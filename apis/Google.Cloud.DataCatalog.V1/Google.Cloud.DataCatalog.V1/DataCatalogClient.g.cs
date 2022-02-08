@@ -59,6 +59,8 @@ namespace Google.Cloud.DataCatalog.V1
             GetEntrySettings = existing.GetEntrySettings;
             LookupEntrySettings = existing.LookupEntrySettings;
             ListEntriesSettings = existing.ListEntriesSettings;
+            ModifyEntryOverviewSettings = existing.ModifyEntryOverviewSettings;
+            ModifyEntryContactsSettings = existing.ModifyEntryContactsSettings;
             CreateTagTemplateSettings = existing.CreateTagTemplateSettings;
             GetTagTemplateSettings = existing.GetTagTemplateSettings;
             UpdateTagTemplateSettings = existing.UpdateTagTemplateSettings;
@@ -72,6 +74,8 @@ namespace Google.Cloud.DataCatalog.V1
             UpdateTagSettings = existing.UpdateTagSettings;
             DeleteTagSettings = existing.DeleteTagSettings;
             ListTagsSettings = existing.ListTagsSettings;
+            StarEntrySettings = existing.StarEntrySettings;
+            UnstarEntrySettings = existing.UnstarEntrySettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
@@ -262,6 +266,30 @@ namespace Google.Cloud.DataCatalog.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataCatalogClient.ModifyEntryOverview</c> and <c>DataCatalogClient.ModifyEntryOverviewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ModifyEntryOverviewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataCatalogClient.ModifyEntryContacts</c> and <c>DataCatalogClient.ModifyEntryContactsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ModifyEntryContactsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DataCatalogClient.CreateTagTemplate</c> and <c>DataCatalogClient.CreateTagTemplateAsync</c>.
         /// </summary>
         /// <remarks>
@@ -422,6 +450,30 @@ namespace Google.Cloud.DataCatalog.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListTagsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>DataCatalogClient.StarEntry</c>
+        ///  and <c>DataCatalogClient.StarEntryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StarEntrySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataCatalogClient.UnstarEntry</c> and <c>DataCatalogClient.UnstarEntryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UnstarEntrySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -2860,6 +2912,84 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
+        /// Modifies entry overview, part of the business context of an
+        /// [Entry][google.cloud.datacatalog.v1.Entry].
+        /// 
+        /// To call this method, you must have the `datacatalog.entries.updateOverview`
+        /// IAM permission on the corresponding project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EntryOverview ModifyEntryOverview(ModifyEntryOverviewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Modifies entry overview, part of the business context of an
+        /// [Entry][google.cloud.datacatalog.v1.Entry].
+        /// 
+        /// To call this method, you must have the `datacatalog.entries.updateOverview`
+        /// IAM permission on the corresponding project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryOverview> ModifyEntryOverviewAsync(ModifyEntryOverviewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Modifies entry overview, part of the business context of an
+        /// [Entry][google.cloud.datacatalog.v1.Entry].
+        /// 
+        /// To call this method, you must have the `datacatalog.entries.updateOverview`
+        /// IAM permission on the corresponding project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryOverview> ModifyEntryOverviewAsync(ModifyEntryOverviewRequest request, st::CancellationToken cancellationToken) =>
+            ModifyEntryOverviewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Modifies contacts, part of the business context of an
+        /// [Entry][google.cloud.datacatalog.v1.Entry].
+        /// 
+        /// To call this method, you must have the `datacatalog.entries.updateContacts`
+        /// IAM permission on the corresponding project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Contacts ModifyEntryContacts(ModifyEntryContactsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Modifies contacts, part of the business context of an
+        /// [Entry][google.cloud.datacatalog.v1.Entry].
+        /// 
+        /// To call this method, you must have the `datacatalog.entries.updateContacts`
+        /// IAM permission on the corresponding project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Contacts> ModifyEntryContactsAsync(ModifyEntryContactsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Modifies contacts, part of the business context of an
+        /// [Entry][google.cloud.datacatalog.v1.Entry].
+        /// 
+        /// To call this method, you must have the `datacatalog.entries.updateContacts`
+        /// IAM permission on the corresponding project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Contacts> ModifyEntryContactsAsync(ModifyEntryContactsRequest request, st::CancellationToken cancellationToken) =>
+            ModifyEntryContactsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates a tag template.
         /// 
         /// You must enable the Data Catalog API in the project identified by the
@@ -3325,9 +3455,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// request body, their values are emptied.
         /// 
         /// Note: Updating the `is_publicly_readable` field may require up to 12
-        /// hours to take effect in search results. Additionally, it also requires
-        /// the `tagTemplates.getIamPolicy` and `tagTemplates.setIamPolicy`
-        /// permissions.
+        /// hours to take effect in search results.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3361,9 +3489,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// request body, their values are emptied.
         /// 
         /// Note: Updating the `is_publicly_readable` field may require up to 12
-        /// hours to take effect in search results. Additionally, it also requires
-        /// the `tagTemplates.getIamPolicy` and `tagTemplates.setIamPolicy`
-        /// permissions.
+        /// hours to take effect in search results.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3397,9 +3523,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// request body, their values are emptied.
         /// 
         /// Note: Updating the `is_publicly_readable` field may require up to 12
-        /// hours to take effect in search results. Additionally, it also requires
-        /// the `tagTemplates.getIamPolicy` and `tagTemplates.setIamPolicy`
-        /// permissions.
+        /// hours to take effect in search results.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5250,6 +5374,8 @@ namespace Google.Cloud.DataCatalog.V1
 
         /// <summary>
         /// Lists tags assigned to an [Entry][google.cloud.datacatalog.v1.Entry].
+        /// The [columns][google.cloud.datacatalog.v1.Tag.column] in the response are
+        /// lowercased.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5259,6 +5385,8 @@ namespace Google.Cloud.DataCatalog.V1
 
         /// <summary>
         /// Lists tags assigned to an [Entry][google.cloud.datacatalog.v1.Entry].
+        /// The [columns][google.cloud.datacatalog.v1.Tag.column] in the response are
+        /// lowercased.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5268,6 +5396,8 @@ namespace Google.Cloud.DataCatalog.V1
 
         /// <summary>
         /// Lists tags assigned to an [Entry][google.cloud.datacatalog.v1.Entry].
+        /// The [columns][google.cloud.datacatalog.v1.Tag.column] in the response are
+        /// lowercased.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the Data Catalog resource to list the tags of.
@@ -5296,6 +5426,8 @@ namespace Google.Cloud.DataCatalog.V1
 
         /// <summary>
         /// Lists tags assigned to an [Entry][google.cloud.datacatalog.v1.Entry].
+        /// The [columns][google.cloud.datacatalog.v1.Tag.column] in the response are
+        /// lowercased.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the Data Catalog resource to list the tags of.
@@ -5324,6 +5456,8 @@ namespace Google.Cloud.DataCatalog.V1
 
         /// <summary>
         /// Lists tags assigned to an [Entry][google.cloud.datacatalog.v1.Entry].
+        /// The [columns][google.cloud.datacatalog.v1.Tag.column] in the response are
+        /// lowercased.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the Data Catalog resource to list the tags of.
@@ -5352,6 +5486,8 @@ namespace Google.Cloud.DataCatalog.V1
 
         /// <summary>
         /// Lists tags assigned to an [Entry][google.cloud.datacatalog.v1.Entry].
+        /// The [columns][google.cloud.datacatalog.v1.Tag.column] in the response are
+        /// lowercased.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the Data Catalog resource to list the tags of.
@@ -5377,6 +5513,234 @@ namespace Google.Cloud.DataCatalog.V1
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
+
+        /// <summary>
+        /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as starred by
+        /// the current user. Starring information is private to each user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual StarEntryResponse StarEntry(StarEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as starred by
+        /// the current user. Starring information is private to each user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<StarEntryResponse> StarEntryAsync(StarEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as starred by
+        /// the current user. Starring information is private to each user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<StarEntryResponse> StarEntryAsync(StarEntryRequest request, st::CancellationToken cancellationToken) =>
+            StarEntryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as starred by
+        /// the current user. Starring information is private to each user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the entry to mark as starred.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual StarEntryResponse StarEntry(string name, gaxgrpc::CallSettings callSettings = null) =>
+            StarEntry(new StarEntryRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as starred by
+        /// the current user. Starring information is private to each user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the entry to mark as starred.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<StarEntryResponse> StarEntryAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            StarEntryAsync(new StarEntryRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as starred by
+        /// the current user. Starring information is private to each user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the entry to mark as starred.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<StarEntryResponse> StarEntryAsync(string name, st::CancellationToken cancellationToken) =>
+            StarEntryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as starred by
+        /// the current user. Starring information is private to each user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the entry to mark as starred.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual StarEntryResponse StarEntry(EntryName name, gaxgrpc::CallSettings callSettings = null) =>
+            StarEntry(new StarEntryRequest
+            {
+                EntryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as starred by
+        /// the current user. Starring information is private to each user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the entry to mark as starred.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<StarEntryResponse> StarEntryAsync(EntryName name, gaxgrpc::CallSettings callSettings = null) =>
+            StarEntryAsync(new StarEntryRequest
+            {
+                EntryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as starred by
+        /// the current user. Starring information is private to each user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the entry to mark as starred.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<StarEntryResponse> StarEntryAsync(EntryName name, st::CancellationToken cancellationToken) =>
+            StarEntryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as NOT starred by
+        /// the current user. Starring information is private to each user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UnstarEntryResponse UnstarEntry(UnstarEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as NOT starred by
+        /// the current user. Starring information is private to each user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UnstarEntryResponse> UnstarEntryAsync(UnstarEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as NOT starred by
+        /// the current user. Starring information is private to each user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UnstarEntryResponse> UnstarEntryAsync(UnstarEntryRequest request, st::CancellationToken cancellationToken) =>
+            UnstarEntryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as NOT starred by
+        /// the current user. Starring information is private to each user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the entry to mark as **not** starred.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UnstarEntryResponse UnstarEntry(string name, gaxgrpc::CallSettings callSettings = null) =>
+            UnstarEntry(new UnstarEntryRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as NOT starred by
+        /// the current user. Starring information is private to each user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the entry to mark as **not** starred.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UnstarEntryResponse> UnstarEntryAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            UnstarEntryAsync(new UnstarEntryRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as NOT starred by
+        /// the current user. Starring information is private to each user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the entry to mark as **not** starred.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UnstarEntryResponse> UnstarEntryAsync(string name, st::CancellationToken cancellationToken) =>
+            UnstarEntryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as NOT starred by
+        /// the current user. Starring information is private to each user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the entry to mark as **not** starred.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UnstarEntryResponse UnstarEntry(EntryName name, gaxgrpc::CallSettings callSettings = null) =>
+            UnstarEntry(new UnstarEntryRequest
+            {
+                EntryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as NOT starred by
+        /// the current user. Starring information is private to each user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the entry to mark as **not** starred.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UnstarEntryResponse> UnstarEntryAsync(EntryName name, gaxgrpc::CallSettings callSettings = null) =>
+            UnstarEntryAsync(new UnstarEntryRequest
+            {
+                EntryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as NOT starred by
+        /// the current user. Starring information is private to each user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the entry to mark as **not** starred.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UnstarEntryResponse> UnstarEntryAsync(EntryName name, st::CancellationToken cancellationToken) =>
+            UnstarEntryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets an access control policy for a resource. Replaces any existing
@@ -6062,6 +6426,10 @@ namespace Google.Cloud.DataCatalog.V1
 
         private readonly gaxgrpc::ApiCall<ListEntriesRequest, ListEntriesResponse> _callListEntries;
 
+        private readonly gaxgrpc::ApiCall<ModifyEntryOverviewRequest, EntryOverview> _callModifyEntryOverview;
+
+        private readonly gaxgrpc::ApiCall<ModifyEntryContactsRequest, Contacts> _callModifyEntryContacts;
+
         private readonly gaxgrpc::ApiCall<CreateTagTemplateRequest, TagTemplate> _callCreateTagTemplate;
 
         private readonly gaxgrpc::ApiCall<GetTagTemplateRequest, TagTemplate> _callGetTagTemplate;
@@ -6087,6 +6455,10 @@ namespace Google.Cloud.DataCatalog.V1
         private readonly gaxgrpc::ApiCall<DeleteTagRequest, wkt::Empty> _callDeleteTag;
 
         private readonly gaxgrpc::ApiCall<ListTagsRequest, ListTagsResponse> _callListTags;
+
+        private readonly gaxgrpc::ApiCall<StarEntryRequest, StarEntryResponse> _callStarEntry;
+
+        private readonly gaxgrpc::ApiCall<UnstarEntryRequest, UnstarEntryResponse> _callUnstarEntry;
 
         private readonly gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> _callSetIamPolicy;
 
@@ -6140,6 +6512,12 @@ namespace Google.Cloud.DataCatalog.V1
             _callListEntries = clientHelper.BuildApiCall<ListEntriesRequest, ListEntriesResponse>(grpcClient.ListEntriesAsync, grpcClient.ListEntries, effectiveSettings.ListEntriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListEntries);
             Modify_ListEntriesApiCall(ref _callListEntries);
+            _callModifyEntryOverview = clientHelper.BuildApiCall<ModifyEntryOverviewRequest, EntryOverview>(grpcClient.ModifyEntryOverviewAsync, grpcClient.ModifyEntryOverview, effectiveSettings.ModifyEntryOverviewSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callModifyEntryOverview);
+            Modify_ModifyEntryOverviewApiCall(ref _callModifyEntryOverview);
+            _callModifyEntryContacts = clientHelper.BuildApiCall<ModifyEntryContactsRequest, Contacts>(grpcClient.ModifyEntryContactsAsync, grpcClient.ModifyEntryContacts, effectiveSettings.ModifyEntryContactsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callModifyEntryContacts);
+            Modify_ModifyEntryContactsApiCall(ref _callModifyEntryContacts);
             _callCreateTagTemplate = clientHelper.BuildApiCall<CreateTagTemplateRequest, TagTemplate>(grpcClient.CreateTagTemplateAsync, grpcClient.CreateTagTemplate, effectiveSettings.CreateTagTemplateSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTagTemplate);
             Modify_CreateTagTemplateApiCall(ref _callCreateTagTemplate);
@@ -6179,6 +6557,12 @@ namespace Google.Cloud.DataCatalog.V1
             _callListTags = clientHelper.BuildApiCall<ListTagsRequest, ListTagsResponse>(grpcClient.ListTagsAsync, grpcClient.ListTags, effectiveSettings.ListTagsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTags);
             Modify_ListTagsApiCall(ref _callListTags);
+            _callStarEntry = clientHelper.BuildApiCall<StarEntryRequest, StarEntryResponse>(grpcClient.StarEntryAsync, grpcClient.StarEntry, effectiveSettings.StarEntrySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callStarEntry);
+            Modify_StarEntryApiCall(ref _callStarEntry);
+            _callUnstarEntry = clientHelper.BuildApiCall<UnstarEntryRequest, UnstarEntryResponse>(grpcClient.UnstarEntryAsync, grpcClient.UnstarEntry, effectiveSettings.UnstarEntrySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callUnstarEntry);
+            Modify_UnstarEntryApiCall(ref _callUnstarEntry);
             _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>(grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
@@ -6217,6 +6601,10 @@ namespace Google.Cloud.DataCatalog.V1
 
         partial void Modify_ListEntriesApiCall(ref gaxgrpc::ApiCall<ListEntriesRequest, ListEntriesResponse> call);
 
+        partial void Modify_ModifyEntryOverviewApiCall(ref gaxgrpc::ApiCall<ModifyEntryOverviewRequest, EntryOverview> call);
+
+        partial void Modify_ModifyEntryContactsApiCall(ref gaxgrpc::ApiCall<ModifyEntryContactsRequest, Contacts> call);
+
         partial void Modify_CreateTagTemplateApiCall(ref gaxgrpc::ApiCall<CreateTagTemplateRequest, TagTemplate> call);
 
         partial void Modify_GetTagTemplateApiCall(ref gaxgrpc::ApiCall<GetTagTemplateRequest, TagTemplate> call);
@@ -6242,6 +6630,10 @@ namespace Google.Cloud.DataCatalog.V1
         partial void Modify_DeleteTagApiCall(ref gaxgrpc::ApiCall<DeleteTagRequest, wkt::Empty> call);
 
         partial void Modify_ListTagsApiCall(ref gaxgrpc::ApiCall<ListTagsRequest, ListTagsResponse> call);
+
+        partial void Modify_StarEntryApiCall(ref gaxgrpc::ApiCall<StarEntryRequest, StarEntryResponse> call);
+
+        partial void Modify_UnstarEntryApiCall(ref gaxgrpc::ApiCall<UnstarEntryRequest, UnstarEntryResponse> call);
 
         partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> call);
 
@@ -6278,6 +6670,10 @@ namespace Google.Cloud.DataCatalog.V1
 
         partial void Modify_ListEntriesRequest(ref ListEntriesRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_ModifyEntryOverviewRequest(ref ModifyEntryOverviewRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ModifyEntryContactsRequest(ref ModifyEntryContactsRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_CreateTagTemplateRequest(ref CreateTagTemplateRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetTagTemplateRequest(ref GetTagTemplateRequest request, ref gaxgrpc::CallSettings settings);
@@ -6303,6 +6699,10 @@ namespace Google.Cloud.DataCatalog.V1
         partial void Modify_DeleteTagRequest(ref DeleteTagRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListTagsRequest(ref ListTagsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StarEntryRequest(ref StarEntryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UnstarEntryRequest(ref UnstarEntryRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetIamPolicyRequest(ref gciv::SetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6759,6 +7159,70 @@ namespace Google.Cloud.DataCatalog.V1
         }
 
         /// <summary>
+        /// Modifies entry overview, part of the business context of an
+        /// [Entry][google.cloud.datacatalog.v1.Entry].
+        /// 
+        /// To call this method, you must have the `datacatalog.entries.updateOverview`
+        /// IAM permission on the corresponding project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override EntryOverview ModifyEntryOverview(ModifyEntryOverviewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ModifyEntryOverviewRequest(ref request, ref callSettings);
+            return _callModifyEntryOverview.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Modifies entry overview, part of the business context of an
+        /// [Entry][google.cloud.datacatalog.v1.Entry].
+        /// 
+        /// To call this method, you must have the `datacatalog.entries.updateOverview`
+        /// IAM permission on the corresponding project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<EntryOverview> ModifyEntryOverviewAsync(ModifyEntryOverviewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ModifyEntryOverviewRequest(ref request, ref callSettings);
+            return _callModifyEntryOverview.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Modifies contacts, part of the business context of an
+        /// [Entry][google.cloud.datacatalog.v1.Entry].
+        /// 
+        /// To call this method, you must have the `datacatalog.entries.updateContacts`
+        /// IAM permission on the corresponding project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Contacts ModifyEntryContacts(ModifyEntryContactsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ModifyEntryContactsRequest(ref request, ref callSettings);
+            return _callModifyEntryContacts.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Modifies contacts, part of the business context of an
+        /// [Entry][google.cloud.datacatalog.v1.Entry].
+        /// 
+        /// To call this method, you must have the `datacatalog.entries.updateContacts`
+        /// IAM permission on the corresponding project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Contacts> ModifyEntryContactsAsync(ModifyEntryContactsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ModifyEntryContactsRequest(ref request, ref callSettings);
+            return _callModifyEntryContacts.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Creates a tag template.
         /// 
         /// You must enable the Data Catalog API in the project identified by the
@@ -7148,6 +7612,8 @@ namespace Google.Cloud.DataCatalog.V1
 
         /// <summary>
         /// Lists tags assigned to an [Entry][google.cloud.datacatalog.v1.Entry].
+        /// The [columns][google.cloud.datacatalog.v1.Tag.column] in the response are
+        /// lowercased.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7160,6 +7626,8 @@ namespace Google.Cloud.DataCatalog.V1
 
         /// <summary>
         /// Lists tags assigned to an [Entry][google.cloud.datacatalog.v1.Entry].
+        /// The [columns][google.cloud.datacatalog.v1.Tag.column] in the response are
+        /// lowercased.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7168,6 +7636,58 @@ namespace Google.Cloud.DataCatalog.V1
         {
             Modify_ListTagsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListTagsRequest, ListTagsResponse, Tag>(_callListTags, request, callSettings);
+        }
+
+        /// <summary>
+        /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as starred by
+        /// the current user. Starring information is private to each user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override StarEntryResponse StarEntry(StarEntryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StarEntryRequest(ref request, ref callSettings);
+            return _callStarEntry.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as starred by
+        /// the current user. Starring information is private to each user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<StarEntryResponse> StarEntryAsync(StarEntryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StarEntryRequest(ref request, ref callSettings);
+            return _callStarEntry.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as NOT starred by
+        /// the current user. Starring information is private to each user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override UnstarEntryResponse UnstarEntry(UnstarEntryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UnstarEntryRequest(ref request, ref callSettings);
+            return _callUnstarEntry.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as NOT starred by
+        /// the current user. Starring information is private to each user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<UnstarEntryResponse> UnstarEntryAsync(UnstarEntryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UnstarEntryRequest(ref request, ref callSettings);
+            return _callUnstarEntry.Async(request, callSettings);
         }
 
         /// <summary>

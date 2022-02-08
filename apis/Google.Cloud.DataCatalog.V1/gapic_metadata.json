@@ -118,6 +118,18 @@
                 "LookupEntryAsync"
               ]
             },
+            "ModifyEntryContacts": {
+              "methods": [
+                "ModifyEntryContacts",
+                "ModifyEntryContactsAsync"
+              ]
+            },
+            "ModifyEntryOverview": {
+              "methods": [
+                "ModifyEntryOverview",
+                "ModifyEntryOverviewAsync"
+              ]
+            },
             "RenameTagTemplateField": {
               "methods": [
                 "RenameTagTemplateField",
@@ -142,10 +154,22 @@
                 "SetIamPolicyAsync"
               ]
             },
+            "StarEntry": {
+              "methods": [
+                "StarEntry",
+                "StarEntryAsync"
+              ]
+            },
             "TestIamPermissions": {
               "methods": [
                 "TestIamPermissions",
                 "TestIamPermissionsAsync"
+              ]
+            },
+            "UnstarEntry": {
+              "methods": [
+                "UnstarEntry",
+                "UnstarEntryAsync"
               ]
             },
             "UpdateEntry": {

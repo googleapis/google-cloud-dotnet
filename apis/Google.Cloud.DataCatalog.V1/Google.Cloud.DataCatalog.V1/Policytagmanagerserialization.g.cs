@@ -26,11 +26,11 @@ namespace Google.Cloud.DataCatalog.V1 {
           string.Concat(
             "Cj9nb29nbGUvY2xvdWQvZGF0YWNhdGFsb2cvdjEvcG9saWN5dGFnbWFuYWdl",
             "cnNlcmlhbGl6YXRpb24ucHJvdG8SG2dvb2dsZS5jbG91ZC5kYXRhY2F0YWxv",
-            "Zy52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxofZ29vZ2xlL2Fw",
-            "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
-            "cm90bxoyZ29vZ2xlL2Nsb3VkL2RhdGFjYXRhbG9nL3YxL3BvbGljeXRhZ21h",
-            "bmFnZXIucHJvdG8aGmdvb2dsZS9pYW0vdjEvcG9saWN5LnByb3RvGhdnb29n",
-            "bGUvYXBpL2NsaWVudC5wcm90byLdAQoSU2VyaWFsaXplZFRheG9ub215EhkK",
+            "Zy52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2Fw",
+            "aS9jbGllbnQucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJv",
+            "dG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aMmdvb2dsZS9jbG91ZC9k",
+            "YXRhY2F0YWxvZy92MS9wb2xpY3l0YWdtYW5hZ2VyLnByb3RvGhpnb29nbGUv",
+            "aWFtL3YxL3BvbGljeS5wcm90byLdAQoSU2VyaWFsaXplZFRheG9ub215EhkK",
             "DGRpc3BsYXlfbmFtZRgBIAEoCUID4EECEhMKC2Rlc2NyaXB0aW9uGAIgASgJ",
             "EkUKC3BvbGljeV90YWdzGAMgAygLMjAuZ29vZ2xlLmNsb3VkLmRhdGFjYXRh",
             "bG9nLnYxLlNlcmlhbGl6ZWRQb2xpY3lUYWcSUAoWYWN0aXZhdGVkX3BvbGlj",
@@ -83,7 +83,7 @@ namespace Google.Cloud.DataCatalog.V1 {
             "Zy5WMcoCG0dvb2dsZVxDbG91ZFxEYXRhQ2F0YWxvZ1xWMeoCHkdvb2dsZTo6",
             "Q2xvdWQ6OkRhdGFDYXRhbG9nOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.PolicytagmanagerReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.PolicytagmanagerReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.SerializedTaxonomy), global::Google.Cloud.DataCatalog.V1.SerializedTaxonomy.Parser, new[]{ "DisplayName", "Description", "PolicyTags", "ActivatedPolicyTypes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.SerializedPolicyTag), global::Google.Cloud.DataCatalog.V1.SerializedPolicyTag.Parser, new[]{ "PolicyTag", "DisplayName", "Description", "ChildPolicyTags" }, null, null, null, null),
