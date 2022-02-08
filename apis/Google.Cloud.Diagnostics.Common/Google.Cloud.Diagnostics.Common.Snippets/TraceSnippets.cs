@@ -25,6 +25,7 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
 {
     public class TraceSnippets
     {
+        private const string OutgoingUrl = "https://www.google.com/";
         private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
 
         private readonly string _testId;
@@ -236,13 +237,13 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
                     IHttpClientFactory clientFactory = host.Services.GetRequiredService<IHttpClientFactory>();
                     var httpClient = clientFactory.CreateClient("tracesOutgoing");
                     // Any code that makes outgoing requests.
-                    var response = await httpClient.GetAsync("http://weather.com/");
+                    var response = await httpClient.GetAsync(OutgoingUrl);
                     // End sample
                 }
 
                 var trace = TraceEntryPolling.Default.GetTrace(_testId, _startTime);
 
-                TraceEntryVerifiers.AssertParentChildSpan(trace, _testId, "http://weather.com/");
+                TraceEntryVerifiers.AssertParentChildSpan(trace, _testId, OutgoingUrl);
             }
             finally
             {
@@ -276,12 +277,12 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
                     IHttpClientFactory clientFactory = host.Services.GetRequiredService<IHttpClientFactory>();
                     var httpClient = clientFactory.CreateClient("tracesOutgoing");
                     // Any code that makes outgoing requests.
-                    var response = await httpClient.GetAsync("http://weather.com/");
+                    var response = await httpClient.GetAsync(OutgoingUrl);
                 }
 
                 var trace = TraceEntryPolling.Default.GetTrace(_testId, _startTime);
 
-                TraceEntryVerifiers.AssertParentChildSpan(trace, _testId, "http://weather.com/");
+                TraceEntryVerifiers.AssertParentChildSpan(trace, _testId, OutgoingUrl);
             }
             finally
             {
