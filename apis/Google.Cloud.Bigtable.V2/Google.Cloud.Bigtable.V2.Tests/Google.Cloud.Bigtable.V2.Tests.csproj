@@ -7,7 +7,7 @@
     <NoWarn>1701;1702;1705;xUnit2004;xUnit2013;AD0001</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Google.Api.Gax.Grpc.Testing" Version="[3.6.0, 4.0.0)" />
+    <PackageReference Include="Google.Api.Gax.Grpc.Testing" Version="[3.7.0-beta01, 4.0.0)" />
     <ProjectReference Include="..\..\Google.Cloud.Bigtable.Admin.V2\Google.Cloud.Bigtable.Admin.V2\Google.Cloud.Bigtable.Admin.V2.csproj" />
     <ProjectReference Include="..\Google.Cloud.Bigtable.V2\Google.Cloud.Bigtable.V2.csproj" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
