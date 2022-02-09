@@ -585,6 +585,26 @@
       "serviceConfigFile": "binaryauthorization_v1beta1.yaml"
     },
     {
+      "id": "Google.Cloud.CertificateManager.V1",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "Certificate Manager",
+      "productUrl": "https://cloud.google.com/certificate-manager/docs",
+      "description": "Recommended Google client library to access the Google Certificate Manager API, which lets you acquire and manage TLS (SSL) certificates for use with Cloud Load Balancing",
+      "tags": [
+        "tls",
+        "ssl",
+        "certificates"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/certificatemanager/v1",
+      "shortName": "certificatemanager",
+      "serviceConfigFile": "certificatemanager_v1.yaml"
+    },
+    {
       "id": "Google.Cloud.Channel.V1",
       "version": "1.6.0",
       "type": "grpc",
