@@ -1,0 +1,23 @@
+[
+  {
+    "method": "ListDnsAuthorizations",
+    "client": "CertificateManagerClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  },
+  {
+    "method": "ListCertificates",
+    "client": "CertificateManagerClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  },
+  {
+    "method": "ListCertificateMaps",
+    "client": "CertificateManagerClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  }
+]
