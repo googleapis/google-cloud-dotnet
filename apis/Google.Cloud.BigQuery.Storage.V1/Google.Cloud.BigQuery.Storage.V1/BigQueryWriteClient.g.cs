@@ -25,6 +25,8 @@ using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using System;
+using Google.Api.Gax.Grpc;
 
 namespace Google.Cloud.BigQuery.Storage.V1
 {
@@ -567,7 +569,48 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
         /// <returns>The client-server stream.</returns>
-        public virtual AppendRowsStream AppendRows(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null) =>
+        [Obsolete("This overload will be removed in the next major version")]
+        public virtual AppendRowsStream AppendRows(gaxgrpc::CallSettings callSettings, gaxgrpc::BidirectionalStreamingSettings streamingSettings) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Appends data to the given stream.
+        /// 
+        /// If `offset` is specified, the `offset` is checked against the end of
+        /// stream. The server returns `OUT_OF_RANGE` in `AppendRowsResponse` if an
+        /// attempt is made to append to an offset beyond the current end of the stream
+        /// or `ALREADY_EXISTS` if user provides an `offset` that has already been
+        /// written to. User can retry with adjusted offset within the same RPC
+        /// connection. If `offset` is not specified, append happens at the end of the
+        /// stream.
+        /// 
+        /// The response contains an optional offset at which the append
+        /// happened.  No offset information will be returned for appends to a
+        /// default stream.
+        /// 
+        /// Responses are received in the same order in which requests are sent.
+        /// There will be one response for each successful inserted request.  Responses
+        /// may optionally embed error information if the originating AppendRequest was
+        /// not successfully processed.
+        /// 
+        /// The specifics of when successfully appended data is made visible to the
+        /// table are governed by the type of stream:
+        /// 
+        /// * For COMMITTED streams (which includes the default stream), data is
+        /// visible immediately upon successful append.
+        /// 
+        /// * For BUFFERED streams, data is made visible via a subsequent `FlushRows`
+        /// rpc which advances a cursor to a newer offset in the stream.
+        /// 
+        /// * For PENDING streams, data is not made visible until the stream itself is
+        /// finalized (via the `FinalizeWriteStream` rpc), and the stream is explicitly
+        /// committed via the `BatchCommitWriteStreams` rpc.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <param name="sampleRequest">A sample request to extract headers from, to use when starting the stream. May be null, in which case no headers will be extracted.</param>
+        /// <returns>The client-server stream.</returns>
+        public virtual AppendRowsStream AppendRows(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null, AppendRowsRequest sampleRequest = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1105,7 +1148,7 @@ namespace Google.Cloud.BigQuery.Storage.V1
             _callCreateWriteStream = clientHelper.BuildApiCall<CreateWriteStreamRequest, WriteStream>(grpcClient.CreateWriteStreamAsync, grpcClient.CreateWriteStream, effectiveSettings.CreateWriteStreamSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateWriteStream);
             Modify_CreateWriteStreamApiCall(ref _callCreateWriteStream);
-            _callAppendRows = clientHelper.BuildApiCall<AppendRowsRequest, AppendRowsResponse>(grpcClient.AppendRows, effectiveSettings.AppendRowsSettings, effectiveSettings.AppendRowsStreamingSettings);
+            _callAppendRows = clientHelper.BuildApiCall<AppendRowsRequest, AppendRowsResponse>(grpcClient.AppendRows, effectiveSettings.AppendRowsSettings, effectiveSettings.AppendRowsStreamingSettings).WithGoogleRequestParam("write_stream", request => request.WriteStream);
             Modify_ApiCall(ref _callAppendRows);
             Modify_AppendRowsApiCall(ref _callAppendRows);
             _callGetWriteStream = clientHelper.BuildApiCall<GetWriteStreamRequest, WriteStream>(grpcClient.GetWriteStreamAsync, grpcClient.GetWriteStream, effectiveSettings.GetWriteStreamSettings).WithGoogleRequestParam("name", request => request.Name);
@@ -1273,11 +1316,52 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
         /// <returns>The client-server stream.</returns>
-        public override BigQueryWriteClient.AppendRowsStream AppendRows(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null)
+        [Obsolete("This overload will be removed in the next major version")]
+        public override BigQueryWriteClient.AppendRowsStream AppendRows(gaxgrpc::CallSettings callSettings, gaxgrpc::BidirectionalStreamingSettings streamingSettings) =>
+            AppendRows(callSettings, streamingSettings, null);
+
+        /// <summary>
+        /// Appends data to the given stream.
+        /// 
+        /// If `offset` is specified, the `offset` is checked against the end of
+        /// stream. The server returns `OUT_OF_RANGE` in `AppendRowsResponse` if an
+        /// attempt is made to append to an offset beyond the current end of the stream
+        /// or `ALREADY_EXISTS` if user provides an `offset` that has already been
+        /// written to. User can retry with adjusted offset within the same RPC
+        /// connection. If `offset` is not specified, append happens at the end of the
+        /// stream.
+        /// 
+        /// The response contains an optional offset at which the append
+        /// happened.  No offset information will be returned for appends to a
+        /// default stream.
+        /// 
+        /// Responses are received in the same order in which requests are sent.
+        /// There will be one response for each successful inserted request.  Responses
+        /// may optionally embed error information if the originating AppendRequest was
+        /// not successfully processed.
+        /// 
+        /// The specifics of when successfully appended data is made visible to the
+        /// table are governed by the type of stream:
+        /// 
+        /// * For COMMITTED streams (which includes the default stream), data is
+        /// visible immediately upon successful append.
+        /// 
+        /// * For BUFFERED streams, data is made visible via a subsequent `FlushRows`
+        /// rpc which advances a cursor to a newer offset in the stream.
+        /// 
+        /// * For PENDING streams, data is not made visible until the stream itself is
+        /// finalized (via the `FinalizeWriteStream` rpc), and the stream is explicitly
+        /// committed via the `BatchCommitWriteStreams` rpc.
+        /// </summary>
+        /// <param name="sampleRequest">A sample request to extract headers from, to use when starting the stream. May be null, in which case no headers will be extracted.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public override AppendRowsStream AppendRows(CallSettings callSettings = null, BidirectionalStreamingSettings streamingSettings = null, AppendRowsRequest sampleRequest = null)
         {
             Modify_AppendRowsRequestCallSettings(ref callSettings);
             gaxgrpc::BidirectionalStreamingSettings effectiveStreamingSettings = streamingSettings ?? _callAppendRows.StreamingSettings;
-            grpccore::AsyncDuplexStreamingCall<AppendRowsRequest, AppendRowsResponse> call = _callAppendRows.Call(callSettings);
+            grpccore::AsyncDuplexStreamingCall<AppendRowsRequest, AppendRowsResponse> call = _callAppendRows.Call(sampleRequest, callSettings);
             gaxgrpc::BufferedClientStreamWriter<AppendRowsRequest> writeBuffer = new gaxgrpc::BufferedClientStreamWriter<AppendRowsRequest>(call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
             return new AppendRowsStreamImpl(this, call, writeBuffer);
         }
