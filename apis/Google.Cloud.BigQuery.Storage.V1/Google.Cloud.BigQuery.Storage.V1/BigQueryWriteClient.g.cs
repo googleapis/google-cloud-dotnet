@@ -1196,23 +1196,30 @@ namespace Google.Cloud.BigQuery.Storage.V1
         {
             /// <summary>Construct the bidirectional streaming method for <c>AppendRows</c>.</summary>
             /// <param name="service">The service containing this streaming method.</param>
-            /// <param name="call">The underlying gRPC duplex streaming call.</param>
-            /// <param name="writeBuffer">
-            /// The <see cref="gaxgrpc::BufferedClientStreamWriter{AppendRowsRequest}"/> instance associated with this
+            /// <param name="callBuilder"> The function to build the underlying gRPC duplex streaming call.</param>
+            /// <param name="writeBufferBuilder">
+            /// The function to build the <see cref="gaxgrpc::BufferedClientStreamWriter{AppendRowsRequest}"/> instance associated with this
             /// streaming call.
             /// </param>
-            public AppendRowsStreamImpl(BigQueryWriteClientImpl service, grpccore::AsyncDuplexStreamingCall<AppendRowsRequest, AppendRowsResponse> call, gaxgrpc::BufferedClientStreamWriter<AppendRowsRequest> writeBuffer)
+            public AppendRowsStreamImpl(BigQueryWriteClientImpl service, sys::Func<AppendRowsRequest, grpccore::AsyncDuplexStreamingCall<AppendRowsRequest, AppendRowsResponse>> callBuilder, sys::Func<grpccore::AsyncDuplexStreamingCall<AppendRowsRequest, AppendRowsResponse>, gaxgrpc::BufferedClientStreamWriter<AppendRowsRequest>> writeBufferBuilder)
             {
                 _service = service;
-                GrpcCall = call;
-                _writeBuffer = writeBuffer;
+                _callBuilder = callBuilder;
+                _writeBufferBuilder = writeBufferBuilder;
             }
 
             private BigQueryWriteClientImpl _service;
 
-            private gaxgrpc::BufferedClientStreamWriter<AppendRowsRequest> _writeBuffer;
+            private object _firstCallLock;
 
-            public override grpccore::AsyncDuplexStreamingCall<AppendRowsRequest, AppendRowsResponse> GrpcCall { get; }
+            private gaxgrpc::BufferedClientStreamWriter<AppendRowsRequest> _writeBuffer;
+            private grpccore::AsyncDuplexStreamingCall<AppendRowsRequest, AppendRowsResponse> _grpcCall;
+
+            private sys::Func<AppendRowsRequest, grpccore::AsyncDuplexStreamingCall<AppendRowsRequest, AppendRowsResponse>> _callBuilder;
+            private sys::Func<grpccore::AsyncDuplexStreamingCall<AppendRowsRequest, AppendRowsResponse>, gaxgrpc::BufferedClientStreamWriter<AppendRowsRequest>> _writeBufferBuilder;
+
+
+            public override grpccore::AsyncDuplexStreamingCall<AppendRowsRequest, AppendRowsResponse> GrpcCall { get => _grpcCall; }
 
             private AppendRowsRequest ModifyRequest(AppendRowsRequest request)
             {
@@ -1220,21 +1227,34 @@ namespace Google.Cloud.BigQuery.Storage.V1
                 return request;
             }
 
+            private gaxgrpc::BufferedClientStreamWriter<AppendRowsRequest> GetBuffer(AppendRowsRequest message)
+            {
+                lock(_firstCallLock)
+                {
+                    if (_writeBuffer is null)
+                    {
+                        _grpcCall = _callBuilder(message);
+                        _writeBuffer = _writeBufferBuilder(_grpcCall);
+                    }
+                    return _writeBuffer;
+                }
+            }
+
             public override stt::Task TryWriteAsync(AppendRowsRequest message) =>
-                _writeBuffer.TryWriteAsync(ModifyRequest(message));
+                GetBuffer(message).TryWriteAsync(ModifyRequest(message));
 
             public override stt::Task WriteAsync(AppendRowsRequest message) =>
-                _writeBuffer.WriteAsync(ModifyRequest(message));
+                GetBuffer(message).WriteAsync(ModifyRequest(message));
 
             public override stt::Task TryWriteAsync(AppendRowsRequest message, grpccore::WriteOptions options) =>
-                _writeBuffer.TryWriteAsync(ModifyRequest(message), options);
+                GetBuffer(message).TryWriteAsync(ModifyRequest(message), options);
 
             public override stt::Task WriteAsync(AppendRowsRequest message, grpccore::WriteOptions options) =>
-                _writeBuffer.WriteAsync(ModifyRequest(message), options);
+                GetBuffer(message).WriteAsync(ModifyRequest(message), options);
 
-            public override stt::Task TryWriteCompleteAsync() => _writeBuffer.TryWriteCompleteAsync();
+            public override stt::Task TryWriteCompleteAsync() => GetBuffer(null).TryWriteCompleteAsync();
 
-            public override stt::Task WriteCompleteAsync() => _writeBuffer.WriteCompleteAsync();
+            public override stt::Task WriteCompleteAsync() => GetBuffer(null).WriteCompleteAsync();
         }
 
         /// <summary>
@@ -1277,9 +1297,9 @@ namespace Google.Cloud.BigQuery.Storage.V1
         {
             Modify_AppendRowsRequestCallSettings(ref callSettings);
             gaxgrpc::BidirectionalStreamingSettings effectiveStreamingSettings = streamingSettings ?? _callAppendRows.StreamingSettings;
-            grpccore::AsyncDuplexStreamingCall<AppendRowsRequest, AppendRowsResponse> call = _callAppendRows.Call(callSettings);
-            gaxgrpc::BufferedClientStreamWriter<AppendRowsRequest> writeBuffer = new gaxgrpc::BufferedClientStreamWriter<AppendRowsRequest>(call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
-            return new AppendRowsStreamImpl(this, call, writeBuffer);
+            sys::Func<AppendRowsRequest, grpccore::AsyncDuplexStreamingCall<AppendRowsRequest, AppendRowsResponse>> callBuilder = request => _callAppendRows.WithGoogleRequestParam("write_stream", request?.WriteStream).Call(callSettings);
+            sys::Func< grpccore::AsyncDuplexStreamingCall < AppendRowsRequest, AppendRowsResponse >, gaxgrpc::BufferedClientStreamWriter<AppendRowsRequest>> writeBufferBuilder =  call => new gaxgrpc::BufferedClientStreamWriter<AppendRowsRequest>(call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
+            return new AppendRowsStreamImpl(this, callBuilder, writeBufferBuilder);
         }
 
         /// <summary>
