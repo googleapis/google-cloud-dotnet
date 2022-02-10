@@ -33,11 +33,11 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             GetApprovalRequestMessage request = new GetApprovalRequestMessage
             {
-                Name = "name1c9368b0",
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
             };
             ApprovalRequest expectedResponse = new ApprovalRequest
             {
-                Name = "name1c9368b0",
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
                 RequestedResourceName = "requested_resource_name3898f866",
                 RequestedReason = new AccessReason(),
                 RequestedLocations = new AccessLocations(),
@@ -60,11 +60,11 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             GetApprovalRequestMessage request = new GetApprovalRequestMessage
             {
-                Name = "name1c9368b0",
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
             };
             ApprovalRequest expectedResponse = new ApprovalRequest
             {
-                Name = "name1c9368b0",
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
                 RequestedResourceName = "requested_resource_name3898f866",
                 RequestedReason = new AccessReason(),
                 RequestedLocations = new AccessLocations(),
@@ -89,11 +89,11 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             GetApprovalRequestMessage request = new GetApprovalRequestMessage
             {
-                Name = "name1c9368b0",
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
             };
             ApprovalRequest expectedResponse = new ApprovalRequest
             {
-                Name = "name1c9368b0",
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
                 RequestedResourceName = "requested_resource_name3898f866",
                 RequestedReason = new AccessReason(),
                 RequestedLocations = new AccessLocations(),
@@ -116,11 +116,11 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             GetApprovalRequestMessage request = new GetApprovalRequestMessage
             {
-                Name = "name1c9368b0",
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
             };
             ApprovalRequest expectedResponse = new ApprovalRequest
             {
-                Name = "name1c9368b0",
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
                 RequestedResourceName = "requested_resource_name3898f866",
                 RequestedReason = new AccessReason(),
                 RequestedLocations = new AccessLocations(),
@@ -140,17 +140,73 @@ namespace Google.Cloud.AccessApproval.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void GetApprovalRequestResourceNames()
+        {
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
+            GetApprovalRequestMessage request = new GetApprovalRequestMessage
+            {
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
+            };
+            ApprovalRequest expectedResponse = new ApprovalRequest
+            {
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
+                RequestedResourceName = "requested_resource_name3898f866",
+                RequestedReason = new AccessReason(),
+                RequestedLocations = new AccessLocations(),
+                RequestTime = new wkt::Timestamp(),
+                RequestedExpiration = new wkt::Timestamp(),
+                Approve = new ApproveDecision(),
+                Dismiss = new DismissDecision(),
+                RequestedResourceProperties = new ResourceProperties(),
+            };
+            mockGrpcClient.Setup(x => x.GetApprovalRequest(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
+            ApprovalRequest response = client.GetApprovalRequest(request.ApprovalRequestName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetApprovalRequestResourceNamesAsync()
+        {
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
+            GetApprovalRequestMessage request = new GetApprovalRequestMessage
+            {
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
+            };
+            ApprovalRequest expectedResponse = new ApprovalRequest
+            {
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
+                RequestedResourceName = "requested_resource_name3898f866",
+                RequestedReason = new AccessReason(),
+                RequestedLocations = new AccessLocations(),
+                RequestTime = new wkt::Timestamp(),
+                RequestedExpiration = new wkt::Timestamp(),
+                Approve = new ApproveDecision(),
+                Dismiss = new DismissDecision(),
+                RequestedResourceProperties = new ResourceProperties(),
+            };
+            mockGrpcClient.Setup(x => x.GetApprovalRequestAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ApprovalRequest>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
+            ApprovalRequest responseCallSettings = await client.GetApprovalRequestAsync(request.ApprovalRequestName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ApprovalRequest responseCancellationToken = await client.GetApprovalRequestAsync(request.ApprovalRequestName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void ApproveApprovalRequestRequestObject()
         {
             moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             ApproveApprovalRequestMessage request = new ApproveApprovalRequestMessage
             {
-                Name = "name1c9368b0",
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
                 ExpireTime = new wkt::Timestamp(),
             };
             ApprovalRequest expectedResponse = new ApprovalRequest
             {
-                Name = "name1c9368b0",
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
                 RequestedResourceName = "requested_resource_name3898f866",
                 RequestedReason = new AccessReason(),
                 RequestedLocations = new AccessLocations(),
@@ -173,12 +229,12 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             ApproveApprovalRequestMessage request = new ApproveApprovalRequestMessage
             {
-                Name = "name1c9368b0",
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
                 ExpireTime = new wkt::Timestamp(),
             };
             ApprovalRequest expectedResponse = new ApprovalRequest
             {
-                Name = "name1c9368b0",
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
                 RequestedResourceName = "requested_resource_name3898f866",
                 RequestedReason = new AccessReason(),
                 RequestedLocations = new AccessLocations(),
@@ -203,11 +259,11 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             DismissApprovalRequestMessage request = new DismissApprovalRequestMessage
             {
-                Name = "name1c9368b0",
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
             };
             ApprovalRequest expectedResponse = new ApprovalRequest
             {
-                Name = "name1c9368b0",
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
                 RequestedResourceName = "requested_resource_name3898f866",
                 RequestedReason = new AccessReason(),
                 RequestedLocations = new AccessLocations(),
@@ -230,11 +286,11 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             DismissApprovalRequestMessage request = new DismissApprovalRequestMessage
             {
-                Name = "name1c9368b0",
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
             };
             ApprovalRequest expectedResponse = new ApprovalRequest
             {
-                Name = "name1c9368b0",
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
                 RequestedResourceName = "requested_resource_name3898f866",
                 RequestedReason = new AccessReason(),
                 RequestedLocations = new AccessLocations(),
@@ -259,11 +315,11 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             GetAccessApprovalSettingsMessage request = new GetAccessApprovalSettingsMessage
             {
-                Name = "name1c9368b0",
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
             };
             AccessApprovalSettings expectedResponse = new AccessApprovalSettings
             {
-                Name = "name1c9368b0",
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
                 NotificationEmails =
                 {
                     "notification_emails936d0793",
@@ -287,11 +343,11 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             GetAccessApprovalSettingsMessage request = new GetAccessApprovalSettingsMessage
             {
-                Name = "name1c9368b0",
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
             };
             AccessApprovalSettings expectedResponse = new AccessApprovalSettings
             {
-                Name = "name1c9368b0",
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
                 NotificationEmails =
                 {
                     "notification_emails936d0793",
@@ -317,11 +373,11 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             GetAccessApprovalSettingsMessage request = new GetAccessApprovalSettingsMessage
             {
-                Name = "name1c9368b0",
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
             };
             AccessApprovalSettings expectedResponse = new AccessApprovalSettings
             {
-                Name = "name1c9368b0",
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
                 NotificationEmails =
                 {
                     "notification_emails936d0793",
@@ -345,11 +401,11 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             GetAccessApprovalSettingsMessage request = new GetAccessApprovalSettingsMessage
             {
-                Name = "name1c9368b0",
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
             };
             AccessApprovalSettings expectedResponse = new AccessApprovalSettings
             {
-                Name = "name1c9368b0",
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
                 NotificationEmails =
                 {
                     "notification_emails936d0793",
@@ -370,6 +426,64 @@ namespace Google.Cloud.AccessApproval.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void GetAccessApprovalSettingsResourceNames()
+        {
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
+            GetAccessApprovalSettingsMessage request = new GetAccessApprovalSettingsMessage
+            {
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
+            };
+            AccessApprovalSettings expectedResponse = new AccessApprovalSettings
+            {
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
+                NotificationEmails =
+                {
+                    "notification_emails936d0793",
+                },
+                EnrolledServices =
+                {
+                    new EnrolledService(),
+                },
+                EnrolledAncestor = true,
+            };
+            mockGrpcClient.Setup(x => x.GetAccessApprovalSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
+            AccessApprovalSettings response = client.GetAccessApprovalSettings(request.AccessApprovalSettingsName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetAccessApprovalSettingsResourceNamesAsync()
+        {
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
+            GetAccessApprovalSettingsMessage request = new GetAccessApprovalSettingsMessage
+            {
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
+            };
+            AccessApprovalSettings expectedResponse = new AccessApprovalSettings
+            {
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
+                NotificationEmails =
+                {
+                    "notification_emails936d0793",
+                },
+                EnrolledServices =
+                {
+                    new EnrolledService(),
+                },
+                EnrolledAncestor = true,
+            };
+            mockGrpcClient.Setup(x => x.GetAccessApprovalSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AccessApprovalSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
+            AccessApprovalSettings responseCallSettings = await client.GetAccessApprovalSettingsAsync(request.AccessApprovalSettingsName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AccessApprovalSettings responseCancellationToken = await client.GetAccessApprovalSettingsAsync(request.AccessApprovalSettingsName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void UpdateAccessApprovalSettingsRequestObject()
         {
             moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
@@ -380,7 +494,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             };
             AccessApprovalSettings expectedResponse = new AccessApprovalSettings
             {
-                Name = "name1c9368b0",
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
                 NotificationEmails =
                 {
                     "notification_emails936d0793",
@@ -409,7 +523,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             };
             AccessApprovalSettings expectedResponse = new AccessApprovalSettings
             {
-                Name = "name1c9368b0",
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
                 NotificationEmails =
                 {
                     "notification_emails936d0793",
@@ -440,7 +554,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             };
             AccessApprovalSettings expectedResponse = new AccessApprovalSettings
             {
-                Name = "name1c9368b0",
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
                 NotificationEmails =
                 {
                     "notification_emails936d0793",
@@ -469,7 +583,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             };
             AccessApprovalSettings expectedResponse = new AccessApprovalSettings
             {
-                Name = "name1c9368b0",
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
                 NotificationEmails =
                 {
                     "notification_emails936d0793",
@@ -495,7 +609,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             DeleteAccessApprovalSettingsMessage request = new DeleteAccessApprovalSettingsMessage
             {
-                Name = "name1c9368b0",
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAccessApprovalSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -510,7 +624,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             DeleteAccessApprovalSettingsMessage request = new DeleteAccessApprovalSettingsMessage
             {
-                Name = "name1c9368b0",
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAccessApprovalSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -526,7 +640,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             DeleteAccessApprovalSettingsMessage request = new DeleteAccessApprovalSettingsMessage
             {
-                Name = "name1c9368b0",
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAccessApprovalSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -541,13 +655,44 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             DeleteAccessApprovalSettingsMessage request = new DeleteAccessApprovalSettingsMessage
             {
-                Name = "name1c9368b0",
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAccessApprovalSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
             await client.DeleteAccessApprovalSettingsAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAccessApprovalSettingsAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteAccessApprovalSettingsResourceNames()
+        {
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
+            DeleteAccessApprovalSettingsMessage request = new DeleteAccessApprovalSettingsMessage
+            {
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteAccessApprovalSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteAccessApprovalSettings(request.AccessApprovalSettingsName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteAccessApprovalSettingsResourceNamesAsync()
+        {
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
+            DeleteAccessApprovalSettingsMessage request = new DeleteAccessApprovalSettingsMessage
+            {
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteAccessApprovalSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteAccessApprovalSettingsAsync(request.AccessApprovalSettingsName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteAccessApprovalSettingsAsync(request.AccessApprovalSettingsName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
     }

@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
+using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -244,17 +245,17 @@ namespace Google.Cloud.AccessApproval.V1
     /// 
     /// - The API has a collection of
     /// [ApprovalRequest][google.cloud.accessapproval.v1.ApprovalRequest]
-    /// resources, named `approvalRequests/{approval_request_id}`
+    /// resources, named `approvalRequests/{approval_request}`
     /// - The API has top-level settings per Project/Folder/Organization, named
     /// `accessApprovalSettings`
     /// 
     /// The service also periodically emails a list of recipients, defined at the
     /// Project/Folder/Organization level in the accessApprovalSettings, when there
     /// is a pending ApprovalRequest for them to act on. The ApprovalRequests can
-    /// also optionally be published to a Cloud Pub/Sub topic owned by the customer
-    /// (for Beta, the Pub/Sub setup is managed manually).
+    /// also optionally be published to a Pub/Sub topic owned by the customer
+    /// (contact support if you would like to enable Pub/Sub notifications).
     /// 
-    /// ApprovalRequests can be approved or dismissed. Google personel can only
+    /// ApprovalRequests can be approved or dismissed. Google personnel can only
     /// access the indicated resource or resources if the request is approved
     /// (subject to some exclusions:
     /// https://cloud.google.com/access-approval/docs/overview#exclusions).
@@ -392,8 +393,8 @@ namespace Google.Cloud.AccessApproval.V1
         /// The order is reverse chronological.
         /// </summary>
         /// <param name="parent">
-        /// The parent resource. This may be "projects/{project_id}",
-        /// "folders/{folder_id}", or "organizations/{organization_id}".
+        /// The parent resource. This may be "projects/{project}",
+        /// "folders/{folder}", or "organizations/{organization}".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -419,8 +420,8 @@ namespace Google.Cloud.AccessApproval.V1
         /// The order is reverse chronological.
         /// </summary>
         /// <param name="parent">
-        /// The parent resource. This may be "projects/{project_id}",
-        /// "folders/{folder_id}", or "organizations/{organization_id}".
+        /// The parent resource. This may be "projects/{project}",
+        /// "folders/{folder}", or "organizations/{organization}".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -436,6 +437,168 @@ namespace Google.Cloud.AccessApproval.V1
             ListApprovalRequestsAsync(new ListApprovalRequestsMessage
             {
                 Parent = parent ?? "",
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists approval requests associated with a project, folder, or organization.
+        /// Approval requests can be filtered by state (pending, active, dismissed).
+        /// The order is reverse chronological.
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource. This may be "projects/{project}",
+        /// "folders/{folder}", or "organizations/{organization}".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ApprovalRequest"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListApprovalRequestsResponse, ApprovalRequest> ListApprovalRequests(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListApprovalRequests(new ListApprovalRequestsMessage
+            {
+                ParentAsProjectName = parent,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists approval requests associated with a project, folder, or organization.
+        /// Approval requests can be filtered by state (pending, active, dismissed).
+        /// The order is reverse chronological.
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource. This may be "projects/{project}",
+        /// "folders/{folder}", or "organizations/{organization}".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ApprovalRequest"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListApprovalRequestsResponse, ApprovalRequest> ListApprovalRequestsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListApprovalRequestsAsync(new ListApprovalRequestsMessage
+            {
+                ParentAsProjectName = parent,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists approval requests associated with a project, folder, or organization.
+        /// Approval requests can be filtered by state (pending, active, dismissed).
+        /// The order is reverse chronological.
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource. This may be "projects/{project}",
+        /// "folders/{folder}", or "organizations/{organization}".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ApprovalRequest"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListApprovalRequestsResponse, ApprovalRequest> ListApprovalRequests(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListApprovalRequests(new ListApprovalRequestsMessage
+            {
+                ParentAsFolderName = parent,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists approval requests associated with a project, folder, or organization.
+        /// Approval requests can be filtered by state (pending, active, dismissed).
+        /// The order is reverse chronological.
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource. This may be "projects/{project}",
+        /// "folders/{folder}", or "organizations/{organization}".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ApprovalRequest"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListApprovalRequestsResponse, ApprovalRequest> ListApprovalRequestsAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListApprovalRequestsAsync(new ListApprovalRequestsMessage
+            {
+                ParentAsFolderName = parent,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists approval requests associated with a project, folder, or organization.
+        /// Approval requests can be filtered by state (pending, active, dismissed).
+        /// The order is reverse chronological.
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource. This may be "projects/{project}",
+        /// "folders/{folder}", or "organizations/{organization}".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ApprovalRequest"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListApprovalRequestsResponse, ApprovalRequest> ListApprovalRequests(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListApprovalRequests(new ListApprovalRequestsMessage
+            {
+                ParentAsOrganizationName = parent,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists approval requests associated with a project, folder, or organization.
+        /// Approval requests can be filtered by state (pending, active, dismissed).
+        /// The order is reverse chronological.
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource. This may be "projects/{project}",
+        /// "folders/{folder}", or "organizations/{organization}".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ApprovalRequest"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListApprovalRequestsResponse, ApprovalRequest> ListApprovalRequestsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListApprovalRequestsAsync(new ListApprovalRequestsMessage
+            {
+                ParentAsOrganizationName = parent,
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -471,7 +634,9 @@ namespace Google.Cloud.AccessApproval.V1
         /// Gets an approval request. Returns NOT_FOUND if the request does not exist.
         /// </summary>
         /// <param name="name">
-        /// Name of the approval request to retrieve.
+        /// The name of the approval request to retrieve.
+        /// Format:
+        /// "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -482,7 +647,9 @@ namespace Google.Cloud.AccessApproval.V1
         /// Gets an approval request. Returns NOT_FOUND if the request does not exist.
         /// </summary>
         /// <param name="name">
-        /// Name of the approval request to retrieve.
+        /// The name of the approval request to retrieve.
+        /// Format:
+        /// "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -493,11 +660,58 @@ namespace Google.Cloud.AccessApproval.V1
         /// Gets an approval request. Returns NOT_FOUND if the request does not exist.
         /// </summary>
         /// <param name="name">
-        /// Name of the approval request to retrieve.
+        /// The name of the approval request to retrieve.
+        /// Format:
+        /// "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}"
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ApprovalRequest> GetApprovalRequestAsync(string name, st::CancellationToken cancellationToken) =>
+            GetApprovalRequestAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an approval request. Returns NOT_FOUND if the request does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the approval request to retrieve.
+        /// Format:
+        /// "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ApprovalRequest GetApprovalRequest(ApprovalRequestName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetApprovalRequest(new GetApprovalRequestMessage
+            {
+                ApprovalRequestName = name,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an approval request. Returns NOT_FOUND if the request does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the approval request to retrieve.
+        /// Format:
+        /// "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ApprovalRequest> GetApprovalRequestAsync(ApprovalRequestName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetApprovalRequestAsync(new GetApprovalRequestMessage
+            {
+                ApprovalRequestName = name,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an approval request. Returns NOT_FOUND if the request does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the approval request to retrieve.
+        /// Format:
+        /// "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ApprovalRequest> GetApprovalRequestAsync(ApprovalRequestName name, st::CancellationToken cancellationToken) =>
             GetApprovalRequestAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -621,7 +835,8 @@ namespace Google.Cloud.AccessApproval.V1
         /// Gets the settings associated with a project, folder, or organization.
         /// </summary>
         /// <param name="name">
-        /// Name of the AccessApprovalSettings to retrieve.
+        /// The name of the AccessApprovalSettings to retrieve.
+        /// Format: "{projects|folders|organizations}/{id}/accessApprovalSettings"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -632,7 +847,8 @@ namespace Google.Cloud.AccessApproval.V1
         /// Gets the settings associated with a project, folder, or organization.
         /// </summary>
         /// <param name="name">
-        /// Name of the AccessApprovalSettings to retrieve.
+        /// The name of the AccessApprovalSettings to retrieve.
+        /// Format: "{projects|folders|organizations}/{id}/accessApprovalSettings"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -643,11 +859,54 @@ namespace Google.Cloud.AccessApproval.V1
         /// Gets the settings associated with a project, folder, or organization.
         /// </summary>
         /// <param name="name">
-        /// Name of the AccessApprovalSettings to retrieve.
+        /// The name of the AccessApprovalSettings to retrieve.
+        /// Format: "{projects|folders|organizations}/{id}/accessApprovalSettings"
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<AccessApprovalSettings> GetAccessApprovalSettingsAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAccessApprovalSettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the settings associated with a project, folder, or organization.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the AccessApprovalSettings to retrieve.
+        /// Format: "{projects|folders|organizations}/{id}/accessApprovalSettings"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AccessApprovalSettings GetAccessApprovalSettings(AccessApprovalSettingsName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAccessApprovalSettings(new GetAccessApprovalSettingsMessage
+            {
+                AccessApprovalSettingsName = name,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the settings associated with a project, folder, or organization.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the AccessApprovalSettings to retrieve.
+        /// Format: "{projects|folders|organizations}/{id}/accessApprovalSettings"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessApprovalSettings> GetAccessApprovalSettingsAsync(AccessApprovalSettingsName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAccessApprovalSettingsAsync(new GetAccessApprovalSettingsMessage
+            {
+                AccessApprovalSettingsName = name,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the settings associated with a project, folder, or organization.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the AccessApprovalSettings to retrieve.
+        /// Format: "{projects|folders|organizations}/{id}/accessApprovalSettings"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessApprovalSettings> GetAccessApprovalSettingsAsync(AccessApprovalSettingsName name, st::CancellationToken cancellationToken) =>
             GetAccessApprovalSettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -849,6 +1108,60 @@ namespace Google.Cloud.AccessApproval.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteAccessApprovalSettingsAsync(string name, st::CancellationToken cancellationToken) =>
             DeleteAccessApprovalSettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the settings associated with a project, folder, or organization.
+        /// This will have the effect of disabling Access Approval for the project,
+        /// folder, or organization, but only if all ancestors also have Access
+        /// Approval disabled. If Access Approval is enabled at a higher level of the
+        /// hierarchy, then Access Approval will still be enabled at this level as
+        /// the settings are inherited.
+        /// </summary>
+        /// <param name="name">
+        /// Name of the AccessApprovalSettings to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAccessApprovalSettings(AccessApprovalSettingsName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAccessApprovalSettings(new DeleteAccessApprovalSettingsMessage
+            {
+                AccessApprovalSettingsName = name,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the settings associated with a project, folder, or organization.
+        /// This will have the effect of disabling Access Approval for the project,
+        /// folder, or organization, but only if all ancestors also have Access
+        /// Approval disabled. If Access Approval is enabled at a higher level of the
+        /// hierarchy, then Access Approval will still be enabled at this level as
+        /// the settings are inherited.
+        /// </summary>
+        /// <param name="name">
+        /// Name of the AccessApprovalSettings to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAccessApprovalSettingsAsync(AccessApprovalSettingsName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAccessApprovalSettingsAsync(new DeleteAccessApprovalSettingsMessage
+            {
+                AccessApprovalSettingsName = name,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the settings associated with a project, folder, or organization.
+        /// This will have the effect of disabling Access Approval for the project,
+        /// folder, or organization, but only if all ancestors also have Access
+        /// Approval disabled. If Access Approval is enabled at a higher level of the
+        /// hierarchy, then Access Approval will still be enabled at this level as
+        /// the settings are inherited.
+        /// </summary>
+        /// <param name="name">
+        /// Name of the AccessApprovalSettings to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAccessApprovalSettingsAsync(AccessApprovalSettingsName name, st::CancellationToken cancellationToken) =>
+            DeleteAccessApprovalSettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>AccessApprovalService client wrapper implementation, for convenient use.</summary>
@@ -858,17 +1171,17 @@ namespace Google.Cloud.AccessApproval.V1
     /// 
     /// - The API has a collection of
     /// [ApprovalRequest][google.cloud.accessapproval.v1.ApprovalRequest]
-    /// resources, named `approvalRequests/{approval_request_id}`
+    /// resources, named `approvalRequests/{approval_request}`
     /// - The API has top-level settings per Project/Folder/Organization, named
     /// `accessApprovalSettings`
     /// 
     /// The service also periodically emails a list of recipients, defined at the
     /// Project/Folder/Organization level in the accessApprovalSettings, when there
     /// is a pending ApprovalRequest for them to act on. The ApprovalRequests can
-    /// also optionally be published to a Cloud Pub/Sub topic owned by the customer
-    /// (for Beta, the Pub/Sub setup is managed manually).
+    /// also optionally be published to a Pub/Sub topic owned by the customer
+    /// (contact support if you would like to enable Pub/Sub notifications).
     /// 
-    /// ApprovalRequests can be approved or dismissed. Google personel can only
+    /// ApprovalRequests can be approved or dismissed. Google personnel can only
     /// access the indicated resource or resources if the request is approved
     /// (subject to some exclusions:
     /// https://cloud.google.com/access-approval/docs/overview#exclusions).
