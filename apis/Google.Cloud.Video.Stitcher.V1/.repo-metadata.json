@@ -1,0 +1,7 @@
+{
+  "distribution_name": "Google.Cloud.Video.Stitcher.V1",
+  "release_level": "unreleased",
+  "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Video.Stitcher.V1/latest",
+  "library_type": "GAPIC_AUTO",
+  "api_shortname": "videostitcher"
+}
