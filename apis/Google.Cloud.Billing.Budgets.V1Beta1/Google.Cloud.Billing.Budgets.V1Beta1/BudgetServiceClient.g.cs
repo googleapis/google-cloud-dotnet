@@ -317,7 +317,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1
 
         /// <summary>
         /// Creates a new budget. See
-        /// &amp;lt;a href="https://cloud.google.com/billing/quotas"&amp;gt;Quotas and limits&amp;lt;/a&amp;gt;
+        /// [Quotas and limits](https://cloud.google.com/billing/quotas)
         /// for more information on the limits of the number of budgets you can create.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -328,7 +328,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1
 
         /// <summary>
         /// Creates a new budget. See
-        /// &amp;lt;a href="https://cloud.google.com/billing/quotas"&amp;gt;Quotas and limits&amp;lt;/a&amp;gt;
+        /// [Quotas and limits](https://cloud.google.com/billing/quotas)
         /// for more information on the limits of the number of budgets you can create.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -339,7 +339,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1
 
         /// <summary>
         /// Creates a new budget. See
-        /// &amp;lt;a href="https://cloud.google.com/billing/quotas"&amp;gt;Quotas and limits&amp;lt;/a&amp;gt;
+        /// [Quotas and limits](https://cloud.google.com/billing/quotas)
         /// for more information on the limits of the number of budgets you can create.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -559,7 +559,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1
 
         /// <summary>
         /// Creates a new budget. See
-        /// &amp;lt;a href="https://cloud.google.com/billing/quotas"&amp;gt;Quotas and limits&amp;lt;/a&amp;gt;
+        /// [Quotas and limits](https://cloud.google.com/billing/quotas)
         /// for more information on the limits of the number of budgets you can create.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -573,7 +573,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1
 
         /// <summary>
         /// Creates a new budget. See
-        /// &amp;lt;a href="https://cloud.google.com/billing/quotas"&amp;gt;Quotas and limits&amp;lt;/a&amp;gt;
+        /// [Quotas and limits](https://cloud.google.com/billing/quotas)
         /// for more information on the limits of the number of budgets you can create.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>

@@ -3,7 +3,7 @@
 //     source: google/cloud/billing/budgets/v1beta1/budget_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -133,7 +133,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     {
       /// <summary>
       /// Creates a new budget. See
-      /// &lt;a href="https://cloud.google.com/billing/quotas">Quotas and limits&lt;/a>
+      /// [Quotas and limits](https://cloud.google.com/billing/quotas)
       /// for more information on the limits of the number of budgets you can create.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -238,7 +238,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
       /// <summary>
       /// Creates a new budget. See
-      /// &lt;a href="https://cloud.google.com/billing/quotas">Quotas and limits&lt;/a>
+      /// [Quotas and limits](https://cloud.google.com/billing/quotas)
       /// for more information on the limits of the number of budgets you can create.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -253,7 +253,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       }
       /// <summary>
       /// Creates a new budget. See
-      /// &lt;a href="https://cloud.google.com/billing/quotas">Quotas and limits&lt;/a>
+      /// [Quotas and limits](https://cloud.google.com/billing/quotas)
       /// for more information on the limits of the number of budgets you can create.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -266,7 +266,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       }
       /// <summary>
       /// Creates a new budget. See
-      /// &lt;a href="https://cloud.google.com/billing/quotas">Quotas and limits&lt;/a>
+      /// [Quotas and limits](https://cloud.google.com/billing/quotas)
       /// for more information on the limits of the number of budgets you can create.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -281,7 +281,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       }
       /// <summary>
       /// Creates a new budget. See
-      /// &lt;a href="https://cloud.google.com/billing/quotas">Quotas and limits&lt;/a>
+      /// [Quotas and limits](https://cloud.google.com/billing/quotas)
       /// for more information on the limits of the number of budgets you can create.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
