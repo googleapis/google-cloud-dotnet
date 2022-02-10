@@ -27,22 +27,23 @@ namespace Google.Cloud.AccessApproval.V1 {
             "CjNnb29nbGUvY2xvdWQvYWNjZXNzYXBwcm92YWwvdjEvYWNjZXNzYXBwcm92",
             "YWwucHJvdG8SHmdvb2dsZS5jbG91ZC5hY2Nlc3NhcHByb3ZhbC52MRocZ29v",
             "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQu",
-            "cHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aG2dvb2ds",
-            "ZS9wcm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxk",
-            "X21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i",
-            "YAoPQWNjZXNzTG9jYXRpb25zEiAKGHByaW5jaXBhbF9vZmZpY2VfY291bnRy",
-            "eRgBIAEoCRIrCiNwcmluY2lwYWxfcGh5c2ljYWxfbG9jYXRpb25fY291bnRy",
-            "eRgCIAEoCSLYAQoMQWNjZXNzUmVhc29uEj8KBHR5cGUYASABKA4yMS5nb29n",
-            "bGUuY2xvdWQuYWNjZXNzYXBwcm92YWwudjEuQWNjZXNzUmVhc29uLlR5cGUS",
-            "DgoGZGV0YWlsGAIgASgJIncKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAA",
-            "Eh4KGkNVU1RPTUVSX0lOSVRJQVRFRF9TVVBQT1JUEAESHAoYR09PR0xFX0lO",
-            "SVRJQVRFRF9TRVJWSUNFEAISGwoXR09PR0xFX0lOSVRJQVRFRF9SRVZJRVcQ",
-            "AyJ0Cg9BcHByb3ZlRGVjaXNpb24SMAoMYXBwcm92ZV90aW1lGAEgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgtleHBpcmVfdGltZRgCIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiQwoPRGlzbWlzc0RlY2lz",
-            "aW9uEjAKDGRpc21pc3NfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXAiMgoSUmVzb3VyY2VQcm9wZXJ0aWVzEhwKFGV4Y2x1ZGVzX2Rl",
-            "c2NlbmRhbnRzGAEgASgIIrEECg9BcHByb3ZhbFJlcXVlc3QSDAoEbmFtZRgB",
+            "cHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2ds",
+            "ZS9hcGkvcmVzb3VyY2UucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5w",
+            "cm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2ds",
+            "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iYAoPQWNjZXNzTG9jYXRpb25z",
+            "EiAKGHByaW5jaXBhbF9vZmZpY2VfY291bnRyeRgBIAEoCRIrCiNwcmluY2lw",
+            "YWxfcGh5c2ljYWxfbG9jYXRpb25fY291bnRyeRgCIAEoCSLYAQoMQWNjZXNz",
+            "UmVhc29uEj8KBHR5cGUYASABKA4yMS5nb29nbGUuY2xvdWQuYWNjZXNzYXBw",
+            "cm92YWwudjEuQWNjZXNzUmVhc29uLlR5cGUSDgoGZGV0YWlsGAIgASgJIncK",
+            "BFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEh4KGkNVU1RPTUVSX0lOSVRJ",
+            "QVRFRF9TVVBQT1JUEAESHAoYR09PR0xFX0lOSVRJQVRFRF9TRVJWSUNFEAIS",
+            "GwoXR09PR0xFX0lOSVRJQVRFRF9SRVZJRVcQAyJ0Cg9BcHByb3ZlRGVjaXNp",
+            "b24SMAoMYXBwcm92ZV90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcBIvCgtleHBpcmVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXAiVQoPRGlzbWlzc0RlY2lzaW9uEjAKDGRpc21pc3NfdGlt",
+            "ZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEAoIaW1wbGlj",
+            "aXQYAiABKAgiMgoSUmVzb3VyY2VQcm9wZXJ0aWVzEhwKFGV4Y2x1ZGVzX2Rl",
+            "c2NlbmRhbnRzGAEgASgIIpcGCg9BcHByb3ZhbFJlcXVlc3QSDAoEbmFtZRgB",
             "IAEoCRIfChdyZXF1ZXN0ZWRfcmVzb3VyY2VfbmFtZRgCIAEoCRJZCh1yZXF1",
             "ZXN0ZWRfcmVzb3VyY2VfcHJvcGVydGllcxgJIAEoCzIyLmdvb2dsZS5jbG91",
             "ZC5hY2Nlc3NhcHByb3ZhbC52MS5SZXNvdXJjZVByb3BlcnRpZXMSRgoQcmVx",
@@ -54,95 +55,113 @@ namespace Google.Cloud.AccessApproval.V1 {
             "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASQgoHYXBwcm92ZRgHIAEoCzIv",
             "Lmdvb2dsZS5jbG91ZC5hY2Nlc3NhcHByb3ZhbC52MS5BcHByb3ZlRGVjaXNp",
             "b25IABJCCgdkaXNtaXNzGAggASgLMi8uZ29vZ2xlLmNsb3VkLmFjY2Vzc2Fw",
-            "cHJvdmFsLnYxLkRpc21pc3NEZWNpc2lvbkgAQgoKCGRlY2lzaW9uInMKD0Vu",
-            "cm9sbGVkU2VydmljZRIVCg1jbG91ZF9wcm9kdWN0GAEgASgJEkkKEGVucm9s",
-            "bG1lbnRfbGV2ZWwYAiABKA4yLy5nb29nbGUuY2xvdWQuYWNjZXNzYXBwcm92",
-            "YWwudjEuRW5yb2xsbWVudExldmVsIq8BChZBY2Nlc3NBcHByb3ZhbFNldHRp",
-            "bmdzEgwKBG5hbWUYASABKAkSGwoTbm90aWZpY2F0aW9uX2VtYWlscxgCIAMo",
-            "CRJKChFlbnJvbGxlZF9zZXJ2aWNlcxgDIAMoCzIvLmdvb2dsZS5jbG91ZC5h",
-            "Y2Nlc3NhcHByb3ZhbC52MS5FbnJvbGxlZFNlcnZpY2USHgoRZW5yb2xsZWRf",
-            "YW5jZXN0b3IYBCABKAhCA+BBAyJkChtMaXN0QXBwcm92YWxSZXF1ZXN0c01l",
-            "c3NhZ2USDgoGcGFyZW50GAEgASgJEg4KBmZpbHRlchgCIAEoCRIRCglwYWdl",
+            "cHJvdmFsLnYxLkRpc21pc3NEZWNpc2lvbkgAOuMB6kHfAQotYWNjZXNzYXBw",
+            "cm92YWwuZ29vZ2xlYXBpcy5jb20vQXBwcm92YWxSZXF1ZXN0EjZwcm9qZWN0",
+            "cy97cHJvamVjdH0vYXBwcm92YWxSZXF1ZXN0cy97YXBwcm92YWxfcmVxdWVz",
+            "dH0SNGZvbGRlcnMve2ZvbGRlcn0vYXBwcm92YWxSZXF1ZXN0cy97YXBwcm92",
+            "YWxfcmVxdWVzdH0SQG9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vYXBw",
+            "cm92YWxSZXF1ZXN0cy97YXBwcm92YWxfcmVxdWVzdH1CCgoIZGVjaXNpb24i",
+            "cwoPRW5yb2xsZWRTZXJ2aWNlEhUKDWNsb3VkX3Byb2R1Y3QYASABKAkSSQoQ",
+            "ZW5yb2xsbWVudF9sZXZlbBgCIAEoDjIvLmdvb2dsZS5jbG91ZC5hY2Nlc3Nh",
+            "cHByb3ZhbC52MS5FbnJvbGxtZW50TGV2ZWwisAMKFkFjY2Vzc0FwcHJvdmFs",
+            "U2V0dGluZ3MSRwoEbmFtZRgBIAEoCUI5+kE2CjRhY2Nlc3NhcHByb3ZhbC5n",
+            "b29nbGVhcGlzLmNvbS9BY2Nlc3NBcHByb3ZhbFNldHRpbmdzEhsKE25vdGlm",
+            "aWNhdGlvbl9lbWFpbHMYAiADKAkSSgoRZW5yb2xsZWRfc2VydmljZXMYAyAD",
+            "KAsyLy5nb29nbGUuY2xvdWQuYWNjZXNzYXBwcm92YWwudjEuRW5yb2xsZWRT",
+            "ZXJ2aWNlEh4KEWVucm9sbGVkX2FuY2VzdG9yGAQgASgIQgPgQQM6wwHqQb8B",
+            "CjRhY2Nlc3NhcHByb3ZhbC5nb29nbGVhcGlzLmNvbS9BY2Nlc3NBcHByb3Zh",
+            "bFNldHRpbmdzEilwcm9qZWN0cy97cHJvamVjdH0vYWNjZXNzQXBwcm92YWxT",
+            "ZXR0aW5ncxInZm9sZGVycy97Zm9sZGVyfS9hY2Nlc3NBcHByb3ZhbFNldHRp",
+            "bmdzEjNvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2FjY2Vzc0FwcHJv",
+            "dmFsU2V0dGluZ3MimAEKG0xpc3RBcHByb3ZhbFJlcXVlc3RzTWVzc2FnZRJC",
+            "CgZwYXJlbnQYASABKAlCMvpBLxItYWNjZXNzYXBwcm92YWwuZ29vZ2xlYXBp",
+            "cy5jb20vQXBwcm92YWxSZXF1ZXN0Eg4KBmZpbHRlchgCIAEoCRIRCglwYWdl",
             "X3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEoCSKDAQocTGlzdEFwcHJv",
             "dmFsUmVxdWVzdHNSZXNwb25zZRJKChFhcHByb3ZhbF9yZXF1ZXN0cxgBIAMo",
             "CzIvLmdvb2dsZS5jbG91ZC5hY2Nlc3NhcHByb3ZhbC52MS5BcHByb3ZhbFJl",
-            "cXVlc3QSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIikKGUdldEFwcHJvdmFs",
-            "UmVxdWVzdE1lc3NhZ2USDAoEbmFtZRgBIAEoCSJeCh1BcHByb3ZlQXBwcm92",
-            "YWxSZXF1ZXN0TWVzc2FnZRIMCgRuYW1lGAEgASgJEi8KC2V4cGlyZV90aW1l",
-            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCItCh1EaXNtaXNz",
-            "QXBwcm92YWxSZXF1ZXN0TWVzc2FnZRIMCgRuYW1lGAEgASgJIjAKIEdldEFj",
-            "Y2Vzc0FwcHJvdmFsU2V0dGluZ3NNZXNzYWdlEgwKBG5hbWUYASABKAkioAEK",
-            "I1VwZGF0ZUFjY2Vzc0FwcHJvdmFsU2V0dGluZ3NNZXNzYWdlEkgKCHNldHRp",
-            "bmdzGAEgASgLMjYuZ29vZ2xlLmNsb3VkLmFjY2Vzc2FwcHJvdmFsLnYxLkFj",
-            "Y2Vzc0FwcHJvdmFsU2V0dGluZ3MSLwoLdXBkYXRlX21hc2sYAiABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuRmllbGRNYXNrIjMKI0RlbGV0ZUFjY2Vzc0FwcHJv",
-            "dmFsU2V0dGluZ3NNZXNzYWdlEgwKBG5hbWUYASABKAkqQgoPRW5yb2xsbWVu",
-            "dExldmVsEiAKHEVOUk9MTE1FTlRfTEVWRUxfVU5TUEVDSUZJRUQQABINCglC",
-            "TE9DS19BTEwQATKIEgoOQWNjZXNzQXBwcm92YWwSqgIKFExpc3RBcHByb3Zh",
-            "bFJlcXVlc3RzEjsuZ29vZ2xlLmNsb3VkLmFjY2Vzc2FwcHJvdmFsLnYxLkxp",
-            "c3RBcHByb3ZhbFJlcXVlc3RzTWVzc2FnZRo8Lmdvb2dsZS5jbG91ZC5hY2Nl",
-            "c3NhcHByb3ZhbC52MS5MaXN0QXBwcm92YWxSZXF1ZXN0c1Jlc3BvbnNlIpYB",
-            "gtPkkwKGARIoL3YxL3twYXJlbnQ9cHJvamVjdHMvKn0vYXBwcm92YWxSZXF1",
-            "ZXN0c1opEicvdjEve3BhcmVudD1mb2xkZXJzLyp9L2FwcHJvdmFsUmVxdWVz",
-            "dHNaLxItL3YxL3twYXJlbnQ9b3JnYW5pemF0aW9ucy8qfS9hcHByb3ZhbFJl",
-            "cXVlc3Rz2kEGcGFyZW50EpcCChJHZXRBcHByb3ZhbFJlcXVlc3QSOS5nb29n",
-            "bGUuY2xvdWQuYWNjZXNzYXBwcm92YWwudjEuR2V0QXBwcm92YWxSZXF1ZXN0",
-            "TWVzc2FnZRovLmdvb2dsZS5jbG91ZC5hY2Nlc3NhcHByb3ZhbC52MS5BcHBy",
-            "b3ZhbFJlcXVlc3QilAGC0+STAoYBEigvdjEve25hbWU9cHJvamVjdHMvKi9h",
-            "cHByb3ZhbFJlcXVlc3RzLyp9WikSJy92MS97bmFtZT1mb2xkZXJzLyovYXBw",
-            "cm92YWxSZXF1ZXN0cy8qfVovEi0vdjEve25hbWU9b3JnYW5pemF0aW9ucy8q",
-            "L2FwcHJvdmFsUmVxdWVzdHMvKn3aQQRuYW1lErkCChZBcHByb3ZlQXBwcm92",
-            "YWxSZXF1ZXN0Ej0uZ29vZ2xlLmNsb3VkLmFjY2Vzc2FwcHJvdmFsLnYxLkFw",
-            "cHJvdmVBcHByb3ZhbFJlcXVlc3RNZXNzYWdlGi8uZ29vZ2xlLmNsb3VkLmFj",
-            "Y2Vzc2FwcHJvdmFsLnYxLkFwcHJvdmFsUmVxdWVzdCKuAYLT5JMCpwEiMC92",
-            "MS97bmFtZT1wcm9qZWN0cy8qL2FwcHJvdmFsUmVxdWVzdHMvKn06YXBwcm92",
-            "ZToBKlo0Ii8vdjEve25hbWU9Zm9sZGVycy8qL2FwcHJvdmFsUmVxdWVzdHMv",
-            "Kn06YXBwcm92ZToBKlo6IjUvdjEve25hbWU9b3JnYW5pemF0aW9ucy8qL2Fw",
-            "cHJvdmFsUmVxdWVzdHMvKn06YXBwcm92ZToBKhK5AgoWRGlzbWlzc0FwcHJv",
-            "dmFsUmVxdWVzdBI9Lmdvb2dsZS5jbG91ZC5hY2Nlc3NhcHByb3ZhbC52MS5E",
-            "aXNtaXNzQXBwcm92YWxSZXF1ZXN0TWVzc2FnZRovLmdvb2dsZS5jbG91ZC5h",
-            "Y2Nlc3NhcHByb3ZhbC52MS5BcHByb3ZhbFJlcXVlc3QirgGC0+STAqcBIjAv",
-            "djEve25hbWU9cHJvamVjdHMvKi9hcHByb3ZhbFJlcXVlc3RzLyp9OmRpc21p",
-            "c3M6ASpaNCIvL3YxL3tuYW1lPWZvbGRlcnMvKi9hcHByb3ZhbFJlcXVlc3Rz",
-            "Lyp9OmRpc21pc3M6ASpaOiI1L3YxL3tuYW1lPW9yZ2FuaXphdGlvbnMvKi9h",
-            "cHByb3ZhbFJlcXVlc3RzLyp9OmRpc21pc3M6ASoSuAIKGUdldEFjY2Vzc0Fw",
-            "cHJvdmFsU2V0dGluZ3MSQC5nb29nbGUuY2xvdWQuYWNjZXNzYXBwcm92YWwu",
-            "djEuR2V0QWNjZXNzQXBwcm92YWxTZXR0aW5nc01lc3NhZ2UaNi5nb29nbGUu",
-            "Y2xvdWQuYWNjZXNzYXBwcm92YWwudjEuQWNjZXNzQXBwcm92YWxTZXR0aW5n",
-            "cyKgAYLT5JMCkgESLC92MS97bmFtZT1wcm9qZWN0cy8qL2FjY2Vzc0FwcHJv",
-            "dmFsU2V0dGluZ3N9Wi0SKy92MS97bmFtZT1mb2xkZXJzLyovYWNjZXNzQXBw",
-            "cm92YWxTZXR0aW5nc31aMxIxL3YxL3tuYW1lPW9yZ2FuaXphdGlvbnMvKi9h",
-            "Y2Nlc3NBcHByb3ZhbFNldHRpbmdzfdpBBG5hbWUShwMKHFVwZGF0ZUFjY2Vz",
-            "c0FwcHJvdmFsU2V0dGluZ3MSQy5nb29nbGUuY2xvdWQuYWNjZXNzYXBwcm92",
-            "YWwudjEuVXBkYXRlQWNjZXNzQXBwcm92YWxTZXR0aW5nc01lc3NhZ2UaNi5n",
-            "b29nbGUuY2xvdWQuYWNjZXNzYXBwcm92YWwudjEuQWNjZXNzQXBwcm92YWxT",
-            "ZXR0aW5ncyLpAYLT5JMCywEyNS92MS97c2V0dGluZ3MubmFtZT1wcm9qZWN0",
-            "cy8qL2FjY2Vzc0FwcHJvdmFsU2V0dGluZ3N9OghzZXR0aW5nc1pAMjQvdjEv",
-            "e3NldHRpbmdzLm5hbWU9Zm9sZGVycy8qL2FjY2Vzc0FwcHJvdmFsU2V0dGlu",
-            "Z3N9OghzZXR0aW5nc1pGMjovdjEve3NldHRpbmdzLm5hbWU9b3JnYW5pemF0",
-            "aW9ucy8qL2FjY2Vzc0FwcHJvdmFsU2V0dGluZ3N9OghzZXR0aW5nc9pBFHNl",
-            "dHRpbmdzLHVwZGF0ZV9tYXNrEp4CChxEZWxldGVBY2Nlc3NBcHByb3ZhbFNl",
-            "dHRpbmdzEkMuZ29vZ2xlLmNsb3VkLmFjY2Vzc2FwcHJvdmFsLnYxLkRlbGV0",
-            "ZUFjY2Vzc0FwcHJvdmFsU2V0dGluZ3NNZXNzYWdlGhYuZ29vZ2xlLnByb3Rv",
-            "YnVmLkVtcHR5IqABgtPkkwKSASosL3YxL3tuYW1lPXByb2plY3RzLyovYWNj",
-            "ZXNzQXBwcm92YWxTZXR0aW5nc31aLSorL3YxL3tuYW1lPWZvbGRlcnMvKi9h",
-            "Y2Nlc3NBcHByb3ZhbFNldHRpbmdzfVozKjEvdjEve25hbWU9b3JnYW5pemF0",
-            "aW9ucy8qL2FjY2Vzc0FwcHJvdmFsU2V0dGluZ3N92kEEbmFtZRpRykEdYWNj",
-            "ZXNzYXBwcm92YWwuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29n",
-            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQu8BCiJjb20uZ29vZ2xl",
-            "LmNsb3VkLmFjY2Vzc2FwcHJvdmFsLnYxQhNBY2Nlc3NBcHByb3ZhbFByb3Rv",
-            "UAFaTGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xv",
-            "dWQvYWNjZXNzYXBwcm92YWwvdjE7YWNjZXNzYXBwcm92YWyqAh5Hb29nbGUu",
-            "Q2xvdWQuQWNjZXNzQXBwcm92YWwuVjHKAh5Hb29nbGVcQ2xvdWRcQWNjZXNz",
-            "QXBwcm92YWxcVjHqAiFHb29nbGU6OkNsb3VkOjpBY2Nlc3NBcHByb3ZhbDo6",
-            "VjFiBnByb3RvMw=="));
+            "cXVlc3QSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIl0KGUdldEFwcHJvdmFs",
+            "UmVxdWVzdE1lc3NhZ2USQAoEbmFtZRgBIAEoCUIy+kEvCi1hY2Nlc3NhcHBy",
+            "b3ZhbC5nb29nbGVhcGlzLmNvbS9BcHByb3ZhbFJlcXVlc3QikgEKHUFwcHJv",
+            "dmVBcHByb3ZhbFJlcXVlc3RNZXNzYWdlEkAKBG5hbWUYASABKAlCMvpBLwot",
+            "YWNjZXNzYXBwcm92YWwuZ29vZ2xlYXBpcy5jb20vQXBwcm92YWxSZXF1ZXN0",
+            "Ei8KC2V4cGlyZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcCJhCh1EaXNtaXNzQXBwcm92YWxSZXF1ZXN0TWVzc2FnZRJACgRuYW1l",
+            "GAEgASgJQjL6QS8KLWFjY2Vzc2FwcHJvdmFsLmdvb2dsZWFwaXMuY29tL0Fw",
+            "cHJvdmFsUmVxdWVzdCJrCiBHZXRBY2Nlc3NBcHByb3ZhbFNldHRpbmdzTWVz",
+            "c2FnZRJHCgRuYW1lGAEgASgJQjn6QTYKNGFjY2Vzc2FwcHJvdmFsLmdvb2ds",
+            "ZWFwaXMuY29tL0FjY2Vzc0FwcHJvdmFsU2V0dGluZ3MioAEKI1VwZGF0ZUFj",
+            "Y2Vzc0FwcHJvdmFsU2V0dGluZ3NNZXNzYWdlEkgKCHNldHRpbmdzGAEgASgL",
+            "MjYuZ29vZ2xlLmNsb3VkLmFjY2Vzc2FwcHJvdmFsLnYxLkFjY2Vzc0FwcHJv",
+            "dmFsU2V0dGluZ3MSLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuRmllbGRNYXNrIm4KI0RlbGV0ZUFjY2Vzc0FwcHJvdmFsU2V0dGlu",
+            "Z3NNZXNzYWdlEkcKBG5hbWUYASABKAlCOfpBNgo0YWNjZXNzYXBwcm92YWwu",
+            "Z29vZ2xlYXBpcy5jb20vQWNjZXNzQXBwcm92YWxTZXR0aW5ncypCCg9FbnJv",
+            "bGxtZW50TGV2ZWwSIAocRU5ST0xMTUVOVF9MRVZFTF9VTlNQRUNJRklFRBAA",
+            "Eg0KCUJMT0NLX0FMTBABMogSCg5BY2Nlc3NBcHByb3ZhbBKqAgoUTGlzdEFw",
+            "cHJvdmFsUmVxdWVzdHMSOy5nb29nbGUuY2xvdWQuYWNjZXNzYXBwcm92YWwu",
+            "djEuTGlzdEFwcHJvdmFsUmVxdWVzdHNNZXNzYWdlGjwuZ29vZ2xlLmNsb3Vk",
+            "LmFjY2Vzc2FwcHJvdmFsLnYxLkxpc3RBcHByb3ZhbFJlcXVlc3RzUmVzcG9u",
+            "c2UilgGC0+STAoYBEigvdjEve3BhcmVudD1wcm9qZWN0cy8qfS9hcHByb3Zh",
+            "bFJlcXVlc3RzWikSJy92MS97cGFyZW50PWZvbGRlcnMvKn0vYXBwcm92YWxS",
+            "ZXF1ZXN0c1ovEi0vdjEve3BhcmVudD1vcmdhbml6YXRpb25zLyp9L2FwcHJv",
+            "dmFsUmVxdWVzdHPaQQZwYXJlbnQSlwIKEkdldEFwcHJvdmFsUmVxdWVzdBI5",
+            "Lmdvb2dsZS5jbG91ZC5hY2Nlc3NhcHByb3ZhbC52MS5HZXRBcHByb3ZhbFJl",
+            "cXVlc3RNZXNzYWdlGi8uZ29vZ2xlLmNsb3VkLmFjY2Vzc2FwcHJvdmFsLnYx",
+            "LkFwcHJvdmFsUmVxdWVzdCKUAYLT5JMChgESKC92MS97bmFtZT1wcm9qZWN0",
+            "cy8qL2FwcHJvdmFsUmVxdWVzdHMvKn1aKRInL3YxL3tuYW1lPWZvbGRlcnMv",
+            "Ki9hcHByb3ZhbFJlcXVlc3RzLyp9Wi8SLS92MS97bmFtZT1vcmdhbml6YXRp",
+            "b25zLyovYXBwcm92YWxSZXF1ZXN0cy8qfdpBBG5hbWUSuQIKFkFwcHJvdmVB",
+            "cHByb3ZhbFJlcXVlc3QSPS5nb29nbGUuY2xvdWQuYWNjZXNzYXBwcm92YWwu",
+            "djEuQXBwcm92ZUFwcHJvdmFsUmVxdWVzdE1lc3NhZ2UaLy5nb29nbGUuY2xv",
+            "dWQuYWNjZXNzYXBwcm92YWwudjEuQXBwcm92YWxSZXF1ZXN0Iq4BgtPkkwKn",
+            "ASIwL3YxL3tuYW1lPXByb2plY3RzLyovYXBwcm92YWxSZXF1ZXN0cy8qfTph",
+            "cHByb3ZlOgEqWjQiLy92MS97bmFtZT1mb2xkZXJzLyovYXBwcm92YWxSZXF1",
+            "ZXN0cy8qfTphcHByb3ZlOgEqWjoiNS92MS97bmFtZT1vcmdhbml6YXRpb25z",
+            "LyovYXBwcm92YWxSZXF1ZXN0cy8qfTphcHByb3ZlOgEqErkCChZEaXNtaXNz",
+            "QXBwcm92YWxSZXF1ZXN0Ej0uZ29vZ2xlLmNsb3VkLmFjY2Vzc2FwcHJvdmFs",
+            "LnYxLkRpc21pc3NBcHByb3ZhbFJlcXVlc3RNZXNzYWdlGi8uZ29vZ2xlLmNs",
+            "b3VkLmFjY2Vzc2FwcHJvdmFsLnYxLkFwcHJvdmFsUmVxdWVzdCKuAYLT5JMC",
+            "pwEiMC92MS97bmFtZT1wcm9qZWN0cy8qL2FwcHJvdmFsUmVxdWVzdHMvKn06",
+            "ZGlzbWlzczoBKlo0Ii8vdjEve25hbWU9Zm9sZGVycy8qL2FwcHJvdmFsUmVx",
+            "dWVzdHMvKn06ZGlzbWlzczoBKlo6IjUvdjEve25hbWU9b3JnYW5pemF0aW9u",
+            "cy8qL2FwcHJvdmFsUmVxdWVzdHMvKn06ZGlzbWlzczoBKhK4AgoZR2V0QWNj",
+            "ZXNzQXBwcm92YWxTZXR0aW5ncxJALmdvb2dsZS5jbG91ZC5hY2Nlc3NhcHBy",
+            "b3ZhbC52MS5HZXRBY2Nlc3NBcHByb3ZhbFNldHRpbmdzTWVzc2FnZRo2Lmdv",
+            "b2dsZS5jbG91ZC5hY2Nlc3NhcHByb3ZhbC52MS5BY2Nlc3NBcHByb3ZhbFNl",
+            "dHRpbmdzIqABgtPkkwKSARIsL3YxL3tuYW1lPXByb2plY3RzLyovYWNjZXNz",
+            "QXBwcm92YWxTZXR0aW5nc31aLRIrL3YxL3tuYW1lPWZvbGRlcnMvKi9hY2Nl",
+            "c3NBcHByb3ZhbFNldHRpbmdzfVozEjEvdjEve25hbWU9b3JnYW5pemF0aW9u",
+            "cy8qL2FjY2Vzc0FwcHJvdmFsU2V0dGluZ3N92kEEbmFtZRKHAwocVXBkYXRl",
+            "QWNjZXNzQXBwcm92YWxTZXR0aW5ncxJDLmdvb2dsZS5jbG91ZC5hY2Nlc3Nh",
+            "cHByb3ZhbC52MS5VcGRhdGVBY2Nlc3NBcHByb3ZhbFNldHRpbmdzTWVzc2Fn",
+            "ZRo2Lmdvb2dsZS5jbG91ZC5hY2Nlc3NhcHByb3ZhbC52MS5BY2Nlc3NBcHBy",
+            "b3ZhbFNldHRpbmdzIukBgtPkkwLLATI1L3YxL3tzZXR0aW5ncy5uYW1lPXBy",
+            "b2plY3RzLyovYWNjZXNzQXBwcm92YWxTZXR0aW5nc306CHNldHRpbmdzWkAy",
+            "NC92MS97c2V0dGluZ3MubmFtZT1mb2xkZXJzLyovYWNjZXNzQXBwcm92YWxT",
+            "ZXR0aW5nc306CHNldHRpbmdzWkYyOi92MS97c2V0dGluZ3MubmFtZT1vcmdh",
+            "bml6YXRpb25zLyovYWNjZXNzQXBwcm92YWxTZXR0aW5nc306CHNldHRpbmdz",
+            "2kEUc2V0dGluZ3MsdXBkYXRlX21hc2sSngIKHERlbGV0ZUFjY2Vzc0FwcHJv",
+            "dmFsU2V0dGluZ3MSQy5nb29nbGUuY2xvdWQuYWNjZXNzYXBwcm92YWwudjEu",
+            "RGVsZXRlQWNjZXNzQXBwcm92YWxTZXR0aW5nc01lc3NhZ2UaFi5nb29nbGUu",
+            "cHJvdG9idWYuRW1wdHkioAGC0+STApIBKiwvdjEve25hbWU9cHJvamVjdHMv",
+            "Ki9hY2Nlc3NBcHByb3ZhbFNldHRpbmdzfVotKisvdjEve25hbWU9Zm9sZGVy",
+            "cy8qL2FjY2Vzc0FwcHJvdmFsU2V0dGluZ3N9WjMqMS92MS97bmFtZT1vcmdh",
+            "bml6YXRpb25zLyovYWNjZXNzQXBwcm92YWxTZXR0aW5nc33aQQRuYW1lGlHK",
+            "QR1hY2Nlc3NhcHByb3ZhbC5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3",
+            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C7wEKImNvbS5n",
+            "b29nbGUuY2xvdWQuYWNjZXNzYXBwcm92YWwudjFCE0FjY2Vzc0FwcHJvdmFs",
+            "UHJvdG9QAVpMZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
+            "cy9jbG91ZC9hY2Nlc3NhcHByb3ZhbC92MTthY2Nlc3NhcHByb3ZhbKoCHkdv",
+            "b2dsZS5DbG91ZC5BY2Nlc3NBcHByb3ZhbC5WMcoCHkdvb2dsZVxDbG91ZFxB",
+            "Y2Nlc3NBcHByb3ZhbFxWMeoCIUdvb2dsZTo6Q2xvdWQ6OkFjY2Vzc0FwcHJv",
+            "dmFsOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AccessApproval.V1.EnrollmentLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.AccessLocations), global::Google.Cloud.AccessApproval.V1.AccessLocations.Parser, new[]{ "PrincipalOfficeCountry", "PrincipalPhysicalLocationCountry" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.AccessReason), global::Google.Cloud.AccessApproval.V1.AccessReason.Parser, new[]{ "Type", "Detail" }, null, new[]{ typeof(global::Google.Cloud.AccessApproval.V1.AccessReason.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.ApproveDecision), global::Google.Cloud.AccessApproval.V1.ApproveDecision.Parser, new[]{ "ApproveTime", "ExpireTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.DismissDecision), global::Google.Cloud.AccessApproval.V1.DismissDecision.Parser, new[]{ "DismissTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.DismissDecision), global::Google.Cloud.AccessApproval.V1.DismissDecision.Parser, new[]{ "DismissTime", "Implicit" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.ResourceProperties), global::Google.Cloud.AccessApproval.V1.ResourceProperties.Parser, new[]{ "ExcludesDescendants" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.ApprovalRequest), global::Google.Cloud.AccessApproval.V1.ApprovalRequest.Parser, new[]{ "Name", "RequestedResourceName", "RequestedResourceProperties", "RequestedReason", "RequestedLocations", "RequestTime", "RequestedExpiration", "Approve", "Dismiss" }, new[]{ "Decision" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AccessApproval.V1.EnrolledService), global::Google.Cloud.AccessApproval.V1.EnrolledService.Parser, new[]{ "CloudProduct", "EnrollmentLevel" }, null, null, null, null),
@@ -236,14 +255,14 @@ namespace Google.Cloud.AccessApproval.V1 {
     /// of a country code.
     /// Possible Region Codes:
     ///
-    /// - ASI: Asia
-    /// - EUR: Europe
-    /// - OCE: Oceania
-    /// - AFR: Africa
-    /// - NAM: North America
-    /// - SAM: South America
-    /// - ANT: Antarctica
-    /// - ANY: Any location
+    ///   * ASI: Asia
+    ///   * EUR: Europe
+    ///   * OCE: Oceania
+    ///   * AFR: Africa
+    ///   * NAM: North America
+    ///   * SAM: South America
+    ///   * ANT: Antarctica
+    ///   * ANY: Any location
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -264,14 +283,14 @@ namespace Google.Cloud.AccessApproval.V1 {
     /// a region code instead of a country code.
     /// Possible Region Codes:
     ///
-    /// - ASI: Asia
-    /// - EUR: Europe
-    /// - OCE: Oceania
-    /// - AFR: Africa
-    /// - NAM: North America
-    /// - SAM: South America
-    /// - ANT: Antarctica
-    /// - ANY: Any location
+    ///   * ASI: Asia
+    ///   * EUR: Europe
+    ///   * OCE: Oceania
+    ///   * AFR: Africa
+    ///   * NAM: North America
+    ///   * SAM: South America
+    ///   * ANT: Antarctica
+    ///   * ANY: Any location
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -686,12 +705,12 @@ namespace Google.Cloud.AccessApproval.V1 {
         /// Customer made a request or raised an issue that required the principal to
         /// access customer data. `detail` is of the form ("#####" is the issue ID):
         ///
-        /// - "Feedback Report: #####"
-        /// - "Case Number: #####"
-        /// - "Case ID: #####"
-        /// - "E-PIN Reference: #####"
-        /// - "Google-#####"
-        /// - "T-#####"
+        ///   * "Feedback Report: #####"
+        ///   * "Case Number: #####"
+        ///   * "Case ID: #####"
+        ///   * "E-PIN Reference: #####"
+        ///   * "Google-#####"
+        ///   * "T-#####"
         /// </summary>
         [pbr::OriginalName("CUSTOMER_INITIATED_SUPPORT")] CustomerInitiatedSupport = 1,
         /// <summary>
@@ -1004,6 +1023,7 @@ namespace Google.Cloud.AccessApproval.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DismissDecision(DismissDecision other) : this() {
       dismissTime_ = other.dismissTime_ != null ? other.dismissTime_.Clone() : null;
+      implicit_ = other.implicit_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1028,6 +1048,23 @@ namespace Google.Cloud.AccessApproval.V1 {
       }
     }
 
+    /// <summary>Field number for the "implicit" field.</summary>
+    public const int ImplicitFieldNumber = 2;
+    private bool implicit_;
+    /// <summary>
+    /// This field will be true if the ApprovalRequest was implcitly dismissed
+    /// due to inaction by the access approval approvers (the request is not acted
+    /// on by the approvers before the exiration time).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Implicit {
+      get { return implicit_; }
+      set {
+        implicit_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1044,6 +1081,7 @@ namespace Google.Cloud.AccessApproval.V1 {
         return true;
       }
       if (!object.Equals(DismissTime, other.DismissTime)) return false;
+      if (Implicit != other.Implicit) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1052,6 +1090,7 @@ namespace Google.Cloud.AccessApproval.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (dismissTime_ != null) hash ^= DismissTime.GetHashCode();
+      if (Implicit != false) hash ^= Implicit.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1074,6 +1113,10 @@ namespace Google.Cloud.AccessApproval.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(DismissTime);
       }
+      if (Implicit != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Implicit);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1088,6 +1131,10 @@ namespace Google.Cloud.AccessApproval.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(DismissTime);
       }
+      if (Implicit != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Implicit);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1100,6 +1147,9 @@ namespace Google.Cloud.AccessApproval.V1 {
       int size = 0;
       if (dismissTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DismissTime);
+      }
+      if (Implicit != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1118,6 +1168,9 @@ namespace Google.Cloud.AccessApproval.V1 {
           DismissTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         DismissTime.MergeFrom(other.DismissTime);
+      }
+      if (other.Implicit != false) {
+        Implicit = other.Implicit;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1141,6 +1194,10 @@ namespace Google.Cloud.AccessApproval.V1 {
             input.ReadMessage(DismissTime);
             break;
           }
+          case 16: {
+            Implicit = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1161,6 +1218,10 @@ namespace Google.Cloud.AccessApproval.V1 {
               DismissTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(DismissTime);
+            break;
+          }
+          case 16: {
+            Implicit = input.ReadBool();
             break;
           }
         }
@@ -1433,7 +1494,7 @@ namespace Google.Cloud.AccessApproval.V1 {
     private string name_ = "";
     /// <summary>
     /// The resource name of the request. Format is
-    /// "{projects|folders|organizations}/{id}/approvalRequests/{approval_request_id}".
+    /// "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2048,16 +2109,61 @@ namespace Google.Cloud.AccessApproval.V1 {
     /// The product for which Access Approval will be enrolled. Allowed values are
     /// listed below (case-sensitive):
     ///
-    /// - all
-    /// - appengine.googleapis.com
-    /// - bigquery.googleapis.com
-    /// - bigtable.googleapis.com
-    /// - cloudkms.googleapis.com
-    /// - compute.googleapis.com
-    /// - dataflow.googleapis.com
-    /// - iam.googleapis.com
-    /// - pubsub.googleapis.com
-    /// - storage.googleapis.com
+    ///   * all
+    ///   * GA
+    ///   * App Engine
+    ///   * BigQuery
+    ///   * Cloud Bigtable
+    ///   * Cloud Key Management Service
+    ///   * Compute Engine
+    ///   * Cloud Dataflow
+    ///   * Cloud DLP
+    ///   * Cloud EKM
+    ///   * Cloud HSM
+    ///   * Cloud Identity and Access Management
+    ///   * Cloud Logging
+    ///   * Cloud Pub/Sub
+    ///   * Cloud Spanner
+    ///   * Cloud SQL
+    ///   * Cloud Storage
+    ///   * Google Kubernetes Engine
+    ///   * Organization Policy Serivice
+    ///   * Persistent Disk
+    ///   * Resource Manager
+    ///   * Speaker ID
+    ///
+    /// Note: These values are supported as input for legacy purposes, but will not
+    /// be returned from the API.
+    ///
+    ///   * all
+    ///   * ga-only
+    ///   * appengine.googleapis.com
+    ///   * bigquery.googleapis.com
+    ///   * bigtable.googleapis.com
+    ///   * container.googleapis.com
+    ///   * cloudkms.googleapis.com
+    ///   * cloudresourcemanager.googleapis.com
+    ///   * cloudsql.googleapis.com
+    ///   * compute.googleapis.com
+    ///   * dataflow.googleapis.com
+    ///   * dlp.googleapis.com
+    ///   * iam.googleapis.com
+    ///   * logging.googleapis.com
+    ///   * orgpolicy.googleapis.com
+    ///   * pubsub.googleapis.com
+    ///   * spanner.googleapis.com
+    ///   * speakerid.googleapis.com
+    ///   * storage.googleapis.com
+    ///
+    /// Calls to UpdateAccessApprovalSettings using 'all' or any of the
+    /// XXX.googleapis.com will be translated to the associated product name
+    /// ('all', 'App Engine', etc.).
+    ///
+    /// Note: 'all' will enroll the resource in all products supported at both 'GA'
+    /// and 'Preview' levels.
+    ///
+    /// More information about levels of support is available at
+    /// https://cloud.google.com/access-approval/docs/supported-services
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2296,9 +2402,9 @@ namespace Google.Cloud.AccessApproval.V1 {
     /// <summary>
     /// The resource name of the settings. Format is one of:
     ///
-    /// - "projects/{project_id}/accessApprovalSettings"
-    /// - "folders/{folder_id}/accessApprovalSettings"
-    /// - "organizations/{organization_id}/accessApprovalSettings"
+    ///   * "projects/{project}/accessApprovalSettings"
+    ///   * "folders/{folder}/accessApprovalSettings"
+    ///   * "organizations/{organization}/accessApprovalSettings"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2355,7 +2461,7 @@ namespace Google.Cloud.AccessApproval.V1 {
     private bool enrolledAncestor_;
     /// <summary>
     /// Output only. This field is read only (not settable via
-    /// UpdateAccessAccessApprovalSettings method). If the field is true, that
+    /// UpdateAccessApprovalSettings method). If the field is true, that
     /// indicates that at least one service is enrolled for Access Approval in one
     /// or more ancestors of the Project or Folder (this field will always be
     /// unset for the organization since organizations do not have ancestors).
@@ -2608,8 +2714,8 @@ namespace Google.Cloud.AccessApproval.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// The parent resource. This may be "projects/{project_id}",
-    /// "folders/{folder_id}", or "organizations/{organization_id}".
+    /// The parent resource. This may be "projects/{project}",
+    /// "folders/{folder}", or "organizations/{organization}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2627,11 +2733,15 @@ namespace Google.Cloud.AccessApproval.V1 {
     /// A filter on the type of approval requests to retrieve. Must be one of the
     /// following values:
     ///
-    /// - [not set]: Requests that are pending or have active approvals.
-    /// - ALL: All requests.
-    /// - PENDING: Only pending requests.
-    /// - ACTIVE: Only active (i.e. currently approved) requests.
-    /// - DISMISSED: Only dismissed (including expired) requests.
+    ///   * [not set]: Requests that are pending or have active approvals.
+    ///   * ALL: All requests.
+    ///   * PENDING: Only pending requests.
+    ///   * ACTIVE: Only active (i.e. currently approved) requests.
+    ///   * DISMISSED: Only requests that have been dismissed, or requests that
+    ///     are not approved and past expiration.
+    ///   * EXPIRED: Only requests that have been approved, and the approval has
+    ///     expired.
+    ///   * HISTORY: Active, dismissed and expired requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3152,7 +3262,9 @@ namespace Google.Cloud.AccessApproval.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Name of the approval request to retrieve.
+    /// The name of the approval request to retrieve.
+    /// Format:
+    /// "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3786,7 +3898,8 @@ namespace Google.Cloud.AccessApproval.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Name of the AccessApprovalSettings to retrieve.
+    /// The name of the AccessApprovalSettings to retrieve.
+    /// Format: "{projects|folders|organizations}/{id}/accessApprovalSettings"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

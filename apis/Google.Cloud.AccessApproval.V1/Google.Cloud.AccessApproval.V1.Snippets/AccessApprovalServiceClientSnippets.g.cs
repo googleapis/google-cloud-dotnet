@@ -17,6 +17,7 @@
 namespace Google.Cloud.AccessApproval.V1.Snippets
 {
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
@@ -34,7 +35,7 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             // Initialize request argument(s)
             ListApprovalRequestsMessage request = new ListApprovalRequestsMessage
             {
-                Parent = "",
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Filter = "",
             };
             // Make the request
@@ -83,7 +84,7 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             // Initialize request argument(s)
             ListApprovalRequestsMessage request = new ListApprovalRequestsMessage
             {
-                Parent = "",
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Filter = "",
             };
             // Make the request
@@ -130,7 +131,7 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             // Create client
             AccessApprovalServiceClient accessApprovalServiceClient = AccessApprovalServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "projects/[PROJECT]";
             // Make the request
             PagedEnumerable<ListApprovalRequestsResponse, ApprovalRequest> response = accessApprovalServiceClient.ListApprovalRequests(parent);
 
@@ -175,7 +176,277 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             // Create client
             AccessApprovalServiceClient accessApprovalServiceClient = await AccessApprovalServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "projects/[PROJECT]";
+            // Make the request
+            PagedAsyncEnumerable<ListApprovalRequestsResponse, ApprovalRequest> response = accessApprovalServiceClient.ListApprovalRequestsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ApprovalRequest item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListApprovalRequestsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ApprovalRequest item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ApprovalRequest> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ApprovalRequest item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListApprovalRequests</summary>
+        public void ListApprovalRequestsResourceNames1()
+        {
+            // Snippet: ListApprovalRequests(ProjectName, string, int?, CallSettings)
+            // Create client
+            AccessApprovalServiceClient accessApprovalServiceClient = AccessApprovalServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedEnumerable<ListApprovalRequestsResponse, ApprovalRequest> response = accessApprovalServiceClient.ListApprovalRequests(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ApprovalRequest item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListApprovalRequestsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ApprovalRequest item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ApprovalRequest> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ApprovalRequest item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListApprovalRequestsAsync</summary>
+        public async Task ListApprovalRequestsResourceNames1Async()
+        {
+            // Snippet: ListApprovalRequestsAsync(ProjectName, string, int?, CallSettings)
+            // Create client
+            AccessApprovalServiceClient accessApprovalServiceClient = await AccessApprovalServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedAsyncEnumerable<ListApprovalRequestsResponse, ApprovalRequest> response = accessApprovalServiceClient.ListApprovalRequestsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ApprovalRequest item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListApprovalRequestsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ApprovalRequest item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ApprovalRequest> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ApprovalRequest item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListApprovalRequests</summary>
+        public void ListApprovalRequestsResourceNames2()
+        {
+            // Snippet: ListApprovalRequests(FolderName, string, int?, CallSettings)
+            // Create client
+            AccessApprovalServiceClient accessApprovalServiceClient = AccessApprovalServiceClient.Create();
+            // Initialize request argument(s)
+            FolderName parent = FolderName.FromFolder("[FOLDER]");
+            // Make the request
+            PagedEnumerable<ListApprovalRequestsResponse, ApprovalRequest> response = accessApprovalServiceClient.ListApprovalRequests(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ApprovalRequest item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListApprovalRequestsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ApprovalRequest item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ApprovalRequest> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ApprovalRequest item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListApprovalRequestsAsync</summary>
+        public async Task ListApprovalRequestsResourceNames2Async()
+        {
+            // Snippet: ListApprovalRequestsAsync(FolderName, string, int?, CallSettings)
+            // Create client
+            AccessApprovalServiceClient accessApprovalServiceClient = await AccessApprovalServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FolderName parent = FolderName.FromFolder("[FOLDER]");
+            // Make the request
+            PagedAsyncEnumerable<ListApprovalRequestsResponse, ApprovalRequest> response = accessApprovalServiceClient.ListApprovalRequestsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ApprovalRequest item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListApprovalRequestsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ApprovalRequest item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ApprovalRequest> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ApprovalRequest item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListApprovalRequests</summary>
+        public void ListApprovalRequestsResourceNames3()
+        {
+            // Snippet: ListApprovalRequests(OrganizationName, string, int?, CallSettings)
+            // Create client
+            AccessApprovalServiceClient accessApprovalServiceClient = AccessApprovalServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedEnumerable<ListApprovalRequestsResponse, ApprovalRequest> response = accessApprovalServiceClient.ListApprovalRequests(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ApprovalRequest item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListApprovalRequestsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ApprovalRequest item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ApprovalRequest> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ApprovalRequest item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListApprovalRequestsAsync</summary>
+        public async Task ListApprovalRequestsResourceNames3Async()
+        {
+            // Snippet: ListApprovalRequestsAsync(OrganizationName, string, int?, CallSettings)
+            // Create client
+            AccessApprovalServiceClient accessApprovalServiceClient = await AccessApprovalServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
             // Make the request
             PagedAsyncEnumerable<ListApprovalRequestsResponse, ApprovalRequest> response = accessApprovalServiceClient.ListApprovalRequestsAsync(parent);
 
@@ -220,7 +491,10 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             // Create client
             AccessApprovalServiceClient accessApprovalServiceClient = AccessApprovalServiceClient.Create();
             // Initialize request argument(s)
-            GetApprovalRequestMessage request = new GetApprovalRequestMessage { Name = "", };
+            GetApprovalRequestMessage request = new GetApprovalRequestMessage
+            {
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
+            };
             // Make the request
             ApprovalRequest response = accessApprovalServiceClient.GetApprovalRequest(request);
             // End snippet
@@ -234,7 +508,10 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             // Create client
             AccessApprovalServiceClient accessApprovalServiceClient = await AccessApprovalServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetApprovalRequestMessage request = new GetApprovalRequestMessage { Name = "", };
+            GetApprovalRequestMessage request = new GetApprovalRequestMessage
+            {
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
+            };
             // Make the request
             ApprovalRequest response = await accessApprovalServiceClient.GetApprovalRequestAsync(request);
             // End snippet
@@ -247,7 +524,7 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             // Create client
             AccessApprovalServiceClient accessApprovalServiceClient = AccessApprovalServiceClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/approvalRequests/[APPROVAL_REQUEST]";
             // Make the request
             ApprovalRequest response = accessApprovalServiceClient.GetApprovalRequest(name);
             // End snippet
@@ -261,7 +538,34 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             // Create client
             AccessApprovalServiceClient accessApprovalServiceClient = await AccessApprovalServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/approvalRequests/[APPROVAL_REQUEST]";
+            // Make the request
+            ApprovalRequest response = await accessApprovalServiceClient.GetApprovalRequestAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetApprovalRequest</summary>
+        public void GetApprovalRequestResourceNames()
+        {
+            // Snippet: GetApprovalRequest(ApprovalRequestName, CallSettings)
+            // Create client
+            AccessApprovalServiceClient accessApprovalServiceClient = AccessApprovalServiceClient.Create();
+            // Initialize request argument(s)
+            ApprovalRequestName name = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]");
+            // Make the request
+            ApprovalRequest response = accessApprovalServiceClient.GetApprovalRequest(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetApprovalRequestAsync</summary>
+        public async Task GetApprovalRequestResourceNamesAsync()
+        {
+            // Snippet: GetApprovalRequestAsync(ApprovalRequestName, CallSettings)
+            // Additional: GetApprovalRequestAsync(ApprovalRequestName, CancellationToken)
+            // Create client
+            AccessApprovalServiceClient accessApprovalServiceClient = await AccessApprovalServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ApprovalRequestName name = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]");
             // Make the request
             ApprovalRequest response = await accessApprovalServiceClient.GetApprovalRequestAsync(name);
             // End snippet
@@ -276,7 +580,7 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             // Initialize request argument(s)
             ApproveApprovalRequestMessage request = new ApproveApprovalRequestMessage
             {
-                Name = "",
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
                 ExpireTime = new Timestamp(),
             };
             // Make the request
@@ -294,7 +598,7 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             // Initialize request argument(s)
             ApproveApprovalRequestMessage request = new ApproveApprovalRequestMessage
             {
-                Name = "",
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
                 ExpireTime = new Timestamp(),
             };
             // Make the request
@@ -309,7 +613,10 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             // Create client
             AccessApprovalServiceClient accessApprovalServiceClient = AccessApprovalServiceClient.Create();
             // Initialize request argument(s)
-            DismissApprovalRequestMessage request = new DismissApprovalRequestMessage { Name = "", };
+            DismissApprovalRequestMessage request = new DismissApprovalRequestMessage
+            {
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
+            };
             // Make the request
             ApprovalRequest response = accessApprovalServiceClient.DismissApprovalRequest(request);
             // End snippet
@@ -323,7 +630,10 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             // Create client
             AccessApprovalServiceClient accessApprovalServiceClient = await AccessApprovalServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DismissApprovalRequestMessage request = new DismissApprovalRequestMessage { Name = "", };
+            DismissApprovalRequestMessage request = new DismissApprovalRequestMessage
+            {
+                ApprovalRequestName = ApprovalRequestName.FromProjectApprovalRequest("[PROJECT]", "[APPROVAL_REQUEST]"),
+            };
             // Make the request
             ApprovalRequest response = await accessApprovalServiceClient.DismissApprovalRequestAsync(request);
             // End snippet
@@ -336,7 +646,10 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             // Create client
             AccessApprovalServiceClient accessApprovalServiceClient = AccessApprovalServiceClient.Create();
             // Initialize request argument(s)
-            GetAccessApprovalSettingsMessage request = new GetAccessApprovalSettingsMessage { Name = "", };
+            GetAccessApprovalSettingsMessage request = new GetAccessApprovalSettingsMessage
+            {
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
+            };
             // Make the request
             AccessApprovalSettings response = accessApprovalServiceClient.GetAccessApprovalSettings(request);
             // End snippet
@@ -350,7 +663,10 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             // Create client
             AccessApprovalServiceClient accessApprovalServiceClient = await AccessApprovalServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetAccessApprovalSettingsMessage request = new GetAccessApprovalSettingsMessage { Name = "", };
+            GetAccessApprovalSettingsMessage request = new GetAccessApprovalSettingsMessage
+            {
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
+            };
             // Make the request
             AccessApprovalSettings response = await accessApprovalServiceClient.GetAccessApprovalSettingsAsync(request);
             // End snippet
@@ -363,7 +679,7 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             // Create client
             AccessApprovalServiceClient accessApprovalServiceClient = AccessApprovalServiceClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/accessApprovalSettings";
             // Make the request
             AccessApprovalSettings response = accessApprovalServiceClient.GetAccessApprovalSettings(name);
             // End snippet
@@ -377,7 +693,34 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             // Create client
             AccessApprovalServiceClient accessApprovalServiceClient = await AccessApprovalServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/accessApprovalSettings";
+            // Make the request
+            AccessApprovalSettings response = await accessApprovalServiceClient.GetAccessApprovalSettingsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAccessApprovalSettings</summary>
+        public void GetAccessApprovalSettingsResourceNames()
+        {
+            // Snippet: GetAccessApprovalSettings(AccessApprovalSettingsName, CallSettings)
+            // Create client
+            AccessApprovalServiceClient accessApprovalServiceClient = AccessApprovalServiceClient.Create();
+            // Initialize request argument(s)
+            AccessApprovalSettingsName name = AccessApprovalSettingsName.FromProject("[PROJECT]");
+            // Make the request
+            AccessApprovalSettings response = accessApprovalServiceClient.GetAccessApprovalSettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAccessApprovalSettingsAsync</summary>
+        public async Task GetAccessApprovalSettingsResourceNamesAsync()
+        {
+            // Snippet: GetAccessApprovalSettingsAsync(AccessApprovalSettingsName, CallSettings)
+            // Additional: GetAccessApprovalSettingsAsync(AccessApprovalSettingsName, CancellationToken)
+            // Create client
+            AccessApprovalServiceClient accessApprovalServiceClient = await AccessApprovalServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AccessApprovalSettingsName name = AccessApprovalSettingsName.FromProject("[PROJECT]");
             // Make the request
             AccessApprovalSettings response = await accessApprovalServiceClient.GetAccessApprovalSettingsAsync(name);
             // End snippet
@@ -454,7 +797,10 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             // Create client
             AccessApprovalServiceClient accessApprovalServiceClient = AccessApprovalServiceClient.Create();
             // Initialize request argument(s)
-            DeleteAccessApprovalSettingsMessage request = new DeleteAccessApprovalSettingsMessage { Name = "", };
+            DeleteAccessApprovalSettingsMessage request = new DeleteAccessApprovalSettingsMessage
+            {
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
+            };
             // Make the request
             accessApprovalServiceClient.DeleteAccessApprovalSettings(request);
             // End snippet
@@ -468,7 +814,10 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             // Create client
             AccessApprovalServiceClient accessApprovalServiceClient = await AccessApprovalServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteAccessApprovalSettingsMessage request = new DeleteAccessApprovalSettingsMessage { Name = "", };
+            DeleteAccessApprovalSettingsMessage request = new DeleteAccessApprovalSettingsMessage
+            {
+                AccessApprovalSettingsName = AccessApprovalSettingsName.FromProject("[PROJECT]"),
+            };
             // Make the request
             await accessApprovalServiceClient.DeleteAccessApprovalSettingsAsync(request);
             // End snippet
@@ -481,7 +830,7 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             // Create client
             AccessApprovalServiceClient accessApprovalServiceClient = AccessApprovalServiceClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/accessApprovalSettings";
             // Make the request
             accessApprovalServiceClient.DeleteAccessApprovalSettings(name);
             // End snippet
@@ -495,7 +844,34 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             // Create client
             AccessApprovalServiceClient accessApprovalServiceClient = await AccessApprovalServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/accessApprovalSettings";
+            // Make the request
+            await accessApprovalServiceClient.DeleteAccessApprovalSettingsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAccessApprovalSettings</summary>
+        public void DeleteAccessApprovalSettingsResourceNames()
+        {
+            // Snippet: DeleteAccessApprovalSettings(AccessApprovalSettingsName, CallSettings)
+            // Create client
+            AccessApprovalServiceClient accessApprovalServiceClient = AccessApprovalServiceClient.Create();
+            // Initialize request argument(s)
+            AccessApprovalSettingsName name = AccessApprovalSettingsName.FromProject("[PROJECT]");
+            // Make the request
+            accessApprovalServiceClient.DeleteAccessApprovalSettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAccessApprovalSettingsAsync</summary>
+        public async Task DeleteAccessApprovalSettingsResourceNamesAsync()
+        {
+            // Snippet: DeleteAccessApprovalSettingsAsync(AccessApprovalSettingsName, CallSettings)
+            // Additional: DeleteAccessApprovalSettingsAsync(AccessApprovalSettingsName, CancellationToken)
+            // Create client
+            AccessApprovalServiceClient accessApprovalServiceClient = await AccessApprovalServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AccessApprovalSettingsName name = AccessApprovalSettingsName.FromProject("[PROJECT]");
             // Make the request
             await accessApprovalServiceClient.DeleteAccessApprovalSettingsAsync(name);
             // End snippet
