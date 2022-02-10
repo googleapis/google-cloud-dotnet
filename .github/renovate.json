@@ -168,6 +168,7 @@
     "apis/Google.Cloud.Translation.V2/Google.Cloud.Translation.V2/**",
     "apis/Google.Cloud.VMMigration.V1/Google.Cloud.VMMigration.V1/**",
     "apis/Google.Cloud.Video.LiveStream.V1/Google.Cloud.Video.LiveStream.V1/**",
+    "apis/Google.Cloud.Video.Stitcher.V1/Google.Cloud.Video.Stitcher.V1/**",
     "apis/Google.Cloud.Video.Transcoder.V1/Google.Cloud.Video.Transcoder.V1/**",
     "apis/Google.Cloud.VideoIntelligence.V1/Google.Cloud.VideoIntelligence.V1/**",
     "apis/Google.Cloud.Vision.V1/Google.Cloud.Vision.V1/**",
