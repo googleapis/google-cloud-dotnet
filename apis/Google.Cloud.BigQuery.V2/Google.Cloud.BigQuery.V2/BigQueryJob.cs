@@ -56,7 +56,7 @@ namespace Google.Cloud.BigQuery.V2
         public JobState State => EnumMap<JobState>.ToValue(Resource.Status.State);
 
         /// <summary>
-        /// The statistics of the job. This is short-hand for <c>Resource.Statistcs</c>.
+        /// The statistics of the job. This is short-hand for <c>Resource.Statistics</c>.
         /// </summary>
         public JobStatistics Statistics => Resource.Statistics;
 
