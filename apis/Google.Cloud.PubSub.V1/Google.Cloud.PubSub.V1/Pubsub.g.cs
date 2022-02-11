@@ -144,148 +144,148 @@ namespace Google.Cloud.PubSub.V1 {
             "b2RpZnlfZGVhZGxpbmVfYWNrX2lkcxgEIAMoCRIoChtzdHJlYW1fYWNrX2Rl",
             "YWRsaW5lX3NlY29uZHMYBSABKAVCA+BBAhIRCgljbGllbnRfaWQYBiABKAkS",
             "IAoYbWF4X291dHN0YW5kaW5nX21lc3NhZ2VzGAcgASgDEh0KFW1heF9vdXRz",
-            "dGFuZGluZ19ieXRlcxgIIAEoAyKrBQoVU3RyZWFtaW5nUHVsbFJlc3BvbnNl",
+            "dGFuZGluZ19ieXRlcxgIIAEoAyKyBQoVU3RyZWFtaW5nUHVsbFJlc3BvbnNl",
             "EjwKEXJlY2VpdmVkX21lc3NhZ2VzGAEgAygLMiEuZ29vZ2xlLnB1YnN1Yi52",
-            "MS5SZWNlaXZlZE1lc3NhZ2USYAoXYWNrbm93bGVnZV9jb25maXJtYXRpb24Y",
-            "AiABKAsyPy5nb29nbGUucHVic3ViLnYxLlN0cmVhbWluZ1B1bGxSZXNwb25z",
-            "ZS5BY2tub3dsZWRnZUNvbmZpcm1hdGlvbhJvCiBtb2RpZnlfYWNrX2RlYWRs",
-            "aW5lX2NvbmZpcm1hdGlvbhgDIAEoCzJFLmdvb2dsZS5wdWJzdWIudjEuU3Ry",
-            "ZWFtaW5nUHVsbFJlc3BvbnNlLk1vZGlmeUFja0RlYWRsaW5lQ29uZmlybWF0",
-            "aW9uEl8KF3N1YnNjcmlwdGlvbl9wcm9wZXJ0aWVzGAQgASgLMj4uZ29vZ2xl",
-            "LnB1YnN1Yi52MS5TdHJlYW1pbmdQdWxsUmVzcG9uc2UuU3Vic2NyaXB0aW9u",
-            "UHJvcGVydGllcxpqChdBY2tub3dsZWRnZUNvbmZpcm1hdGlvbhITCgdhY2tf",
-            "aWRzGAEgAygJQgIIARIbCg9pbnZhbGlkX2Fja19pZHMYAiADKAlCAggBEh0K",
-            "EXVub3JkZXJlZF9hY2tfaWRzGAMgAygJQgIIARpRCh1Nb2RpZnlBY2tEZWFk",
-            "bGluZUNvbmZpcm1hdGlvbhITCgdhY2tfaWRzGAEgAygJQgIIARIbCg9pbnZh",
-            "bGlkX2Fja19pZHMYAiADKAlCAggBGmEKFlN1YnNjcmlwdGlvblByb3BlcnRp",
-            "ZXMSJQodZXhhY3RseV9vbmNlX2RlbGl2ZXJ5X2VuYWJsZWQYASABKAgSIAoY",
-            "bWVzc2FnZV9vcmRlcmluZ19lbmFibGVkGAIgASgIIoMCChVDcmVhdGVTbmFw",
-            "c2hvdFJlcXVlc3QSNAoEbmFtZRgBIAEoCUIm4EEC+kEgCh5wdWJzdWIuZ29v",
-            "Z2xlYXBpcy5jb20vU25hcHNob3QSQAoMc3Vic2NyaXB0aW9uGAIgASgJQirg",
-            "QQL6QSQKInB1YnN1Yi5nb29nbGVhcGlzLmNvbS9TdWJzY3JpcHRpb24SQwoG",
-            "bGFiZWxzGAMgAygLMjMuZ29vZ2xlLnB1YnN1Yi52MS5DcmVhdGVTbmFwc2hv",
-            "dFJlcXVlc3QuTGFiZWxzRW50cnkaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEg",
-            "ASgJEg0KBXZhbHVlGAIgASgJOgI4ASKAAQoVVXBkYXRlU25hcHNob3RSZXF1",
-            "ZXN0EjEKCHNuYXBzaG90GAEgASgLMhouZ29vZ2xlLnB1YnN1Yi52MS5TbmFw",
-            "c2hvdEID4EECEjQKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLkZpZWxkTWFza0ID4EECIq8CCghTbmFwc2hvdBIMCgRuYW1lGAEgASgJ",
-            "Ei8KBXRvcGljGAIgASgJQiD6QR0KG3B1YnN1Yi5nb29nbGVhcGlzLmNvbS9U",
-            "b3BpYxIvCgtleHBpcmVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXASNgoGbGFiZWxzGAQgAygLMiYuZ29vZ2xlLnB1YnN1Yi52MS5T",
-            "bmFwc2hvdC5MYWJlbHNFbnRyeRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASAB",
-            "KAkSDQoFdmFsdWUYAiABKAk6AjgBOkzqQUkKHnB1YnN1Yi5nb29nbGVhcGlz",
-            "LmNvbS9TbmFwc2hvdBIncHJvamVjdHMve3Byb2plY3R9L3NuYXBzaG90cy97",
-            "c25hcHNob3R9Ik4KEkdldFNuYXBzaG90UmVxdWVzdBI4CghzbmFwc2hvdBgB",
-            "IAEoCUIm4EEC+kEgCh5wdWJzdWIuZ29vZ2xlYXBpcy5jb20vU25hcHNob3Qi",
-            "gwEKFExpc3RTbmFwc2hvdHNSZXF1ZXN0EkQKB3Byb2plY3QYASABKAlCM+BB",
-            "AvpBLQorY2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vUHJv",
-            "amVjdBIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJf",
-            "ChVMaXN0U25hcHNob3RzUmVzcG9uc2USLQoJc25hcHNob3RzGAEgAygLMhou",
-            "Z29vZ2xlLnB1YnN1Yi52MS5TbmFwc2hvdBIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
-            "AiABKAkiUQoVRGVsZXRlU25hcHNob3RSZXF1ZXN0EjgKCHNuYXBzaG90GAEg",
-            "ASgJQibgQQL6QSAKHnB1YnN1Yi5nb29nbGVhcGlzLmNvbS9TbmFwc2hvdCK+",
-            "AQoLU2Vla1JlcXVlc3QSQAoMc3Vic2NyaXB0aW9uGAEgASgJQirgQQL6QSQK",
-            "InB1YnN1Yi5nb29nbGVhcGlzLmNvbS9TdWJzY3JpcHRpb24SKgoEdGltZRgC",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIABI3CghzbmFwc2hv",
-            "dBgDIAEoCUIj+kEgCh5wdWJzdWIuZ29vZ2xlYXBpcy5jb20vU25hcHNob3RI",
-            "AEIICgZ0YXJnZXQiDgoMU2Vla1Jlc3BvbnNlMqMLCglQdWJsaXNoZXIScQoL",
-            "Q3JlYXRlVG9waWMSFy5nb29nbGUucHVic3ViLnYxLlRvcGljGhcuZ29vZ2xl",
-            "LnB1YnN1Yi52MS5Ub3BpYyIwgtPkkwIjGh4vdjEve25hbWU9cHJvamVjdHMv",
-            "Ki90b3BpY3MvKn06ASraQQRuYW1lEn0KC1VwZGF0ZVRvcGljEiQuZ29vZ2xl",
-            "LnB1YnN1Yi52MS5VcGRhdGVUb3BpY1JlcXVlc3QaFy5nb29nbGUucHVic3Vi",
-            "LnYxLlRvcGljIi+C0+STAikyJC92MS97dG9waWMubmFtZT1wcm9qZWN0cy8q",
-            "L3RvcGljcy8qfToBKhKTAQoHUHVibGlzaBIgLmdvb2dsZS5wdWJzdWIudjEu",
-            "UHVibGlzaFJlcXVlc3QaIS5nb29nbGUucHVic3ViLnYxLlB1Ymxpc2hSZXNw",
-            "b25zZSJDgtPkkwIsIicvdjEve3RvcGljPXByb2plY3RzLyovdG9waWNzLyp9",
-            "OnB1Ymxpc2g6ASraQQ50b3BpYyxtZXNzYWdlcxJ3CghHZXRUb3BpYxIhLmdv",
-            "b2dsZS5wdWJzdWIudjEuR2V0VG9waWNSZXF1ZXN0GhcuZ29vZ2xlLnB1YnN1",
-            "Yi52MS5Ub3BpYyIvgtPkkwIhEh8vdjEve3RvcGljPXByb2plY3RzLyovdG9w",
-            "aWNzLyp92kEFdG9waWMSigEKCkxpc3RUb3BpY3MSIy5nb29nbGUucHVic3Vi",
-            "LnYxLkxpc3RUb3BpY3NSZXF1ZXN0GiQuZ29vZ2xlLnB1YnN1Yi52MS5MaXN0",
-            "VG9waWNzUmVzcG9uc2UiMYLT5JMCIRIfL3YxL3twcm9qZWN0PXByb2plY3Rz",
-            "Lyp9L3RvcGljc9pBB3Byb2plY3QSugEKFkxpc3RUb3BpY1N1YnNjcmlwdGlv",
-            "bnMSLy5nb29nbGUucHVic3ViLnYxLkxpc3RUb3BpY1N1YnNjcmlwdGlvbnNS",
-            "ZXF1ZXN0GjAuZ29vZ2xlLnB1YnN1Yi52MS5MaXN0VG9waWNTdWJzY3JpcHRp",
-            "b25zUmVzcG9uc2UiPYLT5JMCLxItL3YxL3t0b3BpYz1wcm9qZWN0cy8qL3Rv",
-            "cGljcy8qfS9zdWJzY3JpcHRpb25z2kEFdG9waWMSqgEKEkxpc3RUb3BpY1Nu",
-            "YXBzaG90cxIrLmdvb2dsZS5wdWJzdWIudjEuTGlzdFRvcGljU25hcHNob3Rz",
-            "UmVxdWVzdBosLmdvb2dsZS5wdWJzdWIudjEuTGlzdFRvcGljU25hcHNob3Rz",
-            "UmVzcG9uc2UiOYLT5JMCKxIpL3YxL3t0b3BpYz1wcm9qZWN0cy8qL3RvcGlj",
-            "cy8qfS9zbmFwc2hvdHPaQQV0b3BpYxJ8CgtEZWxldGVUb3BpYxIkLmdvb2ds",
-            "ZS5wdWJzdWIudjEuRGVsZXRlVG9waWNSZXF1ZXN0GhYuZ29vZ2xlLnByb3Rv",
-            "YnVmLkVtcHR5Ii+C0+STAiEqHy92MS97dG9waWM9cHJvamVjdHMvKi90b3Bp",
-            "Y3MvKn3aQQV0b3BpYxKtAQoSRGV0YWNoU3Vic2NyaXB0aW9uEisuZ29vZ2xl",
-            "LnB1YnN1Yi52MS5EZXRhY2hTdWJzY3JpcHRpb25SZXF1ZXN0GiwuZ29vZ2xl",
-            "LnB1YnN1Yi52MS5EZXRhY2hTdWJzY3JpcHRpb25SZXNwb25zZSI8gtPkkwI2",
-            "IjQvdjEve3N1YnNjcmlwdGlvbj1wcm9qZWN0cy8qL3N1YnNjcmlwdGlvbnMv",
-            "Kn06ZGV0YWNoGnDKQRVwdWJzdWIuZ29vZ2xlYXBpcy5jb23SQVVodHRwczov",
-            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBz",
-            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvcHVic3ViMqAVCgpTdWJzY3Jp",
-            "YmVyErQBChJDcmVhdGVTdWJzY3JpcHRpb24SHi5nb29nbGUucHVic3ViLnYx",
-            "LlN1YnNjcmlwdGlvbhoeLmdvb2dsZS5wdWJzdWIudjEuU3Vic2NyaXB0aW9u",
-            "Il6C0+STAioaJS92MS97bmFtZT1wcm9qZWN0cy8qL3N1YnNjcmlwdGlvbnMv",
-            "Kn06ASraQStuYW1lLHRvcGljLHB1c2hfY29uZmlnLGFja19kZWFkbGluZV9z",
-            "ZWNvbmRzEqEBCg9HZXRTdWJzY3JpcHRpb24SKC5nb29nbGUucHVic3ViLnYx",
-            "LkdldFN1YnNjcmlwdGlvblJlcXVlc3QaHi5nb29nbGUucHVic3ViLnYxLlN1",
-            "YnNjcmlwdGlvbiJEgtPkkwIvEi0vdjEve3N1YnNjcmlwdGlvbj1wcm9qZWN0",
-            "cy8qL3N1YnNjcmlwdGlvbnMvKn3aQQxzdWJzY3JpcHRpb24SoAEKElVwZGF0",
-            "ZVN1YnNjcmlwdGlvbhIrLmdvb2dsZS5wdWJzdWIudjEuVXBkYXRlU3Vic2Ny",
-            "aXB0aW9uUmVxdWVzdBoeLmdvb2dsZS5wdWJzdWIudjEuU3Vic2NyaXB0aW9u",
-            "Ij2C0+STAjcyMi92MS97c3Vic2NyaXB0aW9uLm5hbWU9cHJvamVjdHMvKi9z",
-            "dWJzY3JpcHRpb25zLyp9OgEqEqYBChFMaXN0U3Vic2NyaXB0aW9ucxIqLmdv",
-            "b2dsZS5wdWJzdWIudjEuTGlzdFN1YnNjcmlwdGlvbnNSZXF1ZXN0GisuZ29v",
-            "Z2xlLnB1YnN1Yi52MS5MaXN0U3Vic2NyaXB0aW9uc1Jlc3BvbnNlIjiC0+ST",
-            "AigSJi92MS97cHJvamVjdD1wcm9qZWN0cy8qfS9zdWJzY3JpcHRpb25z2kEH",
-            "cHJvamVjdBKfAQoSRGVsZXRlU3Vic2NyaXB0aW9uEisuZ29vZ2xlLnB1YnN1",
-            "Yi52MS5EZWxldGVTdWJzY3JpcHRpb25SZXF1ZXN0GhYuZ29vZ2xlLnByb3Rv",
-            "YnVmLkVtcHR5IkSC0+STAi8qLS92MS97c3Vic2NyaXB0aW9uPXByb2plY3Rz",
-            "Lyovc3Vic2NyaXB0aW9ucy8qfdpBDHN1YnNjcmlwdGlvbhLPAQoRTW9kaWZ5",
-            "QWNrRGVhZGxpbmUSKi5nb29nbGUucHVic3ViLnYxLk1vZGlmeUFja0RlYWRs",
-            "aW5lUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJ2gtPkkwJEIj8v",
-            "djEve3N1YnNjcmlwdGlvbj1wcm9qZWN0cy8qL3N1YnNjcmlwdGlvbnMvKn06",
-            "bW9kaWZ5QWNrRGVhZGxpbmU6ASraQSlzdWJzY3JpcHRpb24sYWNrX2lkcyxh",
-            "Y2tfZGVhZGxpbmVfc2Vjb25kcxKoAQoLQWNrbm93bGVkZ2USJC5nb29nbGUu",
-            "cHVic3ViLnYxLkFja25vd2xlZGdlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1",
-            "Zi5FbXB0eSJbgtPkkwI+IjkvdjEve3N1YnNjcmlwdGlvbj1wcm9qZWN0cy8q",
-            "L3N1YnNjcmlwdGlvbnMvKn06YWNrbm93bGVkZ2U6ASraQRRzdWJzY3JpcHRp",
-            "b24sYWNrX2lkcxLQAQoEUHVsbBIdLmdvb2dsZS5wdWJzdWIudjEuUHVsbFJl",
-            "cXVlc3QaHi5nb29nbGUucHVic3ViLnYxLlB1bGxSZXNwb25zZSKIAYLT5JMC",
-            "NyIyL3YxL3tzdWJzY3JpcHRpb249cHJvamVjdHMvKi9zdWJzY3JpcHRpb25z",
-            "Lyp9OnB1bGw6ASraQSxzdWJzY3JpcHRpb24scmV0dXJuX2ltbWVkaWF0ZWx5",
-            "LG1heF9tZXNzYWdlc9pBGXN1YnNjcmlwdGlvbixtYXhfbWVzc2FnZXMSZgoN",
-            "U3RyZWFtaW5nUHVsbBImLmdvb2dsZS5wdWJzdWIudjEuU3RyZWFtaW5nUHVs",
-            "bFJlcXVlc3QaJy5nb29nbGUucHVic3ViLnYxLlN0cmVhbWluZ1B1bGxSZXNw",
-            "b25zZSIAKAEwARK7AQoQTW9kaWZ5UHVzaENvbmZpZxIpLmdvb2dsZS5wdWJz",
-            "dWIudjEuTW9kaWZ5UHVzaENvbmZpZ1JlcXVlc3QaFi5nb29nbGUucHJvdG9i",
-            "dWYuRW1wdHkiZILT5JMCQyI+L3YxL3tzdWJzY3JpcHRpb249cHJvamVjdHMv",
-            "Ki9zdWJzY3JpcHRpb25zLyp9Om1vZGlmeVB1c2hDb25maWc6ASraQRhzdWJz",
-            "Y3JpcHRpb24scHVzaF9jb25maWcSiQEKC0dldFNuYXBzaG90EiQuZ29vZ2xl",
-            "LnB1YnN1Yi52MS5HZXRTbmFwc2hvdFJlcXVlc3QaGi5nb29nbGUucHVic3Vi",
-            "LnYxLlNuYXBzaG90IjiC0+STAicSJS92MS97c25hcHNob3Q9cHJvamVjdHMv",
-            "Ki9zbmFwc2hvdHMvKn3aQQhzbmFwc2hvdBKWAQoNTGlzdFNuYXBzaG90cxIm",
-            "Lmdvb2dsZS5wdWJzdWIudjEuTGlzdFNuYXBzaG90c1JlcXVlc3QaJy5nb29n",
-            "bGUucHVic3ViLnYxLkxpc3RTbmFwc2hvdHNSZXNwb25zZSI0gtPkkwIkEiIv",
-            "djEve3Byb2plY3Q9cHJvamVjdHMvKn0vc25hcHNob3Rz2kEHcHJvamVjdBKX",
-            "AQoOQ3JlYXRlU25hcHNob3QSJy5nb29nbGUucHVic3ViLnYxLkNyZWF0ZVNu",
-            "YXBzaG90UmVxdWVzdBoaLmdvb2dsZS5wdWJzdWIudjEuU25hcHNob3QiQILT",
-            "5JMCJhohL3YxL3tuYW1lPXByb2plY3RzLyovc25hcHNob3RzLyp9OgEq2kER",
-            "bmFtZSxzdWJzY3JpcHRpb24SjAEKDlVwZGF0ZVNuYXBzaG90EicuZ29vZ2xl",
-            "LnB1YnN1Yi52MS5VcGRhdGVTbmFwc2hvdFJlcXVlc3QaGi5nb29nbGUucHVi",
-            "c3ViLnYxLlNuYXBzaG90IjWC0+STAi8yKi92MS97c25hcHNob3QubmFtZT1w",
-            "cm9qZWN0cy8qL3NuYXBzaG90cy8qfToBKhKLAQoORGVsZXRlU25hcHNob3QS",
-            "Jy5nb29nbGUucHVic3ViLnYxLkRlbGV0ZVNuYXBzaG90UmVxdWVzdBoWLmdv",
-            "b2dsZS5wcm90b2J1Zi5FbXB0eSI4gtPkkwInKiUvdjEve3NuYXBzaG90PXBy",
-            "b2plY3RzLyovc25hcHNob3RzLyp92kEIc25hcHNob3QShAEKBFNlZWsSHS5n",
-            "b29nbGUucHVic3ViLnYxLlNlZWtSZXF1ZXN0Gh4uZ29vZ2xlLnB1YnN1Yi52",
-            "MS5TZWVrUmVzcG9uc2UiPYLT5JMCNyIyL3YxL3tzdWJzY3JpcHRpb249cHJv",
-            "amVjdHMvKi9zdWJzY3JpcHRpb25zLyp9OnNlZWs6ASoacMpBFXB1YnN1Yi5n",
-            "b29nbGVhcGlzLmNvbdJBVWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
-            "dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
-            "YXV0aC9wdWJzdWJCrgEKFGNvbS5nb29nbGUucHVic3ViLnYxQgtQdWJzdWJQ",
-            "cm90b1ABWjZnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
-            "L3B1YnN1Yi92MTtwdWJzdWL4AQGqAhZHb29nbGUuQ2xvdWQuUHViU3ViLlYx",
-            "ygIWR29vZ2xlXENsb3VkXFB1YlN1YlxWMeoCGUdvb2dsZTo6Q2xvdWQ6OlB1",
-            "YlN1Yjo6VjFiBnByb3RvMw=="));
+            "MS5SZWNlaXZlZE1lc3NhZ2USYQoYYWNrbm93bGVkZ2VfY29uZmlybWF0aW9u",
+            "GAUgASgLMj8uZ29vZ2xlLnB1YnN1Yi52MS5TdHJlYW1pbmdQdWxsUmVzcG9u",
+            "c2UuQWNrbm93bGVkZ2VDb25maXJtYXRpb24SbwogbW9kaWZ5X2Fja19kZWFk",
+            "bGluZV9jb25maXJtYXRpb24YAyABKAsyRS5nb29nbGUucHVic3ViLnYxLlN0",
+            "cmVhbWluZ1B1bGxSZXNwb25zZS5Nb2RpZnlBY2tEZWFkbGluZUNvbmZpcm1h",
+            "dGlvbhJfChdzdWJzY3JpcHRpb25fcHJvcGVydGllcxgEIAEoCzI+Lmdvb2ds",
+            "ZS5wdWJzdWIudjEuU3RyZWFtaW5nUHVsbFJlc3BvbnNlLlN1YnNjcmlwdGlv",
+            "blByb3BlcnRpZXMaagoXQWNrbm93bGVkZ2VDb25maXJtYXRpb24SEwoHYWNr",
+            "X2lkcxgBIAMoCUICCAESGwoPaW52YWxpZF9hY2tfaWRzGAIgAygJQgIIARId",
+            "ChF1bm9yZGVyZWRfYWNrX2lkcxgDIAMoCUICCAEaUQodTW9kaWZ5QWNrRGVh",
+            "ZGxpbmVDb25maXJtYXRpb24SEwoHYWNrX2lkcxgBIAMoCUICCAESGwoPaW52",
+            "YWxpZF9hY2tfaWRzGAIgAygJQgIIARphChZTdWJzY3JpcHRpb25Qcm9wZXJ0",
+            "aWVzEiUKHWV4YWN0bHlfb25jZV9kZWxpdmVyeV9lbmFibGVkGAEgASgIEiAK",
+            "GG1lc3NhZ2Vfb3JkZXJpbmdfZW5hYmxlZBgCIAEoCEoECAIQAyKDAgoVQ3Jl",
+            "YXRlU25hcHNob3RSZXF1ZXN0EjQKBG5hbWUYASABKAlCJuBBAvpBIAoecHVi",
+            "c3ViLmdvb2dsZWFwaXMuY29tL1NuYXBzaG90EkAKDHN1YnNjcmlwdGlvbhgC",
+            "IAEoCUIq4EEC+kEkCiJwdWJzdWIuZ29vZ2xlYXBpcy5jb20vU3Vic2NyaXB0",
+            "aW9uEkMKBmxhYmVscxgDIAMoCzIzLmdvb2dsZS5wdWJzdWIudjEuQ3JlYXRl",
+            "U25hcHNob3RSZXF1ZXN0LkxhYmVsc0VudHJ5Gi0KC0xhYmVsc0VudHJ5EgsK",
+            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEigAEKFVVwZGF0ZVNuYXBz",
+            "aG90UmVxdWVzdBIxCghzbmFwc2hvdBgBIAEoCzIaLmdvb2dsZS5wdWJzdWIu",
+            "djEuU25hcHNob3RCA+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAiKvAgoIU25hcHNob3QSDAoEbmFt",
+            "ZRgBIAEoCRIvCgV0b3BpYxgCIAEoCUIg+kEdChtwdWJzdWIuZ29vZ2xlYXBp",
+            "cy5jb20vVG9waWMSLwoLZXhwaXJlX3RpbWUYAyABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wEjYKBmxhYmVscxgEIAMoCzImLmdvb2dsZS5wdWJz",
+            "dWIudjEuU25hcHNob3QuTGFiZWxzRW50cnkaLQoLTGFiZWxzRW50cnkSCwoD",
+            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATpM6kFJCh5wdWJzdWIuZ29v",
+            "Z2xlYXBpcy5jb20vU25hcHNob3QSJ3Byb2plY3RzL3twcm9qZWN0fS9zbmFw",
+            "c2hvdHMve3NuYXBzaG90fSJOChJHZXRTbmFwc2hvdFJlcXVlc3QSOAoIc25h",
+            "cHNob3QYASABKAlCJuBBAvpBIAoecHVic3ViLmdvb2dsZWFwaXMuY29tL1Nu",
+            "YXBzaG90IoMBChRMaXN0U25hcHNob3RzUmVxdWVzdBJECgdwcm9qZWN0GAEg",
+            "ASgJQjPgQQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMu",
+            "Y29tL1Byb2plY3QSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4Y",
+            "AyABKAkiXwoVTGlzdFNuYXBzaG90c1Jlc3BvbnNlEi0KCXNuYXBzaG90cxgB",
+            "IAMoCzIaLmdvb2dsZS5wdWJzdWIudjEuU25hcHNob3QSFwoPbmV4dF9wYWdl",
+            "X3Rva2VuGAIgASgJIlEKFURlbGV0ZVNuYXBzaG90UmVxdWVzdBI4CghzbmFw",
+            "c2hvdBgBIAEoCUIm4EEC+kEgCh5wdWJzdWIuZ29vZ2xlYXBpcy5jb20vU25h",
+            "cHNob3QivgEKC1NlZWtSZXF1ZXN0EkAKDHN1YnNjcmlwdGlvbhgBIAEoCUIq",
+            "4EEC+kEkCiJwdWJzdWIuZ29vZ2xlYXBpcy5jb20vU3Vic2NyaXB0aW9uEioK",
+            "BHRpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAASNwoI",
+            "c25hcHNob3QYAyABKAlCI/pBIAoecHVic3ViLmdvb2dsZWFwaXMuY29tL1Nu",
+            "YXBzaG90SABCCAoGdGFyZ2V0Ig4KDFNlZWtSZXNwb25zZTKjCwoJUHVibGlz",
+            "aGVyEnEKC0NyZWF0ZVRvcGljEhcuZ29vZ2xlLnB1YnN1Yi52MS5Ub3BpYxoX",
+            "Lmdvb2dsZS5wdWJzdWIudjEuVG9waWMiMILT5JMCIxoeL3YxL3tuYW1lPXBy",
+            "b2plY3RzLyovdG9waWNzLyp9OgEq2kEEbmFtZRJ9CgtVcGRhdGVUb3BpYxIk",
+            "Lmdvb2dsZS5wdWJzdWIudjEuVXBkYXRlVG9waWNSZXF1ZXN0GhcuZ29vZ2xl",
+            "LnB1YnN1Yi52MS5Ub3BpYyIvgtPkkwIpMiQvdjEve3RvcGljLm5hbWU9cHJv",
+            "amVjdHMvKi90b3BpY3MvKn06ASoSkwEKB1B1Ymxpc2gSIC5nb29nbGUucHVi",
+            "c3ViLnYxLlB1Ymxpc2hSZXF1ZXN0GiEuZ29vZ2xlLnB1YnN1Yi52MS5QdWJs",
+            "aXNoUmVzcG9uc2UiQ4LT5JMCLCInL3YxL3t0b3BpYz1wcm9qZWN0cy8qL3Rv",
+            "cGljcy8qfTpwdWJsaXNoOgEq2kEOdG9waWMsbWVzc2FnZXMSdwoIR2V0VG9w",
+            "aWMSIS5nb29nbGUucHVic3ViLnYxLkdldFRvcGljUmVxdWVzdBoXLmdvb2ds",
+            "ZS5wdWJzdWIudjEuVG9waWMiL4LT5JMCIRIfL3YxL3t0b3BpYz1wcm9qZWN0",
+            "cy8qL3RvcGljcy8qfdpBBXRvcGljEooBCgpMaXN0VG9waWNzEiMuZ29vZ2xl",
+            "LnB1YnN1Yi52MS5MaXN0VG9waWNzUmVxdWVzdBokLmdvb2dsZS5wdWJzdWIu",
+            "djEuTGlzdFRvcGljc1Jlc3BvbnNlIjGC0+STAiESHy92MS97cHJvamVjdD1w",
+            "cm9qZWN0cy8qfS90b3BpY3PaQQdwcm9qZWN0EroBChZMaXN0VG9waWNTdWJz",
+            "Y3JpcHRpb25zEi8uZ29vZ2xlLnB1YnN1Yi52MS5MaXN0VG9waWNTdWJzY3Jp",
+            "cHRpb25zUmVxdWVzdBowLmdvb2dsZS5wdWJzdWIudjEuTGlzdFRvcGljU3Vi",
+            "c2NyaXB0aW9uc1Jlc3BvbnNlIj2C0+STAi8SLS92MS97dG9waWM9cHJvamVj",
+            "dHMvKi90b3BpY3MvKn0vc3Vic2NyaXB0aW9uc9pBBXRvcGljEqoBChJMaXN0",
+            "VG9waWNTbmFwc2hvdHMSKy5nb29nbGUucHVic3ViLnYxLkxpc3RUb3BpY1Nu",
+            "YXBzaG90c1JlcXVlc3QaLC5nb29nbGUucHVic3ViLnYxLkxpc3RUb3BpY1Nu",
+            "YXBzaG90c1Jlc3BvbnNlIjmC0+STAisSKS92MS97dG9waWM9cHJvamVjdHMv",
+            "Ki90b3BpY3MvKn0vc25hcHNob3Rz2kEFdG9waWMSfAoLRGVsZXRlVG9waWMS",
+            "JC5nb29nbGUucHVic3ViLnYxLkRlbGV0ZVRvcGljUmVxdWVzdBoWLmdvb2ds",
+            "ZS5wcm90b2J1Zi5FbXB0eSIvgtPkkwIhKh8vdjEve3RvcGljPXByb2plY3Rz",
+            "LyovdG9waWNzLyp92kEFdG9waWMSrQEKEkRldGFjaFN1YnNjcmlwdGlvbhIr",
+            "Lmdvb2dsZS5wdWJzdWIudjEuRGV0YWNoU3Vic2NyaXB0aW9uUmVxdWVzdBos",
+            "Lmdvb2dsZS5wdWJzdWIudjEuRGV0YWNoU3Vic2NyaXB0aW9uUmVzcG9uc2Ui",
+            "PILT5JMCNiI0L3YxL3tzdWJzY3JpcHRpb249cHJvamVjdHMvKi9zdWJzY3Jp",
+            "cHRpb25zLyp9OmRldGFjaBpwykEVcHVic3ViLmdvb2dsZWFwaXMuY29t0kFV",
+            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9y",
+            "bSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3B1YnN1YjKgFQoK",
+            "U3Vic2NyaWJlchK0AQoSQ3JlYXRlU3Vic2NyaXB0aW9uEh4uZ29vZ2xlLnB1",
+            "YnN1Yi52MS5TdWJzY3JpcHRpb24aHi5nb29nbGUucHVic3ViLnYxLlN1YnNj",
+            "cmlwdGlvbiJegtPkkwIqGiUvdjEve25hbWU9cHJvamVjdHMvKi9zdWJzY3Jp",
+            "cHRpb25zLyp9OgEq2kErbmFtZSx0b3BpYyxwdXNoX2NvbmZpZyxhY2tfZGVh",
+            "ZGxpbmVfc2Vjb25kcxKhAQoPR2V0U3Vic2NyaXB0aW9uEiguZ29vZ2xlLnB1",
+            "YnN1Yi52MS5HZXRTdWJzY3JpcHRpb25SZXF1ZXN0Gh4uZ29vZ2xlLnB1YnN1",
+            "Yi52MS5TdWJzY3JpcHRpb24iRILT5JMCLxItL3YxL3tzdWJzY3JpcHRpb249",
+            "cHJvamVjdHMvKi9zdWJzY3JpcHRpb25zLyp92kEMc3Vic2NyaXB0aW9uEqAB",
+            "ChJVcGRhdGVTdWJzY3JpcHRpb24SKy5nb29nbGUucHVic3ViLnYxLlVwZGF0",
+            "ZVN1YnNjcmlwdGlvblJlcXVlc3QaHi5nb29nbGUucHVic3ViLnYxLlN1YnNj",
+            "cmlwdGlvbiI9gtPkkwI3MjIvdjEve3N1YnNjcmlwdGlvbi5uYW1lPXByb2pl",
+            "Y3RzLyovc3Vic2NyaXB0aW9ucy8qfToBKhKmAQoRTGlzdFN1YnNjcmlwdGlv",
+            "bnMSKi5nb29nbGUucHVic3ViLnYxLkxpc3RTdWJzY3JpcHRpb25zUmVxdWVz",
+            "dBorLmdvb2dsZS5wdWJzdWIudjEuTGlzdFN1YnNjcmlwdGlvbnNSZXNwb25z",
+            "ZSI4gtPkkwIoEiYvdjEve3Byb2plY3Q9cHJvamVjdHMvKn0vc3Vic2NyaXB0",
+            "aW9uc9pBB3Byb2plY3QSnwEKEkRlbGV0ZVN1YnNjcmlwdGlvbhIrLmdvb2ds",
+            "ZS5wdWJzdWIudjEuRGVsZXRlU3Vic2NyaXB0aW9uUmVxdWVzdBoWLmdvb2ds",
+            "ZS5wcm90b2J1Zi5FbXB0eSJEgtPkkwIvKi0vdjEve3N1YnNjcmlwdGlvbj1w",
+            "cm9qZWN0cy8qL3N1YnNjcmlwdGlvbnMvKn3aQQxzdWJzY3JpcHRpb24SzwEK",
+            "EU1vZGlmeUFja0RlYWRsaW5lEiouZ29vZ2xlLnB1YnN1Yi52MS5Nb2RpZnlB",
+            "Y2tEZWFkbGluZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkidoLT",
+            "5JMCRCI/L3YxL3tzdWJzY3JpcHRpb249cHJvamVjdHMvKi9zdWJzY3JpcHRp",
+            "b25zLyp9Om1vZGlmeUFja0RlYWRsaW5lOgEq2kEpc3Vic2NyaXB0aW9uLGFj",
+            "a19pZHMsYWNrX2RlYWRsaW5lX3NlY29uZHMSqAEKC0Fja25vd2xlZGdlEiQu",
+            "Z29vZ2xlLnB1YnN1Yi52MS5BY2tub3dsZWRnZVJlcXVlc3QaFi5nb29nbGUu",
+            "cHJvdG9idWYuRW1wdHkiW4LT5JMCPiI5L3YxL3tzdWJzY3JpcHRpb249cHJv",
+            "amVjdHMvKi9zdWJzY3JpcHRpb25zLyp9OmFja25vd2xlZGdlOgEq2kEUc3Vi",
+            "c2NyaXB0aW9uLGFja19pZHMS0AEKBFB1bGwSHS5nb29nbGUucHVic3ViLnYx",
+            "LlB1bGxSZXF1ZXN0Gh4uZ29vZ2xlLnB1YnN1Yi52MS5QdWxsUmVzcG9uc2Ui",
+            "iAGC0+STAjciMi92MS97c3Vic2NyaXB0aW9uPXByb2plY3RzLyovc3Vic2Ny",
+            "aXB0aW9ucy8qfTpwdWxsOgEq2kEsc3Vic2NyaXB0aW9uLHJldHVybl9pbW1l",
+            "ZGlhdGVseSxtYXhfbWVzc2FnZXPaQRlzdWJzY3JpcHRpb24sbWF4X21lc3Nh",
+            "Z2VzEmYKDVN0cmVhbWluZ1B1bGwSJi5nb29nbGUucHVic3ViLnYxLlN0cmVh",
+            "bWluZ1B1bGxSZXF1ZXN0GicuZ29vZ2xlLnB1YnN1Yi52MS5TdHJlYW1pbmdQ",
+            "dWxsUmVzcG9uc2UiACgBMAESuwEKEE1vZGlmeVB1c2hDb25maWcSKS5nb29n",
+            "bGUucHVic3ViLnYxLk1vZGlmeVB1c2hDb25maWdSZXF1ZXN0GhYuZ29vZ2xl",
+            "LnByb3RvYnVmLkVtcHR5ImSC0+STAkMiPi92MS97c3Vic2NyaXB0aW9uPXBy",
+            "b2plY3RzLyovc3Vic2NyaXB0aW9ucy8qfTptb2RpZnlQdXNoQ29uZmlnOgEq",
+            "2kEYc3Vic2NyaXB0aW9uLHB1c2hfY29uZmlnEokBCgtHZXRTbmFwc2hvdBIk",
+            "Lmdvb2dsZS5wdWJzdWIudjEuR2V0U25hcHNob3RSZXF1ZXN0GhouZ29vZ2xl",
+            "LnB1YnN1Yi52MS5TbmFwc2hvdCI4gtPkkwInEiUvdjEve3NuYXBzaG90PXBy",
+            "b2plY3RzLyovc25hcHNob3RzLyp92kEIc25hcHNob3QSlgEKDUxpc3RTbmFw",
+            "c2hvdHMSJi5nb29nbGUucHVic3ViLnYxLkxpc3RTbmFwc2hvdHNSZXF1ZXN0",
+            "GicuZ29vZ2xlLnB1YnN1Yi52MS5MaXN0U25hcHNob3RzUmVzcG9uc2UiNILT",
+            "5JMCJBIiL3YxL3twcm9qZWN0PXByb2plY3RzLyp9L3NuYXBzaG90c9pBB3By",
+            "b2plY3QSlwEKDkNyZWF0ZVNuYXBzaG90EicuZ29vZ2xlLnB1YnN1Yi52MS5D",
+            "cmVhdGVTbmFwc2hvdFJlcXVlc3QaGi5nb29nbGUucHVic3ViLnYxLlNuYXBz",
+            "aG90IkCC0+STAiYaIS92MS97bmFtZT1wcm9qZWN0cy8qL3NuYXBzaG90cy8q",
+            "fToBKtpBEW5hbWUsc3Vic2NyaXB0aW9uEowBCg5VcGRhdGVTbmFwc2hvdBIn",
+            "Lmdvb2dsZS5wdWJzdWIudjEuVXBkYXRlU25hcHNob3RSZXF1ZXN0GhouZ29v",
+            "Z2xlLnB1YnN1Yi52MS5TbmFwc2hvdCI1gtPkkwIvMiovdjEve3NuYXBzaG90",
+            "Lm5hbWU9cHJvamVjdHMvKi9zbmFwc2hvdHMvKn06ASoSiwEKDkRlbGV0ZVNu",
+            "YXBzaG90EicuZ29vZ2xlLnB1YnN1Yi52MS5EZWxldGVTbmFwc2hvdFJlcXVl",
+            "c3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiOILT5JMCJyolL3YxL3tzbmFw",
+            "c2hvdD1wcm9qZWN0cy8qL3NuYXBzaG90cy8qfdpBCHNuYXBzaG90EoQBCgRT",
+            "ZWVrEh0uZ29vZ2xlLnB1YnN1Yi52MS5TZWVrUmVxdWVzdBoeLmdvb2dsZS5w",
+            "dWJzdWIudjEuU2Vla1Jlc3BvbnNlIj2C0+STAjciMi92MS97c3Vic2NyaXB0",
+            "aW9uPXByb2plY3RzLyovc3Vic2NyaXB0aW9ucy8qfTpzZWVrOgEqGnDKQRVw",
+            "dWJzdWIuZ29vZ2xlYXBpcy5jb23SQVVodHRwczovL3d3dy5nb29nbGVhcGlz",
+            "LmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFw",
+            "aXMuY29tL2F1dGgvcHVic3ViQq4BChRjb20uZ29vZ2xlLnB1YnN1Yi52MUIL",
+            "UHVic3ViUHJvdG9QAVo2Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
+            "Z2xlYXBpcy9wdWJzdWIvdjE7cHVic3Vi+AEBqgIWR29vZ2xlLkNsb3VkLlB1",
+            "YlN1Yi5WMcoCFkdvb2dsZVxDbG91ZFxQdWJTdWJcVjHqAhlHb29nbGU6OkNs",
+            "b3VkOjpQdWJTdWI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Cloud.PubSub.V1.SchemaReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -324,7 +324,7 @@ namespace Google.Cloud.PubSub.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest), global::Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest.Parser, new[]{ "Subscription", "AckIds", "AckDeadlineSeconds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.AcknowledgeRequest), global::Google.Cloud.PubSub.V1.AcknowledgeRequest.Parser, new[]{ "Subscription", "AckIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.StreamingPullRequest), global::Google.Cloud.PubSub.V1.StreamingPullRequest.Parser, new[]{ "Subscription", "AckIds", "ModifyDeadlineSeconds", "ModifyDeadlineAckIds", "StreamAckDeadlineSeconds", "ClientId", "MaxOutstandingMessages", "MaxOutstandingBytes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.StreamingPullResponse), global::Google.Cloud.PubSub.V1.StreamingPullResponse.Parser, new[]{ "ReceivedMessages", "AcknowlegeConfirmation", "ModifyAckDeadlineConfirmation", "SubscriptionProperties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.AcknowledgeConfirmation), global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.AcknowledgeConfirmation.Parser, new[]{ "AckIds", "InvalidAckIds", "UnorderedAckIds" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.StreamingPullResponse), global::Google.Cloud.PubSub.V1.StreamingPullResponse.Parser, new[]{ "ReceivedMessages", "AcknowledgeConfirmation", "ModifyAckDeadlineConfirmation", "SubscriptionProperties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.AcknowledgeConfirmation), global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.AcknowledgeConfirmation.Parser, new[]{ "AckIds", "InvalidAckIds", "UnorderedAckIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.ModifyAckDeadlineConfirmation), global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.ModifyAckDeadlineConfirmation.Parser, new[]{ "AckIds", "InvalidAckIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.SubscriptionProperties), global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.SubscriptionProperties.Parser, new[]{ "ExactlyOnceDeliveryEnabled", "MessageOrderingEnabled" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.CreateSnapshotRequest), global::Google.Cloud.PubSub.V1.CreateSnapshotRequest.Parser, new[]{ "Name", "Subscription", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
@@ -9932,7 +9932,7 @@ namespace Google.Cloud.PubSub.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StreamingPullResponse(StreamingPullResponse other) : this() {
       receivedMessages_ = other.receivedMessages_.Clone();
-      acknowlegeConfirmation_ = other.acknowlegeConfirmation_ != null ? other.acknowlegeConfirmation_.Clone() : null;
+      acknowledgeConfirmation_ = other.acknowledgeConfirmation_ != null ? other.acknowledgeConfirmation_.Clone() : null;
       modifyAckDeadlineConfirmation_ = other.modifyAckDeadlineConfirmation_ != null ? other.modifyAckDeadlineConfirmation_.Clone() : null;
       subscriptionProperties_ = other.subscriptionProperties_ != null ? other.subscriptionProperties_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -9958,19 +9958,19 @@ namespace Google.Cloud.PubSub.V1 {
       get { return receivedMessages_; }
     }
 
-    /// <summary>Field number for the "acknowlege_confirmation" field.</summary>
-    public const int AcknowlegeConfirmationFieldNumber = 2;
-    private global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.AcknowledgeConfirmation acknowlegeConfirmation_;
+    /// <summary>Field number for the "acknowledge_confirmation" field.</summary>
+    public const int AcknowledgeConfirmationFieldNumber = 5;
+    private global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.AcknowledgeConfirmation acknowledgeConfirmation_;
     /// <summary>
     /// This field will only be set if `enable_exactly_once_delivery` is set to
     /// `true`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.AcknowledgeConfirmation AcknowlegeConfirmation {
-      get { return acknowlegeConfirmation_; }
+    public global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.AcknowledgeConfirmation AcknowledgeConfirmation {
+      get { return acknowledgeConfirmation_; }
       set {
-        acknowlegeConfirmation_ = value;
+        acknowledgeConfirmation_ = value;
       }
     }
 
@@ -10021,7 +10021,7 @@ namespace Google.Cloud.PubSub.V1 {
         return true;
       }
       if(!receivedMessages_.Equals(other.receivedMessages_)) return false;
-      if (!object.Equals(AcknowlegeConfirmation, other.AcknowlegeConfirmation)) return false;
+      if (!object.Equals(AcknowledgeConfirmation, other.AcknowledgeConfirmation)) return false;
       if (!object.Equals(ModifyAckDeadlineConfirmation, other.ModifyAckDeadlineConfirmation)) return false;
       if (!object.Equals(SubscriptionProperties, other.SubscriptionProperties)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -10032,7 +10032,7 @@ namespace Google.Cloud.PubSub.V1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= receivedMessages_.GetHashCode();
-      if (acknowlegeConfirmation_ != null) hash ^= AcknowlegeConfirmation.GetHashCode();
+      if (acknowledgeConfirmation_ != null) hash ^= AcknowledgeConfirmation.GetHashCode();
       if (modifyAckDeadlineConfirmation_ != null) hash ^= ModifyAckDeadlineConfirmation.GetHashCode();
       if (subscriptionProperties_ != null) hash ^= SubscriptionProperties.GetHashCode();
       if (_unknownFields != null) {
@@ -10054,10 +10054,6 @@ namespace Google.Cloud.PubSub.V1 {
       output.WriteRawMessage(this);
     #else
       receivedMessages_.WriteTo(output, _repeated_receivedMessages_codec);
-      if (acknowlegeConfirmation_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(AcknowlegeConfirmation);
-      }
       if (modifyAckDeadlineConfirmation_ != null) {
         output.WriteRawTag(26);
         output.WriteMessage(ModifyAckDeadlineConfirmation);
@@ -10065,6 +10061,10 @@ namespace Google.Cloud.PubSub.V1 {
       if (subscriptionProperties_ != null) {
         output.WriteRawTag(34);
         output.WriteMessage(SubscriptionProperties);
+      }
+      if (acknowledgeConfirmation_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(AcknowledgeConfirmation);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -10077,10 +10077,6 @@ namespace Google.Cloud.PubSub.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       receivedMessages_.WriteTo(ref output, _repeated_receivedMessages_codec);
-      if (acknowlegeConfirmation_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(AcknowlegeConfirmation);
-      }
       if (modifyAckDeadlineConfirmation_ != null) {
         output.WriteRawTag(26);
         output.WriteMessage(ModifyAckDeadlineConfirmation);
@@ -10088,6 +10084,10 @@ namespace Google.Cloud.PubSub.V1 {
       if (subscriptionProperties_ != null) {
         output.WriteRawTag(34);
         output.WriteMessage(SubscriptionProperties);
+      }
+      if (acknowledgeConfirmation_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(AcknowledgeConfirmation);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -10100,8 +10100,8 @@ namespace Google.Cloud.PubSub.V1 {
     public int CalculateSize() {
       int size = 0;
       size += receivedMessages_.CalculateSize(_repeated_receivedMessages_codec);
-      if (acknowlegeConfirmation_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AcknowlegeConfirmation);
+      if (acknowledgeConfirmation_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AcknowledgeConfirmation);
       }
       if (modifyAckDeadlineConfirmation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModifyAckDeadlineConfirmation);
@@ -10122,11 +10122,11 @@ namespace Google.Cloud.PubSub.V1 {
         return;
       }
       receivedMessages_.Add(other.receivedMessages_);
-      if (other.acknowlegeConfirmation_ != null) {
-        if (acknowlegeConfirmation_ == null) {
-          AcknowlegeConfirmation = new global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.AcknowledgeConfirmation();
+      if (other.acknowledgeConfirmation_ != null) {
+        if (acknowledgeConfirmation_ == null) {
+          AcknowledgeConfirmation = new global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.AcknowledgeConfirmation();
         }
-        AcknowlegeConfirmation.MergeFrom(other.AcknowlegeConfirmation);
+        AcknowledgeConfirmation.MergeFrom(other.AcknowledgeConfirmation);
       }
       if (other.modifyAckDeadlineConfirmation_ != null) {
         if (modifyAckDeadlineConfirmation_ == null) {
@@ -10159,13 +10159,6 @@ namespace Google.Cloud.PubSub.V1 {
             receivedMessages_.AddEntriesFrom(input, _repeated_receivedMessages_codec);
             break;
           }
-          case 18: {
-            if (acknowlegeConfirmation_ == null) {
-              AcknowlegeConfirmation = new global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.AcknowledgeConfirmation();
-            }
-            input.ReadMessage(AcknowlegeConfirmation);
-            break;
-          }
           case 26: {
             if (modifyAckDeadlineConfirmation_ == null) {
               ModifyAckDeadlineConfirmation = new global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.ModifyAckDeadlineConfirmation();
@@ -10178,6 +10171,13 @@ namespace Google.Cloud.PubSub.V1 {
               SubscriptionProperties = new global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.SubscriptionProperties();
             }
             input.ReadMessage(SubscriptionProperties);
+            break;
+          }
+          case 42: {
+            if (acknowledgeConfirmation_ == null) {
+              AcknowledgeConfirmation = new global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.AcknowledgeConfirmation();
+            }
+            input.ReadMessage(AcknowledgeConfirmation);
             break;
           }
         }
@@ -10199,13 +10199,6 @@ namespace Google.Cloud.PubSub.V1 {
             receivedMessages_.AddEntriesFrom(ref input, _repeated_receivedMessages_codec);
             break;
           }
-          case 18: {
-            if (acknowlegeConfirmation_ == null) {
-              AcknowlegeConfirmation = new global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.AcknowledgeConfirmation();
-            }
-            input.ReadMessage(AcknowlegeConfirmation);
-            break;
-          }
           case 26: {
             if (modifyAckDeadlineConfirmation_ == null) {
               ModifyAckDeadlineConfirmation = new global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.ModifyAckDeadlineConfirmation();
@@ -10218,6 +10211,13 @@ namespace Google.Cloud.PubSub.V1 {
               SubscriptionProperties = new global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.SubscriptionProperties();
             }
             input.ReadMessage(SubscriptionProperties);
+            break;
+          }
+          case 42: {
+            if (acknowledgeConfirmation_ == null) {
+              AcknowledgeConfirmation = new global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.AcknowledgeConfirmation();
+            }
+            input.ReadMessage(AcknowledgeConfirmation);
             break;
           }
         }
