@@ -853,13 +853,14 @@ namespace Google.Cloud.Compute.V1.Snippets
         /// <summary>Snippet for Insert</summary>
         public void Insert()
         {
-            // Snippet: Insert(FirewallPolicy, CallSettings)
+            // Snippet: Insert(string, FirewallPolicy, CallSettings)
             // Create client
             FirewallPoliciesClient firewallPoliciesClient = FirewallPoliciesClient.Create();
             // Initialize request argument(s)
+            string parentId = "";
             FirewallPolicy firewallPolicyResource = new FirewallPolicy();
             // Make the request
-            lro::Operation<Operation, Operation> response = firewallPoliciesClient.Insert(firewallPolicyResource);
+            lro::Operation<Operation, Operation> response = firewallPoliciesClient.Insert(parentId, firewallPolicyResource);
 
             // Poll until the returned long-running operation is complete
             lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
@@ -882,14 +883,15 @@ namespace Google.Cloud.Compute.V1.Snippets
         /// <summary>Snippet for InsertAsync</summary>
         public async Task InsertAsync()
         {
-            // Snippet: InsertAsync(FirewallPolicy, CallSettings)
-            // Additional: InsertAsync(FirewallPolicy, CancellationToken)
+            // Snippet: InsertAsync(string, FirewallPolicy, CallSettings)
+            // Additional: InsertAsync(string, FirewallPolicy, CancellationToken)
             // Create client
             FirewallPoliciesClient firewallPoliciesClient = await FirewallPoliciesClient.CreateAsync();
             // Initialize request argument(s)
+            string parentId = "";
             FirewallPolicy firewallPolicyResource = new FirewallPolicy();
             // Make the request
-            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.InsertAsync(firewallPolicyResource);
+            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.InsertAsync(parentId, firewallPolicyResource);
 
             // Poll until the returned long-running operation is complete
             lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
@@ -1219,13 +1221,14 @@ namespace Google.Cloud.Compute.V1.Snippets
         /// <summary>Snippet for Move</summary>
         public void Move()
         {
-            // Snippet: Move(string, CallSettings)
+            // Snippet: Move(string, string, CallSettings)
             // Create client
             FirewallPoliciesClient firewallPoliciesClient = FirewallPoliciesClient.Create();
             // Initialize request argument(s)
             string firewallPolicy = "";
+            string parentId = "";
             // Make the request
-            lro::Operation<Operation, Operation> response = firewallPoliciesClient.Move(firewallPolicy);
+            lro::Operation<Operation, Operation> response = firewallPoliciesClient.Move(firewallPolicy, parentId);
 
             // Poll until the returned long-running operation is complete
             lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
@@ -1248,14 +1251,15 @@ namespace Google.Cloud.Compute.V1.Snippets
         /// <summary>Snippet for MoveAsync</summary>
         public async Task MoveAsync()
         {
-            // Snippet: MoveAsync(string, CallSettings)
-            // Additional: MoveAsync(string, CancellationToken)
+            // Snippet: MoveAsync(string, string, CallSettings)
+            // Additional: MoveAsync(string, string, CancellationToken)
             // Create client
             FirewallPoliciesClient firewallPoliciesClient = await FirewallPoliciesClient.CreateAsync();
             // Initialize request argument(s)
             string firewallPolicy = "";
+            string parentId = "";
             // Make the request
-            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.MoveAsync(firewallPolicy);
+            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.MoveAsync(firewallPolicy, parentId);
 
             // Poll until the returned long-running operation is complete
             lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();

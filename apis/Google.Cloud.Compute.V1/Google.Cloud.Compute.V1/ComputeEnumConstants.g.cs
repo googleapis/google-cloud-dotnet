@@ -2248,6 +2248,81 @@ namespace Google.Cloud.Compute.V1
             }
         }
 
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.ManagedInstance"/> message.</summary>
+        public static class ManagedInstance
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.CurrentAction"/> enum.</summary>
+            public static class CurrentAction
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.CurrentAction.UndefinedCurrentAction"/>.</summary>
+                public const string UndefinedCurrentAction = "UNDEFINED_CURRENT_ACTION";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.CurrentAction.Abandoning"/>.</summary>
+                public const string Abandoning = "ABANDONING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.CurrentAction.Creating"/>.</summary>
+                public const string Creating = "CREATING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.CurrentAction.CreatingWithoutRetries"/>.</summary>
+                public const string CreatingWithoutRetries = "CREATING_WITHOUT_RETRIES";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.CurrentAction.Deleting"/>.</summary>
+                public const string Deleting = "DELETING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.CurrentAction.None"/>.</summary>
+                public const string None = "NONE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.CurrentAction.Recreating"/>.</summary>
+                public const string Recreating = "RECREATING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.CurrentAction.Refreshing"/>.</summary>
+                public const string Refreshing = "REFRESHING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.CurrentAction.Restarting"/>.</summary>
+                public const string Restarting = "RESTARTING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.CurrentAction.Verifying"/>.</summary>
+                public const string Verifying = "VERIFYING";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.InstanceStatus"/> enum.</summary>
+            public static class InstanceStatus
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.InstanceStatus.UndefinedInstanceStatus"/>.</summary>
+                public const string UndefinedInstanceStatus = "UNDEFINED_INSTANCE_STATUS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.InstanceStatus.Deprovisioning"/>.</summary>
+                public const string Deprovisioning = "DEPROVISIONING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.InstanceStatus.Provisioning"/>.</summary>
+                public const string Provisioning = "PROVISIONING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.InstanceStatus.Repairing"/>.</summary>
+                public const string Repairing = "REPAIRING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.InstanceStatus.Running"/>.</summary>
+                public const string Running = "RUNNING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.InstanceStatus.Staging"/>.</summary>
+                public const string Staging = "STAGING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.InstanceStatus.Stopped"/>.</summary>
+                public const string Stopped = "STOPPED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.InstanceStatus.Stopping"/>.</summary>
+                public const string Stopping = "STOPPING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.InstanceStatus.Suspended"/>.</summary>
+                public const string Suspended = "SUSPENDED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.InstanceStatus.Suspending"/>.</summary>
+                public const string Suspending = "SUSPENDING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.InstanceStatus.Terminated"/>.</summary>
+                public const string Terminated = "TERMINATED";
+            }
+        }
+
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.ManagedInstanceInstanceHealth"/> message.</summary>
         public static class ManagedInstanceInstanceHealth
         {
