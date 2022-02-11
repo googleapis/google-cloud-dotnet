@@ -6629,7 +6629,7 @@ namespace Google.Cloud.OsConfig.V1 {
                   /// </summary>
                   public enum Interpreter {
                     /// <summary>
-                    /// Defaults to NONE.
+                    /// Invalid value, the request will return validation error.
                     /// </summary>
                     [pbr::OriginalName("INTERPRETER_UNSPECIFIED")] Unspecified = 0,
                     /// <summary>
