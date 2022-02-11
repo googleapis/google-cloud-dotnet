@@ -28,6 +28,7 @@ namespace Google.Cloud.Storage.V1
     /// </summary>
     internal sealed class RetryHandler : IHttpUnsuccessfulResponseHandler
     {
+        // Retriable error codes: 408—Request Timeout, 429-Too Many Requests, 500-Internal Server Error, 502—Bad Gateway, 503—Service Unavailable, 504—Gateway Timeout
         private static readonly int[] s_retriableErrorCodes = { 408, 429, 500, 502, 503, 504 };
         private static RetryHandler s_instance = new RetryHandler();
 
@@ -36,11 +37,8 @@ namespace Google.Cloud.Storage.V1
         internal static void MarkAsRetriable<TResponse>(StorageBaseServiceRequest<TResponse> request) =>
             request.AddUnsuccessfulResponseHandler(s_instance);
 
-        //This function is designed to be asynchronous in case we need to examine the response content, but for now we only need the status code
-        internal static Task<bool> IsRetriableResponse(HttpResponseMessage response)
-        {
-            return Task.FromResult(s_retriableErrorCodes.Contains(((int)response.StatusCode)));
-        }
+        // This function is designed to support asynchrony in case we need to examine the response content, but for now we only need the status code
+        internal static Task<bool> IsRetriableResponse(HttpResponseMessage response) => Task.FromResult(s_retriableErrorCodes.Contains(((int)response.StatusCode)));
 
         public async Task<bool> HandleResponseAsync(HandleUnsuccessfulResponseArgs args)
         {
