@@ -25,113 +25,119 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci1nb29nbGUvY2xvdWQvb3Njb25maWcvdjFhbHBoYS9vc19wb2xpY3kucHJv",
-            "dG8SHWdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MWFscGhhGh9nb29nbGUvYXBp",
-            "L2ZpZWxkX2JlaGF2aW9yLnByb3RvIukhCghPU1BvbGljeRIPCgJpZBgBIAEo",
-            "CUID4EECEhMKC2Rlc2NyaXB0aW9uGAIgASgJEj8KBG1vZGUYAyABKA4yLC5n",
-            "b29nbGUuY2xvdWQub3Njb25maWcudjFhbHBoYS5PU1BvbGljeS5Nb2RlQgPg",
-            "QQISUwoPcmVzb3VyY2VfZ3JvdXBzGAQgAygLMjUuZ29vZ2xlLmNsb3VkLm9z",
-            "Y29uZmlnLnYxYWxwaGEuT1NQb2xpY3kuUmVzb3VyY2VHcm91cEID4EECEiUK",
-            "HWFsbG93X25vX3Jlc291cmNlX2dyb3VwX21hdGNoGAUgASgIGjUKCE9TRmls",
-            "dGVyEhUKDW9zX3Nob3J0X25hbWUYASABKAkSEgoKb3NfdmVyc2lvbhgCIAEo",
-            "CRriHQoIUmVzb3VyY2USDwoCaWQYASABKAlCA+BBAhJPCgNwa2cYAiABKAsy",
-            "QC5nb29nbGUuY2xvdWQub3Njb25maWcudjFhbHBoYS5PU1BvbGljeS5SZXNv",
-            "dXJjZS5QYWNrYWdlUmVzb3VyY2VIABJZCgpyZXBvc2l0b3J5GAMgASgLMkMu",
-            "Z29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxYWxwaGEuT1NQb2xpY3kuUmVzb3Vy",
-            "Y2UuUmVwb3NpdG9yeVJlc291cmNlSAASTQoEZXhlYxgEIAEoCzI9Lmdvb2ds",
-            "ZS5jbG91ZC5vc2NvbmZpZy52MWFscGhhLk9TUG9saWN5LlJlc291cmNlLkV4",
-            "ZWNSZXNvdXJjZUgAEk0KBGZpbGUYBSABKAsyPS5nb29nbGUuY2xvdWQub3Nj",
-            "b25maWcudjFhbHBoYS5PU1BvbGljeS5SZXNvdXJjZS5GaWxlUmVzb3VyY2VI",
-            "ABrQAgoERmlsZRJOCgZyZW1vdGUYASABKAsyPC5nb29nbGUuY2xvdWQub3Nj",
-            "b25maWcudjFhbHBoYS5PU1BvbGljeS5SZXNvdXJjZS5GaWxlLlJlbW90ZUgA",
-            "EkgKA2djcxgCIAEoCzI5Lmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MWFscGhh",
-            "Lk9TUG9saWN5LlJlc291cmNlLkZpbGUuR2NzSAASFAoKbG9jYWxfcGF0aBgD",
-            "IAEoCUgAEhYKDmFsbG93X2luc2VjdXJlGAQgASgIGjMKBlJlbW90ZRIQCgN1",
-            "cmkYASABKAlCA+BBAhIXCg9zaGEyNTZfY2hlY2tzdW0YAiABKAkaQwoDR2Nz",
-            "EhMKBmJ1Y2tldBgBIAEoCUID4EECEhMKBm9iamVjdBgCIAEoCUID4EECEhIK",
-            "CmdlbmVyYXRpb24YAyABKANCBgoEdHlwZRrZCQoPUGFja2FnZVJlc291cmNl",
-            "EmkKDWRlc2lyZWRfc3RhdGUYASABKA4yTS5nb29nbGUuY2xvdWQub3Njb25m",
-            "aWcudjFhbHBoYS5PU1BvbGljeS5SZXNvdXJjZS5QYWNrYWdlUmVzb3VyY2Uu",
-            "RGVzaXJlZFN0YXRlQgPgQQISUwoDYXB0GAIgASgLMkQuZ29vZ2xlLmNsb3Vk",
+            "dG8SHWdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MWFscGhhGhxnb29nbGUvYXBp",
+            "L2Fubm90YXRpb25zLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9y",
+            "LnByb3RvIoQjCghPU1BvbGljeRIPCgJpZBgBIAEoCUID4EECEhMKC2Rlc2Ny",
+            "aXB0aW9uGAIgASgJEj8KBG1vZGUYAyABKA4yLC5nb29nbGUuY2xvdWQub3Nj",
+            "b25maWcudjFhbHBoYS5PU1BvbGljeS5Nb2RlQgPgQQISUwoPcmVzb3VyY2Vf",
+            "Z3JvdXBzGAQgAygLMjUuZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxYWxwaGEu",
+            "T1NQb2xpY3kuUmVzb3VyY2VHcm91cEID4EECEiUKHWFsbG93X25vX3Jlc291",
+            "cmNlX2dyb3VwX21hdGNoGAUgASgIGjUKCE9TRmlsdGVyEhUKDW9zX3Nob3J0",
+            "X25hbWUYASABKAkSEgoKb3NfdmVyc2lvbhgCIAEoCRpBCg9JbnZlbnRvcnlG",
+            "aWx0ZXISGgoNb3Nfc2hvcnRfbmFtZRgBIAEoCUID4EECEhIKCm9zX3ZlcnNp",
+            "b24YAiABKAka4h0KCFJlc291cmNlEg8KAmlkGAEgASgJQgPgQQISTwoDcGtn",
+            "GAIgASgLMkAuZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxYWxwaGEuT1NQb2xp",
+            "Y3kuUmVzb3VyY2UuUGFja2FnZVJlc291cmNlSAASWQoKcmVwb3NpdG9yeRgD",
+            "IAEoCzJDLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MWFscGhhLk9TUG9saWN5",
+            "LlJlc291cmNlLlJlcG9zaXRvcnlSZXNvdXJjZUgAEk0KBGV4ZWMYBCABKAsy",
+            "PS5nb29nbGUuY2xvdWQub3Njb25maWcudjFhbHBoYS5PU1BvbGljeS5SZXNv",
+            "dXJjZS5FeGVjUmVzb3VyY2VIABJNCgRmaWxlGAUgASgLMj0uZ29vZ2xlLmNs",
+            "b3VkLm9zY29uZmlnLnYxYWxwaGEuT1NQb2xpY3kuUmVzb3VyY2UuRmlsZVJl",
+            "c291cmNlSAAa0AIKBEZpbGUSTgoGcmVtb3RlGAEgASgLMjwuZ29vZ2xlLmNs",
+            "b3VkLm9zY29uZmlnLnYxYWxwaGEuT1NQb2xpY3kuUmVzb3VyY2UuRmlsZS5S",
+            "ZW1vdGVIABJICgNnY3MYAiABKAsyOS5nb29nbGUuY2xvdWQub3Njb25maWcu",
+            "djFhbHBoYS5PU1BvbGljeS5SZXNvdXJjZS5GaWxlLkdjc0gAEhQKCmxvY2Fs",
+            "X3BhdGgYAyABKAlIABIWCg5hbGxvd19pbnNlY3VyZRgEIAEoCBozCgZSZW1v",
+            "dGUSEAoDdXJpGAEgASgJQgPgQQISFwoPc2hhMjU2X2NoZWNrc3VtGAIgASgJ",
+            "GkMKA0djcxITCgZidWNrZXQYASABKAlCA+BBAhITCgZvYmplY3QYAiABKAlC",
+            "A+BBAhISCgpnZW5lcmF0aW9uGAMgASgDQgYKBHR5cGUa2QkKD1BhY2thZ2VS",
+            "ZXNvdXJjZRJpCg1kZXNpcmVkX3N0YXRlGAEgASgOMk0uZ29vZ2xlLmNsb3Vk",
             "Lm9zY29uZmlnLnYxYWxwaGEuT1NQb2xpY3kuUmVzb3VyY2UuUGFja2FnZVJl",
-            "c291cmNlLkFQVEgAElMKA2RlYhgDIAEoCzJELmdvb2dsZS5jbG91ZC5vc2Nv",
+            "c291cmNlLkRlc2lyZWRTdGF0ZUID4EECElMKA2FwdBgCIAEoCzJELmdvb2ds",
+            "ZS5jbG91ZC5vc2NvbmZpZy52MWFscGhhLk9TUG9saWN5LlJlc291cmNlLlBh",
+            "Y2thZ2VSZXNvdXJjZS5BUFRIABJTCgNkZWIYAyABKAsyRC5nb29nbGUuY2xv",
+            "dWQub3Njb25maWcudjFhbHBoYS5PU1BvbGljeS5SZXNvdXJjZS5QYWNrYWdl",
+            "UmVzb3VyY2UuRGViSAASUwoDeXVtGAQgASgLMkQuZ29vZ2xlLmNsb3VkLm9z",
+            "Y29uZmlnLnYxYWxwaGEuT1NQb2xpY3kuUmVzb3VyY2UuUGFja2FnZVJlc291",
+            "cmNlLllVTUgAElkKBnp5cHBlchgFIAEoCzJHLmdvb2dsZS5jbG91ZC5vc2Nv",
             "bmZpZy52MWFscGhhLk9TUG9saWN5LlJlc291cmNlLlBhY2thZ2VSZXNvdXJj",
-            "ZS5EZWJIABJTCgN5dW0YBCABKAsyRC5nb29nbGUuY2xvdWQub3Njb25maWcu",
-            "djFhbHBoYS5PU1BvbGljeS5SZXNvdXJjZS5QYWNrYWdlUmVzb3VyY2UuWVVN",
-            "SAASWQoGenlwcGVyGAUgASgLMkcuZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYx",
-            "YWxwaGEuT1NQb2xpY3kuUmVzb3VyY2UuUGFja2FnZVJlc291cmNlLlp5cHBl",
-            "ckgAElMKA3JwbRgGIAEoCzJELmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MWFs",
-            "cGhhLk9TUG9saWN5LlJlc291cmNlLlBhY2thZ2VSZXNvdXJjZS5SUE1IABJZ",
-            "CgZnb29nZXQYByABKAsyRy5nb29nbGUuY2xvdWQub3Njb25maWcudjFhbHBo",
-            "YS5PU1BvbGljeS5SZXNvdXJjZS5QYWNrYWdlUmVzb3VyY2UuR29vR2V0SAAS",
-            "UwoDbXNpGAggASgLMkQuZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxYWxwaGEu",
-            "T1NQb2xpY3kuUmVzb3VyY2UuUGFja2FnZVJlc291cmNlLk1TSUgAGmQKA0Rl",
-            "YhJKCgZzb3VyY2UYASABKAsyNS5nb29nbGUuY2xvdWQub3Njb25maWcudjFh",
+            "ZS5aeXBwZXJIABJTCgNycG0YBiABKAsyRC5nb29nbGUuY2xvdWQub3Njb25m",
+            "aWcudjFhbHBoYS5PU1BvbGljeS5SZXNvdXJjZS5QYWNrYWdlUmVzb3VyY2Uu",
+            "UlBNSAASWQoGZ29vZ2V0GAcgASgLMkcuZ29vZ2xlLmNsb3VkLm9zY29uZmln",
+            "LnYxYWxwaGEuT1NQb2xpY3kuUmVzb3VyY2UuUGFja2FnZVJlc291cmNlLkdv",
+            "b0dldEgAElMKA21zaRgIIAEoCzJELmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52",
+            "MWFscGhhLk9TUG9saWN5LlJlc291cmNlLlBhY2thZ2VSZXNvdXJjZS5NU0lI",
+            "ABpkCgNEZWISSgoGc291cmNlGAEgASgLMjUuZ29vZ2xlLmNsb3VkLm9zY29u",
+            "ZmlnLnYxYWxwaGEuT1NQb2xpY3kuUmVzb3VyY2UuRmlsZUID4EECEhEKCXB1",
+            "bGxfZGVwcxgCIAEoCBoYCgNBUFQSEQoEbmFtZRgBIAEoCUID4EECGmQKA1JQ",
+            "TRJKCgZzb3VyY2UYASABKAsyNS5nb29nbGUuY2xvdWQub3Njb25maWcudjFh",
             "bHBoYS5PU1BvbGljeS5SZXNvdXJjZS5GaWxlQgPgQQISEQoJcHVsbF9kZXBz",
-            "GAIgASgIGhgKA0FQVBIRCgRuYW1lGAEgASgJQgPgQQIaZAoDUlBNEkoKBnNv",
-            "dXJjZRgBIAEoCzI1Lmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MWFscGhhLk9T",
-            "UG9saWN5LlJlc291cmNlLkZpbGVCA+BBAhIRCglwdWxsX2RlcHMYAiABKAga",
-            "GAoDWVVNEhEKBG5hbWUYASABKAlCA+BBAhobCgZaeXBwZXISEQoEbmFtZRgB",
-            "IAEoCUID4EECGhsKBkdvb0dldBIRCgRuYW1lGAEgASgJQgPgQQIaZQoDTVNJ",
-            "EkoKBnNvdXJjZRgBIAEoCzI1Lmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MWFs",
-            "cGhhLk9TUG9saWN5LlJlc291cmNlLkZpbGVCA+BBAhISCgpwcm9wZXJ0aWVz",
-            "GAIgAygJIkkKDERlc2lyZWRTdGF0ZRIdChlERVNJUkVEX1NUQVRFX1VOU1BF",
-            "Q0lGSUVEEAASDQoJSU5TVEFMTEVEEAESCwoHUkVNT1ZFRBACQhAKDnN5c3Rl",
-            "bV9wYWNrYWdlGtEHChJSZXBvc2l0b3J5UmVzb3VyY2USYAoDYXB0GAEgASgL",
-            "MlEuZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxYWxwaGEuT1NQb2xpY3kuUmVz",
-            "b3VyY2UuUmVwb3NpdG9yeVJlc291cmNlLkFwdFJlcG9zaXRvcnlIABJgCgN5",
-            "dW0YAiABKAsyUS5nb29nbGUuY2xvdWQub3Njb25maWcudjFhbHBoYS5PU1Bv",
-            "bGljeS5SZXNvdXJjZS5SZXBvc2l0b3J5UmVzb3VyY2UuWXVtUmVwb3NpdG9y",
-            "eUgAEmYKBnp5cHBlchgDIAEoCzJULmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52",
-            "MWFscGhhLk9TUG9saWN5LlJlc291cmNlLlJlcG9zaXRvcnlSZXNvdXJjZS5a",
-            "eXBwZXJSZXBvc2l0b3J5SAASYAoDZ29vGAQgASgLMlEuZ29vZ2xlLmNsb3Vk",
-            "Lm9zY29uZmlnLnYxYWxwaGEuT1NQb2xpY3kuUmVzb3VyY2UuUmVwb3NpdG9y",
-            "eVJlc291cmNlLkdvb1JlcG9zaXRvcnlIABqjAgoNQXB0UmVwb3NpdG9yeRJ4",
-            "CgxhcmNoaXZlX3R5cGUYASABKA4yXS5nb29nbGUuY2xvdWQub3Njb25maWcu",
-            "djFhbHBoYS5PU1BvbGljeS5SZXNvdXJjZS5SZXBvc2l0b3J5UmVzb3VyY2Uu",
-            "QXB0UmVwb3NpdG9yeS5BcmNoaXZlVHlwZUID4EECEhAKA3VyaRgCIAEoCUID",
-            "4EECEhkKDGRpc3RyaWJ1dGlvbhgDIAEoCUID4EECEhcKCmNvbXBvbmVudHMY",
-            "BCADKAlCA+BBAhIPCgdncGdfa2V5GAUgASgJIkEKC0FyY2hpdmVUeXBlEhwK",
-            "GEFSQ0hJVkVfVFlQRV9VTlNQRUNJRklFRBAAEgcKA0RFQhABEgsKB0RFQl9T",
-            "UkMQAhpfCg1ZdW1SZXBvc2l0b3J5Eg8KAmlkGAEgASgJQgPgQQISFAoMZGlz",
-            "cGxheV9uYW1lGAIgASgJEhUKCGJhc2VfdXJsGAMgASgJQgPgQQISEAoIZ3Bn",
-            "X2tleXMYBCADKAkaYgoQWnlwcGVyUmVwb3NpdG9yeRIPCgJpZBgBIAEoCUID",
-            "4EECEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRIVCghiYXNlX3VybBgDIAEoCUID",
-            "4EECEhAKCGdwZ19rZXlzGAQgAygJGjQKDUdvb1JlcG9zaXRvcnkSEQoEbmFt",
-            "ZRgBIAEoCUID4EECEhAKA3VybBgCIAEoCUID4EECQgwKCnJlcG9zaXRvcnka",
-            "jQQKDEV4ZWNSZXNvdXJjZRJZCgh2YWxpZGF0ZRgBIAEoCzJCLmdvb2dsZS5j",
-            "bG91ZC5vc2NvbmZpZy52MWFscGhhLk9TUG9saWN5LlJlc291cmNlLkV4ZWNS",
-            "ZXNvdXJjZS5FeGVjQgPgQQISUwoHZW5mb3JjZRgCIAEoCzJCLmdvb2dsZS5j",
-            "bG91ZC5vc2NvbmZpZy52MWFscGhhLk9TUG9saWN5LlJlc291cmNlLkV4ZWNS",
-            "ZXNvdXJjZS5FeGVjGswCCgRFeGVjEkUKBGZpbGUYASABKAsyNS5nb29nbGUu",
-            "Y2xvdWQub3Njb25maWcudjFhbHBoYS5PU1BvbGljeS5SZXNvdXJjZS5GaWxl",
-            "SAASEAoGc2NyaXB0GAIgASgJSAASDAoEYXJncxgDIAMoCRJoCgtpbnRlcnBy",
-            "ZXRlchgEIAEoDjJOLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MWFscGhhLk9T",
-            "UG9saWN5LlJlc291cmNlLkV4ZWNSZXNvdXJjZS5FeGVjLkludGVycHJldGVy",
-            "QgPgQQISGAoQb3V0cHV0X2ZpbGVfcGF0aBgFIAEoCSJPCgtJbnRlcnByZXRl",
-            "chIbChdJTlRFUlBSRVRFUl9VTlNQRUNJRklFRBAAEggKBE5PTkUQARIJCgVT",
-            "SEVMTBACEg4KClBPV0VSU0hFTEwQA0IICgZzb3VyY2Ua1gIKDEZpbGVSZXNv",
-            "dXJjZRJFCgRmaWxlGAEgASgLMjUuZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYx",
-            "YWxwaGEuT1NQb2xpY3kuUmVzb3VyY2UuRmlsZUgAEhEKB2NvbnRlbnQYAiAB",
-            "KAlIABIRCgRwYXRoGAMgASgJQgPgQQISXgoFc3RhdGUYBCABKA4ySi5nb29n",
-            "bGUuY2xvdWQub3Njb25maWcudjFhbHBoYS5PU1BvbGljeS5SZXNvdXJjZS5G",
-            "aWxlUmVzb3VyY2UuRGVzaXJlZFN0YXRlQgPgQQISEwoLcGVybWlzc2lvbnMY",
-            "BSABKAkiWgoMRGVzaXJlZFN0YXRlEh0KGURFU0lSRURfU1RBVEVfVU5TUEVD",
-            "SUZJRUQQABILCgdQUkVTRU5UEAESCgoGQUJTRU5UEAISEgoOQ09OVEVOVFNf",
-            "TUFUQ0gQA0IICgZzb3VyY2VCDwoNcmVzb3VyY2VfdHlwZRqeAQoNUmVzb3Vy",
-            "Y2VHcm91cBJDCglvc19maWx0ZXIYASABKAsyMC5nb29nbGUuY2xvdWQub3Nj",
-            "b25maWcudjFhbHBoYS5PU1BvbGljeS5PU0ZpbHRlchJICglyZXNvdXJjZXMY",
-            "AiADKAsyMC5nb29nbGUuY2xvdWQub3Njb25maWcudjFhbHBoYS5PU1BvbGlj",
-            "eS5SZXNvdXJjZUID4EECIj0KBE1vZGUSFAoQTU9ERV9VTlNQRUNJRklFRBAA",
-            "Eg4KClZBTElEQVRJT04QARIPCgtFTkZPUkNFTUVOVBACQt4BCiFjb20uZ29v",
-            "Z2xlLmNsb3VkLm9zY29uZmlnLnYxYWxwaGFCDU9TUG9saWN5UHJvdG9QAVpF",
-            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9v",
-            "c2NvbmZpZy92MWFscGhhO29zY29uZmlnqgIdR29vZ2xlLkNsb3VkLk9zQ29u",
-            "ZmlnLlYxQWxwaGHKAh1Hb29nbGVcQ2xvdWRcT3NDb25maWdcVjFhbHBoYeoC",
-            "IEdvb2dsZTo6Q2xvdWQ6Ok9zQ29uZmlnOjpWMWFscGhhYgZwcm90bzM="));
+            "GAIgASgIGhgKA1lVTRIRCgRuYW1lGAEgASgJQgPgQQIaGwoGWnlwcGVyEhEK",
+            "BG5hbWUYASABKAlCA+BBAhobCgZHb29HZXQSEQoEbmFtZRgBIAEoCUID4EEC",
+            "GmUKA01TSRJKCgZzb3VyY2UYASABKAsyNS5nb29nbGUuY2xvdWQub3Njb25m",
+            "aWcudjFhbHBoYS5PU1BvbGljeS5SZXNvdXJjZS5GaWxlQgPgQQISEgoKcHJv",
+            "cGVydGllcxgCIAMoCSJJCgxEZXNpcmVkU3RhdGUSHQoZREVTSVJFRF9TVEFU",
+            "RV9VTlNQRUNJRklFRBAAEg0KCUlOU1RBTExFRBABEgsKB1JFTU9WRUQQAkIQ",
+            "Cg5zeXN0ZW1fcGFja2FnZRrRBwoSUmVwb3NpdG9yeVJlc291cmNlEmAKA2Fw",
+            "dBgBIAEoCzJRLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MWFscGhhLk9TUG9s",
+            "aWN5LlJlc291cmNlLlJlcG9zaXRvcnlSZXNvdXJjZS5BcHRSZXBvc2l0b3J5",
+            "SAASYAoDeXVtGAIgASgLMlEuZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxYWxw",
+            "aGEuT1NQb2xpY3kuUmVzb3VyY2UuUmVwb3NpdG9yeVJlc291cmNlLll1bVJl",
+            "cG9zaXRvcnlIABJmCgZ6eXBwZXIYAyABKAsyVC5nb29nbGUuY2xvdWQub3Nj",
+            "b25maWcudjFhbHBoYS5PU1BvbGljeS5SZXNvdXJjZS5SZXBvc2l0b3J5UmVz",
+            "b3VyY2UuWnlwcGVyUmVwb3NpdG9yeUgAEmAKA2dvbxgEIAEoCzJRLmdvb2ds",
+            "ZS5jbG91ZC5vc2NvbmZpZy52MWFscGhhLk9TUG9saWN5LlJlc291cmNlLlJl",
+            "cG9zaXRvcnlSZXNvdXJjZS5Hb29SZXBvc2l0b3J5SAAaowIKDUFwdFJlcG9z",
+            "aXRvcnkSeAoMYXJjaGl2ZV90eXBlGAEgASgOMl0uZ29vZ2xlLmNsb3VkLm9z",
+            "Y29uZmlnLnYxYWxwaGEuT1NQb2xpY3kuUmVzb3VyY2UuUmVwb3NpdG9yeVJl",
+            "c291cmNlLkFwdFJlcG9zaXRvcnkuQXJjaGl2ZVR5cGVCA+BBAhIQCgN1cmkY",
+            "AiABKAlCA+BBAhIZCgxkaXN0cmlidXRpb24YAyABKAlCA+BBAhIXCgpjb21w",
+            "b25lbnRzGAQgAygJQgPgQQISDwoHZ3BnX2tleRgFIAEoCSJBCgtBcmNoaXZl",
+            "VHlwZRIcChhBUkNISVZFX1RZUEVfVU5TUEVDSUZJRUQQABIHCgNERUIQARIL",
+            "CgdERUJfU1JDEAIaXwoNWXVtUmVwb3NpdG9yeRIPCgJpZBgBIAEoCUID4EEC",
+            "EhQKDGRpc3BsYXlfbmFtZRgCIAEoCRIVCghiYXNlX3VybBgDIAEoCUID4EEC",
+            "EhAKCGdwZ19rZXlzGAQgAygJGmIKEFp5cHBlclJlcG9zaXRvcnkSDwoCaWQY",
+            "ASABKAlCA+BBAhIUCgxkaXNwbGF5X25hbWUYAiABKAkSFQoIYmFzZV91cmwY",
+            "AyABKAlCA+BBAhIQCghncGdfa2V5cxgEIAMoCRo0Cg1Hb29SZXBvc2l0b3J5",
+            "EhEKBG5hbWUYASABKAlCA+BBAhIQCgN1cmwYAiABKAlCA+BBAkIMCgpyZXBv",
+            "c2l0b3J5Go0ECgxFeGVjUmVzb3VyY2USWQoIdmFsaWRhdGUYASABKAsyQi5n",
+            "b29nbGUuY2xvdWQub3Njb25maWcudjFhbHBoYS5PU1BvbGljeS5SZXNvdXJj",
+            "ZS5FeGVjUmVzb3VyY2UuRXhlY0ID4EECElMKB2VuZm9yY2UYAiABKAsyQi5n",
+            "b29nbGUuY2xvdWQub3Njb25maWcudjFhbHBoYS5PU1BvbGljeS5SZXNvdXJj",
+            "ZS5FeGVjUmVzb3VyY2UuRXhlYxrMAgoERXhlYxJFCgRmaWxlGAEgASgLMjUu",
+            "Z29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxYWxwaGEuT1NQb2xpY3kuUmVzb3Vy",
+            "Y2UuRmlsZUgAEhAKBnNjcmlwdBgCIAEoCUgAEgwKBGFyZ3MYAyADKAkSaAoL",
+            "aW50ZXJwcmV0ZXIYBCABKA4yTi5nb29nbGUuY2xvdWQub3Njb25maWcudjFh",
+            "bHBoYS5PU1BvbGljeS5SZXNvdXJjZS5FeGVjUmVzb3VyY2UuRXhlYy5JbnRl",
+            "cnByZXRlckID4EECEhgKEG91dHB1dF9maWxlX3BhdGgYBSABKAkiTwoLSW50",
+            "ZXJwcmV0ZXISGwoXSU5URVJQUkVURVJfVU5TUEVDSUZJRUQQABIICgROT05F",
+            "EAESCQoFU0hFTEwQAhIOCgpQT1dFUlNIRUxMEANCCAoGc291cmNlGtYCCgxG",
+            "aWxlUmVzb3VyY2USRQoEZmlsZRgBIAEoCzI1Lmdvb2dsZS5jbG91ZC5vc2Nv",
+            "bmZpZy52MWFscGhhLk9TUG9saWN5LlJlc291cmNlLkZpbGVIABIRCgdjb250",
+            "ZW50GAIgASgJSAASEQoEcGF0aBgDIAEoCUID4EECEl4KBXN0YXRlGAQgASgO",
+            "MkouZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxYWxwaGEuT1NQb2xpY3kuUmVz",
+            "b3VyY2UuRmlsZVJlc291cmNlLkRlc2lyZWRTdGF0ZUID4EECEhMKC3Blcm1p",
+            "c3Npb25zGAUgASgJIloKDERlc2lyZWRTdGF0ZRIdChlERVNJUkVEX1NUQVRF",
+            "X1VOU1BFQ0lGSUVEEAASCwoHUFJFU0VOVBABEgoKBkFCU0VOVBACEhIKDkNP",
+            "TlRFTlRTX01BVENIEANCCAoGc291cmNlQg8KDXJlc291cmNlX3R5cGUa9gEK",
+            "DVJlc291cmNlR3JvdXASRwoJb3NfZmlsdGVyGAEgASgLMjAuZ29vZ2xlLmNs",
+            "b3VkLm9zY29uZmlnLnYxYWxwaGEuT1NQb2xpY3kuT1NGaWx0ZXJCAhgBElIK",
+            "EWludmVudG9yeV9maWx0ZXJzGAMgAygLMjcuZ29vZ2xlLmNsb3VkLm9zY29u",
+            "ZmlnLnYxYWxwaGEuT1NQb2xpY3kuSW52ZW50b3J5RmlsdGVyEkgKCXJlc291",
+            "cmNlcxgCIAMoCzIwLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MWFscGhhLk9T",
+            "UG9saWN5LlJlc291cmNlQgPgQQIiPQoETW9kZRIUChBNT0RFX1VOU1BFQ0lG",
+            "SUVEEAASDgoKVkFMSURBVElPThABEg8KC0VORk9SQ0VNRU5UEAJC3gEKIWNv",
+            "bS5nb29nbGUuY2xvdWQub3Njb25maWcudjFhbHBoYUINT3NQb2xpY3lQcm90",
+            "b1ABWkVnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
+            "b3VkL29zY29uZmlnL3YxYWxwaGE7b3Njb25maWeqAh1Hb29nbGUuQ2xvdWQu",
+            "T3NDb25maWcuVjFBbHBoYcoCHUdvb2dsZVxDbG91ZFxPc0NvbmZpZ1xWMWFs",
+            "cGhh6gIgR29vZ2xlOjpDbG91ZDo6T3NDb25maWc6OlYxYWxwaGFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Parser, new[]{ "Id", "Description", "Mode", "ResourceGroups", "AllowNoResourceGroupMatch" }, null, new[]{ typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Mode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.OSFilter), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.OSFilter.Parser, new[]{ "OsShortName", "OsVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.InventoryFilter), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.InventoryFilter.Parser, new[]{ "OsShortName", "OsVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Parser, new[]{ "Id", "Pkg", "Repository", "Exec", "File" }, new[]{ "ResourceType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.File), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.File.Parser, new[]{ "Remote", "Gcs", "LocalPath", "AllowInsecure" }, new[]{ "Type" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.File.Types.Remote), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.File.Types.Remote.Parser, new[]{ "Uri", "Sha256Checksum" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.File.Types.Gcs), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.File.Types.Gcs.Parser, new[]{ "Bucket", "Object", "Generation" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.PackageResource), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.PackageResource.Parser, new[]{ "DesiredState", "Apt", "Deb", "Yum", "Zypper", "Rpm", "Googet", "Msi" }, new[]{ "SystemPackage" }, new[]{ typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.PackageResource.Types.DesiredState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.PackageResource.Types.Deb), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.PackageResource.Types.Deb.Parser, new[]{ "Source", "PullDeps" }, null, null, null, null),
@@ -147,7 +153,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.RepositoryResource.Types.GooRepository), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.RepositoryResource.Types.GooRepository.Parser, new[]{ "Name", "Url" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource.Parser, new[]{ "Validate", "Enforce" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource.Types.Exec), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource.Types.Exec.Parser, new[]{ "File", "Script", "Args", "Interpreter", "OutputFilePath" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource.Types.Exec.Types.Interpreter) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.FileResource), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.FileResource.Parser, new[]{ "File", "Content", "Path", "State", "Permissions" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.FileResource.Types.DesiredState) }, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.ResourceGroup), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.ResourceGroup.Parser, new[]{ "OsFilter", "Resources" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.ResourceGroup), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.ResourceGroup.Parser, new[]{ "OsFilter", "InventoryFilters", "Resources" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -540,8 +546,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       }
 
       /// <summary>
-      /// The `OSFilter` is used to specify the OS filtering criteria for the
-      /// resource group.
+      /// Filtering criteria to select VMs based on OS details.
       /// </summary>
       public sealed partial class OSFilter : pb::IMessage<OSFilter>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -781,6 +786,247 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       }
 
       /// <summary>
+      /// Filtering criteria to select VMs based on inventory details.
+      /// </summary>
+      public sealed partial class InventoryFilter : pb::IMessage<InventoryFilter>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<InventoryFilter> _parser = new pb::MessageParser<InventoryFilter>(() => new InventoryFilter());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<InventoryFilter> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public InventoryFilter() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public InventoryFilter(InventoryFilter other) : this() {
+          osShortName_ = other.osShortName_;
+          osVersion_ = other.osVersion_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public InventoryFilter Clone() {
+          return new InventoryFilter(this);
+        }
+
+        /// <summary>Field number for the "os_short_name" field.</summary>
+        public const int OsShortNameFieldNumber = 1;
+        private string osShortName_ = "";
+        /// <summary>
+        /// Required. The OS short name
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string OsShortName {
+          get { return osShortName_; }
+          set {
+            osShortName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "os_version" field.</summary>
+        public const int OsVersionFieldNumber = 2;
+        private string osVersion_ = "";
+        /// <summary>
+        /// The OS version
+        ///
+        /// Prefix matches are supported if asterisk(*) is provided as the
+        /// last character. For example, to match all versions with a major
+        /// version of `7`, specify the following value for this field `7.*`
+        ///
+        /// An empty string matches all OS versions.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string OsVersion {
+          get { return osVersion_; }
+          set {
+            osVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as InventoryFilter);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(InventoryFilter other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (OsShortName != other.OsShortName) return false;
+          if (OsVersion != other.OsVersion) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (OsShortName.Length != 0) hash ^= OsShortName.GetHashCode();
+          if (OsVersion.Length != 0) hash ^= OsVersion.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (OsShortName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(OsShortName);
+          }
+          if (OsVersion.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(OsVersion);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (OsShortName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(OsShortName);
+          }
+          if (OsVersion.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(OsVersion);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (OsShortName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(OsShortName);
+          }
+          if (OsVersion.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(OsVersion);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(InventoryFilter other) {
+          if (other == null) {
+            return;
+          }
+          if (other.OsShortName.Length != 0) {
+            OsShortName = other.OsShortName;
+          }
+          if (other.OsVersion.Length != 0) {
+            OsVersion = other.OsVersion;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                OsShortName = input.ReadString();
+                break;
+              }
+              case 18: {
+                OsVersion = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                OsShortName = input.ReadString();
+                break;
+              }
+              case 18: {
+                OsVersion = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// An OS policy resource is used to define the desired state configuration
       /// and provides a specific functionality like installing/removing packages,
       /// executing a script etc.
@@ -802,7 +1048,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Descriptor.NestedTypes[1]; }
+          get { return global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6632,24 +6878,24 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                   /// </summary>
                   public enum Interpreter {
                     /// <summary>
-                    /// Defaults to NONE.
+                    /// Invalid value, the request will return validation error.
                     /// </summary>
                     [pbr::OriginalName("INTERPRETER_UNSPECIFIED")] Unspecified = 0,
                     /// <summary>
-                    /// If no interpreter is specified the
-                    /// source will be executed directly, which will likely only
-                    /// succeed for executables and scripts with shebang lines.
-                    /// [Wikipedia
-                    /// shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)).
+                    /// If an interpreter is not specified, the
+                    /// source is executed directly. This execution, without an
+                    /// interpreter, only succeeds for executables and scripts that have &lt;a
+                    /// href="https://en.wikipedia.org/wiki/Shebang_(Unix)"
+                    /// class="external">shebang lines&lt;/a>.
                     /// </summary>
                     [pbr::OriginalName("NONE")] None = 1,
                     /// <summary>
-                    /// Indicates that the script will be run with /bin/sh on Linux and
-                    /// cmd.exe on windows.
+                    /// Indicates that the script runs with `/bin/sh` on Linux and
+                    /// `cmd.exe` on Windows.
                     /// </summary>
                     [pbr::OriginalName("SHELL")] Shell = 2,
                     /// <summary>
-                    /// Indicates that the script will be run with powershell.
+                    /// Indicates that the script runs with PowerShell.
                     /// </summary>
                     [pbr::OriginalName("POWERSHELL")] Powershell = 3,
                   }
@@ -7138,7 +7384,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Descriptor.NestedTypes[2]; }
+          get { return global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7159,6 +7405,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ResourceGroup(ResourceGroup other) : this() {
           osFilter_ = other.osFilter_ != null ? other.osFilter_.Clone() : null;
+          inventoryFilters_ = other.inventoryFilters_.Clone();
           resources_ = other.resources_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
@@ -7173,8 +7420,10 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         public const int OsFilterFieldNumber = 1;
         private global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.OSFilter osFilter_;
         /// <summary>
+        /// Deprecated. Use the `inventory_filters` field instead.
         /// Used to specify the OS filter for a resource group
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.OSFilter OsFilter {
@@ -7182,6 +7431,32 @@ namespace Google.Cloud.OsConfig.V1Alpha {
           set {
             osFilter_ = value;
           }
+        }
+
+        /// <summary>Field number for the "inventory_filters" field.</summary>
+        public const int InventoryFiltersFieldNumber = 3;
+        private static readonly pb::FieldCodec<global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.InventoryFilter> _repeated_inventoryFilters_codec
+            = pb::FieldCodec.ForMessage(26, global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.InventoryFilter.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.InventoryFilter> inventoryFilters_ = new pbc::RepeatedField<global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.InventoryFilter>();
+        /// <summary>
+        /// List of inventory filters for the resource group.
+        ///
+        /// The resources in this resource group are applied to the target VM if it
+        /// satisfies at least one of the following inventory filters.
+        ///
+        /// For example, to apply this resource group to VMs running either `RHEL` or
+        /// `CentOS` operating systems, specify 2 items for the list with following
+        /// values:
+        /// inventory_filters[0].os_short_name='rhel' and
+        /// inventory_filters[1].os_short_name='centos'
+        ///
+        /// If the list is empty, this resource group will be applied to the target
+        /// VM unconditionally.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.InventoryFilter> InventoryFilters {
+          get { return inventoryFilters_; }
         }
 
         /// <summary>Field number for the "resources" field.</summary>
@@ -7215,6 +7490,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             return true;
           }
           if (!object.Equals(OsFilter, other.OsFilter)) return false;
+          if(!inventoryFilters_.Equals(other.inventoryFilters_)) return false;
           if(!resources_.Equals(other.resources_)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -7224,6 +7500,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         public override int GetHashCode() {
           int hash = 1;
           if (osFilter_ != null) hash ^= OsFilter.GetHashCode();
+          hash ^= inventoryFilters_.GetHashCode();
           hash ^= resources_.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -7248,6 +7525,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             output.WriteMessage(OsFilter);
           }
           resources_.WriteTo(output, _repeated_resources_codec);
+          inventoryFilters_.WriteTo(output, _repeated_inventoryFilters_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -7263,6 +7541,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             output.WriteMessage(OsFilter);
           }
           resources_.WriteTo(ref output, _repeated_resources_codec);
+          inventoryFilters_.WriteTo(ref output, _repeated_inventoryFilters_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -7276,6 +7555,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
           if (osFilter_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(OsFilter);
           }
+          size += inventoryFilters_.CalculateSize(_repeated_inventoryFilters_codec);
           size += resources_.CalculateSize(_repeated_resources_codec);
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -7295,6 +7575,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             }
             OsFilter.MergeFrom(other.OsFilter);
           }
+          inventoryFilters_.Add(other.inventoryFilters_);
           resources_.Add(other.resources_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -7322,6 +7603,10 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                 resources_.AddEntriesFrom(input, _repeated_resources_codec);
                 break;
               }
+              case 26: {
+                inventoryFilters_.AddEntriesFrom(input, _repeated_inventoryFilters_codec);
+                break;
+              }
             }
           }
         #endif
@@ -7346,6 +7631,10 @@ namespace Google.Cloud.OsConfig.V1Alpha {
               }
               case 18: {
                 resources_.AddEntriesFrom(ref input, _repeated_resources_codec);
+                break;
+              }
+              case 26: {
+                inventoryFilters_.AddEntriesFrom(ref input, _repeated_inventoryFilters_codec);
                 break;
               }
             }

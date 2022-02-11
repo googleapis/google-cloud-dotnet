@@ -58,6 +58,8 @@ namespace Google.Cloud.OsConfig.V1Alpha
             DeleteOSPolicyAssignmentOperationsSettings = existing.DeleteOSPolicyAssignmentOperationsSettings.Clone();
             GetInstanceOSPoliciesComplianceSettings = existing.GetInstanceOSPoliciesComplianceSettings;
             ListInstanceOSPoliciesCompliancesSettings = existing.ListInstanceOSPoliciesCompliancesSettings;
+            GetOSPolicyAssignmentReportSettings = existing.GetOSPolicyAssignmentReportSettings;
+            ListOSPolicyAssignmentReportsSettings = existing.ListOSPolicyAssignmentReportsSettings;
             GetInventorySettings = existing.GetInventorySettings;
             ListInventoriesSettings = existing.ListInventoriesSettings;
             GetVulnerabilityReportSettings = existing.GetVulnerabilityReportSettings;
@@ -272,6 +274,44 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListInstanceOSPoliciesCompliancesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OsConfigZonalServiceClient.GetOSPolicyAssignmentReport</c> and
+        /// <c>OsConfigZonalServiceClient.GetOSPolicyAssignmentReportAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetOSPolicyAssignmentReportSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OsConfigZonalServiceClient.ListOSPolicyAssignmentReports</c> and
+        /// <c>OsConfigZonalServiceClient.ListOSPolicyAssignmentReportsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListOSPolicyAssignmentReportsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1600,7 +1640,10 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual InstanceOSPoliciesCompliance GetInstanceOSPoliciesCompliance(GetInstanceOSPoliciesComplianceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1610,7 +1653,10 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<InstanceOSPoliciesCompliance> GetInstanceOSPoliciesComplianceAsync(GetInstanceOSPoliciesComplianceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1620,7 +1666,10 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<InstanceOSPoliciesCompliance> GetInstanceOSPoliciesComplianceAsync(GetInstanceOSPoliciesComplianceRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetInstanceOSPoliciesComplianceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1640,8 +1689,11 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual InstanceOSPoliciesCompliance GetInstanceOSPoliciesCompliance(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetInstanceOSPoliciesCompliance(new GetInstanceOSPoliciesComplianceRequest
+#pragma warning restore CS0612
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
             }, callSettings);
@@ -1663,8 +1715,11 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<InstanceOSPoliciesCompliance> GetInstanceOSPoliciesComplianceAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetInstanceOSPoliciesComplianceAsync(new GetInstanceOSPoliciesComplianceRequest
+#pragma warning restore CS0612
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
             }, callSettings);
@@ -1686,7 +1741,10 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<InstanceOSPoliciesCompliance> GetInstanceOSPoliciesComplianceAsync(string name, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetInstanceOSPoliciesComplianceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1706,8 +1764,11 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual InstanceOSPoliciesCompliance GetInstanceOSPoliciesCompliance(InstanceOSPoliciesComplianceName name, gaxgrpc::CallSettings callSettings = null) =>
             GetInstanceOSPoliciesCompliance(new GetInstanceOSPoliciesComplianceRequest
+#pragma warning restore CS0612
             {
                 InstanceOSPoliciesComplianceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
@@ -1729,8 +1790,11 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<InstanceOSPoliciesCompliance> GetInstanceOSPoliciesComplianceAsync(InstanceOSPoliciesComplianceName name, gaxgrpc::CallSettings callSettings = null) =>
             GetInstanceOSPoliciesComplianceAsync(new GetInstanceOSPoliciesComplianceRequest
+#pragma warning restore CS0612
             {
                 InstanceOSPoliciesComplianceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
@@ -1752,7 +1816,10 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<InstanceOSPoliciesCompliance> GetInstanceOSPoliciesComplianceAsync(InstanceOSPoliciesComplianceName name, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetInstanceOSPoliciesComplianceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1762,7 +1829,10 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="InstanceOSPoliciesCompliance"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<ListInstanceOSPoliciesCompliancesResponse, InstanceOSPoliciesCompliance> ListInstanceOSPoliciesCompliances(ListInstanceOSPoliciesCompliancesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1772,7 +1842,10 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="InstanceOSPoliciesCompliance"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<ListInstanceOSPoliciesCompliancesResponse, InstanceOSPoliciesCompliance> ListInstanceOSPoliciesCompliancesAsync(ListInstanceOSPoliciesCompliancesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1797,8 +1870,11 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="InstanceOSPoliciesCompliance"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<ListInstanceOSPoliciesCompliancesResponse, InstanceOSPoliciesCompliance> ListInstanceOSPoliciesCompliances(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListInstanceOSPoliciesCompliances(new ListInstanceOSPoliciesCompliancesRequest
+#pragma warning restore CS0612
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
@@ -1827,8 +1903,11 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="InstanceOSPoliciesCompliance"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<ListInstanceOSPoliciesCompliancesResponse, InstanceOSPoliciesCompliance> ListInstanceOSPoliciesCompliancesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListInstanceOSPoliciesCompliancesAsync(new ListInstanceOSPoliciesCompliancesRequest
+#pragma warning restore CS0612
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
@@ -1857,8 +1936,11 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="InstanceOSPoliciesCompliance"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<ListInstanceOSPoliciesCompliancesResponse, InstanceOSPoliciesCompliance> ListInstanceOSPoliciesCompliances(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListInstanceOSPoliciesCompliances(new ListInstanceOSPoliciesCompliancesRequest
+#pragma warning restore CS0612
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
@@ -1887,10 +1969,375 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="InstanceOSPoliciesCompliance"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<ListInstanceOSPoliciesCompliancesResponse, InstanceOSPoliciesCompliance> ListInstanceOSPoliciesCompliancesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListInstanceOSPoliciesCompliancesAsync(new ListInstanceOSPoliciesCompliancesRequest
+#pragma warning restore CS0612
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Get the OS policy asssignment report for the specified Compute Engine VM
+        /// instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual OSPolicyAssignmentReport GetOSPolicyAssignmentReport(GetOSPolicyAssignmentReportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get the OS policy asssignment report for the specified Compute Engine VM
+        /// instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OSPolicyAssignmentReport> GetOSPolicyAssignmentReportAsync(GetOSPolicyAssignmentReportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get the OS policy asssignment report for the specified Compute Engine VM
+        /// instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OSPolicyAssignmentReport> GetOSPolicyAssignmentReportAsync(GetOSPolicyAssignmentReportRequest request, st::CancellationToken cancellationToken) =>
+            GetOSPolicyAssignmentReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get the OS policy asssignment report for the specified Compute Engine VM
+        /// instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. API resource name for OS policy assignment report.
+        /// 
+        /// Format:
+        /// `/projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/report`
+        /// 
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
+        /// For `{instance_id}`, either Compute Engine `instance-id` or `instance-name`
+        /// can be provided.
+        /// For `{assignment_id}`, the OSPolicyAssignment id must be provided.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual OSPolicyAssignmentReport GetOSPolicyAssignmentReport(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetOSPolicyAssignmentReport(new GetOSPolicyAssignmentReportRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the OS policy asssignment report for the specified Compute Engine VM
+        /// instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. API resource name for OS policy assignment report.
+        /// 
+        /// Format:
+        /// `/projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/report`
+        /// 
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
+        /// For `{instance_id}`, either Compute Engine `instance-id` or `instance-name`
+        /// can be provided.
+        /// For `{assignment_id}`, the OSPolicyAssignment id must be provided.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OSPolicyAssignmentReport> GetOSPolicyAssignmentReportAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetOSPolicyAssignmentReportAsync(new GetOSPolicyAssignmentReportRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the OS policy asssignment report for the specified Compute Engine VM
+        /// instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. API resource name for OS policy assignment report.
+        /// 
+        /// Format:
+        /// `/projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/report`
+        /// 
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
+        /// For `{instance_id}`, either Compute Engine `instance-id` or `instance-name`
+        /// can be provided.
+        /// For `{assignment_id}`, the OSPolicyAssignment id must be provided.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OSPolicyAssignmentReport> GetOSPolicyAssignmentReportAsync(string name, st::CancellationToken cancellationToken) =>
+            GetOSPolicyAssignmentReportAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get the OS policy asssignment report for the specified Compute Engine VM
+        /// instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. API resource name for OS policy assignment report.
+        /// 
+        /// Format:
+        /// `/projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/report`
+        /// 
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
+        /// For `{instance_id}`, either Compute Engine `instance-id` or `instance-name`
+        /// can be provided.
+        /// For `{assignment_id}`, the OSPolicyAssignment id must be provided.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual OSPolicyAssignmentReport GetOSPolicyAssignmentReport(OSPolicyAssignmentReportName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetOSPolicyAssignmentReport(new GetOSPolicyAssignmentReportRequest
+            {
+                OSPolicyAssignmentReportName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the OS policy asssignment report for the specified Compute Engine VM
+        /// instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. API resource name for OS policy assignment report.
+        /// 
+        /// Format:
+        /// `/projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/report`
+        /// 
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
+        /// For `{instance_id}`, either Compute Engine `instance-id` or `instance-name`
+        /// can be provided.
+        /// For `{assignment_id}`, the OSPolicyAssignment id must be provided.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OSPolicyAssignmentReport> GetOSPolicyAssignmentReportAsync(OSPolicyAssignmentReportName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetOSPolicyAssignmentReportAsync(new GetOSPolicyAssignmentReportRequest
+            {
+                OSPolicyAssignmentReportName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the OS policy asssignment report for the specified Compute Engine VM
+        /// instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. API resource name for OS policy assignment report.
+        /// 
+        /// Format:
+        /// `/projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/report`
+        /// 
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
+        /// For `{instance_id}`, either Compute Engine `instance-id` or `instance-name`
+        /// can be provided.
+        /// For `{assignment_id}`, the OSPolicyAssignment id must be provided.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OSPolicyAssignmentReport> GetOSPolicyAssignmentReportAsync(OSPolicyAssignmentReportName name, st::CancellationToken cancellationToken) =>
+            GetOSPolicyAssignmentReportAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List OS policy asssignment reports for all Compute Engine VM instances in
+        /// the specified zone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="OSPolicyAssignmentReport"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReports(ListOSPolicyAssignmentReportsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List OS policy asssignment reports for all Compute Engine VM instances in
+        /// the specified zone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="OSPolicyAssignmentReport"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReportsAsync(ListOSPolicyAssignmentReportsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List OS policy asssignment reports for all Compute Engine VM instances in
+        /// the specified zone.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/reports`
+        /// 
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
+        /// For `{instance}`, either `instance-name`, `instance-id`, or `-` can be
+        /// provided. If '-' is provided, the response will include
+        /// OSPolicyAssignmentReports for all instances in the project/location.
+        /// For `{assignment}`, either `assignment-id` or `-` can be provided. If '-'
+        /// is provided, the response will include OSPolicyAssignmentReports for all
+        /// OSPolicyAssignments in the project/location.
+        /// Either {instance} or {assignment} must be `-`.
+        /// 
+        /// For example:
+        /// `projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/-/reports`
+        /// returns all reports for the instance
+        /// `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/{assignment-id}/reports`
+        /// returns all the reports for the given assignment across all instances.
+        /// `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/-/reports`
+        /// returns all the reports for all assignments across all instances.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="OSPolicyAssignmentReport"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReports(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListOSPolicyAssignmentReports(new ListOSPolicyAssignmentReportsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List OS policy asssignment reports for all Compute Engine VM instances in
+        /// the specified zone.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/reports`
+        /// 
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
+        /// For `{instance}`, either `instance-name`, `instance-id`, or `-` can be
+        /// provided. If '-' is provided, the response will include
+        /// OSPolicyAssignmentReports for all instances in the project/location.
+        /// For `{assignment}`, either `assignment-id` or `-` can be provided. If '-'
+        /// is provided, the response will include OSPolicyAssignmentReports for all
+        /// OSPolicyAssignments in the project/location.
+        /// Either {instance} or {assignment} must be `-`.
+        /// 
+        /// For example:
+        /// `projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/-/reports`
+        /// returns all reports for the instance
+        /// `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/{assignment-id}/reports`
+        /// returns all the reports for the given assignment across all instances.
+        /// `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/-/reports`
+        /// returns all the reports for all assignments across all instances.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="OSPolicyAssignmentReport"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReportsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListOSPolicyAssignmentReportsAsync(new ListOSPolicyAssignmentReportsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List OS policy asssignment reports for all Compute Engine VM instances in
+        /// the specified zone.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/reports`
+        /// 
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
+        /// For `{instance}`, either `instance-name`, `instance-id`, or `-` can be
+        /// provided. If '-' is provided, the response will include
+        /// OSPolicyAssignmentReports for all instances in the project/location.
+        /// For `{assignment}`, either `assignment-id` or `-` can be provided. If '-'
+        /// is provided, the response will include OSPolicyAssignmentReports for all
+        /// OSPolicyAssignments in the project/location.
+        /// Either {instance} or {assignment} must be `-`.
+        /// 
+        /// For example:
+        /// `projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/-/reports`
+        /// returns all reports for the instance
+        /// `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/{assignment-id}/reports`
+        /// returns all the reports for the given assignment across all instances.
+        /// `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/-/reports`
+        /// returns all the reports for all assignments across all instances.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="OSPolicyAssignmentReport"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReports(InstanceOSPolicyAssignmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListOSPolicyAssignmentReports(new ListOSPolicyAssignmentReportsRequest
+            {
+                ParentAsInstanceOSPolicyAssignmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List OS policy asssignment reports for all Compute Engine VM instances in
+        /// the specified zone.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/reports`
+        /// 
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
+        /// For `{instance}`, either `instance-name`, `instance-id`, or `-` can be
+        /// provided. If '-' is provided, the response will include
+        /// OSPolicyAssignmentReports for all instances in the project/location.
+        /// For `{assignment}`, either `assignment-id` or `-` can be provided. If '-'
+        /// is provided, the response will include OSPolicyAssignmentReports for all
+        /// OSPolicyAssignments in the project/location.
+        /// Either {instance} or {assignment} must be `-`.
+        /// 
+        /// For example:
+        /// `projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/-/reports`
+        /// returns all reports for the instance
+        /// `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/{assignment-id}/reports`
+        /// returns all the reports for the given assignment across all instances.
+        /// `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/-/reports`
+        /// returns all the reports for all assignments across all instances.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="OSPolicyAssignmentReport"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReportsAsync(InstanceOSPolicyAssignmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListOSPolicyAssignmentReportsAsync(new ListOSPolicyAssignmentReportsRequest
+            {
+                ParentAsInstanceOSPolicyAssignmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -2075,11 +2522,9 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// <param name="parent">
         /// Required. The parent resource name.
         /// 
-        /// Format: `projects/{project}/locations/{location}/instances/{instance}`
+        /// Format: `projects/{project}/locations/{location}/instances/-`
         /// 
-        /// For `{project}`, either `project-number` or `project-id` can be
-        /// provided. For `{instance}`, only hyphen or dash character is supported to
-        /// list inventories across VMs.
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2105,11 +2550,9 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// <param name="parent">
         /// Required. The parent resource name.
         /// 
-        /// Format: `projects/{project}/locations/{location}/instances/{instance}`
+        /// Format: `projects/{project}/locations/{location}/instances/-`
         /// 
-        /// For `{project}`, either `project-number` or `project-id` can be
-        /// provided. For `{instance}`, only hyphen or dash character is supported to
-        /// list inventories across VMs.
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2135,11 +2578,9 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// <param name="parent">
         /// Required. The parent resource name.
         /// 
-        /// Format: `projects/{project}/locations/{location}/instances/{instance}`
+        /// Format: `projects/{project}/locations/{location}/instances/-`
         /// 
-        /// For `{project}`, either `project-number` or `project-id` can be
-        /// provided. For `{instance}`, only hyphen or dash character is supported to
-        /// list inventories across VMs.
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2165,11 +2606,9 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// <param name="parent">
         /// Required. The parent resource name.
         /// 
-        /// Format: `projects/{project}/locations/{location}/instances/{instance}`
+        /// Format: `projects/{project}/locations/{location}/instances/-`
         /// 
-        /// For `{project}`, either `project-number` or `project-id` can be
-        /// provided. For `{instance}`, only hyphen or dash character is supported to
-        /// list inventories across VMs.
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2369,11 +2808,9 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// <param name="parent">
         /// Required. The parent resource name.
         /// 
-        /// Format: `projects/{project}/locations/{location}/instances/{instance}`
+        /// Format: `projects/{project}/locations/{location}/instances/-`
         /// 
         /// For `{project}`, either `project-number` or `project-id` can be provided.
-        /// For `{instance}`, only `-` character is supported to list vulnerability
-        /// reports across VMs.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2399,11 +2836,9 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// <param name="parent">
         /// Required. The parent resource name.
         /// 
-        /// Format: `projects/{project}/locations/{location}/instances/{instance}`
+        /// Format: `projects/{project}/locations/{location}/instances/-`
         /// 
         /// For `{project}`, either `project-number` or `project-id` can be provided.
-        /// For `{instance}`, only `-` character is supported to list vulnerability
-        /// reports across VMs.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2429,11 +2864,9 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// <param name="parent">
         /// Required. The parent resource name.
         /// 
-        /// Format: `projects/{project}/locations/{location}/instances/{instance}`
+        /// Format: `projects/{project}/locations/{location}/instances/-`
         /// 
         /// For `{project}`, either `project-number` or `project-id` can be provided.
-        /// For `{instance}`, only `-` character is supported to list vulnerability
-        /// reports across VMs.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2459,11 +2892,9 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// <param name="parent">
         /// Required. The parent resource name.
         /// 
-        /// Format: `projects/{project}/locations/{location}/instances/{instance}`
+        /// Format: `projects/{project}/locations/{location}/instances/-`
         /// 
         /// For `{project}`, either `project-number` or `project-id` can be provided.
-        /// For `{instance}`, only `-` character is supported to list vulnerability
-        /// reports across VMs.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2505,9 +2936,15 @@ namespace Google.Cloud.OsConfig.V1Alpha
 
         private readonly gaxgrpc::ApiCall<DeleteOSPolicyAssignmentRequest, lro::Operation> _callDeleteOSPolicyAssignment;
 
+#pragma warning disable CS0612
         private readonly gaxgrpc::ApiCall<GetInstanceOSPoliciesComplianceRequest, InstanceOSPoliciesCompliance> _callGetInstanceOSPoliciesCompliance;
 
         private readonly gaxgrpc::ApiCall<ListInstanceOSPoliciesCompliancesRequest, ListInstanceOSPoliciesCompliancesResponse> _callListInstanceOSPoliciesCompliances;
+#pragma warning restore CS0612
+
+        private readonly gaxgrpc::ApiCall<GetOSPolicyAssignmentReportRequest, OSPolicyAssignmentReport> _callGetOSPolicyAssignmentReport;
+
+        private readonly gaxgrpc::ApiCall<ListOSPolicyAssignmentReportsRequest, ListOSPolicyAssignmentReportsResponse> _callListOSPolicyAssignmentReports;
 
         private readonly gaxgrpc::ApiCall<GetInventoryRequest, Inventory> _callGetInventory;
 
@@ -2549,12 +2986,22 @@ namespace Google.Cloud.OsConfig.V1Alpha
             _callDeleteOSPolicyAssignment = clientHelper.BuildApiCall<DeleteOSPolicyAssignmentRequest, lro::Operation>(grpcClient.DeleteOSPolicyAssignmentAsync, grpcClient.DeleteOSPolicyAssignment, effectiveSettings.DeleteOSPolicyAssignmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteOSPolicyAssignment);
             Modify_DeleteOSPolicyAssignmentApiCall(ref _callDeleteOSPolicyAssignment);
+#pragma warning disable CS0612
             _callGetInstanceOSPoliciesCompliance = clientHelper.BuildApiCall<GetInstanceOSPoliciesComplianceRequest, InstanceOSPoliciesCompliance>(grpcClient.GetInstanceOSPoliciesComplianceAsync, grpcClient.GetInstanceOSPoliciesCompliance, effectiveSettings.GetInstanceOSPoliciesComplianceSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callGetInstanceOSPoliciesCompliance);
             Modify_GetInstanceOSPoliciesComplianceApiCall(ref _callGetInstanceOSPoliciesCompliance);
+#pragma warning disable CS0612
             _callListInstanceOSPoliciesCompliances = clientHelper.BuildApiCall<ListInstanceOSPoliciesCompliancesRequest, ListInstanceOSPoliciesCompliancesResponse>(grpcClient.ListInstanceOSPoliciesCompliancesAsync, grpcClient.ListInstanceOSPoliciesCompliances, effectiveSettings.ListInstanceOSPoliciesCompliancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callListInstanceOSPoliciesCompliances);
             Modify_ListInstanceOSPoliciesCompliancesApiCall(ref _callListInstanceOSPoliciesCompliances);
+            _callGetOSPolicyAssignmentReport = clientHelper.BuildApiCall<GetOSPolicyAssignmentReportRequest, OSPolicyAssignmentReport>(grpcClient.GetOSPolicyAssignmentReportAsync, grpcClient.GetOSPolicyAssignmentReport, effectiveSettings.GetOSPolicyAssignmentReportSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetOSPolicyAssignmentReport);
+            Modify_GetOSPolicyAssignmentReportApiCall(ref _callGetOSPolicyAssignmentReport);
+            _callListOSPolicyAssignmentReports = clientHelper.BuildApiCall<ListOSPolicyAssignmentReportsRequest, ListOSPolicyAssignmentReportsResponse>(grpcClient.ListOSPolicyAssignmentReportsAsync, grpcClient.ListOSPolicyAssignmentReports, effectiveSettings.ListOSPolicyAssignmentReportsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListOSPolicyAssignmentReports);
+            Modify_ListOSPolicyAssignmentReportsApiCall(ref _callListOSPolicyAssignmentReports);
             _callGetInventory = clientHelper.BuildApiCall<GetInventoryRequest, Inventory>(grpcClient.GetInventoryAsync, grpcClient.GetInventory, effectiveSettings.GetInventorySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetInventory);
             Modify_GetInventoryApiCall(ref _callGetInventory);
@@ -2584,9 +3031,15 @@ namespace Google.Cloud.OsConfig.V1Alpha
 
         partial void Modify_DeleteOSPolicyAssignmentApiCall(ref gaxgrpc::ApiCall<DeleteOSPolicyAssignmentRequest, lro::Operation> call);
 
+#pragma warning disable CS0612
         partial void Modify_GetInstanceOSPoliciesComplianceApiCall(ref gaxgrpc::ApiCall<GetInstanceOSPoliciesComplianceRequest, InstanceOSPoliciesCompliance> call);
 
         partial void Modify_ListInstanceOSPoliciesCompliancesApiCall(ref gaxgrpc::ApiCall<ListInstanceOSPoliciesCompliancesRequest, ListInstanceOSPoliciesCompliancesResponse> call);
+#pragma warning restore CS0612
+
+        partial void Modify_GetOSPolicyAssignmentReportApiCall(ref gaxgrpc::ApiCall<GetOSPolicyAssignmentReportRequest, OSPolicyAssignmentReport> call);
+
+        partial void Modify_ListOSPolicyAssignmentReportsApiCall(ref gaxgrpc::ApiCall<ListOSPolicyAssignmentReportsRequest, ListOSPolicyAssignmentReportsResponse> call);
 
         partial void Modify_GetInventoryApiCall(ref gaxgrpc::ApiCall<GetInventoryRequest, Inventory> call);
 
@@ -2613,9 +3066,15 @@ namespace Google.Cloud.OsConfig.V1Alpha
 
         partial void Modify_DeleteOSPolicyAssignmentRequest(ref DeleteOSPolicyAssignmentRequest request, ref gaxgrpc::CallSettings settings);
 
+#pragma warning disable CS0612
         partial void Modify_GetInstanceOSPoliciesComplianceRequest(ref GetInstanceOSPoliciesComplianceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListInstanceOSPoliciesCompliancesRequest(ref ListInstanceOSPoliciesCompliancesRequest request, ref gaxgrpc::CallSettings settings);
+#pragma warning restore CS0612
+
+        partial void Modify_GetOSPolicyAssignmentReportRequest(ref GetOSPolicyAssignmentReportRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListOSPolicyAssignmentReportsRequest(ref ListOSPolicyAssignmentReportsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetInventoryRequest(ref GetInventoryRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2851,7 +3310,10 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override InstanceOSPoliciesCompliance GetInstanceOSPoliciesCompliance(GetInstanceOSPoliciesComplianceRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GetInstanceOSPoliciesComplianceRequest(ref request, ref callSettings);
             return _callGetInstanceOSPoliciesCompliance.Sync(request, callSettings);
@@ -2864,7 +3326,10 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override stt::Task<InstanceOSPoliciesCompliance> GetInstanceOSPoliciesComplianceAsync(GetInstanceOSPoliciesComplianceRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GetInstanceOSPoliciesComplianceRequest(ref request, ref callSettings);
             return _callGetInstanceOSPoliciesCompliance.Async(request, callSettings);
@@ -2877,10 +3342,15 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="InstanceOSPoliciesCompliance"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override gax::PagedEnumerable<ListInstanceOSPoliciesCompliancesResponse, InstanceOSPoliciesCompliance> ListInstanceOSPoliciesCompliances(ListInstanceOSPoliciesCompliancesRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_ListInstanceOSPoliciesCompliancesRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new gaxgrpc::GrpcPagedEnumerable<ListInstanceOSPoliciesCompliancesRequest, ListInstanceOSPoliciesCompliancesResponse, InstanceOSPoliciesCompliance>(_callListInstanceOSPoliciesCompliances, request, callSettings);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -2890,10 +3360,67 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="InstanceOSPoliciesCompliance"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override gax::PagedAsyncEnumerable<ListInstanceOSPoliciesCompliancesResponse, InstanceOSPoliciesCompliance> ListInstanceOSPoliciesCompliancesAsync(ListInstanceOSPoliciesCompliancesRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_ListInstanceOSPoliciesCompliancesRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListInstanceOSPoliciesCompliancesRequest, ListInstanceOSPoliciesCompliancesResponse, InstanceOSPoliciesCompliance>(_callListInstanceOSPoliciesCompliances, request, callSettings);
+#pragma warning restore CS0612
+        }
+
+        /// <summary>
+        /// Get the OS policy asssignment report for the specified Compute Engine VM
+        /// instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override OSPolicyAssignmentReport GetOSPolicyAssignmentReport(GetOSPolicyAssignmentReportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetOSPolicyAssignmentReportRequest(ref request, ref callSettings);
+            return _callGetOSPolicyAssignmentReport.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get the OS policy asssignment report for the specified Compute Engine VM
+        /// instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<OSPolicyAssignmentReport> GetOSPolicyAssignmentReportAsync(GetOSPolicyAssignmentReportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetOSPolicyAssignmentReportRequest(ref request, ref callSettings);
+            return _callGetOSPolicyAssignmentReport.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// List OS policy asssignment reports for all Compute Engine VM instances in
+        /// the specified zone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="OSPolicyAssignmentReport"/> resources.</returns>
+        public override gax::PagedEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReports(ListOSPolicyAssignmentReportsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListOSPolicyAssignmentReportsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListOSPolicyAssignmentReportsRequest, ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport>(_callListOSPolicyAssignmentReports, request, callSettings);
+        }
+
+        /// <summary>
+        /// List OS policy asssignment reports for all Compute Engine VM instances in
+        /// the specified zone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="OSPolicyAssignmentReport"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReportsAsync(ListOSPolicyAssignmentReportsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListOSPolicyAssignmentReportsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListOSPolicyAssignmentReportsRequest, ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport>(_callListOSPolicyAssignmentReports, request, callSettings);
         }
 
         /// <summary>
@@ -3009,6 +3536,10 @@ namespace Google.Cloud.OsConfig.V1Alpha
     {
     }
 
+    public partial class ListOSPolicyAssignmentReportsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListInventoriesRequest : gaxgrpc::IPageRequest
     {
     }
@@ -3033,11 +3564,23 @@ namespace Google.Cloud.OsConfig.V1Alpha
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
+#pragma warning disable CS0612
     public partial class ListInstanceOSPoliciesCompliancesResponse : gaxgrpc::IPageResponse<InstanceOSPoliciesCompliance>
+#pragma warning restore CS0612
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+#pragma warning disable CS0612
         public scg::IEnumerator<InstanceOSPoliciesCompliance> GetEnumerator() =>
+#pragma warning restore CS0612
             InstanceOsPoliciesCompliances.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListOSPolicyAssignmentReportsResponse : gaxgrpc::IPageResponse<OSPolicyAssignmentReport>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<OSPolicyAssignmentReport> GetEnumerator() => OsPolicyAssignmentReports.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

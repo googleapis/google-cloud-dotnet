@@ -40,6 +40,12 @@
                 "GetOSPolicyAssignmentAsync"
               ]
             },
+            "GetOSPolicyAssignmentReport": {
+              "methods": [
+                "GetOSPolicyAssignmentReport",
+                "GetOSPolicyAssignmentReportAsync"
+              ]
+            },
             "GetVulnerabilityReport": {
               "methods": [
                 "GetVulnerabilityReport",
@@ -56,6 +62,12 @@
               "methods": [
                 "ListInventories",
                 "ListInventoriesAsync"
+              ]
+            },
+            "ListOSPolicyAssignmentReports": {
+              "methods": [
+                "ListOSPolicyAssignmentReports",
+                "ListOSPolicyAssignmentReportsAsync"
               ]
             },
             "ListOSPolicyAssignmentRevisions": {

@@ -46,6 +46,7 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
                 Rollout = new OSPolicyAssignment.Types.Rollout(),
                 RevisionId = "revision_id8d9ae05d",
                 RevisionCreateTime = new wkt::Timestamp(),
+                Etag = "etage8ad7218",
                 RolloutState = OSPolicyAssignment.Types.RolloutState.Cancelling,
                 Baseline = false,
                 Deleted = true,
@@ -77,6 +78,7 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
                 Rollout = new OSPolicyAssignment.Types.Rollout(),
                 RevisionId = "revision_id8d9ae05d",
                 RevisionCreateTime = new wkt::Timestamp(),
+                Etag = "etage8ad7218",
                 RolloutState = OSPolicyAssignment.Types.RolloutState.Cancelling,
                 Baseline = false,
                 Deleted = true,
@@ -110,6 +112,7 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
                 Rollout = new OSPolicyAssignment.Types.Rollout(),
                 RevisionId = "revision_id8d9ae05d",
                 RevisionCreateTime = new wkt::Timestamp(),
+                Etag = "etage8ad7218",
                 RolloutState = OSPolicyAssignment.Types.RolloutState.Cancelling,
                 Baseline = false,
                 Deleted = true,
@@ -141,6 +144,7 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
                 Rollout = new OSPolicyAssignment.Types.Rollout(),
                 RevisionId = "revision_id8d9ae05d",
                 RevisionCreateTime = new wkt::Timestamp(),
+                Etag = "etage8ad7218",
                 RolloutState = OSPolicyAssignment.Types.RolloutState.Cancelling,
                 Baseline = false,
                 Deleted = true,
@@ -174,6 +178,7 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
                 Rollout = new OSPolicyAssignment.Types.Rollout(),
                 RevisionId = "revision_id8d9ae05d",
                 RevisionCreateTime = new wkt::Timestamp(),
+                Etag = "etage8ad7218",
                 RolloutState = OSPolicyAssignment.Types.RolloutState.Cancelling,
                 Baseline = false,
                 Deleted = true,
@@ -205,6 +210,7 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
                 Rollout = new OSPolicyAssignment.Types.Rollout(),
                 RevisionId = "revision_id8d9ae05d",
                 RevisionCreateTime = new wkt::Timestamp(),
+                Etag = "etage8ad7218",
                 RolloutState = OSPolicyAssignment.Types.RolloutState.Cancelling,
                 Baseline = false,
                 Deleted = true,
@@ -225,11 +231,15 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
         {
             moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient> mockGrpcClient = new moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+#pragma warning disable CS0612
             GetInstanceOSPoliciesComplianceRequest request = new GetInstanceOSPoliciesComplianceRequest
+#pragma warning restore CS0612
             {
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
+#pragma warning disable CS0612
             InstanceOSPoliciesCompliance expectedResponse = new InstanceOSPoliciesCompliance
+#pragma warning restore CS0612
             {
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 Instance = "instance99a62371",
@@ -238,14 +248,18 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
                 DetailedStateReason = "detailed_state_reason493b0c87",
                 OsPolicyCompliances =
                 {
+#pragma warning disable CS0612
                     new InstanceOSPoliciesCompliance.Types.OSPolicyCompliance(),
+#pragma warning restore CS0612
                 },
                 LastComplianceCheckTime = new wkt::Timestamp(),
                 LastComplianceRunId = "last_compliance_run_id45f5c46a",
             };
             mockGrpcClient.Setup(x => x.GetInstanceOSPoliciesCompliance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+#pragma warning disable CS0612
             InstanceOSPoliciesCompliance response = client.GetInstanceOSPoliciesCompliance(request);
+#pragma warning restore CS0612
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -255,11 +269,15 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
         {
             moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient> mockGrpcClient = new moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+#pragma warning disable CS0612
             GetInstanceOSPoliciesComplianceRequest request = new GetInstanceOSPoliciesComplianceRequest
+#pragma warning restore CS0612
             {
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
+#pragma warning disable CS0612
             InstanceOSPoliciesCompliance expectedResponse = new InstanceOSPoliciesCompliance
+#pragma warning restore CS0612
             {
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 Instance = "instance99a62371",
@@ -268,16 +286,24 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
                 DetailedStateReason = "detailed_state_reason493b0c87",
                 OsPolicyCompliances =
                 {
+#pragma warning disable CS0612
                     new InstanceOSPoliciesCompliance.Types.OSPolicyCompliance(),
+#pragma warning restore CS0612
                 },
                 LastComplianceCheckTime = new wkt::Timestamp(),
                 LastComplianceRunId = "last_compliance_run_id45f5c46a",
             };
+#pragma warning disable CS0612
             mockGrpcClient.Setup(x => x.GetInstanceOSPoliciesComplianceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceOSPoliciesCompliance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+#pragma warning restore CS0612
             OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+#pragma warning disable CS0612
             InstanceOSPoliciesCompliance responseCallSettings = await client.GetInstanceOSPoliciesComplianceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+#pragma warning restore CS0612
             xunit::Assert.Same(expectedResponse, responseCallSettings);
+#pragma warning disable CS0612
             InstanceOSPoliciesCompliance responseCancellationToken = await client.GetInstanceOSPoliciesComplianceAsync(request, st::CancellationToken.None);
+#pragma warning restore CS0612
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -287,11 +313,15 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
         {
             moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient> mockGrpcClient = new moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+#pragma warning disable CS0612
             GetInstanceOSPoliciesComplianceRequest request = new GetInstanceOSPoliciesComplianceRequest
+#pragma warning restore CS0612
             {
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
+#pragma warning disable CS0612
             InstanceOSPoliciesCompliance expectedResponse = new InstanceOSPoliciesCompliance
+#pragma warning restore CS0612
             {
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 Instance = "instance99a62371",
@@ -300,14 +330,18 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
                 DetailedStateReason = "detailed_state_reason493b0c87",
                 OsPolicyCompliances =
                 {
+#pragma warning disable CS0612
                     new InstanceOSPoliciesCompliance.Types.OSPolicyCompliance(),
+#pragma warning restore CS0612
                 },
                 LastComplianceCheckTime = new wkt::Timestamp(),
                 LastComplianceRunId = "last_compliance_run_id45f5c46a",
             };
             mockGrpcClient.Setup(x => x.GetInstanceOSPoliciesCompliance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+#pragma warning disable CS0612
             InstanceOSPoliciesCompliance response = client.GetInstanceOSPoliciesCompliance(request.Name);
+#pragma warning restore CS0612
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -317,11 +351,15 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
         {
             moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient> mockGrpcClient = new moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+#pragma warning disable CS0612
             GetInstanceOSPoliciesComplianceRequest request = new GetInstanceOSPoliciesComplianceRequest
+#pragma warning restore CS0612
             {
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
+#pragma warning disable CS0612
             InstanceOSPoliciesCompliance expectedResponse = new InstanceOSPoliciesCompliance
+#pragma warning restore CS0612
             {
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 Instance = "instance99a62371",
@@ -330,16 +368,24 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
                 DetailedStateReason = "detailed_state_reason493b0c87",
                 OsPolicyCompliances =
                 {
+#pragma warning disable CS0612
                     new InstanceOSPoliciesCompliance.Types.OSPolicyCompliance(),
+#pragma warning restore CS0612
                 },
                 LastComplianceCheckTime = new wkt::Timestamp(),
                 LastComplianceRunId = "last_compliance_run_id45f5c46a",
             };
+#pragma warning disable CS0612
             mockGrpcClient.Setup(x => x.GetInstanceOSPoliciesComplianceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceOSPoliciesCompliance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+#pragma warning restore CS0612
             OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+#pragma warning disable CS0612
             InstanceOSPoliciesCompliance responseCallSettings = await client.GetInstanceOSPoliciesComplianceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+#pragma warning restore CS0612
             xunit::Assert.Same(expectedResponse, responseCallSettings);
+#pragma warning disable CS0612
             InstanceOSPoliciesCompliance responseCancellationToken = await client.GetInstanceOSPoliciesComplianceAsync(request.Name, st::CancellationToken.None);
+#pragma warning restore CS0612
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -349,11 +395,15 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
         {
             moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient> mockGrpcClient = new moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+#pragma warning disable CS0612
             GetInstanceOSPoliciesComplianceRequest request = new GetInstanceOSPoliciesComplianceRequest
+#pragma warning restore CS0612
             {
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
+#pragma warning disable CS0612
             InstanceOSPoliciesCompliance expectedResponse = new InstanceOSPoliciesCompliance
+#pragma warning restore CS0612
             {
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 Instance = "instance99a62371",
@@ -362,14 +412,18 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
                 DetailedStateReason = "detailed_state_reason493b0c87",
                 OsPolicyCompliances =
                 {
+#pragma warning disable CS0612
                     new InstanceOSPoliciesCompliance.Types.OSPolicyCompliance(),
+#pragma warning restore CS0612
                 },
                 LastComplianceCheckTime = new wkt::Timestamp(),
                 LastComplianceRunId = "last_compliance_run_id45f5c46a",
             };
             mockGrpcClient.Setup(x => x.GetInstanceOSPoliciesCompliance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+#pragma warning disable CS0612
             InstanceOSPoliciesCompliance response = client.GetInstanceOSPoliciesCompliance(request.InstanceOSPoliciesComplianceName);
+#pragma warning restore CS0612
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -379,11 +433,15 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
         {
             moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient> mockGrpcClient = new moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+#pragma warning disable CS0612
             GetInstanceOSPoliciesComplianceRequest request = new GetInstanceOSPoliciesComplianceRequest
+#pragma warning restore CS0612
             {
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
+#pragma warning disable CS0612
             InstanceOSPoliciesCompliance expectedResponse = new InstanceOSPoliciesCompliance
+#pragma warning restore CS0612
             {
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 Instance = "instance99a62371",
@@ -392,16 +450,198 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
                 DetailedStateReason = "detailed_state_reason493b0c87",
                 OsPolicyCompliances =
                 {
+#pragma warning disable CS0612
                     new InstanceOSPoliciesCompliance.Types.OSPolicyCompliance(),
+#pragma warning restore CS0612
                 },
                 LastComplianceCheckTime = new wkt::Timestamp(),
                 LastComplianceRunId = "last_compliance_run_id45f5c46a",
             };
+#pragma warning disable CS0612
             mockGrpcClient.Setup(x => x.GetInstanceOSPoliciesComplianceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceOSPoliciesCompliance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+#pragma warning restore CS0612
             OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+#pragma warning disable CS0612
             InstanceOSPoliciesCompliance responseCallSettings = await client.GetInstanceOSPoliciesComplianceAsync(request.InstanceOSPoliciesComplianceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+#pragma warning restore CS0612
             xunit::Assert.Same(expectedResponse, responseCallSettings);
+#pragma warning disable CS0612
             InstanceOSPoliciesCompliance responseCancellationToken = await client.GetInstanceOSPoliciesComplianceAsync(request.InstanceOSPoliciesComplianceName, st::CancellationToken.None);
+#pragma warning restore CS0612
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetOSPolicyAssignmentReportRequestObject()
+        {
+            moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient> mockGrpcClient = new moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetOSPolicyAssignmentReportRequest request = new GetOSPolicyAssignmentReportRequest
+            {
+                OSPolicyAssignmentReportName = OSPolicyAssignmentReportName.FromProjectLocationInstanceAssignment("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[ASSIGNMENT]"),
+            };
+            OSPolicyAssignmentReport expectedResponse = new OSPolicyAssignmentReport
+            {
+                OSPolicyAssignmentReportName = OSPolicyAssignmentReportName.FromProjectLocationInstanceAssignment("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[ASSIGNMENT]"),
+                Instance = "instance99a62371",
+                OsPolicyAssignmentAsOSPolicyAssignmentName = OSPolicyAssignmentName.FromProjectLocationOsPolicyAssignment("[PROJECT]", "[LOCATION]", "[OS_POLICY_ASSIGNMENT]"),
+                OsPolicyCompliances =
+                {
+                    new OSPolicyAssignmentReport.Types.OSPolicyCompliance(),
+                },
+                UpdateTime = new wkt::Timestamp(),
+                LastRunId = "last_run_ida47e4da8",
+            };
+            mockGrpcClient.Setup(x => x.GetOSPolicyAssignmentReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OSPolicyAssignmentReport response = client.GetOSPolicyAssignmentReport(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetOSPolicyAssignmentReportRequestObjectAsync()
+        {
+            moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient> mockGrpcClient = new moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetOSPolicyAssignmentReportRequest request = new GetOSPolicyAssignmentReportRequest
+            {
+                OSPolicyAssignmentReportName = OSPolicyAssignmentReportName.FromProjectLocationInstanceAssignment("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[ASSIGNMENT]"),
+            };
+            OSPolicyAssignmentReport expectedResponse = new OSPolicyAssignmentReport
+            {
+                OSPolicyAssignmentReportName = OSPolicyAssignmentReportName.FromProjectLocationInstanceAssignment("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[ASSIGNMENT]"),
+                Instance = "instance99a62371",
+                OsPolicyAssignmentAsOSPolicyAssignmentName = OSPolicyAssignmentName.FromProjectLocationOsPolicyAssignment("[PROJECT]", "[LOCATION]", "[OS_POLICY_ASSIGNMENT]"),
+                OsPolicyCompliances =
+                {
+                    new OSPolicyAssignmentReport.Types.OSPolicyCompliance(),
+                },
+                UpdateTime = new wkt::Timestamp(),
+                LastRunId = "last_run_ida47e4da8",
+            };
+            mockGrpcClient.Setup(x => x.GetOSPolicyAssignmentReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<OSPolicyAssignmentReport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OSPolicyAssignmentReport responseCallSettings = await client.GetOSPolicyAssignmentReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            OSPolicyAssignmentReport responseCancellationToken = await client.GetOSPolicyAssignmentReportAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetOSPolicyAssignmentReport()
+        {
+            moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient> mockGrpcClient = new moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetOSPolicyAssignmentReportRequest request = new GetOSPolicyAssignmentReportRequest
+            {
+                OSPolicyAssignmentReportName = OSPolicyAssignmentReportName.FromProjectLocationInstanceAssignment("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[ASSIGNMENT]"),
+            };
+            OSPolicyAssignmentReport expectedResponse = new OSPolicyAssignmentReport
+            {
+                OSPolicyAssignmentReportName = OSPolicyAssignmentReportName.FromProjectLocationInstanceAssignment("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[ASSIGNMENT]"),
+                Instance = "instance99a62371",
+                OsPolicyAssignmentAsOSPolicyAssignmentName = OSPolicyAssignmentName.FromProjectLocationOsPolicyAssignment("[PROJECT]", "[LOCATION]", "[OS_POLICY_ASSIGNMENT]"),
+                OsPolicyCompliances =
+                {
+                    new OSPolicyAssignmentReport.Types.OSPolicyCompliance(),
+                },
+                UpdateTime = new wkt::Timestamp(),
+                LastRunId = "last_run_ida47e4da8",
+            };
+            mockGrpcClient.Setup(x => x.GetOSPolicyAssignmentReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OSPolicyAssignmentReport response = client.GetOSPolicyAssignmentReport(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetOSPolicyAssignmentReportAsync()
+        {
+            moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient> mockGrpcClient = new moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetOSPolicyAssignmentReportRequest request = new GetOSPolicyAssignmentReportRequest
+            {
+                OSPolicyAssignmentReportName = OSPolicyAssignmentReportName.FromProjectLocationInstanceAssignment("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[ASSIGNMENT]"),
+            };
+            OSPolicyAssignmentReport expectedResponse = new OSPolicyAssignmentReport
+            {
+                OSPolicyAssignmentReportName = OSPolicyAssignmentReportName.FromProjectLocationInstanceAssignment("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[ASSIGNMENT]"),
+                Instance = "instance99a62371",
+                OsPolicyAssignmentAsOSPolicyAssignmentName = OSPolicyAssignmentName.FromProjectLocationOsPolicyAssignment("[PROJECT]", "[LOCATION]", "[OS_POLICY_ASSIGNMENT]"),
+                OsPolicyCompliances =
+                {
+                    new OSPolicyAssignmentReport.Types.OSPolicyCompliance(),
+                },
+                UpdateTime = new wkt::Timestamp(),
+                LastRunId = "last_run_ida47e4da8",
+            };
+            mockGrpcClient.Setup(x => x.GetOSPolicyAssignmentReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<OSPolicyAssignmentReport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OSPolicyAssignmentReport responseCallSettings = await client.GetOSPolicyAssignmentReportAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            OSPolicyAssignmentReport responseCancellationToken = await client.GetOSPolicyAssignmentReportAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetOSPolicyAssignmentReportResourceNames()
+        {
+            moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient> mockGrpcClient = new moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetOSPolicyAssignmentReportRequest request = new GetOSPolicyAssignmentReportRequest
+            {
+                OSPolicyAssignmentReportName = OSPolicyAssignmentReportName.FromProjectLocationInstanceAssignment("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[ASSIGNMENT]"),
+            };
+            OSPolicyAssignmentReport expectedResponse = new OSPolicyAssignmentReport
+            {
+                OSPolicyAssignmentReportName = OSPolicyAssignmentReportName.FromProjectLocationInstanceAssignment("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[ASSIGNMENT]"),
+                Instance = "instance99a62371",
+                OsPolicyAssignmentAsOSPolicyAssignmentName = OSPolicyAssignmentName.FromProjectLocationOsPolicyAssignment("[PROJECT]", "[LOCATION]", "[OS_POLICY_ASSIGNMENT]"),
+                OsPolicyCompliances =
+                {
+                    new OSPolicyAssignmentReport.Types.OSPolicyCompliance(),
+                },
+                UpdateTime = new wkt::Timestamp(),
+                LastRunId = "last_run_ida47e4da8",
+            };
+            mockGrpcClient.Setup(x => x.GetOSPolicyAssignmentReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OSPolicyAssignmentReport response = client.GetOSPolicyAssignmentReport(request.OSPolicyAssignmentReportName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetOSPolicyAssignmentReportResourceNamesAsync()
+        {
+            moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient> mockGrpcClient = new moq::Mock<OsConfigZonalService.OsConfigZonalServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetOSPolicyAssignmentReportRequest request = new GetOSPolicyAssignmentReportRequest
+            {
+                OSPolicyAssignmentReportName = OSPolicyAssignmentReportName.FromProjectLocationInstanceAssignment("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[ASSIGNMENT]"),
+            };
+            OSPolicyAssignmentReport expectedResponse = new OSPolicyAssignmentReport
+            {
+                OSPolicyAssignmentReportName = OSPolicyAssignmentReportName.FromProjectLocationInstanceAssignment("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[ASSIGNMENT]"),
+                Instance = "instance99a62371",
+                OsPolicyAssignmentAsOSPolicyAssignmentName = OSPolicyAssignmentName.FromProjectLocationOsPolicyAssignment("[PROJECT]", "[LOCATION]", "[OS_POLICY_ASSIGNMENT]"),
+                OsPolicyCompliances =
+                {
+                    new OSPolicyAssignmentReport.Types.OSPolicyCompliance(),
+                },
+                UpdateTime = new wkt::Timestamp(),
+                LastRunId = "last_run_ida47e4da8",
+            };
+            mockGrpcClient.Setup(x => x.GetOSPolicyAssignmentReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<OSPolicyAssignmentReport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OSPolicyAssignmentReport responseCallSettings = await client.GetOSPolicyAssignmentReportAsync(request.OSPolicyAssignmentReportName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            OSPolicyAssignmentReport responseCancellationToken = await client.GetOSPolicyAssignmentReportAsync(request.OSPolicyAssignmentReportName, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
