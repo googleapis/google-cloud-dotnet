@@ -1103,5 +1103,147 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestPermissionsResponse response = await reservationsClient.TestIamPermissionsAsync(project, zone, resource, testPermissionsRequestResource);
             // End snippet
         }
+
+        /// <summary>Snippet for Update</summary>
+        public void UpdateRequestObject()
+        {
+            // Snippet: Update(UpdateReservationRequest, CallSettings)
+            // Create client
+            ReservationsClient reservationsClient = ReservationsClient.Create();
+            // Initialize request argument(s)
+            UpdateReservationRequest request = new UpdateReservationRequest
+            {
+                Zone = "",
+                RequestId = "",
+                Reservation = "",
+                Paths = "",
+                Project = "",
+                ReservationResource = new Reservation(),
+                UpdateMask = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = reservationsClient.Update(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = reservationsClient.PollOnceUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAsync</summary>
+        public async Task UpdateRequestObjectAsync()
+        {
+            // Snippet: UpdateAsync(UpdateReservationRequest, CallSettings)
+            // Additional: UpdateAsync(UpdateReservationRequest, CancellationToken)
+            // Create client
+            ReservationsClient reservationsClient = await ReservationsClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateReservationRequest request = new UpdateReservationRequest
+            {
+                Zone = "",
+                RequestId = "",
+                Reservation = "",
+                Paths = "",
+                Project = "",
+                ReservationResource = new Reservation(),
+                UpdateMask = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await reservationsClient.UpdateAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await reservationsClient.PollOnceUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for Update</summary>
+        public void Update()
+        {
+            // Snippet: Update(string, string, string, Reservation, CallSettings)
+            // Create client
+            ReservationsClient reservationsClient = ReservationsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string reservation = "";
+            Reservation reservationResource = new Reservation();
+            // Make the request
+            lro::Operation<Operation, Operation> response = reservationsClient.Update(project, zone, reservation, reservationResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = reservationsClient.PollOnceUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAsync</summary>
+        public async Task UpdateAsync()
+        {
+            // Snippet: UpdateAsync(string, string, string, Reservation, CallSettings)
+            // Additional: UpdateAsync(string, string, string, Reservation, CancellationToken)
+            // Create client
+            ReservationsClient reservationsClient = await ReservationsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string reservation = "";
+            Reservation reservationResource = new Reservation();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await reservationsClient.UpdateAsync(project, zone, reservation, reservationResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await reservationsClient.PollOnceUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

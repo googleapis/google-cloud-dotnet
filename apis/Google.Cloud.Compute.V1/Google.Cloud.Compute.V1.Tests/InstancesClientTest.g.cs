@@ -46,6 +46,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Tags = new Tags(),
                 Zone = "zone255f4ea8",
                 ShieldedInstanceConfig = new ShieldedInstanceConfig(),
+                SourceMachineImage = "source_machine_image60cc174c",
                 ResourcePolicies =
                 {
                     "resource_policiesdff15734",
@@ -63,6 +64,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 ShieldedInstanceIntegrityPolicy = new ShieldedInstanceIntegrityPolicy(),
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = "status5444cb9a",
+                SourceMachineImageEncryptionKey = new CustomerEncryptionKey(),
                 MachineType = "machine_type68ce40fa",
                 Fingerprint = "fingerprint009e6052",
                 Hostname = "hostnamef4ac9708",
@@ -75,6 +77,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 StatusMessage = "status_message2c618f86",
                 LastSuspendedTimestamp = "last_suspended_timestamp1e59392b",
                 Scheduling = new Scheduling(),
+                NetworkPerformanceConfig = new NetworkPerformanceConfig(),
                 AdvancedMachineFeatures = new AdvancedMachineFeatures(),
                 CpuPlatform = "cpu_platformd5794042",
                 LastStopTimestamp = "last_stop_timestampd336a8f1",
@@ -123,6 +126,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Tags = new Tags(),
                 Zone = "zone255f4ea8",
                 ShieldedInstanceConfig = new ShieldedInstanceConfig(),
+                SourceMachineImage = "source_machine_image60cc174c",
                 ResourcePolicies =
                 {
                     "resource_policiesdff15734",
@@ -140,6 +144,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 ShieldedInstanceIntegrityPolicy = new ShieldedInstanceIntegrityPolicy(),
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = "status5444cb9a",
+                SourceMachineImageEncryptionKey = new CustomerEncryptionKey(),
                 MachineType = "machine_type68ce40fa",
                 Fingerprint = "fingerprint009e6052",
                 Hostname = "hostnamef4ac9708",
@@ -152,6 +157,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 StatusMessage = "status_message2c618f86",
                 LastSuspendedTimestamp = "last_suspended_timestamp1e59392b",
                 Scheduling = new Scheduling(),
+                NetworkPerformanceConfig = new NetworkPerformanceConfig(),
                 AdvancedMachineFeatures = new AdvancedMachineFeatures(),
                 CpuPlatform = "cpu_platformd5794042",
                 LastStopTimestamp = "last_stop_timestampd336a8f1",
@@ -202,6 +208,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Tags = new Tags(),
                 Zone = "zone255f4ea8",
                 ShieldedInstanceConfig = new ShieldedInstanceConfig(),
+                SourceMachineImage = "source_machine_image60cc174c",
                 ResourcePolicies =
                 {
                     "resource_policiesdff15734",
@@ -219,6 +226,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 ShieldedInstanceIntegrityPolicy = new ShieldedInstanceIntegrityPolicy(),
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = "status5444cb9a",
+                SourceMachineImageEncryptionKey = new CustomerEncryptionKey(),
                 MachineType = "machine_type68ce40fa",
                 Fingerprint = "fingerprint009e6052",
                 Hostname = "hostnamef4ac9708",
@@ -231,6 +239,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 StatusMessage = "status_message2c618f86",
                 LastSuspendedTimestamp = "last_suspended_timestamp1e59392b",
                 Scheduling = new Scheduling(),
+                NetworkPerformanceConfig = new NetworkPerformanceConfig(),
                 AdvancedMachineFeatures = new AdvancedMachineFeatures(),
                 CpuPlatform = "cpu_platformd5794042",
                 LastStopTimestamp = "last_stop_timestampd336a8f1",
@@ -279,6 +288,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Tags = new Tags(),
                 Zone = "zone255f4ea8",
                 ShieldedInstanceConfig = new ShieldedInstanceConfig(),
+                SourceMachineImage = "source_machine_image60cc174c",
                 ResourcePolicies =
                 {
                     "resource_policiesdff15734",
@@ -296,6 +306,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 ShieldedInstanceIntegrityPolicy = new ShieldedInstanceIntegrityPolicy(),
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = "status5444cb9a",
+                SourceMachineImageEncryptionKey = new CustomerEncryptionKey(),
                 MachineType = "machine_type68ce40fa",
                 Fingerprint = "fingerprint009e6052",
                 Hostname = "hostnamef4ac9708",
@@ -308,6 +319,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 StatusMessage = "status_message2c618f86",
                 LastSuspendedTimestamp = "last_suspended_timestamp1e59392b",
                 Scheduling = new Scheduling(),
+                NetworkPerformanceConfig = new NetworkPerformanceConfig(),
                 AdvancedMachineFeatures = new AdvancedMachineFeatures(),
                 CpuPlatform = "cpu_platformd5794042",
                 LastStopTimestamp = "last_stop_timestampd336a8f1",
@@ -586,7 +598,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
@@ -614,7 +625,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
@@ -643,7 +653,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
@@ -670,7 +679,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
@@ -1088,7 +1096,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
@@ -1116,7 +1123,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
@@ -1146,7 +1152,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
@@ -1174,7 +1179,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);

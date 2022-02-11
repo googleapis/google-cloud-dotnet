@@ -1206,6 +1206,140 @@ namespace Google.Cloud.Compute.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetEdgeSecurityPolicy</summary>
+        public void SetEdgeSecurityPolicyRequestObject()
+        {
+            // Snippet: SetEdgeSecurityPolicy(SetEdgeSecurityPolicyBackendServiceRequest, CallSettings)
+            // Create client
+            BackendServicesClient backendServicesClient = BackendServicesClient.Create();
+            // Initialize request argument(s)
+            SetEdgeSecurityPolicyBackendServiceRequest request = new SetEdgeSecurityPolicyBackendServiceRequest
+            {
+                RequestId = "",
+                SecurityPolicyReferenceResource = new SecurityPolicyReference(),
+                Project = "",
+                BackendService = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = backendServicesClient.SetEdgeSecurityPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = backendServicesClient.PollOnceSetEdgeSecurityPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetEdgeSecurityPolicyAsync</summary>
+        public async Task SetEdgeSecurityPolicyRequestObjectAsync()
+        {
+            // Snippet: SetEdgeSecurityPolicyAsync(SetEdgeSecurityPolicyBackendServiceRequest, CallSettings)
+            // Additional: SetEdgeSecurityPolicyAsync(SetEdgeSecurityPolicyBackendServiceRequest, CancellationToken)
+            // Create client
+            BackendServicesClient backendServicesClient = await BackendServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            SetEdgeSecurityPolicyBackendServiceRequest request = new SetEdgeSecurityPolicyBackendServiceRequest
+            {
+                RequestId = "",
+                SecurityPolicyReferenceResource = new SecurityPolicyReference(),
+                Project = "",
+                BackendService = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await backendServicesClient.SetEdgeSecurityPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await backendServicesClient.PollOnceSetEdgeSecurityPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetEdgeSecurityPolicy</summary>
+        public void SetEdgeSecurityPolicy()
+        {
+            // Snippet: SetEdgeSecurityPolicy(string, string, SecurityPolicyReference, CallSettings)
+            // Create client
+            BackendServicesClient backendServicesClient = BackendServicesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string backendService = "";
+            SecurityPolicyReference securityPolicyReferenceResource = new SecurityPolicyReference();
+            // Make the request
+            lro::Operation<Operation, Operation> response = backendServicesClient.SetEdgeSecurityPolicy(project, backendService, securityPolicyReferenceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = backendServicesClient.PollOnceSetEdgeSecurityPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetEdgeSecurityPolicyAsync</summary>
+        public async Task SetEdgeSecurityPolicyAsync()
+        {
+            // Snippet: SetEdgeSecurityPolicyAsync(string, string, SecurityPolicyReference, CallSettings)
+            // Additional: SetEdgeSecurityPolicyAsync(string, string, SecurityPolicyReference, CancellationToken)
+            // Create client
+            BackendServicesClient backendServicesClient = await BackendServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string backendService = "";
+            SecurityPolicyReference securityPolicyReferenceResource = new SecurityPolicyReference();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await backendServicesClient.SetEdgeSecurityPolicyAsync(project, backendService, securityPolicyReferenceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await backendServicesClient.PollOnceSetEdgeSecurityPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for SetSecurityPolicy</summary>
         public void SetSecurityPolicyRequestObject()
         {

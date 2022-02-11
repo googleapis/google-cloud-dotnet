@@ -60,6 +60,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LicenseResource = new LicenseResourceCommitment(),
                 SelfLink = "self_link7e87f12d",
                 EndTimestamp = "end_timestamp91060b72",
+                AutoRenew = true,
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionCommitmentsClient client = new RegionCommitmentsClientImpl(mockGrpcClient.Object, null);
@@ -101,6 +102,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LicenseResource = new LicenseResourceCommitment(),
                 SelfLink = "self_link7e87f12d",
                 EndTimestamp = "end_timestamp91060b72",
+                AutoRenew = true,
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Commitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionCommitmentsClient client = new RegionCommitmentsClientImpl(mockGrpcClient.Object, null);
@@ -144,6 +146,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LicenseResource = new LicenseResourceCommitment(),
                 SelfLink = "self_link7e87f12d",
                 EndTimestamp = "end_timestamp91060b72",
+                AutoRenew = true,
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionCommitmentsClient client = new RegionCommitmentsClientImpl(mockGrpcClient.Object, null);
@@ -185,6 +188,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LicenseResource = new LicenseResourceCommitment(),
                 SelfLink = "self_link7e87f12d",
                 EndTimestamp = "end_timestamp91060b72",
+                AutoRenew = true,
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Commitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionCommitmentsClient client = new RegionCommitmentsClientImpl(mockGrpcClient.Object, null);

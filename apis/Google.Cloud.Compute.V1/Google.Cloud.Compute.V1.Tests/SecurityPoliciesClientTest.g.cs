@@ -42,6 +42,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
+                Type = "typee2cc9d59",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Rules =
                 {
@@ -52,6 +53,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Description = "description2cf9da67",
                 AdvancedOptionsConfig = new SecurityPolicyAdvancedOptionsConfig(),
                 SelfLink = "self_link7e87f12d",
+                RecaptchaOptionsConfig = new SecurityPolicyRecaptchaOptionsConfig(),
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -75,6 +77,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
+                Type = "typee2cc9d59",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Rules =
                 {
@@ -85,6 +88,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Description = "description2cf9da67",
                 AdvancedOptionsConfig = new SecurityPolicyAdvancedOptionsConfig(),
                 SelfLink = "self_link7e87f12d",
+                RecaptchaOptionsConfig = new SecurityPolicyRecaptchaOptionsConfig(),
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecurityPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -110,6 +114,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
+                Type = "typee2cc9d59",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Rules =
                 {
@@ -120,6 +125,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Description = "description2cf9da67",
                 AdvancedOptionsConfig = new SecurityPolicyAdvancedOptionsConfig(),
                 SelfLink = "self_link7e87f12d",
+                RecaptchaOptionsConfig = new SecurityPolicyRecaptchaOptionsConfig(),
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -143,6 +149,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
+                Type = "typee2cc9d59",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Rules =
                 {
@@ -153,6 +160,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Description = "description2cf9da67",
                 AdvancedOptionsConfig = new SecurityPolicyAdvancedOptionsConfig(),
                 SelfLink = "self_link7e87f12d",
+                RecaptchaOptionsConfig = new SecurityPolicyRecaptchaOptionsConfig(),
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecurityPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityPoliciesClient client = new SecurityPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -177,9 +185,12 @@ namespace Google.Cloud.Compute.V1.Tests
             SecurityPolicyRule expectedResponse = new SecurityPolicyRule
             {
                 Kind = "kindf7aa39d9",
+                RateLimitOptions = new SecurityPolicyRuleRateLimitOptions(),
                 Match = new SecurityPolicyRuleMatcher(),
+                RedirectOptions = new SecurityPolicyRuleRedirectOptions(),
                 Action = "action09558c41",
                 Preview = true,
+                HeaderAction = new SecurityPolicyRuleHttpHeaderAction(),
                 Description = "description2cf9da67",
                 Priority = 1546225849,
             };
@@ -204,9 +215,12 @@ namespace Google.Cloud.Compute.V1.Tests
             SecurityPolicyRule expectedResponse = new SecurityPolicyRule
             {
                 Kind = "kindf7aa39d9",
+                RateLimitOptions = new SecurityPolicyRuleRateLimitOptions(),
                 Match = new SecurityPolicyRuleMatcher(),
+                RedirectOptions = new SecurityPolicyRuleRedirectOptions(),
                 Action = "action09558c41",
                 Preview = true,
+                HeaderAction = new SecurityPolicyRuleHttpHeaderAction(),
                 Description = "description2cf9da67",
                 Priority = 1546225849,
             };
@@ -232,9 +246,12 @@ namespace Google.Cloud.Compute.V1.Tests
             SecurityPolicyRule expectedResponse = new SecurityPolicyRule
             {
                 Kind = "kindf7aa39d9",
+                RateLimitOptions = new SecurityPolicyRuleRateLimitOptions(),
                 Match = new SecurityPolicyRuleMatcher(),
+                RedirectOptions = new SecurityPolicyRuleRedirectOptions(),
                 Action = "action09558c41",
                 Preview = true,
+                HeaderAction = new SecurityPolicyRuleHttpHeaderAction(),
                 Description = "description2cf9da67",
                 Priority = 1546225849,
             };
@@ -258,9 +275,12 @@ namespace Google.Cloud.Compute.V1.Tests
             SecurityPolicyRule expectedResponse = new SecurityPolicyRule
             {
                 Kind = "kindf7aa39d9",
+                RateLimitOptions = new SecurityPolicyRuleRateLimitOptions(),
                 Match = new SecurityPolicyRuleMatcher(),
+                RedirectOptions = new SecurityPolicyRuleRedirectOptions(),
                 Action = "action09558c41",
                 Preview = true,
+                HeaderAction = new SecurityPolicyRuleHttpHeaderAction(),
                 Description = "description2cf9da67",
                 Priority = 1546225849,
             };
