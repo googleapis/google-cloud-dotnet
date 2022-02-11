@@ -169,6 +169,12 @@
                 "PatchAsync"
               ]
             },
+            "SetEdgeSecurityPolicy": {
+              "methods": [
+                "SetEdgeSecurityPolicy",
+                "SetEdgeSecurityPolicyAsync"
+              ]
+            },
             "Update": {
               "methods": [
                 "Update",
@@ -236,6 +242,12 @@
               "methods": [
                 "Patch",
                 "PatchAsync"
+              ]
+            },
+            "SetEdgeSecurityPolicy": {
+              "methods": [
+                "SetEdgeSecurityPolicy",
+                "SetEdgeSecurityPolicyAsync"
               ]
             },
             "SetSecurityPolicy": {
@@ -1381,6 +1393,12 @@
                 "ResetAsync"
               ]
             },
+            "Resume": {
+              "methods": [
+                "Resume",
+                "ResumeAsync"
+              ]
+            },
             "SendDiagnosticInterrupt": {
               "methods": [
                 "SendDiagnosticInterrupt",
@@ -1481,6 +1499,12 @@
               "methods": [
                 "Stop",
                 "StopAsync"
+              ]
+            },
+            "Suspend": {
+              "methods": [
+                "Suspend",
+                "SuspendAsync"
               ]
             },
             "TestIamPermissions": {
@@ -1659,6 +1683,57 @@
       "clients": {
         "grpc": {
           "libraryClient": "LicensesClient",
+          "rpcs": {
+            "Delete": {
+              "methods": [
+                "Delete",
+                "DeleteAsync"
+              ]
+            },
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "Insert": {
+              "methods": [
+                "Insert",
+                "InsertAsync"
+              ]
+            },
+            "List": {
+              "methods": [
+                "List",
+                "ListAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "MachineImages": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "MachineImagesClient",
           "rpcs": {
             "Delete": {
               "methods": [
@@ -2388,6 +2463,12 @@
                 "List",
                 "ListAsync"
               ]
+            },
+            "Update": {
+              "methods": [
+                "Update",
+                "UpdateAsync"
+              ]
             }
           }
         }
@@ -3096,6 +3177,12 @@
                 "TestIamPermissions",
                 "TestIamPermissionsAsync"
               ]
+            },
+            "Update": {
+              "methods": [
+                "Update",
+                "UpdateAsync"
+              ]
             }
           }
         }
@@ -3413,6 +3500,12 @@
               "methods": [
                 "GetIamPolicy",
                 "GetIamPolicyAsync"
+              ]
+            },
+            "Insert": {
+              "methods": [
+                "Insert",
+                "InsertAsync"
               ]
             },
             "List": {

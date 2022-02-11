@@ -50,6 +50,8 @@ namespace Google.Cloud.Compute.V1
             InsertSettings = existing.InsertSettings;
             InsertOperationsSettings = existing.InsertOperationsSettings.Clone();
             ListSettings = existing.ListSettings;
+            UpdateSettings = existing.UpdateSettings;
+            UpdateOperationsSettings = existing.UpdateOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -147,6 +149,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RegionCommitmentsClient.Update</c> and <c>RegionCommitmentsClient.UpdateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>RegionCommitmentsClient.Update</c> and
+        /// <c>RegionCommitmentsClient.UpdateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="RegionCommitmentsSettings"/> object.</returns>
@@ -656,6 +688,131 @@ namespace Google.Cloud.Compute.V1
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
+
+        /// <summary>
+        /// Updates the specified commitment with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be modified: auto_renew.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Update(UpdateRegionCommitmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the specified commitment with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be modified: auto_renew.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateAsync(UpdateRegionCommitmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the specified commitment with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be modified: auto_renew.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateAsync(UpdateRegionCommitmentRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Update</c>.</summary>
+        public virtual lro::OperationsClient UpdateOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Update</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceUpdate(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Update</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceUpdateAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the specified commitment with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be modified: auto_renew.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="commitment">
+        /// Name of the commitment for which auto renew is being updated.
+        /// </param>
+        /// <param name="commitmentResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Update(string project, string region, string commitment, Commitment commitmentResource, gaxgrpc::CallSettings callSettings = null) =>
+            Update(new UpdateRegionCommitmentRequest
+            {
+                Commitment = gax::GaxPreconditions.CheckNotNullOrEmpty(commitment, nameof(commitment)),
+                CommitmentResource = gax::GaxPreconditions.CheckNotNull(commitmentResource, nameof(commitmentResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the specified commitment with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be modified: auto_renew.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="commitment">
+        /// Name of the commitment for which auto renew is being updated.
+        /// </param>
+        /// <param name="commitmentResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateAsync(string project, string region, string commitment, Commitment commitmentResource, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAsync(new UpdateRegionCommitmentRequest
+            {
+                Commitment = gax::GaxPreconditions.CheckNotNullOrEmpty(commitment, nameof(commitment)),
+                CommitmentResource = gax::GaxPreconditions.CheckNotNull(commitmentResource, nameof(commitmentResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the specified commitment with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be modified: auto_renew.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="commitment">
+        /// Name of the commitment for which auto renew is being updated.
+        /// </param>
+        /// <param name="commitmentResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateAsync(string project, string region, string commitment, Commitment commitmentResource, st::CancellationToken cancellationToken) =>
+            UpdateAsync(project, region, commitment, commitmentResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>RegionCommitments client wrapper implementation, for convenient use.</summary>
@@ -672,6 +829,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<ListRegionCommitmentsRequest, CommitmentList> _callList;
 
+        private readonly gaxgrpc::ApiCall<UpdateRegionCommitmentRequest, Operation> _callUpdate;
+
         /// <summary>
         /// Constructs a client wrapper for the RegionCommitments service, with the specified gRPC client and settings.
         /// </summary>
@@ -683,6 +842,7 @@ namespace Google.Cloud.Compute.V1
             RegionCommitmentsSettings effectiveSettings = settings ?? RegionCommitmentsSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings);
+            UpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.UpdateOperationsSettings);
             _callAggregatedList = clientHelper.BuildApiCall<AggregatedListRegionCommitmentsRequest, CommitmentAggregatedList>(grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callAggregatedList);
             Modify_AggregatedListApiCall(ref _callAggregatedList);
@@ -695,6 +855,9 @@ namespace Google.Cloud.Compute.V1
             _callList = clientHelper.BuildApiCall<ListRegionCommitmentsRequest, CommitmentList>(grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
+            _callUpdate = clientHelper.BuildApiCall<UpdateRegionCommitmentRequest, Operation>(grpcClient.UpdateAsync, grpcClient.Update, effectiveSettings.UpdateSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("commitment", request => request.Commitment);
+            Modify_ApiCall(ref _callUpdate);
+            Modify_UpdateApiCall(ref _callUpdate);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -708,6 +871,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_ListApiCall(ref gaxgrpc::ApiCall<ListRegionCommitmentsRequest, CommitmentList> call);
 
+        partial void Modify_UpdateApiCall(ref gaxgrpc::ApiCall<UpdateRegionCommitmentRequest, Operation> call);
+
         partial void OnConstruction(RegionCommitments.RegionCommitmentsClient grpcClient, RegionCommitmentsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC RegionCommitments client</summary>
@@ -720,6 +885,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_InsertRegionCommitmentRequest(ref InsertRegionCommitmentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListRegionCommitmentsRequest(ref ListRegionCommitmentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateRegionCommitmentRequest(ref UpdateRegionCommitmentRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Retrieves an aggregated list of commitments by region.
@@ -826,6 +993,39 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_ListRegionCommitmentsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListRegionCommitmentsRequest, CommitmentList, Commitment>(_callList, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>Update</c>.</summary>
+        public override lro::OperationsClient UpdateOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the specified commitment with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be modified: auto_renew.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> Update(UpdateRegionCommitmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateRegionCommitmentRequest(ref request, ref callSettings);
+            Operation response = _callUpdate.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the specified commitment with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be modified: auto_renew.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> UpdateAsync(UpdateRegionCommitmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateRegionCommitmentRequest(ref request, ref callSettings);
+            Operation response = await _callUpdate.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateOperationsClient);
         }
     }
 

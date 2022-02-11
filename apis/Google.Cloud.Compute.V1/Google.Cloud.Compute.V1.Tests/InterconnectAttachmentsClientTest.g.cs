@@ -48,6 +48,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 DataplaneVersion = -763719012,
                 PartnerMetadata = new InterconnectAttachmentPartnerMetadata(),
+                CandidateIpv6Subnets =
+                {
+                    "candidate_ipv6_subnets2c08bf5e",
+                },
                 EdgeAvailabilityDomain = "edge_availability_domainf7acc827",
                 Encryption = "encryption9174df5b",
                 State = "state2e9ed39e",
@@ -63,17 +67,22 @@ namespace Google.Cloud.Compute.V1.Tests
                     "candidate_subnets3377adaa",
                 },
                 CloudRouterIpAddress = "cloud_router_ip_address62b476a9",
+                CustomerRouterIpv6Address = "customer_router_ipv6_address4c2b6c88",
                 CustomerRouterIpAddress = "customer_router_ip_address819aa186",
+                CustomerRouterIpv6InterfaceId = "customer_router_ipv6_interface_idb4ee260e",
                 IpsecInternalAddresses =
                 {
                     "ipsec_internal_addresses8b47c5bb",
                 },
                 Description = "description2cf9da67",
+                StackType = "stack_type3a495e39",
                 PartnerAsn = 6862354938501622805L,
                 PairingKey = "pairing_keyfe878c44",
                 AdminEnabled = true,
+                CloudRouterIpv6Address = "cloud_router_ipv6_addressf4d97622",
                 SelfLink = "self_link7e87f12d",
                 SatisfiesPzs = false,
+                CloudRouterIpv6InterfaceId = "cloud_router_ipv6_interface_idc5436f7e",
                 GoogleReferenceId = "google_reference_id815b6ab4",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -104,6 +113,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 DataplaneVersion = -763719012,
                 PartnerMetadata = new InterconnectAttachmentPartnerMetadata(),
+                CandidateIpv6Subnets =
+                {
+                    "candidate_ipv6_subnets2c08bf5e",
+                },
                 EdgeAvailabilityDomain = "edge_availability_domainf7acc827",
                 Encryption = "encryption9174df5b",
                 State = "state2e9ed39e",
@@ -119,17 +132,22 @@ namespace Google.Cloud.Compute.V1.Tests
                     "candidate_subnets3377adaa",
                 },
                 CloudRouterIpAddress = "cloud_router_ip_address62b476a9",
+                CustomerRouterIpv6Address = "customer_router_ipv6_address4c2b6c88",
                 CustomerRouterIpAddress = "customer_router_ip_address819aa186",
+                CustomerRouterIpv6InterfaceId = "customer_router_ipv6_interface_idb4ee260e",
                 IpsecInternalAddresses =
                 {
                     "ipsec_internal_addresses8b47c5bb",
                 },
                 Description = "description2cf9da67",
+                StackType = "stack_type3a495e39",
                 PartnerAsn = 6862354938501622805L,
                 PairingKey = "pairing_keyfe878c44",
                 AdminEnabled = true,
+                CloudRouterIpv6Address = "cloud_router_ipv6_addressf4d97622",
                 SelfLink = "self_link7e87f12d",
                 SatisfiesPzs = false,
+                CloudRouterIpv6InterfaceId = "cloud_router_ipv6_interface_idc5436f7e",
                 GoogleReferenceId = "google_reference_id815b6ab4",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InterconnectAttachment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -162,6 +180,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 DataplaneVersion = -763719012,
                 PartnerMetadata = new InterconnectAttachmentPartnerMetadata(),
+                CandidateIpv6Subnets =
+                {
+                    "candidate_ipv6_subnets2c08bf5e",
+                },
                 EdgeAvailabilityDomain = "edge_availability_domainf7acc827",
                 Encryption = "encryption9174df5b",
                 State = "state2e9ed39e",
@@ -177,17 +199,22 @@ namespace Google.Cloud.Compute.V1.Tests
                     "candidate_subnets3377adaa",
                 },
                 CloudRouterIpAddress = "cloud_router_ip_address62b476a9",
+                CustomerRouterIpv6Address = "customer_router_ipv6_address4c2b6c88",
                 CustomerRouterIpAddress = "customer_router_ip_address819aa186",
+                CustomerRouterIpv6InterfaceId = "customer_router_ipv6_interface_idb4ee260e",
                 IpsecInternalAddresses =
                 {
                     "ipsec_internal_addresses8b47c5bb",
                 },
                 Description = "description2cf9da67",
+                StackType = "stack_type3a495e39",
                 PartnerAsn = 6862354938501622805L,
                 PairingKey = "pairing_keyfe878c44",
                 AdminEnabled = true,
+                CloudRouterIpv6Address = "cloud_router_ipv6_addressf4d97622",
                 SelfLink = "self_link7e87f12d",
                 SatisfiesPzs = false,
+                CloudRouterIpv6InterfaceId = "cloud_router_ipv6_interface_idc5436f7e",
                 GoogleReferenceId = "google_reference_id815b6ab4",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -218,6 +245,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 DataplaneVersion = -763719012,
                 PartnerMetadata = new InterconnectAttachmentPartnerMetadata(),
+                CandidateIpv6Subnets =
+                {
+                    "candidate_ipv6_subnets2c08bf5e",
+                },
                 EdgeAvailabilityDomain = "edge_availability_domainf7acc827",
                 Encryption = "encryption9174df5b",
                 State = "state2e9ed39e",
@@ -233,17 +264,22 @@ namespace Google.Cloud.Compute.V1.Tests
                     "candidate_subnets3377adaa",
                 },
                 CloudRouterIpAddress = "cloud_router_ip_address62b476a9",
+                CustomerRouterIpv6Address = "customer_router_ipv6_address4c2b6c88",
                 CustomerRouterIpAddress = "customer_router_ip_address819aa186",
+                CustomerRouterIpv6InterfaceId = "customer_router_ipv6_interface_idb4ee260e",
                 IpsecInternalAddresses =
                 {
                     "ipsec_internal_addresses8b47c5bb",
                 },
                 Description = "description2cf9da67",
+                StackType = "stack_type3a495e39",
                 PartnerAsn = 6862354938501622805L,
                 PairingKey = "pairing_keyfe878c44",
                 AdminEnabled = true,
+                CloudRouterIpv6Address = "cloud_router_ipv6_addressf4d97622",
                 SelfLink = "self_link7e87f12d",
                 SatisfiesPzs = false,
+                CloudRouterIpv6InterfaceId = "cloud_router_ipv6_interface_idc5436f7e",
                 GoogleReferenceId = "google_reference_id815b6ab4",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InterconnectAttachment>(stt::Task.FromResult(expectedResponse), null, null, null, null));

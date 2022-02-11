@@ -285,6 +285,136 @@ namespace Google.Cloud.Compute.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for Insert</summary>
+        public void InsertRequestObject()
+        {
+            // Snippet: Insert(InsertSnapshotRequest, CallSettings)
+            // Create client
+            SnapshotsClient snapshotsClient = SnapshotsClient.Create();
+            // Initialize request argument(s)
+            InsertSnapshotRequest request = new InsertSnapshotRequest
+            {
+                RequestId = "",
+                Project = "",
+                SnapshotResource = new Snapshot(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = snapshotsClient.Insert(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = snapshotsClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InsertAsync</summary>
+        public async Task InsertRequestObjectAsync()
+        {
+            // Snippet: InsertAsync(InsertSnapshotRequest, CallSettings)
+            // Additional: InsertAsync(InsertSnapshotRequest, CancellationToken)
+            // Create client
+            SnapshotsClient snapshotsClient = await SnapshotsClient.CreateAsync();
+            // Initialize request argument(s)
+            InsertSnapshotRequest request = new InsertSnapshotRequest
+            {
+                RequestId = "",
+                Project = "",
+                SnapshotResource = new Snapshot(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await snapshotsClient.InsertAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await snapshotsClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for Insert</summary>
+        public void Insert()
+        {
+            // Snippet: Insert(string, Snapshot, CallSettings)
+            // Create client
+            SnapshotsClient snapshotsClient = SnapshotsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            Snapshot snapshotResource = new Snapshot();
+            // Make the request
+            lro::Operation<Operation, Operation> response = snapshotsClient.Insert(project, snapshotResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = snapshotsClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InsertAsync</summary>
+        public async Task InsertAsync()
+        {
+            // Snippet: InsertAsync(string, Snapshot, CallSettings)
+            // Additional: InsertAsync(string, Snapshot, CancellationToken)
+            // Create client
+            SnapshotsClient snapshotsClient = await SnapshotsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            Snapshot snapshotResource = new Snapshot();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await snapshotsClient.InsertAsync(project, snapshotResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await snapshotsClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for List</summary>
         public void ListRequestObject()
         {

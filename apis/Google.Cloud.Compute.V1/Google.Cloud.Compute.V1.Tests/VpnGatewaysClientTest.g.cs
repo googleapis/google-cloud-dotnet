@@ -52,6 +52,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Network = "networkd22ce091",
                 Description = "description2cf9da67",
+                StackType = "stack_type3a495e39",
                 SelfLink = "self_link7e87f12d",
                 Labels =
                 {
@@ -93,6 +94,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Network = "networkd22ce091",
                 Description = "description2cf9da67",
+                StackType = "stack_type3a495e39",
                 SelfLink = "self_link7e87f12d",
                 Labels =
                 {
@@ -136,6 +138,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Network = "networkd22ce091",
                 Description = "description2cf9da67",
+                StackType = "stack_type3a495e39",
                 SelfLink = "self_link7e87f12d",
                 Labels =
                 {
@@ -177,6 +180,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Network = "networkd22ce091",
                 Description = "description2cf9da67",
+                StackType = "stack_type3a495e39",
                 SelfLink = "self_link7e87f12d",
                 Labels =
                 {

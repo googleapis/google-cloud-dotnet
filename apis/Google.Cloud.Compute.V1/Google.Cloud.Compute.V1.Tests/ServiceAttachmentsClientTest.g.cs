@@ -44,6 +44,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 TargetService = "target_service3f6f9a5a",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
+                DomainNames =
+                {
+                    "domain_names58aa2a78",
+                },
                 CreationTimestamp = "creation_timestamp235e59a1",
                 ConnectedEndpoints =
                 {
@@ -94,6 +98,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 TargetService = "target_service3f6f9a5a",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
+                DomainNames =
+                {
+                    "domain_names58aa2a78",
+                },
                 CreationTimestamp = "creation_timestamp235e59a1",
                 ConnectedEndpoints =
                 {
@@ -146,6 +154,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 TargetService = "target_service3f6f9a5a",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
+                DomainNames =
+                {
+                    "domain_names58aa2a78",
+                },
                 CreationTimestamp = "creation_timestamp235e59a1",
                 ConnectedEndpoints =
                 {
@@ -196,6 +208,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 TargetService = "target_service3f6f9a5a",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
+                DomainNames =
+                {
+                    "domain_names58aa2a78",
+                },
                 CreationTimestamp = "creation_timestamp235e59a1",
                 ConnectedEndpoints =
                 {
@@ -250,7 +266,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceAttachmentsClient client = new ServiceAttachmentsClientImpl(mockGrpcClient.Object, null);
@@ -278,7 +293,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceAttachmentsClient client = new ServiceAttachmentsClientImpl(mockGrpcClient.Object, null);
@@ -307,7 +321,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceAttachmentsClient client = new ServiceAttachmentsClientImpl(mockGrpcClient.Object, null);
@@ -334,7 +347,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceAttachmentsClient client = new ServiceAttachmentsClientImpl(mockGrpcClient.Object, null);
@@ -364,7 +376,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceAttachmentsClient client = new ServiceAttachmentsClientImpl(mockGrpcClient.Object, null);
@@ -392,7 +403,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceAttachmentsClient client = new ServiceAttachmentsClientImpl(mockGrpcClient.Object, null);
@@ -422,7 +432,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceAttachmentsClient client = new ServiceAttachmentsClientImpl(mockGrpcClient.Object, null);
@@ -450,7 +459,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceAttachmentsClient client = new ServiceAttachmentsClientImpl(mockGrpcClient.Object, null);

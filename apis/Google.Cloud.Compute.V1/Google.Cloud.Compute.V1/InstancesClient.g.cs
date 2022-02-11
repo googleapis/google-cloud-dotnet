@@ -75,6 +75,8 @@ namespace Google.Cloud.Compute.V1
             RemoveResourcePoliciesOperationsSettings = existing.RemoveResourcePoliciesOperationsSettings.Clone();
             ResetSettings = existing.ResetSettings;
             ResetOperationsSettings = existing.ResetOperationsSettings.Clone();
+            ResumeSettings = existing.ResumeSettings;
+            ResumeOperationsSettings = existing.ResumeOperationsSettings.Clone();
             SendDiagnosticInterruptSettings = existing.SendDiagnosticInterruptSettings;
             SetDeletionProtectionSettings = existing.SetDeletionProtectionSettings;
             SetDeletionProtectionOperationsSettings = existing.SetDeletionProtectionOperationsSettings.Clone();
@@ -107,6 +109,8 @@ namespace Google.Cloud.Compute.V1
             StartWithEncryptionKeyOperationsSettings = existing.StartWithEncryptionKeyOperationsSettings.Clone();
             StopSettings = existing.StopSettings;
             StopOperationsSettings = existing.StopOperationsSettings.Clone();
+            SuspendSettings = existing.SuspendSettings;
+            SuspendOperationsSettings = existing.SuspendOperationsSettings.Clone();
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
             UpdateSettings = existing.UpdateSettings;
             UpdateOperationsSettings = existing.UpdateOperationsSettings.Clone();
@@ -635,6 +639,36 @@ namespace Google.Cloud.Compute.V1
         };
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>InstancesClient.Resume</c>
+        /// and <c>InstancesClient.ResumeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ResumeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.Resume</c> and
+        /// <c>InstancesClient.ResumeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ResumeOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>InstancesClient.SendDiagnosticInterrupt</c> and <c>InstancesClient.SendDiagnosticInterruptAsync</c>.
         /// </summary>
@@ -1105,6 +1139,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings StopOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>InstancesClient.Suspend</c>
+        /// and <c>InstancesClient.SuspendAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SuspendSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.Suspend</c> and
+        /// <c>InstancesClient.SuspendAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SuspendOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -3519,6 +3583,120 @@ namespace Google.Cloud.Compute.V1
             ResetAsync(project, zone, instance, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Resumes an instance that was suspended using the instances().suspend method.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Resume(ResumeInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Resumes an instance that was suspended using the instances().suspend method.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ResumeAsync(ResumeInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Resumes an instance that was suspended using the instances().suspend method.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ResumeAsync(ResumeInstanceRequest request, st::CancellationToken cancellationToken) =>
+            ResumeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Resume</c>.</summary>
+        public virtual lro::OperationsClient ResumeOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Resume</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceResume(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ResumeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Resume</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceResumeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ResumeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Resumes an instance that was suspended using the instances().suspend method.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// Name of the instance resource to resume.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Resume(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
+            Resume(new ResumeInstanceRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Resumes an instance that was suspended using the instances().suspend method.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// Name of the instance resource to resume.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ResumeAsync(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
+            ResumeAsync(new ResumeInstanceRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Resumes an instance that was suspended using the instances().suspend method.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// Name of the instance resource to resume.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ResumeAsync(string project, string zone, string instance, st::CancellationToken cancellationToken) =>
+            ResumeAsync(project, zone, instance, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Sends diagnostic interrupt to the instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4585,7 +4763,7 @@ namespace Google.Cloud.Compute.V1
             SetMinCpuPlatformAsync(project, zone, instance, instancesSetMinCpuPlatformRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
+        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states. For more information about setting scheduling options for a VM, see Set VM availability policies.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4594,7 +4772,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
+        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states. For more information about setting scheduling options for a VM, see Set VM availability policies.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4603,7 +4781,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
+        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states. For more information about setting scheduling options for a VM, see Set VM availability policies.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4638,7 +4816,7 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetSchedulingOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
+        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states. For more information about setting scheduling options for a VM, see Set VM availability policies.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -4664,7 +4842,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
+        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states. For more information about setting scheduling options for a VM, see Set VM availability policies.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -4690,7 +4868,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
+        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states. For more information about setting scheduling options for a VM, see Set VM availability policies.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5087,7 +5265,7 @@ namespace Google.Cloud.Compute.V1
             SetTagsAsync(project, zone, instance, tagsResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Simulates a maintenance event on the instance.
+        /// Simulates a host maintenance event on a VM. For more information, see Simulate a host maintenance event.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5096,7 +5274,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Simulates a maintenance event on the instance.
+        /// Simulates a host maintenance event on a VM. For more information, see Simulate a host maintenance event.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5105,7 +5283,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Simulates a maintenance event on the instance.
+        /// Simulates a host maintenance event on a VM. For more information, see Simulate a host maintenance event.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -5141,7 +5319,7 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SimulateMaintenanceEventOperationsClient, callSettings);
 
         /// <summary>
-        /// Simulates a maintenance event on the instance.
+        /// Simulates a host maintenance event on a VM. For more information, see Simulate a host maintenance event.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5163,7 +5341,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Simulates a maintenance event on the instance.
+        /// Simulates a host maintenance event on a VM. For more information, see Simulate a host maintenance event.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5185,7 +5363,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Simulates a maintenance event on the instance.
+        /// Simulates a host maintenance event on a VM. For more information, see Simulate a host maintenance event.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5554,6 +5732,120 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> StopAsync(string project, string zone, string instance, st::CancellationToken cancellationToken) =>
             StopAsync(project, zone, instance, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// This method suspends a running instance, saving its state to persistent storage, and allows you to resume the instance at a later time. Suspended instances have no compute costs (cores or RAM), and incur only storage charges for the saved VM memory and localSSD data. Any charged resources the virtual machine was using, such as persistent disks and static IP addresses, will continue to be charged while the instance is suspended. For more information, see Suspending and resuming an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Suspend(SuspendInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// This method suspends a running instance, saving its state to persistent storage, and allows you to resume the instance at a later time. Suspended instances have no compute costs (cores or RAM), and incur only storage charges for the saved VM memory and localSSD data. Any charged resources the virtual machine was using, such as persistent disks and static IP addresses, will continue to be charged while the instance is suspended. For more information, see Suspending and resuming an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SuspendAsync(SuspendInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// This method suspends a running instance, saving its state to persistent storage, and allows you to resume the instance at a later time. Suspended instances have no compute costs (cores or RAM), and incur only storage charges for the saved VM memory and localSSD data. Any charged resources the virtual machine was using, such as persistent disks and static IP addresses, will continue to be charged while the instance is suspended. For more information, see Suspending and resuming an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SuspendAsync(SuspendInstanceRequest request, st::CancellationToken cancellationToken) =>
+            SuspendAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Suspend</c>.</summary>
+        public virtual lro::OperationsClient SuspendOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Suspend</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceSuspend(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SuspendOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>Suspend</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceSuspendAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SuspendOperationsClient, callSettings);
+
+        /// <summary>
+        /// This method suspends a running instance, saving its state to persistent storage, and allows you to resume the instance at a later time. Suspended instances have no compute costs (cores or RAM), and incur only storage charges for the saved VM memory and localSSD data. Any charged resources the virtual machine was using, such as persistent disks and static IP addresses, will continue to be charged while the instance is suspended. For more information, see Suspending and resuming an instance.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// Name of the instance resource to suspend.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Suspend(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
+            Suspend(new SuspendInstanceRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// This method suspends a running instance, saving its state to persistent storage, and allows you to resume the instance at a later time. Suspended instances have no compute costs (cores or RAM), and incur only storage charges for the saved VM memory and localSSD data. Any charged resources the virtual machine was using, such as persistent disks and static IP addresses, will continue to be charged while the instance is suspended. For more information, see Suspending and resuming an instance.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// Name of the instance resource to suspend.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SuspendAsync(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
+            SuspendAsync(new SuspendInstanceRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// This method suspends a running instance, saving its state to persistent storage, and allows you to resume the instance at a later time. Suspended instances have no compute costs (cores or RAM), and incur only storage charges for the saved VM memory and localSSD data. Any charged resources the virtual machine was using, such as persistent disks and static IP addresses, will continue to be charged while the instance is suspended. For more information, see Suspending and resuming an instance.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// Name of the instance resource to suspend.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SuspendAsync(string project, string zone, string instance, st::CancellationToken cancellationToken) =>
+            SuspendAsync(project, zone, instance, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
@@ -6352,6 +6644,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<ResetInstanceRequest, Operation> _callReset;
 
+        private readonly gaxgrpc::ApiCall<ResumeInstanceRequest, Operation> _callResume;
+
         private readonly gaxgrpc::ApiCall<SendDiagnosticInterruptInstanceRequest, SendDiagnosticInterruptInstanceResponse> _callSendDiagnosticInterrupt;
 
         private readonly gaxgrpc::ApiCall<SetDeletionProtectionInstanceRequest, Operation> _callSetDeletionProtection;
@@ -6386,6 +6680,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<StopInstanceRequest, Operation> _callStop;
 
+        private readonly gaxgrpc::ApiCall<SuspendInstanceRequest, Operation> _callSuspend;
+
         private readonly gaxgrpc::ApiCall<TestIamPermissionsInstanceRequest, TestPermissionsResponse> _callTestIamPermissions;
 
         private readonly gaxgrpc::ApiCall<UpdateInstanceRequest, Operation> _callUpdate;
@@ -6418,6 +6714,7 @@ namespace Google.Cloud.Compute.V1
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.InsertOperationsSettings);
             RemoveResourcePoliciesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.RemoveResourcePoliciesOperationsSettings);
             ResetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.ResetOperationsSettings);
+            ResumeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.ResumeOperationsSettings);
             SetDeletionProtectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetDeletionProtectionOperationsSettings);
             SetDiskAutoDeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetDiskAutoDeleteOperationsSettings);
             SetLabelsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetLabelsOperationsSettings);
@@ -6433,6 +6730,7 @@ namespace Google.Cloud.Compute.V1
             StartOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.StartOperationsSettings);
             StartWithEncryptionKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.StartWithEncryptionKeyOperationsSettings);
             StopOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.StopOperationsSettings);
+            SuspendOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SuspendOperationsSettings);
             UpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.UpdateOperationsSettings);
             UpdateAccessConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.UpdateAccessConfigOperationsSettings);
             UpdateDisplayDeviceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.UpdateDisplayDeviceOperationsSettings);
@@ -6498,6 +6796,9 @@ namespace Google.Cloud.Compute.V1
             _callReset = clientHelper.BuildApiCall<ResetInstanceRequest, Operation>(grpcClient.ResetAsync, grpcClient.Reset, effectiveSettings.ResetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callReset);
             Modify_ResetApiCall(ref _callReset);
+            _callResume = clientHelper.BuildApiCall<ResumeInstanceRequest, Operation>(grpcClient.ResumeAsync, grpcClient.Resume, effectiveSettings.ResumeSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            Modify_ApiCall(ref _callResume);
+            Modify_ResumeApiCall(ref _callResume);
             _callSendDiagnosticInterrupt = clientHelper.BuildApiCall<SendDiagnosticInterruptInstanceRequest, SendDiagnosticInterruptInstanceResponse>(grpcClient.SendDiagnosticInterruptAsync, grpcClient.SendDiagnosticInterrupt, effectiveSettings.SendDiagnosticInterruptSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callSendDiagnosticInterrupt);
             Modify_SendDiagnosticInterruptApiCall(ref _callSendDiagnosticInterrupt);
@@ -6549,6 +6850,9 @@ namespace Google.Cloud.Compute.V1
             _callStop = clientHelper.BuildApiCall<StopInstanceRequest, Operation>(grpcClient.StopAsync, grpcClient.Stop, effectiveSettings.StopSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callStop);
             Modify_StopApiCall(ref _callStop);
+            _callSuspend = clientHelper.BuildApiCall<SuspendInstanceRequest, Operation>(grpcClient.SuspendAsync, grpcClient.Suspend, effectiveSettings.SuspendSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            Modify_ApiCall(ref _callSuspend);
+            Modify_SuspendApiCall(ref _callSuspend);
             _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsInstanceRequest, TestPermissionsResponse>(grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
@@ -6612,6 +6916,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_ResetApiCall(ref gaxgrpc::ApiCall<ResetInstanceRequest, Operation> call);
 
+        partial void Modify_ResumeApiCall(ref gaxgrpc::ApiCall<ResumeInstanceRequest, Operation> call);
+
         partial void Modify_SendDiagnosticInterruptApiCall(ref gaxgrpc::ApiCall<SendDiagnosticInterruptInstanceRequest, SendDiagnosticInterruptInstanceResponse> call);
 
         partial void Modify_SetDeletionProtectionApiCall(ref gaxgrpc::ApiCall<SetDeletionProtectionInstanceRequest, Operation> call);
@@ -6645,6 +6951,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_StartWithEncryptionKeyApiCall(ref gaxgrpc::ApiCall<StartWithEncryptionKeyInstanceRequest, Operation> call);
 
         partial void Modify_StopApiCall(ref gaxgrpc::ApiCall<StopInstanceRequest, Operation> call);
+
+        partial void Modify_SuspendApiCall(ref gaxgrpc::ApiCall<SuspendInstanceRequest, Operation> call);
 
         partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<TestIamPermissionsInstanceRequest, TestPermissionsResponse> call);
 
@@ -6703,6 +7011,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_ResetInstanceRequest(ref ResetInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_ResumeInstanceRequest(ref ResumeInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_SendDiagnosticInterruptInstanceRequest(ref SendDiagnosticInterruptInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetDeletionProtectionInstanceRequest(ref SetDeletionProtectionInstanceRequest request, ref gaxgrpc::CallSettings settings);
@@ -6736,6 +7046,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_StartWithEncryptionKeyInstanceRequest(ref StartWithEncryptionKeyInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_StopInstanceRequest(ref StopInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SuspendInstanceRequest(ref SuspendInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_TestIamPermissionsInstanceRequest(ref TestIamPermissionsInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -7321,6 +7633,39 @@ namespace Google.Cloud.Compute.V1
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), ResetOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>Resume</c>.</summary>
+        public override lro::OperationsClient ResumeOperationsClient { get; }
+
+        /// <summary>
+        /// Resumes an instance that was suspended using the instances().suspend method.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> Resume(ResumeInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ResumeInstanceRequest(ref request, ref callSettings);
+            Operation response = _callResume.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), ResumeOperationsClient);
+        }
+
+        /// <summary>
+        /// Resumes an instance that was suspended using the instances().suspend method.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> ResumeAsync(ResumeInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ResumeInstanceRequest(ref request, ref callSettings);
+            Operation response = await _callResume.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), ResumeOperationsClient);
+        }
+
         /// <summary>
         /// Sends diagnostic interrupt to the instance.
         /// </summary>
@@ -7604,7 +7949,7 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetSchedulingOperationsClient { get; }
 
         /// <summary>
-        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
+        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states. For more information about setting scheduling options for a VM, see Set VM availability policies.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7619,7 +7964,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
+        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states. For more information about setting scheduling options for a VM, see Set VM availability policies.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7736,7 +8081,7 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SimulateMaintenanceEventOperationsClient { get; }
 
         /// <summary>
-        /// Simulates a maintenance event on the instance.
+        /// Simulates a host maintenance event on a VM. For more information, see Simulate a host maintenance event.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7751,7 +8096,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Simulates a maintenance event on the instance.
+        /// Simulates a host maintenance event on a VM. For more information, see Simulate a host maintenance event.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7862,6 +8207,39 @@ namespace Google.Cloud.Compute.V1
             GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), StopOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>Suspend</c>.</summary>
+        public override lro::OperationsClient SuspendOperationsClient { get; }
+
+        /// <summary>
+        /// This method suspends a running instance, saving its state to persistent storage, and allows you to resume the instance at a later time. Suspended instances have no compute costs (cores or RAM), and incur only storage charges for the saved VM memory and localSSD data. Any charged resources the virtual machine was using, such as persistent disks and static IP addresses, will continue to be charged while the instance is suspended. For more information, see Suspending and resuming an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> Suspend(SuspendInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SuspendInstanceRequest(ref request, ref callSettings);
+            Operation response = _callSuspend.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SuspendOperationsClient);
+        }
+
+        /// <summary>
+        /// This method suspends a running instance, saving its state to persistent storage, and allows you to resume the instance at a later time. Suspended instances have no compute costs (cores or RAM), and incur only storage charges for the saved VM memory and localSSD data. Any charged resources the virtual machine was using, such as persistent disks and static IP addresses, will continue to be charged while the instance is suspended. For more information, see Suspending and resuming an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> SuspendAsync(SuspendInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SuspendInstanceRequest(ref request, ref callSettings);
+            Operation response = await _callSuspend.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SuspendOperationsClient);
         }
 
         /// <summary>

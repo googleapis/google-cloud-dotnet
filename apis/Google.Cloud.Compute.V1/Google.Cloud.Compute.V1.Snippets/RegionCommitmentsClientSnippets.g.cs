@@ -617,5 +617,147 @@ namespace Google.Cloud.Compute.V1.Snippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for Update</summary>
+        public void UpdateRequestObject()
+        {
+            // Snippet: Update(UpdateRegionCommitmentRequest, CallSettings)
+            // Create client
+            RegionCommitmentsClient regionCommitmentsClient = RegionCommitmentsClient.Create();
+            // Initialize request argument(s)
+            UpdateRegionCommitmentRequest request = new UpdateRegionCommitmentRequest
+            {
+                RequestId = "",
+                Paths = "",
+                Region = "",
+                Project = "",
+                CommitmentResource = new Commitment(),
+                Commitment = "",
+                UpdateMask = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionCommitmentsClient.Update(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionCommitmentsClient.PollOnceUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAsync</summary>
+        public async Task UpdateRequestObjectAsync()
+        {
+            // Snippet: UpdateAsync(UpdateRegionCommitmentRequest, CallSettings)
+            // Additional: UpdateAsync(UpdateRegionCommitmentRequest, CancellationToken)
+            // Create client
+            RegionCommitmentsClient regionCommitmentsClient = await RegionCommitmentsClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateRegionCommitmentRequest request = new UpdateRegionCommitmentRequest
+            {
+                RequestId = "",
+                Paths = "",
+                Region = "",
+                Project = "",
+                CommitmentResource = new Commitment(),
+                Commitment = "",
+                UpdateMask = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionCommitmentsClient.UpdateAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionCommitmentsClient.PollOnceUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for Update</summary>
+        public void Update()
+        {
+            // Snippet: Update(string, string, string, Commitment, CallSettings)
+            // Create client
+            RegionCommitmentsClient regionCommitmentsClient = RegionCommitmentsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string commitment = "";
+            Commitment commitmentResource = new Commitment();
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionCommitmentsClient.Update(project, region, commitment, commitmentResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionCommitmentsClient.PollOnceUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAsync</summary>
+        public async Task UpdateAsync()
+        {
+            // Snippet: UpdateAsync(string, string, string, Commitment, CallSettings)
+            // Additional: UpdateAsync(string, string, string, Commitment, CancellationToken)
+            // Create client
+            RegionCommitmentsClient regionCommitmentsClient = await RegionCommitmentsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string commitment = "";
+            Commitment commitmentResource = new Commitment();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionCommitmentsClient.UpdateAsync(project, region, commitment, commitmentResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionCommitmentsClient.PollOnceUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

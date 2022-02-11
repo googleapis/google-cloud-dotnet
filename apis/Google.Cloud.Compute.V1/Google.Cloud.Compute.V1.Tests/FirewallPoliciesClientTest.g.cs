@@ -306,7 +306,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -332,7 +331,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -359,7 +357,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -384,7 +381,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -656,7 +652,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -682,7 +677,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -710,7 +704,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -736,7 +729,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
                 Bindings = { new Binding(), },
-                IamOwned = false,
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);

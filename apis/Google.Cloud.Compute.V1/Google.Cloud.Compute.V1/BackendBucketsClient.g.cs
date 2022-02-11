@@ -57,6 +57,8 @@ namespace Google.Cloud.Compute.V1
             ListSettings = existing.ListSettings;
             PatchSettings = existing.PatchSettings;
             PatchOperationsSettings = existing.PatchOperationsSettings.Clone();
+            SetEdgeSecurityPolicySettings = existing.SetEdgeSecurityPolicySettings;
+            SetEdgeSecurityPolicyOperationsSettings = existing.SetEdgeSecurityPolicyOperationsSettings.Clone();
             UpdateSettings = existing.UpdateSettings;
             UpdateOperationsSettings = existing.UpdateOperationsSettings.Clone();
             OnCopy(existing);
@@ -252,6 +254,37 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings PatchOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackendBucketsClient.SetEdgeSecurityPolicy</c> and <c>BackendBucketsClient.SetEdgeSecurityPolicyAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SetEdgeSecurityPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackendBucketsClient.SetEdgeSecurityPolicy</c> and
+        /// <c>BackendBucketsClient.SetEdgeSecurityPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SetEdgeSecurityPolicyOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1142,6 +1175,121 @@ namespace Google.Cloud.Compute.V1
             PatchAsync(project, backendBucket, backendBucketResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Sets the edge security policy for the specified backend bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> SetEdgeSecurityPolicy(SetEdgeSecurityPolicyBackendBucketRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the edge security policy for the specified backend bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetEdgeSecurityPolicyAsync(SetEdgeSecurityPolicyBackendBucketRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the edge security policy for the specified backend bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetEdgeSecurityPolicyAsync(SetEdgeSecurityPolicyBackendBucketRequest request, st::CancellationToken cancellationToken) =>
+            SetEdgeSecurityPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SetEdgeSecurityPolicy</c>.</summary>
+        public virtual lro::OperationsClient SetEdgeSecurityPolicyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SetEdgeSecurityPolicy</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceSetEdgeSecurityPolicy(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetEdgeSecurityPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetEdgeSecurityPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceSetEdgeSecurityPolicyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetEdgeSecurityPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Sets the edge security policy for the specified backend bucket.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="backendBucket">
+        /// Name of the BackendService resource to which the security policy should be set. The name should conform to RFC1035.
+        /// </param>
+        /// <param name="securityPolicyReferenceResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> SetEdgeSecurityPolicy(string project, string backendBucket, SecurityPolicyReference securityPolicyReferenceResource, gaxgrpc::CallSettings callSettings = null) =>
+            SetEdgeSecurityPolicy(new SetEdgeSecurityPolicyBackendBucketRequest
+            {
+                BackendBucket = gax::GaxPreconditions.CheckNotNullOrEmpty(backendBucket, nameof(backendBucket)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                SecurityPolicyReferenceResource = gax::GaxPreconditions.CheckNotNull(securityPolicyReferenceResource, nameof(securityPolicyReferenceResource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the edge security policy for the specified backend bucket.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="backendBucket">
+        /// Name of the BackendService resource to which the security policy should be set. The name should conform to RFC1035.
+        /// </param>
+        /// <param name="securityPolicyReferenceResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetEdgeSecurityPolicyAsync(string project, string backendBucket, SecurityPolicyReference securityPolicyReferenceResource, gaxgrpc::CallSettings callSettings = null) =>
+            SetEdgeSecurityPolicyAsync(new SetEdgeSecurityPolicyBackendBucketRequest
+            {
+                BackendBucket = gax::GaxPreconditions.CheckNotNullOrEmpty(backendBucket, nameof(backendBucket)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                SecurityPolicyReferenceResource = gax::GaxPreconditions.CheckNotNull(securityPolicyReferenceResource, nameof(securityPolicyReferenceResource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the edge security policy for the specified backend bucket.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="backendBucket">
+        /// Name of the BackendService resource to which the security policy should be set. The name should conform to RFC1035.
+        /// </param>
+        /// <param name="securityPolicyReferenceResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetEdgeSecurityPolicyAsync(string project, string backendBucket, SecurityPolicyReference securityPolicyReferenceResource, st::CancellationToken cancellationToken) =>
+            SetEdgeSecurityPolicyAsync(project, backendBucket, securityPolicyReferenceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Updates the specified BackendBucket resource with the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1276,6 +1424,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<PatchBackendBucketRequest, Operation> _callPatch;
 
+        private readonly gaxgrpc::ApiCall<SetEdgeSecurityPolicyBackendBucketRequest, Operation> _callSetEdgeSecurityPolicy;
+
         private readonly gaxgrpc::ApiCall<UpdateBackendBucketRequest, Operation> _callUpdate;
 
         /// <summary>
@@ -1293,6 +1443,7 @@ namespace Google.Cloud.Compute.V1
             DeleteSignedUrlKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteSignedUrlKeyOperationsSettings);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings);
             PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings);
+            SetEdgeSecurityPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetEdgeSecurityPolicyOperationsSettings);
             UpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.UpdateOperationsSettings);
             _callAddSignedUrlKey = clientHelper.BuildApiCall<AddSignedUrlKeyBackendBucketRequest, Operation>(grpcClient.AddSignedUrlKeyAsync, grpcClient.AddSignedUrlKey, effectiveSettings.AddSignedUrlKeySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("backend_bucket", request => request.BackendBucket);
             Modify_ApiCall(ref _callAddSignedUrlKey);
@@ -1315,6 +1466,9 @@ namespace Google.Cloud.Compute.V1
             _callPatch = clientHelper.BuildApiCall<PatchBackendBucketRequest, Operation>(grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("backend_bucket", request => request.BackendBucket);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
+            _callSetEdgeSecurityPolicy = clientHelper.BuildApiCall<SetEdgeSecurityPolicyBackendBucketRequest, Operation>(grpcClient.SetEdgeSecurityPolicyAsync, grpcClient.SetEdgeSecurityPolicy, effectiveSettings.SetEdgeSecurityPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("backend_bucket", request => request.BackendBucket);
+            Modify_ApiCall(ref _callSetEdgeSecurityPolicy);
+            Modify_SetEdgeSecurityPolicyApiCall(ref _callSetEdgeSecurityPolicy);
             _callUpdate = clientHelper.BuildApiCall<UpdateBackendBucketRequest, Operation>(grpcClient.UpdateAsync, grpcClient.Update, effectiveSettings.UpdateSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("backend_bucket", request => request.BackendBucket);
             Modify_ApiCall(ref _callUpdate);
             Modify_UpdateApiCall(ref _callUpdate);
@@ -1337,6 +1491,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_PatchApiCall(ref gaxgrpc::ApiCall<PatchBackendBucketRequest, Operation> call);
 
+        partial void Modify_SetEdgeSecurityPolicyApiCall(ref gaxgrpc::ApiCall<SetEdgeSecurityPolicyBackendBucketRequest, Operation> call);
+
         partial void Modify_UpdateApiCall(ref gaxgrpc::ApiCall<UpdateBackendBucketRequest, Operation> call);
 
         partial void OnConstruction(BackendBuckets.BackendBucketsClient grpcClient, BackendBucketsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
@@ -1357,6 +1513,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_ListBackendBucketsRequest(ref ListBackendBucketsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PatchBackendBucketRequest(ref PatchBackendBucketRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SetEdgeSecurityPolicyBackendBucketRequest(ref SetEdgeSecurityPolicyBackendBucketRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateBackendBucketRequest(ref UpdateBackendBucketRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1571,6 +1729,39 @@ namespace Google.Cloud.Compute.V1
             GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>SetEdgeSecurityPolicy</c>.</summary>
+        public override lro::OperationsClient SetEdgeSecurityPolicyOperationsClient { get; }
+
+        /// <summary>
+        /// Sets the edge security policy for the specified backend bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> SetEdgeSecurityPolicy(SetEdgeSecurityPolicyBackendBucketRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetEdgeSecurityPolicyBackendBucketRequest(ref request, ref callSettings);
+            Operation response = _callSetEdgeSecurityPolicy.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetEdgeSecurityPolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Sets the edge security policy for the specified backend bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> SetEdgeSecurityPolicyAsync(SetEdgeSecurityPolicyBackendBucketRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetEdgeSecurityPolicyBackendBucketRequest(ref request, ref callSettings);
+            Operation response = await _callSetEdgeSecurityPolicy.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetEdgeSecurityPolicyOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>Update</c>.</summary>
