@@ -1179,12 +1179,16 @@ namespace Google.Cloud.OsConfig.V1Alpha.Snippets
             // Create client
             OsConfigZonalServiceClient osConfigZonalServiceClient = OsConfigZonalServiceClient.Create();
             // Initialize request argument(s)
+#pragma warning disable CS0612
             GetInstanceOSPoliciesComplianceRequest request = new GetInstanceOSPoliciesComplianceRequest
+#pragma warning restore CS0612
             {
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             // Make the request
+#pragma warning disable CS0612
             InstanceOSPoliciesCompliance response = osConfigZonalServiceClient.GetInstanceOSPoliciesCompliance(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1196,12 +1200,16 @@ namespace Google.Cloud.OsConfig.V1Alpha.Snippets
             // Create client
             OsConfigZonalServiceClient osConfigZonalServiceClient = await OsConfigZonalServiceClient.CreateAsync();
             // Initialize request argument(s)
+#pragma warning disable CS0612
             GetInstanceOSPoliciesComplianceRequest request = new GetInstanceOSPoliciesComplianceRequest
+#pragma warning restore CS0612
             {
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             // Make the request
+#pragma warning disable CS0612
             InstanceOSPoliciesCompliance response = await osConfigZonalServiceClient.GetInstanceOSPoliciesComplianceAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1214,7 +1222,9 @@ namespace Google.Cloud.OsConfig.V1Alpha.Snippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/instanceOSPoliciesCompliances/[INSTANCE]";
             // Make the request
+#pragma warning disable CS0612
             InstanceOSPoliciesCompliance response = osConfigZonalServiceClient.GetInstanceOSPoliciesCompliance(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1228,7 +1238,9 @@ namespace Google.Cloud.OsConfig.V1Alpha.Snippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/instanceOSPoliciesCompliances/[INSTANCE]";
             // Make the request
+#pragma warning disable CS0612
             InstanceOSPoliciesCompliance response = await osConfigZonalServiceClient.GetInstanceOSPoliciesComplianceAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1241,7 +1253,9 @@ namespace Google.Cloud.OsConfig.V1Alpha.Snippets
             // Initialize request argument(s)
             InstanceOSPoliciesComplianceName name = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
             // Make the request
+#pragma warning disable CS0612
             InstanceOSPoliciesCompliance response = osConfigZonalServiceClient.GetInstanceOSPoliciesCompliance(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1255,7 +1269,9 @@ namespace Google.Cloud.OsConfig.V1Alpha.Snippets
             // Initialize request argument(s)
             InstanceOSPoliciesComplianceName name = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
             // Make the request
+#pragma warning disable CS0612
             InstanceOSPoliciesCompliance response = await osConfigZonalServiceClient.GetInstanceOSPoliciesComplianceAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1266,27 +1282,37 @@ namespace Google.Cloud.OsConfig.V1Alpha.Snippets
             // Create client
             OsConfigZonalServiceClient osConfigZonalServiceClient = OsConfigZonalServiceClient.Create();
             // Initialize request argument(s)
+#pragma warning disable CS0612
             ListInstanceOSPoliciesCompliancesRequest request = new ListInstanceOSPoliciesCompliancesRequest
+#pragma warning restore CS0612
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
             };
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListInstanceOSPoliciesCompliancesResponse, InstanceOSPoliciesCompliance> response = osConfigZonalServiceClient.ListInstanceOSPoliciesCompliances(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             foreach (InstanceOSPoliciesCompliance item in response)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             foreach (ListInstanceOSPoliciesCompliancesResponse page in response.AsRawResponses())
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (InstanceOSPoliciesCompliance item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1295,10 +1321,14 @@ namespace Google.Cloud.OsConfig.V1Alpha.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<InstanceOSPoliciesCompliance> singlePage = response.ReadPage(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (InstanceOSPoliciesCompliance item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1315,27 +1345,37 @@ namespace Google.Cloud.OsConfig.V1Alpha.Snippets
             // Create client
             OsConfigZonalServiceClient osConfigZonalServiceClient = await OsConfigZonalServiceClient.CreateAsync();
             // Initialize request argument(s)
+#pragma warning disable CS0612
             ListInstanceOSPoliciesCompliancesRequest request = new ListInstanceOSPoliciesCompliancesRequest
+#pragma warning restore CS0612
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
             };
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListInstanceOSPoliciesCompliancesResponse, InstanceOSPoliciesCompliance> response = osConfigZonalServiceClient.ListInstanceOSPoliciesCompliancesAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             await response.ForEachAsync((InstanceOSPoliciesCompliance item) =>
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListInstanceOSPoliciesCompliancesResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (InstanceOSPoliciesCompliance item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1344,10 +1384,14 @@ namespace Google.Cloud.OsConfig.V1Alpha.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<InstanceOSPoliciesCompliance> singlePage = await response.ReadPageAsync(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (InstanceOSPoliciesCompliance item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1366,21 +1410,29 @@ namespace Google.Cloud.OsConfig.V1Alpha.Snippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListInstanceOSPoliciesCompliancesResponse, InstanceOSPoliciesCompliance> response = osConfigZonalServiceClient.ListInstanceOSPoliciesCompliances(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             foreach (InstanceOSPoliciesCompliance item in response)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             foreach (ListInstanceOSPoliciesCompliancesResponse page in response.AsRawResponses())
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (InstanceOSPoliciesCompliance item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1389,10 +1441,14 @@ namespace Google.Cloud.OsConfig.V1Alpha.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<InstanceOSPoliciesCompliance> singlePage = response.ReadPage(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (InstanceOSPoliciesCompliance item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1411,21 +1467,29 @@ namespace Google.Cloud.OsConfig.V1Alpha.Snippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListInstanceOSPoliciesCompliancesResponse, InstanceOSPoliciesCompliance> response = osConfigZonalServiceClient.ListInstanceOSPoliciesCompliancesAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             await response.ForEachAsync((InstanceOSPoliciesCompliance item) =>
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListInstanceOSPoliciesCompliancesResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (InstanceOSPoliciesCompliance item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1434,10 +1498,14 @@ namespace Google.Cloud.OsConfig.V1Alpha.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<InstanceOSPoliciesCompliance> singlePage = await response.ReadPageAsync(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (InstanceOSPoliciesCompliance item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1456,21 +1524,29 @@ namespace Google.Cloud.OsConfig.V1Alpha.Snippets
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListInstanceOSPoliciesCompliancesResponse, InstanceOSPoliciesCompliance> response = osConfigZonalServiceClient.ListInstanceOSPoliciesCompliances(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             foreach (InstanceOSPoliciesCompliance item in response)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             foreach (ListInstanceOSPoliciesCompliancesResponse page in response.AsRawResponses())
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (InstanceOSPoliciesCompliance item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1479,10 +1555,14 @@ namespace Google.Cloud.OsConfig.V1Alpha.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<InstanceOSPoliciesCompliance> singlePage = response.ReadPage(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (InstanceOSPoliciesCompliance item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1501,21 +1581,29 @@ namespace Google.Cloud.OsConfig.V1Alpha.Snippets
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListInstanceOSPoliciesCompliancesResponse, InstanceOSPoliciesCompliance> response = osConfigZonalServiceClient.ListInstanceOSPoliciesCompliancesAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             await response.ForEachAsync((InstanceOSPoliciesCompliance item) =>
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListInstanceOSPoliciesCompliancesResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (InstanceOSPoliciesCompliance item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1524,10 +1612,379 @@ namespace Google.Cloud.OsConfig.V1Alpha.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<InstanceOSPoliciesCompliance> singlePage = await response.ReadPageAsync(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (InstanceOSPoliciesCompliance item in singlePage)
+#pragma warning restore CS0612
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOSPolicyAssignmentReport</summary>
+        public void GetOSPolicyAssignmentReportRequestObject()
+        {
+            // Snippet: GetOSPolicyAssignmentReport(GetOSPolicyAssignmentReportRequest, CallSettings)
+            // Create client
+            OsConfigZonalServiceClient osConfigZonalServiceClient = OsConfigZonalServiceClient.Create();
+            // Initialize request argument(s)
+            GetOSPolicyAssignmentReportRequest request = new GetOSPolicyAssignmentReportRequest
+            {
+                OSPolicyAssignmentReportName = OSPolicyAssignmentReportName.FromProjectLocationInstanceAssignment("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[ASSIGNMENT]"),
+            };
+            // Make the request
+            OSPolicyAssignmentReport response = osConfigZonalServiceClient.GetOSPolicyAssignmentReport(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOSPolicyAssignmentReportAsync</summary>
+        public async Task GetOSPolicyAssignmentReportRequestObjectAsync()
+        {
+            // Snippet: GetOSPolicyAssignmentReportAsync(GetOSPolicyAssignmentReportRequest, CallSettings)
+            // Additional: GetOSPolicyAssignmentReportAsync(GetOSPolicyAssignmentReportRequest, CancellationToken)
+            // Create client
+            OsConfigZonalServiceClient osConfigZonalServiceClient = await OsConfigZonalServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetOSPolicyAssignmentReportRequest request = new GetOSPolicyAssignmentReportRequest
+            {
+                OSPolicyAssignmentReportName = OSPolicyAssignmentReportName.FromProjectLocationInstanceAssignment("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[ASSIGNMENT]"),
+            };
+            // Make the request
+            OSPolicyAssignmentReport response = await osConfigZonalServiceClient.GetOSPolicyAssignmentReportAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOSPolicyAssignmentReport</summary>
+        public void GetOSPolicyAssignmentReport()
+        {
+            // Snippet: GetOSPolicyAssignmentReport(string, CallSettings)
+            // Create client
+            OsConfigZonalServiceClient osConfigZonalServiceClient = OsConfigZonalServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]/osPolicyAssignments/[ASSIGNMENT]/report";
+            // Make the request
+            OSPolicyAssignmentReport response = osConfigZonalServiceClient.GetOSPolicyAssignmentReport(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOSPolicyAssignmentReportAsync</summary>
+        public async Task GetOSPolicyAssignmentReportAsync()
+        {
+            // Snippet: GetOSPolicyAssignmentReportAsync(string, CallSettings)
+            // Additional: GetOSPolicyAssignmentReportAsync(string, CancellationToken)
+            // Create client
+            OsConfigZonalServiceClient osConfigZonalServiceClient = await OsConfigZonalServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]/osPolicyAssignments/[ASSIGNMENT]/report";
+            // Make the request
+            OSPolicyAssignmentReport response = await osConfigZonalServiceClient.GetOSPolicyAssignmentReportAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOSPolicyAssignmentReport</summary>
+        public void GetOSPolicyAssignmentReportResourceNames()
+        {
+            // Snippet: GetOSPolicyAssignmentReport(OSPolicyAssignmentReportName, CallSettings)
+            // Create client
+            OsConfigZonalServiceClient osConfigZonalServiceClient = OsConfigZonalServiceClient.Create();
+            // Initialize request argument(s)
+            OSPolicyAssignmentReportName name = OSPolicyAssignmentReportName.FromProjectLocationInstanceAssignment("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[ASSIGNMENT]");
+            // Make the request
+            OSPolicyAssignmentReport response = osConfigZonalServiceClient.GetOSPolicyAssignmentReport(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOSPolicyAssignmentReportAsync</summary>
+        public async Task GetOSPolicyAssignmentReportResourceNamesAsync()
+        {
+            // Snippet: GetOSPolicyAssignmentReportAsync(OSPolicyAssignmentReportName, CallSettings)
+            // Additional: GetOSPolicyAssignmentReportAsync(OSPolicyAssignmentReportName, CancellationToken)
+            // Create client
+            OsConfigZonalServiceClient osConfigZonalServiceClient = await OsConfigZonalServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OSPolicyAssignmentReportName name = OSPolicyAssignmentReportName.FromProjectLocationInstanceAssignment("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[ASSIGNMENT]");
+            // Make the request
+            OSPolicyAssignmentReport response = await osConfigZonalServiceClient.GetOSPolicyAssignmentReportAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOSPolicyAssignmentReports</summary>
+        public void ListOSPolicyAssignmentReportsRequestObject()
+        {
+            // Snippet: ListOSPolicyAssignmentReports(ListOSPolicyAssignmentReportsRequest, CallSettings)
+            // Create client
+            OsConfigZonalServiceClient osConfigZonalServiceClient = OsConfigZonalServiceClient.Create();
+            // Initialize request argument(s)
+            ListOSPolicyAssignmentReportsRequest request = new ListOSPolicyAssignmentReportsRequest
+            {
+                ParentAsInstanceOSPolicyAssignmentName = InstanceOSPolicyAssignmentName.FromProjectLocationInstanceAssignment("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[ASSIGNMENT]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> response = osConfigZonalServiceClient.ListOSPolicyAssignmentReports(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (OSPolicyAssignmentReport item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListOSPolicyAssignmentReportsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (OSPolicyAssignmentReport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<OSPolicyAssignmentReport> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (OSPolicyAssignmentReport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOSPolicyAssignmentReportsAsync</summary>
+        public async Task ListOSPolicyAssignmentReportsRequestObjectAsync()
+        {
+            // Snippet: ListOSPolicyAssignmentReportsAsync(ListOSPolicyAssignmentReportsRequest, CallSettings)
+            // Create client
+            OsConfigZonalServiceClient osConfigZonalServiceClient = await OsConfigZonalServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListOSPolicyAssignmentReportsRequest request = new ListOSPolicyAssignmentReportsRequest
+            {
+                ParentAsInstanceOSPolicyAssignmentName = InstanceOSPolicyAssignmentName.FromProjectLocationInstanceAssignment("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[ASSIGNMENT]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> response = osConfigZonalServiceClient.ListOSPolicyAssignmentReportsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((OSPolicyAssignmentReport item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListOSPolicyAssignmentReportsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (OSPolicyAssignmentReport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<OSPolicyAssignmentReport> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (OSPolicyAssignmentReport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOSPolicyAssignmentReports</summary>
+        public void ListOSPolicyAssignmentReports()
+        {
+            // Snippet: ListOSPolicyAssignmentReports(string, string, int?, CallSettings)
+            // Create client
+            OsConfigZonalServiceClient osConfigZonalServiceClient = OsConfigZonalServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]/osPolicyAssignments/[ASSIGNMENT]";
+            // Make the request
+            PagedEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> response = osConfigZonalServiceClient.ListOSPolicyAssignmentReports(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (OSPolicyAssignmentReport item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListOSPolicyAssignmentReportsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (OSPolicyAssignmentReport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<OSPolicyAssignmentReport> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (OSPolicyAssignmentReport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOSPolicyAssignmentReportsAsync</summary>
+        public async Task ListOSPolicyAssignmentReportsAsync()
+        {
+            // Snippet: ListOSPolicyAssignmentReportsAsync(string, string, int?, CallSettings)
+            // Create client
+            OsConfigZonalServiceClient osConfigZonalServiceClient = await OsConfigZonalServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]/osPolicyAssignments/[ASSIGNMENT]";
+            // Make the request
+            PagedAsyncEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> response = osConfigZonalServiceClient.ListOSPolicyAssignmentReportsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((OSPolicyAssignmentReport item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListOSPolicyAssignmentReportsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (OSPolicyAssignmentReport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<OSPolicyAssignmentReport> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (OSPolicyAssignmentReport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOSPolicyAssignmentReports</summary>
+        public void ListOSPolicyAssignmentReportsResourceNames()
+        {
+            // Snippet: ListOSPolicyAssignmentReports(InstanceOSPolicyAssignmentName, string, int?, CallSettings)
+            // Create client
+            OsConfigZonalServiceClient osConfigZonalServiceClient = OsConfigZonalServiceClient.Create();
+            // Initialize request argument(s)
+            InstanceOSPolicyAssignmentName parent = InstanceOSPolicyAssignmentName.FromProjectLocationInstanceAssignment("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[ASSIGNMENT]");
+            // Make the request
+            PagedEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> response = osConfigZonalServiceClient.ListOSPolicyAssignmentReports(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (OSPolicyAssignmentReport item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListOSPolicyAssignmentReportsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (OSPolicyAssignmentReport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<OSPolicyAssignmentReport> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (OSPolicyAssignmentReport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOSPolicyAssignmentReportsAsync</summary>
+        public async Task ListOSPolicyAssignmentReportsResourceNamesAsync()
+        {
+            // Snippet: ListOSPolicyAssignmentReportsAsync(InstanceOSPolicyAssignmentName, string, int?, CallSettings)
+            // Create client
+            OsConfigZonalServiceClient osConfigZonalServiceClient = await OsConfigZonalServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceOSPolicyAssignmentName parent = InstanceOSPolicyAssignmentName.FromProjectLocationInstanceAssignment("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[ASSIGNMENT]");
+            // Make the request
+            PagedAsyncEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> response = osConfigZonalServiceClient.ListOSPolicyAssignmentReportsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((OSPolicyAssignmentReport item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListOSPolicyAssignmentReportsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (OSPolicyAssignmentReport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<OSPolicyAssignmentReport> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (OSPolicyAssignmentReport item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);

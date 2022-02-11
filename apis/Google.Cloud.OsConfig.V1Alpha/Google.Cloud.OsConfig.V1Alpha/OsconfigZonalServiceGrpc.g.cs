@@ -17,7 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 0414, 1591
+#pragma warning disable 0414, 1591, 0612
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -94,6 +94,14 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesRequest> __Marshaller_google_cloud_osconfig_v1alpha_ListInstanceOSPoliciesCompliancesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse> __Marshaller_google_cloud_osconfig_v1alpha_ListInstanceOSPoliciesCompliancesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.GetOSPolicyAssignmentReportRequest> __Marshaller_google_cloud_osconfig_v1alpha_GetOSPolicyAssignmentReportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.GetOSPolicyAssignmentReportRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReport> __Marshaller_google_cloud_osconfig_v1alpha_OSPolicyAssignmentReport = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReport.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsRequest> __Marshaller_google_cloud_osconfig_v1alpha_ListOSPolicyAssignmentReportsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsResponse> __Marshaller_google_cloud_osconfig_v1alpha_ListOSPolicyAssignmentReportsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.GetInventoryRequest> __Marshaller_google_cloud_osconfig_v1alpha_GetInventoryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.GetInventoryRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -174,6 +182,22 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         "ListInstanceOSPoliciesCompliances",
         __Marshaller_google_cloud_osconfig_v1alpha_ListInstanceOSPoliciesCompliancesRequest,
         __Marshaller_google_cloud_osconfig_v1alpha_ListInstanceOSPoliciesCompliancesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.GetOSPolicyAssignmentReportRequest, global::Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReport> __Method_GetOSPolicyAssignmentReport = new grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.GetOSPolicyAssignmentReportRequest, global::Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReport>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetOSPolicyAssignmentReport",
+        __Marshaller_google_cloud_osconfig_v1alpha_GetOSPolicyAssignmentReportRequest,
+        __Marshaller_google_cloud_osconfig_v1alpha_OSPolicyAssignmentReport);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsRequest, global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsResponse> __Method_ListOSPolicyAssignmentReports = new grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsRequest, global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListOSPolicyAssignmentReports",
+        __Marshaller_google_cloud_osconfig_v1alpha_ListOSPolicyAssignmentReportsRequest,
+        __Marshaller_google_cloud_osconfig_v1alpha_ListOSPolicyAssignmentReportsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.GetInventoryRequest, global::Google.Cloud.OsConfig.V1Alpha.Inventory> __Method_GetInventory = new grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.GetInventoryRequest, global::Google.Cloud.OsConfig.V1Alpha.Inventory>(
@@ -344,6 +368,32 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse> ListInstanceOSPoliciesCompliances(global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get the OS policy asssignment report for the specified Compute Engine VM
+      /// instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReport> GetOSPolicyAssignmentReport(global::Google.Cloud.OsConfig.V1Alpha.GetOSPolicyAssignmentReportRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List OS policy asssignment reports for all Compute Engine VM instances in
+      /// the specified zone.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsResponse> ListOSPolicyAssignmentReports(global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -952,6 +1002,110 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_ListInstanceOSPoliciesCompliances, null, options, request);
       }
       /// <summary>
+      /// Get the OS policy asssignment report for the specified Compute Engine VM
+      /// instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReport GetOSPolicyAssignmentReport(global::Google.Cloud.OsConfig.V1Alpha.GetOSPolicyAssignmentReportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetOSPolicyAssignmentReport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get the OS policy asssignment report for the specified Compute Engine VM
+      /// instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReport GetOSPolicyAssignmentReport(global::Google.Cloud.OsConfig.V1Alpha.GetOSPolicyAssignmentReportRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetOSPolicyAssignmentReport, null, options, request);
+      }
+      /// <summary>
+      /// Get the OS policy asssignment report for the specified Compute Engine VM
+      /// instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReport> GetOSPolicyAssignmentReportAsync(global::Google.Cloud.OsConfig.V1Alpha.GetOSPolicyAssignmentReportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetOSPolicyAssignmentReportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get the OS policy asssignment report for the specified Compute Engine VM
+      /// instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReport> GetOSPolicyAssignmentReportAsync(global::Google.Cloud.OsConfig.V1Alpha.GetOSPolicyAssignmentReportRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetOSPolicyAssignmentReport, null, options, request);
+      }
+      /// <summary>
+      /// List OS policy asssignment reports for all Compute Engine VM instances in
+      /// the specified zone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsResponse ListOSPolicyAssignmentReports(global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListOSPolicyAssignmentReports(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List OS policy asssignment reports for all Compute Engine VM instances in
+      /// the specified zone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsResponse ListOSPolicyAssignmentReports(global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListOSPolicyAssignmentReports, null, options, request);
+      }
+      /// <summary>
+      /// List OS policy asssignment reports for all Compute Engine VM instances in
+      /// the specified zone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsResponse> ListOSPolicyAssignmentReportsAsync(global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListOSPolicyAssignmentReportsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List OS policy asssignment reports for all Compute Engine VM instances in
+      /// the specified zone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsResponse> ListOSPolicyAssignmentReportsAsync(global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListOSPolicyAssignmentReports, null, options, request);
+      }
+      /// <summary>
       /// Get inventory data for the specified VM instance. If the VM has no
       /// associated inventory, the message `NOT_FOUND` is returned.
       /// </summary>
@@ -1173,6 +1327,8 @@ namespace Google.Cloud.OsConfig.V1Alpha {
           .AddMethod(__Method_DeleteOSPolicyAssignment, serviceImpl.DeleteOSPolicyAssignment)
           .AddMethod(__Method_GetInstanceOSPoliciesCompliance, serviceImpl.GetInstanceOSPoliciesCompliance)
           .AddMethod(__Method_ListInstanceOSPoliciesCompliances, serviceImpl.ListInstanceOSPoliciesCompliances)
+          .AddMethod(__Method_GetOSPolicyAssignmentReport, serviceImpl.GetOSPolicyAssignmentReport)
+          .AddMethod(__Method_ListOSPolicyAssignmentReports, serviceImpl.ListOSPolicyAssignmentReports)
           .AddMethod(__Method_GetInventory, serviceImpl.GetInventory)
           .AddMethod(__Method_ListInventories, serviceImpl.ListInventories)
           .AddMethod(__Method_GetVulnerabilityReport, serviceImpl.GetVulnerabilityReport)
@@ -1194,6 +1350,8 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       serviceBinder.AddMethod(__Method_DeleteOSPolicyAssignment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsConfig.V1Alpha.DeleteOSPolicyAssignmentRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteOSPolicyAssignment));
       serviceBinder.AddMethod(__Method_GetInstanceOSPoliciesCompliance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsConfig.V1Alpha.GetInstanceOSPoliciesComplianceRequest, global::Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance>(serviceImpl.GetInstanceOSPoliciesCompliance));
       serviceBinder.AddMethod(__Method_ListInstanceOSPoliciesCompliances, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesRequest, global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse>(serviceImpl.ListInstanceOSPoliciesCompliances));
+      serviceBinder.AddMethod(__Method_GetOSPolicyAssignmentReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsConfig.V1Alpha.GetOSPolicyAssignmentReportRequest, global::Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReport>(serviceImpl.GetOSPolicyAssignmentReport));
+      serviceBinder.AddMethod(__Method_ListOSPolicyAssignmentReports, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsRequest, global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsResponse>(serviceImpl.ListOSPolicyAssignmentReports));
       serviceBinder.AddMethod(__Method_GetInventory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsConfig.V1Alpha.GetInventoryRequest, global::Google.Cloud.OsConfig.V1Alpha.Inventory>(serviceImpl.GetInventory));
       serviceBinder.AddMethod(__Method_ListInventories, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsConfig.V1Alpha.ListInventoriesRequest, global::Google.Cloud.OsConfig.V1Alpha.ListInventoriesResponse>(serviceImpl.ListInventories));
       serviceBinder.AddMethod(__Method_GetVulnerabilityReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsConfig.V1Alpha.GetVulnerabilityReportRequest, global::Google.Cloud.OsConfig.V1Alpha.VulnerabilityReport>(serviceImpl.GetVulnerabilityReport));
