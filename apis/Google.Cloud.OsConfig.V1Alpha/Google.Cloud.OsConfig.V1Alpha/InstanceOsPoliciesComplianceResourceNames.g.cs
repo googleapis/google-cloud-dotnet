@@ -293,6 +293,7 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// <see cref="gcov::InstanceOSPoliciesComplianceName"/>-typed view over the <see cref="Name"/> resource name
         /// property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcov::InstanceOSPoliciesComplianceName InstanceOSPoliciesComplianceName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcov::InstanceOSPoliciesComplianceName.Parse(Name, allowUnparsed: true);
@@ -306,6 +307,7 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// <see cref="gcov::InstanceOSPoliciesComplianceName"/>-typed view over the <see cref="Name"/> resource name
         /// property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcov::InstanceOSPoliciesComplianceName InstanceOSPoliciesComplianceName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcov::InstanceOSPoliciesComplianceName.Parse(Name, allowUnparsed: true);
@@ -318,6 +320,7 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// <summary>
         /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gagr::LocationName ParentAsLocationName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);

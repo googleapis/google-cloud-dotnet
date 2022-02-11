@@ -1180,11 +1180,8 @@ namespace Google.Cloud.OsConfig.V1Alpha.Snippets
             OsConfigZonalServiceClient osConfigZonalServiceClient = OsConfigZonalServiceClient.Create();
             // Initialize request argument(s)
 #pragma warning disable CS0612
-            GetInstanceOSPoliciesComplianceRequest request = new GetInstanceOSPoliciesComplianceRequest
+            GetInstanceOSPoliciesComplianceRequest request = new GetInstanceOSPoliciesComplianceRequest { };
 #pragma warning restore CS0612
-            {
-                InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
-            };
             // Make the request
 #pragma warning disable CS0612
             InstanceOSPoliciesCompliance response = osConfigZonalServiceClient.GetInstanceOSPoliciesCompliance(request);
@@ -1201,11 +1198,8 @@ namespace Google.Cloud.OsConfig.V1Alpha.Snippets
             OsConfigZonalServiceClient osConfigZonalServiceClient = await OsConfigZonalServiceClient.CreateAsync();
             // Initialize request argument(s)
 #pragma warning disable CS0612
-            GetInstanceOSPoliciesComplianceRequest request = new GetInstanceOSPoliciesComplianceRequest
+            GetInstanceOSPoliciesComplianceRequest request = new GetInstanceOSPoliciesComplianceRequest { };
 #pragma warning restore CS0612
-            {
-                InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
-            };
             // Make the request
 #pragma warning disable CS0612
             InstanceOSPoliciesCompliance response = await osConfigZonalServiceClient.GetInstanceOSPoliciesComplianceAsync(request);
@@ -1283,12 +1277,8 @@ namespace Google.Cloud.OsConfig.V1Alpha.Snippets
             OsConfigZonalServiceClient osConfigZonalServiceClient = OsConfigZonalServiceClient.Create();
             // Initialize request argument(s)
 #pragma warning disable CS0612
-            ListInstanceOSPoliciesCompliancesRequest request = new ListInstanceOSPoliciesCompliancesRequest
+            ListInstanceOSPoliciesCompliancesRequest request = new ListInstanceOSPoliciesCompliancesRequest { };
 #pragma warning restore CS0612
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Filter = "",
-            };
             // Make the request
 #pragma warning disable CS0612
             PagedEnumerable<ListInstanceOSPoliciesCompliancesResponse, InstanceOSPoliciesCompliance> response = osConfigZonalServiceClient.ListInstanceOSPoliciesCompliances(request);
@@ -1346,12 +1336,8 @@ namespace Google.Cloud.OsConfig.V1Alpha.Snippets
             OsConfigZonalServiceClient osConfigZonalServiceClient = await OsConfigZonalServiceClient.CreateAsync();
             // Initialize request argument(s)
 #pragma warning disable CS0612
-            ListInstanceOSPoliciesCompliancesRequest request = new ListInstanceOSPoliciesCompliancesRequest
+            ListInstanceOSPoliciesCompliancesRequest request = new ListInstanceOSPoliciesCompliancesRequest { };
 #pragma warning restore CS0612
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Filter = "",
-            };
             // Make the request
 #pragma warning disable CS0612
             PagedAsyncEnumerable<ListInstanceOSPoliciesCompliancesResponse, InstanceOSPoliciesCompliance> response = osConfigZonalServiceClient.ListInstanceOSPoliciesCompliancesAsync(request);

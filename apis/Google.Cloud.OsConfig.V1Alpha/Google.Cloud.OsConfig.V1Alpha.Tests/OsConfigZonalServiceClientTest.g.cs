@@ -235,25 +235,31 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
             GetInstanceOSPoliciesComplianceRequest request = new GetInstanceOSPoliciesComplianceRequest
 #pragma warning restore CS0612
             {
+#pragma warning disable CS0612
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+#pragma warning restore CS0612
             };
 #pragma warning disable CS0612
             InstanceOSPoliciesCompliance expectedResponse = new InstanceOSPoliciesCompliance
 #pragma warning restore CS0612
             {
+#pragma warning disable CS0612
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 Instance = "instance99a62371",
                 State = OSPolicyComplianceState.Unknown,
                 DetailedState = "detailed_state6d8e814a",
                 DetailedStateReason = "detailed_state_reason493b0c87",
                 OsPolicyCompliances =
+#pragma warning restore CS0612
                 {
 #pragma warning disable CS0612
                     new InstanceOSPoliciesCompliance.Types.OSPolicyCompliance(),
 #pragma warning restore CS0612
                 },
+#pragma warning disable CS0612
                 LastComplianceCheckTime = new wkt::Timestamp(),
                 LastComplianceRunId = "last_compliance_run_id45f5c46a",
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetInstanceOSPoliciesCompliance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
@@ -273,25 +279,31 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
             GetInstanceOSPoliciesComplianceRequest request = new GetInstanceOSPoliciesComplianceRequest
 #pragma warning restore CS0612
             {
+#pragma warning disable CS0612
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+#pragma warning restore CS0612
             };
 #pragma warning disable CS0612
             InstanceOSPoliciesCompliance expectedResponse = new InstanceOSPoliciesCompliance
 #pragma warning restore CS0612
             {
+#pragma warning disable CS0612
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 Instance = "instance99a62371",
                 State = OSPolicyComplianceState.Unknown,
                 DetailedState = "detailed_state6d8e814a",
                 DetailedStateReason = "detailed_state_reason493b0c87",
                 OsPolicyCompliances =
+#pragma warning restore CS0612
                 {
 #pragma warning disable CS0612
                     new InstanceOSPoliciesCompliance.Types.OSPolicyCompliance(),
 #pragma warning restore CS0612
                 },
+#pragma warning disable CS0612
                 LastComplianceCheckTime = new wkt::Timestamp(),
                 LastComplianceRunId = "last_compliance_run_id45f5c46a",
+#pragma warning restore CS0612
             };
 #pragma warning disable CS0612
             mockGrpcClient.Setup(x => x.GetInstanceOSPoliciesComplianceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceOSPoliciesCompliance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -317,25 +329,31 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
             GetInstanceOSPoliciesComplianceRequest request = new GetInstanceOSPoliciesComplianceRequest
 #pragma warning restore CS0612
             {
+#pragma warning disable CS0612
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+#pragma warning restore CS0612
             };
 #pragma warning disable CS0612
             InstanceOSPoliciesCompliance expectedResponse = new InstanceOSPoliciesCompliance
 #pragma warning restore CS0612
             {
+#pragma warning disable CS0612
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 Instance = "instance99a62371",
                 State = OSPolicyComplianceState.Unknown,
                 DetailedState = "detailed_state6d8e814a",
                 DetailedStateReason = "detailed_state_reason493b0c87",
                 OsPolicyCompliances =
+#pragma warning restore CS0612
                 {
 #pragma warning disable CS0612
                     new InstanceOSPoliciesCompliance.Types.OSPolicyCompliance(),
 #pragma warning restore CS0612
                 },
+#pragma warning disable CS0612
                 LastComplianceCheckTime = new wkt::Timestamp(),
                 LastComplianceRunId = "last_compliance_run_id45f5c46a",
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetInstanceOSPoliciesCompliance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
@@ -355,25 +373,31 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
             GetInstanceOSPoliciesComplianceRequest request = new GetInstanceOSPoliciesComplianceRequest
 #pragma warning restore CS0612
             {
+#pragma warning disable CS0612
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+#pragma warning restore CS0612
             };
 #pragma warning disable CS0612
             InstanceOSPoliciesCompliance expectedResponse = new InstanceOSPoliciesCompliance
 #pragma warning restore CS0612
             {
+#pragma warning disable CS0612
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 Instance = "instance99a62371",
                 State = OSPolicyComplianceState.Unknown,
                 DetailedState = "detailed_state6d8e814a",
                 DetailedStateReason = "detailed_state_reason493b0c87",
                 OsPolicyCompliances =
+#pragma warning restore CS0612
                 {
 #pragma warning disable CS0612
                     new InstanceOSPoliciesCompliance.Types.OSPolicyCompliance(),
 #pragma warning restore CS0612
                 },
+#pragma warning disable CS0612
                 LastComplianceCheckTime = new wkt::Timestamp(),
                 LastComplianceRunId = "last_compliance_run_id45f5c46a",
+#pragma warning restore CS0612
             };
 #pragma warning disable CS0612
             mockGrpcClient.Setup(x => x.GetInstanceOSPoliciesComplianceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceOSPoliciesCompliance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -399,25 +423,31 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
             GetInstanceOSPoliciesComplianceRequest request = new GetInstanceOSPoliciesComplianceRequest
 #pragma warning restore CS0612
             {
+#pragma warning disable CS0612
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+#pragma warning restore CS0612
             };
 #pragma warning disable CS0612
             InstanceOSPoliciesCompliance expectedResponse = new InstanceOSPoliciesCompliance
 #pragma warning restore CS0612
             {
+#pragma warning disable CS0612
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 Instance = "instance99a62371",
                 State = OSPolicyComplianceState.Unknown,
                 DetailedState = "detailed_state6d8e814a",
                 DetailedStateReason = "detailed_state_reason493b0c87",
                 OsPolicyCompliances =
+#pragma warning restore CS0612
                 {
 #pragma warning disable CS0612
                     new InstanceOSPoliciesCompliance.Types.OSPolicyCompliance(),
 #pragma warning restore CS0612
                 },
+#pragma warning disable CS0612
                 LastComplianceCheckTime = new wkt::Timestamp(),
                 LastComplianceRunId = "last_compliance_run_id45f5c46a",
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetInstanceOSPoliciesCompliance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
@@ -437,25 +467,31 @@ namespace Google.Cloud.OsConfig.V1Alpha.Tests
             GetInstanceOSPoliciesComplianceRequest request = new GetInstanceOSPoliciesComplianceRequest
 #pragma warning restore CS0612
             {
+#pragma warning disable CS0612
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+#pragma warning restore CS0612
             };
 #pragma warning disable CS0612
             InstanceOSPoliciesCompliance expectedResponse = new InstanceOSPoliciesCompliance
 #pragma warning restore CS0612
             {
+#pragma warning disable CS0612
                 InstanceOSPoliciesComplianceName = InstanceOSPoliciesComplianceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 Instance = "instance99a62371",
                 State = OSPolicyComplianceState.Unknown,
                 DetailedState = "detailed_state6d8e814a",
                 DetailedStateReason = "detailed_state_reason493b0c87",
                 OsPolicyCompliances =
+#pragma warning restore CS0612
                 {
 #pragma warning disable CS0612
                     new InstanceOSPoliciesCompliance.Types.OSPolicyCompliance(),
 #pragma warning restore CS0612
                 },
+#pragma warning disable CS0612
                 LastComplianceCheckTime = new wkt::Timestamp(),
                 LastComplianceRunId = "last_compliance_run_id45f5c46a",
+#pragma warning restore CS0612
             };
 #pragma warning disable CS0612
             mockGrpcClient.Setup(x => x.GetInstanceOSPoliciesComplianceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceOSPoliciesCompliance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
