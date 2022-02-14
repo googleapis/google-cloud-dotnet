@@ -7,7 +7,7 @@
     <NoWarn>1701;1702;1705;xUnit2004;xUnit2013;AD0001</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Google.Api.Gax.Testing" Version="[3.5.0, 4.0.0)" />
+    <PackageReference Include="Google.Api.Gax.Testing" Version="[3.7.0, 4.0.0)" />
     <PackageReference Include="Google.Apis.CloudResourceManager.v1" Version="[1.53.0.2281, 2.0.0.0)" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
     <ProjectReference Include="..\Google.Cloud.PubSub.V1\Google.Cloud.PubSub.V1.csproj" />

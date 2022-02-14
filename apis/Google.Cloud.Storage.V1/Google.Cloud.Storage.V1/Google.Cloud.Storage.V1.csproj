@@ -9,7 +9,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.Gax.Rest" Version="[3.6.0, 4.0.0)" />
+    <PackageReference Include="Google.Api.Gax.Rest" Version="[3.7.0, 4.0.0)" />
     <PackageReference Include="Google.Apis.Storage.v1" Version="[1.55.0.2526, 2.0.0.0)" />
     <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.2.12-alpha" PrivateAssets="All" />
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="All" />
