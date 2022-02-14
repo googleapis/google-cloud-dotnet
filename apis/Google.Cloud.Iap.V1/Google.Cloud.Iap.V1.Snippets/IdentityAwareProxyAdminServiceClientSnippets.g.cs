@@ -22,7 +22,7 @@ namespace Google.Cloud.Iap.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedIdentityAwareProxyAdminServiceClientSnippets
+    public sealed class AllGeneratedIdentityAwareProxyAdminServiceClientSnippets
     {
         /// <summary>Snippet for SetIamPolicy</summary>
         public void SetIamPolicyRequestObject()

@@ -26,7 +26,7 @@ namespace Google.Cloud.Domains.V1Beta1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedDomainsClientSnippets
+    public sealed class AllGeneratedDomainsClientSnippets
     {
         /// <summary>Snippet for SearchDomains</summary>
         public void SearchDomainsRequestObject()

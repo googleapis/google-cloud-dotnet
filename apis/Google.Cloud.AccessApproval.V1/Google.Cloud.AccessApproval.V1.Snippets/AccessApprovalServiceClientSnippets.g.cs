@@ -24,7 +24,7 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedAccessApprovalServiceClientSnippets
+    public sealed class AllGeneratedAccessApprovalServiceClientSnippets
     {
         /// <summary>Snippet for ListApprovalRequests</summary>
         public void ListApprovalRequestsRequestObject()

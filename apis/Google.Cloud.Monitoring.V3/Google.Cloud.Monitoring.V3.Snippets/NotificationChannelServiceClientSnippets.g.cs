@@ -24,7 +24,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedNotificationChannelServiceClientSnippets
+    public sealed class AllGeneratedNotificationChannelServiceClientSnippets
     {
         /// <summary>Snippet for ListNotificationChannelDescriptors</summary>
         public void ListNotificationChannelDescriptorsRequestObject()

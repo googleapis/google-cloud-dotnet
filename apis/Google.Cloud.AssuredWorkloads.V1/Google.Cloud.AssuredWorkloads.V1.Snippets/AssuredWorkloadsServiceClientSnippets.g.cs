@@ -24,7 +24,7 @@ namespace Google.Cloud.AssuredWorkloads.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedAssuredWorkloadsServiceClientSnippets
+    public sealed class AllGeneratedAssuredWorkloadsServiceClientSnippets
     {
         /// <summary>Snippet for CreateWorkload</summary>
         public void CreateWorkloadRequestObject()

@@ -23,7 +23,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedAcceleratorTypesClientSnippets
+    public sealed class AllGeneratedAcceleratorTypesClientSnippets
     {
         /// <summary>Snippet for AggregatedList</summary>
         public void AggregatedListRequestObject()

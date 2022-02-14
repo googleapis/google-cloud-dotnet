@@ -24,7 +24,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedUptimeCheckServiceClientSnippets
+    public sealed class AllGeneratedUptimeCheckServiceClientSnippets
     {
         /// <summary>Snippet for ListUptimeCheckConfigs</summary>
         public void ListUptimeCheckConfigsRequestObject()

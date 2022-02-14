@@ -21,7 +21,7 @@ namespace Google.Cloud.AutoML.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedPredictionServiceClientSnippets
+    public sealed class AllGeneratedPredictionServiceClientSnippets
     {
         /// <summary>Snippet for Predict</summary>
         public void PredictRequestObject()

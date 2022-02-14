@@ -24,7 +24,7 @@ namespace Google.Cloud.Kms.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedEkmServiceClientSnippets
+    public sealed class AllGeneratedEkmServiceClientSnippets
     {
         /// <summary>Snippet for ListEkmConnections</summary>
         public void ListEkmConnectionsRequestObject()

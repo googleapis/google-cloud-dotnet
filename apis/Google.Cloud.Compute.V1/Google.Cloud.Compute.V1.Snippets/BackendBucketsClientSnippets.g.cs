@@ -23,7 +23,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedBackendBucketsClientSnippets
+    public sealed class AllGeneratedBackendBucketsClientSnippets
     {
         /// <summary>Snippet for AddSignedUrlKey</summary>
         public void AddSignedUrlKeyRequestObject()

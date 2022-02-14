@@ -25,7 +25,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedMigrationServiceClientSnippets
+    public sealed class AllGeneratedMigrationServiceClientSnippets
     {
         /// <summary>Snippet for SearchMigratableResources</summary>
         public void SearchMigratableResourcesRequestObject()

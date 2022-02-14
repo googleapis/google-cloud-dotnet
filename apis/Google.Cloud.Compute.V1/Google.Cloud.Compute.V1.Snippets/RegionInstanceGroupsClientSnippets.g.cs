@@ -23,7 +23,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedRegionInstanceGroupsClientSnippets
+    public sealed class AllGeneratedRegionInstanceGroupsClientSnippets
     {
         /// <summary>Snippet for Get</summary>
         public void GetRequestObject()

@@ -19,7 +19,7 @@ namespace Google.Cloud.ServiceControl.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedServiceControllerClientSnippets
+    public sealed class AllGeneratedServiceControllerClientSnippets
     {
         /// <summary>Snippet for Check</summary>
         public void CheckRequestObject()

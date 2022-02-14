@@ -25,7 +25,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
     using gcdcv = Google.Cloud.Dialogflow.Cx.V3;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedEnvironmentsClientSnippets
+    public sealed class AllGeneratedEnvironmentsClientSnippets
     {
         /// <summary>Snippet for ListEnvironments</summary>
         public void ListEnvironmentsRequestObject()

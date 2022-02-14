@@ -24,7 +24,7 @@ namespace Google.Cloud.Talent.V4.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedTenantServiceClientSnippets
+    public sealed class AllGeneratedTenantServiceClientSnippets
     {
         /// <summary>Snippet for CreateTenant</summary>
         public void CreateTenantRequestObject()

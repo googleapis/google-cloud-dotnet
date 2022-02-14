@@ -28,7 +28,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedBigtableTableAdminClientSnippets
+    public sealed class AllGeneratedBigtableTableAdminClientSnippets
     {
         /// <summary>Snippet for CreateTable</summary>
         public void CreateTableRequestObject()

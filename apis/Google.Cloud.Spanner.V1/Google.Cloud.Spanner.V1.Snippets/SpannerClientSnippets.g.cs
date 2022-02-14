@@ -28,7 +28,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
     using gcsv = Google.Cloud.Spanner.V1;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedSpannerClientSnippets
+    public sealed class AllGeneratedSpannerClientSnippets
     {
         /// <summary>Snippet for CreateSession</summary>
         public void CreateSessionRequestObject()

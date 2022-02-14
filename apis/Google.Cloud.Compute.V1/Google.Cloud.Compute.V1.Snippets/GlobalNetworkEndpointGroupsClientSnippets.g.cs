@@ -23,7 +23,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedGlobalNetworkEndpointGroupsClientSnippets
+    public sealed class AllGeneratedGlobalNetworkEndpointGroupsClientSnippets
     {
         /// <summary>Snippet for AttachNetworkEndpoints</summary>
         public void AttachNetworkEndpointsRequestObject()

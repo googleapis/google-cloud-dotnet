@@ -25,7 +25,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedAgentsClientSnippets
+    public sealed class AllGeneratedAgentsClientSnippets
     {
         /// <summary>Snippet for GetAgent</summary>
         public void GetAgentRequestObject()

@@ -26,7 +26,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
     using gcdv = Google.Cloud.Dataplex.V1;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedDataplexServiceClientSnippets
+    public sealed class AllGeneratedDataplexServiceClientSnippets
     {
         /// <summary>Snippet for CreateLake</summary>
         public void CreateLakeRequestObject()

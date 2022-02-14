@@ -24,7 +24,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedDataTransferServiceClientSnippets
+    public sealed class AllGeneratedDataTransferServiceClientSnippets
     {
         /// <summary>Snippet for GetDataSource</summary>
         public void GetDataSourceRequestObject()

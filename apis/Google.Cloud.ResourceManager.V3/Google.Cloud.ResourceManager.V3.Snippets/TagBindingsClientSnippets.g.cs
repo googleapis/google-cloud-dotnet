@@ -24,7 +24,7 @@ namespace Google.Cloud.ResourceManager.V3.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedTagBindingsClientSnippets
+    public sealed class AllGeneratedTagBindingsClientSnippets
     {
         /// <summary>Snippet for ListTagBindings</summary>
         public void ListTagBindingsRequestObject()

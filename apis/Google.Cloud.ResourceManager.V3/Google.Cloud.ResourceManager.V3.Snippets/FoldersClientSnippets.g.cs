@@ -27,7 +27,7 @@ namespace Google.Cloud.ResourceManager.V3.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedFoldersClientSnippets
+    public sealed class AllGeneratedFoldersClientSnippets
     {
         /// <summary>Snippet for GetFolder</summary>
         public void GetFolderRequestObject()

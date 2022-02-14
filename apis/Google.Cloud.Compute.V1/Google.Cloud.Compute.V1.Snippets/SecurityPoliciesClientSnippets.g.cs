@@ -23,7 +23,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedSecurityPoliciesClientSnippets
+    public sealed class AllGeneratedSecurityPoliciesClientSnippets
     {
         /// <summary>Snippet for AddRule</summary>
         public void AddRuleRequestObject()

@@ -24,7 +24,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedGroupServiceClientSnippets
+    public sealed class AllGeneratedGroupServiceClientSnippets
     {
         /// <summary>Snippet for ListGroups</summary>
         public void ListGroupsRequestObject()

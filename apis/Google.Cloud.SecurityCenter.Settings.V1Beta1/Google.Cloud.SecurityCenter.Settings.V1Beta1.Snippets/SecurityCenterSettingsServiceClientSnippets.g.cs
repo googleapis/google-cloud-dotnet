@@ -24,7 +24,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedSecurityCenterSettingsServiceClientSnippets
+    public sealed class AllGeneratedSecurityCenterSettingsServiceClientSnippets
     {
         /// <summary>Snippet for GetServiceAccount</summary>
         public void GetServiceAccountRequestObject()

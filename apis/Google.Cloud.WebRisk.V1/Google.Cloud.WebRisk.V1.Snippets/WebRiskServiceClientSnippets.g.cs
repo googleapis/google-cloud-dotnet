@@ -22,7 +22,7 @@ namespace Google.Cloud.WebRisk.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedWebRiskServiceClientSnippets
+    public sealed class AllGeneratedWebRiskServiceClientSnippets
     {
         /// <summary>Snippet for ComputeThreatListDiff</summary>
         public void ComputeThreatListDiffRequestObject()

@@ -23,7 +23,7 @@ namespace Google.Cloud.ServiceUsage.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedServiceUsageClientSnippets
+    public sealed class AllGeneratedServiceUsageClientSnippets
     {
         /// <summary>Snippet for EnableService</summary>
         public void EnableServiceRequestObject()

@@ -26,7 +26,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedWorkflowTemplateServiceClientSnippets
+    public sealed class AllGeneratedWorkflowTemplateServiceClientSnippets
     {
         /// <summary>Snippet for CreateWorkflowTemplate</summary>
         public void CreateWorkflowTemplateRequestObject()

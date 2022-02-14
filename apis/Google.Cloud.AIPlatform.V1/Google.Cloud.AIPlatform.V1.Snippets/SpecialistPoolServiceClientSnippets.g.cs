@@ -25,7 +25,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedSpecialistPoolServiceClientSnippets
+    public sealed class AllGeneratedSpecialistPoolServiceClientSnippets
     {
         /// <summary>Snippet for CreateSpecialistPool</summary>
         public void CreateSpecialistPoolRequestObject()

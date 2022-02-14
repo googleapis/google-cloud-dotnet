@@ -23,7 +23,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedRecommenderClientSnippets
+    public sealed class AllGeneratedRecommenderClientSnippets
     {
         /// <summary>Snippet for ListInsights</summary>
         public void ListInsightsRequestObject()

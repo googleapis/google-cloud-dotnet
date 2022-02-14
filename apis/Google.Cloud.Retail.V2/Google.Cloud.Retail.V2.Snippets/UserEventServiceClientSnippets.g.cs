@@ -21,7 +21,7 @@ namespace Google.Cloud.Retail.V2.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedUserEventServiceClientSnippets
+    public sealed class AllGeneratedUserEventServiceClientSnippets
     {
         /// <summary>Snippet for WriteUserEvent</summary>
         public void WriteUserEventRequestObject()

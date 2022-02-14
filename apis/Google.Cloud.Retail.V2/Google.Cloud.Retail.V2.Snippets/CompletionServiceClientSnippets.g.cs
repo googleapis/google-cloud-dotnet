@@ -20,7 +20,7 @@ namespace Google.Cloud.Retail.V2.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedCompletionServiceClientSnippets
+    public sealed class AllGeneratedCompletionServiceClientSnippets
     {
         /// <summary>Snippet for CompleteQuery</summary>
         public void CompleteQueryRequestObject()

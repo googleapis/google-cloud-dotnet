@@ -24,7 +24,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedDisksClientSnippets
+    public sealed class AllGeneratedDisksClientSnippets
     {
         /// <summary>Snippet for AddResourcePolicies</summary>
         public void AddResourcePoliciesRequestObject()

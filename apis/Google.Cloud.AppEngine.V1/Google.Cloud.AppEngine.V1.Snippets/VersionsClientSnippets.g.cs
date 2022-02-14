@@ -25,7 +25,7 @@ namespace Google.Cloud.AppEngine.V1.Snippets
     using gcav = Google.Cloud.AppEngine.V1;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedVersionsClientSnippets
+    public sealed class AllGeneratedVersionsClientSnippets
     {
         /// <summary>Snippet for ListVersions</summary>
         public void ListVersionsRequestObject()

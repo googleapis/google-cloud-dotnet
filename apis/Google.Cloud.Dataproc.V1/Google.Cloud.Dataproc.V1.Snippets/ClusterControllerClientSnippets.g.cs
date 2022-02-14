@@ -24,7 +24,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedClusterControllerClientSnippets
+    public sealed class AllGeneratedClusterControllerClientSnippets
     {
         /// <summary>Snippet for CreateCluster</summary>
         public void CreateClusterRequestObject()

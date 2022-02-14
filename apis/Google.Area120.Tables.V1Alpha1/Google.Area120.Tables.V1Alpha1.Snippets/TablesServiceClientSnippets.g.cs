@@ -23,7 +23,7 @@ namespace Google.Area120.Tables.V1Alpha1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedTablesServiceClientSnippets
+    public sealed class AllGeneratedTablesServiceClientSnippets
     {
         /// <summary>Snippet for GetTable</summary>
         public void GetTableRequestObject()

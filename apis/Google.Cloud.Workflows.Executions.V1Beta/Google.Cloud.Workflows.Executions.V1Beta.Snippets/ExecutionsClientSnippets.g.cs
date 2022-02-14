@@ -23,7 +23,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedExecutionsClientSnippets
+    public sealed class AllGeneratedExecutionsClientSnippets
     {
         /// <summary>Snippet for ListExecutions</summary>
         public void ListExecutionsRequestObject()

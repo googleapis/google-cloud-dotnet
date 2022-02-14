@@ -24,7 +24,7 @@ namespace Google.Cloud.Logging.V2.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedConfigServiceV2ClientSnippets
+    public sealed class AllGeneratedConfigServiceV2ClientSnippets
     {
         /// <summary>Snippet for ListBuckets</summary>
         public void ListBucketsRequestObject()

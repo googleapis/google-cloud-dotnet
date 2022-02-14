@@ -26,7 +26,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedSubscriberServiceApiClientSnippets
+    public sealed class AllGeneratedSubscriberServiceApiClientSnippets
     {
         /// <summary>Snippet for CreateSubscription</summary>
         public void CreateSubscriptionRequestObject()

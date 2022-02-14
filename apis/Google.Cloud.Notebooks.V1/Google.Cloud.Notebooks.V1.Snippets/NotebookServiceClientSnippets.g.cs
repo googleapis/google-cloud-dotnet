@@ -25,7 +25,7 @@ namespace Google.Cloud.Notebooks.V1.Snippets
     using gcnv = Google.Cloud.Notebooks.V1;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedNotebookServiceClientSnippets
+    public sealed class AllGeneratedNotebookServiceClientSnippets
     {
         /// <summary>Snippet for ListInstances</summary>
         public void ListInstancesRequestObject()

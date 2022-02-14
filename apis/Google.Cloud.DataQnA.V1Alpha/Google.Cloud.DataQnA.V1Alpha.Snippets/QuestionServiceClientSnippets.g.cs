@@ -21,7 +21,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedQuestionServiceClientSnippets
+    public sealed class AllGeneratedQuestionServiceClientSnippets
     {
         /// <summary>Snippet for GetQuestion</summary>
         public void GetQuestionRequestObject()

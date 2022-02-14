@@ -25,7 +25,7 @@ namespace Google.Cloud.VpcAccess.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedVpcAccessServiceClientSnippets
+    public sealed class AllGeneratedVpcAccessServiceClientSnippets
     {
         /// <summary>Snippet for CreateConnector</summary>
         public void CreateConnectorRequestObject()

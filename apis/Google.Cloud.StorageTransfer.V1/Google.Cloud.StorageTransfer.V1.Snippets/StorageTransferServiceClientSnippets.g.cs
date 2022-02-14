@@ -24,7 +24,7 @@ namespace Google.Cloud.StorageTransfer.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedStorageTransferServiceClientSnippets
+    public sealed class AllGeneratedStorageTransferServiceClientSnippets
     {
         /// <summary>Snippet for GetGoogleServiceAccount</summary>
         public void GetGoogleServiceAccountRequestObject()

@@ -23,7 +23,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedIntentsClientSnippets
+    public sealed class AllGeneratedIntentsClientSnippets
     {
         /// <summary>Snippet for ListIntents</summary>
         public void ListIntentsRequestObject()

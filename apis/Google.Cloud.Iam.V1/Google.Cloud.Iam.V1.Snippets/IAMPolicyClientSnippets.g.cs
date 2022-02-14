@@ -20,7 +20,7 @@ namespace Google.Cloud.Iam.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedIAMPolicyClientSnippets
+    public sealed class AllGeneratedIAMPolicyClientSnippets
     {
         /// <summary>Snippet for SetIamPolicy</summary>
         public void SetIamPolicyRequestObject()

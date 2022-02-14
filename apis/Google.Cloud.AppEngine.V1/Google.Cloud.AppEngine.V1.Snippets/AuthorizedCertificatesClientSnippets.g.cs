@@ -23,7 +23,7 @@ namespace Google.Cloud.AppEngine.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedAuthorizedCertificatesClientSnippets
+    public sealed class AllGeneratedAuthorizedCertificatesClientSnippets
     {
         /// <summary>Snippet for ListAuthorizedCertificates</summary>
         public void ListAuthorizedCertificatesRequestObject()

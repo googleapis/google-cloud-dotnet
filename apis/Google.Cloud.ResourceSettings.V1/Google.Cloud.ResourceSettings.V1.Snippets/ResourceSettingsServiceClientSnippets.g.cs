@@ -22,7 +22,7 @@ namespace Google.Cloud.ResourceSettings.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedResourceSettingsServiceClientSnippets
+    public sealed class AllGeneratedResourceSettingsServiceClientSnippets
     {
         /// <summary>Snippet for ListSettings</summary>
         public void ListSettingsRequestObject()

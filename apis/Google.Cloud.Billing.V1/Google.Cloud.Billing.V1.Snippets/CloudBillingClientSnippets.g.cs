@@ -26,7 +26,7 @@ namespace Google.Cloud.Billing.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedCloudBillingClientSnippets
+    public sealed class AllGeneratedCloudBillingClientSnippets
     {
         /// <summary>Snippet for GetBillingAccount</summary>
         public void GetBillingAccountRequestObject()

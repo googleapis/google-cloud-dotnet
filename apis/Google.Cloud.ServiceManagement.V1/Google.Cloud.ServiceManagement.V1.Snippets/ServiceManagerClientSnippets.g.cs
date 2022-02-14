@@ -25,7 +25,7 @@ namespace Google.Cloud.ServiceManagement.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedServiceManagerClientSnippets
+    public sealed class AllGeneratedServiceManagerClientSnippets
     {
         /// <summary>Snippet for ListServices</summary>
         public void ListServicesRequestObject()

@@ -23,7 +23,7 @@ namespace Google.Cloud.Dataflow.V1Beta3.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedJobsV1Beta3ClientSnippets
+    public sealed class AllGeneratedJobsV1Beta3ClientSnippets
     {
         /// <summary>Snippet for CreateJob</summary>
         public void CreateJobRequestObject()

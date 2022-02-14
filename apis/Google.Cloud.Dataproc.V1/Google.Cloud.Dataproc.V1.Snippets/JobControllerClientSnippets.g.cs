@@ -24,7 +24,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedJobControllerClientSnippets
+    public sealed class AllGeneratedJobControllerClientSnippets
     {
         /// <summary>Snippet for SubmitJob</summary>
         public void SubmitJobRequestObject()

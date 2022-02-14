@@ -26,7 +26,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedCloudBuildClientSnippets
+    public sealed class AllGeneratedCloudBuildClientSnippets
     {
         /// <summary>Snippet for CreateBuild</summary>
         public void CreateBuildRequestObject()

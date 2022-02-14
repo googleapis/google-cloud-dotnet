@@ -25,7 +25,7 @@ namespace Google.Cloud.Security.PrivateCA.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedCertificateAuthorityServiceClientSnippets
+    public sealed class AllGeneratedCertificateAuthorityServiceClientSnippets
     {
         /// <summary>Snippet for CreateCertificate</summary>
         public void CreateCertificateRequestObject()

@@ -23,7 +23,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedGSuiteAddOnsClientSnippets
+    public sealed class AllGeneratedGSuiteAddOnsClientSnippets
     {
         /// <summary>Snippet for GetAuthorization</summary>
         public void GetAuthorizationRequestObject()

@@ -25,7 +25,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedDataLabelingServiceClientSnippets
+    public sealed class AllGeneratedDataLabelingServiceClientSnippets
     {
         /// <summary>Snippet for CreateDataset</summary>
         public void CreateDatasetRequestObject()

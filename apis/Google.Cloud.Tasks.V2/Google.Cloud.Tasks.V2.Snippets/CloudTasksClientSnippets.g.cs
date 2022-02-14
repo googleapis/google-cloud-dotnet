@@ -27,7 +27,7 @@ namespace Google.Cloud.Tasks.V2.Snippets
     using gctv = Google.Cloud.Tasks.V2;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedCloudTasksClientSnippets
+    public sealed class AllGeneratedCloudTasksClientSnippets
     {
         /// <summary>Snippet for ListQueues</summary>
         public void ListQueuesRequestObject()

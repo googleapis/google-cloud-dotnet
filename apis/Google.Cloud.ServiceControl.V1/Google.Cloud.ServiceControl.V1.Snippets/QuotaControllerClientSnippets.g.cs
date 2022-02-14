@@ -19,7 +19,7 @@ namespace Google.Cloud.ServiceControl.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedQuotaControllerClientSnippets
+    public sealed class AllGeneratedQuotaControllerClientSnippets
     {
         /// <summary>Snippet for AllocateQuota</summary>
         public void AllocateQuotaRequestObject()

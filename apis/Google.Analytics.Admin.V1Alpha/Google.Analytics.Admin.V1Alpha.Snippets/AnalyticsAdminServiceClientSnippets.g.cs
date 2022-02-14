@@ -23,7 +23,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedAnalyticsAdminServiceClientSnippets
+    public sealed class AllGeneratedAnalyticsAdminServiceClientSnippets
     {
         /// <summary>Snippet for GetAccount</summary>
         public void GetAccountRequestObject()

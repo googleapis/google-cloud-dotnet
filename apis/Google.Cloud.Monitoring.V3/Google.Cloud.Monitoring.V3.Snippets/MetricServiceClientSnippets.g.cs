@@ -25,7 +25,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedMetricServiceClientSnippets
+    public sealed class AllGeneratedMetricServiceClientSnippets
     {
         /// <summary>Snippet for ListMonitoredResourceDescriptors</summary>
         public void ListMonitoredResourceDescriptorsRequestObject()

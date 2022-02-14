@@ -23,7 +23,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedNetworksClientSnippets
+    public sealed class AllGeneratedNetworksClientSnippets
     {
         /// <summary>Snippet for AddPeering</summary>
         public void AddPeeringRequestObject()

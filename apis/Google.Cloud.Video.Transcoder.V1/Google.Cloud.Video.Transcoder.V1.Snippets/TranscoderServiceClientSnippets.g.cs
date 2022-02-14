@@ -23,7 +23,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedTranscoderServiceClientSnippets
+    public sealed class AllGeneratedTranscoderServiceClientSnippets
     {
         /// <summary>Snippet for CreateJob</summary>
         public void CreateJobRequestObject()

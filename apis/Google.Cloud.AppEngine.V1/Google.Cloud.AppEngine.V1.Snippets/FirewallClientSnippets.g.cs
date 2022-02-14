@@ -23,7 +23,7 @@ namespace Google.Cloud.AppEngine.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedFirewallClientSnippets
+    public sealed class AllGeneratedFirewallClientSnippets
     {
         /// <summary>Snippet for ListIngressRules</summary>
         public void ListIngressRulesRequestObject()

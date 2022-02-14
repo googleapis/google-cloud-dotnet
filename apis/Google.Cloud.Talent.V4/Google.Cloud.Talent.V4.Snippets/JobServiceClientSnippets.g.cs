@@ -25,7 +25,7 @@ namespace Google.Cloud.Talent.V4.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedJobServiceClientSnippets
+    public sealed class AllGeneratedJobServiceClientSnippets
     {
         /// <summary>Snippet for CreateJob</summary>
         public void CreateJobRequestObject()

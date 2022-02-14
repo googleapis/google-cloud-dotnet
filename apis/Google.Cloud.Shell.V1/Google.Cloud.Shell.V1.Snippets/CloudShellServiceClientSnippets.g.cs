@@ -21,7 +21,7 @@ namespace Google.Cloud.Shell.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedCloudShellServiceClientSnippets
+    public sealed class AllGeneratedCloudShellServiceClientSnippets
     {
         /// <summary>Snippet for GetEnvironment</summary>
         public void GetEnvironmentRequestObject()

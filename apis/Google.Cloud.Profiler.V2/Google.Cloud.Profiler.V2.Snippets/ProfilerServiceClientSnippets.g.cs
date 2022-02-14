@@ -20,7 +20,7 @@ namespace Google.Cloud.Profiler.V2.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedProfilerServiceClientSnippets
+    public sealed class AllGeneratedProfilerServiceClientSnippets
     {
         /// <summary>Snippet for CreateProfile</summary>
         public void CreateProfileRequestObject()

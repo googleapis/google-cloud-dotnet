@@ -24,7 +24,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedInstancesClientSnippets
+    public sealed class AllGeneratedInstancesClientSnippets
     {
         /// <summary>Snippet for AddAccessConfig</summary>
         public void AddAccessConfigRequestObject()

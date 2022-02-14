@@ -19,7 +19,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedDebugger2ClientSnippets
+    public sealed class AllGeneratedDebugger2ClientSnippets
     {
         /// <summary>Snippet for SetBreakpoint</summary>
         public void SetBreakpointRequestObject()

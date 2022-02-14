@@ -24,7 +24,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedKnowledgeBasesClientSnippets
+    public sealed class AllGeneratedKnowledgeBasesClientSnippets
     {
         /// <summary>Snippet for ListKnowledgeBases</summary>
         public void ListKnowledgeBasesRequestObject()

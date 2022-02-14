@@ -24,7 +24,7 @@ namespace Google.Cloud.Channel.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedCloudChannelServiceClientSnippets
+    public sealed class AllGeneratedCloudChannelServiceClientSnippets
     {
         /// <summary>Snippet for ListCustomers</summary>
         public void ListCustomersRequestObject()

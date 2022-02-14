@@ -19,7 +19,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedController2ClientSnippets
+    public sealed class AllGeneratedController2ClientSnippets
     {
         /// <summary>Snippet for RegisterDebuggee</summary>
         public void RegisterDebuggeeRequestObject()

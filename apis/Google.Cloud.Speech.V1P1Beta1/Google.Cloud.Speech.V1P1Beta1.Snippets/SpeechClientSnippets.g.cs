@@ -21,7 +21,7 @@ namespace Google.Cloud.Speech.V1P1Beta1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedSpeechClientSnippets
+    public sealed class AllGeneratedSpeechClientSnippets
     {
         /// <summary>Snippet for Recognize</summary>
         public void RecognizeRequestObject()

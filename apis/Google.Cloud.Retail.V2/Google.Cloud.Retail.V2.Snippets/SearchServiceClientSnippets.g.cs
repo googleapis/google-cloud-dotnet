@@ -22,7 +22,7 @@ namespace Google.Cloud.Retail.V2.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedSearchServiceClientSnippets
+    public sealed class AllGeneratedSearchServiceClientSnippets
     {
         /// <summary>Snippet for Search</summary>
         public void SearchRequestObject()

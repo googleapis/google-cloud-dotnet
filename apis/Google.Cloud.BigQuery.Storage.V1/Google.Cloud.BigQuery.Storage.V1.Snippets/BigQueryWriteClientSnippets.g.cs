@@ -20,7 +20,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedBigQueryWriteClientSnippets
+    public sealed class AllGeneratedBigQueryWriteClientSnippets
     {
         /// <summary>Snippet for CreateWriteStream</summary>
         public void CreateWriteStreamRequestObject()

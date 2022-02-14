@@ -26,7 +26,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedMetadataServiceClientSnippets
+    public sealed class AllGeneratedMetadataServiceClientSnippets
     {
         /// <summary>Snippet for CreateMetadataStore</summary>
         public void CreateMetadataStoreRequestObject()

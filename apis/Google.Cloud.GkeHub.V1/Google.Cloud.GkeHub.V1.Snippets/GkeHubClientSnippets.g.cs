@@ -26,7 +26,7 @@ namespace Google.Cloud.GkeHub.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedGkeHubClientSnippets
+    public sealed class AllGeneratedGkeHubClientSnippets
     {
         /// <summary>Snippet for ListMemberships</summary>
         public void ListMembershipsRequestObject()

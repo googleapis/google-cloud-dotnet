@@ -25,7 +25,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedIndexEndpointServiceClientSnippets
+    public sealed class AllGeneratedIndexEndpointServiceClientSnippets
     {
         /// <summary>Snippet for CreateIndexEndpoint</summary>
         public void CreateIndexEndpointRequestObject()

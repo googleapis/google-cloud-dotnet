@@ -26,7 +26,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedFeaturestoreServiceClientSnippets
+    public sealed class AllGeneratedFeaturestoreServiceClientSnippets
     {
         /// <summary>Snippet for CreateFeaturestore</summary>
         public void CreateFeaturestoreRequestObject()

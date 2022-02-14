@@ -28,7 +28,7 @@ namespace Google.Cloud.Iam.Admin.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedIAMClientSnippets
+    public sealed class AllGeneratedIAMClientSnippets
     {
         /// <summary>Snippet for ListServiceAccounts</summary>
         public void ListServiceAccountsRequestObject()

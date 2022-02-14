@@ -26,7 +26,7 @@ namespace Google.Cloud.Workflows.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedWorkflowsClientSnippets
+    public sealed class AllGeneratedWorkflowsClientSnippets
     {
         /// <summary>Snippet for ListWorkflows</summary>
         public void ListWorkflowsRequestObject()

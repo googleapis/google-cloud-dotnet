@@ -23,7 +23,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedRegionAutoscalersClientSnippets
+    public sealed class AllGeneratedRegionAutoscalersClientSnippets
     {
         /// <summary>Snippet for Delete</summary>
         public void DeleteRequestObject()

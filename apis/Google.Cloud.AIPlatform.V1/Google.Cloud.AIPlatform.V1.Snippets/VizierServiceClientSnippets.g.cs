@@ -24,7 +24,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedVizierServiceClientSnippets
+    public sealed class AllGeneratedVizierServiceClientSnippets
     {
         /// <summary>Snippet for CreateStudy</summary>
         public void CreateStudyRequestObject()

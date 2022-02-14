@@ -24,7 +24,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedAlertPolicyServiceClientSnippets
+    public sealed class AllGeneratedAlertPolicyServiceClientSnippets
     {
         /// <summary>Snippet for ListAlertPolicies</summary>
         public void ListAlertPoliciesRequestObject()

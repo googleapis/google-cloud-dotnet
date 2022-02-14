@@ -26,7 +26,7 @@ namespace Google.Cloud.Memcache.V1Beta2.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedCloudMemcacheClientSnippets
+    public sealed class AllGeneratedCloudMemcacheClientSnippets
     {
         /// <summary>Snippet for ListInstances</summary>
         public void ListInstancesRequestObject()

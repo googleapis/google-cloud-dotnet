@@ -24,7 +24,7 @@ namespace Google.Cloud.Billing.Budgets.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedBudgetServiceClientSnippets
+    public sealed class AllGeneratedBudgetServiceClientSnippets
     {
         /// <summary>Snippet for CreateBudget</summary>
         public void CreateBudgetRequestObject()

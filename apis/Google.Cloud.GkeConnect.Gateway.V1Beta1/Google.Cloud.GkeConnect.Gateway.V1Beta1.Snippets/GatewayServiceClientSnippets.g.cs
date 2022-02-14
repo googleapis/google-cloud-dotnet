@@ -22,7 +22,7 @@ namespace Google.Cloud.GkeConnect.Gateway.V1Beta1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedGatewayServiceClientSnippets
+    public sealed class AllGeneratedGatewayServiceClientSnippets
     {
         /// <summary>Snippet for GetResource</summary>
         public void GetResourceRequestObject()

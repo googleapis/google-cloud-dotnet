@@ -19,7 +19,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedLookupServiceClientSnippets
+    public sealed class AllGeneratedLookupServiceClientSnippets
     {
         /// <summary>Snippet for ResolveService</summary>
         public void ResolveServiceRequestObject()

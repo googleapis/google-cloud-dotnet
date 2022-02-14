@@ -22,7 +22,7 @@ namespace Google.Cloud.Location.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedLocationsClientSnippets
+    public sealed class AllGeneratedLocationsClientSnippets
     {
         /// <summary>Snippet for ListLocations</summary>
         public void ListLocationsRequestObject()

@@ -26,7 +26,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
     using gcav = Google.Cloud.AIPlatform.V1;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedIndexServiceClientSnippets
+    public sealed class AllGeneratedIndexServiceClientSnippets
     {
         /// <summary>Snippet for CreateIndex</summary>
         public void CreateIndexRequestObject()

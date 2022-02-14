@@ -25,7 +25,7 @@ namespace Google.Cloud.Metastore.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedDataprocMetastoreClientSnippets
+    public sealed class AllGeneratedDataprocMetastoreClientSnippets
     {
         /// <summary>Snippet for ListServices</summary>
         public void ListServicesRequestObject()

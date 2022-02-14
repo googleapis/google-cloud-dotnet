@@ -20,7 +20,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedAutoSuggestionServiceClientSnippets
+    public sealed class AllGeneratedAutoSuggestionServiceClientSnippets
     {
         /// <summary>Snippet for SuggestQueries</summary>
         public void SuggestQueriesRequestObject()

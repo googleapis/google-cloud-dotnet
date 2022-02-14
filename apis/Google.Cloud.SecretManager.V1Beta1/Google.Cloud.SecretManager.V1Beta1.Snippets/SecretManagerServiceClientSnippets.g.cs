@@ -25,7 +25,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedSecretManagerServiceClientSnippets
+    public sealed class AllGeneratedSecretManagerServiceClientSnippets
     {
         /// <summary>Snippet for ListSecrets</summary>
         public void ListSecretsRequestObject()

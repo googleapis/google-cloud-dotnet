@@ -23,7 +23,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedTransitionRouteGroupsClientSnippets
+    public sealed class AllGeneratedTransitionRouteGroupsClientSnippets
     {
         /// <summary>Snippet for ListTransitionRouteGroups</summary>
         public void ListTransitionRouteGroupsRequestObject()

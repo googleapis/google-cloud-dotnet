@@ -26,7 +26,7 @@ namespace Google.Cloud.DataFusion.V1.Snippets
     using gcdv = Google.Cloud.DataFusion.V1;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedDataFusionClientSnippets
+    public sealed class AllGeneratedDataFusionClientSnippets
     {
         /// <summary>Snippet for ListAvailableVersions</summary>
         public void ListAvailableVersionsRequestObject()

@@ -25,7 +25,7 @@ namespace Google.Cloud.NetworkConnectivity.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedHubServiceClientSnippets
+    public sealed class AllGeneratedHubServiceClientSnippets
     {
         /// <summary>Snippet for ListHubs</summary>
         public void ListHubsRequestObject()

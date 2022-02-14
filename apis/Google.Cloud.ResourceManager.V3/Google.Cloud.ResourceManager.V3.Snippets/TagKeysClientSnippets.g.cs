@@ -26,7 +26,7 @@ namespace Google.Cloud.ResourceManager.V3.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedTagKeysClientSnippets
+    public sealed class AllGeneratedTagKeysClientSnippets
     {
         /// <summary>Snippet for ListTagKeys</summary>
         public void ListTagKeysRequestObject()

@@ -25,7 +25,7 @@ namespace Google.Cloud.Deploy.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedCloudDeployClientSnippets
+    public sealed class AllGeneratedCloudDeployClientSnippets
     {
         /// <summary>Snippet for ListDeliveryPipelines</summary>
         public void ListDeliveryPipelinesRequestObject()
