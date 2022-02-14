@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.3.0, released 2022-02-14
+
+### New features
+
+- Added flag for implicit dismissal for `DismissDecision` ([commit 5d1b5af](https://github.com/googleapis/google-cloud-dotnet/commit/5d1b5af90988ddb6ac2e62e8d9cd9711b51e54cd))
+
+### Documentation improvements
+
+- Added resource annotations ([commit 5d1b5af](https://github.com/googleapis/google-cloud-dotnet/commit/5d1b5af90988ddb6ac2e62e8d9cd9711b51e54cd))
+
 ## Version 1.2.0, released 2021-08-19
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
