@@ -25,7 +25,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedContactCenterInsightsClientSnippets
+    public sealed class AllGeneratedContactCenterInsightsClientSnippets
     {
         /// <summary>Snippet for CreateConversation</summary>
         public void CreateConversationRequestObject()

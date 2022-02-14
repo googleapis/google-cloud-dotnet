@@ -23,7 +23,7 @@ namespace Google.Cloud.Trace.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedTraceServiceClientSnippets
+    public sealed class AllGeneratedTraceServiceClientSnippets
     {
         /// <summary>Snippet for ListTraces</summary>
         public void ListTracesRequestObject()

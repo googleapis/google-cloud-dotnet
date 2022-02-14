@@ -25,7 +25,7 @@ namespace Google.Cloud.OsConfig.V1Alpha.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedOsConfigZonalServiceClientSnippets
+    public sealed class AllGeneratedOsConfigZonalServiceClientSnippets
     {
         /// <summary>Snippet for CreateOSPolicyAssignment</summary>
         public void CreateOSPolicyAssignmentRequestObject()

@@ -23,7 +23,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedWebSecurityScannerClientSnippets
+    public sealed class AllGeneratedWebSecurityScannerClientSnippets
     {
         /// <summary>Snippet for CreateScanConfig</summary>
         public void CreateScanConfigRequestObject()

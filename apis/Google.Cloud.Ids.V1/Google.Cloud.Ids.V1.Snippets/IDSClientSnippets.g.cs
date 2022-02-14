@@ -25,7 +25,7 @@ namespace Google.Cloud.Ids.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedIDSClientSnippets
+    public sealed class AllGeneratedIDSClientSnippets
     {
         /// <summary>Snippet for ListEndpoints</summary>
         public void ListEndpointsRequestObject()

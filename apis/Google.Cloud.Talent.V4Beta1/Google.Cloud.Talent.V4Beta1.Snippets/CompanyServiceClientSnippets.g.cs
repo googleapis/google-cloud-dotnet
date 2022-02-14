@@ -24,7 +24,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedCompanyServiceClientSnippets
+    public sealed class AllGeneratedCompanyServiceClientSnippets
     {
         /// <summary>Snippet for CreateCompany</summary>
         public void CreateCompanyRequestObject()

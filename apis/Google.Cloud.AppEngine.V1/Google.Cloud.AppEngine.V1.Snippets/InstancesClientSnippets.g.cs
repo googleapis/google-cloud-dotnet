@@ -24,7 +24,7 @@ namespace Google.Cloud.AppEngine.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedInstancesClientSnippets
+    public sealed class AllGeneratedInstancesClientSnippets
     {
         /// <summary>Snippet for ListInstances</summary>
         public void ListInstancesRequestObject()

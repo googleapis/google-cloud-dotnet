@@ -20,7 +20,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedSpeechTranslationServiceClientSnippets
+    public sealed class AllGeneratedSpeechTranslationServiceClientSnippets
     {
         /// <summary>Snippet for StreamingTranslateSpeech</summary>
         public async Task StreamingTranslateSpeech()

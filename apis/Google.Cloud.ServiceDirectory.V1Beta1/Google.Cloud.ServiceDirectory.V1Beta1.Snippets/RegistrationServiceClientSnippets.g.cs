@@ -25,7 +25,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedRegistrationServiceClientSnippets
+    public sealed class AllGeneratedRegistrationServiceClientSnippets
     {
         /// <summary>Snippet for CreateNamespace</summary>
         public void CreateNamespaceRequestObject()

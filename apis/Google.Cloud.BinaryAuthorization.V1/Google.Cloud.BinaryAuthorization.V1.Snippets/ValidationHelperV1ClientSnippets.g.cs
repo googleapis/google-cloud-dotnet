@@ -20,7 +20,7 @@ namespace Google.Cloud.BinaryAuthorization.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedValidationHelperV1ClientSnippets
+    public sealed class AllGeneratedValidationHelperV1ClientSnippets
     {
         /// <summary>Snippet for ValidateAttestationOccurrence</summary>
         public void ValidateAttestationOccurrenceRequestObject()

@@ -25,7 +25,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
     using gcoasv = Google.Cloud.Orchestration.Airflow.Service.V1;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedEnvironmentsClientSnippets
+    public sealed class AllGeneratedEnvironmentsClientSnippets
     {
         /// <summary>Snippet for CreateEnvironment</summary>
         public void CreateEnvironmentRequestObject()

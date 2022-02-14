@@ -22,7 +22,7 @@ namespace Google.Cloud.Iam.Credentials.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedIAMCredentialsClientSnippets
+    public sealed class AllGeneratedIAMCredentialsClientSnippets
     {
         /// <summary>Snippet for GenerateAccessToken</summary>
         public void GenerateAccessTokenRequestObject()

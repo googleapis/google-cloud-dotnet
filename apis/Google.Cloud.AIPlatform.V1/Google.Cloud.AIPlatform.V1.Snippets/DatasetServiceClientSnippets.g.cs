@@ -26,7 +26,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedDatasetServiceClientSnippets
+    public sealed class AllGeneratedDatasetServiceClientSnippets
     {
         /// <summary>Snippet for CreateDataset</summary>
         public void CreateDatasetRequestObject()

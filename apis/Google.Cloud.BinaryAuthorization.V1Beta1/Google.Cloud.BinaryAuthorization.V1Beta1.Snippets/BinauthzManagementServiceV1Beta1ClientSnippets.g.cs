@@ -23,7 +23,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedBinauthzManagementServiceV1Beta1ClientSnippets
+    public sealed class AllGeneratedBinauthzManagementServiceV1Beta1ClientSnippets
     {
         /// <summary>Snippet for GetPolicy</summary>
         public void GetPolicyRequestObject()

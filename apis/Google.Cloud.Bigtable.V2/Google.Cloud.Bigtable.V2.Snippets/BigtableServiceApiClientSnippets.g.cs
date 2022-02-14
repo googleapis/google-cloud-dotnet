@@ -23,7 +23,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedBigtableServiceApiClientSnippets
+    public sealed class AllGeneratedBigtableServiceApiClientSnippets
     {
         /// <summary>Snippet for ReadRows</summary>
         public async Task ReadRowsRequestObject()

@@ -25,7 +25,7 @@ namespace Google.Cloud.Notebooks.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedManagedNotebookServiceClientSnippets
+    public sealed class AllGeneratedManagedNotebookServiceClientSnippets
     {
         /// <summary>Snippet for ListRuntimes</summary>
         public void ListRuntimesRequestObject()

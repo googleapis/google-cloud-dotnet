@@ -19,7 +19,7 @@ namespace Google.Cloud.Dataflow.V1Beta3.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedSnapshotsV1Beta3ClientSnippets
+    public sealed class AllGeneratedSnapshotsV1Beta3ClientSnippets
     {
         /// <summary>Snippet for GetSnapshot</summary>
         public void GetSnapshotRequestObject()

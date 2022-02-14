@@ -25,7 +25,7 @@ namespace Google.Cloud.ResourceManager.V3.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedOrganizationsClientSnippets
+    public sealed class AllGeneratedOrganizationsClientSnippets
     {
         /// <summary>Snippet for GetOrganization</summary>
         public void GetOrganizationRequestObject()

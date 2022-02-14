@@ -28,7 +28,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedInstanceAdminClientSnippets
+    public sealed class AllGeneratedInstanceAdminClientSnippets
     {
         /// <summary>Snippet for ListInstanceConfigs</summary>
         public void ListInstanceConfigsRequestObject()

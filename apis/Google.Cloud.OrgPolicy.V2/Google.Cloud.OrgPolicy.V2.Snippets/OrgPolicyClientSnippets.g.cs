@@ -23,7 +23,7 @@ namespace Google.Cloud.OrgPolicy.V2.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedOrgPolicyClientSnippets
+    public sealed class AllGeneratedOrgPolicyClientSnippets
     {
         /// <summary>Snippet for ListConstraints</summary>
         public void ListConstraintsRequestObject()

@@ -25,7 +25,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedDataCatalogClientSnippets
+    public sealed class AllGeneratedDataCatalogClientSnippets
     {
         /// <summary>Snippet for SearchCatalog</summary>
         public void SearchCatalogRequestObject()

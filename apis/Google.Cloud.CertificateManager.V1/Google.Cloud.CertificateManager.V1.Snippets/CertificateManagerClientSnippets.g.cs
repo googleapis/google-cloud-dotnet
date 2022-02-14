@@ -25,7 +25,7 @@ namespace Google.Cloud.CertificateManager.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedCertificateManagerClientSnippets
+    public sealed class AllGeneratedCertificateManagerClientSnippets
     {
         /// <summary>Snippet for ListCertificates</summary>
         public void ListCertificatesRequestObject()

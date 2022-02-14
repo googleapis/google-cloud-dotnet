@@ -24,7 +24,7 @@ namespace Google.Cloud.OsConfig.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedOsConfigServiceClientSnippets
+    public sealed class AllGeneratedOsConfigServiceClientSnippets
     {
         /// <summary>Snippet for ExecutePatchJob</summary>
         public void ExecutePatchJobRequestObject()

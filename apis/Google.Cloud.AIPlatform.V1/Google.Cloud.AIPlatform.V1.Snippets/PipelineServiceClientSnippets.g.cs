@@ -25,7 +25,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedPipelineServiceClientSnippets
+    public sealed class AllGeneratedPipelineServiceClientSnippets
     {
         /// <summary>Snippet for CreateTrainingPipeline</summary>
         public void CreateTrainingPipelineRequestObject()

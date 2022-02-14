@@ -19,7 +19,7 @@ namespace Google.Cloud.Language.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedLanguageServiceClientSnippets
+    public sealed class AllGeneratedLanguageServiceClientSnippets
     {
         /// <summary>Snippet for AnalyzeSentiment</summary>
         public void AnalyzeSentimentRequestObject()

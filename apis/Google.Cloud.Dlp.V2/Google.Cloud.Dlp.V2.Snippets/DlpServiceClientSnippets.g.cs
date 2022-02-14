@@ -24,7 +24,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedDlpServiceClientSnippets
+    public sealed class AllGeneratedDlpServiceClientSnippets
     {
         /// <summary>Snippet for InspectContent</summary>
         public void InspectContentRequestObject()

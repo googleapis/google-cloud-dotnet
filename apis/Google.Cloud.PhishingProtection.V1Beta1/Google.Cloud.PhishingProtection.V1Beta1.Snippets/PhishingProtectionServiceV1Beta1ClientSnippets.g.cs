@@ -20,7 +20,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedPhishingProtectionServiceV1Beta1ClientSnippets
+    public sealed class AllGeneratedPhishingProtectionServiceV1Beta1ClientSnippets
     {
         /// <summary>Snippet for ReportPhishing</summary>
         public void ReportPhishingRequestObject()

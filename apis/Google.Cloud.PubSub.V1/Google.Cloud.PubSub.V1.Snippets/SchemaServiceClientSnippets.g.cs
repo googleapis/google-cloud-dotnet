@@ -24,7 +24,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedSchemaServiceClientSnippets
+    public sealed class AllGeneratedSchemaServiceClientSnippets
     {
         /// <summary>Snippet for CreateSchema</summary>
         public void CreateSchemaRequestObject()

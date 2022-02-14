@@ -25,7 +25,7 @@ namespace Google.Cloud.Vision.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedProductSearchClientSnippets
+    public sealed class AllGeneratedProductSearchClientSnippets
     {
         /// <summary>Snippet for CreateProductSet</summary>
         public void CreateProductSetRequestObject()

@@ -25,7 +25,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedPublisherServiceApiClientSnippets
+    public sealed class AllGeneratedPublisherServiceApiClientSnippets
     {
         /// <summary>Snippet for CreateTopic</summary>
         public void CreateTopicRequestObject()

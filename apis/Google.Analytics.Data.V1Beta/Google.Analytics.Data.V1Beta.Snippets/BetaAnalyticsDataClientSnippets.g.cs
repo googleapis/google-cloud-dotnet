@@ -19,7 +19,7 @@ namespace Google.Analytics.Data.V1Beta.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedBetaAnalyticsDataClientSnippets
+    public sealed class AllGeneratedBetaAnalyticsDataClientSnippets
     {
         /// <summary>Snippet for RunReport</summary>
         public void RunReportRequestObject()

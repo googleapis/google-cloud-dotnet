@@ -27,7 +27,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedDatabaseAdminClientSnippets
+    public sealed class AllGeneratedDatabaseAdminClientSnippets
     {
         /// <summary>Snippet for ListDatabases</summary>
         public void ListDatabasesRequestObject()

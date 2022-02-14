@@ -25,7 +25,7 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedGameServerDeploymentsServiceClientSnippets
+    public sealed class AllGeneratedGameServerDeploymentsServiceClientSnippets
     {
         /// <summary>Snippet for ListGameServerDeployments</summary>
         public void ListGameServerDeploymentsRequestObject()

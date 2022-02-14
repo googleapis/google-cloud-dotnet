@@ -23,7 +23,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedAutoscalingPolicyServiceClientSnippets
+    public sealed class AllGeneratedAutoscalingPolicyServiceClientSnippets
     {
         /// <summary>Snippet for CreateAutoscalingPolicy</summary>
         public void CreateAutoscalingPolicyRequestObject()

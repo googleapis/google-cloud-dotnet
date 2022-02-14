@@ -23,7 +23,7 @@ namespace Google.Cloud.Container.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedClusterManagerClientSnippets
+    public sealed class AllGeneratedClusterManagerClientSnippets
     {
         /// <summary>Snippet for ListClusters</summary>
         public void ListClustersRequestObject()

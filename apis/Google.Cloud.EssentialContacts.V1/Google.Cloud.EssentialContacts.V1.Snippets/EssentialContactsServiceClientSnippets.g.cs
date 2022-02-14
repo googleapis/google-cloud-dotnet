@@ -24,7 +24,7 @@ namespace Google.Cloud.EssentialContacts.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedEssentialContactsServiceClientSnippets
+    public sealed class AllGeneratedEssentialContactsServiceClientSnippets
     {
         /// <summary>Snippet for CreateContact</summary>
         public void CreateContactRequestObject()

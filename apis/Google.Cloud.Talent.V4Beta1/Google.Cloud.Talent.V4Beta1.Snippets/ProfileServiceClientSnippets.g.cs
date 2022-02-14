@@ -23,7 +23,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedProfileServiceClientSnippets
+    public sealed class AllGeneratedProfileServiceClientSnippets
     {
         /// <summary>Snippet for ListProfiles</summary>
         public void ListProfilesRequestObject()

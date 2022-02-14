@@ -19,7 +19,7 @@ namespace Google.Cloud.Dataflow.V1Beta3.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedFlexTemplatesServiceClientSnippets
+    public sealed class AllGeneratedFlexTemplatesServiceClientSnippets
     {
         /// <summary>Snippet for LaunchFlexTemplate</summary>
         public void LaunchFlexTemplateRequestObject()

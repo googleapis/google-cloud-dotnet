@@ -22,7 +22,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedMetadataServiceClientSnippets
+    public sealed class AllGeneratedMetadataServiceClientSnippets
     {
         /// <summary>Snippet for GetEntity</summary>
         public void GetEntityRequestObject()

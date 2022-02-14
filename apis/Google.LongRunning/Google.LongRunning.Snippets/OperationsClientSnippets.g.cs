@@ -23,7 +23,7 @@ namespace Google.LongRunning.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedOperationsClientSnippets
+    public sealed class AllGeneratedOperationsClientSnippets
     {
         /// <summary>Snippet for ListOperations</summary>
         public void ListOperationsRequestObject()

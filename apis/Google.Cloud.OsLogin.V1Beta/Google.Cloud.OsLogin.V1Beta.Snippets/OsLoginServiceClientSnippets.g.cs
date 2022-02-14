@@ -21,7 +21,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedOsLoginServiceClientSnippets
+    public sealed class AllGeneratedOsLoginServiceClientSnippets
     {
         /// <summary>Snippet for DeletePosixAccount</summary>
         public void DeletePosixAccountRequestObject()

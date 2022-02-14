@@ -27,7 +27,7 @@ namespace Google.Cloud.ResourceManager.V3.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedProjectsClientSnippets
+    public sealed class AllGeneratedProjectsClientSnippets
     {
         /// <summary>Snippet for GetProject</summary>
         public void GetProjectRequestObject()

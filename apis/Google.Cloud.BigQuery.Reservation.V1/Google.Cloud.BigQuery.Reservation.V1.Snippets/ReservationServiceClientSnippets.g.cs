@@ -25,7 +25,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedReservationServiceClientSnippets
+    public sealed class AllGeneratedReservationServiceClientSnippets
     {
         /// <summary>Snippet for CreateReservation</summary>
         public void CreateReservationRequestObject()

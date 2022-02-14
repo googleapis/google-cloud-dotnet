@@ -26,7 +26,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedManagedIdentitiesServiceClientSnippets
+    public sealed class AllGeneratedManagedIdentitiesServiceClientSnippets
     {
         /// <summary>Snippet for CreateMicrosoftAdDomain</summary>
         public void CreateMicrosoftAdDomainRequestObject()

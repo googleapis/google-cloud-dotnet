@@ -26,7 +26,7 @@ namespace Google.Cloud.Datastore.Admin.V1.Snippets
     using gcdav = Google.Cloud.Datastore.Admin.V1;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedDatastoreAdminClientSnippets
+    public sealed class AllGeneratedDatastoreAdminClientSnippets
     {
         /// <summary>Snippet for ExportEntities</summary>
         public void ExportEntitiesRequestObject()

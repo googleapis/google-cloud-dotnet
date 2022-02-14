@@ -21,7 +21,7 @@ namespace Google.Cloud.ApigeeConnect.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedTetherClientSnippets
+    public sealed class AllGeneratedTetherClientSnippets
     {
         /// <summary>Snippet for Egress</summary>
         public async Task Egress()

@@ -23,7 +23,7 @@ namespace Google.Cloud.Logging.V2.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedMetricsServiceV2ClientSnippets
+    public sealed class AllGeneratedMetricsServiceV2ClientSnippets
     {
         /// <summary>Snippet for ListLogMetrics</summary>
         public void ListLogMetricsRequestObject()

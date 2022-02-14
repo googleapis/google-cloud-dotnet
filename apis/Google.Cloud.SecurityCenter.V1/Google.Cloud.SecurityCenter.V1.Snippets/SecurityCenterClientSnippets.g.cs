@@ -27,7 +27,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedSecurityCenterClientSnippets
+    public sealed class AllGeneratedSecurityCenterClientSnippets
     {
         /// <summary>Snippet for BulkMuteFindings</summary>
         public void BulkMuteFindingsRequestObject()

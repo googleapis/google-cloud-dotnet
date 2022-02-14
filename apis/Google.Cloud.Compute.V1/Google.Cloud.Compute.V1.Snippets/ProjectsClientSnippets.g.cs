@@ -23,7 +23,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedProjectsClientSnippets
+    public sealed class AllGeneratedProjectsClientSnippets
     {
         /// <summary>Snippet for DisableXpnHost</summary>
         public void DisableXpnHostRequestObject()

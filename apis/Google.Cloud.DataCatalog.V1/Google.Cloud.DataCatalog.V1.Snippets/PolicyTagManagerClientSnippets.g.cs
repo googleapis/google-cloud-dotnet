@@ -25,7 +25,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedPolicyTagManagerClientSnippets
+    public sealed class AllGeneratedPolicyTagManagerClientSnippets
     {
         /// <summary>Snippet for CreateTaxonomy</summary>
         public void CreateTaxonomyRequestObject()

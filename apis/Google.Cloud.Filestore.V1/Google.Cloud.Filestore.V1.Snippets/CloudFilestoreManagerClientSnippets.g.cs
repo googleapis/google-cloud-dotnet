@@ -26,7 +26,7 @@ namespace Google.Cloud.Filestore.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedCloudFilestoreManagerClientSnippets
+    public sealed class AllGeneratedCloudFilestoreManagerClientSnippets
     {
         /// <summary>Snippet for ListInstances</summary>
         public void ListInstancesRequestObject()

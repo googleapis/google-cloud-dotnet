@@ -21,7 +21,7 @@ namespace Google.Cloud.WebRisk.V1Beta1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedWebRiskServiceV1Beta1ClientSnippets
+    public sealed class AllGeneratedWebRiskServiceV1Beta1ClientSnippets
     {
         /// <summary>Snippet for ComputeThreatListDiff</summary>
         public void ComputeThreatListDiffRequestObject()

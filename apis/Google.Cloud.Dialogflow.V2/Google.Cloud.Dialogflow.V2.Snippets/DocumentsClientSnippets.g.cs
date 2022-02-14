@@ -24,7 +24,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedDocumentsClientSnippets
+    public sealed class AllGeneratedDocumentsClientSnippets
     {
         /// <summary>Snippet for ListDocuments</summary>
         public void ListDocumentsRequestObject()

@@ -27,7 +27,7 @@ namespace Google.Cloud.Iot.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedDeviceManagerClientSnippets
+    public sealed class AllGeneratedDeviceManagerClientSnippets
     {
         /// <summary>Snippet for CreateDeviceRegistry</summary>
         public void CreateDeviceRegistryRequestObject()

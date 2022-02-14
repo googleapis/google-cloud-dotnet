@@ -27,7 +27,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
     using gcav = Google.Cloud.ArtifactRegistry.V1Beta2;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedArtifactRegistryClientSnippets
+    public sealed class AllGeneratedArtifactRegistryClientSnippets
     {
         /// <summary>Snippet for ImportAptArtifacts</summary>
         public void ImportAptArtifactsRequestObject()

@@ -26,7 +26,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
     using gcfav = Google.Cloud.Firestore.Admin.V1;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedFirestoreAdminClientSnippets
+    public sealed class AllGeneratedFirestoreAdminClientSnippets
     {
         /// <summary>Snippet for CreateIndex</summary>
         public void CreateIndexRequestObject()

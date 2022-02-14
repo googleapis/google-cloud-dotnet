@@ -20,7 +20,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedEventServiceClientSnippets
+    public sealed class AllGeneratedEventServiceClientSnippets
     {
         /// <summary>Snippet for CreateClientEvent</summary>
         public void CreateClientEventRequestObject()

@@ -22,7 +22,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedDeploymentsClientSnippets
+    public sealed class AllGeneratedDeploymentsClientSnippets
     {
         /// <summary>Snippet for ListDeployments</summary>
         public void ListDeploymentsRequestObject()

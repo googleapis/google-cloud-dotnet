@@ -21,7 +21,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedDatastoreClientSnippets
+    public sealed class AllGeneratedDatastoreClientSnippets
     {
         /// <summary>Snippet for Lookup</summary>
         public void LookupRequestObject()

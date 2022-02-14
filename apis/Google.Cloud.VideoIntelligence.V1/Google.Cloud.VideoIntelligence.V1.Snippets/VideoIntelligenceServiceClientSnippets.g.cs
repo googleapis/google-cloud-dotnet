@@ -22,7 +22,7 @@ namespace Google.Cloud.VideoIntelligence.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedVideoIntelligenceServiceClientSnippets
+    public sealed class AllGeneratedVideoIntelligenceServiceClientSnippets
     {
         /// <summary>Snippet for AnnotateVideo</summary>
         public void AnnotateVideoRequestObject()

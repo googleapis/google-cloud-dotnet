@@ -26,7 +26,7 @@ namespace Google.Cloud.Functions.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedCloudFunctionsServiceClientSnippets
+    public sealed class AllGeneratedCloudFunctionsServiceClientSnippets
     {
         /// <summary>Snippet for ListFunctions</summary>
         public void ListFunctionsRequestObject()

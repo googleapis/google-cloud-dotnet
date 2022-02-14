@@ -27,7 +27,7 @@ namespace Google.Cloud.Logging.V2.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedLoggingServiceV2ClientSnippets
+    public sealed class AllGeneratedLoggingServiceV2ClientSnippets
     {
         /// <summary>Snippet for DeleteLog</summary>
         public void DeleteLogRequestObject()

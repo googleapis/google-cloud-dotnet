@@ -24,7 +24,7 @@ namespace Google.Cloud.AppEngine.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedDomainMappingsClientSnippets
+    public sealed class AllGeneratedDomainMappingsClientSnippets
     {
         /// <summary>Snippet for ListDomainMappings</summary>
         public void ListDomainMappingsRequestObject()

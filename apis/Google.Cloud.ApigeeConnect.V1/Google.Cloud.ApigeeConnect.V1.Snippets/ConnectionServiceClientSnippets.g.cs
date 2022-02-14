@@ -22,7 +22,7 @@ namespace Google.Cloud.ApigeeConnect.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedConnectionServiceClientSnippets
+    public sealed class AllGeneratedConnectionServiceClientSnippets
     {
         /// <summary>Snippet for ListConnections</summary>
         public void ListConnectionsRequestObject()

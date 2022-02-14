@@ -25,7 +25,7 @@ namespace Google.Cloud.Eventarc.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedEventarcClientSnippets
+    public sealed class AllGeneratedEventarcClientSnippets
     {
         /// <summary>Snippet for GetTrigger</summary>
         public void GetTriggerRequestObject()

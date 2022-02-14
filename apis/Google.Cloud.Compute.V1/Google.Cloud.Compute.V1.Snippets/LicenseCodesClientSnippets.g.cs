@@ -19,7 +19,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedLicenseCodesClientSnippets
+    public sealed class AllGeneratedLicenseCodesClientSnippets
     {
         /// <summary>Snippet for Get</summary>
         public void GetRequestObject()

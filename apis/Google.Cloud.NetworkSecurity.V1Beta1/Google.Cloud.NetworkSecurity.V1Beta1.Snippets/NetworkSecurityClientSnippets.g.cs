@@ -25,7 +25,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedNetworkSecurityClientSnippets
+    public sealed class AllGeneratedNetworkSecurityClientSnippets
     {
         /// <summary>Snippet for ListAuthorizationPolicies</summary>
         public void ListAuthorizationPoliciesRequestObject()

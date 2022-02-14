@@ -20,7 +20,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedPublisherClientSnippets
+    public sealed class AllGeneratedPublisherClientSnippets
     {
         /// <summary>Snippet for PublishChannelConnectionEvents</summary>
         public void PublishChannelConnectionEventsRequestObject()

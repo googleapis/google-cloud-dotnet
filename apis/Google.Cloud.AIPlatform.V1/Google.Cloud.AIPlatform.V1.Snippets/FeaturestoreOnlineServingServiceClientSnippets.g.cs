@@ -20,7 +20,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedFeaturestoreOnlineServingServiceClientSnippets
+    public sealed class AllGeneratedFeaturestoreOnlineServingServiceClientSnippets
     {
         /// <summary>Snippet for ReadFeatureValues</summary>
         public void ReadFeatureValuesRequestObject()

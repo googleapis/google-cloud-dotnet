@@ -25,7 +25,7 @@ namespace Google.Cloud.Translate.V3.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedTranslationServiceClientSnippets
+    public sealed class AllGeneratedTranslationServiceClientSnippets
     {
         /// <summary>Snippet for TranslateText</summary>
         public void TranslateTextRequestObject()

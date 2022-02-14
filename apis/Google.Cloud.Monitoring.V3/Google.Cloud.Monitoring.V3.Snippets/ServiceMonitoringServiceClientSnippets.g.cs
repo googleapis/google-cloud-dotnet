@@ -24,7 +24,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedServiceMonitoringServiceClientSnippets
+    public sealed class AllGeneratedServiceMonitoringServiceClientSnippets
     {
         /// <summary>Snippet for CreateService</summary>
         public void CreateServiceRequestObject()

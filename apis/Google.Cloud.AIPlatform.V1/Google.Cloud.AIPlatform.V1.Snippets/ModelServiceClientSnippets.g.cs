@@ -25,7 +25,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedModelServiceClientSnippets
+    public sealed class AllGeneratedModelServiceClientSnippets
     {
         /// <summary>Snippet for UploadModel</summary>
         public void UploadModelRequestObject()

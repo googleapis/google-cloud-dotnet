@@ -23,7 +23,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedContainerAnalysisClientSnippets
+    public sealed class AllGeneratedContainerAnalysisClientSnippets
     {
         /// <summary>Snippet for SetIamPolicy</summary>
         public void SetIamPolicyRequestObject()

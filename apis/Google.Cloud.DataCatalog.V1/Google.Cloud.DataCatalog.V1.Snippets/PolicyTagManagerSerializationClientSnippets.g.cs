@@ -20,7 +20,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedPolicyTagManagerSerializationClientSnippets
+    public sealed class AllGeneratedPolicyTagManagerSerializationClientSnippets
     {
         /// <summary>Snippet for ReplaceTaxonomy</summary>
         public void ReplaceTaxonomyRequestObject()

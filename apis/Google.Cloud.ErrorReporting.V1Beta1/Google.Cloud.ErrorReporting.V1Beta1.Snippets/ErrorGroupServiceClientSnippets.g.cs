@@ -19,7 +19,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedErrorGroupServiceClientSnippets
+    public sealed class AllGeneratedErrorGroupServiceClientSnippets
     {
         /// <summary>Snippet for GetGroup</summary>
         public void GetGroupRequestObject()

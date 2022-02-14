@@ -24,7 +24,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedNetworkEndpointGroupsClientSnippets
+    public sealed class AllGeneratedNetworkEndpointGroupsClientSnippets
     {
         /// <summary>Snippet for AggregatedList</summary>
         public void AggregatedListRequestObject()

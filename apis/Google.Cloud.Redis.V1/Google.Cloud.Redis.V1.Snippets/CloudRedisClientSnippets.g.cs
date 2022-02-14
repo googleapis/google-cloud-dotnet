@@ -25,7 +25,7 @@ namespace Google.Cloud.Redis.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedCloudRedisClientSnippets
+    public sealed class AllGeneratedCloudRedisClientSnippets
     {
         /// <summary>Snippet for ListInstances</summary>
         public void ListInstancesRequestObject()

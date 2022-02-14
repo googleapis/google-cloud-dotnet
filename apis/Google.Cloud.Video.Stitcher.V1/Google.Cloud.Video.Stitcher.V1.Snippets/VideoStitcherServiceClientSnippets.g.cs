@@ -24,7 +24,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedVideoStitcherServiceClientSnippets
+    public sealed class AllGeneratedVideoStitcherServiceClientSnippets
     {
         /// <summary>Snippet for CreateCdnKey</summary>
         public void CreateCdnKeyRequestObject()

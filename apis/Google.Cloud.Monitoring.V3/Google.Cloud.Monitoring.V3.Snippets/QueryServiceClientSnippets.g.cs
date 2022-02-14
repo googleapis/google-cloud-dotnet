@@ -22,7 +22,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedQueryServiceClientSnippets
+    public sealed class AllGeneratedQueryServiceClientSnippets
     {
         /// <summary>Snippet for QueryTimeSeries</summary>
         public void QueryTimeSeriesRequestObject()

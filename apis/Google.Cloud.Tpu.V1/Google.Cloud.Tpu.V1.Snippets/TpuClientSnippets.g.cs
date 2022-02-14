@@ -24,7 +24,7 @@ namespace Google.Cloud.Tpu.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedTpuClientSnippets
+    public sealed class AllGeneratedTpuClientSnippets
     {
         /// <summary>Snippet for ListNodes</summary>
         public void ListNodesRequestObject()

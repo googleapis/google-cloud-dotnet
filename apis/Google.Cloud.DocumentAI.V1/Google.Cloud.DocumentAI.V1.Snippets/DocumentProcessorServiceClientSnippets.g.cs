@@ -20,7 +20,7 @@ namespace Google.Cloud.DocumentAI.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedDocumentProcessorServiceClientSnippets
+    public sealed class AllGeneratedDocumentProcessorServiceClientSnippets
     {
         /// <summary>Snippet for ProcessDocument</summary>
         public void ProcessDocumentRequestObject()

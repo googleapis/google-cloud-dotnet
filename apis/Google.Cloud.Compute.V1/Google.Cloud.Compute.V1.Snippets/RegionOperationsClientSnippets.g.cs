@@ -22,7 +22,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedRegionOperationsClientSnippets
+    public sealed class AllGeneratedRegionOperationsClientSnippets
     {
         /// <summary>Snippet for Delete</summary>
         public void DeleteRequestObject()

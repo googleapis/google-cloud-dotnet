@@ -19,7 +19,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedIamCheckerClientSnippets
+    public sealed class AllGeneratedIamCheckerClientSnippets
     {
         /// <summary>Snippet for TroubleshootIamPolicy</summary>
         public void TroubleshootIamPolicyRequestObject()

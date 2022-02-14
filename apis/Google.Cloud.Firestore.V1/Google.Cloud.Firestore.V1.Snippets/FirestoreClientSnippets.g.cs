@@ -25,7 +25,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedFirestoreClientSnippets
+    public sealed class AllGeneratedFirestoreClientSnippets
     {
         /// <summary>Snippet for GetDocument</summary>
         public void GetDocumentRequestObject()

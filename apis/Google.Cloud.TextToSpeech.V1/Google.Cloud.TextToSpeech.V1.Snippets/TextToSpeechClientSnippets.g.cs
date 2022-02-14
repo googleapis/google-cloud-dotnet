@@ -19,7 +19,7 @@ namespace Google.Cloud.TextToSpeech.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedTextToSpeechClientSnippets
+    public sealed class AllGeneratedTextToSpeechClientSnippets
     {
         /// <summary>Snippet for ListVoices</summary>
         public void ListVoicesRequestObject()

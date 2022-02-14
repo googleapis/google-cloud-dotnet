@@ -25,7 +25,7 @@ namespace Google.Identity.AccessContextManager.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedAccessContextManagerClientSnippets
+    public sealed class AllGeneratedAccessContextManagerClientSnippets
     {
         /// <summary>Snippet for ListAccessPolicies</summary>
         public void ListAccessPoliciesRequestObject()

@@ -23,7 +23,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedParticipantsClientSnippets
+    public sealed class AllGeneratedParticipantsClientSnippets
     {
         /// <summary>Snippet for CreateParticipant</summary>
         public void CreateParticipantRequestObject()

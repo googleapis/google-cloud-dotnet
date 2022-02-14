@@ -24,7 +24,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedUserEventServiceClientSnippets
+    public sealed class AllGeneratedUserEventServiceClientSnippets
     {
         /// <summary>Snippet for WriteUserEvent</summary>
         public void WriteUserEventRequestObject()

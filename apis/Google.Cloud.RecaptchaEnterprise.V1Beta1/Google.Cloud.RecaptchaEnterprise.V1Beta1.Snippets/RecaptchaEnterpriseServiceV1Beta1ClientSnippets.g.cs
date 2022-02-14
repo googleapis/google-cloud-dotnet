@@ -24,7 +24,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedRecaptchaEnterpriseServiceV1Beta1ClientSnippets
+    public sealed class AllGeneratedRecaptchaEnterpriseServiceV1Beta1ClientSnippets
     {
         /// <summary>Snippet for CreateAssessment</summary>
         public void CreateAssessmentRequestObject()

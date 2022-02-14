@@ -23,7 +23,7 @@ namespace Google.Cloud.Billing.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedCloudCatalogClientSnippets
+    public sealed class AllGeneratedCloudCatalogClientSnippets
     {
         /// <summary>Snippet for ListServices</summary>
         public void ListServicesRequestObject()

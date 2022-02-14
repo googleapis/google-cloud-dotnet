@@ -25,7 +25,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedLivestreamServiceClientSnippets
+    public sealed class AllGeneratedLivestreamServiceClientSnippets
     {
         /// <summary>Snippet for CreateChannel</summary>
         public void CreateChannelRequestObject()

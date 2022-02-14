@@ -23,7 +23,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedArtifactRegistryClientSnippets
+    public sealed class AllGeneratedArtifactRegistryClientSnippets
     {
         /// <summary>Snippet for ListDockerImages</summary>
         public void ListDockerImagesRequestObject()

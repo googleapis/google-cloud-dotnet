@@ -25,7 +25,7 @@ namespace Google.Cloud.CloudDms.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedDataMigrationServiceClientSnippets
+    public sealed class AllGeneratedDataMigrationServiceClientSnippets
     {
         /// <summary>Snippet for ListMigrationJobs</summary>
         public void ListMigrationJobsRequestObject()

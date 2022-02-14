@@ -24,7 +24,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedCatalogServiceClientSnippets
+    public sealed class AllGeneratedCatalogServiceClientSnippets
     {
         /// <summary>Snippet for CreateCatalogItem</summary>
         public void CreateCatalogItemRequestObject()

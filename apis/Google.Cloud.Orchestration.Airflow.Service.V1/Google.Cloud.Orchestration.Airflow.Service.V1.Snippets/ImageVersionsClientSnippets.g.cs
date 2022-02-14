@@ -22,7 +22,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedImageVersionsClientSnippets
+    public sealed class AllGeneratedImageVersionsClientSnippets
     {
         /// <summary>Snippet for ListImageVersions</summary>
         public void ListImageVersionsRequestObject()

@@ -21,7 +21,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedBigQueryReadClientSnippets
+    public sealed class AllGeneratedBigQueryReadClientSnippets
     {
         /// <summary>Snippet for CreateReadSession</summary>
         public void CreateReadSessionRequestObject()

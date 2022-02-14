@@ -24,7 +24,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedBatchControllerClientSnippets
+    public sealed class AllGeneratedBatchControllerClientSnippets
     {
         /// <summary>Snippet for CreateBatch</summary>
         public void CreateBatchRequestObject()

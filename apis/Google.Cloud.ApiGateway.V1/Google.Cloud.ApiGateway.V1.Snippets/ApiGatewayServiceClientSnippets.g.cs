@@ -26,7 +26,7 @@ namespace Google.Cloud.ApiGateway.V1.Snippets
     using gcav = Google.Cloud.ApiGateway.V1;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedApiGatewayServiceClientSnippets
+    public sealed class AllGeneratedApiGatewayServiceClientSnippets
     {
         /// <summary>Snippet for ListGateways</summary>
         public void ListGatewaysRequestObject()

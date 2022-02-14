@@ -24,7 +24,7 @@ namespace Google.Cloud.Retail.V2.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedProductServiceClientSnippets
+    public sealed class AllGeneratedProductServiceClientSnippets
     {
         /// <summary>Snippet for CreateProduct</summary>
         public void CreateProductRequestObject()

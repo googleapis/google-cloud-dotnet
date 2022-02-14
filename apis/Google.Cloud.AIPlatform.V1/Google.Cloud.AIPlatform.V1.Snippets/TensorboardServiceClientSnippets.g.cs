@@ -27,7 +27,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedTensorboardServiceClientSnippets
+    public sealed class AllGeneratedTensorboardServiceClientSnippets
     {
         /// <summary>Snippet for CreateTensorboard</summary>
         public void CreateTensorboardRequestObject()

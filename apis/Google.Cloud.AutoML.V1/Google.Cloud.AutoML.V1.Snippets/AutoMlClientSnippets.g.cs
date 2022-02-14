@@ -25,7 +25,7 @@ namespace Google.Cloud.AutoML.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedAutoMlClientSnippets
+    public sealed class AllGeneratedAutoMlClientSnippets
     {
         /// <summary>Snippet for CreateDataset</summary>
         public void CreateDatasetRequestObject()

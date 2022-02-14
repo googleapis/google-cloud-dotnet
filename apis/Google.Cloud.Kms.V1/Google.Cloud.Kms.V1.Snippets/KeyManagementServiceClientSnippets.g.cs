@@ -25,7 +25,7 @@ namespace Google.Cloud.Kms.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedKeyManagementServiceClientSnippets
+    public sealed class AllGeneratedKeyManagementServiceClientSnippets
     {
         /// <summary>Snippet for ListKeyRings</summary>
         public void ListKeyRingsRequestObject()

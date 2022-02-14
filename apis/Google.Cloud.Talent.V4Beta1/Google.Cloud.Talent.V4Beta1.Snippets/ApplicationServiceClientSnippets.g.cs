@@ -23,7 +23,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedApplicationServiceClientSnippets
+    public sealed class AllGeneratedApplicationServiceClientSnippets
     {
         /// <summary>Snippet for CreateApplication</summary>
         public void CreateApplicationRequestObject()

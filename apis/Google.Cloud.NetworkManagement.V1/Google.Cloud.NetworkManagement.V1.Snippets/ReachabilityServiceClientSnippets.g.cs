@@ -24,7 +24,7 @@ namespace Google.Cloud.NetworkManagement.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedReachabilityServiceClientSnippets
+    public sealed class AllGeneratedReachabilityServiceClientSnippets
     {
         /// <summary>Snippet for ListConnectivityTests</summary>
         public void ListConnectivityTestsRequestObject()

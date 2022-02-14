@@ -24,7 +24,7 @@ namespace Google.Cloud.Speech.V1P1Beta1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedAdaptationClientSnippets
+    public sealed class AllGeneratedAdaptationClientSnippets
     {
         /// <summary>Snippet for CreatePhraseSet</summary>
         public void CreatePhraseSetRequestObject()

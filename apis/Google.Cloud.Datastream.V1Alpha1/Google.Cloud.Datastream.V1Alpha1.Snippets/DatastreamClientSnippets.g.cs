@@ -25,7 +25,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedDatastreamClientSnippets
+    public sealed class AllGeneratedDatastreamClientSnippets
     {
         /// <summary>Snippet for ListConnectionProfiles</summary>
         public void ListConnectionProfilesRequestObject()

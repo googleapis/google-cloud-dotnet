@@ -24,7 +24,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedCloudSchedulerClientSnippets
+    public sealed class AllGeneratedCloudSchedulerClientSnippets
     {
         /// <summary>Snippet for ListJobs</summary>
         public void ListJobsRequestObject()

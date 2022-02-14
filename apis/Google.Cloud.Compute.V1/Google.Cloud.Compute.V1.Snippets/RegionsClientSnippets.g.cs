@@ -22,7 +22,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedRegionsClientSnippets
+    public sealed class AllGeneratedRegionsClientSnippets
     {
         /// <summary>Snippet for Get</summary>
         public void GetRequestObject()

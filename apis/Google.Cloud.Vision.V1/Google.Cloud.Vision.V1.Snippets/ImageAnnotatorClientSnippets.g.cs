@@ -21,7 +21,7 @@ namespace Google.Cloud.Vision.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedImageAnnotatorClientSnippets
+    public sealed class AllGeneratedImageAnnotatorClientSnippets
     {
         /// <summary>Snippet for BatchAnnotateImages</summary>
         public void BatchAnnotateImagesRequestObject()

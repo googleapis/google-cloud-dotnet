@@ -25,7 +25,7 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedRealmsServiceClientSnippets
+    public sealed class AllGeneratedRealmsServiceClientSnippets
     {
         /// <summary>Snippet for ListRealms</summary>
         public void ListRealmsRequestObject()

@@ -23,7 +23,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1.Snippets
     using gcpv = Google.Cloud.PrivateCatalog.V1Beta1;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedPrivateCatalogClientSnippets
+    public sealed class AllGeneratedPrivateCatalogClientSnippets
     {
         /// <summary>Snippet for SearchCatalogs</summary>
         public void SearchCatalogsRequestObject()

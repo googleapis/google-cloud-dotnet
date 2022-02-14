@@ -20,7 +20,7 @@ namespace Google.Cloud.LifeSciences.V2Beta.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedWorkflowsServiceV2BetaClientSnippets
+    public sealed class AllGeneratedWorkflowsServiceV2BetaClientSnippets
     {
         /// <summary>Snippet for RunPipeline</summary>
         public void RunPipelineRequestObject()

@@ -24,7 +24,7 @@ namespace Google.Cloud.Gaming.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedGameServerClustersServiceClientSnippets
+    public sealed class AllGeneratedGameServerClustersServiceClientSnippets
     {
         /// <summary>Snippet for ListGameServerClusters</summary>
         public void ListGameServerClustersRequestObject()

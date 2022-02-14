@@ -25,7 +25,7 @@ namespace Google.Cloud.Asset.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedAssetServiceClientSnippets
+    public sealed class AllGeneratedAssetServiceClientSnippets
     {
         /// <summary>Snippet for ExportAssets</summary>
         public void ExportAssetsRequestObject()

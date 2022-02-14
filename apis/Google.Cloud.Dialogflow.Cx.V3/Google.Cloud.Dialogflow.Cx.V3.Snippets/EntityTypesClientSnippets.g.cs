@@ -23,7 +23,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedEntityTypesClientSnippets
+    public sealed class AllGeneratedEntityTypesClientSnippets
     {
         /// <summary>Snippet for ListEntityTypes</summary>
         public void ListEntityTypesRequestObject()

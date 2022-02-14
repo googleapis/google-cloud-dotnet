@@ -25,7 +25,7 @@ namespace Google.Cloud.VMMigration.V1.Snippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedVmMigrationClientSnippets
+    public sealed class AllGeneratedVmMigrationClientSnippets
     {
         /// <summary>Snippet for ListSources</summary>
         public void ListSourcesRequestObject()
