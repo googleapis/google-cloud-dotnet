@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta09, released 2022-02-14
+
+### New features
+
+- Add secondary_ip_range field ([commit cb003a3](https://github.com/googleapis/google-cloud-dotnet/commit/cb003a32f9f077fd5a14da788a3a842c52698f67))
+
 ## Version 2.0.0-beta08, released 2022-02-07
 
 ### New features
