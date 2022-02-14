@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.7.0, released 2022-02-14
+
+### New features
+
+- Add methods and messages related to starring feature ([commit 14939ee](https://github.com/googleapis/google-cloud-dotnet/commit/14939ee37813ffdb51f6cd77acefa884960e0f05))
+- Add methods and messages related to business context feature ([commit 14939ee](https://github.com/googleapis/google-cloud-dotnet/commit/14939ee37813ffdb51f6cd77acefa884960e0f05))
+
+### Documentation improvements
+
+- Updates copyright message ([commit 14939ee](https://github.com/googleapis/google-cloud-dotnet/commit/14939ee37813ffdb51f6cd77acefa884960e0f05))
+
 ## Version 1.6.0, released 2021-11-10
 
 - [Commit ceba2bb](https://github.com/googleapis/google-cloud-dotnet/commit/ceba2bb): docs: Improved formatting
