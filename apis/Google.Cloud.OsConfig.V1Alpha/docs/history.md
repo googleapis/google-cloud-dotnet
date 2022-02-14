@@ -1,5 +1,10 @@
 # Version history
 
+## Version 1.0.0-alpha04, released 2022-02-14
+
+### Bug fixes
+
+- Fix description of an interpreter field, validate if the field is not unspecified ([commit 5383e6f](https://github.com/googleapis/google-cloud-dotnet/commit/5383e6fac5edde770d475cabd458b3ae89689524))
 ## Version 1.0.0-alpha03, released 2021-09-24
 
 - [Commit c38ba1f](https://github.com/googleapis/google-cloud-dotnet/commit/c38ba1f): feat: Update osconfig v1 and v1alpha with WindowsApplication
