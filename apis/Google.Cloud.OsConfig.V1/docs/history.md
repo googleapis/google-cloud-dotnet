@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.8.0, released 2022-02-14
+
+### Bug fixes
+
+- Fix description of an interpreter field, validate if the field is not unspecified ([commit ddc399b](https://github.com/googleapis/google-cloud-dotnet/commit/ddc399bcb2411cb5629f49a669b638570574603c))
+
+### New features
+
+- Update osconfig v1 protos ([commit 3bac0d0](https://github.com/googleapis/google-cloud-dotnet/commit/3bac0d0f26d4aa438afdf9e28d71f4e2271ff08f))
+
 ## Version 1.7.0, released 2021-11-18
 
 - [Commit aaeed36](https://github.com/googleapis/google-cloud-dotnet/commit/aaeed36): feat: Add details of items affected by a vulnerability
