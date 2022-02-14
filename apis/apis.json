@@ -2065,7 +2065,6 @@
         "Stackdriver"
       ],
       "dependencies": {
-        "Google.Api.CommonProtos": "2.3.0",
         "Google.Api.Gax.Grpc.GrpcCore": "3.7.0",
         "Google.LongRunning": "2.3.0",
         "Grpc.Core": "2.41.0"
@@ -2275,7 +2274,6 @@
         "Configuration"
       ],
       "dependencies": {
-        "Google.Api.CommonProtos": "2.3.0",
         "Google.Api.Gax.Grpc.GrpcCore": "3.7.0",
         "Google.LongRunning": "2.3.0",
         "Grpc.Core": "2.41.0"
