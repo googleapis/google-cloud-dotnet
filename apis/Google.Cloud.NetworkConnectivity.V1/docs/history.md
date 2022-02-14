@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.2.0, released 2022-02-14
+
+### New features
+
+- Add LocationMetadata message ([commit b6edefb](https://github.com/googleapis/google-cloud-dotnet/commit/b6edefb793651dc0f1a07349852f381e56139b9a))
+- Add RoutingVPC.required_for_new_site_to_site_data_transfer_spokes field ([commit b6edefb](https://github.com/googleapis/google-cloud-dotnet/commit/b6edefb793651dc0f1a07349852f381e56139b9a))
+
+### Documentation improvements
+
+- Update comments to reflect that spokes can now be created with data transfer disabled ([commit b6edefb](https://github.com/googleapis/google-cloud-dotnet/commit/b6edefb793651dc0f1a07349852f381e56139b9a))
+
 ## Version 1.1.0, released 2021-12-07
 
 - [Commit 10e499d](https://github.com/googleapis/google-cloud-dotnet/commit/10e499d): fix!: Mark a couple networkconnectivity API fields as required, to match implemented behavior
