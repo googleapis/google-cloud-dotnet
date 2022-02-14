@@ -469,8 +469,8 @@
         "Bigtable"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc.Gcp": "3.6.0",
-        "Google.Api.Gax.Grpc.GrpcCore": "3.6.0",
+        "Google.Api.Gax.Grpc.Gcp": "3.7.0",
+        "Google.Api.Gax.Grpc.GrpcCore": "3.7.0",
         "Google.Cloud.Bigtable.Common.V2": "2.1.0",
         "Grpc.Core": "2.41.0"
       },
