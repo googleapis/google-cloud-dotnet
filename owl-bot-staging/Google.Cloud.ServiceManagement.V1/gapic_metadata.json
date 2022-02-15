@@ -1,0 +1,96 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.api.servicemanagement.v1",
+  "libraryPackage": "Google.Cloud.ServiceManagement.V1",
+  "services": {
+    "ServiceManager": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ServiceManagerClient",
+          "rpcs": {
+            "CreateService": {
+              "methods": [
+                "CreateService",
+                "CreateServiceAsync"
+              ]
+            },
+            "CreateServiceConfig": {
+              "methods": [
+                "CreateServiceConfig",
+                "CreateServiceConfigAsync"
+              ]
+            },
+            "CreateServiceRollout": {
+              "methods": [
+                "CreateServiceRollout",
+                "CreateServiceRolloutAsync"
+              ]
+            },
+            "DeleteService": {
+              "methods": [
+                "DeleteService",
+                "DeleteServiceAsync"
+              ]
+            },
+            "GenerateConfigReport": {
+              "methods": [
+                "GenerateConfigReport",
+                "GenerateConfigReportAsync"
+              ]
+            },
+            "GetService": {
+              "methods": [
+                "GetService",
+                "GetServiceAsync"
+              ]
+            },
+            "GetServiceConfig": {
+              "methods": [
+                "GetServiceConfig",
+                "GetServiceConfigAsync"
+              ]
+            },
+            "GetServiceRollout": {
+              "methods": [
+                "GetServiceRollout",
+                "GetServiceRolloutAsync"
+              ]
+            },
+            "ListServiceConfigs": {
+              "methods": [
+                "ListServiceConfigs",
+                "ListServiceConfigsAsync"
+              ]
+            },
+            "ListServiceRollouts": {
+              "methods": [
+                "ListServiceRollouts",
+                "ListServiceRolloutsAsync"
+              ]
+            },
+            "ListServices": {
+              "methods": [
+                "ListServices",
+                "ListServicesAsync"
+              ]
+            },
+            "SubmitConfigSource": {
+              "methods": [
+                "SubmitConfigSource",
+                "SubmitConfigSourceAsync"
+              ]
+            },
+            "UndeleteService": {
+              "methods": [
+                "UndeleteService",
+                "UndeleteServiceAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
