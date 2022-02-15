@@ -50,6 +50,7 @@ namespace Google.Cloud.Bigtable.V2
             MutateRowSettings = existing.MutateRowSettings;
             MutateRowsSettings = existing.MutateRowsSettings;
             CheckAndMutateRowSettings = existing.CheckAndMutateRowSettings;
+            PingAndWarmSettings = existing.PingAndWarmSettings;
             ReadModifyWriteRowSettings = existing.ReadModifyWriteRowSettings;
             OnCopy(existing);
         }
@@ -60,14 +61,24 @@ namespace Google.Cloud.Bigtable.V2
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableServiceApiClient.ReadRows</c> and <c>BigtableServiceApiClient.ReadRowsAsync</c>.
         /// </summary>
-        /// <remarks>Timeout: 43200 seconds.</remarks>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 43200 seconds.</description></item>
+        /// </list>
+        /// </remarks>
         public gaxgrpc::CallSettings ReadRowsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(43200000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableServiceApiClient.SampleRowKeys</c> and <c>BigtableServiceApiClient.SampleRowKeysAsync</c>.
         /// </summary>
-        /// <remarks>Timeout: 60 seconds.</remarks>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
         public gaxgrpc::CallSettings SampleRowKeysSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
@@ -95,7 +106,12 @@ namespace Google.Cloud.Bigtable.V2
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableServiceApiClient.MutateRows</c> and <c>BigtableServiceApiClient.MutateRowsAsync</c>.
         /// </summary>
-        /// <remarks>Timeout: 600 seconds.</remarks>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
         public gaxgrpc::CallSettings MutateRowsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
@@ -105,15 +121,23 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 10 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
-        /// <item><description>No status codes are retried.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 20 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CheckAndMutateRowSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(20000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(10), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes()));
+        public gaxgrpc::CallSettings CheckAndMutateRowSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(20000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableServiceApiClient.PingAndWarm</c> and <c>BigtableServiceApiClient.PingAndWarmAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PingAndWarmSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -122,15 +146,11 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 10 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
-        /// <item><description>No status codes are retried.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 20 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ReadModifyWriteRowSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(20000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(10), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes()));
+        public gaxgrpc::CallSettings ReadModifyWriteRowSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(20000)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="BigtableServiceApiSettings"/> object.</returns>
@@ -1647,6 +1667,244 @@ namespace Google.Cloud.Bigtable.V2
             CheckAndMutateRowAsync(tableName, rowKey, predicateFilter, trueMutations, falseMutations, appProfileId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Warm up associated instance metadata for this connection.
+        /// This call is not required but may be useful for connection keep-alive.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PingAndWarmResponse PingAndWarm(PingAndWarmRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Warm up associated instance metadata for this connection.
+        /// This call is not required but may be useful for connection keep-alive.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PingAndWarmResponse> PingAndWarmAsync(PingAndWarmRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Warm up associated instance metadata for this connection.
+        /// This call is not required but may be useful for connection keep-alive.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PingAndWarmResponse> PingAndWarmAsync(PingAndWarmRequest request, st::CancellationToken cancellationToken) =>
+            PingAndWarmAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Warm up associated instance metadata for this connection.
+        /// This call is not required but may be useful for connection keep-alive.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the instance to check permissions for as well as
+        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PingAndWarmResponse PingAndWarm(string name, gaxgrpc::CallSettings callSettings = null) =>
+            PingAndWarm(new PingAndWarmRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Warm up associated instance metadata for this connection.
+        /// This call is not required but may be useful for connection keep-alive.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the instance to check permissions for as well as
+        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PingAndWarmResponse> PingAndWarmAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            PingAndWarmAsync(new PingAndWarmRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Warm up associated instance metadata for this connection.
+        /// This call is not required but may be useful for connection keep-alive.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the instance to check permissions for as well as
+        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PingAndWarmResponse> PingAndWarmAsync(string name, st::CancellationToken cancellationToken) =>
+            PingAndWarmAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Warm up associated instance metadata for this connection.
+        /// This call is not required but may be useful for connection keep-alive.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the instance to check permissions for as well as
+        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PingAndWarmResponse PingAndWarm(InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+            PingAndWarm(new PingAndWarmRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Warm up associated instance metadata for this connection.
+        /// This call is not required but may be useful for connection keep-alive.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the instance to check permissions for as well as
+        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PingAndWarmResponse> PingAndWarmAsync(InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+            PingAndWarmAsync(new PingAndWarmRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Warm up associated instance metadata for this connection.
+        /// This call is not required but may be useful for connection keep-alive.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the instance to check permissions for as well as
+        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PingAndWarmResponse> PingAndWarmAsync(InstanceName name, st::CancellationToken cancellationToken) =>
+            PingAndWarmAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Warm up associated instance metadata for this connection.
+        /// This call is not required but may be useful for connection keep-alive.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the instance to check permissions for as well as
+        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PingAndWarmResponse PingAndWarm(string name, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+            PingAndWarm(new PingAndWarmRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                AppProfileId = appProfileId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Warm up associated instance metadata for this connection.
+        /// This call is not required but may be useful for connection keep-alive.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the instance to check permissions for as well as
+        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PingAndWarmResponse> PingAndWarmAsync(string name, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+            PingAndWarmAsync(new PingAndWarmRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                AppProfileId = appProfileId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Warm up associated instance metadata for this connection.
+        /// This call is not required but may be useful for connection keep-alive.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the instance to check permissions for as well as
+        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PingAndWarmResponse> PingAndWarmAsync(string name, string appProfileId, st::CancellationToken cancellationToken) =>
+            PingAndWarmAsync(name, appProfileId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Warm up associated instance metadata for this connection.
+        /// This call is not required but may be useful for connection keep-alive.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the instance to check permissions for as well as
+        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PingAndWarmResponse PingAndWarm(InstanceName name, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+            PingAndWarm(new PingAndWarmRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                AppProfileId = appProfileId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Warm up associated instance metadata for this connection.
+        /// This call is not required but may be useful for connection keep-alive.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the instance to check permissions for as well as
+        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PingAndWarmResponse> PingAndWarmAsync(InstanceName name, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+            PingAndWarmAsync(new PingAndWarmRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                AppProfileId = appProfileId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Warm up associated instance metadata for this connection.
+        /// This call is not required but may be useful for connection keep-alive.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the instance to check permissions for as well as
+        /// respond. Values are of the form `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PingAndWarmResponse> PingAndWarmAsync(InstanceName name, string appProfileId, st::CancellationToken cancellationToken) =>
+            PingAndWarmAsync(name, appProfileId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Modifies a row atomically on the server. The method reads the latest
         /// existing timestamp and value from the specified columns and writes a new
         /// entry based on pre-defined read/modify/write rules. The new value for the
@@ -2106,6 +2364,8 @@ namespace Google.Cloud.Bigtable.V2
 
         private readonly gaxgrpc::ApiCall<CheckAndMutateRowRequest, CheckAndMutateRowResponse> _callCheckAndMutateRow;
 
+        private readonly gaxgrpc::ApiCall<PingAndWarmRequest, PingAndWarmResponse> _callPingAndWarm;
+
         private readonly gaxgrpc::ApiCall<ReadModifyWriteRowRequest, ReadModifyWriteRowResponse> _callReadModifyWriteRow;
 
         /// <summary>
@@ -2133,6 +2393,9 @@ namespace Google.Cloud.Bigtable.V2
             _callCheckAndMutateRow = clientHelper.BuildApiCall<CheckAndMutateRowRequest, CheckAndMutateRowResponse>(grpcClient.CheckAndMutateRowAsync, grpcClient.CheckAndMutateRow, effectiveSettings.CheckAndMutateRowSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<CheckAndMutateRowRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
             Modify_ApiCall(ref _callCheckAndMutateRow);
             Modify_CheckAndMutateRowApiCall(ref _callCheckAndMutateRow);
+            _callPingAndWarm = clientHelper.BuildApiCall<PingAndWarmRequest, PingAndWarmResponse>(grpcClient.PingAndWarmAsync, grpcClient.PingAndWarm, effectiveSettings.PingAndWarmSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<PingAndWarmRequest>().WithExtractedParameter("name", "^(projects/[^/]+/instances/[^/]+)/?$", request => request.Name).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
+            Modify_ApiCall(ref _callPingAndWarm);
+            Modify_PingAndWarmApiCall(ref _callPingAndWarm);
             _callReadModifyWriteRow = clientHelper.BuildApiCall<ReadModifyWriteRowRequest, ReadModifyWriteRowResponse>(grpcClient.ReadModifyWriteRowAsync, grpcClient.ReadModifyWriteRow, effectiveSettings.ReadModifyWriteRowSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ReadModifyWriteRowRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
             Modify_ApiCall(ref _callReadModifyWriteRow);
             Modify_ReadModifyWriteRowApiCall(ref _callReadModifyWriteRow);
@@ -2153,6 +2416,8 @@ namespace Google.Cloud.Bigtable.V2
 
         partial void Modify_CheckAndMutateRowApiCall(ref gaxgrpc::ApiCall<CheckAndMutateRowRequest, CheckAndMutateRowResponse> call);
 
+        partial void Modify_PingAndWarmApiCall(ref gaxgrpc::ApiCall<PingAndWarmRequest, PingAndWarmResponse> call);
+
         partial void Modify_ReadModifyWriteRowApiCall(ref gaxgrpc::ApiCall<ReadModifyWriteRowRequest, ReadModifyWriteRowResponse> call);
 
         partial void OnConstruction(Bigtable.BigtableClient grpcClient, BigtableServiceApiSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
@@ -2169,6 +2434,8 @@ namespace Google.Cloud.Bigtable.V2
         partial void Modify_MutateRowsRequest(ref MutateRowsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CheckAndMutateRowRequest(ref CheckAndMutateRowRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PingAndWarmRequest(ref PingAndWarmRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ReadModifyWriteRowRequest(ref ReadModifyWriteRowRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2292,6 +2559,32 @@ namespace Google.Cloud.Bigtable.V2
         {
             Modify_CheckAndMutateRowRequest(ref request, ref callSettings);
             return _callCheckAndMutateRow.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Warm up associated instance metadata for this connection.
+        /// This call is not required but may be useful for connection keep-alive.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PingAndWarmResponse PingAndWarm(PingAndWarmRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PingAndWarmRequest(ref request, ref callSettings);
+            return _callPingAndWarm.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Warm up associated instance metadata for this connection.
+        /// This call is not required but may be useful for connection keep-alive.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PingAndWarmResponse> PingAndWarmAsync(PingAndWarmRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PingAndWarmRequest(ref request, ref callSettings);
+            return _callPingAndWarm.Async(request, callSettings);
         }
 
         /// <summary>

@@ -471,6 +471,182 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [xunit::FactAttribute]
+        public void PingAndWarmRequestObject()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            PingAndWarmRequest request = new PingAndWarmRequest
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                AppProfileId = "app_profile_id57fb0442",
+            };
+            PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
+            mockGrpcClient.Setup(x => x.PingAndWarm(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            PingAndWarmResponse response = client.PingAndWarm(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task PingAndWarmRequestObjectAsync()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            PingAndWarmRequest request = new PingAndWarmRequest
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                AppProfileId = "app_profile_id57fb0442",
+            };
+            PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
+            mockGrpcClient.Setup(x => x.PingAndWarmAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PingAndWarmResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            PingAndWarmResponse responseCallSettings = await client.PingAndWarmAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PingAndWarmResponse responseCancellationToken = await client.PingAndWarmAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void PingAndWarm1()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            PingAndWarmRequest request = new PingAndWarmRequest
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+            };
+            PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
+            mockGrpcClient.Setup(x => x.PingAndWarm(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            PingAndWarmResponse response = client.PingAndWarm(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task PingAndWarm1Async()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            PingAndWarmRequest request = new PingAndWarmRequest
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+            };
+            PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
+            mockGrpcClient.Setup(x => x.PingAndWarmAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PingAndWarmResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            PingAndWarmResponse responseCallSettings = await client.PingAndWarmAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PingAndWarmResponse responseCancellationToken = await client.PingAndWarmAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void PingAndWarm1ResourceNames()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            PingAndWarmRequest request = new PingAndWarmRequest
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+            };
+            PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
+            mockGrpcClient.Setup(x => x.PingAndWarm(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            PingAndWarmResponse response = client.PingAndWarm(request.InstanceName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task PingAndWarm1ResourceNamesAsync()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            PingAndWarmRequest request = new PingAndWarmRequest
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+            };
+            PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
+            mockGrpcClient.Setup(x => x.PingAndWarmAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PingAndWarmResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            PingAndWarmResponse responseCallSettings = await client.PingAndWarmAsync(request.InstanceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PingAndWarmResponse responseCancellationToken = await client.PingAndWarmAsync(request.InstanceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void PingAndWarm2()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            PingAndWarmRequest request = new PingAndWarmRequest
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                AppProfileId = "app_profile_id57fb0442",
+            };
+            PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
+            mockGrpcClient.Setup(x => x.PingAndWarm(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            PingAndWarmResponse response = client.PingAndWarm(request.Name, request.AppProfileId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task PingAndWarm2Async()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            PingAndWarmRequest request = new PingAndWarmRequest
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                AppProfileId = "app_profile_id57fb0442",
+            };
+            PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
+            mockGrpcClient.Setup(x => x.PingAndWarmAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PingAndWarmResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            PingAndWarmResponse responseCallSettings = await client.PingAndWarmAsync(request.Name, request.AppProfileId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PingAndWarmResponse responseCancellationToken = await client.PingAndWarmAsync(request.Name, request.AppProfileId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void PingAndWarm2ResourceNames()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            PingAndWarmRequest request = new PingAndWarmRequest
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                AppProfileId = "app_profile_id57fb0442",
+            };
+            PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
+            mockGrpcClient.Setup(x => x.PingAndWarm(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            PingAndWarmResponse response = client.PingAndWarm(request.InstanceName, request.AppProfileId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task PingAndWarm2ResourceNamesAsync()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            PingAndWarmRequest request = new PingAndWarmRequest
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                AppProfileId = "app_profile_id57fb0442",
+            };
+            PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
+            mockGrpcClient.Setup(x => x.PingAndWarmAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PingAndWarmResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            PingAndWarmResponse responseCallSettings = await client.PingAndWarmAsync(request.InstanceName, request.AppProfileId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PingAndWarmResponse responseCancellationToken = await client.PingAndWarmAsync(request.InstanceName, request.AppProfileId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void ReadModifyWriteRowRequestObject()
         {
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
