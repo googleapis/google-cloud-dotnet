@@ -765,6 +765,153 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for PingAndWarm</summary>
+        public void PingAndWarmRequestObject()
+        {
+            // Snippet: PingAndWarm(PingAndWarmRequest, CallSettings)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            PingAndWarmRequest request = new PingAndWarmRequest
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                AppProfileId = "",
+            };
+            // Make the request
+            PingAndWarmResponse response = bigtableServiceApiClient.PingAndWarm(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PingAndWarmAsync</summary>
+        public async Task PingAndWarmRequestObjectAsync()
+        {
+            // Snippet: PingAndWarmAsync(PingAndWarmRequest, CallSettings)
+            // Additional: PingAndWarmAsync(PingAndWarmRequest, CancellationToken)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            PingAndWarmRequest request = new PingAndWarmRequest
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                AppProfileId = "",
+            };
+            // Make the request
+            PingAndWarmResponse response = await bigtableServiceApiClient.PingAndWarmAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PingAndWarm</summary>
+        public void PingAndWarm1()
+        {
+            // Snippet: PingAndWarm(string, CallSettings)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]";
+            // Make the request
+            PingAndWarmResponse response = bigtableServiceApiClient.PingAndWarm(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PingAndWarmAsync</summary>
+        public async Task PingAndWarm1Async()
+        {
+            // Snippet: PingAndWarmAsync(string, CallSettings)
+            // Additional: PingAndWarmAsync(string, CancellationToken)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]";
+            // Make the request
+            PingAndWarmResponse response = await bigtableServiceApiClient.PingAndWarmAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PingAndWarm</summary>
+        public void PingAndWarm1ResourceNames()
+        {
+            // Snippet: PingAndWarm(InstanceName, CallSettings)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            InstanceName name = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            // Make the request
+            PingAndWarmResponse response = bigtableServiceApiClient.PingAndWarm(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PingAndWarmAsync</summary>
+        public async Task PingAndWarm1ResourceNamesAsync()
+        {
+            // Snippet: PingAndWarmAsync(InstanceName, CallSettings)
+            // Additional: PingAndWarmAsync(InstanceName, CancellationToken)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName name = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            // Make the request
+            PingAndWarmResponse response = await bigtableServiceApiClient.PingAndWarmAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PingAndWarm</summary>
+        public void PingAndWarm2()
+        {
+            // Snippet: PingAndWarm(string, string, CallSettings)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]";
+            string appProfileId = "";
+            // Make the request
+            PingAndWarmResponse response = bigtableServiceApiClient.PingAndWarm(name, appProfileId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PingAndWarmAsync</summary>
+        public async Task PingAndWarm2Async()
+        {
+            // Snippet: PingAndWarmAsync(string, string, CallSettings)
+            // Additional: PingAndWarmAsync(string, string, CancellationToken)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]";
+            string appProfileId = "";
+            // Make the request
+            PingAndWarmResponse response = await bigtableServiceApiClient.PingAndWarmAsync(name, appProfileId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PingAndWarm</summary>
+        public void PingAndWarm2ResourceNames()
+        {
+            // Snippet: PingAndWarm(InstanceName, string, CallSettings)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            InstanceName name = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            string appProfileId = "";
+            // Make the request
+            PingAndWarmResponse response = bigtableServiceApiClient.PingAndWarm(name, appProfileId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PingAndWarmAsync</summary>
+        public async Task PingAndWarm2ResourceNamesAsync()
+        {
+            // Snippet: PingAndWarmAsync(InstanceName, string, CallSettings)
+            // Additional: PingAndWarmAsync(InstanceName, string, CancellationToken)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName name = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            string appProfileId = "";
+            // Make the request
+            PingAndWarmResponse response = await bigtableServiceApiClient.PingAndWarmAsync(name, appProfileId);
+            // End snippet
+        }
+
         /// <summary>Snippet for ReadModifyWriteRow</summary>
         public void ReadModifyWriteRowRequestObject()
         {

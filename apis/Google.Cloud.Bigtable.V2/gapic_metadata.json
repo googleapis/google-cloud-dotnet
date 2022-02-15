@@ -28,6 +28,12 @@
                 "MutateRowsAsync"
               ]
             },
+            "PingAndWarm": {
+              "methods": [
+                "PingAndWarm",
+                "PingAndWarmAsync"
+              ]
+            },
             "ReadModifyWriteRow": {
               "methods": [
                 "ReadModifyWriteRow",

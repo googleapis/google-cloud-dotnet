@@ -3,7 +3,7 @@
 //     source: google/bigtable/v2/bigtable.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2019 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -84,6 +84,10 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse> __Marshaller_google_bigtable_v2_CheckAndMutateRowResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.PingAndWarmRequest> __Marshaller_google_bigtable_v2_PingAndWarmRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.PingAndWarmRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.PingAndWarmResponse> __Marshaller_google_bigtable_v2_PingAndWarmResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.PingAndWarmResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest> __Marshaller_google_bigtable_v2_ReadModifyWriteRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse> __Marshaller_google_bigtable_v2_ReadModifyWriteRowResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse.Parser));
@@ -127,6 +131,14 @@ namespace Google.Cloud.Bigtable.V2 {
         "CheckAndMutateRow",
         __Marshaller_google_bigtable_v2_CheckAndMutateRowRequest,
         __Marshaller_google_bigtable_v2_CheckAndMutateRowResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.PingAndWarmRequest, global::Google.Cloud.Bigtable.V2.PingAndWarmResponse> __Method_PingAndWarm = new grpc::Method<global::Google.Cloud.Bigtable.V2.PingAndWarmRequest, global::Google.Cloud.Bigtable.V2.PingAndWarmResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "PingAndWarm",
+        __Marshaller_google_bigtable_v2_PingAndWarmRequest,
+        __Marshaller_google_bigtable_v2_PingAndWarmResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest, global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse> __Method_ReadModifyWriteRow = new grpc::Method<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest, global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse>(
@@ -215,6 +227,19 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse> CheckAndMutateRow(global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Warm up associated instance metadata for this connection.
+      /// This call is not required but may be useful for connection keep-alive.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.V2.PingAndWarmResponse> PingAndWarm(global::Google.Cloud.Bigtable.V2.PingAndWarmRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -455,6 +480,58 @@ namespace Google.Cloud.Bigtable.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_CheckAndMutateRow, null, options, request);
       }
       /// <summary>
+      /// Warm up associated instance metadata for this connection.
+      /// This call is not required but may be useful for connection keep-alive.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Bigtable.V2.PingAndWarmResponse PingAndWarm(global::Google.Cloud.Bigtable.V2.PingAndWarmRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PingAndWarm(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Warm up associated instance metadata for this connection.
+      /// This call is not required but may be useful for connection keep-alive.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Bigtable.V2.PingAndWarmResponse PingAndWarm(global::Google.Cloud.Bigtable.V2.PingAndWarmRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_PingAndWarm, null, options, request);
+      }
+      /// <summary>
+      /// Warm up associated instance metadata for this connection.
+      /// This call is not required but may be useful for connection keep-alive.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.PingAndWarmResponse> PingAndWarmAsync(global::Google.Cloud.Bigtable.V2.PingAndWarmRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PingAndWarmAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Warm up associated instance metadata for this connection.
+      /// This call is not required but may be useful for connection keep-alive.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.PingAndWarmResponse> PingAndWarmAsync(global::Google.Cloud.Bigtable.V2.PingAndWarmRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_PingAndWarm, null, options, request);
+      }
+      /// <summary>
       /// Modifies a row atomically on the server. The method reads the latest
       /// existing timestamp and value from the specified columns and writes a new
       /// entry based on pre-defined read/modify/write rules. The new value for the
@@ -537,6 +614,7 @@ namespace Google.Cloud.Bigtable.V2 {
           .AddMethod(__Method_MutateRow, serviceImpl.MutateRow)
           .AddMethod(__Method_MutateRows, serviceImpl.MutateRows)
           .AddMethod(__Method_CheckAndMutateRow, serviceImpl.CheckAndMutateRow)
+          .AddMethod(__Method_PingAndWarm, serviceImpl.PingAndWarm)
           .AddMethod(__Method_ReadModifyWriteRow, serviceImpl.ReadModifyWriteRow).Build();
     }
 
@@ -552,6 +630,7 @@ namespace Google.Cloud.Bigtable.V2 {
       serviceBinder.AddMethod(__Method_MutateRow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.V2.MutateRowRequest, global::Google.Cloud.Bigtable.V2.MutateRowResponse>(serviceImpl.MutateRow));
       serviceBinder.AddMethod(__Method_MutateRows, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.Bigtable.V2.MutateRowsRequest, global::Google.Cloud.Bigtable.V2.MutateRowsResponse>(serviceImpl.MutateRows));
       serviceBinder.AddMethod(__Method_CheckAndMutateRow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest, global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse>(serviceImpl.CheckAndMutateRow));
+      serviceBinder.AddMethod(__Method_PingAndWarm, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.V2.PingAndWarmRequest, global::Google.Cloud.Bigtable.V2.PingAndWarmResponse>(serviceImpl.PingAndWarm));
       serviceBinder.AddMethod(__Method_ReadModifyWriteRow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest, global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse>(serviceImpl.ReadModifyWriteRow));
     }
 
