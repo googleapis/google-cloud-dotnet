@@ -1,0 +1,42 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.workflows.executions.v1beta",
+  "libraryPackage": "Google.Cloud.Workflows.Executions.V1Beta",
+  "services": {
+    "Executions": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ExecutionsClient",
+          "rpcs": {
+            "CancelExecution": {
+              "methods": [
+                "CancelExecution",
+                "CancelExecutionAsync"
+              ]
+            },
+            "CreateExecution": {
+              "methods": [
+                "CreateExecution",
+                "CreateExecutionAsync"
+              ]
+            },
+            "GetExecution": {
+              "methods": [
+                "GetExecution",
+                "GetExecutionAsync"
+              ]
+            },
+            "ListExecutions": {
+              "methods": [
+                "ListExecutions",
+                "ListExecutionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
