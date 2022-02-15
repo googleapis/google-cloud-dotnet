@@ -1,0 +1,4159 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.PubSub.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.pubsub.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_CreateSchema_sync",
+      "title": "CreateSchemaRequestObject",
+      "description": "Snippet for CreateSchema",
+      "file": "SchemaServiceClient.CreateSchemaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchema",
+        "resultType": "Google.Cloud.PubSub.V1.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.CreateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_CreateSchema_async",
+      "title": "CreateSchemaRequestObjectAsync",
+      "description": "Snippet for CreateSchemaAsync",
+      "file": "SchemaServiceClient.CreateSchemaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.CreateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_CreateSchema_sync_flattened",
+      "title": "CreateSchema",
+      "description": "Snippet for CreateSchema",
+      "file": "SchemaServiceClient.CreateSchemaSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchema",
+        "resultType": "Google.Cloud.PubSub.V1.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.CreateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_CreateSchema_async_flattened",
+      "title": "CreateSchemaAsync",
+      "description": "Snippet for CreateSchemaAsync",
+      "file": "SchemaServiceClient.CreateSchemaAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.CreateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_CreateSchema_sync_flattened_resourceNames",
+      "title": "CreateSchemaResourceNames",
+      "description": "Snippet for CreateSchema",
+      "file": "SchemaServiceClient.CreateSchemaResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchema",
+        "resultType": "Google.Cloud.PubSub.V1.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.CreateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_CreateSchema_async_flattened_resourceNames",
+      "title": "CreateSchemaResourceNamesAsync",
+      "description": "Snippet for CreateSchemaAsync",
+      "file": "SchemaServiceClient.CreateSchemaResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.CreateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_GetSchema_sync",
+      "title": "GetSchemaRequestObject",
+      "description": "Snippet for GetSchema",
+      "file": "SchemaServiceClient.GetSchemaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchema",
+        "resultType": "Google.Cloud.PubSub.V1.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.pubsub.v1.SchemaService.GetSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_GetSchema_async",
+      "title": "GetSchemaRequestObjectAsync",
+      "description": "Snippet for GetSchemaAsync",
+      "file": "SchemaServiceClient.GetSchemaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.pubsub.v1.SchemaService.GetSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_GetSchema_sync_flattened",
+      "title": "GetSchema",
+      "description": "Snippet for GetSchema",
+      "file": "SchemaServiceClient.GetSchemaSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchema",
+        "resultType": "Google.Cloud.PubSub.V1.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.pubsub.v1.SchemaService.GetSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_GetSchema_async_flattened",
+      "title": "GetSchemaAsync",
+      "description": "Snippet for GetSchemaAsync",
+      "file": "SchemaServiceClient.GetSchemaAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.pubsub.v1.SchemaService.GetSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_GetSchema_sync_flattened_resourceNames",
+      "title": "GetSchemaResourceNames",
+      "description": "Snippet for GetSchema",
+      "file": "SchemaServiceClient.GetSchemaResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchema",
+        "resultType": "Google.Cloud.PubSub.V1.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.pubsub.v1.SchemaService.GetSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_GetSchema_async_flattened_resourceNames",
+      "title": "GetSchemaResourceNamesAsync",
+      "description": "Snippet for GetSchemaAsync",
+      "file": "SchemaServiceClient.GetSchemaResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.pubsub.v1.SchemaService.GetSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemas_sync",
+      "title": "ListSchemasRequestObject",
+      "description": "Snippet for ListSchemas",
+      "file": "SchemaServiceClient.ListSchemasRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemas",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemas",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemas",
+          "fullName": "google.pubsub.v1.SchemaService.ListSchemas",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemas_async",
+      "title": "ListSchemasRequestObjectAsync",
+      "description": "Snippet for ListSchemasAsync",
+      "file": "SchemaServiceClient.ListSchemasRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemasAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemasAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemas",
+          "fullName": "google.pubsub.v1.SchemaService.ListSchemas",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemas_sync_flattened",
+      "title": "ListSchemas",
+      "description": "Snippet for ListSchemas",
+      "file": "SchemaServiceClient.ListSchemasSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemas",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemas",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemas",
+          "fullName": "google.pubsub.v1.SchemaService.ListSchemas",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemas_async_flattened",
+      "title": "ListSchemasAsync",
+      "description": "Snippet for ListSchemasAsync",
+      "file": "SchemaServiceClient.ListSchemasAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemasAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemasAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemas",
+          "fullName": "google.pubsub.v1.SchemaService.ListSchemas",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemas_sync_flattened_resourceNames",
+      "title": "ListSchemasResourceNames",
+      "description": "Snippet for ListSchemas",
+      "file": "SchemaServiceClient.ListSchemasResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemas",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemas",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemas",
+          "fullName": "google.pubsub.v1.SchemaService.ListSchemas",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemas_async_flattened_resourceNames",
+      "title": "ListSchemasResourceNamesAsync",
+      "description": "Snippet for ListSchemasAsync",
+      "file": "SchemaServiceClient.ListSchemasResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemasAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemasAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemas",
+          "fullName": "google.pubsub.v1.SchemaService.ListSchemas",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchema_sync",
+      "title": "DeleteSchemaRequestObject",
+      "description": "Snippet for DeleteSchema",
+      "file": "SchemaServiceClient.DeleteSchemaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchema",
+          "fullName": "google.pubsub.v1.SchemaService.DeleteSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchema_async",
+      "title": "DeleteSchemaRequestObjectAsync",
+      "description": "Snippet for DeleteSchemaAsync",
+      "file": "SchemaServiceClient.DeleteSchemaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchema",
+          "fullName": "google.pubsub.v1.SchemaService.DeleteSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchema_sync_flattened",
+      "title": "DeleteSchema",
+      "description": "Snippet for DeleteSchema",
+      "file": "SchemaServiceClient.DeleteSchemaSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchema",
+          "fullName": "google.pubsub.v1.SchemaService.DeleteSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchema_async_flattened",
+      "title": "DeleteSchemaAsync",
+      "description": "Snippet for DeleteSchemaAsync",
+      "file": "SchemaServiceClient.DeleteSchemaAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchema",
+          "fullName": "google.pubsub.v1.SchemaService.DeleteSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchema_sync_flattened_resourceNames",
+      "title": "DeleteSchemaResourceNames",
+      "description": "Snippet for DeleteSchema",
+      "file": "SchemaServiceClient.DeleteSchemaResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchema",
+          "fullName": "google.pubsub.v1.SchemaService.DeleteSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchema_async_flattened_resourceNames",
+      "title": "DeleteSchemaResourceNamesAsync",
+      "description": "Snippet for DeleteSchemaAsync",
+      "file": "SchemaServiceClient.DeleteSchemaResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchema",
+          "fullName": "google.pubsub.v1.SchemaService.DeleteSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ValidateSchema_sync",
+      "title": "ValidateSchemaRequestObject",
+      "description": "Snippet for ValidateSchema",
+      "file": "SchemaServiceClient.ValidateSchemaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ValidateSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchema",
+        "resultType": "Google.Cloud.PubSub.V1.ValidateSchemaResponse",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ValidateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.ValidateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ValidateSchema_async",
+      "title": "ValidateSchemaRequestObjectAsync",
+      "description": "Snippet for ValidateSchemaAsync",
+      "file": "SchemaServiceClient.ValidateSchemaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ValidateSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.ValidateSchemaResponse>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ValidateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.ValidateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ValidateSchema_sync_flattened",
+      "title": "ValidateSchema",
+      "description": "Snippet for ValidateSchema",
+      "file": "SchemaServiceClient.ValidateSchemaSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ValidateSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchema",
+        "resultType": "Google.Cloud.PubSub.V1.ValidateSchemaResponse",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ValidateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.ValidateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ValidateSchema_async_flattened",
+      "title": "ValidateSchemaAsync",
+      "description": "Snippet for ValidateSchemaAsync",
+      "file": "SchemaServiceClient.ValidateSchemaAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ValidateSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.ValidateSchemaResponse>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ValidateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.ValidateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ValidateSchema_sync_flattened_resourceNames",
+      "title": "ValidateSchemaResourceNames",
+      "description": "Snippet for ValidateSchema",
+      "file": "SchemaServiceClient.ValidateSchemaResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ValidateSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchema",
+        "resultType": "Google.Cloud.PubSub.V1.ValidateSchemaResponse",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ValidateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.ValidateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ValidateSchema_async_flattened_resourceNames",
+      "title": "ValidateSchemaResourceNamesAsync",
+      "description": "Snippet for ValidateSchemaAsync",
+      "file": "SchemaServiceClient.ValidateSchemaResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ValidateSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.ValidateSchemaResponse>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ValidateSchema",
+          "fullName": "google.pubsub.v1.SchemaService.ValidateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ValidateMessage_sync",
+      "title": "ValidateMessageRequestObject",
+      "description": "Snippet for ValidateMessage",
+      "file": "SchemaServiceClient.ValidateMessageRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ValidateMessage",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateMessage",
+        "resultType": "Google.Cloud.PubSub.V1.ValidateMessageResponse",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ValidateMessage",
+          "fullName": "google.pubsub.v1.SchemaService.ValidateMessage",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ValidateMessage_async",
+      "title": "ValidateMessageRequestObjectAsync",
+      "description": "Snippet for ValidateMessageAsync",
+      "file": "SchemaServiceClient.ValidateMessageRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ValidateMessageAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateMessageAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.ValidateMessageResponse>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ValidateMessage",
+          "fullName": "google.pubsub.v1.SchemaService.ValidateMessage",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_CreateTopic_sync",
+      "title": "CreateTopicRequestObject",
+      "description": "Snippet for CreateTopic",
+      "file": "PublisherClient.CreateTopicRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTopic",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.CreateTopic",
+        "resultType": "Google.Cloud.PubSub.V1.Topic",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "CreateTopic",
+          "fullName": "google.pubsub.v1.Publisher.CreateTopic",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_CreateTopic_async",
+      "title": "CreateTopicRequestObjectAsync",
+      "description": "Snippet for CreateTopicAsync",
+      "file": "PublisherClient.CreateTopicRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTopicAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.CreateTopicAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Topic>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "CreateTopic",
+          "fullName": "google.pubsub.v1.Publisher.CreateTopic",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_CreateTopic_sync_flattened",
+      "title": "CreateTopic",
+      "description": "Snippet for CreateTopic",
+      "file": "PublisherClient.CreateTopicSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTopic",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.CreateTopic",
+        "resultType": "Google.Cloud.PubSub.V1.Topic",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "CreateTopic",
+          "fullName": "google.pubsub.v1.Publisher.CreateTopic",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_CreateTopic_async_flattened",
+      "title": "CreateTopicAsync",
+      "description": "Snippet for CreateTopicAsync",
+      "file": "PublisherClient.CreateTopicAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTopicAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.CreateTopicAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Topic>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "CreateTopic",
+          "fullName": "google.pubsub.v1.Publisher.CreateTopic",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_CreateTopic_sync_flattened_resourceNames",
+      "title": "CreateTopicResourceNames",
+      "description": "Snippet for CreateTopic",
+      "file": "PublisherClient.CreateTopicResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTopic",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.CreateTopic",
+        "resultType": "Google.Cloud.PubSub.V1.Topic",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "CreateTopic",
+          "fullName": "google.pubsub.v1.Publisher.CreateTopic",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_CreateTopic_async_flattened_resourceNames",
+      "title": "CreateTopicResourceNamesAsync",
+      "description": "Snippet for CreateTopicAsync",
+      "file": "PublisherClient.CreateTopicResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTopicAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.CreateTopicAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Topic>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "CreateTopic",
+          "fullName": "google.pubsub.v1.Publisher.CreateTopic",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_UpdateTopic_sync",
+      "title": "UpdateTopicRequestObject",
+      "description": "Snippet for UpdateTopic",
+      "file": "PublisherClient.UpdateTopicRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTopic",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.UpdateTopic",
+        "resultType": "Google.Cloud.PubSub.V1.Topic",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "UpdateTopic",
+          "fullName": "google.pubsub.v1.Publisher.UpdateTopic",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_UpdateTopic_async",
+      "title": "UpdateTopicRequestObjectAsync",
+      "description": "Snippet for UpdateTopicAsync",
+      "file": "PublisherClient.UpdateTopicRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTopicAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.UpdateTopicAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Topic>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "UpdateTopic",
+          "fullName": "google.pubsub.v1.Publisher.UpdateTopic",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_Publish_sync",
+      "title": "PublishRequestObject",
+      "description": "Snippet for Publish",
+      "file": "PublisherClient.PublishRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Publish",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.Publish",
+        "resultType": "Google.Cloud.PubSub.V1.PublishResponse",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "Publish",
+          "fullName": "google.pubsub.v1.Publisher.Publish",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_Publish_async",
+      "title": "PublishRequestObjectAsync",
+      "description": "Snippet for PublishAsync",
+      "file": "PublisherClient.PublishRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PublishAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.PublishAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.PublishResponse>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "Publish",
+          "fullName": "google.pubsub.v1.Publisher.Publish",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_Publish_sync_flattened",
+      "title": "Publish",
+      "description": "Snippet for Publish",
+      "file": "PublisherClient.PublishSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Publish",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.Publish",
+        "resultType": "Google.Cloud.PubSub.V1.PublishResponse",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "Publish",
+          "fullName": "google.pubsub.v1.Publisher.Publish",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_Publish_async_flattened",
+      "title": "PublishAsync",
+      "description": "Snippet for PublishAsync",
+      "file": "PublisherClient.PublishAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PublishAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.PublishAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.PublishResponse>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "Publish",
+          "fullName": "google.pubsub.v1.Publisher.Publish",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_Publish_sync_flattened_resourceNames",
+      "title": "PublishResourceNames",
+      "description": "Snippet for Publish",
+      "file": "PublisherClient.PublishResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Publish",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.Publish",
+        "resultType": "Google.Cloud.PubSub.V1.PublishResponse",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "Publish",
+          "fullName": "google.pubsub.v1.Publisher.Publish",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_Publish_async_flattened_resourceNames",
+      "title": "PublishResourceNamesAsync",
+      "description": "Snippet for PublishAsync",
+      "file": "PublisherClient.PublishResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PublishAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.PublishAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.PublishResponse>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "Publish",
+          "fullName": "google.pubsub.v1.Publisher.Publish",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_GetTopic_sync",
+      "title": "GetTopicRequestObject",
+      "description": "Snippet for GetTopic",
+      "file": "PublisherClient.GetTopicRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTopic",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.GetTopic",
+        "resultType": "Google.Cloud.PubSub.V1.Topic",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "GetTopic",
+          "fullName": "google.pubsub.v1.Publisher.GetTopic",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_GetTopic_async",
+      "title": "GetTopicRequestObjectAsync",
+      "description": "Snippet for GetTopicAsync",
+      "file": "PublisherClient.GetTopicRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTopicAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.GetTopicAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Topic>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "GetTopic",
+          "fullName": "google.pubsub.v1.Publisher.GetTopic",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_GetTopic_sync_flattened",
+      "title": "GetTopic",
+      "description": "Snippet for GetTopic",
+      "file": "PublisherClient.GetTopicSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTopic",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.GetTopic",
+        "resultType": "Google.Cloud.PubSub.V1.Topic",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "GetTopic",
+          "fullName": "google.pubsub.v1.Publisher.GetTopic",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_GetTopic_async_flattened",
+      "title": "GetTopicAsync",
+      "description": "Snippet for GetTopicAsync",
+      "file": "PublisherClient.GetTopicAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTopicAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.GetTopicAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Topic>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "GetTopic",
+          "fullName": "google.pubsub.v1.Publisher.GetTopic",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_GetTopic_sync_flattened_resourceNames",
+      "title": "GetTopicResourceNames",
+      "description": "Snippet for GetTopic",
+      "file": "PublisherClient.GetTopicResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTopic",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.GetTopic",
+        "resultType": "Google.Cloud.PubSub.V1.Topic",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "GetTopic",
+          "fullName": "google.pubsub.v1.Publisher.GetTopic",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_GetTopic_async_flattened_resourceNames",
+      "title": "GetTopicResourceNamesAsync",
+      "description": "Snippet for GetTopicAsync",
+      "file": "PublisherClient.GetTopicResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTopicAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.GetTopicAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Topic>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "GetTopic",
+          "fullName": "google.pubsub.v1.Publisher.GetTopic",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopics_sync",
+      "title": "ListTopicsRequestObject",
+      "description": "Snippet for ListTopics",
+      "file": "PublisherClient.ListTopicsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTopics",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.ListTopics",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListTopicsResponse, Google.Cloud.PubSub.V1.Topic>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "ListTopics",
+          "fullName": "google.pubsub.v1.Publisher.ListTopics",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopics_async",
+      "title": "ListTopicsRequestObjectAsync",
+      "description": "Snippet for ListTopicsAsync",
+      "file": "PublisherClient.ListTopicsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTopicsAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.ListTopicsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListTopicsResponse, Google.Cloud.PubSub.V1.Topic>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "ListTopics",
+          "fullName": "google.pubsub.v1.Publisher.ListTopics",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopics_sync_flattened",
+      "title": "ListTopics",
+      "description": "Snippet for ListTopics",
+      "file": "PublisherClient.ListTopicsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTopics",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.ListTopics",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListTopicsResponse, Google.Cloud.PubSub.V1.Topic>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "ListTopics",
+          "fullName": "google.pubsub.v1.Publisher.ListTopics",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopics_async_flattened",
+      "title": "ListTopicsAsync",
+      "description": "Snippet for ListTopicsAsync",
+      "file": "PublisherClient.ListTopicsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTopicsAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.ListTopicsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListTopicsResponse, Google.Cloud.PubSub.V1.Topic>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "ListTopics",
+          "fullName": "google.pubsub.v1.Publisher.ListTopics",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopics_sync_flattened_resourceNames",
+      "title": "ListTopicsResourceNames",
+      "description": "Snippet for ListTopics",
+      "file": "PublisherClient.ListTopicsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTopics",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.ListTopics",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListTopicsResponse, Google.Cloud.PubSub.V1.Topic>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "ListTopics",
+          "fullName": "google.pubsub.v1.Publisher.ListTopics",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopics_async_flattened_resourceNames",
+      "title": "ListTopicsResourceNamesAsync",
+      "description": "Snippet for ListTopicsAsync",
+      "file": "PublisherClient.ListTopicsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTopicsAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.ListTopicsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListTopicsResponse, Google.Cloud.PubSub.V1.Topic>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "ListTopics",
+          "fullName": "google.pubsub.v1.Publisher.ListTopics",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSubscriptions_sync",
+      "title": "ListTopicSubscriptionsRequestObject",
+      "description": "Snippet for ListTopicSubscriptions",
+      "file": "PublisherClient.ListTopicSubscriptionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTopicSubscriptions",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.ListTopicSubscriptions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse, System.String>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "ListTopicSubscriptions",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSubscriptions",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSubscriptions_async",
+      "title": "ListTopicSubscriptionsRequestObjectAsync",
+      "description": "Snippet for ListTopicSubscriptionsAsync",
+      "file": "PublisherClient.ListTopicSubscriptionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTopicSubscriptionsAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.ListTopicSubscriptionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse, System.String>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "ListTopicSubscriptions",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSubscriptions",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSubscriptions_sync_flattened",
+      "title": "ListTopicSubscriptions",
+      "description": "Snippet for ListTopicSubscriptions",
+      "file": "PublisherClient.ListTopicSubscriptionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTopicSubscriptions",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.ListTopicSubscriptions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse, System.String>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "ListTopicSubscriptions",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSubscriptions",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSubscriptions_async_flattened",
+      "title": "ListTopicSubscriptionsAsync",
+      "description": "Snippet for ListTopicSubscriptionsAsync",
+      "file": "PublisherClient.ListTopicSubscriptionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTopicSubscriptionsAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.ListTopicSubscriptionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse, System.String>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "ListTopicSubscriptions",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSubscriptions",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSubscriptions_sync_flattened_resourceNames",
+      "title": "ListTopicSubscriptionsResourceNames",
+      "description": "Snippet for ListTopicSubscriptions",
+      "file": "PublisherClient.ListTopicSubscriptionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTopicSubscriptions",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.ListTopicSubscriptions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse, System.String>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "ListTopicSubscriptions",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSubscriptions",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSubscriptions_async_flattened_resourceNames",
+      "title": "ListTopicSubscriptionsResourceNamesAsync",
+      "description": "Snippet for ListTopicSubscriptionsAsync",
+      "file": "PublisherClient.ListTopicSubscriptionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTopicSubscriptionsAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.ListTopicSubscriptionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse, System.String>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "ListTopicSubscriptions",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSubscriptions",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSnapshots_sync",
+      "title": "ListTopicSnapshotsRequestObject",
+      "description": "Snippet for ListTopicSnapshots",
+      "file": "PublisherClient.ListTopicSnapshotsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTopicSnapshots",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.ListTopicSnapshots",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse, System.String>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "ListTopicSnapshots",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSnapshots",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSnapshots_async",
+      "title": "ListTopicSnapshotsRequestObjectAsync",
+      "description": "Snippet for ListTopicSnapshotsAsync",
+      "file": "PublisherClient.ListTopicSnapshotsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTopicSnapshotsAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.ListTopicSnapshotsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse, System.String>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "ListTopicSnapshots",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSnapshots",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSnapshots_sync_flattened",
+      "title": "ListTopicSnapshots",
+      "description": "Snippet for ListTopicSnapshots",
+      "file": "PublisherClient.ListTopicSnapshotsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTopicSnapshots",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.ListTopicSnapshots",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse, System.String>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "ListTopicSnapshots",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSnapshots",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSnapshots_async_flattened",
+      "title": "ListTopicSnapshotsAsync",
+      "description": "Snippet for ListTopicSnapshotsAsync",
+      "file": "PublisherClient.ListTopicSnapshotsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTopicSnapshotsAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.ListTopicSnapshotsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse, System.String>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "ListTopicSnapshots",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSnapshots",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSnapshots_sync_flattened_resourceNames",
+      "title": "ListTopicSnapshotsResourceNames",
+      "description": "Snippet for ListTopicSnapshots",
+      "file": "PublisherClient.ListTopicSnapshotsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTopicSnapshots",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.ListTopicSnapshots",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse, System.String>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "ListTopicSnapshots",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSnapshots",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSnapshots_async_flattened_resourceNames",
+      "title": "ListTopicSnapshotsResourceNamesAsync",
+      "description": "Snippet for ListTopicSnapshotsAsync",
+      "file": "PublisherClient.ListTopicSnapshotsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTopicSnapshotsAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.ListTopicSnapshotsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse, System.String>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "ListTopicSnapshots",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSnapshots",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_DeleteTopic_sync",
+      "title": "DeleteTopicRequestObject",
+      "description": "Snippet for DeleteTopic",
+      "file": "PublisherClient.DeleteTopicRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTopic",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.DeleteTopic",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "DeleteTopic",
+          "fullName": "google.pubsub.v1.Publisher.DeleteTopic",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_DeleteTopic_async",
+      "title": "DeleteTopicRequestObjectAsync",
+      "description": "Snippet for DeleteTopicAsync",
+      "file": "PublisherClient.DeleteTopicRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTopicAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.DeleteTopicAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "DeleteTopic",
+          "fullName": "google.pubsub.v1.Publisher.DeleteTopic",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_DeleteTopic_sync_flattened",
+      "title": "DeleteTopic",
+      "description": "Snippet for DeleteTopic",
+      "file": "PublisherClient.DeleteTopicSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTopic",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.DeleteTopic",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "DeleteTopic",
+          "fullName": "google.pubsub.v1.Publisher.DeleteTopic",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_DeleteTopic_async_flattened",
+      "title": "DeleteTopicAsync",
+      "description": "Snippet for DeleteTopicAsync",
+      "file": "PublisherClient.DeleteTopicAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTopicAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.DeleteTopicAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "DeleteTopic",
+          "fullName": "google.pubsub.v1.Publisher.DeleteTopic",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_DeleteTopic_sync_flattened_resourceNames",
+      "title": "DeleteTopicResourceNames",
+      "description": "Snippet for DeleteTopic",
+      "file": "PublisherClient.DeleteTopicResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTopic",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.DeleteTopic",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "DeleteTopic",
+          "fullName": "google.pubsub.v1.Publisher.DeleteTopic",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_DeleteTopic_async_flattened_resourceNames",
+      "title": "DeleteTopicResourceNamesAsync",
+      "description": "Snippet for DeleteTopicAsync",
+      "file": "PublisherClient.DeleteTopicResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTopicAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.DeleteTopicAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "DeleteTopic",
+          "fullName": "google.pubsub.v1.Publisher.DeleteTopic",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_DetachSubscription_sync",
+      "title": "DetachSubscriptionRequestObject",
+      "description": "Snippet for DetachSubscription",
+      "file": "PublisherClient.DetachSubscriptionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DetachSubscription",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.DetachSubscription",
+        "resultType": "Google.Cloud.PubSub.V1.DetachSubscriptionResponse",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "DetachSubscription",
+          "fullName": "google.pubsub.v1.Publisher.DetachSubscription",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Publisher_DetachSubscription_async",
+      "title": "DetachSubscriptionRequestObjectAsync",
+      "description": "Snippet for DetachSubscriptionAsync",
+      "file": "PublisherClient.DetachSubscriptionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DetachSubscriptionAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherClient.DetachSubscriptionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.DetachSubscriptionResponse>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "DetachSubscription",
+          "fullName": "google.pubsub.v1.Publisher.DetachSubscription",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSubscription_sync",
+      "title": "CreateSubscriptionRequestObject",
+      "description": "Snippet for CreateSubscription",
+      "file": "SubscriberClient.CreateSubscriptionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubscription",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscription",
+        "resultType": "Google.Cloud.PubSub.V1.Subscription",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "CreateSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSubscription",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSubscription_async",
+      "title": "CreateSubscriptionRequestObjectAsync",
+      "description": "Snippet for CreateSubscriptionAsync",
+      "file": "SubscriberClient.CreateSubscriptionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubscriptionAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Subscription>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "CreateSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSubscription",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSubscription_sync_flattened",
+      "title": "CreateSubscription",
+      "description": "Snippet for CreateSubscription",
+      "file": "SubscriberClient.CreateSubscriptionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubscription",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscription",
+        "resultType": "Google.Cloud.PubSub.V1.Subscription",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "CreateSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSubscription",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSubscription_async_flattened",
+      "title": "CreateSubscriptionAsync",
+      "description": "Snippet for CreateSubscriptionAsync",
+      "file": "SubscriberClient.CreateSubscriptionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubscriptionAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Subscription>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "CreateSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSubscription",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSubscription_sync_flattened_resourceNames",
+      "title": "CreateSubscriptionResourceNames",
+      "description": "Snippet for CreateSubscription",
+      "file": "SubscriberClient.CreateSubscriptionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubscription",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscription",
+        "resultType": "Google.Cloud.PubSub.V1.Subscription",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "CreateSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSubscription",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSubscription_async_flattened_resourceNames",
+      "title": "CreateSubscriptionResourceNamesAsync",
+      "description": "Snippet for CreateSubscriptionAsync",
+      "file": "SubscriberClient.CreateSubscriptionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubscriptionAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Subscription>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "CreateSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSubscription",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSubscription_sync",
+      "title": "GetSubscriptionRequestObject",
+      "description": "Snippet for GetSubscription",
+      "file": "SubscriberClient.GetSubscriptionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubscription",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.GetSubscription",
+        "resultType": "Google.Cloud.PubSub.V1.Subscription",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "GetSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.GetSubscription",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSubscription_async",
+      "title": "GetSubscriptionRequestObjectAsync",
+      "description": "Snippet for GetSubscriptionAsync",
+      "file": "SubscriberClient.GetSubscriptionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubscriptionAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.GetSubscriptionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Subscription>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "GetSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.GetSubscription",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSubscription_sync_flattened",
+      "title": "GetSubscription",
+      "description": "Snippet for GetSubscription",
+      "file": "SubscriberClient.GetSubscriptionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubscription",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.GetSubscription",
+        "resultType": "Google.Cloud.PubSub.V1.Subscription",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "GetSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.GetSubscription",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSubscription_async_flattened",
+      "title": "GetSubscriptionAsync",
+      "description": "Snippet for GetSubscriptionAsync",
+      "file": "SubscriberClient.GetSubscriptionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubscriptionAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.GetSubscriptionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Subscription>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "GetSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.GetSubscription",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSubscription_sync_flattened_resourceNames",
+      "title": "GetSubscriptionResourceNames",
+      "description": "Snippet for GetSubscription",
+      "file": "SubscriberClient.GetSubscriptionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubscription",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.GetSubscription",
+        "resultType": "Google.Cloud.PubSub.V1.Subscription",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "GetSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.GetSubscription",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSubscription_async_flattened_resourceNames",
+      "title": "GetSubscriptionResourceNamesAsync",
+      "description": "Snippet for GetSubscriptionAsync",
+      "file": "SubscriberClient.GetSubscriptionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubscriptionAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.GetSubscriptionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Subscription>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "GetSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.GetSubscription",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_UpdateSubscription_sync",
+      "title": "UpdateSubscriptionRequestObject",
+      "description": "Snippet for UpdateSubscription",
+      "file": "SubscriberClient.UpdateSubscriptionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubscription",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.UpdateSubscription",
+        "resultType": "Google.Cloud.PubSub.V1.Subscription",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "UpdateSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.UpdateSubscription",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_UpdateSubscription_async",
+      "title": "UpdateSubscriptionRequestObjectAsync",
+      "description": "Snippet for UpdateSubscriptionAsync",
+      "file": "SubscriberClient.UpdateSubscriptionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubscriptionAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.UpdateSubscriptionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Subscription>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "UpdateSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.UpdateSubscription",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSubscriptions_sync",
+      "title": "ListSubscriptionsRequestObject",
+      "description": "Snippet for ListSubscriptions",
+      "file": "SubscriberClient.ListSubscriptionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubscriptions",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ListSubscriptions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSubscriptionsResponse, Google.Cloud.PubSub.V1.Subscription>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ListSubscriptions",
+          "fullName": "google.pubsub.v1.Subscriber.ListSubscriptions",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSubscriptions_async",
+      "title": "ListSubscriptionsRequestObjectAsync",
+      "description": "Snippet for ListSubscriptionsAsync",
+      "file": "SubscriberClient.ListSubscriptionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubscriptionsAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ListSubscriptionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSubscriptionsResponse, Google.Cloud.PubSub.V1.Subscription>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ListSubscriptions",
+          "fullName": "google.pubsub.v1.Subscriber.ListSubscriptions",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSubscriptions_sync_flattened",
+      "title": "ListSubscriptions",
+      "description": "Snippet for ListSubscriptions",
+      "file": "SubscriberClient.ListSubscriptionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubscriptions",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ListSubscriptions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSubscriptionsResponse, Google.Cloud.PubSub.V1.Subscription>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ListSubscriptions",
+          "fullName": "google.pubsub.v1.Subscriber.ListSubscriptions",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSubscriptions_async_flattened",
+      "title": "ListSubscriptionsAsync",
+      "description": "Snippet for ListSubscriptionsAsync",
+      "file": "SubscriberClient.ListSubscriptionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubscriptionsAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ListSubscriptionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSubscriptionsResponse, Google.Cloud.PubSub.V1.Subscription>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ListSubscriptions",
+          "fullName": "google.pubsub.v1.Subscriber.ListSubscriptions",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSubscriptions_sync_flattened_resourceNames",
+      "title": "ListSubscriptionsResourceNames",
+      "description": "Snippet for ListSubscriptions",
+      "file": "SubscriberClient.ListSubscriptionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubscriptions",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ListSubscriptions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSubscriptionsResponse, Google.Cloud.PubSub.V1.Subscription>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ListSubscriptions",
+          "fullName": "google.pubsub.v1.Subscriber.ListSubscriptions",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSubscriptions_async_flattened_resourceNames",
+      "title": "ListSubscriptionsResourceNamesAsync",
+      "description": "Snippet for ListSubscriptionsAsync",
+      "file": "SubscriberClient.ListSubscriptionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubscriptionsAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ListSubscriptionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSubscriptionsResponse, Google.Cloud.PubSub.V1.Subscription>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ListSubscriptions",
+          "fullName": "google.pubsub.v1.Subscriber.ListSubscriptions",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSubscription_sync",
+      "title": "DeleteSubscriptionRequestObject",
+      "description": "Snippet for DeleteSubscription",
+      "file": "SubscriberClient.DeleteSubscriptionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscription",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.DeleteSubscription",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSubscription",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSubscription_async",
+      "title": "DeleteSubscriptionRequestObjectAsync",
+      "description": "Snippet for DeleteSubscriptionAsync",
+      "file": "SubscriberClient.DeleteSubscriptionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscriptionAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.DeleteSubscriptionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSubscription",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSubscription_sync_flattened",
+      "title": "DeleteSubscription",
+      "description": "Snippet for DeleteSubscription",
+      "file": "SubscriberClient.DeleteSubscriptionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscription",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.DeleteSubscription",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSubscription",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSubscription_async_flattened",
+      "title": "DeleteSubscriptionAsync",
+      "description": "Snippet for DeleteSubscriptionAsync",
+      "file": "SubscriberClient.DeleteSubscriptionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscriptionAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.DeleteSubscriptionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSubscription",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSubscription_sync_flattened_resourceNames",
+      "title": "DeleteSubscriptionResourceNames",
+      "description": "Snippet for DeleteSubscription",
+      "file": "SubscriberClient.DeleteSubscriptionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscription",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.DeleteSubscription",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSubscription",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSubscription_async_flattened_resourceNames",
+      "title": "DeleteSubscriptionResourceNamesAsync",
+      "description": "Snippet for DeleteSubscriptionAsync",
+      "file": "SubscriberClient.DeleteSubscriptionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscriptionAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.DeleteSubscriptionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSubscription",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyAckDeadline_sync",
+      "title": "ModifyAckDeadlineRequestObject",
+      "description": "Snippet for ModifyAckDeadline",
+      "file": "SubscriberClient.ModifyAckDeadlineRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ModifyAckDeadline",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ModifyAckDeadline",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ModifyAckDeadline",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyAckDeadline",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyAckDeadline_async",
+      "title": "ModifyAckDeadlineRequestObjectAsync",
+      "description": "Snippet for ModifyAckDeadlineAsync",
+      "file": "SubscriberClient.ModifyAckDeadlineRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ModifyAckDeadlineAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ModifyAckDeadlineAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ModifyAckDeadline",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyAckDeadline",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyAckDeadline_sync_flattened",
+      "title": "ModifyAckDeadline",
+      "description": "Snippet for ModifyAckDeadline",
+      "file": "SubscriberClient.ModifyAckDeadlineSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ModifyAckDeadline",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ModifyAckDeadline",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ModifyAckDeadline",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyAckDeadline",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyAckDeadline_async_flattened",
+      "title": "ModifyAckDeadlineAsync",
+      "description": "Snippet for ModifyAckDeadlineAsync",
+      "file": "SubscriberClient.ModifyAckDeadlineAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ModifyAckDeadlineAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ModifyAckDeadlineAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ModifyAckDeadline",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyAckDeadline",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyAckDeadline_sync_flattened_resourceNames",
+      "title": "ModifyAckDeadlineResourceNames",
+      "description": "Snippet for ModifyAckDeadline",
+      "file": "SubscriberClient.ModifyAckDeadlineResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ModifyAckDeadline",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ModifyAckDeadline",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ModifyAckDeadline",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyAckDeadline",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyAckDeadline_async_flattened_resourceNames",
+      "title": "ModifyAckDeadlineResourceNamesAsync",
+      "description": "Snippet for ModifyAckDeadlineAsync",
+      "file": "SubscriberClient.ModifyAckDeadlineResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ModifyAckDeadlineAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ModifyAckDeadlineAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ModifyAckDeadline",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyAckDeadline",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_Acknowledge_sync",
+      "title": "AcknowledgeRequestObject",
+      "description": "Snippet for Acknowledge",
+      "file": "SubscriberClient.AcknowledgeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Acknowledge",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.Acknowledge",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "Acknowledge",
+          "fullName": "google.pubsub.v1.Subscriber.Acknowledge",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_Acknowledge_async",
+      "title": "AcknowledgeRequestObjectAsync",
+      "description": "Snippet for AcknowledgeAsync",
+      "file": "SubscriberClient.AcknowledgeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AcknowledgeAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.AcknowledgeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "Acknowledge",
+          "fullName": "google.pubsub.v1.Subscriber.Acknowledge",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_Acknowledge_sync_flattened",
+      "title": "Acknowledge",
+      "description": "Snippet for Acknowledge",
+      "file": "SubscriberClient.AcknowledgeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Acknowledge",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.Acknowledge",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "Acknowledge",
+          "fullName": "google.pubsub.v1.Subscriber.Acknowledge",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_Acknowledge_async_flattened",
+      "title": "AcknowledgeAsync",
+      "description": "Snippet for AcknowledgeAsync",
+      "file": "SubscriberClient.AcknowledgeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AcknowledgeAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.AcknowledgeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "Acknowledge",
+          "fullName": "google.pubsub.v1.Subscriber.Acknowledge",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_Acknowledge_sync_flattened_resourceNames",
+      "title": "AcknowledgeResourceNames",
+      "description": "Snippet for Acknowledge",
+      "file": "SubscriberClient.AcknowledgeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Acknowledge",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.Acknowledge",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "Acknowledge",
+          "fullName": "google.pubsub.v1.Subscriber.Acknowledge",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_Acknowledge_async_flattened_resourceNames",
+      "title": "AcknowledgeResourceNamesAsync",
+      "description": "Snippet for AcknowledgeAsync",
+      "file": "SubscriberClient.AcknowledgeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AcknowledgeAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.AcknowledgeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "Acknowledge",
+          "fullName": "google.pubsub.v1.Subscriber.Acknowledge",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_Pull_sync",
+      "title": "PullRequestObject",
+      "description": "Snippet for Pull",
+      "file": "SubscriberClient.PullRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Pull",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.Pull",
+        "resultType": "Google.Cloud.PubSub.V1.PullResponse",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "Pull",
+          "fullName": "google.pubsub.v1.Subscriber.Pull",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_Pull_async",
+      "title": "PullRequestObjectAsync",
+      "description": "Snippet for PullAsync",
+      "file": "SubscriberClient.PullRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PullAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.PullAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.PullResponse>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "Pull",
+          "fullName": "google.pubsub.v1.Subscriber.Pull",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_Pull_sync_flattened1",
+      "title": "Pull1",
+      "description": "Snippet for Pull",
+      "file": "SubscriberClient.Pull1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Pull",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.Pull",
+        "resultType": "Google.Cloud.PubSub.V1.PullResponse",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "Pull",
+          "fullName": "google.pubsub.v1.Subscriber.Pull",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_Pull_async_flattened1",
+      "title": "Pull1Async",
+      "description": "Snippet for PullAsync",
+      "file": "SubscriberClient.Pull1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PullAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.PullAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.PullResponse>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "Pull",
+          "fullName": "google.pubsub.v1.Subscriber.Pull",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_Pull_sync_flattened1_resourceNames",
+      "title": "Pull1ResourceNames",
+      "description": "Snippet for Pull",
+      "file": "SubscriberClient.Pull1ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Pull",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.Pull",
+        "resultType": "Google.Cloud.PubSub.V1.PullResponse",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "Pull",
+          "fullName": "google.pubsub.v1.Subscriber.Pull",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_Pull_async_flattened1_resourceNames",
+      "title": "Pull1ResourceNamesAsync",
+      "description": "Snippet for PullAsync",
+      "file": "SubscriberClient.Pull1ResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PullAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.PullAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.PullResponse>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "Pull",
+          "fullName": "google.pubsub.v1.Subscriber.Pull",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_Pull_sync_flattened2",
+      "title": "Pull2",
+      "description": "Snippet for Pull",
+      "file": "SubscriberClient.Pull2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Pull",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.Pull",
+        "resultType": "Google.Cloud.PubSub.V1.PullResponse",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "Pull",
+          "fullName": "google.pubsub.v1.Subscriber.Pull",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_Pull_async_flattened2",
+      "title": "Pull2Async",
+      "description": "Snippet for PullAsync",
+      "file": "SubscriberClient.Pull2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PullAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.PullAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.PullResponse>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "Pull",
+          "fullName": "google.pubsub.v1.Subscriber.Pull",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_Pull_sync_flattened2_resourceNames",
+      "title": "Pull2ResourceNames",
+      "description": "Snippet for Pull",
+      "file": "SubscriberClient.Pull2ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Pull",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.Pull",
+        "resultType": "Google.Cloud.PubSub.V1.PullResponse",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "Pull",
+          "fullName": "google.pubsub.v1.Subscriber.Pull",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_Pull_async_flattened2_resourceNames",
+      "title": "Pull2ResourceNamesAsync",
+      "description": "Snippet for PullAsync",
+      "file": "SubscriberClient.Pull2ResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PullAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.PullAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.PullResponse>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "Pull",
+          "fullName": "google.pubsub.v1.Subscriber.Pull",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_StreamingPull_sync",
+      "title": "StreamingPull",
+      "description": "Snippet for StreamingPull",
+      "file": "SubscriberClient.StreamingPullSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StreamingPull",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.StreamingPull",
+        "resultType": "Google.Cloud.PubSub.V1.SubscriberClient+StreamingPullStream",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "StreamingPull",
+          "fullName": "google.pubsub.v1.Subscriber.StreamingPull",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyPushConfig_sync",
+      "title": "ModifyPushConfigRequestObject",
+      "description": "Snippet for ModifyPushConfig",
+      "file": "SubscriberClient.ModifyPushConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ModifyPushConfig",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ModifyPushConfig",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ModifyPushConfig",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyPushConfig",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyPushConfig_async",
+      "title": "ModifyPushConfigRequestObjectAsync",
+      "description": "Snippet for ModifyPushConfigAsync",
+      "file": "SubscriberClient.ModifyPushConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ModifyPushConfigAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ModifyPushConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ModifyPushConfig",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyPushConfig",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyPushConfig_sync_flattened",
+      "title": "ModifyPushConfig",
+      "description": "Snippet for ModifyPushConfig",
+      "file": "SubscriberClient.ModifyPushConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ModifyPushConfig",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ModifyPushConfig",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ModifyPushConfig",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyPushConfig",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyPushConfig_async_flattened",
+      "title": "ModifyPushConfigAsync",
+      "description": "Snippet for ModifyPushConfigAsync",
+      "file": "SubscriberClient.ModifyPushConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ModifyPushConfigAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ModifyPushConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ModifyPushConfig",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyPushConfig",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyPushConfig_sync_flattened_resourceNames",
+      "title": "ModifyPushConfigResourceNames",
+      "description": "Snippet for ModifyPushConfig",
+      "file": "SubscriberClient.ModifyPushConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ModifyPushConfig",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ModifyPushConfig",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ModifyPushConfig",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyPushConfig",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyPushConfig_async_flattened_resourceNames",
+      "title": "ModifyPushConfigResourceNamesAsync",
+      "description": "Snippet for ModifyPushConfigAsync",
+      "file": "SubscriberClient.ModifyPushConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ModifyPushConfigAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ModifyPushConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ModifyPushConfig",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyPushConfig",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSnapshot_sync",
+      "title": "GetSnapshotRequestObject",
+      "description": "Snippet for GetSnapshot",
+      "file": "SubscriberClient.GetSnapshotRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSnapshot",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.GetSnapshot",
+        "resultType": "Google.Cloud.PubSub.V1.Snapshot",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "GetSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.GetSnapshot",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSnapshot_async",
+      "title": "GetSnapshotRequestObjectAsync",
+      "description": "Snippet for GetSnapshotAsync",
+      "file": "SubscriberClient.GetSnapshotRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSnapshotAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.GetSnapshotAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Snapshot>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "GetSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.GetSnapshot",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSnapshot_sync_flattened",
+      "title": "GetSnapshot",
+      "description": "Snippet for GetSnapshot",
+      "file": "SubscriberClient.GetSnapshotSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSnapshot",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.GetSnapshot",
+        "resultType": "Google.Cloud.PubSub.V1.Snapshot",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "GetSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.GetSnapshot",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSnapshot_async_flattened",
+      "title": "GetSnapshotAsync",
+      "description": "Snippet for GetSnapshotAsync",
+      "file": "SubscriberClient.GetSnapshotAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSnapshotAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.GetSnapshotAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Snapshot>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "GetSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.GetSnapshot",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSnapshot_sync_flattened_resourceNames",
+      "title": "GetSnapshotResourceNames",
+      "description": "Snippet for GetSnapshot",
+      "file": "SubscriberClient.GetSnapshotResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSnapshot",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.GetSnapshot",
+        "resultType": "Google.Cloud.PubSub.V1.Snapshot",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "GetSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.GetSnapshot",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSnapshot_async_flattened_resourceNames",
+      "title": "GetSnapshotResourceNamesAsync",
+      "description": "Snippet for GetSnapshotAsync",
+      "file": "SubscriberClient.GetSnapshotResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSnapshotAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.GetSnapshotAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Snapshot>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "GetSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.GetSnapshot",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSnapshots_sync",
+      "title": "ListSnapshotsRequestObject",
+      "description": "Snippet for ListSnapshots",
+      "file": "SubscriberClient.ListSnapshotsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSnapshots",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshots",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSnapshotsResponse, Google.Cloud.PubSub.V1.Snapshot>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ListSnapshots",
+          "fullName": "google.pubsub.v1.Subscriber.ListSnapshots",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSnapshots_async",
+      "title": "ListSnapshotsRequestObjectAsync",
+      "description": "Snippet for ListSnapshotsAsync",
+      "file": "SubscriberClient.ListSnapshotsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSnapshotsAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshotsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSnapshotsResponse, Google.Cloud.PubSub.V1.Snapshot>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ListSnapshots",
+          "fullName": "google.pubsub.v1.Subscriber.ListSnapshots",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSnapshots_sync_flattened",
+      "title": "ListSnapshots",
+      "description": "Snippet for ListSnapshots",
+      "file": "SubscriberClient.ListSnapshotsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSnapshots",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshots",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSnapshotsResponse, Google.Cloud.PubSub.V1.Snapshot>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ListSnapshots",
+          "fullName": "google.pubsub.v1.Subscriber.ListSnapshots",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSnapshots_async_flattened",
+      "title": "ListSnapshotsAsync",
+      "description": "Snippet for ListSnapshotsAsync",
+      "file": "SubscriberClient.ListSnapshotsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSnapshotsAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshotsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSnapshotsResponse, Google.Cloud.PubSub.V1.Snapshot>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ListSnapshots",
+          "fullName": "google.pubsub.v1.Subscriber.ListSnapshots",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSnapshots_sync_flattened_resourceNames",
+      "title": "ListSnapshotsResourceNames",
+      "description": "Snippet for ListSnapshots",
+      "file": "SubscriberClient.ListSnapshotsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSnapshots",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshots",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSnapshotsResponse, Google.Cloud.PubSub.V1.Snapshot>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ListSnapshots",
+          "fullName": "google.pubsub.v1.Subscriber.ListSnapshots",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSnapshots_async_flattened_resourceNames",
+      "title": "ListSnapshotsResourceNamesAsync",
+      "description": "Snippet for ListSnapshotsAsync",
+      "file": "SubscriberClient.ListSnapshotsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSnapshotsAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshotsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSnapshotsResponse, Google.Cloud.PubSub.V1.Snapshot>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "ListSnapshots",
+          "fullName": "google.pubsub.v1.Subscriber.ListSnapshots",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSnapshot_sync",
+      "title": "CreateSnapshotRequestObject",
+      "description": "Snippet for CreateSnapshot",
+      "file": "SubscriberClient.CreateSnapshotRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSnapshot",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshot",
+        "resultType": "Google.Cloud.PubSub.V1.Snapshot",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "CreateSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSnapshot",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSnapshot_async",
+      "title": "CreateSnapshotRequestObjectAsync",
+      "description": "Snippet for CreateSnapshotAsync",
+      "file": "SubscriberClient.CreateSnapshotRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSnapshotAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Snapshot>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "CreateSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSnapshot",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSnapshot_sync_flattened",
+      "title": "CreateSnapshot",
+      "description": "Snippet for CreateSnapshot",
+      "file": "SubscriberClient.CreateSnapshotSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSnapshot",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshot",
+        "resultType": "Google.Cloud.PubSub.V1.Snapshot",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "CreateSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSnapshot",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSnapshot_async_flattened",
+      "title": "CreateSnapshotAsync",
+      "description": "Snippet for CreateSnapshotAsync",
+      "file": "SubscriberClient.CreateSnapshotAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSnapshotAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Snapshot>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "CreateSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSnapshot",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSnapshot_sync_flattened_resourceNames",
+      "title": "CreateSnapshotResourceNames",
+      "description": "Snippet for CreateSnapshot",
+      "file": "SubscriberClient.CreateSnapshotResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSnapshot",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshot",
+        "resultType": "Google.Cloud.PubSub.V1.Snapshot",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "CreateSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSnapshot",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSnapshot_async_flattened_resourceNames",
+      "title": "CreateSnapshotResourceNamesAsync",
+      "description": "Snippet for CreateSnapshotAsync",
+      "file": "SubscriberClient.CreateSnapshotResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSnapshotAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Snapshot>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "CreateSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSnapshot",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_UpdateSnapshot_sync",
+      "title": "UpdateSnapshotRequestObject",
+      "description": "Snippet for UpdateSnapshot",
+      "file": "SubscriberClient.UpdateSnapshotRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSnapshot",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.UpdateSnapshot",
+        "resultType": "Google.Cloud.PubSub.V1.Snapshot",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "UpdateSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.UpdateSnapshot",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_UpdateSnapshot_async",
+      "title": "UpdateSnapshotRequestObjectAsync",
+      "description": "Snippet for UpdateSnapshotAsync",
+      "file": "SubscriberClient.UpdateSnapshotRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSnapshotAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.UpdateSnapshotAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Snapshot>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "UpdateSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.UpdateSnapshot",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSnapshot_sync",
+      "title": "DeleteSnapshotRequestObject",
+      "description": "Snippet for DeleteSnapshot",
+      "file": "SubscriberClient.DeleteSnapshotRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSnapshot",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshot",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "DeleteSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSnapshot",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSnapshot_async",
+      "title": "DeleteSnapshotRequestObjectAsync",
+      "description": "Snippet for DeleteSnapshotAsync",
+      "file": "SubscriberClient.DeleteSnapshotRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSnapshotAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "DeleteSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSnapshot",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSnapshot_sync_flattened",
+      "title": "DeleteSnapshot",
+      "description": "Snippet for DeleteSnapshot",
+      "file": "SubscriberClient.DeleteSnapshotSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSnapshot",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshot",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "DeleteSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSnapshot",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSnapshot_async_flattened",
+      "title": "DeleteSnapshotAsync",
+      "description": "Snippet for DeleteSnapshotAsync",
+      "file": "SubscriberClient.DeleteSnapshotAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSnapshotAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "DeleteSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSnapshot",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSnapshot_sync_flattened_resourceNames",
+      "title": "DeleteSnapshotResourceNames",
+      "description": "Snippet for DeleteSnapshot",
+      "file": "SubscriberClient.DeleteSnapshotResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSnapshot",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshot",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "DeleteSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSnapshot",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSnapshot_async_flattened_resourceNames",
+      "title": "DeleteSnapshotResourceNamesAsync",
+      "description": "Snippet for DeleteSnapshotAsync",
+      "file": "SubscriberClient.DeleteSnapshotResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSnapshotAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "DeleteSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSnapshot",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_Seek_sync",
+      "title": "SeekRequestObject",
+      "description": "Snippet for Seek",
+      "file": "SubscriberClient.SeekRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Seek",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.Seek",
+        "resultType": "Google.Cloud.PubSub.V1.SeekResponse",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "Seek",
+          "fullName": "google.pubsub.v1.Subscriber.Seek",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "pubsub_v1_generated_Subscriber_Seek_async",
+      "title": "SeekRequestObjectAsync",
+      "description": "Snippet for SeekAsync",
+      "file": "SubscriberClient.SeekRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SeekAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberClient.SeekAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.SeekResponse>",
+        "client": {
+          "shortName": "SubscriberClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberClient"
+        },
+        "method": {
+          "shortName": "Seek",
+          "fullName": "google.pubsub.v1.Subscriber.Seek",
+          "service": {
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    }
+  ]
+}
