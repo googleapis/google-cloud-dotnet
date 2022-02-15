@@ -3,7 +3,7 @@
 //     source: google/api/servicemanagement/v1/servicemanager.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2019 Google LLC.
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.ServiceManagement.V1 {
   /// <summary>
-  /// [Google Service Management API](https://cloud.google.com/service-management/overview)
+  /// [Google Service Management API](/service-management/overview)
   /// </summary>
   public static partial class ServiceManager
   {
@@ -105,10 +105,6 @@ namespace Google.Cloud.ServiceManagement.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportRequest> __Marshaller_google_api_servicemanagement_v1_GenerateConfigReportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportResponse> __Marshaller_google_api_servicemanagement_v1_GenerateConfigReportResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.EnableServiceRequest> __Marshaller_google_api_servicemanagement_v1_EnableServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.EnableServiceRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.DisableServiceRequest> __Marshaller_google_api_servicemanagement_v1_DisableServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.DisableServiceRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ServiceManagement.V1.ListServicesRequest, global::Google.Cloud.ServiceManagement.V1.ListServicesResponse> __Method_ListServices = new grpc::Method<global::Google.Cloud.ServiceManagement.V1.ListServicesRequest, global::Google.Cloud.ServiceManagement.V1.ListServicesResponse>(
@@ -214,22 +210,6 @@ namespace Google.Cloud.ServiceManagement.V1 {
         __Marshaller_google_api_servicemanagement_v1_GenerateConfigReportRequest,
         __Marshaller_google_api_servicemanagement_v1_GenerateConfigReportResponse);
 
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.ServiceManagement.V1.EnableServiceRequest, global::Google.LongRunning.Operation> __Method_EnableService = new grpc::Method<global::Google.Cloud.ServiceManagement.V1.EnableServiceRequest, global::Google.LongRunning.Operation>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "EnableService",
-        __Marshaller_google_api_servicemanagement_v1_EnableServiceRequest,
-        __Marshaller_google_longrunning_Operation);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.ServiceManagement.V1.DisableServiceRequest, global::Google.LongRunning.Operation> __Method_DisableService = new grpc::Method<global::Google.Cloud.ServiceManagement.V1.DisableServiceRequest, global::Google.LongRunning.Operation>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "DisableService",
-        __Marshaller_google_api_servicemanagement_v1_DisableServiceRequest,
-        __Marshaller_google_longrunning_Operation);
-
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -246,10 +226,6 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// Returns all public services. For authenticated users, also returns all
       /// services the calling user has "servicemanagement.services.get" permission
       /// for.
-      ///
-      /// **BETA:** If the caller specifies the `consumer_id`, it returns only the
-      /// services enabled on the consumer. The `consumer_id` must have the format
-      /// of "project:{PROJECT-ID}".
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -275,7 +251,14 @@ namespace Google.Cloud.ServiceManagement.V1 {
 
       /// <summary>
       /// Creates a new managed service.
-      /// Please note one producer project can own no more than 20 services.
+      ///
+      /// A managed service is immutable, and is subject to mandatory 30-day
+      /// data retention. You cannot move a service or recreate it within 30 days
+      /// after deletion.
+      ///
+      /// One producer project can own no more than 500 services. For security and
+      /// reliability purposes, a production service should be hosted in a
+      /// dedicated producer project.
       ///
       /// Operation&lt;response: ManagedService>
       /// </summary>
@@ -462,39 +445,6 @@ namespace Google.Cloud.ServiceManagement.V1 {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      /// <summary>
-      /// Enables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can be used
-      /// for the project. See
-      /// [Cloud Auth Guide](https://cloud.google.com/docs/authentication) for
-      /// more information.
-      ///
-      /// Operation&lt;response: EnableServiceResponse>
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> EnableService(global::Google.Cloud.ServiceManagement.V1.EnableServiceRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Disables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can no longer be
-      /// be used for the project. It prevents accidental usage that may cause
-      /// unexpected billing charges or security leaks.
-      ///
-      /// Operation&lt;response: DisableServiceResponse>
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DisableService(global::Google.Cloud.ServiceManagement.V1.DisableServiceRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
     }
 
     /// <summary>Client for ServiceManager</summary>
@@ -530,10 +480,6 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// Returns all public services. For authenticated users, also returns all
       /// services the calling user has "servicemanagement.services.get" permission
       /// for.
-      ///
-      /// **BETA:** If the caller specifies the `consumer_id`, it returns only the
-      /// services enabled on the consumer. The `consumer_id` must have the format
-      /// of "project:{PROJECT-ID}".
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -551,10 +497,6 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// Returns all public services. For authenticated users, also returns all
       /// services the calling user has "servicemanagement.services.get" permission
       /// for.
-      ///
-      /// **BETA:** If the caller specifies the `consumer_id`, it returns only the
-      /// services enabled on the consumer. The `consumer_id` must have the format
-      /// of "project:{PROJECT-ID}".
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -570,10 +512,6 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// Returns all public services. For authenticated users, also returns all
       /// services the calling user has "servicemanagement.services.get" permission
       /// for.
-      ///
-      /// **BETA:** If the caller specifies the `consumer_id`, it returns only the
-      /// services enabled on the consumer. The `consumer_id` must have the format
-      /// of "project:{PROJECT-ID}".
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -591,10 +529,6 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// Returns all public services. For authenticated users, also returns all
       /// services the calling user has "servicemanagement.services.get" permission
       /// for.
-      ///
-      /// **BETA:** If the caller specifies the `consumer_id`, it returns only the
-      /// services enabled on the consumer. The `consumer_id` must have the format
-      /// of "project:{PROJECT-ID}".
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -658,7 +592,14 @@ namespace Google.Cloud.ServiceManagement.V1 {
       }
       /// <summary>
       /// Creates a new managed service.
-      /// Please note one producer project can own no more than 20 services.
+      ///
+      /// A managed service is immutable, and is subject to mandatory 30-day
+      /// data retention. You cannot move a service or recreate it within 30 days
+      /// after deletion.
+      ///
+      /// One producer project can own no more than 500 services. For security and
+      /// reliability purposes, a production service should be hosted in a
+      /// dedicated producer project.
       ///
       /// Operation&lt;response: ManagedService>
       /// </summary>
@@ -674,7 +615,14 @@ namespace Google.Cloud.ServiceManagement.V1 {
       }
       /// <summary>
       /// Creates a new managed service.
-      /// Please note one producer project can own no more than 20 services.
+      ///
+      /// A managed service is immutable, and is subject to mandatory 30-day
+      /// data retention. You cannot move a service or recreate it within 30 days
+      /// after deletion.
+      ///
+      /// One producer project can own no more than 500 services. For security and
+      /// reliability purposes, a production service should be hosted in a
+      /// dedicated producer project.
       ///
       /// Operation&lt;response: ManagedService>
       /// </summary>
@@ -688,7 +636,14 @@ namespace Google.Cloud.ServiceManagement.V1 {
       }
       /// <summary>
       /// Creates a new managed service.
-      /// Please note one producer project can own no more than 20 services.
+      ///
+      /// A managed service is immutable, and is subject to mandatory 30-day
+      /// data retention. You cannot move a service or recreate it within 30 days
+      /// after deletion.
+      ///
+      /// One producer project can own no more than 500 services. For security and
+      /// reliability purposes, a production service should be hosted in a
+      /// dedicated producer project.
       ///
       /// Operation&lt;response: ManagedService>
       /// </summary>
@@ -704,7 +659,14 @@ namespace Google.Cloud.ServiceManagement.V1 {
       }
       /// <summary>
       /// Creates a new managed service.
-      /// Please note one producer project can own no more than 20 services.
+      ///
+      /// A managed service is immutable, and is subject to mandatory 30-day
+      /// data retention. You cannot move a service or recreate it within 30 days
+      /// after deletion.
+      ///
+      /// One producer project can own no more than 500 services. For security and
+      /// reliability purposes, a production service should be hosted in a
+      /// dedicated producer project.
       ///
       /// Operation&lt;response: ManagedService>
       /// </summary>
@@ -1412,138 +1374,6 @@ namespace Google.Cloud.ServiceManagement.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GenerateConfigReport, null, options, request);
       }
-      /// <summary>
-      /// Enables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can be used
-      /// for the project. See
-      /// [Cloud Auth Guide](https://cloud.google.com/docs/authentication) for
-      /// more information.
-      ///
-      /// Operation&lt;response: EnableServiceResponse>
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.LongRunning.Operation EnableService(global::Google.Cloud.ServiceManagement.V1.EnableServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return EnableService(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Enables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can be used
-      /// for the project. See
-      /// [Cloud Auth Guide](https://cloud.google.com/docs/authentication) for
-      /// more information.
-      ///
-      /// Operation&lt;response: EnableServiceResponse>
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.LongRunning.Operation EnableService(global::Google.Cloud.ServiceManagement.V1.EnableServiceRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_EnableService, null, options, request);
-      }
-      /// <summary>
-      /// Enables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can be used
-      /// for the project. See
-      /// [Cloud Auth Guide](https://cloud.google.com/docs/authentication) for
-      /// more information.
-      ///
-      /// Operation&lt;response: EnableServiceResponse>
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EnableServiceAsync(global::Google.Cloud.ServiceManagement.V1.EnableServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return EnableServiceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Enables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can be used
-      /// for the project. See
-      /// [Cloud Auth Guide](https://cloud.google.com/docs/authentication) for
-      /// more information.
-      ///
-      /// Operation&lt;response: EnableServiceResponse>
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EnableServiceAsync(global::Google.Cloud.ServiceManagement.V1.EnableServiceRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_EnableService, null, options, request);
-      }
-      /// <summary>
-      /// Disables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can no longer be
-      /// be used for the project. It prevents accidental usage that may cause
-      /// unexpected billing charges or security leaks.
-      ///
-      /// Operation&lt;response: DisableServiceResponse>
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.LongRunning.Operation DisableService(global::Google.Cloud.ServiceManagement.V1.DisableServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return DisableService(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Disables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can no longer be
-      /// be used for the project. It prevents accidental usage that may cause
-      /// unexpected billing charges or security leaks.
-      ///
-      /// Operation&lt;response: DisableServiceResponse>
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.LongRunning.Operation DisableService(global::Google.Cloud.ServiceManagement.V1.DisableServiceRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_DisableService, null, options, request);
-      }
-      /// <summary>
-      /// Disables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can no longer be
-      /// be used for the project. It prevents accidental usage that may cause
-      /// unexpected billing charges or security leaks.
-      ///
-      /// Operation&lt;response: DisableServiceResponse>
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DisableServiceAsync(global::Google.Cloud.ServiceManagement.V1.DisableServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return DisableServiceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Disables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can no longer be
-      /// be used for the project. It prevents accidental usage that may cause
-      /// unexpected billing charges or security leaks.
-      ///
-      /// Operation&lt;response: DisableServiceResponse>
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DisableServiceAsync(global::Google.Cloud.ServiceManagement.V1.DisableServiceRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_DisableService, null, options, request);
-      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ServiceManagerClient NewInstance(ClientBaseConfiguration configuration)
@@ -1570,9 +1400,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
           .AddMethod(__Method_ListServiceRollouts, serviceImpl.ListServiceRollouts)
           .AddMethod(__Method_GetServiceRollout, serviceImpl.GetServiceRollout)
           .AddMethod(__Method_CreateServiceRollout, serviceImpl.CreateServiceRollout)
-          .AddMethod(__Method_GenerateConfigReport, serviceImpl.GenerateConfigReport)
-          .AddMethod(__Method_EnableService, serviceImpl.EnableService)
-          .AddMethod(__Method_DisableService, serviceImpl.DisableService).Build();
+          .AddMethod(__Method_GenerateConfigReport, serviceImpl.GenerateConfigReport).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -1595,8 +1423,6 @@ namespace Google.Cloud.ServiceManagement.V1 {
       serviceBinder.AddMethod(__Method_GetServiceRollout, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ServiceManagement.V1.GetServiceRolloutRequest, global::Google.Cloud.ServiceManagement.V1.Rollout>(serviceImpl.GetServiceRollout));
       serviceBinder.AddMethod(__Method_CreateServiceRollout, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ServiceManagement.V1.CreateServiceRolloutRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateServiceRollout));
       serviceBinder.AddMethod(__Method_GenerateConfigReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportRequest, global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportResponse>(serviceImpl.GenerateConfigReport));
-      serviceBinder.AddMethod(__Method_EnableService, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ServiceManagement.V1.EnableServiceRequest, global::Google.LongRunning.Operation>(serviceImpl.EnableService));
-      serviceBinder.AddMethod(__Method_DisableService, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ServiceManagement.V1.DisableServiceRequest, global::Google.LongRunning.Operation>(serviceImpl.DisableService));
     }
 
   }

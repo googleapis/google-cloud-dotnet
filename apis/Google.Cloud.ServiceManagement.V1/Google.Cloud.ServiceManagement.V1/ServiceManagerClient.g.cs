@@ -65,10 +65,6 @@ namespace Google.Cloud.ServiceManagement.V1
             CreateServiceRolloutSettings = existing.CreateServiceRolloutSettings;
             CreateServiceRolloutOperationsSettings = existing.CreateServiceRolloutOperationsSettings.Clone();
             GenerateConfigReportSettings = existing.GenerateConfigReportSettings;
-            EnableServiceSettings = existing.EnableServiceSettings;
-            EnableServiceOperationsSettings = existing.EnableServiceOperationsSettings.Clone();
-            DisableServiceSettings = existing.DisableServiceSettings;
-            DisableServiceOperationsSettings = existing.DisableServiceOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -320,66 +316,6 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </remarks>
         public gaxgrpc::CallSettings GenerateConfigReportSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(10000)));
 
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>ServiceManagerClient.EnableService</c> and <c>ServiceManagerClient.EnableServiceAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 10 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings EnableServiceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(10000)));
-
-        /// <summary>
-        /// Long Running Operation settings for calls to <c>ServiceManagerClient.EnableService</c> and
-        /// <c>ServiceManagerClient.EnableServiceAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// Uses default <see cref="gax::PollSettings"/> of:
-        /// <list type="bullet">
-        /// <item><description>Initial delay: 20 seconds.</description></item>
-        /// <item><description>Delay multiplier: 1.5</description></item>
-        /// <item><description>Maximum delay: 45 seconds.</description></item>
-        /// <item><description>Total timeout: 24 hours.</description></item>
-        /// </list>
-        /// </remarks>
-        public lro::OperationsSettings EnableServiceOperationsSettings { get; set; } = new lro::OperationsSettings
-        {
-            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
-        };
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>ServiceManagerClient.DisableService</c> and <c>ServiceManagerClient.DisableServiceAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 10 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings DisableServiceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(10000)));
-
-        /// <summary>
-        /// Long Running Operation settings for calls to <c>ServiceManagerClient.DisableService</c> and
-        /// <c>ServiceManagerClient.DisableServiceAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// Uses default <see cref="gax::PollSettings"/> of:
-        /// <list type="bullet">
-        /// <item><description>Initial delay: 20 seconds.</description></item>
-        /// <item><description>Delay multiplier: 1.5</description></item>
-        /// <item><description>Maximum delay: 45 seconds.</description></item>
-        /// <item><description>Total timeout: 24 hours.</description></item>
-        /// </list>
-        /// </remarks>
-        public lro::OperationsSettings DisableServiceOperationsSettings { get; set; } = new lro::OperationsSettings
-        {
-            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
-        };
-
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ServiceManagerSettings"/> object.</returns>
         public ServiceManagerSettings Clone() => new ServiceManagerSettings(this);
@@ -451,7 +387,7 @@ namespace Google.Cloud.ServiceManagement.V1
 
     /// <summary>ServiceManager client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// [Google Service Management API](https://cloud.google.com/service-management/overview)
+    /// [Google Service Management API](/service-management/overview)
     /// </remarks>
     public abstract partial class ServiceManagerClient
     {
@@ -553,10 +489,6 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Returns all public services. For authenticated users, also returns all
         /// services the calling user has "servicemanagement.services.get" permission
         /// for.
-        /// 
-        /// **BETA:** If the caller specifies the `consumer_id`, it returns only the
-        /// services enabled on the consumer. The `consumer_id` must have the format
-        /// of "project:{PROJECT-ID}".
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -570,10 +502,6 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Returns all public services. For authenticated users, also returns all
         /// services the calling user has "servicemanagement.services.get" permission
         /// for.
-        /// 
-        /// **BETA:** If the caller specifies the `consumer_id`, it returns only the
-        /// services enabled on the consumer. The `consumer_id` must have the format
-        /// of "project:{PROJECT-ID}".
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -587,10 +515,6 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Returns all public services. For authenticated users, also returns all
         /// services the calling user has "servicemanagement.services.get" permission
         /// for.
-        /// 
-        /// **BETA:** If the caller specifies the `consumer_id`, it returns only the
-        /// services enabled on the consumer. The `consumer_id` must have the format
-        /// of "project:{PROJECT-ID}".
         /// </summary>
         /// <param name="producerProjectId">
         /// Include services produced by the specified project.
@@ -628,10 +552,6 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Returns all public services. For authenticated users, also returns all
         /// services the calling user has "servicemanagement.services.get" permission
         /// for.
-        /// 
-        /// **BETA:** If the caller specifies the `consumer_id`, it returns only the
-        /// services enabled on the consumer. The `consumer_id` must have the format
-        /// of "project:{PROJECT-ID}".
         /// </summary>
         /// <param name="producerProjectId">
         /// Include services produced by the specified project.
@@ -740,7 +660,14 @@ namespace Google.Cloud.ServiceManagement.V1
 
         /// <summary>
         /// Creates a new managed service.
-        /// Please note one producer project can own no more than 20 services.
+        /// 
+        /// A managed service is immutable, and is subject to mandatory 30-day
+        /// data retention. You cannot move a service or recreate it within 30 days
+        /// after deletion.
+        /// 
+        /// One producer project can own no more than 500 services. For security and
+        /// reliability purposes, a production service should be hosted in a
+        /// dedicated producer project.
         /// 
         /// Operation&amp;lt;response: ManagedService&amp;gt;
         /// </summary>
@@ -752,7 +679,14 @@ namespace Google.Cloud.ServiceManagement.V1
 
         /// <summary>
         /// Creates a new managed service.
-        /// Please note one producer project can own no more than 20 services.
+        /// 
+        /// A managed service is immutable, and is subject to mandatory 30-day
+        /// data retention. You cannot move a service or recreate it within 30 days
+        /// after deletion.
+        /// 
+        /// One producer project can own no more than 500 services. For security and
+        /// reliability purposes, a production service should be hosted in a
+        /// dedicated producer project.
         /// 
         /// Operation&amp;lt;response: ManagedService&amp;gt;
         /// </summary>
@@ -764,7 +698,14 @@ namespace Google.Cloud.ServiceManagement.V1
 
         /// <summary>
         /// Creates a new managed service.
-        /// Please note one producer project can own no more than 20 services.
+        /// 
+        /// A managed service is immutable, and is subject to mandatory 30-day
+        /// data retention. You cannot move a service or recreate it within 30 days
+        /// after deletion.
+        /// 
+        /// One producer project can own no more than 500 services. For security and
+        /// reliability purposes, a production service should be hosted in a
+        /// dedicated producer project.
         /// 
         /// Operation&amp;lt;response: ManagedService&amp;gt;
         /// </summary>
@@ -802,7 +743,14 @@ namespace Google.Cloud.ServiceManagement.V1
 
         /// <summary>
         /// Creates a new managed service.
-        /// Please note one producer project can own no more than 20 services.
+        /// 
+        /// A managed service is immutable, and is subject to mandatory 30-day
+        /// data retention. You cannot move a service or recreate it within 30 days
+        /// after deletion.
+        /// 
+        /// One producer project can own no more than 500 services. For security and
+        /// reliability purposes, a production service should be hosted in a
+        /// dedicated producer project.
         /// 
         /// Operation&amp;lt;response: ManagedService&amp;gt;
         /// </summary>
@@ -819,7 +767,14 @@ namespace Google.Cloud.ServiceManagement.V1
 
         /// <summary>
         /// Creates a new managed service.
-        /// Please note one producer project can own no more than 20 services.
+        /// 
+        /// A managed service is immutable, and is subject to mandatory 30-day
+        /// data retention. You cannot move a service or recreate it within 30 days
+        /// after deletion.
+        /// 
+        /// One producer project can own no more than 500 services. For security and
+        /// reliability purposes, a production service should be hosted in a
+        /// dedicated producer project.
         /// 
         /// Operation&amp;lt;response: ManagedService&amp;gt;
         /// </summary>
@@ -836,7 +791,14 @@ namespace Google.Cloud.ServiceManagement.V1
 
         /// <summary>
         /// Creates a new managed service.
-        /// Please note one producer project can own no more than 20 services.
+        /// 
+        /// A managed service is immutable, and is subject to mandatory 30-day
+        /// data retention. You cannot move a service or recreate it within 30 days
+        /// after deletion.
+        /// 
+        /// One producer project can own no more than 500 services. For security and
+        /// reliability purposes, a production service should be hosted in a
+        /// dedicated producer project.
         /// 
         /// Operation&amp;lt;response: ManagedService&amp;gt;
         /// </summary>
@@ -925,7 +887,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Operation&amp;lt;response: google.protobuf.Empty&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service.  See the [overview](/service-management/overview)
         /// for naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -945,7 +907,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Operation&amp;lt;response: google.protobuf.Empty&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service.  See the [overview](/service-management/overview)
         /// for naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -965,7 +927,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Operation&amp;lt;response: google.protobuf.Empty&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service.  See the [overview](/service-management/overview)
         /// for naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1050,7 +1012,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Operation&amp;lt;response: UndeleteServiceResponse&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service. See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service. See the [overview](/service-management/overview)
         /// for naming requirements. For example: `example.googleapis.com`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1070,7 +1032,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Operation&amp;lt;response: UndeleteServiceResponse&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service. See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service. See the [overview](/service-management/overview)
         /// for naming requirements. For example: `example.googleapis.com`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1090,7 +1052,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Operation&amp;lt;response: UndeleteServiceResponse&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service. See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service. See the [overview](/service-management/overview)
         /// for naming requirements. For example: `example.googleapis.com`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1123,7 +1085,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// from the newest to the oldest.
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service.  See the [overview](/service-management/overview)
         /// for naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="pageToken">
@@ -1149,7 +1111,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// from the newest to the oldest.
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service.  See the [overview](/service-management/overview)
         /// for naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="pageToken">
@@ -1201,7 +1163,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Gets a service configuration (version) for a managed service.
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service.  See the [overview](/service-management/overview)
         /// for naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="configId">
@@ -1228,7 +1190,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Gets a service configuration (version) for a managed service.
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service.  See the [overview](/service-management/overview)
         /// for naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="configId">
@@ -1255,7 +1217,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Gets a service configuration (version) for a managed service.
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service.  See the [overview](/service-management/overview)
         /// for naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="configId">
@@ -1332,7 +1294,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// eventually.
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service.  See the [overview](/service-management/overview)
         /// for naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="serviceConfig">
@@ -1358,7 +1320,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// eventually.
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service.  See the [overview](/service-management/overview)
         /// for naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="serviceConfig">
@@ -1384,7 +1346,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// eventually.
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service.  See the [overview](/service-management/overview)
         /// for naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="serviceConfig">
@@ -1501,7 +1463,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Operation&amp;lt;response: SubmitConfigSourceResponse&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service.  See the [overview](/service-management/overview)
         /// for naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="configSource">
@@ -1538,7 +1500,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Operation&amp;lt;response: SubmitConfigSourceResponse&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service.  See the [overview](/service-management/overview)
         /// for naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="configSource">
@@ -1575,7 +1537,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Operation&amp;lt;response: SubmitConfigSourceResponse&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service.  See the [overview](/service-management/overview)
         /// for naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="configSource">
@@ -1616,17 +1578,17 @@ namespace Google.Cloud.ServiceManagement.V1
         /// service, from the newest to the oldest.
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service.  See the [overview](/service-management/overview)
         /// for naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="filter">
         /// Required. Use `filter` to return subset of rollouts.
         /// The following filters are supported:
         /// -- To limit the results to only those in
-        /// status (google.api.servicemanagement.v1.RolloutStatus) 'SUCCESS',
+        /// [status](google.api.servicemanagement.v1.RolloutStatus) 'SUCCESS',
         /// use filter='status=SUCCESS'
         /// -- To limit the results to those in
-        /// status (google.api.servicemanagement.v1.RolloutStatus) 'CANCELLED'
+        /// [status](google.api.servicemanagement.v1.RolloutStatus) 'CANCELLED'
         /// or 'FAILED', use filter='status=CANCELLED OR status=FAILED'
         /// </param>
         /// <param name="pageToken">
@@ -1653,17 +1615,17 @@ namespace Google.Cloud.ServiceManagement.V1
         /// service, from the newest to the oldest.
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service.  See the [overview](/service-management/overview)
         /// for naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="filter">
         /// Required. Use `filter` to return subset of rollouts.
         /// The following filters are supported:
         /// -- To limit the results to only those in
-        /// status (google.api.servicemanagement.v1.RolloutStatus) 'SUCCESS',
+        /// [status](google.api.servicemanagement.v1.RolloutStatus) 'SUCCESS',
         /// use filter='status=SUCCESS'
         /// -- To limit the results to those in
-        /// status (google.api.servicemanagement.v1.RolloutStatus) 'CANCELLED'
+        /// [status](google.api.servicemanagement.v1.RolloutStatus) 'CANCELLED'
         /// or 'FAILED', use filter='status=CANCELLED OR status=FAILED'
         /// </param>
         /// <param name="pageToken">
@@ -1716,7 +1678,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Gets a service configuration [rollout][google.api.servicemanagement.v1.Rollout].
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service.  See the [overview](/service-management/overview)
         /// for naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="rolloutId">
@@ -1735,7 +1697,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Gets a service configuration [rollout][google.api.servicemanagement.v1.Rollout].
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service.  See the [overview](/service-management/overview)
         /// for naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="rolloutId">
@@ -1754,7 +1716,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Gets a service configuration [rollout][google.api.servicemanagement.v1.Rollout].
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service.  See the [overview](/service-management/overview)
         /// for naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="rolloutId">
@@ -1875,7 +1837,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Operation&amp;lt;response: Rollout&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service.  See the [overview](/service-management/overview)
         /// for naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="rollout">
@@ -1907,7 +1869,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Operation&amp;lt;response: Rollout&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service.  See the [overview](/service-management/overview)
         /// for naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="rollout">
@@ -1939,7 +1901,7 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Operation&amp;lt;response: Rollout&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](https://cloud.google.com/service-management/overview)
+        /// Required. The name of the service.  See the [overview](/service-management/overview)
         /// for naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="rollout">
@@ -2110,341 +2072,11 @@ namespace Google.Cloud.ServiceManagement.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<GenerateConfigReportResponse> GenerateConfigReportAsync(wkt::Any newConfig, wkt::Any oldConfig, st::CancellationToken cancellationToken) =>
             GenerateConfigReportAsync(newConfig, oldConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Enables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can be used
-        /// for the project. See
-        /// [Cloud Auth Guide](https://cloud.google.com/docs/authentication) for
-        /// more information.
-        /// 
-        /// Operation&amp;lt;response: EnableServiceResponse&amp;gt;
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        [sys::ObsoleteAttribute]
-        public virtual lro::Operation<EnableServiceResponse, OperationMetadata> EnableService(EnableServiceRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Enables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can be used
-        /// for the project. See
-        /// [Cloud Auth Guide](https://cloud.google.com/docs/authentication) for
-        /// more information.
-        /// 
-        /// Operation&amp;lt;response: EnableServiceResponse&amp;gt;
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        [sys::ObsoleteAttribute]
-        public virtual stt::Task<lro::Operation<EnableServiceResponse, OperationMetadata>> EnableServiceAsync(EnableServiceRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Enables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can be used
-        /// for the project. See
-        /// [Cloud Auth Guide](https://cloud.google.com/docs/authentication) for
-        /// more information.
-        /// 
-        /// Operation&amp;lt;response: EnableServiceResponse&amp;gt;
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        [sys::ObsoleteAttribute]
-        public virtual stt::Task<lro::Operation<EnableServiceResponse, OperationMetadata>> EnableServiceAsync(EnableServiceRequest request, st::CancellationToken cancellationToken) =>
-            EnableServiceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>The long-running operations client for <c>EnableService</c>.</summary>
-        public virtual lro::OperationsClient EnableServiceOperationsClient => throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>EnableService</c>.
-        /// </summary>
-        /// <param name="operationName">
-        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The result of polling the operation.</returns>
-        [sys::ObsoleteAttribute]
-        public virtual lro::Operation<EnableServiceResponse, OperationMetadata> PollOnceEnableService(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<EnableServiceResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), EnableServiceOperationsClient, callSettings);
-
-        /// <summary>
-        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
-        /// <c>EnableService</c>.
-        /// </summary>
-        /// <param name="operationName">
-        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A task representing the result of polling the operation.</returns>
-        [sys::ObsoleteAttribute]
-        public virtual stt::Task<lro::Operation<EnableServiceResponse, OperationMetadata>> PollOnceEnableServiceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<EnableServiceResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), EnableServiceOperationsClient, callSettings);
-
-        /// <summary>
-        /// Enables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can be used
-        /// for the project. See
-        /// [Cloud Auth Guide](https://cloud.google.com/docs/authentication) for
-        /// more information.
-        /// 
-        /// Operation&amp;lt;response: EnableServiceResponse&amp;gt;
-        /// </summary>
-        /// <param name="serviceName">
-        /// Required. Name of the service to enable. Specifying an unknown service name will
-        /// cause the request to fail.
-        /// </param>
-        /// <param name="consumerId">
-        /// Required. The identity of consumer resource which service enablement will be
-        /// applied to.
-        /// 
-        /// The Google Service Management implementation accepts the following
-        /// forms:
-        /// - "project:&amp;lt;project_id&amp;gt;"
-        /// 
-        /// Note: this is made compatible with
-        /// google.api.servicecontrol.v1.Operation.consumer_id.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        [sys::ObsoleteAttribute]
-        public virtual lro::Operation<EnableServiceResponse, OperationMetadata> EnableService(string serviceName, string consumerId, gaxgrpc::CallSettings callSettings = null) =>
-            EnableService(new EnableServiceRequest
-            {
-                ServiceName = gax::GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName)),
-                ConsumerId = gax::GaxPreconditions.CheckNotNullOrEmpty(consumerId, nameof(consumerId)),
-            }, callSettings);
-
-        /// <summary>
-        /// Enables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can be used
-        /// for the project. See
-        /// [Cloud Auth Guide](https://cloud.google.com/docs/authentication) for
-        /// more information.
-        /// 
-        /// Operation&amp;lt;response: EnableServiceResponse&amp;gt;
-        /// </summary>
-        /// <param name="serviceName">
-        /// Required. Name of the service to enable. Specifying an unknown service name will
-        /// cause the request to fail.
-        /// </param>
-        /// <param name="consumerId">
-        /// Required. The identity of consumer resource which service enablement will be
-        /// applied to.
-        /// 
-        /// The Google Service Management implementation accepts the following
-        /// forms:
-        /// - "project:&amp;lt;project_id&amp;gt;"
-        /// 
-        /// Note: this is made compatible with
-        /// google.api.servicecontrol.v1.Operation.consumer_id.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        [sys::ObsoleteAttribute]
-        public virtual stt::Task<lro::Operation<EnableServiceResponse, OperationMetadata>> EnableServiceAsync(string serviceName, string consumerId, gaxgrpc::CallSettings callSettings = null) =>
-            EnableServiceAsync(new EnableServiceRequest
-            {
-                ServiceName = gax::GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName)),
-                ConsumerId = gax::GaxPreconditions.CheckNotNullOrEmpty(consumerId, nameof(consumerId)),
-            }, callSettings);
-
-        /// <summary>
-        /// Enables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can be used
-        /// for the project. See
-        /// [Cloud Auth Guide](https://cloud.google.com/docs/authentication) for
-        /// more information.
-        /// 
-        /// Operation&amp;lt;response: EnableServiceResponse&amp;gt;
-        /// </summary>
-        /// <param name="serviceName">
-        /// Required. Name of the service to enable. Specifying an unknown service name will
-        /// cause the request to fail.
-        /// </param>
-        /// <param name="consumerId">
-        /// Required. The identity of consumer resource which service enablement will be
-        /// applied to.
-        /// 
-        /// The Google Service Management implementation accepts the following
-        /// forms:
-        /// - "project:&amp;lt;project_id&amp;gt;"
-        /// 
-        /// Note: this is made compatible with
-        /// google.api.servicecontrol.v1.Operation.consumer_id.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        [sys::ObsoleteAttribute]
-        public virtual stt::Task<lro::Operation<EnableServiceResponse, OperationMetadata>> EnableServiceAsync(string serviceName, string consumerId, st::CancellationToken cancellationToken) =>
-            EnableServiceAsync(serviceName, consumerId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Disables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can no longer be
-        /// be used for the project. It prevents accidental usage that may cause
-        /// unexpected billing charges or security leaks.
-        /// 
-        /// Operation&amp;lt;response: DisableServiceResponse&amp;gt;
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        [sys::ObsoleteAttribute]
-        public virtual lro::Operation<DisableServiceResponse, OperationMetadata> DisableService(DisableServiceRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Disables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can no longer be
-        /// be used for the project. It prevents accidental usage that may cause
-        /// unexpected billing charges or security leaks.
-        /// 
-        /// Operation&amp;lt;response: DisableServiceResponse&amp;gt;
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        [sys::ObsoleteAttribute]
-        public virtual stt::Task<lro::Operation<DisableServiceResponse, OperationMetadata>> DisableServiceAsync(DisableServiceRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Disables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can no longer be
-        /// be used for the project. It prevents accidental usage that may cause
-        /// unexpected billing charges or security leaks.
-        /// 
-        /// Operation&amp;lt;response: DisableServiceResponse&amp;gt;
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        [sys::ObsoleteAttribute]
-        public virtual stt::Task<lro::Operation<DisableServiceResponse, OperationMetadata>> DisableServiceAsync(DisableServiceRequest request, st::CancellationToken cancellationToken) =>
-            DisableServiceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>The long-running operations client for <c>DisableService</c>.</summary>
-        public virtual lro::OperationsClient DisableServiceOperationsClient => throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DisableService</c>.
-        /// </summary>
-        /// <param name="operationName">
-        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The result of polling the operation.</returns>
-        [sys::ObsoleteAttribute]
-        public virtual lro::Operation<DisableServiceResponse, OperationMetadata> PollOnceDisableService(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<DisableServiceResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DisableServiceOperationsClient, callSettings);
-
-        /// <summary>
-        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
-        /// <c>DisableService</c>.
-        /// </summary>
-        /// <param name="operationName">
-        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A task representing the result of polling the operation.</returns>
-        [sys::ObsoleteAttribute]
-        public virtual stt::Task<lro::Operation<DisableServiceResponse, OperationMetadata>> PollOnceDisableServiceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<DisableServiceResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DisableServiceOperationsClient, callSettings);
-
-        /// <summary>
-        /// Disables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can no longer be
-        /// be used for the project. It prevents accidental usage that may cause
-        /// unexpected billing charges or security leaks.
-        /// 
-        /// Operation&amp;lt;response: DisableServiceResponse&amp;gt;
-        /// </summary>
-        /// <param name="serviceName">
-        /// Required. Name of the service to disable. Specifying an unknown service name
-        /// will cause the request to fail.
-        /// </param>
-        /// <param name="consumerId">
-        /// Required. The identity of consumer resource which service disablement will be
-        /// applied to.
-        /// 
-        /// The Google Service Management implementation accepts the following
-        /// forms:
-        /// - "project:&amp;lt;project_id&amp;gt;"
-        /// 
-        /// Note: this is made compatible with
-        /// google.api.servicecontrol.v1.Operation.consumer_id.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        [sys::ObsoleteAttribute]
-        public virtual lro::Operation<DisableServiceResponse, OperationMetadata> DisableService(string serviceName, string consumerId, gaxgrpc::CallSettings callSettings = null) =>
-            DisableService(new DisableServiceRequest
-            {
-                ServiceName = gax::GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName)),
-                ConsumerId = gax::GaxPreconditions.CheckNotNullOrEmpty(consumerId, nameof(consumerId)),
-            }, callSettings);
-
-        /// <summary>
-        /// Disables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can no longer be
-        /// be used for the project. It prevents accidental usage that may cause
-        /// unexpected billing charges or security leaks.
-        /// 
-        /// Operation&amp;lt;response: DisableServiceResponse&amp;gt;
-        /// </summary>
-        /// <param name="serviceName">
-        /// Required. Name of the service to disable. Specifying an unknown service name
-        /// will cause the request to fail.
-        /// </param>
-        /// <param name="consumerId">
-        /// Required. The identity of consumer resource which service disablement will be
-        /// applied to.
-        /// 
-        /// The Google Service Management implementation accepts the following
-        /// forms:
-        /// - "project:&amp;lt;project_id&amp;gt;"
-        /// 
-        /// Note: this is made compatible with
-        /// google.api.servicecontrol.v1.Operation.consumer_id.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        [sys::ObsoleteAttribute]
-        public virtual stt::Task<lro::Operation<DisableServiceResponse, OperationMetadata>> DisableServiceAsync(string serviceName, string consumerId, gaxgrpc::CallSettings callSettings = null) =>
-            DisableServiceAsync(new DisableServiceRequest
-            {
-                ServiceName = gax::GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName)),
-                ConsumerId = gax::GaxPreconditions.CheckNotNullOrEmpty(consumerId, nameof(consumerId)),
-            }, callSettings);
-
-        /// <summary>
-        /// Disables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can no longer be
-        /// be used for the project. It prevents accidental usage that may cause
-        /// unexpected billing charges or security leaks.
-        /// 
-        /// Operation&amp;lt;response: DisableServiceResponse&amp;gt;
-        /// </summary>
-        /// <param name="serviceName">
-        /// Required. Name of the service to disable. Specifying an unknown service name
-        /// will cause the request to fail.
-        /// </param>
-        /// <param name="consumerId">
-        /// Required. The identity of consumer resource which service disablement will be
-        /// applied to.
-        /// 
-        /// The Google Service Management implementation accepts the following
-        /// forms:
-        /// - "project:&amp;lt;project_id&amp;gt;"
-        /// 
-        /// Note: this is made compatible with
-        /// google.api.servicecontrol.v1.Operation.consumer_id.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        [sys::ObsoleteAttribute]
-        public virtual stt::Task<lro::Operation<DisableServiceResponse, OperationMetadata>> DisableServiceAsync(string serviceName, string consumerId, st::CancellationToken cancellationToken) =>
-            DisableServiceAsync(serviceName, consumerId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ServiceManager client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// [Google Service Management API](https://cloud.google.com/service-management/overview)
+    /// [Google Service Management API](/service-management/overview)
     /// </remarks>
     public sealed partial class ServiceManagerClientImpl : ServiceManagerClient
     {
@@ -2474,10 +2106,6 @@ namespace Google.Cloud.ServiceManagement.V1
 
         private readonly gaxgrpc::ApiCall<GenerateConfigReportRequest, GenerateConfigReportResponse> _callGenerateConfigReport;
 
-        private readonly gaxgrpc::ApiCall<EnableServiceRequest, lro::Operation> _callEnableService;
-
-        private readonly gaxgrpc::ApiCall<DisableServiceRequest, lro::Operation> _callDisableService;
-
         /// <summary>
         /// Constructs a client wrapper for the ServiceManager service, with the specified gRPC client and settings.
         /// </summary>
@@ -2493,8 +2121,6 @@ namespace Google.Cloud.ServiceManagement.V1
             UndeleteServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeleteServiceOperationsSettings);
             SubmitConfigSourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SubmitConfigSourceOperationsSettings);
             CreateServiceRolloutOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateServiceRolloutOperationsSettings);
-            EnableServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.EnableServiceOperationsSettings);
-            DisableServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DisableServiceOperationsSettings);
             _callListServices = clientHelper.BuildApiCall<ListServicesRequest, ListServicesResponse>(grpcClient.ListServicesAsync, grpcClient.ListServices, effectiveSettings.ListServicesSettings);
             Modify_ApiCall(ref _callListServices);
             Modify_ListServicesApiCall(ref _callListServices);
@@ -2534,16 +2160,6 @@ namespace Google.Cloud.ServiceManagement.V1
             _callGenerateConfigReport = clientHelper.BuildApiCall<GenerateConfigReportRequest, GenerateConfigReportResponse>(grpcClient.GenerateConfigReportAsync, grpcClient.GenerateConfigReport, effectiveSettings.GenerateConfigReportSettings);
             Modify_ApiCall(ref _callGenerateConfigReport);
             Modify_GenerateConfigReportApiCall(ref _callGenerateConfigReport);
-#pragma warning disable CS0612
-            _callEnableService = clientHelper.BuildApiCall<EnableServiceRequest, lro::Operation>(grpcClient.EnableServiceAsync, grpcClient.EnableService, effectiveSettings.EnableServiceSettings).WithGoogleRequestParam("service_name", request => request.ServiceName);
-#pragma warning restore CS0612
-            Modify_ApiCall(ref _callEnableService);
-            Modify_EnableServiceApiCall(ref _callEnableService);
-#pragma warning disable CS0612
-            _callDisableService = clientHelper.BuildApiCall<DisableServiceRequest, lro::Operation>(grpcClient.DisableServiceAsync, grpcClient.DisableService, effectiveSettings.DisableServiceSettings).WithGoogleRequestParam("service_name", request => request.ServiceName);
-#pragma warning restore CS0612
-            Modify_ApiCall(ref _callDisableService);
-            Modify_DisableServiceApiCall(ref _callDisableService);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2574,10 +2190,6 @@ namespace Google.Cloud.ServiceManagement.V1
         partial void Modify_CreateServiceRolloutApiCall(ref gaxgrpc::ApiCall<CreateServiceRolloutRequest, lro::Operation> call);
 
         partial void Modify_GenerateConfigReportApiCall(ref gaxgrpc::ApiCall<GenerateConfigReportRequest, GenerateConfigReportResponse> call);
-
-        partial void Modify_EnableServiceApiCall(ref gaxgrpc::ApiCall<EnableServiceRequest, lro::Operation> call);
-
-        partial void Modify_DisableServiceApiCall(ref gaxgrpc::ApiCall<DisableServiceRequest, lro::Operation> call);
 
         partial void OnConstruction(ServiceManager.ServiceManagerClient grpcClient, ServiceManagerSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2610,20 +2222,12 @@ namespace Google.Cloud.ServiceManagement.V1
 
         partial void Modify_GenerateConfigReportRequest(ref GenerateConfigReportRequest request, ref gaxgrpc::CallSettings settings);
 
-        partial void Modify_EnableServiceRequest(ref EnableServiceRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_DisableServiceRequest(ref DisableServiceRequest request, ref gaxgrpc::CallSettings settings);
-
         /// <summary>
         /// Lists managed services.
         /// 
         /// Returns all public services. For authenticated users, also returns all
         /// services the calling user has "servicemanagement.services.get" permission
         /// for.
-        /// 
-        /// **BETA:** If the caller specifies the `consumer_id`, it returns only the
-        /// services enabled on the consumer. The `consumer_id` must have the format
-        /// of "project:{PROJECT-ID}".
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2640,10 +2244,6 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Returns all public services. For authenticated users, also returns all
         /// services the calling user has "servicemanagement.services.get" permission
         /// for.
-        /// 
-        /// **BETA:** If the caller specifies the `consumer_id`, it returns only the
-        /// services enabled on the consumer. The `consumer_id` must have the format
-        /// of "project:{PROJECT-ID}".
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2685,7 +2285,14 @@ namespace Google.Cloud.ServiceManagement.V1
 
         /// <summary>
         /// Creates a new managed service.
-        /// Please note one producer project can own no more than 20 services.
+        /// 
+        /// A managed service is immutable, and is subject to mandatory 30-day
+        /// data retention. You cannot move a service or recreate it within 30 days
+        /// after deletion.
+        /// 
+        /// One producer project can own no more than 500 services. For security and
+        /// reliability purposes, a production service should be hosted in a
+        /// dedicated producer project.
         /// 
         /// Operation&amp;lt;response: ManagedService&amp;gt;
         /// </summary>
@@ -2700,7 +2307,14 @@ namespace Google.Cloud.ServiceManagement.V1
 
         /// <summary>
         /// Creates a new managed service.
-        /// Please note one producer project can own no more than 20 services.
+        /// 
+        /// A managed service is immutable, and is subject to mandatory 30-day
+        /// data retention. You cannot move a service or recreate it within 30 days
+        /// after deletion.
+        /// 
+        /// One producer project can own no more than 500 services. For security and
+        /// reliability purposes, a production service should be hosted in a
+        /// dedicated producer project.
         /// 
         /// Operation&amp;lt;response: ManagedService&amp;gt;
         /// </summary>
@@ -3071,82 +2685,6 @@ namespace Google.Cloud.ServiceManagement.V1
         {
             Modify_GenerateConfigReportRequest(ref request, ref callSettings);
             return _callGenerateConfigReport.Async(request, callSettings);
-        }
-
-        /// <summary>The long-running operations client for <c>EnableService</c>.</summary>
-        public override lro::OperationsClient EnableServiceOperationsClient { get; }
-
-        /// <summary>
-        /// Enables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can be used
-        /// for the project. See
-        /// [Cloud Auth Guide](https://cloud.google.com/docs/authentication) for
-        /// more information.
-        /// 
-        /// Operation&amp;lt;response: EnableServiceResponse&amp;gt;
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        [sys::ObsoleteAttribute]
-        public override lro::Operation<EnableServiceResponse, OperationMetadata> EnableService(EnableServiceRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_EnableServiceRequest(ref request, ref callSettings);
-            return new lro::Operation<EnableServiceResponse, OperationMetadata>(_callEnableService.Sync(request, callSettings), EnableServiceOperationsClient);
-        }
-
-        /// <summary>
-        /// Enables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can be used
-        /// for the project. See
-        /// [Cloud Auth Guide](https://cloud.google.com/docs/authentication) for
-        /// more information.
-        /// 
-        /// Operation&amp;lt;response: EnableServiceResponse&amp;gt;
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        [sys::ObsoleteAttribute]
-        public override async stt::Task<lro::Operation<EnableServiceResponse, OperationMetadata>> EnableServiceAsync(EnableServiceRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_EnableServiceRequest(ref request, ref callSettings);
-            return new lro::Operation<EnableServiceResponse, OperationMetadata>(await _callEnableService.Async(request, callSettings).ConfigureAwait(false), EnableServiceOperationsClient);
-        }
-
-        /// <summary>The long-running operations client for <c>DisableService</c>.</summary>
-        public override lro::OperationsClient DisableServiceOperationsClient { get; }
-
-        /// <summary>
-        /// Disables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can no longer be
-        /// be used for the project. It prevents accidental usage that may cause
-        /// unexpected billing charges or security leaks.
-        /// 
-        /// Operation&amp;lt;response: DisableServiceResponse&amp;gt;
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        [sys::ObsoleteAttribute]
-        public override lro::Operation<DisableServiceResponse, OperationMetadata> DisableService(DisableServiceRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DisableServiceRequest(ref request, ref callSettings);
-            return new lro::Operation<DisableServiceResponse, OperationMetadata>(_callDisableService.Sync(request, callSettings), DisableServiceOperationsClient);
-        }
-
-        /// <summary>
-        /// Disables a [service][google.api.servicemanagement.v1.ManagedService] for a project, so it can no longer be
-        /// be used for the project. It prevents accidental usage that may cause
-        /// unexpected billing charges or security leaks.
-        /// 
-        /// Operation&amp;lt;response: DisableServiceResponse&amp;gt;
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        [sys::ObsoleteAttribute]
-        public override async stt::Task<lro::Operation<DisableServiceResponse, OperationMetadata>> DisableServiceAsync(DisableServiceRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DisableServiceRequest(ref request, ref callSettings);
-            return new lro::Operation<DisableServiceResponse, OperationMetadata>(await _callDisableService.Async(request, callSettings).ConfigureAwait(false), DisableServiceOperationsClient);
         }
     }
 

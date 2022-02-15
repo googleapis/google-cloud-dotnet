@@ -34,18 +34,6 @@
                 "DeleteServiceAsync"
               ]
             },
-            "DisableService": {
-              "methods": [
-                "DisableService",
-                "DisableServiceAsync"
-              ]
-            },
-            "EnableService": {
-              "methods": [
-                "EnableService",
-                "EnableServiceAsync"
-              ]
-            },
             "GenerateConfigReport": {
               "methods": [
                 "GenerateConfigReport",
