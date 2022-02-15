@@ -1380,8 +1380,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int ProvisioningIdFieldNumber = 1;
     private string provisioningId_ = "";
     /// <summary>
-    /// Output only. Provisioning ID of the entitlement. For Google Workspace, this would be the
-    /// underlying Subscription ID. For Google Cloud Platform, this would be the
+    /// Output only. Provisioning ID of the entitlement. For Google Workspace, this is the
+    /// underlying Subscription ID. For Google Cloud Platform, this is the
     /// Billing Account ID of the billing subaccount."
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
