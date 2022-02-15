@@ -146,7 +146,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
     public const int ServiceNameFieldNumber = 2;
     private string serviceName_ = "";
     /// <summary>
-    /// The name of the service. See the [overview](https://cloud.google.com/service-management/overview)
+    /// The name of the service. See the [overview](/service-management/overview)
     /// for naming requirements.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
