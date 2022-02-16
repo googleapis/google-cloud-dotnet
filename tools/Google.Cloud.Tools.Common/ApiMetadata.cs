@@ -156,12 +156,6 @@ namespace Google.Cloud.Tools.Common
         public string ProtoPath { get; set; }
         
         /// <summary>
-        /// The path in the directory above <see cref="ProtoPath"/> for the service YAML.
-        /// (Only appropriate for GAPIC generated APIs.)
-        /// </summary>
-        public string ServiceYaml { get; set; }
-
-        /// <summary>
         /// The NuGet package owner, typically "google-apis-packages" or "google-cloud".
         /// This property is used by <see cref="EffectivePackageOwner"/> to override the
         /// default ID-based value.
