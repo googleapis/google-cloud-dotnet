@@ -25,6 +25,8 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.Dataflow.V1Beta3/Google.Cloud.Dataflow.V1Beta3.Tests
     - source: /google/dataflow/v1beta3/.*-csharp/Google.Cloud.Dataflow.V1Beta3.Snippets
       dest: /owl-bot-staging/Google.Cloud.Dataflow.V1Beta3/Google.Cloud.Dataflow.V1Beta3.Snippets
+    - source: /google/dataflow/v1beta3/.*-csharp/Google.Cloud.Dataflow.V1Beta3.GeneratedSnippets
+      dest: /owl-bot-staging/Google.Cloud.Dataflow.V1Beta3/Google.Cloud.Dataflow.V1Beta3.GeneratedSnippets
     - source: /google/dataflow/v1beta3/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.Dataflow.V1Beta3/gapic_metadata.json
 

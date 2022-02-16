@@ -12,6 +12,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.VideoIntellige
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.LongRunning", "..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj", "{21BAAB4C-0624-4439-963A-81247EA3D96E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.VideoIntelligence.V1.GeneratedSnippets", "Google.Cloud.VideoIntelligence.V1.GeneratedSnippets\Google.Cloud.VideoIntelligence.V1.GeneratedSnippets.csproj", "{842374B5-DF66-48D0-9003-9BB0E015207C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,6 +84,18 @@ Global
 		{21BAAB4C-0624-4439-963A-81247EA3D96E}.Release|x64.Build.0 = Release|Any CPU
 		{21BAAB4C-0624-4439-963A-81247EA3D96E}.Release|x86.ActiveCfg = Release|Any CPU
 		{21BAAB4C-0624-4439-963A-81247EA3D96E}.Release|x86.Build.0 = Release|Any CPU
+		{842374B5-DF66-48D0-9003-9BB0E015207C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{842374B5-DF66-48D0-9003-9BB0E015207C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{842374B5-DF66-48D0-9003-9BB0E015207C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{842374B5-DF66-48D0-9003-9BB0E015207C}.Debug|x64.Build.0 = Debug|Any CPU
+		{842374B5-DF66-48D0-9003-9BB0E015207C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{842374B5-DF66-48D0-9003-9BB0E015207C}.Debug|x86.Build.0 = Debug|Any CPU
+		{842374B5-DF66-48D0-9003-9BB0E015207C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{842374B5-DF66-48D0-9003-9BB0E015207C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{842374B5-DF66-48D0-9003-9BB0E015207C}.Release|x64.ActiveCfg = Release|Any CPU
+		{842374B5-DF66-48D0-9003-9BB0E015207C}.Release|x64.Build.0 = Release|Any CPU
+		{842374B5-DF66-48D0-9003-9BB0E015207C}.Release|x86.ActiveCfg = Release|Any CPU
+		{842374B5-DF66-48D0-9003-9BB0E015207C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

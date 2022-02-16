@@ -25,6 +25,8 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.Video.Transcoder.V1/Google.Cloud.Video.Transcoder.V1.Tests
     - source: /google/cloud/video/transcoder/v1/.*-csharp/Google.Cloud.Video.Transcoder.V1.Snippets
       dest: /owl-bot-staging/Google.Cloud.Video.Transcoder.V1/Google.Cloud.Video.Transcoder.V1.Snippets
+    - source: /google/cloud/video/transcoder/v1/.*-csharp/Google.Cloud.Video.Transcoder.V1.GeneratedSnippets
+      dest: /owl-bot-staging/Google.Cloud.Video.Transcoder.V1/Google.Cloud.Video.Transcoder.V1.GeneratedSnippets
     - source: /google/cloud/video/transcoder/v1/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.Video.Transcoder.V1/gapic_metadata.json
 

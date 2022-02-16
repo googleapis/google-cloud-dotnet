@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Firestore.V1.T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.LongRunning", "..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj", "{44BB0120-ED64-4613-A974-72190271C203}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Firestore.V1.GeneratedSnippets", "Google.Cloud.Firestore.V1.GeneratedSnippets\Google.Cloud.Firestore.V1.GeneratedSnippets.csproj", "{ACA35279-4A45-4758-ACA7-B508B8CA9825}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,5 +88,17 @@ Global
 		{44BB0120-ED64-4613-A974-72190271C203}.Release|x64.Build.0 = Release|Any CPU
 		{44BB0120-ED64-4613-A974-72190271C203}.Release|x86.ActiveCfg = Release|Any CPU
 		{44BB0120-ED64-4613-A974-72190271C203}.Release|x86.Build.0 = Release|Any CPU
+		{ACA35279-4A45-4758-ACA7-B508B8CA9825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACA35279-4A45-4758-ACA7-B508B8CA9825}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACA35279-4A45-4758-ACA7-B508B8CA9825}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{ACA35279-4A45-4758-ACA7-B508B8CA9825}.Debug|x64.Build.0 = Debug|Any CPU
+		{ACA35279-4A45-4758-ACA7-B508B8CA9825}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ACA35279-4A45-4758-ACA7-B508B8CA9825}.Debug|x86.Build.0 = Debug|Any CPU
+		{ACA35279-4A45-4758-ACA7-B508B8CA9825}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACA35279-4A45-4758-ACA7-B508B8CA9825}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACA35279-4A45-4758-ACA7-B508B8CA9825}.Release|x64.ActiveCfg = Release|Any CPU
+		{ACA35279-4A45-4758-ACA7-B508B8CA9825}.Release|x64.Build.0 = Release|Any CPU
+		{ACA35279-4A45-4758-ACA7-B508B8CA9825}.Release|x86.ActiveCfg = Release|Any CPU
+		{ACA35279-4A45-4758-ACA7-B508B8CA9825}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

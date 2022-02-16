@@ -25,6 +25,8 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.Location/Google.Cloud.Location.Tests
     - source: /google/cloud/location/.*-csharp/Google.Cloud.Location.Snippets
       dest: /owl-bot-staging/Google.Cloud.Location/Google.Cloud.Location.Snippets
+    - source: /google/cloud/location/.*-csharp/Google.Cloud.Location.GeneratedSnippets
+      dest: /owl-bot-staging/Google.Cloud.Location/Google.Cloud.Location.GeneratedSnippets
     - source: /google/cloud/location/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.Location/gapic_metadata.json
 

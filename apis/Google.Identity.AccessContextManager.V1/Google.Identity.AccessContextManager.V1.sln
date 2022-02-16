@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Identity.AccessContextManager.V1.Tests", "Google.Identity.AccessContextManager.V1.Tests\Google.Identity.AccessContextManager.V1.Tests.csproj", "{D887DEB0-23FC-4BA4-8641-7CB001603DB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Identity.AccessContextManager.V1.GeneratedSnippets", "Google.Identity.AccessContextManager.V1.GeneratedSnippets\Google.Identity.AccessContextManager.V1.GeneratedSnippets.csproj", "{AC092EC2-A4BA-4C25-BE29-FB8D2691B4FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,5 +88,17 @@ Global
 		{D887DEB0-23FC-4BA4-8641-7CB001603DB7}.Release|x64.Build.0 = Release|Any CPU
 		{D887DEB0-23FC-4BA4-8641-7CB001603DB7}.Release|x86.ActiveCfg = Release|Any CPU
 		{D887DEB0-23FC-4BA4-8641-7CB001603DB7}.Release|x86.Build.0 = Release|Any CPU
+		{AC092EC2-A4BA-4C25-BE29-FB8D2691B4FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC092EC2-A4BA-4C25-BE29-FB8D2691B4FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC092EC2-A4BA-4C25-BE29-FB8D2691B4FE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AC092EC2-A4BA-4C25-BE29-FB8D2691B4FE}.Debug|x64.Build.0 = Debug|Any CPU
+		{AC092EC2-A4BA-4C25-BE29-FB8D2691B4FE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AC092EC2-A4BA-4C25-BE29-FB8D2691B4FE}.Debug|x86.Build.0 = Debug|Any CPU
+		{AC092EC2-A4BA-4C25-BE29-FB8D2691B4FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC092EC2-A4BA-4C25-BE29-FB8D2691B4FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC092EC2-A4BA-4C25-BE29-FB8D2691B4FE}.Release|x64.ActiveCfg = Release|Any CPU
+		{AC092EC2-A4BA-4C25-BE29-FB8D2691B4FE}.Release|x64.Build.0 = Release|Any CPU
+		{AC092EC2-A4BA-4C25-BE29-FB8D2691B4FE}.Release|x86.ActiveCfg = Release|Any CPU
+		{AC092EC2-A4BA-4C25-BE29-FB8D2691B4FE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

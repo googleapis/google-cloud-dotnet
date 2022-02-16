@@ -25,6 +25,8 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Identity.AccessContextManager.V1/Google.Identity.AccessContextManager.V1.Tests
     - source: /google/identity/accesscontextmanager/v1/.*-csharp/Google.Identity.AccessContextManager.V1.Snippets
       dest: /owl-bot-staging/Google.Identity.AccessContextManager.V1/Google.Identity.AccessContextManager.V1.Snippets
+    - source: /google/identity/accesscontextmanager/v1/.*-csharp/Google.Identity.AccessContextManager.V1.GeneratedSnippets
+      dest: /owl-bot-staging/Google.Identity.AccessContextManager.V1/Google.Identity.AccessContextManager.V1.GeneratedSnippets
     - source: /google/identity/accesscontextmanager/v1/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Identity.AccessContextManager.V1/gapic_metadata.json
 

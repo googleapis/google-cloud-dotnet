@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.CertificateManager.V1.Tests", "Google.Cloud.CertificateManager.V1.Tests\Google.Cloud.CertificateManager.V1.Tests.csproj", "{2674D451-693E-45D7-A73F-0E19CE1EDD07}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.CertificateManager.V1.GeneratedSnippets", "Google.Cloud.CertificateManager.V1.GeneratedSnippets\Google.Cloud.CertificateManager.V1.GeneratedSnippets.csproj", "{029859D0-781F-4F97-A8BF-72955F2440E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,17 @@ Global
 		{2674D451-693E-45D7-A73F-0E19CE1EDD07}.Release|x64.Build.0 = Release|Any CPU
 		{2674D451-693E-45D7-A73F-0E19CE1EDD07}.Release|x86.ActiveCfg = Release|Any CPU
 		{2674D451-693E-45D7-A73F-0E19CE1EDD07}.Release|x86.Build.0 = Release|Any CPU
+		{029859D0-781F-4F97-A8BF-72955F2440E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{029859D0-781F-4F97-A8BF-72955F2440E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{029859D0-781F-4F97-A8BF-72955F2440E6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{029859D0-781F-4F97-A8BF-72955F2440E6}.Debug|x64.Build.0 = Debug|Any CPU
+		{029859D0-781F-4F97-A8BF-72955F2440E6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{029859D0-781F-4F97-A8BF-72955F2440E6}.Debug|x86.Build.0 = Debug|Any CPU
+		{029859D0-781F-4F97-A8BF-72955F2440E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{029859D0-781F-4F97-A8BF-72955F2440E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{029859D0-781F-4F97-A8BF-72955F2440E6}.Release|x64.ActiveCfg = Release|Any CPU
+		{029859D0-781F-4F97-A8BF-72955F2440E6}.Release|x64.Build.0 = Release|Any CPU
+		{029859D0-781F-4F97-A8BF-72955F2440E6}.Release|x86.ActiveCfg = Release|Any CPU
+		{029859D0-781F-4F97-A8BF-72955F2440E6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

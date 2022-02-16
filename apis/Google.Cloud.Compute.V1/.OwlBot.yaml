@@ -25,6 +25,8 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.Compute.V1/Google.Cloud.Compute.V1.Tests
     - source: /google/cloud/compute/v1/.*-csharp/Google.Cloud.Compute.V1.Snippets
       dest: /owl-bot-staging/Google.Cloud.Compute.V1/Google.Cloud.Compute.V1.Snippets
+    - source: /google/cloud/compute/v1/.*-csharp/Google.Cloud.Compute.V1.GeneratedSnippets
+      dest: /owl-bot-staging/Google.Cloud.Compute.V1/Google.Cloud.Compute.V1.GeneratedSnippets
     - source: /google/cloud/compute/v1/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.Compute.V1/gapic_metadata.json
 

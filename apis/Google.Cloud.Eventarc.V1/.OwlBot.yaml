@@ -25,6 +25,8 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.Eventarc.V1/Google.Cloud.Eventarc.V1.Tests
     - source: /google/cloud/eventarc/v1/.*-csharp/Google.Cloud.Eventarc.V1.Snippets
       dest: /owl-bot-staging/Google.Cloud.Eventarc.V1/Google.Cloud.Eventarc.V1.Snippets
+    - source: /google/cloud/eventarc/v1/.*-csharp/Google.Cloud.Eventarc.V1.GeneratedSnippets
+      dest: /owl-bot-staging/Google.Cloud.Eventarc.V1/Google.Cloud.Eventarc.V1.GeneratedSnippets
     - source: /google/cloud/eventarc/v1/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.Eventarc.V1/gapic_metadata.json
 

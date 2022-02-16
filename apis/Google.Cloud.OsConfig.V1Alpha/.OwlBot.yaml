@@ -25,6 +25,8 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.OsConfig.V1Alpha/Google.Cloud.OsConfig.V1Alpha.Tests
     - source: /google/cloud/osconfig/v1alpha/.*-csharp/Google.Cloud.OsConfig.V1Alpha.Snippets
       dest: /owl-bot-staging/Google.Cloud.OsConfig.V1Alpha/Google.Cloud.OsConfig.V1Alpha.Snippets
+    - source: /google/cloud/osconfig/v1alpha/.*-csharp/Google.Cloud.OsConfig.V1Alpha.GeneratedSnippets
+      dest: /owl-bot-staging/Google.Cloud.OsConfig.V1Alpha/Google.Cloud.OsConfig.V1Alpha.GeneratedSnippets
     - source: /google/cloud/osconfig/v1alpha/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.OsConfig.V1Alpha/gapic_metadata.json
 

@@ -10,6 +10,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Container.V1.Tests", "Google.Cloud.Container.V1.Tests\Google.Cloud.Container.V1.Tests.csproj", "{7C0D5064-C692-45E8-B460-766B7308DA74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Container.V1.GeneratedSnippets", "Google.Cloud.Container.V1.GeneratedSnippets\Google.Cloud.Container.V1.GeneratedSnippets.csproj", "{D892E5A1-98F0-4902-A0F5-F6F870AAE20F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,18 @@ Global
 		{7C0D5064-C692-45E8-B460-766B7308DA74}.Release|x64.Build.0 = Release|Any CPU
 		{7C0D5064-C692-45E8-B460-766B7308DA74}.Release|x86.ActiveCfg = Release|Any CPU
 		{7C0D5064-C692-45E8-B460-766B7308DA74}.Release|x86.Build.0 = Release|Any CPU
+		{D892E5A1-98F0-4902-A0F5-F6F870AAE20F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D892E5A1-98F0-4902-A0F5-F6F870AAE20F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D892E5A1-98F0-4902-A0F5-F6F870AAE20F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D892E5A1-98F0-4902-A0F5-F6F870AAE20F}.Debug|x64.Build.0 = Debug|Any CPU
+		{D892E5A1-98F0-4902-A0F5-F6F870AAE20F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D892E5A1-98F0-4902-A0F5-F6F870AAE20F}.Debug|x86.Build.0 = Debug|Any CPU
+		{D892E5A1-98F0-4902-A0F5-F6F870AAE20F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D892E5A1-98F0-4902-A0F5-F6F870AAE20F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D892E5A1-98F0-4902-A0F5-F6F870AAE20F}.Release|x64.ActiveCfg = Release|Any CPU
+		{D892E5A1-98F0-4902-A0F5-F6F870AAE20F}.Release|x64.Build.0 = Release|Any CPU
+		{D892E5A1-98F0-4902-A0F5-F6F870AAE20F}.Release|x86.ActiveCfg = Release|Any CPU
+		{D892E5A1-98F0-4902-A0F5-F6F870AAE20F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

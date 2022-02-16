@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.PhishingProtection.V1Beta1.Tests", "Google.Cloud.PhishingProtection.V1Beta1.Tests\Google.Cloud.PhishingProtection.V1Beta1.Tests.csproj", "{0F026663-AC95-4B78-AB8B-878A468B503B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.PhishingProtection.V1Beta1.GeneratedSnippets", "Google.Cloud.PhishingProtection.V1Beta1.GeneratedSnippets\Google.Cloud.PhishingProtection.V1Beta1.GeneratedSnippets.csproj", "{85651DF3-7901-48BC-9CFF-2D8358BF6705}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,17 @@ Global
 		{0F026663-AC95-4B78-AB8B-878A468B503B}.Release|x64.Build.0 = Release|Any CPU
 		{0F026663-AC95-4B78-AB8B-878A468B503B}.Release|x86.ActiveCfg = Release|Any CPU
 		{0F026663-AC95-4B78-AB8B-878A468B503B}.Release|x86.Build.0 = Release|Any CPU
+		{85651DF3-7901-48BC-9CFF-2D8358BF6705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85651DF3-7901-48BC-9CFF-2D8358BF6705}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85651DF3-7901-48BC-9CFF-2D8358BF6705}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{85651DF3-7901-48BC-9CFF-2D8358BF6705}.Debug|x64.Build.0 = Debug|Any CPU
+		{85651DF3-7901-48BC-9CFF-2D8358BF6705}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{85651DF3-7901-48BC-9CFF-2D8358BF6705}.Debug|x86.Build.0 = Debug|Any CPU
+		{85651DF3-7901-48BC-9CFF-2D8358BF6705}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85651DF3-7901-48BC-9CFF-2D8358BF6705}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85651DF3-7901-48BC-9CFF-2D8358BF6705}.Release|x64.ActiveCfg = Release|Any CPU
+		{85651DF3-7901-48BC-9CFF-2D8358BF6705}.Release|x64.Build.0 = Release|Any CPU
+		{85651DF3-7901-48BC-9CFF-2D8358BF6705}.Release|x86.ActiveCfg = Release|Any CPU
+		{85651DF3-7901-48BC-9CFF-2D8358BF6705}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -25,6 +25,8 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.LongRunning/Google.LongRunning.Tests
     - source: /google/longrunning/.*-csharp/Google.LongRunning.Snippets
       dest: /owl-bot-staging/Google.LongRunning/Google.LongRunning.Snippets
+    - source: /google/longrunning/.*-csharp/Google.LongRunning.GeneratedSnippets
+      dest: /owl-bot-staging/Google.LongRunning/Google.LongRunning.GeneratedSnippets
     - source: /google/longrunning/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.LongRunning/gapic_metadata.json
 

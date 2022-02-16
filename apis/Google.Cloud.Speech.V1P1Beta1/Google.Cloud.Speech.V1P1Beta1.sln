@@ -12,6 +12,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Speech.V1P1Bet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.LongRunning", "..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj", "{7B3E86A2-986F-4593-92D7-83442A2FDDDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Speech.V1P1Beta1.GeneratedSnippets", "Google.Cloud.Speech.V1P1Beta1.GeneratedSnippets\Google.Cloud.Speech.V1P1Beta1.GeneratedSnippets.csproj", "{EC3AD8F1-9306-4A50-AAD8-10F7880883E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,6 +84,18 @@ Global
 		{7B3E86A2-986F-4593-92D7-83442A2FDDDB}.Release|x64.Build.0 = Release|Any CPU
 		{7B3E86A2-986F-4593-92D7-83442A2FDDDB}.Release|x86.ActiveCfg = Release|Any CPU
 		{7B3E86A2-986F-4593-92D7-83442A2FDDDB}.Release|x86.Build.0 = Release|Any CPU
+		{EC3AD8F1-9306-4A50-AAD8-10F7880883E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC3AD8F1-9306-4A50-AAD8-10F7880883E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC3AD8F1-9306-4A50-AAD8-10F7880883E0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EC3AD8F1-9306-4A50-AAD8-10F7880883E0}.Debug|x64.Build.0 = Debug|Any CPU
+		{EC3AD8F1-9306-4A50-AAD8-10F7880883E0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EC3AD8F1-9306-4A50-AAD8-10F7880883E0}.Debug|x86.Build.0 = Debug|Any CPU
+		{EC3AD8F1-9306-4A50-AAD8-10F7880883E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC3AD8F1-9306-4A50-AAD8-10F7880883E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC3AD8F1-9306-4A50-AAD8-10F7880883E0}.Release|x64.ActiveCfg = Release|Any CPU
+		{EC3AD8F1-9306-4A50-AAD8-10F7880883E0}.Release|x64.Build.0 = Release|Any CPU
+		{EC3AD8F1-9306-4A50-AAD8-10F7880883E0}.Release|x86.ActiveCfg = Release|Any CPU
+		{EC3AD8F1-9306-4A50-AAD8-10F7880883E0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

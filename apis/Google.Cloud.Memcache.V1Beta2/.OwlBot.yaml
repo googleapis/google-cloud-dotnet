@@ -25,6 +25,8 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.Memcache.V1Beta2/Google.Cloud.Memcache.V1Beta2.Tests
     - source: /google/cloud/memcache/v1beta2/.*-csharp/Google.Cloud.Memcache.V1Beta2.Snippets
       dest: /owl-bot-staging/Google.Cloud.Memcache.V1Beta2/Google.Cloud.Memcache.V1Beta2.Snippets
+    - source: /google/cloud/memcache/v1beta2/.*-csharp/Google.Cloud.Memcache.V1Beta2.GeneratedSnippets
+      dest: /owl-bot-staging/Google.Cloud.Memcache.V1Beta2/Google.Cloud.Memcache.V1Beta2.GeneratedSnippets
     - source: /google/cloud/memcache/v1beta2/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.Memcache.V1Beta2/gapic_metadata.json
 

@@ -25,6 +25,8 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.SecurityCenter.Settings.V1Beta1/Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
     - source: /google/cloud/securitycenter/settings/v1beta1/.*-csharp/Google.Cloud.SecurityCenter.Settings.V1Beta1.Snippets
       dest: /owl-bot-staging/Google.Cloud.SecurityCenter.Settings.V1Beta1/Google.Cloud.SecurityCenter.Settings.V1Beta1.Snippets
+    - source: /google/cloud/securitycenter/settings/v1beta1/.*-csharp/Google.Cloud.SecurityCenter.Settings.V1Beta1.GeneratedSnippets
+      dest: /owl-bot-staging/Google.Cloud.SecurityCenter.Settings.V1Beta1/Google.Cloud.SecurityCenter.Settings.V1Beta1.GeneratedSnippets
     - source: /google/cloud/securitycenter/settings/v1beta1/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.SecurityCenter.Settings.V1Beta1/gapic_metadata.json
 

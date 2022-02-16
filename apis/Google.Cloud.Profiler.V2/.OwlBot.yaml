@@ -25,6 +25,8 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.Profiler.V2/Google.Cloud.Profiler.V2.Tests
     - source: /google/devtools/cloudprofiler/v2/.*-csharp/Google.Cloud.Profiler.V2.Snippets
       dest: /owl-bot-staging/Google.Cloud.Profiler.V2/Google.Cloud.Profiler.V2.Snippets
+    - source: /google/devtools/cloudprofiler/v2/.*-csharp/Google.Cloud.Profiler.V2.GeneratedSnippets
+      dest: /owl-bot-staging/Google.Cloud.Profiler.V2/Google.Cloud.Profiler.V2.GeneratedSnippets
     - source: /google/devtools/cloudprofiler/v2/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.Profiler.V2/gapic_metadata.json
 

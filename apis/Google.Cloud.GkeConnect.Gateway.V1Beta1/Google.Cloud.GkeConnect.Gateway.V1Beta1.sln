@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.GkeConnect.Gateway.V1Beta1.Tests", "Google.Cloud.GkeConnect.Gateway.V1Beta1.Tests\Google.Cloud.GkeConnect.Gateway.V1Beta1.Tests.csproj", "{B92BC160-C0AB-4296-B800-9EC6C2963FF7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.GkeConnect.Gateway.V1Beta1.GeneratedSnippets", "Google.Cloud.GkeConnect.Gateway.V1Beta1.GeneratedSnippets\Google.Cloud.GkeConnect.Gateway.V1Beta1.GeneratedSnippets.csproj", "{938354C1-A089-4F4C-8B33-639A6413605D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,17 @@ Global
 		{B92BC160-C0AB-4296-B800-9EC6C2963FF7}.Release|x64.Build.0 = Release|Any CPU
 		{B92BC160-C0AB-4296-B800-9EC6C2963FF7}.Release|x86.ActiveCfg = Release|Any CPU
 		{B92BC160-C0AB-4296-B800-9EC6C2963FF7}.Release|x86.Build.0 = Release|Any CPU
+		{938354C1-A089-4F4C-8B33-639A6413605D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{938354C1-A089-4F4C-8B33-639A6413605D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{938354C1-A089-4F4C-8B33-639A6413605D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{938354C1-A089-4F4C-8B33-639A6413605D}.Debug|x64.Build.0 = Debug|Any CPU
+		{938354C1-A089-4F4C-8B33-639A6413605D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{938354C1-A089-4F4C-8B33-639A6413605D}.Debug|x86.Build.0 = Debug|Any CPU
+		{938354C1-A089-4F4C-8B33-639A6413605D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{938354C1-A089-4F4C-8B33-639A6413605D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{938354C1-A089-4F4C-8B33-639A6413605D}.Release|x64.ActiveCfg = Release|Any CPU
+		{938354C1-A089-4F4C-8B33-639A6413605D}.Release|x64.Build.0 = Release|Any CPU
+		{938354C1-A089-4F4C-8B33-639A6413605D}.Release|x86.ActiveCfg = Release|Any CPU
+		{938354C1-A089-4F4C-8B33-639A6413605D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

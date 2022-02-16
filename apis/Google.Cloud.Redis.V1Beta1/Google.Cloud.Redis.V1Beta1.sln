@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Redis.V1Beta1.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.LongRunning", "..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj", "{6799B067-CCE2-41A4-BF23-F8F2008CB6C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Redis.V1Beta1.GeneratedSnippets", "Google.Cloud.Redis.V1Beta1.GeneratedSnippets\Google.Cloud.Redis.V1Beta1.GeneratedSnippets.csproj", "{96BA5E16-06E0-47E7-8A21-F6393BB78E8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,18 @@ Global
 		{6799B067-CCE2-41A4-BF23-F8F2008CB6C6}.Release|x64.Build.0 = Release|Any CPU
 		{6799B067-CCE2-41A4-BF23-F8F2008CB6C6}.Release|x86.ActiveCfg = Release|Any CPU
 		{6799B067-CCE2-41A4-BF23-F8F2008CB6C6}.Release|x86.Build.0 = Release|Any CPU
+		{96BA5E16-06E0-47E7-8A21-F6393BB78E8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96BA5E16-06E0-47E7-8A21-F6393BB78E8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96BA5E16-06E0-47E7-8A21-F6393BB78E8D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{96BA5E16-06E0-47E7-8A21-F6393BB78E8D}.Debug|x64.Build.0 = Debug|Any CPU
+		{96BA5E16-06E0-47E7-8A21-F6393BB78E8D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{96BA5E16-06E0-47E7-8A21-F6393BB78E8D}.Debug|x86.Build.0 = Debug|Any CPU
+		{96BA5E16-06E0-47E7-8A21-F6393BB78E8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96BA5E16-06E0-47E7-8A21-F6393BB78E8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96BA5E16-06E0-47E7-8A21-F6393BB78E8D}.Release|x64.ActiveCfg = Release|Any CPU
+		{96BA5E16-06E0-47E7-8A21-F6393BB78E8D}.Release|x64.Build.0 = Release|Any CPU
+		{96BA5E16-06E0-47E7-8A21-F6393BB78E8D}.Release|x86.ActiveCfg = Release|Any CPU
+		{96BA5E16-06E0-47E7-8A21-F6393BB78E8D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
