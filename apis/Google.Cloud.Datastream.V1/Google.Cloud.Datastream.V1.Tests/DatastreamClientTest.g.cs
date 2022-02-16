@@ -16,6 +16,7 @@
 
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -34,6 +35,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConnectionProfileRequest request = new GetConnectionProfileRequest
             {
                 ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]"),
@@ -70,6 +72,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConnectionProfileRequest request = new GetConnectionProfileRequest
             {
                 ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]"),
@@ -108,6 +111,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConnectionProfileRequest request = new GetConnectionProfileRequest
             {
                 ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]"),
@@ -144,6 +148,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConnectionProfileRequest request = new GetConnectionProfileRequest
             {
                 ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]"),
@@ -182,6 +187,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConnectionProfileRequest request = new GetConnectionProfileRequest
             {
                 ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]"),
@@ -218,6 +224,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConnectionProfileRequest request = new GetConnectionProfileRequest
             {
                 ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]"),
@@ -256,6 +263,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DiscoverConnectionProfileRequest request = new DiscoverConnectionProfileRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -283,6 +291,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DiscoverConnectionProfileRequest request = new DiscoverConnectionProfileRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -312,6 +321,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetStreamRequest request = new GetStreamRequest
             {
                 StreamName = StreamName.FromProjectLocationStream("[PROJECT]", "[LOCATION]", "[STREAM]"),
@@ -349,6 +359,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetStreamRequest request = new GetStreamRequest
             {
                 StreamName = StreamName.FromProjectLocationStream("[PROJECT]", "[LOCATION]", "[STREAM]"),
@@ -388,6 +399,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetStreamRequest request = new GetStreamRequest
             {
                 StreamName = StreamName.FromProjectLocationStream("[PROJECT]", "[LOCATION]", "[STREAM]"),
@@ -425,6 +437,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetStreamRequest request = new GetStreamRequest
             {
                 StreamName = StreamName.FromProjectLocationStream("[PROJECT]", "[LOCATION]", "[STREAM]"),
@@ -464,6 +477,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetStreamRequest request = new GetStreamRequest
             {
                 StreamName = StreamName.FromProjectLocationStream("[PROJECT]", "[LOCATION]", "[STREAM]"),
@@ -501,6 +515,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetStreamRequest request = new GetStreamRequest
             {
                 StreamName = StreamName.FromProjectLocationStream("[PROJECT]", "[LOCATION]", "[STREAM]"),
@@ -540,6 +555,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetStreamObjectRequest request = new GetStreamObjectRequest
             {
                 StreamObjectName = StreamObjectName.FromProjectLocationStreamObject("[PROJECT]", "[LOCATION]", "[STREAM]", "[OBJECT]"),
@@ -566,6 +582,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetStreamObjectRequest request = new GetStreamObjectRequest
             {
                 StreamObjectName = StreamObjectName.FromProjectLocationStreamObject("[PROJECT]", "[LOCATION]", "[STREAM]", "[OBJECT]"),
@@ -594,6 +611,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetStreamObjectRequest request = new GetStreamObjectRequest
             {
                 StreamObjectName = StreamObjectName.FromProjectLocationStreamObject("[PROJECT]", "[LOCATION]", "[STREAM]", "[OBJECT]"),
@@ -620,6 +638,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetStreamObjectRequest request = new GetStreamObjectRequest
             {
                 StreamObjectName = StreamObjectName.FromProjectLocationStreamObject("[PROJECT]", "[LOCATION]", "[STREAM]", "[OBJECT]"),
@@ -648,6 +667,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetStreamObjectRequest request = new GetStreamObjectRequest
             {
                 StreamObjectName = StreamObjectName.FromProjectLocationStreamObject("[PROJECT]", "[LOCATION]", "[STREAM]", "[OBJECT]"),
@@ -674,6 +694,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetStreamObjectRequest request = new GetStreamObjectRequest
             {
                 StreamObjectName = StreamObjectName.FromProjectLocationStreamObject("[PROJECT]", "[LOCATION]", "[STREAM]", "[OBJECT]"),
@@ -702,6 +723,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             LookupStreamObjectRequest request = new LookupStreamObjectRequest
             {
                 ParentAsStreamName = StreamName.FromProjectLocationStream("[PROJECT]", "[LOCATION]", "[STREAM]"),
@@ -729,6 +751,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             LookupStreamObjectRequest request = new LookupStreamObjectRequest
             {
                 ParentAsStreamName = StreamName.FromProjectLocationStream("[PROJECT]", "[LOCATION]", "[STREAM]"),
@@ -758,6 +781,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StartBackfillJobRequest request = new StartBackfillJobRequest
             {
                 ObjectAsStreamObjectName = StreamObjectName.FromProjectLocationStreamObject("[PROJECT]", "[LOCATION]", "[STREAM]", "[OBJECT]"),
@@ -778,6 +802,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StartBackfillJobRequest request = new StartBackfillJobRequest
             {
                 ObjectAsStreamObjectName = StreamObjectName.FromProjectLocationStreamObject("[PROJECT]", "[LOCATION]", "[STREAM]", "[OBJECT]"),
@@ -800,6 +825,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StartBackfillJobRequest request = new StartBackfillJobRequest
             {
                 ObjectAsStreamObjectName = StreamObjectName.FromProjectLocationStreamObject("[PROJECT]", "[LOCATION]", "[STREAM]", "[OBJECT]"),
@@ -820,6 +846,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StartBackfillJobRequest request = new StartBackfillJobRequest
             {
                 ObjectAsStreamObjectName = StreamObjectName.FromProjectLocationStreamObject("[PROJECT]", "[LOCATION]", "[STREAM]", "[OBJECT]"),
@@ -842,6 +869,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StartBackfillJobRequest request = new StartBackfillJobRequest
             {
                 ObjectAsStreamObjectName = StreamObjectName.FromProjectLocationStreamObject("[PROJECT]", "[LOCATION]", "[STREAM]", "[OBJECT]"),
@@ -862,6 +890,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StartBackfillJobRequest request = new StartBackfillJobRequest
             {
                 ObjectAsStreamObjectName = StreamObjectName.FromProjectLocationStreamObject("[PROJECT]", "[LOCATION]", "[STREAM]", "[OBJECT]"),
@@ -884,6 +913,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StopBackfillJobRequest request = new StopBackfillJobRequest
             {
                 ObjectAsStreamObjectName = StreamObjectName.FromProjectLocationStreamObject("[PROJECT]", "[LOCATION]", "[STREAM]", "[OBJECT]"),
@@ -904,6 +934,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StopBackfillJobRequest request = new StopBackfillJobRequest
             {
                 ObjectAsStreamObjectName = StreamObjectName.FromProjectLocationStreamObject("[PROJECT]", "[LOCATION]", "[STREAM]", "[OBJECT]"),
@@ -926,6 +957,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StopBackfillJobRequest request = new StopBackfillJobRequest
             {
                 ObjectAsStreamObjectName = StreamObjectName.FromProjectLocationStreamObject("[PROJECT]", "[LOCATION]", "[STREAM]", "[OBJECT]"),
@@ -946,6 +978,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StopBackfillJobRequest request = new StopBackfillJobRequest
             {
                 ObjectAsStreamObjectName = StreamObjectName.FromProjectLocationStreamObject("[PROJECT]", "[LOCATION]", "[STREAM]", "[OBJECT]"),
@@ -968,6 +1001,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StopBackfillJobRequest request = new StopBackfillJobRequest
             {
                 ObjectAsStreamObjectName = StreamObjectName.FromProjectLocationStreamObject("[PROJECT]", "[LOCATION]", "[STREAM]", "[OBJECT]"),
@@ -988,6 +1022,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             StopBackfillJobRequest request = new StopBackfillJobRequest
             {
                 ObjectAsStreamObjectName = StreamObjectName.FromProjectLocationStreamObject("[PROJECT]", "[LOCATION]", "[STREAM]", "[OBJECT]"),
@@ -1010,6 +1045,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
             {
                 PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
@@ -1043,6 +1079,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
             {
                 PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
@@ -1078,6 +1115,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
             {
                 PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
@@ -1111,6 +1149,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
             {
                 PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
@@ -1146,6 +1185,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
             {
                 PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
@@ -1179,6 +1219,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
             {
                 PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
@@ -1214,6 +1255,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetRouteRequest request = new GetRouteRequest
             {
                 RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]", "[ROUTE]"),
@@ -1246,6 +1288,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetRouteRequest request = new GetRouteRequest
             {
                 RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]", "[ROUTE]"),
@@ -1280,6 +1323,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetRouteRequest request = new GetRouteRequest
             {
                 RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]", "[ROUTE]"),
@@ -1312,6 +1356,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetRouteRequest request = new GetRouteRequest
             {
                 RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]", "[ROUTE]"),
@@ -1346,6 +1391,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetRouteRequest request = new GetRouteRequest
             {
                 RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]", "[ROUTE]"),
@@ -1378,6 +1424,7 @@ namespace Google.Cloud.Datastream.V1.Tests
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetRouteRequest request = new GetRouteRequest
             {
                 RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]", "[ROUTE]"),
