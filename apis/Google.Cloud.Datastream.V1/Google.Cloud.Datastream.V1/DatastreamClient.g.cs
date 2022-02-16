@@ -18,6 +18,7 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -82,6 +83,7 @@ namespace Google.Cloud.Datastream.V1
             ListRoutesSettings = existing.ListRoutesSettings;
             DeleteRouteSettings = existing.DeleteRouteSettings;
             DeleteRouteOperationsSettings = existing.DeleteRouteOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -658,6 +660,11 @@ namespace Google.Cloud.Datastream.V1
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="DatastreamSettings"/> object.</returns>
         public DatastreamSettings Clone() => new DatastreamSettings(this);
@@ -817,6 +824,9 @@ namespace Google.Cloud.Datastream.V1
 
         /// <summary>The underlying gRPC Datastream client</summary>
         public virtual Datastream.DatastreamClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Use this method to list connection profiles created in a project and
@@ -3873,6 +3883,7 @@ namespace Google.Cloud.Datastream.V1
             DeletePrivateConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeletePrivateConnectionOperationsSettings);
             CreateRouteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRouteOperationsSettings);
             DeleteRouteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRouteOperationsSettings);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings);
             _callListConnectionProfiles = clientHelper.BuildApiCall<ListConnectionProfilesRequest, ListConnectionProfilesResponse>(grpcClient.ListConnectionProfilesAsync, grpcClient.ListConnectionProfiles, effectiveSettings.ListConnectionProfilesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListConnectionProfiles);
             Modify_ListConnectionProfilesApiCall(ref _callListConnectionProfiles);
@@ -4007,6 +4018,9 @@ namespace Google.Cloud.Datastream.V1
 
         /// <summary>The underlying gRPC Datastream client</summary>
         public override Datastream.DatastreamClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_ListConnectionProfilesRequest(ref ListConnectionProfilesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4788,6 +4802,22 @@ namespace Google.Cloud.Datastream.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class Datastream
+    {
+        public partial class DatastreamClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }
