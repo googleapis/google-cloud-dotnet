@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -34,6 +35,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void GetKeyRingRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetKeyRingRequest request = new GetKeyRingRequest
             {
                 KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -54,6 +56,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task GetKeyRingRequestObjectAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetKeyRingRequest request = new GetKeyRingRequest
             {
                 KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -76,6 +79,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void GetKeyRing()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetKeyRingRequest request = new GetKeyRingRequest
             {
                 KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -96,6 +100,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task GetKeyRingAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetKeyRingRequest request = new GetKeyRingRequest
             {
                 KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -118,6 +123,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void GetKeyRingResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetKeyRingRequest request = new GetKeyRingRequest
             {
                 KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -138,6 +144,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task GetKeyRingResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetKeyRingRequest request = new GetKeyRingRequest
             {
                 KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -160,6 +167,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void GetCryptoKeyRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCryptoKeyRequest request = new GetCryptoKeyRequest
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -195,6 +203,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task GetCryptoKeyRequestObjectAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCryptoKeyRequest request = new GetCryptoKeyRequest
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -232,6 +241,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void GetCryptoKey()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCryptoKeyRequest request = new GetCryptoKeyRequest
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -267,6 +277,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task GetCryptoKeyAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCryptoKeyRequest request = new GetCryptoKeyRequest
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -304,6 +315,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void GetCryptoKeyResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCryptoKeyRequest request = new GetCryptoKeyRequest
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -339,6 +351,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task GetCryptoKeyResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCryptoKeyRequest request = new GetCryptoKeyRequest
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -376,6 +389,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void GetCryptoKeyVersionRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCryptoKeyVersionRequest request = new GetCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -408,6 +422,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task GetCryptoKeyVersionRequestObjectAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCryptoKeyVersionRequest request = new GetCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -442,6 +457,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void GetCryptoKeyVersion()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCryptoKeyVersionRequest request = new GetCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -474,6 +490,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task GetCryptoKeyVersionAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCryptoKeyVersionRequest request = new GetCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -508,6 +525,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void GetCryptoKeyVersionResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCryptoKeyVersionRequest request = new GetCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -540,6 +558,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task GetCryptoKeyVersionResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCryptoKeyVersionRequest request = new GetCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -574,6 +593,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void GetPublicKeyRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetPublicKeyRequest request = new GetPublicKeyRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -597,6 +617,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task GetPublicKeyRequestObjectAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetPublicKeyRequest request = new GetPublicKeyRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -622,6 +643,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void GetPublicKey()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetPublicKeyRequest request = new GetPublicKeyRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -645,6 +667,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task GetPublicKeyAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetPublicKeyRequest request = new GetPublicKeyRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -670,6 +693,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void GetPublicKeyResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetPublicKeyRequest request = new GetPublicKeyRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -693,6 +717,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task GetPublicKeyResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetPublicKeyRequest request = new GetPublicKeyRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -718,6 +743,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void GetImportJobRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetImportJobRequest request = new GetImportJobRequest
             {
                 ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
@@ -746,6 +772,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task GetImportJobRequestObjectAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetImportJobRequest request = new GetImportJobRequest
             {
                 ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
@@ -776,6 +803,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void GetImportJob()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetImportJobRequest request = new GetImportJobRequest
             {
                 ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
@@ -804,6 +832,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task GetImportJobAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetImportJobRequest request = new GetImportJobRequest
             {
                 ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
@@ -834,6 +863,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void GetImportJobResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetImportJobRequest request = new GetImportJobRequest
             {
                 ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
@@ -862,6 +892,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task GetImportJobResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetImportJobRequest request = new GetImportJobRequest
             {
                 ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
@@ -892,6 +923,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void CreateKeyRingRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateKeyRingRequest request = new CreateKeyRingRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -914,6 +946,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task CreateKeyRingRequestObjectAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateKeyRingRequest request = new CreateKeyRingRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -938,6 +971,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void CreateKeyRing()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateKeyRingRequest request = new CreateKeyRingRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -960,6 +994,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task CreateKeyRingAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateKeyRingRequest request = new CreateKeyRingRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -984,6 +1019,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void CreateKeyRingResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateKeyRingRequest request = new CreateKeyRingRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -1006,6 +1042,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task CreateKeyRingResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateKeyRingRequest request = new CreateKeyRingRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -1030,6 +1067,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void CreateCryptoKeyRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateCryptoKeyRequest request = new CreateCryptoKeyRequest
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -1068,6 +1106,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task CreateCryptoKeyRequestObjectAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateCryptoKeyRequest request = new CreateCryptoKeyRequest
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -1108,6 +1147,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void CreateCryptoKey()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateCryptoKeyRequest request = new CreateCryptoKeyRequest
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -1145,6 +1185,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task CreateCryptoKeyAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateCryptoKeyRequest request = new CreateCryptoKeyRequest
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -1184,6 +1225,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void CreateCryptoKeyResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateCryptoKeyRequest request = new CreateCryptoKeyRequest
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -1221,6 +1263,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task CreateCryptoKeyResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateCryptoKeyRequest request = new CreateCryptoKeyRequest
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -1260,6 +1303,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void CreateCryptoKeyVersionRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateCryptoKeyVersionRequest request = new CreateCryptoKeyVersionRequest
             {
                 ParentAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -1293,6 +1337,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task CreateCryptoKeyVersionRequestObjectAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateCryptoKeyVersionRequest request = new CreateCryptoKeyVersionRequest
             {
                 ParentAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -1328,6 +1373,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void CreateCryptoKeyVersion()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateCryptoKeyVersionRequest request = new CreateCryptoKeyVersionRequest
             {
                 ParentAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -1361,6 +1407,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task CreateCryptoKeyVersionAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateCryptoKeyVersionRequest request = new CreateCryptoKeyVersionRequest
             {
                 ParentAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -1396,6 +1443,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void CreateCryptoKeyVersionResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateCryptoKeyVersionRequest request = new CreateCryptoKeyVersionRequest
             {
                 ParentAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -1429,6 +1477,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task CreateCryptoKeyVersionResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateCryptoKeyVersionRequest request = new CreateCryptoKeyVersionRequest
             {
                 ParentAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -1464,6 +1513,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void ImportCryptoKeyVersionRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ImportCryptoKeyVersionRequest request = new ImportCryptoKeyVersionRequest
             {
                 ParentAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -1500,6 +1550,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task ImportCryptoKeyVersionRequestObjectAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ImportCryptoKeyVersionRequest request = new ImportCryptoKeyVersionRequest
             {
                 ParentAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -1538,6 +1589,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void CreateImportJobRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateImportJobRequest request = new CreateImportJobRequest
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -1568,6 +1620,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task CreateImportJobRequestObjectAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateImportJobRequest request = new CreateImportJobRequest
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -1600,6 +1653,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void CreateImportJob()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateImportJobRequest request = new CreateImportJobRequest
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -1630,6 +1684,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task CreateImportJobAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateImportJobRequest request = new CreateImportJobRequest
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -1662,6 +1717,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void CreateImportJobResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateImportJobRequest request = new CreateImportJobRequest
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -1692,6 +1748,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task CreateImportJobResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateImportJobRequest request = new CreateImportJobRequest
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -1724,6 +1781,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void UpdateCryptoKeyRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateCryptoKeyRequest request = new UpdateCryptoKeyRequest
             {
                 CryptoKey = new CryptoKey(),
@@ -1760,6 +1818,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task UpdateCryptoKeyRequestObjectAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateCryptoKeyRequest request = new UpdateCryptoKeyRequest
             {
                 CryptoKey = new CryptoKey(),
@@ -1798,6 +1857,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void UpdateCryptoKey()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateCryptoKeyRequest request = new UpdateCryptoKeyRequest
             {
                 CryptoKey = new CryptoKey(),
@@ -1834,6 +1894,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task UpdateCryptoKeyAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateCryptoKeyRequest request = new UpdateCryptoKeyRequest
             {
                 CryptoKey = new CryptoKey(),
@@ -1872,6 +1933,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void UpdateCryptoKeyVersionRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateCryptoKeyVersionRequest request = new UpdateCryptoKeyVersionRequest
             {
                 CryptoKeyVersion = new CryptoKeyVersion(),
@@ -1905,6 +1967,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task UpdateCryptoKeyVersionRequestObjectAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateCryptoKeyVersionRequest request = new UpdateCryptoKeyVersionRequest
             {
                 CryptoKeyVersion = new CryptoKeyVersion(),
@@ -1940,6 +2003,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void UpdateCryptoKeyVersion()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateCryptoKeyVersionRequest request = new UpdateCryptoKeyVersionRequest
             {
                 CryptoKeyVersion = new CryptoKeyVersion(),
@@ -1973,6 +2037,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task UpdateCryptoKeyVersionAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateCryptoKeyVersionRequest request = new UpdateCryptoKeyVersionRequest
             {
                 CryptoKeyVersion = new CryptoKeyVersion(),
@@ -2008,6 +2073,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void UpdateCryptoKeyPrimaryVersionRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateCryptoKeyPrimaryVersionRequest request = new UpdateCryptoKeyPrimaryVersionRequest
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -2044,6 +2110,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task UpdateCryptoKeyPrimaryVersionRequestObjectAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateCryptoKeyPrimaryVersionRequest request = new UpdateCryptoKeyPrimaryVersionRequest
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -2082,6 +2149,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void UpdateCryptoKeyPrimaryVersion()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateCryptoKeyPrimaryVersionRequest request = new UpdateCryptoKeyPrimaryVersionRequest
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -2118,6 +2186,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task UpdateCryptoKeyPrimaryVersionAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateCryptoKeyPrimaryVersionRequest request = new UpdateCryptoKeyPrimaryVersionRequest
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -2156,6 +2225,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void UpdateCryptoKeyPrimaryVersionResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateCryptoKeyPrimaryVersionRequest request = new UpdateCryptoKeyPrimaryVersionRequest
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -2192,6 +2262,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task UpdateCryptoKeyPrimaryVersionResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateCryptoKeyPrimaryVersionRequest request = new UpdateCryptoKeyPrimaryVersionRequest
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -2230,6 +2301,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void DestroyCryptoKeyVersionRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DestroyCryptoKeyVersionRequest request = new DestroyCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -2262,6 +2334,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task DestroyCryptoKeyVersionRequestObjectAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DestroyCryptoKeyVersionRequest request = new DestroyCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -2296,6 +2369,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void DestroyCryptoKeyVersion()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DestroyCryptoKeyVersionRequest request = new DestroyCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -2328,6 +2402,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task DestroyCryptoKeyVersionAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DestroyCryptoKeyVersionRequest request = new DestroyCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -2362,6 +2437,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void DestroyCryptoKeyVersionResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DestroyCryptoKeyVersionRequest request = new DestroyCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -2394,6 +2470,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task DestroyCryptoKeyVersionResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DestroyCryptoKeyVersionRequest request = new DestroyCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -2428,6 +2505,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void RestoreCryptoKeyVersionRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RestoreCryptoKeyVersionRequest request = new RestoreCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -2460,6 +2538,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task RestoreCryptoKeyVersionRequestObjectAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RestoreCryptoKeyVersionRequest request = new RestoreCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -2494,6 +2573,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void RestoreCryptoKeyVersion()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RestoreCryptoKeyVersionRequest request = new RestoreCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -2526,6 +2606,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task RestoreCryptoKeyVersionAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RestoreCryptoKeyVersionRequest request = new RestoreCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -2560,6 +2641,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void RestoreCryptoKeyVersionResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RestoreCryptoKeyVersionRequest request = new RestoreCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -2592,6 +2674,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task RestoreCryptoKeyVersionResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RestoreCryptoKeyVersionRequest request = new RestoreCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -2626,6 +2709,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void EncryptRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             EncryptRequest request = new EncryptRequest
             {
                 ResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -2654,6 +2738,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task EncryptRequestObjectAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             EncryptRequest request = new EncryptRequest
             {
                 ResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -2684,6 +2769,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void Encrypt()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             EncryptRequest request = new EncryptRequest
             {
                 ResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -2709,6 +2795,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task EncryptAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             EncryptRequest request = new EncryptRequest
             {
                 ResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -2736,6 +2823,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void EncryptResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             EncryptRequest request = new EncryptRequest
             {
                 ResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -2761,6 +2849,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task EncryptResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             EncryptRequest request = new EncryptRequest
             {
                 ResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -2788,6 +2877,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void DecryptRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DecryptRequest request = new DecryptRequest
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -2814,6 +2904,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task DecryptRequestObjectAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DecryptRequest request = new DecryptRequest
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -2842,6 +2933,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void Decrypt()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DecryptRequest request = new DecryptRequest
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -2865,6 +2957,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task DecryptAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DecryptRequest request = new DecryptRequest
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -2890,6 +2983,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void DecryptResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DecryptRequest request = new DecryptRequest
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -2913,6 +3007,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task DecryptResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DecryptRequest request = new DecryptRequest
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -2938,6 +3033,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void AsymmetricSignRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AsymmetricSignRequest request = new AsymmetricSignRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -2966,6 +3062,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task AsymmetricSignRequestObjectAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AsymmetricSignRequest request = new AsymmetricSignRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -2996,6 +3093,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void AsymmetricSign()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AsymmetricSignRequest request = new AsymmetricSignRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -3021,6 +3119,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task AsymmetricSignAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AsymmetricSignRequest request = new AsymmetricSignRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -3048,6 +3147,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void AsymmetricSignResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AsymmetricSignRequest request = new AsymmetricSignRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -3073,6 +3173,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task AsymmetricSignResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AsymmetricSignRequest request = new AsymmetricSignRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -3100,6 +3201,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void AsymmetricDecryptRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AsymmetricDecryptRequest request = new AsymmetricDecryptRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -3124,6 +3226,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task AsymmetricDecryptRequestObjectAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AsymmetricDecryptRequest request = new AsymmetricDecryptRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -3150,6 +3253,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void AsymmetricDecrypt()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AsymmetricDecryptRequest request = new AsymmetricDecryptRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -3173,6 +3277,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task AsymmetricDecryptAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AsymmetricDecryptRequest request = new AsymmetricDecryptRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -3198,6 +3303,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void AsymmetricDecryptResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AsymmetricDecryptRequest request = new AsymmetricDecryptRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -3221,6 +3327,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task AsymmetricDecryptResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AsymmetricDecryptRequest request = new AsymmetricDecryptRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -3246,6 +3353,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void MacSignRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             MacSignRequest request = new MacSignRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -3271,6 +3379,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task MacSignRequestObjectAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             MacSignRequest request = new MacSignRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -3298,6 +3407,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void MacSign()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             MacSignRequest request = new MacSignRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -3322,6 +3432,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task MacSignAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             MacSignRequest request = new MacSignRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -3348,6 +3459,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void MacSignResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             MacSignRequest request = new MacSignRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -3372,6 +3484,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task MacSignResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             MacSignRequest request = new MacSignRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -3398,6 +3511,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void MacVerifyRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             MacVerifyRequest request = new MacVerifyRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -3426,6 +3540,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task MacVerifyRequestObjectAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             MacVerifyRequest request = new MacVerifyRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -3456,6 +3571,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void MacVerify()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             MacVerifyRequest request = new MacVerifyRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -3482,6 +3598,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task MacVerifyAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             MacVerifyRequest request = new MacVerifyRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -3510,6 +3627,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void MacVerifyResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             MacVerifyRequest request = new MacVerifyRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -3536,6 +3654,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task MacVerifyResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             MacVerifyRequest request = new MacVerifyRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -3564,6 +3683,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void GenerateRandomBytesRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GenerateRandomBytesRequest request = new GenerateRandomBytesRequest
             {
                 Location = "locatione09d18d5",
@@ -3586,6 +3706,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task GenerateRandomBytesRequestObjectAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GenerateRandomBytesRequest request = new GenerateRandomBytesRequest
             {
                 Location = "locatione09d18d5",
@@ -3610,6 +3731,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public void GenerateRandomBytes()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GenerateRandomBytesRequest request = new GenerateRandomBytesRequest
             {
                 Location = "locatione09d18d5",
@@ -3632,6 +3754,7 @@ namespace Google.Cloud.Kms.V1.Tests
         public async stt::Task GenerateRandomBytesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GenerateRandomBytesRequest request = new GenerateRandomBytesRequest
             {
                 Location = "locatione09d18d5",

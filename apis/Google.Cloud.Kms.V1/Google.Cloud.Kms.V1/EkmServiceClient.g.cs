@@ -18,6 +18,7 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -50,6 +51,7 @@ namespace Google.Cloud.Kms.V1
             GetEkmConnectionSettings = existing.GetEkmConnectionSettings;
             CreateEkmConnectionSettings = existing.CreateEkmConnectionSettings;
             UpdateEkmConnectionSettings = existing.UpdateEkmConnectionSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -138,6 +140,11 @@ namespace Google.Cloud.Kms.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateEkmConnectionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="EkmServiceSettings"/> object.</returns>
@@ -304,6 +311,9 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>The underlying gRPC EkmService client</summary>
         public virtual EkmService.EkmServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lists [EkmConnections][google.cloud.kms.v1.EkmConnection].
@@ -838,6 +848,7 @@ namespace Google.Cloud.Kms.V1
             GrpcClient = grpcClient;
             EkmServiceSettings effectiveSettings = settings ?? EkmServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings);
             _callListEkmConnections = clientHelper.BuildApiCall<ListEkmConnectionsRequest, ListEkmConnectionsResponse>(grpcClient.ListEkmConnectionsAsync, grpcClient.ListEkmConnections, effectiveSettings.ListEkmConnectionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListEkmConnections);
             Modify_ListEkmConnectionsApiCall(ref _callListEkmConnections);
@@ -867,6 +878,9 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>The underlying gRPC EkmService client</summary>
         public override EkmService.EkmServiceClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_ListEkmConnectionsRequest(ref ListEkmConnectionsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -987,5 +1001,21 @@ namespace Google.Cloud.Kms.V1
         public scg::IEnumerator<EkmConnection> GetEnumerator() => EkmConnections.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class EkmService
+    {
+        public partial class EkmServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
+        }
     }
 }
