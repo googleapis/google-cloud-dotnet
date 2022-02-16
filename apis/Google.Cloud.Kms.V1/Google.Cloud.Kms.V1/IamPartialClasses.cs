@@ -26,14 +26,6 @@ namespace Google.Cloud.Kms.V1
     // KMS implements IAM in a different way to most other clients; the methods were generated via reroute_to_grpc_interface
     // in the monolithic generator, but that functionality is not part of the microgenerator.
 
-    public static partial class KeyManagementService
-    {
-        public partial class KeyManagementServiceClient
-        {
-            internal iam::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() => new iam::IAMPolicy.IAMPolicyClient(CallInvoker);
-        }
-    }
-
     public partial class KeyManagementServiceSettings
     {
         /// <summary>
