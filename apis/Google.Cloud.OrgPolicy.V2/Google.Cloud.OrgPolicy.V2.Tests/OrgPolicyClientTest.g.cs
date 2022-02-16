@@ -40,7 +40,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -61,7 +63,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -84,7 +88,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -105,7 +111,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -128,7 +136,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -149,7 +159,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -172,7 +184,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetEffectivePolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -193,7 +207,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetEffectivePolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -216,7 +232,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetEffectivePolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -237,7 +255,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetEffectivePolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -260,7 +280,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetEffectivePolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -281,7 +303,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetEffectivePolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -305,7 +329,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreatePolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -327,7 +353,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreatePolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -351,7 +379,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreatePolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -373,7 +403,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreatePolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -397,7 +429,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreatePolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -419,7 +453,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreatePolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -443,7 +479,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreatePolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -465,7 +503,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreatePolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -489,7 +529,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreatePolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -511,7 +553,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreatePolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -534,7 +578,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.UpdatePolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -555,7 +601,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.UpdatePolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -578,7 +626,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.UpdatePolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
@@ -599,7 +649,9 @@ namespace Google.Cloud.OrgPolicy.V2.Tests
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
                 Spec = new PolicySpec(),
+#pragma warning disable CS0612
                 Alternate = new AlternatePolicySpec(),
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.UpdatePolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OrgPolicyClient client = new OrgPolicyClientImpl(mockGrpcClient.Object, null);
