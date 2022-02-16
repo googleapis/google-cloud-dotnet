@@ -10,6 +10,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.TextToSpeech.V1.Tests", "Google.Cloud.TextToSpeech.V1.Tests\Google.Cloud.TextToSpeech.V1.Tests.csproj", "{D1086051-205B-4566-9471-E6225E794E03}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.TextToSpeech.V1.GeneratedSnippets", "Google.Cloud.TextToSpeech.V1.GeneratedSnippets\Google.Cloud.TextToSpeech.V1.GeneratedSnippets.csproj", "{5EAA9A0F-B170-4983-977F-8C8093A64BA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,18 @@ Global
 		{D1086051-205B-4566-9471-E6225E794E03}.Release|x64.Build.0 = Release|Any CPU
 		{D1086051-205B-4566-9471-E6225E794E03}.Release|x86.ActiveCfg = Release|Any CPU
 		{D1086051-205B-4566-9471-E6225E794E03}.Release|x86.Build.0 = Release|Any CPU
+		{5EAA9A0F-B170-4983-977F-8C8093A64BA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EAA9A0F-B170-4983-977F-8C8093A64BA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EAA9A0F-B170-4983-977F-8C8093A64BA7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5EAA9A0F-B170-4983-977F-8C8093A64BA7}.Debug|x64.Build.0 = Debug|Any CPU
+		{5EAA9A0F-B170-4983-977F-8C8093A64BA7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5EAA9A0F-B170-4983-977F-8C8093A64BA7}.Debug|x86.Build.0 = Debug|Any CPU
+		{5EAA9A0F-B170-4983-977F-8C8093A64BA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EAA9A0F-B170-4983-977F-8C8093A64BA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EAA9A0F-B170-4983-977F-8C8093A64BA7}.Release|x64.ActiveCfg = Release|Any CPU
+		{5EAA9A0F-B170-4983-977F-8C8093A64BA7}.Release|x64.Build.0 = Release|Any CPU
+		{5EAA9A0F-B170-4983-977F-8C8093A64BA7}.Release|x86.ActiveCfg = Release|Any CPU
+		{5EAA9A0F-B170-4983-977F-8C8093A64BA7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

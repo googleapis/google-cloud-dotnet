@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.RecaptchaEnterprise.V1.Tests", "Google.Cloud.RecaptchaEnterprise.V1.Tests\Google.Cloud.RecaptchaEnterprise.V1.Tests.csproj", "{B35EE4E6-BEBD-4EE0-8624-02998D52AC58}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.RecaptchaEnterprise.V1.GeneratedSnippets", "Google.Cloud.RecaptchaEnterprise.V1.GeneratedSnippets\Google.Cloud.RecaptchaEnterprise.V1.GeneratedSnippets.csproj", "{B23A6613-3EBE-40E6-8662-1AC7EA2C97DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,17 @@ Global
 		{B35EE4E6-BEBD-4EE0-8624-02998D52AC58}.Release|x64.Build.0 = Release|Any CPU
 		{B35EE4E6-BEBD-4EE0-8624-02998D52AC58}.Release|x86.ActiveCfg = Release|Any CPU
 		{B35EE4E6-BEBD-4EE0-8624-02998D52AC58}.Release|x86.Build.0 = Release|Any CPU
+		{B23A6613-3EBE-40E6-8662-1AC7EA2C97DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B23A6613-3EBE-40E6-8662-1AC7EA2C97DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B23A6613-3EBE-40E6-8662-1AC7EA2C97DE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B23A6613-3EBE-40E6-8662-1AC7EA2C97DE}.Debug|x64.Build.0 = Debug|Any CPU
+		{B23A6613-3EBE-40E6-8662-1AC7EA2C97DE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B23A6613-3EBE-40E6-8662-1AC7EA2C97DE}.Debug|x86.Build.0 = Debug|Any CPU
+		{B23A6613-3EBE-40E6-8662-1AC7EA2C97DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B23A6613-3EBE-40E6-8662-1AC7EA2C97DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B23A6613-3EBE-40E6-8662-1AC7EA2C97DE}.Release|x64.ActiveCfg = Release|Any CPU
+		{B23A6613-3EBE-40E6-8662-1AC7EA2C97DE}.Release|x64.Build.0 = Release|Any CPU
+		{B23A6613-3EBE-40E6-8662-1AC7EA2C97DE}.Release|x86.ActiveCfg = Release|Any CPU
+		{B23A6613-3EBE-40E6-8662-1AC7EA2C97DE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

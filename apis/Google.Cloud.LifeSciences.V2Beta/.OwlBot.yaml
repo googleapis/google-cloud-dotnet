@@ -25,6 +25,8 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.LifeSciences.V2Beta/Google.Cloud.LifeSciences.V2Beta.Tests
     - source: /google/cloud/lifesciences/v2beta/.*-csharp/Google.Cloud.LifeSciences.V2Beta.Snippets
       dest: /owl-bot-staging/Google.Cloud.LifeSciences.V2Beta/Google.Cloud.LifeSciences.V2Beta.Snippets
+    - source: /google/cloud/lifesciences/v2beta/.*-csharp/Google.Cloud.LifeSciences.V2Beta.GeneratedSnippets
+      dest: /owl-bot-staging/Google.Cloud.LifeSciences.V2Beta/Google.Cloud.LifeSciences.V2Beta.GeneratedSnippets
     - source: /google/cloud/lifesciences/v2beta/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.LifeSciences.V2Beta/gapic_metadata.json
 

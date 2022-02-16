@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Analytics.Data.V1Beta.Tests", "Google.Analytics.Data.V1Beta.Tests\Google.Analytics.Data.V1Beta.Tests.csproj", "{CED3E9F5-8D1D-44C1-A062-D6D71FF827BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Analytics.Data.V1Beta.GeneratedSnippets", "Google.Analytics.Data.V1Beta.GeneratedSnippets\Google.Analytics.Data.V1Beta.GeneratedSnippets.csproj", "{357B72E9-4AD3-4DB4-B3CB-AE6FD5DC65A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,17 @@ Global
 		{CED3E9F5-8D1D-44C1-A062-D6D71FF827BF}.Release|x64.Build.0 = Release|Any CPU
 		{CED3E9F5-8D1D-44C1-A062-D6D71FF827BF}.Release|x86.ActiveCfg = Release|Any CPU
 		{CED3E9F5-8D1D-44C1-A062-D6D71FF827BF}.Release|x86.Build.0 = Release|Any CPU
+		{357B72E9-4AD3-4DB4-B3CB-AE6FD5DC65A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{357B72E9-4AD3-4DB4-B3CB-AE6FD5DC65A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{357B72E9-4AD3-4DB4-B3CB-AE6FD5DC65A2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{357B72E9-4AD3-4DB4-B3CB-AE6FD5DC65A2}.Debug|x64.Build.0 = Debug|Any CPU
+		{357B72E9-4AD3-4DB4-B3CB-AE6FD5DC65A2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{357B72E9-4AD3-4DB4-B3CB-AE6FD5DC65A2}.Debug|x86.Build.0 = Debug|Any CPU
+		{357B72E9-4AD3-4DB4-B3CB-AE6FD5DC65A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{357B72E9-4AD3-4DB4-B3CB-AE6FD5DC65A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{357B72E9-4AD3-4DB4-B3CB-AE6FD5DC65A2}.Release|x64.ActiveCfg = Release|Any CPU
+		{357B72E9-4AD3-4DB4-B3CB-AE6FD5DC65A2}.Release|x64.Build.0 = Release|Any CPU
+		{357B72E9-4AD3-4DB4-B3CB-AE6FD5DC65A2}.Release|x86.ActiveCfg = Release|Any CPU
+		{357B72E9-4AD3-4DB4-B3CB-AE6FD5DC65A2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

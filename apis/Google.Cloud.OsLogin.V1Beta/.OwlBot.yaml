@@ -25,6 +25,8 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.OsLogin.V1Beta/Google.Cloud.OsLogin.V1Beta.Tests
     - source: /google/cloud/oslogin/v1beta/.*-csharp/Google.Cloud.OsLogin.V1Beta.Snippets
       dest: /owl-bot-staging/Google.Cloud.OsLogin.V1Beta/Google.Cloud.OsLogin.V1Beta.Snippets
+    - source: /google/cloud/oslogin/v1beta/.*-csharp/Google.Cloud.OsLogin.V1Beta.GeneratedSnippets
+      dest: /owl-bot-staging/Google.Cloud.OsLogin.V1Beta/Google.Cloud.OsLogin.V1Beta.GeneratedSnippets
     - source: /google/cloud/oslogin/v1beta/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.OsLogin.V1Beta/gapic_metadata.json
 

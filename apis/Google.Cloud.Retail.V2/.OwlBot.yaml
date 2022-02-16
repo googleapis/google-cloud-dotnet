@@ -25,6 +25,8 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.Retail.V2/Google.Cloud.Retail.V2.Tests
     - source: /google/cloud/retail/v2/.*-csharp/Google.Cloud.Retail.V2.Snippets
       dest: /owl-bot-staging/Google.Cloud.Retail.V2/Google.Cloud.Retail.V2.Snippets
+    - source: /google/cloud/retail/v2/.*-csharp/Google.Cloud.Retail.V2.GeneratedSnippets
+      dest: /owl-bot-staging/Google.Cloud.Retail.V2/Google.Cloud.Retail.V2.GeneratedSnippets
     - source: /google/cloud/retail/v2/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.Retail.V2/gapic_metadata.json
 

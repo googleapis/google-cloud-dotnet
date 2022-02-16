@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.LongRunning", "..\Go
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Dialogflow.V2.PatchProtos", "Google.Cloud.Dialogflow.V2.PatchProtos\Google.Cloud.Dialogflow.V2.PatchProtos.csproj", "{E4D953D0-AA71-43D4-A952-CE2FBF10EB04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Dialogflow.V2.GeneratedSnippets", "Google.Cloud.Dialogflow.V2.GeneratedSnippets\Google.Cloud.Dialogflow.V2.GeneratedSnippets.csproj", "{F8A40863-CB71-483A-9E99-4E92487CBF6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +99,18 @@ Global
 		{E4D953D0-AA71-43D4-A952-CE2FBF10EB04}.Release|x64.Build.0 = Release|Any CPU
 		{E4D953D0-AA71-43D4-A952-CE2FBF10EB04}.Release|x86.ActiveCfg = Release|Any CPU
 		{E4D953D0-AA71-43D4-A952-CE2FBF10EB04}.Release|x86.Build.0 = Release|Any CPU
+		{F8A40863-CB71-483A-9E99-4E92487CBF6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8A40863-CB71-483A-9E99-4E92487CBF6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8A40863-CB71-483A-9E99-4E92487CBF6C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F8A40863-CB71-483A-9E99-4E92487CBF6C}.Debug|x64.Build.0 = Debug|Any CPU
+		{F8A40863-CB71-483A-9E99-4E92487CBF6C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F8A40863-CB71-483A-9E99-4E92487CBF6C}.Debug|x86.Build.0 = Debug|Any CPU
+		{F8A40863-CB71-483A-9E99-4E92487CBF6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8A40863-CB71-483A-9E99-4E92487CBF6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8A40863-CB71-483A-9E99-4E92487CBF6C}.Release|x64.ActiveCfg = Release|Any CPU
+		{F8A40863-CB71-483A-9E99-4E92487CBF6C}.Release|x64.Build.0 = Release|Any CPU
+		{F8A40863-CB71-483A-9E99-4E92487CBF6C}.Release|x86.ActiveCfg = Release|Any CPU
+		{F8A40863-CB71-483A-9E99-4E92487CBF6C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

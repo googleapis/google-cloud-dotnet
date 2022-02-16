@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.LongRunning.Tests", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.LongRunning.Snippets", "Google.LongRunning.Snippets\Google.LongRunning.Snippets.csproj", "{D1D90E1A-E504-4193-B2A1-91527114D949}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.LongRunning.GeneratedSnippets", "Google.LongRunning.GeneratedSnippets\Google.LongRunning.GeneratedSnippets.csproj", "{F791474D-CA19-49D7-ACF7-ACBAA4F3FE12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{D1D90E1A-E504-4193-B2A1-91527114D949}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1D90E1A-E504-4193-B2A1-91527114D949}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1D90E1A-E504-4193-B2A1-91527114D949}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F791474D-CA19-49D7-ACF7-ACBAA4F3FE12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F791474D-CA19-49D7-ACF7-ACBAA4F3FE12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F791474D-CA19-49D7-ACF7-ACBAA4F3FE12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F791474D-CA19-49D7-ACF7-ACBAA4F3FE12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

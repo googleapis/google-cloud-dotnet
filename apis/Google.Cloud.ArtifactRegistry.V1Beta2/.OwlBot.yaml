@@ -25,6 +25,8 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.ArtifactRegistry.V1Beta2/Google.Cloud.ArtifactRegistry.V1Beta2.Tests
     - source: /google/devtools/artifactregistry/v1beta2/.*-csharp/Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
       dest: /owl-bot-staging/Google.Cloud.ArtifactRegistry.V1Beta2/Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
+    - source: /google/devtools/artifactregistry/v1beta2/.*-csharp/Google.Cloud.ArtifactRegistry.V1Beta2.GeneratedSnippets
+      dest: /owl-bot-staging/Google.Cloud.ArtifactRegistry.V1Beta2/Google.Cloud.ArtifactRegistry.V1Beta2.GeneratedSnippets
     - source: /google/devtools/artifactregistry/v1beta2/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.ArtifactRegistry.V1Beta2/gapic_metadata.json
 

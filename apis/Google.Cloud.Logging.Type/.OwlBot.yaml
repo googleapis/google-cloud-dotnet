@@ -25,6 +25,8 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.Logging.Type/Google.Cloud.Logging.Type.Tests
     - source: /google/logging/type/.*-csharp/Google.Cloud.Logging.Type.Snippets
       dest: /owl-bot-staging/Google.Cloud.Logging.Type/Google.Cloud.Logging.Type.Snippets
+    - source: /google/logging/type/.*-csharp/Google.Cloud.Logging.Type.GeneratedSnippets
+      dest: /owl-bot-staging/Google.Cloud.Logging.Type/Google.Cloud.Logging.Type.GeneratedSnippets
     - source: /google/logging/type/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.Logging.Type/gapic_metadata.json
 

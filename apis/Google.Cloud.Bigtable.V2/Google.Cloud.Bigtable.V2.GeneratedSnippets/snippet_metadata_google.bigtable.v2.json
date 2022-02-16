@@ -1,0 +1,1420 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Bigtable.V2",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.bigtable.v2",
+        "version": "v2"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadRows_sync",
+      "title": "ReadRowsRequestObject",
+      "description": "Snippet for ReadRows",
+      "file": "BigtableServiceApiClient.ReadRowsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadRows",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadRows",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ReadRowsStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ReadRows",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadRows",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadRows_sync_flattened1",
+      "title": "ReadRows1",
+      "description": "Snippet for ReadRows",
+      "file": "BigtableServiceApiClient.ReadRows1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadRows",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadRows",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ReadRowsStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ReadRows",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadRows",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadRows_sync_flattened1_resourceNames",
+      "title": "ReadRows1ResourceNames",
+      "description": "Snippet for ReadRows",
+      "file": "BigtableServiceApiClient.ReadRows1ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadRows",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadRows",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ReadRowsStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ReadRows",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadRows",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadRows_sync_flattened2",
+      "title": "ReadRows2",
+      "description": "Snippet for ReadRows",
+      "file": "BigtableServiceApiClient.ReadRows2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadRows",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadRows",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ReadRowsStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ReadRows",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadRows",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadRows_sync_flattened2_resourceNames",
+      "title": "ReadRows2ResourceNames",
+      "description": "Snippet for ReadRows",
+      "file": "BigtableServiceApiClient.ReadRows2ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadRows",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadRows",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ReadRowsStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ReadRows",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadRows",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_SampleRowKeys_sync",
+      "title": "SampleRowKeysRequestObject",
+      "description": "Snippet for SampleRowKeys",
+      "file": "BigtableServiceApiClient.SampleRowKeysRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SampleRowKeys",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.SampleRowKeys",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+SampleRowKeysStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "SampleRowKeys",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.SampleRowKeys",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_SampleRowKeys_sync_flattened1",
+      "title": "SampleRowKeys1",
+      "description": "Snippet for SampleRowKeys",
+      "file": "BigtableServiceApiClient.SampleRowKeys1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SampleRowKeys",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.SampleRowKeys",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+SampleRowKeysStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "SampleRowKeys",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.SampleRowKeys",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_SampleRowKeys_sync_flattened1_resourceNames",
+      "title": "SampleRowKeys1ResourceNames",
+      "description": "Snippet for SampleRowKeys",
+      "file": "BigtableServiceApiClient.SampleRowKeys1ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SampleRowKeys",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.SampleRowKeys",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+SampleRowKeysStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "SampleRowKeys",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.SampleRowKeys",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_SampleRowKeys_sync_flattened2",
+      "title": "SampleRowKeys2",
+      "description": "Snippet for SampleRowKeys",
+      "file": "BigtableServiceApiClient.SampleRowKeys2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SampleRowKeys",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.SampleRowKeys",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+SampleRowKeysStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "SampleRowKeys",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.SampleRowKeys",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_SampleRowKeys_sync_flattened2_resourceNames",
+      "title": "SampleRowKeys2ResourceNames",
+      "description": "Snippet for SampleRowKeys",
+      "file": "BigtableServiceApiClient.SampleRowKeys2ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SampleRowKeys",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.SampleRowKeys",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+SampleRowKeysStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "SampleRowKeys",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.SampleRowKeys",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRow_sync",
+      "title": "MutateRowRequestObject",
+      "description": "Snippet for MutateRow",
+      "file": "BigtableServiceApiClient.MutateRowRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MutateRow",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRow",
+        "resultType": "Google.Cloud.Bigtable.V2.MutateRowResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "MutateRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRow_async",
+      "title": "MutateRowRequestObjectAsync",
+      "description": "Snippet for MutateRowAsync",
+      "file": "BigtableServiceApiClient.MutateRowRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MutateRowAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRowAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.MutateRowResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "MutateRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRow_sync_flattened1",
+      "title": "MutateRow1",
+      "description": "Snippet for MutateRow",
+      "file": "BigtableServiceApiClient.MutateRow1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MutateRow",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRow",
+        "resultType": "Google.Cloud.Bigtable.V2.MutateRowResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "MutateRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRow_async_flattened1",
+      "title": "MutateRow1Async",
+      "description": "Snippet for MutateRowAsync",
+      "file": "BigtableServiceApiClient.MutateRow1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MutateRowAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRowAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.MutateRowResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "MutateRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRow_sync_flattened1_resourceNames",
+      "title": "MutateRow1ResourceNames",
+      "description": "Snippet for MutateRow",
+      "file": "BigtableServiceApiClient.MutateRow1ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MutateRow",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRow",
+        "resultType": "Google.Cloud.Bigtable.V2.MutateRowResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "MutateRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRow_async_flattened1_resourceNames",
+      "title": "MutateRow1ResourceNamesAsync",
+      "description": "Snippet for MutateRowAsync",
+      "file": "BigtableServiceApiClient.MutateRow1ResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MutateRowAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRowAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.MutateRowResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "MutateRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRow_sync_flattened2",
+      "title": "MutateRow2",
+      "description": "Snippet for MutateRow",
+      "file": "BigtableServiceApiClient.MutateRow2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MutateRow",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRow",
+        "resultType": "Google.Cloud.Bigtable.V2.MutateRowResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "MutateRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRow_async_flattened2",
+      "title": "MutateRow2Async",
+      "description": "Snippet for MutateRowAsync",
+      "file": "BigtableServiceApiClient.MutateRow2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MutateRowAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRowAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.MutateRowResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "MutateRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRow_sync_flattened2_resourceNames",
+      "title": "MutateRow2ResourceNames",
+      "description": "Snippet for MutateRow",
+      "file": "BigtableServiceApiClient.MutateRow2ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MutateRow",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRow",
+        "resultType": "Google.Cloud.Bigtable.V2.MutateRowResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "MutateRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRow_async_flattened2_resourceNames",
+      "title": "MutateRow2ResourceNamesAsync",
+      "description": "Snippet for MutateRowAsync",
+      "file": "BigtableServiceApiClient.MutateRow2ResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MutateRowAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRowAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.MutateRowResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "MutateRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRows_sync",
+      "title": "MutateRowsRequestObject",
+      "description": "Snippet for MutateRows",
+      "file": "BigtableServiceApiClient.MutateRowsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MutateRows",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRows",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+MutateRowsStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "MutateRows",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRows",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRows_sync_flattened1",
+      "title": "MutateRows1",
+      "description": "Snippet for MutateRows",
+      "file": "BigtableServiceApiClient.MutateRows1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MutateRows",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRows",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+MutateRowsStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "MutateRows",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRows",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRows_sync_flattened1_resourceNames",
+      "title": "MutateRows1ResourceNames",
+      "description": "Snippet for MutateRows",
+      "file": "BigtableServiceApiClient.MutateRows1ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MutateRows",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRows",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+MutateRowsStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "MutateRows",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRows",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRows_sync_flattened2",
+      "title": "MutateRows2",
+      "description": "Snippet for MutateRows",
+      "file": "BigtableServiceApiClient.MutateRows2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MutateRows",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRows",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+MutateRowsStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "MutateRows",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRows",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRows_sync_flattened2_resourceNames",
+      "title": "MutateRows2ResourceNames",
+      "description": "Snippet for MutateRows",
+      "file": "BigtableServiceApiClient.MutateRows2ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MutateRows",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRows",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+MutateRowsStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "MutateRows",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRows",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_sync",
+      "title": "CheckAndMutateRowRequestObject",
+      "description": "Snippet for CheckAndMutateRow",
+      "file": "BigtableServiceApiClient.CheckAndMutateRowRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckAndMutateRow",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.CheckAndMutateRow",
+        "resultType": "Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "CheckAndMutateRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.CheckAndMutateRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_async",
+      "title": "CheckAndMutateRowRequestObjectAsync",
+      "description": "Snippet for CheckAndMutateRowAsync",
+      "file": "BigtableServiceApiClient.CheckAndMutateRowRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckAndMutateRowAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.CheckAndMutateRowAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "CheckAndMutateRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.CheckAndMutateRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_sync_flattened1",
+      "title": "CheckAndMutateRow1",
+      "description": "Snippet for CheckAndMutateRow",
+      "file": "BigtableServiceApiClient.CheckAndMutateRow1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckAndMutateRow",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.CheckAndMutateRow",
+        "resultType": "Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "CheckAndMutateRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.CheckAndMutateRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_async_flattened1",
+      "title": "CheckAndMutateRow1Async",
+      "description": "Snippet for CheckAndMutateRowAsync",
+      "file": "BigtableServiceApiClient.CheckAndMutateRow1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckAndMutateRowAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.CheckAndMutateRowAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "CheckAndMutateRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.CheckAndMutateRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_sync_flattened1_resourceNames",
+      "title": "CheckAndMutateRow1ResourceNames",
+      "description": "Snippet for CheckAndMutateRow",
+      "file": "BigtableServiceApiClient.CheckAndMutateRow1ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckAndMutateRow",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.CheckAndMutateRow",
+        "resultType": "Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "CheckAndMutateRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.CheckAndMutateRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_async_flattened1_resourceNames",
+      "title": "CheckAndMutateRow1ResourceNamesAsync",
+      "description": "Snippet for CheckAndMutateRowAsync",
+      "file": "BigtableServiceApiClient.CheckAndMutateRow1ResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckAndMutateRowAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.CheckAndMutateRowAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "CheckAndMutateRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.CheckAndMutateRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_sync_flattened2",
+      "title": "CheckAndMutateRow2",
+      "description": "Snippet for CheckAndMutateRow",
+      "file": "BigtableServiceApiClient.CheckAndMutateRow2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckAndMutateRow",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.CheckAndMutateRow",
+        "resultType": "Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "CheckAndMutateRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.CheckAndMutateRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_async_flattened2",
+      "title": "CheckAndMutateRow2Async",
+      "description": "Snippet for CheckAndMutateRowAsync",
+      "file": "BigtableServiceApiClient.CheckAndMutateRow2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckAndMutateRowAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.CheckAndMutateRowAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "CheckAndMutateRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.CheckAndMutateRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_sync_flattened2_resourceNames",
+      "title": "CheckAndMutateRow2ResourceNames",
+      "description": "Snippet for CheckAndMutateRow",
+      "file": "BigtableServiceApiClient.CheckAndMutateRow2ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckAndMutateRow",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.CheckAndMutateRow",
+        "resultType": "Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "CheckAndMutateRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.CheckAndMutateRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_async_flattened2_resourceNames",
+      "title": "CheckAndMutateRow2ResourceNamesAsync",
+      "description": "Snippet for CheckAndMutateRowAsync",
+      "file": "BigtableServiceApiClient.CheckAndMutateRow2ResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckAndMutateRowAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.CheckAndMutateRowAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "CheckAndMutateRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.CheckAndMutateRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_PingAndWarm_sync",
+      "title": "PingAndWarmRequestObject",
+      "description": "Snippet for PingAndWarm",
+      "file": "BigtableServiceApiClient.PingAndWarmRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PingAndWarm",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PingAndWarm",
+        "resultType": "Google.Cloud.Bigtable.V2.PingAndWarmResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "PingAndWarm",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.PingAndWarm",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_PingAndWarm_async",
+      "title": "PingAndWarmRequestObjectAsync",
+      "description": "Snippet for PingAndWarmAsync",
+      "file": "BigtableServiceApiClient.PingAndWarmRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PingAndWarmAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PingAndWarmAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.PingAndWarmResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "PingAndWarm",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.PingAndWarm",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_PingAndWarm_sync_flattened1",
+      "title": "PingAndWarm1",
+      "description": "Snippet for PingAndWarm",
+      "file": "BigtableServiceApiClient.PingAndWarm1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PingAndWarm",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PingAndWarm",
+        "resultType": "Google.Cloud.Bigtable.V2.PingAndWarmResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "PingAndWarm",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.PingAndWarm",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_PingAndWarm_async_flattened1",
+      "title": "PingAndWarm1Async",
+      "description": "Snippet for PingAndWarmAsync",
+      "file": "BigtableServiceApiClient.PingAndWarm1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PingAndWarmAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PingAndWarmAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.PingAndWarmResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "PingAndWarm",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.PingAndWarm",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_PingAndWarm_sync_flattened1_resourceNames",
+      "title": "PingAndWarm1ResourceNames",
+      "description": "Snippet for PingAndWarm",
+      "file": "BigtableServiceApiClient.PingAndWarm1ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PingAndWarm",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PingAndWarm",
+        "resultType": "Google.Cloud.Bigtable.V2.PingAndWarmResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "PingAndWarm",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.PingAndWarm",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_PingAndWarm_async_flattened1_resourceNames",
+      "title": "PingAndWarm1ResourceNamesAsync",
+      "description": "Snippet for PingAndWarmAsync",
+      "file": "BigtableServiceApiClient.PingAndWarm1ResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PingAndWarmAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PingAndWarmAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.PingAndWarmResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "PingAndWarm",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.PingAndWarm",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_PingAndWarm_sync_flattened2",
+      "title": "PingAndWarm2",
+      "description": "Snippet for PingAndWarm",
+      "file": "BigtableServiceApiClient.PingAndWarm2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PingAndWarm",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PingAndWarm",
+        "resultType": "Google.Cloud.Bigtable.V2.PingAndWarmResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "PingAndWarm",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.PingAndWarm",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_PingAndWarm_async_flattened2",
+      "title": "PingAndWarm2Async",
+      "description": "Snippet for PingAndWarmAsync",
+      "file": "BigtableServiceApiClient.PingAndWarm2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PingAndWarmAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PingAndWarmAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.PingAndWarmResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "PingAndWarm",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.PingAndWarm",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_PingAndWarm_sync_flattened2_resourceNames",
+      "title": "PingAndWarm2ResourceNames",
+      "description": "Snippet for PingAndWarm",
+      "file": "BigtableServiceApiClient.PingAndWarm2ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PingAndWarm",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PingAndWarm",
+        "resultType": "Google.Cloud.Bigtable.V2.PingAndWarmResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "PingAndWarm",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.PingAndWarm",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_PingAndWarm_async_flattened2_resourceNames",
+      "title": "PingAndWarm2ResourceNamesAsync",
+      "description": "Snippet for PingAndWarmAsync",
+      "file": "BigtableServiceApiClient.PingAndWarm2ResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PingAndWarmAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PingAndWarmAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.PingAndWarmResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "PingAndWarm",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.PingAndWarm",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_sync",
+      "title": "ReadModifyWriteRowRequestObject",
+      "description": "Snippet for ReadModifyWriteRow",
+      "file": "BigtableServiceApiClient.ReadModifyWriteRowRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadModifyWriteRow",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadModifyWriteRow",
+        "resultType": "Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ReadModifyWriteRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadModifyWriteRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_async",
+      "title": "ReadModifyWriteRowRequestObjectAsync",
+      "description": "Snippet for ReadModifyWriteRowAsync",
+      "file": "BigtableServiceApiClient.ReadModifyWriteRowRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadModifyWriteRowAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadModifyWriteRowAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ReadModifyWriteRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadModifyWriteRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_sync_flattened1",
+      "title": "ReadModifyWriteRow1",
+      "description": "Snippet for ReadModifyWriteRow",
+      "file": "BigtableServiceApiClient.ReadModifyWriteRow1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadModifyWriteRow",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadModifyWriteRow",
+        "resultType": "Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ReadModifyWriteRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadModifyWriteRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_async_flattened1",
+      "title": "ReadModifyWriteRow1Async",
+      "description": "Snippet for ReadModifyWriteRowAsync",
+      "file": "BigtableServiceApiClient.ReadModifyWriteRow1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadModifyWriteRowAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadModifyWriteRowAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ReadModifyWriteRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadModifyWriteRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_sync_flattened1_resourceNames",
+      "title": "ReadModifyWriteRow1ResourceNames",
+      "description": "Snippet for ReadModifyWriteRow",
+      "file": "BigtableServiceApiClient.ReadModifyWriteRow1ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadModifyWriteRow",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadModifyWriteRow",
+        "resultType": "Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ReadModifyWriteRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadModifyWriteRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_async_flattened1_resourceNames",
+      "title": "ReadModifyWriteRow1ResourceNamesAsync",
+      "description": "Snippet for ReadModifyWriteRowAsync",
+      "file": "BigtableServiceApiClient.ReadModifyWriteRow1ResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadModifyWriteRowAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadModifyWriteRowAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ReadModifyWriteRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadModifyWriteRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_sync_flattened2",
+      "title": "ReadModifyWriteRow2",
+      "description": "Snippet for ReadModifyWriteRow",
+      "file": "BigtableServiceApiClient.ReadModifyWriteRow2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadModifyWriteRow",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadModifyWriteRow",
+        "resultType": "Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ReadModifyWriteRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadModifyWriteRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_async_flattened2",
+      "title": "ReadModifyWriteRow2Async",
+      "description": "Snippet for ReadModifyWriteRowAsync",
+      "file": "BigtableServiceApiClient.ReadModifyWriteRow2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadModifyWriteRowAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadModifyWriteRowAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ReadModifyWriteRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadModifyWriteRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_sync_flattened2_resourceNames",
+      "title": "ReadModifyWriteRow2ResourceNames",
+      "description": "Snippet for ReadModifyWriteRow",
+      "file": "BigtableServiceApiClient.ReadModifyWriteRow2ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadModifyWriteRow",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadModifyWriteRow",
+        "resultType": "Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ReadModifyWriteRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadModifyWriteRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_async_flattened2_resourceNames",
+      "title": "ReadModifyWriteRow2ResourceNamesAsync",
+      "description": "Snippet for ReadModifyWriteRowAsync",
+      "file": "BigtableServiceApiClient.ReadModifyWriteRow2ResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadModifyWriteRowAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadModifyWriteRowAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ReadModifyWriteRow",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadModifyWriteRow",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    }
+  ]
+}

@@ -25,6 +25,8 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.Workflows.Executions.V1Beta/Google.Cloud.Workflows.Executions.V1Beta.Tests
     - source: /google/cloud/workflows/executions/v1beta/.*-csharp/Google.Cloud.Workflows.Executions.V1Beta.Snippets
       dest: /owl-bot-staging/Google.Cloud.Workflows.Executions.V1Beta/Google.Cloud.Workflows.Executions.V1Beta.Snippets
+    - source: /google/cloud/workflows/executions/v1beta/.*-csharp/Google.Cloud.Workflows.Executions.V1Beta.GeneratedSnippets
+      dest: /owl-bot-staging/Google.Cloud.Workflows.Executions.V1Beta/Google.Cloud.Workflows.Executions.V1Beta.GeneratedSnippets
     - source: /google/cloud/workflows/executions/v1beta/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.Workflows.Executions.V1Beta/gapic_metadata.json
 

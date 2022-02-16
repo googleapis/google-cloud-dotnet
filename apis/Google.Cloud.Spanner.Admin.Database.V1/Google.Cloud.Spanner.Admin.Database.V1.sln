@@ -1,4 +1,4 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
@@ -15,6 +15,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Admin.Database.V1.Tests", "Google.Cloud.Spanner.Admin.Database.V1.Tests\Google.Cloud.Spanner.Admin.Database.V1.Tests.csproj", "{3DBEE305-03E5-4DDB-A523-AF1621B999BC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Common.V1", "..\Google.Cloud.Spanner.Common.V1\Google.Cloud.Spanner.Common.V1\Google.Cloud.Spanner.Common.V1.csproj", "{776FAF0E-199C-4F71-9CA6-26F5DA5EC231}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Spanner.Admin.Database.V1.GeneratedSnippets", "Google.Cloud.Spanner.Admin.Database.V1.GeneratedSnippets\Google.Cloud.Spanner.Admin.Database.V1.GeneratedSnippets.csproj", "{9C91D574-FDE3-49CC-8846-1C99D4F98D12}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -110,6 +112,18 @@ Global
 		{776FAF0E-199C-4F71-9CA6-26F5DA5EC231}.Release|x64.Build.0 = Release|Any CPU
 		{776FAF0E-199C-4F71-9CA6-26F5DA5EC231}.Release|x86.ActiveCfg = Release|Any CPU
 		{776FAF0E-199C-4F71-9CA6-26F5DA5EC231}.Release|x86.Build.0 = Release|Any CPU
+		{9C91D574-FDE3-49CC-8846-1C99D4F98D12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C91D574-FDE3-49CC-8846-1C99D4F98D12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C91D574-FDE3-49CC-8846-1C99D4F98D12}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9C91D574-FDE3-49CC-8846-1C99D4F98D12}.Debug|x64.Build.0 = Debug|Any CPU
+		{9C91D574-FDE3-49CC-8846-1C99D4F98D12}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9C91D574-FDE3-49CC-8846-1C99D4F98D12}.Debug|x86.Build.0 = Debug|Any CPU
+		{9C91D574-FDE3-49CC-8846-1C99D4F98D12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C91D574-FDE3-49CC-8846-1C99D4F98D12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C91D574-FDE3-49CC-8846-1C99D4F98D12}.Release|x64.ActiveCfg = Release|Any CPU
+		{9C91D574-FDE3-49CC-8846-1C99D4F98D12}.Release|x64.Build.0 = Release|Any CPU
+		{9C91D574-FDE3-49CC-8846-1C99D4F98D12}.Release|x86.ActiveCfg = Release|Any CPU
+		{9C91D574-FDE3-49CC-8846-1C99D4F98D12}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

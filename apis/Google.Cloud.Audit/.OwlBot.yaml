@@ -25,6 +25,8 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.Audit/Google.Cloud.Audit.Tests
     - source: /google/cloud/audit/.*-csharp/Google.Cloud.Audit.Snippets
       dest: /owl-bot-staging/Google.Cloud.Audit/Google.Cloud.Audit.Snippets
+    - source: /google/cloud/audit/.*-csharp/Google.Cloud.Audit.GeneratedSnippets
+      dest: /owl-bot-staging/Google.Cloud.Audit/Google.Cloud.Audit.GeneratedSnippets
     - source: /google/cloud/audit/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.Audit/gapic_metadata.json
 

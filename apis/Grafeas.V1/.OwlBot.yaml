@@ -25,6 +25,8 @@ deep-copy-regex:
       dest: /owl-bot-staging/Grafeas.V1/Grafeas.V1.Tests
     - source: /grafeas/v1/.*-csharp/Grafeas.V1.Snippets
       dest: /owl-bot-staging/Grafeas.V1/Grafeas.V1.Snippets
+    - source: /grafeas/v1/.*-csharp/Grafeas.V1.GeneratedSnippets
+      dest: /owl-bot-staging/Grafeas.V1/Grafeas.V1.GeneratedSnippets
     - source: /grafeas/v1/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Grafeas.V1/gapic_metadata.json
 

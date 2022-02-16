@@ -10,6 +10,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.BigQuery.DataTransfer.V1.Tests", "Google.Cloud.BigQuery.DataTransfer.V1.Tests\Google.Cloud.BigQuery.DataTransfer.V1.Tests.csproj", "{FB643825-4196-4B3F-9E07-F3071985DDA8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.DataTransfer.V1.GeneratedSnippets", "Google.Cloud.BigQuery.DataTransfer.V1.GeneratedSnippets\Google.Cloud.BigQuery.DataTransfer.V1.GeneratedSnippets.csproj", "{C9F8A074-2F47-43E9-BEFA-F07F6E6E8C22}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,18 @@ Global
 		{FB643825-4196-4B3F-9E07-F3071985DDA8}.Release|x64.Build.0 = Release|Any CPU
 		{FB643825-4196-4B3F-9E07-F3071985DDA8}.Release|x86.ActiveCfg = Release|Any CPU
 		{FB643825-4196-4B3F-9E07-F3071985DDA8}.Release|x86.Build.0 = Release|Any CPU
+		{C9F8A074-2F47-43E9-BEFA-F07F6E6E8C22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9F8A074-2F47-43E9-BEFA-F07F6E6E8C22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9F8A074-2F47-43E9-BEFA-F07F6E6E8C22}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C9F8A074-2F47-43E9-BEFA-F07F6E6E8C22}.Debug|x64.Build.0 = Debug|Any CPU
+		{C9F8A074-2F47-43E9-BEFA-F07F6E6E8C22}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C9F8A074-2F47-43E9-BEFA-F07F6E6E8C22}.Debug|x86.Build.0 = Debug|Any CPU
+		{C9F8A074-2F47-43E9-BEFA-F07F6E6E8C22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9F8A074-2F47-43E9-BEFA-F07F6E6E8C22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9F8A074-2F47-43E9-BEFA-F07F6E6E8C22}.Release|x64.ActiveCfg = Release|Any CPU
+		{C9F8A074-2F47-43E9-BEFA-F07F6E6E8C22}.Release|x64.Build.0 = Release|Any CPU
+		{C9F8A074-2F47-43E9-BEFA-F07F6E6E8C22}.Release|x86.ActiveCfg = Release|Any CPU
+		{C9F8A074-2F47-43E9-BEFA-F07F6E6E8C22}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

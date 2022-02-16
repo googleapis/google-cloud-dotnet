@@ -10,6 +10,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Iam.V1.Snippets", "Google.Cloud.Iam.V1.Snippets\Google.Cloud.Iam.V1.Snippets.csproj", "{A1D85010-C814-431F-955E-ADC5BCBFB887}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Iam.V1.GeneratedSnippets", "Google.Cloud.Iam.V1.GeneratedSnippets\Google.Cloud.Iam.V1.GeneratedSnippets.csproj", "{1DB97C3C-B2EF-4103-9F06-58EF5DB3F14B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,18 @@ Global
 		{A1D85010-C814-431F-955E-ADC5BCBFB887}.Release|x64.Build.0 = Release|Any CPU
 		{A1D85010-C814-431F-955E-ADC5BCBFB887}.Release|x86.ActiveCfg = Release|Any CPU
 		{A1D85010-C814-431F-955E-ADC5BCBFB887}.Release|x86.Build.0 = Release|Any CPU
+		{1DB97C3C-B2EF-4103-9F06-58EF5DB3F14B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DB97C3C-B2EF-4103-9F06-58EF5DB3F14B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DB97C3C-B2EF-4103-9F06-58EF5DB3F14B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1DB97C3C-B2EF-4103-9F06-58EF5DB3F14B}.Debug|x64.Build.0 = Debug|Any CPU
+		{1DB97C3C-B2EF-4103-9F06-58EF5DB3F14B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1DB97C3C-B2EF-4103-9F06-58EF5DB3F14B}.Debug|x86.Build.0 = Debug|Any CPU
+		{1DB97C3C-B2EF-4103-9F06-58EF5DB3F14B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DB97C3C-B2EF-4103-9F06-58EF5DB3F14B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DB97C3C-B2EF-4103-9F06-58EF5DB3F14B}.Release|x64.ActiveCfg = Release|Any CPU
+		{1DB97C3C-B2EF-4103-9F06-58EF5DB3F14B}.Release|x64.Build.0 = Release|Any CPU
+		{1DB97C3C-B2EF-4103-9F06-58EF5DB3F14B}.Release|x86.ActiveCfg = Release|Any CPU
+		{1DB97C3C-B2EF-4103-9F06-58EF5DB3F14B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

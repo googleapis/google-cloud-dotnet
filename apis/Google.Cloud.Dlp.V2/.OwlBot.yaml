@@ -25,6 +25,8 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.Dlp.V2/Google.Cloud.Dlp.V2.Tests
     - source: /google/privacy/dlp/v2/.*-csharp/Google.Cloud.Dlp.V2.Snippets
       dest: /owl-bot-staging/Google.Cloud.Dlp.V2/Google.Cloud.Dlp.V2.Snippets
+    - source: /google/privacy/dlp/v2/.*-csharp/Google.Cloud.Dlp.V2.GeneratedSnippets
+      dest: /owl-bot-staging/Google.Cloud.Dlp.V2/Google.Cloud.Dlp.V2.GeneratedSnippets
     - source: /google/privacy/dlp/v2/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.Dlp.V2/gapic_metadata.json
 
