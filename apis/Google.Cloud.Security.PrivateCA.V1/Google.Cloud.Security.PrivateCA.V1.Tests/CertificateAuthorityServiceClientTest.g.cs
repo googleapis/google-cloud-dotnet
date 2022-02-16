@@ -15,6 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -33,6 +35,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateCertificateRequest request = new CreateCertificateRequest
             {
                 ParentAsCaPoolName = CaPoolName.FromProjectLocationCaPool("[PROJECT]", "[LOCATION]", "[CA_POOL]"),
@@ -80,6 +84,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateCertificateRequest request = new CreateCertificateRequest
             {
                 ParentAsCaPoolName = CaPoolName.FromProjectLocationCaPool("[PROJECT]", "[LOCATION]", "[CA_POOL]"),
@@ -129,6 +135,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateCertificateRequest request = new CreateCertificateRequest
             {
                 ParentAsCaPoolName = CaPoolName.FromProjectLocationCaPool("[PROJECT]", "[LOCATION]", "[CA_POOL]"),
@@ -173,6 +181,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateCertificateRequest request = new CreateCertificateRequest
             {
                 ParentAsCaPoolName = CaPoolName.FromProjectLocationCaPool("[PROJECT]", "[LOCATION]", "[CA_POOL]"),
@@ -219,6 +229,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateCertificateRequest request = new CreateCertificateRequest
             {
                 ParentAsCaPoolName = CaPoolName.FromProjectLocationCaPool("[PROJECT]", "[LOCATION]", "[CA_POOL]"),
@@ -263,6 +275,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateCertificateRequest request = new CreateCertificateRequest
             {
                 ParentAsCaPoolName = CaPoolName.FromProjectLocationCaPool("[PROJECT]", "[LOCATION]", "[CA_POOL]"),
@@ -309,6 +323,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateRequest request = new GetCertificateRequest
             {
                 CertificateName = CertificateName.FromProjectLocationCaPoolCertificate("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE]"),
@@ -351,6 +367,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateRequest request = new GetCertificateRequest
             {
                 CertificateName = CertificateName.FromProjectLocationCaPoolCertificate("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE]"),
@@ -395,6 +413,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateRequest request = new GetCertificateRequest
             {
                 CertificateName = CertificateName.FromProjectLocationCaPoolCertificate("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE]"),
@@ -437,6 +457,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateRequest request = new GetCertificateRequest
             {
                 CertificateName = CertificateName.FromProjectLocationCaPoolCertificate("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE]"),
@@ -481,6 +503,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateRequest request = new GetCertificateRequest
             {
                 CertificateName = CertificateName.FromProjectLocationCaPoolCertificate("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE]"),
@@ -523,6 +547,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateRequest request = new GetCertificateRequest
             {
                 CertificateName = CertificateName.FromProjectLocationCaPoolCertificate("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE]"),
@@ -567,6 +593,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RevokeCertificateRequest request = new RevokeCertificateRequest
             {
                 CertificateName = CertificateName.FromProjectLocationCaPoolCertificate("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE]"),
@@ -611,6 +639,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RevokeCertificateRequest request = new RevokeCertificateRequest
             {
                 CertificateName = CertificateName.FromProjectLocationCaPoolCertificate("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE]"),
@@ -657,6 +687,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RevokeCertificateRequest request = new RevokeCertificateRequest
             {
                 CertificateName = CertificateName.FromProjectLocationCaPoolCertificate("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE]"),
@@ -699,6 +731,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RevokeCertificateRequest request = new RevokeCertificateRequest
             {
                 CertificateName = CertificateName.FromProjectLocationCaPoolCertificate("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE]"),
@@ -743,6 +777,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RevokeCertificateRequest request = new RevokeCertificateRequest
             {
                 CertificateName = CertificateName.FromProjectLocationCaPoolCertificate("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE]"),
@@ -785,6 +821,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             RevokeCertificateRequest request = new RevokeCertificateRequest
             {
                 CertificateName = CertificateName.FromProjectLocationCaPoolCertificate("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE]"),
@@ -829,6 +867,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateCertificateRequest request = new UpdateCertificateRequest
             {
                 Certificate = new Certificate(),
@@ -873,6 +913,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateCertificateRequest request = new UpdateCertificateRequest
             {
                 Certificate = new Certificate(),
@@ -919,6 +961,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateCertificateRequest request = new UpdateCertificateRequest
             {
                 Certificate = new Certificate(),
@@ -962,6 +1006,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateCertificateRequest request = new UpdateCertificateRequest
             {
                 Certificate = new Certificate(),
@@ -1007,6 +1053,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             FetchCertificateAuthorityCsrRequest request = new FetchCertificateAuthorityCsrRequest
             {
                 CertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCaPoolCertificateAuthority("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE_AUTHORITY]"),
@@ -1027,6 +1075,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             FetchCertificateAuthorityCsrRequest request = new FetchCertificateAuthorityCsrRequest
             {
                 CertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCaPoolCertificateAuthority("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE_AUTHORITY]"),
@@ -1049,6 +1099,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             FetchCertificateAuthorityCsrRequest request = new FetchCertificateAuthorityCsrRequest
             {
                 CertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCaPoolCertificateAuthority("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE_AUTHORITY]"),
@@ -1069,6 +1121,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             FetchCertificateAuthorityCsrRequest request = new FetchCertificateAuthorityCsrRequest
             {
                 CertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCaPoolCertificateAuthority("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE_AUTHORITY]"),
@@ -1091,6 +1145,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             FetchCertificateAuthorityCsrRequest request = new FetchCertificateAuthorityCsrRequest
             {
                 CertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCaPoolCertificateAuthority("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE_AUTHORITY]"),
@@ -1111,6 +1167,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             FetchCertificateAuthorityCsrRequest request = new FetchCertificateAuthorityCsrRequest
             {
                 CertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCaPoolCertificateAuthority("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE_AUTHORITY]"),
@@ -1133,6 +1191,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateAuthorityRequest request = new GetCertificateAuthorityRequest
             {
                 CertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCaPoolCertificateAuthority("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE_AUTHORITY]"),
@@ -1181,6 +1241,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateAuthorityRequest request = new GetCertificateAuthorityRequest
             {
                 CertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCaPoolCertificateAuthority("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE_AUTHORITY]"),
@@ -1231,6 +1293,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateAuthorityRequest request = new GetCertificateAuthorityRequest
             {
                 CertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCaPoolCertificateAuthority("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE_AUTHORITY]"),
@@ -1279,6 +1343,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateAuthorityRequest request = new GetCertificateAuthorityRequest
             {
                 CertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCaPoolCertificateAuthority("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE_AUTHORITY]"),
@@ -1329,6 +1395,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateAuthorityRequest request = new GetCertificateAuthorityRequest
             {
                 CertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCaPoolCertificateAuthority("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE_AUTHORITY]"),
@@ -1377,6 +1445,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateAuthorityRequest request = new GetCertificateAuthorityRequest
             {
                 CertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCaPoolCertificateAuthority("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE_AUTHORITY]"),
@@ -1427,6 +1497,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCaPoolRequest request = new GetCaPoolRequest
             {
                 CaPoolName = CaPoolName.FromProjectLocationCaPool("[PROJECT]", "[LOCATION]", "[CA_POOL]"),
@@ -1457,6 +1529,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCaPoolRequest request = new GetCaPoolRequest
             {
                 CaPoolName = CaPoolName.FromProjectLocationCaPool("[PROJECT]", "[LOCATION]", "[CA_POOL]"),
@@ -1489,6 +1563,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCaPoolRequest request = new GetCaPoolRequest
             {
                 CaPoolName = CaPoolName.FromProjectLocationCaPool("[PROJECT]", "[LOCATION]", "[CA_POOL]"),
@@ -1519,6 +1595,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCaPoolRequest request = new GetCaPoolRequest
             {
                 CaPoolName = CaPoolName.FromProjectLocationCaPool("[PROJECT]", "[LOCATION]", "[CA_POOL]"),
@@ -1551,6 +1629,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCaPoolRequest request = new GetCaPoolRequest
             {
                 CaPoolName = CaPoolName.FromProjectLocationCaPool("[PROJECT]", "[LOCATION]", "[CA_POOL]"),
@@ -1581,6 +1661,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCaPoolRequest request = new GetCaPoolRequest
             {
                 CaPoolName = CaPoolName.FromProjectLocationCaPool("[PROJECT]", "[LOCATION]", "[CA_POOL]"),
@@ -1613,6 +1695,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             FetchCaCertsRequest request = new FetchCaCertsRequest
             {
                 CaPoolAsCaPoolName = CaPoolName.FromProjectLocationCaPool("[PROJECT]", "[LOCATION]", "[CA_POOL]"),
@@ -1637,6 +1721,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             FetchCaCertsRequest request = new FetchCaCertsRequest
             {
                 CaPoolAsCaPoolName = CaPoolName.FromProjectLocationCaPool("[PROJECT]", "[LOCATION]", "[CA_POOL]"),
@@ -1663,6 +1749,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             FetchCaCertsRequest request = new FetchCaCertsRequest
             {
                 CaPoolAsCaPoolName = CaPoolName.FromProjectLocationCaPool("[PROJECT]", "[LOCATION]", "[CA_POOL]"),
@@ -1686,6 +1774,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             FetchCaCertsRequest request = new FetchCaCertsRequest
             {
                 CaPoolAsCaPoolName = CaPoolName.FromProjectLocationCaPool("[PROJECT]", "[LOCATION]", "[CA_POOL]"),
@@ -1711,6 +1801,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             FetchCaCertsRequest request = new FetchCaCertsRequest
             {
                 CaPoolAsCaPoolName = CaPoolName.FromProjectLocationCaPool("[PROJECT]", "[LOCATION]", "[CA_POOL]"),
@@ -1734,6 +1826,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             FetchCaCertsRequest request = new FetchCaCertsRequest
             {
                 CaPoolAsCaPoolName = CaPoolName.FromProjectLocationCaPool("[PROJECT]", "[LOCATION]", "[CA_POOL]"),
@@ -1759,6 +1853,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateRevocationListRequest request = new GetCertificateRevocationListRequest
             {
                 CertificateRevocationListName = CertificateRevocationListName.FromProjectLocationCaPoolCertificateAuthorityCertificateRevocationList("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE_REVOCATION_LIST]"),
@@ -1797,6 +1893,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateRevocationListRequest request = new GetCertificateRevocationListRequest
             {
                 CertificateRevocationListName = CertificateRevocationListName.FromProjectLocationCaPoolCertificateAuthorityCertificateRevocationList("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE_REVOCATION_LIST]"),
@@ -1837,6 +1935,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateRevocationListRequest request = new GetCertificateRevocationListRequest
             {
                 CertificateRevocationListName = CertificateRevocationListName.FromProjectLocationCaPoolCertificateAuthorityCertificateRevocationList("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE_REVOCATION_LIST]"),
@@ -1875,6 +1975,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateRevocationListRequest request = new GetCertificateRevocationListRequest
             {
                 CertificateRevocationListName = CertificateRevocationListName.FromProjectLocationCaPoolCertificateAuthorityCertificateRevocationList("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE_REVOCATION_LIST]"),
@@ -1915,6 +2017,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateRevocationListRequest request = new GetCertificateRevocationListRequest
             {
                 CertificateRevocationListName = CertificateRevocationListName.FromProjectLocationCaPoolCertificateAuthorityCertificateRevocationList("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE_REVOCATION_LIST]"),
@@ -1953,6 +2057,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateRevocationListRequest request = new GetCertificateRevocationListRequest
             {
                 CertificateRevocationListName = CertificateRevocationListName.FromProjectLocationCaPoolCertificateAuthorityCertificateRevocationList("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE_REVOCATION_LIST]"),
@@ -1993,6 +2099,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateTemplateRequest request = new GetCertificateTemplateRequest
             {
                 CertificateTemplateName = CertificateTemplateName.FromProjectLocationCertificateTemplate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_TEMPLATE]"),
@@ -2026,6 +2134,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateTemplateRequest request = new GetCertificateTemplateRequest
             {
                 CertificateTemplateName = CertificateTemplateName.FromProjectLocationCertificateTemplate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_TEMPLATE]"),
@@ -2061,6 +2171,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateTemplateRequest request = new GetCertificateTemplateRequest
             {
                 CertificateTemplateName = CertificateTemplateName.FromProjectLocationCertificateTemplate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_TEMPLATE]"),
@@ -2094,6 +2206,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateTemplateRequest request = new GetCertificateTemplateRequest
             {
                 CertificateTemplateName = CertificateTemplateName.FromProjectLocationCertificateTemplate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_TEMPLATE]"),
@@ -2129,6 +2243,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateTemplateRequest request = new GetCertificateTemplateRequest
             {
                 CertificateTemplateName = CertificateTemplateName.FromProjectLocationCertificateTemplate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_TEMPLATE]"),
@@ -2162,6 +2278,8 @@ namespace Google.Cloud.Security.PrivateCA.V1.Tests
         {
             moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient> mockGrpcClient = new moq::Mock<CertificateAuthorityService.CertificateAuthorityServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetCertificateTemplateRequest request = new GetCertificateTemplateRequest
             {
                 CertificateTemplateName = CertificateTemplateName.FromProjectLocationCertificateTemplate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_TEMPLATE]"),
