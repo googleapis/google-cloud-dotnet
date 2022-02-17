@@ -49,7 +49,7 @@ namespace Grafeas.V1.FixGeneratedCode
             foreach (string file in Directory.GetFiles(Path.Combine(layout.SourceDirectory, "Grafeas.V1.GeneratedSnippets"), "*Snippet.g.cs"))
             {
                 SourceFile.Load(file)
-                    .Rewrite(new SnippetRewriter())
+                    .Rewrite(new SingleFileSnippetRewriter())
                     .Save();
             }
         }
@@ -93,6 +93,14 @@ namespace Grafeas.V1.FixGeneratedCode
                     .Prepend(_channelDeclaration);
                 return node.WithBody(body.WithStatements(new SyntaxList<StatementSyntax>(statements)));
             }
+        }
+
+        private class SingleFileSnippetRewriter : SnippetRewriter
+        {
+            public override SyntaxNode VisitNamespaceDeclaration(NamespaceDeclarationSyntax node) =>
+                base.VisitNamespaceDeclaration(
+                    node.WithName(SyntaxFactory.ParseName("GrafeasV1.Snippets")
+                        .WithTriviaFrom(node.Name)));
         }
     }
 }
