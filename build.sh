@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+set -o pipefail
 
 cd $(dirname $0)
 
@@ -74,7 +75,7 @@ then
   if [[ $apiregex == not* ]]
   then
     echo "regex $apiregex is negated"
-    apiregex=$(echo $apiregex | sed s/^not//g)
+    apiregex=$(set -e; echo $apiregex | sed s/^not//g)
     echo "resulting regex after removing negation: $apiregex;"
     for api in ${apis[*]}
     do
