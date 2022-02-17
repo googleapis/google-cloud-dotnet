@@ -25,8 +25,8 @@ namespace Google.Cloud.Logging.Type {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvbG9nZ2luZy90eXBlL2h0dHBfcmVxdWVzdC5wcm90bxITZ29v",
-            "Z2xlLmxvZ2dpbmcudHlwZRoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnBy",
-            "b3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIu8CCgtIdHRwUmVx",
+            "Z2xlLmxvZ2dpbmcudHlwZRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90",
+            "bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvIu8CCgtIdHRwUmVx",
             "dWVzdBIWCg5yZXF1ZXN0X21ldGhvZBgBIAEoCRITCgtyZXF1ZXN0X3VybBgC",
             "IAEoCRIUCgxyZXF1ZXN0X3NpemUYAyABKAMSDgoGc3RhdHVzGAQgASgFEhUK",
             "DXJlc3BvbnNlX3NpemUYBSABKAMSEgoKdXNlcl9hZ2VudBgGIAEoCRIRCgly",
@@ -41,7 +41,7 @@ namespace Google.Cloud.Logging.Type {
             "R29vZ2xlXENsb3VkXExvZ2dpbmdcVHlwZeoCHEdvb2dsZTo6Q2xvdWQ6Okxv",
             "Z2dpbmc6OlR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.Type.HttpRequest), global::Google.Cloud.Logging.Type.HttpRequest.Parser, new[]{ "RequestMethod", "RequestUrl", "RequestSize", "Status", "ResponseSize", "UserAgent", "RemoteIp", "ServerIp", "Referer", "Latency", "CacheLookup", "CacheHit", "CacheValidatedWithOriginServer", "CacheFillBytes", "Protocol" }, null, null, null, null)
           }));
