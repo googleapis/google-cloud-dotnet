@@ -75,7 +75,7 @@ then
   then
     echo "regex is negated"
     set +H
-    apiregex=$(echo $apiregex | sed s/^!/d)
+    apiregex=$(echo $apiregex | sed s/^!//g)
     set -H
     echo "resulting regex after removing negation"
     echo "$apiregex"
