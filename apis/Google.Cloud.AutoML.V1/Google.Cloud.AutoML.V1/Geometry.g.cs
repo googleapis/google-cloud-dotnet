@@ -25,16 +25,16 @@ namespace Google.Cloud.AutoML.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVnb29nbGUvY2xvdWQvYXV0b21sL3YxL2dlb21ldHJ5LnByb3RvEhZnb29n",
-            "bGUuY2xvdWQuYXV0b21sLnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnBy",
-            "b3RvIigKEE5vcm1hbGl6ZWRWZXJ0ZXgSCQoBeBgBIAEoAhIJCgF5GAIgASgC",
-            "IlUKDEJvdW5kaW5nUG9seRJFChNub3JtYWxpemVkX3ZlcnRpY2VzGAIgAygL",
-            "MiguZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5Ob3JtYWxpemVkVmVydGV4QqoB",
-            "Chpjb20uZ29vZ2xlLmNsb3VkLmF1dG9tbC52MVABWjxnb29nbGUuZ29sYW5n",
-            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2F1dG9tbC92MTthdXRv",
-            "bWyqAhZHb29nbGUuQ2xvdWQuQXV0b01MLlYxygIWR29vZ2xlXENsb3VkXEF1",
-            "dG9NbFxWMeoCGUdvb2dsZTo6Q2xvdWQ6OkF1dG9NTDo6VjFiBnByb3RvMw=="));
+            "bGUuY2xvdWQuYXV0b21sLnYxIigKEE5vcm1hbGl6ZWRWZXJ0ZXgSCQoBeBgB",
+            "IAEoAhIJCgF5GAIgASgCIlUKDEJvdW5kaW5nUG9seRJFChNub3JtYWxpemVk",
+            "X3ZlcnRpY2VzGAIgAygLMiguZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5Ob3Jt",
+            "YWxpemVkVmVydGV4QqoBChpjb20uZ29vZ2xlLmNsb3VkLmF1dG9tbC52MVAB",
+            "Wjxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
+            "L2F1dG9tbC92MTthdXRvbWyqAhZHb29nbGUuQ2xvdWQuQXV0b01MLlYxygIW",
+            "R29vZ2xlXENsb3VkXEF1dG9NbFxWMeoCGUdvb2dsZTo6Q2xvdWQ6OkF1dG9N",
+            "TDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.NormalizedVertex), global::Google.Cloud.AutoML.V1.NormalizedVertex.Parser, new[]{ "X", "Y" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.BoundingPoly), global::Google.Cloud.AutoML.V1.BoundingPoly.Parser, new[]{ "NormalizedVertices" }, null, null, null, null)
