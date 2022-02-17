@@ -4813,5 +4813,1158 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             await dataplexServiceClient.CancelJobAsync(name);
             // End snippet
         }
+
+        /// <summary>Snippet for CreateEnvironment</summary>
+        public void CreateEnvironmentRequestObject()
+        {
+            // Snippet: CreateEnvironment(CreateEnvironmentRequest, CallSettings)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            // Initialize request argument(s)
+            CreateEnvironmentRequest request = new CreateEnvironmentRequest
+            {
+                ParentAsLakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                EnvironmentId = "",
+                Environment = new gcdv::Environment(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<gcdv::Environment, OperationMetadata> response = dataplexServiceClient.CreateEnvironment(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::Environment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcdv::Environment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::Environment, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateEnvironment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::Environment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEnvironmentAsync</summary>
+        public async Task CreateEnvironmentRequestObjectAsync()
+        {
+            // Snippet: CreateEnvironmentAsync(CreateEnvironmentRequest, CallSettings)
+            // Additional: CreateEnvironmentAsync(CreateEnvironmentRequest, CancellationToken)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateEnvironmentRequest request = new CreateEnvironmentRequest
+            {
+                ParentAsLakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                EnvironmentId = "",
+                Environment = new gcdv::Environment(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<gcdv::Environment, OperationMetadata> response = await dataplexServiceClient.CreateEnvironmentAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::Environment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcdv::Environment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::Environment, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateEnvironmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::Environment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEnvironment</summary>
+        public void CreateEnvironment()
+        {
+            // Snippet: CreateEnvironment(string, Environment, string, CallSettings)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
+            gcdv::Environment environment = new gcdv::Environment();
+            string environmentId = "";
+            // Make the request
+            Operation<gcdv::Environment, OperationMetadata> response = dataplexServiceClient.CreateEnvironment(parent, environment, environmentId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::Environment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcdv::Environment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::Environment, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateEnvironment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::Environment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEnvironmentAsync</summary>
+        public async Task CreateEnvironmentAsync()
+        {
+            // Snippet: CreateEnvironmentAsync(string, Environment, string, CallSettings)
+            // Additional: CreateEnvironmentAsync(string, Environment, string, CancellationToken)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
+            gcdv::Environment environment = new gcdv::Environment();
+            string environmentId = "";
+            // Make the request
+            Operation<gcdv::Environment, OperationMetadata> response = await dataplexServiceClient.CreateEnvironmentAsync(parent, environment, environmentId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::Environment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcdv::Environment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::Environment, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateEnvironmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::Environment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEnvironment</summary>
+        public void CreateEnvironmentResourceNames()
+        {
+            // Snippet: CreateEnvironment(LakeName, Environment, string, CallSettings)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            // Initialize request argument(s)
+            LakeName parent = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            gcdv::Environment environment = new gcdv::Environment();
+            string environmentId = "";
+            // Make the request
+            Operation<gcdv::Environment, OperationMetadata> response = dataplexServiceClient.CreateEnvironment(parent, environment, environmentId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::Environment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcdv::Environment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::Environment, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateEnvironment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::Environment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEnvironmentAsync</summary>
+        public async Task CreateEnvironmentResourceNamesAsync()
+        {
+            // Snippet: CreateEnvironmentAsync(LakeName, Environment, string, CallSettings)
+            // Additional: CreateEnvironmentAsync(LakeName, Environment, string, CancellationToken)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LakeName parent = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            gcdv::Environment environment = new gcdv::Environment();
+            string environmentId = "";
+            // Make the request
+            Operation<gcdv::Environment, OperationMetadata> response = await dataplexServiceClient.CreateEnvironmentAsync(parent, environment, environmentId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::Environment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcdv::Environment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::Environment, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateEnvironmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::Environment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEnvironment</summary>
+        public void UpdateEnvironmentRequestObject()
+        {
+            // Snippet: UpdateEnvironment(UpdateEnvironmentRequest, CallSettings)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateEnvironmentRequest request = new UpdateEnvironmentRequest
+            {
+                UpdateMask = new FieldMask(),
+                Environment = new gcdv::Environment(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<gcdv::Environment, OperationMetadata> response = dataplexServiceClient.UpdateEnvironment(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::Environment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcdv::Environment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::Environment, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceUpdateEnvironment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::Environment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEnvironmentAsync</summary>
+        public async Task UpdateEnvironmentRequestObjectAsync()
+        {
+            // Snippet: UpdateEnvironmentAsync(UpdateEnvironmentRequest, CallSettings)
+            // Additional: UpdateEnvironmentAsync(UpdateEnvironmentRequest, CancellationToken)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateEnvironmentRequest request = new UpdateEnvironmentRequest
+            {
+                UpdateMask = new FieldMask(),
+                Environment = new gcdv::Environment(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<gcdv::Environment, OperationMetadata> response = await dataplexServiceClient.UpdateEnvironmentAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::Environment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcdv::Environment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::Environment, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateEnvironmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::Environment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEnvironment</summary>
+        public void UpdateEnvironment()
+        {
+            // Snippet: UpdateEnvironment(Environment, FieldMask, CallSettings)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::Environment environment = new gcdv::Environment();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<gcdv::Environment, OperationMetadata> response = dataplexServiceClient.UpdateEnvironment(environment, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::Environment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcdv::Environment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::Environment, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceUpdateEnvironment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::Environment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEnvironmentAsync</summary>
+        public async Task UpdateEnvironmentAsync()
+        {
+            // Snippet: UpdateEnvironmentAsync(Environment, FieldMask, CallSettings)
+            // Additional: UpdateEnvironmentAsync(Environment, FieldMask, CancellationToken)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::Environment environment = new gcdv::Environment();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<gcdv::Environment, OperationMetadata> response = await dataplexServiceClient.UpdateEnvironmentAsync(environment, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::Environment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcdv::Environment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::Environment, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateEnvironmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::Environment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEnvironment</summary>
+        public void DeleteEnvironmentRequestObject()
+        {
+            // Snippet: DeleteEnvironment(DeleteEnvironmentRequest, CallSettings)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteEnvironmentRequest request = new DeleteEnvironmentRequest
+            {
+                EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = dataplexServiceClient.DeleteEnvironment(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteEnvironment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEnvironmentAsync</summary>
+        public async Task DeleteEnvironmentRequestObjectAsync()
+        {
+            // Snippet: DeleteEnvironmentAsync(DeleteEnvironmentRequest, CallSettings)
+            // Additional: DeleteEnvironmentAsync(DeleteEnvironmentRequest, CancellationToken)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteEnvironmentRequest request = new DeleteEnvironmentRequest
+            {
+                EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await dataplexServiceClient.DeleteEnvironmentAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteEnvironmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEnvironment</summary>
+        public void DeleteEnvironment()
+        {
+            // Snippet: DeleteEnvironment(string, CallSettings)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/environments/[ENVIRONMENT]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = dataplexServiceClient.DeleteEnvironment(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteEnvironment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEnvironmentAsync</summary>
+        public async Task DeleteEnvironmentAsync()
+        {
+            // Snippet: DeleteEnvironmentAsync(string, CallSettings)
+            // Additional: DeleteEnvironmentAsync(string, CancellationToken)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/environments/[ENVIRONMENT]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await dataplexServiceClient.DeleteEnvironmentAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteEnvironmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEnvironment</summary>
+        public void DeleteEnvironmentResourceNames()
+        {
+            // Snippet: DeleteEnvironment(EnvironmentName, CallSettings)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            // Initialize request argument(s)
+            EnvironmentName name = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = dataplexServiceClient.DeleteEnvironment(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteEnvironment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEnvironmentAsync</summary>
+        public async Task DeleteEnvironmentResourceNamesAsync()
+        {
+            // Snippet: DeleteEnvironmentAsync(EnvironmentName, CallSettings)
+            // Additional: DeleteEnvironmentAsync(EnvironmentName, CancellationToken)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EnvironmentName name = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await dataplexServiceClient.DeleteEnvironmentAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteEnvironmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEnvironments</summary>
+        public void ListEnvironmentsRequestObject()
+        {
+            // Snippet: ListEnvironments(ListEnvironmentsRequest, CallSettings)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            // Initialize request argument(s)
+            ListEnvironmentsRequest request = new ListEnvironmentsRequest
+            {
+                ParentAsLakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListEnvironmentsResponse, gcdv::Environment> response = dataplexServiceClient.ListEnvironments(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcdv::Environment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEnvironmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::Environment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::Environment> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::Environment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEnvironmentsAsync</summary>
+        public async Task ListEnvironmentsRequestObjectAsync()
+        {
+            // Snippet: ListEnvironmentsAsync(ListEnvironmentsRequest, CallSettings)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListEnvironmentsRequest request = new ListEnvironmentsRequest
+            {
+                ParentAsLakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListEnvironmentsResponse, gcdv::Environment> response = dataplexServiceClient.ListEnvironmentsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((gcdv::Environment item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEnvironmentsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::Environment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::Environment> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::Environment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEnvironments</summary>
+        public void ListEnvironments()
+        {
+            // Snippet: ListEnvironments(string, string, int?, CallSettings)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
+            // Make the request
+            PagedEnumerable<ListEnvironmentsResponse, gcdv::Environment> response = dataplexServiceClient.ListEnvironments(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcdv::Environment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEnvironmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::Environment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::Environment> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::Environment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEnvironmentsAsync</summary>
+        public async Task ListEnvironmentsAsync()
+        {
+            // Snippet: ListEnvironmentsAsync(string, string, int?, CallSettings)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
+            // Make the request
+            PagedAsyncEnumerable<ListEnvironmentsResponse, gcdv::Environment> response = dataplexServiceClient.ListEnvironmentsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((gcdv::Environment item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEnvironmentsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::Environment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::Environment> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::Environment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEnvironments</summary>
+        public void ListEnvironmentsResourceNames()
+        {
+            // Snippet: ListEnvironments(LakeName, string, int?, CallSettings)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            // Initialize request argument(s)
+            LakeName parent = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            // Make the request
+            PagedEnumerable<ListEnvironmentsResponse, gcdv::Environment> response = dataplexServiceClient.ListEnvironments(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcdv::Environment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEnvironmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::Environment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::Environment> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::Environment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEnvironmentsAsync</summary>
+        public async Task ListEnvironmentsResourceNamesAsync()
+        {
+            // Snippet: ListEnvironmentsAsync(LakeName, string, int?, CallSettings)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LakeName parent = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            // Make the request
+            PagedAsyncEnumerable<ListEnvironmentsResponse, gcdv::Environment> response = dataplexServiceClient.ListEnvironmentsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((gcdv::Environment item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEnvironmentsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::Environment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::Environment> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::Environment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEnvironment</summary>
+        public void GetEnvironmentRequestObject()
+        {
+            // Snippet: GetEnvironment(GetEnvironmentRequest, CallSettings)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            // Initialize request argument(s)
+            GetEnvironmentRequest request = new GetEnvironmentRequest
+            {
+                EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+            };
+            // Make the request
+            gcdv::Environment response = dataplexServiceClient.GetEnvironment(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEnvironmentAsync</summary>
+        public async Task GetEnvironmentRequestObjectAsync()
+        {
+            // Snippet: GetEnvironmentAsync(GetEnvironmentRequest, CallSettings)
+            // Additional: GetEnvironmentAsync(GetEnvironmentRequest, CancellationToken)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetEnvironmentRequest request = new GetEnvironmentRequest
+            {
+                EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+            };
+            // Make the request
+            gcdv::Environment response = await dataplexServiceClient.GetEnvironmentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEnvironment</summary>
+        public void GetEnvironment()
+        {
+            // Snippet: GetEnvironment(string, CallSettings)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/environments/[ENVIRONMENT]";
+            // Make the request
+            gcdv::Environment response = dataplexServiceClient.GetEnvironment(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEnvironmentAsync</summary>
+        public async Task GetEnvironmentAsync()
+        {
+            // Snippet: GetEnvironmentAsync(string, CallSettings)
+            // Additional: GetEnvironmentAsync(string, CancellationToken)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/environments/[ENVIRONMENT]";
+            // Make the request
+            gcdv::Environment response = await dataplexServiceClient.GetEnvironmentAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEnvironment</summary>
+        public void GetEnvironmentResourceNames()
+        {
+            // Snippet: GetEnvironment(EnvironmentName, CallSettings)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            // Initialize request argument(s)
+            EnvironmentName name = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]");
+            // Make the request
+            gcdv::Environment response = dataplexServiceClient.GetEnvironment(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEnvironmentAsync</summary>
+        public async Task GetEnvironmentResourceNamesAsync()
+        {
+            // Snippet: GetEnvironmentAsync(EnvironmentName, CallSettings)
+            // Additional: GetEnvironmentAsync(EnvironmentName, CancellationToken)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EnvironmentName name = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]");
+            // Make the request
+            gcdv::Environment response = await dataplexServiceClient.GetEnvironmentAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSessions</summary>
+        public void ListSessionsRequestObject()
+        {
+            // Snippet: ListSessions(ListSessionsRequest, CallSettings)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            // Initialize request argument(s)
+            ListSessionsRequest request = new ListSessionsRequest
+            {
+                ParentAsEnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+            };
+            // Make the request
+            PagedEnumerable<ListSessionsResponse, Session> response = dataplexServiceClient.ListSessions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Session item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSessionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Session item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Session> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Session item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSessionsAsync</summary>
+        public async Task ListSessionsRequestObjectAsync()
+        {
+            // Snippet: ListSessionsAsync(ListSessionsRequest, CallSettings)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSessionsRequest request = new ListSessionsRequest
+            {
+                ParentAsEnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSessionsResponse, Session> response = dataplexServiceClient.ListSessionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Session item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSessionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Session item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Session> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Session item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSessions</summary>
+        public void ListSessions()
+        {
+            // Snippet: ListSessions(string, string, int?, CallSettings)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/environments/[ENVIRONMENT]";
+            // Make the request
+            PagedEnumerable<ListSessionsResponse, Session> response = dataplexServiceClient.ListSessions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Session item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSessionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Session item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Session> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Session item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSessionsAsync</summary>
+        public async Task ListSessionsAsync()
+        {
+            // Snippet: ListSessionsAsync(string, string, int?, CallSettings)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/environments/[ENVIRONMENT]";
+            // Make the request
+            PagedAsyncEnumerable<ListSessionsResponse, Session> response = dataplexServiceClient.ListSessionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Session item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSessionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Session item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Session> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Session item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSessions</summary>
+        public void ListSessionsResourceNames()
+        {
+            // Snippet: ListSessions(EnvironmentName, string, int?, CallSettings)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            // Initialize request argument(s)
+            EnvironmentName parent = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]");
+            // Make the request
+            PagedEnumerable<ListSessionsResponse, Session> response = dataplexServiceClient.ListSessions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Session item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSessionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Session item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Session> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Session item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSessionsAsync</summary>
+        public async Task ListSessionsResourceNamesAsync()
+        {
+            // Snippet: ListSessionsAsync(EnvironmentName, string, int?, CallSettings)
+            // Create client
+            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EnvironmentName parent = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]");
+            // Make the request
+            PagedAsyncEnumerable<ListSessionsResponse, Session> response = dataplexServiceClient.ListSessionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Session item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSessionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Session item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Session> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Session item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
     }
 }

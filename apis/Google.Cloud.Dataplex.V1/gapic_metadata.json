@@ -5,6 +5,45 @@
   "protoPackage": "google.cloud.dataplex.v1",
   "libraryPackage": "Google.Cloud.Dataplex.V1",
   "services": {
+    "ContentService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ContentServiceClient",
+          "rpcs": {
+            "CreateContent": {
+              "methods": [
+                "CreateContent",
+                "CreateContentAsync"
+              ]
+            },
+            "DeleteContent": {
+              "methods": [
+                "DeleteContent",
+                "DeleteContentAsync"
+              ]
+            },
+            "GetContent": {
+              "methods": [
+                "GetContent",
+                "GetContentAsync"
+              ]
+            },
+            "ListContent": {
+              "methods": [
+                "ListContent",
+                "ListContentAsync"
+              ]
+            },
+            "UpdateContent": {
+              "methods": [
+                "UpdateContent",
+                "UpdateContentAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "DataplexService": {
       "clients": {
         "grpc": {
@@ -20,6 +59,12 @@
               "methods": [
                 "CreateAsset",
                 "CreateAssetAsync"
+              ]
+            },
+            "CreateEnvironment": {
+              "methods": [
+                "CreateEnvironment",
+                "CreateEnvironmentAsync"
               ]
             },
             "CreateLake": {
@@ -46,6 +91,12 @@
                 "DeleteAssetAsync"
               ]
             },
+            "DeleteEnvironment": {
+              "methods": [
+                "DeleteEnvironment",
+                "DeleteEnvironmentAsync"
+              ]
+            },
             "DeleteLake": {
               "methods": [
                 "DeleteLake",
@@ -68,6 +119,12 @@
               "methods": [
                 "GetAsset",
                 "GetAssetAsync"
+              ]
+            },
+            "GetEnvironment": {
+              "methods": [
+                "GetEnvironment",
+                "GetEnvironmentAsync"
               ]
             },
             "GetJob": {
@@ -106,6 +163,12 @@
                 "ListAssetsAsync"
               ]
             },
+            "ListEnvironments": {
+              "methods": [
+                "ListEnvironments",
+                "ListEnvironmentsAsync"
+              ]
+            },
             "ListJobs": {
               "methods": [
                 "ListJobs",
@@ -122,6 +185,12 @@
               "methods": [
                 "ListLakes",
                 "ListLakesAsync"
+              ]
+            },
+            "ListSessions": {
+              "methods": [
+                "ListSessions",
+                "ListSessionsAsync"
               ]
             },
             "ListTasks": {
@@ -146,6 +215,12 @@
               "methods": [
                 "UpdateAsset",
                 "UpdateAssetAsync"
+              ]
+            },
+            "UpdateEnvironment": {
+              "methods": [
+                "UpdateEnvironment",
+                "UpdateEnvironmentAsync"
               ]
             },
             "UpdateLake": {
@@ -175,6 +250,30 @@
         "grpc": {
           "libraryClient": "MetadataServiceClient",
           "rpcs": {
+            "CreateEntity": {
+              "methods": [
+                "CreateEntity",
+                "CreateEntityAsync"
+              ]
+            },
+            "CreatePartition": {
+              "methods": [
+                "CreatePartition",
+                "CreatePartitionAsync"
+              ]
+            },
+            "DeleteEntity": {
+              "methods": [
+                "DeleteEntity",
+                "DeleteEntityAsync"
+              ]
+            },
+            "DeletePartition": {
+              "methods": [
+                "DeletePartition",
+                "DeletePartitionAsync"
+              ]
+            },
             "GetEntity": {
               "methods": [
                 "GetEntity",
@@ -197,6 +296,12 @@
               "methods": [
                 "ListPartitions",
                 "ListPartitionsAsync"
+              ]
+            },
+            "UpdateEntity": {
+              "methods": [
+                "UpdateEntity",
+                "UpdateEntityAsync"
               ]
             }
           }

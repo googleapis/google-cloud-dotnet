@@ -1212,5 +1212,233 @@ namespace Google.Cloud.Dataplex.V1.Tests
             await client.CancelJobAsync(request.JobName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void GetEnvironmentRequestObject()
+        {
+            moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetEnvironmentRequest request = new GetEnvironmentRequest
+            {
+                EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+            };
+            Environment expectedResponse = new Environment
+            {
+                EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+                DisplayName = "display_name137f65c2",
+                Uid = "uida2d37198",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Description = "description2cf9da67",
+                State = State.Deleting,
+                InfrastructureSpec = new Environment.Types.InfrastructureSpec(),
+                SessionSpec = new Environment.Types.SessionSpec(),
+                SessionStatus = new Environment.Types.SessionStatus(),
+                Endpoints = new Environment.Types.Endpoints(),
+            };
+            mockGrpcClient.Setup(x => x.GetEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            Environment response = client.GetEnvironment(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetEnvironmentRequestObjectAsync()
+        {
+            moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetEnvironmentRequest request = new GetEnvironmentRequest
+            {
+                EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+            };
+            Environment expectedResponse = new Environment
+            {
+                EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+                DisplayName = "display_name137f65c2",
+                Uid = "uida2d37198",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Description = "description2cf9da67",
+                State = State.Deleting,
+                InfrastructureSpec = new Environment.Types.InfrastructureSpec(),
+                SessionSpec = new Environment.Types.SessionSpec(),
+                SessionStatus = new Environment.Types.SessionStatus(),
+                Endpoints = new Environment.Types.Endpoints(),
+            };
+            mockGrpcClient.Setup(x => x.GetEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Environment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            Environment responseCallSettings = await client.GetEnvironmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Environment responseCancellationToken = await client.GetEnvironmentAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetEnvironment()
+        {
+            moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetEnvironmentRequest request = new GetEnvironmentRequest
+            {
+                EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+            };
+            Environment expectedResponse = new Environment
+            {
+                EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+                DisplayName = "display_name137f65c2",
+                Uid = "uida2d37198",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Description = "description2cf9da67",
+                State = State.Deleting,
+                InfrastructureSpec = new Environment.Types.InfrastructureSpec(),
+                SessionSpec = new Environment.Types.SessionSpec(),
+                SessionStatus = new Environment.Types.SessionStatus(),
+                Endpoints = new Environment.Types.Endpoints(),
+            };
+            mockGrpcClient.Setup(x => x.GetEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            Environment response = client.GetEnvironment(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetEnvironmentAsync()
+        {
+            moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetEnvironmentRequest request = new GetEnvironmentRequest
+            {
+                EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+            };
+            Environment expectedResponse = new Environment
+            {
+                EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+                DisplayName = "display_name137f65c2",
+                Uid = "uida2d37198",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Description = "description2cf9da67",
+                State = State.Deleting,
+                InfrastructureSpec = new Environment.Types.InfrastructureSpec(),
+                SessionSpec = new Environment.Types.SessionSpec(),
+                SessionStatus = new Environment.Types.SessionStatus(),
+                Endpoints = new Environment.Types.Endpoints(),
+            };
+            mockGrpcClient.Setup(x => x.GetEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Environment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            Environment responseCallSettings = await client.GetEnvironmentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Environment responseCancellationToken = await client.GetEnvironmentAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetEnvironmentResourceNames()
+        {
+            moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetEnvironmentRequest request = new GetEnvironmentRequest
+            {
+                EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+            };
+            Environment expectedResponse = new Environment
+            {
+                EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+                DisplayName = "display_name137f65c2",
+                Uid = "uida2d37198",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Description = "description2cf9da67",
+                State = State.Deleting,
+                InfrastructureSpec = new Environment.Types.InfrastructureSpec(),
+                SessionSpec = new Environment.Types.SessionSpec(),
+                SessionStatus = new Environment.Types.SessionStatus(),
+                Endpoints = new Environment.Types.Endpoints(),
+            };
+            mockGrpcClient.Setup(x => x.GetEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            Environment response = client.GetEnvironment(request.EnvironmentName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetEnvironmentResourceNamesAsync()
+        {
+            moq::Mock<DataplexService.DataplexServiceClient> mockGrpcClient = new moq::Mock<DataplexService.DataplexServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetEnvironmentRequest request = new GetEnvironmentRequest
+            {
+                EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+            };
+            Environment expectedResponse = new Environment
+            {
+                EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+                DisplayName = "display_name137f65c2",
+                Uid = "uida2d37198",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Description = "description2cf9da67",
+                State = State.Deleting,
+                InfrastructureSpec = new Environment.Types.InfrastructureSpec(),
+                SessionSpec = new Environment.Types.SessionSpec(),
+                SessionStatus = new Environment.Types.SessionStatus(),
+                Endpoints = new Environment.Types.Endpoints(),
+            };
+            mockGrpcClient.Setup(x => x.GetEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Environment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataplexServiceClient client = new DataplexServiceClientImpl(mockGrpcClient.Object, null);
+            Environment responseCallSettings = await client.GetEnvironmentAsync(request.EnvironmentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Environment responseCancellationToken = await client.GetEnvironmentAsync(request.EnvironmentName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

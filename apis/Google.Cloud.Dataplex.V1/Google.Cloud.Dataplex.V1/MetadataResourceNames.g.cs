@@ -580,6 +580,28 @@ namespace Google.Cloud.Dataplex.V1
         public static bool operator !=(PartitionName a, PartitionName b) => !(a == b);
     }
 
+    public partial class CreateEntityRequest
+    {
+        /// <summary><see cref="ZoneName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public ZoneName ParentAsZoneName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ZoneName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteEntityRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::EntityName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::EntityName EntityName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::EntityName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListEntitiesRequest
     {
         /// <summary><see cref="ZoneName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
@@ -609,6 +631,28 @@ namespace Google.Cloud.Dataplex.V1
         {
             get => string.IsNullOrEmpty(Parent) ? null : EntityName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreatePartitionRequest
+    {
+        /// <summary><see cref="EntityName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public EntityName ParentAsEntityName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : EntityName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeletePartitionRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::PartitionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::PartitionName PartitionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::PartitionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 

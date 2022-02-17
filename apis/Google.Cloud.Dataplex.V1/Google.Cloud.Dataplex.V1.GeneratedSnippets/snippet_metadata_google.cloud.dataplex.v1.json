@@ -11,6 +11,1087 @@
   },
   "snippets": [
     {
+      "regionTag": "dataplex_v1_generated_ContentService_CreateContent_sync",
+      "title": "CreateContentRequestObject",
+      "description": "Snippet for CreateContent",
+      "file": "ContentServiceClient.CreateContentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateContent",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.CreateContent",
+        "resultType": "Google.Cloud.Dataplex.V1.Content",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.CreateContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_CreateContent_async",
+      "title": "CreateContentRequestObjectAsync",
+      "description": "Snippet for CreateContentAsync",
+      "file": "ContentServiceClient.CreateContentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateContentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.CreateContentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Content>",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.CreateContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_CreateContent_sync_flattened",
+      "title": "CreateContent",
+      "description": "Snippet for CreateContent",
+      "file": "ContentServiceClient.CreateContentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateContent",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.CreateContent",
+        "resultType": "Google.Cloud.Dataplex.V1.Content",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.CreateContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_CreateContent_async_flattened",
+      "title": "CreateContentAsync",
+      "description": "Snippet for CreateContentAsync",
+      "file": "ContentServiceClient.CreateContentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateContentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.CreateContentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Content>",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.CreateContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_CreateContent_sync_flattened_resourceNames",
+      "title": "CreateContentResourceNames",
+      "description": "Snippet for CreateContent",
+      "file": "ContentServiceClient.CreateContentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateContent",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.CreateContent",
+        "resultType": "Google.Cloud.Dataplex.V1.Content",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.CreateContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_CreateContent_async_flattened_resourceNames",
+      "title": "CreateContentResourceNamesAsync",
+      "description": "Snippet for CreateContentAsync",
+      "file": "ContentServiceClient.CreateContentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateContentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.CreateContentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Content>",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.CreateContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_UpdateContent_sync",
+      "title": "UpdateContentRequestObject",
+      "description": "Snippet for UpdateContent",
+      "file": "ContentServiceClient.UpdateContentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateContent",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.UpdateContent",
+        "resultType": "Google.Cloud.Dataplex.V1.Content",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.UpdateContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_UpdateContent_async",
+      "title": "UpdateContentRequestObjectAsync",
+      "description": "Snippet for UpdateContentAsync",
+      "file": "ContentServiceClient.UpdateContentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateContentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.UpdateContentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Content>",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.UpdateContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_UpdateContent_sync_flattened",
+      "title": "UpdateContent",
+      "description": "Snippet for UpdateContent",
+      "file": "ContentServiceClient.UpdateContentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateContent",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.UpdateContent",
+        "resultType": "Google.Cloud.Dataplex.V1.Content",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.UpdateContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_UpdateContent_async_flattened",
+      "title": "UpdateContentAsync",
+      "description": "Snippet for UpdateContentAsync",
+      "file": "ContentServiceClient.UpdateContentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateContentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.UpdateContentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Content>",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.UpdateContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_DeleteContent_sync",
+      "title": "DeleteContentRequestObject",
+      "description": "Snippet for DeleteContent",
+      "file": "ContentServiceClient.DeleteContentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteContent",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.DeleteContent",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.DeleteContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_DeleteContent_async",
+      "title": "DeleteContentRequestObjectAsync",
+      "description": "Snippet for DeleteContentAsync",
+      "file": "ContentServiceClient.DeleteContentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteContentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.DeleteContentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.DeleteContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_DeleteContent_sync_flattened",
+      "title": "DeleteContent",
+      "description": "Snippet for DeleteContent",
+      "file": "ContentServiceClient.DeleteContentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteContent",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.DeleteContent",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.DeleteContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_DeleteContent_async_flattened",
+      "title": "DeleteContentAsync",
+      "description": "Snippet for DeleteContentAsync",
+      "file": "ContentServiceClient.DeleteContentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteContentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.DeleteContentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.DeleteContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_DeleteContent_sync_flattened_resourceNames",
+      "title": "DeleteContentResourceNames",
+      "description": "Snippet for DeleteContent",
+      "file": "ContentServiceClient.DeleteContentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteContent",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.DeleteContent",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.DeleteContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_DeleteContent_async_flattened_resourceNames",
+      "title": "DeleteContentResourceNamesAsync",
+      "description": "Snippet for DeleteContentAsync",
+      "file": "ContentServiceClient.DeleteContentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteContentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.DeleteContentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.DeleteContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_GetContent_sync",
+      "title": "GetContentRequestObject",
+      "description": "Snippet for GetContent",
+      "file": "ContentServiceClient.GetContentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetContent",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.GetContent",
+        "resultType": "Google.Cloud.Dataplex.V1.Content",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "GetContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.GetContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_GetContent_async",
+      "title": "GetContentRequestObjectAsync",
+      "description": "Snippet for GetContentAsync",
+      "file": "ContentServiceClient.GetContentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetContentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.GetContentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Content>",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "GetContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.GetContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_GetContent_sync_flattened",
+      "title": "GetContent",
+      "description": "Snippet for GetContent",
+      "file": "ContentServiceClient.GetContentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetContent",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.GetContent",
+        "resultType": "Google.Cloud.Dataplex.V1.Content",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "GetContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.GetContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_GetContent_async_flattened",
+      "title": "GetContentAsync",
+      "description": "Snippet for GetContentAsync",
+      "file": "ContentServiceClient.GetContentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetContentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.GetContentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Content>",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "GetContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.GetContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_GetContent_sync_flattened_resourceNames",
+      "title": "GetContentResourceNames",
+      "description": "Snippet for GetContent",
+      "file": "ContentServiceClient.GetContentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetContent",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.GetContent",
+        "resultType": "Google.Cloud.Dataplex.V1.Content",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "GetContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.GetContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_GetContent_async_flattened_resourceNames",
+      "title": "GetContentResourceNamesAsync",
+      "description": "Snippet for GetContentAsync",
+      "file": "ContentServiceClient.GetContentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetContentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.GetContentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Content>",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "GetContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.GetContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_ListContent_sync",
+      "title": "ListContentRequestObject",
+      "description": "Snippet for ListContent",
+      "file": "ContentServiceClient.ListContentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListContent",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.ListContent",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListContentResponse, Google.Cloud.Dataplex.V1.Content>",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "ListContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.ListContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_ListContent_async",
+      "title": "ListContentRequestObjectAsync",
+      "description": "Snippet for ListContentAsync",
+      "file": "ContentServiceClient.ListContentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListContentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.ListContentAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListContentResponse, Google.Cloud.Dataplex.V1.Content>",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "ListContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.ListContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_ListContent_sync_flattened",
+      "title": "ListContent",
+      "description": "Snippet for ListContent",
+      "file": "ContentServiceClient.ListContentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListContent",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.ListContent",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListContentResponse, Google.Cloud.Dataplex.V1.Content>",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "ListContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.ListContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_ListContent_async_flattened",
+      "title": "ListContentAsync",
+      "description": "Snippet for ListContentAsync",
+      "file": "ContentServiceClient.ListContentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListContentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.ListContentAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListContentResponse, Google.Cloud.Dataplex.V1.Content>",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "ListContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.ListContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_ListContent_sync_flattened_resourceNames",
+      "title": "ListContentResourceNames",
+      "description": "Snippet for ListContent",
+      "file": "ContentServiceClient.ListContentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListContent",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.ListContent",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListContentResponse, Google.Cloud.Dataplex.V1.Content>",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "ListContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.ListContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_ContentService_ListContent_async_flattened_resourceNames",
+      "title": "ListContentResourceNamesAsync",
+      "description": "Snippet for ListContentAsync",
+      "file": "ContentServiceClient.ListContentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListContentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient.ListContentAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListContentResponse, Google.Cloud.Dataplex.V1.Content>",
+        "client": {
+          "shortName": "ContentServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.ContentServiceClient"
+        },
+        "method": {
+          "shortName": "ListContent",
+          "fullName": "google.cloud.dataplex.v1.ContentService.ListContent",
+          "service": {
+            "shortName": "ContentService",
+            "fullName": "google.cloud.dataplex.v1.ContentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_sync",
+      "title": "CreateEntityRequestObject",
+      "description": "Snippet for CreateEntity",
+      "file": "MetadataServiceClient.CreateEntityRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntity",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreateEntity",
+        "resultType": "Google.Cloud.Dataplex.V1.Entity",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreateEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_async",
+      "title": "CreateEntityRequestObjectAsync",
+      "description": "Snippet for CreateEntityAsync",
+      "file": "MetadataServiceClient.CreateEntityRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntityAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreateEntityAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Entity>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreateEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_sync_flattened",
+      "title": "CreateEntity",
+      "description": "Snippet for CreateEntity",
+      "file": "MetadataServiceClient.CreateEntitySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntity",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreateEntity",
+        "resultType": "Google.Cloud.Dataplex.V1.Entity",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreateEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_async_flattened",
+      "title": "CreateEntityAsync",
+      "description": "Snippet for CreateEntityAsync",
+      "file": "MetadataServiceClient.CreateEntityAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntityAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreateEntityAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Entity>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreateEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_sync_flattened_resourceNames",
+      "title": "CreateEntityResourceNames",
+      "description": "Snippet for CreateEntity",
+      "file": "MetadataServiceClient.CreateEntityResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntity",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreateEntity",
+        "resultType": "Google.Cloud.Dataplex.V1.Entity",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreateEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreateEntity_async_flattened_resourceNames",
+      "title": "CreateEntityResourceNamesAsync",
+      "description": "Snippet for CreateEntityAsync",
+      "file": "MetadataServiceClient.CreateEntityResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntityAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreateEntityAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Entity>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreateEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_UpdateEntity_sync",
+      "title": "UpdateEntityRequestObject",
+      "description": "Snippet for UpdateEntity",
+      "file": "MetadataServiceClient.UpdateEntityRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEntity",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.UpdateEntity",
+        "resultType": "Google.Cloud.Dataplex.V1.Entity",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.UpdateEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_UpdateEntity_async",
+      "title": "UpdateEntityRequestObjectAsync",
+      "description": "Snippet for UpdateEntityAsync",
+      "file": "MetadataServiceClient.UpdateEntityRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEntityAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.UpdateEntityAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Entity>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.UpdateEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_sync",
+      "title": "DeleteEntityRequestObject",
+      "description": "Snippet for DeleteEntity",
+      "file": "MetadataServiceClient.DeleteEntityRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntity",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeleteEntity",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeleteEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_async",
+      "title": "DeleteEntityRequestObjectAsync",
+      "description": "Snippet for DeleteEntityAsync",
+      "file": "MetadataServiceClient.DeleteEntityRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntityAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeleteEntityAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeleteEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_sync_flattened",
+      "title": "DeleteEntity",
+      "description": "Snippet for DeleteEntity",
+      "file": "MetadataServiceClient.DeleteEntitySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntity",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeleteEntity",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeleteEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_async_flattened",
+      "title": "DeleteEntityAsync",
+      "description": "Snippet for DeleteEntityAsync",
+      "file": "MetadataServiceClient.DeleteEntityAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntityAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeleteEntityAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeleteEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_sync_flattened_resourceNames",
+      "title": "DeleteEntityResourceNames",
+      "description": "Snippet for DeleteEntity",
+      "file": "MetadataServiceClient.DeleteEntityResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntity",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeleteEntity",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeleteEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeleteEntity_async_flattened_resourceNames",
+      "title": "DeleteEntityResourceNamesAsync",
+      "description": "Snippet for DeleteEntityAsync",
+      "file": "MetadataServiceClient.DeleteEntityResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntityAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeleteEntityAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntity",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeleteEntity",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "dataplex_v1_generated_MetadataService_GetEntity_sync",
       "title": "GetEntityRequestObject",
       "description": "Snippet for GetEntity",
@@ -312,6 +1393,313 @@
         "method": {
           "shortName": "ListEntities",
           "fullName": "google.cloud.dataplex.v1.MetadataService.ListEntities",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_sync",
+      "title": "CreatePartitionRequestObject",
+      "description": "Snippet for CreatePartition",
+      "file": "MetadataServiceClient.CreatePartitionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePartition",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreatePartition",
+        "resultType": "Google.Cloud.Dataplex.V1.Partition",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreatePartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_async",
+      "title": "CreatePartitionRequestObjectAsync",
+      "description": "Snippet for CreatePartitionAsync",
+      "file": "MetadataServiceClient.CreatePartitionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePartitionAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreatePartitionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Partition>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreatePartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_sync_flattened",
+      "title": "CreatePartition",
+      "description": "Snippet for CreatePartition",
+      "file": "MetadataServiceClient.CreatePartitionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePartition",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreatePartition",
+        "resultType": "Google.Cloud.Dataplex.V1.Partition",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreatePartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_async_flattened",
+      "title": "CreatePartitionAsync",
+      "description": "Snippet for CreatePartitionAsync",
+      "file": "MetadataServiceClient.CreatePartitionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePartitionAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreatePartitionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Partition>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreatePartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_sync_flattened_resourceNames",
+      "title": "CreatePartitionResourceNames",
+      "description": "Snippet for CreatePartition",
+      "file": "MetadataServiceClient.CreatePartitionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePartition",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreatePartition",
+        "resultType": "Google.Cloud.Dataplex.V1.Partition",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreatePartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_CreatePartition_async_flattened_resourceNames",
+      "title": "CreatePartitionResourceNamesAsync",
+      "description": "Snippet for CreatePartitionAsync",
+      "file": "MetadataServiceClient.CreatePartitionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePartitionAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.CreatePartitionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Partition>",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.CreatePartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_sync",
+      "title": "DeletePartitionRequestObject",
+      "description": "Snippet for DeletePartition",
+      "file": "MetadataServiceClient.DeletePartitionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePartition",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeletePartition",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeletePartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_async",
+      "title": "DeletePartitionRequestObjectAsync",
+      "description": "Snippet for DeletePartitionAsync",
+      "file": "MetadataServiceClient.DeletePartitionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePartitionAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeletePartitionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeletePartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_sync_flattened",
+      "title": "DeletePartition",
+      "description": "Snippet for DeletePartition",
+      "file": "MetadataServiceClient.DeletePartitionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePartition",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeletePartition",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeletePartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_async_flattened",
+      "title": "DeletePartitionAsync",
+      "description": "Snippet for DeletePartitionAsync",
+      "file": "MetadataServiceClient.DeletePartitionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePartitionAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeletePartitionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeletePartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_sync_flattened_resourceNames",
+      "title": "DeletePartitionResourceNames",
+      "description": "Snippet for DeletePartition",
+      "file": "MetadataServiceClient.DeletePartitionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePartition",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeletePartition",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeletePartition",
+          "service": {
+            "shortName": "MetadataService",
+            "fullName": "google.cloud.dataplex.v1.MetadataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_MetadataService_DeletePartition_async_flattened_resourceNames",
+      "title": "DeletePartitionResourceNamesAsync",
+      "description": "Snippet for DeletePartitionAsync",
+      "file": "MetadataServiceClient.DeletePartitionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePartitionAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient.DeletePartitionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MetadataServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.MetadataServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePartition",
+          "fullName": "google.cloud.dataplex.v1.MetadataService.DeletePartition",
           "service": {
             "shortName": "MetadataService",
             "fullName": "google.cloud.dataplex.v1.MetadataService"
@@ -4445,6 +5833,885 @@
         "method": {
           "shortName": "CancelJob",
           "fullName": "google.cloud.dataplex.v1.DataplexService.CancelJob",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_CreateEnvironment_sync",
+      "title": "CreateEnvironmentRequestObject",
+      "description": "Snippet for CreateEnvironment",
+      "file": "DataplexServiceClient.CreateEnvironmentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEnvironment",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.CreateEnvironment",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.Environment, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEnvironment",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.CreateEnvironment",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_CreateEnvironment_async",
+      "title": "CreateEnvironmentRequestObjectAsync",
+      "description": "Snippet for CreateEnvironmentAsync",
+      "file": "DataplexServiceClient.CreateEnvironmentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEnvironmentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.CreateEnvironmentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.Environment, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEnvironment",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.CreateEnvironment",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_CreateEnvironment_sync_flattened",
+      "title": "CreateEnvironment",
+      "description": "Snippet for CreateEnvironment",
+      "file": "DataplexServiceClient.CreateEnvironmentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEnvironment",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.CreateEnvironment",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.Environment, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEnvironment",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.CreateEnvironment",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_CreateEnvironment_async_flattened",
+      "title": "CreateEnvironmentAsync",
+      "description": "Snippet for CreateEnvironmentAsync",
+      "file": "DataplexServiceClient.CreateEnvironmentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEnvironmentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.CreateEnvironmentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.Environment, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEnvironment",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.CreateEnvironment",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_CreateEnvironment_sync_flattened_resourceNames",
+      "title": "CreateEnvironmentResourceNames",
+      "description": "Snippet for CreateEnvironment",
+      "file": "DataplexServiceClient.CreateEnvironmentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEnvironment",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.CreateEnvironment",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.Environment, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEnvironment",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.CreateEnvironment",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_CreateEnvironment_async_flattened_resourceNames",
+      "title": "CreateEnvironmentResourceNamesAsync",
+      "description": "Snippet for CreateEnvironmentAsync",
+      "file": "DataplexServiceClient.CreateEnvironmentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEnvironmentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.CreateEnvironmentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.Environment, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEnvironment",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.CreateEnvironment",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_UpdateEnvironment_sync",
+      "title": "UpdateEnvironmentRequestObject",
+      "description": "Snippet for UpdateEnvironment",
+      "file": "DataplexServiceClient.UpdateEnvironmentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEnvironment",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.UpdateEnvironment",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.Environment, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEnvironment",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.UpdateEnvironment",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_UpdateEnvironment_async",
+      "title": "UpdateEnvironmentRequestObjectAsync",
+      "description": "Snippet for UpdateEnvironmentAsync",
+      "file": "DataplexServiceClient.UpdateEnvironmentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEnvironmentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.UpdateEnvironmentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.Environment, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEnvironment",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.UpdateEnvironment",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_UpdateEnvironment_sync_flattened",
+      "title": "UpdateEnvironment",
+      "description": "Snippet for UpdateEnvironment",
+      "file": "DataplexServiceClient.UpdateEnvironmentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEnvironment",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.UpdateEnvironment",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.Environment, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEnvironment",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.UpdateEnvironment",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_UpdateEnvironment_async_flattened",
+      "title": "UpdateEnvironmentAsync",
+      "description": "Snippet for UpdateEnvironmentAsync",
+      "file": "DataplexServiceClient.UpdateEnvironmentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEnvironmentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.UpdateEnvironmentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.Environment, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEnvironment",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.UpdateEnvironment",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_DeleteEnvironment_sync",
+      "title": "DeleteEnvironmentRequestObject",
+      "description": "Snippet for DeleteEnvironment",
+      "file": "DataplexServiceClient.DeleteEnvironmentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEnvironment",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.DeleteEnvironment",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEnvironment",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.DeleteEnvironment",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_DeleteEnvironment_async",
+      "title": "DeleteEnvironmentRequestObjectAsync",
+      "description": "Snippet for DeleteEnvironmentAsync",
+      "file": "DataplexServiceClient.DeleteEnvironmentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEnvironmentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.DeleteEnvironmentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEnvironment",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.DeleteEnvironment",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_DeleteEnvironment_sync_flattened",
+      "title": "DeleteEnvironment",
+      "description": "Snippet for DeleteEnvironment",
+      "file": "DataplexServiceClient.DeleteEnvironmentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEnvironment",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.DeleteEnvironment",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEnvironment",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.DeleteEnvironment",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_DeleteEnvironment_async_flattened",
+      "title": "DeleteEnvironmentAsync",
+      "description": "Snippet for DeleteEnvironmentAsync",
+      "file": "DataplexServiceClient.DeleteEnvironmentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEnvironmentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.DeleteEnvironmentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEnvironment",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.DeleteEnvironment",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_DeleteEnvironment_sync_flattened_resourceNames",
+      "title": "DeleteEnvironmentResourceNames",
+      "description": "Snippet for DeleteEnvironment",
+      "file": "DataplexServiceClient.DeleteEnvironmentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEnvironment",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.DeleteEnvironment",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEnvironment",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.DeleteEnvironment",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_DeleteEnvironment_async_flattened_resourceNames",
+      "title": "DeleteEnvironmentResourceNamesAsync",
+      "description": "Snippet for DeleteEnvironmentAsync",
+      "file": "DataplexServiceClient.DeleteEnvironmentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEnvironmentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.DeleteEnvironmentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEnvironment",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.DeleteEnvironment",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_ListEnvironments_sync",
+      "title": "ListEnvironmentsRequestObject",
+      "description": "Snippet for ListEnvironments",
+      "file": "DataplexServiceClient.ListEnvironmentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEnvironments",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.ListEnvironments",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListEnvironmentsResponse, Google.Cloud.Dataplex.V1.Environment>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "ListEnvironments",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.ListEnvironments",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_ListEnvironments_async",
+      "title": "ListEnvironmentsRequestObjectAsync",
+      "description": "Snippet for ListEnvironmentsAsync",
+      "file": "DataplexServiceClient.ListEnvironmentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEnvironmentsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.ListEnvironmentsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListEnvironmentsResponse, Google.Cloud.Dataplex.V1.Environment>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "ListEnvironments",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.ListEnvironments",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_ListEnvironments_sync_flattened",
+      "title": "ListEnvironments",
+      "description": "Snippet for ListEnvironments",
+      "file": "DataplexServiceClient.ListEnvironmentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEnvironments",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.ListEnvironments",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListEnvironmentsResponse, Google.Cloud.Dataplex.V1.Environment>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "ListEnvironments",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.ListEnvironments",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_ListEnvironments_async_flattened",
+      "title": "ListEnvironmentsAsync",
+      "description": "Snippet for ListEnvironmentsAsync",
+      "file": "DataplexServiceClient.ListEnvironmentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEnvironmentsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.ListEnvironmentsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListEnvironmentsResponse, Google.Cloud.Dataplex.V1.Environment>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "ListEnvironments",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.ListEnvironments",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_ListEnvironments_sync_flattened_resourceNames",
+      "title": "ListEnvironmentsResourceNames",
+      "description": "Snippet for ListEnvironments",
+      "file": "DataplexServiceClient.ListEnvironmentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEnvironments",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.ListEnvironments",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListEnvironmentsResponse, Google.Cloud.Dataplex.V1.Environment>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "ListEnvironments",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.ListEnvironments",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_ListEnvironments_async_flattened_resourceNames",
+      "title": "ListEnvironmentsResourceNamesAsync",
+      "description": "Snippet for ListEnvironmentsAsync",
+      "file": "DataplexServiceClient.ListEnvironmentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEnvironmentsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.ListEnvironmentsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListEnvironmentsResponse, Google.Cloud.Dataplex.V1.Environment>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "ListEnvironments",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.ListEnvironments",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_GetEnvironment_sync",
+      "title": "GetEnvironmentRequestObject",
+      "description": "Snippet for GetEnvironment",
+      "file": "DataplexServiceClient.GetEnvironmentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEnvironment",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.GetEnvironment",
+        "resultType": "Google.Cloud.Dataplex.V1.Environment",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "GetEnvironment",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.GetEnvironment",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_GetEnvironment_async",
+      "title": "GetEnvironmentRequestObjectAsync",
+      "description": "Snippet for GetEnvironmentAsync",
+      "file": "DataplexServiceClient.GetEnvironmentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEnvironmentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.GetEnvironmentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Environment>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "GetEnvironment",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.GetEnvironment",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_GetEnvironment_sync_flattened",
+      "title": "GetEnvironment",
+      "description": "Snippet for GetEnvironment",
+      "file": "DataplexServiceClient.GetEnvironmentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEnvironment",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.GetEnvironment",
+        "resultType": "Google.Cloud.Dataplex.V1.Environment",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "GetEnvironment",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.GetEnvironment",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_GetEnvironment_async_flattened",
+      "title": "GetEnvironmentAsync",
+      "description": "Snippet for GetEnvironmentAsync",
+      "file": "DataplexServiceClient.GetEnvironmentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEnvironmentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.GetEnvironmentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Environment>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "GetEnvironment",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.GetEnvironment",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_GetEnvironment_sync_flattened_resourceNames",
+      "title": "GetEnvironmentResourceNames",
+      "description": "Snippet for GetEnvironment",
+      "file": "DataplexServiceClient.GetEnvironmentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEnvironment",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.GetEnvironment",
+        "resultType": "Google.Cloud.Dataplex.V1.Environment",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "GetEnvironment",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.GetEnvironment",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_GetEnvironment_async_flattened_resourceNames",
+      "title": "GetEnvironmentResourceNamesAsync",
+      "description": "Snippet for GetEnvironmentAsync",
+      "file": "DataplexServiceClient.GetEnvironmentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEnvironmentAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.GetEnvironmentAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Environment>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "GetEnvironment",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.GetEnvironment",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_ListSessions_sync",
+      "title": "ListSessionsRequestObject",
+      "description": "Snippet for ListSessions",
+      "file": "DataplexServiceClient.ListSessionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessions",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.ListSessions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListSessionsResponse, Google.Cloud.Dataplex.V1.Session>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.ListSessions",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_ListSessions_async",
+      "title": "ListSessionsRequestObjectAsync",
+      "description": "Snippet for ListSessionsAsync",
+      "file": "DataplexServiceClient.ListSessionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessionsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.ListSessionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListSessionsResponse, Google.Cloud.Dataplex.V1.Session>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.ListSessions",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_ListSessions_sync_flattened",
+      "title": "ListSessions",
+      "description": "Snippet for ListSessions",
+      "file": "DataplexServiceClient.ListSessionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessions",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.ListSessions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListSessionsResponse, Google.Cloud.Dataplex.V1.Session>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.ListSessions",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_ListSessions_async_flattened",
+      "title": "ListSessionsAsync",
+      "description": "Snippet for ListSessionsAsync",
+      "file": "DataplexServiceClient.ListSessionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessionsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.ListSessionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListSessionsResponse, Google.Cloud.Dataplex.V1.Session>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.ListSessions",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_ListSessions_sync_flattened_resourceNames",
+      "title": "ListSessionsResourceNames",
+      "description": "Snippet for ListSessions",
+      "file": "DataplexServiceClient.ListSessionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessions",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.ListSessions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListSessionsResponse, Google.Cloud.Dataplex.V1.Session>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.ListSessions",
+          "service": {
+            "shortName": "DataplexService",
+            "fullName": "google.cloud.dataplex.v1.DataplexService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataplexService_ListSessions_async_flattened_resourceNames",
+      "title": "ListSessionsResourceNamesAsync",
+      "description": "Snippet for ListSessionsAsync",
+      "file": "DataplexServiceClient.ListSessionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessionsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient.ListSessionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListSessionsResponse, Google.Cloud.Dataplex.V1.Session>",
+        "client": {
+          "shortName": "DataplexServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataplexServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.dataplex.v1.DataplexService.ListSessions",
           "service": {
             "shortName": "DataplexService",
             "fullName": "google.cloud.dataplex.v1.DataplexService"
