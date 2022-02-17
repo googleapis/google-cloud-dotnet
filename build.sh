@@ -73,7 +73,7 @@ then
   # simplest way of doing it.
   if [[ $apiregex == !* ]]
   then
-    apiregex=$(echo $apiregex | sed s/^!//g)
+    apiregex=$(echo "$apiregex" | sed s/^!//g)
     for api in ${apis[*]}
     do
       if [[ ! "$api" =~ $apiregex ]]
