@@ -74,6 +74,7 @@ then
   # simplest way of doing it.
   if [[ $apiregex == not* ]]
   then
+    echo $BASH_VERSION
     echo "regex $apiregex is negated"
     apiregex="$(echo $apiregex | sed s/^not//g)"
     echo "resulting regex after removing negation: $apiregex;"
