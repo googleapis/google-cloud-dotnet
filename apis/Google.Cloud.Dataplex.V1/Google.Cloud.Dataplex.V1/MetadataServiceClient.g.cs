@@ -18,6 +18,7 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
+using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
@@ -44,14 +45,55 @@ namespace Google.Cloud.Dataplex.V1
         private MetadataServiceSettings(MetadataServiceSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            CreateEntitySettings = existing.CreateEntitySettings;
+            UpdateEntitySettings = existing.UpdateEntitySettings;
+            DeleteEntitySettings = existing.DeleteEntitySettings;
             GetEntitySettings = existing.GetEntitySettings;
             ListEntitiesSettings = existing.ListEntitiesSettings;
+            CreatePartitionSettings = existing.CreatePartitionSettings;
+            DeletePartitionSettings = existing.DeletePartitionSettings;
             GetPartitionSettings = existing.GetPartitionSettings;
             ListPartitionsSettings = existing.ListPartitionsSettings;
             OnCopy(existing);
         }
 
         partial void OnCopy(MetadataServiceSettings existing);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MetadataServiceClient.CreateEntity</c> and <c>MetadataServiceClient.CreateEntityAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateEntitySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MetadataServiceClient.UpdateEntity</c> and <c>MetadataServiceClient.UpdateEntityAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateEntitySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MetadataServiceClient.DeleteEntity</c> and <c>MetadataServiceClient.DeleteEntityAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteEntitySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -88,6 +130,30 @@ namespace Google.Cloud.Dataplex.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListEntitiesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MetadataServiceClient.CreatePartition</c> and <c>MetadataServiceClient.CreatePartitionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreatePartitionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MetadataServiceClient.DeletePartition</c> and <c>MetadataServiceClient.DeletePartitionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeletePartitionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -286,6 +352,277 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>The underlying gRPC MetadataService client</summary>
         public virtual MetadataService.MetadataServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a metadata entity.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Entity CreateEntity(CreateEntityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a metadata entity.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Entity> CreateEntityAsync(CreateEntityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a metadata entity.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Entity> CreateEntityAsync(CreateEntityRequest request, st::CancellationToken cancellationToken) =>
+            CreateEntityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a metadata entity.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent zone:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}`.
+        /// </param>
+        /// <param name="entity">
+        /// Required. Entity resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Entity CreateEntity(string parent, Entity entity, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEntity(new CreateEntityRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Entity = gax::GaxPreconditions.CheckNotNull(entity, nameof(entity)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a metadata entity.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent zone:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}`.
+        /// </param>
+        /// <param name="entity">
+        /// Required. Entity resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Entity> CreateEntityAsync(string parent, Entity entity, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEntityAsync(new CreateEntityRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Entity = gax::GaxPreconditions.CheckNotNull(entity, nameof(entity)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a metadata entity.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent zone:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}`.
+        /// </param>
+        /// <param name="entity">
+        /// Required. Entity resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Entity> CreateEntityAsync(string parent, Entity entity, st::CancellationToken cancellationToken) =>
+            CreateEntityAsync(parent, entity, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a metadata entity.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent zone:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}`.
+        /// </param>
+        /// <param name="entity">
+        /// Required. Entity resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Entity CreateEntity(ZoneName parent, Entity entity, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEntity(new CreateEntityRequest
+            {
+                ParentAsZoneName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Entity = gax::GaxPreconditions.CheckNotNull(entity, nameof(entity)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a metadata entity.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent zone:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}`.
+        /// </param>
+        /// <param name="entity">
+        /// Required. Entity resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Entity> CreateEntityAsync(ZoneName parent, Entity entity, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEntityAsync(new CreateEntityRequest
+            {
+                ParentAsZoneName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Entity = gax::GaxPreconditions.CheckNotNull(entity, nameof(entity)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a metadata entity.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent zone:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}`.
+        /// </param>
+        /// <param name="entity">
+        /// Required. Entity resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Entity> CreateEntityAsync(ZoneName parent, Entity entity, st::CancellationToken cancellationToken) =>
+            CreateEntityAsync(parent, entity, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update a metadata entity. Only supports full resource update.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Entity UpdateEntity(UpdateEntityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a metadata entity. Only supports full resource update.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Entity> UpdateEntityAsync(UpdateEntityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a metadata entity. Only supports full resource update.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Entity> UpdateEntityAsync(UpdateEntityRequest request, st::CancellationToken cancellationToken) =>
+            UpdateEntityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a metadata entity.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteEntity(DeleteEntityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a metadata entity.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteEntityAsync(DeleteEntityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a metadata entity.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteEntityAsync(DeleteEntityRequest request, st::CancellationToken cancellationToken) =>
+            DeleteEntityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a metadata entity.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the entity:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteEntity(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEntity(new DeleteEntityRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a metadata entity.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the entity:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteEntityAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEntityAsync(new DeleteEntityRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a metadata entity.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the entity:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteEntityAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteEntityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a metadata entity.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the entity:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteEntity(EntityName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEntity(new DeleteEntityRequest
+            {
+                EntityName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a metadata entity.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the entity:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteEntityAsync(EntityName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEntityAsync(new DeleteEntityRequest
+            {
+                EntityName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a metadata entity.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the entity:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteEntityAsync(EntityName name, st::CancellationToken cancellationToken) =>
+            DeleteEntityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Get a metadata entity.
@@ -517,6 +854,268 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
+        /// Create a metadata partition.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Partition CreatePartition(CreatePartitionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a metadata partition.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Partition> CreatePartitionAsync(CreatePartitionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a metadata partition.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Partition> CreatePartitionAsync(CreatePartitionRequest request, st::CancellationToken cancellationToken) =>
+            CreatePartitionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a metadata partition.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent zone:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}`.
+        /// </param>
+        /// <param name="partition">
+        /// Required. Partition resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Partition CreatePartition(string parent, Partition partition, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePartition(new CreatePartitionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Partition = gax::GaxPreconditions.CheckNotNull(partition, nameof(partition)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a metadata partition.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent zone:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}`.
+        /// </param>
+        /// <param name="partition">
+        /// Required. Partition resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Partition> CreatePartitionAsync(string parent, Partition partition, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePartitionAsync(new CreatePartitionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Partition = gax::GaxPreconditions.CheckNotNull(partition, nameof(partition)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a metadata partition.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent zone:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}`.
+        /// </param>
+        /// <param name="partition">
+        /// Required. Partition resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Partition> CreatePartitionAsync(string parent, Partition partition, st::CancellationToken cancellationToken) =>
+            CreatePartitionAsync(parent, partition, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a metadata partition.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent zone:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}`.
+        /// </param>
+        /// <param name="partition">
+        /// Required. Partition resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Partition CreatePartition(EntityName parent, Partition partition, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePartition(new CreatePartitionRequest
+            {
+                ParentAsEntityName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Partition = gax::GaxPreconditions.CheckNotNull(partition, nameof(partition)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a metadata partition.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent zone:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}`.
+        /// </param>
+        /// <param name="partition">
+        /// Required. Partition resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Partition> CreatePartitionAsync(EntityName parent, Partition partition, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePartitionAsync(new CreatePartitionRequest
+            {
+                ParentAsEntityName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Partition = gax::GaxPreconditions.CheckNotNull(partition, nameof(partition)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a metadata partition.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent zone:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}`.
+        /// </param>
+        /// <param name="partition">
+        /// Required. Partition resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Partition> CreatePartitionAsync(EntityName parent, Partition partition, st::CancellationToken cancellationToken) =>
+            CreatePartitionAsync(parent, partition, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a metadata partition.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeletePartition(DeletePartitionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a metadata partition.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeletePartitionAsync(DeletePartitionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a metadata partition.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeletePartitionAsync(DeletePartitionRequest request, st::CancellationToken cancellationToken) =>
+            DeletePartitionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a metadata partition.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the partition.
+        /// format:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}/partitions/{partition_value_path}`.
+        /// The {partition_value_path} segment consists of an ordered sequence of
+        /// partition values separated by "/". All values must be provided.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeletePartition(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePartition(new DeletePartitionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a metadata partition.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the partition.
+        /// format:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}/partitions/{partition_value_path}`.
+        /// The {partition_value_path} segment consists of an ordered sequence of
+        /// partition values separated by "/". All values must be provided.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeletePartitionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePartitionAsync(new DeletePartitionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a metadata partition.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the partition.
+        /// format:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}/partitions/{partition_value_path}`.
+        /// The {partition_value_path} segment consists of an ordered sequence of
+        /// partition values separated by "/". All values must be provided.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeletePartitionAsync(string name, st::CancellationToken cancellationToken) =>
+            DeletePartitionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a metadata partition.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the partition.
+        /// format:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}/partitions/{partition_value_path}`.
+        /// The {partition_value_path} segment consists of an ordered sequence of
+        /// partition values separated by "/". All values must be provided.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeletePartition(PartitionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePartition(new DeletePartitionRequest
+            {
+                PartitionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a metadata partition.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the partition.
+        /// format:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}/partitions/{partition_value_path}`.
+        /// The {partition_value_path} segment consists of an ordered sequence of
+        /// partition values separated by "/". All values must be provided.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeletePartitionAsync(PartitionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePartitionAsync(new DeletePartitionRequest
+            {
+                PartitionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a metadata partition.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the partition.
+        /// format:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}/partitions/{partition_value_path}`.
+        /// The {partition_value_path} segment consists of an ordered sequence of
+        /// partition values separated by "/". All values must be provided.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeletePartitionAsync(PartitionName name, st::CancellationToken cancellationToken) =>
+            DeletePartitionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Get a metadata partition of an entity.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -548,7 +1147,9 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the partition:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}/partitions/{partition_id}`.
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}/partitions/{partition_value_path}`.
+        /// The {partition_value_path} segment consists of an ordered sequence of
+        /// partition values separated by "/". All values must be provided.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -563,7 +1164,9 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the partition:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}/partitions/{partition_id}`.
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}/partitions/{partition_value_path}`.
+        /// The {partition_value_path} segment consists of an ordered sequence of
+        /// partition values separated by "/". All values must be provided.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -578,7 +1181,9 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the partition:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}/partitions/{partition_id}`.
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}/partitions/{partition_value_path}`.
+        /// The {partition_value_path} segment consists of an ordered sequence of
+        /// partition values separated by "/". All values must be provided.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -590,7 +1195,9 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the partition:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}/partitions/{partition_id}`.
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}/partitions/{partition_value_path}`.
+        /// The {partition_value_path} segment consists of an ordered sequence of
+        /// partition values separated by "/". All values must be provided.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -605,7 +1212,9 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the partition:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}/partitions/{partition_id}`.
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}/partitions/{partition_value_path}`.
+        /// The {partition_value_path} segment consists of an ordered sequence of
+        /// partition values separated by "/". All values must be provided.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -620,7 +1229,9 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the partition:
-        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}/partitions/{partition_id}`.
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}/partitions/{partition_value_path}`.
+        /// The {partition_value_path} segment consists of an ordered sequence of
+        /// partition values separated by "/". All values must be provided.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -753,9 +1364,19 @@ namespace Google.Cloud.Dataplex.V1
     /// </remarks>
     public sealed partial class MetadataServiceClientImpl : MetadataServiceClient
     {
+        private readonly gaxgrpc::ApiCall<CreateEntityRequest, Entity> _callCreateEntity;
+
+        private readonly gaxgrpc::ApiCall<UpdateEntityRequest, Entity> _callUpdateEntity;
+
+        private readonly gaxgrpc::ApiCall<DeleteEntityRequest, wkt::Empty> _callDeleteEntity;
+
         private readonly gaxgrpc::ApiCall<GetEntityRequest, Entity> _callGetEntity;
 
         private readonly gaxgrpc::ApiCall<ListEntitiesRequest, ListEntitiesResponse> _callListEntities;
+
+        private readonly gaxgrpc::ApiCall<CreatePartitionRequest, Partition> _callCreatePartition;
+
+        private readonly gaxgrpc::ApiCall<DeletePartitionRequest, wkt::Empty> _callDeletePartition;
 
         private readonly gaxgrpc::ApiCall<GetPartitionRequest, Partition> _callGetPartition;
 
@@ -771,12 +1392,27 @@ namespace Google.Cloud.Dataplex.V1
             GrpcClient = grpcClient;
             MetadataServiceSettings effectiveSettings = settings ?? MetadataServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            _callCreateEntity = clientHelper.BuildApiCall<CreateEntityRequest, Entity>(grpcClient.CreateEntityAsync, grpcClient.CreateEntity, effectiveSettings.CreateEntitySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateEntity);
+            Modify_CreateEntityApiCall(ref _callCreateEntity);
+            _callUpdateEntity = clientHelper.BuildApiCall<UpdateEntityRequest, Entity>(grpcClient.UpdateEntityAsync, grpcClient.UpdateEntity, effectiveSettings.UpdateEntitySettings).WithGoogleRequestParam("entity.name", request => request.Entity?.Name);
+            Modify_ApiCall(ref _callUpdateEntity);
+            Modify_UpdateEntityApiCall(ref _callUpdateEntity);
+            _callDeleteEntity = clientHelper.BuildApiCall<DeleteEntityRequest, wkt::Empty>(grpcClient.DeleteEntityAsync, grpcClient.DeleteEntity, effectiveSettings.DeleteEntitySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteEntity);
+            Modify_DeleteEntityApiCall(ref _callDeleteEntity);
             _callGetEntity = clientHelper.BuildApiCall<GetEntityRequest, Entity>(grpcClient.GetEntityAsync, grpcClient.GetEntity, effectiveSettings.GetEntitySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetEntity);
             Modify_GetEntityApiCall(ref _callGetEntity);
             _callListEntities = clientHelper.BuildApiCall<ListEntitiesRequest, ListEntitiesResponse>(grpcClient.ListEntitiesAsync, grpcClient.ListEntities, effectiveSettings.ListEntitiesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListEntities);
             Modify_ListEntitiesApiCall(ref _callListEntities);
+            _callCreatePartition = clientHelper.BuildApiCall<CreatePartitionRequest, Partition>(grpcClient.CreatePartitionAsync, grpcClient.CreatePartition, effectiveSettings.CreatePartitionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreatePartition);
+            Modify_CreatePartitionApiCall(ref _callCreatePartition);
+            _callDeletePartition = clientHelper.BuildApiCall<DeletePartitionRequest, wkt::Empty>(grpcClient.DeletePartitionAsync, grpcClient.DeletePartition, effectiveSettings.DeletePartitionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeletePartition);
+            Modify_DeletePartitionApiCall(ref _callDeletePartition);
             _callGetPartition = clientHelper.BuildApiCall<GetPartitionRequest, Partition>(grpcClient.GetPartitionAsync, grpcClient.GetPartition, effectiveSettings.GetPartitionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetPartition);
             Modify_GetPartitionApiCall(ref _callGetPartition);
@@ -788,9 +1424,19 @@ namespace Google.Cloud.Dataplex.V1
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+        partial void Modify_CreateEntityApiCall(ref gaxgrpc::ApiCall<CreateEntityRequest, Entity> call);
+
+        partial void Modify_UpdateEntityApiCall(ref gaxgrpc::ApiCall<UpdateEntityRequest, Entity> call);
+
+        partial void Modify_DeleteEntityApiCall(ref gaxgrpc::ApiCall<DeleteEntityRequest, wkt::Empty> call);
+
         partial void Modify_GetEntityApiCall(ref gaxgrpc::ApiCall<GetEntityRequest, Entity> call);
 
         partial void Modify_ListEntitiesApiCall(ref gaxgrpc::ApiCall<ListEntitiesRequest, ListEntitiesResponse> call);
+
+        partial void Modify_CreatePartitionApiCall(ref gaxgrpc::ApiCall<CreatePartitionRequest, Partition> call);
+
+        partial void Modify_DeletePartitionApiCall(ref gaxgrpc::ApiCall<DeletePartitionRequest, wkt::Empty> call);
 
         partial void Modify_GetPartitionApiCall(ref gaxgrpc::ApiCall<GetPartitionRequest, Partition> call);
 
@@ -801,13 +1447,95 @@ namespace Google.Cloud.Dataplex.V1
         /// <summary>The underlying gRPC MetadataService client</summary>
         public override MetadataService.MetadataServiceClient GrpcClient { get; }
 
+        partial void Modify_CreateEntityRequest(ref CreateEntityRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateEntityRequest(ref UpdateEntityRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteEntityRequest(ref DeleteEntityRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetEntityRequest(ref GetEntityRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListEntitiesRequest(ref ListEntitiesRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CreatePartitionRequest(ref CreatePartitionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeletePartitionRequest(ref DeletePartitionRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetPartitionRequest(ref GetPartitionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListPartitionsRequest(ref ListPartitionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>
+        /// Create a metadata entity.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Entity CreateEntity(CreateEntityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateEntityRequest(ref request, ref callSettings);
+            return _callCreateEntity.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Create a metadata entity.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Entity> CreateEntityAsync(CreateEntityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateEntityRequest(ref request, ref callSettings);
+            return _callCreateEntity.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Update a metadata entity. Only supports full resource update.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Entity UpdateEntity(UpdateEntityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateEntityRequest(ref request, ref callSettings);
+            return _callUpdateEntity.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Update a metadata entity. Only supports full resource update.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Entity> UpdateEntityAsync(UpdateEntityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateEntityRequest(ref request, ref callSettings);
+            return _callUpdateEntity.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Delete a metadata entity.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteEntity(DeleteEntityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteEntityRequest(ref request, ref callSettings);
+            _callDeleteEntity.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Delete a metadata entity.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteEntityAsync(DeleteEntityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteEntityRequest(ref request, ref callSettings);
+            return _callDeleteEntity.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Get a metadata entity.
@@ -855,6 +1583,54 @@ namespace Google.Cloud.Dataplex.V1
         {
             Modify_ListEntitiesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListEntitiesRequest, ListEntitiesResponse, Entity>(_callListEntities, request, callSettings);
+        }
+
+        /// <summary>
+        /// Create a metadata partition.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Partition CreatePartition(CreatePartitionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreatePartitionRequest(ref request, ref callSettings);
+            return _callCreatePartition.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Create a metadata partition.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Partition> CreatePartitionAsync(CreatePartitionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreatePartitionRequest(ref request, ref callSettings);
+            return _callCreatePartition.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Delete a metadata partition.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeletePartition(DeletePartitionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeletePartitionRequest(ref request, ref callSettings);
+            _callDeletePartition.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Delete a metadata partition.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeletePartitionAsync(DeletePartitionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeletePartitionRequest(ref request, ref callSettings);
+            return _callDeletePartition.Async(request, callSettings);
         }
 
         /// <summary>

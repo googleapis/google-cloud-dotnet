@@ -24,6 +24,225 @@ namespace Google.Cloud.Dataplex.V1.Snippets
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedMetadataServiceClientSnippets
     {
+        /// <summary>Snippet for CreateEntity</summary>
+        public void CreateEntityRequestObject()
+        {
+            // Snippet: CreateEntity(CreateEntityRequest, CallSettings)
+            // Create client
+            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            // Initialize request argument(s)
+            CreateEntityRequest request = new CreateEntityRequest
+            {
+                ParentAsZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
+                Entity = new Entity(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Entity response = metadataServiceClient.CreateEntity(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEntityAsync</summary>
+        public async Task CreateEntityRequestObjectAsync()
+        {
+            // Snippet: CreateEntityAsync(CreateEntityRequest, CallSettings)
+            // Additional: CreateEntityAsync(CreateEntityRequest, CancellationToken)
+            // Create client
+            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateEntityRequest request = new CreateEntityRequest
+            {
+                ParentAsZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
+                Entity = new Entity(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Entity response = await metadataServiceClient.CreateEntityAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEntity</summary>
+        public void CreateEntity()
+        {
+            // Snippet: CreateEntity(string, Entity, CallSettings)
+            // Create client
+            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]";
+            Entity entity = new Entity();
+            // Make the request
+            Entity response = metadataServiceClient.CreateEntity(parent, entity);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEntityAsync</summary>
+        public async Task CreateEntityAsync()
+        {
+            // Snippet: CreateEntityAsync(string, Entity, CallSettings)
+            // Additional: CreateEntityAsync(string, Entity, CancellationToken)
+            // Create client
+            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]";
+            Entity entity = new Entity();
+            // Make the request
+            Entity response = await metadataServiceClient.CreateEntityAsync(parent, entity);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEntity</summary>
+        public void CreateEntityResourceNames()
+        {
+            // Snippet: CreateEntity(ZoneName, Entity, CallSettings)
+            // Create client
+            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            // Initialize request argument(s)
+            ZoneName parent = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
+            Entity entity = new Entity();
+            // Make the request
+            Entity response = metadataServiceClient.CreateEntity(parent, entity);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEntityAsync</summary>
+        public async Task CreateEntityResourceNamesAsync()
+        {
+            // Snippet: CreateEntityAsync(ZoneName, Entity, CallSettings)
+            // Additional: CreateEntityAsync(ZoneName, Entity, CancellationToken)
+            // Create client
+            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ZoneName parent = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
+            Entity entity = new Entity();
+            // Make the request
+            Entity response = await metadataServiceClient.CreateEntityAsync(parent, entity);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEntity</summary>
+        public void UpdateEntityRequestObject()
+        {
+            // Snippet: UpdateEntity(UpdateEntityRequest, CallSettings)
+            // Create client
+            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateEntityRequest request = new UpdateEntityRequest
+            {
+                Entity = new Entity(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Entity response = metadataServiceClient.UpdateEntity(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEntityAsync</summary>
+        public async Task UpdateEntityRequestObjectAsync()
+        {
+            // Snippet: UpdateEntityAsync(UpdateEntityRequest, CallSettings)
+            // Additional: UpdateEntityAsync(UpdateEntityRequest, CancellationToken)
+            // Create client
+            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateEntityRequest request = new UpdateEntityRequest
+            {
+                Entity = new Entity(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Entity response = await metadataServiceClient.UpdateEntityAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEntity</summary>
+        public void DeleteEntityRequestObject()
+        {
+            // Snippet: DeleteEntity(DeleteEntityRequest, CallSettings)
+            // Create client
+            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteEntityRequest request = new DeleteEntityRequest
+            {
+                EntityName = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
+                Etag = "",
+            };
+            // Make the request
+            metadataServiceClient.DeleteEntity(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEntityAsync</summary>
+        public async Task DeleteEntityRequestObjectAsync()
+        {
+            // Snippet: DeleteEntityAsync(DeleteEntityRequest, CallSettings)
+            // Additional: DeleteEntityAsync(DeleteEntityRequest, CancellationToken)
+            // Create client
+            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteEntityRequest request = new DeleteEntityRequest
+            {
+                EntityName = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
+                Etag = "",
+            };
+            // Make the request
+            await metadataServiceClient.DeleteEntityAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEntity</summary>
+        public void DeleteEntity()
+        {
+            // Snippet: DeleteEntity(string, CallSettings)
+            // Create client
+            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/entities/[ENTITY]";
+            // Make the request
+            metadataServiceClient.DeleteEntity(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEntityAsync</summary>
+        public async Task DeleteEntityAsync()
+        {
+            // Snippet: DeleteEntityAsync(string, CallSettings)
+            // Additional: DeleteEntityAsync(string, CancellationToken)
+            // Create client
+            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/entities/[ENTITY]";
+            // Make the request
+            await metadataServiceClient.DeleteEntityAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEntity</summary>
+        public void DeleteEntityResourceNames()
+        {
+            // Snippet: DeleteEntity(EntityName, CallSettings)
+            // Create client
+            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            // Initialize request argument(s)
+            EntityName name = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
+            // Make the request
+            metadataServiceClient.DeleteEntity(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEntityAsync</summary>
+        public async Task DeleteEntityResourceNamesAsync()
+        {
+            // Snippet: DeleteEntityAsync(EntityName, CallSettings)
+            // Additional: DeleteEntityAsync(EntityName, CancellationToken)
+            // Create client
+            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EntityName name = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
+            // Make the request
+            await metadataServiceClient.DeleteEntityAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetEntity</summary>
         public void GetEntityRequestObject()
         {
@@ -390,6 +609,188 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePartition</summary>
+        public void CreatePartitionRequestObject()
+        {
+            // Snippet: CreatePartition(CreatePartitionRequest, CallSettings)
+            // Create client
+            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            // Initialize request argument(s)
+            CreatePartitionRequest request = new CreatePartitionRequest
+            {
+                ParentAsEntityName = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
+                Partition = new Partition(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Partition response = metadataServiceClient.CreatePartition(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePartitionAsync</summary>
+        public async Task CreatePartitionRequestObjectAsync()
+        {
+            // Snippet: CreatePartitionAsync(CreatePartitionRequest, CallSettings)
+            // Additional: CreatePartitionAsync(CreatePartitionRequest, CancellationToken)
+            // Create client
+            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreatePartitionRequest request = new CreatePartitionRequest
+            {
+                ParentAsEntityName = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
+                Partition = new Partition(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Partition response = await metadataServiceClient.CreatePartitionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePartition</summary>
+        public void CreatePartition()
+        {
+            // Snippet: CreatePartition(string, Partition, CallSettings)
+            // Create client
+            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/entities/[ENTITY]";
+            Partition partition = new Partition();
+            // Make the request
+            Partition response = metadataServiceClient.CreatePartition(parent, partition);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePartitionAsync</summary>
+        public async Task CreatePartitionAsync()
+        {
+            // Snippet: CreatePartitionAsync(string, Partition, CallSettings)
+            // Additional: CreatePartitionAsync(string, Partition, CancellationToken)
+            // Create client
+            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/entities/[ENTITY]";
+            Partition partition = new Partition();
+            // Make the request
+            Partition response = await metadataServiceClient.CreatePartitionAsync(parent, partition);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePartition</summary>
+        public void CreatePartitionResourceNames()
+        {
+            // Snippet: CreatePartition(EntityName, Partition, CallSettings)
+            // Create client
+            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            // Initialize request argument(s)
+            EntityName parent = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
+            Partition partition = new Partition();
+            // Make the request
+            Partition response = metadataServiceClient.CreatePartition(parent, partition);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePartitionAsync</summary>
+        public async Task CreatePartitionResourceNamesAsync()
+        {
+            // Snippet: CreatePartitionAsync(EntityName, Partition, CallSettings)
+            // Additional: CreatePartitionAsync(EntityName, Partition, CancellationToken)
+            // Create client
+            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EntityName parent = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
+            Partition partition = new Partition();
+            // Make the request
+            Partition response = await metadataServiceClient.CreatePartitionAsync(parent, partition);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePartition</summary>
+        public void DeletePartitionRequestObject()
+        {
+            // Snippet: DeletePartition(DeletePartitionRequest, CallSettings)
+            // Create client
+            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            // Initialize request argument(s)
+            DeletePartitionRequest request = new DeletePartitionRequest
+            {
+                PartitionName = PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]"),
+            };
+            // Make the request
+            metadataServiceClient.DeletePartition(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePartitionAsync</summary>
+        public async Task DeletePartitionRequestObjectAsync()
+        {
+            // Snippet: DeletePartitionAsync(DeletePartitionRequest, CallSettings)
+            // Additional: DeletePartitionAsync(DeletePartitionRequest, CancellationToken)
+            // Create client
+            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeletePartitionRequest request = new DeletePartitionRequest
+            {
+                PartitionName = PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]"),
+            };
+            // Make the request
+            await metadataServiceClient.DeletePartitionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePartition</summary>
+        public void DeletePartition()
+        {
+            // Snippet: DeletePartition(string, CallSettings)
+            // Create client
+            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/entities/[ENTITY]/partitions/[PARTITION]";
+            // Make the request
+            metadataServiceClient.DeletePartition(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePartitionAsync</summary>
+        public async Task DeletePartitionAsync()
+        {
+            // Snippet: DeletePartitionAsync(string, CallSettings)
+            // Additional: DeletePartitionAsync(string, CancellationToken)
+            // Create client
+            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/entities/[ENTITY]/partitions/[PARTITION]";
+            // Make the request
+            await metadataServiceClient.DeletePartitionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePartition</summary>
+        public void DeletePartitionResourceNames()
+        {
+            // Snippet: DeletePartition(PartitionName, CallSettings)
+            // Create client
+            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            // Initialize request argument(s)
+            PartitionName name = PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]");
+            // Make the request
+            metadataServiceClient.DeletePartition(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePartitionAsync</summary>
+        public async Task DeletePartitionResourceNamesAsync()
+        {
+            // Snippet: DeletePartitionAsync(PartitionName, CallSettings)
+            // Additional: DeletePartitionAsync(PartitionName, CancellationToken)
+            // Create client
+            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PartitionName name = PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]");
+            // Make the request
+            await metadataServiceClient.DeletePartitionAsync(name);
             // End snippet
         }
 

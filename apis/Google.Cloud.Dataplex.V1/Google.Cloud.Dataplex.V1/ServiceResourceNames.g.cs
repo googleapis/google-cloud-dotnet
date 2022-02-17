@@ -262,4 +262,60 @@ namespace Google.Cloud.Dataplex.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class CreateEnvironmentRequest
+    {
+        /// <summary><see cref="LakeName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public LakeName ParentAsLakeName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : LakeName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteEnvironmentRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::EnvironmentName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::EnvironmentName EnvironmentName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::EnvironmentName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListEnvironmentsRequest
+    {
+        /// <summary><see cref="LakeName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public LakeName ParentAsLakeName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : LakeName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetEnvironmentRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::EnvironmentName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::EnvironmentName EnvironmentName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::EnvironmentName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListSessionsRequest
+    {
+        /// <summary>
+        /// <see cref="EnvironmentName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public EnvironmentName ParentAsEnvironmentName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : EnvironmentName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
 }

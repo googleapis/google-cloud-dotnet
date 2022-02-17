@@ -85,6 +85,15 @@ namespace Google.Cloud.Dataplex.V1
             ListJobsSettings = existing.ListJobsSettings;
             GetJobSettings = existing.GetJobSettings;
             CancelJobSettings = existing.CancelJobSettings;
+            CreateEnvironmentSettings = existing.CreateEnvironmentSettings;
+            CreateEnvironmentOperationsSettings = existing.CreateEnvironmentOperationsSettings.Clone();
+            UpdateEnvironmentSettings = existing.UpdateEnvironmentSettings;
+            UpdateEnvironmentOperationsSettings = existing.UpdateEnvironmentOperationsSettings.Clone();
+            DeleteEnvironmentSettings = existing.DeleteEnvironmentSettings;
+            DeleteEnvironmentOperationsSettings = existing.DeleteEnvironmentOperationsSettings.Clone();
+            ListEnvironmentsSettings = existing.ListEnvironmentsSettings;
+            GetEnvironmentSettings = existing.GetEnvironmentSettings;
+            ListSessionsSettings = existing.ListSessionsSettings;
             OnCopy(existing);
         }
 
@@ -696,6 +705,132 @@ namespace Google.Cloud.Dataplex.V1
         /// </remarks>
         public gaxgrpc::CallSettings CancelJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataplexServiceClient.CreateEnvironment</c> and <c>DataplexServiceClient.CreateEnvironmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateEnvironmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DataplexServiceClient.CreateEnvironment</c> and
+        /// <c>DataplexServiceClient.CreateEnvironmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateEnvironmentOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataplexServiceClient.UpdateEnvironment</c> and <c>DataplexServiceClient.UpdateEnvironmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateEnvironmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DataplexServiceClient.UpdateEnvironment</c> and
+        /// <c>DataplexServiceClient.UpdateEnvironmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateEnvironmentOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataplexServiceClient.DeleteEnvironment</c> and <c>DataplexServiceClient.DeleteEnvironmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteEnvironmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DataplexServiceClient.DeleteEnvironment</c> and
+        /// <c>DataplexServiceClient.DeleteEnvironmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteEnvironmentOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataplexServiceClient.ListEnvironments</c> and <c>DataplexServiceClient.ListEnvironmentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListEnvironmentsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataplexServiceClient.GetEnvironment</c> and <c>DataplexServiceClient.GetEnvironmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetEnvironmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataplexServiceClient.ListSessions</c> and <c>DataplexServiceClient.ListSessionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListSessionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="DataplexServiceSettings"/> object.</returns>
         public DataplexServiceSettings Clone() => new DataplexServiceSettings(this);
@@ -919,7 +1054,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the lake location, of the form:
-        /// `projects/{project_number}/locations/{location_id}`
+        /// projects/{project_number}/locations/{location_id}
         /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="lake">
@@ -950,7 +1085,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the lake location, of the form:
-        /// `projects/{project_number}/locations/{location_id}`
+        /// projects/{project_number}/locations/{location_id}
         /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="lake">
@@ -981,7 +1116,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the lake location, of the form:
-        /// `projects/{project_number}/locations/{location_id}`
+        /// projects/{project_number}/locations/{location_id}
         /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="lake">
@@ -1007,7 +1142,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the lake location, of the form:
-        /// `projects/{project_number}/locations/{location_id}`
+        /// projects/{project_number}/locations/{location_id}
         /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="lake">
@@ -1038,7 +1173,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the lake location, of the form:
-        /// `projects/{project_number}/locations/{location_id}`
+        /// projects/{project_number}/locations/{location_id}
         /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="lake">
@@ -1069,7 +1204,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the lake location, of the form:
-        /// `projects/{project_number}/locations/{location_id}`
+        /// projects/{project_number}/locations/{location_id}
         /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="lake">
@@ -4335,6 +4470,819 @@ namespace Google.Cloud.Dataplex.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task CancelJobAsync(JobName name, st::CancellationToken cancellationToken) =>
             CancelJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create an environment resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Environment, OperationMetadata> CreateEnvironment(CreateEnvironmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create an environment resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Environment, OperationMetadata>> CreateEnvironmentAsync(CreateEnvironmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create an environment resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Environment, OperationMetadata>> CreateEnvironmentAsync(CreateEnvironmentRequest request, st::CancellationToken cancellationToken) =>
+            CreateEnvironmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateEnvironment</c>.</summary>
+        public virtual lro::OperationsClient CreateEnvironmentOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateEnvironment</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Environment, OperationMetadata> PollOnceCreateEnvironment(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Environment, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateEnvironmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateEnvironment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Environment, OperationMetadata>> PollOnceCreateEnvironmentAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Environment, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateEnvironmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Create an environment resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent lake:
+        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+        /// </param>
+        /// <param name="environment">
+        /// Required. Environment resource.
+        /// </param>
+        /// <param name="environmentId">
+        /// Required. Environment identifier.
+        /// * Must contain only lowercase letters, numbers and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the lake.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Environment, OperationMetadata> CreateEnvironment(string parent, Environment environment, string environmentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEnvironment(new CreateEnvironmentRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                EnvironmentId = gax::GaxPreconditions.CheckNotNullOrEmpty(environmentId, nameof(environmentId)),
+                Environment = gax::GaxPreconditions.CheckNotNull(environment, nameof(environment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create an environment resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent lake:
+        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+        /// </param>
+        /// <param name="environment">
+        /// Required. Environment resource.
+        /// </param>
+        /// <param name="environmentId">
+        /// Required. Environment identifier.
+        /// * Must contain only lowercase letters, numbers and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the lake.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Environment, OperationMetadata>> CreateEnvironmentAsync(string parent, Environment environment, string environmentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEnvironmentAsync(new CreateEnvironmentRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                EnvironmentId = gax::GaxPreconditions.CheckNotNullOrEmpty(environmentId, nameof(environmentId)),
+                Environment = gax::GaxPreconditions.CheckNotNull(environment, nameof(environment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create an environment resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent lake:
+        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+        /// </param>
+        /// <param name="environment">
+        /// Required. Environment resource.
+        /// </param>
+        /// <param name="environmentId">
+        /// Required. Environment identifier.
+        /// * Must contain only lowercase letters, numbers and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the lake.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Environment, OperationMetadata>> CreateEnvironmentAsync(string parent, Environment environment, string environmentId, st::CancellationToken cancellationToken) =>
+            CreateEnvironmentAsync(parent, environment, environmentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create an environment resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent lake:
+        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+        /// </param>
+        /// <param name="environment">
+        /// Required. Environment resource.
+        /// </param>
+        /// <param name="environmentId">
+        /// Required. Environment identifier.
+        /// * Must contain only lowercase letters, numbers and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the lake.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Environment, OperationMetadata> CreateEnvironment(LakeName parent, Environment environment, string environmentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEnvironment(new CreateEnvironmentRequest
+            {
+                ParentAsLakeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                EnvironmentId = gax::GaxPreconditions.CheckNotNullOrEmpty(environmentId, nameof(environmentId)),
+                Environment = gax::GaxPreconditions.CheckNotNull(environment, nameof(environment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create an environment resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent lake:
+        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+        /// </param>
+        /// <param name="environment">
+        /// Required. Environment resource.
+        /// </param>
+        /// <param name="environmentId">
+        /// Required. Environment identifier.
+        /// * Must contain only lowercase letters, numbers and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the lake.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Environment, OperationMetadata>> CreateEnvironmentAsync(LakeName parent, Environment environment, string environmentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEnvironmentAsync(new CreateEnvironmentRequest
+            {
+                ParentAsLakeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                EnvironmentId = gax::GaxPreconditions.CheckNotNullOrEmpty(environmentId, nameof(environmentId)),
+                Environment = gax::GaxPreconditions.CheckNotNull(environment, nameof(environment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create an environment resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent lake:
+        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+        /// </param>
+        /// <param name="environment">
+        /// Required. Environment resource.
+        /// </param>
+        /// <param name="environmentId">
+        /// Required. Environment identifier.
+        /// * Must contain only lowercase letters, numbers and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the lake.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Environment, OperationMetadata>> CreateEnvironmentAsync(LakeName parent, Environment environment, string environmentId, st::CancellationToken cancellationToken) =>
+            CreateEnvironmentAsync(parent, environment, environmentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update the environment resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Environment, OperationMetadata> UpdateEnvironment(UpdateEnvironmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update the environment resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Environment, OperationMetadata>> UpdateEnvironmentAsync(UpdateEnvironmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update the environment resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Environment, OperationMetadata>> UpdateEnvironmentAsync(UpdateEnvironmentRequest request, st::CancellationToken cancellationToken) =>
+            UpdateEnvironmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateEnvironment</c>.</summary>
+        public virtual lro::OperationsClient UpdateEnvironmentOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateEnvironment</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Environment, OperationMetadata> PollOnceUpdateEnvironment(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Environment, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateEnvironmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateEnvironment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Environment, OperationMetadata>> PollOnceUpdateEnvironmentAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Environment, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateEnvironmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Update the environment resource.
+        /// </summary>
+        /// <param name="environment">
+        /// Required. Update description.
+        /// Only fields specified in `update_mask` are updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Mask of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Environment, OperationMetadata> UpdateEnvironment(Environment environment, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateEnvironment(new UpdateEnvironmentRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                Environment = gax::GaxPreconditions.CheckNotNull(environment, nameof(environment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update the environment resource.
+        /// </summary>
+        /// <param name="environment">
+        /// Required. Update description.
+        /// Only fields specified in `update_mask` are updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Mask of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Environment, OperationMetadata>> UpdateEnvironmentAsync(Environment environment, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateEnvironmentAsync(new UpdateEnvironmentRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                Environment = gax::GaxPreconditions.CheckNotNull(environment, nameof(environment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update the environment resource.
+        /// </summary>
+        /// <param name="environment">
+        /// Required. Update description.
+        /// Only fields specified in `update_mask` are updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Mask of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Environment, OperationMetadata>> UpdateEnvironmentAsync(Environment environment, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateEnvironmentAsync(environment, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete the environment resource. All the child resources must have been
+        /// deleted before environment deletion can be initiated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteEnvironment(DeleteEnvironmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete the environment resource. All the child resources must have been
+        /// deleted before environment deletion can be initiated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteEnvironmentAsync(DeleteEnvironmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete the environment resource. All the child resources must have been
+        /// deleted before environment deletion can be initiated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteEnvironmentAsync(DeleteEnvironmentRequest request, st::CancellationToken cancellationToken) =>
+            DeleteEnvironmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteEnvironment</c>.</summary>
+        public virtual lro::OperationsClient DeleteEnvironmentOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteEnvironment</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteEnvironment(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteEnvironmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteEnvironment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteEnvironmentAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteEnvironmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Delete the environment resource. All the child resources must have been
+        /// deleted before environment deletion can be initiated.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the environment:
+        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteEnvironment(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEnvironment(new DeleteEnvironmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete the environment resource. All the child resources must have been
+        /// deleted before environment deletion can be initiated.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the environment:
+        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteEnvironmentAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEnvironmentAsync(new DeleteEnvironmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete the environment resource. All the child resources must have been
+        /// deleted before environment deletion can be initiated.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the environment:
+        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteEnvironmentAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteEnvironmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete the environment resource. All the child resources must have been
+        /// deleted before environment deletion can be initiated.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the environment:
+        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteEnvironment(EnvironmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEnvironment(new DeleteEnvironmentRequest
+            {
+                EnvironmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete the environment resource. All the child resources must have been
+        /// deleted before environment deletion can be initiated.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the environment:
+        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteEnvironmentAsync(EnvironmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEnvironmentAsync(new DeleteEnvironmentRequest
+            {
+                EnvironmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete the environment resource. All the child resources must have been
+        /// deleted before environment deletion can be initiated.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the environment:
+        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteEnvironmentAsync(EnvironmentName name, st::CancellationToken cancellationToken) =>
+            DeleteEnvironmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists environments under the given lake.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Environment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEnvironmentsResponse, Environment> ListEnvironments(ListEnvironmentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists environments under the given lake.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Environment"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListEnvironmentsResponse, Environment> ListEnvironmentsAsync(ListEnvironmentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists environments under the given lake.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent lake:
+        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Environment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEnvironmentsResponse, Environment> ListEnvironments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEnvironments(new ListEnvironmentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists environments under the given lake.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent lake:
+        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Environment"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListEnvironmentsResponse, Environment> ListEnvironmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEnvironmentsAsync(new ListEnvironmentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists environments under the given lake.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent lake:
+        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Environment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEnvironmentsResponse, Environment> ListEnvironments(LakeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEnvironments(new ListEnvironmentsRequest
+            {
+                ParentAsLakeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists environments under the given lake.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent lake:
+        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Environment"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListEnvironmentsResponse, Environment> ListEnvironmentsAsync(LakeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEnvironmentsAsync(new ListEnvironmentsRequest
+            {
+                ParentAsLakeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Get environment resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Environment GetEnvironment(GetEnvironmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get environment resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Environment> GetEnvironmentAsync(GetEnvironmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get environment resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Environment> GetEnvironmentAsync(GetEnvironmentRequest request, st::CancellationToken cancellationToken) =>
+            GetEnvironmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get environment resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the environment:
+        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Environment GetEnvironment(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEnvironment(new GetEnvironmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get environment resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the environment:
+        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Environment> GetEnvironmentAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEnvironmentAsync(new GetEnvironmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get environment resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the environment:
+        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Environment> GetEnvironmentAsync(string name, st::CancellationToken cancellationToken) =>
+            GetEnvironmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get environment resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the environment:
+        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Environment GetEnvironment(EnvironmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEnvironment(new GetEnvironmentRequest
+            {
+                EnvironmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get environment resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the environment:
+        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Environment> GetEnvironmentAsync(EnvironmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEnvironmentAsync(new GetEnvironmentRequest
+            {
+                EnvironmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get environment resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the environment:
+        /// projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Environment> GetEnvironmentAsync(EnvironmentName name, st::CancellationToken cancellationToken) =>
+            GetEnvironmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists session resources in an environment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Session"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSessionsResponse, Session> ListSessions(ListSessionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists session resources in an environment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Session"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSessionsResponse, Session> ListSessionsAsync(ListSessionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists session resources in an environment.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent environment:
+        /// projects/{project_number}/locations/{location_id}/lakes/{lake_id}/environment/{environment_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Session"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSessionsResponse, Session> ListSessions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSessions(new ListSessionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists session resources in an environment.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent environment:
+        /// projects/{project_number}/locations/{location_id}/lakes/{lake_id}/environment/{environment_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Session"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSessionsResponse, Session> ListSessionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSessionsAsync(new ListSessionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists session resources in an environment.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent environment:
+        /// projects/{project_number}/locations/{location_id}/lakes/{lake_id}/environment/{environment_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Session"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSessionsResponse, Session> ListSessions(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSessions(new ListSessionsRequest
+            {
+                ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists session resources in an environment.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent environment:
+        /// projects/{project_number}/locations/{location_id}/lakes/{lake_id}/environment/{environment_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Session"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSessionsResponse, Session> ListSessionsAsync(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSessionsAsync(new ListSessionsRequest
+            {
+                ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
     }
 
     /// <summary>DataplexService client wrapper implementation, for convenient use.</summary>
@@ -4399,6 +5347,18 @@ namespace Google.Cloud.Dataplex.V1
 
         private readonly gaxgrpc::ApiCall<CancelJobRequest, wkt::Empty> _callCancelJob;
 
+        private readonly gaxgrpc::ApiCall<CreateEnvironmentRequest, lro::Operation> _callCreateEnvironment;
+
+        private readonly gaxgrpc::ApiCall<UpdateEnvironmentRequest, lro::Operation> _callUpdateEnvironment;
+
+        private readonly gaxgrpc::ApiCall<DeleteEnvironmentRequest, lro::Operation> _callDeleteEnvironment;
+
+        private readonly gaxgrpc::ApiCall<ListEnvironmentsRequest, ListEnvironmentsResponse> _callListEnvironments;
+
+        private readonly gaxgrpc::ApiCall<GetEnvironmentRequest, Environment> _callGetEnvironment;
+
+        private readonly gaxgrpc::ApiCall<ListSessionsRequest, ListSessionsResponse> _callListSessions;
+
         /// <summary>
         /// Constructs a client wrapper for the DataplexService service, with the specified gRPC client and settings.
         /// </summary>
@@ -4421,6 +5381,9 @@ namespace Google.Cloud.Dataplex.V1
             CreateTaskOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTaskOperationsSettings);
             UpdateTaskOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTaskOperationsSettings);
             DeleteTaskOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTaskOperationsSettings);
+            CreateEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEnvironmentOperationsSettings);
+            UpdateEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateEnvironmentOperationsSettings);
+            DeleteEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteEnvironmentOperationsSettings);
             _callCreateLake = clientHelper.BuildApiCall<CreateLakeRequest, lro::Operation>(grpcClient.CreateLakeAsync, grpcClient.CreateLake, effectiveSettings.CreateLakeSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateLake);
             Modify_CreateLakeApiCall(ref _callCreateLake);
@@ -4499,6 +5462,24 @@ namespace Google.Cloud.Dataplex.V1
             _callCancelJob = clientHelper.BuildApiCall<CancelJobRequest, wkt::Empty>(grpcClient.CancelJobAsync, grpcClient.CancelJob, effectiveSettings.CancelJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCancelJob);
             Modify_CancelJobApiCall(ref _callCancelJob);
+            _callCreateEnvironment = clientHelper.BuildApiCall<CreateEnvironmentRequest, lro::Operation>(grpcClient.CreateEnvironmentAsync, grpcClient.CreateEnvironment, effectiveSettings.CreateEnvironmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateEnvironment);
+            Modify_CreateEnvironmentApiCall(ref _callCreateEnvironment);
+            _callUpdateEnvironment = clientHelper.BuildApiCall<UpdateEnvironmentRequest, lro::Operation>(grpcClient.UpdateEnvironmentAsync, grpcClient.UpdateEnvironment, effectiveSettings.UpdateEnvironmentSettings).WithGoogleRequestParam("environment.name", request => request.Environment?.Name);
+            Modify_ApiCall(ref _callUpdateEnvironment);
+            Modify_UpdateEnvironmentApiCall(ref _callUpdateEnvironment);
+            _callDeleteEnvironment = clientHelper.BuildApiCall<DeleteEnvironmentRequest, lro::Operation>(grpcClient.DeleteEnvironmentAsync, grpcClient.DeleteEnvironment, effectiveSettings.DeleteEnvironmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteEnvironment);
+            Modify_DeleteEnvironmentApiCall(ref _callDeleteEnvironment);
+            _callListEnvironments = clientHelper.BuildApiCall<ListEnvironmentsRequest, ListEnvironmentsResponse>(grpcClient.ListEnvironmentsAsync, grpcClient.ListEnvironments, effectiveSettings.ListEnvironmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListEnvironments);
+            Modify_ListEnvironmentsApiCall(ref _callListEnvironments);
+            _callGetEnvironment = clientHelper.BuildApiCall<GetEnvironmentRequest, Environment>(grpcClient.GetEnvironmentAsync, grpcClient.GetEnvironment, effectiveSettings.GetEnvironmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetEnvironment);
+            Modify_GetEnvironmentApiCall(ref _callGetEnvironment);
+            _callListSessions = clientHelper.BuildApiCall<ListSessionsRequest, ListSessionsResponse>(grpcClient.ListSessionsAsync, grpcClient.ListSessions, effectiveSettings.ListSessionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListSessions);
+            Modify_ListSessionsApiCall(ref _callListSessions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4556,6 +5537,18 @@ namespace Google.Cloud.Dataplex.V1
 
         partial void Modify_CancelJobApiCall(ref gaxgrpc::ApiCall<CancelJobRequest, wkt::Empty> call);
 
+        partial void Modify_CreateEnvironmentApiCall(ref gaxgrpc::ApiCall<CreateEnvironmentRequest, lro::Operation> call);
+
+        partial void Modify_UpdateEnvironmentApiCall(ref gaxgrpc::ApiCall<UpdateEnvironmentRequest, lro::Operation> call);
+
+        partial void Modify_DeleteEnvironmentApiCall(ref gaxgrpc::ApiCall<DeleteEnvironmentRequest, lro::Operation> call);
+
+        partial void Modify_ListEnvironmentsApiCall(ref gaxgrpc::ApiCall<ListEnvironmentsRequest, ListEnvironmentsResponse> call);
+
+        partial void Modify_GetEnvironmentApiCall(ref gaxgrpc::ApiCall<GetEnvironmentRequest, Environment> call);
+
+        partial void Modify_ListSessionsApiCall(ref gaxgrpc::ApiCall<ListSessionsRequest, ListSessionsResponse> call);
+
         partial void OnConstruction(DataplexService.DataplexServiceClient grpcClient, DataplexServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC DataplexService client</summary>
@@ -4612,6 +5605,18 @@ namespace Google.Cloud.Dataplex.V1
         partial void Modify_GetJobRequest(ref GetJobRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CancelJobRequest(ref CancelJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateEnvironmentRequest(ref CreateEnvironmentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateEnvironmentRequest(ref UpdateEnvironmentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteEnvironmentRequest(ref DeleteEnvironmentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListEnvironmentsRequest(ref ListEnvironmentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetEnvironmentRequest(ref GetEnvironmentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListSessionsRequest(ref ListSessionsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateLake</c>.</summary>
         public override lro::OperationsClient CreateLakeOperationsClient { get; }
@@ -5278,6 +6283,161 @@ namespace Google.Cloud.Dataplex.V1
             Modify_CancelJobRequest(ref request, ref callSettings);
             return _callCancelJob.Async(request, callSettings);
         }
+
+        /// <summary>The long-running operations client for <c>CreateEnvironment</c>.</summary>
+        public override lro::OperationsClient CreateEnvironmentOperationsClient { get; }
+
+        /// <summary>
+        /// Create an environment resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Environment, OperationMetadata> CreateEnvironment(CreateEnvironmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateEnvironmentRequest(ref request, ref callSettings);
+            return new lro::Operation<Environment, OperationMetadata>(_callCreateEnvironment.Sync(request, callSettings), CreateEnvironmentOperationsClient);
+        }
+
+        /// <summary>
+        /// Create an environment resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Environment, OperationMetadata>> CreateEnvironmentAsync(CreateEnvironmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateEnvironmentRequest(ref request, ref callSettings);
+            return new lro::Operation<Environment, OperationMetadata>(await _callCreateEnvironment.Async(request, callSettings).ConfigureAwait(false), CreateEnvironmentOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateEnvironment</c>.</summary>
+        public override lro::OperationsClient UpdateEnvironmentOperationsClient { get; }
+
+        /// <summary>
+        /// Update the environment resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Environment, OperationMetadata> UpdateEnvironment(UpdateEnvironmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateEnvironmentRequest(ref request, ref callSettings);
+            return new lro::Operation<Environment, OperationMetadata>(_callUpdateEnvironment.Sync(request, callSettings), UpdateEnvironmentOperationsClient);
+        }
+
+        /// <summary>
+        /// Update the environment resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Environment, OperationMetadata>> UpdateEnvironmentAsync(UpdateEnvironmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateEnvironmentRequest(ref request, ref callSettings);
+            return new lro::Operation<Environment, OperationMetadata>(await _callUpdateEnvironment.Async(request, callSettings).ConfigureAwait(false), UpdateEnvironmentOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteEnvironment</c>.</summary>
+        public override lro::OperationsClient DeleteEnvironmentOperationsClient { get; }
+
+        /// <summary>
+        /// Delete the environment resource. All the child resources must have been
+        /// deleted before environment deletion can be initiated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteEnvironment(DeleteEnvironmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteEnvironmentRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteEnvironment.Sync(request, callSettings), DeleteEnvironmentOperationsClient);
+        }
+
+        /// <summary>
+        /// Delete the environment resource. All the child resources must have been
+        /// deleted before environment deletion can be initiated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteEnvironmentAsync(DeleteEnvironmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteEnvironmentRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteEnvironment.Async(request, callSettings).ConfigureAwait(false), DeleteEnvironmentOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists environments under the given lake.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Environment"/> resources.</returns>
+        public override gax::PagedEnumerable<ListEnvironmentsResponse, Environment> ListEnvironments(ListEnvironmentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListEnvironmentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListEnvironmentsRequest, ListEnvironmentsResponse, Environment>(_callListEnvironments, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists environments under the given lake.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Environment"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListEnvironmentsResponse, Environment> ListEnvironmentsAsync(ListEnvironmentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListEnvironmentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListEnvironmentsRequest, ListEnvironmentsResponse, Environment>(_callListEnvironments, request, callSettings);
+        }
+
+        /// <summary>
+        /// Get environment resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Environment GetEnvironment(GetEnvironmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEnvironmentRequest(ref request, ref callSettings);
+            return _callGetEnvironment.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get environment resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Environment> GetEnvironmentAsync(GetEnvironmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEnvironmentRequest(ref request, ref callSettings);
+            return _callGetEnvironment.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists session resources in an environment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Session"/> resources.</returns>
+        public override gax::PagedEnumerable<ListSessionsResponse, Session> ListSessions(ListSessionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSessionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSessionsRequest, ListSessionsResponse, Session>(_callListSessions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists session resources in an environment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Session"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListSessionsResponse, Session> ListSessionsAsync(ListSessionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSessionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSessionsRequest, ListSessionsResponse, Session>(_callListSessions, request, callSettings);
+        }
     }
 
     public partial class ListLakesRequest : gaxgrpc::IPageRequest
@@ -5309,6 +6469,14 @@ namespace Google.Cloud.Dataplex.V1
     }
 
     public partial class ListJobsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListEnvironmentsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListSessionsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -5356,6 +6524,22 @@ namespace Google.Cloud.Dataplex.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Job> GetEnumerator() => Jobs.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListEnvironmentsResponse : gaxgrpc::IPageResponse<Environment>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Environment> GetEnumerator() => Environments.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSessionsResponse : gaxgrpc::IPageResponse<Session>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Session> GetEnumerator() => Sessions.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

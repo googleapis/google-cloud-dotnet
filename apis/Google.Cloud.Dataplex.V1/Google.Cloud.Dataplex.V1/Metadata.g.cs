@@ -28,130 +28,170 @@ namespace Google.Cloud.Dataplex.V1 {
             "b2dsZS5jbG91ZC5kYXRhcGxleC52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9u",
             "cy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2dsZS9hcGkv",
             "ZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJv",
-            "dG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3Rv",
-            "YnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
-            "bXAucHJvdG8iowIKE0xpc3RFbnRpdGllc1JlcXVlc3QSNAoGcGFyZW50GAEg",
-            "ASgJQiTgQQL6QR4KHGRhdGFwbGV4Lmdvb2dsZWFwaXMuY29tL1pvbmUSSwoE",
-            "dmlldxgCIAEoDjI4Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5MaXN0RW50",
-            "aXRpZXNSZXF1ZXN0LkVudGl0eVZpZXdCA+BBAhIWCglwYWdlX3NpemUYAyAB",
-            "KAVCA+BBARIXCgpwYWdlX3Rva2VuGAQgASgJQgPgQQESEwoGZmlsdGVyGAUg",
-            "ASgJQgPgQQEiQwoKRW50aXR5VmlldxIbChdFTlRJVFlfVklFV19VTlNQRUNJ",
-            "RklFRBAAEgoKBlRBQkxFUxABEgwKCEZJTEVTRVRTEAIiYwoUTGlzdEVudGl0",
-            "aWVzUmVzcG9uc2USMgoIZW50aXRpZXMYASADKAsyIC5nb29nbGUuY2xvdWQu",
-            "ZGF0YXBsZXgudjEuRW50aXR5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSLe",
-            "AQoQR2V0RW50aXR5UmVxdWVzdBI0CgRuYW1lGAEgASgJQibgQQL6QSAKHmRh",
-            "dGFwbGV4Lmdvb2dsZWFwaXMuY29tL0VudGl0eRJICgR2aWV3GAIgASgOMjUu",
-            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkdldEVudGl0eVJlcXVlc3QuRW50",
-            "aXR5Vmlld0ID4EEBIkoKCkVudGl0eVZpZXcSGwoXRU5USVRZX1ZJRVdfVU5T",
-            "UEVDSUZJRUQQABIJCgVCQVNJQxABEgoKBlNDSEVNQRACEggKBEZVTEwQBCKV",
-            "AQoVTGlzdFBhcnRpdGlvbnNSZXF1ZXN0EjYKBnBhcmVudBgBIAEoCUIm4EEC",
-            "+kEgCh5kYXRhcGxleC5nb29nbGVhcGlzLmNvbS9FbnRpdHkSFgoJcGFnZV9z",
-            "aXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBEhMKBmZp",
-            "bHRlchgEIAEoCUID4EEBImoKFkxpc3RQYXJ0aXRpb25zUmVzcG9uc2USNwoK",
-            "cGFydGl0aW9ucxgBIAMoCzIjLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5Q",
-            "YXJ0aXRpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIk4KE0dldFBhcnRp",
-            "dGlvblJlcXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFkYXRhcGxleC5n",
-            "b29nbGVhcGlzLmNvbS9QYXJ0aXRpb24i8AgKBkVudGl0eRI0CgRuYW1lGAEg",
-            "ASgJQibgQQP6QSAKHmRhdGFwbGV4Lmdvb2dsZWFwaXMuY29tL0VudGl0eRIZ",
-            "CgxkaXNwbGF5X25hbWUYAiABKAlCA+BBARIYCgtkZXNjcmlwdGlvbhgDIAEo",
-            "CUID4EEBEjQKC2NyZWF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAYgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEg8KAmlkGAcgASgJQgPgQQISEQoE",
-            "ZXRhZxgIIAEoCUID4EEBEjgKBHR5cGUYCiABKA4yJS5nb29nbGUuY2xvdWQu",
-            "ZGF0YXBsZXgudjEuRW50aXR5LlR5cGVCA+BBAhISCgVhc3NldBgLIAEoCUID",
-            "4EECEhkKCWRhdGFfcGF0aBgMIAEoCUIG4EEC4EEFEh4KEWRhdGFfcGF0aF9w",
-            "YXR0ZXJuGA0gASgJQgPgQQESGgoNY2F0YWxvZ19lbnRyeRgOIAEoCUID4EED",
-            "EjwKBnN5c3RlbRgPIAEoDjInLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5T",
-            "dG9yYWdlU3lzdGVtQgPgQQISPAoGZm9ybWF0GBAgASgLMicuZ29vZ2xlLmNs",
-            "b3VkLmRhdGFwbGV4LnYxLlN0b3JhZ2VGb3JtYXRCA+BBAhJQCg1jb21wYXRp",
-            "YmlsaXR5GBMgASgLMjQuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkVudGl0",
-            "eS5Db21wYXRpYmlsaXR5U3RhdHVzQgPgQQMSNQoGc2NoZW1hGDIgASgLMiAu",
-            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLlNjaGVtYUID4EECGpACChNDb21w",
-            "YXRpYmlsaXR5U3RhdHVzEl8KDmhpdmVfbWV0YXN0b3JlGAEgASgLMkIuZ29v",
-            "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxLkVudGl0eS5Db21wYXRpYmlsaXR5U3Rh",
-            "dHVzLkNvbXBhdGliaWxpdHlCA+BBAxJZCghiaWdxdWVyeRgCIAEoCzJCLmdv",
-            "b2dsZS5jbG91ZC5kYXRhcGxleC52MS5FbnRpdHkuQ29tcGF0aWJpbGl0eVN0",
-            "YXR1cy5Db21wYXRpYmlsaXR5QgPgQQMaPQoNQ29tcGF0aWJpbGl0eRIXCgpj",
-            "b21wYXRpYmxlGAEgASgIQgPgQQMSEwoGcmVhc29uGAIgASgJQgPgQQMiNAoE",
-            "VHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCQoFVEFCTEUQARILCgdGSUxF",
-            "U0VUEAI6eOpBdQoeZGF0YXBsZXguZ29vZ2xlYXBpcy5jb20vRW50aXR5ElNw",
-            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbGFrZXMv",
-            "e2xha2V9L3pvbmVzL3t6b25lfS9lbnRpdGllcy97ZW50aXR5fSKfAgoJUGFy",
-            "dGl0aW9uEjcKBG5hbWUYASABKAlCKeBBA/pBIwohZGF0YXBsZXguZ29vZ2xl",
-            "YXBpcy5jb20vUGFydGl0aW9uEhYKBnZhbHVlcxgCIAMoCUIG4EEC4EEFEhgK",
-            "CGxvY2F0aW9uGAMgASgJQgbgQQLgQQUSEQoEZXRhZxgEIAEoCUID4EEBOpMB",
-            "6kGPAQohZGF0YXBsZXguZ29vZ2xlYXBpcy5jb20vUGFydGl0aW9uEmpwcm9q",
-            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbGFrZXMve2xh",
-            "a2V9L3pvbmVzL3t6b25lfS9lbnRpdGllcy97ZW50aXR5fS9wYXJ0aXRpb25z",
-            "L3twYXJ0aXRpb259IrQHCgZTY2hlbWESGQoMdXNlcl9tYW5hZ2VkGAEgASgI",
-            "QgPgQQISQQoGZmllbGRzGAIgAygLMiwuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
-            "LnYxLlNjaGVtYS5TY2hlbWFGaWVsZEID4EEBEk4KEHBhcnRpdGlvbl9maWVs",
-            "ZHMYAyADKAsyLy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuU2NoZW1hLlBh",
-            "cnRpdGlvbkZpZWxkQgPgQQESTQoPcGFydGl0aW9uX3N0eWxlGAQgASgOMi8u",
-            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLlNjaGVtYS5QYXJ0aXRpb25TdHls",
-            "ZUID4EEBGvEBCgtTY2hlbWFGaWVsZBIRCgRuYW1lGAEgASgJQgPgQQISGAoL",
-            "ZGVzY3JpcHRpb24YAiABKAlCA+BBARI4CgR0eXBlGAMgASgOMiUuZ29vZ2xl",
-            "LmNsb3VkLmRhdGFwbGV4LnYxLlNjaGVtYS5UeXBlQgPgQQISOAoEbW9kZRgE",
-            "IAEoDjIlLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5TY2hlbWEuTW9kZUID",
-            "4EECEkEKBmZpZWxkcxgKIAMoCzIsLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52",
-            "MS5TY2hlbWEuU2NoZW1hRmllbGRCA+BBARpdCg5QYXJ0aXRpb25GaWVsZBIR",
-            "CgRuYW1lGAEgASgJQgPgQQISOAoEdHlwZRgCIAEoDjIlLmdvb2dsZS5jbG91",
-            "ZC5kYXRhcGxleC52MS5TY2hlbWEuVHlwZUID4EECIskBCgRUeXBlEhQKEFRZ",
-            "UEVfVU5TUEVDSUZJRUQQABILCgdCT09MRUFOEAESCAoEQllURRACEgkKBUlO",
-            "VDE2EAMSCQoFSU5UMzIQBBIJCgVJTlQ2NBAFEgkKBUZMT0FUEAYSCgoGRE9V",
-            "QkxFEAcSCwoHREVDSU1BTBAIEgoKBlNUUklORxAJEgoKBkJJTkFSWRAKEg0K",
-            "CVRJTUVTVEFNUBALEggKBERBVEUQDBIICgRUSU1FEA0SCgoGUkVDT1JEEA4S",
-            "CAoETlVMTBBkIkYKBE1vZGUSFAoQTU9ERV9VTlNQRUNJRklFRBAAEgwKCFJF",
-            "UVVJUkVEEAESDAoITlVMTEFCTEUQAhIMCghSRVBFQVRFRBADIkYKDlBhcnRp",
-            "dGlvblN0eWxlEh8KG1BBUlRJVElPTl9TVFlMRV9VTlNQRUNJRklFRBAAEhMK",
-            "D0hJVkVfQ09NUEFUSUJMRRABIvIFCg1TdG9yYWdlRm9ybWF0EkMKBmZvcm1h",
-            "dBgBIAEoDjIuLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5TdG9yYWdlRm9y",
-            "bWF0LkZvcm1hdEID4EEDEloKEmNvbXByZXNzaW9uX2Zvcm1hdBgCIAEoDjI5",
-            "Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5TdG9yYWdlRm9ybWF0LkNvbXBy",
-            "ZXNzaW9uRm9ybWF0QgPgQQESFgoJbWltZV90eXBlGAMgASgJQgPgQQISRgoD",
-            "Y3N2GAogASgLMjIuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLlN0b3JhZ2VG",
-            "b3JtYXQuQ3N2T3B0aW9uc0ID4EEBSAASSAoEanNvbhgLIAEoCzIzLmdvb2ds",
-            "ZS5jbG91ZC5kYXRhcGxleC52MS5TdG9yYWdlRm9ybWF0Lkpzb25PcHRpb25z",
-            "QgPgQQFIABppCgpDc3ZPcHRpb25zEhUKCGVuY29kaW5nGAEgASgJQgPgQQES",
-            "GAoLaGVhZGVyX3Jvd3MYAiABKAVCA+BBARIWCglkZWxpbWl0ZXIYAyABKAlC",
-            "A+BBARISCgVxdW90ZRgEIAEoCUID4EEBGiQKC0pzb25PcHRpb25zEhUKCGVu",
-            "Y29kaW5nGAEgASgJQgPgQQEiqwEKBkZvcm1hdBIWChJGT1JNQVRfVU5TUEVD",
-            "SUZJRUQQABILCgdQQVJRVUVUEAESCAoEQVZSTxACEgcKA09SQxADEgcKA0NT",
-            "VhBkEggKBEpTT04QZRIKCgVJTUFHRRDIARIKCgVBVURJTxDJARIKCgVWSURF",
-            "TxDKARIJCgRURVhUEMsBEg0KCFRGUkVDT1JEEMwBEgoKBU9USEVSEOgHEgwK",
-            "B1VOS05PV04Q6QciTAoRQ29tcHJlc3Npb25Gb3JtYXQSIgoeQ09NUFJFU1NJ",
-            "T05fRk9STUFUX1VOU1BFQ0lGSUVEEAASCAoER1pJUBACEgkKBUJaSVAyEANC",
-            "CQoHb3B0aW9ucypQCg1TdG9yYWdlU3lzdGVtEh4KGlNUT1JBR0VfU1lTVEVN",
-            "X1VOU1BFQ0lGSUVEEAASEQoNQ0xPVURfU1RPUkFHRRABEgwKCEJJR1FVRVJZ",
-            "EAIy2AYKD01ldGFkYXRhU2VydmljZRKmAQoJR2V0RW50aXR5EiouZ29vZ2xl",
-            "LmNsb3VkLmRhdGFwbGV4LnYxLkdldEVudGl0eVJlcXVlc3QaIC5nb29nbGUu",
-            "Y2xvdWQuZGF0YXBsZXgudjEuRW50aXR5IkuC0+STAj4SPC92MS97bmFtZT1w",
+            "dG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxofZ29vZ2xlL3Byb3Rv",
+            "YnVmL3RpbWVzdGFtcC5wcm90byKeAQoTQ3JlYXRlRW50aXR5UmVxdWVzdBI0",
+            "CgZwYXJlbnQYASABKAlCJOBBAvpBHgocZGF0YXBsZXguZ29vZ2xlYXBpcy5j",
+            "b20vWm9uZRI1CgZlbnRpdHkYAyABKAsyIC5nb29nbGUuY2xvdWQuZGF0YXBs",
+            "ZXgudjEuRW50aXR5QgPgQQISGgoNdmFsaWRhdGVfb25seRgEIAEoCEID4EEB",
+            "ImgKE1VwZGF0ZUVudGl0eVJlcXVlc3QSNQoGZW50aXR5GAIgASgLMiAuZ29v",
+            "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxLkVudGl0eUID4EECEhoKDXZhbGlkYXRl",
+            "X29ubHkYAyABKAhCA+BBASJeChNEZWxldGVFbnRpdHlSZXF1ZXN0EjQKBG5h",
+            "bWUYASABKAlCJuBBAvpBIAoeZGF0YXBsZXguZ29vZ2xlYXBpcy5jb20vRW50",
+            "aXR5EhEKBGV0YWcYAiABKAlCA+BBAiKjAgoTTGlzdEVudGl0aWVzUmVxdWVz",
+            "dBI0CgZwYXJlbnQYASABKAlCJOBBAvpBHgocZGF0YXBsZXguZ29vZ2xlYXBp",
+            "cy5jb20vWm9uZRJLCgR2aWV3GAIgASgOMjguZ29vZ2xlLmNsb3VkLmRhdGFw",
+            "bGV4LnYxLkxpc3RFbnRpdGllc1JlcXVlc3QuRW50aXR5Vmlld0ID4EECEhYK",
+            "CXBhZ2Vfc2l6ZRgDIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YBCABKAlCA+BB",
+            "ARITCgZmaWx0ZXIYBSABKAlCA+BBASJDCgpFbnRpdHlWaWV3EhsKF0VOVElU",
+            "WV9WSUVXX1VOU1BFQ0lGSUVEEAASCgoGVEFCTEVTEAESDAoIRklMRVNFVFMQ",
+            "AiJjChRMaXN0RW50aXRpZXNSZXNwb25zZRIyCghlbnRpdGllcxgBIAMoCzIg",
+            "Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5FbnRpdHkSFwoPbmV4dF9wYWdl",
+            "X3Rva2VuGAIgASgJIt4BChBHZXRFbnRpdHlSZXF1ZXN0EjQKBG5hbWUYASAB",
+            "KAlCJuBBAvpBIAoeZGF0YXBsZXguZ29vZ2xlYXBpcy5jb20vRW50aXR5EkgK",
+            "BHZpZXcYAiABKA4yNS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuR2V0RW50",
+            "aXR5UmVxdWVzdC5FbnRpdHlWaWV3QgPgQQEiSgoKRW50aXR5VmlldxIbChdF",
+            "TlRJVFlfVklFV19VTlNQRUNJRklFRBAAEgkKBUJBU0lDEAESCgoGU0NIRU1B",
+            "EAISCAoERlVMTBAEIpUBChVMaXN0UGFydGl0aW9uc1JlcXVlc3QSNgoGcGFy",
+            "ZW50GAEgASgJQibgQQL6QSAKHmRhdGFwbGV4Lmdvb2dsZWFwaXMuY29tL0Vu",
+            "dGl0eRIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMg",
+            "ASgJQgPgQQESEwoGZmlsdGVyGAQgASgJQgPgQQEiqQEKFkNyZWF0ZVBhcnRp",
+            "dGlvblJlcXVlc3QSNgoGcGFyZW50GAEgASgJQibgQQL6QSAKHmRhdGFwbGV4",
+            "Lmdvb2dsZWFwaXMuY29tL0VudGl0eRI7CglwYXJ0aXRpb24YAyABKAsyIy5n",
+            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuUGFydGl0aW9uQgPgQQISGgoNdmFs",
+            "aWRhdGVfb25seRgEIAEoCEID4EEBImYKFkRlbGV0ZVBhcnRpdGlvblJlcXVl",
+            "c3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFkYXRhcGxleC5nb29nbGVhcGlz",
+            "LmNvbS9QYXJ0aXRpb24SEwoEZXRhZxgCIAEoCUIFGAHgQQEiagoWTGlzdFBh",
+            "cnRpdGlvbnNSZXNwb25zZRI3CgpwYXJ0aXRpb25zGAEgAygLMiMuZ29vZ2xl",
+            "LmNsb3VkLmRhdGFwbGV4LnYxLlBhcnRpdGlvbhIXCg9uZXh0X3BhZ2VfdG9r",
+            "ZW4YAiABKAkiTgoTR2V0UGFydGl0aW9uUmVxdWVzdBI3CgRuYW1lGAEgASgJ",
+            "QingQQL6QSMKIWRhdGFwbGV4Lmdvb2dsZWFwaXMuY29tL1BhcnRpdGlvbiL5",
+            "CAoGRW50aXR5EjQKBG5hbWUYASABKAlCJuBBA/pBIAoeZGF0YXBsZXguZ29v",
+            "Z2xlYXBpcy5jb20vRW50aXR5EhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EEB",
+            "EhgKC2Rlc2NyaXB0aW9uGAMgASgJQgPgQQESNAoLY3JlYXRlX3RpbWUYBSAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRl",
+            "X3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
+            "DwoCaWQYByABKAlCA+BBAhIRCgRldGFnGAggASgJQgPgQQESOwoEdHlwZRgK",
+            "IAEoDjIlLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5FbnRpdHkuVHlwZUIG",
+            "4EEC4EEFEhUKBWFzc2V0GAsgASgJQgbgQQLgQQUSGQoJZGF0YV9wYXRoGAwg",
+            "ASgJQgbgQQLgQQUSHgoRZGF0YV9wYXRoX3BhdHRlcm4YDSABKAlCA+BBARIa",
+            "Cg1jYXRhbG9nX2VudHJ5GA4gASgJQgPgQQMSPwoGc3lzdGVtGA8gASgOMicu",
+            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLlN0b3JhZ2VTeXN0ZW1CBuBBAuBB",
+            "BRI8CgZmb3JtYXQYECABKAsyJy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
+            "U3RvcmFnZUZvcm1hdEID4EECElAKDWNvbXBhdGliaWxpdHkYEyABKAsyNC5n",
+            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRW50aXR5LkNvbXBhdGliaWxpdHlT",
+            "dGF0dXNCA+BBAxI1CgZzY2hlbWEYMiABKAsyIC5nb29nbGUuY2xvdWQuZGF0",
+            "YXBsZXgudjEuU2NoZW1hQgPgQQIakAIKE0NvbXBhdGliaWxpdHlTdGF0dXMS",
+            "XwoOaGl2ZV9tZXRhc3RvcmUYASABKAsyQi5nb29nbGUuY2xvdWQuZGF0YXBs",
+            "ZXgudjEuRW50aXR5LkNvbXBhdGliaWxpdHlTdGF0dXMuQ29tcGF0aWJpbGl0",
+            "eUID4EEDElkKCGJpZ3F1ZXJ5GAIgASgLMkIuZ29vZ2xlLmNsb3VkLmRhdGFw",
+            "bGV4LnYxLkVudGl0eS5Db21wYXRpYmlsaXR5U3RhdHVzLkNvbXBhdGliaWxp",
+            "dHlCA+BBAxo9Cg1Db21wYXRpYmlsaXR5EhcKCmNvbXBhdGlibGUYASABKAhC",
+            "A+BBAxITCgZyZWFzb24YAiABKAlCA+BBAyI0CgRUeXBlEhQKEFRZUEVfVU5T",
+            "UEVDSUZJRUQQABIJCgVUQUJMRRABEgsKB0ZJTEVTRVQQAjp46kF1Ch5kYXRh",
+            "cGxleC5nb29nbGVhcGlzLmNvbS9FbnRpdHkSU3Byb2plY3RzL3twcm9qZWN0",
+            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9sYWtlcy97bGFrZX0vem9uZXMve3pv",
+            "bmV9L2VudGl0aWVzL3tlbnRpdHl9IqECCglQYXJ0aXRpb24SNwoEbmFtZRgB",
+            "IAEoCUIp4EED+kEjCiFkYXRhcGxleC5nb29nbGVhcGlzLmNvbS9QYXJ0aXRp",
+            "b24SFgoGdmFsdWVzGAIgAygJQgbgQQLgQQUSGAoIbG9jYXRpb24YAyABKAlC",
+            "BuBBAuBBBRITCgRldGFnGAQgASgJQgUYAeBBATqTAepBjwEKIWRhdGFwbGV4",
+            "Lmdvb2dsZWFwaXMuY29tL1BhcnRpdGlvbhJqcHJvamVjdHMve3Byb2plY3R9",
+            "L2xvY2F0aW9ucy97bG9jYXRpb259L2xha2VzL3tsYWtlfS96b25lcy97em9u",
+            "ZX0vZW50aXRpZXMve2VudGl0eX0vcGFydGl0aW9ucy97cGFydGl0aW9ufSK3",
+            "BwoGU2NoZW1hEhkKDHVzZXJfbWFuYWdlZBgBIAEoCEID4EECEkEKBmZpZWxk",
+            "cxgCIAMoCzIsLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5TY2hlbWEuU2No",
+            "ZW1hRmllbGRCA+BBARJOChBwYXJ0aXRpb25fZmllbGRzGAMgAygLMi8uZ29v",
+            "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxLlNjaGVtYS5QYXJ0aXRpb25GaWVsZEID",
+            "4EEBEk0KD3BhcnRpdGlvbl9zdHlsZRgEIAEoDjIvLmdvb2dsZS5jbG91ZC5k",
+            "YXRhcGxleC52MS5TY2hlbWEuUGFydGl0aW9uU3R5bGVCA+BBARrxAQoLU2No",
+            "ZW1hRmllbGQSEQoEbmFtZRgBIAEoCUID4EECEhgKC2Rlc2NyaXB0aW9uGAIg",
+            "ASgJQgPgQQESOAoEdHlwZRgDIAEoDjIlLmdvb2dsZS5jbG91ZC5kYXRhcGxl",
+            "eC52MS5TY2hlbWEuVHlwZUID4EECEjgKBG1vZGUYBCABKA4yJS5nb29nbGUu",
+            "Y2xvdWQuZGF0YXBsZXgudjEuU2NoZW1hLk1vZGVCA+BBAhJBCgZmaWVsZHMY",
+            "CiADKAsyLC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuU2NoZW1hLlNjaGVt",
+            "YUZpZWxkQgPgQQEaYAoOUGFydGl0aW9uRmllbGQSEQoEbmFtZRgBIAEoCUID",
+            "4EECEjsKBHR5cGUYAiABKA4yJS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
+            "U2NoZW1hLlR5cGVCBuBBAuBBBSLJAQoEVHlwZRIUChBUWVBFX1VOU1BFQ0lG",
+            "SUVEEAASCwoHQk9PTEVBThABEggKBEJZVEUQAhIJCgVJTlQxNhADEgkKBUlO",
+            "VDMyEAQSCQoFSU5UNjQQBRIJCgVGTE9BVBAGEgoKBkRPVUJMRRAHEgsKB0RF",
+            "Q0lNQUwQCBIKCgZTVFJJTkcQCRIKCgZCSU5BUlkQChINCglUSU1FU1RBTVAQ",
+            "CxIICgREQVRFEAwSCAoEVElNRRANEgoKBlJFQ09SRBAOEggKBE5VTEwQZCJG",
+            "CgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJRUQQABIMCghSRVFVSVJFRBABEgwK",
+            "CE5VTExBQkxFEAISDAoIUkVQRUFURUQQAyJGCg5QYXJ0aXRpb25TdHlsZRIf",
+            "ChtQQVJUSVRJT05fU1RZTEVfVU5TUEVDSUZJRUQQABITCg9ISVZFX0NPTVBB",
+            "VElCTEUQASLyBQoNU3RvcmFnZUZvcm1hdBJDCgZmb3JtYXQYASABKA4yLi5n",
+            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuU3RvcmFnZUZvcm1hdC5Gb3JtYXRC",
+            "A+BBAxJaChJjb21wcmVzc2lvbl9mb3JtYXQYAiABKA4yOS5nb29nbGUuY2xv",
+            "dWQuZGF0YXBsZXgudjEuU3RvcmFnZUZvcm1hdC5Db21wcmVzc2lvbkZvcm1h",
+            "dEID4EEBEhYKCW1pbWVfdHlwZRgDIAEoCUID4EECEkYKA2NzdhgKIAEoCzIy",
+            "Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5TdG9yYWdlRm9ybWF0LkNzdk9w",
+            "dGlvbnNCA+BBAUgAEkgKBGpzb24YCyABKAsyMy5nb29nbGUuY2xvdWQuZGF0",
+            "YXBsZXgudjEuU3RvcmFnZUZvcm1hdC5Kc29uT3B0aW9uc0ID4EEBSAAaaQoK",
+            "Q3N2T3B0aW9ucxIVCghlbmNvZGluZxgBIAEoCUID4EEBEhgKC2hlYWRlcl9y",
+            "b3dzGAIgASgFQgPgQQESFgoJZGVsaW1pdGVyGAMgASgJQgPgQQESEgoFcXVv",
+            "dGUYBCABKAlCA+BBARokCgtKc29uT3B0aW9ucxIVCghlbmNvZGluZxgBIAEo",
+            "CUID4EEBIqsBCgZGb3JtYXQSFgoSRk9STUFUX1VOU1BFQ0lGSUVEEAASCwoH",
+            "UEFSUVVFVBABEggKBEFWUk8QAhIHCgNPUkMQAxIHCgNDU1YQZBIICgRKU09O",
+            "EGUSCgoFSU1BR0UQyAESCgoFQVVESU8QyQESCgoFVklERU8QygESCQoEVEVY",
+            "VBDLARINCghURlJFQ09SRBDMARIKCgVPVEhFUhDoBxIMCgdVTktOT1dOEOkH",
+            "IkwKEUNvbXByZXNzaW9uRm9ybWF0EiIKHkNPTVBSRVNTSU9OX0ZPUk1BVF9V",
+            "TlNQRUNJRklFRBAAEggKBEdaSVAQAhIJCgVCWklQMhADQgkKB29wdGlvbnMq",
+            "UAoNU3RvcmFnZVN5c3RlbRIeChpTVE9SQUdFX1NZU1RFTV9VTlNQRUNJRklF",
+            "RBAAEhEKDUNMT1VEX1NUT1JBR0UQARIMCghCSUdRVUVSWRACMokOCg9NZXRh",
+            "ZGF0YVNlcnZpY2USvQEKDENyZWF0ZUVudGl0eRItLmdvb2dsZS5jbG91ZC5k",
+            "YXRhcGxleC52MS5DcmVhdGVFbnRpdHlSZXF1ZXN0GiAuZ29vZ2xlLmNsb3Vk",
+            "LmRhdGFwbGV4LnYxLkVudGl0eSJcgtPkkwJGIjwvdjEve3BhcmVudD1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL2xha2VzLyovem9uZXMvKn0vZW50aXRpZXM6",
+            "BmVudGl0edpBDXBhcmVudCxlbnRpdHkStAEKDFVwZGF0ZUVudGl0eRItLmdv",
+            "b2dsZS5jbG91ZC5kYXRhcGxleC52MS5VcGRhdGVFbnRpdHlSZXF1ZXN0GiAu",
+            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkVudGl0eSJTgtPkkwJNGkMvdjEv",
+            "e2VudGl0eS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovbGFrZXMvKi96",
+            "b25lcy8qL2VudGl0aWVzLyp9OgZlbnRpdHkSogEKDERlbGV0ZUVudGl0eRIt",
+            "Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EZWxldGVFbnRpdHlSZXF1ZXN0",
+            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkuC0+STAj4qPC92MS97bmFtZT1w",
             "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2xha2VzLyovem9uZXMvKi9lbnRpdGll",
-            "cy8qfdpBBG5hbWUSvAEKDExpc3RFbnRpdGllcxItLmdvb2dsZS5jbG91ZC5k",
-            "YXRhcGxleC52MS5MaXN0RW50aXRpZXNSZXF1ZXN0Gi4uZ29vZ2xlLmNsb3Vk",
-            "LmRhdGFwbGV4LnYxLkxpc3RFbnRpdGllc1Jlc3BvbnNlIk2C0+STAj4SPC92",
-            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovbGFrZXMvKi96b25l",
-            "cy8qfS9lbnRpdGllc9pBBnBhcmVudBK9AQoMR2V0UGFydGl0aW9uEi0uZ29v",
-            "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxLkdldFBhcnRpdGlvblJlcXVlc3QaIy5n",
-            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuUGFydGl0aW9uIlmC0+STAkwSSi92",
-            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2xha2VzLyovem9uZXMv",
-            "Ki9lbnRpdGllcy8qL3BhcnRpdGlvbnMvKip92kEEbmFtZRLPAQoOTGlzdFBh",
-            "cnRpdGlvbnMSLy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuTGlzdFBhcnRp",
-            "dGlvbnNSZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkxpc3RQ",
-            "YXJ0aXRpb25zUmVzcG9uc2UiWoLT5JMCSxJJL3YxL3twYXJlbnQ9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKi9sYWtlcy8qL3pvbmVzLyovZW50aXRpZXMvKn0v",
-            "cGFydGl0aW9uc9pBBnBhcmVudBpLykEXZGF0YXBsZXguZ29vZ2xlYXBpcy5j",
-            "b23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBs",
-            "YXRmb3JtQnEKHGNvbS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjFCDU1ldGFk",
-            "YXRhUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
-            "YXBpcy9jbG91ZC9kYXRhcGxleC92MTtkYXRhcGxleGIGcHJvdG8z"));
+            "cy8qfdpBBG5hbWUSpgEKCUdldEVudGl0eRIqLmdvb2dsZS5jbG91ZC5kYXRh",
+            "cGxleC52MS5HZXRFbnRpdHlSZXF1ZXN0GiAuZ29vZ2xlLmNsb3VkLmRhdGFw",
+            "bGV4LnYxLkVudGl0eSJLgtPkkwI+EjwvdjEve25hbWU9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9sYWtlcy8qL3pvbmVzLyovZW50aXRpZXMvKn3aQQRuYW1l",
+            "ErwBCgxMaXN0RW50aXRpZXMSLS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
+            "TGlzdEVudGl0aWVzUmVxdWVzdBouLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52",
+            "MS5MaXN0RW50aXRpZXNSZXNwb25zZSJNgtPkkwI+EjwvdjEve3BhcmVudD1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2xha2VzLyovem9uZXMvKn0vZW50aXRp",
+            "ZXPaQQZwYXJlbnQS2QEKD0NyZWF0ZVBhcnRpdGlvbhIwLmdvb2dsZS5jbG91",
+            "ZC5kYXRhcGxleC52MS5DcmVhdGVQYXJ0aXRpb25SZXF1ZXN0GiMuZ29vZ2xl",
+            "LmNsb3VkLmRhdGFwbGV4LnYxLlBhcnRpdGlvbiJvgtPkkwJWIkkvdjEve3Bh",
+            "cmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2xha2VzLyovem9uZXMvKi9l",
+            "bnRpdGllcy8qfS9wYXJ0aXRpb25zOglwYXJ0aXRpb27aQRBwYXJlbnQscGFy",
+            "dGl0aW9uErYBCg9EZWxldGVQYXJ0aXRpb24SMC5nb29nbGUuY2xvdWQuZGF0",
+            "YXBsZXgudjEuRGVsZXRlUGFydGl0aW9uUmVxdWVzdBoWLmdvb2dsZS5wcm90",
+            "b2J1Zi5FbXB0eSJZgtPkkwJMKkovdjEve25hbWU9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9sYWtlcy8qL3pvbmVzLyovZW50aXRpZXMvKi9wYXJ0aXRpb25z",
+            "LyoqfdpBBG5hbWUSvQEKDEdldFBhcnRpdGlvbhItLmdvb2dsZS5jbG91ZC5k",
+            "YXRhcGxleC52MS5HZXRQYXJ0aXRpb25SZXF1ZXN0GiMuZ29vZ2xlLmNsb3Vk",
+            "LmRhdGFwbGV4LnYxLlBhcnRpdGlvbiJZgtPkkwJMEkovdjEve25hbWU9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9sYWtlcy8qL3pvbmVzLyovZW50aXRpZXMv",
+            "Ki9wYXJ0aXRpb25zLyoqfdpBBG5hbWUSzwEKDkxpc3RQYXJ0aXRpb25zEi8u",
+            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkxpc3RQYXJ0aXRpb25zUmVxdWVz",
+            "dBowLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5MaXN0UGFydGl0aW9uc1Jl",
+            "c3BvbnNlIlqC0+STAksSSS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyovbGFrZXMvKi96b25lcy8qL2VudGl0aWVzLyp9L3BhcnRpdGlvbnPa",
+            "QQZwYXJlbnQaS8pBF2RhdGFwbGV4Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6",
+            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUJxChxj",
+            "b20uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxQg1NZXRhZGF0YVByb3RvUAFa",
+            "QGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
+            "ZGF0YXBsZXgvdjE7ZGF0YXBsZXhiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataplex.V1.StorageSystem), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.CreateEntityRequest), global::Google.Cloud.Dataplex.V1.CreateEntityRequest.Parser, new[]{ "Parent", "Entity", "ValidateOnly" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.UpdateEntityRequest), global::Google.Cloud.Dataplex.V1.UpdateEntityRequest.Parser, new[]{ "Entity", "ValidateOnly" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DeleteEntityRequest), global::Google.Cloud.Dataplex.V1.DeleteEntityRequest.Parser, new[]{ "Name", "Etag" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.ListEntitiesRequest), global::Google.Cloud.Dataplex.V1.ListEntitiesRequest.Parser, new[]{ "Parent", "View", "PageSize", "PageToken", "Filter" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.ListEntitiesRequest.Types.EntityView) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.ListEntitiesResponse), global::Google.Cloud.Dataplex.V1.ListEntitiesResponse.Parser, new[]{ "Entities", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.GetEntityRequest), global::Google.Cloud.Dataplex.V1.GetEntityRequest.Parser, new[]{ "Name", "View" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.GetEntityRequest.Types.EntityView) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.ListPartitionsRequest), global::Google.Cloud.Dataplex.V1.ListPartitionsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.CreatePartitionRequest), global::Google.Cloud.Dataplex.V1.CreatePartitionRequest.Parser, new[]{ "Parent", "Partition", "ValidateOnly" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DeletePartitionRequest), global::Google.Cloud.Dataplex.V1.DeletePartitionRequest.Parser, new[]{ "Name", "Etag" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.ListPartitionsResponse), global::Google.Cloud.Dataplex.V1.ListPartitionsResponse.Parser, new[]{ "Partitions", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.GetPartitionRequest), global::Google.Cloud.Dataplex.V1.GetPartitionRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Entity), global::Google.Cloud.Dataplex.V1.Entity.Parser, new[]{ "Name", "DisplayName", "Description", "CreateTime", "UpdateTime", "Id", "Etag", "Type", "Asset", "DataPath", "DataPathPattern", "CatalogEntry", "System", "Format", "Compatibility", "Schema" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.Entity.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Entity.Types.CompatibilityStatus), global::Google.Cloud.Dataplex.V1.Entity.Types.CompatibilityStatus.Parser, new[]{ "HiveMetastore", "Bigquery" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Entity.Types.CompatibilityStatus.Types.Compatibility), global::Google.Cloud.Dataplex.V1.Entity.Types.CompatibilityStatus.Types.Compatibility.Parser, new[]{ "Compatible", "Reason" }, null, null, null, null)})}),
@@ -188,6 +228,776 @@ namespace Google.Cloud.Dataplex.V1 {
 
   #region Messages
   /// <summary>
+  /// Create a metadata entity request.
+  /// </summary>
+  public sealed partial class CreateEntityRequest : pb::IMessage<CreateEntityRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateEntityRequest> _parser = new pb::MessageParser<CreateEntityRequest>(() => new CreateEntityRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateEntityRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateEntityRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateEntityRequest(CreateEntityRequest other) : this() {
+      parent_ = other.parent_;
+      entity_ = other.entity_ != null ? other.entity_.Clone() : null;
+      validateOnly_ = other.validateOnly_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateEntityRequest Clone() {
+      return new CreateEntityRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The resource name of the parent zone:
+    /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "entity" field.</summary>
+    public const int EntityFieldNumber = 3;
+    private global::Google.Cloud.Dataplex.V1.Entity entity_;
+    /// <summary>
+    /// Required. Entity resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.Entity Entity {
+      get { return entity_; }
+      set {
+        entity_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "validate_only" field.</summary>
+    public const int ValidateOnlyFieldNumber = 4;
+    private bool validateOnly_;
+    /// <summary>
+    /// Optional. Only validate the request, but do not perform mutations.
+    /// The default is false.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ValidateOnly {
+      get { return validateOnly_; }
+      set {
+        validateOnly_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateEntityRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateEntityRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (!object.Equals(Entity, other.Entity)) return false;
+      if (ValidateOnly != other.ValidateOnly) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (entity_ != null) hash ^= Entity.GetHashCode();
+      if (ValidateOnly != false) hash ^= ValidateOnly.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (entity_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Entity);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ValidateOnly);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (entity_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Entity);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ValidateOnly);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (entity_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Entity);
+      }
+      if (ValidateOnly != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateEntityRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.entity_ != null) {
+        if (entity_ == null) {
+          Entity = new global::Google.Cloud.Dataplex.V1.Entity();
+        }
+        Entity.MergeFrom(other.Entity);
+      }
+      if (other.ValidateOnly != false) {
+        ValidateOnly = other.ValidateOnly;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (entity_ == null) {
+              Entity = new global::Google.Cloud.Dataplex.V1.Entity();
+            }
+            input.ReadMessage(Entity);
+            break;
+          }
+          case 32: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (entity_ == null) {
+              Entity = new global::Google.Cloud.Dataplex.V1.Entity();
+            }
+            input.ReadMessage(Entity);
+            break;
+          }
+          case 32: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Update a metadata entity request.
+  /// The exiting entity will be fully replaced by the entity in the request.
+  /// The entity ID is mutable. To modify the ID, use the current entity ID in the
+  /// request URL and specify the new ID in the request body.
+  /// </summary>
+  public sealed partial class UpdateEntityRequest : pb::IMessage<UpdateEntityRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateEntityRequest> _parser = new pb::MessageParser<UpdateEntityRequest>(() => new UpdateEntityRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateEntityRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateEntityRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateEntityRequest(UpdateEntityRequest other) : this() {
+      entity_ = other.entity_ != null ? other.entity_.Clone() : null;
+      validateOnly_ = other.validateOnly_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateEntityRequest Clone() {
+      return new UpdateEntityRequest(this);
+    }
+
+    /// <summary>Field number for the "entity" field.</summary>
+    public const int EntityFieldNumber = 2;
+    private global::Google.Cloud.Dataplex.V1.Entity entity_;
+    /// <summary>
+    /// Required. Update description.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.Entity Entity {
+      get { return entity_; }
+      set {
+        entity_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "validate_only" field.</summary>
+    public const int ValidateOnlyFieldNumber = 3;
+    private bool validateOnly_;
+    /// <summary>
+    /// Optional. Only validate the request, but do not perform mutations.
+    /// The default is false.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ValidateOnly {
+      get { return validateOnly_; }
+      set {
+        validateOnly_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateEntityRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateEntityRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Entity, other.Entity)) return false;
+      if (ValidateOnly != other.ValidateOnly) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (entity_ != null) hash ^= Entity.GetHashCode();
+      if (ValidateOnly != false) hash ^= ValidateOnly.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (entity_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Entity);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ValidateOnly);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (entity_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Entity);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ValidateOnly);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (entity_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Entity);
+      }
+      if (ValidateOnly != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateEntityRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.entity_ != null) {
+        if (entity_ == null) {
+          Entity = new global::Google.Cloud.Dataplex.V1.Entity();
+        }
+        Entity.MergeFrom(other.Entity);
+      }
+      if (other.ValidateOnly != false) {
+        ValidateOnly = other.ValidateOnly;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 18: {
+            if (entity_ == null) {
+              Entity = new global::Google.Cloud.Dataplex.V1.Entity();
+            }
+            input.ReadMessage(Entity);
+            break;
+          }
+          case 24: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            if (entity_ == null) {
+              Entity = new global::Google.Cloud.Dataplex.V1.Entity();
+            }
+            input.ReadMessage(Entity);
+            break;
+          }
+          case 24: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Delete a metadata entity request.
+  /// </summary>
+  public sealed partial class DeleteEntityRequest : pb::IMessage<DeleteEntityRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteEntityRequest> _parser = new pb::MessageParser<DeleteEntityRequest>(() => new DeleteEntityRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteEntityRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteEntityRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteEntityRequest(DeleteEntityRequest other) : this() {
+      name_ = other.name_;
+      etag_ = other.etag_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteEntityRequest Clone() {
+      return new DeleteEntityRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name of the entity:
+    /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "etag" field.</summary>
+    public const int EtagFieldNumber = 2;
+    private string etag_ = "";
+    /// <summary>
+    /// Required. The etag associated with the partition if it was previously retrieved.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Etag {
+      get { return etag_; }
+      set {
+        etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteEntityRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteEntityRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Etag != other.Etag) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Etag);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Etag);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Etag.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteEntityRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Etag.Length != 0) {
+        Etag = other.Etag;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Etag = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Etag = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// List metadata entities request.
   /// </summary>
   public sealed partial class ListEntitiesRequest : pb::IMessage<ListEntitiesRequest>
@@ -204,7 +1014,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -274,8 +1084,8 @@ namespace Google.Cloud.Dataplex.V1 {
     private int pageSize_;
     /// <summary>
     /// Optional. Maximum number of entities to return. The service may return fewer than
-    /// this value. If unspecified, at most 10 entities will be returned. The
-    /// maximum value is 1000; values above 1000 are set to 1000.
+    /// this value. If unspecified, 100 entities will be returned by default. The
+    /// maximum value is 500; larger values will will be truncated to 500.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -308,7 +1118,14 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int FilterFieldNumber = 5;
     private string filter_ = "";
     /// <summary>
-    /// Optional. Filter request by name prefix.
+    /// Optional. The following filter parameters can be added to the URL to limit the
+    /// entities returned by the API:
+    ///
+    /// - Entity ID: ?filter="id=entityID"
+    /// - Asset ID: ?filter="asset=assetID"
+    /// - Data path ?filter="data_path=gs://my-bucket"
+    /// - Is HIVE compatible: ?filter=”hive_compatible=true”
+    /// - Is BigQuery compatible: ?filter=”bigquery_compatible=true”
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -591,7 +1408,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -816,7 +1633,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1056,7 +1873,7 @@ namespace Google.Cloud.Dataplex.V1 {
         /// </summary>
         [pbr::OriginalName("SCHEMA")] Schema = 2,
         /// <summary>
-        /// Include everything.
+        /// Include everything. Currently, this is the same as the SCHEMA view.
         /// </summary>
         [pbr::OriginalName("FULL")] Full = 4,
       }
@@ -1083,7 +1900,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1137,8 +1954,8 @@ namespace Google.Cloud.Dataplex.V1 {
     private int pageSize_;
     /// <summary>
     /// Optional. Maximum number of partitions to return. The service may return fewer than
-    /// this value. If unspecified, at most 10 partitions will be returned. The
-    /// maximum value is 1000; values above 1000 will be coerced to 1000.
+    /// this value. If unspecified, 100 partitions will be returned by default. The
+    /// maximum page size is 500; larger values will will be truncated to 500.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1171,7 +1988,25 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int FilterFieldNumber = 4;
     private string filter_ = "";
     /// <summary>
-    /// Optional. Filter request.
+    /// Optional. Filter the partitions returned to the caller using a key vslue pair
+    /// expression. The filter expression supports:
+    ///
+    /// - logical operators: AND, OR
+    /// - comparison operators: &lt;, >, >=, &lt;= ,=, !=
+    /// - LIKE operators:
+    ///     - The right hand of a LIKE operator supports “.” and
+    ///       “*” for wildcard searches, for example "value1 LIKE ".*oo.*"
+    /// - parenthetical grouping: ( )
+    ///
+    /// Sample filter expression: `?filter="key1 &lt; value1 OR key2 > value2"
+    ///
+    /// **Notes:**
+    ///
+    /// - Keys to the left of operators are case insensitive.
+    /// - Partition results are sorted first by creation time, then by
+    ///   lexicographic order.
+    /// - Up to 20 key value filter pairs are allowed, but due to performance
+    ///   considerations, only the first 10 will be used as a filter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1388,6 +2223,532 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
+  /// Create metadata partition request.
+  /// </summary>
+  public sealed partial class CreatePartitionRequest : pb::IMessage<CreatePartitionRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreatePartitionRequest> _parser = new pb::MessageParser<CreatePartitionRequest>(() => new CreatePartitionRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreatePartitionRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreatePartitionRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreatePartitionRequest(CreatePartitionRequest other) : this() {
+      parent_ = other.parent_;
+      partition_ = other.partition_ != null ? other.partition_.Clone() : null;
+      validateOnly_ = other.validateOnly_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreatePartitionRequest Clone() {
+      return new CreatePartitionRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The resource name of the parent zone:
+    /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "partition" field.</summary>
+    public const int PartitionFieldNumber = 3;
+    private global::Google.Cloud.Dataplex.V1.Partition partition_;
+    /// <summary>
+    /// Required. Partition resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.Partition Partition {
+      get { return partition_; }
+      set {
+        partition_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "validate_only" field.</summary>
+    public const int ValidateOnlyFieldNumber = 4;
+    private bool validateOnly_;
+    /// <summary>
+    /// Optional. Only validate the request, but do not perform mutations.
+    /// The default is false.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ValidateOnly {
+      get { return validateOnly_; }
+      set {
+        validateOnly_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreatePartitionRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreatePartitionRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (!object.Equals(Partition, other.Partition)) return false;
+      if (ValidateOnly != other.ValidateOnly) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (partition_ != null) hash ^= Partition.GetHashCode();
+      if (ValidateOnly != false) hash ^= ValidateOnly.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (partition_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Partition);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ValidateOnly);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (partition_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Partition);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ValidateOnly);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (partition_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Partition);
+      }
+      if (ValidateOnly != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreatePartitionRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.partition_ != null) {
+        if (partition_ == null) {
+          Partition = new global::Google.Cloud.Dataplex.V1.Partition();
+        }
+        Partition.MergeFrom(other.Partition);
+      }
+      if (other.ValidateOnly != false) {
+        ValidateOnly = other.ValidateOnly;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (partition_ == null) {
+              Partition = new global::Google.Cloud.Dataplex.V1.Partition();
+            }
+            input.ReadMessage(Partition);
+            break;
+          }
+          case 32: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (partition_ == null) {
+              Partition = new global::Google.Cloud.Dataplex.V1.Partition();
+            }
+            input.ReadMessage(Partition);
+            break;
+          }
+          case 32: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Delete metadata partition request.
+  /// </summary>
+  public sealed partial class DeletePartitionRequest : pb::IMessage<DeletePartitionRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeletePartitionRequest> _parser = new pb::MessageParser<DeletePartitionRequest>(() => new DeletePartitionRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeletePartitionRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeletePartitionRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeletePartitionRequest(DeletePartitionRequest other) : this() {
+      name_ = other.name_;
+      etag_ = other.etag_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeletePartitionRequest Clone() {
+      return new DeletePartitionRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name of the partition.
+    /// format:
+    /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}/partitions/{partition_value_path}`.
+    /// The {partition_value_path} segment consists of an ordered sequence of
+    /// partition values separated by "/". All values must be provided.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "etag" field.</summary>
+    public const int EtagFieldNumber = 2;
+    private string etag_ = "";
+    /// <summary>
+    /// Optional. The etag associated with the partition if it was previously retrieved.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Etag {
+      get { return etag_; }
+      set {
+        etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeletePartitionRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeletePartitionRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Etag != other.Etag) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Etag);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Etag);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Etag.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeletePartitionRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Etag.Length != 0) {
+        Etag = other.Etag;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Etag = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Etag = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// List metadata partitions response.
   /// </summary>
   public sealed partial class ListPartitionsResponse : pb::IMessage<ListPartitionsResponse>
@@ -1404,7 +2765,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1629,7 +2990,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1664,7 +3025,9 @@ namespace Google.Cloud.Dataplex.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. The resource name of the partition:
-    /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}/partitions/{partition_id}`.
+    /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}/partitions/{partition_value_path}`.
+    /// The {partition_value_path} segment consists of an ordered sequence of
+    /// partition values separated by "/". All values must be provided.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1825,7 +3188,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1890,7 +3253,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Optional. User friendly display name.
+    /// Optional. Display name must be shorter than or equal to 63 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1905,7 +3268,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int DescriptionFieldNumber = 3;
     private string description_ = "";
     /// <summary>
-    /// Optional. User friendly longer description text.
+    /// Optional. User friendly longer description text. Must be shorter than or equal to
+    /// 1024 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1953,6 +3317,8 @@ namespace Google.Cloud.Dataplex.V1 {
     /// Required. A user-provided entity ID. It is mutable, and will be used as the
     /// published table name. Specifying a new ID in an update entity
     /// request will override the existing value.
+    /// The ID must contain only letters (a-z, A-Z), numbers (0-9), and
+    /// underscores. Must begin with a letter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1967,8 +3333,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int EtagFieldNumber = 8;
     private string etag_ = "";
     /// <summary>
-    /// Optional. The etag for this entity.
-    /// Required for update requests. It must match the server's etag.
+    /// Optional. The etag for this entity. Required for update and delete requests. Must
+    /// match the server's etag.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1983,7 +3349,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int TypeFieldNumber = 10;
     private global::Google.Cloud.Dataplex.V1.Entity.Types.Type type_ = global::Google.Cloud.Dataplex.V1.Entity.Types.Type.Unspecified;
     /// <summary>
-    /// Required. The type of entity.
+    /// Required. Immutable. The type of entity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1998,8 +3364,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int AssetFieldNumber = 11;
     private string asset_ = "";
     /// <summary>
-    /// Required. The name of the asset associated with the storage location containing the
-    /// entity data.
+    /// Required. Immutable. The ID of the asset associated with the storage location containing the
+    /// entity data. The entity must be with in the same zone with the asset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2065,7 +3431,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int SystemFieldNumber = 15;
     private global::Google.Cloud.Dataplex.V1.StorageSystem system_ = global::Google.Cloud.Dataplex.V1.StorageSystem.Unspecified;
     /// <summary>
-    /// Required. Identifies the storage system of the entity data.
+    /// Required. Immutable. Identifies the storage system of the entity data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3203,7 +4569,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3240,9 +4606,13 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name of the partition, of the form:
-    /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}/partitions/{partition_id}`.
-    /// {partition_id} is a generated unique ID.
+    /// Output only. The values must be HTML URL encoded two times before constructing the path.
+    /// For example, if you have a value of "US:CA", encoded it two times and you
+    /// get "US%253ACA". Then if you have the 2nd value is "CA#Sunnyvale", encoded
+    /// two times and you get "CA%2523Sunnyvale". The partition values path is
+    /// "US%253ACA/CA%2523Sunnyvale". The final URL will be
+    /// "https://.../partitions/US%253ACA/CA%2523Sunnyvale". The name field in the
+    /// responses will always have the encoded format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3274,6 +4644,7 @@ namespace Google.Cloud.Dataplex.V1 {
     /// <summary>
     /// Required. Immutable. The location of the entity data within the partition, for example,
     /// `gs://bucket/path/to/entity/key1=value1/key2=value2`.
+    /// Or `projects/&lt;project_id>/datasets/&lt;dataset_id>/tables/&lt;table_id>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3289,8 +4660,8 @@ namespace Google.Cloud.Dataplex.V1 {
     private string etag_ = "";
     /// <summary>
     /// Optional. The etag for this partition.
-    /// Required for update requests. It must match the server's etag.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Etag {
@@ -3512,7 +4883,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3549,8 +4920,23 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int UserManagedFieldNumber = 1;
     private bool userManaged_;
     /// <summary>
-    /// Required. Whether the schema is user-managed or managed by the service. User-managed
-    /// schemas are not automatically updated by discovery jobs.
+    /// Required. Whether the schema is user-managed or managed by the service.
+    /// - Set user_manage to false if you would like Dataplex to help you manage
+    /// the schema. You will get the full service provided by Dataplex discovery,
+    /// including new data discovery, schema inference and schema evolution. You
+    /// can still provide input the schema of the entities, for example renaming a
+    /// schema field, changing CSV or Json options if you think the discovered
+    /// values are not as accurate. Dataplex will consider your input as the
+    /// initial schema (as if they were produced by the previous discovery run),
+    /// and will evolve schema or flag actions based on that.
+    /// - Set user_manage to true if you would like to fully manage the entity
+    /// schema by yourself. This is useful when you would like to manually specify
+    /// the schema for a table. In this case, the schema defined by the user is
+    /// guaranteed to be kept unchanged and would not be overwritten. But this also
+    /// means Dataplex will not provide schema evolution management for you.
+    /// Dataplex will still be able to manage partition registration (i.e., keeping
+    /// the list of partitions up to date) when Dataplex discovery is turned on and
+    /// user_managed is set to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3957,7 +5343,8 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int NameFieldNumber = 1;
         private string name_ = "";
         /// <summary>
-        /// Required. The name of the field.
+        /// Required. The name of the field. The maximum length is 767 characters. The name
+        /// must begins with a letter and not contains `:` and `.`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3972,7 +5359,8 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int DescriptionFieldNumber = 2;
         private string description_ = "";
         /// <summary>
-        /// Optional. User friendly field description.
+        /// Optional. User friendly field description. Must be less than or equal to 1024
+        /// characters.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4247,7 +5635,9 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Represents a key field within the entity's partition structure.
+      /// Represents a key field within the entity's partition structure. You could
+      /// have up to 20 partition fields, but only the first 10 partitions have the
+      /// filtering ability due to performance consideration.
       /// </summary>
       public sealed partial class PartitionField : pb::IMessage<PartitionField>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4298,7 +5688,8 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int NameFieldNumber = 1;
         private string name_ = "";
         /// <summary>
-        /// Required. The name of the field.
+        /// Required. Partition name is editable if only the partition style is not HIVE
+        /// compatible. The maximum length allowed is 767 characters.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4313,7 +5704,7 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int TypeFieldNumber = 2;
         private global::Google.Cloud.Dataplex.V1.Schema.Types.Type type_ = global::Google.Cloud.Dataplex.V1.Schema.Types.Type.Unspecified;
         /// <summary>
-        /// Required. The type of field.
+        /// Required. Immutable. The type of field.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4503,7 +5894,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Dataplex.V1.MetadataReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4549,7 +5940,7 @@ namespace Google.Cloud.Dataplex.V1 {
     private global::Google.Cloud.Dataplex.V1.StorageFormat.Types.Format format_ = global::Google.Cloud.Dataplex.V1.StorageFormat.Types.Format.Unspecified;
     /// <summary>
     /// Output only. The data format associated with the stored data, which represents
-    /// content type values.
+    /// content type values. The value is inferred from mime type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4580,8 +5971,19 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int MimeTypeFieldNumber = 3;
     private string mimeType_ = "";
     /// <summary>
-    /// Required. The mime type descriptor for the data. This field is valid for formats
-    /// other than `UNKNOWN` and `MIXED`.
+    /// Required. The mime type descriptor for the data. Must match the pattern
+    /// {type}/{subtype}. Supported values:
+    /// - application/x-parquet
+    /// - application/x-avro
+    /// - application/x-orc
+    /// - application/x-tfrecord
+    /// - application/json
+    /// - application/{subtypes}
+    /// - text/csv
+    /// - text/&lt;subtypes>
+    /// - image/{image subtype}
+    /// - video/{video subtype}
+    /// - audio/{audio subtype}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4939,7 +6341,7 @@ namespace Google.Cloud.Dataplex.V1 {
         /// </summary>
         [pbr::OriginalName("IMAGE")] Image = 200,
         /// <summary>
-        /// Audio data formats (such as mp3 and wav).
+        /// Audio data formats (such as mp3, and wav).
         /// </summary>
         [pbr::OriginalName("AUDIO")] Audio = 201,
         /// <summary>
@@ -5036,7 +6438,8 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int EncodingFieldNumber = 1;
         private string encoding_ = "";
         /// <summary>
-        /// Optional. The character encoding of the data. The default is UTF-8.
+        /// Optional. The character encoding of the data. Accepts "US-ASCII", "UTF-8", and
+        /// "ISO-8859-1". Defaults to UTF-8 if unspecified.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5052,7 +6455,7 @@ namespace Google.Cloud.Dataplex.V1 {
         private int headerRows_;
         /// <summary>
         /// Optional. The number of rows to interpret as header rows that should be skipped
-        /// when reading data rows.
+        /// when reading data rows. Defaults to 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5082,8 +6485,8 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int QuoteFieldNumber = 4;
         private string quote_ = "";
         /// <summary>
-        /// Optional. The character used to quote column values. Defaults to empty,
-        /// implying unquoted data.
+        /// Optional. The character used to quote column values. Accepts '"' and '''.
+        /// Defaults to '"' if unspecified.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5350,7 +6753,8 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int EncodingFieldNumber = 1;
         private string encoding_ = "";
         /// <summary>
-        /// Optional. The character encoding of the data. The default is UTF-8.
+        /// Optional. The character encoding of the data. Accepts "US-ASCII", "UTF-8" and
+        /// "ISO-8859-1". Defaults to UTF-8 if not specified.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
