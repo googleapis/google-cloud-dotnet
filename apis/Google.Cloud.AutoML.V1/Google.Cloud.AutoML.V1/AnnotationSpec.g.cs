@@ -25,19 +25,18 @@ namespace Google.Cloud.AutoML.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cixnb29nbGUvY2xvdWQvYXV0b21sL3YxL2Fubm90YXRpb25fc3BlYy5wcm90",
-            "bxIWZ29vZ2xlLmNsb3VkLmF1dG9tbC52MRocZ29vZ2xlL2FwaS9hbm5vdGF0",
-            "aW9ucy5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byLWAQoOQW5u",
-            "b3RhdGlvblNwZWMSDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiAB",
-            "KAkSFQoNZXhhbXBsZV9jb3VudBgJIAEoBTqIAepBhAEKJGF1dG9tbC5nb29n",
-            "bGVhcGlzLmNvbS9Bbm5vdGF0aW9uU3BlYxJccHJvamVjdHMve3Byb2plY3R9",
-            "L2xvY2F0aW9ucy97bG9jYXRpb259L2RhdGFzZXRzL3tkYXRhc2V0fS9hbm5v",
-            "dGF0aW9uU3BlY3Mve2Fubm90YXRpb25fc3BlY31CqgEKGmNvbS5nb29nbGUu",
-            "Y2xvdWQuYXV0b21sLnYxUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
-            "L2dvb2dsZWFwaXMvY2xvdWQvYXV0b21sL3YxO2F1dG9tbKoCFkdvb2dsZS5D",
-            "bG91ZC5BdXRvTUwuVjHKAhZHb29nbGVcQ2xvdWRcQXV0b01sXFYx6gIZR29v",
-            "Z2xlOjpDbG91ZDo6QXV0b01MOjpWMWIGcHJvdG8z"));
+            "bxIWZ29vZ2xlLmNsb3VkLmF1dG9tbC52MRoZZ29vZ2xlL2FwaS9yZXNvdXJj",
+            "ZS5wcm90byLWAQoOQW5ub3RhdGlvblNwZWMSDAoEbmFtZRgBIAEoCRIUCgxk",
+            "aXNwbGF5X25hbWUYAiABKAkSFQoNZXhhbXBsZV9jb3VudBgJIAEoBTqIAepB",
+            "hAEKJGF1dG9tbC5nb29nbGVhcGlzLmNvbS9Bbm5vdGF0aW9uU3BlYxJccHJv",
+            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2RhdGFzZXRz",
+            "L3tkYXRhc2V0fS9hbm5vdGF0aW9uU3BlY3Mve2Fubm90YXRpb25fc3BlY31C",
+            "qgEKGmNvbS5nb29nbGUuY2xvdWQuYXV0b21sLnYxUAFaPGdvb2dsZS5nb2xh",
+            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYXV0b21sL3YxO2F1",
+            "dG9tbKoCFkdvb2dsZS5DbG91ZC5BdXRvTUwuVjHKAhZHb29nbGVcQ2xvdWRc",
+            "QXV0b01sXFYx6gIZR29vZ2xlOjpDbG91ZDo6QXV0b01MOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.AnnotationSpec), global::Google.Cloud.AutoML.V1.AnnotationSpec.Parser, new[]{ "Name", "DisplayName", "ExampleCount" }, null, null, null, null)
           }));
