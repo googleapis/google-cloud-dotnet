@@ -18,6 +18,7 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -69,6 +70,10 @@ namespace Google.Cloud.Logging.V2
             DeleteExclusionSettings = existing.DeleteExclusionSettings;
             GetCmekSettingsSettings = existing.GetCmekSettingsSettings;
             UpdateCmekSettingsSettings = existing.UpdateCmekSettingsSettings;
+            GetSettingsSettings = existing.GetSettingsSettings;
+            UpdateSettingsSettings = existing.UpdateSettingsSettings;
+            CopyLogEntriesSettings = existing.CopyLogEntriesSettings;
+            CopyLogEntriesOperationsSettings = existing.CopyLogEntriesOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -413,6 +418,60 @@ namespace Google.Cloud.Logging.V2
         /// </remarks>
         public gaxgrpc::CallSettings UpdateCmekSettingsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.GetSettings</c> and <c>ConfigServiceV2Client.GetSettingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetSettingsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.UpdateSettings</c> and <c>ConfigServiceV2Client.UpdateSettingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateSettingsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.CopyLogEntries</c> and <c>ConfigServiceV2Client.CopyLogEntriesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CopyLogEntriesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ConfigServiceV2Client.CopyLogEntries</c> and
+        /// <c>ConfigServiceV2Client.CopyLogEntriesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CopyLogEntriesOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ConfigServiceV2Settings"/> object.</returns>
         public ConfigServiceV2Settings Clone() => new ConfigServiceV2Settings(this);
@@ -581,7 +640,7 @@ namespace Google.Cloud.Logging.V2
         public virtual ConfigServiceV2.ConfigServiceV2Client GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists buckets.
+        /// Lists log buckets.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -590,7 +649,7 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists buckets.
+        /// Lists log buckets.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -599,7 +658,7 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists buckets.
+        /// Lists log buckets.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose buckets are to be listed:
@@ -632,7 +691,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists buckets.
+        /// Lists log buckets.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose buckets are to be listed:
@@ -665,7 +724,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists buckets.
+        /// Lists log buckets.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose buckets are to be listed:
@@ -698,7 +757,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists buckets.
+        /// Lists log buckets.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose buckets are to be listed:
@@ -731,7 +790,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists buckets.
+        /// Lists log buckets.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose buckets are to be listed:
@@ -764,7 +823,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists buckets.
+        /// Lists log buckets.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose buckets are to be listed:
@@ -797,7 +856,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists buckets.
+        /// Lists log buckets.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose buckets are to be listed:
@@ -830,7 +889,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists buckets.
+        /// Lists log buckets.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose buckets are to be listed:
@@ -863,7 +922,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists buckets.
+        /// Lists log buckets.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose buckets are to be listed:
@@ -896,7 +955,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists buckets.
+        /// Lists log buckets.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose buckets are to be listed:
@@ -929,7 +988,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets a bucket.
+        /// Gets a log bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -938,7 +997,7 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a bucket.
+        /// Gets a log bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -947,7 +1006,7 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a bucket.
+        /// Gets a log bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -956,8 +1015,8 @@ namespace Google.Cloud.Logging.V2
             GetBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a bucket that can be used to store log entries. Once a bucket has
-        /// been created, the region cannot be changed.
+        /// Creates a log bucket that can be used to store log entries. After a bucket
+        /// has been created, the bucket's location cannot be changed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -966,8 +1025,8 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a bucket that can be used to store log entries. Once a bucket has
-        /// been created, the region cannot be changed.
+        /// Creates a log bucket that can be used to store log entries. After a bucket
+        /// has been created, the bucket's location cannot be changed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -976,8 +1035,8 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a bucket that can be used to store log entries. Once a bucket has
-        /// been created, the region cannot be changed.
+        /// Creates a log bucket that can be used to store log entries. After a bucket
+        /// has been created, the bucket's location cannot be changed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -986,16 +1045,16 @@ namespace Google.Cloud.Logging.V2
             CreateBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a bucket. This method replaces the following fields in the
+        /// Updates a log bucket. This method replaces the following fields in the
         /// existing bucket with values from the new bucket: `retention_period`
         /// 
         /// If the retention period is decreased and the bucket is locked,
-        /// FAILED_PRECONDITION will be returned.
+        /// `FAILED_PRECONDITION` will be returned.
         /// 
-        /// If the bucket has a LifecycleState of DELETE_REQUESTED, FAILED_PRECONDITION
-        /// will be returned.
+        /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
+        /// `FAILED_PRECONDITION` will be returned.
         /// 
-        /// A buckets region may not be modified after it is created.
+        /// After a bucket has been created, the bucket's location cannot be changed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1004,16 +1063,16 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a bucket. This method replaces the following fields in the
+        /// Updates a log bucket. This method replaces the following fields in the
         /// existing bucket with values from the new bucket: `retention_period`
         /// 
         /// If the retention period is decreased and the bucket is locked,
-        /// FAILED_PRECONDITION will be returned.
+        /// `FAILED_PRECONDITION` will be returned.
         /// 
-        /// If the bucket has a LifecycleState of DELETE_REQUESTED, FAILED_PRECONDITION
-        /// will be returned.
+        /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
+        /// `FAILED_PRECONDITION` will be returned.
         /// 
-        /// A buckets region may not be modified after it is created.
+        /// After a bucket has been created, the bucket's location cannot be changed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1022,16 +1081,16 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a bucket. This method replaces the following fields in the
+        /// Updates a log bucket. This method replaces the following fields in the
         /// existing bucket with values from the new bucket: `retention_period`
         /// 
         /// If the retention period is decreased and the bucket is locked,
-        /// FAILED_PRECONDITION will be returned.
+        /// `FAILED_PRECONDITION` will be returned.
         /// 
-        /// If the bucket has a LifecycleState of DELETE_REQUESTED, FAILED_PRECONDITION
-        /// will be returned.
+        /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
+        /// `FAILED_PRECONDITION` will be returned.
         /// 
-        /// A buckets region may not be modified after it is created.
+        /// After a bucket has been created, the bucket's location cannot be changed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1040,10 +1099,11 @@ namespace Google.Cloud.Logging.V2
             UpdateBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a bucket.
-        /// Moves the bucket to the DELETE_REQUESTED state. After 7 days, the
-        /// bucket will be purged and all logs in the bucket will be permanently
-        /// deleted.
+        /// Deletes a log bucket.
+        /// 
+        /// Changes the bucket's `lifecycle_state` to the `DELETE_REQUESTED` state.
+        /// After 7 days, the bucket will be purged and all log entries in the bucket
+        /// will be permanently deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1052,10 +1112,11 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a bucket.
-        /// Moves the bucket to the DELETE_REQUESTED state. After 7 days, the
-        /// bucket will be purged and all logs in the bucket will be permanently
-        /// deleted.
+        /// Deletes a log bucket.
+        /// 
+        /// Changes the bucket's `lifecycle_state` to the `DELETE_REQUESTED` state.
+        /// After 7 days, the bucket will be purged and all log entries in the bucket
+        /// will be permanently deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1064,10 +1125,11 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a bucket.
-        /// Moves the bucket to the DELETE_REQUESTED state. After 7 days, the
-        /// bucket will be purged and all logs in the bucket will be permanently
-        /// deleted.
+        /// Deletes a log bucket.
+        /// 
+        /// Changes the bucket's `lifecycle_state` to the `DELETE_REQUESTED` state.
+        /// After 7 days, the bucket will be purged and all log entries in the bucket
+        /// will be permanently deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1076,8 +1138,8 @@ namespace Google.Cloud.Logging.V2
             DeleteBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Undeletes a bucket. A bucket that has been deleted may be undeleted within
-        /// the grace period of 7 days.
+        /// Undeletes a log bucket. A bucket that has been deleted can be undeleted
+        /// within the grace period of 7 days.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1086,8 +1148,8 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Undeletes a bucket. A bucket that has been deleted may be undeleted within
-        /// the grace period of 7 days.
+        /// Undeletes a log bucket. A bucket that has been deleted can be undeleted
+        /// within the grace period of 7 days.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1096,8 +1158,8 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Undeletes a bucket. A bucket that has been deleted may be undeleted within
-        /// the grace period of 7 days.
+        /// Undeletes a log bucket. A bucket that has been deleted can be undeleted
+        /// within the grace period of 7 days.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1106,7 +1168,7 @@ namespace Google.Cloud.Logging.V2
             UndeleteBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists views on a bucket.
+        /// Lists views on a log bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1115,7 +1177,7 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists views on a bucket.
+        /// Lists views on a log bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1124,7 +1186,7 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists views on a bucket.
+        /// Lists views on a log bucket.
         /// </summary>
         /// <param name="parent">
         /// Required. The bucket whose views are to be listed:
@@ -1150,7 +1212,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists views on a bucket.
+        /// Lists views on a log bucket.
         /// </summary>
         /// <param name="parent">
         /// Required. The bucket whose views are to be listed:
@@ -1176,7 +1238,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets a view.
+        /// Gets a view on a log bucket..
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1185,7 +1247,7 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a view.
+        /// Gets a view on a log bucket..
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1194,7 +1256,7 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a view.
+        /// Gets a view on a log bucket..
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1203,8 +1265,8 @@ namespace Google.Cloud.Logging.V2
             GetViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a view over logs in a bucket. A bucket may contain a maximum of
-        /// 50 views.
+        /// Creates a view over log entries in a log bucket. A bucket may contain a
+        /// maximum of 30 views.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1213,8 +1275,8 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a view over logs in a bucket. A bucket may contain a maximum of
-        /// 50 views.
+        /// Creates a view over log entries in a log bucket. A bucket may contain a
+        /// maximum of 30 views.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1223,8 +1285,8 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a view over logs in a bucket. A bucket may contain a maximum of
-        /// 50 views.
+        /// Creates a view over log entries in a log bucket. A bucket may contain a
+        /// maximum of 30 views.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1233,8 +1295,11 @@ namespace Google.Cloud.Logging.V2
             CreateViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a view. This method replaces the following fields in the existing
-        /// view with values from the new view: `filter`.
+        /// Updates a view on a log bucket. This method replaces the following fields
+        /// in the existing view with values from the new view: `filter`.
+        /// If an `UNAVAILABLE` error is returned, this indicates that system is not in
+        /// a state where it can update the view. If this occurs, please try again in a
+        /// few minutes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1243,8 +1308,11 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a view. This method replaces the following fields in the existing
-        /// view with values from the new view: `filter`.
+        /// Updates a view on a log bucket. This method replaces the following fields
+        /// in the existing view with values from the new view: `filter`.
+        /// If an `UNAVAILABLE` error is returned, this indicates that system is not in
+        /// a state where it can update the view. If this occurs, please try again in a
+        /// few minutes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1253,8 +1321,11 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a view. This method replaces the following fields in the existing
-        /// view with values from the new view: `filter`.
+        /// Updates a view on a log bucket. This method replaces the following fields
+        /// in the existing view with values from the new view: `filter`.
+        /// If an `UNAVAILABLE` error is returned, this indicates that system is not in
+        /// a state where it can update the view. If this occurs, please try again in a
+        /// few minutes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1263,7 +1334,10 @@ namespace Google.Cloud.Logging.V2
             UpdateViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a view from a bucket.
+        /// Deletes a view on a log bucket.
+        /// If an `UNAVAILABLE` error is returned, this indicates that system is not in
+        /// a state where it can delete the view. If this occurs, please try again in a
+        /// few minutes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1272,7 +1346,10 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a view from a bucket.
+        /// Deletes a view on a log bucket.
+        /// If an `UNAVAILABLE` error is returned, this indicates that system is not in
+        /// a state where it can delete the view. If this occurs, please try again in a
+        /// few minutes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1281,7 +1358,10 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a view from a bucket.
+        /// Deletes a view on a log bucket.
+        /// If an `UNAVAILABLE` error is returned, this indicates that system is not in
+        /// a state where it can delete the view. If this occurs, please try again in a
+        /// few minutes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1635,7 +1715,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1656,7 +1738,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1677,7 +1761,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1695,7 +1781,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1716,7 +1804,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1737,7 +1827,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1794,7 +1886,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="sink">
         /// Required. The new sink, whose `name` parameter is a sink identifier that
@@ -1823,7 +1918,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="sink">
         /// Required. The new sink, whose `name` parameter is a sink identifier that
@@ -1852,7 +1950,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="sink">
         /// Required. The new sink, whose `name` parameter is a sink identifier that
@@ -1877,7 +1978,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="sink">
         /// Required. The new sink, whose `name` parameter is a sink identifier that
@@ -1906,7 +2010,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="sink">
         /// Required. The new sink, whose `name` parameter is a sink identifier that
@@ -1935,7 +2042,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="sink">
         /// Required. The new sink, whose `name` parameter is a sink identifier that
@@ -1960,7 +2070,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="sink">
         /// Required. The new sink, whose `name` parameter is a sink identifier that
@@ -1989,7 +2102,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="sink">
         /// Required. The new sink, whose `name` parameter is a sink identifier that
@@ -2018,7 +2134,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="sink">
         /// Required. The new sink, whose `name` parameter is a sink identifier that
@@ -2043,7 +2162,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="sink">
         /// Required. The new sink, whose `name` parameter is a sink identifier that
@@ -2072,7 +2194,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="sink">
         /// Required. The new sink, whose `name` parameter is a sink identifier that
@@ -2101,7 +2226,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="sink">
         /// Required. The new sink, whose `name` parameter is a sink identifier that
@@ -2126,7 +2254,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="sink">
         /// Required. The new sink, whose `name` parameter is a sink identifier that
@@ -2155,7 +2286,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="sink">
         /// Required. The new sink, whose `name` parameter is a sink identifier that
@@ -2184,7 +2318,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="sink">
         /// Required. The new sink, whose `name` parameter is a sink identifier that
@@ -2250,7 +2387,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
         /// Required. The updated sink, whose name is the same identifier that appears as part
@@ -2261,16 +2400,18 @@ namespace Google.Cloud.Logging.V2
         /// an update. A sink field will be overwritten if, and only if, it is
         /// in the update mask. `name` and output only fields cannot be updated.
         /// 
-        /// An empty updateMask is temporarily treated as using the following mask
+        /// An empty `updateMask` is temporarily treated as using the following mask
         /// for backwards compatibility purposes:
-        /// destination,filter,includeChildren
+        /// 
+        /// `destination,filter,includeChildren`
+        /// 
         /// At some point in the future, behavior will be removed and specifying an
-        /// empty updateMask will be an error.
+        /// empty `updateMask` will be an error.
         /// 
         /// For a detailed `FieldMask` definition, see
         /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMask
         /// 
-        /// Example: `updateMask=filter`.
+        /// For example: `updateMask=filter`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2298,7 +2439,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
         /// Required. The updated sink, whose name is the same identifier that appears as part
@@ -2309,16 +2452,18 @@ namespace Google.Cloud.Logging.V2
         /// an update. A sink field will be overwritten if, and only if, it is
         /// in the update mask. `name` and output only fields cannot be updated.
         /// 
-        /// An empty updateMask is temporarily treated as using the following mask
+        /// An empty `updateMask` is temporarily treated as using the following mask
         /// for backwards compatibility purposes:
-        /// destination,filter,includeChildren
+        /// 
+        /// `destination,filter,includeChildren`
+        /// 
         /// At some point in the future, behavior will be removed and specifying an
-        /// empty updateMask will be an error.
+        /// empty `updateMask` will be an error.
         /// 
         /// For a detailed `FieldMask` definition, see
         /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMask
         /// 
-        /// Example: `updateMask=filter`.
+        /// For example: `updateMask=filter`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2346,7 +2491,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
         /// Required. The updated sink, whose name is the same identifier that appears as part
@@ -2357,16 +2504,18 @@ namespace Google.Cloud.Logging.V2
         /// an update. A sink field will be overwritten if, and only if, it is
         /// in the update mask. `name` and output only fields cannot be updated.
         /// 
-        /// An empty updateMask is temporarily treated as using the following mask
+        /// An empty `updateMask` is temporarily treated as using the following mask
         /// for backwards compatibility purposes:
-        /// destination,filter,includeChildren
+        /// 
+        /// `destination,filter,includeChildren`
+        /// 
         /// At some point in the future, behavior will be removed and specifying an
-        /// empty updateMask will be an error.
+        /// empty `updateMask` will be an error.
         /// 
         /// For a detailed `FieldMask` definition, see
         /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMask
         /// 
-        /// Example: `updateMask=filter`.
+        /// For example: `updateMask=filter`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2389,7 +2538,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
         /// Required. The updated sink, whose name is the same identifier that appears as part
@@ -2400,16 +2551,18 @@ namespace Google.Cloud.Logging.V2
         /// an update. A sink field will be overwritten if, and only if, it is
         /// in the update mask. `name` and output only fields cannot be updated.
         /// 
-        /// An empty updateMask is temporarily treated as using the following mask
+        /// An empty `updateMask` is temporarily treated as using the following mask
         /// for backwards compatibility purposes:
-        /// destination,filter,includeChildren
+        /// 
+        /// `destination,filter,includeChildren`
+        /// 
         /// At some point in the future, behavior will be removed and specifying an
-        /// empty updateMask will be an error.
+        /// empty `updateMask` will be an error.
         /// 
         /// For a detailed `FieldMask` definition, see
         /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMask
         /// 
-        /// Example: `updateMask=filter`.
+        /// For example: `updateMask=filter`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2437,7 +2590,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
         /// Required. The updated sink, whose name is the same identifier that appears as part
@@ -2448,16 +2603,18 @@ namespace Google.Cloud.Logging.V2
         /// an update. A sink field will be overwritten if, and only if, it is
         /// in the update mask. `name` and output only fields cannot be updated.
         /// 
-        /// An empty updateMask is temporarily treated as using the following mask
+        /// An empty `updateMask` is temporarily treated as using the following mask
         /// for backwards compatibility purposes:
-        /// destination,filter,includeChildren
+        /// 
+        /// `destination,filter,includeChildren`
+        /// 
         /// At some point in the future, behavior will be removed and specifying an
-        /// empty updateMask will be an error.
+        /// empty `updateMask` will be an error.
         /// 
         /// For a detailed `FieldMask` definition, see
         /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMask
         /// 
-        /// Example: `updateMask=filter`.
+        /// For example: `updateMask=filter`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2485,7 +2642,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
         /// Required. The updated sink, whose name is the same identifier that appears as part
@@ -2496,16 +2655,18 @@ namespace Google.Cloud.Logging.V2
         /// an update. A sink field will be overwritten if, and only if, it is
         /// in the update mask. `name` and output only fields cannot be updated.
         /// 
-        /// An empty updateMask is temporarily treated as using the following mask
+        /// An empty `updateMask` is temporarily treated as using the following mask
         /// for backwards compatibility purposes:
-        /// destination,filter,includeChildren
+        /// 
+        /// `destination,filter,includeChildren`
+        /// 
         /// At some point in the future, behavior will be removed and specifying an
-        /// empty updateMask will be an error.
+        /// empty `updateMask` will be an error.
         /// 
         /// For a detailed `FieldMask` definition, see
         /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMask
         /// 
-        /// Example: `updateMask=filter`.
+        /// For example: `updateMask=filter`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2528,7 +2689,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
         /// Required. The updated sink, whose name is the same identifier that appears as part
@@ -2559,7 +2722,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
         /// Required. The updated sink, whose name is the same identifier that appears as part
@@ -2590,7 +2755,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
         /// Required. The updated sink, whose name is the same identifier that appears as part
@@ -2617,7 +2784,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
         /// Required. The updated sink, whose name is the same identifier that appears as part
@@ -2648,7 +2817,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
         /// Required. The updated sink, whose name is the same identifier that appears as part
@@ -2679,7 +2850,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
         /// Required. The updated sink, whose name is the same identifier that appears as part
@@ -2733,7 +2906,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2756,7 +2931,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2779,7 +2956,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2799,7 +2978,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2822,7 +3003,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2845,7 +3028,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         /// "folders/[FOLDER_ID]/sinks/[SINK_ID]"
         /// 
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2853,7 +3038,7 @@ namespace Google.Cloud.Logging.V2
             DeleteSinkAsync(sinkName, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists all the exclusions in a parent resource.
+        /// Lists all the exclusions on the _Default sink in a parent resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2862,7 +3047,7 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all the exclusions in a parent resource.
+        /// Lists all the exclusions on the _Default sink in a parent resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2871,7 +3056,7 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all the exclusions in a parent resource.
+        /// Lists all the exclusions on the _Default sink in a parent resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose exclusions are to be listed.
@@ -2900,7 +3085,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists all the exclusions in a parent resource.
+        /// Lists all the exclusions on the _Default sink in a parent resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose exclusions are to be listed.
@@ -2929,7 +3114,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists all the exclusions in a parent resource.
+        /// Lists all the exclusions on the _Default sink in a parent resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose exclusions are to be listed.
@@ -2958,7 +3143,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists all the exclusions in a parent resource.
+        /// Lists all the exclusions on the _Default sink in a parent resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose exclusions are to be listed.
@@ -2987,7 +3172,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists all the exclusions in a parent resource.
+        /// Lists all the exclusions on the _Default sink in a parent resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose exclusions are to be listed.
@@ -3016,7 +3201,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists all the exclusions in a parent resource.
+        /// Lists all the exclusions on the _Default sink in a parent resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose exclusions are to be listed.
@@ -3045,7 +3230,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists all the exclusions in a parent resource.
+        /// Lists all the exclusions on the _Default sink in a parent resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose exclusions are to be listed.
@@ -3074,7 +3259,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists all the exclusions in a parent resource.
+        /// Lists all the exclusions on the _Default sink in a parent resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose exclusions are to be listed.
@@ -3103,7 +3288,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists all the exclusions in a parent resource.
+        /// Lists all the exclusions on the _Default sink in a parent resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose exclusions are to be listed.
@@ -3132,7 +3317,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists all the exclusions in a parent resource.
+        /// Lists all the exclusions on the _Default sink in a parent resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose exclusions are to be listed.
@@ -3161,7 +3346,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets the description of an exclusion.
+        /// Gets the description of an exclusion in the _Default sink.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3170,7 +3355,7 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the description of an exclusion.
+        /// Gets the description of an exclusion in the _Default sink.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3179,7 +3364,7 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the description of an exclusion.
+        /// Gets the description of an exclusion in the _Default sink.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3188,7 +3373,7 @@ namespace Google.Cloud.Logging.V2
             GetExclusionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the description of an exclusion.
+        /// Gets the description of an exclusion in the _Default sink.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of an existing exclusion:
@@ -3198,7 +3383,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         /// "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
         /// 
-        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3209,7 +3396,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets the description of an exclusion.
+        /// Gets the description of an exclusion in the _Default sink.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of an existing exclusion:
@@ -3219,7 +3406,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         /// "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
         /// 
-        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3230,7 +3419,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets the description of an exclusion.
+        /// Gets the description of an exclusion in the _Default sink.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of an existing exclusion:
@@ -3240,7 +3429,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         /// "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
         /// 
-        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3248,7 +3439,7 @@ namespace Google.Cloud.Logging.V2
             GetExclusionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the description of an exclusion.
+        /// Gets the description of an exclusion in the _Default sink.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of an existing exclusion:
@@ -3258,7 +3449,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         /// "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
         /// 
-        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3269,7 +3462,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets the description of an exclusion.
+        /// Gets the description of an exclusion in the _Default sink.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of an existing exclusion:
@@ -3279,7 +3472,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         /// "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
         /// 
-        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3290,7 +3485,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets the description of an exclusion.
+        /// Gets the description of an exclusion in the _Default sink.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of an existing exclusion:
@@ -3300,7 +3495,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         /// "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
         /// 
-        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3308,9 +3505,9 @@ namespace Google.Cloud.Logging.V2
             GetExclusionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new exclusion in a specified parent resource.
-        /// Only log entries belonging to that resource can be excluded.
-        /// You can have up to 10 exclusions in a resource.
+        /// Creates a new exclusion in the _Default sink in a specified parent
+        /// resource. Only log entries belonging to that resource can be excluded. You
+        /// can have up to 10 exclusions in a resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3319,9 +3516,9 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new exclusion in a specified parent resource.
-        /// Only log entries belonging to that resource can be excluded.
-        /// You can have up to 10 exclusions in a resource.
+        /// Creates a new exclusion in the _Default sink in a specified parent
+        /// resource. Only log entries belonging to that resource can be excluded. You
+        /// can have up to 10 exclusions in a resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3330,9 +3527,9 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new exclusion in a specified parent resource.
-        /// Only log entries belonging to that resource can be excluded.
-        /// You can have up to 10 exclusions in a resource.
+        /// Creates a new exclusion in the _Default sink in a specified parent
+        /// resource. Only log entries belonging to that resource can be excluded. You
+        /// can have up to 10 exclusions in a resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3341,9 +3538,9 @@ namespace Google.Cloud.Logging.V2
             CreateExclusionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new exclusion in a specified parent resource.
-        /// Only log entries belonging to that resource can be excluded.
-        /// You can have up to 10 exclusions in a resource.
+        /// Creates a new exclusion in the _Default sink in a specified parent
+        /// resource. Only log entries belonging to that resource can be excluded. You
+        /// can have up to 10 exclusions in a resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource in which to create the exclusion:
@@ -3353,7 +3550,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-logging-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="exclusion">
         /// Required. The new exclusion, whose `name` parameter is an exclusion name
@@ -3369,9 +3569,9 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a new exclusion in a specified parent resource.
-        /// Only log entries belonging to that resource can be excluded.
-        /// You can have up to 10 exclusions in a resource.
+        /// Creates a new exclusion in the _Default sink in a specified parent
+        /// resource. Only log entries belonging to that resource can be excluded. You
+        /// can have up to 10 exclusions in a resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource in which to create the exclusion:
@@ -3381,7 +3581,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-logging-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="exclusion">
         /// Required. The new exclusion, whose `name` parameter is an exclusion name
@@ -3397,9 +3600,9 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a new exclusion in a specified parent resource.
-        /// Only log entries belonging to that resource can be excluded.
-        /// You can have up to 10 exclusions in a resource.
+        /// Creates a new exclusion in the _Default sink in a specified parent
+        /// resource. Only log entries belonging to that resource can be excluded. You
+        /// can have up to 10 exclusions in a resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource in which to create the exclusion:
@@ -3409,7 +3612,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-logging-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="exclusion">
         /// Required. The new exclusion, whose `name` parameter is an exclusion name
@@ -3421,9 +3627,9 @@ namespace Google.Cloud.Logging.V2
             CreateExclusionAsync(parent, exclusion, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new exclusion in a specified parent resource.
-        /// Only log entries belonging to that resource can be excluded.
-        /// You can have up to 10 exclusions in a resource.
+        /// Creates a new exclusion in the _Default sink in a specified parent
+        /// resource. Only log entries belonging to that resource can be excluded. You
+        /// can have up to 10 exclusions in a resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource in which to create the exclusion:
@@ -3433,7 +3639,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-logging-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="exclusion">
         /// Required. The new exclusion, whose `name` parameter is an exclusion name
@@ -3449,9 +3658,9 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a new exclusion in a specified parent resource.
-        /// Only log entries belonging to that resource can be excluded.
-        /// You can have up to 10 exclusions in a resource.
+        /// Creates a new exclusion in the _Default sink in a specified parent
+        /// resource. Only log entries belonging to that resource can be excluded. You
+        /// can have up to 10 exclusions in a resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource in which to create the exclusion:
@@ -3461,7 +3670,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-logging-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="exclusion">
         /// Required. The new exclusion, whose `name` parameter is an exclusion name
@@ -3477,9 +3689,9 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a new exclusion in a specified parent resource.
-        /// Only log entries belonging to that resource can be excluded.
-        /// You can have up to 10 exclusions in a resource.
+        /// Creates a new exclusion in the _Default sink in a specified parent
+        /// resource. Only log entries belonging to that resource can be excluded. You
+        /// can have up to 10 exclusions in a resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource in which to create the exclusion:
@@ -3489,7 +3701,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-logging-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="exclusion">
         /// Required. The new exclusion, whose `name` parameter is an exclusion name
@@ -3501,9 +3716,9 @@ namespace Google.Cloud.Logging.V2
             CreateExclusionAsync(parent, exclusion, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new exclusion in a specified parent resource.
-        /// Only log entries belonging to that resource can be excluded.
-        /// You can have up to 10 exclusions in a resource.
+        /// Creates a new exclusion in the _Default sink in a specified parent
+        /// resource. Only log entries belonging to that resource can be excluded. You
+        /// can have up to 10 exclusions in a resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource in which to create the exclusion:
@@ -3513,7 +3728,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-logging-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="exclusion">
         /// Required. The new exclusion, whose `name` parameter is an exclusion name
@@ -3529,9 +3747,9 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a new exclusion in a specified parent resource.
-        /// Only log entries belonging to that resource can be excluded.
-        /// You can have up to 10 exclusions in a resource.
+        /// Creates a new exclusion in the _Default sink in a specified parent
+        /// resource. Only log entries belonging to that resource can be excluded. You
+        /// can have up to 10 exclusions in a resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource in which to create the exclusion:
@@ -3541,7 +3759,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-logging-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="exclusion">
         /// Required. The new exclusion, whose `name` parameter is an exclusion name
@@ -3557,9 +3778,9 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a new exclusion in a specified parent resource.
-        /// Only log entries belonging to that resource can be excluded.
-        /// You can have up to 10 exclusions in a resource.
+        /// Creates a new exclusion in the _Default sink in a specified parent
+        /// resource. Only log entries belonging to that resource can be excluded. You
+        /// can have up to 10 exclusions in a resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource in which to create the exclusion:
@@ -3569,7 +3790,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-logging-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="exclusion">
         /// Required. The new exclusion, whose `name` parameter is an exclusion name
@@ -3581,9 +3805,9 @@ namespace Google.Cloud.Logging.V2
             CreateExclusionAsync(parent, exclusion, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new exclusion in a specified parent resource.
-        /// Only log entries belonging to that resource can be excluded.
-        /// You can have up to 10 exclusions in a resource.
+        /// Creates a new exclusion in the _Default sink in a specified parent
+        /// resource. Only log entries belonging to that resource can be excluded. You
+        /// can have up to 10 exclusions in a resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource in which to create the exclusion:
@@ -3593,7 +3817,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-logging-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="exclusion">
         /// Required. The new exclusion, whose `name` parameter is an exclusion name
@@ -3609,9 +3836,9 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a new exclusion in a specified parent resource.
-        /// Only log entries belonging to that resource can be excluded.
-        /// You can have up to 10 exclusions in a resource.
+        /// Creates a new exclusion in the _Default sink in a specified parent
+        /// resource. Only log entries belonging to that resource can be excluded. You
+        /// can have up to 10 exclusions in a resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource in which to create the exclusion:
@@ -3621,7 +3848,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-logging-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="exclusion">
         /// Required. The new exclusion, whose `name` parameter is an exclusion name
@@ -3637,9 +3867,9 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a new exclusion in a specified parent resource.
-        /// Only log entries belonging to that resource can be excluded.
-        /// You can have up to 10 exclusions in a resource.
+        /// Creates a new exclusion in the _Default sink in a specified parent
+        /// resource. Only log entries belonging to that resource can be excluded. You
+        /// can have up to 10 exclusions in a resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource in which to create the exclusion:
@@ -3649,7 +3879,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-logging-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="exclusion">
         /// Required. The new exclusion, whose `name` parameter is an exclusion name
@@ -3661,9 +3894,9 @@ namespace Google.Cloud.Logging.V2
             CreateExclusionAsync(parent, exclusion, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new exclusion in a specified parent resource.
-        /// Only log entries belonging to that resource can be excluded.
-        /// You can have up to 10 exclusions in a resource.
+        /// Creates a new exclusion in the _Default sink in a specified parent
+        /// resource. Only log entries belonging to that resource can be excluded. You
+        /// can have up to 10 exclusions in a resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource in which to create the exclusion:
@@ -3673,7 +3906,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-logging-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="exclusion">
         /// Required. The new exclusion, whose `name` parameter is an exclusion name
@@ -3689,9 +3925,9 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a new exclusion in a specified parent resource.
-        /// Only log entries belonging to that resource can be excluded.
-        /// You can have up to 10 exclusions in a resource.
+        /// Creates a new exclusion in the _Default sink in a specified parent
+        /// resource. Only log entries belonging to that resource can be excluded. You
+        /// can have up to 10 exclusions in a resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource in which to create the exclusion:
@@ -3701,7 +3937,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-logging-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="exclusion">
         /// Required. The new exclusion, whose `name` parameter is an exclusion name
@@ -3717,9 +3956,9 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a new exclusion in a specified parent resource.
-        /// Only log entries belonging to that resource can be excluded.
-        /// You can have up to 10 exclusions in a resource.
+        /// Creates a new exclusion in the _Default sink in a specified parent
+        /// resource. Only log entries belonging to that resource can be excluded. You
+        /// can have up to 10 exclusions in a resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource in which to create the exclusion:
@@ -3729,7 +3968,10 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
-        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// For examples:
+        /// 
+        /// `"projects/my-logging-project"`
+        /// `"organizations/123456789"`
         /// </param>
         /// <param name="exclusion">
         /// Required. The new exclusion, whose `name` parameter is an exclusion name
@@ -3741,7 +3983,8 @@ namespace Google.Cloud.Logging.V2
             CreateExclusionAsync(parent, exclusion, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Changes one or more properties of an existing exclusion.
+        /// Changes one or more properties of an existing exclusion in the _Default
+        /// sink.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3750,7 +3993,8 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Changes one or more properties of an existing exclusion.
+        /// Changes one or more properties of an existing exclusion in the _Default
+        /// sink.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3759,7 +4003,8 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Changes one or more properties of an existing exclusion.
+        /// Changes one or more properties of an existing exclusion in the _Default
+        /// sink.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3768,7 +4013,8 @@ namespace Google.Cloud.Logging.V2
             UpdateExclusionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Changes one or more properties of an existing exclusion.
+        /// Changes one or more properties of an existing exclusion in the _Default
+        /// sink.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the exclusion to update:
@@ -3778,7 +4024,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         /// "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
         /// 
-        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="exclusion">
         /// Required. New values for the existing exclusion. Only the fields specified in
@@ -3804,7 +4052,8 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Changes one or more properties of an existing exclusion.
+        /// Changes one or more properties of an existing exclusion in the _Default
+        /// sink.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the exclusion to update:
@@ -3814,7 +4063,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         /// "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
         /// 
-        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="exclusion">
         /// Required. New values for the existing exclusion. Only the fields specified in
@@ -3840,7 +4091,8 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Changes one or more properties of an existing exclusion.
+        /// Changes one or more properties of an existing exclusion in the _Default
+        /// sink.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the exclusion to update:
@@ -3850,7 +4102,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         /// "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
         /// 
-        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="exclusion">
         /// Required. New values for the existing exclusion. Only the fields specified in
@@ -3871,7 +4125,8 @@ namespace Google.Cloud.Logging.V2
             UpdateExclusionAsync(name, exclusion, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Changes one or more properties of an existing exclusion.
+        /// Changes one or more properties of an existing exclusion in the _Default
+        /// sink.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the exclusion to update:
@@ -3881,7 +4136,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         /// "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
         /// 
-        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="exclusion">
         /// Required. New values for the existing exclusion. Only the fields specified in
@@ -3907,7 +4164,8 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Changes one or more properties of an existing exclusion.
+        /// Changes one or more properties of an existing exclusion in the _Default
+        /// sink.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the exclusion to update:
@@ -3917,7 +4175,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         /// "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
         /// 
-        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="exclusion">
         /// Required. New values for the existing exclusion. Only the fields specified in
@@ -3943,7 +4203,8 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Changes one or more properties of an existing exclusion.
+        /// Changes one or more properties of an existing exclusion in the _Default
+        /// sink.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the exclusion to update:
@@ -3953,7 +4214,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         /// "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
         /// 
-        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="exclusion">
         /// Required. New values for the existing exclusion. Only the fields specified in
@@ -3974,7 +4237,7 @@ namespace Google.Cloud.Logging.V2
             UpdateExclusionAsync(name, exclusion, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes an exclusion.
+        /// Deletes an exclusion in the _Default sink.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3983,7 +4246,7 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes an exclusion.
+        /// Deletes an exclusion in the _Default sink.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3992,7 +4255,7 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes an exclusion.
+        /// Deletes an exclusion in the _Default sink.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4001,7 +4264,7 @@ namespace Google.Cloud.Logging.V2
             DeleteExclusionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes an exclusion.
+        /// Deletes an exclusion in the _Default sink.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of an existing exclusion to delete:
@@ -4011,7 +4274,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         /// "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
         /// 
-        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4022,7 +4287,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Deletes an exclusion.
+        /// Deletes an exclusion in the _Default sink.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of an existing exclusion to delete:
@@ -4032,7 +4297,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         /// "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
         /// 
-        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4043,7 +4310,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Deletes an exclusion.
+        /// Deletes an exclusion in the _Default sink.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of an existing exclusion to delete:
@@ -4053,7 +4320,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         /// "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
         /// 
-        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4061,7 +4330,7 @@ namespace Google.Cloud.Logging.V2
             DeleteExclusionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes an exclusion.
+        /// Deletes an exclusion in the _Default sink.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of an existing exclusion to delete:
@@ -4071,7 +4340,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         /// "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
         /// 
-        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4082,7 +4353,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Deletes an exclusion.
+        /// Deletes an exclusion in the _Default sink.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of an existing exclusion to delete:
@@ -4092,7 +4363,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         /// "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
         /// 
-        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4103,7 +4376,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Deletes an exclusion.
+        /// Deletes an exclusion in the _Default sink.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of an existing exclusion to delete:
@@ -4113,7 +4386,9 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         /// "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
         /// 
-        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// For example:
+        /// 
+        /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4121,13 +4396,14 @@ namespace Google.Cloud.Logging.V2
             DeleteExclusionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the Logs Router CMEK settings for the given resource.
+        /// Gets the Logging CMEK settings for the given resource.
         /// 
-        /// Note: CMEK for the Logs Router can currently only be configured for GCP
-        /// organizations. Once configured, it applies to all projects and folders in
-        /// the GCP organization.
+        /// Note: CMEK for the Log Router can be configured for Google Cloud projects,
+        /// folders, organizations and billing accounts. Once configured for an
+        /// organization, it applies to all projects and folders in the Google Cloud
+        /// organization.
         /// 
-        /// See [Enabling CMEK for Logs
+        /// See [Enabling CMEK for Log
         /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
         /// for more information.
         /// </summary>
@@ -4138,13 +4414,14 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the Logs Router CMEK settings for the given resource.
+        /// Gets the Logging CMEK settings for the given resource.
         /// 
-        /// Note: CMEK for the Logs Router can currently only be configured for GCP
-        /// organizations. Once configured, it applies to all projects and folders in
-        /// the GCP organization.
+        /// Note: CMEK for the Log Router can be configured for Google Cloud projects,
+        /// folders, organizations and billing accounts. Once configured for an
+        /// organization, it applies to all projects and folders in the Google Cloud
+        /// organization.
         /// 
-        /// See [Enabling CMEK for Logs
+        /// See [Enabling CMEK for Log
         /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
         /// for more information.
         /// </summary>
@@ -4155,13 +4432,14 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the Logs Router CMEK settings for the given resource.
+        /// Gets the Logging CMEK settings for the given resource.
         /// 
-        /// Note: CMEK for the Logs Router can currently only be configured for GCP
-        /// organizations. Once configured, it applies to all projects and folders in
-        /// the GCP organization.
+        /// Note: CMEK for the Log Router can be configured for Google Cloud projects,
+        /// folders, organizations and billing accounts. Once configured for an
+        /// organization, it applies to all projects and folders in the Google Cloud
+        /// organization.
         /// 
-        /// See [Enabling CMEK for Logs
+        /// See [Enabling CMEK for Log
         /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
         /// for more information.
         /// </summary>
@@ -4172,11 +4450,11 @@ namespace Google.Cloud.Logging.V2
             GetCmekSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates the Logs Router CMEK settings for the given resource.
+        /// Updates the Log Router CMEK settings for the given resource.
         /// 
-        /// Note: CMEK for the Logs Router can currently only be configured for GCP
-        /// organizations. Once configured, it applies to all projects and folders in
-        /// the GCP organization.
+        /// Note: CMEK for the Log Router can currently only be configured for Google
+        /// Cloud organizations. Once configured, it applies to all projects and
+        /// folders in the Google Cloud organization.
         /// 
         /// [UpdateCmekSettings][google.logging.v2.ConfigServiceV2.UpdateCmekSettings]
         /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
@@ -4184,7 +4462,7 @@ namespace Google.Cloud.Logging.V2
         /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
         /// 3) access to the key is disabled.
         /// 
-        /// See [Enabling CMEK for Logs
+        /// See [Enabling CMEK for Log
         /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
         /// for more information.
         /// </summary>
@@ -4195,11 +4473,11 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the Logs Router CMEK settings for the given resource.
+        /// Updates the Log Router CMEK settings for the given resource.
         /// 
-        /// Note: CMEK for the Logs Router can currently only be configured for GCP
-        /// organizations. Once configured, it applies to all projects and folders in
-        /// the GCP organization.
+        /// Note: CMEK for the Log Router can currently only be configured for Google
+        /// Cloud organizations. Once configured, it applies to all projects and
+        /// folders in the Google Cloud organization.
         /// 
         /// [UpdateCmekSettings][google.logging.v2.ConfigServiceV2.UpdateCmekSettings]
         /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
@@ -4207,7 +4485,7 @@ namespace Google.Cloud.Logging.V2
         /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
         /// 3) access to the key is disabled.
         /// 
-        /// See [Enabling CMEK for Logs
+        /// See [Enabling CMEK for Log
         /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
         /// for more information.
         /// </summary>
@@ -4218,11 +4496,11 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the Logs Router CMEK settings for the given resource.
+        /// Updates the Log Router CMEK settings for the given resource.
         /// 
-        /// Note: CMEK for the Logs Router can currently only be configured for GCP
-        /// organizations. Once configured, it applies to all projects and folders in
-        /// the GCP organization.
+        /// Note: CMEK for the Log Router can currently only be configured for Google
+        /// Cloud organizations. Once configured, it applies to all projects and
+        /// folders in the Google Cloud organization.
         /// 
         /// [UpdateCmekSettings][google.logging.v2.ConfigServiceV2.UpdateCmekSettings]
         /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
@@ -4230,7 +4508,7 @@ namespace Google.Cloud.Logging.V2
         /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
         /// 3) access to the key is disabled.
         /// 
-        /// See [Enabling CMEK for Logs
+        /// See [Enabling CMEK for Log
         /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
         /// for more information.
         /// </summary>
@@ -4239,6 +4517,526 @@ namespace Google.Cloud.Logging.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<CmekSettings> UpdateCmekSettingsAsync(UpdateCmekSettingsRequest request, st::CancellationToken cancellationToken) =>
             UpdateCmekSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the Log Router settings for the given resource.
+        /// 
+        /// Note: Settings for the Log Router can be get for Google Cloud projects,
+        /// folders, organizations and billing accounts. Currently it can only be
+        /// configured for organizations. Once configured for an organization, it
+        /// applies to all projects and folders in the Google Cloud organization.
+        /// 
+        /// See [Enabling CMEK for Log
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+        /// for more information.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Settings GetSettings(GetSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the Log Router settings for the given resource.
+        /// 
+        /// Note: Settings for the Log Router can be get for Google Cloud projects,
+        /// folders, organizations and billing accounts. Currently it can only be
+        /// configured for organizations. Once configured for an organization, it
+        /// applies to all projects and folders in the Google Cloud organization.
+        /// 
+        /// See [Enabling CMEK for Log
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+        /// for more information.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Settings> GetSettingsAsync(GetSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the Log Router settings for the given resource.
+        /// 
+        /// Note: Settings for the Log Router can be get for Google Cloud projects,
+        /// folders, organizations and billing accounts. Currently it can only be
+        /// configured for organizations. Once configured for an organization, it
+        /// applies to all projects and folders in the Google Cloud organization.
+        /// 
+        /// See [Enabling CMEK for Log
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+        /// for more information.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Settings> GetSettingsAsync(GetSettingsRequest request, st::CancellationToken cancellationToken) =>
+            GetSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the Log Router settings for the given resource.
+        /// 
+        /// Note: Settings for the Log Router can be get for Google Cloud projects,
+        /// folders, organizations and billing accounts. Currently it can only be
+        /// configured for organizations. Once configured for an organization, it
+        /// applies to all projects and folders in the Google Cloud organization.
+        /// 
+        /// See [Enabling CMEK for Log
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+        /// for more information.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource for which to retrieve settings.
+        /// 
+        /// "projects/[PROJECT_ID]/settings"
+        /// "organizations/[ORGANIZATION_ID]/settings"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+        /// "folders/[FOLDER_ID]/settings"
+        /// 
+        /// For example:
+        /// 
+        /// `"organizations/12345/settings"`
+        /// 
+        /// Note: Settings for the Log Router can be get for Google Cloud projects,
+        /// folders, organizations and billing accounts. Currently it can only be
+        /// configured for organizations. Once configured for an organization, it
+        /// applies to all projects and folders in the Google Cloud organization.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Settings GetSettings(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSettings(new GetSettingsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the Log Router settings for the given resource.
+        /// 
+        /// Note: Settings for the Log Router can be get for Google Cloud projects,
+        /// folders, organizations and billing accounts. Currently it can only be
+        /// configured for organizations. Once configured for an organization, it
+        /// applies to all projects and folders in the Google Cloud organization.
+        /// 
+        /// See [Enabling CMEK for Log
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+        /// for more information.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource for which to retrieve settings.
+        /// 
+        /// "projects/[PROJECT_ID]/settings"
+        /// "organizations/[ORGANIZATION_ID]/settings"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+        /// "folders/[FOLDER_ID]/settings"
+        /// 
+        /// For example:
+        /// 
+        /// `"organizations/12345/settings"`
+        /// 
+        /// Note: Settings for the Log Router can be get for Google Cloud projects,
+        /// folders, organizations and billing accounts. Currently it can only be
+        /// configured for organizations. Once configured for an organization, it
+        /// applies to all projects and folders in the Google Cloud organization.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Settings> GetSettingsAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSettingsAsync(new GetSettingsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the Log Router settings for the given resource.
+        /// 
+        /// Note: Settings for the Log Router can be get for Google Cloud projects,
+        /// folders, organizations and billing accounts. Currently it can only be
+        /// configured for organizations. Once configured for an organization, it
+        /// applies to all projects and folders in the Google Cloud organization.
+        /// 
+        /// See [Enabling CMEK for Log
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+        /// for more information.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource for which to retrieve settings.
+        /// 
+        /// "projects/[PROJECT_ID]/settings"
+        /// "organizations/[ORGANIZATION_ID]/settings"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+        /// "folders/[FOLDER_ID]/settings"
+        /// 
+        /// For example:
+        /// 
+        /// `"organizations/12345/settings"`
+        /// 
+        /// Note: Settings for the Log Router can be get for Google Cloud projects,
+        /// folders, organizations and billing accounts. Currently it can only be
+        /// configured for organizations. Once configured for an organization, it
+        /// applies to all projects and folders in the Google Cloud organization.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Settings> GetSettingsAsync(string name, st::CancellationToken cancellationToken) =>
+            GetSettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the Log Router settings for the given resource.
+        /// 
+        /// Note: Settings for the Log Router can be get for Google Cloud projects,
+        /// folders, organizations and billing accounts. Currently it can only be
+        /// configured for organizations. Once configured for an organization, it
+        /// applies to all projects and folders in the Google Cloud organization.
+        /// 
+        /// See [Enabling CMEK for Log
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+        /// for more information.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource for which to retrieve settings.
+        /// 
+        /// "projects/[PROJECT_ID]/settings"
+        /// "organizations/[ORGANIZATION_ID]/settings"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+        /// "folders/[FOLDER_ID]/settings"
+        /// 
+        /// For example:
+        /// 
+        /// `"organizations/12345/settings"`
+        /// 
+        /// Note: Settings for the Log Router can be get for Google Cloud projects,
+        /// folders, organizations and billing accounts. Currently it can only be
+        /// configured for organizations. Once configured for an organization, it
+        /// applies to all projects and folders in the Google Cloud organization.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Settings GetSettings(SettingsName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSettings(new GetSettingsRequest
+            {
+                SettingsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the Log Router settings for the given resource.
+        /// 
+        /// Note: Settings for the Log Router can be get for Google Cloud projects,
+        /// folders, organizations and billing accounts. Currently it can only be
+        /// configured for organizations. Once configured for an organization, it
+        /// applies to all projects and folders in the Google Cloud organization.
+        /// 
+        /// See [Enabling CMEK for Log
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+        /// for more information.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource for which to retrieve settings.
+        /// 
+        /// "projects/[PROJECT_ID]/settings"
+        /// "organizations/[ORGANIZATION_ID]/settings"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+        /// "folders/[FOLDER_ID]/settings"
+        /// 
+        /// For example:
+        /// 
+        /// `"organizations/12345/settings"`
+        /// 
+        /// Note: Settings for the Log Router can be get for Google Cloud projects,
+        /// folders, organizations and billing accounts. Currently it can only be
+        /// configured for organizations. Once configured for an organization, it
+        /// applies to all projects and folders in the Google Cloud organization.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Settings> GetSettingsAsync(SettingsName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSettingsAsync(new GetSettingsRequest
+            {
+                SettingsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the Log Router settings for the given resource.
+        /// 
+        /// Note: Settings for the Log Router can be get for Google Cloud projects,
+        /// folders, organizations and billing accounts. Currently it can only be
+        /// configured for organizations. Once configured for an organization, it
+        /// applies to all projects and folders in the Google Cloud organization.
+        /// 
+        /// See [Enabling CMEK for Log
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+        /// for more information.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource for which to retrieve settings.
+        /// 
+        /// "projects/[PROJECT_ID]/settings"
+        /// "organizations/[ORGANIZATION_ID]/settings"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+        /// "folders/[FOLDER_ID]/settings"
+        /// 
+        /// For example:
+        /// 
+        /// `"organizations/12345/settings"`
+        /// 
+        /// Note: Settings for the Log Router can be get for Google Cloud projects,
+        /// folders, organizations and billing accounts. Currently it can only be
+        /// configured for organizations. Once configured for an organization, it
+        /// applies to all projects and folders in the Google Cloud organization.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Settings> GetSettingsAsync(SettingsName name, st::CancellationToken cancellationToken) =>
+            GetSettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the Log Router settings for the given resource.
+        /// 
+        /// Note: Settings for the Log Router can currently only be configured for
+        /// Google Cloud organizations. Once configured, it applies to all projects and
+        /// folders in the Google Cloud organization.
+        /// 
+        /// [UpdateSettings][google.logging.v2.ConfigServiceV2.UpdateSettings]
+        /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
+        /// account does not have the required
+        /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
+        /// 3) access to the key is disabled. 4) `location_id` is not supported by
+        /// Logging. 5) `location_id` violate OrgPolicy.
+        /// 
+        /// See [Enabling CMEK for Log
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+        /// for more information.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Settings UpdateSettings(UpdateSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the Log Router settings for the given resource.
+        /// 
+        /// Note: Settings for the Log Router can currently only be configured for
+        /// Google Cloud organizations. Once configured, it applies to all projects and
+        /// folders in the Google Cloud organization.
+        /// 
+        /// [UpdateSettings][google.logging.v2.ConfigServiceV2.UpdateSettings]
+        /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
+        /// account does not have the required
+        /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
+        /// 3) access to the key is disabled. 4) `location_id` is not supported by
+        /// Logging. 5) `location_id` violate OrgPolicy.
+        /// 
+        /// See [Enabling CMEK for Log
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+        /// for more information.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Settings> UpdateSettingsAsync(UpdateSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the Log Router settings for the given resource.
+        /// 
+        /// Note: Settings for the Log Router can currently only be configured for
+        /// Google Cloud organizations. Once configured, it applies to all projects and
+        /// folders in the Google Cloud organization.
+        /// 
+        /// [UpdateSettings][google.logging.v2.ConfigServiceV2.UpdateSettings]
+        /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
+        /// account does not have the required
+        /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
+        /// 3) access to the key is disabled. 4) `location_id` is not supported by
+        /// Logging. 5) `location_id` violate OrgPolicy.
+        /// 
+        /// See [Enabling CMEK for Log
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+        /// for more information.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Settings> UpdateSettingsAsync(UpdateSettingsRequest request, st::CancellationToken cancellationToken) =>
+            UpdateSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the Log Router settings for the given resource.
+        /// 
+        /// Note: Settings for the Log Router can currently only be configured for
+        /// Google Cloud organizations. Once configured, it applies to all projects and
+        /// folders in the Google Cloud organization.
+        /// 
+        /// [UpdateSettings][google.logging.v2.ConfigServiceV2.UpdateSettings]
+        /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
+        /// account does not have the required
+        /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
+        /// 3) access to the key is disabled. 4) `location_id` is not supported by
+        /// Logging. 5) `location_id` violate OrgPolicy.
+        /// 
+        /// See [Enabling CMEK for Log
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+        /// for more information.
+        /// </summary>
+        /// <param name="settings">
+        /// Required. The settings to update.
+        /// 
+        /// See [Enabling CMEK for Log
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+        /// for more information.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask identifying which fields from `settings` should
+        /// be updated. A field will be overwritten if and only if it is in the update
+        /// mask. Output only fields cannot be updated.
+        /// 
+        /// See [FieldMask][google.protobuf.FieldMask] for more information.
+        /// 
+        /// For example: `"updateMask=kmsKeyName"`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Settings UpdateSettings(Settings settings, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSettings(new UpdateSettingsRequest
+            {
+                Settings = gax::GaxPreconditions.CheckNotNull(settings, nameof(settings)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the Log Router settings for the given resource.
+        /// 
+        /// Note: Settings for the Log Router can currently only be configured for
+        /// Google Cloud organizations. Once configured, it applies to all projects and
+        /// folders in the Google Cloud organization.
+        /// 
+        /// [UpdateSettings][google.logging.v2.ConfigServiceV2.UpdateSettings]
+        /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
+        /// account does not have the required
+        /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
+        /// 3) access to the key is disabled. 4) `location_id` is not supported by
+        /// Logging. 5) `location_id` violate OrgPolicy.
+        /// 
+        /// See [Enabling CMEK for Log
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+        /// for more information.
+        /// </summary>
+        /// <param name="settings">
+        /// Required. The settings to update.
+        /// 
+        /// See [Enabling CMEK for Log
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+        /// for more information.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask identifying which fields from `settings` should
+        /// be updated. A field will be overwritten if and only if it is in the update
+        /// mask. Output only fields cannot be updated.
+        /// 
+        /// See [FieldMask][google.protobuf.FieldMask] for more information.
+        /// 
+        /// For example: `"updateMask=kmsKeyName"`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Settings> UpdateSettingsAsync(Settings settings, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSettingsAsync(new UpdateSettingsRequest
+            {
+                Settings = gax::GaxPreconditions.CheckNotNull(settings, nameof(settings)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the Log Router settings for the given resource.
+        /// 
+        /// Note: Settings for the Log Router can currently only be configured for
+        /// Google Cloud organizations. Once configured, it applies to all projects and
+        /// folders in the Google Cloud organization.
+        /// 
+        /// [UpdateSettings][google.logging.v2.ConfigServiceV2.UpdateSettings]
+        /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
+        /// account does not have the required
+        /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
+        /// 3) access to the key is disabled. 4) `location_id` is not supported by
+        /// Logging. 5) `location_id` violate OrgPolicy.
+        /// 
+        /// See [Enabling CMEK for Log
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+        /// for more information.
+        /// </summary>
+        /// <param name="settings">
+        /// Required. The settings to update.
+        /// 
+        /// See [Enabling CMEK for Log
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+        /// for more information.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask identifying which fields from `settings` should
+        /// be updated. A field will be overwritten if and only if it is in the update
+        /// mask. Output only fields cannot be updated.
+        /// 
+        /// See [FieldMask][google.protobuf.FieldMask] for more information.
+        /// 
+        /// For example: `"updateMask=kmsKeyName"`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Settings> UpdateSettingsAsync(Settings settings, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateSettingsAsync(settings, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Copies a set of log entries from a log bucket to a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CopyLogEntriesResponse, CopyLogEntriesMetadata> CopyLogEntries(CopyLogEntriesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Copies a set of log entries from a log bucket to a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CopyLogEntriesResponse, CopyLogEntriesMetadata>> CopyLogEntriesAsync(CopyLogEntriesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Copies a set of log entries from a log bucket to a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CopyLogEntriesResponse, CopyLogEntriesMetadata>> CopyLogEntriesAsync(CopyLogEntriesRequest request, st::CancellationToken cancellationToken) =>
+            CopyLogEntriesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CopyLogEntries</c>.</summary>
+        public virtual lro::OperationsClient CopyLogEntriesOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CopyLogEntries</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<CopyLogEntriesResponse, CopyLogEntriesMetadata> PollOnceCopyLogEntries(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CopyLogEntriesResponse, CopyLogEntriesMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CopyLogEntriesOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CopyLogEntries</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<CopyLogEntriesResponse, CopyLogEntriesMetadata>> PollOnceCopyLogEntriesAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CopyLogEntriesResponse, CopyLogEntriesMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CopyLogEntriesOperationsClient, callSettings);
     }
 
     /// <summary>ConfigServiceV2 client wrapper implementation, for convenient use.</summary>
@@ -4293,6 +5091,12 @@ namespace Google.Cloud.Logging.V2
 
         private readonly gaxgrpc::ApiCall<UpdateCmekSettingsRequest, CmekSettings> _callUpdateCmekSettings;
 
+        private readonly gaxgrpc::ApiCall<GetSettingsRequest, Settings> _callGetSettings;
+
+        private readonly gaxgrpc::ApiCall<UpdateSettingsRequest, Settings> _callUpdateSettings;
+
+        private readonly gaxgrpc::ApiCall<CopyLogEntriesRequest, lro::Operation> _callCopyLogEntries;
+
         /// <summary>
         /// Constructs a client wrapper for the ConfigServiceV2 service, with the specified gRPC client and settings.
         /// </summary>
@@ -4303,6 +5107,7 @@ namespace Google.Cloud.Logging.V2
             GrpcClient = grpcClient;
             ConfigServiceV2Settings effectiveSettings = settings ?? ConfigServiceV2Settings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            CopyLogEntriesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CopyLogEntriesOperationsSettings);
             _callListBuckets = clientHelper.BuildApiCall<ListBucketsRequest, ListBucketsResponse>(grpcClient.ListBucketsAsync, grpcClient.ListBuckets, effectiveSettings.ListBucketsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListBuckets);
             Modify_ListBucketsApiCall(ref _callListBuckets);
@@ -4372,6 +5177,15 @@ namespace Google.Cloud.Logging.V2
             _callUpdateCmekSettings = clientHelper.BuildApiCall<UpdateCmekSettingsRequest, CmekSettings>(grpcClient.UpdateCmekSettingsAsync, grpcClient.UpdateCmekSettings, effectiveSettings.UpdateCmekSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateCmekSettings);
             Modify_UpdateCmekSettingsApiCall(ref _callUpdateCmekSettings);
+            _callGetSettings = clientHelper.BuildApiCall<GetSettingsRequest, Settings>(grpcClient.GetSettingsAsync, grpcClient.GetSettings, effectiveSettings.GetSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetSettings);
+            Modify_GetSettingsApiCall(ref _callGetSettings);
+            _callUpdateSettings = clientHelper.BuildApiCall<UpdateSettingsRequest, Settings>(grpcClient.UpdateSettingsAsync, grpcClient.UpdateSettings, effectiveSettings.UpdateSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callUpdateSettings);
+            Modify_UpdateSettingsApiCall(ref _callUpdateSettings);
+            _callCopyLogEntries = clientHelper.BuildApiCall<CopyLogEntriesRequest, lro::Operation>(grpcClient.CopyLogEntriesAsync, grpcClient.CopyLogEntries, effectiveSettings.CopyLogEntriesSettings);
+            Modify_ApiCall(ref _callCopyLogEntries);
+            Modify_CopyLogEntriesApiCall(ref _callCopyLogEntries);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4422,6 +5236,12 @@ namespace Google.Cloud.Logging.V2
         partial void Modify_GetCmekSettingsApiCall(ref gaxgrpc::ApiCall<GetCmekSettingsRequest, CmekSettings> call);
 
         partial void Modify_UpdateCmekSettingsApiCall(ref gaxgrpc::ApiCall<UpdateCmekSettingsRequest, CmekSettings> call);
+
+        partial void Modify_GetSettingsApiCall(ref gaxgrpc::ApiCall<GetSettingsRequest, Settings> call);
+
+        partial void Modify_UpdateSettingsApiCall(ref gaxgrpc::ApiCall<UpdateSettingsRequest, Settings> call);
+
+        partial void Modify_CopyLogEntriesApiCall(ref gaxgrpc::ApiCall<CopyLogEntriesRequest, lro::Operation> call);
 
         partial void OnConstruction(ConfigServiceV2.ConfigServiceV2Client grpcClient, ConfigServiceV2Settings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -4474,8 +5294,14 @@ namespace Google.Cloud.Logging.V2
 
         partial void Modify_UpdateCmekSettingsRequest(ref UpdateCmekSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_GetSettingsRequest(ref GetSettingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateSettingsRequest(ref UpdateSettingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CopyLogEntriesRequest(ref CopyLogEntriesRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>
-        /// Lists buckets.
+        /// Lists log buckets.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4487,7 +5313,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists buckets.
+        /// Lists log buckets.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4499,7 +5325,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Gets a bucket.
+        /// Gets a log bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4511,7 +5337,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Gets a bucket.
+        /// Gets a log bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4523,8 +5349,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Creates a bucket that can be used to store log entries. Once a bucket has
-        /// been created, the region cannot be changed.
+        /// Creates a log bucket that can be used to store log entries. After a bucket
+        /// has been created, the bucket's location cannot be changed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4536,8 +5362,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Creates a bucket that can be used to store log entries. Once a bucket has
-        /// been created, the region cannot be changed.
+        /// Creates a log bucket that can be used to store log entries. After a bucket
+        /// has been created, the bucket's location cannot be changed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4549,16 +5375,16 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Updates a bucket. This method replaces the following fields in the
+        /// Updates a log bucket. This method replaces the following fields in the
         /// existing bucket with values from the new bucket: `retention_period`
         /// 
         /// If the retention period is decreased and the bucket is locked,
-        /// FAILED_PRECONDITION will be returned.
+        /// `FAILED_PRECONDITION` will be returned.
         /// 
-        /// If the bucket has a LifecycleState of DELETE_REQUESTED, FAILED_PRECONDITION
-        /// will be returned.
+        /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
+        /// `FAILED_PRECONDITION` will be returned.
         /// 
-        /// A buckets region may not be modified after it is created.
+        /// After a bucket has been created, the bucket's location cannot be changed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4570,16 +5396,16 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Updates a bucket. This method replaces the following fields in the
+        /// Updates a log bucket. This method replaces the following fields in the
         /// existing bucket with values from the new bucket: `retention_period`
         /// 
         /// If the retention period is decreased and the bucket is locked,
-        /// FAILED_PRECONDITION will be returned.
+        /// `FAILED_PRECONDITION` will be returned.
         /// 
-        /// If the bucket has a LifecycleState of DELETE_REQUESTED, FAILED_PRECONDITION
-        /// will be returned.
+        /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
+        /// `FAILED_PRECONDITION` will be returned.
         /// 
-        /// A buckets region may not be modified after it is created.
+        /// After a bucket has been created, the bucket's location cannot be changed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4591,10 +5417,11 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Deletes a bucket.
-        /// Moves the bucket to the DELETE_REQUESTED state. After 7 days, the
-        /// bucket will be purged and all logs in the bucket will be permanently
-        /// deleted.
+        /// Deletes a log bucket.
+        /// 
+        /// Changes the bucket's `lifecycle_state` to the `DELETE_REQUESTED` state.
+        /// After 7 days, the bucket will be purged and all log entries in the bucket
+        /// will be permanently deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4606,10 +5433,11 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Deletes a bucket.
-        /// Moves the bucket to the DELETE_REQUESTED state. After 7 days, the
-        /// bucket will be purged and all logs in the bucket will be permanently
-        /// deleted.
+        /// Deletes a log bucket.
+        /// 
+        /// Changes the bucket's `lifecycle_state` to the `DELETE_REQUESTED` state.
+        /// After 7 days, the bucket will be purged and all log entries in the bucket
+        /// will be permanently deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4621,8 +5449,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Undeletes a bucket. A bucket that has been deleted may be undeleted within
-        /// the grace period of 7 days.
+        /// Undeletes a log bucket. A bucket that has been deleted can be undeleted
+        /// within the grace period of 7 days.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4634,8 +5462,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Undeletes a bucket. A bucket that has been deleted may be undeleted within
-        /// the grace period of 7 days.
+        /// Undeletes a log bucket. A bucket that has been deleted can be undeleted
+        /// within the grace period of 7 days.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4647,7 +5475,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists views on a bucket.
+        /// Lists views on a log bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4659,7 +5487,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists views on a bucket.
+        /// Lists views on a log bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4671,7 +5499,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Gets a view.
+        /// Gets a view on a log bucket..
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4683,7 +5511,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Gets a view.
+        /// Gets a view on a log bucket..
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4695,8 +5523,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Creates a view over logs in a bucket. A bucket may contain a maximum of
-        /// 50 views.
+        /// Creates a view over log entries in a log bucket. A bucket may contain a
+        /// maximum of 30 views.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4708,8 +5536,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Creates a view over logs in a bucket. A bucket may contain a maximum of
-        /// 50 views.
+        /// Creates a view over log entries in a log bucket. A bucket may contain a
+        /// maximum of 30 views.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4721,8 +5549,11 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Updates a view. This method replaces the following fields in the existing
-        /// view with values from the new view: `filter`.
+        /// Updates a view on a log bucket. This method replaces the following fields
+        /// in the existing view with values from the new view: `filter`.
+        /// If an `UNAVAILABLE` error is returned, this indicates that system is not in
+        /// a state where it can update the view. If this occurs, please try again in a
+        /// few minutes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4734,8 +5565,11 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Updates a view. This method replaces the following fields in the existing
-        /// view with values from the new view: `filter`.
+        /// Updates a view on a log bucket. This method replaces the following fields
+        /// in the existing view with values from the new view: `filter`.
+        /// If an `UNAVAILABLE` error is returned, this indicates that system is not in
+        /// a state where it can update the view. If this occurs, please try again in a
+        /// few minutes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4747,7 +5581,10 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Deletes a view from a bucket.
+        /// Deletes a view on a log bucket.
+        /// If an `UNAVAILABLE` error is returned, this indicates that system is not in
+        /// a state where it can delete the view. If this occurs, please try again in a
+        /// few minutes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4759,7 +5596,10 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Deletes a view from a bucket.
+        /// Deletes a view on a log bucket.
+        /// If an `UNAVAILABLE` error is returned, this indicates that system is not in
+        /// a state where it can delete the view. If this occurs, please try again in a
+        /// few minutes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4907,7 +5747,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists all the exclusions in a parent resource.
+        /// Lists all the exclusions on the _Default sink in a parent resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4919,7 +5759,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists all the exclusions in a parent resource.
+        /// Lists all the exclusions on the _Default sink in a parent resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4931,7 +5771,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Gets the description of an exclusion.
+        /// Gets the description of an exclusion in the _Default sink.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4943,7 +5783,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Gets the description of an exclusion.
+        /// Gets the description of an exclusion in the _Default sink.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4955,9 +5795,9 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Creates a new exclusion in a specified parent resource.
-        /// Only log entries belonging to that resource can be excluded.
-        /// You can have up to 10 exclusions in a resource.
+        /// Creates a new exclusion in the _Default sink in a specified parent
+        /// resource. Only log entries belonging to that resource can be excluded. You
+        /// can have up to 10 exclusions in a resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4969,9 +5809,9 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Creates a new exclusion in a specified parent resource.
-        /// Only log entries belonging to that resource can be excluded.
-        /// You can have up to 10 exclusions in a resource.
+        /// Creates a new exclusion in the _Default sink in a specified parent
+        /// resource. Only log entries belonging to that resource can be excluded. You
+        /// can have up to 10 exclusions in a resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4983,7 +5823,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Changes one or more properties of an existing exclusion.
+        /// Changes one or more properties of an existing exclusion in the _Default
+        /// sink.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4995,7 +5836,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Changes one or more properties of an existing exclusion.
+        /// Changes one or more properties of an existing exclusion in the _Default
+        /// sink.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5007,7 +5849,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Deletes an exclusion.
+        /// Deletes an exclusion in the _Default sink.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5019,7 +5861,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Deletes an exclusion.
+        /// Deletes an exclusion in the _Default sink.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5031,13 +5873,14 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Gets the Logs Router CMEK settings for the given resource.
+        /// Gets the Logging CMEK settings for the given resource.
         /// 
-        /// Note: CMEK for the Logs Router can currently only be configured for GCP
-        /// organizations. Once configured, it applies to all projects and folders in
-        /// the GCP organization.
+        /// Note: CMEK for the Log Router can be configured for Google Cloud projects,
+        /// folders, organizations and billing accounts. Once configured for an
+        /// organization, it applies to all projects and folders in the Google Cloud
+        /// organization.
         /// 
-        /// See [Enabling CMEK for Logs
+        /// See [Enabling CMEK for Log
         /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
         /// for more information.
         /// </summary>
@@ -5051,13 +5894,14 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Gets the Logs Router CMEK settings for the given resource.
+        /// Gets the Logging CMEK settings for the given resource.
         /// 
-        /// Note: CMEK for the Logs Router can currently only be configured for GCP
-        /// organizations. Once configured, it applies to all projects and folders in
-        /// the GCP organization.
+        /// Note: CMEK for the Log Router can be configured for Google Cloud projects,
+        /// folders, organizations and billing accounts. Once configured for an
+        /// organization, it applies to all projects and folders in the Google Cloud
+        /// organization.
         /// 
-        /// See [Enabling CMEK for Logs
+        /// See [Enabling CMEK for Log
         /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
         /// for more information.
         /// </summary>
@@ -5071,11 +5915,11 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Updates the Logs Router CMEK settings for the given resource.
+        /// Updates the Log Router CMEK settings for the given resource.
         /// 
-        /// Note: CMEK for the Logs Router can currently only be configured for GCP
-        /// organizations. Once configured, it applies to all projects and folders in
-        /// the GCP organization.
+        /// Note: CMEK for the Log Router can currently only be configured for Google
+        /// Cloud organizations. Once configured, it applies to all projects and
+        /// folders in the Google Cloud organization.
         /// 
         /// [UpdateCmekSettings][google.logging.v2.ConfigServiceV2.UpdateCmekSettings]
         /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
@@ -5083,7 +5927,7 @@ namespace Google.Cloud.Logging.V2
         /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
         /// 3) access to the key is disabled.
         /// 
-        /// See [Enabling CMEK for Logs
+        /// See [Enabling CMEK for Log
         /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
         /// for more information.
         /// </summary>
@@ -5097,11 +5941,11 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Updates the Logs Router CMEK settings for the given resource.
+        /// Updates the Log Router CMEK settings for the given resource.
         /// 
-        /// Note: CMEK for the Logs Router can currently only be configured for GCP
-        /// organizations. Once configured, it applies to all projects and folders in
-        /// the GCP organization.
+        /// Note: CMEK for the Log Router can currently only be configured for Google
+        /// Cloud organizations. Once configured, it applies to all projects and
+        /// folders in the Google Cloud organization.
         /// 
         /// [UpdateCmekSettings][google.logging.v2.ConfigServiceV2.UpdateCmekSettings]
         /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
@@ -5109,7 +5953,7 @@ namespace Google.Cloud.Logging.V2
         /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
         /// 3) access to the key is disabled.
         /// 
-        /// See [Enabling CMEK for Logs
+        /// See [Enabling CMEK for Log
         /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
         /// for more information.
         /// </summary>
@@ -5120,6 +5964,129 @@ namespace Google.Cloud.Logging.V2
         {
             Modify_UpdateCmekSettingsRequest(ref request, ref callSettings);
             return _callUpdateCmekSettings.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the Log Router settings for the given resource.
+        /// 
+        /// Note: Settings for the Log Router can be get for Google Cloud projects,
+        /// folders, organizations and billing accounts. Currently it can only be
+        /// configured for organizations. Once configured for an organization, it
+        /// applies to all projects and folders in the Google Cloud organization.
+        /// 
+        /// See [Enabling CMEK for Log
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+        /// for more information.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Settings GetSettings(GetSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSettingsRequest(ref request, ref callSettings);
+            return _callGetSettings.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the Log Router settings for the given resource.
+        /// 
+        /// Note: Settings for the Log Router can be get for Google Cloud projects,
+        /// folders, organizations and billing accounts. Currently it can only be
+        /// configured for organizations. Once configured for an organization, it
+        /// applies to all projects and folders in the Google Cloud organization.
+        /// 
+        /// See [Enabling CMEK for Log
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+        /// for more information.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Settings> GetSettingsAsync(GetSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSettingsRequest(ref request, ref callSettings);
+            return _callGetSettings.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the Log Router settings for the given resource.
+        /// 
+        /// Note: Settings for the Log Router can currently only be configured for
+        /// Google Cloud organizations. Once configured, it applies to all projects and
+        /// folders in the Google Cloud organization.
+        /// 
+        /// [UpdateSettings][google.logging.v2.ConfigServiceV2.UpdateSettings]
+        /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
+        /// account does not have the required
+        /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
+        /// 3) access to the key is disabled. 4) `location_id` is not supported by
+        /// Logging. 5) `location_id` violate OrgPolicy.
+        /// 
+        /// See [Enabling CMEK for Log
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+        /// for more information.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Settings UpdateSettings(UpdateSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSettingsRequest(ref request, ref callSettings);
+            return _callUpdateSettings.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the Log Router settings for the given resource.
+        /// 
+        /// Note: Settings for the Log Router can currently only be configured for
+        /// Google Cloud organizations. Once configured, it applies to all projects and
+        /// folders in the Google Cloud organization.
+        /// 
+        /// [UpdateSettings][google.logging.v2.ConfigServiceV2.UpdateSettings]
+        /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
+        /// account does not have the required
+        /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
+        /// 3) access to the key is disabled. 4) `location_id` is not supported by
+        /// Logging. 5) `location_id` violate OrgPolicy.
+        /// 
+        /// See [Enabling CMEK for Log
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+        /// for more information.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Settings> UpdateSettingsAsync(UpdateSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSettingsRequest(ref request, ref callSettings);
+            return _callUpdateSettings.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CopyLogEntries</c>.</summary>
+        public override lro::OperationsClient CopyLogEntriesOperationsClient { get; }
+
+        /// <summary>
+        /// Copies a set of log entries from a log bucket to a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<CopyLogEntriesResponse, CopyLogEntriesMetadata> CopyLogEntries(CopyLogEntriesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CopyLogEntriesRequest(ref request, ref callSettings);
+            return new lro::Operation<CopyLogEntriesResponse, CopyLogEntriesMetadata>(_callCopyLogEntries.Sync(request, callSettings), CopyLogEntriesOperationsClient);
+        }
+
+        /// <summary>
+        /// Copies a set of log entries from a log bucket to a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<CopyLogEntriesResponse, CopyLogEntriesMetadata>> CopyLogEntriesAsync(CopyLogEntriesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CopyLogEntriesRequest(ref request, ref callSettings);
+            return new lro::Operation<CopyLogEntriesResponse, CopyLogEntriesMetadata>(await _callCopyLogEntries.Async(request, callSettings).ConfigureAwait(false), CopyLogEntriesOperationsClient);
         }
     }
 
@@ -5169,5 +6136,19 @@ namespace Google.Cloud.Logging.V2
         public scg::IEnumerator<LogExclusion> GetEnumerator() => Exclusions.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class ConfigServiceV2
+    {
+        public partial class ConfigServiceV2Client
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
+                new lro::Operations.OperationsClient(CallInvoker);
+        }
     }
 }

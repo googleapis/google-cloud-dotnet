@@ -931,7 +931,10 @@ namespace Google.Cloud.Logging.V2.Snippets
             ListLogsRequest request = new ListLogsRequest
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
-                ResourceNames = { "", },
+                ResourceNamesAsProjectNames =
+                {
+                    ProjectName.FromProject("[PROJECT]"),
+                },
             };
             // Make the request
             PagedEnumerable<ListLogsResponse, string> response = loggingServiceV2Client.ListLogs(request);
@@ -980,7 +983,10 @@ namespace Google.Cloud.Logging.V2.Snippets
             ListLogsRequest request = new ListLogsRequest
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
-                ResourceNames = { "", },
+                ResourceNamesAsProjectNames =
+                {
+                    ProjectName.FromProject("[PROJECT]"),
+                },
             };
             // Make the request
             PagedAsyncEnumerable<ListLogsResponse, string> response = loggingServiceV2Client.ListLogsAsync(request);

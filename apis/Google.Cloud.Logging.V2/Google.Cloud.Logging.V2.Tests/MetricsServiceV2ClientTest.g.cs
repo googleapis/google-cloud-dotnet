@@ -57,6 +57,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BucketOptions = new ga::Distribution.Types.BucketOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
@@ -93,6 +94,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BucketOptions = new ga::Distribution.Types.BucketOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
@@ -131,6 +133,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BucketOptions = new ga::Distribution.Types.BucketOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
@@ -167,6 +170,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BucketOptions = new ga::Distribution.Types.BucketOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
@@ -205,6 +209,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BucketOptions = new ga::Distribution.Types.BucketOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
@@ -241,6 +246,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BucketOptions = new ga::Distribution.Types.BucketOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
@@ -280,6 +286,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BucketOptions = new ga::Distribution.Types.BucketOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
@@ -317,6 +324,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BucketOptions = new ga::Distribution.Types.BucketOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
@@ -356,6 +364,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BucketOptions = new ga::Distribution.Types.BucketOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
@@ -393,6 +402,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BucketOptions = new ga::Distribution.Types.BucketOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
@@ -432,6 +442,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BucketOptions = new ga::Distribution.Types.BucketOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
@@ -469,6 +480,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BucketOptions = new ga::Distribution.Types.BucketOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
@@ -508,6 +520,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BucketOptions = new ga::Distribution.Types.BucketOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
@@ -545,6 +558,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BucketOptions = new ga::Distribution.Types.BucketOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
@@ -584,6 +598,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BucketOptions = new ga::Distribution.Types.BucketOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
@@ -621,6 +636,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BucketOptions = new ga::Distribution.Types.BucketOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
@@ -660,6 +676,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BucketOptions = new ga::Distribution.Types.BucketOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
@@ -697,6 +714,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BucketOptions = new ga::Distribution.Types.BucketOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
