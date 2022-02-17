@@ -1,5 +1,17 @@
 # Version history
 
+## Version 4.0.0, released 2022-02-17
+
+### New features
+
+- Add support for Virtual Dataproc cluster running on GKE cluster ([commit 462556b](https://github.com/googleapis/google-cloud-dotnet/commit/462556ba2b46bd840da1198fe0bd4bfba6b13af1))
+
+### Breaking changes
+
+- ClusterConfig.GkeClusterConfig has been removed
+- GkeClusterConfig.NamespacedGkeDeploymentTarget has been removed
+  (along with the corresponding nested type)
+
 ## Version 3.4.0, released 2022-01-17
 
 ### New features
