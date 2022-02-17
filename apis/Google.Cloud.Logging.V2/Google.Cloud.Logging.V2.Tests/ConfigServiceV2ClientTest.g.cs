@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -33,6 +34,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void GetBucketRequestObject()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetBucketRequest request = new GetBucketRequest
             {
                 LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
@@ -46,6 +48,11 @@ namespace Google.Cloud.Logging.V2.Tests
                 Locked = true,
                 RetentionDays = -710726207,
                 LifecycleState = LifecycleState.Unspecified,
+                RestrictedFields =
+                {
+                    "restricted_fields6a1f6114",
+                },
+                CmekSettings = new CmekSettings(),
             };
             mockGrpcClient.Setup(x => x.GetBucket(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
@@ -58,6 +65,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task GetBucketRequestObjectAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetBucketRequest request = new GetBucketRequest
             {
                 LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
@@ -71,6 +79,11 @@ namespace Google.Cloud.Logging.V2.Tests
                 Locked = true,
                 RetentionDays = -710726207,
                 LifecycleState = LifecycleState.Unspecified,
+                RestrictedFields =
+                {
+                    "restricted_fields6a1f6114",
+                },
+                CmekSettings = new CmekSettings(),
             };
             mockGrpcClient.Setup(x => x.GetBucketAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogBucket>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
@@ -85,6 +98,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void CreateBucketRequestObject()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateBucketRequest request = new CreateBucketRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -100,6 +114,11 @@ namespace Google.Cloud.Logging.V2.Tests
                 Locked = true,
                 RetentionDays = -710726207,
                 LifecycleState = LifecycleState.Unspecified,
+                RestrictedFields =
+                {
+                    "restricted_fields6a1f6114",
+                },
+                CmekSettings = new CmekSettings(),
             };
             mockGrpcClient.Setup(x => x.CreateBucket(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
@@ -112,6 +131,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task CreateBucketRequestObjectAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateBucketRequest request = new CreateBucketRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -127,6 +147,11 @@ namespace Google.Cloud.Logging.V2.Tests
                 Locked = true,
                 RetentionDays = -710726207,
                 LifecycleState = LifecycleState.Unspecified,
+                RestrictedFields =
+                {
+                    "restricted_fields6a1f6114",
+                },
+                CmekSettings = new CmekSettings(),
             };
             mockGrpcClient.Setup(x => x.CreateBucketAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogBucket>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
@@ -141,6 +166,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void UpdateBucketRequestObject()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateBucketRequest request = new UpdateBucketRequest
             {
                 LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
@@ -156,6 +182,11 @@ namespace Google.Cloud.Logging.V2.Tests
                 Locked = true,
                 RetentionDays = -710726207,
                 LifecycleState = LifecycleState.Unspecified,
+                RestrictedFields =
+                {
+                    "restricted_fields6a1f6114",
+                },
+                CmekSettings = new CmekSettings(),
             };
             mockGrpcClient.Setup(x => x.UpdateBucket(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
@@ -168,6 +199,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task UpdateBucketRequestObjectAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateBucketRequest request = new UpdateBucketRequest
             {
                 LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
@@ -183,6 +215,11 @@ namespace Google.Cloud.Logging.V2.Tests
                 Locked = true,
                 RetentionDays = -710726207,
                 LifecycleState = LifecycleState.Unspecified,
+                RestrictedFields =
+                {
+                    "restricted_fields6a1f6114",
+                },
+                CmekSettings = new CmekSettings(),
             };
             mockGrpcClient.Setup(x => x.UpdateBucketAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogBucket>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
@@ -197,6 +234,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void DeleteBucketRequestObject()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteBucketRequest request = new DeleteBucketRequest
             {
                 LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
@@ -212,6 +250,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task DeleteBucketRequestObjectAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteBucketRequest request = new DeleteBucketRequest
             {
                 LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
@@ -228,6 +267,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void UndeleteBucketRequestObject()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UndeleteBucketRequest request = new UndeleteBucketRequest
             {
                 LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
@@ -243,6 +283,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task UndeleteBucketRequestObjectAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UndeleteBucketRequest request = new UndeleteBucketRequest
             {
                 LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
@@ -259,6 +300,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void GetViewRequestObject()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetViewRequest request = new GetViewRequest
             {
                 LogViewName = LogViewName.FromProjectLocationBucketView("[PROJECT]", "[LOCATION]", "[BUCKET]", "[VIEW]"),
@@ -282,6 +324,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task GetViewRequestObjectAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetViewRequest request = new GetViewRequest
             {
                 LogViewName = LogViewName.FromProjectLocationBucketView("[PROJECT]", "[LOCATION]", "[BUCKET]", "[VIEW]"),
@@ -307,6 +350,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void CreateViewRequestObject()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateViewRequest request = new CreateViewRequest
             {
                 Parent = "parent7858e4d0",
@@ -332,6 +376,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task CreateViewRequestObjectAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateViewRequest request = new CreateViewRequest
             {
                 Parent = "parent7858e4d0",
@@ -359,6 +404,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void UpdateViewRequestObject()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateViewRequest request = new UpdateViewRequest
             {
                 Name = "name1c9368b0",
@@ -384,6 +430,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task UpdateViewRequestObjectAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateViewRequest request = new UpdateViewRequest
             {
                 Name = "name1c9368b0",
@@ -411,6 +458,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void DeleteViewRequestObject()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteViewRequest request = new DeleteViewRequest
             {
                 LogViewName = LogViewName.FromProjectLocationBucketView("[PROJECT]", "[LOCATION]", "[BUCKET]", "[VIEW]"),
@@ -426,6 +474,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task DeleteViewRequestObjectAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteViewRequest request = new DeleteViewRequest
             {
                 LogViewName = LogViewName.FromProjectLocationBucketView("[PROJECT]", "[LOCATION]", "[BUCKET]", "[VIEW]"),
@@ -442,6 +491,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void GetSinkRequestObject()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSinkRequest request = new GetSinkRequest
             {
                 SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
@@ -474,6 +524,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task GetSinkRequestObjectAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSinkRequest request = new GetSinkRequest
             {
                 SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
@@ -508,6 +559,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void GetSink()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSinkRequest request = new GetSinkRequest
             {
                 SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
@@ -540,6 +592,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task GetSinkAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSinkRequest request = new GetSinkRequest
             {
                 SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
@@ -574,6 +627,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void GetSinkResourceNames()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSinkRequest request = new GetSinkRequest
             {
                 SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
@@ -606,6 +660,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task GetSinkResourceNamesAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSinkRequest request = new GetSinkRequest
             {
                 SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
@@ -640,6 +695,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void CreateSinkRequestObject()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateSinkRequest request = new CreateSinkRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -674,6 +730,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task CreateSinkRequestObjectAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateSinkRequest request = new CreateSinkRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -710,6 +767,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void CreateSink()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateSinkRequest request = new CreateSinkRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -743,6 +801,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task CreateSinkAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateSinkRequest request = new CreateSinkRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -778,6 +837,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void CreateSinkResourceNames1()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateSinkRequest request = new CreateSinkRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -811,6 +871,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task CreateSinkResourceNames1Async()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateSinkRequest request = new CreateSinkRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -846,6 +907,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void CreateSinkResourceNames2()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateSinkRequest request = new CreateSinkRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -879,6 +941,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task CreateSinkResourceNames2Async()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateSinkRequest request = new CreateSinkRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -914,6 +977,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void CreateSinkResourceNames3()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateSinkRequest request = new CreateSinkRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -947,6 +1011,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task CreateSinkResourceNames3Async()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateSinkRequest request = new CreateSinkRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -982,6 +1047,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void CreateSinkResourceNames4()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateSinkRequest request = new CreateSinkRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -1015,6 +1081,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task CreateSinkResourceNames4Async()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateSinkRequest request = new CreateSinkRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -1050,6 +1117,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void UpdateSinkRequestObject()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateSinkRequest request = new UpdateSinkRequest
             {
                 SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
@@ -1085,6 +1153,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task UpdateSinkRequestObjectAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateSinkRequest request = new UpdateSinkRequest
             {
                 SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
@@ -1122,6 +1191,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void UpdateSink1()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateSinkRequest request = new UpdateSinkRequest
             {
                 SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
@@ -1156,6 +1226,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task UpdateSink1Async()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateSinkRequest request = new UpdateSinkRequest
             {
                 SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
@@ -1192,6 +1263,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void UpdateSink1ResourceNames()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateSinkRequest request = new UpdateSinkRequest
             {
                 SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
@@ -1226,6 +1298,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task UpdateSink1ResourceNamesAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateSinkRequest request = new UpdateSinkRequest
             {
                 SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
@@ -1262,6 +1335,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void UpdateSink2()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateSinkRequest request = new UpdateSinkRequest
             {
                 SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
@@ -1295,6 +1369,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task UpdateSink2Async()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateSinkRequest request = new UpdateSinkRequest
             {
                 SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
@@ -1330,6 +1405,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void UpdateSink2ResourceNames()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateSinkRequest request = new UpdateSinkRequest
             {
                 SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
@@ -1363,6 +1439,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task UpdateSink2ResourceNamesAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateSinkRequest request = new UpdateSinkRequest
             {
                 SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
@@ -1398,6 +1475,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void DeleteSinkRequestObject()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteSinkRequest request = new DeleteSinkRequest
             {
                 SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
@@ -1413,6 +1491,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task DeleteSinkRequestObjectAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteSinkRequest request = new DeleteSinkRequest
             {
                 SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
@@ -1429,6 +1508,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void DeleteSink()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteSinkRequest request = new DeleteSinkRequest
             {
                 SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
@@ -1444,6 +1524,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task DeleteSinkAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteSinkRequest request = new DeleteSinkRequest
             {
                 SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
@@ -1460,6 +1541,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void DeleteSinkResourceNames()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteSinkRequest request = new DeleteSinkRequest
             {
                 SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
@@ -1475,6 +1557,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task DeleteSinkResourceNamesAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteSinkRequest request = new DeleteSinkRequest
             {
                 SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
@@ -1491,6 +1574,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void GetExclusionRequestObject()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetExclusionRequest request = new GetExclusionRequest
             {
                 LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
@@ -1515,6 +1599,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task GetExclusionRequestObjectAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetExclusionRequest request = new GetExclusionRequest
             {
                 LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
@@ -1541,6 +1626,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void GetExclusion()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetExclusionRequest request = new GetExclusionRequest
             {
                 LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
@@ -1565,6 +1651,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task GetExclusionAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetExclusionRequest request = new GetExclusionRequest
             {
                 LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
@@ -1591,6 +1678,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void GetExclusionResourceNames()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetExclusionRequest request = new GetExclusionRequest
             {
                 LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
@@ -1615,6 +1703,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task GetExclusionResourceNamesAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetExclusionRequest request = new GetExclusionRequest
             {
                 LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
@@ -1641,6 +1730,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void CreateExclusionRequestObject()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateExclusionRequest request = new CreateExclusionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -1666,6 +1756,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task CreateExclusionRequestObjectAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateExclusionRequest request = new CreateExclusionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -1693,6 +1784,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void CreateExclusion()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateExclusionRequest request = new CreateExclusionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -1718,6 +1810,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task CreateExclusionAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateExclusionRequest request = new CreateExclusionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -1745,6 +1838,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void CreateExclusionResourceNames1()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateExclusionRequest request = new CreateExclusionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -1770,6 +1864,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task CreateExclusionResourceNames1Async()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateExclusionRequest request = new CreateExclusionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -1797,6 +1892,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void CreateExclusionResourceNames2()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateExclusionRequest request = new CreateExclusionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -1822,6 +1918,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task CreateExclusionResourceNames2Async()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateExclusionRequest request = new CreateExclusionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -1849,6 +1946,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void CreateExclusionResourceNames3()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateExclusionRequest request = new CreateExclusionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -1874,6 +1972,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task CreateExclusionResourceNames3Async()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateExclusionRequest request = new CreateExclusionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -1901,6 +2000,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void CreateExclusionResourceNames4()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateExclusionRequest request = new CreateExclusionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -1926,6 +2026,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task CreateExclusionResourceNames4Async()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateExclusionRequest request = new CreateExclusionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -1953,6 +2054,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void UpdateExclusionRequestObject()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateExclusionRequest request = new UpdateExclusionRequest
             {
                 LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
@@ -1979,6 +2081,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task UpdateExclusionRequestObjectAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateExclusionRequest request = new UpdateExclusionRequest
             {
                 LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
@@ -2007,6 +2110,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void UpdateExclusion()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateExclusionRequest request = new UpdateExclusionRequest
             {
                 LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
@@ -2033,6 +2137,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task UpdateExclusionAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateExclusionRequest request = new UpdateExclusionRequest
             {
                 LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
@@ -2061,6 +2166,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void UpdateExclusionResourceNames()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateExclusionRequest request = new UpdateExclusionRequest
             {
                 LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
@@ -2087,6 +2193,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task UpdateExclusionResourceNamesAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateExclusionRequest request = new UpdateExclusionRequest
             {
                 LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
@@ -2115,6 +2222,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void DeleteExclusionRequestObject()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteExclusionRequest request = new DeleteExclusionRequest
             {
                 LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
@@ -2130,6 +2238,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task DeleteExclusionRequestObjectAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteExclusionRequest request = new DeleteExclusionRequest
             {
                 LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
@@ -2146,6 +2255,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void DeleteExclusion()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteExclusionRequest request = new DeleteExclusionRequest
             {
                 LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
@@ -2161,6 +2271,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task DeleteExclusionAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteExclusionRequest request = new DeleteExclusionRequest
             {
                 LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
@@ -2177,6 +2288,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void DeleteExclusionResourceNames()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteExclusionRequest request = new DeleteExclusionRequest
             {
                 LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
@@ -2192,6 +2304,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task DeleteExclusionResourceNamesAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteExclusionRequest request = new DeleteExclusionRequest
             {
                 LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
@@ -2208,6 +2321,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void GetCmekSettingsRequestObject()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetCmekSettingsRequest request = new GetCmekSettingsRequest
             {
                 CmekSettingsName = CmekSettingsName.FromProject("[PROJECT]"),
@@ -2229,6 +2343,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task GetCmekSettingsRequestObjectAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetCmekSettingsRequest request = new GetCmekSettingsRequest
             {
                 CmekSettingsName = CmekSettingsName.FromProject("[PROJECT]"),
@@ -2252,6 +2367,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public void UpdateCmekSettingsRequestObject()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateCmekSettingsRequest request = new UpdateCmekSettingsRequest
             {
                 Name = "name1c9368b0",
@@ -2275,6 +2391,7 @@ namespace Google.Cloud.Logging.V2.Tests
         public async stt::Task UpdateCmekSettingsRequestObjectAsync()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateCmekSettingsRequest request = new UpdateCmekSettingsRequest
             {
                 Name = "name1c9368b0",
@@ -2292,6 +2409,242 @@ namespace Google.Cloud.Logging.V2.Tests
             CmekSettings responseCallSettings = await client.UpdateCmekSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CmekSettings responseCancellationToken = await client.UpdateCmekSettingsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetSettingsRequestObject()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetSettingsRequest request = new GetSettingsRequest
+            {
+                SettingsName = SettingsName.FromProject("[PROJECT]"),
+            };
+            Settings expectedResponse = new Settings
+            {
+                SettingsName = SettingsName.FromProject("[PROJECT]"),
+                StorageLocation = "storage_locationde7cb603",
+                DisableDefaultSink = false,
+            };
+            mockGrpcClient.Setup(x => x.GetSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            Settings response = client.GetSettings(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetSettingsRequestObjectAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetSettingsRequest request = new GetSettingsRequest
+            {
+                SettingsName = SettingsName.FromProject("[PROJECT]"),
+            };
+            Settings expectedResponse = new Settings
+            {
+                SettingsName = SettingsName.FromProject("[PROJECT]"),
+                StorageLocation = "storage_locationde7cb603",
+                DisableDefaultSink = false,
+            };
+            mockGrpcClient.Setup(x => x.GetSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            Settings responseCallSettings = await client.GetSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Settings responseCancellationToken = await client.GetSettingsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetSettings()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetSettingsRequest request = new GetSettingsRequest
+            {
+                SettingsName = SettingsName.FromProject("[PROJECT]"),
+            };
+            Settings expectedResponse = new Settings
+            {
+                SettingsName = SettingsName.FromProject("[PROJECT]"),
+                StorageLocation = "storage_locationde7cb603",
+                DisableDefaultSink = false,
+            };
+            mockGrpcClient.Setup(x => x.GetSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            Settings response = client.GetSettings(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetSettingsAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetSettingsRequest request = new GetSettingsRequest
+            {
+                SettingsName = SettingsName.FromProject("[PROJECT]"),
+            };
+            Settings expectedResponse = new Settings
+            {
+                SettingsName = SettingsName.FromProject("[PROJECT]"),
+                StorageLocation = "storage_locationde7cb603",
+                DisableDefaultSink = false,
+            };
+            mockGrpcClient.Setup(x => x.GetSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            Settings responseCallSettings = await client.GetSettingsAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Settings responseCancellationToken = await client.GetSettingsAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetSettingsResourceNames()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetSettingsRequest request = new GetSettingsRequest
+            {
+                SettingsName = SettingsName.FromProject("[PROJECT]"),
+            };
+            Settings expectedResponse = new Settings
+            {
+                SettingsName = SettingsName.FromProject("[PROJECT]"),
+                StorageLocation = "storage_locationde7cb603",
+                DisableDefaultSink = false,
+            };
+            mockGrpcClient.Setup(x => x.GetSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            Settings response = client.GetSettings(request.SettingsName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetSettingsResourceNamesAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetSettingsRequest request = new GetSettingsRequest
+            {
+                SettingsName = SettingsName.FromProject("[PROJECT]"),
+            };
+            Settings expectedResponse = new Settings
+            {
+                SettingsName = SettingsName.FromProject("[PROJECT]"),
+                StorageLocation = "storage_locationde7cb603",
+                DisableDefaultSink = false,
+            };
+            mockGrpcClient.Setup(x => x.GetSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            Settings responseCallSettings = await client.GetSettingsAsync(request.SettingsName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Settings responseCancellationToken = await client.GetSettingsAsync(request.SettingsName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateSettingsRequestObject()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateSettingsRequest request = new UpdateSettingsRequest
+            {
+                Name = "name1c9368b0",
+                Settings = new Settings(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Settings expectedResponse = new Settings
+            {
+                SettingsName = SettingsName.FromProject("[PROJECT]"),
+                StorageLocation = "storage_locationde7cb603",
+                DisableDefaultSink = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            Settings response = client.UpdateSettings(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateSettingsRequestObjectAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateSettingsRequest request = new UpdateSettingsRequest
+            {
+                Name = "name1c9368b0",
+                Settings = new Settings(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Settings expectedResponse = new Settings
+            {
+                SettingsName = SettingsName.FromProject("[PROJECT]"),
+                StorageLocation = "storage_locationde7cb603",
+                DisableDefaultSink = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            Settings responseCallSettings = await client.UpdateSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Settings responseCancellationToken = await client.UpdateSettingsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateSettings()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateSettingsRequest request = new UpdateSettingsRequest
+            {
+                Settings = new Settings(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Settings expectedResponse = new Settings
+            {
+                SettingsName = SettingsName.FromProject("[PROJECT]"),
+                StorageLocation = "storage_locationde7cb603",
+                DisableDefaultSink = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            Settings response = client.UpdateSettings(request.Settings, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateSettingsAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateSettingsRequest request = new UpdateSettingsRequest
+            {
+                Settings = new Settings(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Settings expectedResponse = new Settings
+            {
+                SettingsName = SettingsName.FromProject("[PROJECT]"),
+                StorageLocation = "storage_locationde7cb603",
+                DisableDefaultSink = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            Settings responseCallSettings = await client.UpdateSettingsAsync(request.Settings, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Settings responseCancellationToken = await client.UpdateSettingsAsync(request.Settings, request.UpdateMask, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

@@ -3261,6 +3261,318 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_GetSettings_sync",
+      "title": "GetSettingsRequestObject",
+      "description": "Snippet for GetSettings",
+      "file": "ConfigServiceV2Client.GetSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSettings",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSettings",
+        "resultType": "Google.Cloud.Logging.V2.Settings",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "GetSettings",
+          "fullName": "google.logging.v2.ConfigServiceV2.GetSettings",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_GetSettings_async",
+      "title": "GetSettingsRequestObjectAsync",
+      "description": "Snippet for GetSettingsAsync",
+      "file": "ConfigServiceV2Client.GetSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSettingsAsync",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSettingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.Settings>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "GetSettings",
+          "fullName": "google.logging.v2.ConfigServiceV2.GetSettings",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_GetSettings_sync_flattened",
+      "title": "GetSettings",
+      "description": "Snippet for GetSettings",
+      "file": "ConfigServiceV2Client.GetSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSettings",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSettings",
+        "resultType": "Google.Cloud.Logging.V2.Settings",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "GetSettings",
+          "fullName": "google.logging.v2.ConfigServiceV2.GetSettings",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_GetSettings_async_flattened",
+      "title": "GetSettingsAsync",
+      "description": "Snippet for GetSettingsAsync",
+      "file": "ConfigServiceV2Client.GetSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSettingsAsync",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSettingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.Settings>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "GetSettings",
+          "fullName": "google.logging.v2.ConfigServiceV2.GetSettings",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_GetSettings_sync_flattened_resourceNames",
+      "title": "GetSettingsResourceNames",
+      "description": "Snippet for GetSettings",
+      "file": "ConfigServiceV2Client.GetSettingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSettings",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSettings",
+        "resultType": "Google.Cloud.Logging.V2.Settings",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "GetSettings",
+          "fullName": "google.logging.v2.ConfigServiceV2.GetSettings",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_GetSettings_async_flattened_resourceNames",
+      "title": "GetSettingsResourceNamesAsync",
+      "description": "Snippet for GetSettingsAsync",
+      "file": "ConfigServiceV2Client.GetSettingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSettingsAsync",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSettingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.Settings>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "GetSettings",
+          "fullName": "google.logging.v2.ConfigServiceV2.GetSettings",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_UpdateSettings_sync",
+      "title": "UpdateSettingsRequestObject",
+      "description": "Snippet for UpdateSettings",
+      "file": "ConfigServiceV2Client.UpdateSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSettings",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSettings",
+        "resultType": "Google.Cloud.Logging.V2.Settings",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "UpdateSettings",
+          "fullName": "google.logging.v2.ConfigServiceV2.UpdateSettings",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_UpdateSettings_async",
+      "title": "UpdateSettingsRequestObjectAsync",
+      "description": "Snippet for UpdateSettingsAsync",
+      "file": "ConfigServiceV2Client.UpdateSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSettingsAsync",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSettingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.Settings>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "UpdateSettings",
+          "fullName": "google.logging.v2.ConfigServiceV2.UpdateSettings",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_UpdateSettings_sync_flattened",
+      "title": "UpdateSettings",
+      "description": "Snippet for UpdateSettings",
+      "file": "ConfigServiceV2Client.UpdateSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSettings",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSettings",
+        "resultType": "Google.Cloud.Logging.V2.Settings",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "UpdateSettings",
+          "fullName": "google.logging.v2.ConfigServiceV2.UpdateSettings",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_UpdateSettings_async_flattened",
+      "title": "UpdateSettingsAsync",
+      "description": "Snippet for UpdateSettingsAsync",
+      "file": "ConfigServiceV2Client.UpdateSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSettingsAsync",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSettingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.Settings>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "UpdateSettings",
+          "fullName": "google.logging.v2.ConfigServiceV2.UpdateSettings",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_CopyLogEntries_sync",
+      "title": "CopyLogEntriesRequestObject",
+      "description": "Snippet for CopyLogEntries",
+      "file": "ConfigServiceV2Client.CopyLogEntriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CopyLogEntries",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CopyLogEntries",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Logging.V2.CopyLogEntriesResponse, Google.Cloud.Logging.V2.CopyLogEntriesMetadata>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "CopyLogEntries",
+          "fullName": "google.logging.v2.ConfigServiceV2.CopyLogEntries",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_CopyLogEntries_async",
+      "title": "CopyLogEntriesRequestObjectAsync",
+      "description": "Snippet for CopyLogEntriesAsync",
+      "file": "ConfigServiceV2Client.CopyLogEntriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CopyLogEntriesAsync",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CopyLogEntriesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Logging.V2.CopyLogEntriesResponse, Google.Cloud.Logging.V2.CopyLogEntriesMetadata>>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "CopyLogEntries",
+          "fullName": "google.logging.v2.ConfigServiceV2.CopyLogEntries",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "logging_v2_generated_LoggingServiceV2_DeleteLog_sync",
       "title": "DeleteLogRequestObject",
       "description": "Snippet for DeleteLog",

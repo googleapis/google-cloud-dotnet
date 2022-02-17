@@ -3,7 +3,7 @@
 //     source: google/logging/v2/logging_config.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2020 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -129,6 +129,16 @@ namespace Google.Cloud.Logging.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.CmekSettings> __Marshaller_google_logging_v2_CmekSettings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.CmekSettings.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.UpdateCmekSettingsRequest> __Marshaller_google_logging_v2_UpdateCmekSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.UpdateCmekSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.GetSettingsRequest> __Marshaller_google_logging_v2_GetSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.GetSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.Settings> __Marshaller_google_logging_v2_Settings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.Settings.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.UpdateSettingsRequest> __Marshaller_google_logging_v2_UpdateSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.UpdateSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.CopyLogEntriesRequest> __Marshaller_google_logging_v2_CopyLogEntriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.CopyLogEntriesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.ListBucketsRequest, global::Google.Cloud.Logging.V2.ListBucketsResponse> __Method_ListBuckets = new grpc::Method<global::Google.Cloud.Logging.V2.ListBucketsRequest, global::Google.Cloud.Logging.V2.ListBucketsResponse>(
@@ -314,6 +324,30 @@ namespace Google.Cloud.Logging.V2 {
         __Marshaller_google_logging_v2_UpdateCmekSettingsRequest,
         __Marshaller_google_logging_v2_CmekSettings);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Logging.V2.GetSettingsRequest, global::Google.Cloud.Logging.V2.Settings> __Method_GetSettings = new grpc::Method<global::Google.Cloud.Logging.V2.GetSettingsRequest, global::Google.Cloud.Logging.V2.Settings>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSettings",
+        __Marshaller_google_logging_v2_GetSettingsRequest,
+        __Marshaller_google_logging_v2_Settings);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Logging.V2.UpdateSettingsRequest, global::Google.Cloud.Logging.V2.Settings> __Method_UpdateSettings = new grpc::Method<global::Google.Cloud.Logging.V2.UpdateSettingsRequest, global::Google.Cloud.Logging.V2.Settings>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateSettings",
+        __Marshaller_google_logging_v2_UpdateSettingsRequest,
+        __Marshaller_google_logging_v2_Settings);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Logging.V2.CopyLogEntriesRequest, global::Google.LongRunning.Operation> __Method_CopyLogEntries = new grpc::Method<global::Google.Cloud.Logging.V2.CopyLogEntriesRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CopyLogEntries",
+        __Marshaller_google_logging_v2_CopyLogEntriesRequest,
+        __Marshaller_google_longrunning_Operation);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -325,7 +359,7 @@ namespace Google.Cloud.Logging.V2 {
     public abstract partial class ConfigServiceV2Base
     {
       /// <summary>
-      /// Lists buckets.
+      /// Lists log buckets.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -337,7 +371,7 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Gets a bucket.
+      /// Gets a log bucket.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -349,8 +383,8 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Creates a bucket that can be used to store log entries. Once a bucket has
-      /// been created, the region cannot be changed.
+      /// Creates a log bucket that can be used to store log entries. After a bucket
+      /// has been created, the bucket's location cannot be changed.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -362,16 +396,16 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Updates a bucket. This method replaces the following fields in the
+      /// Updates a log bucket. This method replaces the following fields in the
       /// existing bucket with values from the new bucket: `retention_period`
       ///
       /// If the retention period is decreased and the bucket is locked,
-      /// FAILED_PRECONDITION will be returned.
+      /// `FAILED_PRECONDITION` will be returned.
       ///
-      /// If the bucket has a LifecycleState of DELETE_REQUESTED, FAILED_PRECONDITION
-      /// will be returned.
+      /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
+      /// `FAILED_PRECONDITION` will be returned.
       ///
-      /// A buckets region may not be modified after it is created.
+      /// After a bucket has been created, the bucket's location cannot be changed.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -383,10 +417,11 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Deletes a bucket.
-      /// Moves the bucket to the DELETE_REQUESTED state. After 7 days, the
-      /// bucket will be purged and all logs in the bucket will be permanently
-      /// deleted.
+      /// Deletes a log bucket.
+      ///
+      /// Changes the bucket's `lifecycle_state` to the `DELETE_REQUESTED` state.
+      /// After 7 days, the bucket will be purged and all log entries in the bucket
+      /// will be permanently deleted.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -398,8 +433,8 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Undeletes a bucket. A bucket that has been deleted may be undeleted within
-      /// the grace period of 7 days.
+      /// Undeletes a log bucket. A bucket that has been deleted can be undeleted
+      /// within the grace period of 7 days.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -411,7 +446,7 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Lists views on a bucket.
+      /// Lists views on a log bucket.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -423,7 +458,7 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Gets a view.
+      /// Gets a view on a log bucket..
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -435,8 +470,8 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Creates a view over logs in a bucket. A bucket may contain a maximum of
-      /// 50 views.
+      /// Creates a view over log entries in a log bucket. A bucket may contain a
+      /// maximum of 30 views.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -448,8 +483,11 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Updates a view. This method replaces the following fields in the existing
-      /// view with values from the new view: `filter`.
+      /// Updates a view on a log bucket. This method replaces the following fields
+      /// in the existing view with values from the new view: `filter`.
+      /// If an `UNAVAILABLE` error is returned, this indicates that system is not in
+      /// a state where it can update the view. If this occurs, please try again in a
+      /// few minutes.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -461,7 +499,10 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Deletes a view from a bucket.
+      /// Deletes a view on a log bucket.
+      /// If an `UNAVAILABLE` error is returned, this indicates that system is not in
+      /// a state where it can delete the view. If this occurs, please try again in a
+      /// few minutes.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -541,7 +582,7 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Lists all the exclusions in a parent resource.
+      /// Lists all the exclusions on the _Default sink in a parent resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -553,7 +594,7 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Gets the description of an exclusion.
+      /// Gets the description of an exclusion in the _Default sink.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -565,9 +606,9 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Creates a new exclusion in a specified parent resource.
-      /// Only log entries belonging to that resource can be excluded.
-      /// You can have up to 10 exclusions in a resource.
+      /// Creates a new exclusion in the _Default sink in a specified parent
+      /// resource. Only log entries belonging to that resource can be excluded. You
+      /// can have up to 10 exclusions in a resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -579,7 +620,8 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Changes one or more properties of an existing exclusion.
+      /// Changes one or more properties of an existing exclusion in the _Default
+      /// sink.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -591,7 +633,7 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Deletes an exclusion.
+      /// Deletes an exclusion in the _Default sink.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -603,13 +645,14 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Gets the Logs Router CMEK settings for the given resource.
+      /// Gets the Logging CMEK settings for the given resource.
       ///
-      /// Note: CMEK for the Logs Router can currently only be configured for GCP
-      /// organizations. Once configured, it applies to all projects and folders in
-      /// the GCP organization.
+      /// Note: CMEK for the Log Router can be configured for Google Cloud projects,
+      /// folders, organizations and billing accounts. Once configured for an
+      /// organization, it applies to all projects and folders in the Google Cloud
+      /// organization.
       ///
-      /// See [Enabling CMEK for Logs
+      /// See [Enabling CMEK for Log
       /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
       /// for more information.
       /// </summary>
@@ -623,11 +666,11 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Updates the Logs Router CMEK settings for the given resource.
+      /// Updates the Log Router CMEK settings for the given resource.
       ///
-      /// Note: CMEK for the Logs Router can currently only be configured for GCP
-      /// organizations. Once configured, it applies to all projects and folders in
-      /// the GCP organization.
+      /// Note: CMEK for the Log Router can currently only be configured for Google
+      /// Cloud organizations. Once configured, it applies to all projects and
+      /// folders in the Google Cloud organization.
       ///
       /// [UpdateCmekSettings][google.logging.v2.ConfigServiceV2.UpdateCmekSettings]
       /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
@@ -635,7 +678,7 @@ namespace Google.Cloud.Logging.V2 {
       /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
       /// 3) access to the key is disabled.
       ///
-      /// See [Enabling CMEK for Logs
+      /// See [Enabling CMEK for Log
       /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
       /// for more information.
       /// </summary>
@@ -644,6 +687,66 @@ namespace Google.Cloud.Logging.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.CmekSettings> UpdateCmekSettings(global::Google.Cloud.Logging.V2.UpdateCmekSettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the Log Router settings for the given resource.
+      ///
+      /// Note: Settings for the Log Router can be get for Google Cloud projects,
+      /// folders, organizations and billing accounts. Currently it can only be
+      /// configured for organizations. Once configured for an organization, it
+      /// applies to all projects and folders in the Google Cloud organization.
+      ///
+      /// See [Enabling CMEK for Log
+      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+      /// for more information.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.Settings> GetSettings(global::Google.Cloud.Logging.V2.GetSettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the Log Router settings for the given resource.
+      ///
+      /// Note: Settings for the Log Router can currently only be configured for
+      /// Google Cloud organizations. Once configured, it applies to all projects and
+      /// folders in the Google Cloud organization.
+      ///
+      /// [UpdateSettings][google.logging.v2.ConfigServiceV2.UpdateSettings]
+      /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
+      /// account does not have the required
+      /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
+      /// 3) access to the key is disabled. 4) `location_id` is not supported by
+      /// Logging. 5) `location_id` violate OrgPolicy.
+      ///
+      /// See [Enabling CMEK for Log
+      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+      /// for more information.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.Settings> UpdateSettings(global::Google.Cloud.Logging.V2.UpdateSettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Copies a set of log entries from a log bucket to a Cloud Storage bucket.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CopyLogEntries(global::Google.Cloud.Logging.V2.CopyLogEntriesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -678,7 +781,7 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Lists buckets.
+      /// Lists log buckets.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -691,7 +794,7 @@ namespace Google.Cloud.Logging.V2 {
         return ListBuckets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists buckets.
+      /// Lists log buckets.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -702,7 +805,7 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListBuckets, null, options, request);
       }
       /// <summary>
-      /// Lists buckets.
+      /// Lists log buckets.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -715,7 +818,7 @@ namespace Google.Cloud.Logging.V2 {
         return ListBucketsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists buckets.
+      /// Lists log buckets.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -726,7 +829,7 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ListBuckets, null, options, request);
       }
       /// <summary>
-      /// Gets a bucket.
+      /// Gets a log bucket.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -739,7 +842,7 @@ namespace Google.Cloud.Logging.V2 {
         return GetBucket(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a bucket.
+      /// Gets a log bucket.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -750,7 +853,7 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetBucket, null, options, request);
       }
       /// <summary>
-      /// Gets a bucket.
+      /// Gets a log bucket.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -763,7 +866,7 @@ namespace Google.Cloud.Logging.V2 {
         return GetBucketAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a bucket.
+      /// Gets a log bucket.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -774,8 +877,8 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetBucket, null, options, request);
       }
       /// <summary>
-      /// Creates a bucket that can be used to store log entries. Once a bucket has
-      /// been created, the region cannot be changed.
+      /// Creates a log bucket that can be used to store log entries. After a bucket
+      /// has been created, the bucket's location cannot be changed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -788,8 +891,8 @@ namespace Google.Cloud.Logging.V2 {
         return CreateBucket(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a bucket that can be used to store log entries. Once a bucket has
-      /// been created, the region cannot be changed.
+      /// Creates a log bucket that can be used to store log entries. After a bucket
+      /// has been created, the bucket's location cannot be changed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -800,8 +903,8 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateBucket, null, options, request);
       }
       /// <summary>
-      /// Creates a bucket that can be used to store log entries. Once a bucket has
-      /// been created, the region cannot be changed.
+      /// Creates a log bucket that can be used to store log entries. After a bucket
+      /// has been created, the bucket's location cannot be changed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -814,8 +917,8 @@ namespace Google.Cloud.Logging.V2 {
         return CreateBucketAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a bucket that can be used to store log entries. Once a bucket has
-      /// been created, the region cannot be changed.
+      /// Creates a log bucket that can be used to store log entries. After a bucket
+      /// has been created, the bucket's location cannot be changed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -826,16 +929,16 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateBucket, null, options, request);
       }
       /// <summary>
-      /// Updates a bucket. This method replaces the following fields in the
+      /// Updates a log bucket. This method replaces the following fields in the
       /// existing bucket with values from the new bucket: `retention_period`
       ///
       /// If the retention period is decreased and the bucket is locked,
-      /// FAILED_PRECONDITION will be returned.
+      /// `FAILED_PRECONDITION` will be returned.
       ///
-      /// If the bucket has a LifecycleState of DELETE_REQUESTED, FAILED_PRECONDITION
-      /// will be returned.
+      /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
+      /// `FAILED_PRECONDITION` will be returned.
       ///
-      /// A buckets region may not be modified after it is created.
+      /// After a bucket has been created, the bucket's location cannot be changed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -848,16 +951,16 @@ namespace Google.Cloud.Logging.V2 {
         return UpdateBucket(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a bucket. This method replaces the following fields in the
+      /// Updates a log bucket. This method replaces the following fields in the
       /// existing bucket with values from the new bucket: `retention_period`
       ///
       /// If the retention period is decreased and the bucket is locked,
-      /// FAILED_PRECONDITION will be returned.
+      /// `FAILED_PRECONDITION` will be returned.
       ///
-      /// If the bucket has a LifecycleState of DELETE_REQUESTED, FAILED_PRECONDITION
-      /// will be returned.
+      /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
+      /// `FAILED_PRECONDITION` will be returned.
       ///
-      /// A buckets region may not be modified after it is created.
+      /// After a bucket has been created, the bucket's location cannot be changed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -868,16 +971,16 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateBucket, null, options, request);
       }
       /// <summary>
-      /// Updates a bucket. This method replaces the following fields in the
+      /// Updates a log bucket. This method replaces the following fields in the
       /// existing bucket with values from the new bucket: `retention_period`
       ///
       /// If the retention period is decreased and the bucket is locked,
-      /// FAILED_PRECONDITION will be returned.
+      /// `FAILED_PRECONDITION` will be returned.
       ///
-      /// If the bucket has a LifecycleState of DELETE_REQUESTED, FAILED_PRECONDITION
-      /// will be returned.
+      /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
+      /// `FAILED_PRECONDITION` will be returned.
       ///
-      /// A buckets region may not be modified after it is created.
+      /// After a bucket has been created, the bucket's location cannot be changed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -890,16 +993,16 @@ namespace Google.Cloud.Logging.V2 {
         return UpdateBucketAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a bucket. This method replaces the following fields in the
+      /// Updates a log bucket. This method replaces the following fields in the
       /// existing bucket with values from the new bucket: `retention_period`
       ///
       /// If the retention period is decreased and the bucket is locked,
-      /// FAILED_PRECONDITION will be returned.
+      /// `FAILED_PRECONDITION` will be returned.
       ///
-      /// If the bucket has a LifecycleState of DELETE_REQUESTED, FAILED_PRECONDITION
-      /// will be returned.
+      /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
+      /// `FAILED_PRECONDITION` will be returned.
       ///
-      /// A buckets region may not be modified after it is created.
+      /// After a bucket has been created, the bucket's location cannot be changed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -910,10 +1013,11 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateBucket, null, options, request);
       }
       /// <summary>
-      /// Deletes a bucket.
-      /// Moves the bucket to the DELETE_REQUESTED state. After 7 days, the
-      /// bucket will be purged and all logs in the bucket will be permanently
-      /// deleted.
+      /// Deletes a log bucket.
+      ///
+      /// Changes the bucket's `lifecycle_state` to the `DELETE_REQUESTED` state.
+      /// After 7 days, the bucket will be purged and all log entries in the bucket
+      /// will be permanently deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -926,10 +1030,11 @@ namespace Google.Cloud.Logging.V2 {
         return DeleteBucket(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a bucket.
-      /// Moves the bucket to the DELETE_REQUESTED state. After 7 days, the
-      /// bucket will be purged and all logs in the bucket will be permanently
-      /// deleted.
+      /// Deletes a log bucket.
+      ///
+      /// Changes the bucket's `lifecycle_state` to the `DELETE_REQUESTED` state.
+      /// After 7 days, the bucket will be purged and all log entries in the bucket
+      /// will be permanently deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -940,10 +1045,11 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteBucket, null, options, request);
       }
       /// <summary>
-      /// Deletes a bucket.
-      /// Moves the bucket to the DELETE_REQUESTED state. After 7 days, the
-      /// bucket will be purged and all logs in the bucket will be permanently
-      /// deleted.
+      /// Deletes a log bucket.
+      ///
+      /// Changes the bucket's `lifecycle_state` to the `DELETE_REQUESTED` state.
+      /// After 7 days, the bucket will be purged and all log entries in the bucket
+      /// will be permanently deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -956,10 +1062,11 @@ namespace Google.Cloud.Logging.V2 {
         return DeleteBucketAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a bucket.
-      /// Moves the bucket to the DELETE_REQUESTED state. After 7 days, the
-      /// bucket will be purged and all logs in the bucket will be permanently
-      /// deleted.
+      /// Deletes a log bucket.
+      ///
+      /// Changes the bucket's `lifecycle_state` to the `DELETE_REQUESTED` state.
+      /// After 7 days, the bucket will be purged and all log entries in the bucket
+      /// will be permanently deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -970,8 +1077,8 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteBucket, null, options, request);
       }
       /// <summary>
-      /// Undeletes a bucket. A bucket that has been deleted may be undeleted within
-      /// the grace period of 7 days.
+      /// Undeletes a log bucket. A bucket that has been deleted can be undeleted
+      /// within the grace period of 7 days.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -984,8 +1091,8 @@ namespace Google.Cloud.Logging.V2 {
         return UndeleteBucket(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Undeletes a bucket. A bucket that has been deleted may be undeleted within
-      /// the grace period of 7 days.
+      /// Undeletes a log bucket. A bucket that has been deleted can be undeleted
+      /// within the grace period of 7 days.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -996,8 +1103,8 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_UndeleteBucket, null, options, request);
       }
       /// <summary>
-      /// Undeletes a bucket. A bucket that has been deleted may be undeleted within
-      /// the grace period of 7 days.
+      /// Undeletes a log bucket. A bucket that has been deleted can be undeleted
+      /// within the grace period of 7 days.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1010,8 +1117,8 @@ namespace Google.Cloud.Logging.V2 {
         return UndeleteBucketAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Undeletes a bucket. A bucket that has been deleted may be undeleted within
-      /// the grace period of 7 days.
+      /// Undeletes a log bucket. A bucket that has been deleted can be undeleted
+      /// within the grace period of 7 days.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1022,7 +1129,7 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_UndeleteBucket, null, options, request);
       }
       /// <summary>
-      /// Lists views on a bucket.
+      /// Lists views on a log bucket.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1035,7 +1142,7 @@ namespace Google.Cloud.Logging.V2 {
         return ListViews(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists views on a bucket.
+      /// Lists views on a log bucket.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1046,7 +1153,7 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListViews, null, options, request);
       }
       /// <summary>
-      /// Lists views on a bucket.
+      /// Lists views on a log bucket.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1059,7 +1166,7 @@ namespace Google.Cloud.Logging.V2 {
         return ListViewsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists views on a bucket.
+      /// Lists views on a log bucket.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1070,7 +1177,7 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ListViews, null, options, request);
       }
       /// <summary>
-      /// Gets a view.
+      /// Gets a view on a log bucket..
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1083,7 +1190,7 @@ namespace Google.Cloud.Logging.V2 {
         return GetView(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a view.
+      /// Gets a view on a log bucket..
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1094,7 +1201,7 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetView, null, options, request);
       }
       /// <summary>
-      /// Gets a view.
+      /// Gets a view on a log bucket..
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1107,7 +1214,7 @@ namespace Google.Cloud.Logging.V2 {
         return GetViewAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a view.
+      /// Gets a view on a log bucket..
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1118,8 +1225,8 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetView, null, options, request);
       }
       /// <summary>
-      /// Creates a view over logs in a bucket. A bucket may contain a maximum of
-      /// 50 views.
+      /// Creates a view over log entries in a log bucket. A bucket may contain a
+      /// maximum of 30 views.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1132,8 +1239,8 @@ namespace Google.Cloud.Logging.V2 {
         return CreateView(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a view over logs in a bucket. A bucket may contain a maximum of
-      /// 50 views.
+      /// Creates a view over log entries in a log bucket. A bucket may contain a
+      /// maximum of 30 views.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1144,8 +1251,8 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateView, null, options, request);
       }
       /// <summary>
-      /// Creates a view over logs in a bucket. A bucket may contain a maximum of
-      /// 50 views.
+      /// Creates a view over log entries in a log bucket. A bucket may contain a
+      /// maximum of 30 views.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1158,8 +1265,8 @@ namespace Google.Cloud.Logging.V2 {
         return CreateViewAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a view over logs in a bucket. A bucket may contain a maximum of
-      /// 50 views.
+      /// Creates a view over log entries in a log bucket. A bucket may contain a
+      /// maximum of 30 views.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1170,8 +1277,11 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateView, null, options, request);
       }
       /// <summary>
-      /// Updates a view. This method replaces the following fields in the existing
-      /// view with values from the new view: `filter`.
+      /// Updates a view on a log bucket. This method replaces the following fields
+      /// in the existing view with values from the new view: `filter`.
+      /// If an `UNAVAILABLE` error is returned, this indicates that system is not in
+      /// a state where it can update the view. If this occurs, please try again in a
+      /// few minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1184,8 +1294,11 @@ namespace Google.Cloud.Logging.V2 {
         return UpdateView(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a view. This method replaces the following fields in the existing
-      /// view with values from the new view: `filter`.
+      /// Updates a view on a log bucket. This method replaces the following fields
+      /// in the existing view with values from the new view: `filter`.
+      /// If an `UNAVAILABLE` error is returned, this indicates that system is not in
+      /// a state where it can update the view. If this occurs, please try again in a
+      /// few minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1196,8 +1309,11 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateView, null, options, request);
       }
       /// <summary>
-      /// Updates a view. This method replaces the following fields in the existing
-      /// view with values from the new view: `filter`.
+      /// Updates a view on a log bucket. This method replaces the following fields
+      /// in the existing view with values from the new view: `filter`.
+      /// If an `UNAVAILABLE` error is returned, this indicates that system is not in
+      /// a state where it can update the view. If this occurs, please try again in a
+      /// few minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1210,8 +1326,11 @@ namespace Google.Cloud.Logging.V2 {
         return UpdateViewAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a view. This method replaces the following fields in the existing
-      /// view with values from the new view: `filter`.
+      /// Updates a view on a log bucket. This method replaces the following fields
+      /// in the existing view with values from the new view: `filter`.
+      /// If an `UNAVAILABLE` error is returned, this indicates that system is not in
+      /// a state where it can update the view. If this occurs, please try again in a
+      /// few minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1222,7 +1341,10 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateView, null, options, request);
       }
       /// <summary>
-      /// Deletes a view from a bucket.
+      /// Deletes a view on a log bucket.
+      /// If an `UNAVAILABLE` error is returned, this indicates that system is not in
+      /// a state where it can delete the view. If this occurs, please try again in a
+      /// few minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1235,7 +1357,10 @@ namespace Google.Cloud.Logging.V2 {
         return DeleteView(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a view from a bucket.
+      /// Deletes a view on a log bucket.
+      /// If an `UNAVAILABLE` error is returned, this indicates that system is not in
+      /// a state where it can delete the view. If this occurs, please try again in a
+      /// few minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1246,7 +1371,10 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteView, null, options, request);
       }
       /// <summary>
-      /// Deletes a view from a bucket.
+      /// Deletes a view on a log bucket.
+      /// If an `UNAVAILABLE` error is returned, this indicates that system is not in
+      /// a state where it can delete the view. If this occurs, please try again in a
+      /// few minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1259,7 +1387,10 @@ namespace Google.Cloud.Logging.V2 {
         return DeleteViewAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a view from a bucket.
+      /// Deletes a view on a log bucket.
+      /// If an `UNAVAILABLE` error is returned, this indicates that system is not in
+      /// a state where it can delete the view. If this occurs, please try again in a
+      /// few minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1542,7 +1673,7 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSink, null, options, request);
       }
       /// <summary>
-      /// Lists all the exclusions in a parent resource.
+      /// Lists all the exclusions on the _Default sink in a parent resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1555,7 +1686,7 @@ namespace Google.Cloud.Logging.V2 {
         return ListExclusions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all the exclusions in a parent resource.
+      /// Lists all the exclusions on the _Default sink in a parent resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1566,7 +1697,7 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListExclusions, null, options, request);
       }
       /// <summary>
-      /// Lists all the exclusions in a parent resource.
+      /// Lists all the exclusions on the _Default sink in a parent resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1579,7 +1710,7 @@ namespace Google.Cloud.Logging.V2 {
         return ListExclusionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all the exclusions in a parent resource.
+      /// Lists all the exclusions on the _Default sink in a parent resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1590,7 +1721,7 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ListExclusions, null, options, request);
       }
       /// <summary>
-      /// Gets the description of an exclusion.
+      /// Gets the description of an exclusion in the _Default sink.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1603,7 +1734,7 @@ namespace Google.Cloud.Logging.V2 {
         return GetExclusion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the description of an exclusion.
+      /// Gets the description of an exclusion in the _Default sink.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1614,7 +1745,7 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetExclusion, null, options, request);
       }
       /// <summary>
-      /// Gets the description of an exclusion.
+      /// Gets the description of an exclusion in the _Default sink.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1627,7 +1758,7 @@ namespace Google.Cloud.Logging.V2 {
         return GetExclusionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the description of an exclusion.
+      /// Gets the description of an exclusion in the _Default sink.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1638,9 +1769,9 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetExclusion, null, options, request);
       }
       /// <summary>
-      /// Creates a new exclusion in a specified parent resource.
-      /// Only log entries belonging to that resource can be excluded.
-      /// You can have up to 10 exclusions in a resource.
+      /// Creates a new exclusion in the _Default sink in a specified parent
+      /// resource. Only log entries belonging to that resource can be excluded. You
+      /// can have up to 10 exclusions in a resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1653,9 +1784,9 @@ namespace Google.Cloud.Logging.V2 {
         return CreateExclusion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new exclusion in a specified parent resource.
-      /// Only log entries belonging to that resource can be excluded.
-      /// You can have up to 10 exclusions in a resource.
+      /// Creates a new exclusion in the _Default sink in a specified parent
+      /// resource. Only log entries belonging to that resource can be excluded. You
+      /// can have up to 10 exclusions in a resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1666,9 +1797,9 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateExclusion, null, options, request);
       }
       /// <summary>
-      /// Creates a new exclusion in a specified parent resource.
-      /// Only log entries belonging to that resource can be excluded.
-      /// You can have up to 10 exclusions in a resource.
+      /// Creates a new exclusion in the _Default sink in a specified parent
+      /// resource. Only log entries belonging to that resource can be excluded. You
+      /// can have up to 10 exclusions in a resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1681,9 +1812,9 @@ namespace Google.Cloud.Logging.V2 {
         return CreateExclusionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new exclusion in a specified parent resource.
-      /// Only log entries belonging to that resource can be excluded.
-      /// You can have up to 10 exclusions in a resource.
+      /// Creates a new exclusion in the _Default sink in a specified parent
+      /// resource. Only log entries belonging to that resource can be excluded. You
+      /// can have up to 10 exclusions in a resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1694,7 +1825,8 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateExclusion, null, options, request);
       }
       /// <summary>
-      /// Changes one or more properties of an existing exclusion.
+      /// Changes one or more properties of an existing exclusion in the _Default
+      /// sink.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1707,7 +1839,8 @@ namespace Google.Cloud.Logging.V2 {
         return UpdateExclusion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Changes one or more properties of an existing exclusion.
+      /// Changes one or more properties of an existing exclusion in the _Default
+      /// sink.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1718,7 +1851,8 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateExclusion, null, options, request);
       }
       /// <summary>
-      /// Changes one or more properties of an existing exclusion.
+      /// Changes one or more properties of an existing exclusion in the _Default
+      /// sink.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1731,7 +1865,8 @@ namespace Google.Cloud.Logging.V2 {
         return UpdateExclusionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Changes one or more properties of an existing exclusion.
+      /// Changes one or more properties of an existing exclusion in the _Default
+      /// sink.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1742,7 +1877,7 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateExclusion, null, options, request);
       }
       /// <summary>
-      /// Deletes an exclusion.
+      /// Deletes an exclusion in the _Default sink.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1755,7 +1890,7 @@ namespace Google.Cloud.Logging.V2 {
         return DeleteExclusion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes an exclusion.
+      /// Deletes an exclusion in the _Default sink.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1766,7 +1901,7 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteExclusion, null, options, request);
       }
       /// <summary>
-      /// Deletes an exclusion.
+      /// Deletes an exclusion in the _Default sink.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1779,7 +1914,7 @@ namespace Google.Cloud.Logging.V2 {
         return DeleteExclusionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes an exclusion.
+      /// Deletes an exclusion in the _Default sink.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1790,13 +1925,14 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteExclusion, null, options, request);
       }
       /// <summary>
-      /// Gets the Logs Router CMEK settings for the given resource.
+      /// Gets the Logging CMEK settings for the given resource.
       ///
-      /// Note: CMEK for the Logs Router can currently only be configured for GCP
-      /// organizations. Once configured, it applies to all projects and folders in
-      /// the GCP organization.
+      /// Note: CMEK for the Log Router can be configured for Google Cloud projects,
+      /// folders, organizations and billing accounts. Once configured for an
+      /// organization, it applies to all projects and folders in the Google Cloud
+      /// organization.
       ///
-      /// See [Enabling CMEK for Logs
+      /// See [Enabling CMEK for Log
       /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
       /// for more information.
       /// </summary>
@@ -1811,13 +1947,14 @@ namespace Google.Cloud.Logging.V2 {
         return GetCmekSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the Logs Router CMEK settings for the given resource.
+      /// Gets the Logging CMEK settings for the given resource.
       ///
-      /// Note: CMEK for the Logs Router can currently only be configured for GCP
-      /// organizations. Once configured, it applies to all projects and folders in
-      /// the GCP organization.
+      /// Note: CMEK for the Log Router can be configured for Google Cloud projects,
+      /// folders, organizations and billing accounts. Once configured for an
+      /// organization, it applies to all projects and folders in the Google Cloud
+      /// organization.
       ///
-      /// See [Enabling CMEK for Logs
+      /// See [Enabling CMEK for Log
       /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
       /// for more information.
       /// </summary>
@@ -1830,13 +1967,14 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetCmekSettings, null, options, request);
       }
       /// <summary>
-      /// Gets the Logs Router CMEK settings for the given resource.
+      /// Gets the Logging CMEK settings for the given resource.
       ///
-      /// Note: CMEK for the Logs Router can currently only be configured for GCP
-      /// organizations. Once configured, it applies to all projects and folders in
-      /// the GCP organization.
+      /// Note: CMEK for the Log Router can be configured for Google Cloud projects,
+      /// folders, organizations and billing accounts. Once configured for an
+      /// organization, it applies to all projects and folders in the Google Cloud
+      /// organization.
       ///
-      /// See [Enabling CMEK for Logs
+      /// See [Enabling CMEK for Log
       /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
       /// for more information.
       /// </summary>
@@ -1851,13 +1989,14 @@ namespace Google.Cloud.Logging.V2 {
         return GetCmekSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the Logs Router CMEK settings for the given resource.
+      /// Gets the Logging CMEK settings for the given resource.
       ///
-      /// Note: CMEK for the Logs Router can currently only be configured for GCP
-      /// organizations. Once configured, it applies to all projects and folders in
-      /// the GCP organization.
+      /// Note: CMEK for the Log Router can be configured for Google Cloud projects,
+      /// folders, organizations and billing accounts. Once configured for an
+      /// organization, it applies to all projects and folders in the Google Cloud
+      /// organization.
       ///
-      /// See [Enabling CMEK for Logs
+      /// See [Enabling CMEK for Log
       /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
       /// for more information.
       /// </summary>
@@ -1870,11 +2009,11 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetCmekSettings, null, options, request);
       }
       /// <summary>
-      /// Updates the Logs Router CMEK settings for the given resource.
+      /// Updates the Log Router CMEK settings for the given resource.
       ///
-      /// Note: CMEK for the Logs Router can currently only be configured for GCP
-      /// organizations. Once configured, it applies to all projects and folders in
-      /// the GCP organization.
+      /// Note: CMEK for the Log Router can currently only be configured for Google
+      /// Cloud organizations. Once configured, it applies to all projects and
+      /// folders in the Google Cloud organization.
       ///
       /// [UpdateCmekSettings][google.logging.v2.ConfigServiceV2.UpdateCmekSettings]
       /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
@@ -1882,7 +2021,7 @@ namespace Google.Cloud.Logging.V2 {
       /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
       /// 3) access to the key is disabled.
       ///
-      /// See [Enabling CMEK for Logs
+      /// See [Enabling CMEK for Log
       /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
       /// for more information.
       /// </summary>
@@ -1897,11 +2036,11 @@ namespace Google.Cloud.Logging.V2 {
         return UpdateCmekSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the Logs Router CMEK settings for the given resource.
+      /// Updates the Log Router CMEK settings for the given resource.
       ///
-      /// Note: CMEK for the Logs Router can currently only be configured for GCP
-      /// organizations. Once configured, it applies to all projects and folders in
-      /// the GCP organization.
+      /// Note: CMEK for the Log Router can currently only be configured for Google
+      /// Cloud organizations. Once configured, it applies to all projects and
+      /// folders in the Google Cloud organization.
       ///
       /// [UpdateCmekSettings][google.logging.v2.ConfigServiceV2.UpdateCmekSettings]
       /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
@@ -1909,7 +2048,7 @@ namespace Google.Cloud.Logging.V2 {
       /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
       /// 3) access to the key is disabled.
       ///
-      /// See [Enabling CMEK for Logs
+      /// See [Enabling CMEK for Log
       /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
       /// for more information.
       /// </summary>
@@ -1922,11 +2061,11 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateCmekSettings, null, options, request);
       }
       /// <summary>
-      /// Updates the Logs Router CMEK settings for the given resource.
+      /// Updates the Log Router CMEK settings for the given resource.
       ///
-      /// Note: CMEK for the Logs Router can currently only be configured for GCP
-      /// organizations. Once configured, it applies to all projects and folders in
-      /// the GCP organization.
+      /// Note: CMEK for the Log Router can currently only be configured for Google
+      /// Cloud organizations. Once configured, it applies to all projects and
+      /// folders in the Google Cloud organization.
       ///
       /// [UpdateCmekSettings][google.logging.v2.ConfigServiceV2.UpdateCmekSettings]
       /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
@@ -1934,7 +2073,7 @@ namespace Google.Cloud.Logging.V2 {
       /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
       /// 3) access to the key is disabled.
       ///
-      /// See [Enabling CMEK for Logs
+      /// See [Enabling CMEK for Log
       /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
       /// for more information.
       /// </summary>
@@ -1949,11 +2088,11 @@ namespace Google.Cloud.Logging.V2 {
         return UpdateCmekSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the Logs Router CMEK settings for the given resource.
+      /// Updates the Log Router CMEK settings for the given resource.
       ///
-      /// Note: CMEK for the Logs Router can currently only be configured for GCP
-      /// organizations. Once configured, it applies to all projects and folders in
-      /// the GCP organization.
+      /// Note: CMEK for the Log Router can currently only be configured for Google
+      /// Cloud organizations. Once configured, it applies to all projects and
+      /// folders in the Google Cloud organization.
       ///
       /// [UpdateCmekSettings][google.logging.v2.ConfigServiceV2.UpdateCmekSettings]
       /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
@@ -1961,7 +2100,7 @@ namespace Google.Cloud.Logging.V2 {
       /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
       /// 3) access to the key is disabled.
       ///
-      /// See [Enabling CMEK for Logs
+      /// See [Enabling CMEK for Log
       /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
       /// for more information.
       /// </summary>
@@ -1972,6 +2111,246 @@ namespace Google.Cloud.Logging.V2 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.CmekSettings> UpdateCmekSettingsAsync(global::Google.Cloud.Logging.V2.UpdateCmekSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCmekSettings, null, options, request);
+      }
+      /// <summary>
+      /// Gets the Log Router settings for the given resource.
+      ///
+      /// Note: Settings for the Log Router can be get for Google Cloud projects,
+      /// folders, organizations and billing accounts. Currently it can only be
+      /// configured for organizations. Once configured for an organization, it
+      /// applies to all projects and folders in the Google Cloud organization.
+      ///
+      /// See [Enabling CMEK for Log
+      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+      /// for more information.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Logging.V2.Settings GetSettings(global::Google.Cloud.Logging.V2.GetSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the Log Router settings for the given resource.
+      ///
+      /// Note: Settings for the Log Router can be get for Google Cloud projects,
+      /// folders, organizations and billing accounts. Currently it can only be
+      /// configured for organizations. Once configured for an organization, it
+      /// applies to all projects and folders in the Google Cloud organization.
+      ///
+      /// See [Enabling CMEK for Log
+      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+      /// for more information.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Logging.V2.Settings GetSettings(global::Google.Cloud.Logging.V2.GetSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSettings, null, options, request);
+      }
+      /// <summary>
+      /// Gets the Log Router settings for the given resource.
+      ///
+      /// Note: Settings for the Log Router can be get for Google Cloud projects,
+      /// folders, organizations and billing accounts. Currently it can only be
+      /// configured for organizations. Once configured for an organization, it
+      /// applies to all projects and folders in the Google Cloud organization.
+      ///
+      /// See [Enabling CMEK for Log
+      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+      /// for more information.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.Settings> GetSettingsAsync(global::Google.Cloud.Logging.V2.GetSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the Log Router settings for the given resource.
+      ///
+      /// Note: Settings for the Log Router can be get for Google Cloud projects,
+      /// folders, organizations and billing accounts. Currently it can only be
+      /// configured for organizations. Once configured for an organization, it
+      /// applies to all projects and folders in the Google Cloud organization.
+      ///
+      /// See [Enabling CMEK for Log
+      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+      /// for more information.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.Settings> GetSettingsAsync(global::Google.Cloud.Logging.V2.GetSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSettings, null, options, request);
+      }
+      /// <summary>
+      /// Updates the Log Router settings for the given resource.
+      ///
+      /// Note: Settings for the Log Router can currently only be configured for
+      /// Google Cloud organizations. Once configured, it applies to all projects and
+      /// folders in the Google Cloud organization.
+      ///
+      /// [UpdateSettings][google.logging.v2.ConfigServiceV2.UpdateSettings]
+      /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
+      /// account does not have the required
+      /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
+      /// 3) access to the key is disabled. 4) `location_id` is not supported by
+      /// Logging. 5) `location_id` violate OrgPolicy.
+      ///
+      /// See [Enabling CMEK for Log
+      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+      /// for more information.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Logging.V2.Settings UpdateSettings(global::Google.Cloud.Logging.V2.UpdateSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the Log Router settings for the given resource.
+      ///
+      /// Note: Settings for the Log Router can currently only be configured for
+      /// Google Cloud organizations. Once configured, it applies to all projects and
+      /// folders in the Google Cloud organization.
+      ///
+      /// [UpdateSettings][google.logging.v2.ConfigServiceV2.UpdateSettings]
+      /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
+      /// account does not have the required
+      /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
+      /// 3) access to the key is disabled. 4) `location_id` is not supported by
+      /// Logging. 5) `location_id` violate OrgPolicy.
+      ///
+      /// See [Enabling CMEK for Log
+      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+      /// for more information.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Logging.V2.Settings UpdateSettings(global::Google.Cloud.Logging.V2.UpdateSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateSettings, null, options, request);
+      }
+      /// <summary>
+      /// Updates the Log Router settings for the given resource.
+      ///
+      /// Note: Settings for the Log Router can currently only be configured for
+      /// Google Cloud organizations. Once configured, it applies to all projects and
+      /// folders in the Google Cloud organization.
+      ///
+      /// [UpdateSettings][google.logging.v2.ConfigServiceV2.UpdateSettings]
+      /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
+      /// account does not have the required
+      /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
+      /// 3) access to the key is disabled. 4) `location_id` is not supported by
+      /// Logging. 5) `location_id` violate OrgPolicy.
+      ///
+      /// See [Enabling CMEK for Log
+      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+      /// for more information.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.Settings> UpdateSettingsAsync(global::Google.Cloud.Logging.V2.UpdateSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the Log Router settings for the given resource.
+      ///
+      /// Note: Settings for the Log Router can currently only be configured for
+      /// Google Cloud organizations. Once configured, it applies to all projects and
+      /// folders in the Google Cloud organization.
+      ///
+      /// [UpdateSettings][google.logging.v2.ConfigServiceV2.UpdateSettings]
+      /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
+      /// account does not have the required
+      /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
+      /// 3) access to the key is disabled. 4) `location_id` is not supported by
+      /// Logging. 5) `location_id` violate OrgPolicy.
+      ///
+      /// See [Enabling CMEK for Log
+      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+      /// for more information.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.Settings> UpdateSettingsAsync(global::Google.Cloud.Logging.V2.UpdateSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateSettings, null, options, request);
+      }
+      /// <summary>
+      /// Copies a set of log entries from a log bucket to a Cloud Storage bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CopyLogEntries(global::Google.Cloud.Logging.V2.CopyLogEntriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CopyLogEntries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Copies a set of log entries from a log bucket to a Cloud Storage bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CopyLogEntries(global::Google.Cloud.Logging.V2.CopyLogEntriesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CopyLogEntries, null, options, request);
+      }
+      /// <summary>
+      /// Copies a set of log entries from a log bucket to a Cloud Storage bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CopyLogEntriesAsync(global::Google.Cloud.Logging.V2.CopyLogEntriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CopyLogEntriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Copies a set of log entries from a log bucket to a Cloud Storage bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CopyLogEntriesAsync(global::Google.Cloud.Logging.V2.CopyLogEntriesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CopyLogEntries, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -2009,7 +2388,10 @@ namespace Google.Cloud.Logging.V2 {
           .AddMethod(__Method_UpdateExclusion, serviceImpl.UpdateExclusion)
           .AddMethod(__Method_DeleteExclusion, serviceImpl.DeleteExclusion)
           .AddMethod(__Method_GetCmekSettings, serviceImpl.GetCmekSettings)
-          .AddMethod(__Method_UpdateCmekSettings, serviceImpl.UpdateCmekSettings).Build();
+          .AddMethod(__Method_UpdateCmekSettings, serviceImpl.UpdateCmekSettings)
+          .AddMethod(__Method_GetSettings, serviceImpl.GetSettings)
+          .AddMethod(__Method_UpdateSettings, serviceImpl.UpdateSettings)
+          .AddMethod(__Method_CopyLogEntries, serviceImpl.CopyLogEntries).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -2042,6 +2424,9 @@ namespace Google.Cloud.Logging.V2 {
       serviceBinder.AddMethod(__Method_DeleteExclusion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.DeleteExclusionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteExclusion));
       serviceBinder.AddMethod(__Method_GetCmekSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.GetCmekSettingsRequest, global::Google.Cloud.Logging.V2.CmekSettings>(serviceImpl.GetCmekSettings));
       serviceBinder.AddMethod(__Method_UpdateCmekSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.UpdateCmekSettingsRequest, global::Google.Cloud.Logging.V2.CmekSettings>(serviceImpl.UpdateCmekSettings));
+      serviceBinder.AddMethod(__Method_GetSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.GetSettingsRequest, global::Google.Cloud.Logging.V2.Settings>(serviceImpl.GetSettings));
+      serviceBinder.AddMethod(__Method_UpdateSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.UpdateSettingsRequest, global::Google.Cloud.Logging.V2.Settings>(serviceImpl.UpdateSettings));
+      serviceBinder.AddMethod(__Method_CopyLogEntries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.CopyLogEntriesRequest, global::Google.LongRunning.Operation>(serviceImpl.CopyLogEntries));
     }
 
   }

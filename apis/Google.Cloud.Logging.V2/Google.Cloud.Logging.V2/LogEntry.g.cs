@@ -25,50 +25,53 @@ namespace Google.Cloud.Logging.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFnb29nbGUvbG9nZ2luZy92Mi9sb2dfZW50cnkucHJvdG8SEWdvb2dsZS5s",
-            "b2dnaW5nLnYyGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGiNn",
-            "b29nbGUvYXBpL21vbml0b3JlZF9yZXNvdXJjZS5wcm90bxoZZ29vZ2xlL2Fw",
-            "aS9yZXNvdXJjZS5wcm90bxomZ29vZ2xlL2xvZ2dpbmcvdHlwZS9odHRwX3Jl",
-            "cXVlc3QucHJvdG8aJmdvb2dsZS9sb2dnaW5nL3R5cGUvbG9nX3NldmVyaXR5",
-            "LnByb3RvGhlnb29nbGUvcHJvdG9idWYvYW55LnByb3RvGhxnb29nbGUvcHJv",
-            "dG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
-            "LnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90bxocZ29vZ2xlL2FwaS9h",
-            "bm5vdGF0aW9ucy5wcm90byLSBwoITG9nRW50cnkSFQoIbG9nX25hbWUYDCAB",
-            "KAlCA+BBAhI0CghyZXNvdXJjZRgIIAEoCzIdLmdvb2dsZS5hcGkuTW9uaXRv",
-            "cmVkUmVzb3VyY2VCA+BBAhItCg1wcm90b19wYXlsb2FkGAIgASgLMhQuZ29v",
-            "Z2xlLnByb3RvYnVmLkFueUgAEhYKDHRleHRfcGF5bG9hZBgDIAEoCUgAEi8K",
-            "DGpzb25fcGF5bG9hZBgGIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RI",
-            "ABIyCgl0aW1lc3RhbXAYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQESOgoRcmVjZWl2ZV90aW1lc3RhbXAYGCABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNwoIc2V2ZXJpdHkYCiABKA4yIC5n",
-            "b29nbGUubG9nZ2luZy50eXBlLkxvZ1NldmVyaXR5QgPgQQESFgoJaW5zZXJ0",
-            "X2lkGAQgASgJQgPgQQESOwoMaHR0cF9yZXF1ZXN0GAcgASgLMiAuZ29vZ2xl",
-            "LmxvZ2dpbmcudHlwZS5IdHRwUmVxdWVzdEID4EEBEjwKBmxhYmVscxgLIAMo",
-            "CzInLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ0VudHJ5LkxhYmVsc0VudHJ5QgPg",
-            "QQESPAoJb3BlcmF0aW9uGA8gASgLMiQuZ29vZ2xlLmxvZ2dpbmcudjIuTG9n",
-            "RW50cnlPcGVyYXRpb25CA+BBARISCgV0cmFjZRgWIAEoCUID4EEBEhQKB3Nw",
-            "YW5faWQYGyABKAlCA+BBARIaCg10cmFjZV9zYW1wbGVkGB4gASgIQgPgQQES",
-            "RwoPc291cmNlX2xvY2F0aW9uGBcgASgLMikuZ29vZ2xlLmxvZ2dpbmcudjIu",
-            "TG9nRW50cnlTb3VyY2VMb2NhdGlvbkID4EEBGi0KC0xhYmVsc0VudHJ5EgsK",
-            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6vQHqQbkBChpsb2dnaW5n",
-            "Lmdvb2dsZWFwaXMuY29tL0xvZxIdcHJvamVjdHMve3Byb2plY3R9L2xvZ3Mv",
-            "e2xvZ30SJ29yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9ncy97bG9n",
-            "fRIbZm9sZGVycy97Zm9sZGVyfS9sb2dzL3tsb2d9EixiaWxsaW5nQWNjb3Vu",
-            "dHMve2JpbGxpbmdfYWNjb3VudH0vbG9ncy97bG9nfRoIbG9nX25hbWVCCQoH",
-            "cGF5bG9hZCJiChFMb2dFbnRyeU9wZXJhdGlvbhIPCgJpZBgBIAEoCUID4EEB",
-            "EhUKCHByb2R1Y2VyGAIgASgJQgPgQQESEgoFZmlyc3QYAyABKAhCA+BBARIR",
-            "CgRsYXN0GAQgASgIQgPgQQEiVQoWTG9nRW50cnlTb3VyY2VMb2NhdGlvbhIR",
-            "CgRmaWxlGAEgASgJQgPgQQESEQoEbGluZRgCIAEoA0ID4EEBEhUKCGZ1bmN0",
-            "aW9uGAMgASgJQgPgQQFCtgEKFWNvbS5nb29nbGUubG9nZ2luZy52MkINTG9n",
-            "RW50cnlQcm90b1ABWjhnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
-            "bGVhcGlzL2xvZ2dpbmcvdjI7bG9nZ2luZ/gBAaoCF0dvb2dsZS5DbG91ZC5M",
-            "b2dnaW5nLlYyygIXR29vZ2xlXENsb3VkXExvZ2dpbmdcVjLqAhpHb29nbGU6",
-            "OkNsb3VkOjpMb2dnaW5nOjpWMmIGcHJvdG8z"));
+            "b2dnaW5nLnYyGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGh9nb29n",
+            "bGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGiNnb29nbGUvYXBpL21vbml0",
+            "b3JlZF9yZXNvdXJjZS5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90",
+            "bxomZ29vZ2xlL2xvZ2dpbmcvdHlwZS9odHRwX3JlcXVlc3QucHJvdG8aJmdv",
+            "b2dsZS9sb2dnaW5nL3R5cGUvbG9nX3NldmVyaXR5LnByb3RvGhlnb29nbGUv",
+            "cHJvdG9idWYvYW55LnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnBy",
+            "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIoMICghMb2dF",
+            "bnRyeRIVCghsb2dfbmFtZRgMIAEoCUID4EECEjQKCHJlc291cmNlGAggASgL",
+            "Mh0uZ29vZ2xlLmFwaS5Nb25pdG9yZWRSZXNvdXJjZUID4EECEi0KDXByb3Rv",
+            "X3BheWxvYWQYAiABKAsyFC5nb29nbGUucHJvdG9idWYuQW55SAASFgoMdGV4",
+            "dF9wYXlsb2FkGAMgASgJSAASLwoManNvbl9wYXlsb2FkGAYgASgLMhcuZ29v",
+            "Z2xlLnByb3RvYnVmLlN0cnVjdEgAEjIKCXRpbWVzdGFtcBgJIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBARI6ChFyZWNlaXZlX3RpbWVz",
+            "dGFtcBgYIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI3",
+            "CghzZXZlcml0eRgKIAEoDjIgLmdvb2dsZS5sb2dnaW5nLnR5cGUuTG9nU2V2",
+            "ZXJpdHlCA+BBARIWCglpbnNlcnRfaWQYBCABKAlCA+BBARI7CgxodHRwX3Jl",
+            "cXVlc3QYByABKAsyIC5nb29nbGUubG9nZ2luZy50eXBlLkh0dHBSZXF1ZXN0",
+            "QgPgQQESPAoGbGFiZWxzGAsgAygLMicuZ29vZ2xlLmxvZ2dpbmcudjIuTG9n",
+            "RW50cnkuTGFiZWxzRW50cnlCA+BBARI8CglvcGVyYXRpb24YDyABKAsyJC5n",
+            "b29nbGUubG9nZ2luZy52Mi5Mb2dFbnRyeU9wZXJhdGlvbkID4EEBEhIKBXRy",
+            "YWNlGBYgASgJQgPgQQESFAoHc3Bhbl9pZBgbIAEoCUID4EEBEhoKDXRyYWNl",
+            "X3NhbXBsZWQYHiABKAhCA+BBARJHCg9zb3VyY2VfbG9jYXRpb24YFyABKAsy",
+            "KS5nb29nbGUubG9nZ2luZy52Mi5Mb2dFbnRyeVNvdXJjZUxvY2F0aW9uQgPg",
+            "QQESLwoFc3BsaXQYIyABKAsyGy5nb29nbGUubG9nZ2luZy52Mi5Mb2dTcGxp",
+            "dEID4EEBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
+            "IAEoCToCOAE6vQHqQbkBChpsb2dnaW5nLmdvb2dsZWFwaXMuY29tL0xvZxId",
+            "cHJvamVjdHMve3Byb2plY3R9L2xvZ3Mve2xvZ30SJ29yZ2FuaXphdGlvbnMv",
+            "e29yZ2FuaXphdGlvbn0vbG9ncy97bG9nfRIbZm9sZGVycy97Zm9sZGVyfS9s",
+            "b2dzL3tsb2d9EixiaWxsaW5nQWNjb3VudHMve2JpbGxpbmdfYWNjb3VudH0v",
+            "bG9ncy97bG9nfRoIbG9nX25hbWVCCQoHcGF5bG9hZCJiChFMb2dFbnRyeU9w",
+            "ZXJhdGlvbhIPCgJpZBgBIAEoCUID4EEBEhUKCHByb2R1Y2VyGAIgASgJQgPg",
+            "QQESEgoFZmlyc3QYAyABKAhCA+BBARIRCgRsYXN0GAQgASgIQgPgQQEiVQoW",
+            "TG9nRW50cnlTb3VyY2VMb2NhdGlvbhIRCgRmaWxlGAEgASgJQgPgQQESEQoE",
+            "bGluZRgCIAEoA0ID4EEBEhUKCGZ1bmN0aW9uGAMgASgJQgPgQQEiPAoITG9n",
+            "U3BsaXQSCwoDdWlkGAEgASgJEg0KBWluZGV4GAIgASgFEhQKDHRvdGFsX3Nw",
+            "bGl0cxgDIAEoBUK2AQoVY29tLmdvb2dsZS5sb2dnaW5nLnYyQg1Mb2dFbnRy",
+            "eVByb3RvUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
+            "aXMvbG9nZ2luZy92Mjtsb2dnaW5n+AEBqgIXR29vZ2xlLkNsb3VkLkxvZ2dp",
+            "bmcuVjLKAhdHb29nbGVcQ2xvdWRcTG9nZ2luZ1xWMuoCGkdvb2dsZTo6Q2xv",
+            "dWQ6OkxvZ2dpbmc6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Logging.Type.HttpRequestReflection.Descriptor, global::Google.Cloud.Logging.Type.LogSeverityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Logging.Type.HttpRequestReflection.Descriptor, global::Google.Cloud.Logging.Type.LogSeverityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntry), global::Google.Cloud.Logging.V2.LogEntry.Parser, new[]{ "LogName", "Resource", "ProtoPayload", "TextPayload", "JsonPayload", "Timestamp", "ReceiveTimestamp", "Severity", "InsertId", "HttpRequest", "Labels", "Operation", "Trace", "SpanId", "TraceSampled", "SourceLocation" }, new[]{ "Payload" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntry), global::Google.Cloud.Logging.V2.LogEntry.Parser, new[]{ "LogName", "Resource", "ProtoPayload", "TextPayload", "JsonPayload", "Timestamp", "ReceiveTimestamp", "Severity", "InsertId", "HttpRequest", "Labels", "Operation", "Trace", "SpanId", "TraceSampled", "SourceLocation", "Split" }, new[]{ "Payload" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntryOperation), global::Google.Cloud.Logging.V2.LogEntryOperation.Parser, new[]{ "Id", "Producer", "First", "Last" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntrySourceLocation), global::Google.Cloud.Logging.V2.LogEntrySourceLocation.Parser, new[]{ "File", "Line", "Function" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntrySourceLocation), global::Google.Cloud.Logging.V2.LogEntrySourceLocation.Parser, new[]{ "File", "Line", "Function" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogSplit), global::Google.Cloud.Logging.V2.LogSplit.Parser, new[]{ "Uid", "Index", "TotalSplits" }, null, null, null, null)
           }));
     }
     #endregion
@@ -125,6 +128,7 @@ namespace Google.Cloud.Logging.V2 {
       spanId_ = other.spanId_;
       traceSampled_ = other.traceSampled_;
       sourceLocation_ = other.sourceLocation_ != null ? other.sourceLocation_.Clone() : null;
+      split_ = other.split_ != null ? other.split_.Clone() : null;
       switch (other.PayloadCase) {
         case PayloadOneofCase.ProtoPayload:
           ProtoPayload = other.ProtoPayload.Clone();
@@ -163,12 +167,13 @@ namespace Google.Cloud.Logging.V2 {
     ///
     /// `[LOG_ID]` must be URL-encoded within `log_name`. Example:
     /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
+    ///
     /// `[LOG_ID]` must be less than 512 characters long and can only include the
     /// following characters: upper and lower case alphanumeric characters,
     /// forward-slash, underscore, hyphen, and period.
     ///
     /// For backward compatibility, if `log_name` begins with a forward-slash, such
-    /// as `/projects/...`, then the log entry is ingested as usual but the
+    /// as `/projects/...`, then the log entry is ingested as usual, but the
     /// forward-slash is removed. Listing the log entry will not show the leading
     /// slash and filtering for a log name with a leading slash will never return
     /// any results.
@@ -320,7 +325,7 @@ namespace Google.Cloud.Logging.V2 {
     /// de-duplication in the export of logs.
     ///
     /// If the `insert_id` is omitted when writing a log entry, the Logging API
-    ///  assigns its own unique identifier in this field.
+    /// assigns its own unique identifier in this field.
     ///
     /// In queries, the `insert_id` is also used to order log entries that have
     /// the same `log_name` and `timestamp` values.
@@ -356,8 +361,20 @@ namespace Google.Cloud.Logging.V2 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 90);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Optional. A set of user-defined (key, value) data that provides additional
-    /// information about the log entry.
+    /// Optional. A map of key, value pairs that provides additional information about the
+    /// log entry. The labels can be user-defined or system-defined.
+    ///
+    /// User-defined labels are arbitrary key, value pairs that you can use to
+    /// classify logs.
+    ///
+    /// System-defined labels are defined by GCP services for platform logs.
+    /// They have two components - a service namespace component and the
+    /// attribute name. For example: `compute.googleapis.com/resource_name`.
+    ///
+    /// Cloud Logging truncates label keys that exceed 512 B and label
+    /// values that exceed 64 KB upon their associated log entry being
+    /// written. The truncation is indicated by an ellipsis at the
+    /// end of the character string.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -454,6 +471,22 @@ namespace Google.Cloud.Logging.V2 {
       }
     }
 
+    /// <summary>Field number for the "split" field.</summary>
+    public const int SplitFieldNumber = 35;
+    private global::Google.Cloud.Logging.V2.LogSplit split_;
+    /// <summary>
+    /// Optional. Information indicating this LogEntry is part of a sequence of multiple log
+    /// entries split from a single LogEntry.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Logging.V2.LogSplit Split {
+      get { return split_; }
+      set {
+        split_ = value;
+      }
+    }
+
     private object payload_;
     /// <summary>Enum of possible cases for the "payload" oneof.</summary>
     public enum PayloadOneofCase {
@@ -507,6 +540,7 @@ namespace Google.Cloud.Logging.V2 {
       if (SpanId != other.SpanId) return false;
       if (TraceSampled != other.TraceSampled) return false;
       if (!object.Equals(SourceLocation, other.SourceLocation)) return false;
+      if (!object.Equals(Split, other.Split)) return false;
       if (PayloadCase != other.PayloadCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -531,6 +565,7 @@ namespace Google.Cloud.Logging.V2 {
       if (SpanId.Length != 0) hash ^= SpanId.GetHashCode();
       if (TraceSampled != false) hash ^= TraceSampled.GetHashCode();
       if (sourceLocation_ != null) hash ^= SourceLocation.GetHashCode();
+      if (split_ != null) hash ^= Split.GetHashCode();
       hash ^= (int) payloadCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -611,6 +646,10 @@ namespace Google.Cloud.Logging.V2 {
         output.WriteRawTag(240, 1);
         output.WriteBool(TraceSampled);
       }
+      if (split_ != null) {
+        output.WriteRawTag(154, 2);
+        output.WriteMessage(Split);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -682,6 +721,10 @@ namespace Google.Cloud.Logging.V2 {
         output.WriteRawTag(240, 1);
         output.WriteBool(TraceSampled);
       }
+      if (split_ != null) {
+        output.WriteRawTag(154, 2);
+        output.WriteMessage(Split);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -737,6 +780,9 @@ namespace Google.Cloud.Logging.V2 {
       }
       if (sourceLocation_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SourceLocation);
+      }
+      if (split_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Split);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -804,6 +850,12 @@ namespace Google.Cloud.Logging.V2 {
           SourceLocation = new global::Google.Cloud.Logging.V2.LogEntrySourceLocation();
         }
         SourceLocation.MergeFrom(other.SourceLocation);
+      }
+      if (other.split_ != null) {
+        if (split_ == null) {
+          Split = new global::Google.Cloud.Logging.V2.LogSplit();
+        }
+        Split.MergeFrom(other.Split);
       }
       switch (other.PayloadCase) {
         case PayloadOneofCase.ProtoPayload:
@@ -930,6 +982,13 @@ namespace Google.Cloud.Logging.V2 {
             TraceSampled = input.ReadBool();
             break;
           }
+          case 282: {
+            if (split_ == null) {
+              Split = new global::Google.Cloud.Logging.V2.LogSplit();
+            }
+            input.ReadMessage(Split);
+            break;
+          }
         }
       }
     #endif
@@ -1035,6 +1094,13 @@ namespace Google.Cloud.Logging.V2 {
           }
           case 240: {
             TraceSampled = input.ReadBool();
+            break;
+          }
+          case 282: {
+            if (split_ == null) {
+              Split = new global::Google.Cloud.Logging.V2.LogSplit();
+            }
+            input.ReadMessage(Split);
             break;
           }
         }
@@ -1637,6 +1703,287 @@ namespace Google.Cloud.Logging.V2 {
           }
           case 26: {
             Function = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Additional information used to correlate multiple log entries. Used when a
+  /// single LogEntry would exceed the Google Cloud Logging size limit and is
+  /// split across multiple log entries.
+  /// </summary>
+  public sealed partial class LogSplit : pb::IMessage<LogSplit>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<LogSplit> _parser = new pb::MessageParser<LogSplit>(() => new LogSplit());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<LogSplit> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Logging.V2.LogEntryReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LogSplit() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LogSplit(LogSplit other) : this() {
+      uid_ = other.uid_;
+      index_ = other.index_;
+      totalSplits_ = other.totalSplits_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LogSplit Clone() {
+      return new LogSplit(this);
+    }
+
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 1;
+    private string uid_ = "";
+    /// <summary>
+    /// A globally unique identifier for all log entries in a sequence of split log
+    /// entries. All log entries with the same |LogSplit.uid| are assumed to be
+    /// part of the same sequence of split log entries.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uid {
+      get { return uid_; }
+      set {
+        uid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "index" field.</summary>
+    public const int IndexFieldNumber = 2;
+    private int index_;
+    /// <summary>
+    /// The index of this LogEntry in the sequence of split log entries. Log
+    /// entries are given |index| values 0, 1, ..., n-1 for a sequence of n log
+    /// entries.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Index {
+      get { return index_; }
+      set {
+        index_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_splits" field.</summary>
+    public const int TotalSplitsFieldNumber = 3;
+    private int totalSplits_;
+    /// <summary>
+    /// The total number of log entries that the original LogEntry was split into.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int TotalSplits {
+      get { return totalSplits_; }
+      set {
+        totalSplits_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as LogSplit);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(LogSplit other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Uid != other.Uid) return false;
+      if (Index != other.Index) return false;
+      if (TotalSplits != other.TotalSplits) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Uid.Length != 0) hash ^= Uid.GetHashCode();
+      if (Index != 0) hash ^= Index.GetHashCode();
+      if (TotalSplits != 0) hash ^= TotalSplits.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Uid.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Uid);
+      }
+      if (Index != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Index);
+      }
+      if (TotalSplits != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(TotalSplits);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Uid.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Uid);
+      }
+      if (Index != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Index);
+      }
+      if (TotalSplits != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(TotalSplits);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Uid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uid);
+      }
+      if (Index != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Index);
+      }
+      if (TotalSplits != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalSplits);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(LogSplit other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Uid.Length != 0) {
+        Uid = other.Uid;
+      }
+      if (other.Index != 0) {
+        Index = other.Index;
+      }
+      if (other.TotalSplits != 0) {
+        TotalSplits = other.TotalSplits;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Uid = input.ReadString();
+            break;
+          }
+          case 16: {
+            Index = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            TotalSplits = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Uid = input.ReadString();
+            break;
+          }
+          case 16: {
+            Index = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            TotalSplits = input.ReadInt32();
             break;
           }
         }

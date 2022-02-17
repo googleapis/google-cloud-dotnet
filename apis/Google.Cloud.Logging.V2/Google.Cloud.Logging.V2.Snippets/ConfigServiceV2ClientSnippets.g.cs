@@ -18,6 +18,7 @@ namespace Google.Cloud.Logging.V2.Snippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
@@ -3192,6 +3193,228 @@ namespace Google.Cloud.Logging.V2.Snippets
             };
             // Make the request
             CmekSettings response = await configServiceV2Client.UpdateCmekSettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSettings</summary>
+        public void GetSettingsRequestObject()
+        {
+            // Snippet: GetSettings(GetSettingsRequest, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            GetSettingsRequest request = new GetSettingsRequest
+            {
+                SettingsName = SettingsName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            Settings response = configServiceV2Client.GetSettings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSettingsAsync</summary>
+        public async Task GetSettingsRequestObjectAsync()
+        {
+            // Snippet: GetSettingsAsync(GetSettingsRequest, CallSettings)
+            // Additional: GetSettingsAsync(GetSettingsRequest, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            GetSettingsRequest request = new GetSettingsRequest
+            {
+                SettingsName = SettingsName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            Settings response = await configServiceV2Client.GetSettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSettings</summary>
+        public void GetSettings()
+        {
+            // Snippet: GetSettings(string, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/settings";
+            // Make the request
+            Settings response = configServiceV2Client.GetSettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSettingsAsync</summary>
+        public async Task GetSettingsAsync()
+        {
+            // Snippet: GetSettingsAsync(string, CallSettings)
+            // Additional: GetSettingsAsync(string, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/settings";
+            // Make the request
+            Settings response = await configServiceV2Client.GetSettingsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSettings</summary>
+        public void GetSettingsResourceNames()
+        {
+            // Snippet: GetSettings(SettingsName, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            SettingsName name = SettingsName.FromProject("[PROJECT]");
+            // Make the request
+            Settings response = configServiceV2Client.GetSettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSettingsAsync</summary>
+        public async Task GetSettingsResourceNamesAsync()
+        {
+            // Snippet: GetSettingsAsync(SettingsName, CallSettings)
+            // Additional: GetSettingsAsync(SettingsName, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            SettingsName name = SettingsName.FromProject("[PROJECT]");
+            // Make the request
+            Settings response = await configServiceV2Client.GetSettingsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSettings</summary>
+        public void UpdateSettingsRequestObject()
+        {
+            // Snippet: UpdateSettings(UpdateSettingsRequest, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            UpdateSettingsRequest request = new UpdateSettingsRequest
+            {
+                Name = "",
+                Settings = new Settings(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Settings response = configServiceV2Client.UpdateSettings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSettingsAsync</summary>
+        public async Task UpdateSettingsRequestObjectAsync()
+        {
+            // Snippet: UpdateSettingsAsync(UpdateSettingsRequest, CallSettings)
+            // Additional: UpdateSettingsAsync(UpdateSettingsRequest, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            UpdateSettingsRequest request = new UpdateSettingsRequest
+            {
+                Name = "",
+                Settings = new Settings(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Settings response = await configServiceV2Client.UpdateSettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSettings</summary>
+        public void UpdateSettings()
+        {
+            // Snippet: UpdateSettings(Settings, FieldMask, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            Settings settings = new Settings();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Settings response = configServiceV2Client.UpdateSettings(settings, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSettingsAsync</summary>
+        public async Task UpdateSettingsAsync()
+        {
+            // Snippet: UpdateSettingsAsync(Settings, FieldMask, CallSettings)
+            // Additional: UpdateSettingsAsync(Settings, FieldMask, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            Settings settings = new Settings();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Settings response = await configServiceV2Client.UpdateSettingsAsync(settings, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CopyLogEntries</summary>
+        public void CopyLogEntriesRequestObject()
+        {
+            // Snippet: CopyLogEntries(CopyLogEntriesRequest, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            CopyLogEntriesRequest request = new CopyLogEntriesRequest
+            {
+                Name = "",
+                Filter = "",
+                Destination = "",
+            };
+            // Make the request
+            Operation<CopyLogEntriesResponse, CopyLogEntriesMetadata> response = configServiceV2Client.CopyLogEntries(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CopyLogEntriesResponse, CopyLogEntriesMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CopyLogEntriesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CopyLogEntriesResponse, CopyLogEntriesMetadata> retrievedResponse = configServiceV2Client.PollOnceCopyLogEntries(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CopyLogEntriesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CopyLogEntriesAsync</summary>
+        public async Task CopyLogEntriesRequestObjectAsync()
+        {
+            // Snippet: CopyLogEntriesAsync(CopyLogEntriesRequest, CallSettings)
+            // Additional: CopyLogEntriesAsync(CopyLogEntriesRequest, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            CopyLogEntriesRequest request = new CopyLogEntriesRequest
+            {
+                Name = "",
+                Filter = "",
+                Destination = "",
+            };
+            // Make the request
+            Operation<CopyLogEntriesResponse, CopyLogEntriesMetadata> response = await configServiceV2Client.CopyLogEntriesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CopyLogEntriesResponse, CopyLogEntriesMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CopyLogEntriesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CopyLogEntriesResponse, CopyLogEntriesMetadata> retrievedResponse = await configServiceV2Client.PollOnceCopyLogEntriesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CopyLogEntriesResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

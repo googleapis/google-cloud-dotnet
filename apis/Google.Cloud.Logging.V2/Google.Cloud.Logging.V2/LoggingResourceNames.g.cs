@@ -180,5 +180,69 @@ namespace Google.Cloud.Logging.V2
             }
             set => Parent = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="ResourceNames"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<gagr::ProjectName> ResourceNamesAsProjectNames
+        {
+            get => new gax::ResourceNameList<gagr::ProjectName>(ResourceNames, s => string.IsNullOrEmpty(s) ? null : gagr::ProjectName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="gagr::OrganizationName"/>-typed view over the <see cref="ResourceNames"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<gagr::OrganizationName> ResourceNamesAsOrganizationNames
+        {
+            get => new gax::ResourceNameList<gagr::OrganizationName>(ResourceNames, s => string.IsNullOrEmpty(s) ? null : gagr::OrganizationName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="gagr::FolderName"/>-typed view over the <see cref="ResourceNames"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<gagr::FolderName> ResourceNamesAsFolderNames
+        {
+            get => new gax::ResourceNameList<gagr::FolderName>(ResourceNames, s => string.IsNullOrEmpty(s) ? null : gagr::FolderName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="gagr::BillingAccountName"/>-typed view over the <see cref="ResourceNames"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<gagr::BillingAccountName> ResourceNamesAsBillingAccountNames
+        {
+            get => new gax::ResourceNameList<gagr::BillingAccountName>(ResourceNames, s => string.IsNullOrEmpty(s) ? null : gagr::BillingAccountName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="ResourceNames"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<gax::IResourceName> ResourceNamesAsResourceNames
+        {
+            get => new gax::ResourceNameList<gax::IResourceName>(ResourceNames, s =>
+            {
+                if (string.IsNullOrEmpty(s))
+                {
+                    return null;
+                }
+                if (gagr::ProjectName.TryParse(s, out gagr::ProjectName project))
+                {
+                    return project;
+                }
+                if (gagr::OrganizationName.TryParse(s, out gagr::OrganizationName organization))
+                {
+                    return organization;
+                }
+                if (gagr::FolderName.TryParse(s, out gagr::FolderName folder))
+                {
+                    return folder;
+                }
+                if (gagr::BillingAccountName.TryParse(s, out gagr::BillingAccountName billingAccount))
+                {
+                    return billingAccount;
+                }
+                return gax::UnparsedResourceName.Parse(s);
+            });
+        }
     }
 }
