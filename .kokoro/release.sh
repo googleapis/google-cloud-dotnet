@@ -16,6 +16,8 @@ cd ..
 
 source $SCRIPT_DIR/populatesecrets.sh
 
+git config --global core.longpaths true
+
 # Only populate secrets if we have to.
 # Else, we assume secrets have already been populated by the caller.
 populatesecrets=true
