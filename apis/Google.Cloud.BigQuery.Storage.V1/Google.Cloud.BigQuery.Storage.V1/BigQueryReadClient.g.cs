@@ -188,14 +188,12 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// The default BigQueryRead scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/bigquery</description></item>
-        /// <item><description>https://www.googleapis.com/auth/bigquery.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/bigquery",
-            "https://www.googleapis.com/auth/bigquery.readonly",
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
