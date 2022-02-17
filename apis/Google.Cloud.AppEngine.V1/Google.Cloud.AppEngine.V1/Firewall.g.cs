@@ -25,18 +25,18 @@ namespace Google.Cloud.AppEngine.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvYXBwZW5naW5lL3YxL2ZpcmV3YWxsLnByb3RvEhNnb29nbGUu",
-            "YXBwZW5naW5lLnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIrwB",
-            "CgxGaXJld2FsbFJ1bGUSEAoIcHJpb3JpdHkYASABKAUSOAoGYWN0aW9uGAIg",
-            "ASgOMiguZ29vZ2xlLmFwcGVuZ2luZS52MS5GaXJld2FsbFJ1bGUuQWN0aW9u",
-            "EhQKDHNvdXJjZV9yYW5nZRgDIAEoCRITCgtkZXNjcmlwdGlvbhgEIAEoCSI1",
-            "CgZBY3Rpb24SFgoSVU5TUEVDSUZJRURfQUNUSU9OEAASCQoFQUxMT1cQARII",
-            "CgRERU5ZEAJCyAEKIGNvbS5nb29nbGUuYXBwZW5naW5lLnYxLmZpcmV3YWxs",
-            "Qg1GaXJld2FsbFByb3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
-            "L2dvb2dsZWFwaXMvYXBwZW5naW5lL3YxO2FwcGVuZ2luZaoCGUdvb2dsZS5D",
-            "bG91ZC5BcHBFbmdpbmUuVjHKAhlHb29nbGVcQ2xvdWRcQXBwRW5naW5lXFYx",
-            "6gIcR29vZ2xlOjpDbG91ZDo6QXBwRW5naW5lOjpWMWIGcHJvdG8z"));
+            "YXBwZW5naW5lLnYxIrwBCgxGaXJld2FsbFJ1bGUSEAoIcHJpb3JpdHkYASAB",
+            "KAUSOAoGYWN0aW9uGAIgASgOMiguZ29vZ2xlLmFwcGVuZ2luZS52MS5GaXJl",
+            "d2FsbFJ1bGUuQWN0aW9uEhQKDHNvdXJjZV9yYW5nZRgDIAEoCRITCgtkZXNj",
+            "cmlwdGlvbhgEIAEoCSI1CgZBY3Rpb24SFgoSVU5TUEVDSUZJRURfQUNUSU9O",
+            "EAASCQoFQUxMT1cQARIICgRERU5ZEAJCyAEKIGNvbS5nb29nbGUuYXBwZW5n",
+            "aW5lLnYxLmZpcmV3YWxsQg1GaXJld2FsbFByb3RvUAFaPGdvb2dsZS5nb2xh",
+            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYXBwZW5naW5lL3YxO2FwcGVu",
+            "Z2luZaoCGUdvb2dsZS5DbG91ZC5BcHBFbmdpbmUuVjHKAhlHb29nbGVcQ2xv",
+            "dWRcQXBwRW5naW5lXFYx6gIcR29vZ2xlOjpDbG91ZDo6QXBwRW5naW5lOjpW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppEngine.V1.FirewallRule), global::Google.Cloud.AppEngine.V1.FirewallRule.Parser, new[]{ "Priority", "Action", "SourceRange", "Description" }, null, new[]{ typeof(global::Google.Cloud.AppEngine.V1.FirewallRule.Types.Action) }, null, null)
           }));
