@@ -76,7 +76,8 @@ then
   then
     echo $BASH_VERSION
     echo "regex $apiregex is negated"
-    apiregex="$(echo $apiregex | sed s/^not//g)"
+    temp=$(echo $apiregex | sed s/^not//g)
+    apiregex=$temp
     echo "resulting regex after removing negation: $apiregex;"
     for api in ${apis[*]}
     do
