@@ -75,7 +75,7 @@ then
   if [[ $apiregex == not* ]]
   then
     echo "regex $apiregex is negated"
-    apiregex=$(set -e; echo $apiregex | sed s/^not//g)
+    apiregex="$(echo $apiregex | sed s/^not//g)"
     echo "resulting regex after removing negation: $apiregex;"
     for api in ${apis[*]}
     do
@@ -110,7 +110,7 @@ then
     echo "After regular expression filter, no projects left to build. Exiting."
     exit 0
   fi
-fi
+  fi
 
 # If we are building Google.Cloud.Diagnostics.AspNetCore we also need to build
 # Google.Cloud.Diagnostics.AspNetCore3 since they share code files.
