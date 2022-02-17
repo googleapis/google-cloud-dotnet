@@ -378,7 +378,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     private global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute mute_ = global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute.Unspecified;
     /// <summary>
     /// Indicates the mute state of a finding (either unspecified, muted, unmuted
-    /// or undefined).
+    /// or undefined). Unlike other attributes of a finding, a finding provider
+    /// shouldn't set the value of mute.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -492,7 +493,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// <summary>
     /// First known as mute_annotation. Records additional information about the
     /// mute operation e.g. mute config that muted the finding, user who muted the
-    /// finding, etc.
+    /// finding, etc. Unlike other attributes of a finding, a finding provider
+    /// shouldn't set the value of mute.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

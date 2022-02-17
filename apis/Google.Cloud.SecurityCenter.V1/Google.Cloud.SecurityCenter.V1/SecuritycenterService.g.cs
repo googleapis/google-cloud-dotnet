@@ -9273,7 +9273,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
             public const int ProjectDisplayNameFieldNumber = 3;
             private string projectDisplayName_ = "";
             /// <summary>
-            /// The human readable name of project that the resource belongs to.
+            /// The project id that the resource belongs to.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
