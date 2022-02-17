@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Grafeas.V1.Snippets
+namespace GrafeasV1.Snippets
 {
     // [START containeranalysis_v1_generated_Grafeas_BatchCreateNotes_sync_flattened_resourceNames]
     using Grafeas.V1;
