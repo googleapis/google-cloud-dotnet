@@ -73,7 +73,10 @@ then
   # simplest way of doing it.
   if [[ $apiregex == !* ]]
   then
+    echo "regex is negated"
     apiregex=$(echo $apiregex | sed s/^!//g)
+    echo "resulting regex after removing negation"
+    echo "$apiregex"
     for api in ${apis[*]}
     do
       if [[ ! "$api" =~ $apiregex ]]
