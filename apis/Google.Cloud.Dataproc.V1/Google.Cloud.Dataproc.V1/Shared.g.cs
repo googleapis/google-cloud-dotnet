@@ -47,16 +47,51 @@ namespace Google.Cloud.Dataproc.V1 {
             "ZC5kYXRhcHJvYy52MS5SdW50aW1lSW5mby5FbmRwb2ludHNFbnRyeUID4EED",
             "EhcKCm91dHB1dF91cmkYAiABKAlCA+BBAxIiChVkaWFnbm9zdGljX291dHB1",
             "dF91cmkYAyABKAlCA+BBAxowCg5FbmRwb2ludHNFbnRyeRILCgNrZXkYASAB",
-            "KAkSDQoFdmFsdWUYAiABKAk6AjgBKr8BCglDb21wb25lbnQSGQoVQ09NUE9O",
-            "RU5UX1VOU1BFQ0lGSUVEEAASDAoIQU5BQ09OREEQBRIKCgZET0NLRVIQDRIJ",
-            "CgVEUlVJRBAJEgkKBUZMSU5LEA4SCQoFSEJBU0UQCxIQCgxISVZFX1dFQkhD",
-            "QVQQAxILCgdKVVBZVEVSEAESCgoGUFJFU1RPEAYSCgoGUkFOR0VSEAwSCAoE",
-            "U09MUhAKEgwKCFpFUFBFTElOEAQSDQoJWk9PS0VFUEVSEAgqSgoNRmFpbHVy",
-            "ZUFjdGlvbhIeChpGQUlMVVJFX0FDVElPTl9VTlNQRUNJRklFRBAAEg0KCU5P",
-            "X0FDVElPThABEgoKBkRFTEVURRACQm8KHGNvbS5nb29nbGUuY2xvdWQuZGF0",
-            "YXByb2MudjFCC1NoYXJlZFByb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZGF0YXByb2MvdjE7ZGF0YXByb2Ni",
-            "BnByb3RvMw=="));
+            "KAkSDQoFdmFsdWUYAiABKAk6AjgBIn8KEEdrZUNsdXN0ZXJDb25maWcSHwoS",
+            "Z2tlX2NsdXN0ZXJfdGFyZ2V0GAIgASgJQgPgQQESSgoQbm9kZV9wb29sX3Rh",
+            "cmdldBgDIAMoCzIrLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5Ha2VOb2Rl",
+            "UG9vbFRhcmdldEID4EEBIvIBChdLdWJlcm5ldGVzQ2x1c3RlckNvbmZpZxIh",
+            "ChRrdWJlcm5ldGVzX25hbWVzcGFjZRgBIAEoCUID4EEBEk0KEmdrZV9jbHVz",
+            "dGVyX2NvbmZpZxgCIAEoCzIqLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5H",
+            "a2VDbHVzdGVyQ29uZmlnQgPgQQJIABJbChprdWJlcm5ldGVzX3NvZnR3YXJl",
+            "X2NvbmZpZxgDIAEoCzIyLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5LdWJl",
+            "cm5ldGVzU29mdHdhcmVDb25maWdCA+BBAUIICgZjb25maWciwwIKGEt1YmVy",
+            "bmV0ZXNTb2Z0d2FyZUNvbmZpZxJjChFjb21wb25lbnRfdmVyc2lvbhgBIAMo",
+            "CzJILmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5LdWJlcm5ldGVzU29mdHdh",
+            "cmVDb25maWcuQ29tcG9uZW50VmVyc2lvbkVudHJ5ElYKCnByb3BlcnRpZXMY",
+            "AiADKAsyQi5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuS3ViZXJuZXRlc1Nv",
+            "ZnR3YXJlQ29uZmlnLlByb3BlcnRpZXNFbnRyeRo3ChVDb21wb25lbnRWZXJz",
+            "aW9uRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARoxCg9Q",
+            "cm9wZXJ0aWVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
+            "ASKeAgoRR2tlTm9kZVBvb2xUYXJnZXQSFgoJbm9kZV9wb29sGAEgASgJQgPg",
+            "QQISRAoFcm9sZXMYAiADKA4yMC5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEu",
+            "R2tlTm9kZVBvb2xUYXJnZXQuUm9sZUID4EECEkoKEG5vZGVfcG9vbF9jb25m",
+            "aWcYAyABKAsyKy5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuR2tlTm9kZVBv",
+            "b2xDb25maWdCA+BBASJfCgRSb2xlEhQKEFJPTEVfVU5TUEVDSUZJRUQQABIL",
+            "CgdERUZBVUxUEAESDgoKQ09OVFJPTExFUhACEhAKDFNQQVJLX0RSSVZFUhAD",
+            "EhIKDlNQQVJLX0VYRUNVVE9SEAQi7QQKEUdrZU5vZGVQb29sQ29uZmlnEk4K",
+            "BmNvbmZpZxgCIAEoCzI5Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5Ha2VO",
+            "b2RlUG9vbENvbmZpZy5Ha2VOb2RlQ29uZmlnQgPgQQESFgoJbG9jYXRpb25z",
+            "GA0gAygJQgPgQQESYgoLYXV0b3NjYWxpbmcYBCABKAsySC5nb29nbGUuY2xv",
+            "dWQuZGF0YXByb2MudjEuR2tlTm9kZVBvb2xDb25maWcuR2tlTm9kZVBvb2xB",
+            "dXRvc2NhbGluZ0NvbmZpZ0ID4EEBGuYBCg1Ha2VOb2RlQ29uZmlnEhkKDG1h",
+            "Y2hpbmVfdHlwZRgBIAEoCUID4EEBEhgKC3ByZWVtcHRpYmxlGAogASgIQgPg",
+            "QQESHAoPbG9jYWxfc3NkX2NvdW50GAcgASgFQgPgQQESYwoMYWNjZWxlcmF0",
+            "b3JzGAsgAygLMkguZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkdrZU5vZGVQ",
+            "b29sQ29uZmlnLkdrZU5vZGVQb29sQWNjZWxlcmF0b3JDb25maWdCA+BBARId",
+            "ChBtaW5fY3B1X3BsYXRmb3JtGA0gASgJQgPgQQEaUwocR2tlTm9kZVBvb2xB",
+            "Y2NlbGVyYXRvckNvbmZpZxIZChFhY2NlbGVyYXRvcl9jb3VudBgBIAEoAxIY",
+            "ChBhY2NlbGVyYXRvcl90eXBlGAIgASgJGk4KHEdrZU5vZGVQb29sQXV0b3Nj",
+            "YWxpbmdDb25maWcSFgoObWluX25vZGVfY291bnQYAiABKAUSFgoObWF4X25v",
+            "ZGVfY291bnQYAyABKAUqvwEKCUNvbXBvbmVudBIZChVDT01QT05FTlRfVU5T",
+            "UEVDSUZJRUQQABIMCghBTkFDT05EQRAFEgoKBkRPQ0tFUhANEgkKBURSVUlE",
+            "EAkSCQoFRkxJTksQDhIJCgVIQkFTRRALEhAKDEhJVkVfV0VCSENBVBADEgsK",
+            "B0pVUFlURVIQARIKCgZQUkVTVE8QBhIKCgZSQU5HRVIQDBIICgRTT0xSEAoS",
+            "DAoIWkVQUEVMSU4QBBINCglaT09LRUVQRVIQCCpKCg1GYWlsdXJlQWN0aW9u",
+            "Eh4KGkZBSUxVUkVfQUNUSU9OX1VOU1BFQ0lGSUVEEAASDQoJTk9fQUNUSU9O",
+            "EAESCgoGREVMRVRFEAJCbwocY29tLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52",
+            "MUILU2hhcmVkUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
+            "Z29vZ2xlYXBpcy9jbG91ZC9kYXRhcHJvYy92MTtkYXRhcHJvY2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataproc.V1.Component), typeof(global::Google.Cloud.Dataproc.V1.FailureAction), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -65,7 +100,14 @@ namespace Google.Cloud.Dataproc.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ExecutionConfig), global::Google.Cloud.Dataproc.V1.ExecutionConfig.Parser, new[]{ "ServiceAccount", "NetworkUri", "SubnetworkUri", "NetworkTags", "KmsKey" }, new[]{ "Network" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SparkHistoryServerConfig), global::Google.Cloud.Dataproc.V1.SparkHistoryServerConfig.Parser, new[]{ "DataprocCluster" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.PeripheralsConfig), global::Google.Cloud.Dataproc.V1.PeripheralsConfig.Parser, new[]{ "MetastoreService", "SparkHistoryServerConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.RuntimeInfo), global::Google.Cloud.Dataproc.V1.RuntimeInfo.Parser, new[]{ "Endpoints", "OutputUri", "DiagnosticOutputUri" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.RuntimeInfo), global::Google.Cloud.Dataproc.V1.RuntimeInfo.Parser, new[]{ "Endpoints", "OutputUri", "DiagnosticOutputUri" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GkeClusterConfig), global::Google.Cloud.Dataproc.V1.GkeClusterConfig.Parser, new[]{ "GkeClusterTarget", "NodePoolTarget" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.KubernetesClusterConfig), global::Google.Cloud.Dataproc.V1.KubernetesClusterConfig.Parser, new[]{ "KubernetesNamespace", "GkeClusterConfig", "KubernetesSoftwareConfig" }, new[]{ "Config" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.KubernetesSoftwareConfig), global::Google.Cloud.Dataproc.V1.KubernetesSoftwareConfig.Parser, new[]{ "ComponentVersion", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GkeNodePoolTarget), global::Google.Cloud.Dataproc.V1.GkeNodePoolTarget.Parser, new[]{ "NodePool", "Roles", "NodePoolConfig" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.GkeNodePoolTarget.Types.Role) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig), global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Parser, new[]{ "Config", "Locations", "Autoscaling" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodeConfig), global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodeConfig.Parser, new[]{ "MachineType", "Preemptible", "LocalSsdCount", "Accelerators", "MinCpuPlatform" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodePoolAcceleratorConfig), global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodePoolAcceleratorConfig.Parser, new[]{ "AcceleratorCount", "AcceleratorType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodePoolAutoscalingConfig), global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodePoolAutoscalingConfig.Parser, new[]{ "MinNodeCount", "MaxNodeCount" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -1762,6 +1804,2242 @@ namespace Google.Cloud.Dataproc.V1 {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// The cluster's GKE config.
+  /// </summary>
+  public sealed partial class GkeClusterConfig : pb::IMessage<GkeClusterConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GkeClusterConfig> _parser = new pb::MessageParser<GkeClusterConfig>(() => new GkeClusterConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GkeClusterConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataproc.V1.SharedReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GkeClusterConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GkeClusterConfig(GkeClusterConfig other) : this() {
+      gkeClusterTarget_ = other.gkeClusterTarget_;
+      nodePoolTarget_ = other.nodePoolTarget_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GkeClusterConfig Clone() {
+      return new GkeClusterConfig(this);
+    }
+
+    /// <summary>Field number for the "gke_cluster_target" field.</summary>
+    public const int GkeClusterTargetFieldNumber = 2;
+    private string gkeClusterTarget_ = "";
+    /// <summary>
+    /// Optional. A target GKE cluster to deploy to. It must be in the same project and
+    /// region as the Dataproc cluster (the GKE cluster can be zonal or regional).
+    /// Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string GkeClusterTarget {
+      get { return gkeClusterTarget_; }
+      set {
+        gkeClusterTarget_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "node_pool_target" field.</summary>
+    public const int NodePoolTargetFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dataproc.V1.GkeNodePoolTarget> _repeated_nodePoolTarget_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Dataproc.V1.GkeNodePoolTarget.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.GkeNodePoolTarget> nodePoolTarget_ = new pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.GkeNodePoolTarget>();
+    /// <summary>
+    /// Optional. GKE NodePools where workloads will be scheduled. At least one node pool
+    /// must be assigned the 'default' role. Each role can be given to only a
+    /// single NodePoolTarget. All NodePools must have the same location settings.
+    /// If a nodePoolTarget is not specified, Dataproc constructs a default
+    /// nodePoolTarget.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.GkeNodePoolTarget> NodePoolTarget {
+      get { return nodePoolTarget_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GkeClusterConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GkeClusterConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (GkeClusterTarget != other.GkeClusterTarget) return false;
+      if(!nodePoolTarget_.Equals(other.nodePoolTarget_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (GkeClusterTarget.Length != 0) hash ^= GkeClusterTarget.GetHashCode();
+      hash ^= nodePoolTarget_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (GkeClusterTarget.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(GkeClusterTarget);
+      }
+      nodePoolTarget_.WriteTo(output, _repeated_nodePoolTarget_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (GkeClusterTarget.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(GkeClusterTarget);
+      }
+      nodePoolTarget_.WriteTo(ref output, _repeated_nodePoolTarget_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (GkeClusterTarget.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GkeClusterTarget);
+      }
+      size += nodePoolTarget_.CalculateSize(_repeated_nodePoolTarget_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GkeClusterConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.GkeClusterTarget.Length != 0) {
+        GkeClusterTarget = other.GkeClusterTarget;
+      }
+      nodePoolTarget_.Add(other.nodePoolTarget_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 18: {
+            GkeClusterTarget = input.ReadString();
+            break;
+          }
+          case 26: {
+            nodePoolTarget_.AddEntriesFrom(input, _repeated_nodePoolTarget_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            GkeClusterTarget = input.ReadString();
+            break;
+          }
+          case 26: {
+            nodePoolTarget_.AddEntriesFrom(ref input, _repeated_nodePoolTarget_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The configuration for running the Dataproc cluster on Kubernetes.
+  /// </summary>
+  public sealed partial class KubernetesClusterConfig : pb::IMessage<KubernetesClusterConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<KubernetesClusterConfig> _parser = new pb::MessageParser<KubernetesClusterConfig>(() => new KubernetesClusterConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<KubernetesClusterConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataproc.V1.SharedReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public KubernetesClusterConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public KubernetesClusterConfig(KubernetesClusterConfig other) : this() {
+      kubernetesNamespace_ = other.kubernetesNamespace_;
+      kubernetesSoftwareConfig_ = other.kubernetesSoftwareConfig_ != null ? other.kubernetesSoftwareConfig_.Clone() : null;
+      switch (other.ConfigCase) {
+        case ConfigOneofCase.GkeClusterConfig:
+          GkeClusterConfig = other.GkeClusterConfig.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public KubernetesClusterConfig Clone() {
+      return new KubernetesClusterConfig(this);
+    }
+
+    /// <summary>Field number for the "kubernetes_namespace" field.</summary>
+    public const int KubernetesNamespaceFieldNumber = 1;
+    private string kubernetesNamespace_ = "";
+    /// <summary>
+    /// Optional. A namespace within the Kubernetes cluster to deploy into. If this namespace
+    /// does not exist, it is created. If it exists, Dataproc
+    /// verifies that another Dataproc VirtualCluster is not installed
+    /// into it. If not specified, the name of the Dataproc Cluster is used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string KubernetesNamespace {
+      get { return kubernetesNamespace_; }
+      set {
+        kubernetesNamespace_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "gke_cluster_config" field.</summary>
+    public const int GkeClusterConfigFieldNumber = 2;
+    /// <summary>
+    /// Required. The configuration for running the Dataproc cluster on GKE.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataproc.V1.GkeClusterConfig GkeClusterConfig {
+      get { return configCase_ == ConfigOneofCase.GkeClusterConfig ? (global::Google.Cloud.Dataproc.V1.GkeClusterConfig) config_ : null; }
+      set {
+        config_ = value;
+        configCase_ = value == null ? ConfigOneofCase.None : ConfigOneofCase.GkeClusterConfig;
+      }
+    }
+
+    /// <summary>Field number for the "kubernetes_software_config" field.</summary>
+    public const int KubernetesSoftwareConfigFieldNumber = 3;
+    private global::Google.Cloud.Dataproc.V1.KubernetesSoftwareConfig kubernetesSoftwareConfig_;
+    /// <summary>
+    /// Optional. The software configuration for this Dataproc cluster running on Kubernetes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataproc.V1.KubernetesSoftwareConfig KubernetesSoftwareConfig {
+      get { return kubernetesSoftwareConfig_; }
+      set {
+        kubernetesSoftwareConfig_ = value;
+      }
+    }
+
+    private object config_;
+    /// <summary>Enum of possible cases for the "config" oneof.</summary>
+    public enum ConfigOneofCase {
+      None = 0,
+      GkeClusterConfig = 2,
+    }
+    private ConfigOneofCase configCase_ = ConfigOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConfigOneofCase ConfigCase {
+      get { return configCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearConfig() {
+      configCase_ = ConfigOneofCase.None;
+      config_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as KubernetesClusterConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(KubernetesClusterConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (KubernetesNamespace != other.KubernetesNamespace) return false;
+      if (!object.Equals(GkeClusterConfig, other.GkeClusterConfig)) return false;
+      if (!object.Equals(KubernetesSoftwareConfig, other.KubernetesSoftwareConfig)) return false;
+      if (ConfigCase != other.ConfigCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (KubernetesNamespace.Length != 0) hash ^= KubernetesNamespace.GetHashCode();
+      if (configCase_ == ConfigOneofCase.GkeClusterConfig) hash ^= GkeClusterConfig.GetHashCode();
+      if (kubernetesSoftwareConfig_ != null) hash ^= KubernetesSoftwareConfig.GetHashCode();
+      hash ^= (int) configCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (KubernetesNamespace.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(KubernetesNamespace);
+      }
+      if (configCase_ == ConfigOneofCase.GkeClusterConfig) {
+        output.WriteRawTag(18);
+        output.WriteMessage(GkeClusterConfig);
+      }
+      if (kubernetesSoftwareConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(KubernetesSoftwareConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (KubernetesNamespace.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(KubernetesNamespace);
+      }
+      if (configCase_ == ConfigOneofCase.GkeClusterConfig) {
+        output.WriteRawTag(18);
+        output.WriteMessage(GkeClusterConfig);
+      }
+      if (kubernetesSoftwareConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(KubernetesSoftwareConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (KubernetesNamespace.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KubernetesNamespace);
+      }
+      if (configCase_ == ConfigOneofCase.GkeClusterConfig) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GkeClusterConfig);
+      }
+      if (kubernetesSoftwareConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(KubernetesSoftwareConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(KubernetesClusterConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.KubernetesNamespace.Length != 0) {
+        KubernetesNamespace = other.KubernetesNamespace;
+      }
+      if (other.kubernetesSoftwareConfig_ != null) {
+        if (kubernetesSoftwareConfig_ == null) {
+          KubernetesSoftwareConfig = new global::Google.Cloud.Dataproc.V1.KubernetesSoftwareConfig();
+        }
+        KubernetesSoftwareConfig.MergeFrom(other.KubernetesSoftwareConfig);
+      }
+      switch (other.ConfigCase) {
+        case ConfigOneofCase.GkeClusterConfig:
+          if (GkeClusterConfig == null) {
+            GkeClusterConfig = new global::Google.Cloud.Dataproc.V1.GkeClusterConfig();
+          }
+          GkeClusterConfig.MergeFrom(other.GkeClusterConfig);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            KubernetesNamespace = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dataproc.V1.GkeClusterConfig subBuilder = new global::Google.Cloud.Dataproc.V1.GkeClusterConfig();
+            if (configCase_ == ConfigOneofCase.GkeClusterConfig) {
+              subBuilder.MergeFrom(GkeClusterConfig);
+            }
+            input.ReadMessage(subBuilder);
+            GkeClusterConfig = subBuilder;
+            break;
+          }
+          case 26: {
+            if (kubernetesSoftwareConfig_ == null) {
+              KubernetesSoftwareConfig = new global::Google.Cloud.Dataproc.V1.KubernetesSoftwareConfig();
+            }
+            input.ReadMessage(KubernetesSoftwareConfig);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            KubernetesNamespace = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dataproc.V1.GkeClusterConfig subBuilder = new global::Google.Cloud.Dataproc.V1.GkeClusterConfig();
+            if (configCase_ == ConfigOneofCase.GkeClusterConfig) {
+              subBuilder.MergeFrom(GkeClusterConfig);
+            }
+            input.ReadMessage(subBuilder);
+            GkeClusterConfig = subBuilder;
+            break;
+          }
+          case 26: {
+            if (kubernetesSoftwareConfig_ == null) {
+              KubernetesSoftwareConfig = new global::Google.Cloud.Dataproc.V1.KubernetesSoftwareConfig();
+            }
+            input.ReadMessage(KubernetesSoftwareConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The software configuration for this Dataproc cluster running on Kubernetes.
+  /// </summary>
+  public sealed partial class KubernetesSoftwareConfig : pb::IMessage<KubernetesSoftwareConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<KubernetesSoftwareConfig> _parser = new pb::MessageParser<KubernetesSoftwareConfig>(() => new KubernetesSoftwareConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<KubernetesSoftwareConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataproc.V1.SharedReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public KubernetesSoftwareConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public KubernetesSoftwareConfig(KubernetesSoftwareConfig other) : this() {
+      componentVersion_ = other.componentVersion_.Clone();
+      properties_ = other.properties_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public KubernetesSoftwareConfig Clone() {
+      return new KubernetesSoftwareConfig(this);
+    }
+
+    /// <summary>Field number for the "component_version" field.</summary>
+    public const int ComponentVersionFieldNumber = 1;
+    private static readonly pbc::MapField<string, string>.Codec _map_componentVersion_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 10);
+    private readonly pbc::MapField<string, string> componentVersion_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// The components that should be installed in this Dataproc cluster. The key
+    /// must be a string from the KubernetesComponent enumeration. The value is
+    /// the version of the software to be installed.
+    /// At least one entry must be specified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> ComponentVersion {
+      get { return componentVersion_; }
+    }
+
+    /// <summary>Field number for the "properties" field.</summary>
+    public const int PropertiesFieldNumber = 2;
+    private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
+    private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// The properties to set on daemon config files.
+    ///
+    /// Property keys are specified in `prefix:property` format, for example
+    /// `spark:spark.kubernetes.container.image`. The following are supported
+    /// prefixes and their mappings:
+    ///
+    /// * spark:  `spark-defaults.conf`
+    ///
+    /// For more information, see [Cluster
+    /// properties](https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Properties {
+      get { return properties_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as KubernetesSoftwareConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(KubernetesSoftwareConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!ComponentVersion.Equals(other.ComponentVersion)) return false;
+      if (!Properties.Equals(other.Properties)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= ComponentVersion.GetHashCode();
+      hash ^= Properties.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      componentVersion_.WriteTo(output, _map_componentVersion_codec);
+      properties_.WriteTo(output, _map_properties_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      componentVersion_.WriteTo(ref output, _map_componentVersion_codec);
+      properties_.WriteTo(ref output, _map_properties_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += componentVersion_.CalculateSize(_map_componentVersion_codec);
+      size += properties_.CalculateSize(_map_properties_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(KubernetesSoftwareConfig other) {
+      if (other == null) {
+        return;
+      }
+      componentVersion_.Add(other.componentVersion_);
+      properties_.Add(other.properties_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            componentVersion_.AddEntriesFrom(input, _map_componentVersion_codec);
+            break;
+          }
+          case 18: {
+            properties_.AddEntriesFrom(input, _map_properties_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            componentVersion_.AddEntriesFrom(ref input, _map_componentVersion_codec);
+            break;
+          }
+          case 18: {
+            properties_.AddEntriesFrom(ref input, _map_properties_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// GKE NodePools that Dataproc workloads run on.
+  /// </summary>
+  public sealed partial class GkeNodePoolTarget : pb::IMessage<GkeNodePoolTarget>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GkeNodePoolTarget> _parser = new pb::MessageParser<GkeNodePoolTarget>(() => new GkeNodePoolTarget());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GkeNodePoolTarget> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataproc.V1.SharedReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GkeNodePoolTarget() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GkeNodePoolTarget(GkeNodePoolTarget other) : this() {
+      nodePool_ = other.nodePool_;
+      roles_ = other.roles_.Clone();
+      nodePoolConfig_ = other.nodePoolConfig_ != null ? other.nodePoolConfig_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GkeNodePoolTarget Clone() {
+      return new GkeNodePoolTarget(this);
+    }
+
+    /// <summary>Field number for the "node_pool" field.</summary>
+    public const int NodePoolFieldNumber = 1;
+    private string nodePool_ = "";
+    /// <summary>
+    /// Required. The target GKE NodePool.
+    /// Format:
+    /// 'projects/{project}/locations/{location}/clusters/{cluster}/nodePools/{node_pool}'
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NodePool {
+      get { return nodePool_; }
+      set {
+        nodePool_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "roles" field.</summary>
+    public const int RolesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dataproc.V1.GkeNodePoolTarget.Types.Role> _repeated_roles_codec
+        = pb::FieldCodec.ForEnum(18, x => (int) x, x => (global::Google.Cloud.Dataproc.V1.GkeNodePoolTarget.Types.Role) x);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.GkeNodePoolTarget.Types.Role> roles_ = new pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.GkeNodePoolTarget.Types.Role>();
+    /// <summary>
+    /// Required. The types of role for a GKE NodePool
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.GkeNodePoolTarget.Types.Role> Roles {
+      get { return roles_; }
+    }
+
+    /// <summary>Field number for the "node_pool_config" field.</summary>
+    public const int NodePoolConfigFieldNumber = 3;
+    private global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig nodePoolConfig_;
+    /// <summary>
+    /// Optional. The configuration for the GKE NodePool.
+    ///
+    /// If specified, Dataproc attempts to create a NodePool with the
+    /// specified shape. If one with the same name already exists, it is
+    /// verified against all specified fields. If a field differs, the
+    /// virtual cluster creation will fail.
+    ///
+    /// If omitted, any NodePool with the specified name is used. If a
+    /// NodePool with the specified name does not exist, Dataproc create a NodePool
+    /// with default values.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig NodePoolConfig {
+      get { return nodePoolConfig_; }
+      set {
+        nodePoolConfig_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GkeNodePoolTarget);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GkeNodePoolTarget other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (NodePool != other.NodePool) return false;
+      if(!roles_.Equals(other.roles_)) return false;
+      if (!object.Equals(NodePoolConfig, other.NodePoolConfig)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (NodePool.Length != 0) hash ^= NodePool.GetHashCode();
+      hash ^= roles_.GetHashCode();
+      if (nodePoolConfig_ != null) hash ^= NodePoolConfig.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (NodePool.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NodePool);
+      }
+      roles_.WriteTo(output, _repeated_roles_codec);
+      if (nodePoolConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(NodePoolConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NodePool.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NodePool);
+      }
+      roles_.WriteTo(ref output, _repeated_roles_codec);
+      if (nodePoolConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(NodePoolConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (NodePool.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NodePool);
+      }
+      size += roles_.CalculateSize(_repeated_roles_codec);
+      if (nodePoolConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NodePoolConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GkeNodePoolTarget other) {
+      if (other == null) {
+        return;
+      }
+      if (other.NodePool.Length != 0) {
+        NodePool = other.NodePool;
+      }
+      roles_.Add(other.roles_);
+      if (other.nodePoolConfig_ != null) {
+        if (nodePoolConfig_ == null) {
+          NodePoolConfig = new global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig();
+        }
+        NodePoolConfig.MergeFrom(other.NodePoolConfig);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            NodePool = input.ReadString();
+            break;
+          }
+          case 18:
+          case 16: {
+            roles_.AddEntriesFrom(input, _repeated_roles_codec);
+            break;
+          }
+          case 26: {
+            if (nodePoolConfig_ == null) {
+              NodePoolConfig = new global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig();
+            }
+            input.ReadMessage(NodePoolConfig);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            NodePool = input.ReadString();
+            break;
+          }
+          case 18:
+          case 16: {
+            roles_.AddEntriesFrom(ref input, _repeated_roles_codec);
+            break;
+          }
+          case 26: {
+            if (nodePoolConfig_ == null) {
+              NodePoolConfig = new global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig();
+            }
+            input.ReadMessage(NodePoolConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the GkeNodePoolTarget message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// `Role` specifies whose tasks will run on the NodePool. The roles can be
+      /// specific to workloads. Exactly one GkeNodePoolTarget within the
+      /// VirtualCluster must have 'default' role, which is used to run all workloads
+      /// that are not associated with a NodePool.
+      /// </summary>
+      public enum Role {
+        /// <summary>
+        /// Role is unspecified.
+        /// </summary>
+        [pbr::OriginalName("ROLE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Any roles that are not directly assigned to a NodePool run on the
+        /// `default` role's NodePool.
+        /// </summary>
+        [pbr::OriginalName("DEFAULT")] Default = 1,
+        /// <summary>
+        /// Run controllers and webhooks.
+        /// </summary>
+        [pbr::OriginalName("CONTROLLER")] Controller = 2,
+        /// <summary>
+        /// Run spark driver.
+        /// </summary>
+        [pbr::OriginalName("SPARK_DRIVER")] SparkDriver = 3,
+        /// <summary>
+        /// Run spark executors.
+        /// </summary>
+        [pbr::OriginalName("SPARK_EXECUTOR")] SparkExecutor = 4,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// The configuration of a GKE NodePool used by a [Dataproc-on-GKE
+  /// cluster](https://cloud.google.com/dataproc/docs/concepts/jobs/dataproc-gke#create-a-dataproc-on-gke-cluster).
+  /// </summary>
+  public sealed partial class GkeNodePoolConfig : pb::IMessage<GkeNodePoolConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GkeNodePoolConfig> _parser = new pb::MessageParser<GkeNodePoolConfig>(() => new GkeNodePoolConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GkeNodePoolConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataproc.V1.SharedReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GkeNodePoolConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GkeNodePoolConfig(GkeNodePoolConfig other) : this() {
+      config_ = other.config_ != null ? other.config_.Clone() : null;
+      locations_ = other.locations_.Clone();
+      autoscaling_ = other.autoscaling_ != null ? other.autoscaling_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GkeNodePoolConfig Clone() {
+      return new GkeNodePoolConfig(this);
+    }
+
+    /// <summary>Field number for the "config" field.</summary>
+    public const int ConfigFieldNumber = 2;
+    private global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodeConfig config_;
+    /// <summary>
+    /// Optional. The node pool configuration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodeConfig Config {
+      get { return config_; }
+      set {
+        config_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "locations" field.</summary>
+    public const int LocationsFieldNumber = 13;
+    private static readonly pb::FieldCodec<string> _repeated_locations_codec
+        = pb::FieldCodec.ForString(106);
+    private readonly pbc::RepeatedField<string> locations_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The list of Compute Engine
+    /// [zones](https://cloud.google.com/compute/docs/zones#available) where
+    /// NodePool's nodes will be located.
+    ///
+    /// **Note:** Currently, only one zone may be specified.
+    ///
+    /// If a location is not specified during NodePool creation, Dataproc will
+    /// choose a location.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Locations {
+      get { return locations_; }
+    }
+
+    /// <summary>Field number for the "autoscaling" field.</summary>
+    public const int AutoscalingFieldNumber = 4;
+    private global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodePoolAutoscalingConfig autoscaling_;
+    /// <summary>
+    /// Optional. The autoscaler configuration for this NodePool. The autoscaler is enabled
+    /// only when a valid configuration is present.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodePoolAutoscalingConfig Autoscaling {
+      get { return autoscaling_; }
+      set {
+        autoscaling_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GkeNodePoolConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GkeNodePoolConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Config, other.Config)) return false;
+      if(!locations_.Equals(other.locations_)) return false;
+      if (!object.Equals(Autoscaling, other.Autoscaling)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (config_ != null) hash ^= Config.GetHashCode();
+      hash ^= locations_.GetHashCode();
+      if (autoscaling_ != null) hash ^= Autoscaling.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (config_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Config);
+      }
+      if (autoscaling_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Autoscaling);
+      }
+      locations_.WriteTo(output, _repeated_locations_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (config_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Config);
+      }
+      if (autoscaling_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Autoscaling);
+      }
+      locations_.WriteTo(ref output, _repeated_locations_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (config_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Config);
+      }
+      size += locations_.CalculateSize(_repeated_locations_codec);
+      if (autoscaling_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Autoscaling);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GkeNodePoolConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.config_ != null) {
+        if (config_ == null) {
+          Config = new global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodeConfig();
+        }
+        Config.MergeFrom(other.Config);
+      }
+      locations_.Add(other.locations_);
+      if (other.autoscaling_ != null) {
+        if (autoscaling_ == null) {
+          Autoscaling = new global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodePoolAutoscalingConfig();
+        }
+        Autoscaling.MergeFrom(other.Autoscaling);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 18: {
+            if (config_ == null) {
+              Config = new global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodeConfig();
+            }
+            input.ReadMessage(Config);
+            break;
+          }
+          case 34: {
+            if (autoscaling_ == null) {
+              Autoscaling = new global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodePoolAutoscalingConfig();
+            }
+            input.ReadMessage(Autoscaling);
+            break;
+          }
+          case 106: {
+            locations_.AddEntriesFrom(input, _repeated_locations_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            if (config_ == null) {
+              Config = new global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodeConfig();
+            }
+            input.ReadMessage(Config);
+            break;
+          }
+          case 34: {
+            if (autoscaling_ == null) {
+              Autoscaling = new global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodePoolAutoscalingConfig();
+            }
+            input.ReadMessage(Autoscaling);
+            break;
+          }
+          case 106: {
+            locations_.AddEntriesFrom(ref input, _repeated_locations_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the GkeNodePoolConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Parameters that describe cluster nodes.
+      /// </summary>
+      public sealed partial class GkeNodeConfig : pb::IMessage<GkeNodeConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<GkeNodeConfig> _parser = new pb::MessageParser<GkeNodeConfig>(() => new GkeNodeConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<GkeNodeConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GkeNodeConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GkeNodeConfig(GkeNodeConfig other) : this() {
+          machineType_ = other.machineType_;
+          preemptible_ = other.preemptible_;
+          localSsdCount_ = other.localSsdCount_;
+          accelerators_ = other.accelerators_.Clone();
+          minCpuPlatform_ = other.minCpuPlatform_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GkeNodeConfig Clone() {
+          return new GkeNodeConfig(this);
+        }
+
+        /// <summary>Field number for the "machine_type" field.</summary>
+        public const int MachineTypeFieldNumber = 1;
+        private string machineType_ = "";
+        /// <summary>
+        /// Optional. The name of a Compute Engine [machine
+        /// type](https://cloud.google.com/compute/docs/machine-types).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string MachineType {
+          get { return machineType_; }
+          set {
+            machineType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "preemptible" field.</summary>
+        public const int PreemptibleFieldNumber = 10;
+        private bool preemptible_;
+        /// <summary>
+        /// Optional. Whether the nodes are created as [preemptible VM
+        /// instances](https://cloud.google.com/compute/docs/instances/preemptible).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Preemptible {
+          get { return preemptible_; }
+          set {
+            preemptible_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "local_ssd_count" field.</summary>
+        public const int LocalSsdCountFieldNumber = 7;
+        private int localSsdCount_;
+        /// <summary>
+        /// Optional. The number of local SSD disks to attach to the node, which is limited by
+        /// the maximum number of disks allowable per zone (see [Adding Local
+        /// SSDs](https://cloud.google.com/compute/docs/disks/local-ssd)).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int LocalSsdCount {
+          get { return localSsdCount_; }
+          set {
+            localSsdCount_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "accelerators" field.</summary>
+        public const int AcceleratorsFieldNumber = 11;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodePoolAcceleratorConfig> _repeated_accelerators_codec
+            = pb::FieldCodec.ForMessage(90, global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodePoolAcceleratorConfig.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodePoolAcceleratorConfig> accelerators_ = new pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodePoolAcceleratorConfig>();
+        /// <summary>
+        /// Optional. A list of [hardware
+        /// accelerators](https://cloud.google.com/compute/docs/gpus) to attach to
+        /// each node.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodePoolAcceleratorConfig> Accelerators {
+          get { return accelerators_; }
+        }
+
+        /// <summary>Field number for the "min_cpu_platform" field.</summary>
+        public const int MinCpuPlatformFieldNumber = 13;
+        private string minCpuPlatform_ = "";
+        /// <summary>
+        /// Optional. [Minimum CPU
+        /// platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+        /// to be used by this instance. The instance may be scheduled on the
+        /// specified or a newer CPU platform. Specify the friendly names of CPU
+        /// platforms, such as "Intel Haswell"` or Intel Sandy Bridge".
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string MinCpuPlatform {
+          get { return minCpuPlatform_; }
+          set {
+            minCpuPlatform_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as GkeNodeConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(GkeNodeConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (MachineType != other.MachineType) return false;
+          if (Preemptible != other.Preemptible) return false;
+          if (LocalSsdCount != other.LocalSsdCount) return false;
+          if(!accelerators_.Equals(other.accelerators_)) return false;
+          if (MinCpuPlatform != other.MinCpuPlatform) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (MachineType.Length != 0) hash ^= MachineType.GetHashCode();
+          if (Preemptible != false) hash ^= Preemptible.GetHashCode();
+          if (LocalSsdCount != 0) hash ^= LocalSsdCount.GetHashCode();
+          hash ^= accelerators_.GetHashCode();
+          if (MinCpuPlatform.Length != 0) hash ^= MinCpuPlatform.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (MachineType.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(MachineType);
+          }
+          if (LocalSsdCount != 0) {
+            output.WriteRawTag(56);
+            output.WriteInt32(LocalSsdCount);
+          }
+          if (Preemptible != false) {
+            output.WriteRawTag(80);
+            output.WriteBool(Preemptible);
+          }
+          accelerators_.WriteTo(output, _repeated_accelerators_codec);
+          if (MinCpuPlatform.Length != 0) {
+            output.WriteRawTag(106);
+            output.WriteString(MinCpuPlatform);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (MachineType.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(MachineType);
+          }
+          if (LocalSsdCount != 0) {
+            output.WriteRawTag(56);
+            output.WriteInt32(LocalSsdCount);
+          }
+          if (Preemptible != false) {
+            output.WriteRawTag(80);
+            output.WriteBool(Preemptible);
+          }
+          accelerators_.WriteTo(ref output, _repeated_accelerators_codec);
+          if (MinCpuPlatform.Length != 0) {
+            output.WriteRawTag(106);
+            output.WriteString(MinCpuPlatform);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (MachineType.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(MachineType);
+          }
+          if (Preemptible != false) {
+            size += 1 + 1;
+          }
+          if (LocalSsdCount != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(LocalSsdCount);
+          }
+          size += accelerators_.CalculateSize(_repeated_accelerators_codec);
+          if (MinCpuPlatform.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(MinCpuPlatform);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(GkeNodeConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.MachineType.Length != 0) {
+            MachineType = other.MachineType;
+          }
+          if (other.Preemptible != false) {
+            Preemptible = other.Preemptible;
+          }
+          if (other.LocalSsdCount != 0) {
+            LocalSsdCount = other.LocalSsdCount;
+          }
+          accelerators_.Add(other.accelerators_);
+          if (other.MinCpuPlatform.Length != 0) {
+            MinCpuPlatform = other.MinCpuPlatform;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                MachineType = input.ReadString();
+                break;
+              }
+              case 56: {
+                LocalSsdCount = input.ReadInt32();
+                break;
+              }
+              case 80: {
+                Preemptible = input.ReadBool();
+                break;
+              }
+              case 90: {
+                accelerators_.AddEntriesFrom(input, _repeated_accelerators_codec);
+                break;
+              }
+              case 106: {
+                MinCpuPlatform = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                MachineType = input.ReadString();
+                break;
+              }
+              case 56: {
+                LocalSsdCount = input.ReadInt32();
+                break;
+              }
+              case 80: {
+                Preemptible = input.ReadBool();
+                break;
+              }
+              case 90: {
+                accelerators_.AddEntriesFrom(ref input, _repeated_accelerators_codec);
+                break;
+              }
+              case 106: {
+                MinCpuPlatform = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// A GkeNodeConfigAcceleratorConfig represents a Hardware Accelerator request
+      /// for a NodePool.
+      /// </summary>
+      public sealed partial class GkeNodePoolAcceleratorConfig : pb::IMessage<GkeNodePoolAcceleratorConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<GkeNodePoolAcceleratorConfig> _parser = new pb::MessageParser<GkeNodePoolAcceleratorConfig>(() => new GkeNodePoolAcceleratorConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<GkeNodePoolAcceleratorConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GkeNodePoolAcceleratorConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GkeNodePoolAcceleratorConfig(GkeNodePoolAcceleratorConfig other) : this() {
+          acceleratorCount_ = other.acceleratorCount_;
+          acceleratorType_ = other.acceleratorType_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GkeNodePoolAcceleratorConfig Clone() {
+          return new GkeNodePoolAcceleratorConfig(this);
+        }
+
+        /// <summary>Field number for the "accelerator_count" field.</summary>
+        public const int AcceleratorCountFieldNumber = 1;
+        private long acceleratorCount_;
+        /// <summary>
+        /// The number of accelerator cards exposed to an instance.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long AcceleratorCount {
+          get { return acceleratorCount_; }
+          set {
+            acceleratorCount_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "accelerator_type" field.</summary>
+        public const int AcceleratorTypeFieldNumber = 2;
+        private string acceleratorType_ = "";
+        /// <summary>
+        /// The accelerator type resource namename (see GPUs on Compute Engine).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string AcceleratorType {
+          get { return acceleratorType_; }
+          set {
+            acceleratorType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as GkeNodePoolAcceleratorConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(GkeNodePoolAcceleratorConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (AcceleratorCount != other.AcceleratorCount) return false;
+          if (AcceleratorType != other.AcceleratorType) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (AcceleratorCount != 0L) hash ^= AcceleratorCount.GetHashCode();
+          if (AcceleratorType.Length != 0) hash ^= AcceleratorType.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (AcceleratorCount != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(AcceleratorCount);
+          }
+          if (AcceleratorType.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(AcceleratorType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (AcceleratorCount != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(AcceleratorCount);
+          }
+          if (AcceleratorType.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(AcceleratorType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (AcceleratorCount != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(AcceleratorCount);
+          }
+          if (AcceleratorType.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(AcceleratorType);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(GkeNodePoolAcceleratorConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.AcceleratorCount != 0L) {
+            AcceleratorCount = other.AcceleratorCount;
+          }
+          if (other.AcceleratorType.Length != 0) {
+            AcceleratorType = other.AcceleratorType;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                AcceleratorCount = input.ReadInt64();
+                break;
+              }
+              case 18: {
+                AcceleratorType = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                AcceleratorCount = input.ReadInt64();
+                break;
+              }
+              case 18: {
+                AcceleratorType = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// GkeNodePoolAutoscaling contains information the cluster autoscaler needs to
+      /// adjust the size of the node pool to the current cluster usage.
+      /// </summary>
+      public sealed partial class GkeNodePoolAutoscalingConfig : pb::IMessage<GkeNodePoolAutoscalingConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<GkeNodePoolAutoscalingConfig> _parser = new pb::MessageParser<GkeNodePoolAutoscalingConfig>(() => new GkeNodePoolAutoscalingConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<GkeNodePoolAutoscalingConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GkeNodePoolAutoscalingConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GkeNodePoolAutoscalingConfig(GkeNodePoolAutoscalingConfig other) : this() {
+          minNodeCount_ = other.minNodeCount_;
+          maxNodeCount_ = other.maxNodeCount_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GkeNodePoolAutoscalingConfig Clone() {
+          return new GkeNodePoolAutoscalingConfig(this);
+        }
+
+        /// <summary>Field number for the "min_node_count" field.</summary>
+        public const int MinNodeCountFieldNumber = 2;
+        private int minNodeCount_;
+        /// <summary>
+        /// The minimum number of nodes in the NodePool. Must be >= 0 and &lt;=
+        /// max_node_count.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int MinNodeCount {
+          get { return minNodeCount_; }
+          set {
+            minNodeCount_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "max_node_count" field.</summary>
+        public const int MaxNodeCountFieldNumber = 3;
+        private int maxNodeCount_;
+        /// <summary>
+        /// The maximum number of nodes in the NodePool. Must be >= min_node_count.
+        /// **Note:** Quota must be sufficient to scale up the cluster.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int MaxNodeCount {
+          get { return maxNodeCount_; }
+          set {
+            maxNodeCount_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as GkeNodePoolAutoscalingConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(GkeNodePoolAutoscalingConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (MinNodeCount != other.MinNodeCount) return false;
+          if (MaxNodeCount != other.MaxNodeCount) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (MinNodeCount != 0) hash ^= MinNodeCount.GetHashCode();
+          if (MaxNodeCount != 0) hash ^= MaxNodeCount.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (MinNodeCount != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(MinNodeCount);
+          }
+          if (MaxNodeCount != 0) {
+            output.WriteRawTag(24);
+            output.WriteInt32(MaxNodeCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (MinNodeCount != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(MinNodeCount);
+          }
+          if (MaxNodeCount != 0) {
+            output.WriteRawTag(24);
+            output.WriteInt32(MaxNodeCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (MinNodeCount != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(MinNodeCount);
+          }
+          if (MaxNodeCount != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxNodeCount);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(GkeNodePoolAutoscalingConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.MinNodeCount != 0) {
+            MinNodeCount = other.MinNodeCount;
+          }
+          if (other.MaxNodeCount != 0) {
+            MaxNodeCount = other.MaxNodeCount;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 16: {
+                MinNodeCount = input.ReadInt32();
+                break;
+              }
+              case 24: {
+                MaxNodeCount = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 16: {
+                MinNodeCount = input.ReadInt32();
+                break;
+              }
+              case 24: {
+                MaxNodeCount = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
