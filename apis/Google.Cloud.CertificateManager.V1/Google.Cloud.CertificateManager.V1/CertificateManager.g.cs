@@ -10047,10 +10047,9 @@ namespace Google.Cloud.CertificateManager.V1 {
     /// <summary>Field number for the "hostname" field.</summary>
     public const int HostnameFieldNumber = 5;
     /// <summary>
-    /// A Hostname (FQDN, e.g. example.com)
-    /// or a wildcard hostname expression (*.example.com) for a set of hostnames
-    /// with common suffix. Used as Server Name Indication (SNI) for selecting
-    /// a proper certificate.
+    /// A Hostname (FQDN, e.g. `example.com`) or a wildcard hostname expression
+    /// (`*.example.com`) for a set of hostnames with common suffix. Used as
+    /// Server Name Indication (SNI) for selecting a proper certificate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10618,8 +10617,8 @@ namespace Google.Cloud.CertificateManager.V1 {
     private string domain_ = "";
     /// <summary>
     /// Required. Immutable. A domain which is being authorized. A DnsAuthorization resource covers a
-    /// single domain and its wildcard, e.g. authorization for "example.com" can
-    /// be used to issue certificates for "example.com" and "*.example.com".
+    /// single domain and its wildcard, e.g. authorization for `example.com` can
+    /// be used to issue certificates for `example.com` and `*.example.com`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10998,7 +10997,7 @@ namespace Google.Cloud.CertificateManager.V1 {
         private string name_ = "";
         /// <summary>
         /// Output only. Fully qualified name of the DNS Resource Record.
-        /// e.g. "_acme-challenge.example.com."
+        /// e.g. `_acme-challenge.example.com`
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
