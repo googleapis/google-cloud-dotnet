@@ -25,23 +25,22 @@ namespace Google.Cloud.AppEngine.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNnb29nbGUvYXBwZW5naW5lL3YxL29wZXJhdGlvbi5wcm90bxITZ29vZ2xl",
-            "LmFwcGVuZ2luZS52MRoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3Rv",
-            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhxnb29nbGUvYXBp",
-            "L2Fubm90YXRpb25zLnByb3RvIrICChNPcGVyYXRpb25NZXRhZGF0YVYxEg4K",
-            "Bm1ldGhvZBgBIAEoCRIvCgtpbnNlcnRfdGltZRgCIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAyABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wEgwKBHVzZXIYBCABKAkSDgoGdGFyZ2V0GAUg",
-            "ASgJEhkKEWVwaGVtZXJhbF9tZXNzYWdlGAYgASgJEg8KB3dhcm5pbmcYByAD",
-            "KAkSTwoXY3JlYXRlX3ZlcnNpb25fbWV0YWRhdGEYCCABKAsyLC5nb29nbGUu",
-            "YXBwZW5naW5lLnYxLkNyZWF0ZVZlcnNpb25NZXRhZGF0YVYxSABCEQoPbWV0",
-            "aG9kX21ldGFkYXRhIjEKF0NyZWF0ZVZlcnNpb25NZXRhZGF0YVYxEhYKDmNs",
-            "b3VkX2J1aWxkX2lkGAEgASgJQsABChdjb20uZ29vZ2xlLmFwcGVuZ2luZS52",
-            "MUIOT3BlcmF0aW9uUHJvdG9QAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9hcHBlbmdpbmUvdjE7YXBwZW5naW5lqgIZR29vZ2xl",
-            "LkNsb3VkLkFwcEVuZ2luZS5WMcoCGUdvb2dsZVxDbG91ZFxBcHBFbmdpbmVc",
-            "VjHqAhxHb29nbGU6OkNsb3VkOjpBcHBFbmdpbmU6OlYxYgZwcm90bzM="));
+            "LmFwcGVuZ2luZS52MRofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90",
+            "byKyAgoTT3BlcmF0aW9uTWV0YWRhdGFWMRIOCgZtZXRob2QYASABKAkSLwoL",
+            "aW5zZXJ0X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "EiwKCGVuZF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cBIMCgR1c2VyGAQgASgJEg4KBnRhcmdldBgFIAEoCRIZChFlcGhlbWVyYWxf",
+            "bWVzc2FnZRgGIAEoCRIPCgd3YXJuaW5nGAcgAygJEk8KF2NyZWF0ZV92ZXJz",
+            "aW9uX21ldGFkYXRhGAggASgLMiwuZ29vZ2xlLmFwcGVuZ2luZS52MS5DcmVh",
+            "dGVWZXJzaW9uTWV0YWRhdGFWMUgAQhEKD21ldGhvZF9tZXRhZGF0YSIxChdD",
+            "cmVhdGVWZXJzaW9uTWV0YWRhdGFWMRIWCg5jbG91ZF9idWlsZF9pZBgBIAEo",
+            "CULAAQoXY29tLmdvb2dsZS5hcHBlbmdpbmUudjFCDk9wZXJhdGlvblByb3Rv",
+            "UAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYXBw",
+            "ZW5naW5lL3YxO2FwcGVuZ2luZaoCGUdvb2dsZS5DbG91ZC5BcHBFbmdpbmUu",
+            "VjHKAhlHb29nbGVcQ2xvdWRcQXBwRW5naW5lXFYx6gIcR29vZ2xlOjpDbG91",
+            "ZDo6QXBwRW5naW5lOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppEngine.V1.OperationMetadataV1), global::Google.Cloud.AppEngine.V1.OperationMetadataV1.Parser, new[]{ "Method", "InsertTime", "EndTime", "User", "Target", "EphemeralMessage", "Warning", "CreateVersionMetadata" }, new[]{ "MethodMetadata" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppEngine.V1.CreateVersionMetadataV1), global::Google.Cloud.AppEngine.V1.CreateVersionMetadataV1.Parser, new[]{ "CloudBuildId" }, null, null, null, null)

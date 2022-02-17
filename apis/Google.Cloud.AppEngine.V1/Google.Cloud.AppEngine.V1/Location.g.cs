@@ -26,17 +26,16 @@ namespace Google.Cloud.AppEngine.V1 {
           string.Concat(
             "CiJnb29nbGUvYXBwZW5naW5lL3YxL2xvY2F0aW9uLnByb3RvEhNnb29nbGUu",
             "YXBwZW5naW5lLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3Rv",
-            "Ghxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIoUBChBMb2NhdGlvbk1l",
-            "dGFkYXRhEiYKHnN0YW5kYXJkX2Vudmlyb25tZW50X2F2YWlsYWJsZRgCIAEo",
-            "CBImCh5mbGV4aWJsZV9lbnZpcm9ubWVudF9hdmFpbGFibGUYBCABKAgSIQoU",
-            "c2VhcmNoX2FwaV9hdmFpbGFibGUYBiABKAhCA+BBA0K/AQoXY29tLmdvb2ds",
-            "ZS5hcHBlbmdpbmUudjFCDUxvY2F0aW9uUHJvdG9QAVo8Z29vZ2xlLmdvbGFu",
-            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hcHBlbmdpbmUvdjE7YXBwZW5n",
-            "aW5lqgIZR29vZ2xlLkNsb3VkLkFwcEVuZ2luZS5WMcoCGUdvb2dsZVxDbG91",
-            "ZFxBcHBFbmdpbmVcVjHqAhxHb29nbGU6OkNsb3VkOjpBcHBFbmdpbmU6OlYx",
-            "YgZwcm90bzM="));
+            "IoUBChBMb2NhdGlvbk1ldGFkYXRhEiYKHnN0YW5kYXJkX2Vudmlyb25tZW50",
+            "X2F2YWlsYWJsZRgCIAEoCBImCh5mbGV4aWJsZV9lbnZpcm9ubWVudF9hdmFp",
+            "bGFibGUYBCABKAgSIQoUc2VhcmNoX2FwaV9hdmFpbGFibGUYBiABKAhCA+BB",
+            "A0K/AQoXY29tLmdvb2dsZS5hcHBlbmdpbmUudjFCDUxvY2F0aW9uUHJvdG9Q",
+            "AVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hcHBl",
+            "bmdpbmUvdjE7YXBwZW5naW5lqgIZR29vZ2xlLkNsb3VkLkFwcEVuZ2luZS5W",
+            "McoCGUdvb2dsZVxDbG91ZFxBcHBFbmdpbmVcVjHqAhxHb29nbGU6OkNsb3Vk",
+            "OjpBcHBFbmdpbmU6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppEngine.V1.LocationMetadata), global::Google.Cloud.AppEngine.V1.LocationMetadata.Parser, new[]{ "StandardEnvironmentAvailable", "FlexibleEnvironmentAvailable", "SearchApiAvailable" }, null, null, null, null)
           }));
