@@ -57,6 +57,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                     },
                 },
                 Metrics = new ClusterMetrics(),
+                VirtualClusterConfig = new VirtualClusterConfig(),
             };
             mockGrpcClient.Setup(x => x.GetCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterControllerClient client = new ClusterControllerClientImpl(mockGrpcClient.Object, null);
@@ -95,6 +96,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                     },
                 },
                 Metrics = new ClusterMetrics(),
+                VirtualClusterConfig = new VirtualClusterConfig(),
             };
             mockGrpcClient.Setup(x => x.GetClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Cluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterControllerClient client = new ClusterControllerClientImpl(mockGrpcClient.Object, null);
@@ -135,6 +137,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                     },
                 },
                 Metrics = new ClusterMetrics(),
+                VirtualClusterConfig = new VirtualClusterConfig(),
             };
             mockGrpcClient.Setup(x => x.GetCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterControllerClient client = new ClusterControllerClientImpl(mockGrpcClient.Object, null);
@@ -173,6 +176,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                     },
                 },
                 Metrics = new ClusterMetrics(),
+                VirtualClusterConfig = new VirtualClusterConfig(),
             };
             mockGrpcClient.Setup(x => x.GetClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Cluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterControllerClient client = new ClusterControllerClientImpl(mockGrpcClient.Object, null);
