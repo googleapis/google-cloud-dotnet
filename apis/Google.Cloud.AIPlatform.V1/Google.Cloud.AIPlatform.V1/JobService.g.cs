@@ -6494,7 +6494,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Required. ModelDeploymentMonitoring Job resource name.
     /// Format:
-    /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}
+    /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

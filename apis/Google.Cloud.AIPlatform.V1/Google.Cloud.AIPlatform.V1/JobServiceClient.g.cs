@@ -3656,7 +3656,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="modelDeploymentMonitoringJob">
         /// Required. ModelDeploymentMonitoring Job resource name.
         /// Format:
-        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
         /// </param>
         /// <param name="deployedModelId">
         /// Required. The DeployedModel ID of the
@@ -3687,7 +3687,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="modelDeploymentMonitoringJob">
         /// Required. ModelDeploymentMonitoring Job resource name.
         /// Format:
-        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
         /// </param>
         /// <param name="deployedModelId">
         /// Required. The DeployedModel ID of the
@@ -3720,7 +3720,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="modelDeploymentMonitoringJob">
         /// Required. ModelDeploymentMonitoring Job resource name.
         /// Format:
-        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
         /// </param>
         /// <param name="deployedModelId">
         /// Required. The DeployedModel ID of the
@@ -3751,7 +3751,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="modelDeploymentMonitoringJob">
         /// Required. ModelDeploymentMonitoring Job resource name.
         /// Format:
-        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
         /// </param>
         /// <param name="deployedModelId">
         /// Required. The DeployedModel ID of the
