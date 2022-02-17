@@ -10,7 +10,7 @@ jobs:
       DOTNET_NOLOGO: true
     strategy:
       matrix:
-        regex: ["'Google\\.Cloud\\.[A-L].*'", "'Google\\.Cloud\\.[M-Z].*'", "'!Google\\.Cloud'"]
+        regex: ["'Google\\.Cloud\\.[A-L].*'", "'Google\\.Cloud\\.[M-Z].*'", "'notGoogle\\.Cloud'"]
     
     steps:
     - uses: actions/checkout@v2

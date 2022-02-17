@@ -71,12 +71,10 @@ then
   # This is a hack to allow ! to negate the regex.
   # Bash regular expressions don't allow for lookahead, so this is the
   # simplest way of doing it.
-  if [[ $apiregex == !* ]]
+  if [[ $apiregex == not* ]]
   then
     echo "regex $apiregex is negated"
-    set +H
-    apiregex=$(echo $apiregex | sed s/^!//g)
-    set -H
+    apiregex=$(echo $apiregex | sed s/^not//g)
     echo "resulting regex after removing negation: $apiregex"
     for api in ${apis[*]}
     do
