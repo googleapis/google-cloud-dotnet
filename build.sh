@@ -74,7 +74,7 @@ then
   if [[ $apiregex == not* ]]
   then
     echo "regex $apiregex is negated"
-    apiregex=$(echo $apiregex | sed s/^not//g)
+    apiregex=echo $(echo $apiregex | sed s/^not//g)
     echo "resulting regex after removing negation: $apiregex"
     for api in ${apis[*]}
     do
