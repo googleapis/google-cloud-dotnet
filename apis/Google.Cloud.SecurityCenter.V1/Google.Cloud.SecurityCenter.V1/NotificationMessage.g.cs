@@ -28,19 +28,18 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "X21lc3NhZ2UucHJvdG8SHmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52",
             "MRosZ29vZ2xlL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxL2ZpbmRpbmcucHJv",
             "dG8aLWdvb2dsZS9jbG91ZC9zZWN1cml0eWNlbnRlci92MS9yZXNvdXJjZS5w",
-            "cm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byK4AQoTTm90aWZp",
-            "Y2F0aW9uTWVzc2FnZRIgChhub3RpZmljYXRpb25fY29uZmlnX25hbWUYASAB",
-            "KAkSOgoHZmluZGluZxgCIAEoCzInLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNl",
-            "bnRlci52MS5GaW5kaW5nSAASOgoIcmVzb3VyY2UYAyABKAsyKC5nb29nbGUu",
-            "Y2xvdWQuc2VjdXJpdHljZW50ZXIudjEuUmVzb3VyY2VCBwoFZXZlbnRC9AEK",
-            "ImNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFCGE5vdGlmaWNh",
-            "dGlvbk1lc3NhZ2VQcm90b1ABWkxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
-            "by9nb29nbGVhcGlzL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxO3NlY3VyaXR5",
-            "Y2VudGVyqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYxygIeR29v",
-            "Z2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYx6gIhR29vZ2xlOjpDbG91ZDo6",
-            "U2VjdXJpdHlDZW50ZXI6OlYxYgZwcm90bzM="));
+            "cm90byK4AQoTTm90aWZpY2F0aW9uTWVzc2FnZRIgChhub3RpZmljYXRpb25f",
+            "Y29uZmlnX25hbWUYASABKAkSOgoHZmluZGluZxgCIAEoCzInLmdvb2dsZS5j",
+            "bG91ZC5zZWN1cml0eWNlbnRlci52MS5GaW5kaW5nSAASOgoIcmVzb3VyY2UY",
+            "AyABKAsyKC5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuUmVzb3Vy",
+            "Y2VCBwoFZXZlbnRC9AEKImNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50",
+            "ZXIudjFCGE5vdGlmaWNhdGlvbk1lc3NhZ2VQcm90b1ABWkxnb29nbGUuZ29s",
+            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3NlY3VyaXR5Y2Vu",
+            "dGVyL3YxO3NlY3VyaXR5Y2VudGVyqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5",
+            "Q2VudGVyLlYxygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYx6gIh",
+            "R29vZ2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.SecurityCenter.V1.FindingReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ResourceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.SecurityCenter.V1.FindingReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.NotificationMessage), global::Google.Cloud.SecurityCenter.V1.NotificationMessage.Parser, new[]{ "NotificationConfigName", "Finding", "Resource" }, new[]{ "Event" }, null, null, null)
           }));
