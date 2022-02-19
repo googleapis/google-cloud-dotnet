@@ -27,20 +27,19 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "Ci1nb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvcmVzb3VyY2UucHJv",
             "dG8SHmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MRofZ29vZ2xlL2Fw",
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxorZ29vZ2xlL2Nsb3VkL3NlY3VyaXR5",
-            "Y2VudGVyL3YxL2ZvbGRlci5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9u",
-            "cy5wcm90byLWAQoIUmVzb3VyY2USDAoEbmFtZRgBIAEoCRIPCgdwcm9qZWN0",
-            "GAIgASgJEhwKFHByb2plY3RfZGlzcGxheV9uYW1lGAMgASgJEg4KBnBhcmVu",
-            "dBgEIAEoCRIbChNwYXJlbnRfZGlzcGxheV9uYW1lGAUgASgJEgwKBHR5cGUY",
-            "BiABKAkSPAoHZm9sZGVycxgHIAMoCzImLmdvb2dsZS5jbG91ZC5zZWN1cml0",
-            "eWNlbnRlci52MS5Gb2xkZXJCA+BBAxIUCgxkaXNwbGF5X25hbWUYCCABKAlC",
-            "6QEKImNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFCDVJlc291",
-            "cmNlUHJvdG9QAVpMZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
-            "YXBpcy9jbG91ZC9zZWN1cml0eWNlbnRlci92MTtzZWN1cml0eWNlbnRlcqoC",
-            "Hkdvb2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5WMcoCHkdvb2dsZVxDbG91",
-            "ZFxTZWN1cml0eUNlbnRlclxWMeoCIUdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5",
-            "Q2VudGVyOjpWMWIGcHJvdG8z"));
+            "Y2VudGVyL3YxL2ZvbGRlci5wcm90byLWAQoIUmVzb3VyY2USDAoEbmFtZRgB",
+            "IAEoCRIPCgdwcm9qZWN0GAIgASgJEhwKFHByb2plY3RfZGlzcGxheV9uYW1l",
+            "GAMgASgJEg4KBnBhcmVudBgEIAEoCRIbChNwYXJlbnRfZGlzcGxheV9uYW1l",
+            "GAUgASgJEgwKBHR5cGUYBiABKAkSPAoHZm9sZGVycxgHIAMoCzImLmdvb2ds",
+            "ZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5Gb2xkZXJCA+BBAxIUCgxkaXNw",
+            "bGF5X25hbWUYCCABKAlC6QEKImNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHlj",
+            "ZW50ZXIudjFCDVJlc291cmNlUHJvdG9QAVpMZ29vZ2xlLmdvbGFuZy5vcmcv",
+            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9zZWN1cml0eWNlbnRlci92MTtz",
+            "ZWN1cml0eWNlbnRlcqoCHkdvb2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5W",
+            "McoCHkdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxWMeoCIUdvb2dsZTo6",
+            "Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.FolderReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.FolderReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Resource), global::Google.Cloud.SecurityCenter.V1.Resource.Parser, new[]{ "Name", "Project", "ProjectDisplayName", "Parent", "ParentDisplayName", "Type", "Folders", "DisplayName" }, null, null, null, null)
           }));
