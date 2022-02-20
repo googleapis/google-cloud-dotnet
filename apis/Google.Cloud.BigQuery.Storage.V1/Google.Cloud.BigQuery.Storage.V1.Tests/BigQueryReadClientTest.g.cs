@@ -50,6 +50,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 ReadOptions = new ReadSession.Types.TableReadOptions(),
                 Streams = { new ReadStream(), },
                 EstimatedTotalBytesScanned = 3051848153574264650L,
+                TraceId = "trace_id105c890f",
             };
             mockGrpcClient.Setup(x => x.CreateReadSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null);
@@ -80,6 +81,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 ReadOptions = new ReadSession.Types.TableReadOptions(),
                 Streams = { new ReadStream(), },
                 EstimatedTotalBytesScanned = 3051848153574264650L,
+                TraceId = "trace_id105c890f",
             };
             mockGrpcClient.Setup(x => x.CreateReadSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReadSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null);
@@ -112,6 +114,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 ReadOptions = new ReadSession.Types.TableReadOptions(),
                 Streams = { new ReadStream(), },
                 EstimatedTotalBytesScanned = 3051848153574264650L,
+                TraceId = "trace_id105c890f",
             };
             mockGrpcClient.Setup(x => x.CreateReadSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null);
@@ -142,6 +145,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 ReadOptions = new ReadSession.Types.TableReadOptions(),
                 Streams = { new ReadStream(), },
                 EstimatedTotalBytesScanned = 3051848153574264650L,
+                TraceId = "trace_id105c890f",
             };
             mockGrpcClient.Setup(x => x.CreateReadSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReadSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null);
@@ -174,6 +178,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 ReadOptions = new ReadSession.Types.TableReadOptions(),
                 Streams = { new ReadStream(), },
                 EstimatedTotalBytesScanned = 3051848153574264650L,
+                TraceId = "trace_id105c890f",
             };
             mockGrpcClient.Setup(x => x.CreateReadSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null);
@@ -204,6 +209,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 ReadOptions = new ReadSession.Types.TableReadOptions(),
                 Streams = { new ReadStream(), },
                 EstimatedTotalBytesScanned = 3051848153574264650L,
+                TraceId = "trace_id105c890f",
             };
             mockGrpcClient.Setup(x => x.CreateReadSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReadSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null);
