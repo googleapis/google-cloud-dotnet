@@ -66,7 +66,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void GetGcpConsoleLogsUrl()
         {
             GoogleLogger logger = GetLogger();
+#pragma warning disable CS0618 // Type or member is obsolete
             Uri actualUrl = logger.GetGcpConsoleLogsUrl();
+#pragma warning restore CS0618 // Type or member is obsolete
             string query = actualUrl.Query;
 
             Assert.StartsWith(ExpectedGcpLogBaseUrl, actualUrl.ToString());
@@ -81,7 +83,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void GetGcpConsoleLogsUrl_NonDefault()
         {
             GoogleLogger logger = GetLogger(logLevel: LogLevel.Error, monitoredResource: new MonitoredResource() { Type = "dummy-type"}, logName: "custom-name");
+#pragma warning disable CS0618 // Type or member is obsolete
             Uri actualUrl = logger.GetGcpConsoleLogsUrl();
+#pragma warning restore CS0618 // Type or member is obsolete
             string query = actualUrl.Query;
 
             Assert.StartsWith(ExpectedGcpLogBaseUrl, actualUrl.ToString());
@@ -96,7 +100,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void GetGcpConsoleLogsUrl_Organization()
         {
             GoogleLogger logger = GetLogger(logTarget: LogTarget.ForOrganization("12345"));
+#pragma warning disable CS0618 // Type or member is obsolete
             string query = logger.GetGcpConsoleLogsUrl().Query;
+#pragma warning restore CS0618 // Type or member is obsolete
 
             Assert.Contains("organizationId=12345", query);
             Assert.DoesNotContain("project=", query);
@@ -107,7 +113,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             GoogleLogger logger = GetLogger(monitoredResource: MonitoredResourceBuilder.FromPlatform(new Platform(
                     new GaePlatformDetails("project-id", "instance", "service", "version"))));
+#pragma warning disable CS0618 // Type or member is obsolete
             string query = logger.GetGcpConsoleLogsUrl().Query;
+#pragma warning restore CS0618 // Type or member is obsolete
 
             Assert.Contains($"resource=gae_app", query);
         }
@@ -123,7 +131,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 Type = "gke_container"
             };
             GoogleLogger logger = GetLogger(monitoredResource: resource);
+#pragma warning disable CS0618 // Type or member is obsolete
             string query = logger.GetGcpConsoleLogsUrl().Query;
+#pragma warning restore CS0618 // Type or member is obsolete
 
             Assert.Contains($"resource=container", query);
         }

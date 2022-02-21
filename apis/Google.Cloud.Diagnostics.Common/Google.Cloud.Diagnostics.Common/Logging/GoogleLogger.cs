@@ -200,8 +200,10 @@ namespace Google.Cloud.Diagnostics.Common
 
         /// <summary>
         /// For diagnostic purposes. Builds and returns the URL where the entries logged by
-        /// this <see cref="GoogleLogger"/> can be seen on the Google Cloud Logging Console.
+        /// this <see cref="GoogleLogger"/> can be seen on the Google Cloud Legacy Logs Viewer.
         /// </summary>
+        [Obsolete("This is the URI where you can find logs in Legacy Logs Viewer, which is being turned down in 2022 in favor of Logs Explorer." +
+            "You can find more information in https://cloud.google.com/logging/docs/view/log-viewer-shutdown.")]
         public Uri GetGcpConsoleLogsUrl()
         {
             string target =
@@ -230,13 +232,48 @@ namespace Google.Cloud.Diagnostics.Common
             }.Uri;
         }
 
+        /// <summary>
+        /// For diagnostic purposes. Builds and returns the URL where the entries logged by
+        /// this <see cref="GoogleLogger"/> can be seen on the Google Cloud Logs Explorer.
+        /// </summary>
+        public Uri GetLogsExplorerLogsUrl()
+        {
+            string target =
+                _logTarget.Kind == LogTargetKind.Project ? $"project={_logTarget.ProjectId}" :
+                _logTarget.Kind == LogTargetKind.Organization ? $"organizationId={_logTarget.OrganizationId}" :
+                throw new InvalidOperationException($"Unrecognized LogTargetKind: {_logTarget.Kind}");
+
+            string resourceType = _loggerOptions.MonitoredResource.Type;
+            // Log ingestion converts "gke_container" into "container", but we really do need to search for "container",
+            // as the UI doesn't support "gke_container". (Whereas the Monitoring API *only* supports "gke_container".)
+            if (resourceType == "gke_container")
+            {
+                resourceType = "container";
+            }
+            IList<string> parameters = new List<string>
+            {
+                $"resource={resourceType}",
+                $"minLogLevel={(int)_loggerOptions.LogLevel.ToLogSeverity()}",
+                $"logName={_loggerOptions.LogName}",
+                target
+            };
+
+            return new UriBuilder(GcpConsoleLogsBaseUrl)
+            {
+                Query = string.Join("&", parameters)
+            }.Uri;
+        }
+
         internal void WriteDiagnostics(TextWriter writer)
         {
             // Explicitly not catching exceptions.
             // This should only be activated for diagnostics purposes so in that case
             // we shouldn't try to handle exceptions.
 
-            writer.WriteLine(Invariant($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss} - GoogleLogger will write logs to: {GetGcpConsoleLogsUrl()}"));
+            writer.WriteLine(Invariant($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss} - GoogleLogger will write logs to Logs Explorer in: {GetLogsExplorerLogsUrl()}"));
+#pragma warning disable CS0618 // Type or member is obsolete
+            writer.WriteLine(Invariant($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss} - GoogleLogger will write logs to Legacy Logs Viewer in: {GetGcpConsoleLogsUrl()}"));
+#pragma warning restore CS0618 // Type or member is obsolete
             writer.Flush();
         }
 
