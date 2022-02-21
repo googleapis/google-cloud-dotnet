@@ -96,6 +96,8 @@ namespace Google.Cloud.Spanner.Data.Tests
         [InlineData("-- Single line comment\n@{FORCE_INDEX=_BASE_TABLE, -- Inner single line comment\n OPTIMIZER_VERSION=1} \n\t \nSELECT * FROM Albums")]
         [InlineData("SELECT/*comment*/ * FROM Albums")]
         [InlineData("SELECT--comment\n * FROM Albums")]
+        [InlineData("/*@ USE_ADDITIONAL_PARALLELISM=TRUE */ \nSELECT * FROM Albums")]
+        [InlineData("/*@ USE_ADDITIONAL_PARALLELISM=TRUE */ \nSELECT * FROM Albums /*@ FORCE_INDEX=_BASE_TABLE */ INNER Join /*@ FORCE_JOIN_ORDER=TRUE */ AlbumsView WHERE Albums.Id=AlbumsView.Id")]
         public void SelectCommand(string commandText)
         {
             var builder = SpannerCommandTextBuilder.FromCommandText(commandText);
