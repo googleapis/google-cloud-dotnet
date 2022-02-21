@@ -1,0 +1,16 @@
+[
+  {
+    "method": "ListSlates",
+    "client": "VideoStitcherServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListCdnKeys",
+    "client": "VideoStitcherServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  }
+]
