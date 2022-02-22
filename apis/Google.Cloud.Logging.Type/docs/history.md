@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.4.0, released 2022-02-22
+
+### New features
+
+- Update Logging API with latest changes ([commit b29bee2](https://github.com/googleapis/google-cloud-dotnet/commit/b29bee29cd0000c5d6aea64169dbe4866f74b17a))
+
 ## Version 3.3.0, released 2021-05-26
 
 No API surface changes; just dependency updates.
