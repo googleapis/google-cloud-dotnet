@@ -48,7 +48,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             { ApiType.Regapic, "netstandard2.0;net461" }
         };
 
-        private const string DefaultTestTargetFrameworks = "netcoreapp2.1;net461";
+        private const string DefaultTestTargetFrameworks = "netcoreapp3.1;net461";
 
         private static Dictionary<ApiType, string[]> PackageTypeToImplicitDependencies = new Dictionary<ApiType, string[]>
         {
@@ -58,7 +58,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         };
 
         private const string AnalyzersTargetFramework = "netstandard1.3";
-        private const string AnalyzersTestTargetFramework = "netcoreapp2.0";
+        private const string AnalyzersTestTargetFramework = "netcoreapp3.1";
 
         private const string ProjectVersionValue = "project";
         private const string DefaultVersionValue = "default";
@@ -695,7 +695,7 @@ api-name: {api.Id}
             }
             var propertyGroup =
                 new XElement("PropertyGroup",
-                    new XElement("TargetFramework", "netcoreapp2.1"),
+                    new XElement("TargetFramework", "netcoreapp3.1"),
                     new XElement("OutputType", "Exe"),
                     new XElement("IsPackable", false));
             var dependenciesElement =
@@ -715,7 +715,7 @@ api-name: {api.Id}
             dependencies.Add(api.Id, "project");
             var propertyGroup =
                 new XElement("PropertyGroup",
-                    new XElement("TargetFramework", "netcoreapp2.1"),
+                    new XElement("TargetFramework", "netcoreapp3.1"),
                     new XElement("OutputType", "Exe"),
                     new XElement("IsPackable", false),
                     new XElement("StartupObject", api.Id + ".Samples.Program"));
