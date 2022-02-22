@@ -2244,7 +2244,7 @@
     },
     {
       "id": "Google.Cloud.OrgPolicy.V2",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "type": "grpc",
       "productName": "Organization Policy",
       "productUrl": "https://cloud.google.com/resource-manager/docs/organization-policy/overview",
