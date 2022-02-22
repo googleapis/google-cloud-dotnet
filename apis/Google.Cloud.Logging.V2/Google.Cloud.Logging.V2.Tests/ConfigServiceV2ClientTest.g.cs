@@ -2425,6 +2425,8 @@ namespace Google.Cloud.Logging.V2.Tests
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromProject("[PROJECT]"),
+                KmsKeyName = "kms_key_name06bd122b",
+                KmsServiceAccountId = "kms_service_account_id158e99fb",
                 StorageLocation = "storage_locationde7cb603",
                 DisableDefaultSink = false,
             };
@@ -2447,6 +2449,8 @@ namespace Google.Cloud.Logging.V2.Tests
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromProject("[PROJECT]"),
+                KmsKeyName = "kms_key_name06bd122b",
+                KmsServiceAccountId = "kms_service_account_id158e99fb",
                 StorageLocation = "storage_locationde7cb603",
                 DisableDefaultSink = false,
             };
@@ -2471,6 +2475,8 @@ namespace Google.Cloud.Logging.V2.Tests
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromProject("[PROJECT]"),
+                KmsKeyName = "kms_key_name06bd122b",
+                KmsServiceAccountId = "kms_service_account_id158e99fb",
                 StorageLocation = "storage_locationde7cb603",
                 DisableDefaultSink = false,
             };
@@ -2493,6 +2499,8 @@ namespace Google.Cloud.Logging.V2.Tests
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromProject("[PROJECT]"),
+                KmsKeyName = "kms_key_name06bd122b",
+                KmsServiceAccountId = "kms_service_account_id158e99fb",
                 StorageLocation = "storage_locationde7cb603",
                 DisableDefaultSink = false,
             };
@@ -2517,6 +2525,8 @@ namespace Google.Cloud.Logging.V2.Tests
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromProject("[PROJECT]"),
+                KmsKeyName = "kms_key_name06bd122b",
+                KmsServiceAccountId = "kms_service_account_id158e99fb",
                 StorageLocation = "storage_locationde7cb603",
                 DisableDefaultSink = false,
             };
@@ -2539,6 +2549,8 @@ namespace Google.Cloud.Logging.V2.Tests
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromProject("[PROJECT]"),
+                KmsKeyName = "kms_key_name06bd122b",
+                KmsServiceAccountId = "kms_service_account_id158e99fb",
                 StorageLocation = "storage_locationde7cb603",
                 DisableDefaultSink = false,
             };
@@ -2565,6 +2577,8 @@ namespace Google.Cloud.Logging.V2.Tests
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromProject("[PROJECT]"),
+                KmsKeyName = "kms_key_name06bd122b",
+                KmsServiceAccountId = "kms_service_account_id158e99fb",
                 StorageLocation = "storage_locationde7cb603",
                 DisableDefaultSink = false,
             };
@@ -2589,6 +2603,8 @@ namespace Google.Cloud.Logging.V2.Tests
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromProject("[PROJECT]"),
+                KmsKeyName = "kms_key_name06bd122b",
+                KmsServiceAccountId = "kms_service_account_id158e99fb",
                 StorageLocation = "storage_locationde7cb603",
                 DisableDefaultSink = false,
             };
@@ -2614,6 +2630,8 @@ namespace Google.Cloud.Logging.V2.Tests
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromProject("[PROJECT]"),
+                KmsKeyName = "kms_key_name06bd122b",
+                KmsServiceAccountId = "kms_service_account_id158e99fb",
                 StorageLocation = "storage_locationde7cb603",
                 DisableDefaultSink = false,
             };
@@ -2637,6 +2655,8 @@ namespace Google.Cloud.Logging.V2.Tests
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromProject("[PROJECT]"),
+                KmsKeyName = "kms_key_name06bd122b",
+                KmsServiceAccountId = "kms_service_account_id158e99fb",
                 StorageLocation = "storage_locationde7cb603",
                 DisableDefaultSink = false,
             };
