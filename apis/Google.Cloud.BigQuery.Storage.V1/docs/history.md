@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.7.0, released 2022-02-22
+
+### New features
+
+- Add trace_id for Read API ([commit 2cac347](https://github.com/googleapis/google-cloud-dotnet/commit/2cac34761c11e939b6150fb70fd4409f40c7edb8))
+
+### Additional notes
+
+The `bigquery.readonly` has been removed ([commit
+f691c91](https://github.com/googleapis/google-cloud-dotnet/commit/f691c9119d6b00f1c0629a5d5bc65c7b6ee8ed12)).
+We don't expect that to break any users, but please be aware of the
+change.
+
 ## Version 2.6.0, released 2022-01-17
 
 ### New features
