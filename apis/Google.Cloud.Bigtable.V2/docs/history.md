@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.6.0, released 2022-02-22
+
+### New features
+
+- Add WarmAndPing request for channel priming ([commit 263af4c](https://github.com/googleapis/google-cloud-dotnet/commit/263af4c4f666ebbe9e4e183fe4fb9616029bdaed))
+- Add explicit routing header annotations for bigtable/v2 ([commit 53d712e](https://github.com/googleapis/google-cloud-dotnet/commit/53d712e19ed4fc727b47534fc771363fc901f9ab))
 ## Version 2.5.0, released 2022-01-18
 
 No API surface changes; just dependency updates.
