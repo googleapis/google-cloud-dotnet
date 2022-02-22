@@ -25,17 +25,16 @@ namespace Google.Cloud.Logging.Type {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvbG9nZ2luZy90eXBlL2xvZ19zZXZlcml0eS5wcm90bxITZ29v",
-            "Z2xlLmxvZ2dpbmcudHlwZRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90",
-            "byqCAQoLTG9nU2V2ZXJpdHkSCwoHREVGQVVMVBAAEgkKBURFQlVHEGQSCQoE",
-            "SU5GTxDIARILCgZOT1RJQ0UQrAISDAoHV0FSTklORxCQAxIKCgVFUlJPUhD0",
-            "AxINCghDUklUSUNBTBDYBBIKCgVBTEVSVBC8BRIOCglFTUVSR0VOQ1kQoAZC",
-            "xQEKF2NvbS5nb29nbGUubG9nZ2luZy50eXBlQhBMb2dTZXZlcml0eVByb3Rv",
-            "UAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvbG9n",
-            "Z2luZy90eXBlO2x0eXBlogIER0xPR6oCGUdvb2dsZS5DbG91ZC5Mb2dnaW5n",
-            "LlR5cGXKAhlHb29nbGVcQ2xvdWRcTG9nZ2luZ1xUeXBl6gIcR29vZ2xlOjpD",
-            "bG91ZDo6TG9nZ2luZzo6VHlwZWIGcHJvdG8z"));
+            "Z2xlLmxvZ2dpbmcudHlwZSqCAQoLTG9nU2V2ZXJpdHkSCwoHREVGQVVMVBAA",
+            "EgkKBURFQlVHEGQSCQoESU5GTxDIARILCgZOT1RJQ0UQrAISDAoHV0FSTklO",
+            "RxCQAxIKCgVFUlJPUhD0AxINCghDUklUSUNBTBDYBBIKCgVBTEVSVBC8BRIO",
+            "CglFTUVSR0VOQ1kQoAZCxQEKF2NvbS5nb29nbGUubG9nZ2luZy50eXBlQhBM",
+            "b2dTZXZlcml0eVByb3RvUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
+            "L2dvb2dsZWFwaXMvbG9nZ2luZy90eXBlO2x0eXBlogIER0xPR6oCGUdvb2ds",
+            "ZS5DbG91ZC5Mb2dnaW5nLlR5cGXKAhlHb29nbGVcQ2xvdWRcTG9nZ2luZ1xU",
+            "eXBl6gIcR29vZ2xlOjpDbG91ZDo6TG9nZ2luZzo6VHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Logging.Type.LogSeverity), }, null, null));
     }
     #endregion
