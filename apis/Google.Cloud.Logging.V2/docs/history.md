@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.5.0, released 2022-02-22
+
+### New features
+
+- Update Logging API with latest changes ([commit 644279c](https://github.com/googleapis/google-cloud-dotnet/commit/644279c4e5b4725b6fada108667372b39f52f83e))
+
 ## Version 3.4.0, released 2021-09-06
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
