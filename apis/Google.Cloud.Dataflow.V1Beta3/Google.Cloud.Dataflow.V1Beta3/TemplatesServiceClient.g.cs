@@ -359,13 +359,13 @@ namespace Google.Cloud.Dataflow.V1Beta3
             GrpcClient = grpcClient;
             TemplatesServiceSettings effectiveSettings = settings ?? TemplatesServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCreateJobFromTemplate = clientHelper.BuildApiCall<CreateJobFromTemplateRequest, Job>(grpcClient.CreateJobFromTemplateAsync, grpcClient.CreateJobFromTemplate, effectiveSettings.CreateJobFromTemplateSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callCreateJobFromTemplate = clientHelper.BuildApiCall<CreateJobFromTemplateRequest, Job>(grpcClient.CreateJobFromTemplateAsync, grpcClient.CreateJobFromTemplate, effectiveSettings.CreateJobFromTemplateSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location);
             Modify_ApiCall(ref _callCreateJobFromTemplate);
             Modify_CreateJobFromTemplateApiCall(ref _callCreateJobFromTemplate);
-            _callLaunchTemplate = clientHelper.BuildApiCall<LaunchTemplateRequest, LaunchTemplateResponse>(grpcClient.LaunchTemplateAsync, grpcClient.LaunchTemplate, effectiveSettings.LaunchTemplateSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callLaunchTemplate = clientHelper.BuildApiCall<LaunchTemplateRequest, LaunchTemplateResponse>(grpcClient.LaunchTemplateAsync, grpcClient.LaunchTemplate, effectiveSettings.LaunchTemplateSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location);
             Modify_ApiCall(ref _callLaunchTemplate);
             Modify_LaunchTemplateApiCall(ref _callLaunchTemplate);
-            _callGetTemplate = clientHelper.BuildApiCall<GetTemplateRequest, GetTemplateResponse>(grpcClient.GetTemplateAsync, grpcClient.GetTemplate, effectiveSettings.GetTemplateSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callGetTemplate = clientHelper.BuildApiCall<GetTemplateRequest, GetTemplateResponse>(grpcClient.GetTemplateAsync, grpcClient.GetTemplate, effectiveSettings.GetTemplateSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location);
             Modify_ApiCall(ref _callGetTemplate);
             Modify_GetTemplateApiCall(ref _callGetTemplate);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

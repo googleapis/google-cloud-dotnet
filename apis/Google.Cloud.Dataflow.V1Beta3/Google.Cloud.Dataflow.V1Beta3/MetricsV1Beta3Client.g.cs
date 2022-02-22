@@ -373,7 +373,7 @@ namespace Google.Cloud.Dataflow.V1Beta3
             GrpcClient = grpcClient;
             MetricsV1Beta3Settings effectiveSettings = settings ?? MetricsV1Beta3Settings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callGetJobMetrics = clientHelper.BuildApiCall<GetJobMetricsRequest, JobMetrics>(grpcClient.GetJobMetricsAsync, grpcClient.GetJobMetrics, effectiveSettings.GetJobMetricsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("job_id", request => request.JobId);
+            _callGetJobMetrics = clientHelper.BuildApiCall<GetJobMetricsRequest, JobMetrics>(grpcClient.GetJobMetricsAsync, grpcClient.GetJobMetrics, effectiveSettings.GetJobMetricsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("job_id", request => request.JobId);
             Modify_ApiCall(ref _callGetJobMetrics);
             Modify_GetJobMetricsApiCall(ref _callGetJobMetrics);
             _callGetJobExecutionDetails = clientHelper.BuildApiCall<GetJobExecutionDetailsRequest, JobExecutionDetails>(grpcClient.GetJobExecutionDetailsAsync, grpcClient.GetJobExecutionDetails, effectiveSettings.GetJobExecutionDetailsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("job_id", request => request.JobId);
