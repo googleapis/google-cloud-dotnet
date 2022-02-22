@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.4.0, released 2022-02-22
+
+### New features
+
+- Add `symbols` field, and auto-format comments ([commit 8e00219](https://github.com/googleapis/google-cloud-dotnet/commit/8e0021998961044fe9b556c323c80bb2d3030461))
+
 ## Version 1.3.0, released 2022-02-07
 
 ### New features
