@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.9.0, released 2022-02-22
+
+### New features
+
+- Add IAM mixin to Google.Cloud.Kms.V1 ([commit dd98ae1](https://github.com/googleapis/google-cloud-dotnet/commit/dd98ae17324b3f6817af7ff01ae42f1ff6503f6a))
+
 ## Version 2.8.0, released 2022-02-07
 
 ### New features
