@@ -36,6 +36,7 @@ namespace Google.Cloud.Storage.V1
             var bucketEntity = new Bucket { Name = bucket };
             var request = Service.Buckets.Get(bucket);
             options?.ModifyRequest(request);
+            RetryHandler.MarkAsRetriable(request);
             return request;
         }
     }

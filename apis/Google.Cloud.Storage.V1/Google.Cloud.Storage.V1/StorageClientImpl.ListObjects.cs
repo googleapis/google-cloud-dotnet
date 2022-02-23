@@ -57,6 +57,7 @@ namespace Google.Cloud.Storage.V1
             var request = Service.Objects.List(bucket);
             request.Prefix = prefix;
             options?.ModifyRequest(request);
+            RetryHandler.MarkAsRetriable(request);
             return request;
         }
     }

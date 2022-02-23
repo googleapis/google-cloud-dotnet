@@ -76,6 +76,10 @@ namespace Google.Cloud.Storage.V1
             options?.ModifyRequest(request);
             ApplyEncryptionKey(options?.EncryptionKey, options?.KmsKeyName, request);
             request.ModifyRequest += (options?.SourceEncryptionKey ?? EncryptionKey).ModifyRequestForRewriteSource;
+            if(options.IfGenerationMatch != null)
+            {
+                RetryHandler.MarkAsRetriable(request);
+            }
             return request;
         }
     }
