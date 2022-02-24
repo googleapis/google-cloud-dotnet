@@ -3,7 +3,7 @@
 //     source: google/cloud/gkehub/v1beta1/membership.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -25,7 +25,8 @@ using grpc = global::Grpc.Core;
 namespace Google.Cloud.GkeHub.V1Beta1 {
   /// <summary>
   /// The GKE Hub MembershipService handles the registration of many Kubernetes
-  /// clusters to Google Cloud, represented with the [Membership][google.cloud.gkehub.v1beta1.Membership] resource.
+  /// clusters to Google Cloud, represented with the
+  /// [Membership][google.cloud.gkehub.v1beta1.Membership] resource.
   ///
   /// GKE Hub is currently only available in the global region.
   ///
