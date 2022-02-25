@@ -19,13 +19,13 @@ jobs:
 
     # We need just the .NET Core 2.1 runtime for testing    
     - name: Setup .NET Core 2.1
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 2.1.x
 
     # Install .NET Core 3.1 for building
     - name: Setup .NET Core 3.1
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 3.1.x
 
