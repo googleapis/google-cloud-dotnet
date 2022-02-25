@@ -25,21 +25,20 @@ namespace Google.Cloud.Dialogflow.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjJnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92Mi92YWxpZGF0aW9uX3Jlc3Vs",
-            "dC5wcm90bxIaZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIaHGdvb2dsZS9h",
-            "cGkvYW5ub3RhdGlvbnMucHJvdG8i1wEKD1ZhbGlkYXRpb25FcnJvchJGCghz",
-            "ZXZlcml0eRgBIAEoDjI0Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlZh",
-            "bGlkYXRpb25FcnJvci5TZXZlcml0eRIPCgdlbnRyaWVzGAMgAygJEhUKDWVy",
-            "cm9yX21lc3NhZ2UYBCABKAkiVAoIU2V2ZXJpdHkSGAoUU0VWRVJJVFlfVU5T",
-            "UEVDSUZJRUQQABIICgRJTkZPEAESCwoHV0FSTklORxACEgkKBUVSUk9SEAMS",
-            "DAoIQ1JJVElDQUwQBCJaChBWYWxpZGF0aW9uUmVzdWx0EkYKEXZhbGlkYXRp",
-            "b25fZXJyb3JzGAEgAygLMisuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIu",
-            "VmFsaWRhdGlvbkVycm9yQqQBCh5jb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
-            "b3cudjJCFVZhbGlkYXRpb25SZXN1bHRQcm90b1ABWkRnb29nbGUuZ29sYW5n",
-            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RpYWxvZ2Zsb3cvdjI7",
-            "ZGlhbG9nZmxvd/gBAaICAkRGqgIaR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cu",
-            "VjJiBnByb3RvMw=="));
+            "dC5wcm90bxIaZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIi1wEKD1ZhbGlk",
+            "YXRpb25FcnJvchJGCghzZXZlcml0eRgBIAEoDjI0Lmdvb2dsZS5jbG91ZC5k",
+            "aWFsb2dmbG93LnYyLlZhbGlkYXRpb25FcnJvci5TZXZlcml0eRIPCgdlbnRy",
+            "aWVzGAMgAygJEhUKDWVycm9yX21lc3NhZ2UYBCABKAkiVAoIU2V2ZXJpdHkS",
+            "GAoUU0VWRVJJVFlfVU5TUEVDSUZJRUQQABIICgRJTkZPEAESCwoHV0FSTklO",
+            "RxACEgkKBUVSUk9SEAMSDAoIQ1JJVElDQUwQBCJaChBWYWxpZGF0aW9uUmVz",
+            "dWx0EkYKEXZhbGlkYXRpb25fZXJyb3JzGAEgAygLMisuZ29vZ2xlLmNsb3Vk",
+            "LmRpYWxvZ2Zsb3cudjIuVmFsaWRhdGlvbkVycm9yQqQBCh5jb20uZ29vZ2xl",
+            "LmNsb3VkLmRpYWxvZ2Zsb3cudjJCFVZhbGlkYXRpb25SZXN1bHRQcm90b1AB",
+            "WkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
+            "L2RpYWxvZ2Zsb3cvdjI7ZGlhbG9nZmxvd/gBAaICAkRGqgIaR29vZ2xlLkNs",
+            "b3VkLkRpYWxvZ2Zsb3cuVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ValidationError), global::Google.Cloud.Dialogflow.V2.ValidationError.Parser, new[]{ "Severity", "Entries", "ErrorMessage" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.ValidationError.Types.Severity) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ValidationResult), global::Google.Cloud.Dialogflow.V2.ValidationResult.Parser, new[]{ "ValidationErrors" }, null, null, null, null)

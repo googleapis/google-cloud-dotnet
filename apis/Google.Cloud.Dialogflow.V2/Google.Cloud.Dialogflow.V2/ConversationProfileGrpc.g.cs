@@ -3,7 +3,7 @@
 //     source: google/cloud/dialogflow/v2/conversation_profile.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -79,6 +79,12 @@ namespace Google.Cloud.Dialogflow.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.DeleteConversationProfileRequest> __Marshaller_google_cloud_dialogflow_v2_DeleteConversationProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.DeleteConversationProfileRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SetSuggestionFeatureConfigRequest> __Marshaller_google_cloud_dialogflow_v2_SetSuggestionFeatureConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.SetSuggestionFeatureConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ClearSuggestionFeatureConfigRequest> __Marshaller_google_cloud_dialogflow_v2_ClearSuggestionFeatureConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.ClearSuggestionFeatureConfigRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.ListConversationProfilesRequest, global::Google.Cloud.Dialogflow.V2.ListConversationProfilesResponse> __Method_ListConversationProfiles = new grpc::Method<global::Google.Cloud.Dialogflow.V2.ListConversationProfilesRequest, global::Google.Cloud.Dialogflow.V2.ListConversationProfilesResponse>(
@@ -119,6 +125,22 @@ namespace Google.Cloud.Dialogflow.V2 {
         "DeleteConversationProfile",
         __Marshaller_google_cloud_dialogflow_v2_DeleteConversationProfileRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.SetSuggestionFeatureConfigRequest, global::Google.LongRunning.Operation> __Method_SetSuggestionFeatureConfig = new grpc::Method<global::Google.Cloud.Dialogflow.V2.SetSuggestionFeatureConfigRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SetSuggestionFeatureConfig",
+        __Marshaller_google_cloud_dialogflow_v2_SetSuggestionFeatureConfigRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.ClearSuggestionFeatureConfigRequest, global::Google.LongRunning.Operation> __Method_ClearSuggestionFeatureConfig = new grpc::Method<global::Google.Cloud.Dialogflow.V2.ClearSuggestionFeatureConfigRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ClearSuggestionFeatureConfig",
+        __Marshaller_google_cloud_dialogflow_v2_ClearSuggestionFeatureConfigRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -194,6 +216,53 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteConversationProfile(global::Google.Cloud.Dialogflow.V2.DeleteConversationProfileRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Adds or updates a suggestion feature in a conversation profile.
+      /// If the conversation profile contains the type of suggestion feature for
+      /// the participant role, it will update it. Otherwise it will insert the
+      /// suggestion feature.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
+      /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+      ///
+      /// If a long running operation to add or update suggestion feature
+      /// config for the same conversation profile, participant role and suggestion
+      /// feature type exists, please cancel the existing long running operation
+      /// before sending such request, otherwise the request will be rejected.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> SetSuggestionFeatureConfig(global::Google.Cloud.Dialogflow.V2.SetSuggestionFeatureConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Clears a suggestion feature from a conversation profile for the given
+      /// participant role.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
+      /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ClearSuggestionFeatureConfig(global::Google.Cloud.Dialogflow.V2.ClearSuggestionFeatureConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -499,6 +568,194 @@ namespace Google.Cloud.Dialogflow.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteConversationProfile, null, options, request);
       }
+      /// <summary>
+      /// Adds or updates a suggestion feature in a conversation profile.
+      /// If the conversation profile contains the type of suggestion feature for
+      /// the participant role, it will update it. Otherwise it will insert the
+      /// suggestion feature.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
+      /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+      ///
+      /// If a long running operation to add or update suggestion feature
+      /// config for the same conversation profile, participant role and suggestion
+      /// feature type exists, please cancel the existing long running operation
+      /// before sending such request, otherwise the request will be rejected.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation SetSuggestionFeatureConfig(global::Google.Cloud.Dialogflow.V2.SetSuggestionFeatureConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetSuggestionFeatureConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Adds or updates a suggestion feature in a conversation profile.
+      /// If the conversation profile contains the type of suggestion feature for
+      /// the participant role, it will update it. Otherwise it will insert the
+      /// suggestion feature.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
+      /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+      ///
+      /// If a long running operation to add or update suggestion feature
+      /// config for the same conversation profile, participant role and suggestion
+      /// feature type exists, please cancel the existing long running operation
+      /// before sending such request, otherwise the request will be rejected.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation SetSuggestionFeatureConfig(global::Google.Cloud.Dialogflow.V2.SetSuggestionFeatureConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SetSuggestionFeatureConfig, null, options, request);
+      }
+      /// <summary>
+      /// Adds or updates a suggestion feature in a conversation profile.
+      /// If the conversation profile contains the type of suggestion feature for
+      /// the participant role, it will update it. Otherwise it will insert the
+      /// suggestion feature.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
+      /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+      ///
+      /// If a long running operation to add or update suggestion feature
+      /// config for the same conversation profile, participant role and suggestion
+      /// feature type exists, please cancel the existing long running operation
+      /// before sending such request, otherwise the request will be rejected.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SetSuggestionFeatureConfigAsync(global::Google.Cloud.Dialogflow.V2.SetSuggestionFeatureConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetSuggestionFeatureConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Adds or updates a suggestion feature in a conversation profile.
+      /// If the conversation profile contains the type of suggestion feature for
+      /// the participant role, it will update it. Otherwise it will insert the
+      /// suggestion feature.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
+      /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+      ///
+      /// If a long running operation to add or update suggestion feature
+      /// config for the same conversation profile, participant role and suggestion
+      /// feature type exists, please cancel the existing long running operation
+      /// before sending such request, otherwise the request will be rejected.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SetSuggestionFeatureConfigAsync(global::Google.Cloud.Dialogflow.V2.SetSuggestionFeatureConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SetSuggestionFeatureConfig, null, options, request);
+      }
+      /// <summary>
+      /// Clears a suggestion feature from a conversation profile for the given
+      /// participant role.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
+      /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ClearSuggestionFeatureConfig(global::Google.Cloud.Dialogflow.V2.ClearSuggestionFeatureConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ClearSuggestionFeatureConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Clears a suggestion feature from a conversation profile for the given
+      /// participant role.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
+      /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ClearSuggestionFeatureConfig(global::Google.Cloud.Dialogflow.V2.ClearSuggestionFeatureConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ClearSuggestionFeatureConfig, null, options, request);
+      }
+      /// <summary>
+      /// Clears a suggestion feature from a conversation profile for the given
+      /// participant role.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
+      /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ClearSuggestionFeatureConfigAsync(global::Google.Cloud.Dialogflow.V2.ClearSuggestionFeatureConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ClearSuggestionFeatureConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Clears a suggestion feature from a conversation profile for the given
+      /// participant role.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
+      /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ClearSuggestionFeatureConfigAsync(global::Google.Cloud.Dialogflow.V2.ClearSuggestionFeatureConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ClearSuggestionFeatureConfig, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ConversationProfilesClient NewInstance(ClientBaseConfiguration configuration)
@@ -517,7 +774,9 @@ namespace Google.Cloud.Dialogflow.V2 {
           .AddMethod(__Method_GetConversationProfile, serviceImpl.GetConversationProfile)
           .AddMethod(__Method_CreateConversationProfile, serviceImpl.CreateConversationProfile)
           .AddMethod(__Method_UpdateConversationProfile, serviceImpl.UpdateConversationProfile)
-          .AddMethod(__Method_DeleteConversationProfile, serviceImpl.DeleteConversationProfile).Build();
+          .AddMethod(__Method_DeleteConversationProfile, serviceImpl.DeleteConversationProfile)
+          .AddMethod(__Method_SetSuggestionFeatureConfig, serviceImpl.SetSuggestionFeatureConfig)
+          .AddMethod(__Method_ClearSuggestionFeatureConfig, serviceImpl.ClearSuggestionFeatureConfig).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -532,6 +791,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       serviceBinder.AddMethod(__Method_CreateConversationProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.CreateConversationProfileRequest, global::Google.Cloud.Dialogflow.V2.ConversationProfile>(serviceImpl.CreateConversationProfile));
       serviceBinder.AddMethod(__Method_UpdateConversationProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.UpdateConversationProfileRequest, global::Google.Cloud.Dialogflow.V2.ConversationProfile>(serviceImpl.UpdateConversationProfile));
       serviceBinder.AddMethod(__Method_DeleteConversationProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.DeleteConversationProfileRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteConversationProfile));
+      serviceBinder.AddMethod(__Method_SetSuggestionFeatureConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.SetSuggestionFeatureConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.SetSuggestionFeatureConfig));
+      serviceBinder.AddMethod(__Method_ClearSuggestionFeatureConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.ClearSuggestionFeatureConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.ClearSuggestionFeatureConfig));
     }
 
   }

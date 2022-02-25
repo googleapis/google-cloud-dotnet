@@ -25,24 +25,23 @@ namespace Google.Cloud.Dialogflow.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjNnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92Mi9jb252ZXJzYXRpb25fZXZl",
-            "bnQucHJvdG8SGmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyGhxnb29nbGUv",
-            "YXBpL2Fubm90YXRpb25zLnByb3RvGixnb29nbGUvY2xvdWQvZGlhbG9nZmxv",
-            "dy92Mi9wYXJ0aWNpcGFudC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJv",
-            "dG8igQMKEUNvbnZlcnNhdGlvbkV2ZW50EhQKDGNvbnZlcnNhdGlvbhgBIAEo",
-            "CRJACgR0eXBlGAIgASgOMjIuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIu",
-            "Q29udmVyc2F0aW9uRXZlbnQuVHlwZRIoCgxlcnJvcl9zdGF0dXMYAyABKAsy",
-            "Ei5nb29nbGUucnBjLlN0YXR1cxJCChNuZXdfbWVzc2FnZV9wYXlsb2FkGAQg",
-            "ASgLMiMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuTWVzc2FnZUgAIpoB",
-            "CgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIYChRDT05WRVJTQVRJT05f",
-            "U1RBUlRFRBABEhkKFUNPTlZFUlNBVElPTl9GSU5JU0hFRBACEh0KGUhVTUFO",
-            "X0lOVEVSVkVOVElPTl9ORUVERUQQAxIPCgtORVdfTUVTU0FHRRAFEhcKE1VO",
-            "UkVDT1ZFUkFCTEVfRVJST1IQBEIJCgdwYXlsb2FkQqUBCh5jb20uZ29vZ2xl",
-            "LmNsb3VkLmRpYWxvZ2Zsb3cudjJCFkNvbnZlcnNhdGlvbkV2ZW50UHJvdG9Q",
-            "AVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91",
-            "ZC9kaWFsb2dmbG93L3YyO2RpYWxvZ2Zsb3f4AQGiAgJERqoCGkdvb2dsZS5D",
-            "bG91ZC5EaWFsb2dmbG93LlYyYgZwcm90bzM="));
+            "bnQucHJvdG8SGmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyGixnb29nbGUv",
+            "Y2xvdWQvZGlhbG9nZmxvdy92Mi9wYXJ0aWNpcGFudC5wcm90bxoXZ29vZ2xl",
+            "L3JwYy9zdGF0dXMucHJvdG8igQMKEUNvbnZlcnNhdGlvbkV2ZW50EhQKDGNv",
+            "bnZlcnNhdGlvbhgBIAEoCRJACgR0eXBlGAIgASgOMjIuZ29vZ2xlLmNsb3Vk",
+            "LmRpYWxvZ2Zsb3cudjIuQ29udmVyc2F0aW9uRXZlbnQuVHlwZRIoCgxlcnJv",
+            "cl9zdGF0dXMYAyABKAsyEi5nb29nbGUucnBjLlN0YXR1cxJCChNuZXdfbWVz",
+            "c2FnZV9wYXlsb2FkGAQgASgLMiMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
+            "djIuTWVzc2FnZUgAIpoBCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIY",
+            "ChRDT05WRVJTQVRJT05fU1RBUlRFRBABEhkKFUNPTlZFUlNBVElPTl9GSU5J",
+            "U0hFRBACEh0KGUhVTUFOX0lOVEVSVkVOVElPTl9ORUVERUQQAxIPCgtORVdf",
+            "TUVTU0FHRRAFEhcKE1VOUkVDT1ZFUkFCTEVfRVJST1IQBEIJCgdwYXlsb2Fk",
+            "QqUBCh5jb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJCFkNvbnZlcnNh",
+            "dGlvbkV2ZW50UHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
+            "Z29vZ2xlYXBpcy9jbG91ZC9kaWFsb2dmbG93L3YyO2RpYWxvZ2Zsb3f4AQGi",
+            "AgJERqoCGkdvb2dsZS5DbG91ZC5EaWFsb2dmbG93LlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.ParticipantReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.Dialogflow.V2.ParticipantReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ConversationEvent), global::Google.Cloud.Dialogflow.V2.ConversationEvent.Parser, new[]{ "Conversation", "Type", "ErrorStatus", "NewMessagePayload" }, new[]{ "Payload" }, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.ConversationEvent.Types.Type) }, null, null)
           }));
