@@ -26,17 +26,17 @@ namespace Google.Cloud.Dialogflow.V2 {
           string.Concat(
             "Cjxnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92Mi9odW1hbl9hZ2VudF9hc3Np",
             "c3RhbnRfZXZlbnQucHJvdG8SGmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYy",
-            "Ghxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGixnb29nbGUvY2xvdWQv",
-            "ZGlhbG9nZmxvdy92Mi9wYXJ0aWNpcGFudC5wcm90byKPAQoYSHVtYW5BZ2Vu",
-            "dEFzc2lzdGFudEV2ZW50EhQKDGNvbnZlcnNhdGlvbhgBIAEoCRITCgtwYXJ0",
-            "aWNpcGFudBgDIAEoCRJIChJzdWdnZXN0aW9uX3Jlc3VsdHMYBSADKAsyLC5n",
-            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TdWdnZXN0aW9uUmVzdWx0QqwB",
-            "Ch5jb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJCHUh1bWFuQWdlbnRB",
-            "c3Npc3RhbnRFdmVudFByb3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvZGlhbG9nZmxvdy92MjtkaWFsb2dmbG93",
-            "+AEBogICREaqAhpHb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
+            "Gixnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92Mi9wYXJ0aWNpcGFudC5wcm90",
+            "byKPAQoYSHVtYW5BZ2VudEFzc2lzdGFudEV2ZW50EhQKDGNvbnZlcnNhdGlv",
+            "bhgBIAEoCRITCgtwYXJ0aWNpcGFudBgDIAEoCRJIChJzdWdnZXN0aW9uX3Jl",
+            "c3VsdHMYBSADKAsyLC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TdWdn",
+            "ZXN0aW9uUmVzdWx0QqwBCh5jb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
+            "djJCHUh1bWFuQWdlbnRBc3Npc3RhbnRFdmVudFByb3RvUAFaRGdvb2dsZS5n",
+            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZGlhbG9nZmxv",
+            "dy92MjtkaWFsb2dmbG93+AEBogICREaqAhpHb29nbGUuQ2xvdWQuRGlhbG9n",
+            "Zmxvdy5WMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.ParticipantReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.Dialogflow.V2.ParticipantReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantEvent), global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantEvent.Parser, new[]{ "Conversation", "Participant", "SuggestionResults" }, null, null, null, null)
           }));

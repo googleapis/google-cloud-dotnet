@@ -57,6 +57,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 RawContent = proto::ByteString.CopyFromUtf8("raw_content4f67d498"),
                 EnableAutoReload = true,
                 LatestReloadStatus = new Document.Types.ReloadStatus(),
+                State = Document.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetDocument(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DocumentsClient client = new DocumentsClientImpl(mockGrpcClient.Object, null);
@@ -94,6 +95,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 RawContent = proto::ByteString.CopyFromUtf8("raw_content4f67d498"),
                 EnableAutoReload = true,
                 LatestReloadStatus = new Document.Types.ReloadStatus(),
+                State = Document.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetDocumentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Document>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DocumentsClient client = new DocumentsClientImpl(mockGrpcClient.Object, null);
@@ -133,6 +135,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 RawContent = proto::ByteString.CopyFromUtf8("raw_content4f67d498"),
                 EnableAutoReload = true,
                 LatestReloadStatus = new Document.Types.ReloadStatus(),
+                State = Document.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetDocument(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DocumentsClient client = new DocumentsClientImpl(mockGrpcClient.Object, null);
@@ -170,6 +173,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 RawContent = proto::ByteString.CopyFromUtf8("raw_content4f67d498"),
                 EnableAutoReload = true,
                 LatestReloadStatus = new Document.Types.ReloadStatus(),
+                State = Document.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetDocumentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Document>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DocumentsClient client = new DocumentsClientImpl(mockGrpcClient.Object, null);
@@ -209,6 +213,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 RawContent = proto::ByteString.CopyFromUtf8("raw_content4f67d498"),
                 EnableAutoReload = true,
                 LatestReloadStatus = new Document.Types.ReloadStatus(),
+                State = Document.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetDocument(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DocumentsClient client = new DocumentsClientImpl(mockGrpcClient.Object, null);
@@ -246,6 +251,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 RawContent = proto::ByteString.CopyFromUtf8("raw_content4f67d498"),
                 EnableAutoReload = true,
                 LatestReloadStatus = new Document.Types.ReloadStatus(),
+                State = Document.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetDocumentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Document>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DocumentsClient client = new DocumentsClientImpl(mockGrpcClient.Object, null);

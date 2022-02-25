@@ -134,11 +134,119 @@
         }
       }
     },
+    "ConversationDatasets": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ConversationDatasetsClient",
+          "rpcs": {
+            "CreateConversationDataset": {
+              "methods": [
+                "CreateConversationDataset",
+                "CreateConversationDatasetAsync"
+              ]
+            },
+            "DeleteConversationDataset": {
+              "methods": [
+                "DeleteConversationDataset",
+                "DeleteConversationDatasetAsync"
+              ]
+            },
+            "GetConversationDataset": {
+              "methods": [
+                "GetConversationDataset",
+                "GetConversationDatasetAsync"
+              ]
+            },
+            "ImportConversationData": {
+              "methods": [
+                "ImportConversationData",
+                "ImportConversationDataAsync"
+              ]
+            },
+            "ListConversationDatasets": {
+              "methods": [
+                "ListConversationDatasets",
+                "ListConversationDatasetsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ConversationModels": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ConversationModelsClient",
+          "rpcs": {
+            "CreateConversationModel": {
+              "methods": [
+                "CreateConversationModel",
+                "CreateConversationModelAsync"
+              ]
+            },
+            "CreateConversationModelEvaluation": {
+              "methods": [
+                "CreateConversationModelEvaluation",
+                "CreateConversationModelEvaluationAsync"
+              ]
+            },
+            "DeleteConversationModel": {
+              "methods": [
+                "DeleteConversationModel",
+                "DeleteConversationModelAsync"
+              ]
+            },
+            "DeployConversationModel": {
+              "methods": [
+                "DeployConversationModel",
+                "DeployConversationModelAsync"
+              ]
+            },
+            "GetConversationModel": {
+              "methods": [
+                "GetConversationModel",
+                "GetConversationModelAsync"
+              ]
+            },
+            "GetConversationModelEvaluation": {
+              "methods": [
+                "GetConversationModelEvaluation",
+                "GetConversationModelEvaluationAsync"
+              ]
+            },
+            "ListConversationModelEvaluations": {
+              "methods": [
+                "ListConversationModelEvaluations",
+                "ListConversationModelEvaluationsAsync"
+              ]
+            },
+            "ListConversationModels": {
+              "methods": [
+                "ListConversationModels",
+                "ListConversationModelsAsync"
+              ]
+            },
+            "UndeployConversationModel": {
+              "methods": [
+                "UndeployConversationModel",
+                "UndeployConversationModelAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "ConversationProfiles": {
       "clients": {
         "grpc": {
           "libraryClient": "ConversationProfilesClient",
           "rpcs": {
+            "ClearSuggestionFeatureConfig": {
+              "methods": [
+                "ClearSuggestionFeatureConfig",
+                "ClearSuggestionFeatureConfigAsync"
+              ]
+            },
             "CreateConversationProfile": {
               "methods": [
                 "CreateConversationProfile",
@@ -161,6 +269,12 @@
               "methods": [
                 "ListConversationProfiles",
                 "ListConversationProfilesAsync"
+              ]
+            },
+            "SetSuggestionFeatureConfig": {
+              "methods": [
+                "SetSuggestionFeatureConfig",
+                "SetSuggestionFeatureConfigAsync"
               ]
             },
             "UpdateConversationProfile": {

@@ -18,6 +18,7 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -51,6 +52,10 @@ namespace Google.Cloud.Dialogflow.V2
             CreateConversationProfileSettings = existing.CreateConversationProfileSettings;
             UpdateConversationProfileSettings = existing.UpdateConversationProfileSettings;
             DeleteConversationProfileSettings = existing.DeleteConversationProfileSettings;
+            SetSuggestionFeatureConfigSettings = existing.SetSuggestionFeatureConfigSettings;
+            SetSuggestionFeatureConfigOperationsSettings = existing.SetSuggestionFeatureConfigOperationsSettings.Clone();
+            ClearSuggestionFeatureConfigSettings = existing.ClearSuggestionFeatureConfigSettings;
+            ClearSuggestionFeatureConfigOperationsSettings = existing.ClearSuggestionFeatureConfigOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -150,6 +155,80 @@ namespace Google.Cloud.Dialogflow.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteConversationProfileSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConversationProfilesClient.SetSuggestionFeatureConfig</c> and
+        /// <c>ConversationProfilesClient.SetSuggestionFeatureConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SetSuggestionFeatureConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ConversationProfilesClient.SetSuggestionFeatureConfig</c>
+        /// and <c>ConversationProfilesClient.SetSuggestionFeatureConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SetSuggestionFeatureConfigOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConversationProfilesClient.ClearSuggestionFeatureConfig</c> and
+        /// <c>ConversationProfilesClient.ClearSuggestionFeatureConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ClearSuggestionFeatureConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ConversationProfilesClient.ClearSuggestionFeatureConfig</c>
+        /// and <c>ConversationProfilesClient.ClearSuggestionFeatureConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ClearSuggestionFeatureConfigOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ConversationProfilesSettings"/> object.</returns>
@@ -1053,6 +1132,342 @@ namespace Google.Cloud.Dialogflow.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteConversationProfileAsync(ConversationProfileName name, st::CancellationToken cancellationToken) =>
             DeleteConversationProfileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds or updates a suggestion feature in a conversation profile.
+        /// If the conversation profile contains the type of suggestion feature for
+        /// the participant role, it will update it. Otherwise it will insert the
+        /// suggestion feature.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
+        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// 
+        /// If a long running operation to add or update suggestion feature
+        /// config for the same conversation profile, participant role and suggestion
+        /// feature type exists, please cancel the existing long running operation
+        /// before sending such request, otherwise the request will be rejected.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata> SetSuggestionFeatureConfig(SetSuggestionFeatureConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Adds or updates a suggestion feature in a conversation profile.
+        /// If the conversation profile contains the type of suggestion feature for
+        /// the participant role, it will update it. Otherwise it will insert the
+        /// suggestion feature.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
+        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// 
+        /// If a long running operation to add or update suggestion feature
+        /// config for the same conversation profile, participant role and suggestion
+        /// feature type exists, please cancel the existing long running operation
+        /// before sending such request, otherwise the request will be rejected.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata>> SetSuggestionFeatureConfigAsync(SetSuggestionFeatureConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Adds or updates a suggestion feature in a conversation profile.
+        /// If the conversation profile contains the type of suggestion feature for
+        /// the participant role, it will update it. Otherwise it will insert the
+        /// suggestion feature.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
+        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// 
+        /// If a long running operation to add or update suggestion feature
+        /// config for the same conversation profile, participant role and suggestion
+        /// feature type exists, please cancel the existing long running operation
+        /// before sending such request, otherwise the request will be rejected.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata>> SetSuggestionFeatureConfigAsync(SetSuggestionFeatureConfigRequest request, st::CancellationToken cancellationToken) =>
+            SetSuggestionFeatureConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SetSuggestionFeatureConfig</c>.</summary>
+        public virtual lro::OperationsClient SetSuggestionFeatureConfigOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetSuggestionFeatureConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata> PollOnceSetSuggestionFeatureConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetSuggestionFeatureConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetSuggestionFeatureConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata>> PollOnceSetSuggestionFeatureConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetSuggestionFeatureConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Adds or updates a suggestion feature in a conversation profile.
+        /// If the conversation profile contains the type of suggestion feature for
+        /// the participant role, it will update it. Otherwise it will insert the
+        /// suggestion feature.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
+        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// 
+        /// If a long running operation to add or update suggestion feature
+        /// config for the same conversation profile, participant role and suggestion
+        /// feature type exists, please cancel the existing long running operation
+        /// before sending such request, otherwise the request will be rejected.
+        /// </summary>
+        /// <param name="conversationProfile">
+        /// Required. The Conversation Profile to add or update the suggestion feature
+        /// config. Format: `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata> SetSuggestionFeatureConfig(string conversationProfile, gaxgrpc::CallSettings callSettings = null) =>
+            SetSuggestionFeatureConfig(new SetSuggestionFeatureConfigRequest
+            {
+                ConversationProfile = gax::GaxPreconditions.CheckNotNullOrEmpty(conversationProfile, nameof(conversationProfile)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds or updates a suggestion feature in a conversation profile.
+        /// If the conversation profile contains the type of suggestion feature for
+        /// the participant role, it will update it. Otherwise it will insert the
+        /// suggestion feature.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
+        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// 
+        /// If a long running operation to add or update suggestion feature
+        /// config for the same conversation profile, participant role and suggestion
+        /// feature type exists, please cancel the existing long running operation
+        /// before sending such request, otherwise the request will be rejected.
+        /// </summary>
+        /// <param name="conversationProfile">
+        /// Required. The Conversation Profile to add or update the suggestion feature
+        /// config. Format: `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata>> SetSuggestionFeatureConfigAsync(string conversationProfile, gaxgrpc::CallSettings callSettings = null) =>
+            SetSuggestionFeatureConfigAsync(new SetSuggestionFeatureConfigRequest
+            {
+                ConversationProfile = gax::GaxPreconditions.CheckNotNullOrEmpty(conversationProfile, nameof(conversationProfile)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds or updates a suggestion feature in a conversation profile.
+        /// If the conversation profile contains the type of suggestion feature for
+        /// the participant role, it will update it. Otherwise it will insert the
+        /// suggestion feature.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
+        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// 
+        /// If a long running operation to add or update suggestion feature
+        /// config for the same conversation profile, participant role and suggestion
+        /// feature type exists, please cancel the existing long running operation
+        /// before sending such request, otherwise the request will be rejected.
+        /// </summary>
+        /// <param name="conversationProfile">
+        /// Required. The Conversation Profile to add or update the suggestion feature
+        /// config. Format: `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata>> SetSuggestionFeatureConfigAsync(string conversationProfile, st::CancellationToken cancellationToken) =>
+            SetSuggestionFeatureConfigAsync(conversationProfile, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Clears a suggestion feature from a conversation profile for the given
+        /// participant role.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
+        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata> ClearSuggestionFeatureConfig(ClearSuggestionFeatureConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Clears a suggestion feature from a conversation profile for the given
+        /// participant role.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
+        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata>> ClearSuggestionFeatureConfigAsync(ClearSuggestionFeatureConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Clears a suggestion feature from a conversation profile for the given
+        /// participant role.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
+        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata>> ClearSuggestionFeatureConfigAsync(ClearSuggestionFeatureConfigRequest request, st::CancellationToken cancellationToken) =>
+            ClearSuggestionFeatureConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ClearSuggestionFeatureConfig</c>.</summary>
+        public virtual lro::OperationsClient ClearSuggestionFeatureConfigOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ClearSuggestionFeatureConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata> PollOnceClearSuggestionFeatureConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ClearSuggestionFeatureConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ClearSuggestionFeatureConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata>> PollOnceClearSuggestionFeatureConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ClearSuggestionFeatureConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Clears a suggestion feature from a conversation profile for the given
+        /// participant role.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
+        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// </summary>
+        /// <param name="conversationProfile">
+        /// Required. The Conversation Profile to add or update the suggestion feature
+        /// config. Format: `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata> ClearSuggestionFeatureConfig(string conversationProfile, gaxgrpc::CallSettings callSettings = null) =>
+            ClearSuggestionFeatureConfig(new ClearSuggestionFeatureConfigRequest
+            {
+                ConversationProfile = gax::GaxPreconditions.CheckNotNullOrEmpty(conversationProfile, nameof(conversationProfile)),
+            }, callSettings);
+
+        /// <summary>
+        /// Clears a suggestion feature from a conversation profile for the given
+        /// participant role.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
+        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// </summary>
+        /// <param name="conversationProfile">
+        /// Required. The Conversation Profile to add or update the suggestion feature
+        /// config. Format: `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata>> ClearSuggestionFeatureConfigAsync(string conversationProfile, gaxgrpc::CallSettings callSettings = null) =>
+            ClearSuggestionFeatureConfigAsync(new ClearSuggestionFeatureConfigRequest
+            {
+                ConversationProfile = gax::GaxPreconditions.CheckNotNullOrEmpty(conversationProfile, nameof(conversationProfile)),
+            }, callSettings);
+
+        /// <summary>
+        /// Clears a suggestion feature from a conversation profile for the given
+        /// participant role.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
+        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// </summary>
+        /// <param name="conversationProfile">
+        /// Required. The Conversation Profile to add or update the suggestion feature
+        /// config. Format: `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/conversationProfiles/&amp;lt;Conversation Profile ID&amp;gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata>> ClearSuggestionFeatureConfigAsync(string conversationProfile, st::CancellationToken cancellationToken) =>
+            ClearSuggestionFeatureConfigAsync(conversationProfile, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ConversationProfiles client wrapper implementation, for convenient use.</summary>
@@ -1071,6 +1486,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         private readonly gaxgrpc::ApiCall<DeleteConversationProfileRequest, wkt::Empty> _callDeleteConversationProfile;
 
+        private readonly gaxgrpc::ApiCall<SetSuggestionFeatureConfigRequest, lro::Operation> _callSetSuggestionFeatureConfig;
+
+        private readonly gaxgrpc::ApiCall<ClearSuggestionFeatureConfigRequest, lro::Operation> _callClearSuggestionFeatureConfig;
+
         /// <summary>
         /// Constructs a client wrapper for the ConversationProfiles service, with the specified gRPC client and
         /// settings.
@@ -1082,6 +1501,8 @@ namespace Google.Cloud.Dialogflow.V2
             GrpcClient = grpcClient;
             ConversationProfilesSettings effectiveSettings = settings ?? ConversationProfilesSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            SetSuggestionFeatureConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetSuggestionFeatureConfigOperationsSettings);
+            ClearSuggestionFeatureConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ClearSuggestionFeatureConfigOperationsSettings);
             _callListConversationProfiles = clientHelper.BuildApiCall<ListConversationProfilesRequest, ListConversationProfilesResponse>(grpcClient.ListConversationProfilesAsync, grpcClient.ListConversationProfiles, effectiveSettings.ListConversationProfilesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListConversationProfiles);
             Modify_ListConversationProfilesApiCall(ref _callListConversationProfiles);
@@ -1097,6 +1518,12 @@ namespace Google.Cloud.Dialogflow.V2
             _callDeleteConversationProfile = clientHelper.BuildApiCall<DeleteConversationProfileRequest, wkt::Empty>(grpcClient.DeleteConversationProfileAsync, grpcClient.DeleteConversationProfile, effectiveSettings.DeleteConversationProfileSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteConversationProfile);
             Modify_DeleteConversationProfileApiCall(ref _callDeleteConversationProfile);
+            _callSetSuggestionFeatureConfig = clientHelper.BuildApiCall<SetSuggestionFeatureConfigRequest, lro::Operation>(grpcClient.SetSuggestionFeatureConfigAsync, grpcClient.SetSuggestionFeatureConfig, effectiveSettings.SetSuggestionFeatureConfigSettings).WithGoogleRequestParam("conversation_profile", request => request.ConversationProfile);
+            Modify_ApiCall(ref _callSetSuggestionFeatureConfig);
+            Modify_SetSuggestionFeatureConfigApiCall(ref _callSetSuggestionFeatureConfig);
+            _callClearSuggestionFeatureConfig = clientHelper.BuildApiCall<ClearSuggestionFeatureConfigRequest, lro::Operation>(grpcClient.ClearSuggestionFeatureConfigAsync, grpcClient.ClearSuggestionFeatureConfig, effectiveSettings.ClearSuggestionFeatureConfigSettings).WithGoogleRequestParam("conversation_profile", request => request.ConversationProfile);
+            Modify_ApiCall(ref _callClearSuggestionFeatureConfig);
+            Modify_ClearSuggestionFeatureConfigApiCall(ref _callClearSuggestionFeatureConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1112,6 +1539,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         partial void Modify_DeleteConversationProfileApiCall(ref gaxgrpc::ApiCall<DeleteConversationProfileRequest, wkt::Empty> call);
 
+        partial void Modify_SetSuggestionFeatureConfigApiCall(ref gaxgrpc::ApiCall<SetSuggestionFeatureConfigRequest, lro::Operation> call);
+
+        partial void Modify_ClearSuggestionFeatureConfigApiCall(ref gaxgrpc::ApiCall<ClearSuggestionFeatureConfigRequest, lro::Operation> call);
+
         partial void OnConstruction(ConversationProfiles.ConversationProfilesClient grpcClient, ConversationProfilesSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ConversationProfiles client</summary>
@@ -1126,6 +1557,10 @@ namespace Google.Cloud.Dialogflow.V2
         partial void Modify_UpdateConversationProfileRequest(ref UpdateConversationProfileRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteConversationProfileRequest(ref DeleteConversationProfileRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SetSuggestionFeatureConfigRequest(ref SetSuggestionFeatureConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ClearSuggestionFeatureConfigRequest(ref ClearSuggestionFeatureConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Returns the list of all conversation profiles in the specified project.
@@ -1262,6 +1697,106 @@ namespace Google.Cloud.Dialogflow.V2
             Modify_DeleteConversationProfileRequest(ref request, ref callSettings);
             return _callDeleteConversationProfile.Async(request, callSettings);
         }
+
+        /// <summary>The long-running operations client for <c>SetSuggestionFeatureConfig</c>.</summary>
+        public override lro::OperationsClient SetSuggestionFeatureConfigOperationsClient { get; }
+
+        /// <summary>
+        /// Adds or updates a suggestion feature in a conversation profile.
+        /// If the conversation profile contains the type of suggestion feature for
+        /// the participant role, it will update it. Otherwise it will insert the
+        /// suggestion feature.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
+        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// 
+        /// If a long running operation to add or update suggestion feature
+        /// config for the same conversation profile, participant role and suggestion
+        /// feature type exists, please cancel the existing long running operation
+        /// before sending such request, otherwise the request will be rejected.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata> SetSuggestionFeatureConfig(SetSuggestionFeatureConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetSuggestionFeatureConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata>(_callSetSuggestionFeatureConfig.Sync(request, callSettings), SetSuggestionFeatureConfigOperationsClient);
+        }
+
+        /// <summary>
+        /// Adds or updates a suggestion feature in a conversation profile.
+        /// If the conversation profile contains the type of suggestion feature for
+        /// the participant role, it will update it. Otherwise it will insert the
+        /// suggestion feature.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
+        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// 
+        /// If a long running operation to add or update suggestion feature
+        /// config for the same conversation profile, participant role and suggestion
+        /// feature type exists, please cancel the existing long running operation
+        /// before sending such request, otherwise the request will be rejected.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata>> SetSuggestionFeatureConfigAsync(SetSuggestionFeatureConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetSuggestionFeatureConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata>(await _callSetSuggestionFeatureConfig.Async(request, callSettings).ConfigureAwait(false), SetSuggestionFeatureConfigOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>ClearSuggestionFeatureConfig</c>.</summary>
+        public override lro::OperationsClient ClearSuggestionFeatureConfigOperationsClient { get; }
+
+        /// <summary>
+        /// Clears a suggestion feature from a conversation profile for the given
+        /// participant role.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
+        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata> ClearSuggestionFeatureConfig(ClearSuggestionFeatureConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ClearSuggestionFeatureConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata>(_callClearSuggestionFeatureConfig.Sync(request, callSettings), ClearSuggestionFeatureConfigOperationsClient);
+        }
+
+        /// <summary>
+        /// Clears a suggestion feature from a conversation profile for the given
+        /// participant role.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
+        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata>> ClearSuggestionFeatureConfigAsync(ClearSuggestionFeatureConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ClearSuggestionFeatureConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata>(await _callClearSuggestionFeatureConfig.Async(request, callSettings).ConfigureAwait(false), ClearSuggestionFeatureConfigOperationsClient);
+        }
     }
 
     public partial class ListConversationProfilesRequest : gaxgrpc::IPageRequest
@@ -1274,5 +1809,19 @@ namespace Google.Cloud.Dialogflow.V2
         public scg::IEnumerator<ConversationProfile> GetEnumerator() => ConversationProfiles.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class ConversationProfiles
+    {
+        public partial class ConversationProfilesClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
+                new lro::Operations.OperationsClient(CallInvoker);
+        }
     }
 }

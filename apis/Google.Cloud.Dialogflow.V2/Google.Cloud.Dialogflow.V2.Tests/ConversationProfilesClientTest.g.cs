@@ -16,6 +16,7 @@
 
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -32,6 +33,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void GetConversationProfileRequestObject()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetConversationProfileRequest request = new GetConversationProfileRequest
             {
                 ConversationProfileName = ConversationProfileName.FromProjectConversationProfile("[PROJECT]", "[CONVERSATION_PROFILE]"),
@@ -64,6 +66,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task GetConversationProfileRequestObjectAsync()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetConversationProfileRequest request = new GetConversationProfileRequest
             {
                 ConversationProfileName = ConversationProfileName.FromProjectConversationProfile("[PROJECT]", "[CONVERSATION_PROFILE]"),
@@ -98,6 +101,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void GetConversationProfile()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetConversationProfileRequest request = new GetConversationProfileRequest
             {
                 ConversationProfileName = ConversationProfileName.FromProjectConversationProfile("[PROJECT]", "[CONVERSATION_PROFILE]"),
@@ -130,6 +134,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task GetConversationProfileAsync()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetConversationProfileRequest request = new GetConversationProfileRequest
             {
                 ConversationProfileName = ConversationProfileName.FromProjectConversationProfile("[PROJECT]", "[CONVERSATION_PROFILE]"),
@@ -164,6 +169,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void GetConversationProfileResourceNames()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetConversationProfileRequest request = new GetConversationProfileRequest
             {
                 ConversationProfileName = ConversationProfileName.FromProjectConversationProfile("[PROJECT]", "[CONVERSATION_PROFILE]"),
@@ -196,6 +202,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task GetConversationProfileResourceNamesAsync()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetConversationProfileRequest request = new GetConversationProfileRequest
             {
                 ConversationProfileName = ConversationProfileName.FromProjectConversationProfile("[PROJECT]", "[CONVERSATION_PROFILE]"),
@@ -230,6 +237,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CreateConversationProfileRequestObject()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateConversationProfileRequest request = new CreateConversationProfileRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -263,6 +271,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CreateConversationProfileRequestObjectAsync()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateConversationProfileRequest request = new CreateConversationProfileRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -298,6 +307,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CreateConversationProfile()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateConversationProfileRequest request = new CreateConversationProfileRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -331,6 +341,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CreateConversationProfileAsync()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateConversationProfileRequest request = new CreateConversationProfileRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -366,6 +377,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CreateConversationProfileResourceNames1()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateConversationProfileRequest request = new CreateConversationProfileRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -399,6 +411,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CreateConversationProfileResourceNames1Async()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateConversationProfileRequest request = new CreateConversationProfileRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -434,6 +447,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void CreateConversationProfileResourceNames2()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateConversationProfileRequest request = new CreateConversationProfileRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -467,6 +481,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task CreateConversationProfileResourceNames2Async()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateConversationProfileRequest request = new CreateConversationProfileRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -502,6 +517,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void UpdateConversationProfileRequestObject()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateConversationProfileRequest request = new UpdateConversationProfileRequest
             {
                 ConversationProfile = new ConversationProfile(),
@@ -535,6 +551,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task UpdateConversationProfileRequestObjectAsync()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateConversationProfileRequest request = new UpdateConversationProfileRequest
             {
                 ConversationProfile = new ConversationProfile(),
@@ -570,6 +587,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void UpdateConversationProfile()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateConversationProfileRequest request = new UpdateConversationProfileRequest
             {
                 ConversationProfile = new ConversationProfile(),
@@ -603,6 +621,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task UpdateConversationProfileAsync()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateConversationProfileRequest request = new UpdateConversationProfileRequest
             {
                 ConversationProfile = new ConversationProfile(),
@@ -638,6 +657,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void DeleteConversationProfileRequestObject()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteConversationProfileRequest request = new DeleteConversationProfileRequest
             {
                 ConversationProfileName = ConversationProfileName.FromProjectConversationProfile("[PROJECT]", "[CONVERSATION_PROFILE]"),
@@ -653,6 +673,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task DeleteConversationProfileRequestObjectAsync()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteConversationProfileRequest request = new DeleteConversationProfileRequest
             {
                 ConversationProfileName = ConversationProfileName.FromProjectConversationProfile("[PROJECT]", "[CONVERSATION_PROFILE]"),
@@ -669,6 +690,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void DeleteConversationProfile()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteConversationProfileRequest request = new DeleteConversationProfileRequest
             {
                 ConversationProfileName = ConversationProfileName.FromProjectConversationProfile("[PROJECT]", "[CONVERSATION_PROFILE]"),
@@ -684,6 +706,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task DeleteConversationProfileAsync()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteConversationProfileRequest request = new DeleteConversationProfileRequest
             {
                 ConversationProfileName = ConversationProfileName.FromProjectConversationProfile("[PROJECT]", "[CONVERSATION_PROFILE]"),
@@ -700,6 +723,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public void DeleteConversationProfileResourceNames()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteConversationProfileRequest request = new DeleteConversationProfileRequest
             {
                 ConversationProfileName = ConversationProfileName.FromProjectConversationProfile("[PROJECT]", "[CONVERSATION_PROFILE]"),
@@ -715,6 +739,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         public async stt::Task DeleteConversationProfileResourceNamesAsync()
         {
             moq::Mock<ConversationProfiles.ConversationProfilesClient> mockGrpcClient = new moq::Mock<ConversationProfiles.ConversationProfilesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteConversationProfileRequest request = new DeleteConversationProfileRequest
             {
                 ConversationProfileName = ConversationProfileName.FromProjectConversationProfile("[PROJECT]", "[CONVERSATION_PROFILE]"),
