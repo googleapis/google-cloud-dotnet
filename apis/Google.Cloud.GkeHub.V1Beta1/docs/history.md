@@ -1,5 +1,14 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2022-02-28
+
+### New features
+
+- Added support for k8s_version field ([commit 38e1e18](https://github.com/googleapis/google-cloud-dotnet/commit/38e1e18e562490fc3b68d55f64c816421ed40a5c))
+
+### Documentation improvements
+
+- K8s_version field is not part of resource_options struct ([commit 38e1e18](https://github.com/googleapis/google-cloud-dotnet/commit/38e1e18e562490fc3b68d55f64c816421ed40a5c))
 ## Version 1.0.0-beta03, released 2021-09-23
 
 - [Commit 1d19cbd](https://github.com/googleapis/google-cloud-dotnet/commit/1d19cbd):

@@ -1558,7 +1558,7 @@
     },
     {
       "id": "Google.Cloud.GkeHub.V1Beta1",
-      "version": "1.0.0-beta03",
+      "version": "1.0.0-beta04",
       "type": "grpc",
       "productName": "GKE Hub",
       "productUrl": "https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster",
