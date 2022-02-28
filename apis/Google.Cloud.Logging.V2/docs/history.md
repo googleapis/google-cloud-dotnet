@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.6.0, released 2022-02-28
+
+### New features
+
+- KMS configuration in settings ([commit 058dff4](https://github.com/googleapis/google-cloud-dotnet/commit/058dff439fa8075576f7a78e03ec7aceed4b7295))
+
 ## Version 3.5.0, released 2022-02-22
 
 ### New features
