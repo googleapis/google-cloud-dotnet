@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.4.0, released 2022-02-28
+
+### New features
+
+- Add TPU_V2 & TPU_V3 values to AcceleratorType in aiplatform v1/v1beta1 accelerator_type.proto ([commit 354f7fd](https://github.com/googleapis/google-cloud-dotnet/commit/354f7fd84ba22d2eef391d63e633ef836bea54e9))
+
+### Documentation improvements
+
+- Fix misformatted field description ([commit 95bf8b9](https://github.com/googleapis/google-cloud-dotnet/commit/95bf8b971a5ebaf3e9c57b69139e6a3b2b69ce32))
+
 ## Version 1.3.0, released 2022-02-07
 
 ### New features
