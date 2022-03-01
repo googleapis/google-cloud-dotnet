@@ -25,21 +25,19 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjVnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My9hZHZhbmNlZF9zZXR0",
-            "aW5ncy5wcm90bxIdZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMaHGdv",
-            "b2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRf",
-            "YmVoYXZpb3IucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90",
-            "byLIAQoQQWR2YW5jZWRTZXR0aW5ncxJZChBsb2dnaW5nX3NldHRpbmdzGAYg",
-            "ASgLMj8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuQWR2YW5jZWRT",
-            "ZXR0aW5ncy5Mb2dnaW5nU2V0dGluZ3MaWQoPTG9nZ2luZ1NldHRpbmdzEiIK",
-            "GmVuYWJsZV9zdGFja2RyaXZlcl9sb2dnaW5nGAIgASgIEiIKGmVuYWJsZV9p",
-            "bnRlcmFjdGlvbl9sb2dnaW5nGAMgASgIQskBCiFjb20uZ29vZ2xlLmNsb3Vk",
-            "LmRpYWxvZ2Zsb3cuY3gudjNCFUFkdmFuY2VkU2V0dGluZ3NQcm90b1ABWj9n",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2Rp",
-            "YWxvZ2Zsb3cvY3gvdjM7Y3j4AQGiAgJERqoCHUdvb2dsZS5DbG91ZC5EaWFs",
-            "b2dmbG93LkN4LlYz6gIhR29vZ2xlOjpDbG91ZDo6RGlhbG9nZmxvdzo6Q1g6",
-            "OlYzYgZwcm90bzM="));
+            "aW5ncy5wcm90bxIdZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMaH2dv",
+            "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8iyAEKEEFkdmFuY2VkU2V0",
+            "dGluZ3MSWQoQbG9nZ2luZ19zZXR0aW5ncxgGIAEoCzI/Lmdvb2dsZS5jbG91",
+            "ZC5kaWFsb2dmbG93LmN4LnYzLkFkdmFuY2VkU2V0dGluZ3MuTG9nZ2luZ1Nl",
+            "dHRpbmdzGlkKD0xvZ2dpbmdTZXR0aW5ncxIiChplbmFibGVfc3RhY2tkcml2",
+            "ZXJfbG9nZ2luZxgCIAEoCBIiChplbmFibGVfaW50ZXJhY3Rpb25fbG9nZ2lu",
+            "ZxgDIAEoCELJAQohY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYz",
+            "QhVBZHZhbmNlZFNldHRpbmdzUHJvdG9QAVo/Z29vZ2xlLmdvbGFuZy5vcmcv",
+            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kaWFsb2dmbG93L2N4L3YzO2N4",
+            "+AEBogICREaqAh1Hb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5DeC5WM+oCIUdv",
+            "b2dsZTo6Q2xvdWQ6OkRpYWxvZ2Zsb3c6OkNYOjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings), global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings.Parser, new[]{ "LoggingSettings" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings.Types.LoggingSettings), global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings.Types.LoggingSettings.Parser, new[]{ "EnableStackdriverLogging", "EnableInteractionLogging" }, null, null, null, null)})
           }));
