@@ -1922,727 +1922,6 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_CreateSecuritySettings_sync",
-      "title": "CreateSecuritySettingsRequestObject",
-      "description": "Snippet for CreateSecuritySettings",
-      "file": "SecuritySettingsServiceClient.CreateSecuritySettingsRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateSecuritySettings",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.CreateSecuritySettings",
-        "resultType": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettings",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "CreateSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.CreateSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_CreateSecuritySettings_async",
-      "title": "CreateSecuritySettingsRequestObjectAsync",
-      "description": "Snippet for CreateSecuritySettingsAsync",
-      "file": "SecuritySettingsServiceClient.CreateSecuritySettingsRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateSecuritySettingsAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.CreateSecuritySettingsAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "CreateSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.CreateSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_CreateSecuritySettings_sync_flattened",
-      "title": "CreateSecuritySettings",
-      "description": "Snippet for CreateSecuritySettings",
-      "file": "SecuritySettingsServiceClient.CreateSecuritySettingsSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateSecuritySettings",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.CreateSecuritySettings",
-        "resultType": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettings",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "CreateSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.CreateSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_CreateSecuritySettings_async_flattened",
-      "title": "CreateSecuritySettingsAsync",
-      "description": "Snippet for CreateSecuritySettingsAsync",
-      "file": "SecuritySettingsServiceClient.CreateSecuritySettingsAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateSecuritySettingsAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.CreateSecuritySettingsAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "CreateSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.CreateSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_CreateSecuritySettings_sync_flattened_resourceNames",
-      "title": "CreateSecuritySettingsResourceNames",
-      "description": "Snippet for CreateSecuritySettings",
-      "file": "SecuritySettingsServiceClient.CreateSecuritySettingsResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateSecuritySettings",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.CreateSecuritySettings",
-        "resultType": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettings",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "CreateSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.CreateSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_CreateSecuritySettings_async_flattened_resourceNames",
-      "title": "CreateSecuritySettingsResourceNamesAsync",
-      "description": "Snippet for CreateSecuritySettingsAsync",
-      "file": "SecuritySettingsServiceClient.CreateSecuritySettingsResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateSecuritySettingsAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.CreateSecuritySettingsAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "CreateSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.CreateSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_GetSecuritySettings_sync",
-      "title": "GetSecuritySettingsRequestObject",
-      "description": "Snippet for GetSecuritySettings",
-      "file": "SecuritySettingsServiceClient.GetSecuritySettingsRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetSecuritySettings",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.GetSecuritySettings",
-        "resultType": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettings",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "GetSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.GetSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_GetSecuritySettings_async",
-      "title": "GetSecuritySettingsRequestObjectAsync",
-      "description": "Snippet for GetSecuritySettingsAsync",
-      "file": "SecuritySettingsServiceClient.GetSecuritySettingsRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetSecuritySettingsAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.GetSecuritySettingsAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "GetSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.GetSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_GetSecuritySettings_sync_flattened",
-      "title": "GetSecuritySettings",
-      "description": "Snippet for GetSecuritySettings",
-      "file": "SecuritySettingsServiceClient.GetSecuritySettingsSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetSecuritySettings",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.GetSecuritySettings",
-        "resultType": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettings",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "GetSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.GetSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_GetSecuritySettings_async_flattened",
-      "title": "GetSecuritySettingsAsync",
-      "description": "Snippet for GetSecuritySettingsAsync",
-      "file": "SecuritySettingsServiceClient.GetSecuritySettingsAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetSecuritySettingsAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.GetSecuritySettingsAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "GetSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.GetSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_GetSecuritySettings_sync_flattened_resourceNames",
-      "title": "GetSecuritySettingsResourceNames",
-      "description": "Snippet for GetSecuritySettings",
-      "file": "SecuritySettingsServiceClient.GetSecuritySettingsResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetSecuritySettings",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.GetSecuritySettings",
-        "resultType": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettings",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "GetSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.GetSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_GetSecuritySettings_async_flattened_resourceNames",
-      "title": "GetSecuritySettingsResourceNamesAsync",
-      "description": "Snippet for GetSecuritySettingsAsync",
-      "file": "SecuritySettingsServiceClient.GetSecuritySettingsResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetSecuritySettingsAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.GetSecuritySettingsAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "GetSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.GetSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_UpdateSecuritySettings_sync",
-      "title": "UpdateSecuritySettingsRequestObject",
-      "description": "Snippet for UpdateSecuritySettings",
-      "file": "SecuritySettingsServiceClient.UpdateSecuritySettingsRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "UpdateSecuritySettings",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.UpdateSecuritySettings",
-        "resultType": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettings",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "UpdateSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.UpdateSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_UpdateSecuritySettings_async",
-      "title": "UpdateSecuritySettingsRequestObjectAsync",
-      "description": "Snippet for UpdateSecuritySettingsAsync",
-      "file": "SecuritySettingsServiceClient.UpdateSecuritySettingsRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "UpdateSecuritySettingsAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.UpdateSecuritySettingsAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "UpdateSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.UpdateSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_UpdateSecuritySettings_sync_flattened",
-      "title": "UpdateSecuritySettings",
-      "description": "Snippet for UpdateSecuritySettings",
-      "file": "SecuritySettingsServiceClient.UpdateSecuritySettingsSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "UpdateSecuritySettings",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.UpdateSecuritySettings",
-        "resultType": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettings",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "UpdateSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.UpdateSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_UpdateSecuritySettings_async_flattened",
-      "title": "UpdateSecuritySettingsAsync",
-      "description": "Snippet for UpdateSecuritySettingsAsync",
-      "file": "SecuritySettingsServiceClient.UpdateSecuritySettingsAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "UpdateSecuritySettingsAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.UpdateSecuritySettingsAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "UpdateSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.UpdateSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_ListSecuritySettings_sync",
-      "title": "ListSecuritySettingsRequestObject",
-      "description": "Snippet for ListSecuritySettings",
-      "file": "SecuritySettingsServiceClient.ListSecuritySettingsRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListSecuritySettings",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.ListSecuritySettings",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsResponse, Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "ListSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.ListSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_ListSecuritySettings_async",
-      "title": "ListSecuritySettingsRequestObjectAsync",
-      "description": "Snippet for ListSecuritySettingsAsync",
-      "file": "SecuritySettingsServiceClient.ListSecuritySettingsRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListSecuritySettingsAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.ListSecuritySettingsAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsResponse, Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "ListSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.ListSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_ListSecuritySettings_sync_flattened",
-      "title": "ListSecuritySettings",
-      "description": "Snippet for ListSecuritySettings",
-      "file": "SecuritySettingsServiceClient.ListSecuritySettingsSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListSecuritySettings",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.ListSecuritySettings",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsResponse, Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "ListSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.ListSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_ListSecuritySettings_async_flattened",
-      "title": "ListSecuritySettingsAsync",
-      "description": "Snippet for ListSecuritySettingsAsync",
-      "file": "SecuritySettingsServiceClient.ListSecuritySettingsAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListSecuritySettingsAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.ListSecuritySettingsAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsResponse, Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "ListSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.ListSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_ListSecuritySettings_sync_flattened_resourceNames",
-      "title": "ListSecuritySettingsResourceNames",
-      "description": "Snippet for ListSecuritySettings",
-      "file": "SecuritySettingsServiceClient.ListSecuritySettingsResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListSecuritySettings",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.ListSecuritySettings",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsResponse, Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "ListSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.ListSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_ListSecuritySettings_async_flattened_resourceNames",
-      "title": "ListSecuritySettingsResourceNamesAsync",
-      "description": "Snippet for ListSecuritySettingsAsync",
-      "file": "SecuritySettingsServiceClient.ListSecuritySettingsResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListSecuritySettingsAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.ListSecuritySettingsAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsResponse, Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "ListSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.ListSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_DeleteSecuritySettings_sync",
-      "title": "DeleteSecuritySettingsRequestObject",
-      "description": "Snippet for DeleteSecuritySettings",
-      "file": "SecuritySettingsServiceClient.DeleteSecuritySettingsRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteSecuritySettings",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.DeleteSecuritySettings",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.DeleteSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_DeleteSecuritySettings_async",
-      "title": "DeleteSecuritySettingsRequestObjectAsync",
-      "description": "Snippet for DeleteSecuritySettingsAsync",
-      "file": "SecuritySettingsServiceClient.DeleteSecuritySettingsRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteSecuritySettingsAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.DeleteSecuritySettingsAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.DeleteSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_DeleteSecuritySettings_sync_flattened",
-      "title": "DeleteSecuritySettings",
-      "description": "Snippet for DeleteSecuritySettings",
-      "file": "SecuritySettingsServiceClient.DeleteSecuritySettingsSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteSecuritySettings",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.DeleteSecuritySettings",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.DeleteSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_DeleteSecuritySettings_async_flattened",
-      "title": "DeleteSecuritySettingsAsync",
-      "description": "Snippet for DeleteSecuritySettingsAsync",
-      "file": "SecuritySettingsServiceClient.DeleteSecuritySettingsAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteSecuritySettingsAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.DeleteSecuritySettingsAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.DeleteSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_DeleteSecuritySettings_sync_flattened_resourceNames",
-      "title": "DeleteSecuritySettingsResourceNames",
-      "description": "Snippet for DeleteSecuritySettings",
-      "file": "SecuritySettingsServiceClient.DeleteSecuritySettingsResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteSecuritySettings",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.DeleteSecuritySettings",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.DeleteSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_DeleteSecuritySettings_async_flattened_resourceNames",
-      "title": "DeleteSecuritySettingsResourceNamesAsync",
-      "description": "Snippet for DeleteSecuritySettingsAsync",
-      "file": "SecuritySettingsServiceClient.DeleteSecuritySettingsResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteSecuritySettingsAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.DeleteSecuritySettingsAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "SecuritySettingsServiceClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteSecuritySettings",
-          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.DeleteSecuritySettings",
-          "service": {
-            "shortName": "SecuritySettingsService",
-            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
       "regionTag": "dialogflow_v3_generated_Agents_ListAgents_sync",
       "title": "ListAgentsRequestObject",
       "description": "Snippet for ListAgents",
@@ -8663,727 +7942,6 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "dialogflow_v3_generated_Webhooks_ListWebhooks_sync",
-      "title": "ListWebhooksRequestObject",
-      "description": "Snippet for ListWebhooks",
-      "file": "WebhooksClient.ListWebhooksRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListWebhooks",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.ListWebhooks",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListWebhooksResponse, Google.Cloud.Dialogflow.Cx.V3.Webhook>",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "ListWebhooks",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.ListWebhooks",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_ListWebhooks_async",
-      "title": "ListWebhooksRequestObjectAsync",
-      "description": "Snippet for ListWebhooksAsync",
-      "file": "WebhooksClient.ListWebhooksRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListWebhooksAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.ListWebhooksAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListWebhooksResponse, Google.Cloud.Dialogflow.Cx.V3.Webhook>",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "ListWebhooks",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.ListWebhooks",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_ListWebhooks_sync_flattened",
-      "title": "ListWebhooks",
-      "description": "Snippet for ListWebhooks",
-      "file": "WebhooksClient.ListWebhooksSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListWebhooks",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.ListWebhooks",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListWebhooksResponse, Google.Cloud.Dialogflow.Cx.V3.Webhook>",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "ListWebhooks",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.ListWebhooks",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_ListWebhooks_async_flattened",
-      "title": "ListWebhooksAsync",
-      "description": "Snippet for ListWebhooksAsync",
-      "file": "WebhooksClient.ListWebhooksAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListWebhooksAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.ListWebhooksAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListWebhooksResponse, Google.Cloud.Dialogflow.Cx.V3.Webhook>",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "ListWebhooks",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.ListWebhooks",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_ListWebhooks_sync_flattened_resourceNames",
-      "title": "ListWebhooksResourceNames",
-      "description": "Snippet for ListWebhooks",
-      "file": "WebhooksClient.ListWebhooksResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListWebhooks",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.ListWebhooks",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListWebhooksResponse, Google.Cloud.Dialogflow.Cx.V3.Webhook>",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "ListWebhooks",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.ListWebhooks",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_ListWebhooks_async_flattened_resourceNames",
-      "title": "ListWebhooksResourceNamesAsync",
-      "description": "Snippet for ListWebhooksAsync",
-      "file": "WebhooksClient.ListWebhooksResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListWebhooksAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.ListWebhooksAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListWebhooksResponse, Google.Cloud.Dialogflow.Cx.V3.Webhook>",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "ListWebhooks",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.ListWebhooks",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_GetWebhook_sync",
-      "title": "GetWebhookRequestObject",
-      "description": "Snippet for GetWebhook",
-      "file": "WebhooksClient.GetWebhookRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetWebhook",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.GetWebhook",
-        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Webhook",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "GetWebhook",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.GetWebhook",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_GetWebhook_async",
-      "title": "GetWebhookRequestObjectAsync",
-      "description": "Snippet for GetWebhookAsync",
-      "file": "WebhooksClient.GetWebhookRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetWebhookAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.GetWebhookAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Webhook>",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "GetWebhook",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.GetWebhook",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_GetWebhook_sync_flattened",
-      "title": "GetWebhook",
-      "description": "Snippet for GetWebhook",
-      "file": "WebhooksClient.GetWebhookSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetWebhook",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.GetWebhook",
-        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Webhook",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "GetWebhook",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.GetWebhook",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_GetWebhook_async_flattened",
-      "title": "GetWebhookAsync",
-      "description": "Snippet for GetWebhookAsync",
-      "file": "WebhooksClient.GetWebhookAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetWebhookAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.GetWebhookAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Webhook>",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "GetWebhook",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.GetWebhook",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_GetWebhook_sync_flattened_resourceNames",
-      "title": "GetWebhookResourceNames",
-      "description": "Snippet for GetWebhook",
-      "file": "WebhooksClient.GetWebhookResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetWebhook",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.GetWebhook",
-        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Webhook",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "GetWebhook",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.GetWebhook",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_GetWebhook_async_flattened_resourceNames",
-      "title": "GetWebhookResourceNamesAsync",
-      "description": "Snippet for GetWebhookAsync",
-      "file": "WebhooksClient.GetWebhookResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetWebhookAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.GetWebhookAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Webhook>",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "GetWebhook",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.GetWebhook",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_CreateWebhook_sync",
-      "title": "CreateWebhookRequestObject",
-      "description": "Snippet for CreateWebhook",
-      "file": "WebhooksClient.CreateWebhookRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateWebhook",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.CreateWebhook",
-        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Webhook",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "CreateWebhook",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.CreateWebhook",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_CreateWebhook_async",
-      "title": "CreateWebhookRequestObjectAsync",
-      "description": "Snippet for CreateWebhookAsync",
-      "file": "WebhooksClient.CreateWebhookRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateWebhookAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.CreateWebhookAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Webhook>",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "CreateWebhook",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.CreateWebhook",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_CreateWebhook_sync_flattened",
-      "title": "CreateWebhook",
-      "description": "Snippet for CreateWebhook",
-      "file": "WebhooksClient.CreateWebhookSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateWebhook",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.CreateWebhook",
-        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Webhook",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "CreateWebhook",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.CreateWebhook",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_CreateWebhook_async_flattened",
-      "title": "CreateWebhookAsync",
-      "description": "Snippet for CreateWebhookAsync",
-      "file": "WebhooksClient.CreateWebhookAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateWebhookAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.CreateWebhookAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Webhook>",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "CreateWebhook",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.CreateWebhook",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_CreateWebhook_sync_flattened_resourceNames",
-      "title": "CreateWebhookResourceNames",
-      "description": "Snippet for CreateWebhook",
-      "file": "WebhooksClient.CreateWebhookResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateWebhook",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.CreateWebhook",
-        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Webhook",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "CreateWebhook",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.CreateWebhook",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_CreateWebhook_async_flattened_resourceNames",
-      "title": "CreateWebhookResourceNamesAsync",
-      "description": "Snippet for CreateWebhookAsync",
-      "file": "WebhooksClient.CreateWebhookResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateWebhookAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.CreateWebhookAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Webhook>",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "CreateWebhook",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.CreateWebhook",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_UpdateWebhook_sync",
-      "title": "UpdateWebhookRequestObject",
-      "description": "Snippet for UpdateWebhook",
-      "file": "WebhooksClient.UpdateWebhookRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "UpdateWebhook",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.UpdateWebhook",
-        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Webhook",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "UpdateWebhook",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.UpdateWebhook",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_UpdateWebhook_async",
-      "title": "UpdateWebhookRequestObjectAsync",
-      "description": "Snippet for UpdateWebhookAsync",
-      "file": "WebhooksClient.UpdateWebhookRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "UpdateWebhookAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.UpdateWebhookAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Webhook>",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "UpdateWebhook",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.UpdateWebhook",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_UpdateWebhook_sync_flattened",
-      "title": "UpdateWebhook",
-      "description": "Snippet for UpdateWebhook",
-      "file": "WebhooksClient.UpdateWebhookSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "UpdateWebhook",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.UpdateWebhook",
-        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Webhook",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "UpdateWebhook",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.UpdateWebhook",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_UpdateWebhook_async_flattened",
-      "title": "UpdateWebhookAsync",
-      "description": "Snippet for UpdateWebhookAsync",
-      "file": "WebhooksClient.UpdateWebhookAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "UpdateWebhookAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.UpdateWebhookAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Webhook>",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "UpdateWebhook",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.UpdateWebhook",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_DeleteWebhook_sync",
-      "title": "DeleteWebhookRequestObject",
-      "description": "Snippet for DeleteWebhook",
-      "file": "WebhooksClient.DeleteWebhookRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteWebhook",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.DeleteWebhook",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "DeleteWebhook",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.DeleteWebhook",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_DeleteWebhook_async",
-      "title": "DeleteWebhookRequestObjectAsync",
-      "description": "Snippet for DeleteWebhookAsync",
-      "file": "WebhooksClient.DeleteWebhookRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteWebhookAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.DeleteWebhookAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "DeleteWebhook",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.DeleteWebhook",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_DeleteWebhook_sync_flattened",
-      "title": "DeleteWebhook",
-      "description": "Snippet for DeleteWebhook",
-      "file": "WebhooksClient.DeleteWebhookSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteWebhook",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.DeleteWebhook",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "DeleteWebhook",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.DeleteWebhook",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_DeleteWebhook_async_flattened",
-      "title": "DeleteWebhookAsync",
-      "description": "Snippet for DeleteWebhookAsync",
-      "file": "WebhooksClient.DeleteWebhookAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteWebhookAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.DeleteWebhookAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "DeleteWebhook",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.DeleteWebhook",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_DeleteWebhook_sync_flattened_resourceNames",
-      "title": "DeleteWebhookResourceNames",
-      "description": "Snippet for DeleteWebhook",
-      "file": "WebhooksClient.DeleteWebhookResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteWebhook",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.DeleteWebhook",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "DeleteWebhook",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.DeleteWebhook",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_Webhooks_DeleteWebhook_async_flattened_resourceNames",
-      "title": "DeleteWebhookResourceNamesAsync",
-      "description": "Snippet for DeleteWebhookAsync",
-      "file": "WebhooksClient.DeleteWebhookResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteWebhookAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.DeleteWebhookAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "WebhooksClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
-        },
-        "method": {
-          "shortName": "DeleteWebhook",
-          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.DeleteWebhook",
-          "service": {
-            "shortName": "Webhooks",
-            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
       "regionTag": "dialogflow_v3_generated_Environments_ListEnvironments_sync",
       "title": "ListEnvironmentsRequestObject",
       "description": "Snippet for ListEnvironments",
@@ -11552,6 +10110,727 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_CreateSecuritySettings_sync",
+      "title": "CreateSecuritySettingsRequestObject",
+      "description": "Snippet for CreateSecuritySettings",
+      "file": "SecuritySettingsServiceClient.CreateSecuritySettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecuritySettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.CreateSecuritySettings",
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettings",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.CreateSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_CreateSecuritySettings_async",
+      "title": "CreateSecuritySettingsRequestObjectAsync",
+      "description": "Snippet for CreateSecuritySettingsAsync",
+      "file": "SecuritySettingsServiceClient.CreateSecuritySettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecuritySettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.CreateSecuritySettingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.CreateSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_CreateSecuritySettings_sync_flattened",
+      "title": "CreateSecuritySettings",
+      "description": "Snippet for CreateSecuritySettings",
+      "file": "SecuritySettingsServiceClient.CreateSecuritySettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecuritySettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.CreateSecuritySettings",
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettings",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.CreateSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_CreateSecuritySettings_async_flattened",
+      "title": "CreateSecuritySettingsAsync",
+      "description": "Snippet for CreateSecuritySettingsAsync",
+      "file": "SecuritySettingsServiceClient.CreateSecuritySettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecuritySettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.CreateSecuritySettingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.CreateSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_CreateSecuritySettings_sync_flattened_resourceNames",
+      "title": "CreateSecuritySettingsResourceNames",
+      "description": "Snippet for CreateSecuritySettings",
+      "file": "SecuritySettingsServiceClient.CreateSecuritySettingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecuritySettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.CreateSecuritySettings",
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettings",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.CreateSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_CreateSecuritySettings_async_flattened_resourceNames",
+      "title": "CreateSecuritySettingsResourceNamesAsync",
+      "description": "Snippet for CreateSecuritySettingsAsync",
+      "file": "SecuritySettingsServiceClient.CreateSecuritySettingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecuritySettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.CreateSecuritySettingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.CreateSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_GetSecuritySettings_sync",
+      "title": "GetSecuritySettingsRequestObject",
+      "description": "Snippet for GetSecuritySettings",
+      "file": "SecuritySettingsServiceClient.GetSecuritySettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSecuritySettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.GetSecuritySettings",
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettings",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.GetSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_GetSecuritySettings_async",
+      "title": "GetSecuritySettingsRequestObjectAsync",
+      "description": "Snippet for GetSecuritySettingsAsync",
+      "file": "SecuritySettingsServiceClient.GetSecuritySettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSecuritySettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.GetSecuritySettingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.GetSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_GetSecuritySettings_sync_flattened",
+      "title": "GetSecuritySettings",
+      "description": "Snippet for GetSecuritySettings",
+      "file": "SecuritySettingsServiceClient.GetSecuritySettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSecuritySettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.GetSecuritySettings",
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettings",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.GetSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_GetSecuritySettings_async_flattened",
+      "title": "GetSecuritySettingsAsync",
+      "description": "Snippet for GetSecuritySettingsAsync",
+      "file": "SecuritySettingsServiceClient.GetSecuritySettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSecuritySettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.GetSecuritySettingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.GetSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_GetSecuritySettings_sync_flattened_resourceNames",
+      "title": "GetSecuritySettingsResourceNames",
+      "description": "Snippet for GetSecuritySettings",
+      "file": "SecuritySettingsServiceClient.GetSecuritySettingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSecuritySettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.GetSecuritySettings",
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettings",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.GetSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_GetSecuritySettings_async_flattened_resourceNames",
+      "title": "GetSecuritySettingsResourceNamesAsync",
+      "description": "Snippet for GetSecuritySettingsAsync",
+      "file": "SecuritySettingsServiceClient.GetSecuritySettingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSecuritySettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.GetSecuritySettingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.GetSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_UpdateSecuritySettings_sync",
+      "title": "UpdateSecuritySettingsRequestObject",
+      "description": "Snippet for UpdateSecuritySettings",
+      "file": "SecuritySettingsServiceClient.UpdateSecuritySettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSecuritySettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.UpdateSecuritySettings",
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettings",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.UpdateSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_UpdateSecuritySettings_async",
+      "title": "UpdateSecuritySettingsRequestObjectAsync",
+      "description": "Snippet for UpdateSecuritySettingsAsync",
+      "file": "SecuritySettingsServiceClient.UpdateSecuritySettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSecuritySettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.UpdateSecuritySettingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.UpdateSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_UpdateSecuritySettings_sync_flattened",
+      "title": "UpdateSecuritySettings",
+      "description": "Snippet for UpdateSecuritySettings",
+      "file": "SecuritySettingsServiceClient.UpdateSecuritySettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSecuritySettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.UpdateSecuritySettings",
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettings",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.UpdateSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_UpdateSecuritySettings_async_flattened",
+      "title": "UpdateSecuritySettingsAsync",
+      "description": "Snippet for UpdateSecuritySettingsAsync",
+      "file": "SecuritySettingsServiceClient.UpdateSecuritySettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSecuritySettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.UpdateSecuritySettingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.UpdateSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_ListSecuritySettings_sync",
+      "title": "ListSecuritySettingsRequestObject",
+      "description": "Snippet for ListSecuritySettings",
+      "file": "SecuritySettingsServiceClient.ListSecuritySettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSecuritySettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.ListSecuritySettings",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsResponse, Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "ListSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.ListSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_ListSecuritySettings_async",
+      "title": "ListSecuritySettingsRequestObjectAsync",
+      "description": "Snippet for ListSecuritySettingsAsync",
+      "file": "SecuritySettingsServiceClient.ListSecuritySettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSecuritySettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.ListSecuritySettingsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsResponse, Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "ListSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.ListSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_ListSecuritySettings_sync_flattened",
+      "title": "ListSecuritySettings",
+      "description": "Snippet for ListSecuritySettings",
+      "file": "SecuritySettingsServiceClient.ListSecuritySettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSecuritySettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.ListSecuritySettings",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsResponse, Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "ListSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.ListSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_ListSecuritySettings_async_flattened",
+      "title": "ListSecuritySettingsAsync",
+      "description": "Snippet for ListSecuritySettingsAsync",
+      "file": "SecuritySettingsServiceClient.ListSecuritySettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSecuritySettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.ListSecuritySettingsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsResponse, Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "ListSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.ListSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_ListSecuritySettings_sync_flattened_resourceNames",
+      "title": "ListSecuritySettingsResourceNames",
+      "description": "Snippet for ListSecuritySettings",
+      "file": "SecuritySettingsServiceClient.ListSecuritySettingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSecuritySettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.ListSecuritySettings",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsResponse, Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "ListSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.ListSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_ListSecuritySettings_async_flattened_resourceNames",
+      "title": "ListSecuritySettingsResourceNamesAsync",
+      "description": "Snippet for ListSecuritySettingsAsync",
+      "file": "SecuritySettingsServiceClient.ListSecuritySettingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSecuritySettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.ListSecuritySettingsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsResponse, Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "ListSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.ListSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_DeleteSecuritySettings_sync",
+      "title": "DeleteSecuritySettingsRequestObject",
+      "description": "Snippet for DeleteSecuritySettings",
+      "file": "SecuritySettingsServiceClient.DeleteSecuritySettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSecuritySettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.DeleteSecuritySettings",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.DeleteSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_DeleteSecuritySettings_async",
+      "title": "DeleteSecuritySettingsRequestObjectAsync",
+      "description": "Snippet for DeleteSecuritySettingsAsync",
+      "file": "SecuritySettingsServiceClient.DeleteSecuritySettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSecuritySettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.DeleteSecuritySettingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.DeleteSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_DeleteSecuritySettings_sync_flattened",
+      "title": "DeleteSecuritySettings",
+      "description": "Snippet for DeleteSecuritySettings",
+      "file": "SecuritySettingsServiceClient.DeleteSecuritySettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSecuritySettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.DeleteSecuritySettings",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.DeleteSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_DeleteSecuritySettings_async_flattened",
+      "title": "DeleteSecuritySettingsAsync",
+      "description": "Snippet for DeleteSecuritySettingsAsync",
+      "file": "SecuritySettingsServiceClient.DeleteSecuritySettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSecuritySettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.DeleteSecuritySettingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.DeleteSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_DeleteSecuritySettings_sync_flattened_resourceNames",
+      "title": "DeleteSecuritySettingsResourceNames",
+      "description": "Snippet for DeleteSecuritySettings",
+      "file": "SecuritySettingsServiceClient.DeleteSecuritySettingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSecuritySettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.DeleteSecuritySettings",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.DeleteSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_SecuritySettingsService_DeleteSecuritySettings_async_flattened_resourceNames",
+      "title": "DeleteSecuritySettingsResourceNamesAsync",
+      "description": "Snippet for DeleteSecuritySettingsAsync",
+      "file": "SecuritySettingsServiceClient.DeleteSecuritySettingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSecuritySettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient.DeleteSecuritySettingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SecuritySettingsServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSecuritySettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService.DeleteSecuritySettings",
+          "service": {
+            "shortName": "SecuritySettingsService",
+            "fullName": "google.cloud.dialogflow.cx.v3.SecuritySettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "dialogflow_v3_generated_Versions_ListVersions_sync",
       "title": "ListVersionsRequestObject",
       "description": "Snippet for ListVersions",
@@ -12577,6 +11856,727 @@
           "service": {
             "shortName": "Versions",
             "fullName": "google.cloud.dialogflow.cx.v3.Versions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_ListWebhooks_sync",
+      "title": "ListWebhooksRequestObject",
+      "description": "Snippet for ListWebhooks",
+      "file": "WebhooksClient.ListWebhooksRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWebhooks",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.ListWebhooks",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListWebhooksResponse, Google.Cloud.Dialogflow.Cx.V3.Webhook>",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "ListWebhooks",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.ListWebhooks",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_ListWebhooks_async",
+      "title": "ListWebhooksRequestObjectAsync",
+      "description": "Snippet for ListWebhooksAsync",
+      "file": "WebhooksClient.ListWebhooksRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWebhooksAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.ListWebhooksAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListWebhooksResponse, Google.Cloud.Dialogflow.Cx.V3.Webhook>",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "ListWebhooks",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.ListWebhooks",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_ListWebhooks_sync_flattened",
+      "title": "ListWebhooks",
+      "description": "Snippet for ListWebhooks",
+      "file": "WebhooksClient.ListWebhooksSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWebhooks",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.ListWebhooks",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListWebhooksResponse, Google.Cloud.Dialogflow.Cx.V3.Webhook>",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "ListWebhooks",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.ListWebhooks",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_ListWebhooks_async_flattened",
+      "title": "ListWebhooksAsync",
+      "description": "Snippet for ListWebhooksAsync",
+      "file": "WebhooksClient.ListWebhooksAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWebhooksAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.ListWebhooksAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListWebhooksResponse, Google.Cloud.Dialogflow.Cx.V3.Webhook>",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "ListWebhooks",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.ListWebhooks",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_ListWebhooks_sync_flattened_resourceNames",
+      "title": "ListWebhooksResourceNames",
+      "description": "Snippet for ListWebhooks",
+      "file": "WebhooksClient.ListWebhooksResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWebhooks",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.ListWebhooks",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListWebhooksResponse, Google.Cloud.Dialogflow.Cx.V3.Webhook>",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "ListWebhooks",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.ListWebhooks",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_ListWebhooks_async_flattened_resourceNames",
+      "title": "ListWebhooksResourceNamesAsync",
+      "description": "Snippet for ListWebhooksAsync",
+      "file": "WebhooksClient.ListWebhooksResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWebhooksAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.ListWebhooksAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListWebhooksResponse, Google.Cloud.Dialogflow.Cx.V3.Webhook>",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "ListWebhooks",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.ListWebhooks",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_GetWebhook_sync",
+      "title": "GetWebhookRequestObject",
+      "description": "Snippet for GetWebhook",
+      "file": "WebhooksClient.GetWebhookRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWebhook",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.GetWebhook",
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Webhook",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "GetWebhook",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.GetWebhook",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_GetWebhook_async",
+      "title": "GetWebhookRequestObjectAsync",
+      "description": "Snippet for GetWebhookAsync",
+      "file": "WebhooksClient.GetWebhookRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWebhookAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.GetWebhookAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Webhook>",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "GetWebhook",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.GetWebhook",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_GetWebhook_sync_flattened",
+      "title": "GetWebhook",
+      "description": "Snippet for GetWebhook",
+      "file": "WebhooksClient.GetWebhookSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWebhook",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.GetWebhook",
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Webhook",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "GetWebhook",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.GetWebhook",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_GetWebhook_async_flattened",
+      "title": "GetWebhookAsync",
+      "description": "Snippet for GetWebhookAsync",
+      "file": "WebhooksClient.GetWebhookAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWebhookAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.GetWebhookAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Webhook>",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "GetWebhook",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.GetWebhook",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_GetWebhook_sync_flattened_resourceNames",
+      "title": "GetWebhookResourceNames",
+      "description": "Snippet for GetWebhook",
+      "file": "WebhooksClient.GetWebhookResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWebhook",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.GetWebhook",
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Webhook",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "GetWebhook",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.GetWebhook",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_GetWebhook_async_flattened_resourceNames",
+      "title": "GetWebhookResourceNamesAsync",
+      "description": "Snippet for GetWebhookAsync",
+      "file": "WebhooksClient.GetWebhookResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWebhookAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.GetWebhookAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Webhook>",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "GetWebhook",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.GetWebhook",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_CreateWebhook_sync",
+      "title": "CreateWebhookRequestObject",
+      "description": "Snippet for CreateWebhook",
+      "file": "WebhooksClient.CreateWebhookRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWebhook",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.CreateWebhook",
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Webhook",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "CreateWebhook",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.CreateWebhook",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_CreateWebhook_async",
+      "title": "CreateWebhookRequestObjectAsync",
+      "description": "Snippet for CreateWebhookAsync",
+      "file": "WebhooksClient.CreateWebhookRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWebhookAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.CreateWebhookAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Webhook>",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "CreateWebhook",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.CreateWebhook",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_CreateWebhook_sync_flattened",
+      "title": "CreateWebhook",
+      "description": "Snippet for CreateWebhook",
+      "file": "WebhooksClient.CreateWebhookSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWebhook",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.CreateWebhook",
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Webhook",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "CreateWebhook",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.CreateWebhook",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_CreateWebhook_async_flattened",
+      "title": "CreateWebhookAsync",
+      "description": "Snippet for CreateWebhookAsync",
+      "file": "WebhooksClient.CreateWebhookAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWebhookAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.CreateWebhookAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Webhook>",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "CreateWebhook",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.CreateWebhook",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_CreateWebhook_sync_flattened_resourceNames",
+      "title": "CreateWebhookResourceNames",
+      "description": "Snippet for CreateWebhook",
+      "file": "WebhooksClient.CreateWebhookResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWebhook",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.CreateWebhook",
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Webhook",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "CreateWebhook",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.CreateWebhook",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_CreateWebhook_async_flattened_resourceNames",
+      "title": "CreateWebhookResourceNamesAsync",
+      "description": "Snippet for CreateWebhookAsync",
+      "file": "WebhooksClient.CreateWebhookResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWebhookAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.CreateWebhookAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Webhook>",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "CreateWebhook",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.CreateWebhook",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_UpdateWebhook_sync",
+      "title": "UpdateWebhookRequestObject",
+      "description": "Snippet for UpdateWebhook",
+      "file": "WebhooksClient.UpdateWebhookRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateWebhook",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.UpdateWebhook",
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Webhook",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "UpdateWebhook",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.UpdateWebhook",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_UpdateWebhook_async",
+      "title": "UpdateWebhookRequestObjectAsync",
+      "description": "Snippet for UpdateWebhookAsync",
+      "file": "WebhooksClient.UpdateWebhookRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateWebhookAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.UpdateWebhookAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Webhook>",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "UpdateWebhook",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.UpdateWebhook",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_UpdateWebhook_sync_flattened",
+      "title": "UpdateWebhook",
+      "description": "Snippet for UpdateWebhook",
+      "file": "WebhooksClient.UpdateWebhookSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateWebhook",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.UpdateWebhook",
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Webhook",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "UpdateWebhook",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.UpdateWebhook",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_UpdateWebhook_async_flattened",
+      "title": "UpdateWebhookAsync",
+      "description": "Snippet for UpdateWebhookAsync",
+      "file": "WebhooksClient.UpdateWebhookAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateWebhookAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.UpdateWebhookAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Webhook>",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "UpdateWebhook",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.UpdateWebhook",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_DeleteWebhook_sync",
+      "title": "DeleteWebhookRequestObject",
+      "description": "Snippet for DeleteWebhook",
+      "file": "WebhooksClient.DeleteWebhookRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWebhook",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.DeleteWebhook",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "DeleteWebhook",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.DeleteWebhook",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_DeleteWebhook_async",
+      "title": "DeleteWebhookRequestObjectAsync",
+      "description": "Snippet for DeleteWebhookAsync",
+      "file": "WebhooksClient.DeleteWebhookRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWebhookAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.DeleteWebhookAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "DeleteWebhook",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.DeleteWebhook",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_DeleteWebhook_sync_flattened",
+      "title": "DeleteWebhook",
+      "description": "Snippet for DeleteWebhook",
+      "file": "WebhooksClient.DeleteWebhookSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWebhook",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.DeleteWebhook",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "DeleteWebhook",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.DeleteWebhook",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_DeleteWebhook_async_flattened",
+      "title": "DeleteWebhookAsync",
+      "description": "Snippet for DeleteWebhookAsync",
+      "file": "WebhooksClient.DeleteWebhookAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWebhookAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.DeleteWebhookAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "DeleteWebhook",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.DeleteWebhook",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_DeleteWebhook_sync_flattened_resourceNames",
+      "title": "DeleteWebhookResourceNames",
+      "description": "Snippet for DeleteWebhook",
+      "file": "WebhooksClient.DeleteWebhookResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWebhook",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.DeleteWebhook",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "DeleteWebhook",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.DeleteWebhook",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Webhooks_DeleteWebhook_async_flattened_resourceNames",
+      "title": "DeleteWebhookResourceNamesAsync",
+      "description": "Snippet for DeleteWebhookAsync",
+      "file": "WebhooksClient.DeleteWebhookResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWebhookAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient.DeleteWebhookAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "WebhooksClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.WebhooksClient"
+        },
+        "method": {
+          "shortName": "DeleteWebhook",
+          "fullName": "google.cloud.dialogflow.cx.v3.Webhooks.DeleteWebhook",
+          "service": {
+            "shortName": "Webhooks",
+            "fullName": "google.cloud.dialogflow.cx.v3.Webhooks"
           }
         }
       },

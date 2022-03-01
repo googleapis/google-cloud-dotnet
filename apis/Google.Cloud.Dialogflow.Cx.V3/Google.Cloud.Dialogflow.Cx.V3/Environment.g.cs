@@ -29,8 +29,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "cGkvYW5ub3RhdGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3Rv",
             "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBp",
             "L3Jlc291cmNlLnByb3RvGi1nb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92",
-            "My90ZXN0X2Nhc2UucHJvdG8aK2dvb2dsZS9jbG91ZC9kaWFsb2dmbG93L2N4",
-            "L3YzL3dlYmhvb2sucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRp",
+            "My90ZXN0X2Nhc2UucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRp",
             "b25zLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8aIGdvb2ds",
             "ZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYv",
             "dGltZXN0YW1wLnByb3RvIo4FCgtFbnZpcm9ubWVudBIMCgRuYW1lGAEgASgJ",
@@ -159,7 +158,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "b2dmbG93LkN4LlYz6gIhR29vZ2xlOjpDbG91ZDo6RGlhbG9nZmxvdzo6Q1g6",
             "OlYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.TestCaseReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.WebhookReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.TestCaseReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Environment), global::Google.Cloud.Dialogflow.Cx.V3.Environment.Parser, new[]{ "Name", "DisplayName", "Description", "VersionConfigs", "UpdateTime", "TestCasesConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Environment.Types.VersionConfig), global::Google.Cloud.Dialogflow.Cx.V3.Environment.Types.VersionConfig.Parser, new[]{ "Version" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Environment.Types.TestCasesConfig), global::Google.Cloud.Dialogflow.Cx.V3.Environment.Types.TestCasesConfig.Parser, new[]{ "TestCases", "EnableContinuousRun", "EnablePredeploymentRun" }, null, null, null, null)}),
