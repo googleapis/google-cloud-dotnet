@@ -214,7 +214,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
                 Mute = Finding.Types.Mute.Unmuted,
-                FindingClass = Finding.Types.FindingClass.Observation,
+                FindingClass = Finding.Types.FindingClass.SccError,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
@@ -225,6 +225,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                         new ExternalSystem()
                     },
                 },
+                MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
             };
@@ -267,7 +268,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
                 Mute = Finding.Types.Mute.Unmuted,
-                FindingClass = Finding.Types.FindingClass.Observation,
+                FindingClass = Finding.Types.FindingClass.SccError,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
@@ -278,6 +279,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                         new ExternalSystem()
                     },
                 },
+                MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
             };
@@ -322,7 +324,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
                 Mute = Finding.Types.Mute.Unmuted,
-                FindingClass = Finding.Types.FindingClass.Observation,
+                FindingClass = Finding.Types.FindingClass.SccError,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
@@ -333,6 +335,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                         new ExternalSystem()
                     },
                 },
+                MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
             };
@@ -375,7 +378,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
                 Mute = Finding.Types.Mute.Unmuted,
-                FindingClass = Finding.Types.FindingClass.Observation,
+                FindingClass = Finding.Types.FindingClass.SccError,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
@@ -386,6 +389,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                         new ExternalSystem()
                     },
                 },
+                MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
             };
@@ -430,7 +434,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
                 Mute = Finding.Types.Mute.Unmuted,
-                FindingClass = Finding.Types.FindingClass.Observation,
+                FindingClass = Finding.Types.FindingClass.SccError,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
@@ -441,6 +445,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                         new ExternalSystem()
                     },
                 },
+                MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
             };
@@ -483,7 +488,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
                 Mute = Finding.Types.Mute.Unmuted,
-                FindingClass = Finding.Types.FindingClass.Observation,
+                FindingClass = Finding.Types.FindingClass.SccError,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
@@ -494,6 +499,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                         new ExternalSystem()
                     },
                 },
+                MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
             };
@@ -1521,6 +1527,174 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void GetBigQueryExportRequestObject()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetBigQueryExportRequest request = new GetBigQueryExportRequest
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+            };
+            BigQueryExport expectedResponse = new BigQueryExport
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Dataset = "datasete4094d3c",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+                Principal = "principala915d7e7",
+            };
+            mockGrpcClient.Setup(x => x.GetBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            BigQueryExport response = client.GetBigQueryExport(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetBigQueryExportRequestObjectAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetBigQueryExportRequest request = new GetBigQueryExportRequest
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+            };
+            BigQueryExport expectedResponse = new BigQueryExport
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Dataset = "datasete4094d3c",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+                Principal = "principala915d7e7",
+            };
+            mockGrpcClient.Setup(x => x.GetBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BigQueryExport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            BigQueryExport responseCallSettings = await client.GetBigQueryExportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            BigQueryExport responseCancellationToken = await client.GetBigQueryExportAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetBigQueryExport()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetBigQueryExportRequest request = new GetBigQueryExportRequest
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+            };
+            BigQueryExport expectedResponse = new BigQueryExport
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Dataset = "datasete4094d3c",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+                Principal = "principala915d7e7",
+            };
+            mockGrpcClient.Setup(x => x.GetBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            BigQueryExport response = client.GetBigQueryExport(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetBigQueryExportAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetBigQueryExportRequest request = new GetBigQueryExportRequest
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+            };
+            BigQueryExport expectedResponse = new BigQueryExport
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Dataset = "datasete4094d3c",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+                Principal = "principala915d7e7",
+            };
+            mockGrpcClient.Setup(x => x.GetBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BigQueryExport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            BigQueryExport responseCallSettings = await client.GetBigQueryExportAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            BigQueryExport responseCancellationToken = await client.GetBigQueryExportAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetBigQueryExportResourceNames()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetBigQueryExportRequest request = new GetBigQueryExportRequest
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+            };
+            BigQueryExport expectedResponse = new BigQueryExport
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Dataset = "datasete4094d3c",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+                Principal = "principala915d7e7",
+            };
+            mockGrpcClient.Setup(x => x.GetBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            BigQueryExport response = client.GetBigQueryExport(request.BigQueryExportName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetBigQueryExportResourceNamesAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetBigQueryExportRequest request = new GetBigQueryExportRequest
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+            };
+            BigQueryExport expectedResponse = new BigQueryExport
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Dataset = "datasete4094d3c",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+                Principal = "principala915d7e7",
+            };
+            mockGrpcClient.Setup(x => x.GetBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BigQueryExport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            BigQueryExport responseCallSettings = await client.GetBigQueryExportAsync(request.BigQueryExportName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            BigQueryExport responseCancellationToken = await client.GetBigQueryExportAsync(request.BigQueryExportName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetIamPolicyRequestObject()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
@@ -2316,7 +2490,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
                 Mute = Finding.Types.Mute.Unmuted,
-                FindingClass = Finding.Types.FindingClass.Observation,
+                FindingClass = Finding.Types.FindingClass.SccError,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
@@ -2327,6 +2501,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                         new ExternalSystem()
                     },
                 },
+                MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
             };
@@ -2369,7 +2544,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
                 Mute = Finding.Types.Mute.Unmuted,
-                FindingClass = Finding.Types.FindingClass.Observation,
+                FindingClass = Finding.Types.FindingClass.SccError,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
@@ -2380,6 +2555,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                         new ExternalSystem()
                     },
                 },
+                MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
             };
@@ -2424,7 +2600,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
                 Mute = Finding.Types.Mute.Unmuted,
-                FindingClass = Finding.Types.FindingClass.Observation,
+                FindingClass = Finding.Types.FindingClass.SccError,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
@@ -2435,6 +2611,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                         new ExternalSystem()
                     },
                 },
+                MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
             };
@@ -2477,7 +2654,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
                 Mute = Finding.Types.Mute.Unmuted,
-                FindingClass = Finding.Types.FindingClass.Observation,
+                FindingClass = Finding.Types.FindingClass.SccError,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
@@ -2488,6 +2665,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                         new ExternalSystem()
                     },
                 },
+                MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
             };
@@ -2532,7 +2710,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
                 Mute = Finding.Types.Mute.Unmuted,
-                FindingClass = Finding.Types.FindingClass.Observation,
+                FindingClass = Finding.Types.FindingClass.SccError,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
@@ -2543,6 +2721,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                         new ExternalSystem()
                     },
                 },
+                MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
             };
@@ -2585,7 +2764,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
                 Mute = Finding.Types.Mute.Unmuted,
-                FindingClass = Finding.Types.FindingClass.Observation,
+                FindingClass = Finding.Types.FindingClass.SccError,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
@@ -2596,6 +2775,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                         new ExternalSystem()
                     },
                 },
+                MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
             };
@@ -2639,7 +2819,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
                 Mute = Finding.Types.Mute.Unmuted,
-                FindingClass = Finding.Types.FindingClass.Observation,
+                FindingClass = Finding.Types.FindingClass.SccError,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
@@ -2650,6 +2830,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                         new ExternalSystem()
                     },
                 },
+                MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
             };
@@ -2691,7 +2872,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
                 Mute = Finding.Types.Mute.Unmuted,
-                FindingClass = Finding.Types.FindingClass.Observation,
+                FindingClass = Finding.Types.FindingClass.SccError,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
@@ -2702,6 +2883,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                         new ExternalSystem()
                     },
                 },
+                MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
             };
@@ -2745,7 +2927,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
                 Mute = Finding.Types.Mute.Unmuted,
-                FindingClass = Finding.Types.FindingClass.Observation,
+                FindingClass = Finding.Types.FindingClass.SccError,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
@@ -2756,6 +2938,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                         new ExternalSystem()
                     },
                 },
+                MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
             };
@@ -2797,7 +2980,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
                 Mute = Finding.Types.Mute.Unmuted,
-                FindingClass = Finding.Types.FindingClass.Observation,
+                FindingClass = Finding.Types.FindingClass.SccError,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
@@ -2808,6 +2991,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                         new ExternalSystem()
                     },
                 },
+                MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
             };
@@ -2851,7 +3035,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
                 Mute = Finding.Types.Mute.Unmuted,
-                FindingClass = Finding.Types.FindingClass.Observation,
+                FindingClass = Finding.Types.FindingClass.SccError,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
@@ -2862,6 +3046,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                         new ExternalSystem()
                     },
                 },
+                MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
             };
@@ -2903,7 +3088,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
                 Mute = Finding.Types.Mute.Unmuted,
-                FindingClass = Finding.Types.FindingClass.Observation,
+                FindingClass = Finding.Types.FindingClass.SccError,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
@@ -2914,6 +3099,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                         new ExternalSystem()
                     },
                 },
+                MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
             };
@@ -3403,7 +3589,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
                 Mute = Finding.Types.Mute.Unmuted,
-                FindingClass = Finding.Types.FindingClass.Observation,
+                FindingClass = Finding.Types.FindingClass.SccError,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
@@ -3414,6 +3600,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                         new ExternalSystem()
                     },
                 },
+                MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
             };
@@ -3455,7 +3642,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
                 Mute = Finding.Types.Mute.Unmuted,
-                FindingClass = Finding.Types.FindingClass.Observation,
+                FindingClass = Finding.Types.FindingClass.SccError,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
@@ -3466,6 +3653,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                         new ExternalSystem()
                     },
                 },
+                MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
             };
@@ -3508,7 +3696,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
                 Mute = Finding.Types.Mute.Unmuted,
-                FindingClass = Finding.Types.FindingClass.Observation,
+                FindingClass = Finding.Types.FindingClass.SccError,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
@@ -3519,6 +3707,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                         new ExternalSystem()
                     },
                 },
+                MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
             };
@@ -3559,7 +3748,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
                 Mute = Finding.Types.Mute.Unmuted,
-                FindingClass = Finding.Types.FindingClass.Observation,
+                FindingClass = Finding.Types.FindingClass.SccError,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
@@ -3570,6 +3759,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                         new ExternalSystem()
                     },
                 },
+                MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
             };
@@ -4164,6 +4354,521 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             SecurityMarks responseCallSettings = await client.UpdateSecurityMarksAsync(request.SecurityMarks, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SecurityMarks responseCancellationToken = await client.UpdateSecurityMarksAsync(request.SecurityMarks, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateBigQueryExportRequestObject()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateBigQueryExportRequest request = new CreateBigQueryExportRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                BigQueryExport = new BigQueryExport(),
+                BigQueryExportId = "big_query_export_id7a229269",
+            };
+            BigQueryExport expectedResponse = new BigQueryExport
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Dataset = "datasete4094d3c",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+                Principal = "principala915d7e7",
+            };
+            mockGrpcClient.Setup(x => x.CreateBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            BigQueryExport response = client.CreateBigQueryExport(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateBigQueryExportRequestObjectAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateBigQueryExportRequest request = new CreateBigQueryExportRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                BigQueryExport = new BigQueryExport(),
+                BigQueryExportId = "big_query_export_id7a229269",
+            };
+            BigQueryExport expectedResponse = new BigQueryExport
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Dataset = "datasete4094d3c",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+                Principal = "principala915d7e7",
+            };
+            mockGrpcClient.Setup(x => x.CreateBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BigQueryExport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            BigQueryExport responseCallSettings = await client.CreateBigQueryExportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            BigQueryExport responseCancellationToken = await client.CreateBigQueryExportAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateBigQueryExport()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateBigQueryExportRequest request = new CreateBigQueryExportRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                BigQueryExport = new BigQueryExport(),
+                BigQueryExportId = "big_query_export_id7a229269",
+            };
+            BigQueryExport expectedResponse = new BigQueryExport
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Dataset = "datasete4094d3c",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+                Principal = "principala915d7e7",
+            };
+            mockGrpcClient.Setup(x => x.CreateBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            BigQueryExport response = client.CreateBigQueryExport(request.Parent, request.BigQueryExport, request.BigQueryExportId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateBigQueryExportAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateBigQueryExportRequest request = new CreateBigQueryExportRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                BigQueryExport = new BigQueryExport(),
+                BigQueryExportId = "big_query_export_id7a229269",
+            };
+            BigQueryExport expectedResponse = new BigQueryExport
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Dataset = "datasete4094d3c",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+                Principal = "principala915d7e7",
+            };
+            mockGrpcClient.Setup(x => x.CreateBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BigQueryExport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            BigQueryExport responseCallSettings = await client.CreateBigQueryExportAsync(request.Parent, request.BigQueryExport, request.BigQueryExportId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            BigQueryExport responseCancellationToken = await client.CreateBigQueryExportAsync(request.Parent, request.BigQueryExport, request.BigQueryExportId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateBigQueryExportResourceNames1()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateBigQueryExportRequest request = new CreateBigQueryExportRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                BigQueryExport = new BigQueryExport(),
+                BigQueryExportId = "big_query_export_id7a229269",
+            };
+            BigQueryExport expectedResponse = new BigQueryExport
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Dataset = "datasete4094d3c",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+                Principal = "principala915d7e7",
+            };
+            mockGrpcClient.Setup(x => x.CreateBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            BigQueryExport response = client.CreateBigQueryExport(request.ParentAsOrganizationName, request.BigQueryExport, request.BigQueryExportId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateBigQueryExportResourceNames1Async()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateBigQueryExportRequest request = new CreateBigQueryExportRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                BigQueryExport = new BigQueryExport(),
+                BigQueryExportId = "big_query_export_id7a229269",
+            };
+            BigQueryExport expectedResponse = new BigQueryExport
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Dataset = "datasete4094d3c",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+                Principal = "principala915d7e7",
+            };
+            mockGrpcClient.Setup(x => x.CreateBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BigQueryExport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            BigQueryExport responseCallSettings = await client.CreateBigQueryExportAsync(request.ParentAsOrganizationName, request.BigQueryExport, request.BigQueryExportId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            BigQueryExport responseCancellationToken = await client.CreateBigQueryExportAsync(request.ParentAsOrganizationName, request.BigQueryExport, request.BigQueryExportId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateBigQueryExportResourceNames2()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateBigQueryExportRequest request = new CreateBigQueryExportRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                BigQueryExport = new BigQueryExport(),
+                BigQueryExportId = "big_query_export_id7a229269",
+            };
+            BigQueryExport expectedResponse = new BigQueryExport
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Dataset = "datasete4094d3c",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+                Principal = "principala915d7e7",
+            };
+            mockGrpcClient.Setup(x => x.CreateBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            BigQueryExport response = client.CreateBigQueryExport(request.ParentAsFolderName, request.BigQueryExport, request.BigQueryExportId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateBigQueryExportResourceNames2Async()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateBigQueryExportRequest request = new CreateBigQueryExportRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                BigQueryExport = new BigQueryExport(),
+                BigQueryExportId = "big_query_export_id7a229269",
+            };
+            BigQueryExport expectedResponse = new BigQueryExport
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Dataset = "datasete4094d3c",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+                Principal = "principala915d7e7",
+            };
+            mockGrpcClient.Setup(x => x.CreateBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BigQueryExport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            BigQueryExport responseCallSettings = await client.CreateBigQueryExportAsync(request.ParentAsFolderName, request.BigQueryExport, request.BigQueryExportId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            BigQueryExport responseCancellationToken = await client.CreateBigQueryExportAsync(request.ParentAsFolderName, request.BigQueryExport, request.BigQueryExportId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateBigQueryExportResourceNames3()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateBigQueryExportRequest request = new CreateBigQueryExportRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                BigQueryExport = new BigQueryExport(),
+                BigQueryExportId = "big_query_export_id7a229269",
+            };
+            BigQueryExport expectedResponse = new BigQueryExport
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Dataset = "datasete4094d3c",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+                Principal = "principala915d7e7",
+            };
+            mockGrpcClient.Setup(x => x.CreateBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            BigQueryExport response = client.CreateBigQueryExport(request.ParentAsProjectName, request.BigQueryExport, request.BigQueryExportId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateBigQueryExportResourceNames3Async()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateBigQueryExportRequest request = new CreateBigQueryExportRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                BigQueryExport = new BigQueryExport(),
+                BigQueryExportId = "big_query_export_id7a229269",
+            };
+            BigQueryExport expectedResponse = new BigQueryExport
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Dataset = "datasete4094d3c",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+                Principal = "principala915d7e7",
+            };
+            mockGrpcClient.Setup(x => x.CreateBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BigQueryExport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            BigQueryExport responseCallSettings = await client.CreateBigQueryExportAsync(request.ParentAsProjectName, request.BigQueryExport, request.BigQueryExportId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            BigQueryExport responseCancellationToken = await client.CreateBigQueryExportAsync(request.ParentAsProjectName, request.BigQueryExport, request.BigQueryExportId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteBigQueryExportRequestObject()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteBigQueryExportRequest request = new DeleteBigQueryExportRequest
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            client.DeleteBigQueryExport(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteBigQueryExportRequestObjectAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteBigQueryExportRequest request = new DeleteBigQueryExportRequest
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteBigQueryExportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteBigQueryExportAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteBigQueryExport()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteBigQueryExportRequest request = new DeleteBigQueryExportRequest
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            client.DeleteBigQueryExport(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteBigQueryExportAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteBigQueryExportRequest request = new DeleteBigQueryExportRequest
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteBigQueryExportAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteBigQueryExportAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteBigQueryExportResourceNames()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteBigQueryExportRequest request = new DeleteBigQueryExportRequest
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            client.DeleteBigQueryExport(request.BigQueryExportName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteBigQueryExportResourceNamesAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteBigQueryExportRequest request = new DeleteBigQueryExportRequest
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteBigQueryExportAsync(request.BigQueryExportName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteBigQueryExportAsync(request.BigQueryExportName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateBigQueryExportRequestObject()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateBigQueryExportRequest request = new UpdateBigQueryExportRequest
+            {
+                BigQueryExport = new BigQueryExport(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            BigQueryExport expectedResponse = new BigQueryExport
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Dataset = "datasete4094d3c",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+                Principal = "principala915d7e7",
+            };
+            mockGrpcClient.Setup(x => x.UpdateBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            BigQueryExport response = client.UpdateBigQueryExport(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateBigQueryExportRequestObjectAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateBigQueryExportRequest request = new UpdateBigQueryExportRequest
+            {
+                BigQueryExport = new BigQueryExport(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            BigQueryExport expectedResponse = new BigQueryExport
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Dataset = "datasete4094d3c",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+                Principal = "principala915d7e7",
+            };
+            mockGrpcClient.Setup(x => x.UpdateBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BigQueryExport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            BigQueryExport responseCallSettings = await client.UpdateBigQueryExportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            BigQueryExport responseCancellationToken = await client.UpdateBigQueryExportAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateBigQueryExport()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateBigQueryExportRequest request = new UpdateBigQueryExportRequest
+            {
+                BigQueryExport = new BigQueryExport(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            BigQueryExport expectedResponse = new BigQueryExport
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Dataset = "datasete4094d3c",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+                Principal = "principala915d7e7",
+            };
+            mockGrpcClient.Setup(x => x.UpdateBigQueryExport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            BigQueryExport response = client.UpdateBigQueryExport(request.BigQueryExport, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateBigQueryExportAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateBigQueryExportRequest request = new UpdateBigQueryExportRequest
+            {
+                BigQueryExport = new BigQueryExport(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            BigQueryExport expectedResponse = new BigQueryExport
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Dataset = "datasete4094d3c",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+                Principal = "principala915d7e7",
+            };
+            mockGrpcClient.Setup(x => x.UpdateBigQueryExportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BigQueryExport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            BigQueryExport responseCallSettings = await client.UpdateBigQueryExportAsync(request.BigQueryExport, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            BigQueryExport responseCancellationToken = await client.UpdateBigQueryExportAsync(request.BigQueryExport, request.UpdateMask, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

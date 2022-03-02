@@ -56,6 +56,7 @@ namespace Google.Cloud.SecurityCenter.V1
             CreateNotificationConfigSettings = existing.CreateNotificationConfigSettings;
             DeleteMuteConfigSettings = existing.DeleteMuteConfigSettings;
             DeleteNotificationConfigSettings = existing.DeleteNotificationConfigSettings;
+            GetBigQueryExportSettings = existing.GetBigQueryExportSettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             GetMuteConfigSettings = existing.GetMuteConfigSettings;
             GetNotificationConfigSettings = existing.GetNotificationConfigSettings;
@@ -81,6 +82,10 @@ namespace Google.Cloud.SecurityCenter.V1
             UpdateOrganizationSettingsSettings = existing.UpdateOrganizationSettingsSettings;
             UpdateSourceSettings = existing.UpdateSourceSettings;
             UpdateSecurityMarksSettings = existing.UpdateSecurityMarksSettings;
+            CreateBigQueryExportSettings = existing.CreateBigQueryExportSettings;
+            DeleteBigQueryExportSettings = existing.DeleteBigQueryExportSettings;
+            UpdateBigQueryExportSettings = existing.UpdateBigQueryExportSettings;
+            ListBigQueryExportsSettings = existing.ListBigQueryExportsSettings;
             OnCopy(existing);
         }
 
@@ -189,6 +194,18 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteNotificationConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.GetBigQueryExport</c> and <c>SecurityCenterClient.GetBigQueryExportAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetBigQueryExportSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -600,6 +617,54 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </remarks>
         public gaxgrpc::CallSettings UpdateSecurityMarksSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(480000)));
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.CreateBigQueryExport</c> and <c>SecurityCenterClient.CreateBigQueryExportAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateBigQueryExportSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.DeleteBigQueryExport</c> and <c>SecurityCenterClient.DeleteBigQueryExportAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteBigQueryExportSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.UpdateBigQueryExport</c> and <c>SecurityCenterClient.UpdateBigQueryExportAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateBigQueryExportSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.ListBigQueryExports</c> and <c>SecurityCenterClient.ListBigQueryExportsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListBigQueryExportsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="SecurityCenterSettings"/> object.</returns>
         public SecurityCenterSettings Clone() => new SecurityCenterSettings(this);
@@ -826,8 +891,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// matched by the filter will be muted after the LRO is done.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, at which bulk action needs to be applied. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, at which bulk action needs to be applied. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -844,8 +909,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// matched by the filter will be muted after the LRO is done.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, at which bulk action needs to be applied. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, at which bulk action needs to be applied. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -862,8 +927,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// matched by the filter will be muted after the LRO is done.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, at which bulk action needs to be applied. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, at which bulk action needs to be applied. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -877,8 +942,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// matched by the filter will be muted after the LRO is done.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, at which bulk action needs to be applied. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, at which bulk action needs to be applied. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -895,8 +960,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// matched by the filter will be muted after the LRO is done.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, at which bulk action needs to be applied. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, at which bulk action needs to be applied. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -913,8 +978,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// matched by the filter will be muted after the LRO is done.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, at which bulk action needs to be applied. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, at which bulk action needs to be applied. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -957,8 +1022,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// Required. The Source being created, only the display_name and description will be
-        /// used. All other fields will be ignored.
+        /// Required. The Source being created, only the display_name and description
+        /// will be used. All other fields will be ignored.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -977,8 +1042,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// Required. The Source being created, only the display_name and description will be
-        /// used. All other fields will be ignored.
+        /// Required. The Source being created, only the display_name and description
+        /// will be used. All other fields will be ignored.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -997,8 +1062,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// Required. The Source being created, only the display_name and description will be
-        /// used. All other fields will be ignored.
+        /// Required. The Source being created, only the display_name and description
+        /// will be used. All other fields will be ignored.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1013,8 +1078,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// Required. The Source being created, only the display_name and description will be
-        /// used. All other fields will be ignored.
+        /// Required. The Source being created, only the display_name and description
+        /// will be used. All other fields will be ignored.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1033,8 +1098,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// Required. The Source being created, only the display_name and description will be
-        /// used. All other fields will be ignored.
+        /// Required. The Source being created, only the display_name and description
+        /// will be used. All other fields will be ignored.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1053,8 +1118,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// Required. The Source being created, only the display_name and description will be
-        /// used. All other fields will be ignored.
+        /// Required. The Source being created, only the display_name and description
+        /// will be used. All other fields will be ignored.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1105,8 +1170,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// Required. The Finding being created. The name and security_marks will be ignored as
-        /// they are both output only fields on this resource.
+        /// Required. The Finding being created. The name and security_marks will be
+        /// ignored as they are both output only fields on this resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1132,8 +1197,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// Required. The Finding being created. The name and security_marks will be ignored as
-        /// they are both output only fields on this resource.
+        /// Required. The Finding being created. The name and security_marks will be
+        /// ignored as they are both output only fields on this resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1159,8 +1224,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// Required. The Finding being created. The name and security_marks will be ignored as
-        /// they are both output only fields on this resource.
+        /// Required. The Finding being created. The name and security_marks will be
+        /// ignored as they are both output only fields on this resource.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1181,8 +1246,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// Required. The Finding being created. The name and security_marks will be ignored as
-        /// they are both output only fields on this resource.
+        /// Required. The Finding being created. The name and security_marks will be
+        /// ignored as they are both output only fields on this resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1208,8 +1273,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// Required. The Finding being created. The name and security_marks will be ignored as
-        /// they are both output only fields on this resource.
+        /// Required. The Finding being created. The name and security_marks will be
+        /// ignored as they are both output only fields on this resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1235,8 +1300,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// Required. The Finding being created. The name and security_marks will be ignored as
-        /// they are both output only fields on this resource.
+        /// Required. The Finding being created. The name and security_marks will be
+        /// ignored as they are both output only fields on this resource.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1829,8 +1894,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -1839,8 +1904,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// characters, underscores or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1856,8 +1922,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -1866,8 +1932,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// characters, underscores or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1883,8 +1950,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -1893,8 +1960,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// characters, underscores or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1905,8 +1973,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -1915,8 +1983,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// characters, underscores or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1932,8 +2001,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -1942,8 +2011,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// characters, underscores or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1959,8 +2029,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="configId">
         /// Required.
@@ -1969,8 +2039,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// characters, underscores or hyphens only.
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1981,12 +2052,13 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2001,12 +2073,13 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2021,12 +2094,13 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2037,12 +2111,13 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2057,12 +2132,13 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2077,12 +2153,13 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a notification config.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the new notification config's parent. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="notificationConfig">
-        /// Required. The notification config being created. The name and the service account
-        /// will be ignored as they are both output only fields on this resource.
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2322,6 +2399,129 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteNotificationConfigAsync(NotificationConfigName name, st::CancellationToken cancellationToken) =>
             DeleteNotificationConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a big query export.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BigQueryExport GetBigQueryExport(GetBigQueryExportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a big query export.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryExport> GetBigQueryExportAsync(GetBigQueryExportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a big query export.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryExport> GetBigQueryExportAsync(GetBigQueryExportRequest request, st::CancellationToken cancellationToken) =>
+            GetBigQueryExportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a big query export.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the big query export to retrieve. Its format is
+        /// organizations/{organization}/bigQueryExports/{export_id},
+        /// folders/{folder}/bigQueryExports/{export_id}, or
+        /// projects/{project}/bigQueryExports/{export_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BigQueryExport GetBigQueryExport(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBigQueryExport(new GetBigQueryExportRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a big query export.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the big query export to retrieve. Its format is
+        /// organizations/{organization}/bigQueryExports/{export_id},
+        /// folders/{folder}/bigQueryExports/{export_id}, or
+        /// projects/{project}/bigQueryExports/{export_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryExport> GetBigQueryExportAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBigQueryExportAsync(new GetBigQueryExportRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a big query export.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the big query export to retrieve. Its format is
+        /// organizations/{organization}/bigQueryExports/{export_id},
+        /// folders/{folder}/bigQueryExports/{export_id}, or
+        /// projects/{project}/bigQueryExports/{export_id}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryExport> GetBigQueryExportAsync(string name, st::CancellationToken cancellationToken) =>
+            GetBigQueryExportAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a big query export.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the big query export to retrieve. Its format is
+        /// organizations/{organization}/bigQueryExports/{export_id},
+        /// folders/{folder}/bigQueryExports/{export_id}, or
+        /// projects/{project}/bigQueryExports/{export_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BigQueryExport GetBigQueryExport(BigQueryExportName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBigQueryExport(new GetBigQueryExportRequest
+            {
+                BigQueryExportName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a big query export.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the big query export to retrieve. Its format is
+        /// organizations/{organization}/bigQueryExports/{export_id},
+        /// folders/{folder}/bigQueryExports/{export_id}, or
+        /// projects/{project}/bigQueryExports/{export_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryExport> GetBigQueryExportAsync(BigQueryExportName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBigQueryExportAsync(new GetBigQueryExportRequest
+            {
+                BigQueryExportName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a big query export.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the big query export to retrieve. Its format is
+        /// organizations/{organization}/bigQueryExports/{export_id},
+        /// folders/{folder}/bigQueryExports/{export_id}, or
+        /// projects/{project}/bigQueryExports/{export_id}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryExport> GetBigQueryExportAsync(BigQueryExportName name, st::CancellationToken cancellationToken) =>
+            GetBigQueryExportAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the access control policy on the specified Source.
@@ -2699,8 +2899,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the organization to get organization settings for. Its format is
-        /// "organizations/[organization_id]/organizationSettings".
+        /// Required. Name of the organization to get organization settings for. Its
+        /// format is "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2714,8 +2914,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the organization to get organization settings for. Its format is
-        /// "organizations/[organization_id]/organizationSettings".
+        /// Required. Name of the organization to get organization settings for. Its
+        /// format is "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2729,8 +2929,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the organization to get organization settings for. Its format is
-        /// "organizations/[organization_id]/organizationSettings".
+        /// Required. Name of the organization to get organization settings for. Its
+        /// format is "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2741,8 +2941,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the organization to get organization settings for. Its format is
-        /// "organizations/[organization_id]/organizationSettings".
+        /// Required. Name of the organization to get organization settings for. Its
+        /// format is "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2756,8 +2956,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the organization to get organization settings for. Its format is
-        /// "organizations/[organization_id]/organizationSettings".
+        /// Required. Name of the organization to get organization settings for. Its
+        /// format is "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2771,8 +2971,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the organization to get organization settings for. Its format is
-        /// "organizations/[organization_id]/organizationSettings".
+        /// Required. Name of the organization to get organization settings for. Its
+        /// format is "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2959,9 +3159,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// or projects/{project_id}/sources/-
         /// </param>
         /// <param name="groupBy">
-        /// Required. Expression that defines what assets fields to use for grouping (including
-        /// `state_change`). The string value should follow SQL syntax: comma separated
-        /// list of fields. For example: "parent,resource_name".
+        /// Required. Expression that defines what assets fields to use for grouping
+        /// (including `state_change`). The string value should follow SQL syntax:
+        /// comma separated list of fields. For example: "parent,resource_name".
         /// 
         /// The following fields are supported:
         /// 
@@ -3013,9 +3213,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// or projects/{project_id}/sources/-
         /// </param>
         /// <param name="groupBy">
-        /// Required. Expression that defines what assets fields to use for grouping (including
-        /// `state_change`). The string value should follow SQL syntax: comma separated
-        /// list of fields. For example: "parent,resource_name".
+        /// Required. Expression that defines what assets fields to use for grouping
+        /// (including `state_change`). The string value should follow SQL syntax:
+        /// comma separated list of fields. For example: "parent,resource_name".
         /// 
         /// The following fields are supported:
         /// 
@@ -3067,9 +3267,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// or projects/{project_id}/sources/-
         /// </param>
         /// <param name="groupBy">
-        /// Required. Expression that defines what assets fields to use for grouping (including
-        /// `state_change`). The string value should follow SQL syntax: comma separated
-        /// list of fields. For example: "parent,resource_name".
+        /// Required. Expression that defines what assets fields to use for grouping
+        /// (including `state_change`). The string value should follow SQL syntax:
+        /// comma separated list of fields. For example: "parent,resource_name".
         /// 
         /// The following fields are supported:
         /// 
@@ -3121,9 +3321,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// or projects/{project_id}/sources/-
         /// </param>
         /// <param name="groupBy">
-        /// Required. Expression that defines what assets fields to use for grouping (including
-        /// `state_change`). The string value should follow SQL syntax: comma separated
-        /// list of fields. For example: "parent,resource_name".
+        /// Required. Expression that defines what assets fields to use for grouping
+        /// (including `state_change`). The string value should follow SQL syntax:
+        /// comma separated list of fields. For example: "parent,resource_name".
         /// 
         /// The following fields are supported:
         /// 
@@ -3226,8 +3426,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists mute configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of mute configs. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of mute configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3252,8 +3452,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists mute configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of mute configs. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of mute configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3278,8 +3478,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists mute configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of mute configs. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of mute configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3304,8 +3504,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists mute configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of mute configs. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of mute configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3330,8 +3530,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists mute configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of mute configs. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of mute configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3356,8 +3556,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists mute configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of mute configs. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of mute configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3382,8 +3582,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists mute configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of mute configs. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of mute configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3408,8 +3608,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists mute configs.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns the collection of mute configs. Its format is
-        /// "organizations/[organization_id]", "folders/[folder_id]",
+        /// Required. The parent, which owns the collection of mute configs. Its format
+        /// is "organizations/[organization_id]", "folders/[folder_id]",
         /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3570,8 +3770,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should be
-        /// "organizations/[organization_id], folders/[folder_id], or
+        /// Required. Resource name of the parent of sources to list. Its format should
+        /// be "organizations/[organization_id], folders/[folder_id], or
         /// projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3596,8 +3796,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should be
-        /// "organizations/[organization_id], folders/[folder_id], or
+        /// Required. Resource name of the parent of sources to list. Its format should
+        /// be "organizations/[organization_id], folders/[folder_id], or
         /// projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3622,8 +3822,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should be
-        /// "organizations/[organization_id], folders/[folder_id], or
+        /// Required. Resource name of the parent of sources to list. Its format should
+        /// be "organizations/[organization_id], folders/[folder_id], or
         /// projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3648,8 +3848,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should be
-        /// "organizations/[organization_id], folders/[folder_id], or
+        /// Required. Resource name of the parent of sources to list. Its format should
+        /// be "organizations/[organization_id], folders/[folder_id], or
         /// projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3674,8 +3874,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should be
-        /// "organizations/[organization_id], folders/[folder_id], or
+        /// Required. Resource name of the parent of sources to list. Its format should
+        /// be "organizations/[organization_id], folders/[folder_id], or
         /// projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3700,8 +3900,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should be
-        /// "organizations/[organization_id], folders/[folder_id], or
+        /// Required. Resource name of the parent of sources to list. Its format should
+        /// be "organizations/[organization_id], folders/[folder_id], or
         /// projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3726,8 +3926,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should be
-        /// "organizations/[organization_id], folders/[folder_id], or
+        /// Required. Resource name of the parent of sources to list. Its format should
+        /// be "organizations/[organization_id], folders/[folder_id], or
         /// projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3752,8 +3952,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should be
-        /// "organizations/[organization_id], folders/[folder_id], or
+        /// Required. Resource name of the parent of sources to list. Its format should
+        /// be "organizations/[organization_id], folders/[folder_id], or
         /// projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
@@ -3852,8 +4052,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to run asset discovery for. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Name of the organization to run asset discovery for. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3872,8 +4072,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to run asset discovery for. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Name of the organization to run asset discovery for. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3892,8 +4092,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to run asset discovery for. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Name of the organization to run asset discovery for. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3909,8 +4109,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to run asset discovery for. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Name of the organization to run asset discovery for. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3929,8 +4129,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to run asset discovery for. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Name of the organization to run asset discovery for. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3949,8 +4149,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to run asset discovery for. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Name of the organization to run asset discovery for. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4713,8 +4913,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// finding creation to succeed.
         /// </summary>
         /// <param name="finding">
-        /// Required. The finding resource to update or create if it does not already exist.
-        /// parent, security_marks, and update_time will be ignored.
+        /// Required. The finding resource to update or create if it does not already
+        /// exist. parent, security_marks, and update_time will be ignored.
         /// 
         /// In the case of creation, the finding id portion of the name must be
         /// alphanumeric and less than or equal to 32 characters and greater than 0
@@ -4733,8 +4933,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// finding creation to succeed.
         /// </summary>
         /// <param name="finding">
-        /// Required. The finding resource to update or create if it does not already exist.
-        /// parent, security_marks, and update_time will be ignored.
+        /// Required. The finding resource to update or create if it does not already
+        /// exist. parent, security_marks, and update_time will be ignored.
         /// 
         /// In the case of creation, the finding id portion of the name must be
         /// alphanumeric and less than or equal to 32 characters and greater than 0
@@ -4753,8 +4953,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// finding creation to succeed.
         /// </summary>
         /// <param name="finding">
-        /// Required. The finding resource to update or create if it does not already exist.
-        /// parent, security_marks, and update_time will be ignored.
+        /// Required. The finding resource to update or create if it does not already
+        /// exist. parent, security_marks, and update_time will be ignored.
         /// 
         /// In the case of creation, the finding id portion of the name must be
         /// alphanumeric and less than or equal to 32 characters and greater than 0
@@ -5173,6 +5373,806 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<SecurityMarks> UpdateSecurityMarksAsync(SecurityMarks securityMarks, st::CancellationToken cancellationToken) =>
             UpdateSecurityMarksAsync(securityMarks, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a big query export.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BigQueryExport CreateBigQueryExport(CreateBigQueryExportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a big query export.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryExport> CreateBigQueryExportAsync(CreateBigQueryExportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a big query export.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryExport> CreateBigQueryExportAsync(CreateBigQueryExportRequest request, st::CancellationToken cancellationToken) =>
+            CreateBigQueryExportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a big query export.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new big query export's parent. Its format is
+        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="bigQueryExport">
+        /// Required. The big query export being created.
+        /// </param>
+        /// <param name="bigQueryExportId">
+        /// Required. Unique identifier provided by the client within the parent scope.
+        /// It must consist of lower case letters, numbers, and hyphen, with the first
+        /// character a letter, the last a letter or a number, and a 63 character
+        /// maximum.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BigQueryExport CreateBigQueryExport(string parent, BigQueryExport bigQueryExport, string bigQueryExportId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBigQueryExport(new CreateBigQueryExportRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BigQueryExport = gax::GaxPreconditions.CheckNotNull(bigQueryExport, nameof(bigQueryExport)),
+                BigQueryExportId = gax::GaxPreconditions.CheckNotNullOrEmpty(bigQueryExportId, nameof(bigQueryExportId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a big query export.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new big query export's parent. Its format is
+        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="bigQueryExport">
+        /// Required. The big query export being created.
+        /// </param>
+        /// <param name="bigQueryExportId">
+        /// Required. Unique identifier provided by the client within the parent scope.
+        /// It must consist of lower case letters, numbers, and hyphen, with the first
+        /// character a letter, the last a letter or a number, and a 63 character
+        /// maximum.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryExport> CreateBigQueryExportAsync(string parent, BigQueryExport bigQueryExport, string bigQueryExportId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBigQueryExportAsync(new CreateBigQueryExportRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BigQueryExport = gax::GaxPreconditions.CheckNotNull(bigQueryExport, nameof(bigQueryExport)),
+                BigQueryExportId = gax::GaxPreconditions.CheckNotNullOrEmpty(bigQueryExportId, nameof(bigQueryExportId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a big query export.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new big query export's parent. Its format is
+        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="bigQueryExport">
+        /// Required. The big query export being created.
+        /// </param>
+        /// <param name="bigQueryExportId">
+        /// Required. Unique identifier provided by the client within the parent scope.
+        /// It must consist of lower case letters, numbers, and hyphen, with the first
+        /// character a letter, the last a letter or a number, and a 63 character
+        /// maximum.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryExport> CreateBigQueryExportAsync(string parent, BigQueryExport bigQueryExport, string bigQueryExportId, st::CancellationToken cancellationToken) =>
+            CreateBigQueryExportAsync(parent, bigQueryExport, bigQueryExportId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a big query export.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new big query export's parent. Its format is
+        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="bigQueryExport">
+        /// Required. The big query export being created.
+        /// </param>
+        /// <param name="bigQueryExportId">
+        /// Required. Unique identifier provided by the client within the parent scope.
+        /// It must consist of lower case letters, numbers, and hyphen, with the first
+        /// character a letter, the last a letter or a number, and a 63 character
+        /// maximum.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BigQueryExport CreateBigQueryExport(gagr::OrganizationName parent, BigQueryExport bigQueryExport, string bigQueryExportId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBigQueryExport(new CreateBigQueryExportRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BigQueryExport = gax::GaxPreconditions.CheckNotNull(bigQueryExport, nameof(bigQueryExport)),
+                BigQueryExportId = gax::GaxPreconditions.CheckNotNullOrEmpty(bigQueryExportId, nameof(bigQueryExportId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a big query export.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new big query export's parent. Its format is
+        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="bigQueryExport">
+        /// Required. The big query export being created.
+        /// </param>
+        /// <param name="bigQueryExportId">
+        /// Required. Unique identifier provided by the client within the parent scope.
+        /// It must consist of lower case letters, numbers, and hyphen, with the first
+        /// character a letter, the last a letter or a number, and a 63 character
+        /// maximum.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryExport> CreateBigQueryExportAsync(gagr::OrganizationName parent, BigQueryExport bigQueryExport, string bigQueryExportId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBigQueryExportAsync(new CreateBigQueryExportRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BigQueryExport = gax::GaxPreconditions.CheckNotNull(bigQueryExport, nameof(bigQueryExport)),
+                BigQueryExportId = gax::GaxPreconditions.CheckNotNullOrEmpty(bigQueryExportId, nameof(bigQueryExportId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a big query export.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new big query export's parent. Its format is
+        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="bigQueryExport">
+        /// Required. The big query export being created.
+        /// </param>
+        /// <param name="bigQueryExportId">
+        /// Required. Unique identifier provided by the client within the parent scope.
+        /// It must consist of lower case letters, numbers, and hyphen, with the first
+        /// character a letter, the last a letter or a number, and a 63 character
+        /// maximum.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryExport> CreateBigQueryExportAsync(gagr::OrganizationName parent, BigQueryExport bigQueryExport, string bigQueryExportId, st::CancellationToken cancellationToken) =>
+            CreateBigQueryExportAsync(parent, bigQueryExport, bigQueryExportId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a big query export.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new big query export's parent. Its format is
+        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="bigQueryExport">
+        /// Required. The big query export being created.
+        /// </param>
+        /// <param name="bigQueryExportId">
+        /// Required. Unique identifier provided by the client within the parent scope.
+        /// It must consist of lower case letters, numbers, and hyphen, with the first
+        /// character a letter, the last a letter or a number, and a 63 character
+        /// maximum.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BigQueryExport CreateBigQueryExport(gagr::FolderName parent, BigQueryExport bigQueryExport, string bigQueryExportId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBigQueryExport(new CreateBigQueryExportRequest
+            {
+                ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BigQueryExport = gax::GaxPreconditions.CheckNotNull(bigQueryExport, nameof(bigQueryExport)),
+                BigQueryExportId = gax::GaxPreconditions.CheckNotNullOrEmpty(bigQueryExportId, nameof(bigQueryExportId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a big query export.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new big query export's parent. Its format is
+        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="bigQueryExport">
+        /// Required. The big query export being created.
+        /// </param>
+        /// <param name="bigQueryExportId">
+        /// Required. Unique identifier provided by the client within the parent scope.
+        /// It must consist of lower case letters, numbers, and hyphen, with the first
+        /// character a letter, the last a letter or a number, and a 63 character
+        /// maximum.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryExport> CreateBigQueryExportAsync(gagr::FolderName parent, BigQueryExport bigQueryExport, string bigQueryExportId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBigQueryExportAsync(new CreateBigQueryExportRequest
+            {
+                ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BigQueryExport = gax::GaxPreconditions.CheckNotNull(bigQueryExport, nameof(bigQueryExport)),
+                BigQueryExportId = gax::GaxPreconditions.CheckNotNullOrEmpty(bigQueryExportId, nameof(bigQueryExportId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a big query export.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new big query export's parent. Its format is
+        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="bigQueryExport">
+        /// Required. The big query export being created.
+        /// </param>
+        /// <param name="bigQueryExportId">
+        /// Required. Unique identifier provided by the client within the parent scope.
+        /// It must consist of lower case letters, numbers, and hyphen, with the first
+        /// character a letter, the last a letter or a number, and a 63 character
+        /// maximum.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryExport> CreateBigQueryExportAsync(gagr::FolderName parent, BigQueryExport bigQueryExport, string bigQueryExportId, st::CancellationToken cancellationToken) =>
+            CreateBigQueryExportAsync(parent, bigQueryExport, bigQueryExportId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a big query export.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new big query export's parent. Its format is
+        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="bigQueryExport">
+        /// Required. The big query export being created.
+        /// </param>
+        /// <param name="bigQueryExportId">
+        /// Required. Unique identifier provided by the client within the parent scope.
+        /// It must consist of lower case letters, numbers, and hyphen, with the first
+        /// character a letter, the last a letter or a number, and a 63 character
+        /// maximum.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BigQueryExport CreateBigQueryExport(gagr::ProjectName parent, BigQueryExport bigQueryExport, string bigQueryExportId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBigQueryExport(new CreateBigQueryExportRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BigQueryExport = gax::GaxPreconditions.CheckNotNull(bigQueryExport, nameof(bigQueryExport)),
+                BigQueryExportId = gax::GaxPreconditions.CheckNotNullOrEmpty(bigQueryExportId, nameof(bigQueryExportId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a big query export.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new big query export's parent. Its format is
+        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="bigQueryExport">
+        /// Required. The big query export being created.
+        /// </param>
+        /// <param name="bigQueryExportId">
+        /// Required. Unique identifier provided by the client within the parent scope.
+        /// It must consist of lower case letters, numbers, and hyphen, with the first
+        /// character a letter, the last a letter or a number, and a 63 character
+        /// maximum.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryExport> CreateBigQueryExportAsync(gagr::ProjectName parent, BigQueryExport bigQueryExport, string bigQueryExportId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBigQueryExportAsync(new CreateBigQueryExportRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BigQueryExport = gax::GaxPreconditions.CheckNotNull(bigQueryExport, nameof(bigQueryExport)),
+                BigQueryExportId = gax::GaxPreconditions.CheckNotNullOrEmpty(bigQueryExportId, nameof(bigQueryExportId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a big query export.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new big query export's parent. Its format is
+        /// "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="bigQueryExport">
+        /// Required. The big query export being created.
+        /// </param>
+        /// <param name="bigQueryExportId">
+        /// Required. Unique identifier provided by the client within the parent scope.
+        /// It must consist of lower case letters, numbers, and hyphen, with the first
+        /// character a letter, the last a letter or a number, and a 63 character
+        /// maximum.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryExport> CreateBigQueryExportAsync(gagr::ProjectName parent, BigQueryExport bigQueryExport, string bigQueryExportId, st::CancellationToken cancellationToken) =>
+            CreateBigQueryExportAsync(parent, bigQueryExport, bigQueryExportId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an existing big query export.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteBigQueryExport(DeleteBigQueryExportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an existing big query export.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBigQueryExportAsync(DeleteBigQueryExportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an existing big query export.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBigQueryExportAsync(DeleteBigQueryExportRequest request, st::CancellationToken cancellationToken) =>
+            DeleteBigQueryExportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an existing big query export.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the big query export to delete. Its format is
+        /// organizations/{organization}/bigQueryExports/{export_id},
+        /// folders/{folder}/bigQueryExports/{export_id}, or
+        /// projects/{project}/bigQueryExports/{export_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteBigQueryExport(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBigQueryExport(new DeleteBigQueryExportRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing big query export.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the big query export to delete. Its format is
+        /// organizations/{organization}/bigQueryExports/{export_id},
+        /// folders/{folder}/bigQueryExports/{export_id}, or
+        /// projects/{project}/bigQueryExports/{export_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBigQueryExportAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBigQueryExportAsync(new DeleteBigQueryExportRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing big query export.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the big query export to delete. Its format is
+        /// organizations/{organization}/bigQueryExports/{export_id},
+        /// folders/{folder}/bigQueryExports/{export_id}, or
+        /// projects/{project}/bigQueryExports/{export_id}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBigQueryExportAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteBigQueryExportAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an existing big query export.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the big query export to delete. Its format is
+        /// organizations/{organization}/bigQueryExports/{export_id},
+        /// folders/{folder}/bigQueryExports/{export_id}, or
+        /// projects/{project}/bigQueryExports/{export_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteBigQueryExport(BigQueryExportName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBigQueryExport(new DeleteBigQueryExportRequest
+            {
+                BigQueryExportName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing big query export.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the big query export to delete. Its format is
+        /// organizations/{organization}/bigQueryExports/{export_id},
+        /// folders/{folder}/bigQueryExports/{export_id}, or
+        /// projects/{project}/bigQueryExports/{export_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBigQueryExportAsync(BigQueryExportName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBigQueryExportAsync(new DeleteBigQueryExportRequest
+            {
+                BigQueryExportName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing big query export.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the big query export to delete. Its format is
+        /// organizations/{organization}/bigQueryExports/{export_id},
+        /// folders/{folder}/bigQueryExports/{export_id}, or
+        /// projects/{project}/bigQueryExports/{export_id}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBigQueryExportAsync(BigQueryExportName name, st::CancellationToken cancellationToken) =>
+            DeleteBigQueryExportAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a BigQuery export.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BigQueryExport UpdateBigQueryExport(UpdateBigQueryExportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a BigQuery export.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryExport> UpdateBigQueryExportAsync(UpdateBigQueryExportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a BigQuery export.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryExport> UpdateBigQueryExportAsync(UpdateBigQueryExportRequest request, st::CancellationToken cancellationToken) =>
+            UpdateBigQueryExportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a BigQuery export.
+        /// </summary>
+        /// <param name="bigQueryExport">
+        /// Required. The BigQuery export being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// If empty all mutable fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BigQueryExport UpdateBigQueryExport(BigQueryExport bigQueryExport, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBigQueryExport(new UpdateBigQueryExportRequest
+            {
+                BigQueryExport = gax::GaxPreconditions.CheckNotNull(bigQueryExport, nameof(bigQueryExport)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a BigQuery export.
+        /// </summary>
+        /// <param name="bigQueryExport">
+        /// Required. The BigQuery export being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// If empty all mutable fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryExport> UpdateBigQueryExportAsync(BigQueryExport bigQueryExport, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBigQueryExportAsync(new UpdateBigQueryExportRequest
+            {
+                BigQueryExport = gax::GaxPreconditions.CheckNotNull(bigQueryExport, nameof(bigQueryExport)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a BigQuery export.
+        /// </summary>
+        /// <param name="bigQueryExport">
+        /// Required. The BigQuery export being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// If empty all mutable fields will be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryExport> UpdateBigQueryExportAsync(BigQueryExport bigQueryExport, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateBigQueryExportAsync(bigQueryExport, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
+        /// given level all exports under that level are also returned e.g. if
+        /// requesting BigQuery exports under a folder, then all BigQuery exports
+        /// immediately under the folder plus the ones created under the projects
+        /// within the folder are returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BigQueryExport"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExports(ListBigQueryExportsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
+        /// given level all exports under that level are also returned e.g. if
+        /// requesting BigQuery exports under a folder, then all BigQuery exports
+        /// immediately under the folder plus the ones created under the projects
+        /// within the folder are returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BigQueryExport"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExportsAsync(ListBigQueryExportsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
+        /// given level all exports under that level are also returned e.g. if
+        /// requesting BigQuery exports under a folder, then all BigQuery exports
+        /// immediately under the folder plus the ones created under the projects
+        /// within the folder are returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns the collection of BigQuery exports. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]",
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BigQueryExport"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExports(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBigQueryExports(new ListBigQueryExportsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
+        /// given level all exports under that level are also returned e.g. if
+        /// requesting BigQuery exports under a folder, then all BigQuery exports
+        /// immediately under the folder plus the ones created under the projects
+        /// within the folder are returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns the collection of BigQuery exports. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]",
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BigQueryExport"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExportsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBigQueryExportsAsync(new ListBigQueryExportsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
+        /// given level all exports under that level are also returned e.g. if
+        /// requesting BigQuery exports under a folder, then all BigQuery exports
+        /// immediately under the folder plus the ones created under the projects
+        /// within the folder are returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns the collection of BigQuery exports. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]",
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BigQueryExport"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExports(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBigQueryExports(new ListBigQueryExportsRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
+        /// given level all exports under that level are also returned e.g. if
+        /// requesting BigQuery exports under a folder, then all BigQuery exports
+        /// immediately under the folder plus the ones created under the projects
+        /// within the folder are returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns the collection of BigQuery exports. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]",
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BigQueryExport"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExportsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBigQueryExportsAsync(new ListBigQueryExportsRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
+        /// given level all exports under that level are also returned e.g. if
+        /// requesting BigQuery exports under a folder, then all BigQuery exports
+        /// immediately under the folder plus the ones created under the projects
+        /// within the folder are returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns the collection of BigQuery exports. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]",
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BigQueryExport"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExports(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBigQueryExports(new ListBigQueryExportsRequest
+            {
+                ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
+        /// given level all exports under that level are also returned e.g. if
+        /// requesting BigQuery exports under a folder, then all BigQuery exports
+        /// immediately under the folder plus the ones created under the projects
+        /// within the folder are returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns the collection of BigQuery exports. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]",
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BigQueryExport"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExportsAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBigQueryExportsAsync(new ListBigQueryExportsRequest
+            {
+                ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
+        /// given level all exports under that level are also returned e.g. if
+        /// requesting BigQuery exports under a folder, then all BigQuery exports
+        /// immediately under the folder plus the ones created under the projects
+        /// within the folder are returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns the collection of BigQuery exports. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]",
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BigQueryExport"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExports(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBigQueryExports(new ListBigQueryExportsRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
+        /// given level all exports under that level are also returned e.g. if
+        /// requesting BigQuery exports under a folder, then all BigQuery exports
+        /// immediately under the folder plus the ones created under the projects
+        /// within the folder are returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns the collection of BigQuery exports. Its
+        /// format is "organizations/[organization_id]", "folders/[folder_id]",
+        /// "projects/[project_id]".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BigQueryExport"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExportsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBigQueryExportsAsync(new ListBigQueryExportsRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
     }
 
     /// <summary>SecurityCenter client wrapper implementation, for convenient use.</summary>
@@ -5194,6 +6194,8 @@ namespace Google.Cloud.SecurityCenter.V1
         private readonly gaxgrpc::ApiCall<DeleteMuteConfigRequest, wkt::Empty> _callDeleteMuteConfig;
 
         private readonly gaxgrpc::ApiCall<DeleteNotificationConfigRequest, wkt::Empty> _callDeleteNotificationConfig;
+
+        private readonly gaxgrpc::ApiCall<GetBigQueryExportRequest, BigQueryExport> _callGetBigQueryExport;
 
         private readonly gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> _callGetIamPolicy;
 
@@ -5243,6 +6245,14 @@ namespace Google.Cloud.SecurityCenter.V1
 
         private readonly gaxgrpc::ApiCall<UpdateSecurityMarksRequest, SecurityMarks> _callUpdateSecurityMarks;
 
+        private readonly gaxgrpc::ApiCall<CreateBigQueryExportRequest, BigQueryExport> _callCreateBigQueryExport;
+
+        private readonly gaxgrpc::ApiCall<DeleteBigQueryExportRequest, wkt::Empty> _callDeleteBigQueryExport;
+
+        private readonly gaxgrpc::ApiCall<UpdateBigQueryExportRequest, BigQueryExport> _callUpdateBigQueryExport;
+
+        private readonly gaxgrpc::ApiCall<ListBigQueryExportsRequest, ListBigQueryExportsResponse> _callListBigQueryExports;
+
         /// <summary>
         /// Constructs a client wrapper for the SecurityCenter service, with the specified gRPC client and settings.
         /// </summary>
@@ -5276,6 +6286,9 @@ namespace Google.Cloud.SecurityCenter.V1
             _callDeleteNotificationConfig = clientHelper.BuildApiCall<DeleteNotificationConfigRequest, wkt::Empty>(grpcClient.DeleteNotificationConfigAsync, grpcClient.DeleteNotificationConfig, effectiveSettings.DeleteNotificationConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteNotificationConfig);
             Modify_DeleteNotificationConfigApiCall(ref _callDeleteNotificationConfig);
+            _callGetBigQueryExport = clientHelper.BuildApiCall<GetBigQueryExportRequest, BigQueryExport>(grpcClient.GetBigQueryExportAsync, grpcClient.GetBigQueryExport, effectiveSettings.GetBigQueryExportSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetBigQueryExport);
+            Modify_GetBigQueryExportApiCall(ref _callGetBigQueryExport);
             _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>(grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
@@ -5348,6 +6361,18 @@ namespace Google.Cloud.SecurityCenter.V1
             _callUpdateSecurityMarks = clientHelper.BuildApiCall<UpdateSecurityMarksRequest, SecurityMarks>(grpcClient.UpdateSecurityMarksAsync, grpcClient.UpdateSecurityMarks, effectiveSettings.UpdateSecurityMarksSettings).WithGoogleRequestParam("security_marks.name", request => request.SecurityMarks?.Name);
             Modify_ApiCall(ref _callUpdateSecurityMarks);
             Modify_UpdateSecurityMarksApiCall(ref _callUpdateSecurityMarks);
+            _callCreateBigQueryExport = clientHelper.BuildApiCall<CreateBigQueryExportRequest, BigQueryExport>(grpcClient.CreateBigQueryExportAsync, grpcClient.CreateBigQueryExport, effectiveSettings.CreateBigQueryExportSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateBigQueryExport);
+            Modify_CreateBigQueryExportApiCall(ref _callCreateBigQueryExport);
+            _callDeleteBigQueryExport = clientHelper.BuildApiCall<DeleteBigQueryExportRequest, wkt::Empty>(grpcClient.DeleteBigQueryExportAsync, grpcClient.DeleteBigQueryExport, effectiveSettings.DeleteBigQueryExportSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteBigQueryExport);
+            Modify_DeleteBigQueryExportApiCall(ref _callDeleteBigQueryExport);
+            _callUpdateBigQueryExport = clientHelper.BuildApiCall<UpdateBigQueryExportRequest, BigQueryExport>(grpcClient.UpdateBigQueryExportAsync, grpcClient.UpdateBigQueryExport, effectiveSettings.UpdateBigQueryExportSettings).WithGoogleRequestParam("big_query_export.name", request => request.BigQueryExport?.Name);
+            Modify_ApiCall(ref _callUpdateBigQueryExport);
+            Modify_UpdateBigQueryExportApiCall(ref _callUpdateBigQueryExport);
+            _callListBigQueryExports = clientHelper.BuildApiCall<ListBigQueryExportsRequest, ListBigQueryExportsResponse>(grpcClient.ListBigQueryExportsAsync, grpcClient.ListBigQueryExports, effectiveSettings.ListBigQueryExportsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListBigQueryExports);
+            Modify_ListBigQueryExportsApiCall(ref _callListBigQueryExports);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -5366,6 +6391,8 @@ namespace Google.Cloud.SecurityCenter.V1
         partial void Modify_DeleteMuteConfigApiCall(ref gaxgrpc::ApiCall<DeleteMuteConfigRequest, wkt::Empty> call);
 
         partial void Modify_DeleteNotificationConfigApiCall(ref gaxgrpc::ApiCall<DeleteNotificationConfigRequest, wkt::Empty> call);
+
+        partial void Modify_GetBigQueryExportApiCall(ref gaxgrpc::ApiCall<GetBigQueryExportRequest, BigQueryExport> call);
 
         partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> call);
 
@@ -5415,6 +6442,14 @@ namespace Google.Cloud.SecurityCenter.V1
 
         partial void Modify_UpdateSecurityMarksApiCall(ref gaxgrpc::ApiCall<UpdateSecurityMarksRequest, SecurityMarks> call);
 
+        partial void Modify_CreateBigQueryExportApiCall(ref gaxgrpc::ApiCall<CreateBigQueryExportRequest, BigQueryExport> call);
+
+        partial void Modify_DeleteBigQueryExportApiCall(ref gaxgrpc::ApiCall<DeleteBigQueryExportRequest, wkt::Empty> call);
+
+        partial void Modify_UpdateBigQueryExportApiCall(ref gaxgrpc::ApiCall<UpdateBigQueryExportRequest, BigQueryExport> call);
+
+        partial void Modify_ListBigQueryExportsApiCall(ref gaxgrpc::ApiCall<ListBigQueryExportsRequest, ListBigQueryExportsResponse> call);
+
         partial void OnConstruction(SecurityCenter.SecurityCenterClient grpcClient, SecurityCenterSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC SecurityCenter client</summary>
@@ -5433,6 +6468,8 @@ namespace Google.Cloud.SecurityCenter.V1
         partial void Modify_DeleteMuteConfigRequest(ref DeleteMuteConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteNotificationConfigRequest(ref DeleteNotificationConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetBigQueryExportRequest(ref GetBigQueryExportRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetIamPolicyRequest(ref gciv::GetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5481,6 +6518,14 @@ namespace Google.Cloud.SecurityCenter.V1
         partial void Modify_UpdateSourceRequest(ref UpdateSourceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateSecurityMarksRequest(ref UpdateSecurityMarksRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateBigQueryExportRequest(ref CreateBigQueryExportRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteBigQueryExportRequest(ref DeleteBigQueryExportRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateBigQueryExportRequest(ref UpdateBigQueryExportRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListBigQueryExportsRequest(ref ListBigQueryExportsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>BulkMuteFindings</c>.</summary>
         public override lro::OperationsClient BulkMuteFindingsOperationsClient { get; }
@@ -5657,6 +6702,30 @@ namespace Google.Cloud.SecurityCenter.V1
         {
             Modify_DeleteNotificationConfigRequest(ref request, ref callSettings);
             return _callDeleteNotificationConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a big query export.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BigQueryExport GetBigQueryExport(GetBigQueryExportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBigQueryExportRequest(ref request, ref callSettings);
+            return _callGetBigQueryExport.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a big query export.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BigQueryExport> GetBigQueryExportAsync(GetBigQueryExportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBigQueryExportRequest(ref request, ref callSettings);
+            return _callGetBigQueryExport.Async(request, callSettings);
         }
 
         /// <summary>
@@ -6277,6 +7346,110 @@ namespace Google.Cloud.SecurityCenter.V1
             Modify_UpdateSecurityMarksRequest(ref request, ref callSettings);
             return _callUpdateSecurityMarks.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Creates a big query export.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BigQueryExport CreateBigQueryExport(CreateBigQueryExportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBigQueryExportRequest(ref request, ref callSettings);
+            return _callCreateBigQueryExport.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a big query export.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BigQueryExport> CreateBigQueryExportAsync(CreateBigQueryExportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBigQueryExportRequest(ref request, ref callSettings);
+            return _callCreateBigQueryExport.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an existing big query export.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteBigQueryExport(DeleteBigQueryExportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBigQueryExportRequest(ref request, ref callSettings);
+            _callDeleteBigQueryExport.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an existing big query export.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteBigQueryExportAsync(DeleteBigQueryExportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBigQueryExportRequest(ref request, ref callSettings);
+            return _callDeleteBigQueryExport.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a BigQuery export.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BigQueryExport UpdateBigQueryExport(UpdateBigQueryExportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBigQueryExportRequest(ref request, ref callSettings);
+            return _callUpdateBigQueryExport.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a BigQuery export.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BigQueryExport> UpdateBigQueryExportAsync(UpdateBigQueryExportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBigQueryExportRequest(ref request, ref callSettings);
+            return _callUpdateBigQueryExport.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
+        /// given level all exports under that level are also returned e.g. if
+        /// requesting BigQuery exports under a folder, then all BigQuery exports
+        /// immediately under the folder plus the ones created under the projects
+        /// within the folder are returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BigQueryExport"/> resources.</returns>
+        public override gax::PagedEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExports(ListBigQueryExportsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBigQueryExportsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListBigQueryExportsRequest, ListBigQueryExportsResponse, BigQueryExport>(_callListBigQueryExports, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
+        /// given level all exports under that level are also returned e.g. if
+        /// requesting BigQuery exports under a folder, then all BigQuery exports
+        /// immediately under the folder plus the ones created under the projects
+        /// within the folder are returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BigQueryExport"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListBigQueryExportsResponse, BigQueryExport> ListBigQueryExportsAsync(ListBigQueryExportsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBigQueryExportsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBigQueryExportsRequest, ListBigQueryExportsResponse, BigQueryExport>(_callListBigQueryExports, request, callSettings);
+        }
     }
 
     public partial class GroupAssetsRequest : gaxgrpc::IPageRequest
@@ -6304,6 +7477,10 @@ namespace Google.Cloud.SecurityCenter.V1
     }
 
     public partial class ListSourcesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListBigQueryExportsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -6359,6 +7536,14 @@ namespace Google.Cloud.SecurityCenter.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Source> GetEnumerator() => Sources.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListBigQueryExportsResponse : gaxgrpc::IPageResponse<BigQueryExport>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<BigQueryExport> GetEnumerator() => BigQueryExports.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

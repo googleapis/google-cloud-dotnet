@@ -90,6 +90,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest> __Marshaller_google_cloud_securitycenter_v1_DeleteNotificationConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GetBigQueryExportRequest> __Marshaller_google_cloud_securitycenter_v1_GetBigQueryExportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.GetBigQueryExportRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.BigQueryExport> __Marshaller_google_cloud_securitycenter_v1_BigQueryExport = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.BigQueryExport.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.Policy.Parser));
@@ -161,6 +165,16 @@ namespace Google.Cloud.SecurityCenter.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateSecurityMarksRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateSecurityMarksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.UpdateSecurityMarksRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.SecurityMarks> __Marshaller_google_cloud_securitycenter_v1_SecurityMarks = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.SecurityMarks.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.CreateBigQueryExportRequest> __Marshaller_google_cloud_securitycenter_v1_CreateBigQueryExportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.CreateBigQueryExportRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.DeleteBigQueryExportRequest> __Marshaller_google_cloud_securitycenter_v1_DeleteBigQueryExportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.DeleteBigQueryExportRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateBigQueryExportRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateBigQueryExportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.UpdateBigQueryExportRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsRequest> __Marshaller_google_cloud_securitycenter_v1_ListBigQueryExportsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse> __Marshaller_google_cloud_securitycenter_v1_ListBigQueryExportsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.BulkMuteFindingsRequest, global::Google.LongRunning.Operation> __Method_BulkMuteFindings = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.BulkMuteFindingsRequest, global::Google.LongRunning.Operation>(
@@ -217,6 +231,14 @@ namespace Google.Cloud.SecurityCenter.V1 {
         "DeleteNotificationConfig",
         __Marshaller_google_cloud_securitycenter_v1_DeleteNotificationConfigRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetBigQueryExportRequest, global::Google.Cloud.SecurityCenter.V1.BigQueryExport> __Method_GetBigQueryExport = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetBigQueryExportRequest, global::Google.Cloud.SecurityCenter.V1.BigQueryExport>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetBigQueryExport",
+        __Marshaller_google_cloud_securitycenter_v1_GetBigQueryExportRequest,
+        __Marshaller_google_cloud_securitycenter_v1_BigQueryExport);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_GetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
@@ -410,6 +432,38 @@ namespace Google.Cloud.SecurityCenter.V1 {
         __Marshaller_google_cloud_securitycenter_v1_UpdateSecurityMarksRequest,
         __Marshaller_google_cloud_securitycenter_v1_SecurityMarks);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.CreateBigQueryExportRequest, global::Google.Cloud.SecurityCenter.V1.BigQueryExport> __Method_CreateBigQueryExport = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.CreateBigQueryExportRequest, global::Google.Cloud.SecurityCenter.V1.BigQueryExport>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateBigQueryExport",
+        __Marshaller_google_cloud_securitycenter_v1_CreateBigQueryExportRequest,
+        __Marshaller_google_cloud_securitycenter_v1_BigQueryExport);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.DeleteBigQueryExportRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteBigQueryExport = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.DeleteBigQueryExportRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteBigQueryExport",
+        __Marshaller_google_cloud_securitycenter_v1_DeleteBigQueryExportRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateBigQueryExportRequest, global::Google.Cloud.SecurityCenter.V1.BigQueryExport> __Method_UpdateBigQueryExport = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateBigQueryExportRequest, global::Google.Cloud.SecurityCenter.V1.BigQueryExport>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateBigQueryExport",
+        __Marshaller_google_cloud_securitycenter_v1_UpdateBigQueryExportRequest,
+        __Marshaller_google_cloud_securitycenter_v1_BigQueryExport);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsRequest, global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse> __Method_ListBigQueryExports = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsRequest, global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListBigQueryExports",
+        __Marshaller_google_cloud_securitycenter_v1_ListBigQueryExportsRequest,
+        __Marshaller_google_cloud_securitycenter_v1_ListBigQueryExportsResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -503,6 +557,18 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteNotificationConfig(global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a big query export.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.BigQueryExport> GetBigQueryExport(global::Google.Cloud.SecurityCenter.V1.GetBigQueryExportRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -809,6 +875,58 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.SecurityMarks> UpdateSecurityMarks(global::Google.Cloud.SecurityCenter.V1.UpdateSecurityMarksRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a big query export.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.BigQueryExport> CreateBigQueryExport(global::Google.Cloud.SecurityCenter.V1.CreateBigQueryExportRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes an existing big query export.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBigQueryExport(global::Google.Cloud.SecurityCenter.V1.DeleteBigQueryExportRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a BigQuery export.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.BigQueryExport> UpdateBigQueryExport(global::Google.Cloud.SecurityCenter.V1.UpdateBigQueryExportRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
+      /// given level all exports under that level are also returned e.g. if
+      /// requesting BigQuery exports under a folder, then all BigQuery exports
+      /// immediately under the folder plus the ones created under the projects
+      /// within the folder are returned.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse> ListBigQueryExports(global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1189,6 +1307,54 @@ namespace Google.Cloud.SecurityCenter.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteNotificationConfigAsync(global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteNotificationConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets a big query export.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.BigQueryExport GetBigQueryExport(global::Google.Cloud.SecurityCenter.V1.GetBigQueryExportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBigQueryExport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a big query export.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.BigQueryExport GetBigQueryExport(global::Google.Cloud.SecurityCenter.V1.GetBigQueryExportRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetBigQueryExport, null, options, request);
+      }
+      /// <summary>
+      /// Gets a big query export.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.BigQueryExport> GetBigQueryExportAsync(global::Google.Cloud.SecurityCenter.V1.GetBigQueryExportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBigQueryExportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a big query export.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.BigQueryExport> GetBigQueryExportAsync(global::Google.Cloud.SecurityCenter.V1.GetBigQueryExportRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetBigQueryExport, null, options, request);
       }
       /// <summary>
       /// Gets the access control policy on the specified Source.
@@ -2414,6 +2580,214 @@ namespace Google.Cloud.SecurityCenter.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSecurityMarks, null, options, request);
       }
+      /// <summary>
+      /// Creates a big query export.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.BigQueryExport CreateBigQueryExport(global::Google.Cloud.SecurityCenter.V1.CreateBigQueryExportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBigQueryExport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a big query export.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.BigQueryExport CreateBigQueryExport(global::Google.Cloud.SecurityCenter.V1.CreateBigQueryExportRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateBigQueryExport, null, options, request);
+      }
+      /// <summary>
+      /// Creates a big query export.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.BigQueryExport> CreateBigQueryExportAsync(global::Google.Cloud.SecurityCenter.V1.CreateBigQueryExportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBigQueryExportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a big query export.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.BigQueryExport> CreateBigQueryExportAsync(global::Google.Cloud.SecurityCenter.V1.CreateBigQueryExportRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateBigQueryExport, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an existing big query export.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteBigQueryExport(global::Google.Cloud.SecurityCenter.V1.DeleteBigQueryExportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBigQueryExport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an existing big query export.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteBigQueryExport(global::Google.Cloud.SecurityCenter.V1.DeleteBigQueryExportRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteBigQueryExport, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an existing big query export.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBigQueryExportAsync(global::Google.Cloud.SecurityCenter.V1.DeleteBigQueryExportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBigQueryExportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an existing big query export.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBigQueryExportAsync(global::Google.Cloud.SecurityCenter.V1.DeleteBigQueryExportRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteBigQueryExport, null, options, request);
+      }
+      /// <summary>
+      /// Updates a BigQuery export.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.BigQueryExport UpdateBigQueryExport(global::Google.Cloud.SecurityCenter.V1.UpdateBigQueryExportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBigQueryExport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a BigQuery export.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.BigQueryExport UpdateBigQueryExport(global::Google.Cloud.SecurityCenter.V1.UpdateBigQueryExportRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateBigQueryExport, null, options, request);
+      }
+      /// <summary>
+      /// Updates a BigQuery export.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.BigQueryExport> UpdateBigQueryExportAsync(global::Google.Cloud.SecurityCenter.V1.UpdateBigQueryExportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBigQueryExportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a BigQuery export.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.BigQueryExport> UpdateBigQueryExportAsync(global::Google.Cloud.SecurityCenter.V1.UpdateBigQueryExportRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateBigQueryExport, null, options, request);
+      }
+      /// <summary>
+      /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
+      /// given level all exports under that level are also returned e.g. if
+      /// requesting BigQuery exports under a folder, then all BigQuery exports
+      /// immediately under the folder plus the ones created under the projects
+      /// within the folder are returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse ListBigQueryExports(global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBigQueryExports(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
+      /// given level all exports under that level are also returned e.g. if
+      /// requesting BigQuery exports under a folder, then all BigQuery exports
+      /// immediately under the folder plus the ones created under the projects
+      /// within the folder are returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse ListBigQueryExports(global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListBigQueryExports, null, options, request);
+      }
+      /// <summary>
+      /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
+      /// given level all exports under that level are also returned e.g. if
+      /// requesting BigQuery exports under a folder, then all BigQuery exports
+      /// immediately under the folder plus the ones created under the projects
+      /// within the folder are returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse> ListBigQueryExportsAsync(global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBigQueryExportsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists BigQuery exports. Note that when requesting BigQuery exports at a
+      /// given level all exports under that level are also returned e.g. if
+      /// requesting BigQuery exports under a folder, then all BigQuery exports
+      /// immediately under the folder plus the ones created under the projects
+      /// within the folder are returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse> ListBigQueryExportsAsync(global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListBigQueryExports, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override SecurityCenterClient NewInstance(ClientBaseConfiguration configuration)
@@ -2435,6 +2809,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
           .AddMethod(__Method_CreateNotificationConfig, serviceImpl.CreateNotificationConfig)
           .AddMethod(__Method_DeleteMuteConfig, serviceImpl.DeleteMuteConfig)
           .AddMethod(__Method_DeleteNotificationConfig, serviceImpl.DeleteNotificationConfig)
+          .AddMethod(__Method_GetBigQueryExport, serviceImpl.GetBigQueryExport)
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
           .AddMethod(__Method_GetMuteConfig, serviceImpl.GetMuteConfig)
           .AddMethod(__Method_GetNotificationConfig, serviceImpl.GetNotificationConfig)
@@ -2458,7 +2833,11 @@ namespace Google.Cloud.SecurityCenter.V1 {
           .AddMethod(__Method_UpdateNotificationConfig, serviceImpl.UpdateNotificationConfig)
           .AddMethod(__Method_UpdateOrganizationSettings, serviceImpl.UpdateOrganizationSettings)
           .AddMethod(__Method_UpdateSource, serviceImpl.UpdateSource)
-          .AddMethod(__Method_UpdateSecurityMarks, serviceImpl.UpdateSecurityMarks).Build();
+          .AddMethod(__Method_UpdateSecurityMarks, serviceImpl.UpdateSecurityMarks)
+          .AddMethod(__Method_CreateBigQueryExport, serviceImpl.CreateBigQueryExport)
+          .AddMethod(__Method_DeleteBigQueryExport, serviceImpl.DeleteBigQueryExport)
+          .AddMethod(__Method_UpdateBigQueryExport, serviceImpl.UpdateBigQueryExport)
+          .AddMethod(__Method_ListBigQueryExports, serviceImpl.ListBigQueryExports).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -2475,6 +2854,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       serviceBinder.AddMethod(__Method_CreateNotificationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.CreateNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig>(serviceImpl.CreateNotificationConfig));
       serviceBinder.AddMethod(__Method_DeleteMuteConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.DeleteMuteConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteMuteConfig));
       serviceBinder.AddMethod(__Method_DeleteNotificationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteNotificationConfig));
+      serviceBinder.AddMethod(__Method_GetBigQueryExport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetBigQueryExportRequest, global::Google.Cloud.SecurityCenter.V1.BigQueryExport>(serviceImpl.GetBigQueryExport));
       serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
       serviceBinder.AddMethod(__Method_GetMuteConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetMuteConfigRequest, global::Google.Cloud.SecurityCenter.V1.MuteConfig>(serviceImpl.GetMuteConfig));
       serviceBinder.AddMethod(__Method_GetNotificationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig>(serviceImpl.GetNotificationConfig));
@@ -2499,6 +2879,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
       serviceBinder.AddMethod(__Method_UpdateOrganizationSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateOrganizationSettingsRequest, global::Google.Cloud.SecurityCenter.V1.OrganizationSettings>(serviceImpl.UpdateOrganizationSettings));
       serviceBinder.AddMethod(__Method_UpdateSource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source>(serviceImpl.UpdateSource));
       serviceBinder.AddMethod(__Method_UpdateSecurityMarks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateSecurityMarksRequest, global::Google.Cloud.SecurityCenter.V1.SecurityMarks>(serviceImpl.UpdateSecurityMarks));
+      serviceBinder.AddMethod(__Method_CreateBigQueryExport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.CreateBigQueryExportRequest, global::Google.Cloud.SecurityCenter.V1.BigQueryExport>(serviceImpl.CreateBigQueryExport));
+      serviceBinder.AddMethod(__Method_DeleteBigQueryExport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.DeleteBigQueryExportRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteBigQueryExport));
+      serviceBinder.AddMethod(__Method_UpdateBigQueryExport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateBigQueryExportRequest, global::Google.Cloud.SecurityCenter.V1.BigQueryExport>(serviceImpl.UpdateBigQueryExport));
+      serviceBinder.AddMethod(__Method_ListBigQueryExports, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsRequest, global::Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse>(serviceImpl.ListBigQueryExports));
     }
 
   }

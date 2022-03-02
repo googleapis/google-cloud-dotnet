@@ -1014,6 +1014,93 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetBigQueryExport</summary>
+        public void GetBigQueryExportRequestObject()
+        {
+            // Snippet: GetBigQueryExport(GetBigQueryExportRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            GetBigQueryExportRequest request = new GetBigQueryExportRequest
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+            };
+            // Make the request
+            BigQueryExport response = securityCenterClient.GetBigQueryExport(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBigQueryExportAsync</summary>
+        public async Task GetBigQueryExportRequestObjectAsync()
+        {
+            // Snippet: GetBigQueryExportAsync(GetBigQueryExportRequest, CallSettings)
+            // Additional: GetBigQueryExportAsync(GetBigQueryExportRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            GetBigQueryExportRequest request = new GetBigQueryExportRequest
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+            };
+            // Make the request
+            BigQueryExport response = await securityCenterClient.GetBigQueryExportAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBigQueryExport</summary>
+        public void GetBigQueryExport()
+        {
+            // Snippet: GetBigQueryExport(string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/bigQueryExports/[EXPORT]";
+            // Make the request
+            BigQueryExport response = securityCenterClient.GetBigQueryExport(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBigQueryExportAsync</summary>
+        public async Task GetBigQueryExportAsync()
+        {
+            // Snippet: GetBigQueryExportAsync(string, CallSettings)
+            // Additional: GetBigQueryExportAsync(string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/bigQueryExports/[EXPORT]";
+            // Make the request
+            BigQueryExport response = await securityCenterClient.GetBigQueryExportAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBigQueryExport</summary>
+        public void GetBigQueryExportResourceNames()
+        {
+            // Snippet: GetBigQueryExport(BigQueryExportName, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            BigQueryExportName name = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]");
+            // Make the request
+            BigQueryExport response = securityCenterClient.GetBigQueryExport(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBigQueryExportAsync</summary>
+        public async Task GetBigQueryExportResourceNamesAsync()
+        {
+            // Snippet: GetBigQueryExportAsync(BigQueryExportName, CallSettings)
+            // Additional: GetBigQueryExportAsync(BigQueryExportName, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            BigQueryExportName name = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]");
+            // Make the request
+            BigQueryExport response = await securityCenterClient.GetBigQueryExportAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetIamPolicy</summary>
         public void GetIamPolicyRequestObject()
         {
@@ -4270,6 +4357,774 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             SecurityMarks securityMarks = new SecurityMarks();
             // Make the request
             SecurityMarks response = await securityCenterClient.UpdateSecurityMarksAsync(securityMarks);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBigQueryExport</summary>
+        public void CreateBigQueryExportRequestObject()
+        {
+            // Snippet: CreateBigQueryExport(CreateBigQueryExportRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            CreateBigQueryExportRequest request = new CreateBigQueryExportRequest
+            {
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
+                BigQueryExport = new BigQueryExport(),
+                BigQueryExportId = "",
+            };
+            // Make the request
+            BigQueryExport response = securityCenterClient.CreateBigQueryExport(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBigQueryExportAsync</summary>
+        public async Task CreateBigQueryExportRequestObjectAsync()
+        {
+            // Snippet: CreateBigQueryExportAsync(CreateBigQueryExportRequest, CallSettings)
+            // Additional: CreateBigQueryExportAsync(CreateBigQueryExportRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateBigQueryExportRequest request = new CreateBigQueryExportRequest
+            {
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
+                BigQueryExport = new BigQueryExport(),
+                BigQueryExportId = "",
+            };
+            // Make the request
+            BigQueryExport response = await securityCenterClient.CreateBigQueryExportAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBigQueryExport</summary>
+        public void CreateBigQueryExport()
+        {
+            // Snippet: CreateBigQueryExport(string, BigQueryExport, string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]";
+            BigQueryExport bigQueryExport = new BigQueryExport();
+            string bigQueryExportId = "";
+            // Make the request
+            BigQueryExport response = securityCenterClient.CreateBigQueryExport(parent, bigQueryExport, bigQueryExportId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBigQueryExportAsync</summary>
+        public async Task CreateBigQueryExportAsync()
+        {
+            // Snippet: CreateBigQueryExportAsync(string, BigQueryExport, string, CallSettings)
+            // Additional: CreateBigQueryExportAsync(string, BigQueryExport, string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]";
+            BigQueryExport bigQueryExport = new BigQueryExport();
+            string bigQueryExportId = "";
+            // Make the request
+            BigQueryExport response = await securityCenterClient.CreateBigQueryExportAsync(parent, bigQueryExport, bigQueryExportId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBigQueryExport</summary>
+        public void CreateBigQueryExportResourceNames1()
+        {
+            // Snippet: CreateBigQueryExport(OrganizationName, BigQueryExport, string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            BigQueryExport bigQueryExport = new BigQueryExport();
+            string bigQueryExportId = "";
+            // Make the request
+            BigQueryExport response = securityCenterClient.CreateBigQueryExport(parent, bigQueryExport, bigQueryExportId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBigQueryExportAsync</summary>
+        public async Task CreateBigQueryExportResourceNames1Async()
+        {
+            // Snippet: CreateBigQueryExportAsync(OrganizationName, BigQueryExport, string, CallSettings)
+            // Additional: CreateBigQueryExportAsync(OrganizationName, BigQueryExport, string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            BigQueryExport bigQueryExport = new BigQueryExport();
+            string bigQueryExportId = "";
+            // Make the request
+            BigQueryExport response = await securityCenterClient.CreateBigQueryExportAsync(parent, bigQueryExport, bigQueryExportId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBigQueryExport</summary>
+        public void CreateBigQueryExportResourceNames2()
+        {
+            // Snippet: CreateBigQueryExport(FolderName, BigQueryExport, string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            FolderName parent = FolderName.FromFolder("[FOLDER]");
+            BigQueryExport bigQueryExport = new BigQueryExport();
+            string bigQueryExportId = "";
+            // Make the request
+            BigQueryExport response = securityCenterClient.CreateBigQueryExport(parent, bigQueryExport, bigQueryExportId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBigQueryExportAsync</summary>
+        public async Task CreateBigQueryExportResourceNames2Async()
+        {
+            // Snippet: CreateBigQueryExportAsync(FolderName, BigQueryExport, string, CallSettings)
+            // Additional: CreateBigQueryExportAsync(FolderName, BigQueryExport, string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            FolderName parent = FolderName.FromFolder("[FOLDER]");
+            BigQueryExport bigQueryExport = new BigQueryExport();
+            string bigQueryExportId = "";
+            // Make the request
+            BigQueryExport response = await securityCenterClient.CreateBigQueryExportAsync(parent, bigQueryExport, bigQueryExportId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBigQueryExport</summary>
+        public void CreateBigQueryExportResourceNames3()
+        {
+            // Snippet: CreateBigQueryExport(ProjectName, BigQueryExport, string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            BigQueryExport bigQueryExport = new BigQueryExport();
+            string bigQueryExportId = "";
+            // Make the request
+            BigQueryExport response = securityCenterClient.CreateBigQueryExport(parent, bigQueryExport, bigQueryExportId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBigQueryExportAsync</summary>
+        public async Task CreateBigQueryExportResourceNames3Async()
+        {
+            // Snippet: CreateBigQueryExportAsync(ProjectName, BigQueryExport, string, CallSettings)
+            // Additional: CreateBigQueryExportAsync(ProjectName, BigQueryExport, string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            BigQueryExport bigQueryExport = new BigQueryExport();
+            string bigQueryExportId = "";
+            // Make the request
+            BigQueryExport response = await securityCenterClient.CreateBigQueryExportAsync(parent, bigQueryExport, bigQueryExportId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBigQueryExport</summary>
+        public void DeleteBigQueryExportRequestObject()
+        {
+            // Snippet: DeleteBigQueryExport(DeleteBigQueryExportRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            DeleteBigQueryExportRequest request = new DeleteBigQueryExportRequest
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+            };
+            // Make the request
+            securityCenterClient.DeleteBigQueryExport(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBigQueryExportAsync</summary>
+        public async Task DeleteBigQueryExportRequestObjectAsync()
+        {
+            // Snippet: DeleteBigQueryExportAsync(DeleteBigQueryExportRequest, CallSettings)
+            // Additional: DeleteBigQueryExportAsync(DeleteBigQueryExportRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteBigQueryExportRequest request = new DeleteBigQueryExportRequest
+            {
+                BigQueryExportName = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]"),
+            };
+            // Make the request
+            await securityCenterClient.DeleteBigQueryExportAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBigQueryExport</summary>
+        public void DeleteBigQueryExport()
+        {
+            // Snippet: DeleteBigQueryExport(string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/bigQueryExports/[EXPORT]";
+            // Make the request
+            securityCenterClient.DeleteBigQueryExport(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBigQueryExportAsync</summary>
+        public async Task DeleteBigQueryExportAsync()
+        {
+            // Snippet: DeleteBigQueryExportAsync(string, CallSettings)
+            // Additional: DeleteBigQueryExportAsync(string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/bigQueryExports/[EXPORT]";
+            // Make the request
+            await securityCenterClient.DeleteBigQueryExportAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBigQueryExport</summary>
+        public void DeleteBigQueryExportResourceNames()
+        {
+            // Snippet: DeleteBigQueryExport(BigQueryExportName, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            BigQueryExportName name = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]");
+            // Make the request
+            securityCenterClient.DeleteBigQueryExport(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBigQueryExportAsync</summary>
+        public async Task DeleteBigQueryExportResourceNamesAsync()
+        {
+            // Snippet: DeleteBigQueryExportAsync(BigQueryExportName, CallSettings)
+            // Additional: DeleteBigQueryExportAsync(BigQueryExportName, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            BigQueryExportName name = BigQueryExportName.FromOrganizationExport("[ORGANIZATION]", "[EXPORT]");
+            // Make the request
+            await securityCenterClient.DeleteBigQueryExportAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBigQueryExport</summary>
+        public void UpdateBigQueryExportRequestObject()
+        {
+            // Snippet: UpdateBigQueryExport(UpdateBigQueryExportRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            UpdateBigQueryExportRequest request = new UpdateBigQueryExportRequest
+            {
+                BigQueryExport = new BigQueryExport(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            BigQueryExport response = securityCenterClient.UpdateBigQueryExport(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBigQueryExportAsync</summary>
+        public async Task UpdateBigQueryExportRequestObjectAsync()
+        {
+            // Snippet: UpdateBigQueryExportAsync(UpdateBigQueryExportRequest, CallSettings)
+            // Additional: UpdateBigQueryExportAsync(UpdateBigQueryExportRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateBigQueryExportRequest request = new UpdateBigQueryExportRequest
+            {
+                BigQueryExport = new BigQueryExport(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            BigQueryExport response = await securityCenterClient.UpdateBigQueryExportAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBigQueryExport</summary>
+        public void UpdateBigQueryExport()
+        {
+            // Snippet: UpdateBigQueryExport(BigQueryExport, FieldMask, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            BigQueryExport bigQueryExport = new BigQueryExport();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            BigQueryExport response = securityCenterClient.UpdateBigQueryExport(bigQueryExport, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBigQueryExportAsync</summary>
+        public async Task UpdateBigQueryExportAsync()
+        {
+            // Snippet: UpdateBigQueryExportAsync(BigQueryExport, FieldMask, CallSettings)
+            // Additional: UpdateBigQueryExportAsync(BigQueryExport, FieldMask, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            BigQueryExport bigQueryExport = new BigQueryExport();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            BigQueryExport response = await securityCenterClient.UpdateBigQueryExportAsync(bigQueryExport, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBigQueryExports</summary>
+        public void ListBigQueryExportsRequestObject()
+        {
+            // Snippet: ListBigQueryExports(ListBigQueryExportsRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ListBigQueryExportsRequest request = new ListBigQueryExportsRequest
+            {
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListBigQueryExportsResponse, BigQueryExport> response = securityCenterClient.ListBigQueryExports(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BigQueryExport item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBigQueryExportsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BigQueryExport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BigQueryExport> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BigQueryExport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBigQueryExportsAsync</summary>
+        public async Task ListBigQueryExportsRequestObjectAsync()
+        {
+            // Snippet: ListBigQueryExportsAsync(ListBigQueryExportsRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ListBigQueryExportsRequest request = new ListBigQueryExportsRequest
+            {
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListBigQueryExportsResponse, BigQueryExport> response = securityCenterClient.ListBigQueryExportsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BigQueryExport item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBigQueryExportsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BigQueryExport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BigQueryExport> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BigQueryExport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBigQueryExports</summary>
+        public void ListBigQueryExports()
+        {
+            // Snippet: ListBigQueryExports(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]";
+            // Make the request
+            PagedEnumerable<ListBigQueryExportsResponse, BigQueryExport> response = securityCenterClient.ListBigQueryExports(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BigQueryExport item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBigQueryExportsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BigQueryExport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BigQueryExport> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BigQueryExport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBigQueryExportsAsync</summary>
+        public async Task ListBigQueryExportsAsync()
+        {
+            // Snippet: ListBigQueryExportsAsync(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListBigQueryExportsResponse, BigQueryExport> response = securityCenterClient.ListBigQueryExportsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BigQueryExport item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBigQueryExportsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BigQueryExport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BigQueryExport> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BigQueryExport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBigQueryExports</summary>
+        public void ListBigQueryExportsResourceNames1()
+        {
+            // Snippet: ListBigQueryExports(OrganizationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedEnumerable<ListBigQueryExportsResponse, BigQueryExport> response = securityCenterClient.ListBigQueryExports(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BigQueryExport item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBigQueryExportsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BigQueryExport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BigQueryExport> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BigQueryExport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBigQueryExportsAsync</summary>
+        public async Task ListBigQueryExportsResourceNames1Async()
+        {
+            // Snippet: ListBigQueryExportsAsync(OrganizationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListBigQueryExportsResponse, BigQueryExport> response = securityCenterClient.ListBigQueryExportsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BigQueryExport item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBigQueryExportsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BigQueryExport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BigQueryExport> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BigQueryExport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBigQueryExports</summary>
+        public void ListBigQueryExportsResourceNames2()
+        {
+            // Snippet: ListBigQueryExports(FolderName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            FolderName parent = FolderName.FromFolder("[FOLDER]");
+            // Make the request
+            PagedEnumerable<ListBigQueryExportsResponse, BigQueryExport> response = securityCenterClient.ListBigQueryExports(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BigQueryExport item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBigQueryExportsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BigQueryExport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BigQueryExport> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BigQueryExport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBigQueryExportsAsync</summary>
+        public async Task ListBigQueryExportsResourceNames2Async()
+        {
+            // Snippet: ListBigQueryExportsAsync(FolderName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            FolderName parent = FolderName.FromFolder("[FOLDER]");
+            // Make the request
+            PagedAsyncEnumerable<ListBigQueryExportsResponse, BigQueryExport> response = securityCenterClient.ListBigQueryExportsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BigQueryExport item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBigQueryExportsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BigQueryExport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BigQueryExport> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BigQueryExport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBigQueryExports</summary>
+        public void ListBigQueryExportsResourceNames3()
+        {
+            // Snippet: ListBigQueryExports(ProjectName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedEnumerable<ListBigQueryExportsResponse, BigQueryExport> response = securityCenterClient.ListBigQueryExports(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BigQueryExport item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBigQueryExportsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BigQueryExport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BigQueryExport> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BigQueryExport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBigQueryExportsAsync</summary>
+        public async Task ListBigQueryExportsResourceNames3Async()
+        {
+            // Snippet: ListBigQueryExportsAsync(ProjectName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedAsyncEnumerable<ListBigQueryExportsResponse, BigQueryExport> response = securityCenterClient.ListBigQueryExportsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BigQueryExport item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBigQueryExportsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BigQueryExport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BigQueryExport> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BigQueryExport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
     }
