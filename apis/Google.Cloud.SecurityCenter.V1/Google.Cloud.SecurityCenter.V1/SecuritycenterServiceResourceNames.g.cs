@@ -148,6 +148,18 @@ namespace Google.Cloud.SecurityCenter.V1
         }
     }
 
+    public partial class GetBigQueryExportRequest
+    {
+        /// <summary>
+        /// <see cref="gcsv::BigQueryExportName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcsv::BigQueryExportName BigQueryExportName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::BigQueryExportName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetMuteConfigRequest
     {
         /// <summary>
@@ -493,6 +505,134 @@ namespace Google.Cloud.SecurityCenter.V1
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateBigQueryExportRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::OrganizationName ParentAsOrganizationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::FolderName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::FolderName ParentAsFolderName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::FolderName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (gagr::OrganizationName.TryParse(Parent, out gagr::OrganizationName organization))
+                {
+                    return organization;
+                }
+                if (gagr::FolderName.TryParse(Parent, out gagr::FolderName folder))
+                {
+                    return folder;
+                }
+                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
+                {
+                    return project;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListBigQueryExportsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::OrganizationName ParentAsOrganizationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::FolderName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::FolderName ParentAsFolderName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::FolderName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (gagr::OrganizationName.TryParse(Parent, out gagr::OrganizationName organization))
+                {
+                    return organization;
+                }
+                if (gagr::FolderName.TryParse(Parent, out gagr::FolderName folder))
+                {
+                    return folder;
+                }
+                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
+                {
+                    return project;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteBigQueryExportRequest
+    {
+        /// <summary>
+        /// <see cref="gcsv::BigQueryExportName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcsv::BigQueryExportName BigQueryExportName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::BigQueryExportName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 }

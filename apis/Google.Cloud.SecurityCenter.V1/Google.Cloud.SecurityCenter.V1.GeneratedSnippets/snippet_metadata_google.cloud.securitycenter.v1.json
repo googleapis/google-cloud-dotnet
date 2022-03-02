@@ -1498,6 +1498,161 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_GetBigQueryExport_sync",
+      "title": "GetBigQueryExportRequestObject",
+      "description": "Snippet for GetBigQueryExport",
+      "file": "SecurityCenterClient.GetBigQueryExportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBigQueryExport",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.GetBigQueryExport",
+        "resultType": "Google.Cloud.SecurityCenter.V1.BigQueryExport",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "GetBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.GetBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_GetBigQueryExport_async",
+      "title": "GetBigQueryExportRequestObjectAsync",
+      "description": "Snippet for GetBigQueryExportAsync",
+      "file": "SecurityCenterClient.GetBigQueryExportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBigQueryExportAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.GetBigQueryExportAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.BigQueryExport>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "GetBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.GetBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_GetBigQueryExport_sync_flattened",
+      "title": "GetBigQueryExport",
+      "description": "Snippet for GetBigQueryExport",
+      "file": "SecurityCenterClient.GetBigQueryExportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBigQueryExport",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.GetBigQueryExport",
+        "resultType": "Google.Cloud.SecurityCenter.V1.BigQueryExport",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "GetBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.GetBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_GetBigQueryExport_async_flattened",
+      "title": "GetBigQueryExportAsync",
+      "description": "Snippet for GetBigQueryExportAsync",
+      "file": "SecurityCenterClient.GetBigQueryExportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBigQueryExportAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.GetBigQueryExportAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.BigQueryExport>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "GetBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.GetBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_GetBigQueryExport_sync_flattened_resourceNames",
+      "title": "GetBigQueryExportResourceNames",
+      "description": "Snippet for GetBigQueryExport",
+      "file": "SecurityCenterClient.GetBigQueryExportResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBigQueryExport",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.GetBigQueryExport",
+        "resultType": "Google.Cloud.SecurityCenter.V1.BigQueryExport",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "GetBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.GetBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_GetBigQueryExport_async_flattened_resourceNames",
+      "title": "GetBigQueryExportResourceNamesAsync",
+      "description": "Snippet for GetBigQueryExportAsync",
+      "file": "SecurityCenterClient.GetBigQueryExportResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBigQueryExportAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.GetBigQueryExportAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.BigQueryExport>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "GetBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.GetBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "securitycenter_v1_generated_SecurityCenter_GetIamPolicy_sync",
       "title": "GetIamPolicyRequestObject",
       "description": "Snippet for GetIamPolicy",
@@ -4801,6 +4956,776 @@
         "method": {
           "shortName": "UpdateSecurityMarks",
           "fullName": "google.cloud.securitycenter.v1.SecurityCenter.UpdateSecurityMarks",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateBigQueryExport_sync",
+      "title": "CreateBigQueryExportRequestObject",
+      "description": "Snippet for CreateBigQueryExport",
+      "file": "SecurityCenterClient.CreateBigQueryExportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBigQueryExport",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateBigQueryExport",
+        "resultType": "Google.Cloud.SecurityCenter.V1.BigQueryExport",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateBigQueryExport_async",
+      "title": "CreateBigQueryExportRequestObjectAsync",
+      "description": "Snippet for CreateBigQueryExportAsync",
+      "file": "SecurityCenterClient.CreateBigQueryExportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBigQueryExportAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateBigQueryExportAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.BigQueryExport>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateBigQueryExport_sync_flattened",
+      "title": "CreateBigQueryExport",
+      "description": "Snippet for CreateBigQueryExport",
+      "file": "SecurityCenterClient.CreateBigQueryExportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBigQueryExport",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateBigQueryExport",
+        "resultType": "Google.Cloud.SecurityCenter.V1.BigQueryExport",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateBigQueryExport_async_flattened",
+      "title": "CreateBigQueryExportAsync",
+      "description": "Snippet for CreateBigQueryExportAsync",
+      "file": "SecurityCenterClient.CreateBigQueryExportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBigQueryExportAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateBigQueryExportAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.BigQueryExport>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateBigQueryExport_sync_flattened_resourceNames1",
+      "title": "CreateBigQueryExportResourceNames1",
+      "description": "Snippet for CreateBigQueryExport",
+      "file": "SecurityCenterClient.CreateBigQueryExportResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBigQueryExport",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateBigQueryExport",
+        "resultType": "Google.Cloud.SecurityCenter.V1.BigQueryExport",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateBigQueryExport_async_flattened_resourceNames1",
+      "title": "CreateBigQueryExportResourceNames1Async",
+      "description": "Snippet for CreateBigQueryExportAsync",
+      "file": "SecurityCenterClient.CreateBigQueryExportResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBigQueryExportAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateBigQueryExportAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.BigQueryExport>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateBigQueryExport_sync_flattened_resourceNames2",
+      "title": "CreateBigQueryExportResourceNames2",
+      "description": "Snippet for CreateBigQueryExport",
+      "file": "SecurityCenterClient.CreateBigQueryExportResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBigQueryExport",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateBigQueryExport",
+        "resultType": "Google.Cloud.SecurityCenter.V1.BigQueryExport",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateBigQueryExport_async_flattened_resourceNames2",
+      "title": "CreateBigQueryExportResourceNames2Async",
+      "description": "Snippet for CreateBigQueryExportAsync",
+      "file": "SecurityCenterClient.CreateBigQueryExportResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBigQueryExportAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateBigQueryExportAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.BigQueryExport>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateBigQueryExport_sync_flattened_resourceNames3",
+      "title": "CreateBigQueryExportResourceNames3",
+      "description": "Snippet for CreateBigQueryExport",
+      "file": "SecurityCenterClient.CreateBigQueryExportResourceNames3Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBigQueryExport",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateBigQueryExport",
+        "resultType": "Google.Cloud.SecurityCenter.V1.BigQueryExport",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateBigQueryExport_async_flattened_resourceNames3",
+      "title": "CreateBigQueryExportResourceNames3Async",
+      "description": "Snippet for CreateBigQueryExportAsync",
+      "file": "SecurityCenterClient.CreateBigQueryExportResourceNames3AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBigQueryExportAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateBigQueryExportAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.BigQueryExport>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_DeleteBigQueryExport_sync",
+      "title": "DeleteBigQueryExportRequestObject",
+      "description": "Snippet for DeleteBigQueryExport",
+      "file": "SecurityCenterClient.DeleteBigQueryExportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBigQueryExport",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.DeleteBigQueryExport",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "DeleteBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.DeleteBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_DeleteBigQueryExport_async",
+      "title": "DeleteBigQueryExportRequestObjectAsync",
+      "description": "Snippet for DeleteBigQueryExportAsync",
+      "file": "SecurityCenterClient.DeleteBigQueryExportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBigQueryExportAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.DeleteBigQueryExportAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "DeleteBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.DeleteBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_DeleteBigQueryExport_sync_flattened",
+      "title": "DeleteBigQueryExport",
+      "description": "Snippet for DeleteBigQueryExport",
+      "file": "SecurityCenterClient.DeleteBigQueryExportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBigQueryExport",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.DeleteBigQueryExport",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "DeleteBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.DeleteBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_DeleteBigQueryExport_async_flattened",
+      "title": "DeleteBigQueryExportAsync",
+      "description": "Snippet for DeleteBigQueryExportAsync",
+      "file": "SecurityCenterClient.DeleteBigQueryExportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBigQueryExportAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.DeleteBigQueryExportAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "DeleteBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.DeleteBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_DeleteBigQueryExport_sync_flattened_resourceNames",
+      "title": "DeleteBigQueryExportResourceNames",
+      "description": "Snippet for DeleteBigQueryExport",
+      "file": "SecurityCenterClient.DeleteBigQueryExportResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBigQueryExport",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.DeleteBigQueryExport",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "DeleteBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.DeleteBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_DeleteBigQueryExport_async_flattened_resourceNames",
+      "title": "DeleteBigQueryExportResourceNamesAsync",
+      "description": "Snippet for DeleteBigQueryExportAsync",
+      "file": "SecurityCenterClient.DeleteBigQueryExportResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBigQueryExportAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.DeleteBigQueryExportAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "DeleteBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.DeleteBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_UpdateBigQueryExport_sync",
+      "title": "UpdateBigQueryExportRequestObject",
+      "description": "Snippet for UpdateBigQueryExport",
+      "file": "SecurityCenterClient.UpdateBigQueryExportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBigQueryExport",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.UpdateBigQueryExport",
+        "resultType": "Google.Cloud.SecurityCenter.V1.BigQueryExport",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "UpdateBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.UpdateBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_UpdateBigQueryExport_async",
+      "title": "UpdateBigQueryExportRequestObjectAsync",
+      "description": "Snippet for UpdateBigQueryExportAsync",
+      "file": "SecurityCenterClient.UpdateBigQueryExportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBigQueryExportAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.UpdateBigQueryExportAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.BigQueryExport>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "UpdateBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.UpdateBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_UpdateBigQueryExport_sync_flattened",
+      "title": "UpdateBigQueryExport",
+      "description": "Snippet for UpdateBigQueryExport",
+      "file": "SecurityCenterClient.UpdateBigQueryExportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBigQueryExport",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.UpdateBigQueryExport",
+        "resultType": "Google.Cloud.SecurityCenter.V1.BigQueryExport",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "UpdateBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.UpdateBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_UpdateBigQueryExport_async_flattened",
+      "title": "UpdateBigQueryExportAsync",
+      "description": "Snippet for UpdateBigQueryExportAsync",
+      "file": "SecurityCenterClient.UpdateBigQueryExportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBigQueryExportAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.UpdateBigQueryExportAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.BigQueryExport>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "UpdateBigQueryExport",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.UpdateBigQueryExport",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListBigQueryExports_sync",
+      "title": "ListBigQueryExportsRequestObject",
+      "description": "Snippet for ListBigQueryExports",
+      "file": "SecurityCenterClient.ListBigQueryExportsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBigQueryExports",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListBigQueryExports",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse, Google.Cloud.SecurityCenter.V1.BigQueryExport>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListBigQueryExports",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListBigQueryExports",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListBigQueryExports_async",
+      "title": "ListBigQueryExportsRequestObjectAsync",
+      "description": "Snippet for ListBigQueryExportsAsync",
+      "file": "SecurityCenterClient.ListBigQueryExportsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBigQueryExportsAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListBigQueryExportsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse, Google.Cloud.SecurityCenter.V1.BigQueryExport>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListBigQueryExports",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListBigQueryExports",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListBigQueryExports_sync_flattened",
+      "title": "ListBigQueryExports",
+      "description": "Snippet for ListBigQueryExports",
+      "file": "SecurityCenterClient.ListBigQueryExportsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBigQueryExports",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListBigQueryExports",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse, Google.Cloud.SecurityCenter.V1.BigQueryExport>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListBigQueryExports",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListBigQueryExports",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListBigQueryExports_async_flattened",
+      "title": "ListBigQueryExportsAsync",
+      "description": "Snippet for ListBigQueryExportsAsync",
+      "file": "SecurityCenterClient.ListBigQueryExportsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBigQueryExportsAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListBigQueryExportsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse, Google.Cloud.SecurityCenter.V1.BigQueryExport>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListBigQueryExports",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListBigQueryExports",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListBigQueryExports_sync_flattened_resourceNames1",
+      "title": "ListBigQueryExportsResourceNames1",
+      "description": "Snippet for ListBigQueryExports",
+      "file": "SecurityCenterClient.ListBigQueryExportsResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBigQueryExports",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListBigQueryExports",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse, Google.Cloud.SecurityCenter.V1.BigQueryExport>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListBigQueryExports",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListBigQueryExports",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListBigQueryExports_async_flattened_resourceNames1",
+      "title": "ListBigQueryExportsResourceNames1Async",
+      "description": "Snippet for ListBigQueryExportsAsync",
+      "file": "SecurityCenterClient.ListBigQueryExportsResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBigQueryExportsAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListBigQueryExportsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse, Google.Cloud.SecurityCenter.V1.BigQueryExport>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListBigQueryExports",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListBigQueryExports",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListBigQueryExports_sync_flattened_resourceNames2",
+      "title": "ListBigQueryExportsResourceNames2",
+      "description": "Snippet for ListBigQueryExports",
+      "file": "SecurityCenterClient.ListBigQueryExportsResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBigQueryExports",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListBigQueryExports",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse, Google.Cloud.SecurityCenter.V1.BigQueryExport>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListBigQueryExports",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListBigQueryExports",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListBigQueryExports_async_flattened_resourceNames2",
+      "title": "ListBigQueryExportsResourceNames2Async",
+      "description": "Snippet for ListBigQueryExportsAsync",
+      "file": "SecurityCenterClient.ListBigQueryExportsResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBigQueryExportsAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListBigQueryExportsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse, Google.Cloud.SecurityCenter.V1.BigQueryExport>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListBigQueryExports",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListBigQueryExports",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListBigQueryExports_sync_flattened_resourceNames3",
+      "title": "ListBigQueryExportsResourceNames3",
+      "description": "Snippet for ListBigQueryExports",
+      "file": "SecurityCenterClient.ListBigQueryExportsResourceNames3Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBigQueryExports",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListBigQueryExports",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse, Google.Cloud.SecurityCenter.V1.BigQueryExport>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListBigQueryExports",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListBigQueryExports",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListBigQueryExports_async_flattened_resourceNames3",
+      "title": "ListBigQueryExportsResourceNames3Async",
+      "description": "Snippet for ListBigQueryExportsAsync",
+      "file": "SecurityCenterClient.ListBigQueryExportsResourceNames3AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBigQueryExportsAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListBigQueryExportsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1.ListBigQueryExportsResponse, Google.Cloud.SecurityCenter.V1.BigQueryExport>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListBigQueryExports",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListBigQueryExports",
           "service": {
             "shortName": "SecurityCenter",
             "fullName": "google.cloud.securitycenter.v1.SecurityCenter"

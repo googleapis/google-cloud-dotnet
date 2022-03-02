@@ -25,20 +25,20 @@ namespace Google.Cloud.SecurityCenter.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Citnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvYWNjZXNzLnByb3Rv",
-            "Eh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEaHGdvb2dsZS9hcGkv",
-            "YW5ub3RhdGlvbnMucHJvdG8ivgEKBkFjY2VzcxIXCg9wcmluY2lwYWxfZW1h",
-            "aWwYASABKAkSEQoJY2FsbGVyX2lwGAIgASgJEkIKDWNhbGxlcl9pcF9nZW8Y",
-            "AyABKAsyKy5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuR2VvbG9j",
-            "YXRpb24SGQoRdXNlcl9hZ2VudF9mYW1pbHkYBCABKAkSFAoMc2VydmljZV9u",
-            "YW1lGAUgASgJEhMKC21ldGhvZF9uYW1lGAYgASgJIiIKC0dlb2xvY2F0aW9u",
-            "EhMKC3JlZ2lvbl9jb2RlGAEgASgJQucBCiJjb20uZ29vZ2xlLmNsb3VkLnNl",
-            "Y3VyaXR5Y2VudGVyLnYxQgtBY2Nlc3NQcm90b1ABWkxnb29nbGUuZ29sYW5n",
-            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3NlY3VyaXR5Y2VudGVy",
-            "L3YxO3NlY3VyaXR5Y2VudGVyqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2Vu",
-            "dGVyLlYxygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYx6gIhR29v",
-            "Z2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYxYgZwcm90bzM="));
+            "Eh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEivgEKBkFjY2VzcxIX",
+            "Cg9wcmluY2lwYWxfZW1haWwYASABKAkSEQoJY2FsbGVyX2lwGAIgASgJEkIK",
+            "DWNhbGxlcl9pcF9nZW8YAyABKAsyKy5nb29nbGUuY2xvdWQuc2VjdXJpdHlj",
+            "ZW50ZXIudjEuR2VvbG9jYXRpb24SGQoRdXNlcl9hZ2VudF9mYW1pbHkYBCAB",
+            "KAkSFAoMc2VydmljZV9uYW1lGAUgASgJEhMKC21ldGhvZF9uYW1lGAYgASgJ",
+            "IiIKC0dlb2xvY2F0aW9uEhMKC3JlZ2lvbl9jb2RlGAEgASgJQucBCiJjb20u",
+            "Z29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxQgtBY2Nlc3NQcm90b1AB",
+            "Wkxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
+            "L3NlY3VyaXR5Y2VudGVyL3YxO3NlY3VyaXR5Y2VudGVyqgIeR29vZ2xlLkNs",
+            "b3VkLlNlY3VyaXR5Q2VudGVyLlYxygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5",
+            "Q2VudGVyXFYx6gIhR29vZ2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Access), global::Google.Cloud.SecurityCenter.V1.Access.Parser, new[]{ "PrincipalEmail", "CallerIp", "CallerIpGeo", "UserAgentFamily", "ServiceName", "MethodName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Geolocation), global::Google.Cloud.SecurityCenter.V1.Geolocation.Parser, new[]{ "RegionCode" }, null, null, null, null)
