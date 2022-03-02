@@ -784,7 +784,8 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// The name of the parent resource whose files will be listed.
+    /// The name of the repository whose files will be listed. For example:
+    /// "projects/p1/locations/us-central1/repositories/repo1
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
