@@ -25,18 +25,18 @@ namespace Google.Cloud.Retail.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cilnb29nbGUvY2xvdWQvcmV0YWlsL3YyL3B1cmdlX2NvbmZpZy5wcm90bxIW",
-            "Z29vZ2xlLmNsb3VkLnJldGFpbC52MhocZ29vZ2xlL2FwaS9hbm5vdGF0aW9u",
-            "cy5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90byIPCg1Q",
-            "dXJnZU1ldGFkYXRhIlEKFlB1cmdlVXNlckV2ZW50c1JlcXVlc3QSEwoGcGFy",
-            "ZW50GAEgASgJQgPgQQISEwoGZmlsdGVyGAIgASgJQgPgQQISDQoFZm9yY2UY",
-            "AyABKAgiNgoXUHVyZ2VVc2VyRXZlbnRzUmVzcG9uc2USGwoTcHVyZ2VkX2V2",
-            "ZW50c19jb3VudBgBIAEoA0LFAQoaY29tLmdvb2dsZS5jbG91ZC5yZXRhaWwu",
-            "djJCEFB1cmdlQ29uZmlnUHJvdG9QAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
-            "cHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9yZXRhaWwvdjI7cmV0YWlsogIGUkVU",
-            "QUlMqgIWR29vZ2xlLkNsb3VkLlJldGFpbC5WMsoCFkdvb2dsZVxDbG91ZFxS",
-            "ZXRhaWxcVjLqAhlHb29nbGU6OkNsb3VkOjpSZXRhaWw6OlYyYgZwcm90bzM="));
+            "Z29vZ2xlLmNsb3VkLnJldGFpbC52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
+            "dmlvci5wcm90byIPCg1QdXJnZU1ldGFkYXRhIlEKFlB1cmdlVXNlckV2ZW50",
+            "c1JlcXVlc3QSEwoGcGFyZW50GAEgASgJQgPgQQISEwoGZmlsdGVyGAIgASgJ",
+            "QgPgQQISDQoFZm9yY2UYAyABKAgiNgoXUHVyZ2VVc2VyRXZlbnRzUmVzcG9u",
+            "c2USGwoTcHVyZ2VkX2V2ZW50c19jb3VudBgBIAEoA0LFAQoaY29tLmdvb2ds",
+            "ZS5jbG91ZC5yZXRhaWwudjJCEFB1cmdlQ29uZmlnUHJvdG9QAVo8Z29vZ2xl",
+            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9yZXRhaWwv",
+            "djI7cmV0YWlsogIGUkVUQUlMqgIWR29vZ2xlLkNsb3VkLlJldGFpbC5WMsoC",
+            "Fkdvb2dsZVxDbG91ZFxSZXRhaWxcVjLqAhlHb29nbGU6OkNsb3VkOjpSZXRh",
+            "aWw6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.PurgeMetadata), global::Google.Cloud.Retail.V2.PurgeMetadata.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.PurgeUserEventsRequest), global::Google.Cloud.Retail.V2.PurgeUserEventsRequest.Parser, new[]{ "Parent", "Filter", "Force" }, null, null, null, null),
