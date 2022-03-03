@@ -263,10 +263,7 @@ namespace Google.Cloud.Spanner.Data
             }, "SpannerTransaction.ExecuteMutations", SpannerConnection.Logger);
         }
 
-        Task<ReliableStreamReader> ISpannerTransaction.ExecuteReadOrQueryAsync(
-            ReadOrQueryRequest request,
-            CancellationToken cancellationToken,
-            int timeoutSeconds) // Ignored
+        Task<ReliableStreamReader> ISpannerTransaction.ExecuteReadOrQueryAsync(ReadOrQueryRequest request, CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckNotNull(request, nameof(request));
             CheckCompatibleMode(TransactionMode.ReadOnly);

@@ -765,36 +765,6 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
-        public async Task ParallelMutationCommandsOnAmbientTransaction_OnlyCreateOneSpannerTransactionAsync()
-        {
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
-            spannerClientMock
-                .SetupBatchCreateSessionsAsync()
-                .SetupBeginTransactionAsync()
-                .SetupCommitAsync();
-
-            using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
-            {
-                SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
-
-                var tables = new string[] { "TAB1", "TAB2", "TAB3" };
-                await Task.WhenAll(tables.Select(table =>
-                {
-                    using var cmd = connection.CreateInsertCommand(table);
-                    return cmd.ExecuteNonQueryAsync();
-                }));
-                scope.Complete();
-            }
-
-            spannerClientMock.Verify(client => client.CommitAsync(
-                It.IsAny<CommitRequest>(), It.IsAny<CallSettings>()), Times.Once());
-            spannerClientMock.Verify(client => client.CommitAsync(
-                It.Is<CommitRequest>(request => request.Mutations.Count == 3),
-                It.IsAny<CallSettings>()), Times.Once());
-        }
-
-        [Fact]
         public void CanCreateReadCommand()
         {
             var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");

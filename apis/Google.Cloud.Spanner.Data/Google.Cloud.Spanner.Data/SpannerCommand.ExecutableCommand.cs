@@ -118,9 +118,9 @@ namespace Google.Cloud.Spanner.Data
                 // Three transaction options:
                 // - A single-use transaction. This doesn't go through a BeginTransaction request; instead, the transaction options are in the request.
                 // - One specified in the command
-                // - The default based on the connection (may be ephemeral, may be implicit via TransactionScope)
+                // - An ephemeral transaction
 
-                ISpannerTransaction effectiveTransaction = Transaction ?? Connection.AmbientTransaction;
+                ISpannerTransaction effectiveTransaction = Transaction;
                 if (singleUseReadSettings != null && Transaction != null)
                 {
                     throw new InvalidOperationException("singleUseReadSettings cannot be used within another transaction.");
@@ -152,8 +152,7 @@ namespace Google.Cloud.Spanner.Data
                     Connection.Logger.SensitiveInfo(() => $"SpannerCommand.ExecuteReader.Query={request.ExecuteSqlRequest.Sql}");
                 }
 
-                // Execute the command. Note that the command timeout here is only used for ambient transactions where we need to set a commit timeout.
-                return effectiveTransaction.ExecuteReadOrQueryAsync(request, cancellationToken, CommandTimeout);
+                return effectiveTransaction.ExecuteReadOrQueryAsync(request, cancellationToken);
             }
 
             internal async Task<IReadOnlyList<CommandPartition>> GetReaderPartitionsAsync(long? partitionSizeBytes, long? maxPartitions, CancellationToken cancellationToken)
@@ -200,7 +199,7 @@ namespace Google.Cloud.Spanner.Data
             internal async Task<long> ExecutePartitionedUpdateAsync(CancellationToken cancellationToken)
             {
                 ValidateConnectionAndCommandTextBuilder();
-                GaxPreconditions.CheckState(Transaction is null && Connection.AmbientTransaction is null, "Partitioned updates cannot be executed within another transaction");
+                GaxPreconditions.CheckState(Transaction is null, "Partitioned updates cannot be executed within another transaction");
                 GaxPreconditions.CheckState(CommandTextBuilder.SpannerCommandType == SpannerCommandType.Dml, "Only general DML commands can be executed in as partitioned updates");
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
                 ExecuteSqlRequest request = GetExecuteSqlRequest();
@@ -219,7 +218,7 @@ namespace Google.Cloud.Spanner.Data
             private async Task<int> ExecuteDmlAsync(CancellationToken cancellationToken)
             {
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
-                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, s_readWriteOptions, Priority);
+                var transaction = (ISpannerTransaction) Transaction ?? new EphemeralTransaction(Connection, s_readWriteOptions, Priority);
                 ExecuteSqlRequest request = GetExecuteSqlRequest();
                 long count = await transaction.ExecuteDmlAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
                 // This cannot currently exceed int.MaxValue due to Spanner commit limitations anyway.
@@ -306,7 +305,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
                 var mutations = GetMutations();
-                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, s_readWriteOptions, Priority);
+                var transaction = (ISpannerTransaction) Transaction ?? new EphemeralTransaction(Connection, s_readWriteOptions, Priority);
                 // Make the request. This will commit immediately or not depending on whether a transaction was explicitly created.
                 await transaction.ExecuteMutationsAsync(mutations, cancellationToken, CommandTimeout).ConfigureAwait(false);
                 // Return the number of records affected.

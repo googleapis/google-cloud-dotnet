@@ -59,9 +59,6 @@ namespace Google.Cloud.Spanner.Data
 
         private ConnectionState _state = ConnectionState.Closed;
 
-        // State used for TransactionScope-based transactions.
-        private VolatileResourceManager _volatileResourceManager;
-
         /// <inheritdoc />
         public override string ConnectionString
         {
@@ -412,9 +409,6 @@ namespace Google.Cloud.Spanner.Data
 
             if (sessionPool != null)
             {
-                // Note: if we're in an implicit transaction using TransactionScope, this will "release" the session pool
-                // back to the session pool manager before we're really done with it, but that's okay - it will just report
-                // inaccurate connection counts temporarily. This is an inherent problem with implicit transactions.
                 Builder.SessionPoolManager.Release(sessionPool);
             }
 
@@ -576,12 +570,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 return;
             }
-            Open(GetTransactionEnlister());
-        }
-
-        private void Open(Action transactionEnlister)
-        {
-            Func<Task> taskRunner = () => OpenAsyncImpl(transactionEnlister, CancellationToken.None);
+            Func<Task> taskRunner = () => OpenAsyncImpl(CancellationToken.None);
 
             // This is slightly annoying, but hard to get round: most of our timeouts use Expiration, but this is more of
             // a BCL-oriented timeout.
@@ -596,7 +585,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <inheritdoc />
-        public override Task OpenAsync(CancellationToken cancellationToken) => OpenAsyncImpl(GetTransactionEnlister(), cancellationToken);
+        public override Task OpenAsync(CancellationToken cancellationToken) => OpenAsyncImpl(cancellationToken);
 
         /// <summary>
         /// Returns a task indicating when the session pool associated with the connection is populated up to its minimum size.
@@ -649,9 +638,8 @@ namespace Google.Cloud.Spanner.Data
         /// Opens the connection, which involves acquiring a SessionPool,
         /// and potentially enlists the connection in the current transaction.
         /// </summary>
-        /// <param name="transactionEnlister">Enlistment delegate; may be null.</param>
         /// <param name="cancellationToken">Cancellation token; may be None</param>
-        private Task OpenAsyncImpl(Action transactionEnlister, CancellationToken cancellationToken)
+        private Task OpenAsyncImpl(CancellationToken cancellationToken)
         {
             // TODO: Use the cancellation token. We can't at the moment, as the only reason for this being async is
             // due to credential fetching, and we can't pass a cancellation token to any of that.
@@ -687,10 +675,6 @@ namespace Google.Cloud.Spanner.Data
                         {
                             _state = _sessionPool != null ? ConnectionState.Open : ConnectionState.Broken;
                         }
-                        if (IsOpen)
-                        {
-                            transactionEnlister?.Invoke();
-                        }
                         OnStateChange(new StateChangeEventArgs(ConnectionState.Connecting, _state));
                     }
                 }, "SpannerConnection.OpenAsync", Logger);
@@ -719,12 +703,6 @@ namespace Google.Cloud.Spanner.Data
                 Close();
             }
         }
-
-        /// <summary>
-        /// Returns the current ambient transaction (from TransactionScope), if any.
-        /// The .NET Standard 1.x version will always return null, as TransactionScope is not supported in .NET Core 1.x.
-        /// </summary>
-        internal ISpannerTransaction AmbientTransaction => _volatileResourceManager;
 
         /// <summary>
         /// The current connection string builder. The object is never mutated and never exposed to consumers.
@@ -813,101 +791,6 @@ namespace Google.Cloud.Spanner.Data
             AssertClosed("change connection information.");
             // We will never allow our internal SpannerConnectionStringBuilder to be touched from the outside, so it's cloned.
             Builder = newBuilder.Clone();
-        }
-
-        /// <summary>
-        /// Returns a delegate to enlist the current transaction (as detected on the executing thread *now*)
-        /// when opening the connection.
-        /// </summary>
-        private Action GetTransactionEnlister()
-        {
-            Transaction current = Transaction.Current;
-            return current == null ? (Action) null : () => EnlistTransaction(current);
-        }
-
-        /// <summary>
-        /// Call OpenAsReadOnly within a <see cref="System.Transactions.TransactionScope" /> to open the connection
-        /// with a read-only transaction with the given <see cref="TimestampBound" /> settings
-        /// </summary>
-        /// <param name="timestampBound">Specifies the timestamp or maximum staleness of a read operation. May be null.</param>
-        public void OpenAsReadOnly(TimestampBound timestampBound = null)
-        {
-            // Note: This has to be checked on the current thread, which is why we don't just use Task.Run
-            // and delegate to OpenAsReadOnlyAsync
-            var transaction = Transaction.Current;
-            if (transaction == null)
-            {
-                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called within a TransactionScope.");
-            }
-            if (!EnlistInTransaction)
-            {
-                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
-            }
-            Open(() => EnlistTransaction(transaction, timestampBound ?? TimestampBound.Strong, null));
-        }
-
-        /// <summary>
-        /// If this connection is being opened within a <see cref="System.Transactions.TransactionScope" />, this
-        /// will connect to an existing transaction identified by <paramref name="transactionId"/>.
-        /// </summary>
-        /// <param name="transactionId">The <see cref="TransactionId"/> representing an active readonly <see cref="SpannerTransaction"/>.</param>
-        public void OpenAsReadOnly(TransactionId transactionId)
-        {
-            GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
-            var transaction = Transaction.Current;
-            if (transaction == null)
-            {
-                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called within a TransactionScope.");
-            }
-            if (!EnlistInTransaction)
-            {
-                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
-            }
-            Open(() => EnlistTransaction(transaction, null, transactionId));
-        }
-
-        /// <summary>
-        /// If this connection is being opened within a <see cref="System.Transactions.TransactionScope" />, this forces
-        /// the created Cloud Spanner transaction to be a read-only transaction with the given
-        /// <see cref="TimestampBound" /> settings.
-        /// </summary>
-        /// <param name="timestampBound">Specifies the timestamp or maximum staleness of a read operation. May be null.</param>
-        /// <param name="cancellationToken">An optional token for canceling the call.</param>
-        public Task OpenAsReadOnlyAsync(TimestampBound timestampBound = null, CancellationToken cancellationToken = default)
-        {
-            var transaction = Transaction.Current;
-            if (transaction == null)
-            {
-                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called within a TransactionScope.");
-            }
-            if (!EnlistInTransaction)
-            {
-                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
-            }
-            Action transactionEnlister = () => EnlistTransaction(transaction, timestampBound ?? TimestampBound.Strong, null);
-            return OpenAsyncImpl(transactionEnlister, cancellationToken);
-        }
-
-        /// <summary>
-        /// Gets or Sets whether to participate in the active <see cref="System.Transactions.TransactionScope" />
-        /// </summary>
-        public bool EnlistInTransaction { get; set; } = true;
-
-        /// <inheritdoc />
-        public override void EnlistTransaction(Transaction transaction) => EnlistTransaction(transaction, null, null);
-
-        private void EnlistTransaction(Transaction transaction, TimestampBound timestampBound, TransactionId transactionId)
-        {
-            if (!EnlistInTransaction)
-            {
-                return;
-            }
-            if (_volatileResourceManager != null)
-            {
-                throw new InvalidOperationException("This connection is already enlisted to a transaction.");
-            }
-            _volatileResourceManager = new VolatileResourceManager(this, timestampBound, transactionId);
-            transaction.EnlistVolatile(_volatileResourceManager, System.Transactions.EnlistmentOptions.None);
         }
 
         /// <inheritdoc />

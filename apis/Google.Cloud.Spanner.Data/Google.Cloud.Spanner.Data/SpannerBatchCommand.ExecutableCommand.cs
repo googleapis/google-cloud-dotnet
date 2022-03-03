@@ -83,7 +83,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
 
-                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, s_readWriteOptions, Priority);
+                var transaction = (ISpannerTransaction) Transaction ?? new EphemeralTransaction(Connection, s_readWriteOptions, Priority);
                 ExecuteBatchDmlRequest request = GetExecuteBatchDmlRequest();
                 IEnumerable<long> result = await transaction.ExecuteBatchDmlAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
                 return result.ToList().AsReadOnly();
