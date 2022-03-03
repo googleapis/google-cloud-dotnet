@@ -14,7 +14,6 @@
 
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
-using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -91,7 +90,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task TestChunking()
         {
-            Logger.DefaultLogger.Info($"Seed={_seed}");
+            FileLogger.Log($"Seed={_seed}");
             var rowsRead = 0;
             int rowsToWrite = _random.Next(1, 6);
 

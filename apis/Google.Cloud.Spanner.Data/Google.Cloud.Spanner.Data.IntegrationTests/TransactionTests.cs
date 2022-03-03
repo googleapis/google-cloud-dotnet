@@ -15,7 +15,6 @@
 using Google.Api.Gax.Grpc;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
-using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
 using System.Threading.Tasks;
 using Xunit;
@@ -23,7 +22,6 @@ using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
-    [PerformanceLog]
     [Collection(nameof(TransactionTableFixture))]
     [CommonTestDiagnostics]
     public class TransactionTests : TransactionTestBase
@@ -544,19 +542,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        /// <summary>
-        /// Simple extension of DefaultLogger that also keeps a reference to the last logged CommitResponse.
-        /// </summary>
-        internal class CommitStatsCapturerLogger : DefaultLogger
-        {
-            internal V1.CommitResponse LastCommitResponse { get; private set; }
-
-            public override void LogCommitStats(V1.CommitRequest request, V1.CommitResponse response)
-            {
-                LastCommitResponse = response;
-                base.LogCommitStats(request, response);
-            }
-        }
+        /* FIXME: Work out how to reinstate this
 
         [SkippableFact]
         public async Task ReturnCommitStats()
@@ -594,6 +580,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     }
                 }
             });
-        }
+        }*/
     }
 }

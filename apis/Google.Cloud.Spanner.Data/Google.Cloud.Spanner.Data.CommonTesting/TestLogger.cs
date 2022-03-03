@@ -13,33 +13,20 @@
 // limitations under the License.
 
 using Google.Cloud.ClientTesting;
-using Google.Cloud.Spanner.V1.Internal.Logging;
+using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
 
 namespace Google.Cloud.Spanner.Data.CommonTesting
 {
-    public class TestLogger : Logger
+    /// <summary>
+    /// ILogger implementation that delegates to <see cref="FileLogger"/>.
+    /// </summary>
+    public class TestLogger : ILogger
     {
         public static TestLogger Instance { get; } = new TestLogger();
         
         private TestLogger()
         {
-            LogLevel = V1.Internal.Logging.LogLevel.Debug;
-        }
-
-        public static void Install() => SetDefaultLogger(Instance);
-
-        protected override void LogImpl(V1.Internal.Logging.LogLevel level, string message, Exception exception) =>
-            WriteLine(exception == null ? $"{level}: {message}" : $"{level}: {message}, Exception: {exception}");
-
-        protected override void LogPerformanceEntries(IEnumerable<string> entries)
-        {
-            WriteLine("Performance:");
-            foreach (var entry in entries)
-            {
-                WriteLine($"  {entry}");
-            }
         }
 
         private void WriteLine(string line)
@@ -54,5 +41,13 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
                 // after a test has completed (some action occurred asynchronously).
             }
         }
+
+        public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter) =>
+            WriteLine(formatter(state, exception));
+
+        public bool IsEnabled(LogLevel logLevel) => logLevel >= LogLevel.Debug;
+
+        public IDisposable BeginScope<TState>(TState state) =>
+            throw new NotImplementedException();
     }
 }

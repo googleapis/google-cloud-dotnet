@@ -16,7 +16,6 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using Google.Cloud.Spanner.V1.Internal.Logging;
 
 namespace Google.Cloud.Spanner.Data.Ycsb
 {
@@ -111,14 +110,6 @@ namespace Google.Cloud.Spanner.Data.Ycsb
         protected override void InitializeSettings()
         {
             base.InitializeSettings();
-            if (IsDebugMode)
-            {
-                Logger.DefaultLogger.LogPerformanceTraces = true;
-                if (GetOption<int>("debugmode") == 2)
-                {
-                    Logger.DefaultLogger.LogLevel = V1.Internal.Logging.LogLevel.Debug;
-                }
-            }
 
             int channels;
             int maxActiveSessions;

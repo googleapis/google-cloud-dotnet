@@ -13,7 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.Internal.Logging;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Threading;
@@ -48,7 +48,7 @@ namespace Google.Cloud.Spanner.Data
 
         private bool HasExecutedDmlOrMutations => IsTransactionCreated && (_hasExecutedDml || SpannerTransaction.HasMutations);
 
-        private Logger Logger => _spannerConnection.Logger;
+        private ILogger Logger => _spannerConnection.Logger;
 
         private Task<SpannerTransaction> CreateTransactionAsync()
         {
@@ -69,7 +69,7 @@ namespace Google.Cloud.Spanner.Data
             }
             catch (Exception e)
             {
-                Logger.Error("Error disposing", e);
+                Logger.LogError(e, "Error disposing");
             }
         }
 
@@ -83,7 +83,7 @@ namespace Google.Cloud.Spanner.Data
                     // which we will no-op and allow through even if it was a two phase commit.
                     // This allows cases such as nested transactions where the inner transaction is a readonly
                     // timestamp bound read and doesn't have anything to commit.
-                    Logger.Debug(() => "Received a COMMIT for a two phase commit but without changes. This is allowed.");
+                    Logger.LogDebug("Received a COMMIT for a two phase commit but without changes. This is allowed.");
                     enlistment.Done();
 
                     // For write transactions with no mutations, this ensures the transaction
@@ -91,7 +91,7 @@ namespace Google.Cloud.Spanner.Data
                     CommitToSpanner();
                     return;
                 }
-                Logger.Warn("Received a call to Commit, which indicates two phase commit inside a transaction scope. This is currently not supported in Spanner.");
+                Logger.LogWarning("Received a call to Commit, which indicates two phase commit inside a transaction scope. This is currently not supported in Spanner.");
                 throw new NotSupportedException(
                     "Spanner only supports single phase commit (2-P Commit not supported)." +
                     " This error can happen when attempting to use multiple transaction resources but may also happen for" +
@@ -105,7 +105,7 @@ namespace Google.Cloud.Spanner.Data
 
         public void InDoubt(Enlistment enlistment)
         {
-            Logger.Warn("Got an InDoubt call, which indicates two phase commit inside a transaction scope. This is currently not supported in Spanner.");
+            Logger.LogWarning("Got an InDoubt call, which indicates two phase commit inside a transaction scope. This is currently not supported in Spanner.");
             enlistment.Done();
         }
 
@@ -117,11 +117,11 @@ namespace Google.Cloud.Spanner.Data
                 // which we will no-op and allow through even if it was a two phase commit.
                 // This allows cases such as nested transactions where the inner transaction is a readonly
                 // timestamp bound read and doesn't have anything to commit.
-                Logger.Debug(() => "Received a PREPARE for a two phase commit but without changes. This is allowed.");
+                Logger.LogDebug("Received a PREPARE for a two phase commit but without changes. This is allowed.");
                 preparingEnlistment.Prepared();
                 return;
             }
-            Logger.Warn(() => "Received a call to Prepare, which indicates two phase commit inside a transaction scope. This is currently not supported in Spanner.");
+            Logger.LogWarning("Received a call to Prepare, which indicates two phase commit inside a transaction scope. This is currently not supported in Spanner.");
             try
             {
                 preparingEnlistment.ForceRollback(new NotSupportedException(
@@ -152,7 +152,7 @@ namespace Google.Cloud.Spanner.Data
             }
             catch (Exception e)
             {
-                Logger.Error("Error attempting to rollback a transaction.", e);
+                Logger.LogError(e, "Error attempting to rollback a transaction.");
             }
             finally
             {

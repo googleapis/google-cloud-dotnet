@@ -13,8 +13,10 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.Internal.Logging;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
@@ -22,7 +24,7 @@ using Xunit;
 
 namespace Google.Cloud.Spanner.Data.Tests
 {
-    using ClientFactory = Func<SpannerClientCreationOptions, SpannerSettings, Logger, Task<SpannerClient>>;
+    using ClientFactory = Func<SpannerClientCreationOptions, SpannerSettings, ILogger, Task<SpannerClient>>;
 
     public class SessionPoolManagerTests
     {
@@ -38,7 +40,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 factoryCalls++;
                 return Task.FromResult<SpannerClient>(new FailingSpannerClient());
             };
-            var manager = new SessionPoolManager(new SessionPoolOptions(), SessionPoolManager.CreateDefaultSpannerSettings(), Logger.DefaultLogger, factory);
+            var manager = new SessionPoolManager(new SessionPoolOptions(), SessionPoolManager.CreateDefaultSpannerSettings(), NullLogger.Instance, factory);
 
             var options1 = new SpannerClientCreationOptions(new SpannerConnectionStringBuilder(ConnectionString));
             var options2 = new SpannerClientCreationOptions(new SpannerConnectionStringBuilder(ConnectionString));
@@ -59,7 +61,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 factoryCalls++;
                 return Task.FromResult<SpannerClient>(new FailingSpannerClient());
             };
-            var manager = new SessionPoolManager(new SessionPoolOptions(), SessionPoolManager.CreateDefaultSpannerSettings(), Logger.DefaultLogger, factory);
+            var manager = new SessionPoolManager(new SessionPoolOptions(), SessionPoolManager.CreateDefaultSpannerSettings(), NullLogger.Instance, factory);
 
             var options1 = new SpannerClientCreationOptions(new SpannerConnectionStringBuilder(ConnectionString));
             var options2 = new SpannerClientCreationOptions(new SpannerConnectionStringBuilder(ConnectionString) { Port = 1234 });
@@ -79,23 +81,23 @@ namespace Google.Cloud.Spanner.Data.Tests
                 return Task.FromResult<SpannerClient>(new FailingSpannerClient(settings));
             };
             var customSettings = new SpannerSettings();
-            var manager = new SessionPoolManager(new SessionPoolOptions(), customSettings, Logger.DefaultLogger, factory);
+            var manager = new SessionPoolManager(new SessionPoolOptions(), customSettings, NullLogger.Instance, factory);
 
             var pool = await manager.AcquireSessionPoolAsync(new SpannerClientCreationOptions(new SpannerConnectionStringBuilder(ConnectionString)));
             Assert.Same(customSettings, pool.Client.Settings);
         }
 
         [Fact]
-        public void Create_UsesDefaultLogger()
+        public void Create_UsesNullLogger()
         {
             var manager = SessionPoolManager.Create(new SessionPoolOptions());
-            Assert.Same(Logger.DefaultLogger, manager.Logger);
+            Assert.Same(NullLogger.Instance, manager.Logger);
         }
 
         [Fact]
         public void CreateWithSettings_UsesLoggerInSettings()
         {
-            var settings = new SpannerSettings {Logger = new DefaultLogger()};
+            var settings = new SpannerSettings { Logger = TestLogger.Instance };
             var manager = SessionPoolManager.CreateWithSettings(new SessionPoolOptions(), settings);
             Assert.Same(settings.Logger, manager.Logger);
         }
@@ -103,7 +105,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public async Task ReleaseDecreasesCount()
         {
-            var manager = new SessionPoolManager(new SessionPoolOptions(), SessionPoolManager.CreateDefaultSpannerSettings(), Logger.DefaultLogger, FailingSpannerClient.Factory);
+            var manager = new SessionPoolManager(new SessionPoolOptions(), SessionPoolManager.CreateDefaultSpannerSettings(), NullLogger.Instance, FailingSpannerClient.Factory);
 
             var options = new SpannerClientCreationOptions(new SpannerConnectionStringBuilder(ConnectionString));
             var pool = await manager.AcquireSessionPoolAsync(options);
@@ -125,7 +127,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public async Task EmulatorDetection_AlwaysUsesRegularOptions(string emulatorHost)
         {
             var regularOptions = new SessionPoolOptions();
-            var manager = new SessionPoolManager(regularOptions, SessionPoolManager.CreateDefaultSpannerSettings(), Logger.DefaultLogger, FailingSpannerClient.Factory);
+            var manager = new SessionPoolManager(regularOptions, SessionPoolManager.CreateDefaultSpannerSettings(), NullLogger.Instance, FailingSpannerClient.Factory);
 
             var builder = new SpannerConnectionStringBuilder(ConnectionString)
             {

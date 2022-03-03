@@ -12,10 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Spanner.V1.Internal.Logging;
-using System.Reflection;
-using System.Threading;
-using System.Threading.Tasks;
+using Google.Cloud.ClientTesting;
 
 namespace Google.Cloud.Spanner.Data.CommonTesting
 {
@@ -31,13 +28,13 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             TableName = tableName;
             if (Database.Fresh)
             {
-                Logger.DefaultLogger.Debug($"Creating table {TableName}");
+                FileLogger.Log($"Creating table {TableName}");
                 CreateTable();
             }
             RetryHelpers.ResetStats();
-            Logger.DefaultLogger.Debug($"Populating table {TableName}");
+            FileLogger.Log($"Populating table {TableName}");
             PopulateTable(Database.Fresh);
-            Logger.DefaultLogger.Debug($"Ready to run tests");
+            FileLogger.Log($"Ready to run tests");
             RetryHelpers.MaybeLogStats($"Population of {TableName}");
             RetryHelpers.ResetStats();
         }

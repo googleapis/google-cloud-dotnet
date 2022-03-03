@@ -17,7 +17,6 @@ using Google.Api.Gax.ResourceNames;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Admin.Instance.V1;
 using Google.Cloud.Spanner.Common.V1;
-using Google.Cloud.Spanner.V1.Internal.Logging;
 using Grpc.Core;
 using System;
 
@@ -32,6 +31,8 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
     {
         private static readonly object s_lock = new object();
         private static SpannerTestDatabase s_instance = null;
+
+        private static readonly SessionPoolManager s_sessionPoolManager = SessionPoolManager.Create(new V1.SessionPoolOptions(), TestLogger.Instance);
 
         /// <summary>
         /// Fetches the database, creating it if necessary.
@@ -79,14 +80,13 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
 
         private SpannerTestDatabase(string projectId)
         {
-            TestLogger.Install();
-
             ProjectId = projectId;
             var builder = new SpannerConnectionStringBuilder
             {
                 Host = SpannerHost,
                 DataSource = $"projects/{ProjectId}/instances/{SpannerInstance}",
-                EmulatorDetection = EmulatorDetection.EmulatorOrProduction
+                EmulatorDetection = EmulatorDetection.EmulatorOrProduction,
+                SessionPoolManager = s_sessionPoolManager
             };
             if (SpannerPort != null)
             {
@@ -101,16 +101,16 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             MaybeCreateInstanceOnEmulator(projectId);
             if (Fresh)
             {
-                using (var connection = new SpannerConnection(NoDbConnectionString))
+                using (var connection = new SpannerConnection(new SpannerConnectionStringBuilder(NoDbConnectionString) { SessionPoolManager = s_sessionPoolManager }))
                 {
                     var createCmd = connection.CreateDdlCommand($"CREATE DATABASE {SpannerDatabase}");
                     createCmd.ExecuteNonQuery();
-                    Logger.DefaultLogger.Debug($"Created database {SpannerDatabase}");
+                    FileLogger.Log($"Created database {SpannerDatabase}");
                 }
             }
             else
             {
-                Logger.DefaultLogger.Debug($"Using existing database {SpannerDatabase}");
+                FileLogger.Log($"Using existing database {SpannerDatabase}");
             }
         }
 
@@ -154,10 +154,7 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             }
         }
 
-        public SpannerConnection GetConnection() => new SpannerConnection(ConnectionString);
-
-        // Creates a SpannerConnection with a specific logger.
-        public SpannerConnection GetConnection(Logger logger) =>
-            new SpannerConnection(new SpannerConnectionStringBuilder(ConnectionString) { SessionPoolManager = SessionPoolManager.Create(new V1.SessionPoolOptions(), logger) });
+        public SpannerConnection GetConnection() => 
+            new SpannerConnection(new SpannerConnectionStringBuilder(ConnectionString) { SessionPoolManager = s_sessionPoolManager });
     }
 }

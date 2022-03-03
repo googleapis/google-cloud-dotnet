@@ -13,9 +13,9 @@
 // limitations under the License.
 
 using Google.Api.Gax.Grpc;
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data;
 using Google.Cloud.Spanner.Data.IntegrationTests;
-using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -64,7 +64,7 @@ namespace Google.Cloud.Spanner.V1.IntegrationTests
                 initialSessions.ForEach(s => s.ReleaseToPool(false));
                 cts = new CancellationTokenSource(10000);
                 await pool.WhenPoolReady(_fixture.DatabaseName, cts.Token);
-                Logger.DefaultLogger.Info(pool.GetStatisticsSnapshot(_fixture.DatabaseName).ToString());
+                FileLogger.Log(pool.GetStatisticsSnapshot(_fixture.DatabaseName).ToString());
                 var refreshedSessions = await AcquireSessionsAsync(pool);
 
                 // We should still have the same sessions...

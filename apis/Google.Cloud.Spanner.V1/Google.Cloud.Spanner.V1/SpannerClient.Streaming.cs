@@ -12,11 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Cloud.Spanner.V1.Internal.Logging;
-using Grpc.Core;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
 
 namespace Google.Cloud.Spanner.V1
 {
@@ -40,12 +39,12 @@ namespace Google.Cloud.Spanner.V1
             Logger = existing.Logger;
         }
 
-        private Logger _logger = Logger.DefaultLogger;
+        private ILogger _logger = NullLogger.Instance;
 
         /// <summary>
         /// The logger to use for operations involving this client. This property is never null.
         /// </summary>
-        public Logger Logger
+        public ILogger Logger
         {
             get => _logger;
             set => _logger = GaxPreconditions.CheckNotNull(value, nameof(value));

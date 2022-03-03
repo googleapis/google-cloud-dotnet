@@ -17,11 +17,11 @@ using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Testing;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Cloud.Spanner.V1.Tests;
 using Google.Protobuf.Collections;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
+using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -119,7 +119,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             const string connOptimizerVersion = "1";
             const string connOptimizerStatisticsPackage = "stats_package_1";
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupExecuteStreamingSql();
@@ -146,7 +146,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void CommandHasQueryOptionsFromEnvironment()
         {
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupExecuteStreamingSql();
@@ -182,7 +182,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void CommandHasQueryOptionsSetOnCommand()
         {
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupExecuteStreamingSql();
@@ -244,7 +244,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void CommitPriorityDefaultsToUnspecified()
         {
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync();
@@ -258,7 +258,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var priority = Priority.High;
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupExecuteStreamingSql();
@@ -281,7 +281,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var commitPriority = Priority.Medium;
             var commandPriority = Priority.High;
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
@@ -313,7 +313,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var priority = Priority.Medium;
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
@@ -342,7 +342,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void CommitPriorityCannotBeSetForReadOnlyTransaction()
         {
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync();
@@ -355,7 +355,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void PriorityCanBeSetToUnspecified()
         {
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
@@ -387,7 +387,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var priority = Priority.Low;
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
@@ -419,7 +419,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void MutationCommandIncludesPriority()
         {
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
@@ -439,7 +439,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void PdmlCommandIncludesPriority()
         {
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
@@ -460,7 +460,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var priority = Priority.Medium;
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
@@ -497,7 +497,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var tag = "tag-1";
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupExecuteStreamingSql();
@@ -521,7 +521,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var requestTag2 = "request-tag-2";
             var transactionTag = "transaction-tag-1";
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
@@ -575,7 +575,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var transactionTag = "transaction-tag-1";
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
@@ -607,7 +607,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void TransactionTagCannotBeSetForReadOnlyTransaction()
         {
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync();
@@ -620,7 +620,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void TagsCanBeSetToNull()
         {
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
@@ -652,7 +652,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var transactionTag = "retryable-tx-tag";
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
@@ -685,7 +685,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void ClientCreatedWithEmulatorDetection()
         {
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupExecuteStreamingSql();
@@ -727,7 +727,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void ExecuteReaderHasResourceHeader()
         {
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupExecuteStreamingSql();
@@ -748,7 +748,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void PdmlRetriedOnEosError()
         {
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
@@ -768,7 +768,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public async Task ParallelMutationCommandsOnAmbientTransaction_OnlyCreateOneSpannerTransactionAsync()
         {
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
@@ -812,7 +812,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public async Task CanExecuteReadCommand()
         {
             var spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger);
+                .CreateMockClient(NullLogger.Instance);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupStreamingRead();
@@ -857,7 +857,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public async Task CanExecuteReadAllCommand()
         {
             var spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger);
+                .CreateMockClient(NullLogger.Instance);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupStreamingRead();
@@ -875,7 +875,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public async Task CanExecuteReadCommandWithKeyRange()
         {
             var spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger);
+                .CreateMockClient(NullLogger.Instance);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupStreamingRead();
@@ -899,7 +899,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public async Task CanExecuteReadCommandWithKeyCollection()
         {
             var spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger);
+                .CreateMockClient(NullLogger.Instance);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupStreamingRead();
@@ -924,7 +924,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public async Task CanExecuteReadCommandWithIndex()
         {
             var spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger);
+                .CreateMockClient(NullLogger.Instance);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupStreamingRead();
@@ -942,7 +942,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public async Task CanExecuteReadCommandWithLimit()
         {
             var spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger);
+                .CreateMockClient(NullLogger.Instance);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupStreamingRead();
@@ -960,7 +960,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public async Task CanExecuteReadPartitionedReadCommand()
         {
             var spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger);
+                .CreateMockClient(NullLogger.Instance);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()

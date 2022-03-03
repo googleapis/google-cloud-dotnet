@@ -16,11 +16,10 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
 using Grpc.Core;
+using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Common;
@@ -93,7 +92,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// The logger used by this connection. This is never null.
         /// </summary>
-        internal Logger Logger => Builder.SessionPoolManager.Logger;
+        internal ILogger Logger => Builder.SessionPoolManager.Logger;
 
         /// <inheritdoc />
         public override ConnectionState State
@@ -128,7 +127,6 @@ namespace Google.Cloud.Spanner.Data
         /// Commit statistics that are returned for a transaction are logged using the
         /// logger of this connection. Applications can set a custom logger on the
         /// connection to log the output to a different destination.
-        /// <see cref="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogCommitStats(CommitRequest, CommitResponse)"/>
         /// </remarks>
         public bool LogCommitStats => Builder.LogCommitStats;
 

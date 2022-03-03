@@ -12,25 +12,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Grpc.Testing;
 using Google.Api.Gax.Testing;
 using Google.Cloud.Spanner.Data;
-using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Google.Rpc;
-using Google.Rpc.Context;
 using Grpc.Core;
+using Microsoft.Extensions.Logging;
 using Moq;
 using Moq.Language;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Status = Grpc.Core.Status;
 using static Google.Cloud.Spanner.V1.SpannerClientImpl;
+using Status = Grpc.Core.Status;
 
 namespace Google.Cloud.Spanner.V1.Tests
 {
@@ -51,7 +49,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         /// Creates a mock SpannerClient configured with settings that include a fake clock
         /// and a fake scheduler.
         /// </summary>
-        internal static Mock<SpannerClient> CreateMockClient(Logger logger, MockBehavior behavior = MockBehavior.Strict)
+        internal static Mock<SpannerClient> CreateMockClient(ILogger logger, MockBehavior behavior = MockBehavior.Strict)
         {
             var fakeScheduler = new FakeScheduler();
             var settings = SpannerSettings.GetDefault();

@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Spanner.V1.Internal.Logging;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
@@ -21,13 +21,13 @@ namespace Google.Cloud.Spanner.Data
 {
     internal static class ExecuteHelper
     {
-        internal static void WithErrorTranslationAndProfiling(Action t, string name, Logger logger)
+        internal static void WithErrorTranslationAndProfiling(Action t, string name, ILogger logger)
         {
             SpannerException translatedException;
             try
             {
                 Stopwatch sw = null;
-                if (logger.LogPerformanceTraces)
+                if (logger.IsEnabled(LogLevel.Trace))
                 {
                     sw = Stopwatch.StartNew();
                 }
@@ -35,7 +35,7 @@ namespace Google.Cloud.Spanner.Data
                 t();
                 if (sw != null)
                 {
-                    logger.LogPerformanceCounter($"{name}.Duration", sw.ElapsedMilliseconds);
+                    logger.LogTrace("Operation '{name}' took {time}ms", name, sw.ElapsedMilliseconds);
                 }
             }
             catch (Exception e) when ((translatedException = SpannerException.TryTranslateRpcException(e)) != null)
@@ -44,7 +44,7 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        internal static Task WithErrorTranslationAndProfiling(Func<Task> t, string name, Logger logger)
+        internal static Task WithErrorTranslationAndProfiling(Func<Task> t, string name, ILogger logger)
         {
             return WithErrorTranslationAndProfiling(
                 async () =>
@@ -54,14 +54,14 @@ namespace Google.Cloud.Spanner.Data
                 }, name, logger);
         }
 
-        internal static async Task<T> WithErrorTranslationAndProfiling<T>(Func<Task<T>> t, string name, Logger logger)
+        internal static async Task<T> WithErrorTranslationAndProfiling<T>(Func<Task<T>> t, string name, ILogger logger)
         {
             SpannerException translatedException;
 
             try
             {
                 Stopwatch sw = null;
-                if (logger.LogPerformanceTraces)
+                if (logger.IsEnabled(LogLevel.Trace))
                 {
                     sw = Stopwatch.StartNew();
                 }
@@ -69,7 +69,7 @@ namespace Google.Cloud.Spanner.Data
                 var result = await t().ConfigureAwait(false);
                 if (sw != null)
                 {
-                    logger.LogPerformanceCounter($"{name}.Duration", sw.ElapsedMilliseconds);
+                    logger.LogTrace("Operation '{name}' took {time}ms", name, sw.ElapsedMilliseconds);
                 }
 
                 return result;

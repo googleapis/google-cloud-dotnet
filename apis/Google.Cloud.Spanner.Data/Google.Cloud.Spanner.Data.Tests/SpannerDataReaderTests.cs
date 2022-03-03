@@ -14,8 +14,8 @@
 
 using Google.Api.Gax.Grpc.Testing;
 using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf.WellKnownTypes;
+using Microsoft.Extensions.Logging.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -145,7 +145,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             PartialResultSet[] results,
             ResultSetMetadata metadata = null) =>
             new SpannerDataReader(
-                Logger.DefaultLogger, CreateReader(results, metadata), Timestamp.FromDateTime(DateTime.UtcNow),
+                NullLogger.Instance, CreateReader(results, metadata), Timestamp.FromDateTime(DateTime.UtcNow),
                 null, SpannerConversionOptions.Default, false, 120);
 
         private static PartialResultSet CreateResultSet(params byte[][] bytesValues) =>
@@ -156,7 +156,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         private static ReliableStreamReader CreateReader(PartialResultSet[] results, ResultSetMetadata metadata = null)
         {
             results[0].Metadata = metadata ?? CreateSingleBytesFieldMetadata();
-            return new ReliableStreamReader(new AsyncStreamAdapter<PartialResultSet>(results.ToAsyncEnumerable().GetAsyncEnumerator()), Logger.DefaultLogger);
+            return new ReliableStreamReader(new AsyncStreamAdapter<PartialResultSet>(results.ToAsyncEnumerable().GetAsyncEnumerator()), NullLogger.Instance);
         }
 
         private static ResultSetMetadata CreateSingleBytesFieldMetadata() => CreateSingleFieldMetadata(TypeCode.Bytes);

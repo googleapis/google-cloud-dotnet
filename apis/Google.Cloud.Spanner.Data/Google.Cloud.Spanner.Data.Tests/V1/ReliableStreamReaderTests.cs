@@ -13,8 +13,8 @@
 // limitations under the License.
 
 using Google.Api.Gax.Grpc.Testing;
-using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf.WellKnownTypes;
+using Microsoft.Extensions.Logging.Abstractions;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -158,7 +158,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         private static ReliableStreamReader CreateReader(PartialResultSet[] results, ResultSetMetadata metadata = null)
         {
             results[0].Metadata = metadata ?? CreateSingleStringFieldMetadata();
-            return new ReliableStreamReader(new AsyncStreamAdapter<PartialResultSet>(results.ToAsyncEnumerable().GetAsyncEnumerator(default)), Logger.DefaultLogger);
+            return new ReliableStreamReader(new AsyncStreamAdapter<PartialResultSet>(results.ToAsyncEnumerable().GetAsyncEnumerator(default)), NullLogger.Instance);
         }
 
         private static ResultSetMetadata CreateSingleStringFieldMetadata() =>

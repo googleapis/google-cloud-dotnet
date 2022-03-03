@@ -14,8 +14,8 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf.WellKnownTypes;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections;
 using System.Collections.Concurrent;
@@ -33,8 +33,6 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     public sealed class SpannerDataReader : DbDataReader
     {
-        private static long s_readerCount;
-
         private bool _rowValid = false;
 
         // Tristate:
@@ -57,7 +55,7 @@ namespace Google.Cloud.Spanner.Data
         private bool _closed;
 
         internal SpannerDataReader(
-            Logger logger,
+            ILogger logger,
             ReliableStreamReader resultSet,
             Timestamp readTimestamp,
             IDisposable resourceToClose,
@@ -67,9 +65,6 @@ namespace Google.Cloud.Spanner.Data
         {
             GaxPreconditions.CheckNotNull(resultSet, nameof(resultSet));
             Logger = logger;
-            Logger.LogPerformanceCounter(
-                "SpannerDataReader.ActiveCount",
-                () => Interlocked.Increment(ref s_readerCount));
             _resultSet = resultSet;
             _readTimestamp = readTimestamp;
             _resourceToClose = resourceToClose;
@@ -78,7 +73,7 @@ namespace Google.Cloud.Spanner.Data
             _readTimeoutSeconds = readTimeoutSeconds;
         }
 
-        private Logger Logger { get; }
+        private ILogger Logger { get; }
 
         // Nesting is not supported, so we return 0.
         /// <inheritdoc />
@@ -365,7 +360,7 @@ namespace Google.Cloud.Spanner.Data
             _rowValid = false;
             _hasRows = false;
             _innerList.Clear();
-            Logger.Warn("Spanner does not support multiple SQL queries in a single command");
+            Logger.LogWarning("Spanner does not support multiple SQL queries in a single command");
             return false;
         }
 
@@ -485,10 +480,6 @@ namespace Google.Cloud.Spanner.Data
                     return;
                 }
                 _closed = true;
-                Logger.LogPerformanceCounter(
-                    "SpannerDataReader.ActiveCount",
-                    () => Interlocked.Decrement(ref s_readerCount));
-
                 _resultSet?.Dispose();
                 _resourceToClose?.Dispose();
             }

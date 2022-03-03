@@ -15,7 +15,6 @@
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -237,7 +236,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 var cmd = connection.CreateInsertCommand(_fixture.TableName);
                 cmd.Parameters.Add("badjuju", SpannerDbType.String, IdGenerator.FromGuid());
                 var e = await Assert.ThrowsAsync<SpannerException>(() => cmd.ExecuteNonQueryAsyncWithRetry());
-                Logger.DefaultLogger.Debug($"BadColumnName: Caught error code: {e.ErrorCode}");
+                FileLogger.Log($"BadColumnName: Caught error code: {e.ErrorCode}");
                 Assert.Equal(ErrorCode.NotFound, e.ErrorCode);
                 Assert.False(e.IsTransientSpannerFault());
             }
@@ -251,7 +250,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 var cmd = connection.CreateInsertCommand(_fixture.TableName);
                 cmd.Parameters.Add("K", SpannerDbType.Float64, 0.1);
                 var e = await Assert.ThrowsAsync<SpannerException>(() => cmd.ExecuteNonQueryAsyncWithRetry());
-                Logger.DefaultLogger.Debug($"BadColumnType: Caught error code: {e.ErrorCode}");
+                FileLogger.Log($"BadColumnType: Caught error code: {e.ErrorCode}");
                 Assert.Equal(ErrorCode.FailedPrecondition, e.ErrorCode);
                 Assert.False(e.IsTransientSpannerFault());
             }
@@ -265,7 +264,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 var cmd = connection.CreateInsertCommand("badjuju");
                 cmd.Parameters.Add("K", SpannerDbType.String, IdGenerator.FromGuid());
                 var e = await Assert.ThrowsAsync<SpannerException>(() => cmd.ExecuteNonQueryAsyncWithRetry());
-                Logger.DefaultLogger.Debug($"BadTableName: Caught error code: {e.ErrorCode}");
+                FileLogger.Log($"BadTableName: Caught error code: {e.ErrorCode}");
                 Assert.Equal(ErrorCode.NotFound, e.ErrorCode);
                 Assert.False(e.IsTransientSpannerFault());
             }

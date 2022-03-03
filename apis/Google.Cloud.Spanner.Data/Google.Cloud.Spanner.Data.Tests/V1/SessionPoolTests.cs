@@ -15,9 +15,8 @@
 using Google.Api.Gax.Grpc;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Common.V1;
-using Google.Cloud.Spanner.Data.CommonTesting;
-using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -291,36 +290,32 @@ namespace Google.Cloud.Spanner.V1.Tests
         /// Logger which retains log entries, allowing us to detect warnings and errors.
         /// All log entries are also written to the test logger.
         /// </summary>
-        private class InMemoryLogger : Logger
+        private class InMemoryLogger : ILogger
         {
             private readonly ConcurrentDictionary<LogLevel, List<string>> _logsByLevel = new ConcurrentDictionary<LogLevel, List<string>>();
 
             internal InMemoryLogger()
             {
-                LogLevel = LogLevel.Debug;
             }
 
-            protected override void LogPerformanceEntries(IEnumerable<string> entries)
-            {
-                // No-op
-            }
+            public IDisposable BeginScope<TState>(TState state) =>
+                throw new NotImplementedException();
 
-            protected override void LogImpl(LogLevel level, string message, Exception exception)
-            {
-                TestLogger.Instance.Log(level, message, exception);
-                var list = _logsByLevel.GetOrAdd(level, _ => new List<string>());
+            public bool IsEnabled(LogLevel logLevel) => logLevel >= LogLevel.Debug;
 
-                // We don't care about any exceptions at the moment.
+            public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
+            {
+                var list = _logsByLevel.GetOrAdd(logLevel, _ => new List<string>());
                 lock (list)
                 {
-                    list.Add(message);
+                    list.Add(formatter(state, exception));
                 }
             }
 
             internal void AssertNoWarningsOrErrors()
             {
                 AssertNoEntries(LogLevel.Error);
-                AssertNoEntries(LogLevel.Warn);
+                AssertNoEntries(LogLevel.Warning);
             }
 
             internal List<string> GetEntries(LogLevel level)

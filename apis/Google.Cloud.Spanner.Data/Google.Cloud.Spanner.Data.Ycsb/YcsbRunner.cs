@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+using Grpc.Core;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -21,9 +23,6 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Google.Api.Gax;
-using Google.Cloud.Spanner.V1.Internal.Logging;
-using Grpc.Core;
 
 namespace Google.Cloud.Spanner.Data.Ycsb
 {
@@ -208,7 +207,6 @@ namespace Google.Cloud.Spanner.Data.Ycsb
             {
                 operation.PrintResults();
             }
-            Logger.DefaultLogger.LogPerformanceData();
         }
 
         internal static string GenerateRandomString()

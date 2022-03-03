@@ -299,7 +299,6 @@ namespace Google.Cloud.Spanner.Data
         /// Commit statistics that are returned for a transaction are logged using the
         /// logger of the connection. Applications can set a custom logger on the
         /// connection to log the output to a different destination.
-        /// <see cref="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogCommitStats(CommitRequest, CommitResponse)"/>
         /// </remarks>
         public bool LogCommitStats
         {

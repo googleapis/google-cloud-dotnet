@@ -13,9 +13,9 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
+using Microsoft.Extensions.Logging;
 using System;
 using System.IO;
 using System.Linq;
@@ -31,7 +31,7 @@ namespace Google.Cloud.Spanner.V1
     public sealed class ReliableStreamReader : IDisposable
     {
         private readonly IAsyncStreamReader<PartialResultSet> _resultStream;
-        private readonly Logger _logger;
+        private readonly ILogger _logger;
 
         private bool _initialized = false;
         private PartialResultSet _currentResultSet;
@@ -43,7 +43,7 @@ namespace Google.Cloud.Spanner.V1
         private bool _cachedValueIsValid;
         private Value _cachedValue;
 
-        internal ReliableStreamReader(IAsyncStreamReader<PartialResultSet> resultStream, Logger logger)
+        internal ReliableStreamReader(IAsyncStreamReader<PartialResultSet> resultStream, ILogger logger)
         {
             _resultStream = GaxPreconditions.CheckNotNull(resultStream, nameof(resultStream));
             _logger = GaxPreconditions.CheckNotNull(logger, nameof(logger));
@@ -84,7 +84,7 @@ namespace Google.Cloud.Spanner.V1
         ~ReliableStreamReader()
         {
             // If our finalizer runs, it means we were not disposed properly.
-            _logger.Warn("ReliableStreamReader was not disposed of properly.  A Session may have been leaked.");
+            _logger.LogWarning("ReliableStreamReader was not disposed of properly.  A Session may have been leaked.");
         }
 
         /// <summary>

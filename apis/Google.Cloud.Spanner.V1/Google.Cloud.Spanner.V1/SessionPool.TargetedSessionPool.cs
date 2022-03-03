@@ -17,6 +17,7 @@ using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Protobuf;
 using Grpc.Core;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -401,7 +402,7 @@ namespace Google.Cloud.Spanner.V1
                 }
                 catch (RpcException e)
                 {
-                    Parent._logger.Warn("Failed to refresh session. Session will be deleted.", e);
+                    Parent._logger.LogWarning(e, "Failed to refresh session. Session will be deleted.");
                     EvictSession(session);
                     return;
                 }
@@ -423,7 +424,7 @@ namespace Google.Cloud.Spanner.V1
                 {
                     // Failed to create a read/write transaction; release this back to the pool, but making
                     // sure we don't come back here.
-                    Parent._logger.Warn("Failed to create read/write transaction for pooled session", e);
+                    Parent._logger.LogWarning(e, "Failed to create read/write transaction for pooled session");
                 }
                 ReleaseInactiveSession(session, maybeCreateReadWriteTransaction: false);
             }
@@ -474,7 +475,7 @@ namespace Google.Cloud.Spanner.V1
                     }
                     catch(RpcException e)
                     {
-                        Parent._logger.Warn("Failed to create transaction for acquired session", e);
+                        Parent._logger.LogWarning(e, "Failed to create transaction for acquired session");
                         // Failed to create the transaction for the session.
                         // Release the session back to the pool.
                         // We'll try to acquire a new session now.
@@ -506,7 +507,7 @@ namespace Google.Cloud.Spanner.V1
                     catch (RpcException e)
                     {
                         // Rollback failed. Evict the session as it's effectively unstable now.
-                        Parent._logger.Warn("Failed to rollback transaction for pooled session", e);
+                        Parent._logger.LogWarning(e, "Failed to rollback transaction for pooled session");
                         deleteSession = true;
                     }
                 }
@@ -528,7 +529,10 @@ namespace Google.Cloud.Spanner.V1
                 }
                 EvictAndRefreshSessions();
                 StartSessionCreationTasksIfNecessary();
-                Parent._logger.Debug(() => $"After maintenance: {GetStatisticsSnapshot()}");
+                if (Parent._logger.IsEnabled(LogLevel.Debug))
+                {
+                    Parent._logger.LogDebug("After maintenance: {stats}", GetStatisticsSnapshot());
+                }
             }
 
             private void EvictAndRefreshSessions()
@@ -777,7 +781,7 @@ namespace Google.Cloud.Spanner.V1
                 }
                 catch(Exception e)
                 {
-                    Parent._logger.Warn(() => $"Failed to batch create sessions for {_databaseName}", e);
+                    Parent._logger.LogWarning(e, "Failed to batch create sessions for {db}", _databaseName);
                     throw;
                 }
                 finally
@@ -802,7 +806,7 @@ namespace Google.Cloud.Spanner.V1
                     }
                     if (writeHealthChangedLog)
                     {
-                        Parent._logger.Info(() => $"Session pool for {_databaseName} is now {(success ? "healthy" : "unhealthy")}.");
+                        Parent._logger.LogInformation("Session pool for {db} is now {status}.", _databaseName, success ? "healthy" : "unhealthy");
                     }
                 }
             }
@@ -922,7 +926,7 @@ namespace Google.Cloud.Spanner.V1
                 // the active session count and in-flight session creation count to hit 0... but it means we don't need to worry
                 // about race conditions of one thread checking the shutdown flag just before it was set, but then adding a
                 // pending acquisition just after we've cancelled everything.
-                Parent._logger.Debug(() => $"Executing shutdown for {_databaseName}");
+                Parent._logger.LogDebug("Executing shutdown for {db}", _databaseName);
                 try
                 {
                     while (true)
@@ -942,7 +946,7 @@ namespace Google.Cloud.Spanner.V1
                             }
                         }
 
-                        Parent._logger.Debug(() => $"Pending shutdown: {GetStatisticsSnapshot()}");
+                        Parent._logger.LogDebug("Pending shutdown: {statistics}", GetStatisticsSnapshot());
 
                         var nursingTask = Interlocked.Exchange(ref _nurseBackToHealthTask, null);
                         nursingTask?.TrySetCanceled();
@@ -979,7 +983,7 @@ namespace Google.Cloud.Spanner.V1
                         catch
                         {
                             var failureCount = tasks.Count(t => t.Status != TaskStatus.RanToCompletion);
-                            Parent._logger.Warn($"{failureCount} out of {tasks.Count} deletion tasks failed during shutdown");
+                            Parent._logger.LogWarning("{failureCount} out of {totalCount} deletion tasks failed during shutdown", failureCount, tasks.Count);
                         }
 
                         await Parent._scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None).ConfigureAwait(false);
@@ -988,7 +992,7 @@ namespace Google.Cloud.Spanner.V1
                 // However we complete, signal that shutdown is finished.
                 finally
                 {
-                    Parent._logger.Debug(() => $"Shutdown complete for {_databaseName}");
+                    Parent._logger.LogDebug("Shutdown complete for {db}", _databaseName);
                     tcsToSignal.TrySetResult(0);
                 }
             }

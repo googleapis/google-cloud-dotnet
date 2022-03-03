@@ -25,7 +25,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     /// <summary>
     /// Tests for the .NET ambient transaction management implementation.
     /// </summary>
-    [PerformanceLog]
     [Collection(nameof(TransactionTableFixture))]
     [CommonTestDiagnostics]
     public class TransactionScopeTests : TransactionTestBase

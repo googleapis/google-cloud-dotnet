@@ -14,10 +14,10 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Spanner.Common.V1;
-using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Concurrent;
 using System.Linq;
@@ -37,7 +37,7 @@ namespace Google.Cloud.Spanner.V1
     public sealed partial class SessionPool
     {
         private readonly ISessionPool _detachedSessionPool;
-        private readonly Logger _logger;
+        private readonly ILogger _logger;
         private readonly IClock _clock;
         private readonly IScheduler _scheduler;
 
@@ -105,7 +105,7 @@ namespace Google.Cloud.Spanner.V1
                 }
                 catch (Exception e)
                 {
-                    localPool._logger.Error($"Error running {nameof(SessionPool)} maintenance task", e);
+                    localPool._logger.LogError(e, "Error running SessionPool maintenance task");
                 }
                 var scheduler = localPool._scheduler;
                 var delay = localPool.Options.MaintenanceLoopDelay;
@@ -244,7 +244,7 @@ namespace Google.Cloud.Spanner.V1
             }
             catch (Exception e)
             {
-                _logger.Error($"Error in background session pool task for {purpose}", e);
+                _logger.LogError(e, "Error in background session pool task for {purpose}", purpose);
             }
         }
 
@@ -261,7 +261,7 @@ namespace Google.Cloud.Spanner.V1
             }
             catch (RpcException e)
             {
-                _logger.Warn("Failed to delete session. Session will be abandoned to garbage collection.", e);
+                _logger.LogWarning(e, "Failed to delete session. Session will be abandoned to garbage collection.");
             }
         }
     }

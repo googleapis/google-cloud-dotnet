@@ -17,6 +17,7 @@ using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -371,14 +372,23 @@ namespace Google.Cloud.Spanner.Data
                 {
                     throw new SpannerException(ErrorCode.Internal, "Commit succeeded, but returned a response with no commit timestamp");
                 }
-                if (LogCommitStats)
-                {
-                    SpannerConnection.Logger.LogCommitStats(request, response);
-                }
+                MaybeLogCommitStats(request, response);
                 return response.CommitTimestamp.ToDateTime();
             },
             "SpannerTransaction.Commit", SpannerConnection.Logger);
         }
+
+        private void MaybeLogCommitStats(CommitRequest request, CommitResponse response)
+        {
+            if (LogCommitStats)
+            {
+                if (response.CommitStats != null)
+                {
+                    SpannerConnection.Logger.LogInformation("Transaction '{requestId}' mutation count: {mutationCount}", request.TransactionId?.ToBase64() ?? "", response.CommitStats.MutationCount);
+                }
+            }
+        }
+
         private RequestOptions BuildCommitRequestOptions() =>
             new RequestOptions { Priority = PriorityConverter.ToProto(CommitPriority), TransactionTag = _tag ?? "" };
 

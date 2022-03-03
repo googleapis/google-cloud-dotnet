@@ -14,7 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Cloud.Spanner.V1.Internal.Logging;
+using Google.Cloud.ClientTesting;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -118,7 +118,7 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             {
                 return;
             }
-            Logger.DefaultLogger.Debug($"{description}: RetryHelper stats: {retries} retries out of {calls} calls");
+            FileLogger.Log($"{description}: RetryHelper stats: {retries} retries out of {calls} calls");
         }
 
         public static void ResetStats()

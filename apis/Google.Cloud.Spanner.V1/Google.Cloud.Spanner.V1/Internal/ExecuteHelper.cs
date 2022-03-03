@@ -17,6 +17,8 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Spanner.V1.Internal
 {
+    // FIXME: Move to Google.Cloud.Spanner.V1? Move IsSessionExpiredError to a new extensions class?
+
     /// <summary>
     /// Helper class to wrap operations.
     /// </summary>

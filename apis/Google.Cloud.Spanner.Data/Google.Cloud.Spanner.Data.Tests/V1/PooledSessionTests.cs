@@ -15,9 +15,10 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Testing;
-using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
 using Grpc.Core;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
 using System;
 using System.Threading;
@@ -405,7 +406,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             public SessionPoolOptions Options { get; }
             IClock SessionPool.ISessionPool.Clock => Clock;
             public FakeClock Clock => (FakeClock) Client.Settings.Clock;
-            public Logger Logger { get; } = Logger.DefaultLogger;
+            public ILogger Logger { get; } = NullLogger.Instance;
 
             public bool? ReleasedSessionDeleted { get; private set; }
             public ByteString RolledBackTransaction { get; private set; }

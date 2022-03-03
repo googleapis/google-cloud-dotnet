@@ -18,6 +18,7 @@ using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -149,11 +150,17 @@ namespace Google.Cloud.Spanner.Data
 
                 if (request.IsQuery)
                 {
-                    Connection.Logger.SensitiveInfo(() => $"SpannerCommand.ExecuteReader.Query={request.ExecuteSqlRequest.Sql}");
+                    MaybeLogSensitiveInfo(request);
                 }
 
                 // Execute the command. Note that the command timeout here is only used for ambient transactions where we need to set a commit timeout.
                 return effectiveTransaction.ExecuteReadOrQueryAsync(request, cancellationToken, CommandTimeout);
+            }
+
+            // FIXME: Do this conditionally? We had a separate setting in the Spanner internal logging infrastructure
+            private void MaybeLogSensitiveInfo(ReadOrQueryRequest request)
+            {
+                Connection.Logger.LogDebug("SpannerCommand.ExecuteReader.Query='{sql}'", request.ExecuteSqlRequest.Sql);
             }
 
             internal async Task<IReadOnlyList<CommandPartition>> GetReaderPartitionsAsync(long? partitionSizeBytes, long? maxPartitions, CancellationToken cancellationToken)

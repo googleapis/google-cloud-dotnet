@@ -15,9 +15,9 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Cloud.Spanner.V1.Tests;
 using Google.Protobuf;
+using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -157,7 +157,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void CommandPriorityDefaultsToUnspecified()
         {
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync();
@@ -172,7 +172,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var priority = Priority.High;
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
@@ -197,7 +197,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var priority = Priority.Medium;
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
@@ -224,7 +224,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var requestTag = "request-tag-1";
             var transactionTag = "transaction-tag-1";
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+                .CreateMockClient(NullLogger.Instance, MockBehavior.Strict);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()

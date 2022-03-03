@@ -15,7 +15,6 @@
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
 using System.Linq;
 using System.Threading;
@@ -25,7 +24,6 @@ using Xunit;
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     [Collection(nameof(SpannerStressTestTableFixture))]
-    [PerformanceLog]
     [CommonTestDiagnostics]
     public class SpannerStressTests : StressTestBase
     {
@@ -152,33 +150,17 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 MaximumGrpcChannels = Math.Max(4, 8 * TargetQps / 2000)
             };
             var pool = await connectionStringBuilder.AcquireSessionPoolAsync();
-            var logger = Logger.DefaultLogger;
-            logger.ResetPerformanceData();
 
-            logger.Info("Prewarming session pool for stress test");
+            FileLogger.Log("Prewarming session pool for stress test");
             // Prewarm step: allow up to 30 seconds for the session pool to be populated.
             var cancellationToken = new CancellationTokenSource(30000).Token;
             await pool.WhenPoolReady(_fixture.DatabaseName, cancellationToken);
 
-            logger.Info($"Prewarm complete. Pool stats: {pool.GetStatisticsSnapshot(_fixture.DatabaseName)}");
+            FileLogger.Log($"Prewarm complete. Pool stats: {pool.GetStatisticsSnapshot(_fixture.DatabaseName)}");
 
-            // Now run the test, with performance logging enabled, but without debug logging.
-            // (Debug logging can write a lot to our log file, breaking the test.)
-            var previousLogLevel = logger.LogLevel;
-            logger.LogLevel = V1.Internal.Logging.LogLevel.Info;
-            logger.LogPerformanceTraces = true;
-            double latencyMs;
-            try
-            {
-                latencyMs = await TestLatencyWithQps(TargetQps, TestDuration, () => func(connectionStringBuilder));
-                logger.LogPerformanceData();
-            }
-            finally
-            {
-                logger.LogLevel = previousLogLevel;
-                logger.LogPerformanceTraces = false;
-            }
-            logger.Info($"Spanner latency = {latencyMs}ms");
+            // Now run the test.
+            double latencyMs = await TestLatencyWithQps(TargetQps, TestDuration, () => func(connectionStringBuilder));
+            FileLogger.Log($"Spanner latency = {latencyMs}ms");
 
             await SessionPoolHelpers.ShutdownPoolAsync(connectionStringBuilder);
 

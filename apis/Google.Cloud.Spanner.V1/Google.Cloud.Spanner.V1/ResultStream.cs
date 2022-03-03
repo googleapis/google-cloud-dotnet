@@ -17,6 +17,7 @@ using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.V1.Internal;
 using Google.Rpc;
 using Grpc.Core;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -181,7 +182,7 @@ namespace Google.Cloud.Spanner.V1
                 }
                 catch (RpcException e) when (_safeToRetry && retryState.CanRetry(e))
                 {
-                    _client.Settings.Logger.Warn($"Exception when reading from result stream. Retrying.", e);
+                    _client.Settings.Logger.LogWarning(e, "Exception when reading from result stream. Retrying.");
                     await retryState.WaitAsync(e, cancellationToken).ConfigureAwait(false);
 
                     // Clear anything we've received since the previous response that contained a resume token

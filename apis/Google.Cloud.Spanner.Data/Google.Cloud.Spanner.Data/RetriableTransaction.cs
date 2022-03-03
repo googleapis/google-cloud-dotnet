@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -80,7 +81,7 @@ namespace Google.Cloud.Spanner.Data
                                 // If the commit failed, calling Rollback will fail as well.
                                 // We don't want that or any other rollback exception to propagate,
                                 // it will not trigger the retry
-                                _connection.Logger.Warn("A rollback attempt failed on RetriableTransaction.RunAsync.CommitAttempt", e);
+                                _connection.Logger.LogWarning(e, "A rollback attempt failed on RetriableTransaction.RunAsync.CommitAttempt");
                             }
 
                             // Throw, the retry helper will know when to retry.
