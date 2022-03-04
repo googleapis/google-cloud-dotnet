@@ -136,22 +136,10 @@
                 "CreateUserLinkAsync"
               ]
             },
-            "CreateWebDataStream": {
-              "methods": [
-                "CreateWebDataStream",
-                "CreateWebDataStreamAsync"
-              ]
-            },
             "DeleteAccount": {
               "methods": [
                 "DeleteAccount",
                 "DeleteAccountAsync"
-              ]
-            },
-            "DeleteAndroidAppDataStream": {
-              "methods": [
-                "DeleteAndroidAppDataStream",
-                "DeleteAndroidAppDataStreamAsync"
               ]
             },
             "DeleteConversionEvent": {
@@ -190,12 +178,6 @@
                 "DeleteGoogleAdsLinkAsync"
               ]
             },
-            "DeleteIosAppDataStream": {
-              "methods": [
-                "DeleteIosAppDataStream",
-                "DeleteIosAppDataStreamAsync"
-              ]
-            },
             "DeleteMeasurementProtocolSecret": {
               "methods": [
                 "DeleteMeasurementProtocolSecret",
@@ -214,22 +196,10 @@
                 "DeleteUserLinkAsync"
               ]
             },
-            "DeleteWebDataStream": {
-              "methods": [
-                "DeleteWebDataStream",
-                "DeleteWebDataStreamAsync"
-              ]
-            },
             "GetAccount": {
               "methods": [
                 "GetAccount",
                 "GetAccountAsync"
-              ]
-            },
-            "GetAndroidAppDataStream": {
-              "methods": [
-                "GetAndroidAppDataStream",
-                "GetAndroidAppDataStreamAsync"
               ]
             },
             "GetConversionEvent": {
@@ -292,12 +262,6 @@
                 "GetGoogleSignalsSettingsAsync"
               ]
             },
-            "GetIosAppDataStream": {
-              "methods": [
-                "GetIosAppDataStream",
-                "GetIosAppDataStreamAsync"
-              ]
-            },
             "GetMeasurementProtocolSecret": {
               "methods": [
                 "GetMeasurementProtocolSecret",
@@ -316,12 +280,6 @@
                 "GetUserLinkAsync"
               ]
             },
-            "GetWebDataStream": {
-              "methods": [
-                "GetWebDataStream",
-                "GetWebDataStreamAsync"
-              ]
-            },
             "ListAccountSummaries": {
               "methods": [
                 "ListAccountSummaries",
@@ -332,12 +290,6 @@
               "methods": [
                 "ListAccounts",
                 "ListAccountsAsync"
-              ]
-            },
-            "ListAndroidAppDataStreams": {
-              "methods": [
-                "ListAndroidAppDataStreams",
-                "ListAndroidAppDataStreamsAsync"
               ]
             },
             "ListConversionEvents": {
@@ -388,12 +340,6 @@
                 "ListGoogleAdsLinksAsync"
               ]
             },
-            "ListIosAppDataStreams": {
-              "methods": [
-                "ListIosAppDataStreams",
-                "ListIosAppDataStreamsAsync"
-              ]
-            },
             "ListMeasurementProtocolSecrets": {
               "methods": [
                 "ListMeasurementProtocolSecrets",
@@ -412,12 +358,6 @@
                 "ListUserLinksAsync"
               ]
             },
-            "ListWebDataStreams": {
-              "methods": [
-                "ListWebDataStreams",
-                "ListWebDataStreamsAsync"
-              ]
-            },
             "ProvisionAccountTicket": {
               "methods": [
                 "ProvisionAccountTicket",
@@ -434,12 +374,6 @@
               "methods": [
                 "UpdateAccount",
                 "UpdateAccountAsync"
-              ]
-            },
-            "UpdateAndroidAppDataStream": {
-              "methods": [
-                "UpdateAndroidAppDataStream",
-                "UpdateAndroidAppDataStreamAsync"
               ]
             },
             "UpdateCustomDimension": {
@@ -484,12 +418,6 @@
                 "UpdateGoogleSignalsSettingsAsync"
               ]
             },
-            "UpdateIosAppDataStream": {
-              "methods": [
-                "UpdateIosAppDataStream",
-                "UpdateIosAppDataStreamAsync"
-              ]
-            },
             "UpdateMeasurementProtocolSecret": {
               "methods": [
                 "UpdateMeasurementProtocolSecret",
@@ -506,12 +434,6 @@
               "methods": [
                 "UpdateUserLink",
                 "UpdateUserLinkAsync"
-              ]
-            },
-            "UpdateWebDataStream": {
-              "methods": [
-                "UpdateWebDataStream",
-                "UpdateWebDataStreamAsync"
               ]
             }
           }

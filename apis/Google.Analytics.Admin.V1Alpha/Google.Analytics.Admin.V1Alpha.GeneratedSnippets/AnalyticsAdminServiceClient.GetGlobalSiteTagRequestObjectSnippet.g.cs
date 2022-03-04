@@ -33,7 +33,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             GetGlobalSiteTagRequest request = new GetGlobalSiteTagRequest
             {
-                GlobalSiteTagName = GlobalSiteTagName.FromProperty("[PROPERTY]"),
+                GlobalSiteTagName = GlobalSiteTagName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]"),
             };
             // Make the request
             GlobalSiteTag response = analyticsAdminServiceClient.GetGlobalSiteTag(request);

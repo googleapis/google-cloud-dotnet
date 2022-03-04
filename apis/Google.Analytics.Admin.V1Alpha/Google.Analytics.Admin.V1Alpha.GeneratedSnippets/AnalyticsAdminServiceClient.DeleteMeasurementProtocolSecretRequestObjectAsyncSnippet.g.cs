@@ -34,7 +34,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             DeleteMeasurementProtocolSecretRequest request = new DeleteMeasurementProtocolSecretRequest
             {
-                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyDataStreamMeasurementProtocolSecret("[PROPERTY]", "[DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
             };
             // Make the request
             await analyticsAdminServiceClient.DeleteMeasurementProtocolSecretAsync(request);

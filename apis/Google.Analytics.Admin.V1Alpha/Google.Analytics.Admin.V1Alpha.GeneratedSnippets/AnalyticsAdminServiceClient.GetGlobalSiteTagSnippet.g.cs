@@ -31,7 +31,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/globalSiteTag";
+            string name = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]/globalSiteTag";
             // Make the request
             GlobalSiteTag response = analyticsAdminServiceClient.GetGlobalSiteTag(name);
         }

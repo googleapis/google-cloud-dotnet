@@ -1860,1641 +1860,6 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for GetWebDataStream</summary>
-        public void GetWebDataStreamRequestObject()
-        {
-            // Snippet: GetWebDataStream(GetWebDataStreamRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            GetWebDataStreamRequest request = new GetWebDataStreamRequest
-            {
-                WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
-            };
-            // Make the request
-            WebDataStream response = analyticsAdminServiceClient.GetWebDataStream(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetWebDataStreamAsync</summary>
-        public async Task GetWebDataStreamRequestObjectAsync()
-        {
-            // Snippet: GetWebDataStreamAsync(GetWebDataStreamRequest, CallSettings)
-            // Additional: GetWebDataStreamAsync(GetWebDataStreamRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            GetWebDataStreamRequest request = new GetWebDataStreamRequest
-            {
-                WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
-            };
-            // Make the request
-            WebDataStream response = await analyticsAdminServiceClient.GetWebDataStreamAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetWebDataStream</summary>
-        public void GetWebDataStream()
-        {
-            // Snippet: GetWebDataStream(string, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/webDataStreams/[WEB_DATA_STREAM]";
-            // Make the request
-            WebDataStream response = analyticsAdminServiceClient.GetWebDataStream(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetWebDataStreamAsync</summary>
-        public async Task GetWebDataStreamAsync()
-        {
-            // Snippet: GetWebDataStreamAsync(string, CallSettings)
-            // Additional: GetWebDataStreamAsync(string, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/webDataStreams/[WEB_DATA_STREAM]";
-            // Make the request
-            WebDataStream response = await analyticsAdminServiceClient.GetWebDataStreamAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetWebDataStream</summary>
-        public void GetWebDataStreamResourceNames()
-        {
-            // Snippet: GetWebDataStream(WebDataStreamName, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            WebDataStreamName name = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]");
-            // Make the request
-            WebDataStream response = analyticsAdminServiceClient.GetWebDataStream(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetWebDataStreamAsync</summary>
-        public async Task GetWebDataStreamResourceNamesAsync()
-        {
-            // Snippet: GetWebDataStreamAsync(WebDataStreamName, CallSettings)
-            // Additional: GetWebDataStreamAsync(WebDataStreamName, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            WebDataStreamName name = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]");
-            // Make the request
-            WebDataStream response = await analyticsAdminServiceClient.GetWebDataStreamAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteWebDataStream</summary>
-        public void DeleteWebDataStreamRequestObject()
-        {
-            // Snippet: DeleteWebDataStream(DeleteWebDataStreamRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            DeleteWebDataStreamRequest request = new DeleteWebDataStreamRequest
-            {
-                WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
-            };
-            // Make the request
-            analyticsAdminServiceClient.DeleteWebDataStream(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteWebDataStreamAsync</summary>
-        public async Task DeleteWebDataStreamRequestObjectAsync()
-        {
-            // Snippet: DeleteWebDataStreamAsync(DeleteWebDataStreamRequest, CallSettings)
-            // Additional: DeleteWebDataStreamAsync(DeleteWebDataStreamRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            DeleteWebDataStreamRequest request = new DeleteWebDataStreamRequest
-            {
-                WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
-            };
-            // Make the request
-            await analyticsAdminServiceClient.DeleteWebDataStreamAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteWebDataStream</summary>
-        public void DeleteWebDataStream()
-        {
-            // Snippet: DeleteWebDataStream(string, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/webDataStreams/[WEB_DATA_STREAM]";
-            // Make the request
-            analyticsAdminServiceClient.DeleteWebDataStream(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteWebDataStreamAsync</summary>
-        public async Task DeleteWebDataStreamAsync()
-        {
-            // Snippet: DeleteWebDataStreamAsync(string, CallSettings)
-            // Additional: DeleteWebDataStreamAsync(string, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/webDataStreams/[WEB_DATA_STREAM]";
-            // Make the request
-            await analyticsAdminServiceClient.DeleteWebDataStreamAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteWebDataStream</summary>
-        public void DeleteWebDataStreamResourceNames()
-        {
-            // Snippet: DeleteWebDataStream(WebDataStreamName, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            WebDataStreamName name = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]");
-            // Make the request
-            analyticsAdminServiceClient.DeleteWebDataStream(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteWebDataStreamAsync</summary>
-        public async Task DeleteWebDataStreamResourceNamesAsync()
-        {
-            // Snippet: DeleteWebDataStreamAsync(WebDataStreamName, CallSettings)
-            // Additional: DeleteWebDataStreamAsync(WebDataStreamName, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            WebDataStreamName name = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]");
-            // Make the request
-            await analyticsAdminServiceClient.DeleteWebDataStreamAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateWebDataStream</summary>
-        public void UpdateWebDataStreamRequestObject()
-        {
-            // Snippet: UpdateWebDataStream(UpdateWebDataStreamRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            UpdateWebDataStreamRequest request = new UpdateWebDataStreamRequest
-            {
-                WebDataStream = new WebDataStream(),
-                UpdateMask = new FieldMask(),
-            };
-            // Make the request
-            WebDataStream response = analyticsAdminServiceClient.UpdateWebDataStream(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateWebDataStreamAsync</summary>
-        public async Task UpdateWebDataStreamRequestObjectAsync()
-        {
-            // Snippet: UpdateWebDataStreamAsync(UpdateWebDataStreamRequest, CallSettings)
-            // Additional: UpdateWebDataStreamAsync(UpdateWebDataStreamRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            UpdateWebDataStreamRequest request = new UpdateWebDataStreamRequest
-            {
-                WebDataStream = new WebDataStream(),
-                UpdateMask = new FieldMask(),
-            };
-            // Make the request
-            WebDataStream response = await analyticsAdminServiceClient.UpdateWebDataStreamAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateWebDataStream</summary>
-        public void UpdateWebDataStream()
-        {
-            // Snippet: UpdateWebDataStream(WebDataStream, FieldMask, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            WebDataStream webDataStream = new WebDataStream();
-            FieldMask updateMask = new FieldMask();
-            // Make the request
-            WebDataStream response = analyticsAdminServiceClient.UpdateWebDataStream(webDataStream, updateMask);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateWebDataStreamAsync</summary>
-        public async Task UpdateWebDataStreamAsync()
-        {
-            // Snippet: UpdateWebDataStreamAsync(WebDataStream, FieldMask, CallSettings)
-            // Additional: UpdateWebDataStreamAsync(WebDataStream, FieldMask, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            WebDataStream webDataStream = new WebDataStream();
-            FieldMask updateMask = new FieldMask();
-            // Make the request
-            WebDataStream response = await analyticsAdminServiceClient.UpdateWebDataStreamAsync(webDataStream, updateMask);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateWebDataStream</summary>
-        public void CreateWebDataStreamRequestObject()
-        {
-            // Snippet: CreateWebDataStream(CreateWebDataStreamRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            CreateWebDataStreamRequest request = new CreateWebDataStreamRequest
-            {
-                WebDataStream = new WebDataStream(),
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            // Make the request
-            WebDataStream response = analyticsAdminServiceClient.CreateWebDataStream(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateWebDataStreamAsync</summary>
-        public async Task CreateWebDataStreamRequestObjectAsync()
-        {
-            // Snippet: CreateWebDataStreamAsync(CreateWebDataStreamRequest, CallSettings)
-            // Additional: CreateWebDataStreamAsync(CreateWebDataStreamRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            CreateWebDataStreamRequest request = new CreateWebDataStreamRequest
-            {
-                WebDataStream = new WebDataStream(),
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            // Make the request
-            WebDataStream response = await analyticsAdminServiceClient.CreateWebDataStreamAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateWebDataStream</summary>
-        public void CreateWebDataStream()
-        {
-            // Snippet: CreateWebDataStream(string, WebDataStream, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            string parent = "properties/[PROPERTY]";
-            WebDataStream webDataStream = new WebDataStream();
-            // Make the request
-            WebDataStream response = analyticsAdminServiceClient.CreateWebDataStream(parent, webDataStream);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateWebDataStreamAsync</summary>
-        public async Task CreateWebDataStreamAsync()
-        {
-            // Snippet: CreateWebDataStreamAsync(string, WebDataStream, CallSettings)
-            // Additional: CreateWebDataStreamAsync(string, WebDataStream, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string parent = "properties/[PROPERTY]";
-            WebDataStream webDataStream = new WebDataStream();
-            // Make the request
-            WebDataStream response = await analyticsAdminServiceClient.CreateWebDataStreamAsync(parent, webDataStream);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateWebDataStream</summary>
-        public void CreateWebDataStreamResourceNames()
-        {
-            // Snippet: CreateWebDataStream(PropertyName, WebDataStream, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
-            WebDataStream webDataStream = new WebDataStream();
-            // Make the request
-            WebDataStream response = analyticsAdminServiceClient.CreateWebDataStream(parent, webDataStream);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateWebDataStreamAsync</summary>
-        public async Task CreateWebDataStreamResourceNamesAsync()
-        {
-            // Snippet: CreateWebDataStreamAsync(PropertyName, WebDataStream, CallSettings)
-            // Additional: CreateWebDataStreamAsync(PropertyName, WebDataStream, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
-            WebDataStream webDataStream = new WebDataStream();
-            // Make the request
-            WebDataStream response = await analyticsAdminServiceClient.CreateWebDataStreamAsync(parent, webDataStream);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListWebDataStreams</summary>
-        public void ListWebDataStreamsRequestObject()
-        {
-            // Snippet: ListWebDataStreams(ListWebDataStreamsRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            ListWebDataStreamsRequest request = new ListWebDataStreamsRequest
-            {
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            // Make the request
-            PagedEnumerable<ListWebDataStreamsResponse, WebDataStream> response = analyticsAdminServiceClient.ListWebDataStreams(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (WebDataStream item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListWebDataStreamsResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (WebDataStream item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<WebDataStream> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (WebDataStream item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListWebDataStreamsAsync</summary>
-        public async Task ListWebDataStreamsRequestObjectAsync()
-        {
-            // Snippet: ListWebDataStreamsAsync(ListWebDataStreamsRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            ListWebDataStreamsRequest request = new ListWebDataStreamsRequest
-            {
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            // Make the request
-            PagedAsyncEnumerable<ListWebDataStreamsResponse, WebDataStream> response = analyticsAdminServiceClient.ListWebDataStreamsAsync(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((WebDataStream item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListWebDataStreamsResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (WebDataStream item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<WebDataStream> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (WebDataStream item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListWebDataStreams</summary>
-        public void ListWebDataStreams()
-        {
-            // Snippet: ListWebDataStreams(string, string, int?, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            string parent = "properties/[PROPERTY]";
-            // Make the request
-            PagedEnumerable<ListWebDataStreamsResponse, WebDataStream> response = analyticsAdminServiceClient.ListWebDataStreams(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (WebDataStream item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListWebDataStreamsResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (WebDataStream item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<WebDataStream> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (WebDataStream item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListWebDataStreamsAsync</summary>
-        public async Task ListWebDataStreamsAsync()
-        {
-            // Snippet: ListWebDataStreamsAsync(string, string, int?, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string parent = "properties/[PROPERTY]";
-            // Make the request
-            PagedAsyncEnumerable<ListWebDataStreamsResponse, WebDataStream> response = analyticsAdminServiceClient.ListWebDataStreamsAsync(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((WebDataStream item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListWebDataStreamsResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (WebDataStream item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<WebDataStream> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (WebDataStream item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListWebDataStreams</summary>
-        public void ListWebDataStreamsResourceNames()
-        {
-            // Snippet: ListWebDataStreams(PropertyName, string, int?, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
-            // Make the request
-            PagedEnumerable<ListWebDataStreamsResponse, WebDataStream> response = analyticsAdminServiceClient.ListWebDataStreams(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (WebDataStream item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListWebDataStreamsResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (WebDataStream item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<WebDataStream> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (WebDataStream item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListWebDataStreamsAsync</summary>
-        public async Task ListWebDataStreamsResourceNamesAsync()
-        {
-            // Snippet: ListWebDataStreamsAsync(PropertyName, string, int?, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
-            // Make the request
-            PagedAsyncEnumerable<ListWebDataStreamsResponse, WebDataStream> response = analyticsAdminServiceClient.ListWebDataStreamsAsync(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((WebDataStream item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListWebDataStreamsResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (WebDataStream item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<WebDataStream> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (WebDataStream item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetIosAppDataStream</summary>
-        public void GetIosAppDataStreamRequestObject()
-        {
-            // Snippet: GetIosAppDataStream(GetIosAppDataStreamRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            GetIosAppDataStreamRequest request = new GetIosAppDataStreamRequest
-            {
-                IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
-            };
-            // Make the request
-            IosAppDataStream response = analyticsAdminServiceClient.GetIosAppDataStream(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetIosAppDataStreamAsync</summary>
-        public async Task GetIosAppDataStreamRequestObjectAsync()
-        {
-            // Snippet: GetIosAppDataStreamAsync(GetIosAppDataStreamRequest, CallSettings)
-            // Additional: GetIosAppDataStreamAsync(GetIosAppDataStreamRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            GetIosAppDataStreamRequest request = new GetIosAppDataStreamRequest
-            {
-                IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
-            };
-            // Make the request
-            IosAppDataStream response = await analyticsAdminServiceClient.GetIosAppDataStreamAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetIosAppDataStream</summary>
-        public void GetIosAppDataStream()
-        {
-            // Snippet: GetIosAppDataStream(string, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/iosAppDataStreams/[IOS_APP_DATA_STREAM]";
-            // Make the request
-            IosAppDataStream response = analyticsAdminServiceClient.GetIosAppDataStream(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetIosAppDataStreamAsync</summary>
-        public async Task GetIosAppDataStreamAsync()
-        {
-            // Snippet: GetIosAppDataStreamAsync(string, CallSettings)
-            // Additional: GetIosAppDataStreamAsync(string, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/iosAppDataStreams/[IOS_APP_DATA_STREAM]";
-            // Make the request
-            IosAppDataStream response = await analyticsAdminServiceClient.GetIosAppDataStreamAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetIosAppDataStream</summary>
-        public void GetIosAppDataStreamResourceNames()
-        {
-            // Snippet: GetIosAppDataStream(IosAppDataStreamName, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            IosAppDataStreamName name = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]");
-            // Make the request
-            IosAppDataStream response = analyticsAdminServiceClient.GetIosAppDataStream(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetIosAppDataStreamAsync</summary>
-        public async Task GetIosAppDataStreamResourceNamesAsync()
-        {
-            // Snippet: GetIosAppDataStreamAsync(IosAppDataStreamName, CallSettings)
-            // Additional: GetIosAppDataStreamAsync(IosAppDataStreamName, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            IosAppDataStreamName name = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]");
-            // Make the request
-            IosAppDataStream response = await analyticsAdminServiceClient.GetIosAppDataStreamAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteIosAppDataStream</summary>
-        public void DeleteIosAppDataStreamRequestObject()
-        {
-            // Snippet: DeleteIosAppDataStream(DeleteIosAppDataStreamRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            DeleteIosAppDataStreamRequest request = new DeleteIosAppDataStreamRequest
-            {
-                IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
-            };
-            // Make the request
-            analyticsAdminServiceClient.DeleteIosAppDataStream(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteIosAppDataStreamAsync</summary>
-        public async Task DeleteIosAppDataStreamRequestObjectAsync()
-        {
-            // Snippet: DeleteIosAppDataStreamAsync(DeleteIosAppDataStreamRequest, CallSettings)
-            // Additional: DeleteIosAppDataStreamAsync(DeleteIosAppDataStreamRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            DeleteIosAppDataStreamRequest request = new DeleteIosAppDataStreamRequest
-            {
-                IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
-            };
-            // Make the request
-            await analyticsAdminServiceClient.DeleteIosAppDataStreamAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteIosAppDataStream</summary>
-        public void DeleteIosAppDataStream()
-        {
-            // Snippet: DeleteIosAppDataStream(string, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/iosAppDataStreams/[IOS_APP_DATA_STREAM]";
-            // Make the request
-            analyticsAdminServiceClient.DeleteIosAppDataStream(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteIosAppDataStreamAsync</summary>
-        public async Task DeleteIosAppDataStreamAsync()
-        {
-            // Snippet: DeleteIosAppDataStreamAsync(string, CallSettings)
-            // Additional: DeleteIosAppDataStreamAsync(string, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/iosAppDataStreams/[IOS_APP_DATA_STREAM]";
-            // Make the request
-            await analyticsAdminServiceClient.DeleteIosAppDataStreamAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteIosAppDataStream</summary>
-        public void DeleteIosAppDataStreamResourceNames()
-        {
-            // Snippet: DeleteIosAppDataStream(IosAppDataStreamName, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            IosAppDataStreamName name = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]");
-            // Make the request
-            analyticsAdminServiceClient.DeleteIosAppDataStream(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteIosAppDataStreamAsync</summary>
-        public async Task DeleteIosAppDataStreamResourceNamesAsync()
-        {
-            // Snippet: DeleteIosAppDataStreamAsync(IosAppDataStreamName, CallSettings)
-            // Additional: DeleteIosAppDataStreamAsync(IosAppDataStreamName, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            IosAppDataStreamName name = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]");
-            // Make the request
-            await analyticsAdminServiceClient.DeleteIosAppDataStreamAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateIosAppDataStream</summary>
-        public void UpdateIosAppDataStreamRequestObject()
-        {
-            // Snippet: UpdateIosAppDataStream(UpdateIosAppDataStreamRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            UpdateIosAppDataStreamRequest request = new UpdateIosAppDataStreamRequest
-            {
-                IosAppDataStream = new IosAppDataStream(),
-                UpdateMask = new FieldMask(),
-            };
-            // Make the request
-            IosAppDataStream response = analyticsAdminServiceClient.UpdateIosAppDataStream(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateIosAppDataStreamAsync</summary>
-        public async Task UpdateIosAppDataStreamRequestObjectAsync()
-        {
-            // Snippet: UpdateIosAppDataStreamAsync(UpdateIosAppDataStreamRequest, CallSettings)
-            // Additional: UpdateIosAppDataStreamAsync(UpdateIosAppDataStreamRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            UpdateIosAppDataStreamRequest request = new UpdateIosAppDataStreamRequest
-            {
-                IosAppDataStream = new IosAppDataStream(),
-                UpdateMask = new FieldMask(),
-            };
-            // Make the request
-            IosAppDataStream response = await analyticsAdminServiceClient.UpdateIosAppDataStreamAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateIosAppDataStream</summary>
-        public void UpdateIosAppDataStream()
-        {
-            // Snippet: UpdateIosAppDataStream(IosAppDataStream, FieldMask, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            IosAppDataStream iosAppDataStream = new IosAppDataStream();
-            FieldMask updateMask = new FieldMask();
-            // Make the request
-            IosAppDataStream response = analyticsAdminServiceClient.UpdateIosAppDataStream(iosAppDataStream, updateMask);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateIosAppDataStreamAsync</summary>
-        public async Task UpdateIosAppDataStreamAsync()
-        {
-            // Snippet: UpdateIosAppDataStreamAsync(IosAppDataStream, FieldMask, CallSettings)
-            // Additional: UpdateIosAppDataStreamAsync(IosAppDataStream, FieldMask, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            IosAppDataStream iosAppDataStream = new IosAppDataStream();
-            FieldMask updateMask = new FieldMask();
-            // Make the request
-            IosAppDataStream response = await analyticsAdminServiceClient.UpdateIosAppDataStreamAsync(iosAppDataStream, updateMask);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListIosAppDataStreams</summary>
-        public void ListIosAppDataStreamsRequestObject()
-        {
-            // Snippet: ListIosAppDataStreams(ListIosAppDataStreamsRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            ListIosAppDataStreamsRequest request = new ListIosAppDataStreamsRequest
-            {
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            // Make the request
-            PagedEnumerable<ListIosAppDataStreamsResponse, IosAppDataStream> response = analyticsAdminServiceClient.ListIosAppDataStreams(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (IosAppDataStream item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListIosAppDataStreamsResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (IosAppDataStream item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<IosAppDataStream> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (IosAppDataStream item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListIosAppDataStreamsAsync</summary>
-        public async Task ListIosAppDataStreamsRequestObjectAsync()
-        {
-            // Snippet: ListIosAppDataStreamsAsync(ListIosAppDataStreamsRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            ListIosAppDataStreamsRequest request = new ListIosAppDataStreamsRequest
-            {
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            // Make the request
-            PagedAsyncEnumerable<ListIosAppDataStreamsResponse, IosAppDataStream> response = analyticsAdminServiceClient.ListIosAppDataStreamsAsync(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((IosAppDataStream item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListIosAppDataStreamsResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (IosAppDataStream item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<IosAppDataStream> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (IosAppDataStream item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListIosAppDataStreams</summary>
-        public void ListIosAppDataStreams()
-        {
-            // Snippet: ListIosAppDataStreams(string, string, int?, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            string parent = "properties/[PROPERTY]";
-            // Make the request
-            PagedEnumerable<ListIosAppDataStreamsResponse, IosAppDataStream> response = analyticsAdminServiceClient.ListIosAppDataStreams(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (IosAppDataStream item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListIosAppDataStreamsResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (IosAppDataStream item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<IosAppDataStream> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (IosAppDataStream item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListIosAppDataStreamsAsync</summary>
-        public async Task ListIosAppDataStreamsAsync()
-        {
-            // Snippet: ListIosAppDataStreamsAsync(string, string, int?, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string parent = "properties/[PROPERTY]";
-            // Make the request
-            PagedAsyncEnumerable<ListIosAppDataStreamsResponse, IosAppDataStream> response = analyticsAdminServiceClient.ListIosAppDataStreamsAsync(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((IosAppDataStream item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListIosAppDataStreamsResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (IosAppDataStream item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<IosAppDataStream> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (IosAppDataStream item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListIosAppDataStreams</summary>
-        public void ListIosAppDataStreamsResourceNames()
-        {
-            // Snippet: ListIosAppDataStreams(PropertyName, string, int?, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
-            // Make the request
-            PagedEnumerable<ListIosAppDataStreamsResponse, IosAppDataStream> response = analyticsAdminServiceClient.ListIosAppDataStreams(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (IosAppDataStream item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListIosAppDataStreamsResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (IosAppDataStream item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<IosAppDataStream> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (IosAppDataStream item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListIosAppDataStreamsAsync</summary>
-        public async Task ListIosAppDataStreamsResourceNamesAsync()
-        {
-            // Snippet: ListIosAppDataStreamsAsync(PropertyName, string, int?, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
-            // Make the request
-            PagedAsyncEnumerable<ListIosAppDataStreamsResponse, IosAppDataStream> response = analyticsAdminServiceClient.ListIosAppDataStreamsAsync(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((IosAppDataStream item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListIosAppDataStreamsResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (IosAppDataStream item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<IosAppDataStream> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (IosAppDataStream item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetAndroidAppDataStream</summary>
-        public void GetAndroidAppDataStreamRequestObject()
-        {
-            // Snippet: GetAndroidAppDataStream(GetAndroidAppDataStreamRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            GetAndroidAppDataStreamRequest request = new GetAndroidAppDataStreamRequest
-            {
-                AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
-            };
-            // Make the request
-            AndroidAppDataStream response = analyticsAdminServiceClient.GetAndroidAppDataStream(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetAndroidAppDataStreamAsync</summary>
-        public async Task GetAndroidAppDataStreamRequestObjectAsync()
-        {
-            // Snippet: GetAndroidAppDataStreamAsync(GetAndroidAppDataStreamRequest, CallSettings)
-            // Additional: GetAndroidAppDataStreamAsync(GetAndroidAppDataStreamRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            GetAndroidAppDataStreamRequest request = new GetAndroidAppDataStreamRequest
-            {
-                AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
-            };
-            // Make the request
-            AndroidAppDataStream response = await analyticsAdminServiceClient.GetAndroidAppDataStreamAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetAndroidAppDataStream</summary>
-        public void GetAndroidAppDataStream()
-        {
-            // Snippet: GetAndroidAppDataStream(string, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/androidAppDataStreams/[ANDROID_APP_DATA_STREAM]";
-            // Make the request
-            AndroidAppDataStream response = analyticsAdminServiceClient.GetAndroidAppDataStream(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetAndroidAppDataStreamAsync</summary>
-        public async Task GetAndroidAppDataStreamAsync()
-        {
-            // Snippet: GetAndroidAppDataStreamAsync(string, CallSettings)
-            // Additional: GetAndroidAppDataStreamAsync(string, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/androidAppDataStreams/[ANDROID_APP_DATA_STREAM]";
-            // Make the request
-            AndroidAppDataStream response = await analyticsAdminServiceClient.GetAndroidAppDataStreamAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetAndroidAppDataStream</summary>
-        public void GetAndroidAppDataStreamResourceNames()
-        {
-            // Snippet: GetAndroidAppDataStream(AndroidAppDataStreamName, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            AndroidAppDataStreamName name = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]");
-            // Make the request
-            AndroidAppDataStream response = analyticsAdminServiceClient.GetAndroidAppDataStream(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetAndroidAppDataStreamAsync</summary>
-        public async Task GetAndroidAppDataStreamResourceNamesAsync()
-        {
-            // Snippet: GetAndroidAppDataStreamAsync(AndroidAppDataStreamName, CallSettings)
-            // Additional: GetAndroidAppDataStreamAsync(AndroidAppDataStreamName, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            AndroidAppDataStreamName name = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]");
-            // Make the request
-            AndroidAppDataStream response = await analyticsAdminServiceClient.GetAndroidAppDataStreamAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteAndroidAppDataStream</summary>
-        public void DeleteAndroidAppDataStreamRequestObject()
-        {
-            // Snippet: DeleteAndroidAppDataStream(DeleteAndroidAppDataStreamRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            DeleteAndroidAppDataStreamRequest request = new DeleteAndroidAppDataStreamRequest
-            {
-                AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
-            };
-            // Make the request
-            analyticsAdminServiceClient.DeleteAndroidAppDataStream(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteAndroidAppDataStreamAsync</summary>
-        public async Task DeleteAndroidAppDataStreamRequestObjectAsync()
-        {
-            // Snippet: DeleteAndroidAppDataStreamAsync(DeleteAndroidAppDataStreamRequest, CallSettings)
-            // Additional: DeleteAndroidAppDataStreamAsync(DeleteAndroidAppDataStreamRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            DeleteAndroidAppDataStreamRequest request = new DeleteAndroidAppDataStreamRequest
-            {
-                AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
-            };
-            // Make the request
-            await analyticsAdminServiceClient.DeleteAndroidAppDataStreamAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteAndroidAppDataStream</summary>
-        public void DeleteAndroidAppDataStream()
-        {
-            // Snippet: DeleteAndroidAppDataStream(string, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/androidAppDataStreams/[ANDROID_APP_DATA_STREAM]";
-            // Make the request
-            analyticsAdminServiceClient.DeleteAndroidAppDataStream(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteAndroidAppDataStreamAsync</summary>
-        public async Task DeleteAndroidAppDataStreamAsync()
-        {
-            // Snippet: DeleteAndroidAppDataStreamAsync(string, CallSettings)
-            // Additional: DeleteAndroidAppDataStreamAsync(string, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/androidAppDataStreams/[ANDROID_APP_DATA_STREAM]";
-            // Make the request
-            await analyticsAdminServiceClient.DeleteAndroidAppDataStreamAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteAndroidAppDataStream</summary>
-        public void DeleteAndroidAppDataStreamResourceNames()
-        {
-            // Snippet: DeleteAndroidAppDataStream(AndroidAppDataStreamName, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            AndroidAppDataStreamName name = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]");
-            // Make the request
-            analyticsAdminServiceClient.DeleteAndroidAppDataStream(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteAndroidAppDataStreamAsync</summary>
-        public async Task DeleteAndroidAppDataStreamResourceNamesAsync()
-        {
-            // Snippet: DeleteAndroidAppDataStreamAsync(AndroidAppDataStreamName, CallSettings)
-            // Additional: DeleteAndroidAppDataStreamAsync(AndroidAppDataStreamName, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            AndroidAppDataStreamName name = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]");
-            // Make the request
-            await analyticsAdminServiceClient.DeleteAndroidAppDataStreamAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateAndroidAppDataStream</summary>
-        public void UpdateAndroidAppDataStreamRequestObject()
-        {
-            // Snippet: UpdateAndroidAppDataStream(UpdateAndroidAppDataStreamRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            UpdateAndroidAppDataStreamRequest request = new UpdateAndroidAppDataStreamRequest
-            {
-                AndroidAppDataStream = new AndroidAppDataStream(),
-                UpdateMask = new FieldMask(),
-            };
-            // Make the request
-            AndroidAppDataStream response = analyticsAdminServiceClient.UpdateAndroidAppDataStream(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateAndroidAppDataStreamAsync</summary>
-        public async Task UpdateAndroidAppDataStreamRequestObjectAsync()
-        {
-            // Snippet: UpdateAndroidAppDataStreamAsync(UpdateAndroidAppDataStreamRequest, CallSettings)
-            // Additional: UpdateAndroidAppDataStreamAsync(UpdateAndroidAppDataStreamRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            UpdateAndroidAppDataStreamRequest request = new UpdateAndroidAppDataStreamRequest
-            {
-                AndroidAppDataStream = new AndroidAppDataStream(),
-                UpdateMask = new FieldMask(),
-            };
-            // Make the request
-            AndroidAppDataStream response = await analyticsAdminServiceClient.UpdateAndroidAppDataStreamAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateAndroidAppDataStream</summary>
-        public void UpdateAndroidAppDataStream()
-        {
-            // Snippet: UpdateAndroidAppDataStream(AndroidAppDataStream, FieldMask, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            AndroidAppDataStream androidAppDataStream = new AndroidAppDataStream();
-            FieldMask updateMask = new FieldMask();
-            // Make the request
-            AndroidAppDataStream response = analyticsAdminServiceClient.UpdateAndroidAppDataStream(androidAppDataStream, updateMask);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateAndroidAppDataStreamAsync</summary>
-        public async Task UpdateAndroidAppDataStreamAsync()
-        {
-            // Snippet: UpdateAndroidAppDataStreamAsync(AndroidAppDataStream, FieldMask, CallSettings)
-            // Additional: UpdateAndroidAppDataStreamAsync(AndroidAppDataStream, FieldMask, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            AndroidAppDataStream androidAppDataStream = new AndroidAppDataStream();
-            FieldMask updateMask = new FieldMask();
-            // Make the request
-            AndroidAppDataStream response = await analyticsAdminServiceClient.UpdateAndroidAppDataStreamAsync(androidAppDataStream, updateMask);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListAndroidAppDataStreams</summary>
-        public void ListAndroidAppDataStreamsRequestObject()
-        {
-            // Snippet: ListAndroidAppDataStreams(ListAndroidAppDataStreamsRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            ListAndroidAppDataStreamsRequest request = new ListAndroidAppDataStreamsRequest
-            {
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            // Make the request
-            PagedEnumerable<ListAndroidAppDataStreamsResponse, AndroidAppDataStream> response = analyticsAdminServiceClient.ListAndroidAppDataStreams(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (AndroidAppDataStream item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListAndroidAppDataStreamsResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (AndroidAppDataStream item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<AndroidAppDataStream> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (AndroidAppDataStream item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListAndroidAppDataStreamsAsync</summary>
-        public async Task ListAndroidAppDataStreamsRequestObjectAsync()
-        {
-            // Snippet: ListAndroidAppDataStreamsAsync(ListAndroidAppDataStreamsRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            ListAndroidAppDataStreamsRequest request = new ListAndroidAppDataStreamsRequest
-            {
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            // Make the request
-            PagedAsyncEnumerable<ListAndroidAppDataStreamsResponse, AndroidAppDataStream> response = analyticsAdminServiceClient.ListAndroidAppDataStreamsAsync(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AndroidAppDataStream item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAndroidAppDataStreamsResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (AndroidAppDataStream item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<AndroidAppDataStream> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (AndroidAppDataStream item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListAndroidAppDataStreams</summary>
-        public void ListAndroidAppDataStreams()
-        {
-            // Snippet: ListAndroidAppDataStreams(string, string, int?, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            string parent = "properties/[PROPERTY]";
-            // Make the request
-            PagedEnumerable<ListAndroidAppDataStreamsResponse, AndroidAppDataStream> response = analyticsAdminServiceClient.ListAndroidAppDataStreams(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (AndroidAppDataStream item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListAndroidAppDataStreamsResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (AndroidAppDataStream item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<AndroidAppDataStream> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (AndroidAppDataStream item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListAndroidAppDataStreamsAsync</summary>
-        public async Task ListAndroidAppDataStreamsAsync()
-        {
-            // Snippet: ListAndroidAppDataStreamsAsync(string, string, int?, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string parent = "properties/[PROPERTY]";
-            // Make the request
-            PagedAsyncEnumerable<ListAndroidAppDataStreamsResponse, AndroidAppDataStream> response = analyticsAdminServiceClient.ListAndroidAppDataStreamsAsync(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AndroidAppDataStream item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAndroidAppDataStreamsResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (AndroidAppDataStream item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<AndroidAppDataStream> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (AndroidAppDataStream item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListAndroidAppDataStreams</summary>
-        public void ListAndroidAppDataStreamsResourceNames()
-        {
-            // Snippet: ListAndroidAppDataStreams(PropertyName, string, int?, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
-            // Make the request
-            PagedEnumerable<ListAndroidAppDataStreamsResponse, AndroidAppDataStream> response = analyticsAdminServiceClient.ListAndroidAppDataStreams(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (AndroidAppDataStream item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListAndroidAppDataStreamsResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (AndroidAppDataStream item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<AndroidAppDataStream> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (AndroidAppDataStream item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListAndroidAppDataStreamsAsync</summary>
-        public async Task ListAndroidAppDataStreamsResourceNamesAsync()
-        {
-            // Snippet: ListAndroidAppDataStreamsAsync(PropertyName, string, int?, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
-            // Make the request
-            PagedAsyncEnumerable<ListAndroidAppDataStreamsResponse, AndroidAppDataStream> response = analyticsAdminServiceClient.ListAndroidAppDataStreamsAsync(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AndroidAppDataStream item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAndroidAppDataStreamsResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (AndroidAppDataStream item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<AndroidAppDataStream> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (AndroidAppDataStream item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
         /// <summary>Snippet for CreateFirebaseLink</summary>
         public void CreateFirebaseLinkRequestObject()
         {
@@ -3960,7 +2325,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             GetGlobalSiteTagRequest request = new GetGlobalSiteTagRequest
             {
-                GlobalSiteTagName = GlobalSiteTagName.FromProperty("[PROPERTY]"),
+                GlobalSiteTagName = GlobalSiteTagName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]"),
             };
             // Make the request
             GlobalSiteTag response = analyticsAdminServiceClient.GetGlobalSiteTag(request);
@@ -3977,7 +2342,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             GetGlobalSiteTagRequest request = new GetGlobalSiteTagRequest
             {
-                GlobalSiteTagName = GlobalSiteTagName.FromProperty("[PROPERTY]"),
+                GlobalSiteTagName = GlobalSiteTagName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]"),
             };
             // Make the request
             GlobalSiteTag response = await analyticsAdminServiceClient.GetGlobalSiteTagAsync(request);
@@ -3991,7 +2356,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/globalSiteTag";
+            string name = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]/globalSiteTag";
             // Make the request
             GlobalSiteTag response = analyticsAdminServiceClient.GetGlobalSiteTag(name);
             // End snippet
@@ -4005,7 +2370,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/globalSiteTag";
+            string name = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]/globalSiteTag";
             // Make the request
             GlobalSiteTag response = await analyticsAdminServiceClient.GetGlobalSiteTagAsync(name);
             // End snippet
@@ -4018,7 +2383,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            GlobalSiteTagName name = GlobalSiteTagName.FromProperty("[PROPERTY]");
+            GlobalSiteTagName name = GlobalSiteTagName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]");
             // Make the request
             GlobalSiteTag response = analyticsAdminServiceClient.GetGlobalSiteTag(name);
             // End snippet
@@ -4032,7 +2397,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GlobalSiteTagName name = GlobalSiteTagName.FromProperty("[PROPERTY]");
+            GlobalSiteTagName name = GlobalSiteTagName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]");
             // Make the request
             GlobalSiteTag response = await analyticsAdminServiceClient.GetGlobalSiteTagAsync(name);
             // End snippet
@@ -4654,7 +3019,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             GetMeasurementProtocolSecretRequest request = new GetMeasurementProtocolSecretRequest
             {
-                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyDataStreamMeasurementProtocolSecret("[PROPERTY]", "[DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
             };
             // Make the request
             MeasurementProtocolSecret response = analyticsAdminServiceClient.GetMeasurementProtocolSecret(request);
@@ -4671,7 +3036,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             GetMeasurementProtocolSecretRequest request = new GetMeasurementProtocolSecretRequest
             {
-                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyDataStreamMeasurementProtocolSecret("[PROPERTY]", "[DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
             };
             // Make the request
             MeasurementProtocolSecret response = await analyticsAdminServiceClient.GetMeasurementProtocolSecretAsync(request);
@@ -4685,7 +3050,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/webDataStreams/[WEB_DATA_STREAM]/measurementProtocolSecrets/[MEASUREMENT_PROTOCOL_SECRET]";
+            string name = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]/measurementProtocolSecrets/[MEASUREMENT_PROTOCOL_SECRET]";
             // Make the request
             MeasurementProtocolSecret response = analyticsAdminServiceClient.GetMeasurementProtocolSecret(name);
             // End snippet
@@ -4699,7 +3064,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/webDataStreams/[WEB_DATA_STREAM]/measurementProtocolSecrets/[MEASUREMENT_PROTOCOL_SECRET]";
+            string name = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]/measurementProtocolSecrets/[MEASUREMENT_PROTOCOL_SECRET]";
             // Make the request
             MeasurementProtocolSecret response = await analyticsAdminServiceClient.GetMeasurementProtocolSecretAsync(name);
             // End snippet
@@ -4712,7 +3077,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            MeasurementProtocolSecretName name = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]");
+            MeasurementProtocolSecretName name = MeasurementProtocolSecretName.FromPropertyDataStreamMeasurementProtocolSecret("[PROPERTY]", "[DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]");
             // Make the request
             MeasurementProtocolSecret response = analyticsAdminServiceClient.GetMeasurementProtocolSecret(name);
             // End snippet
@@ -4726,7 +3091,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            MeasurementProtocolSecretName name = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]");
+            MeasurementProtocolSecretName name = MeasurementProtocolSecretName.FromPropertyDataStreamMeasurementProtocolSecret("[PROPERTY]", "[DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]");
             // Make the request
             MeasurementProtocolSecret response = await analyticsAdminServiceClient.GetMeasurementProtocolSecretAsync(name);
             // End snippet
@@ -4741,7 +3106,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             ListMeasurementProtocolSecretsRequest request = new ListMeasurementProtocolSecretsRequest
             {
-                ParentAsWebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                ParentAsDataStreamName = DataStreamName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]"),
             };
             // Make the request
             PagedEnumerable<ListMeasurementProtocolSecretsResponse, MeasurementProtocolSecret> response = analyticsAdminServiceClient.ListMeasurementProtocolSecrets(request);
@@ -4789,7 +3154,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             ListMeasurementProtocolSecretsRequest request = new ListMeasurementProtocolSecretsRequest
             {
-                ParentAsWebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                ParentAsDataStreamName = DataStreamName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListMeasurementProtocolSecretsResponse, MeasurementProtocolSecret> response = analyticsAdminServiceClient.ListMeasurementProtocolSecretsAsync(request);
@@ -4835,7 +3200,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "properties/[PROPERTY]/webDataStreams/[WEB_DATA_STREAM]";
+            string parent = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]";
             // Make the request
             PagedEnumerable<ListMeasurementProtocolSecretsResponse, MeasurementProtocolSecret> response = analyticsAdminServiceClient.ListMeasurementProtocolSecrets(parent);
 
@@ -4880,7 +3245,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "properties/[PROPERTY]/webDataStreams/[WEB_DATA_STREAM]";
+            string parent = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]";
             // Make the request
             PagedAsyncEnumerable<ListMeasurementProtocolSecretsResponse, MeasurementProtocolSecret> response = analyticsAdminServiceClient.ListMeasurementProtocolSecretsAsync(parent);
 
@@ -4921,11 +3286,11 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
         /// <summary>Snippet for ListMeasurementProtocolSecrets</summary>
         public void ListMeasurementProtocolSecretsResourceNames()
         {
-            // Snippet: ListMeasurementProtocolSecrets(WebDataStreamName, string, int?, CallSettings)
+            // Snippet: ListMeasurementProtocolSecrets(DataStreamName, string, int?, CallSettings)
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            WebDataStreamName parent = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]");
+            DataStreamName parent = DataStreamName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]");
             // Make the request
             PagedEnumerable<ListMeasurementProtocolSecretsResponse, MeasurementProtocolSecret> response = analyticsAdminServiceClient.ListMeasurementProtocolSecrets(parent);
 
@@ -4966,11 +3331,11 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
         /// <summary>Snippet for ListMeasurementProtocolSecretsAsync</summary>
         public async Task ListMeasurementProtocolSecretsResourceNamesAsync()
         {
-            // Snippet: ListMeasurementProtocolSecretsAsync(WebDataStreamName, string, int?, CallSettings)
+            // Snippet: ListMeasurementProtocolSecretsAsync(DataStreamName, string, int?, CallSettings)
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            WebDataStreamName parent = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]");
+            DataStreamName parent = DataStreamName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]");
             // Make the request
             PagedAsyncEnumerable<ListMeasurementProtocolSecretsResponse, MeasurementProtocolSecret> response = analyticsAdminServiceClient.ListMeasurementProtocolSecretsAsync(parent);
 
@@ -5017,7 +3382,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             CreateMeasurementProtocolSecretRequest request = new CreateMeasurementProtocolSecretRequest
             {
-                ParentAsWebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                ParentAsDataStreamName = DataStreamName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]"),
                 MeasurementProtocolSecret = new MeasurementProtocolSecret(),
             };
             // Make the request
@@ -5035,7 +3400,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             CreateMeasurementProtocolSecretRequest request = new CreateMeasurementProtocolSecretRequest
             {
-                ParentAsWebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                ParentAsDataStreamName = DataStreamName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]"),
                 MeasurementProtocolSecret = new MeasurementProtocolSecret(),
             };
             // Make the request
@@ -5050,7 +3415,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "properties/[PROPERTY]/webDataStreams/[WEB_DATA_STREAM]";
+            string parent = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]";
             MeasurementProtocolSecret measurementProtocolSecret = new MeasurementProtocolSecret();
             // Make the request
             MeasurementProtocolSecret response = analyticsAdminServiceClient.CreateMeasurementProtocolSecret(parent, measurementProtocolSecret);
@@ -5065,7 +3430,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "properties/[PROPERTY]/webDataStreams/[WEB_DATA_STREAM]";
+            string parent = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]";
             MeasurementProtocolSecret measurementProtocolSecret = new MeasurementProtocolSecret();
             // Make the request
             MeasurementProtocolSecret response = await analyticsAdminServiceClient.CreateMeasurementProtocolSecretAsync(parent, measurementProtocolSecret);
@@ -5075,11 +3440,11 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
         /// <summary>Snippet for CreateMeasurementProtocolSecret</summary>
         public void CreateMeasurementProtocolSecretResourceNames()
         {
-            // Snippet: CreateMeasurementProtocolSecret(WebDataStreamName, MeasurementProtocolSecret, CallSettings)
+            // Snippet: CreateMeasurementProtocolSecret(DataStreamName, MeasurementProtocolSecret, CallSettings)
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            WebDataStreamName parent = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]");
+            DataStreamName parent = DataStreamName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]");
             MeasurementProtocolSecret measurementProtocolSecret = new MeasurementProtocolSecret();
             // Make the request
             MeasurementProtocolSecret response = analyticsAdminServiceClient.CreateMeasurementProtocolSecret(parent, measurementProtocolSecret);
@@ -5089,12 +3454,12 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
         /// <summary>Snippet for CreateMeasurementProtocolSecretAsync</summary>
         public async Task CreateMeasurementProtocolSecretResourceNamesAsync()
         {
-            // Snippet: CreateMeasurementProtocolSecretAsync(WebDataStreamName, MeasurementProtocolSecret, CallSettings)
-            // Additional: CreateMeasurementProtocolSecretAsync(WebDataStreamName, MeasurementProtocolSecret, CancellationToken)
+            // Snippet: CreateMeasurementProtocolSecretAsync(DataStreamName, MeasurementProtocolSecret, CallSettings)
+            // Additional: CreateMeasurementProtocolSecretAsync(DataStreamName, MeasurementProtocolSecret, CancellationToken)
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            WebDataStreamName parent = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]");
+            DataStreamName parent = DataStreamName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]");
             MeasurementProtocolSecret measurementProtocolSecret = new MeasurementProtocolSecret();
             // Make the request
             MeasurementProtocolSecret response = await analyticsAdminServiceClient.CreateMeasurementProtocolSecretAsync(parent, measurementProtocolSecret);
@@ -5110,7 +3475,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             DeleteMeasurementProtocolSecretRequest request = new DeleteMeasurementProtocolSecretRequest
             {
-                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyDataStreamMeasurementProtocolSecret("[PROPERTY]", "[DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
             };
             // Make the request
             analyticsAdminServiceClient.DeleteMeasurementProtocolSecret(request);
@@ -5127,7 +3492,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             DeleteMeasurementProtocolSecretRequest request = new DeleteMeasurementProtocolSecretRequest
             {
-                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyDataStreamMeasurementProtocolSecret("[PROPERTY]", "[DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
             };
             // Make the request
             await analyticsAdminServiceClient.DeleteMeasurementProtocolSecretAsync(request);
@@ -5141,7 +3506,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/webDataStreams/[WEB_DATA_STREAM]/measurementProtocolSecrets/[MEASUREMENT_PROTOCOL_SECRET]";
+            string name = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]/measurementProtocolSecrets/[MEASUREMENT_PROTOCOL_SECRET]";
             // Make the request
             analyticsAdminServiceClient.DeleteMeasurementProtocolSecret(name);
             // End snippet
@@ -5155,7 +3520,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/webDataStreams/[WEB_DATA_STREAM]/measurementProtocolSecrets/[MEASUREMENT_PROTOCOL_SECRET]";
+            string name = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]/measurementProtocolSecrets/[MEASUREMENT_PROTOCOL_SECRET]";
             // Make the request
             await analyticsAdminServiceClient.DeleteMeasurementProtocolSecretAsync(name);
             // End snippet
@@ -5168,7 +3533,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            MeasurementProtocolSecretName name = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]");
+            MeasurementProtocolSecretName name = MeasurementProtocolSecretName.FromPropertyDataStreamMeasurementProtocolSecret("[PROPERTY]", "[DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]");
             // Make the request
             analyticsAdminServiceClient.DeleteMeasurementProtocolSecret(name);
             // End snippet
@@ -5182,7 +3547,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            MeasurementProtocolSecretName name = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]");
+            MeasurementProtocolSecretName name = MeasurementProtocolSecretName.FromPropertyDataStreamMeasurementProtocolSecret("[PROPERTY]", "[DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]");
             // Make the request
             await analyticsAdminServiceClient.DeleteMeasurementProtocolSecretAsync(name);
             // End snippet

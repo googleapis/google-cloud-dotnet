@@ -48,247 +48,223 @@ namespace Google.Analytics.Admin.V1Alpha {
             "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEj4KB2FjY291bnQYDSABKAlC",
             "LeBBBfpBJwolYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQWNjb3Vu",
             "dDpC6kE/CiZhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9Qcm9wZXJ0",
-            "eRIVcHJvcGVydGllcy97cHJvcGVydHl9IuQCChRBbmRyb2lkQXBwRGF0YVN0",
-            "cmVhbRIRCgRuYW1lGAEgASgJQgPgQQMSHAoPZmlyZWJhc2VfYXBwX2lkGAIg",
-            "ASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSGQoMcGFja2FnZV9uYW1lGAUg",
-            "ASgJQgPgQQUSFAoMZGlzcGxheV9uYW1lGAYgASgJOn7qQXsKMmFuYWx5dGlj",
-            "c2FkbWluLmdvb2dsZWFwaXMuY29tL0FuZHJvaWRBcHBEYXRhU3RyZWFtEkVw",
-            "cm9wZXJ0aWVzL3twcm9wZXJ0eX0vYW5kcm9pZEFwcERhdGFTdHJlYW1zL3th",
-            "bmRyb2lkX2FwcF9kYXRhX3N0cmVhbX0i1AIKEElvc0FwcERhdGFTdHJlYW0S",
-            "EQoEbmFtZRgBIAEoCUID4EEDEhwKD2ZpcmViYXNlX2FwcF9pZBgCIAEoCUID",
-            "4EEDEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEhkKCWJ1bmRsZV9pZBgFIAEoCUIG4EEF",
-            "4EECEhQKDGRpc3BsYXlfbmFtZRgGIAEoCTpy6kFvCi5hbmFseXRpY3NhZG1p",
-            "bi5nb29nbGVhcGlzLmNvbS9Jb3NBcHBEYXRhU3RyZWFtEj1wcm9wZXJ0aWVz",
-            "L3twcm9wZXJ0eX0vaW9zQXBwRGF0YVN0cmVhbXMve2lvc19hcHBfZGF0YV9z",
-            "dHJlYW19IugCCg1XZWJEYXRhU3RyZWFtEhEKBG5hbWUYASABKAlCA+BBAxIb",
-            "Cg5tZWFzdXJlbWVudF9pZBgCIAEoCUID4EEDEhwKD2ZpcmViYXNlX2FwcF9p",
-            "ZBgDIAEoCUID4EEDEjQKC2NyZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAUgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhgKC2RlZmF1bHRfdXJp",
-            "GAYgASgJQgPgQQUSGQoMZGlzcGxheV9uYW1lGAcgASgJQgPgQQI6aOpBZQor",
-            "YW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vV2ViRGF0YVN0cmVhbRI2",
-            "cHJvcGVydGllcy97cHJvcGVydHl9L3dlYkRhdGFTdHJlYW1zL3t3ZWJfZGF0",
-            "YV9zdHJlYW19IvkHCgpEYXRhU3RyZWFtElMKD3dlYl9zdHJlYW1fZGF0YRgG",
-            "IAEoCzI4Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5EYXRhU3Ry",
-            "ZWFtLldlYlN0cmVhbURhdGFIABJiChdhbmRyb2lkX2FwcF9zdHJlYW1fZGF0",
-            "YRgHIAEoCzI/Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5EYXRh",
-            "U3RyZWFtLkFuZHJvaWRBcHBTdHJlYW1EYXRhSAASWgoTaW9zX2FwcF9zdHJl",
-            "YW1fZGF0YRgIIAEoCzI7Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBo",
-            "YS5EYXRhU3RyZWFtLklvc0FwcFN0cmVhbURhdGFIABIRCgRuYW1lGAEgASgJ",
-            "QgPgQQMSTwoEdHlwZRgCIAEoDjI5Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4u",
-            "djFhbHBoYS5EYXRhU3RyZWFtLkRhdGFTdHJlYW1UeXBlQgbgQQXgQQISFAoM",
-            "ZGlzcGxheV9uYW1lGAMgASgJEjQKC2NyZWF0ZV90aW1lGAQgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAUg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDGmQKDVdlYlN0",
-            "cmVhbURhdGESGwoObWVhc3VyZW1lbnRfaWQYASABKAlCA+BBAxIcCg9maXJl",
-            "YmFzZV9hcHBfaWQYAiABKAlCA+BBAxIYCgtkZWZhdWx0X3VyaRgDIAEoCUID",
-            "4EEFGk8KFEFuZHJvaWRBcHBTdHJlYW1EYXRhEhwKD2ZpcmViYXNlX2FwcF9p",
-            "ZBgBIAEoCUID4EEDEhkKDHBhY2thZ2VfbmFtZRgCIAEoCUID4EEFGksKEElv",
-            "c0FwcFN0cmVhbURhdGESHAoPZmlyZWJhc2VfYXBwX2lkGAEgASgJQgPgQQMS",
-            "GQoJYnVuZGxlX2lkGAIgASgJQgbgQQXgQQIifQoORGF0YVN0cmVhbVR5cGUS",
-            "IAocREFUQV9TVFJFQU1fVFlQRV9VTlNQRUNJRklFRBAAEhMKD1dFQl9EQVRB",
-            "X1NUUkVBTRABEhsKF0FORFJPSURfQVBQX0RBVEFfU1RSRUFNEAISFwoTSU9T",
-            "X0FQUF9EQVRBX1NUUkVBTRADOl7qQVsKKGFuYWx5dGljc2FkbWluLmdvb2ds",
-            "ZWFwaXMuY29tL0RhdGFTdHJlYW0SL3Byb3BlcnRpZXMve3Byb3BlcnR5fS9k",
-            "YXRhU3RyZWFtcy97ZGF0YV9zdHJlYW19Qg0KC3N0cmVhbV9kYXRhItQBCghV",
-            "c2VyTGluaxIRCgRuYW1lGAEgASgJQgPgQQMSGgoNZW1haWxfYWRkcmVzcxgC",
-            "IAEoCUID4EEFEhQKDGRpcmVjdF9yb2xlcxgDIAMoCTqCAepBfwomYW5hbHl0",
-            "aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vVXNlckxpbmsSKGFjY291bnRzL3th",
-            "Y2NvdW50fS91c2VyTGlua3Mve3VzZXJfbGlua30SK3Byb3BlcnRpZXMve3By",
-            "b3BlcnR5fS91c2VyTGlua3Mve3VzZXJfbGlua30iYwoNQXVkaXRVc2VyTGlu",
-            "axIMCgRuYW1lGAEgASgJEhUKDWVtYWlsX2FkZHJlc3MYAiABKAkSFAoMZGly",
-            "ZWN0X3JvbGVzGAMgAygJEhcKD2VmZmVjdGl2ZV9yb2xlcxgEIAMoCSLTAQoM",
-            "RmlyZWJhc2VMaW5rEhEKBG5hbWUYASABKAlCA+BBAxIUCgdwcm9qZWN0GAIg",
-            "ASgJQgPgQQUSNAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQM6ZOpBYQoqYW5hbHl0aWNzYWRtaW4uZ29vZ2xl",
-            "YXBpcy5jb20vRmlyZWJhc2VMaW5rEjNwcm9wZXJ0aWVzL3twcm9wZXJ0eX0v",
-            "ZmlyZWJhc2VMaW5rcy97ZmlyZWJhc2VfbGlua30ijwEKDUdsb2JhbFNpdGVU",
-            "YWcSEQoEbmFtZRgBIAEoCUID4EEDEhQKB3NuaXBwZXQYAiABKAlCA+BBBTpV",
-            "6kFSCithbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9HbG9iYWxTaXRl",
-            "VGFnEiNwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vZ2xvYmFsU2l0ZVRhZyKYAwoN",
-            "R29vZ2xlQWRzTGluaxIRCgRuYW1lGAEgASgJQgPgQQMSGAoLY3VzdG9tZXJf",
-            "aWQYAyABKAlCA+BBBRIfChJjYW5fbWFuYWdlX2NsaWVudHMYBCABKAhCA+BB",
-            "AxI/ChthZHNfcGVyc29uYWxpemF0aW9uX2VuYWJsZWQYBSABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuQm9vbFZhbHVlEjQKC2NyZWF0ZV90aW1lGAcgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1l",
-            "GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEiIKFWNy",
-            "ZWF0b3JfZW1haWxfYWRkcmVzcxgJIAEoCUID4EEDOmjqQWUKK2FuYWx5dGlj",
-            "c2FkbWluLmdvb2dsZWFwaXMuY29tL0dvb2dsZUFkc0xpbmsSNnByb3BlcnRp",
-            "ZXMve3Byb3BlcnR5fS9nb29nbGVBZHNMaW5rcy97Z29vZ2xlX2Fkc19saW5r",
-            "fSLrAgoTRGF0YVNoYXJpbmdTZXR0aW5ncxIRCgRuYW1lGAEgASgJQgPgQQMS",
-            "Kwojc2hhcmluZ193aXRoX2dvb2dsZV9zdXBwb3J0X2VuYWJsZWQYAiABKAgS",
-            "Mgoqc2hhcmluZ193aXRoX2dvb2dsZV9hc3NpZ25lZF9zYWxlc19lbmFibGVk",
-            "GAMgASgIEi0KJXNoYXJpbmdfd2l0aF9nb29nbGVfYW55X3NhbGVzX2VuYWJs",
-            "ZWQYBCABKAgSLAokc2hhcmluZ193aXRoX2dvb2dsZV9wcm9kdWN0c19lbmFi",
-            "bGVkGAUgASgIEiMKG3NoYXJpbmdfd2l0aF9vdGhlcnNfZW5hYmxlZBgGIAEo",
-            "CDpe6kFbCjFhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9EYXRhU2hh",
-            "cmluZ1NldHRpbmdzEiZhY2NvdW50cy97YWNjb3VudH0vZGF0YVNoYXJpbmdT",
-            "ZXR0aW5ncyKVAgoOQWNjb3VudFN1bW1hcnkSDAoEbmFtZRgBIAEoCRI7Cgdh",
-            "Y2NvdW50GAIgASgJQir6QScKJWFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMu",
-            "Y29tL0FjY291bnQSFAoMZGlzcGxheV9uYW1lGAMgASgJEksKEnByb3BlcnR5",
-            "X3N1bW1hcmllcxgEIAMoCzIvLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFh",
-            "bHBoYS5Qcm9wZXJ0eVN1bW1hcnk6VepBUgosYW5hbHl0aWNzYWRtaW4uZ29v",
-            "Z2xlYXBpcy5jb20vQWNjb3VudFN1bW1hcnkSImFjY291bnRTdW1tYXJpZXMv",
-            "e2FjY291bnRfc3VtbWFyeX0iZgoPUHJvcGVydHlTdW1tYXJ5Ej0KCHByb3Bl",
-            "cnR5GAEgASgJQiv6QSgKJmFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29t",
-            "L1Byb3BlcnR5EhQKDGRpc3BsYXlfbmFtZRgCIAEoCSKVAgoZTWVhc3VyZW1l",
-            "bnRQcm90b2NvbFNlY3JldBIRCgRuYW1lGAEgASgJQgPgQQMSGQoMZGlzcGxh",
-            "eV9uYW1lGAIgASgJQgPgQQISGQoMc2VjcmV0X3ZhbHVlGAMgASgJQgPgQQM6",
-            "rgHqQaoBCjdhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9NZWFzdXJl",
-            "bWVudFByb3RvY29sU2VjcmV0Em9wcm9wZXJ0aWVzL3twcm9wZXJ0eX0vd2Vi",
-            "RGF0YVN0cmVhbXMve3dlYl9kYXRhX3N0cmVhbX0vbWVhc3VyZW1lbnRQcm90",
-            "b2NvbFNlY3JldHMve21lYXN1cmVtZW50X3Byb3RvY29sX3NlY3JldH0iigIK",
-            "EkNoYW5nZUhpc3RvcnlFdmVudBIKCgJpZBgBIAEoCRIvCgtjaGFuZ2VfdGlt",
-            "ZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASPQoKYWN0b3Jf",
-            "dHlwZRgDIAEoDjIpLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5B",
-            "Y3RvclR5cGUSGAoQdXNlcl9hY3Rvcl9lbWFpbBgEIAEoCRIYChBjaGFuZ2Vz",
-            "X2ZpbHRlcmVkGAUgASgIEkQKB2NoYW5nZXMYBiADKAsyMy5nb29nbGUuYW5h",
-            "bHl0aWNzLmFkbWluLnYxYWxwaGEuQ2hhbmdlSGlzdG9yeUNoYW5nZSK9DAoT",
-            "Q2hhbmdlSGlzdG9yeUNoYW5nZRIQCghyZXNvdXJjZRgBIAEoCRI6CgZhY3Rp",
-            "b24YAiABKA4yKi5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQWN0",
-            "aW9uVHlwZRJpChZyZXNvdXJjZV9iZWZvcmVfY2hhbmdlGAMgASgLMkkuZ29v",
-            "Z2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkNoYW5nZUhpc3RvcnlDaGFu",
-            "Z2UuQ2hhbmdlSGlzdG9yeVJlc291cmNlEmgKFXJlc291cmNlX2FmdGVyX2No",
-            "YW5nZRgEIAEoCzJJLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5D",
-            "aGFuZ2VIaXN0b3J5Q2hhbmdlLkNoYW5nZUhpc3RvcnlSZXNvdXJjZRqCCgoV",
-            "Q2hhbmdlSGlzdG9yeVJlc291cmNlEjoKB2FjY291bnQYASABKAsyJy5nb29n",
-            "bGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQWNjb3VudEgAEjwKCHByb3Bl",
-            "cnR5GAIgASgLMiguZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLlBy",
-            "b3BlcnR5SAASSAoPd2ViX2RhdGFfc3RyZWFtGAMgASgLMi0uZ29vZ2xlLmFu",
-            "YWx5dGljcy5hZG1pbi52MWFscGhhLldlYkRhdGFTdHJlYW1IABJXChdhbmRy",
-            "b2lkX2FwcF9kYXRhX3N0cmVhbRgEIAEoCzI0Lmdvb2dsZS5hbmFseXRpY3Mu",
-            "YWRtaW4udjFhbHBoYS5BbmRyb2lkQXBwRGF0YVN0cmVhbUgAEk8KE2lvc19h",
-            "cHBfZGF0YV9zdHJlYW0YBSABKAsyMC5nb29nbGUuYW5hbHl0aWNzLmFkbWlu",
-            "LnYxYWxwaGEuSW9zQXBwRGF0YVN0cmVhbUgAEkUKDWZpcmViYXNlX2xpbmsY",
-            "BiABKAsyLC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuRmlyZWJh",
-            "c2VMaW5rSAASSAoPZ29vZ2xlX2Fkc19saW5rGAcgASgLMi0uZ29vZ2xlLmFu",
-            "YWx5dGljcy5hZG1pbi52MWFscGhhLkdvb2dsZUFkc0xpbmtIABJYChdnb29n",
-            "bGVfc2lnbmFsc19zZXR0aW5ncxgIIAEoCzI1Lmdvb2dsZS5hbmFseXRpY3Mu",
-            "YWRtaW4udjFhbHBoYS5Hb29nbGVTaWduYWxzU2V0dGluZ3NIABJqCiFkaXNw",
-            "bGF5X3ZpZGVvXzM2MF9hZHZlcnRpc2VyX2xpbmsYCSABKAsyPS5nb29nbGUu",
-            "YW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuRGlzcGxheVZpZGVvMzYwQWR2ZXJ0",
-            "aXNlckxpbmtIABJ7CipkaXNwbGF5X3ZpZGVvXzM2MF9hZHZlcnRpc2VyX2xp",
-            "bmtfcHJvcG9zYWwYCiABKAsyRS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYx",
-            "YWxwaGEuRGlzcGxheVZpZGVvMzYwQWR2ZXJ0aXNlckxpbmtQcm9wb3NhbEgA",
-            "EksKEGNvbnZlcnNpb25fZXZlbnQYCyABKAsyLy5nb29nbGUuYW5hbHl0aWNz",
-            "LmFkbWluLnYxYWxwaGEuQ29udmVyc2lvbkV2ZW50SAASYAobbWVhc3VyZW1l",
-            "bnRfcHJvdG9jb2xfc2VjcmV0GAwgASgLMjkuZ29vZ2xlLmFuYWx5dGljcy5h",
-            "ZG1pbi52MWFscGhhLk1lYXN1cmVtZW50UHJvdG9jb2xTZWNyZXRIABJLChBj",
-            "dXN0b21fZGltZW5zaW9uGA0gASgLMi8uZ29vZ2xlLmFuYWx5dGljcy5hZG1p",
-            "bi52MWFscGhhLkN1c3RvbURpbWVuc2lvbkgAEkUKDWN1c3RvbV9tZXRyaWMY",
-            "DiABKAsyLC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQ3VzdG9t",
-            "TWV0cmljSAASWAoXZGF0YV9yZXRlbnRpb25fc2V0dGluZ3MYDyABKAsyNS5n",
-            "b29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuRGF0YVJldGVudGlvblNl",
-            "dHRpbmdzSABCCgoIcmVzb3VyY2Ui3wMKHURpc3BsYXlWaWRlbzM2MEFkdmVy",
-            "dGlzZXJMaW5rEhEKBG5hbWUYASABKAlCA+BBAxIaCg1hZHZlcnRpc2VyX2lk",
-            "GAIgASgJQgPgQQUSJAoXYWR2ZXJ0aXNlcl9kaXNwbGF5X25hbWUYAyABKAlC",
-            "A+BBAxI/ChthZHNfcGVyc29uYWxpemF0aW9uX2VuYWJsZWQYBCABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuQm9vbFZhbHVlEkYKHWNhbXBhaWduX2RhdGFfc2hh",
-            "cmluZ19lbmFibGVkGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1",
-            "ZUID4EEFEkIKGWNvc3RfZGF0YV9zaGFyaW5nX2VuYWJsZWQYBiABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuQm9vbFZhbHVlQgPgQQU6mwHqQZcBCjthbmFseXRp",
-            "Y3NhZG1pbi5nb29nbGVhcGlzLmNvbS9EaXNwbGF5VmlkZW8zNjBBZHZlcnRp",
-            "c2VyTGluaxJYcHJvcGVydGllcy97cHJvcGVydHl9L2Rpc3BsYXlWaWRlbzM2",
-            "MEFkdmVydGlzZXJMaW5rcy97ZGlzcGxheV92aWRlb18zNjBfYWR2ZXJ0aXNl",
-            "cl9saW5rfSKKBQolRGlzcGxheVZpZGVvMzYwQWR2ZXJ0aXNlckxpbmtQcm9w",
-            "b3NhbBIRCgRuYW1lGAEgASgJQgPgQQMSGgoNYWR2ZXJ0aXNlcl9pZBgCIAEo",
-            "CUID4EEFEmQKHGxpbmtfcHJvcG9zYWxfc3RhdHVzX2RldGFpbHMYAyABKAsy",
-            "OS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuTGlua1Byb3Bvc2Fs",
-            "U3RhdHVzRGV0YWlsc0ID4EEDEiQKF2FkdmVydGlzZXJfZGlzcGxheV9uYW1l",
-            "GAQgASgJQgPgQQMSHQoQdmFsaWRhdGlvbl9lbWFpbBgFIAEoCUID4EEEEkQK",
-            "G2Fkc19wZXJzb25hbGl6YXRpb25fZW5hYmxlZBgGIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5Cb29sVmFsdWVCA+BBBRJGCh1jYW1wYWlnbl9kYXRhX3NoYXJp",
-            "bmdfZW5hYmxlZBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVC",
-            "A+BBBRJCChljb3N0X2RhdGFfc2hhcmluZ19lbmFibGVkGAggASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLkJvb2xWYWx1ZUID4EEFOrQB6kGwAQpDYW5hbHl0aWNz",
-            "YWRtaW4uZ29vZ2xlYXBpcy5jb20vRGlzcGxheVZpZGVvMzYwQWR2ZXJ0aXNl",
-            "ckxpbmtQcm9wb3NhbBJpcHJvcGVydGllcy97cHJvcGVydHl9L2Rpc3BsYXlW",
-            "aWRlbzM2MEFkdmVydGlzZXJMaW5rUHJvcG9zYWxzL3tkaXNwbGF5X3ZpZGVv",
-            "XzM2MF9hZHZlcnRpc2VyX2xpbmtfcHJvcG9zYWx9IvwBChlMaW5rUHJvcG9z",
-            "YWxTdGF0dXNEZXRhaWxzEmwKIGxpbmtfcHJvcG9zYWxfaW5pdGlhdGluZ19w",
-            "cm9kdWN0GAEgASgOMj0uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhh",
-            "LkxpbmtQcm9wb3NhbEluaXRpYXRpbmdQcm9kdWN0QgPgQQMSHAoPcmVxdWVz",
-            "dG9yX2VtYWlsGAIgASgJQgPgQQMSUwoTbGlua19wcm9wb3NhbF9zdGF0ZRgD",
-            "IAEoDjIxLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5MaW5rUHJv",
-            "cG9zYWxTdGF0ZUID4EEDIo8CCg9Db252ZXJzaW9uRXZlbnQSEQoEbmFtZRgB",
-            "IAEoCUID4EEDEhcKCmV2ZW50X25hbWUYAiABKAlCA+BBBRI0CgtjcmVhdGVf",
-            "dGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIW",
-            "CglkZWxldGFibGUYBCABKAhCA+BBAxITCgZjdXN0b20YBSABKAhCA+BBAzpt",
-            "6kFqCi1hbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9Db252ZXJzaW9u",
-            "RXZlbnQSOXByb3BlcnRpZXMve3Byb3BlcnR5fS9jb252ZXJzaW9uRXZlbnRz",
-            "L3tjb252ZXJzaW9uX2V2ZW50fSKgAgoVR29vZ2xlU2lnbmFsc1NldHRpbmdz",
-            "EhEKBG5hbWUYASABKAlCA+BBAxJBCgVzdGF0ZRgDIAEoDjIyLmdvb2dsZS5h",
-            "bmFseXRpY3MuYWRtaW4udjFhbHBoYS5Hb29nbGVTaWduYWxzU3RhdGUSSgoH",
-            "Y29uc2VudBgEIAEoDjI0Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBo",
-            "YS5Hb29nbGVTaWduYWxzQ29uc2VudEID4EEDOmXqQWIKM2FuYWx5dGljc2Fk",
-            "bWluLmdvb2dsZWFwaXMuY29tL0dvb2dsZVNpZ25hbHNTZXR0aW5ncxIrcHJv",
-            "cGVydGllcy97cHJvcGVydHl9L2dvb2dsZVNpZ25hbHNTZXR0aW5ncyKfAwoP",
-            "Q3VzdG9tRGltZW5zaW9uEhEKBG5hbWUYASABKAlCA+BBAxIeCg5wYXJhbWV0",
-            "ZXJfbmFtZRgCIAEoCUIG4EEC4EEFEhkKDGRpc3BsYXlfbmFtZRgDIAEoCUID",
-            "4EECEhgKC2Rlc2NyaXB0aW9uGAQgASgJQgPgQQESVQoFc2NvcGUYBSABKA4y",
-            "Pi5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQ3VzdG9tRGltZW5z",
-            "aW9uLkRpbWVuc2lvblNjb3BlQgbgQQLgQQUSKQocZGlzYWxsb3dfYWRzX3Bl",
-            "cnNvbmFsaXphdGlvbhgGIAEoCEID4EEBIkYKDkRpbWVuc2lvblNjb3BlEh8K",
-            "G0RJTUVOU0lPTl9TQ09QRV9VTlNQRUNJRklFRBAAEgkKBUVWRU5UEAESCAoE",
-            "VVNFUhACOlrqQVcKLWFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0N1",
-            "c3RvbURpbWVuc2lvbhImcHJvcGVydGllcy97cHJvcGVydHl9L2N1c3RvbURp",
-            "bWVuc2lvbnMi7AQKDEN1c3RvbU1ldHJpYxIRCgRuYW1lGAEgASgJQgPgQQMS",
-            "HgoOcGFyYW1ldGVyX25hbWUYAiABKAlCBuBBAuBBBRIZCgxkaXNwbGF5X25h",
-            "bWUYAyABKAlCA+BBAhIYCgtkZXNjcmlwdGlvbhgEIAEoCUID4EEBElsKEG1l",
-            "YXN1cmVtZW50X3VuaXQYBSABKA4yPC5nb29nbGUuYW5hbHl0aWNzLmFkbWlu",
-            "LnYxYWxwaGEuQ3VzdG9tTWV0cmljLk1lYXN1cmVtZW50VW5pdEID4EECEk8K",
-            "BXNjb3BlGAYgASgOMjguZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhh",
-            "LkN1c3RvbU1ldHJpYy5NZXRyaWNTY29wZUIG4EEC4EEFIrcBCg9NZWFzdXJl",
-            "bWVudFVuaXQSIAocTUVBU1VSRU1FTlRfVU5JVF9VTlNQRUNJRklFRBAAEgwK",
-            "CFNUQU5EQVJEEAESDAoIQ1VSUkVOQ1kQAhIICgRGRUVUEAMSCgoGTUVURVJT",
-            "EAQSDgoKS0lMT01FVEVSUxAFEgkKBU1JTEVTEAYSEAoMTUlMTElTRUNPTkRT",
-            "EAcSCwoHU0VDT05EUxAIEgsKB01JTlVURVMQCRIJCgVIT1VSUxAKIjYKC01l",
-            "dHJpY1Njb3BlEhwKGE1FVFJJQ19TQ09QRV9VTlNQRUNJRklFRBAAEgkKBUVW",
-            "RU5UEAE6VOpBUQoqYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQ3Vz",
-            "dG9tTWV0cmljEiNwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vY3VzdG9tTWV0cmlj",
-            "cyLCAwoVRGF0YVJldGVudGlvblNldHRpbmdzEhEKBG5hbWUYASABKAlCA+BB",
-            "AxJlChRldmVudF9kYXRhX3JldGVudGlvbhgCIAEoDjJHLmdvb2dsZS5hbmFs",
-            "eXRpY3MuYWRtaW4udjFhbHBoYS5EYXRhUmV0ZW50aW9uU2V0dGluZ3MuUmV0",
-            "ZW50aW9uRHVyYXRpb24SJwofcmVzZXRfdXNlcl9kYXRhX29uX25ld19hY3Rp",
-            "dml0eRgDIAEoCCKeAQoRUmV0ZW50aW9uRHVyYXRpb24SIgoeUkVURU5USU9O",
-            "X0RVUkFUSU9OX1VOU1BFQ0lGSUVEEAASDgoKVFdPX01PTlRIUxABEhMKD0ZP",
-            "VVJURUVOX01PTlRIUxADEhUKEVRXRU5UWV9TSVhfTU9OVEhTEAQSFwoTVEhJ",
-            "UlRZX0VJR0hUX01PTlRIUxAFEhAKDEZJRlRZX01PTlRIUxAGOmXqQWIKM2Fu",
-            "YWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0RhdGFSZXRlbnRpb25TZXR0",
-            "aW5ncxIrcHJvcGVydGllcy97cHJvcGVydHl9L2RhdGFSZXRlbnRpb25TZXR0",
-            "aW5ncyqqBAoQSW5kdXN0cnlDYXRlZ29yeRIhCh1JTkRVU1RSWV9DQVRFR09S",
-            "WV9VTlNQRUNJRklFRBAAEg4KCkFVVE9NT1RJVkUQARIjCh9CVVNJTkVTU19B",
-            "TkRfSU5EVVNUUklBTF9NQVJLRVRTEAISCwoHRklOQU5DRRADEg4KCkhFQUxU",
-            "SENBUkUQBBIOCgpURUNITk9MT0dZEAUSCgoGVFJBVkVMEAYSCQoFT1RIRVIQ",
-            "BxIaChZBUlRTX0FORF9FTlRFUlRBSU5NRU5UEAgSFgoSQkVBVVRZX0FORF9G",
-            "SVRORVNTEAkSGAoUQk9PS1NfQU5EX0xJVEVSQVRVUkUQChISCg5GT09EX0FO",
-            "RF9EUklOSxALEgkKBUdBTUVTEAwSFwoTSE9CQklFU19BTkRfTEVJU1VSRRAN",
-            "EhMKD0hPTUVfQU5EX0dBUkRFThAOEhgKFElOVEVSTkVUX0FORF9URUxFQ09N",
-            "EA8SFgoSTEFXX0FORF9HT1ZFUk5NRU5UEBASCAoETkVXUxAREhYKEk9OTElO",
-            "RV9DT01NVU5JVElFUxASEhYKElBFT1BMRV9BTkRfU09DSUVUWRATEhQKEFBF",
-            "VFNfQU5EX0FOSU1BTFMQFBIPCgtSRUFMX0VTVEFURRAVEg0KCVJFRkVSRU5D",
-            "RRAWEgsKB1NDSUVOQ0UQFxIKCgZTUE9SVFMQGBIWChJKT0JTX0FORF9FRFVD",
-            "QVRJT04QGRIMCghTSE9QUElORxAaKmYKDFNlcnZpY2VMZXZlbBIdChlTRVJW",
-            "SUNFX0xFVkVMX1VOU1BFQ0lGSUVEEAASHQoZR09PR0xFX0FOQUxZVElDU19T",
-            "VEFOREFSRBABEhgKFEdPT0dMRV9BTkFMWVRJQ1NfMzYwEAIqSgoJQWN0b3JU",
-            "eXBlEhoKFkFDVE9SX1RZUEVfVU5TUEVDSUZJRUQQABIICgRVU0VSEAESCgoG",
-            "U1lTVEVNEAISCwoHU1VQUE9SVBADKlAKCkFjdGlvblR5cGUSGwoXQUNUSU9O",
-            "X1RZUEVfVU5TUEVDSUZJRUQQABILCgdDUkVBVEVEEAESCwoHVVBEQVRFRBAC",
-            "EgsKB0RFTEVURUQQAyrIAwoZQ2hhbmdlSGlzdG9yeVJlc291cmNlVHlwZRIs",
-            "CihDSEFOR0VfSElTVE9SWV9SRVNPVVJDRV9UWVBFX1VOU1BFQ0lGSUVEEAAS",
-            "CwoHQUNDT1VOVBABEgwKCFBST1BFUlRZEAISEwoPV0VCX0RBVEFfU1RSRUFN",
-            "EAMSGwoXQU5EUk9JRF9BUFBfREFUQV9TVFJFQU0QBBIXChNJT1NfQVBQX0RB",
-            "VEFfU1RSRUFNEAUSEQoNRklSRUJBU0VfTElOSxAGEhMKD0dPT0dMRV9BRFNf",
-            "TElOSxAHEhsKF0dPT0dMRV9TSUdOQUxTX1NFVFRJTkdTEAgSFAoQQ09OVkVS",
-            "U0lPTl9FVkVOVBAJEh8KG01FQVNVUkVNRU5UX1BST1RPQ09MX1NFQ1JFVBAK",
-            "EhQKEENVU1RPTV9ESU1FTlNJT04QCxIRCg1DVVNUT01fTUVUUklDEAwSGwoX",
-            "REFUQV9SRVRFTlRJT05fU0VUVElOR1MQDRIlCiFESVNQTEFZX1ZJREVPXzM2",
-            "MF9BRFZFUlRJU0VSX0xJTksQDhIuCipESVNQTEFZX1ZJREVPXzM2MF9BRFZF",
-            "UlRJU0VSX0xJTktfUFJPUE9TQUwQDypzChJHb29nbGVTaWduYWxzU3RhdGUS",
+            "eRIVcHJvcGVydGllcy97cHJvcGVydHl9IvkHCgpEYXRhU3RyZWFtElMKD3dl",
+            "Yl9zdHJlYW1fZGF0YRgGIAEoCzI4Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4u",
+            "djFhbHBoYS5EYXRhU3RyZWFtLldlYlN0cmVhbURhdGFIABJiChdhbmRyb2lk",
+            "X2FwcF9zdHJlYW1fZGF0YRgHIAEoCzI/Lmdvb2dsZS5hbmFseXRpY3MuYWRt",
+            "aW4udjFhbHBoYS5EYXRhU3RyZWFtLkFuZHJvaWRBcHBTdHJlYW1EYXRhSAAS",
+            "WgoTaW9zX2FwcF9zdHJlYW1fZGF0YRgIIAEoCzI7Lmdvb2dsZS5hbmFseXRp",
+            "Y3MuYWRtaW4udjFhbHBoYS5EYXRhU3RyZWFtLklvc0FwcFN0cmVhbURhdGFI",
+            "ABIRCgRuYW1lGAEgASgJQgPgQQMSTwoEdHlwZRgCIAEoDjI5Lmdvb2dsZS5h",
+            "bmFseXRpY3MuYWRtaW4udjFhbHBoYS5EYXRhU3RyZWFtLkRhdGFTdHJlYW1U",
+            "eXBlQgbgQQXgQQISFAoMZGlzcGxheV9uYW1lGAMgASgJEjQKC2NyZWF0ZV90",
+            "aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQK",
+            "C3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEID4EEDGmQKDVdlYlN0cmVhbURhdGESGwoObWVhc3VyZW1lbnRfaWQYASAB",
+            "KAlCA+BBAxIcCg9maXJlYmFzZV9hcHBfaWQYAiABKAlCA+BBAxIYCgtkZWZh",
+            "dWx0X3VyaRgDIAEoCUID4EEFGk8KFEFuZHJvaWRBcHBTdHJlYW1EYXRhEhwK",
+            "D2ZpcmViYXNlX2FwcF9pZBgBIAEoCUID4EEDEhkKDHBhY2thZ2VfbmFtZRgC",
+            "IAEoCUID4EEFGksKEElvc0FwcFN0cmVhbURhdGESHAoPZmlyZWJhc2VfYXBw",
+            "X2lkGAEgASgJQgPgQQMSGQoJYnVuZGxlX2lkGAIgASgJQgbgQQXgQQIifQoO",
+            "RGF0YVN0cmVhbVR5cGUSIAocREFUQV9TVFJFQU1fVFlQRV9VTlNQRUNJRklF",
+            "RBAAEhMKD1dFQl9EQVRBX1NUUkVBTRABEhsKF0FORFJPSURfQVBQX0RBVEFf",
+            "U1RSRUFNEAISFwoTSU9TX0FQUF9EQVRBX1NUUkVBTRADOl7qQVsKKGFuYWx5",
+            "dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0RhdGFTdHJlYW0SL3Byb3BlcnRp",
+            "ZXMve3Byb3BlcnR5fS9kYXRhU3RyZWFtcy97ZGF0YV9zdHJlYW19Qg0KC3N0",
+            "cmVhbV9kYXRhItQBCghVc2VyTGluaxIRCgRuYW1lGAEgASgJQgPgQQMSGgoN",
+            "ZW1haWxfYWRkcmVzcxgCIAEoCUID4EEFEhQKDGRpcmVjdF9yb2xlcxgDIAMo",
+            "CTqCAepBfwomYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vVXNlckxp",
+            "bmsSKGFjY291bnRzL3thY2NvdW50fS91c2VyTGlua3Mve3VzZXJfbGlua30S",
+            "K3Byb3BlcnRpZXMve3Byb3BlcnR5fS91c2VyTGlua3Mve3VzZXJfbGlua30i",
+            "YwoNQXVkaXRVc2VyTGluaxIMCgRuYW1lGAEgASgJEhUKDWVtYWlsX2FkZHJl",
+            "c3MYAiABKAkSFAoMZGlyZWN0X3JvbGVzGAMgAygJEhcKD2VmZmVjdGl2ZV9y",
+            "b2xlcxgEIAMoCSLTAQoMRmlyZWJhc2VMaW5rEhEKBG5hbWUYASABKAlCA+BB",
+            "AxIUCgdwcm9qZWN0GAIgASgJQgPgQQUSNAoLY3JlYXRlX3RpbWUYAyABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQM6ZOpBYQoqYW5hbHl0",
+            "aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vRmlyZWJhc2VMaW5rEjNwcm9wZXJ0",
+            "aWVzL3twcm9wZXJ0eX0vZmlyZWJhc2VMaW5rcy97ZmlyZWJhc2VfbGlua30i",
+            "qQEKDUdsb2JhbFNpdGVUYWcSEQoEbmFtZRgBIAEoCUID4EEDEhQKB3NuaXBw",
+            "ZXQYAiABKAlCA+BBBTpv6kFsCithbmFseXRpY3NhZG1pbi5nb29nbGVhcGlz",
+            "LmNvbS9HbG9iYWxTaXRlVGFnEj1wcm9wZXJ0aWVzL3twcm9wZXJ0eX0vZGF0",
+            "YVN0cmVhbXMve2RhdGFfc3RyZWFtfS9nbG9iYWxTaXRlVGFnIpgDCg1Hb29n",
+            "bGVBZHNMaW5rEhEKBG5hbWUYASABKAlCA+BBAxIYCgtjdXN0b21lcl9pZBgD",
+            "IAEoCUID4EEFEh8KEmNhbl9tYW5hZ2VfY2xpZW50cxgEIAEoCEID4EEDEj8K",
+            "G2Fkc19wZXJzb25hbGl6YXRpb25fZW5hYmxlZBgFIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5Cb29sVmFsdWUSNAoLY3JlYXRlX3RpbWUYByABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYCCAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSIgoVY3JlYXRv",
+            "cl9lbWFpbF9hZGRyZXNzGAkgASgJQgPgQQM6aOpBZQorYW5hbHl0aWNzYWRt",
+            "aW4uZ29vZ2xlYXBpcy5jb20vR29vZ2xlQWRzTGluaxI2cHJvcGVydGllcy97",
+            "cHJvcGVydHl9L2dvb2dsZUFkc0xpbmtzL3tnb29nbGVfYWRzX2xpbmt9IusC",
+            "ChNEYXRhU2hhcmluZ1NldHRpbmdzEhEKBG5hbWUYASABKAlCA+BBAxIrCiNz",
+            "aGFyaW5nX3dpdGhfZ29vZ2xlX3N1cHBvcnRfZW5hYmxlZBgCIAEoCBIyCipz",
+            "aGFyaW5nX3dpdGhfZ29vZ2xlX2Fzc2lnbmVkX3NhbGVzX2VuYWJsZWQYAyAB",
+            "KAgSLQolc2hhcmluZ193aXRoX2dvb2dsZV9hbnlfc2FsZXNfZW5hYmxlZBgE",
+            "IAEoCBIsCiRzaGFyaW5nX3dpdGhfZ29vZ2xlX3Byb2R1Y3RzX2VuYWJsZWQY",
+            "BSABKAgSIwobc2hhcmluZ193aXRoX290aGVyc19lbmFibGVkGAYgASgIOl7q",
+            "QVsKMWFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0RhdGFTaGFyaW5n",
+            "U2V0dGluZ3MSJmFjY291bnRzL3thY2NvdW50fS9kYXRhU2hhcmluZ1NldHRp",
+            "bmdzIpUCCg5BY2NvdW50U3VtbWFyeRIMCgRuYW1lGAEgASgJEjsKB2FjY291",
+            "bnQYAiABKAlCKvpBJwolYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20v",
+            "QWNjb3VudBIUCgxkaXNwbGF5X25hbWUYAyABKAkSSwoScHJvcGVydHlfc3Vt",
+            "bWFyaWVzGAQgAygLMi8uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhh",
+            "LlByb3BlcnR5U3VtbWFyeTpV6kFSCixhbmFseXRpY3NhZG1pbi5nb29nbGVh",
+            "cGlzLmNvbS9BY2NvdW50U3VtbWFyeRIiYWNjb3VudFN1bW1hcmllcy97YWNj",
+            "b3VudF9zdW1tYXJ5fSJmCg9Qcm9wZXJ0eVN1bW1hcnkSPQoIcHJvcGVydHkY",
+            "ASABKAlCK/pBKAomYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vUHJv",
+            "cGVydHkSFAoMZGlzcGxheV9uYW1lGAIgASgJIo4CChlNZWFzdXJlbWVudFBy",
+            "b3RvY29sU2VjcmV0EhEKBG5hbWUYASABKAlCA+BBAxIZCgxkaXNwbGF5X25h",
+            "bWUYAiABKAlCA+BBAhIZCgxzZWNyZXRfdmFsdWUYAyABKAlCA+BBAzqnAepB",
+            "owEKN2FuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL01lYXN1cmVtZW50",
+            "UHJvdG9jb2xTZWNyZXQSaHByb3BlcnRpZXMve3Byb3BlcnR5fS9kYXRhU3Ry",
+            "ZWFtcy97ZGF0YV9zdHJlYW19L21lYXN1cmVtZW50UHJvdG9jb2xTZWNyZXRz",
+            "L3ttZWFzdXJlbWVudF9wcm90b2NvbF9zZWNyZXR9IooCChJDaGFuZ2VIaXN0",
+            "b3J5RXZlbnQSCgoCaWQYASABKAkSLwoLY2hhbmdlX3RpbWUYAiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEj0KCmFjdG9yX3R5cGUYAyABKA4y",
+            "KS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQWN0b3JUeXBlEhgK",
+            "EHVzZXJfYWN0b3JfZW1haWwYBCABKAkSGAoQY2hhbmdlc19maWx0ZXJlZBgF",
+            "IAEoCBJECgdjaGFuZ2VzGAYgAygLMjMuZ29vZ2xlLmFuYWx5dGljcy5hZG1p",
+            "bi52MWFscGhhLkNoYW5nZUhpc3RvcnlDaGFuZ2UijAsKE0NoYW5nZUhpc3Rv",
+            "cnlDaGFuZ2USEAoIcmVzb3VyY2UYASABKAkSOgoGYWN0aW9uGAIgASgOMiou",
+            "Z29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkFjdGlvblR5cGUSaQoW",
+            "cmVzb3VyY2VfYmVmb3JlX2NoYW5nZRgDIAEoCzJJLmdvb2dsZS5hbmFseXRp",
+            "Y3MuYWRtaW4udjFhbHBoYS5DaGFuZ2VIaXN0b3J5Q2hhbmdlLkNoYW5nZUhp",
+            "c3RvcnlSZXNvdXJjZRJoChVyZXNvdXJjZV9hZnRlcl9jaGFuZ2UYBCABKAsy",
+            "SS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQ2hhbmdlSGlzdG9y",
+            "eUNoYW5nZS5DaGFuZ2VIaXN0b3J5UmVzb3VyY2Ua0QgKFUNoYW5nZUhpc3Rv",
+            "cnlSZXNvdXJjZRI6CgdhY2NvdW50GAEgASgLMicuZ29vZ2xlLmFuYWx5dGlj",
+            "cy5hZG1pbi52MWFscGhhLkFjY291bnRIABI8Cghwcm9wZXJ0eRgCIAEoCzIo",
+            "Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5Qcm9wZXJ0eUgAEkUK",
+            "DWZpcmViYXNlX2xpbmsYBiABKAsyLC5nb29nbGUuYW5hbHl0aWNzLmFkbWlu",
+            "LnYxYWxwaGEuRmlyZWJhc2VMaW5rSAASSAoPZ29vZ2xlX2Fkc19saW5rGAcg",
+            "ASgLMi0uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkdvb2dsZUFk",
+            "c0xpbmtIABJYChdnb29nbGVfc2lnbmFsc19zZXR0aW5ncxgIIAEoCzI1Lmdv",
+            "b2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5Hb29nbGVTaWduYWxzU2V0",
+            "dGluZ3NIABJqCiFkaXNwbGF5X3ZpZGVvXzM2MF9hZHZlcnRpc2VyX2xpbmsY",
+            "CSABKAsyPS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuRGlzcGxh",
+            "eVZpZGVvMzYwQWR2ZXJ0aXNlckxpbmtIABJ7CipkaXNwbGF5X3ZpZGVvXzM2",
+            "MF9hZHZlcnRpc2VyX2xpbmtfcHJvcG9zYWwYCiABKAsyRS5nb29nbGUuYW5h",
+            "bHl0aWNzLmFkbWluLnYxYWxwaGEuRGlzcGxheVZpZGVvMzYwQWR2ZXJ0aXNl",
+            "ckxpbmtQcm9wb3NhbEgAEksKEGNvbnZlcnNpb25fZXZlbnQYCyABKAsyLy5n",
+            "b29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQ29udmVyc2lvbkV2ZW50",
+            "SAASYAobbWVhc3VyZW1lbnRfcHJvdG9jb2xfc2VjcmV0GAwgASgLMjkuZ29v",
+            "Z2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLk1lYXN1cmVtZW50UHJvdG9j",
+            "b2xTZWNyZXRIABJLChBjdXN0b21fZGltZW5zaW9uGA0gASgLMi8uZ29vZ2xl",
+            "LmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkN1c3RvbURpbWVuc2lvbkgAEkUK",
+            "DWN1c3RvbV9tZXRyaWMYDiABKAsyLC5nb29nbGUuYW5hbHl0aWNzLmFkbWlu",
+            "LnYxYWxwaGEuQ3VzdG9tTWV0cmljSAASWAoXZGF0YV9yZXRlbnRpb25fc2V0",
+            "dGluZ3MYDyABKAsyNS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEu",
+            "RGF0YVJldGVudGlvblNldHRpbmdzSAASQQoLZGF0YV9zdHJlYW0YEiABKAsy",
+            "Ki5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuRGF0YVN0cmVhbUgA",
+            "QgoKCHJlc291cmNlIt8DCh1EaXNwbGF5VmlkZW8zNjBBZHZlcnRpc2VyTGlu",
+            "axIRCgRuYW1lGAEgASgJQgPgQQMSGgoNYWR2ZXJ0aXNlcl9pZBgCIAEoCUID",
+            "4EEFEiQKF2FkdmVydGlzZXJfZGlzcGxheV9uYW1lGAMgASgJQgPgQQMSPwob",
+            "YWRzX3BlcnNvbmFsaXphdGlvbl9lbmFibGVkGAQgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLkJvb2xWYWx1ZRJGCh1jYW1wYWlnbl9kYXRhX3NoYXJpbmdfZW5h",
+            "YmxlZBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVCA+BBBRJC",
+            "Chljb3N0X2RhdGFfc2hhcmluZ19lbmFibGVkGAYgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLkJvb2xWYWx1ZUID4EEFOpsB6kGXAQo7YW5hbHl0aWNzYWRtaW4u",
+            "Z29vZ2xlYXBpcy5jb20vRGlzcGxheVZpZGVvMzYwQWR2ZXJ0aXNlckxpbmsS",
+            "WHByb3BlcnRpZXMve3Byb3BlcnR5fS9kaXNwbGF5VmlkZW8zNjBBZHZlcnRp",
+            "c2VyTGlua3Mve2Rpc3BsYXlfdmlkZW9fMzYwX2FkdmVydGlzZXJfbGlua30i",
+            "igUKJURpc3BsYXlWaWRlbzM2MEFkdmVydGlzZXJMaW5rUHJvcG9zYWwSEQoE",
+            "bmFtZRgBIAEoCUID4EEDEhoKDWFkdmVydGlzZXJfaWQYAiABKAlCA+BBBRJk",
+            "ChxsaW5rX3Byb3Bvc2FsX3N0YXR1c19kZXRhaWxzGAMgASgLMjkuZ29vZ2xl",
+            "LmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkxpbmtQcm9wb3NhbFN0YXR1c0Rl",
+            "dGFpbHNCA+BBAxIkChdhZHZlcnRpc2VyX2Rpc3BsYXlfbmFtZRgEIAEoCUID",
+            "4EEDEh0KEHZhbGlkYXRpb25fZW1haWwYBSABKAlCA+BBBBJEChthZHNfcGVy",
+            "c29uYWxpemF0aW9uX2VuYWJsZWQYBiABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "Qm9vbFZhbHVlQgPgQQUSRgodY2FtcGFpZ25fZGF0YV9zaGFyaW5nX2VuYWJs",
+            "ZWQYByABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlQgPgQQUSQgoZ",
+            "Y29zdF9kYXRhX3NoYXJpbmdfZW5hYmxlZBgIIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5Cb29sVmFsdWVCA+BBBTq0AepBsAEKQ2FuYWx5dGljc2FkbWluLmdv",
+            "b2dsZWFwaXMuY29tL0Rpc3BsYXlWaWRlbzM2MEFkdmVydGlzZXJMaW5rUHJv",
+            "cG9zYWwSaXByb3BlcnRpZXMve3Byb3BlcnR5fS9kaXNwbGF5VmlkZW8zNjBB",
+            "ZHZlcnRpc2VyTGlua1Byb3Bvc2Fscy97ZGlzcGxheV92aWRlb18zNjBfYWR2",
+            "ZXJ0aXNlcl9saW5rX3Byb3Bvc2FsfSL8AQoZTGlua1Byb3Bvc2FsU3RhdHVz",
+            "RGV0YWlscxJsCiBsaW5rX3Byb3Bvc2FsX2luaXRpYXRpbmdfcHJvZHVjdBgB",
+            "IAEoDjI9Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5MaW5rUHJv",
+            "cG9zYWxJbml0aWF0aW5nUHJvZHVjdEID4EEDEhwKD3JlcXVlc3Rvcl9lbWFp",
+            "bBgCIAEoCUID4EEDElMKE2xpbmtfcHJvcG9zYWxfc3RhdGUYAyABKA4yMS5n",
+            "b29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuTGlua1Byb3Bvc2FsU3Rh",
+            "dGVCA+BBAyKPAgoPQ29udmVyc2lvbkV2ZW50EhEKBG5hbWUYASABKAlCA+BB",
+            "AxIXCgpldmVudF9uYW1lGAIgASgJQgPgQQUSNAoLY3JlYXRlX3RpbWUYAyAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSFgoJZGVsZXRh",
+            "YmxlGAQgASgIQgPgQQMSEwoGY3VzdG9tGAUgASgIQgPgQQM6bepBagotYW5h",
+            "bHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQ29udmVyc2lvbkV2ZW50Ejlw",
+            "cm9wZXJ0aWVzL3twcm9wZXJ0eX0vY29udmVyc2lvbkV2ZW50cy97Y29udmVy",
+            "c2lvbl9ldmVudH0ioAIKFUdvb2dsZVNpZ25hbHNTZXR0aW5ncxIRCgRuYW1l",
+            "GAEgASgJQgPgQQMSQQoFc3RhdGUYAyABKA4yMi5nb29nbGUuYW5hbHl0aWNz",
+            "LmFkbWluLnYxYWxwaGEuR29vZ2xlU2lnbmFsc1N0YXRlEkoKB2NvbnNlbnQY",
+            "BCABKA4yNC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuR29vZ2xl",
+            "U2lnbmFsc0NvbnNlbnRCA+BBAzpl6kFiCjNhbmFseXRpY3NhZG1pbi5nb29n",
+            "bGVhcGlzLmNvbS9Hb29nbGVTaWduYWxzU2V0dGluZ3MSK3Byb3BlcnRpZXMv",
+            "e3Byb3BlcnR5fS9nb29nbGVTaWduYWxzU2V0dGluZ3MinwMKD0N1c3RvbURp",
+            "bWVuc2lvbhIRCgRuYW1lGAEgASgJQgPgQQMSHgoOcGFyYW1ldGVyX25hbWUY",
+            "AiABKAlCBuBBAuBBBRIZCgxkaXNwbGF5X25hbWUYAyABKAlCA+BBAhIYCgtk",
+            "ZXNjcmlwdGlvbhgEIAEoCUID4EEBElUKBXNjb3BlGAUgASgOMj4uZ29vZ2xl",
+            "LmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkN1c3RvbURpbWVuc2lvbi5EaW1l",
+            "bnNpb25TY29wZUIG4EEC4EEFEikKHGRpc2FsbG93X2Fkc19wZXJzb25hbGl6",
+            "YXRpb24YBiABKAhCA+BBASJGCg5EaW1lbnNpb25TY29wZRIfChtESU1FTlNJ",
+            "T05fU0NPUEVfVU5TUEVDSUZJRUQQABIJCgVFVkVOVBABEggKBFVTRVIQAjpa",
+            "6kFXCi1hbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9DdXN0b21EaW1l",
+            "bnNpb24SJnByb3BlcnRpZXMve3Byb3BlcnR5fS9jdXN0b21EaW1lbnNpb25z",
+            "IrUGCgxDdXN0b21NZXRyaWMSEQoEbmFtZRgBIAEoCUID4EEDEh4KDnBhcmFt",
+            "ZXRlcl9uYW1lGAIgASgJQgbgQQLgQQUSGQoMZGlzcGxheV9uYW1lGAMgASgJ",
+            "QgPgQQISGAoLZGVzY3JpcHRpb24YBCABKAlCA+BBARJbChBtZWFzdXJlbWVu",
+            "dF91bml0GAUgASgOMjwuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhh",
+            "LkN1c3RvbU1ldHJpYy5NZWFzdXJlbWVudFVuaXRCA+BBAhJPCgVzY29wZRgG",
+            "IAEoDjI4Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5DdXN0b21N",
+            "ZXRyaWMuTWV0cmljU2NvcGVCBuBBAuBBBRJmChZyZXN0cmljdGVkX21ldHJp",
+            "Y190eXBlGAggAygOMkEuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhh",
+            "LkN1c3RvbU1ldHJpYy5SZXN0cmljdGVkTWV0cmljVHlwZUID4EEBIrcBCg9N",
+            "ZWFzdXJlbWVudFVuaXQSIAocTUVBU1VSRU1FTlRfVU5JVF9VTlNQRUNJRklF",
+            "RBAAEgwKCFNUQU5EQVJEEAESDAoIQ1VSUkVOQ1kQAhIICgRGRUVUEAMSCgoG",
+            "TUVURVJTEAQSDgoKS0lMT01FVEVSUxAFEgkKBU1JTEVTEAYSEAoMTUlMTElT",
+            "RUNPTkRTEAcSCwoHU0VDT05EUxAIEgsKB01JTlVURVMQCRIJCgVIT1VSUxAK",
+            "IjYKC01ldHJpY1Njb3BlEhwKGE1FVFJJQ19TQ09QRV9VTlNQRUNJRklFRBAA",
+            "EgkKBUVWRU5UEAEiXwoUUmVzdHJpY3RlZE1ldHJpY1R5cGUSJgoiUkVTVFJJ",
+            "Q1RFRF9NRVRSSUNfVFlQRV9VTlNQRUNJRklFRBAAEg0KCUNPU1RfREFUQRAB",
+            "EhAKDFJFVkVOVUVfREFUQRACOlTqQVEKKmFuYWx5dGljc2FkbWluLmdvb2ds",
+            "ZWFwaXMuY29tL0N1c3RvbU1ldHJpYxIjcHJvcGVydGllcy97cHJvcGVydHl9",
+            "L2N1c3RvbU1ldHJpY3MiwgMKFURhdGFSZXRlbnRpb25TZXR0aW5ncxIRCgRu",
+            "YW1lGAEgASgJQgPgQQMSZQoUZXZlbnRfZGF0YV9yZXRlbnRpb24YAiABKA4y",
+            "Ry5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuRGF0YVJldGVudGlv",
+            "blNldHRpbmdzLlJldGVudGlvbkR1cmF0aW9uEicKH3Jlc2V0X3VzZXJfZGF0",
+            "YV9vbl9uZXdfYWN0aXZpdHkYAyABKAgingEKEVJldGVudGlvbkR1cmF0aW9u",
+            "EiIKHlJFVEVOVElPTl9EVVJBVElPTl9VTlNQRUNJRklFRBAAEg4KClRXT19N",
+            "T05USFMQARITCg9GT1VSVEVFTl9NT05USFMQAxIVChFUV0VOVFlfU0lYX01P",
+            "TlRIUxAEEhcKE1RISVJUWV9FSUdIVF9NT05USFMQBRIQCgxGSUZUWV9NT05U",
+            "SFMQBjpl6kFiCjNhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9EYXRh",
+            "UmV0ZW50aW9uU2V0dGluZ3MSK3Byb3BlcnRpZXMve3Byb3BlcnR5fS9kYXRh",
+            "UmV0ZW50aW9uU2V0dGluZ3MqqgQKEEluZHVzdHJ5Q2F0ZWdvcnkSIQodSU5E",
+            "VVNUUllfQ0FURUdPUllfVU5TUEVDSUZJRUQQABIOCgpBVVRPTU9USVZFEAES",
+            "IwofQlVTSU5FU1NfQU5EX0lORFVTVFJJQUxfTUFSS0VUUxACEgsKB0ZJTkFO",
+            "Q0UQAxIOCgpIRUFMVEhDQVJFEAQSDgoKVEVDSE5PTE9HWRAFEgoKBlRSQVZF",
+            "TBAGEgkKBU9USEVSEAcSGgoWQVJUU19BTkRfRU5URVJUQUlOTUVOVBAIEhYK",
+            "EkJFQVVUWV9BTkRfRklUTkVTUxAJEhgKFEJPT0tTX0FORF9MSVRFUkFUVVJF",
+            "EAoSEgoORk9PRF9BTkRfRFJJTksQCxIJCgVHQU1FUxAMEhcKE0hPQkJJRVNf",
+            "QU5EX0xFSVNVUkUQDRITCg9IT01FX0FORF9HQVJERU4QDhIYChRJTlRFUk5F",
+            "VF9BTkRfVEVMRUNPTRAPEhYKEkxBV19BTkRfR09WRVJOTUVOVBAQEggKBE5F",
+            "V1MQERIWChJPTkxJTkVfQ09NTVVOSVRJRVMQEhIWChJQRU9QTEVfQU5EX1NP",
+            "Q0lFVFkQExIUChBQRVRTX0FORF9BTklNQUxTEBQSDwoLUkVBTF9FU1RBVEUQ",
+            "FRINCglSRUZFUkVOQ0UQFhILCgdTQ0lFTkNFEBcSCgoGU1BPUlRTEBgSFgoS",
+            "Sk9CU19BTkRfRURVQ0FUSU9OEBkSDAoIU0hPUFBJTkcQGipmCgxTZXJ2aWNl",
+            "TGV2ZWwSHQoZU0VSVklDRV9MRVZFTF9VTlNQRUNJRklFRBAAEh0KGUdPT0dM",
+            "RV9BTkFMWVRJQ1NfU1RBTkRBUkQQARIYChRHT09HTEVfQU5BTFlUSUNTXzM2",
+            "MBACKkoKCUFjdG9yVHlwZRIaChZBQ1RPUl9UWVBFX1VOU1BFQ0lGSUVEEAAS",
+            "CAoEVVNFUhABEgoKBlNZU1RFTRACEgsKB1NVUFBPUlQQAypQCgpBY3Rpb25U",
+            "eXBlEhsKF0FDVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASCwoHQ1JFQVRFRBAB",
+            "EgsKB1VQREFURUQQAhILCgdERUxFVEVEEAMqjgMKGUNoYW5nZUhpc3RvcnlS",
+            "ZXNvdXJjZVR5cGUSLAooQ0hBTkdFX0hJU1RPUllfUkVTT1VSQ0VfVFlQRV9V",
+            "TlNQRUNJRklFRBAAEgsKB0FDQ09VTlQQARIMCghQUk9QRVJUWRACEhEKDUZJ",
+            "UkVCQVNFX0xJTksQBhITCg9HT09HTEVfQURTX0xJTksQBxIbChdHT09HTEVf",
+            "U0lHTkFMU19TRVRUSU5HUxAIEhQKEENPTlZFUlNJT05fRVZFTlQQCRIfChtN",
+            "RUFTVVJFTUVOVF9QUk9UT0NPTF9TRUNSRVQQChIUChBDVVNUT01fRElNRU5T",
+            "SU9OEAsSEQoNQ1VTVE9NX01FVFJJQxAMEhsKF0RBVEFfUkVURU5USU9OX1NF",
+            "VFRJTkdTEA0SJQohRElTUExBWV9WSURFT18zNjBfQURWRVJUSVNFUl9MSU5L",
+            "EA4SLgoqRElTUExBWV9WSURFT18zNjBfQURWRVJUSVNFUl9MSU5LX1BST1BP",
+            "U0FMEA8SDwoLREFUQV9TVFJFQU0QEipzChJHb29nbGVTaWduYWxzU3RhdGUS",
             "JAogR09PR0xFX1NJR05BTFNfU1RBVEVfVU5TUEVDSUZJRUQQABIaChZHT09H",
             "TEVfU0lHTkFMU19FTkFCTEVEEAESGwoXR09PR0xFX1NJR05BTFNfRElTQUJM",
             "RUQQAiqOAQoUR29vZ2xlU2lnbmFsc0NvbnNlbnQSJgoiR09PR0xFX1NJR05B",
@@ -310,9 +286,6 @@ namespace Google.Analytics.Admin.V1Alpha {
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Admin.V1Alpha.IndustryCategory), typeof(global::Google.Analytics.Admin.V1Alpha.ServiceLevel), typeof(global::Google.Analytics.Admin.V1Alpha.ActorType), typeof(global::Google.Analytics.Admin.V1Alpha.ActionType), typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryResourceType), typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsState), typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsConsent), typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalInitiatingProduct), typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalState), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.Account), global::Google.Analytics.Admin.V1Alpha.Account.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "DisplayName", "RegionCode", "Deleted" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.Property), global::Google.Analytics.Admin.V1Alpha.Property.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Parent", "DisplayName", "IndustryCategory", "TimeZone", "CurrencyCode", "ServiceLevel", "DeleteTime", "ExpireTime", "Account" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream), global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream.Parser, new[]{ "Name", "FirebaseAppId", "CreateTime", "UpdateTime", "PackageName", "DisplayName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.IosAppDataStream), global::Google.Analytics.Admin.V1Alpha.IosAppDataStream.Parser, new[]{ "Name", "FirebaseAppId", "CreateTime", "UpdateTime", "BundleId", "DisplayName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.WebDataStream), global::Google.Analytics.Admin.V1Alpha.WebDataStream.Parser, new[]{ "Name", "MeasurementId", "FirebaseAppId", "CreateTime", "UpdateTime", "DefaultUri", "DisplayName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataStream), global::Google.Analytics.Admin.V1Alpha.DataStream.Parser, new[]{ "WebStreamData", "AndroidAppStreamData", "IosAppStreamData", "Name", "Type", "DisplayName", "CreateTime", "UpdateTime" }, new[]{ "StreamData" }, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.DataStream.Types.DataStreamType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataStream.Types.WebStreamData), global::Google.Analytics.Admin.V1Alpha.DataStream.Types.WebStreamData.Parser, new[]{ "MeasurementId", "FirebaseAppId", "DefaultUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataStream.Types.AndroidAppStreamData), global::Google.Analytics.Admin.V1Alpha.DataStream.Types.AndroidAppStreamData.Parser, new[]{ "FirebaseAppId", "PackageName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataStream.Types.IosAppStreamData), global::Google.Analytics.Admin.V1Alpha.DataStream.Types.IosAppStreamData.Parser, new[]{ "FirebaseAppId", "BundleId" }, null, null, null, null)}),
@@ -326,14 +299,14 @@ namespace Google.Analytics.Admin.V1Alpha {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.PropertySummary), global::Google.Analytics.Admin.V1Alpha.PropertySummary.Parser, new[]{ "Property", "DisplayName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret), global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret.Parser, new[]{ "Name", "DisplayName", "SecretValue" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryEvent), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryEvent.Parser, new[]{ "Id", "ChangeTime", "ActorType", "UserActorEmail", "ChangesFiltered", "Changes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Parser, new[]{ "Resource", "Action", "ResourceBeforeChange", "ResourceAfterChange" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource.Parser, new[]{ "Account", "Property", "WebDataStream", "AndroidAppDataStream", "IosAppDataStream", "FirebaseLink", "GoogleAdsLink", "GoogleSignalsSettings", "DisplayVideo360AdvertiserLink", "DisplayVideo360AdvertiserLinkProposal", "ConversionEvent", "MeasurementProtocolSecret", "CustomDimension", "CustomMetric", "DataRetentionSettings" }, new[]{ "Resource" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Parser, new[]{ "Resource", "Action", "ResourceBeforeChange", "ResourceAfterChange" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource.Parser, new[]{ "Account", "Property", "FirebaseLink", "GoogleAdsLink", "GoogleSignalsSettings", "DisplayVideo360AdvertiserLink", "DisplayVideo360AdvertiserLinkProposal", "ConversionEvent", "MeasurementProtocolSecret", "CustomDimension", "CustomMetric", "DataRetentionSettings", "DataStream" }, new[]{ "Resource" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink), global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink.Parser, new[]{ "Name", "AdvertiserId", "AdvertiserDisplayName", "AdsPersonalizationEnabled", "CampaignDataSharingEnabled", "CostDataSharingEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal), global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal.Parser, new[]{ "Name", "AdvertiserId", "LinkProposalStatusDetails", "AdvertiserDisplayName", "ValidationEmail", "AdsPersonalizationEnabled", "CampaignDataSharingEnabled", "CostDataSharingEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalStatusDetails), global::Google.Analytics.Admin.V1Alpha.LinkProposalStatusDetails.Parser, new[]{ "LinkProposalInitiatingProduct", "RequestorEmail", "LinkProposalState" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ConversionEvent), global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Parser, new[]{ "Name", "EventName", "CreateTime", "Deletable", "Custom" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings), global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings.Parser, new[]{ "Name", "State", "Consent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.CustomDimension), global::Google.Analytics.Admin.V1Alpha.CustomDimension.Parser, new[]{ "Name", "ParameterName", "DisplayName", "Description", "Scope", "DisallowAdsPersonalization" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.CustomDimension.Types.DimensionScope) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.CustomMetric), global::Google.Analytics.Admin.V1Alpha.CustomMetric.Parser, new[]{ "Name", "ParameterName", "DisplayName", "Description", "MeasurementUnit", "Scope" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.MeasurementUnit), typeof(global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.MetricScope) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.CustomMetric), global::Google.Analytics.Admin.V1Alpha.CustomMetric.Parser, new[]{ "Name", "ParameterName", "DisplayName", "Description", "MeasurementUnit", "Scope", "RestrictedMetricType" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.MeasurementUnit), typeof(global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.MetricScope), typeof(global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.RestrictedMetricType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings), global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Parser, new[]{ "Name", "EventDataRetention", "ResetUserDataOnNewActivity" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration) }, null, null)
           }));
     }
@@ -535,18 +508,6 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// </summary>
     [pbr::OriginalName("PROPERTY")] Property = 2,
     /// <summary>
-    /// WebDataStream resource
-    /// </summary>
-    [pbr::OriginalName("WEB_DATA_STREAM")] WebDataStream = 3,
-    /// <summary>
-    /// AndroidAppDataStream resource
-    /// </summary>
-    [pbr::OriginalName("ANDROID_APP_DATA_STREAM")] AndroidAppDataStream = 4,
-    /// <summary>
-    /// IosAppDataStream resource
-    /// </summary>
-    [pbr::OriginalName("IOS_APP_DATA_STREAM")] IosAppDataStream = 5,
-    /// <summary>
     /// FirebaseLink resource
     /// </summary>
     [pbr::OriginalName("FIREBASE_LINK")] FirebaseLink = 6,
@@ -586,6 +547,10 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// DisplayVideo360AdvertiserLinkProposal resource
     /// </summary>
     [pbr::OriginalName("DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL")] DisplayVideo360AdvertiserLinkProposal = 15,
+    /// <summary>
+    /// DataStream resource
+    /// </summary>
+    [pbr::OriginalName("DATA_STREAM")] DataStream = 18,
   }
 
   /// <summary>
@@ -1806,1304 +1771,6 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A resource message representing a Google Analytics Android app stream.
-  /// </summary>
-  public sealed partial class AndroidAppDataStream : pb::IMessage<AndroidAppDataStream>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<AndroidAppDataStream> _parser = new pb::MessageParser<AndroidAppDataStream>(() => new AndroidAppDataStream());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<AndroidAppDataStream> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[2]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AndroidAppDataStream() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AndroidAppDataStream(AndroidAppDataStream other) : this() {
-      name_ = other.name_;
-      firebaseAppId_ = other.firebaseAppId_;
-      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
-      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
-      packageName_ = other.packageName_;
-      displayName_ = other.displayName_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AndroidAppDataStream Clone() {
-      return new AndroidAppDataStream(this);
-    }
-
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
-    private string name_ = "";
-    /// <summary>
-    /// Output only. Resource name of this Data Stream.
-    /// Format: properties/{property_id}/androidAppDataStreams/{stream_id}
-    /// Example: "properties/1000/androidAppDataStreams/2000"
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "firebase_app_id" field.</summary>
-    public const int FirebaseAppIdFieldNumber = 2;
-    private string firebaseAppId_ = "";
-    /// <summary>
-    /// Output only. ID of the corresponding Android app in Firebase, if any.
-    /// This ID can change if the Android app is deleted and recreated.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string FirebaseAppId {
-      get { return firebaseAppId_; }
-      set {
-        firebaseAppId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "create_time" field.</summary>
-    public const int CreateTimeFieldNumber = 3;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
-    /// <summary>
-    /// Output only. Time when this stream was originally created.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
-      get { return createTime_; }
-      set {
-        createTime_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "update_time" field.</summary>
-    public const int UpdateTimeFieldNumber = 4;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
-    /// <summary>
-    /// Output only. Time when stream payload fields were last updated.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
-      get { return updateTime_; }
-      set {
-        updateTime_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "package_name" field.</summary>
-    public const int PackageNameFieldNumber = 5;
-    private string packageName_ = "";
-    /// <summary>
-    /// Immutable. The package name for the app being measured.
-    /// Example: "com.example.myandroidapp"
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string PackageName {
-      get { return packageName_; }
-      set {
-        packageName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "display_name" field.</summary>
-    public const int DisplayNameFieldNumber = 6;
-    private string displayName_ = "";
-    /// <summary>
-    /// Human-readable display name for the Data Stream.
-    ///
-    /// The max allowed display name length is 255 UTF-16 code units.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string DisplayName {
-      get { return displayName_; }
-      set {
-        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as AndroidAppDataStream);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(AndroidAppDataStream other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Name != other.Name) return false;
-      if (FirebaseAppId != other.FirebaseAppId) return false;
-      if (!object.Equals(CreateTime, other.CreateTime)) return false;
-      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
-      if (PackageName != other.PackageName) return false;
-      if (DisplayName != other.DisplayName) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (FirebaseAppId.Length != 0) hash ^= FirebaseAppId.GetHashCode();
-      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
-      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
-      if (PackageName.Length != 0) hash ^= PackageName.GetHashCode();
-      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (FirebaseAppId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FirebaseAppId);
-      }
-      if (createTime_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(CreateTime);
-      }
-      if (updateTime_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(UpdateTime);
-      }
-      if (PackageName.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(PackageName);
-      }
-      if (DisplayName.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(DisplayName);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (FirebaseAppId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FirebaseAppId);
-      }
-      if (createTime_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(CreateTime);
-      }
-      if (updateTime_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(UpdateTime);
-      }
-      if (PackageName.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(PackageName);
-      }
-      if (DisplayName.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(DisplayName);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (FirebaseAppId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FirebaseAppId);
-      }
-      if (createTime_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
-      }
-      if (updateTime_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
-      }
-      if (PackageName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PackageName);
-      }
-      if (DisplayName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(AndroidAppDataStream other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      if (other.FirebaseAppId.Length != 0) {
-        FirebaseAppId = other.FirebaseAppId;
-      }
-      if (other.createTime_ != null) {
-        if (createTime_ == null) {
-          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        CreateTime.MergeFrom(other.CreateTime);
-      }
-      if (other.updateTime_ != null) {
-        if (updateTime_ == null) {
-          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        UpdateTime.MergeFrom(other.UpdateTime);
-      }
-      if (other.PackageName.Length != 0) {
-        PackageName = other.PackageName;
-      }
-      if (other.DisplayName.Length != 0) {
-        DisplayName = other.DisplayName;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            FirebaseAppId = input.ReadString();
-            break;
-          }
-          case 26: {
-            if (createTime_ == null) {
-              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(CreateTime);
-            break;
-          }
-          case 34: {
-            if (updateTime_ == null) {
-              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(UpdateTime);
-            break;
-          }
-          case 42: {
-            PackageName = input.ReadString();
-            break;
-          }
-          case 50: {
-            DisplayName = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            FirebaseAppId = input.ReadString();
-            break;
-          }
-          case 26: {
-            if (createTime_ == null) {
-              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(CreateTime);
-            break;
-          }
-          case 34: {
-            if (updateTime_ == null) {
-              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(UpdateTime);
-            break;
-          }
-          case 42: {
-            PackageName = input.ReadString();
-            break;
-          }
-          case 50: {
-            DisplayName = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// A resource message representing a Google Analytics IOS app stream.
-  /// </summary>
-  public sealed partial class IosAppDataStream : pb::IMessage<IosAppDataStream>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<IosAppDataStream> _parser = new pb::MessageParser<IosAppDataStream>(() => new IosAppDataStream());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<IosAppDataStream> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[3]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public IosAppDataStream() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public IosAppDataStream(IosAppDataStream other) : this() {
-      name_ = other.name_;
-      firebaseAppId_ = other.firebaseAppId_;
-      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
-      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
-      bundleId_ = other.bundleId_;
-      displayName_ = other.displayName_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public IosAppDataStream Clone() {
-      return new IosAppDataStream(this);
-    }
-
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
-    private string name_ = "";
-    /// <summary>
-    /// Output only. Resource name of this Data Stream.
-    /// Format: properties/{property_id}/iosAppDataStreams/{stream_id}
-    /// Example: "properties/1000/iosAppDataStreams/2000"
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "firebase_app_id" field.</summary>
-    public const int FirebaseAppIdFieldNumber = 2;
-    private string firebaseAppId_ = "";
-    /// <summary>
-    /// Output only. ID of the corresponding iOS app in Firebase, if any.
-    /// This ID can change if the iOS app is deleted and recreated.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string FirebaseAppId {
-      get { return firebaseAppId_; }
-      set {
-        firebaseAppId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "create_time" field.</summary>
-    public const int CreateTimeFieldNumber = 3;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
-    /// <summary>
-    /// Output only. Time when this stream was originally created.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
-      get { return createTime_; }
-      set {
-        createTime_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "update_time" field.</summary>
-    public const int UpdateTimeFieldNumber = 4;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
-    /// <summary>
-    /// Output only. Time when stream payload fields were last updated.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
-      get { return updateTime_; }
-      set {
-        updateTime_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "bundle_id" field.</summary>
-    public const int BundleIdFieldNumber = 5;
-    private string bundleId_ = "";
-    /// <summary>
-    /// Required. Immutable. The Apple App Store Bundle ID for the app
-    /// Example: "com.example.myiosapp"
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string BundleId {
-      get { return bundleId_; }
-      set {
-        bundleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "display_name" field.</summary>
-    public const int DisplayNameFieldNumber = 6;
-    private string displayName_ = "";
-    /// <summary>
-    /// Human-readable display name for the Data Stream.
-    ///
-    /// The max allowed display name length is 255 UTF-16 code units.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string DisplayName {
-      get { return displayName_; }
-      set {
-        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as IosAppDataStream);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(IosAppDataStream other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Name != other.Name) return false;
-      if (FirebaseAppId != other.FirebaseAppId) return false;
-      if (!object.Equals(CreateTime, other.CreateTime)) return false;
-      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
-      if (BundleId != other.BundleId) return false;
-      if (DisplayName != other.DisplayName) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (FirebaseAppId.Length != 0) hash ^= FirebaseAppId.GetHashCode();
-      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
-      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
-      if (BundleId.Length != 0) hash ^= BundleId.GetHashCode();
-      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (FirebaseAppId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FirebaseAppId);
-      }
-      if (createTime_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(CreateTime);
-      }
-      if (updateTime_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(UpdateTime);
-      }
-      if (BundleId.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(BundleId);
-      }
-      if (DisplayName.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(DisplayName);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (FirebaseAppId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FirebaseAppId);
-      }
-      if (createTime_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(CreateTime);
-      }
-      if (updateTime_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(UpdateTime);
-      }
-      if (BundleId.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(BundleId);
-      }
-      if (DisplayName.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(DisplayName);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (FirebaseAppId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FirebaseAppId);
-      }
-      if (createTime_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
-      }
-      if (updateTime_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
-      }
-      if (BundleId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(BundleId);
-      }
-      if (DisplayName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(IosAppDataStream other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      if (other.FirebaseAppId.Length != 0) {
-        FirebaseAppId = other.FirebaseAppId;
-      }
-      if (other.createTime_ != null) {
-        if (createTime_ == null) {
-          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        CreateTime.MergeFrom(other.CreateTime);
-      }
-      if (other.updateTime_ != null) {
-        if (updateTime_ == null) {
-          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        UpdateTime.MergeFrom(other.UpdateTime);
-      }
-      if (other.BundleId.Length != 0) {
-        BundleId = other.BundleId;
-      }
-      if (other.DisplayName.Length != 0) {
-        DisplayName = other.DisplayName;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            FirebaseAppId = input.ReadString();
-            break;
-          }
-          case 26: {
-            if (createTime_ == null) {
-              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(CreateTime);
-            break;
-          }
-          case 34: {
-            if (updateTime_ == null) {
-              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(UpdateTime);
-            break;
-          }
-          case 42: {
-            BundleId = input.ReadString();
-            break;
-          }
-          case 50: {
-            DisplayName = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            FirebaseAppId = input.ReadString();
-            break;
-          }
-          case 26: {
-            if (createTime_ == null) {
-              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(CreateTime);
-            break;
-          }
-          case 34: {
-            if (updateTime_ == null) {
-              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(UpdateTime);
-            break;
-          }
-          case 42: {
-            BundleId = input.ReadString();
-            break;
-          }
-          case 50: {
-            DisplayName = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// A resource message representing a Google Analytics web stream.
-  /// </summary>
-  public sealed partial class WebDataStream : pb::IMessage<WebDataStream>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<WebDataStream> _parser = new pb::MessageParser<WebDataStream>(() => new WebDataStream());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<WebDataStream> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[4]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public WebDataStream() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public WebDataStream(WebDataStream other) : this() {
-      name_ = other.name_;
-      measurementId_ = other.measurementId_;
-      firebaseAppId_ = other.firebaseAppId_;
-      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
-      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
-      defaultUri_ = other.defaultUri_;
-      displayName_ = other.displayName_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public WebDataStream Clone() {
-      return new WebDataStream(this);
-    }
-
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
-    private string name_ = "";
-    /// <summary>
-    /// Output only. Resource name of this Data Stream.
-    /// Format: properties/{property_id}/webDataStreams/{stream_id}
-    /// Example: "properties/1000/webDataStreams/2000"
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "measurement_id" field.</summary>
-    public const int MeasurementIdFieldNumber = 2;
-    private string measurementId_ = "";
-    /// <summary>
-    /// Output only. Analytics "Measurement ID", without the "G-" prefix.
-    /// Example: "G-1A2BCD345E" would just be "1A2BCD345E"
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string MeasurementId {
-      get { return measurementId_; }
-      set {
-        measurementId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "firebase_app_id" field.</summary>
-    public const int FirebaseAppIdFieldNumber = 3;
-    private string firebaseAppId_ = "";
-    /// <summary>
-    /// Output only. ID of the corresponding web app in Firebase, if any.
-    /// This ID can change if the web app is deleted and recreated.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string FirebaseAppId {
-      get { return firebaseAppId_; }
-      set {
-        firebaseAppId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "create_time" field.</summary>
-    public const int CreateTimeFieldNumber = 4;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
-    /// <summary>
-    /// Output only. Time when this stream was originally created.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
-      get { return createTime_; }
-      set {
-        createTime_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "update_time" field.</summary>
-    public const int UpdateTimeFieldNumber = 5;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
-    /// <summary>
-    /// Output only. Time when stream payload fields were last updated.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
-      get { return updateTime_; }
-      set {
-        updateTime_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "default_uri" field.</summary>
-    public const int DefaultUriFieldNumber = 6;
-    private string defaultUri_ = "";
-    /// <summary>
-    /// Immutable. Domain name of the web app being measured, or empty.
-    /// Example: "http://www.google.com", "https://www.google.com"
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string DefaultUri {
-      get { return defaultUri_; }
-      set {
-        defaultUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "display_name" field.</summary>
-    public const int DisplayNameFieldNumber = 7;
-    private string displayName_ = "";
-    /// <summary>
-    /// Required. Human-readable display name for the Data Stream.
-    ///
-    /// The max allowed display name length is 255 UTF-16 code units.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string DisplayName {
-      get { return displayName_; }
-      set {
-        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as WebDataStream);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(WebDataStream other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Name != other.Name) return false;
-      if (MeasurementId != other.MeasurementId) return false;
-      if (FirebaseAppId != other.FirebaseAppId) return false;
-      if (!object.Equals(CreateTime, other.CreateTime)) return false;
-      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
-      if (DefaultUri != other.DefaultUri) return false;
-      if (DisplayName != other.DisplayName) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (MeasurementId.Length != 0) hash ^= MeasurementId.GetHashCode();
-      if (FirebaseAppId.Length != 0) hash ^= FirebaseAppId.GetHashCode();
-      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
-      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
-      if (DefaultUri.Length != 0) hash ^= DefaultUri.GetHashCode();
-      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (MeasurementId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(MeasurementId);
-      }
-      if (FirebaseAppId.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FirebaseAppId);
-      }
-      if (createTime_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(CreateTime);
-      }
-      if (updateTime_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(UpdateTime);
-      }
-      if (DefaultUri.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(DefaultUri);
-      }
-      if (DisplayName.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(DisplayName);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (MeasurementId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(MeasurementId);
-      }
-      if (FirebaseAppId.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FirebaseAppId);
-      }
-      if (createTime_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(CreateTime);
-      }
-      if (updateTime_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(UpdateTime);
-      }
-      if (DefaultUri.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(DefaultUri);
-      }
-      if (DisplayName.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(DisplayName);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (MeasurementId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(MeasurementId);
-      }
-      if (FirebaseAppId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FirebaseAppId);
-      }
-      if (createTime_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
-      }
-      if (updateTime_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
-      }
-      if (DefaultUri.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DefaultUri);
-      }
-      if (DisplayName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(WebDataStream other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      if (other.MeasurementId.Length != 0) {
-        MeasurementId = other.MeasurementId;
-      }
-      if (other.FirebaseAppId.Length != 0) {
-        FirebaseAppId = other.FirebaseAppId;
-      }
-      if (other.createTime_ != null) {
-        if (createTime_ == null) {
-          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        CreateTime.MergeFrom(other.CreateTime);
-      }
-      if (other.updateTime_ != null) {
-        if (updateTime_ == null) {
-          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        UpdateTime.MergeFrom(other.UpdateTime);
-      }
-      if (other.DefaultUri.Length != 0) {
-        DefaultUri = other.DefaultUri;
-      }
-      if (other.DisplayName.Length != 0) {
-        DisplayName = other.DisplayName;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            MeasurementId = input.ReadString();
-            break;
-          }
-          case 26: {
-            FirebaseAppId = input.ReadString();
-            break;
-          }
-          case 34: {
-            if (createTime_ == null) {
-              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(CreateTime);
-            break;
-          }
-          case 42: {
-            if (updateTime_ == null) {
-              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(UpdateTime);
-            break;
-          }
-          case 50: {
-            DefaultUri = input.ReadString();
-            break;
-          }
-          case 58: {
-            DisplayName = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            MeasurementId = input.ReadString();
-            break;
-          }
-          case 26: {
-            FirebaseAppId = input.ReadString();
-            break;
-          }
-          case 34: {
-            if (createTime_ == null) {
-              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(CreateTime);
-            break;
-          }
-          case 42: {
-            if (updateTime_ == null) {
-              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(UpdateTime);
-            break;
-          }
-          case 50: {
-            DefaultUri = input.ReadString();
-            break;
-          }
-          case 58: {
-            DisplayName = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
   /// A resource message representing a data stream.
   /// </summary>
   public sealed partial class DataStream : pb::IMessage<DataStream>
@@ -3120,7 +1787,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4480,7 +3147,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4758,7 +3425,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5059,7 +3726,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5334,7 +4001,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
   /// <summary>
   /// Read-only resource with the tag for sending data from a website to a
-  /// WebDataStream.
+  /// DataStream. Only present for web DataStream resources.
   /// </summary>
   public sealed partial class GlobalSiteTag : pb::IMessage<GlobalSiteTag>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5350,7 +4017,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5386,7 +4053,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     private string name_ = "";
     /// <summary>
     /// Output only. Resource name for this GlobalSiteTag resource.
-    /// Format: properties/{propertyId}/globalSiteTag
+    /// Format: properties/{property_id}/dataStreams/{stream_id}/globalSiteTag
+    /// Example: "properties/123/dataStreams/456/globalSiteTag"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5587,7 +4255,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6055,7 +4723,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6457,7 +5125,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6765,7 +5433,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7002,7 +5670,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7285,7 +5953,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7682,7 +6350,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8048,15 +6716,6 @@ namespace Google.Analytics.Admin.V1Alpha {
             case ResourceOneofCase.Property:
               Property = other.Property.Clone();
               break;
-            case ResourceOneofCase.WebDataStream:
-              WebDataStream = other.WebDataStream.Clone();
-              break;
-            case ResourceOneofCase.AndroidAppDataStream:
-              AndroidAppDataStream = other.AndroidAppDataStream.Clone();
-              break;
-            case ResourceOneofCase.IosAppDataStream:
-              IosAppDataStream = other.IosAppDataStream.Clone();
-              break;
             case ResourceOneofCase.FirebaseLink:
               FirebaseLink = other.FirebaseLink.Clone();
               break;
@@ -8086,6 +6745,9 @@ namespace Google.Analytics.Admin.V1Alpha {
               break;
             case ResourceOneofCase.DataRetentionSettings:
               DataRetentionSettings = other.DataRetentionSettings.Clone();
+              break;
+            case ResourceOneofCase.DataStream:
+              DataStream = other.DataStream.Clone();
               break;
           }
 
@@ -8125,51 +6787,6 @@ namespace Google.Analytics.Admin.V1Alpha {
           set {
             resource_ = value;
             resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.Property;
-          }
-        }
-
-        /// <summary>Field number for the "web_data_stream" field.</summary>
-        public const int WebDataStreamFieldNumber = 3;
-        /// <summary>
-        /// A snapshot of a WebDataStream resource in change history.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Google.Analytics.Admin.V1Alpha.WebDataStream WebDataStream {
-          get { return resourceCase_ == ResourceOneofCase.WebDataStream ? (global::Google.Analytics.Admin.V1Alpha.WebDataStream) resource_ : null; }
-          set {
-            resource_ = value;
-            resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.WebDataStream;
-          }
-        }
-
-        /// <summary>Field number for the "android_app_data_stream" field.</summary>
-        public const int AndroidAppDataStreamFieldNumber = 4;
-        /// <summary>
-        /// A snapshot of an AndroidAppDataStream resource in change history.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream AndroidAppDataStream {
-          get { return resourceCase_ == ResourceOneofCase.AndroidAppDataStream ? (global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream) resource_ : null; }
-          set {
-            resource_ = value;
-            resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.AndroidAppDataStream;
-          }
-        }
-
-        /// <summary>Field number for the "ios_app_data_stream" field.</summary>
-        public const int IosAppDataStreamFieldNumber = 5;
-        /// <summary>
-        /// A snapshot of an IosAppDataStream resource in change history.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Google.Analytics.Admin.V1Alpha.IosAppDataStream IosAppDataStream {
-          get { return resourceCase_ == ResourceOneofCase.IosAppDataStream ? (global::Google.Analytics.Admin.V1Alpha.IosAppDataStream) resource_ : null; }
-          set {
-            resource_ = value;
-            resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.IosAppDataStream;
           }
         }
 
@@ -8325,15 +6942,27 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
         }
 
+        /// <summary>Field number for the "data_stream" field.</summary>
+        public const int DataStreamFieldNumber = 18;
+        /// <summary>
+        /// A snapshot of a DataStream resource in change history.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Analytics.Admin.V1Alpha.DataStream DataStream {
+          get { return resourceCase_ == ResourceOneofCase.DataStream ? (global::Google.Analytics.Admin.V1Alpha.DataStream) resource_ : null; }
+          set {
+            resource_ = value;
+            resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.DataStream;
+          }
+        }
+
         private object resource_;
         /// <summary>Enum of possible cases for the "resource" oneof.</summary>
         public enum ResourceOneofCase {
           None = 0,
           Account = 1,
           Property = 2,
-          WebDataStream = 3,
-          AndroidAppDataStream = 4,
-          IosAppDataStream = 5,
           FirebaseLink = 6,
           GoogleAdsLink = 7,
           GoogleSignalsSettings = 8,
@@ -8344,6 +6973,7 @@ namespace Google.Analytics.Admin.V1Alpha {
           CustomDimension = 13,
           CustomMetric = 14,
           DataRetentionSettings = 15,
+          DataStream = 18,
         }
         private ResourceOneofCase resourceCase_ = ResourceOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8376,9 +7006,6 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
           if (!object.Equals(Account, other.Account)) return false;
           if (!object.Equals(Property, other.Property)) return false;
-          if (!object.Equals(WebDataStream, other.WebDataStream)) return false;
-          if (!object.Equals(AndroidAppDataStream, other.AndroidAppDataStream)) return false;
-          if (!object.Equals(IosAppDataStream, other.IosAppDataStream)) return false;
           if (!object.Equals(FirebaseLink, other.FirebaseLink)) return false;
           if (!object.Equals(GoogleAdsLink, other.GoogleAdsLink)) return false;
           if (!object.Equals(GoogleSignalsSettings, other.GoogleSignalsSettings)) return false;
@@ -8389,6 +7016,7 @@ namespace Google.Analytics.Admin.V1Alpha {
           if (!object.Equals(CustomDimension, other.CustomDimension)) return false;
           if (!object.Equals(CustomMetric, other.CustomMetric)) return false;
           if (!object.Equals(DataRetentionSettings, other.DataRetentionSettings)) return false;
+          if (!object.Equals(DataStream, other.DataStream)) return false;
           if (ResourceCase != other.ResourceCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -8399,9 +7027,6 @@ namespace Google.Analytics.Admin.V1Alpha {
           int hash = 1;
           if (resourceCase_ == ResourceOneofCase.Account) hash ^= Account.GetHashCode();
           if (resourceCase_ == ResourceOneofCase.Property) hash ^= Property.GetHashCode();
-          if (resourceCase_ == ResourceOneofCase.WebDataStream) hash ^= WebDataStream.GetHashCode();
-          if (resourceCase_ == ResourceOneofCase.AndroidAppDataStream) hash ^= AndroidAppDataStream.GetHashCode();
-          if (resourceCase_ == ResourceOneofCase.IosAppDataStream) hash ^= IosAppDataStream.GetHashCode();
           if (resourceCase_ == ResourceOneofCase.FirebaseLink) hash ^= FirebaseLink.GetHashCode();
           if (resourceCase_ == ResourceOneofCase.GoogleAdsLink) hash ^= GoogleAdsLink.GetHashCode();
           if (resourceCase_ == ResourceOneofCase.GoogleSignalsSettings) hash ^= GoogleSignalsSettings.GetHashCode();
@@ -8412,6 +7037,7 @@ namespace Google.Analytics.Admin.V1Alpha {
           if (resourceCase_ == ResourceOneofCase.CustomDimension) hash ^= CustomDimension.GetHashCode();
           if (resourceCase_ == ResourceOneofCase.CustomMetric) hash ^= CustomMetric.GetHashCode();
           if (resourceCase_ == ResourceOneofCase.DataRetentionSettings) hash ^= DataRetentionSettings.GetHashCode();
+          if (resourceCase_ == ResourceOneofCase.DataStream) hash ^= DataStream.GetHashCode();
           hash ^= (int) resourceCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -8439,18 +7065,6 @@ namespace Google.Analytics.Admin.V1Alpha {
             output.WriteRawTag(18);
             output.WriteMessage(Property);
           }
-          if (resourceCase_ == ResourceOneofCase.WebDataStream) {
-            output.WriteRawTag(26);
-            output.WriteMessage(WebDataStream);
-          }
-          if (resourceCase_ == ResourceOneofCase.AndroidAppDataStream) {
-            output.WriteRawTag(34);
-            output.WriteMessage(AndroidAppDataStream);
-          }
-          if (resourceCase_ == ResourceOneofCase.IosAppDataStream) {
-            output.WriteRawTag(42);
-            output.WriteMessage(IosAppDataStream);
-          }
           if (resourceCase_ == ResourceOneofCase.FirebaseLink) {
             output.WriteRawTag(50);
             output.WriteMessage(FirebaseLink);
@@ -8490,6 +7104,10 @@ namespace Google.Analytics.Admin.V1Alpha {
           if (resourceCase_ == ResourceOneofCase.DataRetentionSettings) {
             output.WriteRawTag(122);
             output.WriteMessage(DataRetentionSettings);
+          }
+          if (resourceCase_ == ResourceOneofCase.DataStream) {
+            output.WriteRawTag(146, 1);
+            output.WriteMessage(DataStream);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
@@ -8509,18 +7127,6 @@ namespace Google.Analytics.Admin.V1Alpha {
             output.WriteRawTag(18);
             output.WriteMessage(Property);
           }
-          if (resourceCase_ == ResourceOneofCase.WebDataStream) {
-            output.WriteRawTag(26);
-            output.WriteMessage(WebDataStream);
-          }
-          if (resourceCase_ == ResourceOneofCase.AndroidAppDataStream) {
-            output.WriteRawTag(34);
-            output.WriteMessage(AndroidAppDataStream);
-          }
-          if (resourceCase_ == ResourceOneofCase.IosAppDataStream) {
-            output.WriteRawTag(42);
-            output.WriteMessage(IosAppDataStream);
-          }
           if (resourceCase_ == ResourceOneofCase.FirebaseLink) {
             output.WriteRawTag(50);
             output.WriteMessage(FirebaseLink);
@@ -8561,6 +7167,10 @@ namespace Google.Analytics.Admin.V1Alpha {
             output.WriteRawTag(122);
             output.WriteMessage(DataRetentionSettings);
           }
+          if (resourceCase_ == ResourceOneofCase.DataStream) {
+            output.WriteRawTag(146, 1);
+            output.WriteMessage(DataStream);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -8576,15 +7186,6 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
           if (resourceCase_ == ResourceOneofCase.Property) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Property);
-          }
-          if (resourceCase_ == ResourceOneofCase.WebDataStream) {
-            size += 1 + pb::CodedOutputStream.ComputeMessageSize(WebDataStream);
-          }
-          if (resourceCase_ == ResourceOneofCase.AndroidAppDataStream) {
-            size += 1 + pb::CodedOutputStream.ComputeMessageSize(AndroidAppDataStream);
-          }
-          if (resourceCase_ == ResourceOneofCase.IosAppDataStream) {
-            size += 1 + pb::CodedOutputStream.ComputeMessageSize(IosAppDataStream);
           }
           if (resourceCase_ == ResourceOneofCase.FirebaseLink) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(FirebaseLink);
@@ -8616,6 +7217,9 @@ namespace Google.Analytics.Admin.V1Alpha {
           if (resourceCase_ == ResourceOneofCase.DataRetentionSettings) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(DataRetentionSettings);
           }
+          if (resourceCase_ == ResourceOneofCase.DataStream) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(DataStream);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -8640,24 +7244,6 @@ namespace Google.Analytics.Admin.V1Alpha {
                 Property = new global::Google.Analytics.Admin.V1Alpha.Property();
               }
               Property.MergeFrom(other.Property);
-              break;
-            case ResourceOneofCase.WebDataStream:
-              if (WebDataStream == null) {
-                WebDataStream = new global::Google.Analytics.Admin.V1Alpha.WebDataStream();
-              }
-              WebDataStream.MergeFrom(other.WebDataStream);
-              break;
-            case ResourceOneofCase.AndroidAppDataStream:
-              if (AndroidAppDataStream == null) {
-                AndroidAppDataStream = new global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream();
-              }
-              AndroidAppDataStream.MergeFrom(other.AndroidAppDataStream);
-              break;
-            case ResourceOneofCase.IosAppDataStream:
-              if (IosAppDataStream == null) {
-                IosAppDataStream = new global::Google.Analytics.Admin.V1Alpha.IosAppDataStream();
-              }
-              IosAppDataStream.MergeFrom(other.IosAppDataStream);
               break;
             case ResourceOneofCase.FirebaseLink:
               if (FirebaseLink == null) {
@@ -8719,6 +7305,12 @@ namespace Google.Analytics.Admin.V1Alpha {
               }
               DataRetentionSettings.MergeFrom(other.DataRetentionSettings);
               break;
+            case ResourceOneofCase.DataStream:
+              if (DataStream == null) {
+                DataStream = new global::Google.Analytics.Admin.V1Alpha.DataStream();
+              }
+              DataStream.MergeFrom(other.DataStream);
+              break;
           }
 
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -8754,33 +7346,6 @@ namespace Google.Analytics.Admin.V1Alpha {
                 Property = subBuilder;
                 break;
               }
-              case 26: {
-                global::Google.Analytics.Admin.V1Alpha.WebDataStream subBuilder = new global::Google.Analytics.Admin.V1Alpha.WebDataStream();
-                if (resourceCase_ == ResourceOneofCase.WebDataStream) {
-                  subBuilder.MergeFrom(WebDataStream);
-                }
-                input.ReadMessage(subBuilder);
-                WebDataStream = subBuilder;
-                break;
-              }
-              case 34: {
-                global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream subBuilder = new global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream();
-                if (resourceCase_ == ResourceOneofCase.AndroidAppDataStream) {
-                  subBuilder.MergeFrom(AndroidAppDataStream);
-                }
-                input.ReadMessage(subBuilder);
-                AndroidAppDataStream = subBuilder;
-                break;
-              }
-              case 42: {
-                global::Google.Analytics.Admin.V1Alpha.IosAppDataStream subBuilder = new global::Google.Analytics.Admin.V1Alpha.IosAppDataStream();
-                if (resourceCase_ == ResourceOneofCase.IosAppDataStream) {
-                  subBuilder.MergeFrom(IosAppDataStream);
-                }
-                input.ReadMessage(subBuilder);
-                IosAppDataStream = subBuilder;
-                break;
-              }
               case 50: {
                 global::Google.Analytics.Admin.V1Alpha.FirebaseLink subBuilder = new global::Google.Analytics.Admin.V1Alpha.FirebaseLink();
                 if (resourceCase_ == ResourceOneofCase.FirebaseLink) {
@@ -8869,6 +7434,15 @@ namespace Google.Analytics.Admin.V1Alpha {
                 }
                 input.ReadMessage(subBuilder);
                 DataRetentionSettings = subBuilder;
+                break;
+              }
+              case 146: {
+                global::Google.Analytics.Admin.V1Alpha.DataStream subBuilder = new global::Google.Analytics.Admin.V1Alpha.DataStream();
+                if (resourceCase_ == ResourceOneofCase.DataStream) {
+                  subBuilder.MergeFrom(DataStream);
+                }
+                input.ReadMessage(subBuilder);
+                DataStream = subBuilder;
                 break;
               }
             }
@@ -8904,33 +7478,6 @@ namespace Google.Analytics.Admin.V1Alpha {
                 Property = subBuilder;
                 break;
               }
-              case 26: {
-                global::Google.Analytics.Admin.V1Alpha.WebDataStream subBuilder = new global::Google.Analytics.Admin.V1Alpha.WebDataStream();
-                if (resourceCase_ == ResourceOneofCase.WebDataStream) {
-                  subBuilder.MergeFrom(WebDataStream);
-                }
-                input.ReadMessage(subBuilder);
-                WebDataStream = subBuilder;
-                break;
-              }
-              case 34: {
-                global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream subBuilder = new global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream();
-                if (resourceCase_ == ResourceOneofCase.AndroidAppDataStream) {
-                  subBuilder.MergeFrom(AndroidAppDataStream);
-                }
-                input.ReadMessage(subBuilder);
-                AndroidAppDataStream = subBuilder;
-                break;
-              }
-              case 42: {
-                global::Google.Analytics.Admin.V1Alpha.IosAppDataStream subBuilder = new global::Google.Analytics.Admin.V1Alpha.IosAppDataStream();
-                if (resourceCase_ == ResourceOneofCase.IosAppDataStream) {
-                  subBuilder.MergeFrom(IosAppDataStream);
-                }
-                input.ReadMessage(subBuilder);
-                IosAppDataStream = subBuilder;
-                break;
-              }
               case 50: {
                 global::Google.Analytics.Admin.V1Alpha.FirebaseLink subBuilder = new global::Google.Analytics.Admin.V1Alpha.FirebaseLink();
                 if (resourceCase_ == ResourceOneofCase.FirebaseLink) {
@@ -9021,6 +7568,15 @@ namespace Google.Analytics.Admin.V1Alpha {
                 DataRetentionSettings = subBuilder;
                 break;
               }
+              case 146: {
+                global::Google.Analytics.Admin.V1Alpha.DataStream subBuilder = new global::Google.Analytics.Admin.V1Alpha.DataStream();
+                if (resourceCase_ == ResourceOneofCase.DataStream) {
+                  subBuilder.MergeFrom(DataStream);
+                }
+                input.ReadMessage(subBuilder);
+                DataStream = subBuilder;
+                break;
+              }
             }
           }
         }
@@ -9050,7 +7606,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9485,7 +8041,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10007,7 +8563,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10282,7 +8838,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10653,7 +9209,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10930,7 +9486,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11367,7 +9923,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11393,6 +9949,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       description_ = other.description_;
       measurementUnit_ = other.measurementUnit_;
       scope_ = other.scope_;
+      restrictedMetricType_ = other.restrictedMetricType_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -11504,6 +10061,22 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
     }
 
+    /// <summary>Field number for the "restricted_metric_type" field.</summary>
+    public const int RestrictedMetricTypeFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.RestrictedMetricType> _repeated_restrictedMetricType_codec
+        = pb::FieldCodec.ForEnum(66, x => (int) x, x => (global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.RestrictedMetricType) x);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.RestrictedMetricType> restrictedMetricType_ = new pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.RestrictedMetricType>();
+    /// <summary>
+    /// Optional. Types of restricted data that this metric may contain. Required for metrics
+    /// with CURRENCY measurement unit. Must be empty for metrics with a
+    /// non-CURRENCY measurement unit.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.RestrictedMetricType> RestrictedMetricType {
+      get { return restrictedMetricType_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -11525,6 +10098,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (Description != other.Description) return false;
       if (MeasurementUnit != other.MeasurementUnit) return false;
       if (Scope != other.Scope) return false;
+      if(!restrictedMetricType_.Equals(other.restrictedMetricType_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -11538,6 +10112,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (MeasurementUnit != global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.MeasurementUnit.Unspecified) hash ^= MeasurementUnit.GetHashCode();
       if (Scope != global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.MetricScope.Unspecified) hash ^= Scope.GetHashCode();
+      hash ^= restrictedMetricType_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -11580,6 +10155,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(48);
         output.WriteEnum((int) Scope);
       }
+      restrictedMetricType_.WriteTo(output, _repeated_restrictedMetricType_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -11614,6 +10190,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(48);
         output.WriteEnum((int) Scope);
       }
+      restrictedMetricType_.WriteTo(ref output, _repeated_restrictedMetricType_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -11642,6 +10219,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (Scope != global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.MetricScope.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Scope);
       }
+      size += restrictedMetricType_.CalculateSize(_repeated_restrictedMetricType_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -11672,6 +10250,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (other.Scope != global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.MetricScope.Unspecified) {
         Scope = other.Scope;
       }
+      restrictedMetricType_.Add(other.restrictedMetricType_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -11711,6 +10290,11 @@ namespace Google.Analytics.Admin.V1Alpha {
             Scope = (global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.MetricScope) input.ReadEnum();
             break;
           }
+          case 66:
+          case 64: {
+            restrictedMetricType_.AddEntriesFrom(input, _repeated_restrictedMetricType_codec);
+            break;
+          }
         }
       }
     #endif
@@ -11748,6 +10332,11 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
           case 48: {
             Scope = (global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.MetricScope) input.ReadEnum();
+            break;
+          }
+          case 66:
+          case 64: {
+            restrictedMetricType_.AddEntriesFrom(ref input, _repeated_restrictedMetricType_codec);
             break;
           }
         }
@@ -11827,6 +10416,25 @@ namespace Google.Analytics.Admin.V1Alpha {
         [pbr::OriginalName("EVENT")] Event = 1,
       }
 
+      /// <summary>
+      /// Labels that mark the data in this custom metric as data that should be
+      /// restricted to specific users.
+      /// </summary>
+      public enum RestrictedMetricType {
+        /// <summary>
+        /// Type unknown or unspecified.
+        /// </summary>
+        [pbr::OriginalName("RESTRICTED_METRIC_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Metric reports cost data.
+        /// </summary>
+        [pbr::OriginalName("COST_DATA")] CostData = 1,
+        /// <summary>
+        /// Metric reports revenue data.
+        /// </summary>
+        [pbr::OriginalName("REVENUE_DATA")] RevenueData = 2,
+      }
+
     }
     #endregion
 
@@ -11849,7 +10457,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
