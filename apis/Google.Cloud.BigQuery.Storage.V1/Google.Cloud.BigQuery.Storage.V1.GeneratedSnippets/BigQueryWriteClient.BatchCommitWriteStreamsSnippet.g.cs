@@ -31,7 +31,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Snippets
             // Create client
             BigQueryWriteClient bigQueryWriteClient = BigQueryWriteClient.Create();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "projects/[PROJECT]/datasets/[DATASET]/tables/[TABLE]";
             // Make the request
             BatchCommitWriteStreamsResponse response = bigQueryWriteClient.BatchCommitWriteStreams(parent);
         }

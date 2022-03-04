@@ -563,6 +563,13 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// * For PENDING streams, data is not made visible until the stream itself is
         /// finalized (via the `FinalizeWriteStream` rpc), and the stream is explicitly
         /// committed via the `BatchCommitWriteStreams` rpc.
+        /// 
+        /// Note: For users coding against the gRPC api directly, it may be
+        /// necessary to supply the x-goog-request-params system parameter
+        /// with `write_stream=&amp;lt;full_write_stream_name&amp;gt;`.
+        /// 
+        /// More information about system parameters:
+        /// https://cloud.google.com/apis/docs/system-parameters
         /// </summary>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
@@ -898,6 +905,63 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<BatchCommitWriteStreamsResponse> BatchCommitWriteStreamsAsync(string parent, st::CancellationToken cancellationToken) =>
+            BatchCommitWriteStreamsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Atomically commits a group of `PENDING` streams that belong to the same
+        /// `parent` table.
+        /// 
+        /// Streams must be finalized before commit and cannot be committed multiple
+        /// times. Once a stream is committed, data in the stream becomes available
+        /// for read operations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent table that all the streams should belong to, in the form of
+        /// `projects/{project}/datasets/{dataset}/tables/{table}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCommitWriteStreamsResponse BatchCommitWriteStreams(TableName parent, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCommitWriteStreams(new BatchCommitWriteStreamsRequest
+            {
+                ParentAsTableName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Atomically commits a group of `PENDING` streams that belong to the same
+        /// `parent` table.
+        /// 
+        /// Streams must be finalized before commit and cannot be committed multiple
+        /// times. Once a stream is committed, data in the stream becomes available
+        /// for read operations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent table that all the streams should belong to, in the form of
+        /// `projects/{project}/datasets/{dataset}/tables/{table}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCommitWriteStreamsResponse> BatchCommitWriteStreamsAsync(TableName parent, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCommitWriteStreamsAsync(new BatchCommitWriteStreamsRequest
+            {
+                ParentAsTableName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Atomically commits a group of `PENDING` streams that belong to the same
+        /// `parent` table.
+        /// 
+        /// Streams must be finalized before commit and cannot be committed multiple
+        /// times. Once a stream is committed, data in the stream becomes available
+        /// for read operations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent table that all the streams should belong to, in the form of
+        /// `projects/{project}/datasets/{dataset}/tables/{table}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCommitWriteStreamsResponse> BatchCommitWriteStreamsAsync(TableName parent, st::CancellationToken cancellationToken) =>
             BatchCommitWriteStreamsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1269,6 +1333,13 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// * For PENDING streams, data is not made visible until the stream itself is
         /// finalized (via the `FinalizeWriteStream` rpc), and the stream is explicitly
         /// committed via the `BatchCommitWriteStreams` rpc.
+        /// 
+        /// Note: For users coding against the gRPC api directly, it may be
+        /// necessary to supply the x-goog-request-params system parameter
+        /// with `write_stream=&amp;lt;full_write_stream_name&amp;gt;`.
+        /// 
+        /// More information about system parameters:
+        /// https://cloud.google.com/apis/docs/system-parameters
         /// </summary>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>

@@ -16,26 +16,25 @@
 
 namespace Google.Cloud.BigQuery.Storage.V1.Snippets
 {
-    // [START bigquerystorage_v1_generated_BigQueryWrite_BatchCommitWriteStreams_async_flattened]
+    // [START bigquerystorage_v1_generated_BigQueryWrite_BatchCommitWriteStreams_sync_flattened_resourceNames]
     using Google.Cloud.BigQuery.Storage.V1;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedBigQueryWriteClientSnippets
     {
-        /// <summary>Snippet for BatchCommitWriteStreamsAsync</summary>
+        /// <summary>Snippet for BatchCommitWriteStreams</summary>
         /// <remarks>
         /// This snippet has been automatically generated for illustrative purposes only.
         /// It may require modifications to work in your environment.
         /// </remarks>
-        public async Task BatchCommitWriteStreamsAsync()
+        public void BatchCommitWriteStreamsResourceNames()
         {
             // Create client
-            BigQueryWriteClient bigQueryWriteClient = await BigQueryWriteClient.CreateAsync();
+            BigQueryWriteClient bigQueryWriteClient = BigQueryWriteClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/datasets/[DATASET]/tables/[TABLE]";
+            TableName parent = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]");
             // Make the request
-            BatchCommitWriteStreamsResponse response = await bigQueryWriteClient.BatchCommitWriteStreamsAsync(parent);
+            BatchCommitWriteStreamsResponse response = bigQueryWriteClient.BatchCommitWriteStreams(parent);
         }
     }
-    // [END bigquerystorage_v1_generated_BigQueryWrite_BatchCommitWriteStreams_async_flattened]
+    // [END bigquerystorage_v1_generated_BigQueryWrite_BatchCommitWriteStreams_sync_flattened_resourceNames]
 }
