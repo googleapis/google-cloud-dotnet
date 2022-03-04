@@ -33,7 +33,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Snippets
             // Initialize request argument(s)
             BatchCommitWriteStreamsRequest request = new BatchCommitWriteStreamsRequest
             {
-                Parent = "",
+                ParentAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
                 WriteStreams = { "", },
             };
             // Make the request
