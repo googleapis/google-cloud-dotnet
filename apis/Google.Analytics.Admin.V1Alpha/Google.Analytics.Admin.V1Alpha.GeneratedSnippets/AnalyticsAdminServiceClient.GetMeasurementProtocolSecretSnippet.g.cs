@@ -31,7 +31,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/webDataStreams/[WEB_DATA_STREAM]/measurementProtocolSecrets/[MEASUREMENT_PROTOCOL_SECRET]";
+            string name = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]/measurementProtocolSecrets/[MEASUREMENT_PROTOCOL_SECRET]";
             // Make the request
             MeasurementProtocolSecret response = analyticsAdminServiceClient.GetMeasurementProtocolSecret(name);
         }

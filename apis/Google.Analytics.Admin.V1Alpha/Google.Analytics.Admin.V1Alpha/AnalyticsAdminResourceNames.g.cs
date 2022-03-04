@@ -414,126 +414,6 @@ namespace Google.Analytics.Admin.V1Alpha
         }
     }
 
-    public partial class GetWebDataStreamRequest
-    {
-        /// <summary>
-        /// <see cref="gaav::WebDataStreamName"/>-typed view over the <see cref="Name"/> resource name property.
-        /// </summary>
-        public gaav::WebDataStreamName WebDataStreamName
-        {
-            get => string.IsNullOrEmpty(Name) ? null : gaav::WebDataStreamName.Parse(Name, allowUnparsed: true);
-            set => Name = value?.ToString() ?? "";
-        }
-    }
-
-    public partial class DeleteWebDataStreamRequest
-    {
-        /// <summary>
-        /// <see cref="gaav::WebDataStreamName"/>-typed view over the <see cref="Name"/> resource name property.
-        /// </summary>
-        public gaav::WebDataStreamName WebDataStreamName
-        {
-            get => string.IsNullOrEmpty(Name) ? null : gaav::WebDataStreamName.Parse(Name, allowUnparsed: true);
-            set => Name = value?.ToString() ?? "";
-        }
-    }
-
-    public partial class CreateWebDataStreamRequest
-    {
-        /// <summary>
-        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public PropertyName ParentAsPropertyName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-    }
-
-    public partial class ListWebDataStreamsRequest
-    {
-        /// <summary>
-        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public PropertyName ParentAsPropertyName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-    }
-
-    public partial class GetIosAppDataStreamRequest
-    {
-        /// <summary>
-        /// <see cref="gaav::IosAppDataStreamName"/>-typed view over the <see cref="Name"/> resource name property.
-        /// </summary>
-        public gaav::IosAppDataStreamName IosAppDataStreamName
-        {
-            get => string.IsNullOrEmpty(Name) ? null : gaav::IosAppDataStreamName.Parse(Name, allowUnparsed: true);
-            set => Name = value?.ToString() ?? "";
-        }
-    }
-
-    public partial class DeleteIosAppDataStreamRequest
-    {
-        /// <summary>
-        /// <see cref="gaav::IosAppDataStreamName"/>-typed view over the <see cref="Name"/> resource name property.
-        /// </summary>
-        public gaav::IosAppDataStreamName IosAppDataStreamName
-        {
-            get => string.IsNullOrEmpty(Name) ? null : gaav::IosAppDataStreamName.Parse(Name, allowUnparsed: true);
-            set => Name = value?.ToString() ?? "";
-        }
-    }
-
-    public partial class ListIosAppDataStreamsRequest
-    {
-        /// <summary>
-        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public PropertyName ParentAsPropertyName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-    }
-
-    public partial class GetAndroidAppDataStreamRequest
-    {
-        /// <summary>
-        /// <see cref="gaav::AndroidAppDataStreamName"/>-typed view over the <see cref="Name"/> resource name property.
-        /// </summary>
-        public gaav::AndroidAppDataStreamName AndroidAppDataStreamName
-        {
-            get => string.IsNullOrEmpty(Name) ? null : gaav::AndroidAppDataStreamName.Parse(Name, allowUnparsed: true);
-            set => Name = value?.ToString() ?? "";
-        }
-    }
-
-    public partial class DeleteAndroidAppDataStreamRequest
-    {
-        /// <summary>
-        /// <see cref="gaav::AndroidAppDataStreamName"/>-typed view over the <see cref="Name"/> resource name property.
-        /// </summary>
-        public gaav::AndroidAppDataStreamName AndroidAppDataStreamName
-        {
-            get => string.IsNullOrEmpty(Name) ? null : gaav::AndroidAppDataStreamName.Parse(Name, allowUnparsed: true);
-            set => Name = value?.ToString() ?? "";
-        }
-    }
-
-    public partial class ListAndroidAppDataStreamsRequest
-    {
-        /// <summary>
-        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public PropertyName ParentAsPropertyName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-    }
-
     public partial class CreateFirebaseLinkRequest
     {
         /// <summary>
@@ -679,11 +559,11 @@ namespace Google.Analytics.Admin.V1Alpha
     public partial class CreateMeasurementProtocolSecretRequest
     {
         /// <summary>
-        /// <see cref="WebDataStreamName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="DataStreamName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public WebDataStreamName ParentAsWebDataStreamName
+        public DataStreamName ParentAsDataStreamName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : WebDataStreamName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : DataStreamName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -704,11 +584,11 @@ namespace Google.Analytics.Admin.V1Alpha
     public partial class ListMeasurementProtocolSecretsRequest
     {
         /// <summary>
-        /// <see cref="WebDataStreamName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="DataStreamName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public WebDataStreamName ParentAsWebDataStreamName
+        public DataStreamName ParentAsDataStreamName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : WebDataStreamName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : DataStreamName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }

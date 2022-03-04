@@ -32,7 +32,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "properties/[PROPERTY]/webDataStreams/[WEB_DATA_STREAM]";
+            string parent = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]";
             MeasurementProtocolSecret measurementProtocolSecret = new MeasurementProtocolSecret();
             // Make the request
             MeasurementProtocolSecret response = await analyticsAdminServiceClient.CreateMeasurementProtocolSecretAsync(parent, measurementProtocolSecret);

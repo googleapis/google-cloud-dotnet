@@ -68,19 +68,6 @@ namespace Google.Analytics.Admin.V1Alpha
             BatchUpdateUserLinksSettings = existing.BatchUpdateUserLinksSettings;
             DeleteUserLinkSettings = existing.DeleteUserLinkSettings;
             BatchDeleteUserLinksSettings = existing.BatchDeleteUserLinksSettings;
-            GetWebDataStreamSettings = existing.GetWebDataStreamSettings;
-            DeleteWebDataStreamSettings = existing.DeleteWebDataStreamSettings;
-            UpdateWebDataStreamSettings = existing.UpdateWebDataStreamSettings;
-            CreateWebDataStreamSettings = existing.CreateWebDataStreamSettings;
-            ListWebDataStreamsSettings = existing.ListWebDataStreamsSettings;
-            GetIosAppDataStreamSettings = existing.GetIosAppDataStreamSettings;
-            DeleteIosAppDataStreamSettings = existing.DeleteIosAppDataStreamSettings;
-            UpdateIosAppDataStreamSettings = existing.UpdateIosAppDataStreamSettings;
-            ListIosAppDataStreamsSettings = existing.ListIosAppDataStreamsSettings;
-            GetAndroidAppDataStreamSettings = existing.GetAndroidAppDataStreamSettings;
-            DeleteAndroidAppDataStreamSettings = existing.DeleteAndroidAppDataStreamSettings;
-            UpdateAndroidAppDataStreamSettings = existing.UpdateAndroidAppDataStreamSettings;
-            ListAndroidAppDataStreamsSettings = existing.ListAndroidAppDataStreamsSettings;
             CreateFirebaseLinkSettings = existing.CreateFirebaseLinkSettings;
             DeleteFirebaseLinkSettings = existing.DeleteFirebaseLinkSettings;
             ListFirebaseLinksSettings = existing.ListFirebaseLinksSettings;
@@ -142,11 +129,20 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetAccountSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings GetAccountSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -154,11 +150,20 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListAccountsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings ListAccountsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -166,11 +171,20 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteAccountSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings DeleteAccountSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -178,11 +192,20 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateAccountSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings UpdateAccountSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -191,11 +214,20 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ProvisionAccountTicketSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings ProvisionAccountTicketSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -225,209 +257,25 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetPropertySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings GetPropertySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AnalyticsAdminServiceClient.ListProperties</c> and <c>AnalyticsAdminServiceClient.ListPropertiesAsync</c>
         /// .
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings ListPropertiesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.CreateProperty</c> and <c>AnalyticsAdminServiceClient.CreatePropertyAsync</c>
-        /// .
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings CreatePropertySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.DeleteProperty</c> and <c>AnalyticsAdminServiceClient.DeletePropertyAsync</c>
-        /// .
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings DeletePropertySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.UpdateProperty</c> and <c>AnalyticsAdminServiceClient.UpdatePropertyAsync</c>
-        /// .
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings UpdatePropertySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.GetUserLink</c> and <c>AnalyticsAdminServiceClient.GetUserLinkAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings GetUserLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.BatchGetUserLinks</c> and
-        /// <c>AnalyticsAdminServiceClient.BatchGetUserLinksAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings BatchGetUserLinksSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.ListUserLinks</c> and <c>AnalyticsAdminServiceClient.ListUserLinksAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings ListUserLinksSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.AuditUserLinks</c> and <c>AnalyticsAdminServiceClient.AuditUserLinksAsync</c>
-        /// .
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings AuditUserLinksSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.CreateUserLink</c> and <c>AnalyticsAdminServiceClient.CreateUserLinkAsync</c>
-        /// .
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings CreateUserLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.BatchCreateUserLinks</c> and
-        /// <c>AnalyticsAdminServiceClient.BatchCreateUserLinksAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings BatchCreateUserLinksSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.UpdateUserLink</c> and <c>AnalyticsAdminServiceClient.UpdateUserLinkAsync</c>
-        /// .
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings UpdateUserLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.BatchUpdateUserLinks</c> and
-        /// <c>AnalyticsAdminServiceClient.BatchUpdateUserLinksAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings BatchUpdateUserLinksSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.DeleteUserLink</c> and <c>AnalyticsAdminServiceClient.DeleteUserLinkAsync</c>
-        /// .
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings DeleteUserLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.BatchDeleteUserLinks</c> and
-        /// <c>AnalyticsAdminServiceClient.BatchDeleteUserLinksAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings BatchDeleteUserLinksSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.GetWebDataStream</c> and <c>AnalyticsAdminServiceClient.GetWebDataStreamAsync</c>
-        /// .
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings GetWebDataStreamSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.DeleteWebDataStream</c> and
-        /// <c>AnalyticsAdminServiceClient.DeleteWebDataStreamAsync</c>.
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
@@ -444,150 +292,291 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteWebDataStreamSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings ListPropertiesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.UpdateWebDataStream</c> and
-        /// <c>AnalyticsAdminServiceClient.UpdateWebDataStreamAsync</c>.
+        /// <c>AnalyticsAdminServiceClient.CreateProperty</c> and <c>AnalyticsAdminServiceClient.CreatePropertyAsync</c>
+        /// .
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateWebDataStreamSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings CreatePropertySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.CreateWebDataStream</c> and
-        /// <c>AnalyticsAdminServiceClient.CreateWebDataStreamAsync</c>.
+        /// <c>AnalyticsAdminServiceClient.DeleteProperty</c> and <c>AnalyticsAdminServiceClient.DeletePropertyAsync</c>
+        /// .
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateWebDataStreamSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings DeletePropertySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.ListWebDataStreams</c> and
-        /// <c>AnalyticsAdminServiceClient.ListWebDataStreamsAsync</c>.
+        /// <c>AnalyticsAdminServiceClient.UpdateProperty</c> and <c>AnalyticsAdminServiceClient.UpdatePropertyAsync</c>
+        /// .
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListWebDataStreamsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings UpdatePropertySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.GetIosAppDataStream</c> and
-        /// <c>AnalyticsAdminServiceClient.GetIosAppDataStreamAsync</c>.
+        /// <c>AnalyticsAdminServiceClient.GetUserLink</c> and <c>AnalyticsAdminServiceClient.GetUserLinkAsync</c>.
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetIosAppDataStreamSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings GetUserLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.DeleteIosAppDataStream</c> and
-        /// <c>AnalyticsAdminServiceClient.DeleteIosAppDataStreamAsync</c>.
+        /// <c>AnalyticsAdminServiceClient.BatchGetUserLinks</c> and
+        /// <c>AnalyticsAdminServiceClient.BatchGetUserLinksAsync</c>.
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteIosAppDataStreamSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings BatchGetUserLinksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.UpdateIosAppDataStream</c> and
-        /// <c>AnalyticsAdminServiceClient.UpdateIosAppDataStreamAsync</c>.
+        /// <c>AnalyticsAdminServiceClient.ListUserLinks</c> and <c>AnalyticsAdminServiceClient.ListUserLinksAsync</c>.
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateIosAppDataStreamSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings ListUserLinksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.ListIosAppDataStreams</c> and
-        /// <c>AnalyticsAdminServiceClient.ListIosAppDataStreamsAsync</c>.
+        /// <c>AnalyticsAdminServiceClient.AuditUserLinks</c> and <c>AnalyticsAdminServiceClient.AuditUserLinksAsync</c>
+        /// .
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListIosAppDataStreamsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings AuditUserLinksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.GetAndroidAppDataStream</c> and
-        /// <c>AnalyticsAdminServiceClient.GetAndroidAppDataStreamAsync</c>.
+        /// <c>AnalyticsAdminServiceClient.CreateUserLink</c> and <c>AnalyticsAdminServiceClient.CreateUserLinkAsync</c>
+        /// .
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetAndroidAppDataStreamSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings CreateUserLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.DeleteAndroidAppDataStream</c> and
-        /// <c>AnalyticsAdminServiceClient.DeleteAndroidAppDataStreamAsync</c>.
+        /// <c>AnalyticsAdminServiceClient.BatchCreateUserLinks</c> and
+        /// <c>AnalyticsAdminServiceClient.BatchCreateUserLinksAsync</c>.
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteAndroidAppDataStreamSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings BatchCreateUserLinksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.UpdateAndroidAppDataStream</c> and
-        /// <c>AnalyticsAdminServiceClient.UpdateAndroidAppDataStreamAsync</c>.
+        /// <c>AnalyticsAdminServiceClient.UpdateUserLink</c> and <c>AnalyticsAdminServiceClient.UpdateUserLinkAsync</c>
+        /// .
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateAndroidAppDataStreamSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings UpdateUserLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.ListAndroidAppDataStreams</c> and
-        /// <c>AnalyticsAdminServiceClient.ListAndroidAppDataStreamsAsync</c>.
+        /// <c>AnalyticsAdminServiceClient.BatchUpdateUserLinks</c> and
+        /// <c>AnalyticsAdminServiceClient.BatchUpdateUserLinksAsync</c>.
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListAndroidAppDataStreamsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings BatchUpdateUserLinksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.DeleteUserLink</c> and <c>AnalyticsAdminServiceClient.DeleteUserLinkAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteUserLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.BatchDeleteUserLinks</c> and
+        /// <c>AnalyticsAdminServiceClient.BatchDeleteUserLinksAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchDeleteUserLinksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -596,11 +585,20 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateFirebaseLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings CreateFirebaseLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -609,11 +607,20 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteFirebaseLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings DeleteFirebaseLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -622,11 +629,20 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListFirebaseLinksSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings ListFirebaseLinksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -635,11 +651,20 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetGlobalSiteTagSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings GetGlobalSiteTagSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -648,11 +673,20 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateGoogleAdsLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings CreateGoogleAdsLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -661,11 +695,20 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateGoogleAdsLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings UpdateGoogleAdsLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -674,11 +717,20 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteGoogleAdsLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings DeleteGoogleAdsLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -687,11 +739,20 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListGoogleAdsLinksSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings ListGoogleAdsLinksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -3592,1519 +3653,6 @@ namespace Google.Analytics.Admin.V1Alpha
             BatchDeleteUserLinksAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lookup for a single WebDataStream
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual WebDataStream GetWebDataStream(GetWebDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Lookup for a single WebDataStream
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<WebDataStream> GetWebDataStreamAsync(GetWebDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Lookup for a single WebDataStream
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<WebDataStream> GetWebDataStreamAsync(GetWebDataStreamRequest request, st::CancellationToken cancellationToken) =>
-            GetWebDataStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Lookup for a single WebDataStream
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the web data stream to lookup.
-        /// Format: properties/{property_id}/webDataStreams/{stream_id}
-        /// Example: "properties/123/webDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual WebDataStream GetWebDataStream(string name, gaxgrpc::CallSettings callSettings = null) =>
-            GetWebDataStream(new GetWebDataStreamRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Lookup for a single WebDataStream
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the web data stream to lookup.
-        /// Format: properties/{property_id}/webDataStreams/{stream_id}
-        /// Example: "properties/123/webDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<WebDataStream> GetWebDataStreamAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
-            GetWebDataStreamAsync(new GetWebDataStreamRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Lookup for a single WebDataStream
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the web data stream to lookup.
-        /// Format: properties/{property_id}/webDataStreams/{stream_id}
-        /// Example: "properties/123/webDataStreams/456"
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<WebDataStream> GetWebDataStreamAsync(string name, st::CancellationToken cancellationToken) =>
-            GetWebDataStreamAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Lookup for a single WebDataStream
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the web data stream to lookup.
-        /// Format: properties/{property_id}/webDataStreams/{stream_id}
-        /// Example: "properties/123/webDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual WebDataStream GetWebDataStream(WebDataStreamName name, gaxgrpc::CallSettings callSettings = null) =>
-            GetWebDataStream(new GetWebDataStreamRequest
-            {
-                WebDataStreamName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Lookup for a single WebDataStream
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the web data stream to lookup.
-        /// Format: properties/{property_id}/webDataStreams/{stream_id}
-        /// Example: "properties/123/webDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<WebDataStream> GetWebDataStreamAsync(WebDataStreamName name, gaxgrpc::CallSettings callSettings = null) =>
-            GetWebDataStreamAsync(new GetWebDataStreamRequest
-            {
-                WebDataStreamName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Lookup for a single WebDataStream
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the web data stream to lookup.
-        /// Format: properties/{property_id}/webDataStreams/{stream_id}
-        /// Example: "properties/123/webDataStreams/456"
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<WebDataStream> GetWebDataStreamAsync(WebDataStreamName name, st::CancellationToken cancellationToken) =>
-            GetWebDataStreamAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deletes a web stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void DeleteWebDataStream(DeleteWebDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Deletes a web stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteWebDataStreamAsync(DeleteWebDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Deletes a web stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteWebDataStreamAsync(DeleteWebDataStreamRequest request, st::CancellationToken cancellationToken) =>
-            DeleteWebDataStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deletes a web stream on a property.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the web data stream to delete.
-        /// Format: properties/{property_id}/webDataStreams/{stream_id}
-        /// Example: "properties/123/webDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void DeleteWebDataStream(string name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteWebDataStream(new DeleteWebDataStreamRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes a web stream on a property.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the web data stream to delete.
-        /// Format: properties/{property_id}/webDataStreams/{stream_id}
-        /// Example: "properties/123/webDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteWebDataStreamAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteWebDataStreamAsync(new DeleteWebDataStreamRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes a web stream on a property.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the web data stream to delete.
-        /// Format: properties/{property_id}/webDataStreams/{stream_id}
-        /// Example: "properties/123/webDataStreams/456"
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteWebDataStreamAsync(string name, st::CancellationToken cancellationToken) =>
-            DeleteWebDataStreamAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deletes a web stream on a property.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the web data stream to delete.
-        /// Format: properties/{property_id}/webDataStreams/{stream_id}
-        /// Example: "properties/123/webDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void DeleteWebDataStream(WebDataStreamName name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteWebDataStream(new DeleteWebDataStreamRequest
-            {
-                WebDataStreamName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes a web stream on a property.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the web data stream to delete.
-        /// Format: properties/{property_id}/webDataStreams/{stream_id}
-        /// Example: "properties/123/webDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteWebDataStreamAsync(WebDataStreamName name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteWebDataStreamAsync(new DeleteWebDataStreamRequest
-            {
-                WebDataStreamName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes a web stream on a property.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the web data stream to delete.
-        /// Format: properties/{property_id}/webDataStreams/{stream_id}
-        /// Example: "properties/123/webDataStreams/456"
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteWebDataStreamAsync(WebDataStreamName name, st::CancellationToken cancellationToken) =>
-            DeleteWebDataStreamAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Updates a web stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual WebDataStream UpdateWebDataStream(UpdateWebDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Updates a web stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<WebDataStream> UpdateWebDataStreamAsync(UpdateWebDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Updates a web stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<WebDataStream> UpdateWebDataStreamAsync(UpdateWebDataStreamRequest request, st::CancellationToken cancellationToken) =>
-            UpdateWebDataStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Updates a web stream on a property.
-        /// </summary>
-        /// <param name="webDataStream">
-        /// Required. The web stream to update.
-        /// The `name` field is used to identify the web stream to be updated.
-        /// </param>
-        /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual WebDataStream UpdateWebDataStream(WebDataStream webDataStream, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
-            UpdateWebDataStream(new UpdateWebDataStreamRequest
-            {
-                WebDataStream = gax::GaxPreconditions.CheckNotNull(webDataStream, nameof(webDataStream)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
-            }, callSettings);
-
-        /// <summary>
-        /// Updates a web stream on a property.
-        /// </summary>
-        /// <param name="webDataStream">
-        /// Required. The web stream to update.
-        /// The `name` field is used to identify the web stream to be updated.
-        /// </param>
-        /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<WebDataStream> UpdateWebDataStreamAsync(WebDataStream webDataStream, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
-            UpdateWebDataStreamAsync(new UpdateWebDataStreamRequest
-            {
-                WebDataStream = gax::GaxPreconditions.CheckNotNull(webDataStream, nameof(webDataStream)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
-            }, callSettings);
-
-        /// <summary>
-        /// Updates a web stream on a property.
-        /// </summary>
-        /// <param name="webDataStream">
-        /// Required. The web stream to update.
-        /// The `name` field is used to identify the web stream to be updated.
-        /// </param>
-        /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<WebDataStream> UpdateWebDataStreamAsync(WebDataStream webDataStream, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
-            UpdateWebDataStreamAsync(webDataStream, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a web stream with the specified location and attributes.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual WebDataStream CreateWebDataStream(CreateWebDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Creates a web stream with the specified location and attributes.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<WebDataStream> CreateWebDataStreamAsync(CreateWebDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Creates a web stream with the specified location and attributes.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<WebDataStream> CreateWebDataStreamAsync(CreateWebDataStreamRequest request, st::CancellationToken cancellationToken) =>
-            CreateWebDataStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a web stream with the specified location and attributes.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource where this web data stream will be created.
-        /// Format: properties/123
-        /// </param>
-        /// <param name="webDataStream">
-        /// Required. The web stream to create.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual WebDataStream CreateWebDataStream(string parent, WebDataStream webDataStream, gaxgrpc::CallSettings callSettings = null) =>
-            CreateWebDataStream(new CreateWebDataStreamRequest
-            {
-                WebDataStream = gax::GaxPreconditions.CheckNotNull(webDataStream, nameof(webDataStream)),
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a web stream with the specified location and attributes.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource where this web data stream will be created.
-        /// Format: properties/123
-        /// </param>
-        /// <param name="webDataStream">
-        /// Required. The web stream to create.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<WebDataStream> CreateWebDataStreamAsync(string parent, WebDataStream webDataStream, gaxgrpc::CallSettings callSettings = null) =>
-            CreateWebDataStreamAsync(new CreateWebDataStreamRequest
-            {
-                WebDataStream = gax::GaxPreconditions.CheckNotNull(webDataStream, nameof(webDataStream)),
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a web stream with the specified location and attributes.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource where this web data stream will be created.
-        /// Format: properties/123
-        /// </param>
-        /// <param name="webDataStream">
-        /// Required. The web stream to create.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<WebDataStream> CreateWebDataStreamAsync(string parent, WebDataStream webDataStream, st::CancellationToken cancellationToken) =>
-            CreateWebDataStreamAsync(parent, webDataStream, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a web stream with the specified location and attributes.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource where this web data stream will be created.
-        /// Format: properties/123
-        /// </param>
-        /// <param name="webDataStream">
-        /// Required. The web stream to create.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual WebDataStream CreateWebDataStream(PropertyName parent, WebDataStream webDataStream, gaxgrpc::CallSettings callSettings = null) =>
-            CreateWebDataStream(new CreateWebDataStreamRequest
-            {
-                WebDataStream = gax::GaxPreconditions.CheckNotNull(webDataStream, nameof(webDataStream)),
-                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a web stream with the specified location and attributes.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource where this web data stream will be created.
-        /// Format: properties/123
-        /// </param>
-        /// <param name="webDataStream">
-        /// Required. The web stream to create.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<WebDataStream> CreateWebDataStreamAsync(PropertyName parent, WebDataStream webDataStream, gaxgrpc::CallSettings callSettings = null) =>
-            CreateWebDataStreamAsync(new CreateWebDataStreamRequest
-            {
-                WebDataStream = gax::GaxPreconditions.CheckNotNull(webDataStream, nameof(webDataStream)),
-                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a web stream with the specified location and attributes.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource where this web data stream will be created.
-        /// Format: properties/123
-        /// </param>
-        /// <param name="webDataStream">
-        /// Required. The web stream to create.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<WebDataStream> CreateWebDataStreamAsync(PropertyName parent, WebDataStream webDataStream, st::CancellationToken cancellationToken) =>
-            CreateWebDataStreamAsync(parent, webDataStream, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Returns child web data streams under the specified parent property.
-        /// 
-        /// Web data streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant web data streams are found.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="WebDataStream"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWebDataStreamsResponse, WebDataStream> ListWebDataStreams(ListWebDataStreamsRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Returns child web data streams under the specified parent property.
-        /// 
-        /// Web data streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant web data streams are found.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="WebDataStream"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWebDataStreamsResponse, WebDataStream> ListWebDataStreamsAsync(ListWebDataStreamsRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Returns child web data streams under the specified parent property.
-        /// 
-        /// Web data streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant web data streams are found.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The name of the parent property.
-        /// For example, to list results of web streams under the property with Id
-        /// 123: "properties/123"
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="WebDataStream"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWebDataStreamsResponse, WebDataStream> ListWebDataStreams(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWebDataStreams(new ListWebDataStreamsRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Returns child web data streams under the specified parent property.
-        /// 
-        /// Web data streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant web data streams are found.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The name of the parent property.
-        /// For example, to list results of web streams under the property with Id
-        /// 123: "properties/123"
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="WebDataStream"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWebDataStreamsResponse, WebDataStream> ListWebDataStreamsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWebDataStreamsAsync(new ListWebDataStreamsRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Returns child web data streams under the specified parent property.
-        /// 
-        /// Web data streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant web data streams are found.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The name of the parent property.
-        /// For example, to list results of web streams under the property with Id
-        /// 123: "properties/123"
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="WebDataStream"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWebDataStreamsResponse, WebDataStream> ListWebDataStreams(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWebDataStreams(new ListWebDataStreamsRequest
-            {
-                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Returns child web data streams under the specified parent property.
-        /// 
-        /// Web data streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant web data streams are found.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The name of the parent property.
-        /// For example, to list results of web streams under the property with Id
-        /// 123: "properties/123"
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="WebDataStream"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWebDataStreamsResponse, WebDataStream> ListWebDataStreamsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWebDataStreamsAsync(new ListWebDataStreamsRequest
-            {
-                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Lookup for a single IosAppDataStream
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual IosAppDataStream GetIosAppDataStream(GetIosAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Lookup for a single IosAppDataStream
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<IosAppDataStream> GetIosAppDataStreamAsync(GetIosAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Lookup for a single IosAppDataStream
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<IosAppDataStream> GetIosAppDataStreamAsync(GetIosAppDataStreamRequest request, st::CancellationToken cancellationToken) =>
-            GetIosAppDataStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Lookup for a single IosAppDataStream
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the iOS app data stream to lookup.
-        /// Format: properties/{property_id}/iosAppDataStreams/{stream_id}
-        /// Example: "properties/123/iosAppDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual IosAppDataStream GetIosAppDataStream(string name, gaxgrpc::CallSettings callSettings = null) =>
-            GetIosAppDataStream(new GetIosAppDataStreamRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Lookup for a single IosAppDataStream
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the iOS app data stream to lookup.
-        /// Format: properties/{property_id}/iosAppDataStreams/{stream_id}
-        /// Example: "properties/123/iosAppDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<IosAppDataStream> GetIosAppDataStreamAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
-            GetIosAppDataStreamAsync(new GetIosAppDataStreamRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Lookup for a single IosAppDataStream
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the iOS app data stream to lookup.
-        /// Format: properties/{property_id}/iosAppDataStreams/{stream_id}
-        /// Example: "properties/123/iosAppDataStreams/456"
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<IosAppDataStream> GetIosAppDataStreamAsync(string name, st::CancellationToken cancellationToken) =>
-            GetIosAppDataStreamAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Lookup for a single IosAppDataStream
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the iOS app data stream to lookup.
-        /// Format: properties/{property_id}/iosAppDataStreams/{stream_id}
-        /// Example: "properties/123/iosAppDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual IosAppDataStream GetIosAppDataStream(IosAppDataStreamName name, gaxgrpc::CallSettings callSettings = null) =>
-            GetIosAppDataStream(new GetIosAppDataStreamRequest
-            {
-                IosAppDataStreamName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Lookup for a single IosAppDataStream
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the iOS app data stream to lookup.
-        /// Format: properties/{property_id}/iosAppDataStreams/{stream_id}
-        /// Example: "properties/123/iosAppDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<IosAppDataStream> GetIosAppDataStreamAsync(IosAppDataStreamName name, gaxgrpc::CallSettings callSettings = null) =>
-            GetIosAppDataStreamAsync(new GetIosAppDataStreamRequest
-            {
-                IosAppDataStreamName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Lookup for a single IosAppDataStream
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the iOS app data stream to lookup.
-        /// Format: properties/{property_id}/iosAppDataStreams/{stream_id}
-        /// Example: "properties/123/iosAppDataStreams/456"
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<IosAppDataStream> GetIosAppDataStreamAsync(IosAppDataStreamName name, st::CancellationToken cancellationToken) =>
-            GetIosAppDataStreamAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deletes an iOS app stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void DeleteIosAppDataStream(DeleteIosAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Deletes an iOS app stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteIosAppDataStreamAsync(DeleteIosAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Deletes an iOS app stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteIosAppDataStreamAsync(DeleteIosAppDataStreamRequest request, st::CancellationToken cancellationToken) =>
-            DeleteIosAppDataStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deletes an iOS app stream on a property.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the iOS app data stream to delete.
-        /// Format: properties/{property_id}/iosAppDataStreams/{stream_id}
-        /// Example: "properties/123/iosAppDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void DeleteIosAppDataStream(string name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteIosAppDataStream(new DeleteIosAppDataStreamRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes an iOS app stream on a property.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the iOS app data stream to delete.
-        /// Format: properties/{property_id}/iosAppDataStreams/{stream_id}
-        /// Example: "properties/123/iosAppDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteIosAppDataStreamAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteIosAppDataStreamAsync(new DeleteIosAppDataStreamRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes an iOS app stream on a property.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the iOS app data stream to delete.
-        /// Format: properties/{property_id}/iosAppDataStreams/{stream_id}
-        /// Example: "properties/123/iosAppDataStreams/456"
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteIosAppDataStreamAsync(string name, st::CancellationToken cancellationToken) =>
-            DeleteIosAppDataStreamAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deletes an iOS app stream on a property.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the iOS app data stream to delete.
-        /// Format: properties/{property_id}/iosAppDataStreams/{stream_id}
-        /// Example: "properties/123/iosAppDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void DeleteIosAppDataStream(IosAppDataStreamName name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteIosAppDataStream(new DeleteIosAppDataStreamRequest
-            {
-                IosAppDataStreamName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes an iOS app stream on a property.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the iOS app data stream to delete.
-        /// Format: properties/{property_id}/iosAppDataStreams/{stream_id}
-        /// Example: "properties/123/iosAppDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteIosAppDataStreamAsync(IosAppDataStreamName name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteIosAppDataStreamAsync(new DeleteIosAppDataStreamRequest
-            {
-                IosAppDataStreamName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes an iOS app stream on a property.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the iOS app data stream to delete.
-        /// Format: properties/{property_id}/iosAppDataStreams/{stream_id}
-        /// Example: "properties/123/iosAppDataStreams/456"
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteIosAppDataStreamAsync(IosAppDataStreamName name, st::CancellationToken cancellationToken) =>
-            DeleteIosAppDataStreamAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Updates an iOS app stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual IosAppDataStream UpdateIosAppDataStream(UpdateIosAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Updates an iOS app stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<IosAppDataStream> UpdateIosAppDataStreamAsync(UpdateIosAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Updates an iOS app stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<IosAppDataStream> UpdateIosAppDataStreamAsync(UpdateIosAppDataStreamRequest request, st::CancellationToken cancellationToken) =>
-            UpdateIosAppDataStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Updates an iOS app stream on a property.
-        /// </summary>
-        /// <param name="iosAppDataStream">
-        /// Required. The iOS app stream to update.
-        /// The `name` field is used to identify the iOS app stream to be updated.
-        /// </param>
-        /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual IosAppDataStream UpdateIosAppDataStream(IosAppDataStream iosAppDataStream, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
-            UpdateIosAppDataStream(new UpdateIosAppDataStreamRequest
-            {
-                IosAppDataStream = gax::GaxPreconditions.CheckNotNull(iosAppDataStream, nameof(iosAppDataStream)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
-            }, callSettings);
-
-        /// <summary>
-        /// Updates an iOS app stream on a property.
-        /// </summary>
-        /// <param name="iosAppDataStream">
-        /// Required. The iOS app stream to update.
-        /// The `name` field is used to identify the iOS app stream to be updated.
-        /// </param>
-        /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<IosAppDataStream> UpdateIosAppDataStreamAsync(IosAppDataStream iosAppDataStream, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
-            UpdateIosAppDataStreamAsync(new UpdateIosAppDataStreamRequest
-            {
-                IosAppDataStream = gax::GaxPreconditions.CheckNotNull(iosAppDataStream, nameof(iosAppDataStream)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
-            }, callSettings);
-
-        /// <summary>
-        /// Updates an iOS app stream on a property.
-        /// </summary>
-        /// <param name="iosAppDataStream">
-        /// Required. The iOS app stream to update.
-        /// The `name` field is used to identify the iOS app stream to be updated.
-        /// </param>
-        /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<IosAppDataStream> UpdateIosAppDataStreamAsync(IosAppDataStream iosAppDataStream, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
-            UpdateIosAppDataStreamAsync(iosAppDataStream, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Returns child iOS app data streams under the specified parent property.
-        /// 
-        /// iOS app data streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant iOS app data streams are found.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="IosAppDataStream"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListIosAppDataStreamsResponse, IosAppDataStream> ListIosAppDataStreams(ListIosAppDataStreamsRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Returns child iOS app data streams under the specified parent property.
-        /// 
-        /// iOS app data streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant iOS app data streams are found.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="IosAppDataStream"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListIosAppDataStreamsResponse, IosAppDataStream> ListIosAppDataStreamsAsync(ListIosAppDataStreamsRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Returns child iOS app data streams under the specified parent property.
-        /// 
-        /// iOS app data streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant iOS app data streams are found.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The name of the parent property.
-        /// For example, to list results of app streams under the property with Id
-        /// 123: "properties/123"
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="IosAppDataStream"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListIosAppDataStreamsResponse, IosAppDataStream> ListIosAppDataStreams(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIosAppDataStreams(new ListIosAppDataStreamsRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Returns child iOS app data streams under the specified parent property.
-        /// 
-        /// iOS app data streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant iOS app data streams are found.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The name of the parent property.
-        /// For example, to list results of app streams under the property with Id
-        /// 123: "properties/123"
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="IosAppDataStream"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListIosAppDataStreamsResponse, IosAppDataStream> ListIosAppDataStreamsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIosAppDataStreamsAsync(new ListIosAppDataStreamsRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Returns child iOS app data streams under the specified parent property.
-        /// 
-        /// iOS app data streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant iOS app data streams are found.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The name of the parent property.
-        /// For example, to list results of app streams under the property with Id
-        /// 123: "properties/123"
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="IosAppDataStream"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListIosAppDataStreamsResponse, IosAppDataStream> ListIosAppDataStreams(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIosAppDataStreams(new ListIosAppDataStreamsRequest
-            {
-                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Returns child iOS app data streams under the specified parent property.
-        /// 
-        /// iOS app data streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant iOS app data streams are found.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The name of the parent property.
-        /// For example, to list results of app streams under the property with Id
-        /// 123: "properties/123"
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="IosAppDataStream"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListIosAppDataStreamsResponse, IosAppDataStream> ListIosAppDataStreamsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIosAppDataStreamsAsync(new ListIosAppDataStreamsRequest
-            {
-                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Lookup for a single AndroidAppDataStream
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual AndroidAppDataStream GetAndroidAppDataStream(GetAndroidAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Lookup for a single AndroidAppDataStream
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AndroidAppDataStream> GetAndroidAppDataStreamAsync(GetAndroidAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Lookup for a single AndroidAppDataStream
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AndroidAppDataStream> GetAndroidAppDataStreamAsync(GetAndroidAppDataStreamRequest request, st::CancellationToken cancellationToken) =>
-            GetAndroidAppDataStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Lookup for a single AndroidAppDataStream
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the android app data stream to lookup.
-        /// Format: properties/{property_id}/androidAppDataStreams/{stream_id}
-        /// Example: "properties/123/androidAppDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual AndroidAppDataStream GetAndroidAppDataStream(string name, gaxgrpc::CallSettings callSettings = null) =>
-            GetAndroidAppDataStream(new GetAndroidAppDataStreamRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Lookup for a single AndroidAppDataStream
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the android app data stream to lookup.
-        /// Format: properties/{property_id}/androidAppDataStreams/{stream_id}
-        /// Example: "properties/123/androidAppDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AndroidAppDataStream> GetAndroidAppDataStreamAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
-            GetAndroidAppDataStreamAsync(new GetAndroidAppDataStreamRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Lookup for a single AndroidAppDataStream
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the android app data stream to lookup.
-        /// Format: properties/{property_id}/androidAppDataStreams/{stream_id}
-        /// Example: "properties/123/androidAppDataStreams/456"
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AndroidAppDataStream> GetAndroidAppDataStreamAsync(string name, st::CancellationToken cancellationToken) =>
-            GetAndroidAppDataStreamAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Lookup for a single AndroidAppDataStream
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the android app data stream to lookup.
-        /// Format: properties/{property_id}/androidAppDataStreams/{stream_id}
-        /// Example: "properties/123/androidAppDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual AndroidAppDataStream GetAndroidAppDataStream(AndroidAppDataStreamName name, gaxgrpc::CallSettings callSettings = null) =>
-            GetAndroidAppDataStream(new GetAndroidAppDataStreamRequest
-            {
-                AndroidAppDataStreamName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Lookup for a single AndroidAppDataStream
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the android app data stream to lookup.
-        /// Format: properties/{property_id}/androidAppDataStreams/{stream_id}
-        /// Example: "properties/123/androidAppDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AndroidAppDataStream> GetAndroidAppDataStreamAsync(AndroidAppDataStreamName name, gaxgrpc::CallSettings callSettings = null) =>
-            GetAndroidAppDataStreamAsync(new GetAndroidAppDataStreamRequest
-            {
-                AndroidAppDataStreamName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Lookup for a single AndroidAppDataStream
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the android app data stream to lookup.
-        /// Format: properties/{property_id}/androidAppDataStreams/{stream_id}
-        /// Example: "properties/123/androidAppDataStreams/456"
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AndroidAppDataStream> GetAndroidAppDataStreamAsync(AndroidAppDataStreamName name, st::CancellationToken cancellationToken) =>
-            GetAndroidAppDataStreamAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deletes an android app stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void DeleteAndroidAppDataStream(DeleteAndroidAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Deletes an android app stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteAndroidAppDataStreamAsync(DeleteAndroidAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Deletes an android app stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteAndroidAppDataStreamAsync(DeleteAndroidAppDataStreamRequest request, st::CancellationToken cancellationToken) =>
-            DeleteAndroidAppDataStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deletes an android app stream on a property.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the android app data stream to delete.
-        /// Format: properties/{property_id}/androidAppDataStreams/{stream_id}
-        /// Example: "properties/123/androidAppDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void DeleteAndroidAppDataStream(string name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteAndroidAppDataStream(new DeleteAndroidAppDataStreamRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes an android app stream on a property.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the android app data stream to delete.
-        /// Format: properties/{property_id}/androidAppDataStreams/{stream_id}
-        /// Example: "properties/123/androidAppDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteAndroidAppDataStreamAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteAndroidAppDataStreamAsync(new DeleteAndroidAppDataStreamRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes an android app stream on a property.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the android app data stream to delete.
-        /// Format: properties/{property_id}/androidAppDataStreams/{stream_id}
-        /// Example: "properties/123/androidAppDataStreams/456"
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteAndroidAppDataStreamAsync(string name, st::CancellationToken cancellationToken) =>
-            DeleteAndroidAppDataStreamAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deletes an android app stream on a property.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the android app data stream to delete.
-        /// Format: properties/{property_id}/androidAppDataStreams/{stream_id}
-        /// Example: "properties/123/androidAppDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void DeleteAndroidAppDataStream(AndroidAppDataStreamName name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteAndroidAppDataStream(new DeleteAndroidAppDataStreamRequest
-            {
-                AndroidAppDataStreamName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes an android app stream on a property.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the android app data stream to delete.
-        /// Format: properties/{property_id}/androidAppDataStreams/{stream_id}
-        /// Example: "properties/123/androidAppDataStreams/456"
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteAndroidAppDataStreamAsync(AndroidAppDataStreamName name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteAndroidAppDataStreamAsync(new DeleteAndroidAppDataStreamRequest
-            {
-                AndroidAppDataStreamName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes an android app stream on a property.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the android app data stream to delete.
-        /// Format: properties/{property_id}/androidAppDataStreams/{stream_id}
-        /// Example: "properties/123/androidAppDataStreams/456"
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteAndroidAppDataStreamAsync(AndroidAppDataStreamName name, st::CancellationToken cancellationToken) =>
-            DeleteAndroidAppDataStreamAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Updates an android app stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual AndroidAppDataStream UpdateAndroidAppDataStream(UpdateAndroidAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Updates an android app stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AndroidAppDataStream> UpdateAndroidAppDataStreamAsync(UpdateAndroidAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Updates an android app stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AndroidAppDataStream> UpdateAndroidAppDataStreamAsync(UpdateAndroidAppDataStreamRequest request, st::CancellationToken cancellationToken) =>
-            UpdateAndroidAppDataStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Updates an android app stream on a property.
-        /// </summary>
-        /// <param name="androidAppDataStream">
-        /// Required. The android app stream to update.
-        /// The `name` field is used to identify the android app stream to be updated.
-        /// </param>
-        /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual AndroidAppDataStream UpdateAndroidAppDataStream(AndroidAppDataStream androidAppDataStream, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
-            UpdateAndroidAppDataStream(new UpdateAndroidAppDataStreamRequest
-            {
-                AndroidAppDataStream = gax::GaxPreconditions.CheckNotNull(androidAppDataStream, nameof(androidAppDataStream)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
-            }, callSettings);
-
-        /// <summary>
-        /// Updates an android app stream on a property.
-        /// </summary>
-        /// <param name="androidAppDataStream">
-        /// Required. The android app stream to update.
-        /// The `name` field is used to identify the android app stream to be updated.
-        /// </param>
-        /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AndroidAppDataStream> UpdateAndroidAppDataStreamAsync(AndroidAppDataStream androidAppDataStream, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
-            UpdateAndroidAppDataStreamAsync(new UpdateAndroidAppDataStreamRequest
-            {
-                AndroidAppDataStream = gax::GaxPreconditions.CheckNotNull(androidAppDataStream, nameof(androidAppDataStream)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
-            }, callSettings);
-
-        /// <summary>
-        /// Updates an android app stream on a property.
-        /// </summary>
-        /// <param name="androidAppDataStream">
-        /// Required. The android app stream to update.
-        /// The `name` field is used to identify the android app stream to be updated.
-        /// </param>
-        /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AndroidAppDataStream> UpdateAndroidAppDataStreamAsync(AndroidAppDataStream androidAppDataStream, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
-            UpdateAndroidAppDataStreamAsync(androidAppDataStream, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Returns child android app streams under the specified parent property.
-        /// 
-        /// Android app streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant android app streams are found.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="AndroidAppDataStream"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAndroidAppDataStreamsResponse, AndroidAppDataStream> ListAndroidAppDataStreams(ListAndroidAppDataStreamsRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Returns child android app streams under the specified parent property.
-        /// 
-        /// Android app streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant android app streams are found.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="AndroidAppDataStream"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAndroidAppDataStreamsResponse, AndroidAppDataStream> ListAndroidAppDataStreamsAsync(ListAndroidAppDataStreamsRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Returns child android app streams under the specified parent property.
-        /// 
-        /// Android app streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant android app streams are found.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The name of the parent property.
-        /// For example, to limit results to app streams under the property with Id
-        /// 123: "properties/123"
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="AndroidAppDataStream"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAndroidAppDataStreamsResponse, AndroidAppDataStream> ListAndroidAppDataStreams(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAndroidAppDataStreams(new ListAndroidAppDataStreamsRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Returns child android app streams under the specified parent property.
-        /// 
-        /// Android app streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant android app streams are found.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The name of the parent property.
-        /// For example, to limit results to app streams under the property with Id
-        /// 123: "properties/123"
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="AndroidAppDataStream"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAndroidAppDataStreamsResponse, AndroidAppDataStream> ListAndroidAppDataStreamsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAndroidAppDataStreamsAsync(new ListAndroidAppDataStreamsRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Returns child android app streams under the specified parent property.
-        /// 
-        /// Android app streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant android app streams are found.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The name of the parent property.
-        /// For example, to limit results to app streams under the property with Id
-        /// 123: "properties/123"
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="AndroidAppDataStream"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAndroidAppDataStreamsResponse, AndroidAppDataStream> ListAndroidAppDataStreams(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAndroidAppDataStreams(new ListAndroidAppDataStreamsRequest
-            {
-                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Returns child android app streams under the specified parent property.
-        /// 
-        /// Android app streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant android app streams are found.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The name of the parent property.
-        /// For example, to limit results to app streams under the property with Id
-        /// 123: "properties/123"
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="AndroidAppDataStream"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAndroidAppDataStreamsResponse, AndroidAppDataStream> ListAndroidAppDataStreamsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAndroidAppDataStreamsAsync(new ListAndroidAppDataStreamsRequest
-            {
-                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
         /// Creates a FirebaseLink.
         /// 
         /// Properties can have at most one FirebaseLink.
@@ -5527,8 +4075,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the site tag to lookup.
         /// Note that site tags are singletons and do not have unique IDs.
-        /// Format: properties/{property_id}/webDataStreams/{stream_id}/globalSiteTag
-        /// Example: "properties/123/webDataStreams/456/globalSiteTag"
+        /// Format: properties/{property_id}/dataStreams/{stream_id}/globalSiteTag
+        /// Example: "properties/123/dataStreams/456/globalSiteTag"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5545,8 +4093,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the site tag to lookup.
         /// Note that site tags are singletons and do not have unique IDs.
-        /// Format: properties/{property_id}/webDataStreams/{stream_id}/globalSiteTag
-        /// Example: "properties/123/webDataStreams/456/globalSiteTag"
+        /// Format: properties/{property_id}/dataStreams/{stream_id}/globalSiteTag
+        /// Example: "properties/123/dataStreams/456/globalSiteTag"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5563,8 +4111,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the site tag to lookup.
         /// Note that site tags are singletons and do not have unique IDs.
-        /// Format: properties/{property_id}/webDataStreams/{stream_id}/globalSiteTag
-        /// Example: "properties/123/webDataStreams/456/globalSiteTag"
+        /// Format: properties/{property_id}/dataStreams/{stream_id}/globalSiteTag
+        /// Example: "properties/123/dataStreams/456/globalSiteTag"
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5578,8 +4126,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the site tag to lookup.
         /// Note that site tags are singletons and do not have unique IDs.
-        /// Format: properties/{property_id}/webDataStreams/{stream_id}/globalSiteTag
-        /// Example: "properties/123/webDataStreams/456/globalSiteTag"
+        /// Format: properties/{property_id}/dataStreams/{stream_id}/globalSiteTag
+        /// Example: "properties/123/dataStreams/456/globalSiteTag"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5596,8 +4144,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the site tag to lookup.
         /// Note that site tags are singletons and do not have unique IDs.
-        /// Format: properties/{property_id}/webDataStreams/{stream_id}/globalSiteTag
-        /// Example: "properties/123/webDataStreams/456/globalSiteTag"
+        /// Format: properties/{property_id}/dataStreams/{stream_id}/globalSiteTag
+        /// Example: "properties/123/dataStreams/456/globalSiteTag"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5614,8 +4162,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the site tag to lookup.
         /// Note that site tags are singletons and do not have unique IDs.
-        /// Format: properties/{property_id}/webDataStreams/{stream_id}/globalSiteTag
-        /// Example: "properties/123/webDataStreams/456/globalSiteTag"
+        /// Format: properties/{property_id}/dataStreams/{stream_id}/globalSiteTag
+        /// Example: "properties/123/dataStreams/456/globalSiteTag"
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6210,9 +4758,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the measurement protocol secret to lookup.
         /// Format:
-        /// properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
-        /// Note: Any type of stream (WebDataStream, IosAppDataStream,
-        /// AndroidAppDataStream) may be a parent.
+        /// properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6228,9 +4774,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the measurement protocol secret to lookup.
         /// Format:
-        /// properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
-        /// Note: Any type of stream (WebDataStream, IosAppDataStream,
-        /// AndroidAppDataStream) may be a parent.
+        /// properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6246,9 +4790,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the measurement protocol secret to lookup.
         /// Format:
-        /// properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
-        /// Note: Any type of stream (WebDataStream, IosAppDataStream,
-        /// AndroidAppDataStream) may be a parent.
+        /// properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6261,9 +4803,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the measurement protocol secret to lookup.
         /// Format:
-        /// properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
-        /// Note: Any type of stream (WebDataStream, IosAppDataStream,
-        /// AndroidAppDataStream) may be a parent.
+        /// properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6279,9 +4819,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the measurement protocol secret to lookup.
         /// Format:
-        /// properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
-        /// Note: Any type of stream (WebDataStream, IosAppDataStream,
-        /// AndroidAppDataStream) may be a parent.
+        /// properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6297,9 +4835,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the measurement protocol secret to lookup.
         /// Format:
-        /// properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
-        /// Note: Any type of stream (WebDataStream, IosAppDataStream,
-        /// AndroidAppDataStream) may be a parent.
+        /// properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6332,10 +4868,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent stream.
-        /// Any type of stream (WebDataStream, IosAppDataStream, AndroidAppDataStream)
-        /// may be a parent.
         /// Format:
-        /// properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets
+        /// properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6361,10 +4895,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent stream.
-        /// Any type of stream (WebDataStream, IosAppDataStream, AndroidAppDataStream)
-        /// may be a parent.
         /// Format:
-        /// properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets
+        /// properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6390,10 +4922,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent stream.
-        /// Any type of stream (WebDataStream, IosAppDataStream, AndroidAppDataStream)
-        /// may be a parent.
         /// Format:
-        /// properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets
+        /// properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6405,10 +4935,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MeasurementProtocolSecret"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMeasurementProtocolSecretsResponse, MeasurementProtocolSecret> ListMeasurementProtocolSecrets(WebDataStreamName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedEnumerable<ListMeasurementProtocolSecretsResponse, MeasurementProtocolSecret> ListMeasurementProtocolSecrets(DataStreamName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListMeasurementProtocolSecrets(new ListMeasurementProtocolSecretsRequest
             {
-                ParentAsWebDataStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsDataStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -6419,10 +4949,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent stream.
-        /// Any type of stream (WebDataStream, IosAppDataStream, AndroidAppDataStream)
-        /// may be a parent.
         /// Format:
-        /// properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets
+        /// properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6434,10 +4962,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MeasurementProtocolSecret"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMeasurementProtocolSecretsResponse, MeasurementProtocolSecret> ListMeasurementProtocolSecretsAsync(WebDataStreamName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedAsyncEnumerable<ListMeasurementProtocolSecretsResponse, MeasurementProtocolSecret> ListMeasurementProtocolSecretsAsync(DataStreamName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListMeasurementProtocolSecretsAsync(new ListMeasurementProtocolSecretsRequest
             {
-                ParentAsWebDataStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsDataStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -6474,9 +5002,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this secret will be created.
-        /// Any type of stream (WebDataStream, IosAppDataStream, AndroidAppDataStream)
-        /// may be a parent.
-        /// Format: properties/{property}/webDataStreams/{webDataStream}
+        /// Format: properties/{property}/dataStreams/{dataStream}
         /// </param>
         /// <param name="measurementProtocolSecret">
         /// Required. The measurement protocol secret to create.
@@ -6495,9 +5021,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this secret will be created.
-        /// Any type of stream (WebDataStream, IosAppDataStream, AndroidAppDataStream)
-        /// may be a parent.
-        /// Format: properties/{property}/webDataStreams/{webDataStream}
+        /// Format: properties/{property}/dataStreams/{dataStream}
         /// </param>
         /// <param name="measurementProtocolSecret">
         /// Required. The measurement protocol secret to create.
@@ -6516,9 +5040,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this secret will be created.
-        /// Any type of stream (WebDataStream, IosAppDataStream, AndroidAppDataStream)
-        /// may be a parent.
-        /// Format: properties/{property}/webDataStreams/{webDataStream}
+        /// Format: properties/{property}/dataStreams/{dataStream}
         /// </param>
         /// <param name="measurementProtocolSecret">
         /// Required. The measurement protocol secret to create.
@@ -6533,19 +5055,17 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this secret will be created.
-        /// Any type of stream (WebDataStream, IosAppDataStream, AndroidAppDataStream)
-        /// may be a parent.
-        /// Format: properties/{property}/webDataStreams/{webDataStream}
+        /// Format: properties/{property}/dataStreams/{dataStream}
         /// </param>
         /// <param name="measurementProtocolSecret">
         /// Required. The measurement protocol secret to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual MeasurementProtocolSecret CreateMeasurementProtocolSecret(WebDataStreamName parent, MeasurementProtocolSecret measurementProtocolSecret, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual MeasurementProtocolSecret CreateMeasurementProtocolSecret(DataStreamName parent, MeasurementProtocolSecret measurementProtocolSecret, gaxgrpc::CallSettings callSettings = null) =>
             CreateMeasurementProtocolSecret(new CreateMeasurementProtocolSecretRequest
             {
-                ParentAsWebDataStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsDataStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 MeasurementProtocolSecret = gax::GaxPreconditions.CheckNotNull(measurementProtocolSecret, nameof(measurementProtocolSecret)),
             }, callSettings);
 
@@ -6554,19 +5074,17 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this secret will be created.
-        /// Any type of stream (WebDataStream, IosAppDataStream, AndroidAppDataStream)
-        /// may be a parent.
-        /// Format: properties/{property}/webDataStreams/{webDataStream}
+        /// Format: properties/{property}/dataStreams/{dataStream}
         /// </param>
         /// <param name="measurementProtocolSecret">
         /// Required. The measurement protocol secret to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<MeasurementProtocolSecret> CreateMeasurementProtocolSecretAsync(WebDataStreamName parent, MeasurementProtocolSecret measurementProtocolSecret, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<MeasurementProtocolSecret> CreateMeasurementProtocolSecretAsync(DataStreamName parent, MeasurementProtocolSecret measurementProtocolSecret, gaxgrpc::CallSettings callSettings = null) =>
             CreateMeasurementProtocolSecretAsync(new CreateMeasurementProtocolSecretRequest
             {
-                ParentAsWebDataStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsDataStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 MeasurementProtocolSecret = gax::GaxPreconditions.CheckNotNull(measurementProtocolSecret, nameof(measurementProtocolSecret)),
             }, callSettings);
 
@@ -6575,16 +5093,14 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this secret will be created.
-        /// Any type of stream (WebDataStream, IosAppDataStream, AndroidAppDataStream)
-        /// may be a parent.
-        /// Format: properties/{property}/webDataStreams/{webDataStream}
+        /// Format: properties/{property}/dataStreams/{dataStream}
         /// </param>
         /// <param name="measurementProtocolSecret">
         /// Required. The measurement protocol secret to create.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<MeasurementProtocolSecret> CreateMeasurementProtocolSecretAsync(WebDataStreamName parent, MeasurementProtocolSecret measurementProtocolSecret, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<MeasurementProtocolSecret> CreateMeasurementProtocolSecretAsync(DataStreamName parent, MeasurementProtocolSecret measurementProtocolSecret, st::CancellationToken cancellationToken) =>
             CreateMeasurementProtocolSecretAsync(parent, measurementProtocolSecret, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -6620,9 +5136,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the MeasurementProtocolSecret to delete.
         /// Format:
-        /// properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
-        /// Note: Any type of stream (WebDataStream, IosAppDataStream,
-        /// AndroidAppDataStream) may be a parent.
+        /// properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6638,9 +5152,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the MeasurementProtocolSecret to delete.
         /// Format:
-        /// properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
-        /// Note: Any type of stream (WebDataStream, IosAppDataStream,
-        /// AndroidAppDataStream) may be a parent.
+        /// properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6656,9 +5168,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the MeasurementProtocolSecret to delete.
         /// Format:
-        /// properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
-        /// Note: Any type of stream (WebDataStream, IosAppDataStream,
-        /// AndroidAppDataStream) may be a parent.
+        /// properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6671,9 +5181,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the MeasurementProtocolSecret to delete.
         /// Format:
-        /// properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
-        /// Note: Any type of stream (WebDataStream, IosAppDataStream,
-        /// AndroidAppDataStream) may be a parent.
+        /// properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6689,9 +5197,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the MeasurementProtocolSecret to delete.
         /// Format:
-        /// properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
-        /// Note: Any type of stream (WebDataStream, IosAppDataStream,
-        /// AndroidAppDataStream) may be a parent.
+        /// properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6707,9 +5213,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the MeasurementProtocolSecret to delete.
         /// Format:
-        /// properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
-        /// Note: Any type of stream (WebDataStream, IosAppDataStream,
-        /// AndroidAppDataStream) may be a parent.
+        /// properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -10577,32 +9081,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         private readonly gaxgrpc::ApiCall<BatchDeleteUserLinksRequest, wkt::Empty> _callBatchDeleteUserLinks;
 
-        private readonly gaxgrpc::ApiCall<GetWebDataStreamRequest, WebDataStream> _callGetWebDataStream;
-
-        private readonly gaxgrpc::ApiCall<DeleteWebDataStreamRequest, wkt::Empty> _callDeleteWebDataStream;
-
-        private readonly gaxgrpc::ApiCall<UpdateWebDataStreamRequest, WebDataStream> _callUpdateWebDataStream;
-
-        private readonly gaxgrpc::ApiCall<CreateWebDataStreamRequest, WebDataStream> _callCreateWebDataStream;
-
-        private readonly gaxgrpc::ApiCall<ListWebDataStreamsRequest, ListWebDataStreamsResponse> _callListWebDataStreams;
-
-        private readonly gaxgrpc::ApiCall<GetIosAppDataStreamRequest, IosAppDataStream> _callGetIosAppDataStream;
-
-        private readonly gaxgrpc::ApiCall<DeleteIosAppDataStreamRequest, wkt::Empty> _callDeleteIosAppDataStream;
-
-        private readonly gaxgrpc::ApiCall<UpdateIosAppDataStreamRequest, IosAppDataStream> _callUpdateIosAppDataStream;
-
-        private readonly gaxgrpc::ApiCall<ListIosAppDataStreamsRequest, ListIosAppDataStreamsResponse> _callListIosAppDataStreams;
-
-        private readonly gaxgrpc::ApiCall<GetAndroidAppDataStreamRequest, AndroidAppDataStream> _callGetAndroidAppDataStream;
-
-        private readonly gaxgrpc::ApiCall<DeleteAndroidAppDataStreamRequest, wkt::Empty> _callDeleteAndroidAppDataStream;
-
-        private readonly gaxgrpc::ApiCall<UpdateAndroidAppDataStreamRequest, AndroidAppDataStream> _callUpdateAndroidAppDataStream;
-
-        private readonly gaxgrpc::ApiCall<ListAndroidAppDataStreamsRequest, ListAndroidAppDataStreamsResponse> _callListAndroidAppDataStreams;
-
         private readonly gaxgrpc::ApiCall<CreateFirebaseLinkRequest, FirebaseLink> _callCreateFirebaseLink;
 
         private readonly gaxgrpc::ApiCall<DeleteFirebaseLinkRequest, wkt::Empty> _callDeleteFirebaseLink;
@@ -10777,45 +9255,6 @@ namespace Google.Analytics.Admin.V1Alpha
             _callBatchDeleteUserLinks = clientHelper.BuildApiCall<BatchDeleteUserLinksRequest, wkt::Empty>(grpcClient.BatchDeleteUserLinksAsync, grpcClient.BatchDeleteUserLinks, effectiveSettings.BatchDeleteUserLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchDeleteUserLinks);
             Modify_BatchDeleteUserLinksApiCall(ref _callBatchDeleteUserLinks);
-            _callGetWebDataStream = clientHelper.BuildApiCall<GetWebDataStreamRequest, WebDataStream>(grpcClient.GetWebDataStreamAsync, grpcClient.GetWebDataStream, effectiveSettings.GetWebDataStreamSettings).WithGoogleRequestParam("name", request => request.Name);
-            Modify_ApiCall(ref _callGetWebDataStream);
-            Modify_GetWebDataStreamApiCall(ref _callGetWebDataStream);
-            _callDeleteWebDataStream = clientHelper.BuildApiCall<DeleteWebDataStreamRequest, wkt::Empty>(grpcClient.DeleteWebDataStreamAsync, grpcClient.DeleteWebDataStream, effectiveSettings.DeleteWebDataStreamSettings).WithGoogleRequestParam("name", request => request.Name);
-            Modify_ApiCall(ref _callDeleteWebDataStream);
-            Modify_DeleteWebDataStreamApiCall(ref _callDeleteWebDataStream);
-            _callUpdateWebDataStream = clientHelper.BuildApiCall<UpdateWebDataStreamRequest, WebDataStream>(grpcClient.UpdateWebDataStreamAsync, grpcClient.UpdateWebDataStream, effectiveSettings.UpdateWebDataStreamSettings).WithGoogleRequestParam("web_data_stream.name", request => request.WebDataStream?.Name);
-            Modify_ApiCall(ref _callUpdateWebDataStream);
-            Modify_UpdateWebDataStreamApiCall(ref _callUpdateWebDataStream);
-            _callCreateWebDataStream = clientHelper.BuildApiCall<CreateWebDataStreamRequest, WebDataStream>(grpcClient.CreateWebDataStreamAsync, grpcClient.CreateWebDataStream, effectiveSettings.CreateWebDataStreamSettings).WithGoogleRequestParam("parent", request => request.Parent);
-            Modify_ApiCall(ref _callCreateWebDataStream);
-            Modify_CreateWebDataStreamApiCall(ref _callCreateWebDataStream);
-            _callListWebDataStreams = clientHelper.BuildApiCall<ListWebDataStreamsRequest, ListWebDataStreamsResponse>(grpcClient.ListWebDataStreamsAsync, grpcClient.ListWebDataStreams, effectiveSettings.ListWebDataStreamsSettings).WithGoogleRequestParam("parent", request => request.Parent);
-            Modify_ApiCall(ref _callListWebDataStreams);
-            Modify_ListWebDataStreamsApiCall(ref _callListWebDataStreams);
-            _callGetIosAppDataStream = clientHelper.BuildApiCall<GetIosAppDataStreamRequest, IosAppDataStream>(grpcClient.GetIosAppDataStreamAsync, grpcClient.GetIosAppDataStream, effectiveSettings.GetIosAppDataStreamSettings).WithGoogleRequestParam("name", request => request.Name);
-            Modify_ApiCall(ref _callGetIosAppDataStream);
-            Modify_GetIosAppDataStreamApiCall(ref _callGetIosAppDataStream);
-            _callDeleteIosAppDataStream = clientHelper.BuildApiCall<DeleteIosAppDataStreamRequest, wkt::Empty>(grpcClient.DeleteIosAppDataStreamAsync, grpcClient.DeleteIosAppDataStream, effectiveSettings.DeleteIosAppDataStreamSettings).WithGoogleRequestParam("name", request => request.Name);
-            Modify_ApiCall(ref _callDeleteIosAppDataStream);
-            Modify_DeleteIosAppDataStreamApiCall(ref _callDeleteIosAppDataStream);
-            _callUpdateIosAppDataStream = clientHelper.BuildApiCall<UpdateIosAppDataStreamRequest, IosAppDataStream>(grpcClient.UpdateIosAppDataStreamAsync, grpcClient.UpdateIosAppDataStream, effectiveSettings.UpdateIosAppDataStreamSettings).WithGoogleRequestParam("ios_app_data_stream.name", request => request.IosAppDataStream?.Name);
-            Modify_ApiCall(ref _callUpdateIosAppDataStream);
-            Modify_UpdateIosAppDataStreamApiCall(ref _callUpdateIosAppDataStream);
-            _callListIosAppDataStreams = clientHelper.BuildApiCall<ListIosAppDataStreamsRequest, ListIosAppDataStreamsResponse>(grpcClient.ListIosAppDataStreamsAsync, grpcClient.ListIosAppDataStreams, effectiveSettings.ListIosAppDataStreamsSettings).WithGoogleRequestParam("parent", request => request.Parent);
-            Modify_ApiCall(ref _callListIosAppDataStreams);
-            Modify_ListIosAppDataStreamsApiCall(ref _callListIosAppDataStreams);
-            _callGetAndroidAppDataStream = clientHelper.BuildApiCall<GetAndroidAppDataStreamRequest, AndroidAppDataStream>(grpcClient.GetAndroidAppDataStreamAsync, grpcClient.GetAndroidAppDataStream, effectiveSettings.GetAndroidAppDataStreamSettings).WithGoogleRequestParam("name", request => request.Name);
-            Modify_ApiCall(ref _callGetAndroidAppDataStream);
-            Modify_GetAndroidAppDataStreamApiCall(ref _callGetAndroidAppDataStream);
-            _callDeleteAndroidAppDataStream = clientHelper.BuildApiCall<DeleteAndroidAppDataStreamRequest, wkt::Empty>(grpcClient.DeleteAndroidAppDataStreamAsync, grpcClient.DeleteAndroidAppDataStream, effectiveSettings.DeleteAndroidAppDataStreamSettings).WithGoogleRequestParam("name", request => request.Name);
-            Modify_ApiCall(ref _callDeleteAndroidAppDataStream);
-            Modify_DeleteAndroidAppDataStreamApiCall(ref _callDeleteAndroidAppDataStream);
-            _callUpdateAndroidAppDataStream = clientHelper.BuildApiCall<UpdateAndroidAppDataStreamRequest, AndroidAppDataStream>(grpcClient.UpdateAndroidAppDataStreamAsync, grpcClient.UpdateAndroidAppDataStream, effectiveSettings.UpdateAndroidAppDataStreamSettings).WithGoogleRequestParam("android_app_data_stream.name", request => request.AndroidAppDataStream?.Name);
-            Modify_ApiCall(ref _callUpdateAndroidAppDataStream);
-            Modify_UpdateAndroidAppDataStreamApiCall(ref _callUpdateAndroidAppDataStream);
-            _callListAndroidAppDataStreams = clientHelper.BuildApiCall<ListAndroidAppDataStreamsRequest, ListAndroidAppDataStreamsResponse>(grpcClient.ListAndroidAppDataStreamsAsync, grpcClient.ListAndroidAppDataStreams, effectiveSettings.ListAndroidAppDataStreamsSettings).WithGoogleRequestParam("parent", request => request.Parent);
-            Modify_ApiCall(ref _callListAndroidAppDataStreams);
-            Modify_ListAndroidAppDataStreamsApiCall(ref _callListAndroidAppDataStreams);
             _callCreateFirebaseLink = clientHelper.BuildApiCall<CreateFirebaseLinkRequest, FirebaseLink>(grpcClient.CreateFirebaseLinkAsync, grpcClient.CreateFirebaseLink, effectiveSettings.CreateFirebaseLinkSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateFirebaseLink);
             Modify_CreateFirebaseLinkApiCall(ref _callCreateFirebaseLink);
@@ -11013,32 +9452,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_BatchDeleteUserLinksApiCall(ref gaxgrpc::ApiCall<BatchDeleteUserLinksRequest, wkt::Empty> call);
 
-        partial void Modify_GetWebDataStreamApiCall(ref gaxgrpc::ApiCall<GetWebDataStreamRequest, WebDataStream> call);
-
-        partial void Modify_DeleteWebDataStreamApiCall(ref gaxgrpc::ApiCall<DeleteWebDataStreamRequest, wkt::Empty> call);
-
-        partial void Modify_UpdateWebDataStreamApiCall(ref gaxgrpc::ApiCall<UpdateWebDataStreamRequest, WebDataStream> call);
-
-        partial void Modify_CreateWebDataStreamApiCall(ref gaxgrpc::ApiCall<CreateWebDataStreamRequest, WebDataStream> call);
-
-        partial void Modify_ListWebDataStreamsApiCall(ref gaxgrpc::ApiCall<ListWebDataStreamsRequest, ListWebDataStreamsResponse> call);
-
-        partial void Modify_GetIosAppDataStreamApiCall(ref gaxgrpc::ApiCall<GetIosAppDataStreamRequest, IosAppDataStream> call);
-
-        partial void Modify_DeleteIosAppDataStreamApiCall(ref gaxgrpc::ApiCall<DeleteIosAppDataStreamRequest, wkt::Empty> call);
-
-        partial void Modify_UpdateIosAppDataStreamApiCall(ref gaxgrpc::ApiCall<UpdateIosAppDataStreamRequest, IosAppDataStream> call);
-
-        partial void Modify_ListIosAppDataStreamsApiCall(ref gaxgrpc::ApiCall<ListIosAppDataStreamsRequest, ListIosAppDataStreamsResponse> call);
-
-        partial void Modify_GetAndroidAppDataStreamApiCall(ref gaxgrpc::ApiCall<GetAndroidAppDataStreamRequest, AndroidAppDataStream> call);
-
-        partial void Modify_DeleteAndroidAppDataStreamApiCall(ref gaxgrpc::ApiCall<DeleteAndroidAppDataStreamRequest, wkt::Empty> call);
-
-        partial void Modify_UpdateAndroidAppDataStreamApiCall(ref gaxgrpc::ApiCall<UpdateAndroidAppDataStreamRequest, AndroidAppDataStream> call);
-
-        partial void Modify_ListAndroidAppDataStreamsApiCall(ref gaxgrpc::ApiCall<ListAndroidAppDataStreamsRequest, ListAndroidAppDataStreamsResponse> call);
-
         partial void Modify_CreateFirebaseLinkApiCall(ref gaxgrpc::ApiCall<CreateFirebaseLinkRequest, FirebaseLink> call);
 
         partial void Modify_DeleteFirebaseLinkApiCall(ref gaxgrpc::ApiCall<DeleteFirebaseLinkRequest, wkt::Empty> call);
@@ -11185,32 +9598,6 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_DeleteUserLinkRequest(ref DeleteUserLinkRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_BatchDeleteUserLinksRequest(ref BatchDeleteUserLinksRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_GetWebDataStreamRequest(ref GetWebDataStreamRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_DeleteWebDataStreamRequest(ref DeleteWebDataStreamRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_UpdateWebDataStreamRequest(ref UpdateWebDataStreamRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_CreateWebDataStreamRequest(ref CreateWebDataStreamRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_ListWebDataStreamsRequest(ref ListWebDataStreamsRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_GetIosAppDataStreamRequest(ref GetIosAppDataStreamRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_DeleteIosAppDataStreamRequest(ref DeleteIosAppDataStreamRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_UpdateIosAppDataStreamRequest(ref UpdateIosAppDataStreamRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_ListIosAppDataStreamsRequest(ref ListIosAppDataStreamsRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_GetAndroidAppDataStreamRequest(ref GetAndroidAppDataStreamRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_DeleteAndroidAppDataStreamRequest(ref DeleteAndroidAppDataStreamRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_UpdateAndroidAppDataStreamRequest(ref UpdateAndroidAppDataStreamRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_ListAndroidAppDataStreamsRequest(ref ListAndroidAppDataStreamsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateFirebaseLinkRequest(ref CreateFirebaseLinkRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -11902,336 +10289,6 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             Modify_BatchDeleteUserLinksRequest(ref request, ref callSettings);
             return _callBatchDeleteUserLinks.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Lookup for a single WebDataStream
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override WebDataStream GetWebDataStream(GetWebDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetWebDataStreamRequest(ref request, ref callSettings);
-            return _callGetWebDataStream.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Lookup for a single WebDataStream
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<WebDataStream> GetWebDataStreamAsync(GetWebDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetWebDataStreamRequest(ref request, ref callSettings);
-            return _callGetWebDataStream.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Deletes a web stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override void DeleteWebDataStream(DeleteWebDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteWebDataStreamRequest(ref request, ref callSettings);
-            _callDeleteWebDataStream.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Deletes a web stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task DeleteWebDataStreamAsync(DeleteWebDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteWebDataStreamRequest(ref request, ref callSettings);
-            return _callDeleteWebDataStream.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Updates a web stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override WebDataStream UpdateWebDataStream(UpdateWebDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_UpdateWebDataStreamRequest(ref request, ref callSettings);
-            return _callUpdateWebDataStream.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Updates a web stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<WebDataStream> UpdateWebDataStreamAsync(UpdateWebDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_UpdateWebDataStreamRequest(ref request, ref callSettings);
-            return _callUpdateWebDataStream.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Creates a web stream with the specified location and attributes.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override WebDataStream CreateWebDataStream(CreateWebDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateWebDataStreamRequest(ref request, ref callSettings);
-            return _callCreateWebDataStream.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Creates a web stream with the specified location and attributes.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<WebDataStream> CreateWebDataStreamAsync(CreateWebDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateWebDataStreamRequest(ref request, ref callSettings);
-            return _callCreateWebDataStream.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Returns child web data streams under the specified parent property.
-        /// 
-        /// Web data streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant web data streams are found.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="WebDataStream"/> resources.</returns>
-        public override gax::PagedEnumerable<ListWebDataStreamsResponse, WebDataStream> ListWebDataStreams(ListWebDataStreamsRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListWebDataStreamsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<ListWebDataStreamsRequest, ListWebDataStreamsResponse, WebDataStream>(_callListWebDataStreams, request, callSettings);
-        }
-
-        /// <summary>
-        /// Returns child web data streams under the specified parent property.
-        /// 
-        /// Web data streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant web data streams are found.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="WebDataStream"/> resources.</returns>
-        public override gax::PagedAsyncEnumerable<ListWebDataStreamsResponse, WebDataStream> ListWebDataStreamsAsync(ListWebDataStreamsRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListWebDataStreamsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListWebDataStreamsRequest, ListWebDataStreamsResponse, WebDataStream>(_callListWebDataStreams, request, callSettings);
-        }
-
-        /// <summary>
-        /// Lookup for a single IosAppDataStream
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override IosAppDataStream GetIosAppDataStream(GetIosAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetIosAppDataStreamRequest(ref request, ref callSettings);
-            return _callGetIosAppDataStream.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Lookup for a single IosAppDataStream
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<IosAppDataStream> GetIosAppDataStreamAsync(GetIosAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetIosAppDataStreamRequest(ref request, ref callSettings);
-            return _callGetIosAppDataStream.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Deletes an iOS app stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override void DeleteIosAppDataStream(DeleteIosAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteIosAppDataStreamRequest(ref request, ref callSettings);
-            _callDeleteIosAppDataStream.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Deletes an iOS app stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task DeleteIosAppDataStreamAsync(DeleteIosAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteIosAppDataStreamRequest(ref request, ref callSettings);
-            return _callDeleteIosAppDataStream.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Updates an iOS app stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override IosAppDataStream UpdateIosAppDataStream(UpdateIosAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_UpdateIosAppDataStreamRequest(ref request, ref callSettings);
-            return _callUpdateIosAppDataStream.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Updates an iOS app stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<IosAppDataStream> UpdateIosAppDataStreamAsync(UpdateIosAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_UpdateIosAppDataStreamRequest(ref request, ref callSettings);
-            return _callUpdateIosAppDataStream.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Returns child iOS app data streams under the specified parent property.
-        /// 
-        /// iOS app data streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant iOS app data streams are found.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="IosAppDataStream"/> resources.</returns>
-        public override gax::PagedEnumerable<ListIosAppDataStreamsResponse, IosAppDataStream> ListIosAppDataStreams(ListIosAppDataStreamsRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListIosAppDataStreamsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<ListIosAppDataStreamsRequest, ListIosAppDataStreamsResponse, IosAppDataStream>(_callListIosAppDataStreams, request, callSettings);
-        }
-
-        /// <summary>
-        /// Returns child iOS app data streams under the specified parent property.
-        /// 
-        /// iOS app data streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant iOS app data streams are found.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="IosAppDataStream"/> resources.</returns>
-        public override gax::PagedAsyncEnumerable<ListIosAppDataStreamsResponse, IosAppDataStream> ListIosAppDataStreamsAsync(ListIosAppDataStreamsRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListIosAppDataStreamsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListIosAppDataStreamsRequest, ListIosAppDataStreamsResponse, IosAppDataStream>(_callListIosAppDataStreams, request, callSettings);
-        }
-
-        /// <summary>
-        /// Lookup for a single AndroidAppDataStream
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override AndroidAppDataStream GetAndroidAppDataStream(GetAndroidAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetAndroidAppDataStreamRequest(ref request, ref callSettings);
-            return _callGetAndroidAppDataStream.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Lookup for a single AndroidAppDataStream
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<AndroidAppDataStream> GetAndroidAppDataStreamAsync(GetAndroidAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetAndroidAppDataStreamRequest(ref request, ref callSettings);
-            return _callGetAndroidAppDataStream.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Deletes an android app stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override void DeleteAndroidAppDataStream(DeleteAndroidAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteAndroidAppDataStreamRequest(ref request, ref callSettings);
-            _callDeleteAndroidAppDataStream.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Deletes an android app stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task DeleteAndroidAppDataStreamAsync(DeleteAndroidAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteAndroidAppDataStreamRequest(ref request, ref callSettings);
-            return _callDeleteAndroidAppDataStream.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Updates an android app stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override AndroidAppDataStream UpdateAndroidAppDataStream(UpdateAndroidAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_UpdateAndroidAppDataStreamRequest(ref request, ref callSettings);
-            return _callUpdateAndroidAppDataStream.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Updates an android app stream on a property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<AndroidAppDataStream> UpdateAndroidAppDataStreamAsync(UpdateAndroidAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_UpdateAndroidAppDataStreamRequest(ref request, ref callSettings);
-            return _callUpdateAndroidAppDataStream.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Returns child android app streams under the specified parent property.
-        /// 
-        /// Android app streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant android app streams are found.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="AndroidAppDataStream"/> resources.</returns>
-        public override gax::PagedEnumerable<ListAndroidAppDataStreamsResponse, AndroidAppDataStream> ListAndroidAppDataStreams(ListAndroidAppDataStreamsRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListAndroidAppDataStreamsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<ListAndroidAppDataStreamsRequest, ListAndroidAppDataStreamsResponse, AndroidAppDataStream>(_callListAndroidAppDataStreams, request, callSettings);
-        }
-
-        /// <summary>
-        /// Returns child android app streams under the specified parent property.
-        /// 
-        /// Android app streams will be excluded if the caller does not have access.
-        /// Returns an empty list if no relevant android app streams are found.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="AndroidAppDataStream"/> resources.</returns>
-        public override gax::PagedAsyncEnumerable<ListAndroidAppDataStreamsResponse, AndroidAppDataStream> ListAndroidAppDataStreamsAsync(ListAndroidAppDataStreamsRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListAndroidAppDataStreamsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAndroidAppDataStreamsRequest, ListAndroidAppDataStreamsResponse, AndroidAppDataStream>(_callListAndroidAppDataStreams, request, callSettings);
         }
 
         /// <summary>
@@ -13505,18 +11562,6 @@ namespace Google.Analytics.Admin.V1Alpha
     {
     }
 
-    public partial class ListWebDataStreamsRequest : gaxgrpc::IPageRequest
-    {
-    }
-
-    public partial class ListIosAppDataStreamsRequest : gaxgrpc::IPageRequest
-    {
-    }
-
-    public partial class ListAndroidAppDataStreamsRequest : gaxgrpc::IPageRequest
-    {
-    }
-
     public partial class ListFirebaseLinksRequest : gaxgrpc::IPageRequest
     {
     }
@@ -13593,30 +11638,6 @@ namespace Google.Analytics.Admin.V1Alpha
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<AuditUserLink> GetEnumerator() => UserLinks.GetEnumerator();
-
-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
-    }
-
-    public partial class ListWebDataStreamsResponse : gaxgrpc::IPageResponse<WebDataStream>
-    {
-        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
-        public scg::IEnumerator<WebDataStream> GetEnumerator() => WebDataStreams.GetEnumerator();
-
-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
-    }
-
-    public partial class ListIosAppDataStreamsResponse : gaxgrpc::IPageResponse<IosAppDataStream>
-    {
-        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
-        public scg::IEnumerator<IosAppDataStream> GetEnumerator() => IosAppDataStreams.GetEnumerator();
-
-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
-    }
-
-    public partial class ListAndroidAppDataStreamsResponse : gaxgrpc::IPageResponse<AndroidAppDataStream>
-    {
-        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
-        public scg::IEnumerator<AndroidAppDataStream> GetEnumerator() => AndroidAppDataStreams.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

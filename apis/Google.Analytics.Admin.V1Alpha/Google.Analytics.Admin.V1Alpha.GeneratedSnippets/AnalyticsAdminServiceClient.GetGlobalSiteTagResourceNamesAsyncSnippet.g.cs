@@ -32,7 +32,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GlobalSiteTagName name = GlobalSiteTagName.FromProperty("[PROPERTY]");
+            GlobalSiteTagName name = GlobalSiteTagName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]");
             // Make the request
             GlobalSiteTag response = await analyticsAdminServiceClient.GetGlobalSiteTagAsync(name);
         }

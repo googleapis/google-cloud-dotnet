@@ -33,7 +33,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "properties/[PROPERTY]/webDataStreams/[WEB_DATA_STREAM]";
+            string parent = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]";
             // Make the request
             PagedEnumerable<ListMeasurementProtocolSecretsResponse, MeasurementProtocolSecret> response = analyticsAdminServiceClient.ListMeasurementProtocolSecrets(parent);
 

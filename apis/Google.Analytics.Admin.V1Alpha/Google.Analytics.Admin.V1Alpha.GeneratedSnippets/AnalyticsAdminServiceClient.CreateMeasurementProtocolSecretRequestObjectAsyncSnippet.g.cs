@@ -34,7 +34,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             CreateMeasurementProtocolSecretRequest request = new CreateMeasurementProtocolSecretRequest
             {
-                ParentAsWebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                ParentAsDataStreamName = DataStreamName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]"),
                 MeasurementProtocolSecret = new MeasurementProtocolSecret(),
             };
             // Make the request

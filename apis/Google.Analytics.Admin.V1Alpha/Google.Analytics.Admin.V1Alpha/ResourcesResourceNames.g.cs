@@ -407,708 +407,6 @@ namespace Google.Analytics.Admin.V1Alpha
         public static bool operator !=(PropertyName a, PropertyName b) => !(a == b);
     }
 
-    /// <summary>Resource name for the <c>AndroidAppDataStream</c> resource.</summary>
-    public sealed partial class AndroidAppDataStreamName : gax::IResourceName, sys::IEquatable<AndroidAppDataStreamName>
-    {
-        /// <summary>The possible contents of <see cref="AndroidAppDataStreamName"/>.</summary>
-        public enum ResourceNameType
-        {
-            /// <summary>An unparsed resource name.</summary>
-            Unparsed = 0,
-
-            /// <summary>
-            /// A resource name with pattern <c>properties/{property}/androidAppDataStreams/{android_app_data_stream}</c>
-            /// .
-            /// </summary>
-            PropertyAndroidAppDataStream = 1,
-        }
-
-        private static gax::PathTemplate s_propertyAndroidAppDataStream = new gax::PathTemplate("properties/{property}/androidAppDataStreams/{android_app_data_stream}");
-
-        /// <summary>Creates a <see cref="AndroidAppDataStreamName"/> containing an unparsed resource name.</summary>
-        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
-        /// <returns>
-        /// A new instance of <see cref="AndroidAppDataStreamName"/> containing the provided
-        /// <paramref name="unparsedResourceName"/>.
-        /// </returns>
-        public static AndroidAppDataStreamName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
-            new AndroidAppDataStreamName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
-
-        /// <summary>
-        /// Creates a <see cref="AndroidAppDataStreamName"/> with the pattern
-        /// <c>properties/{property}/androidAppDataStreams/{android_app_data_stream}</c>.
-        /// </summary>
-        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="androidAppDataStreamId">
-        /// The <c>AndroidAppDataStream</c> ID. Must not be <c>null</c> or empty.
-        /// </param>
-        /// <returns>
-        /// A new instance of <see cref="AndroidAppDataStreamName"/> constructed from the provided ids.
-        /// </returns>
-        public static AndroidAppDataStreamName FromPropertyAndroidAppDataStream(string propertyId, string androidAppDataStreamId) =>
-            new AndroidAppDataStreamName(ResourceNameType.PropertyAndroidAppDataStream, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), androidAppDataStreamId: gax::GaxPreconditions.CheckNotNullOrEmpty(androidAppDataStreamId, nameof(androidAppDataStreamId)));
-
-        /// <summary>
-        /// Formats the IDs into the string representation of this <see cref="AndroidAppDataStreamName"/> with pattern
-        /// <c>properties/{property}/androidAppDataStreams/{android_app_data_stream}</c>.
-        /// </summary>
-        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="androidAppDataStreamId">
-        /// The <c>AndroidAppDataStream</c> ID. Must not be <c>null</c> or empty.
-        /// </param>
-        /// <returns>
-        /// The string representation of this <see cref="AndroidAppDataStreamName"/> with pattern
-        /// <c>properties/{property}/androidAppDataStreams/{android_app_data_stream}</c>.
-        /// </returns>
-        public static string Format(string propertyId, string androidAppDataStreamId) =>
-            FormatPropertyAndroidAppDataStream(propertyId, androidAppDataStreamId);
-
-        /// <summary>
-        /// Formats the IDs into the string representation of this <see cref="AndroidAppDataStreamName"/> with pattern
-        /// <c>properties/{property}/androidAppDataStreams/{android_app_data_stream}</c>.
-        /// </summary>
-        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="androidAppDataStreamId">
-        /// The <c>AndroidAppDataStream</c> ID. Must not be <c>null</c> or empty.
-        /// </param>
-        /// <returns>
-        /// The string representation of this <see cref="AndroidAppDataStreamName"/> with pattern
-        /// <c>properties/{property}/androidAppDataStreams/{android_app_data_stream}</c>.
-        /// </returns>
-        public static string FormatPropertyAndroidAppDataStream(string propertyId, string androidAppDataStreamId) =>
-            s_propertyAndroidAppDataStream.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), gax::GaxPreconditions.CheckNotNullOrEmpty(androidAppDataStreamId, nameof(androidAppDataStreamId)));
-
-        /// <summary>
-        /// Parses the given resource name string into a new <see cref="AndroidAppDataStreamName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet">
-        /// <item>
-        /// <description><c>properties/{property}/androidAppDataStreams/{android_app_data_stream}</c></description>
-        /// </item>
-        /// </list>
-        /// </remarks>
-        /// <param name="androidAppDataStreamName">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="AndroidAppDataStreamName"/> if successful.</returns>
-        public static AndroidAppDataStreamName Parse(string androidAppDataStreamName) =>
-            Parse(androidAppDataStreamName, false);
-
-        /// <summary>
-        /// Parses the given resource name string into a new <see cref="AndroidAppDataStreamName"/> instance; optionally
-        /// allowing an unparseable resource name.
-        /// </summary>
-        /// <remarks>
-        /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet">
-        /// <item>
-        /// <description><c>properties/{property}/androidAppDataStreams/{android_app_data_stream}</c></description>
-        /// </item>
-        /// </list>
-        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
-        /// </remarks>
-        /// <param name="androidAppDataStreamName">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="allowUnparsed">
-        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
-        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
-        /// specified.
-        /// </param>
-        /// <returns>The parsed <see cref="AndroidAppDataStreamName"/> if successful.</returns>
-        public static AndroidAppDataStreamName Parse(string androidAppDataStreamName, bool allowUnparsed) =>
-            TryParse(androidAppDataStreamName, allowUnparsed, out AndroidAppDataStreamName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
-
-        /// <summary>
-        /// Tries to parse the given resource name string into a new <see cref="AndroidAppDataStreamName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet">
-        /// <item>
-        /// <description><c>properties/{property}/androidAppDataStreams/{android_app_data_stream}</c></description>
-        /// </item>
-        /// </list>
-        /// </remarks>
-        /// <param name="androidAppDataStreamName">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">
-        /// When this method returns, the parsed <see cref="AndroidAppDataStreamName"/>, or <c>null</c> if parsing
-        /// failed.
-        /// </param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string androidAppDataStreamName, out AndroidAppDataStreamName result) =>
-            TryParse(androidAppDataStreamName, false, out result);
-
-        /// <summary>
-        /// Tries to parse the given resource name string into a new <see cref="AndroidAppDataStreamName"/> instance;
-        /// optionally allowing an unparseable resource name.
-        /// </summary>
-        /// <remarks>
-        /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet">
-        /// <item>
-        /// <description><c>properties/{property}/androidAppDataStreams/{android_app_data_stream}</c></description>
-        /// </item>
-        /// </list>
-        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
-        /// </remarks>
-        /// <param name="androidAppDataStreamName">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="allowUnparsed">
-        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
-        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
-        /// specified.
-        /// </param>
-        /// <param name="result">
-        /// When this method returns, the parsed <see cref="AndroidAppDataStreamName"/>, or <c>null</c> if parsing
-        /// failed.
-        /// </param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string androidAppDataStreamName, bool allowUnparsed, out AndroidAppDataStreamName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(androidAppDataStreamName, nameof(androidAppDataStreamName));
-            gax::TemplatedResourceName resourceName;
-            if (s_propertyAndroidAppDataStream.TryParseName(androidAppDataStreamName, out resourceName))
-            {
-                result = FromPropertyAndroidAppDataStream(resourceName[0], resourceName[1]);
-                return true;
-            }
-            if (allowUnparsed)
-            {
-                if (gax::UnparsedResourceName.TryParse(androidAppDataStreamName, out gax::UnparsedResourceName unparsedResourceName))
-                {
-                    result = FromUnparsed(unparsedResourceName);
-                    return true;
-                }
-            }
-            result = null;
-            return false;
-        }
-
-        private AndroidAppDataStreamName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string androidAppDataStreamId = null, string propertyId = null)
-        {
-            Type = type;
-            UnparsedResource = unparsedResourceName;
-            AndroidAppDataStreamId = androidAppDataStreamId;
-            PropertyId = propertyId;
-        }
-
-        /// <summary>
-        /// Constructs a new instance of a <see cref="AndroidAppDataStreamName"/> class from the component parts of
-        /// pattern <c>properties/{property}/androidAppDataStreams/{android_app_data_stream}</c>
-        /// </summary>
-        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="androidAppDataStreamId">
-        /// The <c>AndroidAppDataStream</c> ID. Must not be <c>null</c> or empty.
-        /// </param>
-        public AndroidAppDataStreamName(string propertyId, string androidAppDataStreamId) : this(ResourceNameType.PropertyAndroidAppDataStream, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), androidAppDataStreamId: gax::GaxPreconditions.CheckNotNullOrEmpty(androidAppDataStreamId, nameof(androidAppDataStreamId)))
-        {
-        }
-
-        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
-        public ResourceNameType Type { get; }
-
-        /// <summary>
-        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
-        /// unparsed resource name.
-        /// </summary>
-        public gax::UnparsedResourceName UnparsedResource { get; }
-
-        /// <summary>
-        /// The <c>AndroidAppDataStream</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed
-        /// resource name.
-        /// </summary>
-        public string AndroidAppDataStreamId { get; }
-
-        /// <summary>
-        /// The <c>Property</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
-        /// </summary>
-        public string PropertyId { get; }
-
-        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
-        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
-
-        /// <summary>The string representation of the resource name.</summary>
-        /// <returns>The string representation of the resource name.</returns>
-        public override string ToString()
-        {
-            switch (Type)
-            {
-                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
-                case ResourceNameType.PropertyAndroidAppDataStream: return s_propertyAndroidAppDataStream.Expand(PropertyId, AndroidAppDataStreamId);
-                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
-            }
-        }
-
-        /// <summary>Returns a hash code for this resource name.</summary>
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc/>
-        public override bool Equals(object obj) => Equals(obj as AndroidAppDataStreamName);
-
-        /// <inheritdoc/>
-        public bool Equals(AndroidAppDataStreamName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc/>
-        public static bool operator ==(AndroidAppDataStreamName a, AndroidAppDataStreamName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc/>
-        public static bool operator !=(AndroidAppDataStreamName a, AndroidAppDataStreamName b) => !(a == b);
-    }
-
-    /// <summary>Resource name for the <c>IosAppDataStream</c> resource.</summary>
-    public sealed partial class IosAppDataStreamName : gax::IResourceName, sys::IEquatable<IosAppDataStreamName>
-    {
-        /// <summary>The possible contents of <see cref="IosAppDataStreamName"/>.</summary>
-        public enum ResourceNameType
-        {
-            /// <summary>An unparsed resource name.</summary>
-            Unparsed = 0,
-
-            /// <summary>
-            /// A resource name with pattern <c>properties/{property}/iosAppDataStreams/{ios_app_data_stream}</c>.
-            /// </summary>
-            PropertyIosAppDataStream = 1,
-        }
-
-        private static gax::PathTemplate s_propertyIosAppDataStream = new gax::PathTemplate("properties/{property}/iosAppDataStreams/{ios_app_data_stream}");
-
-        /// <summary>Creates a <see cref="IosAppDataStreamName"/> containing an unparsed resource name.</summary>
-        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
-        /// <returns>
-        /// A new instance of <see cref="IosAppDataStreamName"/> containing the provided
-        /// <paramref name="unparsedResourceName"/>.
-        /// </returns>
-        public static IosAppDataStreamName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
-            new IosAppDataStreamName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
-
-        /// <summary>
-        /// Creates a <see cref="IosAppDataStreamName"/> with the pattern
-        /// <c>properties/{property}/iosAppDataStreams/{ios_app_data_stream}</c>.
-        /// </summary>
-        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="iosAppDataStreamId">The <c>IosAppDataStream</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <returns>A new instance of <see cref="IosAppDataStreamName"/> constructed from the provided ids.</returns>
-        public static IosAppDataStreamName FromPropertyIosAppDataStream(string propertyId, string iosAppDataStreamId) =>
-            new IosAppDataStreamName(ResourceNameType.PropertyIosAppDataStream, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), iosAppDataStreamId: gax::GaxPreconditions.CheckNotNullOrEmpty(iosAppDataStreamId, nameof(iosAppDataStreamId)));
-
-        /// <summary>
-        /// Formats the IDs into the string representation of this <see cref="IosAppDataStreamName"/> with pattern
-        /// <c>properties/{property}/iosAppDataStreams/{ios_app_data_stream}</c>.
-        /// </summary>
-        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="iosAppDataStreamId">The <c>IosAppDataStream</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <returns>
-        /// The string representation of this <see cref="IosAppDataStreamName"/> with pattern
-        /// <c>properties/{property}/iosAppDataStreams/{ios_app_data_stream}</c>.
-        /// </returns>
-        public static string Format(string propertyId, string iosAppDataStreamId) =>
-            FormatPropertyIosAppDataStream(propertyId, iosAppDataStreamId);
-
-        /// <summary>
-        /// Formats the IDs into the string representation of this <see cref="IosAppDataStreamName"/> with pattern
-        /// <c>properties/{property}/iosAppDataStreams/{ios_app_data_stream}</c>.
-        /// </summary>
-        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="iosAppDataStreamId">The <c>IosAppDataStream</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <returns>
-        /// The string representation of this <see cref="IosAppDataStreamName"/> with pattern
-        /// <c>properties/{property}/iosAppDataStreams/{ios_app_data_stream}</c>.
-        /// </returns>
-        public static string FormatPropertyIosAppDataStream(string propertyId, string iosAppDataStreamId) =>
-            s_propertyIosAppDataStream.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), gax::GaxPreconditions.CheckNotNullOrEmpty(iosAppDataStreamId, nameof(iosAppDataStreamId)));
-
-        /// <summary>
-        /// Parses the given resource name string into a new <see cref="IosAppDataStreamName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet">
-        /// <item>
-        /// <description><c>properties/{property}/iosAppDataStreams/{ios_app_data_stream}</c></description>
-        /// </item>
-        /// </list>
-        /// </remarks>
-        /// <param name="iosAppDataStreamName">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="IosAppDataStreamName"/> if successful.</returns>
-        public static IosAppDataStreamName Parse(string iosAppDataStreamName) => Parse(iosAppDataStreamName, false);
-
-        /// <summary>
-        /// Parses the given resource name string into a new <see cref="IosAppDataStreamName"/> instance; optionally
-        /// allowing an unparseable resource name.
-        /// </summary>
-        /// <remarks>
-        /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet">
-        /// <item>
-        /// <description><c>properties/{property}/iosAppDataStreams/{ios_app_data_stream}</c></description>
-        /// </item>
-        /// </list>
-        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
-        /// </remarks>
-        /// <param name="iosAppDataStreamName">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="allowUnparsed">
-        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
-        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
-        /// specified.
-        /// </param>
-        /// <returns>The parsed <see cref="IosAppDataStreamName"/> if successful.</returns>
-        public static IosAppDataStreamName Parse(string iosAppDataStreamName, bool allowUnparsed) =>
-            TryParse(iosAppDataStreamName, allowUnparsed, out IosAppDataStreamName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
-
-        /// <summary>
-        /// Tries to parse the given resource name string into a new <see cref="IosAppDataStreamName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet">
-        /// <item>
-        /// <description><c>properties/{property}/iosAppDataStreams/{ios_app_data_stream}</c></description>
-        /// </item>
-        /// </list>
-        /// </remarks>
-        /// <param name="iosAppDataStreamName">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">
-        /// When this method returns, the parsed <see cref="IosAppDataStreamName"/>, or <c>null</c> if parsing failed.
-        /// </param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string iosAppDataStreamName, out IosAppDataStreamName result) =>
-            TryParse(iosAppDataStreamName, false, out result);
-
-        /// <summary>
-        /// Tries to parse the given resource name string into a new <see cref="IosAppDataStreamName"/> instance;
-        /// optionally allowing an unparseable resource name.
-        /// </summary>
-        /// <remarks>
-        /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet">
-        /// <item>
-        /// <description><c>properties/{property}/iosAppDataStreams/{ios_app_data_stream}</c></description>
-        /// </item>
-        /// </list>
-        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
-        /// </remarks>
-        /// <param name="iosAppDataStreamName">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="allowUnparsed">
-        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
-        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
-        /// specified.
-        /// </param>
-        /// <param name="result">
-        /// When this method returns, the parsed <see cref="IosAppDataStreamName"/>, or <c>null</c> if parsing failed.
-        /// </param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string iosAppDataStreamName, bool allowUnparsed, out IosAppDataStreamName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(iosAppDataStreamName, nameof(iosAppDataStreamName));
-            gax::TemplatedResourceName resourceName;
-            if (s_propertyIosAppDataStream.TryParseName(iosAppDataStreamName, out resourceName))
-            {
-                result = FromPropertyIosAppDataStream(resourceName[0], resourceName[1]);
-                return true;
-            }
-            if (allowUnparsed)
-            {
-                if (gax::UnparsedResourceName.TryParse(iosAppDataStreamName, out gax::UnparsedResourceName unparsedResourceName))
-                {
-                    result = FromUnparsed(unparsedResourceName);
-                    return true;
-                }
-            }
-            result = null;
-            return false;
-        }
-
-        private IosAppDataStreamName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string iosAppDataStreamId = null, string propertyId = null)
-        {
-            Type = type;
-            UnparsedResource = unparsedResourceName;
-            IosAppDataStreamId = iosAppDataStreamId;
-            PropertyId = propertyId;
-        }
-
-        /// <summary>
-        /// Constructs a new instance of a <see cref="IosAppDataStreamName"/> class from the component parts of pattern
-        /// <c>properties/{property}/iosAppDataStreams/{ios_app_data_stream}</c>
-        /// </summary>
-        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="iosAppDataStreamId">The <c>IosAppDataStream</c> ID. Must not be <c>null</c> or empty.</param>
-        public IosAppDataStreamName(string propertyId, string iosAppDataStreamId) : this(ResourceNameType.PropertyIosAppDataStream, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), iosAppDataStreamId: gax::GaxPreconditions.CheckNotNullOrEmpty(iosAppDataStreamId, nameof(iosAppDataStreamId)))
-        {
-        }
-
-        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
-        public ResourceNameType Type { get; }
-
-        /// <summary>
-        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
-        /// unparsed resource name.
-        /// </summary>
-        public gax::UnparsedResourceName UnparsedResource { get; }
-
-        /// <summary>
-        /// The <c>IosAppDataStream</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
-        /// name.
-        /// </summary>
-        public string IosAppDataStreamId { get; }
-
-        /// <summary>
-        /// The <c>Property</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
-        /// </summary>
-        public string PropertyId { get; }
-
-        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
-        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
-
-        /// <summary>The string representation of the resource name.</summary>
-        /// <returns>The string representation of the resource name.</returns>
-        public override string ToString()
-        {
-            switch (Type)
-            {
-                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
-                case ResourceNameType.PropertyIosAppDataStream: return s_propertyIosAppDataStream.Expand(PropertyId, IosAppDataStreamId);
-                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
-            }
-        }
-
-        /// <summary>Returns a hash code for this resource name.</summary>
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc/>
-        public override bool Equals(object obj) => Equals(obj as IosAppDataStreamName);
-
-        /// <inheritdoc/>
-        public bool Equals(IosAppDataStreamName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc/>
-        public static bool operator ==(IosAppDataStreamName a, IosAppDataStreamName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc/>
-        public static bool operator !=(IosAppDataStreamName a, IosAppDataStreamName b) => !(a == b);
-    }
-
-    /// <summary>Resource name for the <c>WebDataStream</c> resource.</summary>
-    public sealed partial class WebDataStreamName : gax::IResourceName, sys::IEquatable<WebDataStreamName>
-    {
-        /// <summary>The possible contents of <see cref="WebDataStreamName"/>.</summary>
-        public enum ResourceNameType
-        {
-            /// <summary>An unparsed resource name.</summary>
-            Unparsed = 0,
-
-            /// <summary>
-            /// A resource name with pattern <c>properties/{property}/webDataStreams/{web_data_stream}</c>.
-            /// </summary>
-            PropertyWebDataStream = 1,
-        }
-
-        private static gax::PathTemplate s_propertyWebDataStream = new gax::PathTemplate("properties/{property}/webDataStreams/{web_data_stream}");
-
-        /// <summary>Creates a <see cref="WebDataStreamName"/> containing an unparsed resource name.</summary>
-        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
-        /// <returns>
-        /// A new instance of <see cref="WebDataStreamName"/> containing the provided
-        /// <paramref name="unparsedResourceName"/>.
-        /// </returns>
-        public static WebDataStreamName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
-            new WebDataStreamName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
-
-        /// <summary>
-        /// Creates a <see cref="WebDataStreamName"/> with the pattern
-        /// <c>properties/{property}/webDataStreams/{web_data_stream}</c>.
-        /// </summary>
-        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="webDataStreamId">The <c>WebDataStream</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <returns>A new instance of <see cref="WebDataStreamName"/> constructed from the provided ids.</returns>
-        public static WebDataStreamName FromPropertyWebDataStream(string propertyId, string webDataStreamId) =>
-            new WebDataStreamName(ResourceNameType.PropertyWebDataStream, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), webDataStreamId: gax::GaxPreconditions.CheckNotNullOrEmpty(webDataStreamId, nameof(webDataStreamId)));
-
-        /// <summary>
-        /// Formats the IDs into the string representation of this <see cref="WebDataStreamName"/> with pattern
-        /// <c>properties/{property}/webDataStreams/{web_data_stream}</c>.
-        /// </summary>
-        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="webDataStreamId">The <c>WebDataStream</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <returns>
-        /// The string representation of this <see cref="WebDataStreamName"/> with pattern
-        /// <c>properties/{property}/webDataStreams/{web_data_stream}</c>.
-        /// </returns>
-        public static string Format(string propertyId, string webDataStreamId) =>
-            FormatPropertyWebDataStream(propertyId, webDataStreamId);
-
-        /// <summary>
-        /// Formats the IDs into the string representation of this <see cref="WebDataStreamName"/> with pattern
-        /// <c>properties/{property}/webDataStreams/{web_data_stream}</c>.
-        /// </summary>
-        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="webDataStreamId">The <c>WebDataStream</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <returns>
-        /// The string representation of this <see cref="WebDataStreamName"/> with pattern
-        /// <c>properties/{property}/webDataStreams/{web_data_stream}</c>.
-        /// </returns>
-        public static string FormatPropertyWebDataStream(string propertyId, string webDataStreamId) =>
-            s_propertyWebDataStream.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), gax::GaxPreconditions.CheckNotNullOrEmpty(webDataStreamId, nameof(webDataStreamId)));
-
-        /// <summary>
-        /// Parses the given resource name string into a new <see cref="WebDataStreamName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet">
-        /// <item><description><c>properties/{property}/webDataStreams/{web_data_stream}</c></description></item>
-        /// </list>
-        /// </remarks>
-        /// <param name="webDataStreamName">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="WebDataStreamName"/> if successful.</returns>
-        public static WebDataStreamName Parse(string webDataStreamName) => Parse(webDataStreamName, false);
-
-        /// <summary>
-        /// Parses the given resource name string into a new <see cref="WebDataStreamName"/> instance; optionally
-        /// allowing an unparseable resource name.
-        /// </summary>
-        /// <remarks>
-        /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet">
-        /// <item><description><c>properties/{property}/webDataStreams/{web_data_stream}</c></description></item>
-        /// </list>
-        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
-        /// </remarks>
-        /// <param name="webDataStreamName">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="allowUnparsed">
-        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
-        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
-        /// specified.
-        /// </param>
-        /// <returns>The parsed <see cref="WebDataStreamName"/> if successful.</returns>
-        public static WebDataStreamName Parse(string webDataStreamName, bool allowUnparsed) =>
-            TryParse(webDataStreamName, allowUnparsed, out WebDataStreamName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
-
-        /// <summary>
-        /// Tries to parse the given resource name string into a new <see cref="WebDataStreamName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet">
-        /// <item><description><c>properties/{property}/webDataStreams/{web_data_stream}</c></description></item>
-        /// </list>
-        /// </remarks>
-        /// <param name="webDataStreamName">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">
-        /// When this method returns, the parsed <see cref="WebDataStreamName"/>, or <c>null</c> if parsing failed.
-        /// </param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string webDataStreamName, out WebDataStreamName result) =>
-            TryParse(webDataStreamName, false, out result);
-
-        /// <summary>
-        /// Tries to parse the given resource name string into a new <see cref="WebDataStreamName"/> instance;
-        /// optionally allowing an unparseable resource name.
-        /// </summary>
-        /// <remarks>
-        /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet">
-        /// <item><description><c>properties/{property}/webDataStreams/{web_data_stream}</c></description></item>
-        /// </list>
-        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
-        /// </remarks>
-        /// <param name="webDataStreamName">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="allowUnparsed">
-        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
-        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
-        /// specified.
-        /// </param>
-        /// <param name="result">
-        /// When this method returns, the parsed <see cref="WebDataStreamName"/>, or <c>null</c> if parsing failed.
-        /// </param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string webDataStreamName, bool allowUnparsed, out WebDataStreamName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(webDataStreamName, nameof(webDataStreamName));
-            gax::TemplatedResourceName resourceName;
-            if (s_propertyWebDataStream.TryParseName(webDataStreamName, out resourceName))
-            {
-                result = FromPropertyWebDataStream(resourceName[0], resourceName[1]);
-                return true;
-            }
-            if (allowUnparsed)
-            {
-                if (gax::UnparsedResourceName.TryParse(webDataStreamName, out gax::UnparsedResourceName unparsedResourceName))
-                {
-                    result = FromUnparsed(unparsedResourceName);
-                    return true;
-                }
-            }
-            result = null;
-            return false;
-        }
-
-        private WebDataStreamName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string propertyId = null, string webDataStreamId = null)
-        {
-            Type = type;
-            UnparsedResource = unparsedResourceName;
-            PropertyId = propertyId;
-            WebDataStreamId = webDataStreamId;
-        }
-
-        /// <summary>
-        /// Constructs a new instance of a <see cref="WebDataStreamName"/> class from the component parts of pattern
-        /// <c>properties/{property}/webDataStreams/{web_data_stream}</c>
-        /// </summary>
-        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="webDataStreamId">The <c>WebDataStream</c> ID. Must not be <c>null</c> or empty.</param>
-        public WebDataStreamName(string propertyId, string webDataStreamId) : this(ResourceNameType.PropertyWebDataStream, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), webDataStreamId: gax::GaxPreconditions.CheckNotNullOrEmpty(webDataStreamId, nameof(webDataStreamId)))
-        {
-        }
-
-        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
-        public ResourceNameType Type { get; }
-
-        /// <summary>
-        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
-        /// unparsed resource name.
-        /// </summary>
-        public gax::UnparsedResourceName UnparsedResource { get; }
-
-        /// <summary>
-        /// The <c>Property</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
-        /// </summary>
-        public string PropertyId { get; }
-
-        /// <summary>
-        /// The <c>WebDataStream</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
-        /// name.
-        /// </summary>
-        public string WebDataStreamId { get; }
-
-        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
-        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
-
-        /// <summary>The string representation of the resource name.</summary>
-        /// <returns>The string representation of the resource name.</returns>
-        public override string ToString()
-        {
-            switch (Type)
-            {
-                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
-                case ResourceNameType.PropertyWebDataStream: return s_propertyWebDataStream.Expand(PropertyId, WebDataStreamId);
-                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
-            }
-        }
-
-        /// <summary>Returns a hash code for this resource name.</summary>
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc/>
-        public override bool Equals(object obj) => Equals(obj as WebDataStreamName);
-
-        /// <inheritdoc/>
-        public bool Equals(WebDataStreamName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc/>
-        public static bool operator ==(WebDataStreamName a, WebDataStreamName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc/>
-        public static bool operator !=(WebDataStreamName a, WebDataStreamName b) => !(a == b);
-    }
-
     /// <summary>Resource name for the <c>DataStream</c> resource.</summary>
     public sealed partial class DataStreamName : gax::IResourceName, sys::IEquatable<DataStreamName>
     {
@@ -1818,11 +1116,13 @@ namespace Google.Analytics.Admin.V1Alpha
             /// <summary>An unparsed resource name.</summary>
             Unparsed = 0,
 
-            /// <summary>A resource name with pattern <c>properties/{property}/globalSiteTag</c>.</summary>
-            Property = 1,
+            /// <summary>
+            /// A resource name with pattern <c>properties/{property}/dataStreams/{data_stream}/globalSiteTag</c>.
+            /// </summary>
+            PropertyDataStream = 1,
         }
 
-        private static gax::PathTemplate s_property = new gax::PathTemplate("properties/{property}/globalSiteTag");
+        private static gax::PathTemplate s_propertyDataStream = new gax::PathTemplate("properties/{property}/dataStreams/{data_stream}/globalSiteTag");
 
         /// <summary>Creates a <see cref="GlobalSiteTagName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -1834,35 +1134,40 @@ namespace Google.Analytics.Admin.V1Alpha
             new GlobalSiteTagName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
 
         /// <summary>
-        /// Creates a <see cref="GlobalSiteTagName"/> with the pattern <c>properties/{property}/globalSiteTag</c>.
+        /// Creates a <see cref="GlobalSiteTagName"/> with the pattern
+        /// <c>properties/{property}/dataStreams/{data_stream}/globalSiteTag</c>.
         /// </summary>
         /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStreamId">The <c>DataStream</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>A new instance of <see cref="GlobalSiteTagName"/> constructed from the provided ids.</returns>
-        public static GlobalSiteTagName FromProperty(string propertyId) =>
-            new GlobalSiteTagName(ResourceNameType.Property, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)));
+        public static GlobalSiteTagName FromPropertyDataStream(string propertyId, string dataStreamId) =>
+            new GlobalSiteTagName(ResourceNameType.PropertyDataStream, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), dataStreamId: gax::GaxPreconditions.CheckNotNullOrEmpty(dataStreamId, nameof(dataStreamId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="GlobalSiteTagName"/> with pattern
-        /// <c>properties/{property}/globalSiteTag</c>.
+        /// <c>properties/{property}/dataStreams/{data_stream}/globalSiteTag</c>.
         /// </summary>
         /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStreamId">The <c>DataStream</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="GlobalSiteTagName"/> with pattern
-        /// <c>properties/{property}/globalSiteTag</c>.
+        /// <c>properties/{property}/dataStreams/{data_stream}/globalSiteTag</c>.
         /// </returns>
-        public static string Format(string propertyId) => FormatProperty(propertyId);
+        public static string Format(string propertyId, string dataStreamId) =>
+            FormatPropertyDataStream(propertyId, dataStreamId);
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="GlobalSiteTagName"/> with pattern
-        /// <c>properties/{property}/globalSiteTag</c>.
+        /// <c>properties/{property}/dataStreams/{data_stream}/globalSiteTag</c>.
         /// </summary>
         /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStreamId">The <c>DataStream</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="GlobalSiteTagName"/> with pattern
-        /// <c>properties/{property}/globalSiteTag</c>.
+        /// <c>properties/{property}/dataStreams/{data_stream}/globalSiteTag</c>.
         /// </returns>
-        public static string FormatProperty(string propertyId) =>
-            s_property.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)));
+        public static string FormatPropertyDataStream(string propertyId, string dataStreamId) =>
+            s_propertyDataStream.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), gax::GaxPreconditions.CheckNotNullOrEmpty(dataStreamId, nameof(dataStreamId)));
 
         /// <summary>
         /// Parses the given resource name string into a new <see cref="GlobalSiteTagName"/> instance.
@@ -1870,7 +1175,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>properties/{property}/globalSiteTag</c></description></item>
+        /// <item>
+        /// <description><c>properties/{property}/dataStreams/{data_stream}/globalSiteTag</c></description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="globalSiteTagName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -1884,7 +1191,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>properties/{property}/globalSiteTag</c></description></item>
+        /// <item>
+        /// <description><c>properties/{property}/dataStreams/{data_stream}/globalSiteTag</c></description>
+        /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -1904,7 +1213,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>properties/{property}/globalSiteTag</c></description></item>
+        /// <item>
+        /// <description><c>properties/{property}/dataStreams/{data_stream}/globalSiteTag</c></description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="globalSiteTagName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -1922,7 +1233,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>properties/{property}/globalSiteTag</c></description></item>
+        /// <item>
+        /// <description><c>properties/{property}/dataStreams/{data_stream}/globalSiteTag</c></description>
+        /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -1940,9 +1253,9 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             gax::GaxPreconditions.CheckNotNull(globalSiteTagName, nameof(globalSiteTagName));
             gax::TemplatedResourceName resourceName;
-            if (s_property.TryParseName(globalSiteTagName, out resourceName))
+            if (s_propertyDataStream.TryParseName(globalSiteTagName, out resourceName))
             {
-                result = FromProperty(resourceName[0]);
+                result = FromPropertyDataStream(resourceName[0], resourceName[1]);
                 return true;
             }
             if (allowUnparsed)
@@ -1957,19 +1270,21 @@ namespace Google.Analytics.Admin.V1Alpha
             return false;
         }
 
-        private GlobalSiteTagName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string propertyId = null)
+        private GlobalSiteTagName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string dataStreamId = null, string propertyId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
+            DataStreamId = dataStreamId;
             PropertyId = propertyId;
         }
 
         /// <summary>
         /// Constructs a new instance of a <see cref="GlobalSiteTagName"/> class from the component parts of pattern
-        /// <c>properties/{property}/globalSiteTag</c>
+        /// <c>properties/{property}/dataStreams/{data_stream}/globalSiteTag</c>
         /// </summary>
         /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
-        public GlobalSiteTagName(string propertyId) : this(ResourceNameType.Property, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)))
+        /// <param name="dataStreamId">The <c>DataStream</c> ID. Must not be <c>null</c> or empty.</param>
+        public GlobalSiteTagName(string propertyId, string dataStreamId) : this(ResourceNameType.PropertyDataStream, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), dataStreamId: gax::GaxPreconditions.CheckNotNullOrEmpty(dataStreamId, nameof(dataStreamId)))
         {
         }
 
@@ -1981,6 +1296,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// unparsed resource name.
         /// </summary>
         public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>DataStream</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string DataStreamId { get; }
 
         /// <summary>
         /// The <c>Property</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
@@ -1997,7 +1317,7 @@ namespace Google.Analytics.Admin.V1Alpha
             switch (Type)
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
-                case ResourceNameType.Property: return s_property.Expand(PropertyId);
+                case ResourceNameType.PropertyDataStream: return s_propertyDataStream.Expand(PropertyId, DataStreamId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
@@ -2678,13 +1998,13 @@ namespace Google.Analytics.Admin.V1Alpha
             /// <summary>
             /// A resource name with pattern
             /// <c>
-            /// properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
+            /// properties/{property}/dataStreams/{data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
             /// .
             /// </summary>
-            PropertyWebDataStreamMeasurementProtocolSecret = 1,
+            PropertyDataStreamMeasurementProtocolSecret = 1,
         }
 
-        private static gax::PathTemplate s_propertyWebDataStreamMeasurementProtocolSecret = new gax::PathTemplate("properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}");
+        private static gax::PathTemplate s_propertyDataStreamMeasurementProtocolSecret = new gax::PathTemplate("properties/{property}/dataStreams/{data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}");
 
         /// <summary>
         /// Creates a <see cref="MeasurementProtocolSecretName"/> containing an unparsed resource name.
@@ -2699,62 +2019,57 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Creates a <see cref="MeasurementProtocolSecretName"/> with the pattern
-        /// <c>
-        /// properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
+        /// <c>properties/{property}/dataStreams/{data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
         /// .
         /// </summary>
         /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="webDataStreamId">The <c>WebDataStream</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStreamId">The <c>DataStream</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="measurementProtocolSecretId">
         /// The <c>MeasurementProtocolSecret</c> ID. Must not be <c>null</c> or empty.
         /// </param>
         /// <returns>
         /// A new instance of <see cref="MeasurementProtocolSecretName"/> constructed from the provided ids.
         /// </returns>
-        public static MeasurementProtocolSecretName FromPropertyWebDataStreamMeasurementProtocolSecret(string propertyId, string webDataStreamId, string measurementProtocolSecretId) =>
-            new MeasurementProtocolSecretName(ResourceNameType.PropertyWebDataStreamMeasurementProtocolSecret, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), webDataStreamId: gax::GaxPreconditions.CheckNotNullOrEmpty(webDataStreamId, nameof(webDataStreamId)), measurementProtocolSecretId: gax::GaxPreconditions.CheckNotNullOrEmpty(measurementProtocolSecretId, nameof(measurementProtocolSecretId)));
+        public static MeasurementProtocolSecretName FromPropertyDataStreamMeasurementProtocolSecret(string propertyId, string dataStreamId, string measurementProtocolSecretId) =>
+            new MeasurementProtocolSecretName(ResourceNameType.PropertyDataStreamMeasurementProtocolSecret, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), dataStreamId: gax::GaxPreconditions.CheckNotNullOrEmpty(dataStreamId, nameof(dataStreamId)), measurementProtocolSecretId: gax::GaxPreconditions.CheckNotNullOrEmpty(measurementProtocolSecretId, nameof(measurementProtocolSecretId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="MeasurementProtocolSecretName"/> with
         /// pattern
-        /// <c>
-        /// properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
+        /// <c>properties/{property}/dataStreams/{data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
         /// .
         /// </summary>
         /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="webDataStreamId">The <c>WebDataStream</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStreamId">The <c>DataStream</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="measurementProtocolSecretId">
         /// The <c>MeasurementProtocolSecret</c> ID. Must not be <c>null</c> or empty.
         /// </param>
         /// <returns>
         /// The string representation of this <see cref="MeasurementProtocolSecretName"/> with pattern
-        /// <c>
-        /// properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
+        /// <c>properties/{property}/dataStreams/{data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
         /// .
         /// </returns>
-        public static string Format(string propertyId, string webDataStreamId, string measurementProtocolSecretId) =>
-            FormatPropertyWebDataStreamMeasurementProtocolSecret(propertyId, webDataStreamId, measurementProtocolSecretId);
+        public static string Format(string propertyId, string dataStreamId, string measurementProtocolSecretId) =>
+            FormatPropertyDataStreamMeasurementProtocolSecret(propertyId, dataStreamId, measurementProtocolSecretId);
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="MeasurementProtocolSecretName"/> with
         /// pattern
-        /// <c>
-        /// properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
+        /// <c>properties/{property}/dataStreams/{data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
         /// .
         /// </summary>
         /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="webDataStreamId">The <c>WebDataStream</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStreamId">The <c>DataStream</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="measurementProtocolSecretId">
         /// The <c>MeasurementProtocolSecret</c> ID. Must not be <c>null</c> or empty.
         /// </param>
         /// <returns>
         /// The string representation of this <see cref="MeasurementProtocolSecretName"/> with pattern
-        /// <c>
-        /// properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
+        /// <c>properties/{property}/dataStreams/{data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
         /// .
         /// </returns>
-        public static string FormatPropertyWebDataStreamMeasurementProtocolSecret(string propertyId, string webDataStreamId, string measurementProtocolSecretId) =>
-            s_propertyWebDataStreamMeasurementProtocolSecret.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), gax::GaxPreconditions.CheckNotNullOrEmpty(webDataStreamId, nameof(webDataStreamId)), gax::GaxPreconditions.CheckNotNullOrEmpty(measurementProtocolSecretId, nameof(measurementProtocolSecretId)));
+        public static string FormatPropertyDataStreamMeasurementProtocolSecret(string propertyId, string dataStreamId, string measurementProtocolSecretId) =>
+            s_propertyDataStreamMeasurementProtocolSecret.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), gax::GaxPreconditions.CheckNotNullOrEmpty(dataStreamId, nameof(dataStreamId)), gax::GaxPreconditions.CheckNotNullOrEmpty(measurementProtocolSecretId, nameof(measurementProtocolSecretId)));
 
         /// <summary>
         /// Parses the given resource name string into a new <see cref="MeasurementProtocolSecretName"/> instance.
@@ -2764,8 +2079,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>
-        /// properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
+        /// <c>properties/{property}/dataStreams/{data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -2786,8 +2100,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>
-        /// properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
+        /// <c>properties/{property}/dataStreams/{data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -2814,8 +2127,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>
-        /// properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
+        /// <c>properties/{property}/dataStreams/{data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -2840,8 +2152,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>
-        /// properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
+        /// <c>properties/{property}/dataStreams/{data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -2864,9 +2175,9 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             gax::GaxPreconditions.CheckNotNull(measurementProtocolSecretName, nameof(measurementProtocolSecretName));
             gax::TemplatedResourceName resourceName;
-            if (s_propertyWebDataStreamMeasurementProtocolSecret.TryParseName(measurementProtocolSecretName, out resourceName))
+            if (s_propertyDataStreamMeasurementProtocolSecret.TryParseName(measurementProtocolSecretName, out resourceName))
             {
-                result = FromPropertyWebDataStreamMeasurementProtocolSecret(resourceName[0], resourceName[1], resourceName[2]);
+                result = FromPropertyDataStreamMeasurementProtocolSecret(resourceName[0], resourceName[1], resourceName[2]);
                 return true;
             }
             if (allowUnparsed)
@@ -2881,27 +2192,26 @@ namespace Google.Analytics.Admin.V1Alpha
             return false;
         }
 
-        private MeasurementProtocolSecretName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string measurementProtocolSecretId = null, string propertyId = null, string webDataStreamId = null)
+        private MeasurementProtocolSecretName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string dataStreamId = null, string measurementProtocolSecretId = null, string propertyId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
+            DataStreamId = dataStreamId;
             MeasurementProtocolSecretId = measurementProtocolSecretId;
             PropertyId = propertyId;
-            WebDataStreamId = webDataStreamId;
         }
 
         /// <summary>
         /// Constructs a new instance of a <see cref="MeasurementProtocolSecretName"/> class from the component parts of
         /// pattern
-        /// <c>
-        /// properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
+        /// <c>properties/{property}/dataStreams/{data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
         /// </summary>
         /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="webDataStreamId">The <c>WebDataStream</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStreamId">The <c>DataStream</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="measurementProtocolSecretId">
         /// The <c>MeasurementProtocolSecret</c> ID. Must not be <c>null</c> or empty.
         /// </param>
-        public MeasurementProtocolSecretName(string propertyId, string webDataStreamId, string measurementProtocolSecretId) : this(ResourceNameType.PropertyWebDataStreamMeasurementProtocolSecret, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), webDataStreamId: gax::GaxPreconditions.CheckNotNullOrEmpty(webDataStreamId, nameof(webDataStreamId)), measurementProtocolSecretId: gax::GaxPreconditions.CheckNotNullOrEmpty(measurementProtocolSecretId, nameof(measurementProtocolSecretId)))
+        public MeasurementProtocolSecretName(string propertyId, string dataStreamId, string measurementProtocolSecretId) : this(ResourceNameType.PropertyDataStreamMeasurementProtocolSecret, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), dataStreamId: gax::GaxPreconditions.CheckNotNullOrEmpty(dataStreamId, nameof(dataStreamId)), measurementProtocolSecretId: gax::GaxPreconditions.CheckNotNullOrEmpty(measurementProtocolSecretId, nameof(measurementProtocolSecretId)))
         {
         }
 
@@ -2915,6 +2225,11 @@ namespace Google.Analytics.Admin.V1Alpha
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
+        /// The <c>DataStream</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string DataStreamId { get; }
+
+        /// <summary>
         /// The <c>MeasurementProtocolSecret</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed
         /// resource name.
         /// </summary>
@@ -2924,12 +2239,6 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The <c>Property</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
         /// </summary>
         public string PropertyId { get; }
-
-        /// <summary>
-        /// The <c>WebDataStream</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
-        /// name.
-        /// </summary>
-        public string WebDataStreamId { get; }
 
         /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
         public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
@@ -2941,7 +2250,7 @@ namespace Google.Analytics.Admin.V1Alpha
             switch (Type)
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
-                case ResourceNameType.PropertyWebDataStreamMeasurementProtocolSecret: return s_propertyWebDataStreamMeasurementProtocolSecret.Expand(PropertyId, WebDataStreamId, MeasurementProtocolSecretId);
+                case ResourceNameType.PropertyDataStreamMeasurementProtocolSecret: return s_propertyDataStreamMeasurementProtocolSecret.Expand(PropertyId, DataStreamId, MeasurementProtocolSecretId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
@@ -4604,42 +3913,6 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             get => string.IsNullOrEmpty(Account) ? null : AccountName.Parse(Account, allowUnparsed: true);
             set => Account = value?.ToString() ?? "";
-        }
-    }
-
-    public partial class AndroidAppDataStream
-    {
-        /// <summary>
-        /// <see cref="gaav::AndroidAppDataStreamName"/>-typed view over the <see cref="Name"/> resource name property.
-        /// </summary>
-        public gaav::AndroidAppDataStreamName AndroidAppDataStreamName
-        {
-            get => string.IsNullOrEmpty(Name) ? null : gaav::AndroidAppDataStreamName.Parse(Name, allowUnparsed: true);
-            set => Name = value?.ToString() ?? "";
-        }
-    }
-
-    public partial class IosAppDataStream
-    {
-        /// <summary>
-        /// <see cref="gaav::IosAppDataStreamName"/>-typed view over the <see cref="Name"/> resource name property.
-        /// </summary>
-        public gaav::IosAppDataStreamName IosAppDataStreamName
-        {
-            get => string.IsNullOrEmpty(Name) ? null : gaav::IosAppDataStreamName.Parse(Name, allowUnparsed: true);
-            set => Name = value?.ToString() ?? "";
-        }
-    }
-
-    public partial class WebDataStream
-    {
-        /// <summary>
-        /// <see cref="gaav::WebDataStreamName"/>-typed view over the <see cref="Name"/> resource name property.
-        /// </summary>
-        public gaav::WebDataStreamName WebDataStreamName
-        {
-            get => string.IsNullOrEmpty(Name) ? null : gaav::WebDataStreamName.Parse(Name, allowUnparsed: true);
-            set => Name = value?.ToString() ?? "";
         }
     }
 
