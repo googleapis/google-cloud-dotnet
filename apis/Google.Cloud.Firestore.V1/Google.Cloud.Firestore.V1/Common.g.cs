@@ -25,24 +25,24 @@ namespace Google.Cloud.Firestore.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBnb29nbGUvZmlyZXN0b3JlL3YxL2NvbW1vbi5wcm90bxITZ29vZ2xlLmZp",
-            "cmVzdG9yZS52MRofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoc",
-            "Z29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byIjCgxEb2N1bWVudE1hc2sS",
-            "EwoLZmllbGRfcGF0aHMYASADKAkiZQoMUHJlY29uZGl0aW9uEhAKBmV4aXN0",
-            "cxgBIAEoCEgAEjEKC3VwZGF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEgAQhAKDmNvbmRpdGlvbl90eXBlIqkCChJUcmFuc2Fj",
-            "dGlvbk9wdGlvbnMSRQoJcmVhZF9vbmx5GAIgASgLMjAuZ29vZ2xlLmZpcmVz",
-            "dG9yZS52MS5UcmFuc2FjdGlvbk9wdGlvbnMuUmVhZE9ubHlIABJHCgpyZWFk",
-            "X3dyaXRlGAMgASgLMjEuZ29vZ2xlLmZpcmVzdG9yZS52MS5UcmFuc2FjdGlv",
-            "bk9wdGlvbnMuUmVhZFdyaXRlSAAaJgoJUmVhZFdyaXRlEhkKEXJldHJ5X3Ry",
-            "YW5zYWN0aW9uGAEgASgMGlMKCFJlYWRPbmx5Ei8KCXJlYWRfdGltZRgCIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAEIWChRjb25zaXN0ZW5j",
-            "eV9zZWxlY3RvckIGCgRtb2RlQsQBChdjb20uZ29vZ2xlLmZpcmVzdG9yZS52",
-            "MUILQ29tbW9uUHJvdG9QAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
-            "Z29vZ2xlYXBpcy9maXJlc3RvcmUvdjE7ZmlyZXN0b3JlogIER0NGU6oCGUdv",
-            "b2dsZS5DbG91ZC5GaXJlc3RvcmUuVjHKAhlHb29nbGVcQ2xvdWRcRmlyZXN0",
-            "b3JlXFYx6gIcR29vZ2xlOjpDbG91ZDo6RmlyZXN0b3JlOjpWMWIGcHJvdG8z"));
+            "cmVzdG9yZS52MRofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byIj",
+            "CgxEb2N1bWVudE1hc2sSEwoLZmllbGRfcGF0aHMYASADKAkiZQoMUHJlY29u",
+            "ZGl0aW9uEhAKBmV4aXN0cxgBIAEoCEgAEjEKC3VwZGF0ZV90aW1lGAIgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgAQhAKDmNvbmRpdGlvbl90",
+            "eXBlIqkCChJUcmFuc2FjdGlvbk9wdGlvbnMSRQoJcmVhZF9vbmx5GAIgASgL",
+            "MjAuZ29vZ2xlLmZpcmVzdG9yZS52MS5UcmFuc2FjdGlvbk9wdGlvbnMuUmVh",
+            "ZE9ubHlIABJHCgpyZWFkX3dyaXRlGAMgASgLMjEuZ29vZ2xlLmZpcmVzdG9y",
+            "ZS52MS5UcmFuc2FjdGlvbk9wdGlvbnMuUmVhZFdyaXRlSAAaJgoJUmVhZFdy",
+            "aXRlEhkKEXJldHJ5X3RyYW5zYWN0aW9uGAEgASgMGlMKCFJlYWRPbmx5Ei8K",
+            "CXJlYWRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBI",
+            "AEIWChRjb25zaXN0ZW5jeV9zZWxlY3RvckIGCgRtb2RlQsQBChdjb20uZ29v",
+            "Z2xlLmZpcmVzdG9yZS52MUILQ29tbW9uUHJvdG9QAVo8Z29vZ2xlLmdvbGFu",
+            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9maXJlc3RvcmUvdjE7ZmlyZXN0",
+            "b3JlogIER0NGU6oCGUdvb2dsZS5DbG91ZC5GaXJlc3RvcmUuVjHKAhlHb29n",
+            "bGVcQ2xvdWRcRmlyZXN0b3JlXFYx6gIcR29vZ2xlOjpDbG91ZDo6RmlyZXN0",
+            "b3JlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentMask), global::Google.Cloud.Firestore.V1.DocumentMask.Parser, new[]{ "FieldPaths" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Precondition), global::Google.Cloud.Firestore.V1.Precondition.Parser, new[]{ "Exists", "UpdateTime" }, new[]{ "ConditionType" }, null, null, null),
@@ -318,7 +318,7 @@ namespace Google.Cloud.Firestore.V1 {
     public const int UpdateTimeFieldNumber = 2;
     /// <summary>
     /// When set, the target document must exist and have been last updated at
-    /// that time.
+    /// that time. Timestamp must be microsecond aligned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
