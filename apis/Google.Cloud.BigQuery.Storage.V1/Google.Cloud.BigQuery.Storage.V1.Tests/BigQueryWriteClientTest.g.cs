@@ -459,7 +459,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
             moq::Mock<BigQueryWrite.BigQueryWriteClient> mockGrpcClient = new moq::Mock<BigQueryWrite.BigQueryWriteClient>(moq::MockBehavior.Strict);
             BatchCommitWriteStreamsRequest request = new BatchCommitWriteStreamsRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
                 WriteStreams =
                 {
                     "write_streams405973b2",
@@ -483,7 +483,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
             moq::Mock<BigQueryWrite.BigQueryWriteClient> mockGrpcClient = new moq::Mock<BigQueryWrite.BigQueryWriteClient>(moq::MockBehavior.Strict);
             BatchCommitWriteStreamsRequest request = new BatchCommitWriteStreamsRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
                 WriteStreams =
                 {
                     "write_streams405973b2",
@@ -509,7 +509,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
             moq::Mock<BigQueryWrite.BigQueryWriteClient> mockGrpcClient = new moq::Mock<BigQueryWrite.BigQueryWriteClient>(moq::MockBehavior.Strict);
             BatchCommitWriteStreamsRequest request = new BatchCommitWriteStreamsRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
             };
             BatchCommitWriteStreamsResponse expectedResponse = new BatchCommitWriteStreamsResponse
             {
@@ -529,7 +529,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
             moq::Mock<BigQueryWrite.BigQueryWriteClient> mockGrpcClient = new moq::Mock<BigQueryWrite.BigQueryWriteClient>(moq::MockBehavior.Strict);
             BatchCommitWriteStreamsRequest request = new BatchCommitWriteStreamsRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
             };
             BatchCommitWriteStreamsResponse expectedResponse = new BatchCommitWriteStreamsResponse
             {
@@ -541,6 +541,48 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
             BatchCommitWriteStreamsResponse responseCallSettings = await client.BatchCommitWriteStreamsAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchCommitWriteStreamsResponse responseCancellationToken = await client.BatchCommitWriteStreamsAsync(request.Parent, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void BatchCommitWriteStreamsResourceNames()
+        {
+            moq::Mock<BigQueryWrite.BigQueryWriteClient> mockGrpcClient = new moq::Mock<BigQueryWrite.BigQueryWriteClient>(moq::MockBehavior.Strict);
+            BatchCommitWriteStreamsRequest request = new BatchCommitWriteStreamsRequest
+            {
+                ParentAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
+            };
+            BatchCommitWriteStreamsResponse expectedResponse = new BatchCommitWriteStreamsResponse
+            {
+                CommitTime = new wkt::Timestamp(),
+                StreamErrors = { new StorageError(), },
+            };
+            mockGrpcClient.Setup(x => x.BatchCommitWriteStreams(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BatchCommitWriteStreamsResponse response = client.BatchCommitWriteStreams(request.ParentAsTableName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task BatchCommitWriteStreamsResourceNamesAsync()
+        {
+            moq::Mock<BigQueryWrite.BigQueryWriteClient> mockGrpcClient = new moq::Mock<BigQueryWrite.BigQueryWriteClient>(moq::MockBehavior.Strict);
+            BatchCommitWriteStreamsRequest request = new BatchCommitWriteStreamsRequest
+            {
+                ParentAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
+            };
+            BatchCommitWriteStreamsResponse expectedResponse = new BatchCommitWriteStreamsResponse
+            {
+                CommitTime = new wkt::Timestamp(),
+                StreamErrors = { new StorageError(), },
+            };
+            mockGrpcClient.Setup(x => x.BatchCommitWriteStreamsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCommitWriteStreamsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
+            BatchCommitWriteStreamsResponse responseCallSettings = await client.BatchCommitWriteStreamsAsync(request.ParentAsTableName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            BatchCommitWriteStreamsResponse responseCancellationToken = await client.BatchCommitWriteStreamsAsync(request.ParentAsTableName, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

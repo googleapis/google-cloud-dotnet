@@ -3,7 +3,7 @@
 //     source: google/cloud/bigquery/storage/v1/storage.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -668,6 +668,13 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       /// * For PENDING streams, data is not made visible until the stream itself is
       /// finalized (via the `FinalizeWriteStream` rpc), and the stream is explicitly
       /// committed via the `BatchCommitWriteStreams` rpc.
+      ///
+      /// Note: For users coding against the gRPC api directly, it may be
+      /// necessary to supply the x-goog-request-params system parameter
+      /// with `write_stream=&lt;full_write_stream_name>`.
+      ///
+      /// More information about system parameters:
+      /// https://cloud.google.com/apis/docs/system-parameters
       /// </summary>
       /// <param name="requestStream">Used for reading requests from the client.</param>
       /// <param name="responseStream">Used for sending responses back to the client.</param>
@@ -869,6 +876,13 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       /// * For PENDING streams, data is not made visible until the stream itself is
       /// finalized (via the `FinalizeWriteStream` rpc), and the stream is explicitly
       /// committed via the `BatchCommitWriteStreams` rpc.
+      ///
+      /// Note: For users coding against the gRPC api directly, it may be
+      /// necessary to supply the x-goog-request-params system parameter
+      /// with `write_stream=&lt;full_write_stream_name>`.
+      ///
+      /// More information about system parameters:
+      /// https://cloud.google.com/apis/docs/system-parameters
       /// </summary>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
@@ -911,6 +925,13 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       /// * For PENDING streams, data is not made visible until the stream itself is
       /// finalized (via the `FinalizeWriteStream` rpc), and the stream is explicitly
       /// committed via the `BatchCommitWriteStreams` rpc.
+      ///
+      /// Note: For users coding against the gRPC api directly, it may be
+      /// necessary to supply the x-goog-request-params system parameter
+      /// with `write_stream=&lt;full_write_stream_name>`.
+      ///
+      /// More information about system parameters:
+      /// https://cloud.google.com/apis/docs/system-parameters
       /// </summary>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>

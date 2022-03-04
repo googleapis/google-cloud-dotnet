@@ -890,6 +890,57 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "bigquerystorage_v1_generated_BigQueryWrite_BatchCommitWriteStreams_sync_flattened_resourceNames",
+      "title": "BatchCommitWriteStreamsResourceNames",
+      "description": "Snippet for BatchCommitWriteStreams",
+      "file": "BigQueryWriteClient.BatchCommitWriteStreamsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCommitWriteStreams",
+        "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.BatchCommitWriteStreams",
+        "resultType": "Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsResponse",
+        "client": {
+          "shortName": "BigQueryWriteClient",
+          "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient"
+        },
+        "method": {
+          "shortName": "BatchCommitWriteStreams",
+          "fullName": "google.cloud.bigquery.storage.v1.BigQueryWrite.BatchCommitWriteStreams",
+          "service": {
+            "shortName": "BigQueryWrite",
+            "fullName": "google.cloud.bigquery.storage.v1.BigQueryWrite"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigquerystorage_v1_generated_BigQueryWrite_BatchCommitWriteStreams_async_flattened_resourceNames",
+      "title": "BatchCommitWriteStreamsResourceNamesAsync",
+      "description": "Snippet for BatchCommitWriteStreamsAsync",
+      "file": "BigQueryWriteClient.BatchCommitWriteStreamsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCommitWriteStreamsAsync",
+        "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.BatchCommitWriteStreamsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsResponse>",
+        "client": {
+          "shortName": "BigQueryWriteClient",
+          "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient"
+        },
+        "method": {
+          "shortName": "BatchCommitWriteStreams",
+          "fullName": "google.cloud.bigquery.storage.v1.BigQueryWrite.BatchCommitWriteStreams",
+          "service": {
+            "shortName": "BigQueryWrite",
+            "fullName": "google.cloud.bigquery.storage.v1.BigQueryWrite"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "bigquerystorage_v1_generated_BigQueryWrite_FlushRows_sync",
       "title": "FlushRowsRequestObject",
       "description": "Snippet for FlushRows",

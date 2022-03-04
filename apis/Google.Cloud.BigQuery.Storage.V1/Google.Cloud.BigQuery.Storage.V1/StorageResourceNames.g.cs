@@ -320,6 +320,16 @@ namespace Google.Cloud.BigQuery.Storage.V1
         }
     }
 
+    public partial class BatchCommitWriteStreamsRequest
+    {
+        /// <summary><see cref="TableName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public TableName ParentAsTableName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : TableName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class FinalizeWriteStreamRequest
     {
         /// <summary>
