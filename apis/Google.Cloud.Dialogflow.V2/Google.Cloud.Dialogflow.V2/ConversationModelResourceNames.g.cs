@@ -30,20 +30,20 @@ namespace Google.Cloud.Dialogflow.V2
             Unparsed = 0,
 
             /// <summary>
-            /// A resource name with pattern <c>projects/{project}/conversationModels/{conversation_model}</c>.
-            /// </summary>
-            ProjectConversationModel = 1,
-
-            /// <summary>
             /// A resource name with pattern
             /// <c>projects/{project}/locations/{location}/conversationModels/{conversation_model}</c>.
             /// </summary>
-            ProjectLocationConversationModel = 2,
+            ProjectLocationConversationModel = 1,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/conversationModels/{conversation_model}</c>.
+            /// </summary>
+            ProjectConversationModel = 2,
         }
 
-        private static gax::PathTemplate s_projectConversationModel = new gax::PathTemplate("projects/{project}/conversationModels/{conversation_model}");
-
         private static gax::PathTemplate s_projectLocationConversationModel = new gax::PathTemplate("projects/{project}/locations/{location}/conversationModels/{conversation_model}");
+
+        private static gax::PathTemplate s_projectConversationModel = new gax::PathTemplate("projects/{project}/conversationModels/{conversation_model}");
 
         /// <summary>Creates a <see cref="ConversationModelName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -53,16 +53,6 @@ namespace Google.Cloud.Dialogflow.V2
         /// </returns>
         public static ConversationModelName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
             new ConversationModelName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
-
-        /// <summary>
-        /// Creates a <see cref="ConversationModelName"/> with the pattern
-        /// <c>projects/{project}/conversationModels/{conversation_model}</c>.
-        /// </summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="conversationModelId">The <c>ConversationModel</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <returns>A new instance of <see cref="ConversationModelName"/> constructed from the provided ids.</returns>
-        public static ConversationModelName FromProjectConversationModel(string projectId, string conversationModelId) =>
-            new ConversationModelName(ResourceNameType.ProjectConversationModel, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), conversationModelId: gax::GaxPreconditions.CheckNotNullOrEmpty(conversationModelId, nameof(conversationModelId)));
 
         /// <summary>
         /// Creates a <see cref="ConversationModelName"/> with the pattern
@@ -76,30 +66,28 @@ namespace Google.Cloud.Dialogflow.V2
             new ConversationModelName(ResourceNameType.ProjectLocationConversationModel, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), conversationModelId: gax::GaxPreconditions.CheckNotNullOrEmpty(conversationModelId, nameof(conversationModelId)));
 
         /// <summary>
-        /// Formats the IDs into the string representation of this <see cref="ConversationModelName"/> with pattern
+        /// Creates a <see cref="ConversationModelName"/> with the pattern
         /// <c>projects/{project}/conversationModels/{conversation_model}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="conversationModelId">The <c>ConversationModel</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <returns>
-        /// The string representation of this <see cref="ConversationModelName"/> with pattern
-        /// <c>projects/{project}/conversationModels/{conversation_model}</c>.
-        /// </returns>
-        public static string Format(string projectId, string conversationModelId) =>
-            FormatProjectConversationModel(projectId, conversationModelId);
+        /// <returns>A new instance of <see cref="ConversationModelName"/> constructed from the provided ids.</returns>
+        public static ConversationModelName FromProjectConversationModel(string projectId, string conversationModelId) =>
+            new ConversationModelName(ResourceNameType.ProjectConversationModel, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), conversationModelId: gax::GaxPreconditions.CheckNotNullOrEmpty(conversationModelId, nameof(conversationModelId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="ConversationModelName"/> with pattern
-        /// <c>projects/{project}/conversationModels/{conversation_model}</c>.
+        /// <c>projects/{project}/locations/{location}/conversationModels/{conversation_model}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="conversationModelId">The <c>ConversationModel</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="ConversationModelName"/> with pattern
-        /// <c>projects/{project}/conversationModels/{conversation_model}</c>.
+        /// <c>projects/{project}/locations/{location}/conversationModels/{conversation_model}</c>.
         /// </returns>
-        public static string FormatProjectConversationModel(string projectId, string conversationModelId) =>
-            s_projectConversationModel.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(conversationModelId, nameof(conversationModelId)));
+        public static string Format(string projectId, string locationId, string conversationModelId) =>
+            FormatProjectLocationConversationModel(projectId, locationId, conversationModelId);
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="ConversationModelName"/> with pattern
@@ -116,17 +104,30 @@ namespace Google.Cloud.Dialogflow.V2
             s_projectLocationConversationModel.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(conversationModelId, nameof(conversationModelId)));
 
         /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ConversationModelName"/> with pattern
+        /// <c>projects/{project}/conversationModels/{conversation_model}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="conversationModelId">The <c>ConversationModel</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ConversationModelName"/> with pattern
+        /// <c>projects/{project}/conversationModels/{conversation_model}</c>.
+        /// </returns>
+        public static string FormatProjectConversationModel(string projectId, string conversationModelId) =>
+            s_projectConversationModel.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(conversationModelId, nameof(conversationModelId)));
+
+        /// <summary>
         /// Parses the given resource name string into a new <see cref="ConversationModelName"/> instance.
         /// </summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/conversationModels/{conversation_model}</c></description></item>
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/conversationModels/{conversation_model}</c>
         /// </description>
         /// </item>
+        /// <item><description><c>projects/{project}/conversationModels/{conversation_model}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="conversationModelName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -140,12 +141,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/conversationModels/{conversation_model}</c></description></item>
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/conversationModels/{conversation_model}</c>
         /// </description>
         /// </item>
+        /// <item><description><c>projects/{project}/conversationModels/{conversation_model}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -165,12 +166,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/conversationModels/{conversation_model}</c></description></item>
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/conversationModels/{conversation_model}</c>
         /// </description>
         /// </item>
+        /// <item><description><c>projects/{project}/conversationModels/{conversation_model}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="conversationModelName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -188,12 +189,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/conversationModels/{conversation_model}</c></description></item>
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/conversationModels/{conversation_model}</c>
         /// </description>
         /// </item>
+        /// <item><description><c>projects/{project}/conversationModels/{conversation_model}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -211,14 +212,14 @@ namespace Google.Cloud.Dialogflow.V2
         {
             gax::GaxPreconditions.CheckNotNull(conversationModelName, nameof(conversationModelName));
             gax::TemplatedResourceName resourceName;
-            if (s_projectConversationModel.TryParseName(conversationModelName, out resourceName))
-            {
-                result = FromProjectConversationModel(resourceName[0], resourceName[1]);
-                return true;
-            }
             if (s_projectLocationConversationModel.TryParseName(conversationModelName, out resourceName))
             {
                 result = FromProjectLocationConversationModel(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (s_projectConversationModel.TryParseName(conversationModelName, out resourceName))
+            {
+                result = FromProjectConversationModel(resourceName[0], resourceName[1]);
                 return true;
             }
             if (allowUnparsed)
@@ -244,11 +245,12 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Constructs a new instance of a <see cref="ConversationModelName"/> class from the component parts of pattern
-        /// <c>projects/{project}/conversationModels/{conversation_model}</c>
+        /// <c>projects/{project}/locations/{location}/conversationModels/{conversation_model}</c>
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="conversationModelId">The <c>ConversationModel</c> ID. Must not be <c>null</c> or empty.</param>
-        public ConversationModelName(string projectId, string conversationModelId) : this(ResourceNameType.ProjectConversationModel, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), conversationModelId: gax::GaxPreconditions.CheckNotNullOrEmpty(conversationModelId, nameof(conversationModelId)))
+        public ConversationModelName(string projectId, string locationId, string conversationModelId) : this(ResourceNameType.ProjectLocationConversationModel, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), conversationModelId: gax::GaxPreconditions.CheckNotNullOrEmpty(conversationModelId, nameof(conversationModelId)))
         {
         }
 
@@ -287,8 +289,8 @@ namespace Google.Cloud.Dialogflow.V2
             switch (Type)
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
-                case ResourceNameType.ProjectConversationModel: return s_projectConversationModel.Expand(ProjectId, ConversationModelId);
                 case ResourceNameType.ProjectLocationConversationModel: return s_projectLocationConversationModel.Expand(ProjectId, LocationId, ConversationModelId);
+                case ResourceNameType.ProjectConversationModel: return s_projectConversationModel.Expand(ProjectId, ConversationModelId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }

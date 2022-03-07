@@ -32,7 +32,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Create client
             ConversationModelsClient conversationModelsClient = ConversationModelsClient.Create();
             // Initialize request argument(s)
-            ConversationModelName parent = ConversationModelName.FromProjectConversationModel("[PROJECT]", "[CONVERSATION_MODEL]");
+            ConversationModelName parent = ConversationModelName.FromProjectLocationConversationModel("[PROJECT]", "[LOCATION]", "[CONVERSATION_MODEL]");
             ConversationModelEvaluation conversationModelEvaluation = new ConversationModelEvaluation();
             // Make the request
             Operation<ConversationModelEvaluation, CreateConversationModelEvaluationOperationMetadata> response = conversationModelsClient.CreateConversationModelEvaluation(parent, conversationModelEvaluation);

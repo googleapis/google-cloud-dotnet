@@ -39,7 +39,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             ConversationModel expectedResponse = new ConversationModel
             {
-                ConversationModelName = ConversationModelName.FromProjectConversationModel("[PROJECT]", "[CONVERSATION_MODEL]"),
+                ConversationModelName = ConversationModelName.FromProjectLocationConversationModel("[PROJECT]", "[LOCATION]", "[CONVERSATION_MODEL]"),
                 DisplayName = "display_name137f65c2",
                 CreateTime = new wkt::Timestamp(),
                 Datasets = { new InputDataset(), },
@@ -66,7 +66,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             ConversationModel expectedResponse = new ConversationModel
             {
-                ConversationModelName = ConversationModelName.FromProjectConversationModel("[PROJECT]", "[CONVERSATION_MODEL]"),
+                ConversationModelName = ConversationModelName.FromProjectLocationConversationModel("[PROJECT]", "[LOCATION]", "[CONVERSATION_MODEL]"),
                 DisplayName = "display_name137f65c2",
                 CreateTime = new wkt::Timestamp(),
                 Datasets = { new InputDataset(), },
@@ -95,7 +95,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             ConversationModel expectedResponse = new ConversationModel
             {
-                ConversationModelName = ConversationModelName.FromProjectConversationModel("[PROJECT]", "[CONVERSATION_MODEL]"),
+                ConversationModelName = ConversationModelName.FromProjectLocationConversationModel("[PROJECT]", "[LOCATION]", "[CONVERSATION_MODEL]"),
                 DisplayName = "display_name137f65c2",
                 CreateTime = new wkt::Timestamp(),
                 Datasets = { new InputDataset(), },
@@ -122,7 +122,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             ConversationModel expectedResponse = new ConversationModel
             {
-                ConversationModelName = ConversationModelName.FromProjectConversationModel("[PROJECT]", "[CONVERSATION_MODEL]"),
+                ConversationModelName = ConversationModelName.FromProjectLocationConversationModel("[PROJECT]", "[LOCATION]", "[CONVERSATION_MODEL]"),
                 DisplayName = "display_name137f65c2",
                 CreateTime = new wkt::Timestamp(),
                 Datasets = { new InputDataset(), },
