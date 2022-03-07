@@ -83,7 +83,7 @@ namespace Grafeas.V1 {
             "UEVDSUZJRUQQABITCg9TQ09QRV9VTkNIQU5HRUQQARIRCg1TQ09QRV9DSEFO",
             "R0VEEAIiUgoGSW1wYWN0EhYKEklNUEFDVF9VTlNQRUNJRklFRBAAEg8KC0lN",
             "UEFDVF9ISUdIEAESDgoKSU1QQUNUX0xPVxACEg8KC0lNUEFDVF9OT05FEANC",
-            "XAoNaW8uZ3JhZmVhcy52MUIJQ1ZTU1Byb3RvUAFaOGdvb2dsZS5nb2xhbmcu",
+            "XAoNaW8uZ3JhZmVhcy52MUIJQ3Zzc1Byb3RvUAFaOGdvb2dsZS5nb2xhbmcu",
             "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZ3JhZmVhcy92MTtncmFmZWFzogID",
             "R1JBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
