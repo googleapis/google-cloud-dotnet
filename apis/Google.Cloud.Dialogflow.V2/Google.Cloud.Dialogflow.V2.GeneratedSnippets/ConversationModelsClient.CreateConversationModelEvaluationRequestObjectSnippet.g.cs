@@ -34,7 +34,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Initialize request argument(s)
             CreateConversationModelEvaluationRequest request = new CreateConversationModelEvaluationRequest
             {
-                ParentAsConversationModelName = ConversationModelName.FromProjectConversationModel("[PROJECT]", "[CONVERSATION_MODEL]"),
+                ParentAsConversationModelName = ConversationModelName.FromProjectLocationConversationModel("[PROJECT]", "[LOCATION]", "[CONVERSATION_MODEL]"),
                 ConversationModelEvaluation = new ConversationModelEvaluation(),
             };
             // Make the request

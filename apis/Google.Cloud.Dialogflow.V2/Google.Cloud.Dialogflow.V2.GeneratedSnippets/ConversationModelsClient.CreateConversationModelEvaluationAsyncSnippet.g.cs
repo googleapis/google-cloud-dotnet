@@ -33,7 +33,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Create client
             ConversationModelsClient conversationModelsClient = await ConversationModelsClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/conversationModels/[CONVERSATION_MODEL]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/conversationModels/[CONVERSATION_MODEL]";
             ConversationModelEvaluation conversationModelEvaluation = new ConversationModelEvaluation();
             // Make the request
             Operation<ConversationModelEvaluation, CreateConversationModelEvaluationOperationMetadata> response = await conversationModelsClient.CreateConversationModelEvaluationAsync(parent, conversationModelEvaluation);
