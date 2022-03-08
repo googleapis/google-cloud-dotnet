@@ -588,6 +588,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             get => string.IsNullOrEmpty(Flow) ? null : FlowName.Parse(Flow, allowUnparsed: true);
             set => Flow = value?.ToString() ?? "";
         }
+
+        /// <summary><see cref="PageName"/>-typed view over the <see cref="Page"/> resource name property.</summary>
+        public PageName PageAsPageName
+        {
+            get => string.IsNullOrEmpty(Page) ? null : PageName.Parse(Page, allowUnparsed: true);
+            set => Page = value?.ToString() ?? "";
+        }
     }
 
     public partial class CalculateCoverageRequest
