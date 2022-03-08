@@ -31,101 +31,103 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
             "GWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aHmdvb2dsZS9pYW0vdjEvaWFt",
             "X3BvbGljeS5wcm90bxoaZ29vZ2xlL2lhbS92MS9wb2xpY3kucHJvdG8aG2dv",
             "b2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2Zp",
-            "ZWxkX21hc2sucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5wcm90",
-            "byK6AQoXQ3JlYXRlQ29ubmVjdGlvblJlcXVlc3QSOQoGcGFyZW50GAEgASgJ",
-            "QingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhIa",
-            "Cg1jb25uZWN0aW9uX2lkGAIgASgJQgPgQQESSAoKY29ubmVjdGlvbhgDIAEo",
-            "CzIvLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLkNvbm5l",
-            "Y3Rpb25CA+BBAiJaChRHZXRDb25uZWN0aW9uUmVxdWVzdBJCCgRuYW1lGAEg",
+            "ZWxkX21hc2sucHJvdG8iugEKF0NyZWF0ZUNvbm5lY3Rpb25SZXF1ZXN0EjkK",
+            "BnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5j",
+            "b20vTG9jYXRpb24SGgoNY29ubmVjdGlvbl9pZBgCIAEoCUID4EEBEkgKCmNv",
+            "bm5lY3Rpb24YAyABKAsyLy5nb29nbGUuY2xvdWQuYmlncXVlcnkuY29ubmVj",
+            "dGlvbi52MS5Db25uZWN0aW9uQgPgQQIiWgoUR2V0Q29ubmVjdGlvblJlcXVl",
+            "c3QSQgoEbmFtZRgBIAEoCUI04EEC+kEuCixiaWdxdWVyeWNvbm5lY3Rpb24u",
+            "Z29vZ2xlYXBpcy5jb20vQ29ubmVjdGlvbiJ/ChZMaXN0Q29ubmVjdGlvbnNS",
+            "ZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29v",
+            "Z2xlYXBpcy5jb20vTG9jYXRpb24SFgoJcGFnZV9zaXplGAQgASgFQgPgQQIS",
+            "EgoKcGFnZV90b2tlbhgDIAEoCSJ4ChdMaXN0Q29ubmVjdGlvbnNSZXNwb25z",
+            "ZRIXCg9uZXh0X3BhZ2VfdG9rZW4YASABKAkSRAoLY29ubmVjdGlvbnMYAiAD",
+            "KAsyLy5nb29nbGUuY2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5Db25u",
+            "ZWN0aW9uIt0BChdVcGRhdGVDb25uZWN0aW9uUmVxdWVzdBJCCgRuYW1lGAEg",
             "ASgJQjTgQQL6QS4KLGJpZ3F1ZXJ5Y29ubmVjdGlvbi5nb29nbGVhcGlzLmNv",
-            "bS9Db25uZWN0aW9uIn8KFkxpc3RDb25uZWN0aW9uc1JlcXVlc3QSOQoGcGFy",
-            "ZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9M",
-            "b2NhdGlvbhIWCglwYWdlX3NpemUYBCABKAVCA+BBAhISCgpwYWdlX3Rva2Vu",
-            "GAMgASgJIngKF0xpc3RDb25uZWN0aW9uc1Jlc3BvbnNlEhcKD25leHRfcGFn",
-            "ZV90b2tlbhgBIAEoCRJECgtjb25uZWN0aW9ucxgCIAMoCzIvLmdvb2dsZS5j",
-            "bG91ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLkNvbm5lY3Rpb24i3QEKF1Vw",
-            "ZGF0ZUNvbm5lY3Rpb25SZXF1ZXN0EkIKBG5hbWUYASABKAlCNOBBAvpBLgos",
-            "YmlncXVlcnljb25uZWN0aW9uLmdvb2dsZWFwaXMuY29tL0Nvbm5lY3Rpb24S",
-            "SAoKY29ubmVjdGlvbhgCIAEoCzIvLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5j",
-            "b25uZWN0aW9uLnYxLkNvbm5lY3Rpb25CA+BBAhI0Cgt1cGRhdGVfbWFzaxgD",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAiJdChdEZWxl",
-            "dGVDb25uZWN0aW9uUmVxdWVzdBJCCgRuYW1lGAEgASgJQjTgQQL6QS4KLGJp",
-            "Z3F1ZXJ5Y29ubmVjdGlvbi5nb29nbGVhcGlzLmNvbS9Db25uZWN0aW9uIooE",
-            "CgpDb25uZWN0aW9uEgwKBG5hbWUYASABKAkSFQoNZnJpZW5kbHlfbmFtZRgC",
-            "IAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRJMCgljbG91ZF9zcWwYBCABKAsy",
-            "Ny5nb29nbGUuY2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5DbG91ZFNx",
-            "bFByb3BlcnRpZXNIABJBCgNhd3MYCCABKAsyMi5nb29nbGUuY2xvdWQuYmln",
-            "cXVlcnkuY29ubmVjdGlvbi52MS5Bd3NQcm9wZXJ0aWVzSAASVAoNY2xvdWRf",
-            "c3Bhbm5lchgVIAEoCzI7Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0",
-            "aW9uLnYxLkNsb3VkU3Bhbm5lclByb3BlcnRpZXNIABIaCg1jcmVhdGlvbl90",
-            "aW1lGAUgASgDQgPgQQMSHwoSbGFzdF9tb2RpZmllZF90aW1lGAYgASgDQgPg",
-            "QQMSGwoOaGFzX2NyZWRlbnRpYWwYByABKAhCA+BBAzpz6kFwCixiaWdxdWVy",
-            "eWNvbm5lY3Rpb24uZ29vZ2xlYXBpcy5jb20vQ29ubmVjdGlvbhJAcHJvamVj",
-            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Nvbm5lY3Rpb25z",
-            "L3tjb25uZWN0aW9ufUIMCgpwcm9wZXJ0aWVzIqkCChJDbG91ZFNxbFByb3Bl",
-            "cnRpZXMSEwoLaW5zdGFuY2VfaWQYASABKAkSEAoIZGF0YWJhc2UYAiABKAkS",
-            "UgoEdHlwZRgDIAEoDjJELmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0",
-            "aW9uLnYxLkNsb3VkU3FsUHJvcGVydGllcy5EYXRhYmFzZVR5cGUSUAoKY3Jl",
-            "ZGVudGlhbBgEIAEoCzI3Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0",
-            "aW9uLnYxLkNsb3VkU3FsQ3JlZGVudGlhbEID4EEEIkYKDERhdGFiYXNlVHlw",
-            "ZRIdChlEQVRBQkFTRV9UWVBFX1VOU1BFQ0lGSUVEEAASDAoIUE9TVEdSRVMQ",
-            "ARIJCgVNWVNRTBACIjgKEkNsb3VkU3FsQ3JlZGVudGlhbBIQCgh1c2VybmFt",
-            "ZRgBIAEoCRIQCghwYXNzd29yZBgCIAEoCSJDChZDbG91ZFNwYW5uZXJQcm9w",
-            "ZXJ0aWVzEhAKCGRhdGFiYXNlGAEgASgJEhcKD3VzZV9wYXJhbGxlbGlzbRgC",
-            "IAEoCCLLAQoNQXdzUHJvcGVydGllcxJWChJjcm9zc19hY2NvdW50X3JvbGUY",
-            "AiABKAsyOC5nb29nbGUuY2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5B",
-            "d3NDcm9zc0FjY291bnRSb2xlSAASSQoLYWNjZXNzX3JvbGUYAyABKAsyMi5n",
-            "b29nbGUuY2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5Bd3NBY2Nlc3NS",
-            "b2xlSABCFwoVYXV0aGVudGljYXRpb25fbWV0aG9kIl4KE0F3c0Nyb3NzQWNj",
-            "b3VudFJvbGUSEwoLaWFtX3JvbGVfaWQYASABKAkSGAoLaWFtX3VzZXJfaWQY",
-            "AiABKAlCA+BBAxIYCgtleHRlcm5hbF9pZBgDIAEoCUID4EEDIjYKDUF3c0Fj",
-            "Y2Vzc1JvbGUSEwoLaWFtX3JvbGVfaWQYASABKAkSEAoIaWRlbnRpdHkYAiAB",
-            "KAkyzA0KEUNvbm5lY3Rpb25TZXJ2aWNlEugBChBDcmVhdGVDb25uZWN0aW9u",
-            "EjwuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmNvbm5lY3Rpb24udjEuQ3JlYXRl",
-            "Q29ubmVjdGlvblJlcXVlc3QaLy5nb29nbGUuY2xvdWQuYmlncXVlcnkuY29u",
-            "bmVjdGlvbi52MS5Db25uZWN0aW9uImWC0+STAj0iLy92MS97cGFyZW50PXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyp9L2Nvbm5lY3Rpb25zOgpjb25uZWN0aW9u",
-            "2kEfcGFyZW50LGNvbm5lY3Rpb24sY29ubmVjdGlvbl9pZBK7AQoNR2V0Q29u",
-            "bmVjdGlvbhI5Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYx",
-            "LkdldENvbm5lY3Rpb25SZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
-            "LmNvbm5lY3Rpb24udjEuQ29ubmVjdGlvbiI+gtPkkwIxEi8vdjEve25hbWU9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb25uZWN0aW9ucy8qfdpBBG5hbWUS",
-            "zgEKD0xpc3RDb25uZWN0aW9ucxI7Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5j",
-            "b25uZWN0aW9uLnYxLkxpc3RDb25uZWN0aW9uc1JlcXVlc3QaPC5nb29nbGUu",
-            "Y2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5MaXN0Q29ubmVjdGlvbnNS",
-            "ZXNwb25zZSJAgtPkkwIxEi8vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qfS9jb25uZWN0aW9uc9pBBnBhcmVudBLkAQoQVXBkYXRlQ29ubmVj",
-            "dGlvbhI8Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLlVw",
-            "ZGF0ZUNvbm5lY3Rpb25SZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
-            "LmNvbm5lY3Rpb24udjEuQ29ubmVjdGlvbiJhgtPkkwI9Mi8vdjEve25hbWU9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb25uZWN0aW9ucy8qfToKY29ubmVj",
-            "dGlvbtpBG25hbWUsY29ubmVjdGlvbix1cGRhdGVfbWFzaxKoAQoQRGVsZXRl",
-            "Q29ubmVjdGlvbhI8Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9u",
-            "LnYxLkRlbGV0ZUNvbm5lY3Rpb25SZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVm",
-            "LkVtcHR5Ij6C0+STAjEqLy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL2Nvbm5lY3Rpb25zLyp92kEEbmFtZRKpAQoMR2V0SWFtUG9saWN5EiIu",
-            "Z29vZ2xlLmlhbS52MS5HZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlh",
-            "bS52MS5Qb2xpY3kiXoLT5JMCRSJAL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qL2Nvbm5lY3Rpb25zLyp9OmdldElhbVBvbGljeToBKtpB",
-            "EHJlc291cmNlLG9wdGlvbnMSqAEKDFNldElhbVBvbGljeRIiLmdvb2dsZS5p",
-            "YW0udjEuU2V0SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9s",
-            "aWN5Il2C0+STAkUiQC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9jb25uZWN0aW9ucy8qfTpzZXRJYW1Qb2xpY3k6ASraQQ9yZXNvdXJj",
-            "ZSxwb2xpY3kS0wEKElRlc3RJYW1QZXJtaXNzaW9ucxIoLmdvb2dsZS5pYW0u",
-            "djEuVGVzdElhbVBlcm1pc3Npb25zUmVxdWVzdBopLmdvb2dsZS5pYW0udjEu",
-            "VGVzdElhbVBlcm1pc3Npb25zUmVzcG9uc2UiaILT5JMCSyJGL3YxL3tyZXNv",
-            "dXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Nvbm5lY3Rpb25zLyp9OnRl",
-            "c3RJYW1QZXJtaXNzaW9uczoBKtpBFHJlc291cmNlLHBlcm1pc3Npb25zGn7K",
-            "QSFiaWdxdWVyeWNvbm5lY3Rpb24uZ29vZ2xlYXBpcy5jb23SQVdodHRwczov",
-            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2JpZ3F1ZXJ5LGh0dHBzOi8vd3d3",
-            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CxgEKJ2NvbS5n",
-            "b29nbGUuY2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MVABWk1nb29nbGUu",
-            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2JpZ3F1ZXJ5",
-            "L2Nvbm5lY3Rpb24vdjE7Y29ubmVjdGlvbqoCI0dvb2dsZS5DbG91ZC5CaWdR",
-            "dWVyeS5Db25uZWN0aW9uLlYxygIjR29vZ2xlXENsb3VkXEJpZ1F1ZXJ5XENv",
-            "bm5lY3Rpb25cVjFiBnByb3RvMw=="));
+            "bS9Db25uZWN0aW9uEkgKCmNvbm5lY3Rpb24YAiABKAsyLy5nb29nbGUuY2xv",
+            "dWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5Db25uZWN0aW9uQgPgQQISNAoL",
+            "dXBkYXRlX21hc2sYAyABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNr",
+            "QgPgQQIiXQoXRGVsZXRlQ29ubmVjdGlvblJlcXVlc3QSQgoEbmFtZRgBIAEo",
+            "CUI04EEC+kEuCixiaWdxdWVyeWNvbm5lY3Rpb24uZ29vZ2xlYXBpcy5jb20v",
+            "Q29ubmVjdGlvbiLiBAoKQ29ubmVjdGlvbhIMCgRuYW1lGAEgASgJEhUKDWZy",
+            "aWVuZGx5X25hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSTAoJY2xv",
+            "dWRfc3FsGAQgASgLMjcuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmNvbm5lY3Rp",
+            "b24udjEuQ2xvdWRTcWxQcm9wZXJ0aWVzSAASQQoDYXdzGAggASgLMjIuZ29v",
+            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LmNvbm5lY3Rpb24udjEuQXdzUHJvcGVydGll",
+            "c0gAElQKDWNsb3VkX3NwYW5uZXIYFSABKAsyOy5nb29nbGUuY2xvdWQuYmln",
+            "cXVlcnkuY29ubmVjdGlvbi52MS5DbG91ZFNwYW5uZXJQcm9wZXJ0aWVzSAAS",
+            "VgoOY2xvdWRfcmVzb3VyY2UYFiABKAsyPC5nb29nbGUuY2xvdWQuYmlncXVl",
+            "cnkuY29ubmVjdGlvbi52MS5DbG91ZFJlc291cmNlUHJvcGVydGllc0gAEhoK",
+            "DWNyZWF0aW9uX3RpbWUYBSABKANCA+BBAxIfChJsYXN0X21vZGlmaWVkX3Rp",
+            "bWUYBiABKANCA+BBAxIbCg5oYXNfY3JlZGVudGlhbBgHIAEoCEID4EEDOnPq",
+            "QXAKLGJpZ3F1ZXJ5Y29ubmVjdGlvbi5nb29nbGVhcGlzLmNvbS9Db25uZWN0",
+            "aW9uEkBwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "Y29ubmVjdGlvbnMve2Nvbm5lY3Rpb259QgwKCnByb3BlcnRpZXMiqQIKEkNs",
+            "b3VkU3FsUHJvcGVydGllcxITCgtpbnN0YW5jZV9pZBgBIAEoCRIQCghkYXRh",
+            "YmFzZRgCIAEoCRJSCgR0eXBlGAMgASgOMkQuZ29vZ2xlLmNsb3VkLmJpZ3F1",
+            "ZXJ5LmNvbm5lY3Rpb24udjEuQ2xvdWRTcWxQcm9wZXJ0aWVzLkRhdGFiYXNl",
+            "VHlwZRJQCgpjcmVkZW50aWFsGAQgASgLMjcuZ29vZ2xlLmNsb3VkLmJpZ3F1",
+            "ZXJ5LmNvbm5lY3Rpb24udjEuQ2xvdWRTcWxDcmVkZW50aWFsQgPgQQQiRgoM",
+            "RGF0YWJhc2VUeXBlEh0KGURBVEFCQVNFX1RZUEVfVU5TUEVDSUZJRUQQABIM",
+            "CghQT1NUR1JFUxABEgkKBU1ZU1FMEAIiOAoSQ2xvdWRTcWxDcmVkZW50aWFs",
+            "EhAKCHVzZXJuYW1lGAEgASgJEhAKCHBhc3N3b3JkGAIgASgJIkMKFkNsb3Vk",
+            "U3Bhbm5lclByb3BlcnRpZXMSEAoIZGF0YWJhc2UYASABKAkSFwoPdXNlX3Bh",
+            "cmFsbGVsaXNtGAIgASgIIssBCg1Bd3NQcm9wZXJ0aWVzElYKEmNyb3NzX2Fj",
+            "Y291bnRfcm9sZRgCIAEoCzI4Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25u",
+            "ZWN0aW9uLnYxLkF3c0Nyb3NzQWNjb3VudFJvbGVIABJJCgthY2Nlc3Nfcm9s",
+            "ZRgDIAEoCzIyLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYx",
+            "LkF3c0FjY2Vzc1JvbGVIAEIXChVhdXRoZW50aWNhdGlvbl9tZXRob2QiXgoT",
+            "QXdzQ3Jvc3NBY2NvdW50Um9sZRITCgtpYW1fcm9sZV9pZBgBIAEoCRIYCgtp",
+            "YW1fdXNlcl9pZBgCIAEoCUID4EEDEhgKC2V4dGVybmFsX2lkGAMgASgJQgPg",
+            "QQMiNgoNQXdzQWNjZXNzUm9sZRITCgtpYW1fcm9sZV9pZBgBIAEoCRIQCghp",
+            "ZGVudGl0eRgCIAEoCSI6ChdDbG91ZFJlc291cmNlUHJvcGVydGllcxIfChJz",
+            "ZXJ2aWNlX2FjY291bnRfaWQYASABKAlCA+BBAzLMDQoRQ29ubmVjdGlvblNl",
+            "cnZpY2US6AEKEENyZWF0ZUNvbm5lY3Rpb24SPC5nb29nbGUuY2xvdWQuYmln",
+            "cXVlcnkuY29ubmVjdGlvbi52MS5DcmVhdGVDb25uZWN0aW9uUmVxdWVzdBov",
+            "Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLkNvbm5lY3Rp",
+            "b24iZYLT5JMCPSIvL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Kn0vY29ubmVjdGlvbnM6CmNvbm5lY3Rpb27aQR9wYXJlbnQsY29ubmVjdGlv",
+            "bixjb25uZWN0aW9uX2lkErsBCg1HZXRDb25uZWN0aW9uEjkuZ29vZ2xlLmNs",
+            "b3VkLmJpZ3F1ZXJ5LmNvbm5lY3Rpb24udjEuR2V0Q29ubmVjdGlvblJlcXVl",
+            "c3QaLy5nb29nbGUuY2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5Db25u",
+            "ZWN0aW9uIj6C0+STAjESLy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL2Nvbm5lY3Rpb25zLyp92kEEbmFtZRLOAQoPTGlzdENvbm5lY3Rpb25z",
+            "EjsuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmNvbm5lY3Rpb24udjEuTGlzdENv",
+            "bm5lY3Rpb25zUmVxdWVzdBo8Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25u",
+            "ZWN0aW9uLnYxLkxpc3RDb25uZWN0aW9uc1Jlc3BvbnNlIkCC0+STAjESLy92",
+            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2Nvbm5lY3Rpb25z",
+            "2kEGcGFyZW50EuQBChBVcGRhdGVDb25uZWN0aW9uEjwuZ29vZ2xlLmNsb3Vk",
+            "LmJpZ3F1ZXJ5LmNvbm5lY3Rpb24udjEuVXBkYXRlQ29ubmVjdGlvblJlcXVl",
+            "c3QaLy5nb29nbGUuY2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5Db25u",
+            "ZWN0aW9uImGC0+STAj0yLy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL2Nvbm5lY3Rpb25zLyp9Ogpjb25uZWN0aW9u2kEbbmFtZSxjb25uZWN0",
+            "aW9uLHVwZGF0ZV9tYXNrEqgBChBEZWxldGVDb25uZWN0aW9uEjwuZ29vZ2xl",
+            "LmNsb3VkLmJpZ3F1ZXJ5LmNvbm5lY3Rpb24udjEuRGVsZXRlQ29ubmVjdGlv",
+            "blJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiPoLT5JMCMSovL3Yx",
+            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY29ubmVjdGlvbnMvKn3a",
+            "QQRuYW1lEqkBCgxHZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLkdldElh",
+            "bVBvbGljeVJlcXVlc3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSJegtPkkwJF",
+            "IkAvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovY29ubmVj",
+            "dGlvbnMvKn06Z2V0SWFtUG9saWN5OgEq2kEQcmVzb3VyY2Usb3B0aW9ucxKo",
+            "AQoMU2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5TZXRJYW1Qb2xpY3lS",
+            "ZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiXYLT5JMCRSJAL3YxL3ty",
+            "ZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Nvbm5lY3Rpb25zLyp9",
+            "OnNldElhbVBvbGljeToBKtpBD3Jlc291cmNlLHBvbGljeRLTAQoSVGVzdElh",
+            "bVBlcm1pc3Npb25zEiguZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lv",
+            "bnNSZXF1ZXN0GikuZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNS",
+            "ZXNwb25zZSJogtPkkwJLIkYvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovY29ubmVjdGlvbnMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEq",
+            "2kEUcmVzb3VyY2UscGVybWlzc2lvbnMafspBIWJpZ3F1ZXJ5Y29ubmVjdGlv",
+            "bi5nb29nbGVhcGlzLmNvbdJBV2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
+            "L2F1dGgvYmlncXVlcnksaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9jbG91ZC1wbGF0Zm9ybULGAQonY29tLmdvb2dsZS5jbG91ZC5iaWdxdWVy",
+            "eS5jb25uZWN0aW9uLnYxUAFaTWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
+            "L2dvb2dsZWFwaXMvY2xvdWQvYmlncXVlcnkvY29ubmVjdGlvbi92MTtjb25u",
+            "ZWN0aW9uqgIjR29vZ2xlLkNsb3VkLkJpZ1F1ZXJ5LkNvbm5lY3Rpb24uVjHK",
+            "AiNHb29nbGVcQ2xvdWRcQmlnUXVlcnlcQ29ubmVjdGlvblxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.CreateConnectionRequest), global::Google.Cloud.BigQuery.Connection.V1.CreateConnectionRequest.Parser, new[]{ "Parent", "ConnectionId", "Connection" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.GetConnectionRequest), global::Google.Cloud.BigQuery.Connection.V1.GetConnectionRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -133,13 +135,14 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.ListConnectionsResponse), global::Google.Cloud.BigQuery.Connection.V1.ListConnectionsResponse.Parser, new[]{ "NextPageToken", "Connections" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.UpdateConnectionRequest), global::Google.Cloud.BigQuery.Connection.V1.UpdateConnectionRequest.Parser, new[]{ "Name", "Connection", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.DeleteConnectionRequest), global::Google.Cloud.BigQuery.Connection.V1.DeleteConnectionRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.Connection), global::Google.Cloud.BigQuery.Connection.V1.Connection.Parser, new[]{ "Name", "FriendlyName", "Description", "CloudSql", "Aws", "CloudSpanner", "CreationTime", "LastModifiedTime", "HasCredential" }, new[]{ "Properties" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.Connection), global::Google.Cloud.BigQuery.Connection.V1.Connection.Parser, new[]{ "Name", "FriendlyName", "Description", "CloudSql", "Aws", "CloudSpanner", "CloudResource", "CreationTime", "LastModifiedTime", "HasCredential" }, new[]{ "Properties" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.CloudSqlProperties), global::Google.Cloud.BigQuery.Connection.V1.CloudSqlProperties.Parser, new[]{ "InstanceId", "Database", "Type", "Credential" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Connection.V1.CloudSqlProperties.Types.DatabaseType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.CloudSqlCredential), global::Google.Cloud.BigQuery.Connection.V1.CloudSqlCredential.Parser, new[]{ "Username", "Password" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.CloudSpannerProperties), global::Google.Cloud.BigQuery.Connection.V1.CloudSpannerProperties.Parser, new[]{ "Database", "UseParallelism" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.AwsProperties), global::Google.Cloud.BigQuery.Connection.V1.AwsProperties.Parser, new[]{ "CrossAccountRole", "AccessRole" }, new[]{ "AuthenticationMethod" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.AwsCrossAccountRole), global::Google.Cloud.BigQuery.Connection.V1.AwsCrossAccountRole.Parser, new[]{ "IamRoleId", "IamUserId", "ExternalId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.AwsAccessRole), global::Google.Cloud.BigQuery.Connection.V1.AwsAccessRole.Parser, new[]{ "IamRoleId", "Identity" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.AwsAccessRole), global::Google.Cloud.BigQuery.Connection.V1.AwsAccessRole.Parser, new[]{ "IamRoleId", "Identity" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.CloudResourceProperties), global::Google.Cloud.BigQuery.Connection.V1.CloudResourceProperties.Parser, new[]{ "ServiceAccountId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1671,6 +1674,9 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
         case PropertiesOneofCase.CloudSpanner:
           CloudSpanner = other.CloudSpanner.Clone();
           break;
+        case PropertiesOneofCase.CloudResource:
+          CloudResource = other.CloudResource.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1773,6 +1779,21 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       }
     }
 
+    /// <summary>Field number for the "cloud_resource" field.</summary>
+    public const int CloudResourceFieldNumber = 22;
+    /// <summary>
+    /// Cloud Resource properties.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Connection.V1.CloudResourceProperties CloudResource {
+      get { return propertiesCase_ == PropertiesOneofCase.CloudResource ? (global::Google.Cloud.BigQuery.Connection.V1.CloudResourceProperties) properties_ : null; }
+      set {
+        properties_ = value;
+        propertiesCase_ = value == null ? PropertiesOneofCase.None : PropertiesOneofCase.CloudResource;
+      }
+    }
+
     /// <summary>Field number for the "creation_time" field.</summary>
     public const int CreationTimeFieldNumber = 5;
     private long creationTime_;
@@ -1825,6 +1846,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       CloudSql = 4,
       Aws = 8,
       CloudSpanner = 21,
+      CloudResource = 22,
     }
     private PropertiesOneofCase propertiesCase_ = PropertiesOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1861,6 +1883,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       if (!object.Equals(CloudSql, other.CloudSql)) return false;
       if (!object.Equals(Aws, other.Aws)) return false;
       if (!object.Equals(CloudSpanner, other.CloudSpanner)) return false;
+      if (!object.Equals(CloudResource, other.CloudResource)) return false;
       if (CreationTime != other.CreationTime) return false;
       if (LastModifiedTime != other.LastModifiedTime) return false;
       if (HasCredential != other.HasCredential) return false;
@@ -1878,6 +1901,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       if (propertiesCase_ == PropertiesOneofCase.CloudSql) hash ^= CloudSql.GetHashCode();
       if (propertiesCase_ == PropertiesOneofCase.Aws) hash ^= Aws.GetHashCode();
       if (propertiesCase_ == PropertiesOneofCase.CloudSpanner) hash ^= CloudSpanner.GetHashCode();
+      if (propertiesCase_ == PropertiesOneofCase.CloudResource) hash ^= CloudResource.GetHashCode();
       if (CreationTime != 0L) hash ^= CreationTime.GetHashCode();
       if (LastModifiedTime != 0L) hash ^= LastModifiedTime.GetHashCode();
       if (HasCredential != false) hash ^= HasCredential.GetHashCode();
@@ -1936,6 +1960,10 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
         output.WriteRawTag(170, 1);
         output.WriteMessage(CloudSpanner);
       }
+      if (propertiesCase_ == PropertiesOneofCase.CloudResource) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(CloudResource);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1982,6 +2010,10 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
         output.WriteRawTag(170, 1);
         output.WriteMessage(CloudSpanner);
       }
+      if (propertiesCase_ == PropertiesOneofCase.CloudResource) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(CloudResource);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2009,6 +2041,9 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       }
       if (propertiesCase_ == PropertiesOneofCase.CloudSpanner) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(CloudSpanner);
+      }
+      if (propertiesCase_ == PropertiesOneofCase.CloudResource) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(CloudResource);
       }
       if (CreationTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(CreationTime);
@@ -2067,6 +2102,12 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
             CloudSpanner = new global::Google.Cloud.BigQuery.Connection.V1.CloudSpannerProperties();
           }
           CloudSpanner.MergeFrom(other.CloudSpanner);
+          break;
+        case PropertiesOneofCase.CloudResource:
+          if (CloudResource == null) {
+            CloudResource = new global::Google.Cloud.BigQuery.Connection.V1.CloudResourceProperties();
+          }
+          CloudResource.MergeFrom(other.CloudResource);
           break;
       }
 
@@ -2136,6 +2177,15 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
             CloudSpanner = subBuilder;
             break;
           }
+          case 178: {
+            global::Google.Cloud.BigQuery.Connection.V1.CloudResourceProperties subBuilder = new global::Google.Cloud.BigQuery.Connection.V1.CloudResourceProperties();
+            if (propertiesCase_ == PropertiesOneofCase.CloudResource) {
+              subBuilder.MergeFrom(CloudResource);
+            }
+            input.ReadMessage(subBuilder);
+            CloudResource = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -2200,6 +2250,15 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
             }
             input.ReadMessage(subBuilder);
             CloudSpanner = subBuilder;
+            break;
+          }
+          case 178: {
+            global::Google.Cloud.BigQuery.Connection.V1.CloudResourceProperties subBuilder = new global::Google.Cloud.BigQuery.Connection.V1.CloudResourceProperties();
+            if (propertiesCase_ == PropertiesOneofCase.CloudResource) {
+              subBuilder.MergeFrom(CloudResource);
+            }
+            input.ReadMessage(subBuilder);
+            CloudResource = subBuilder;
             break;
           }
         }
@@ -3833,6 +3892,211 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
           }
           case 18: {
             Identity = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Container for connection properties for delegation of access to GCP
+  /// resources.
+  /// </summary>
+  public sealed partial class CloudResourceProperties : pb::IMessage<CloudResourceProperties>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CloudResourceProperties> _parser = new pb::MessageParser<CloudResourceProperties>(() => new CloudResourceProperties());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CloudResourceProperties> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.Connection.V1.ConnectionReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CloudResourceProperties() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CloudResourceProperties(CloudResourceProperties other) : this() {
+      serviceAccountId_ = other.serviceAccountId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CloudResourceProperties Clone() {
+      return new CloudResourceProperties(this);
+    }
+
+    /// <summary>Field number for the "service_account_id" field.</summary>
+    public const int ServiceAccountIdFieldNumber = 1;
+    private string serviceAccountId_ = "";
+    /// <summary>
+    /// Output only. The account ID of the service created for the purpose of this connection.
+    ///
+    /// The service account does not have any permissions associated with it
+    /// when it is created. After creation, customers delegate permissions
+    /// to the service account. When the connection is used in the context of an
+    /// operation in BigQuery, the service account will be used to connect to the
+    /// desired resources in GCP.
+    ///
+    /// The account ID is in the form of:
+    ///   &lt;service-1234>@gcp-sa-bigquery-cloudresource.iam.gserviceaccount.com
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ServiceAccountId {
+      get { return serviceAccountId_; }
+      set {
+        serviceAccountId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CloudResourceProperties);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CloudResourceProperties other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ServiceAccountId != other.ServiceAccountId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ServiceAccountId.Length != 0) hash ^= ServiceAccountId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ServiceAccountId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ServiceAccountId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ServiceAccountId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ServiceAccountId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ServiceAccountId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAccountId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CloudResourceProperties other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ServiceAccountId.Length != 0) {
+        ServiceAccountId = other.ServiceAccountId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ServiceAccountId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ServiceAccountId = input.ReadString();
             break;
           }
         }

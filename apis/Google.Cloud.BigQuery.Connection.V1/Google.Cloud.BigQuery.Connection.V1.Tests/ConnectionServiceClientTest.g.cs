@@ -52,6 +52,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 HasCredential = true,
                 Aws = new AwsProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
+                CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.CreateConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -81,6 +82,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 HasCredential = true,
                 Aws = new AwsProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
+                CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.CreateConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -112,6 +114,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 HasCredential = true,
                 Aws = new AwsProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
+                CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.CreateConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -141,6 +144,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 HasCredential = true,
                 Aws = new AwsProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
+                CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.CreateConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -172,6 +176,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 HasCredential = true,
                 Aws = new AwsProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
+                CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.CreateConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -201,6 +206,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 HasCredential = true,
                 Aws = new AwsProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
+                CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.CreateConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -230,6 +236,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 HasCredential = true,
                 Aws = new AwsProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
+                CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.GetConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -257,6 +264,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 HasCredential = true,
                 Aws = new AwsProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
+                CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.GetConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -286,6 +294,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 HasCredential = true,
                 Aws = new AwsProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
+                CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.GetConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -313,6 +322,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 HasCredential = true,
                 Aws = new AwsProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
+                CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.GetConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -342,6 +352,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 HasCredential = true,
                 Aws = new AwsProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
+                CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.GetConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -369,6 +380,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 HasCredential = true,
                 Aws = new AwsProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
+                CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.GetConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -400,6 +412,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 HasCredential = true,
                 Aws = new AwsProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
+                CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.UpdateConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -429,6 +442,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 HasCredential = true,
                 Aws = new AwsProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
+                CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.UpdateConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -460,6 +474,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 HasCredential = true,
                 Aws = new AwsProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
+                CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.UpdateConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -489,6 +504,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 HasCredential = true,
                 Aws = new AwsProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
+                CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.UpdateConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -520,6 +536,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 HasCredential = true,
                 Aws = new AwsProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
+                CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.UpdateConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -549,6 +566,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 HasCredential = true,
                 Aws = new AwsProperties(),
                 CloudSpanner = new CloudSpannerProperties(),
+                CloudResource = new CloudResourceProperties(),
             };
             mockGrpcClient.Setup(x => x.UpdateConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
