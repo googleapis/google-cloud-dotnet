@@ -147,6 +147,30 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             }
         }
 
+        [Fact]
+        public void InsertRow_Single_Throws()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var dataset = client.GetDataset(_fixture.DatasetId);
+            // Don't insert into a table used by other tests...
+            var table = dataset.CreateTable(
+                _fixture.CreateTableId(),
+                new TableSchemaBuilder { { "year", BigQueryDbType.Int64 } }.Build());
+            var row = new BigQueryInsertRow { { "noSuchField", 10 } };
+
+            var exception = Assert.Throws<GoogleApiException>(() => table.InsertRow(row));
+
+            Assert.Equal(
+                "The service bigquery has thrown an exception. " +
+                "No HttpStatusCode was specified. " +
+                "Error inserting data: 1 error(s). " +
+                "Status: NoRowsInserted. " +
+                "First error message: Error in row 0. no such field: noSuchField.",
+                exception.Message);
+            Assert.Equal(1, exception.Error.Errors.Count);
+            Assert.Contains(exception.Error.Errors, e => e.Message.ToLower().Contains($"in row 0"));
+        }
+
         public static IEnumerable<object[]> BadDataSilentOptions
         {
             get

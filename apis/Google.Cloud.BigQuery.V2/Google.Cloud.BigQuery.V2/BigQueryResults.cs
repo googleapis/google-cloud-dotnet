@@ -216,7 +216,7 @@ namespace Google.Cloud.BigQuery.V2
             var errors = _response.Errors;
             if (errors?.Count > 0)
             {
-                throw new GoogleApiException(_client.Service.Name, $"Job {JobReference.ProjectId}/{JobReference.Location}/{JobReference.JobId} contained errors")
+                throw new GoogleApiException(_client.Service.Name)
                 {
                     Error = new RequestError
                     {
@@ -225,8 +225,9 @@ namespace Google.Cloud.BigQuery.V2
                             Location = error.Location,
                             Reason = error.Reason,
                             Message = error.Message
-                        })
-                        .ToList()
+                        }).ToList(),
+                        Message = $"Job {JobReference.ProjectId}/{JobReference.Location}/{JobReference.JobId} contained {errors.Count} error(s). " +
+                            $"First error message: {errors.First().Message}"
                     }
                 };
             }
