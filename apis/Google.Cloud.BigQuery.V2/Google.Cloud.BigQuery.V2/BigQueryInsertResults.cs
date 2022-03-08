@@ -94,6 +94,7 @@ namespace Google.Cloud.BigQuery.V2
             int originalRowsWithErrors = 0;
             _errors = errorsByRow
                 .Select(rowErrors => new BigQueryInsertRowErrors(GetRow(rowErrors.Key), rowErrors.ToList().AsReadOnly()))
+                .OrderBy(rowErrors => rowErrors.OriginalRowIndex ?? long.MaxValue)
                 .ToList().AsReadOnly();
 
             OriginalRowsWithErrors = originalRowsWithErrors;
@@ -125,7 +126,7 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Throws <see cref="GoogleApiException"/> if there were insert errors.
-        /// The excetpion will contain details of these errors.
+        /// The exception will contain details of these errors.
         /// </summary>
         /// <exception cref="GoogleApiException">There were insert errors.</exception>
         public BigQueryInsertResults ThrowOnAnyError()
@@ -135,14 +136,17 @@ namespace Google.Cloud.BigQuery.V2
                 return this;
             }
 
-            var exception = new GoogleApiException(_client.Service.Name, $"Error inserting data. Status: {Status}")
+            var flattenedErrors = Errors.SelectMany(rowErrors => rowErrors).ToList();
+            throw new GoogleApiException(_client.Service.Name)
             {
                 Error = new RequestError
                 {
-                    Errors = Errors.SelectMany(rowErrors => rowErrors).ToList()
+                    Errors = flattenedErrors,
+                    Message = $"Error inserting data: {flattenedErrors.Count} error(s). " +
+                        $"Status: {Status}. " +
+                        $"First error message: { flattenedErrors.First().Message }"
                 }
             };
-            throw exception;
         }
 
         internal BigQueryInsertResults ThrowIfNotSuppressing(bool? suppressInsertErrors) =>
