@@ -37,6 +37,7 @@ namespace Google.Cloud.Security.PrivateCA.V1.Snippets
                 CertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCaPoolCertificateAuthority("[PROJECT]", "[LOCATION]", "[CA_POOL]", "[CERTIFICATE_AUTHORITY]"),
                 RequestId = "",
                 IgnoreActiveCertificates = false,
+                SkipGracePeriod = false,
             };
             // Make the request
             Operation<CertificateAuthority, OperationMetadata> response = certificateAuthorityServiceClient.DeleteCertificateAuthority(request);
