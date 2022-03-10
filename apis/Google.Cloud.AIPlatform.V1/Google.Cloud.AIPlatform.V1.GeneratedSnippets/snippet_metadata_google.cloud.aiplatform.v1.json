@@ -11,237 +11,6 @@
   },
   "snippets": [
     {
-      "regionTag": "aiplatform_v1_generated_FeaturestoreOnlineServingService_ReadFeatureValues_sync",
-      "title": "ReadFeatureValuesRequestObject",
-      "description": "Snippet for ReadFeatureValues",
-      "file": "FeaturestoreOnlineServingServiceClient.ReadFeatureValuesRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ReadFeatureValues",
-        "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient.ReadFeatureValues",
-        "resultType": "Google.Cloud.AIPlatform.V1.ReadFeatureValuesResponse",
-        "client": {
-          "shortName": "FeaturestoreOnlineServingServiceClient",
-          "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient"
-        },
-        "method": {
-          "shortName": "ReadFeatureValues",
-          "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.ReadFeatureValues",
-          "service": {
-            "shortName": "FeaturestoreOnlineServingService",
-            "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "aiplatform_v1_generated_FeaturestoreOnlineServingService_ReadFeatureValues_async",
-      "title": "ReadFeatureValuesRequestObjectAsync",
-      "description": "Snippet for ReadFeatureValuesAsync",
-      "file": "FeaturestoreOnlineServingServiceClient.ReadFeatureValuesRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ReadFeatureValuesAsync",
-        "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient.ReadFeatureValuesAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.ReadFeatureValuesResponse>",
-        "client": {
-          "shortName": "FeaturestoreOnlineServingServiceClient",
-          "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient"
-        },
-        "method": {
-          "shortName": "ReadFeatureValues",
-          "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.ReadFeatureValues",
-          "service": {
-            "shortName": "FeaturestoreOnlineServingService",
-            "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "aiplatform_v1_generated_FeaturestoreOnlineServingService_ReadFeatureValues_sync_flattened",
-      "title": "ReadFeatureValues",
-      "description": "Snippet for ReadFeatureValues",
-      "file": "FeaturestoreOnlineServingServiceClient.ReadFeatureValuesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ReadFeatureValues",
-        "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient.ReadFeatureValues",
-        "resultType": "Google.Cloud.AIPlatform.V1.ReadFeatureValuesResponse",
-        "client": {
-          "shortName": "FeaturestoreOnlineServingServiceClient",
-          "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient"
-        },
-        "method": {
-          "shortName": "ReadFeatureValues",
-          "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.ReadFeatureValues",
-          "service": {
-            "shortName": "FeaturestoreOnlineServingService",
-            "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "aiplatform_v1_generated_FeaturestoreOnlineServingService_ReadFeatureValues_async_flattened",
-      "title": "ReadFeatureValuesAsync",
-      "description": "Snippet for ReadFeatureValuesAsync",
-      "file": "FeaturestoreOnlineServingServiceClient.ReadFeatureValuesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ReadFeatureValuesAsync",
-        "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient.ReadFeatureValuesAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.ReadFeatureValuesResponse>",
-        "client": {
-          "shortName": "FeaturestoreOnlineServingServiceClient",
-          "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient"
-        },
-        "method": {
-          "shortName": "ReadFeatureValues",
-          "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.ReadFeatureValues",
-          "service": {
-            "shortName": "FeaturestoreOnlineServingService",
-            "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "aiplatform_v1_generated_FeaturestoreOnlineServingService_ReadFeatureValues_sync_flattened_resourceNames",
-      "title": "ReadFeatureValuesResourceNames",
-      "description": "Snippet for ReadFeatureValues",
-      "file": "FeaturestoreOnlineServingServiceClient.ReadFeatureValuesResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ReadFeatureValues",
-        "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient.ReadFeatureValues",
-        "resultType": "Google.Cloud.AIPlatform.V1.ReadFeatureValuesResponse",
-        "client": {
-          "shortName": "FeaturestoreOnlineServingServiceClient",
-          "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient"
-        },
-        "method": {
-          "shortName": "ReadFeatureValues",
-          "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.ReadFeatureValues",
-          "service": {
-            "shortName": "FeaturestoreOnlineServingService",
-            "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "aiplatform_v1_generated_FeaturestoreOnlineServingService_ReadFeatureValues_async_flattened_resourceNames",
-      "title": "ReadFeatureValuesResourceNamesAsync",
-      "description": "Snippet for ReadFeatureValuesAsync",
-      "file": "FeaturestoreOnlineServingServiceClient.ReadFeatureValuesResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ReadFeatureValuesAsync",
-        "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient.ReadFeatureValuesAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.ReadFeatureValuesResponse>",
-        "client": {
-          "shortName": "FeaturestoreOnlineServingServiceClient",
-          "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient"
-        },
-        "method": {
-          "shortName": "ReadFeatureValues",
-          "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.ReadFeatureValues",
-          "service": {
-            "shortName": "FeaturestoreOnlineServingService",
-            "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "aiplatform_v1_generated_FeaturestoreOnlineServingService_StreamingReadFeatureValues_sync",
-      "title": "StreamingReadFeatureValuesRequestObject",
-      "description": "Snippet for StreamingReadFeatureValues",
-      "file": "FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "StreamingReadFeatureValues",
-        "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValues",
-        "resultType": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient+StreamingReadFeatureValuesStream",
-        "client": {
-          "shortName": "FeaturestoreOnlineServingServiceClient",
-          "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient"
-        },
-        "method": {
-          "shortName": "StreamingReadFeatureValues",
-          "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.StreamingReadFeatureValues",
-          "service": {
-            "shortName": "FeaturestoreOnlineServingService",
-            "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "aiplatform_v1_generated_FeaturestoreOnlineServingService_StreamingReadFeatureValues_sync_flattened",
-      "title": "StreamingReadFeatureValues",
-      "description": "Snippet for StreamingReadFeatureValues",
-      "file": "FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "StreamingReadFeatureValues",
-        "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValues",
-        "resultType": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient+StreamingReadFeatureValuesStream",
-        "client": {
-          "shortName": "FeaturestoreOnlineServingServiceClient",
-          "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient"
-        },
-        "method": {
-          "shortName": "StreamingReadFeatureValues",
-          "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.StreamingReadFeatureValues",
-          "service": {
-            "shortName": "FeaturestoreOnlineServingService",
-            "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "aiplatform_v1_generated_FeaturestoreOnlineServingService_StreamingReadFeatureValues_sync_flattened_resourceNames",
-      "title": "StreamingReadFeatureValuesResourceNames",
-      "description": "Snippet for StreamingReadFeatureValues",
-      "file": "FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "StreamingReadFeatureValues",
-        "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValues",
-        "resultType": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient+StreamingReadFeatureValuesStream",
-        "client": {
-          "shortName": "FeaturestoreOnlineServingServiceClient",
-          "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient"
-        },
-        "method": {
-          "shortName": "StreamingReadFeatureValues",
-          "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.StreamingReadFeatureValues",
-          "service": {
-            "shortName": "FeaturestoreOnlineServingService",
-            "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
       "regionTag": "aiplatform_v1_generated_FeaturestoreService_CreateFeaturestore_sync",
       "title": "CreateFeaturestoreRequestObject",
       "description": "Snippet for CreateFeaturestore",
@@ -24986,6 +24755,237 @@
           "service": {
             "shortName": "IndexEndpointService",
             "fullName": "google.cloud.aiplatform.v1.IndexEndpointService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_FeaturestoreOnlineServingService_ReadFeatureValues_sync",
+      "title": "ReadFeatureValuesRequestObject",
+      "description": "Snippet for ReadFeatureValues",
+      "file": "FeaturestoreOnlineServingServiceClient.ReadFeatureValuesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadFeatureValues",
+        "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient.ReadFeatureValues",
+        "resultType": "Google.Cloud.AIPlatform.V1.ReadFeatureValuesResponse",
+        "client": {
+          "shortName": "FeaturestoreOnlineServingServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient"
+        },
+        "method": {
+          "shortName": "ReadFeatureValues",
+          "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.ReadFeatureValues",
+          "service": {
+            "shortName": "FeaturestoreOnlineServingService",
+            "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_FeaturestoreOnlineServingService_ReadFeatureValues_async",
+      "title": "ReadFeatureValuesRequestObjectAsync",
+      "description": "Snippet for ReadFeatureValuesAsync",
+      "file": "FeaturestoreOnlineServingServiceClient.ReadFeatureValuesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadFeatureValuesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient.ReadFeatureValuesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.ReadFeatureValuesResponse>",
+        "client": {
+          "shortName": "FeaturestoreOnlineServingServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient"
+        },
+        "method": {
+          "shortName": "ReadFeatureValues",
+          "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.ReadFeatureValues",
+          "service": {
+            "shortName": "FeaturestoreOnlineServingService",
+            "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_FeaturestoreOnlineServingService_ReadFeatureValues_sync_flattened",
+      "title": "ReadFeatureValues",
+      "description": "Snippet for ReadFeatureValues",
+      "file": "FeaturestoreOnlineServingServiceClient.ReadFeatureValuesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadFeatureValues",
+        "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient.ReadFeatureValues",
+        "resultType": "Google.Cloud.AIPlatform.V1.ReadFeatureValuesResponse",
+        "client": {
+          "shortName": "FeaturestoreOnlineServingServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient"
+        },
+        "method": {
+          "shortName": "ReadFeatureValues",
+          "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.ReadFeatureValues",
+          "service": {
+            "shortName": "FeaturestoreOnlineServingService",
+            "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_FeaturestoreOnlineServingService_ReadFeatureValues_async_flattened",
+      "title": "ReadFeatureValuesAsync",
+      "description": "Snippet for ReadFeatureValuesAsync",
+      "file": "FeaturestoreOnlineServingServiceClient.ReadFeatureValuesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadFeatureValuesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient.ReadFeatureValuesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.ReadFeatureValuesResponse>",
+        "client": {
+          "shortName": "FeaturestoreOnlineServingServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient"
+        },
+        "method": {
+          "shortName": "ReadFeatureValues",
+          "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.ReadFeatureValues",
+          "service": {
+            "shortName": "FeaturestoreOnlineServingService",
+            "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_FeaturestoreOnlineServingService_ReadFeatureValues_sync_flattened_resourceNames",
+      "title": "ReadFeatureValuesResourceNames",
+      "description": "Snippet for ReadFeatureValues",
+      "file": "FeaturestoreOnlineServingServiceClient.ReadFeatureValuesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadFeatureValues",
+        "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient.ReadFeatureValues",
+        "resultType": "Google.Cloud.AIPlatform.V1.ReadFeatureValuesResponse",
+        "client": {
+          "shortName": "FeaturestoreOnlineServingServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient"
+        },
+        "method": {
+          "shortName": "ReadFeatureValues",
+          "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.ReadFeatureValues",
+          "service": {
+            "shortName": "FeaturestoreOnlineServingService",
+            "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_FeaturestoreOnlineServingService_ReadFeatureValues_async_flattened_resourceNames",
+      "title": "ReadFeatureValuesResourceNamesAsync",
+      "description": "Snippet for ReadFeatureValuesAsync",
+      "file": "FeaturestoreOnlineServingServiceClient.ReadFeatureValuesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadFeatureValuesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient.ReadFeatureValuesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.ReadFeatureValuesResponse>",
+        "client": {
+          "shortName": "FeaturestoreOnlineServingServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient"
+        },
+        "method": {
+          "shortName": "ReadFeatureValues",
+          "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.ReadFeatureValues",
+          "service": {
+            "shortName": "FeaturestoreOnlineServingService",
+            "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_FeaturestoreOnlineServingService_StreamingReadFeatureValues_sync",
+      "title": "StreamingReadFeatureValuesRequestObject",
+      "description": "Snippet for StreamingReadFeatureValues",
+      "file": "FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StreamingReadFeatureValues",
+        "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValues",
+        "resultType": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient+StreamingReadFeatureValuesStream",
+        "client": {
+          "shortName": "FeaturestoreOnlineServingServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient"
+        },
+        "method": {
+          "shortName": "StreamingReadFeatureValues",
+          "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.StreamingReadFeatureValues",
+          "service": {
+            "shortName": "FeaturestoreOnlineServingService",
+            "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_FeaturestoreOnlineServingService_StreamingReadFeatureValues_sync_flattened",
+      "title": "StreamingReadFeatureValues",
+      "description": "Snippet for StreamingReadFeatureValues",
+      "file": "FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StreamingReadFeatureValues",
+        "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValues",
+        "resultType": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient+StreamingReadFeatureValuesStream",
+        "client": {
+          "shortName": "FeaturestoreOnlineServingServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient"
+        },
+        "method": {
+          "shortName": "StreamingReadFeatureValues",
+          "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.StreamingReadFeatureValues",
+          "service": {
+            "shortName": "FeaturestoreOnlineServingService",
+            "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_FeaturestoreOnlineServingService_StreamingReadFeatureValues_sync_flattened_resourceNames",
+      "title": "StreamingReadFeatureValuesResourceNames",
+      "description": "Snippet for StreamingReadFeatureValues",
+      "file": "FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StreamingReadFeatureValues",
+        "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValues",
+        "resultType": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient+StreamingReadFeatureValuesStream",
+        "client": {
+          "shortName": "FeaturestoreOnlineServingServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServingServiceClient"
+        },
+        "method": {
+          "shortName": "StreamingReadFeatureValues",
+          "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.StreamingReadFeatureValues",
+          "service": {
+            "shortName": "FeaturestoreOnlineServingService",
+            "fullName": "google.cloud.aiplatform.v1.FeaturestoreOnlineServingService"
           }
         }
       },

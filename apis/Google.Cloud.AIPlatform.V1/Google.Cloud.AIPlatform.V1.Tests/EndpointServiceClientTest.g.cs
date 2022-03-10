@@ -66,7 +66,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
+                PredictRequestResponseLoggingConfig = new PredictRequestResponseLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null);
@@ -113,7 +116,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
+                PredictRequestResponseLoggingConfig = new PredictRequestResponseLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null);
@@ -162,7 +168,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
+                PredictRequestResponseLoggingConfig = new PredictRequestResponseLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null);
@@ -209,7 +218,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
+                PredictRequestResponseLoggingConfig = new PredictRequestResponseLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null);
@@ -258,7 +270,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
+                PredictRequestResponseLoggingConfig = new PredictRequestResponseLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null);
@@ -305,7 +320,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
+                PredictRequestResponseLoggingConfig = new PredictRequestResponseLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null);
@@ -355,7 +373,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
+                PredictRequestResponseLoggingConfig = new PredictRequestResponseLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null);
@@ -403,7 +424,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
+                PredictRequestResponseLoggingConfig = new PredictRequestResponseLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null);
@@ -453,7 +477,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
+                PredictRequestResponseLoggingConfig = new PredictRequestResponseLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null);
@@ -501,7 +528,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
+                PredictRequestResponseLoggingConfig = new PredictRequestResponseLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EndpointServiceClient client = new EndpointServiceClientImpl(mockGrpcClient.Object, null);

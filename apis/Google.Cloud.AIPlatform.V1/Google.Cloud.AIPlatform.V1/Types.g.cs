@@ -25,17 +25,17 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS90eXBlcy5wcm90bxIaZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
-            "bnMucHJvdG8iGwoJQm9vbEFycmF5Eg4KBnZhbHVlcxgBIAMoCCIdCgtEb3Vi",
-            "bGVBcnJheRIOCgZ2YWx1ZXMYASADKAEiHAoKSW50NjRBcnJheRIOCgZ2YWx1",
-            "ZXMYASADKAMiHQoLU3RyaW5nQXJyYXkSDgoGdmFsdWVzGAEgAygJQs4BCh5j",
-            "b20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCClR5cGVzUHJvdG9QAVpE",
-            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9h",
-            "aXBsYXRmb3JtL3YxO2FpcGxhdGZvcm2qAhpHb29nbGUuQ2xvdWQuQUlQbGF0",
-            "Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xl",
-            "OjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEiGwoJQm9vbEFycmF5Eg4KBnZhbHVl",
+            "cxgBIAMoCCIdCgtEb3VibGVBcnJheRIOCgZ2YWx1ZXMYASADKAEiHAoKSW50",
+            "NjRBcnJheRIOCgZ2YWx1ZXMYASADKAMiHQoLU3RyaW5nQXJyYXkSDgoGdmFs",
+            "dWVzGAEgAygJQs4BCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFC",
+            "ClR5cGVzUHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
+            "Z2xlYXBpcy9jbG91ZC9haXBsYXRmb3JtL3YxO2FpcGxhdGZvcm2qAhpHb29n",
+            "bGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRm",
+            "b3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BoolArray), global::Google.Cloud.AIPlatform.V1.BoolArray.Parser, new[]{ "Values" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DoubleArray), global::Google.Cloud.AIPlatform.V1.DoubleArray.Parser, new[]{ "Values" }, null, null, null, null),
