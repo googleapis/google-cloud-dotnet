@@ -247,4 +247,14 @@ namespace Google.Cloud.TextToSpeech.V1
         /// <inheritdoc/>
         public static bool operator !=(ModelName a, ModelName b) => !(a == b);
     }
+
+    public partial class CustomVoiceParams
+    {
+        /// <summary><see cref="ModelName"/>-typed view over the <see cref="Model"/> resource name property.</summary>
+        public ModelName ModelAsModelName
+        {
+            get => string.IsNullOrEmpty(Model) ? null : ModelName.Parse(Model, allowUnparsed: true);
+            set => Model = value?.ToString() ?? "";
+        }
+    }
 }
