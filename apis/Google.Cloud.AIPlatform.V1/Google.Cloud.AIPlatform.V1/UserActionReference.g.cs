@@ -25,17 +25,17 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjZnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS91c2VyX2FjdGlvbl9yZWZl",
-            "cmVuY2UucHJvdG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGhxnb29n",
-            "bGUvYXBpL2Fubm90YXRpb25zLnByb3RvImQKE1VzZXJBY3Rpb25SZWZlcmVu",
-            "Y2USEwoJb3BlcmF0aW9uGAEgASgJSAASGwoRZGF0YV9sYWJlbGluZ19qb2IY",
-            "AiABKAlIABIOCgZtZXRob2QYAyABKAlCCwoJcmVmZXJlbmNlQtwBCh5jb20u",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCGFVzZXJBY3Rpb25SZWZlcmVu",
-            "Y2VQcm90b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
-            "cGlzL2Nsb3VkL2FpcGxhdGZvcm0vdjE7YWlwbGF0Zm9ybaoCGkdvb2dsZS5D",
-            "bG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1c",
-            "VjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "cmVuY2UucHJvdG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxImQKE1Vz",
+            "ZXJBY3Rpb25SZWZlcmVuY2USEwoJb3BlcmF0aW9uGAEgASgJSAASGwoRZGF0",
+            "YV9sYWJlbGluZ19qb2IYAiABKAlIABIOCgZtZXRob2QYAyABKAlCCwoJcmVm",
+            "ZXJlbmNlQtwBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCGFVz",
+            "ZXJBY3Rpb25SZWZlcmVuY2VQcm90b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2FpcGxhdGZvcm0vdjE7YWlwbGF0",
+            "Zm9ybaoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENs",
+            "b3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3Jt",
+            "OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.UserActionReference), global::Google.Cloud.AIPlatform.V1.UserActionReference.Parser, new[]{ "Operation", "DataLabelingJob", "Method" }, new[]{ "Reference" }, null, null, null)
           }));

@@ -25,17 +25,16 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjBnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9lbmNyeXB0aW9uX3NwZWMu",
-            "cHJvdG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGhxnb29nbGUvYXBp",
-            "L2Fubm90YXRpb25zLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9y",
-            "LnByb3RvIisKDkVuY3J5cHRpb25TcGVjEhkKDGttc19rZXlfbmFtZRgBIAEo",
-            "CUID4EECQtcBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCE0Vu",
-            "Y3J5cHRpb25TcGVjUHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9jbG91ZC9haXBsYXRmb3JtL3YxO2FpcGxhdGZvcm2q",
-            "AhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxB",
-            "SVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFi",
-            "BnByb3RvMw=="));
+            "cHJvdG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9nb29nbGUvYXBp",
+            "L2ZpZWxkX2JlaGF2aW9yLnByb3RvIisKDkVuY3J5cHRpb25TcGVjEhkKDGtt",
+            "c19rZXlfbmFtZRgBIAEoCUID4EECQtcBCh5jb20uZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjFCE0VuY3J5cHRpb25TcGVjUHJvdG9QAVpEZ29vZ2xlLmdv",
+            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9haXBsYXRmb3Jt",
+            "L3YxO2FpcGxhdGZvcm2qAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoC",
+            "Gkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6",
+            "QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.EncryptionSpec), global::Google.Cloud.AIPlatform.V1.EncryptionSpec.Parser, new[]{ "KmsKeyName" }, null, null, null, null)
           }));

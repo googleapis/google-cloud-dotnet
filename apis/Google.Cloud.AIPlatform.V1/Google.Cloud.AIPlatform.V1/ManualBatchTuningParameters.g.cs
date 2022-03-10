@@ -26,17 +26,16 @@ namespace Google.Cloud.AIPlatform.V1 {
           string.Concat(
             "Cj9nb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tYW51YWxfYmF0Y2hfdHVu",
             "aW5nX3BhcmFtZXRlcnMucHJvdG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGh9nb29nbGUvYXBp",
-            "L2ZpZWxkX2JlaGF2aW9yLnByb3RvIjYKG01hbnVhbEJhdGNoVHVuaW5nUGFy",
-            "YW1ldGVycxIXCgpiYXRjaF9zaXplGAEgASgFQgPgQQVC5AEKHmNvbS5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIgTWFudWFsQmF0Y2hUdW5pbmdQYXJh",
-            "bWV0ZXJzUHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
-            "Z2xlYXBpcy9jbG91ZC9haXBsYXRmb3JtL3YxO2FpcGxhdGZvcm2qAhpHb29n",
-            "bGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRm",
-            "b3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3Rv",
-            "Mw=="));
+            "LnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvIjYKG01hbnVh",
+            "bEJhdGNoVHVuaW5nUGFyYW1ldGVycxIXCgpiYXRjaF9zaXplGAEgASgFQgPg",
+            "QQVC5AEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIgTWFudWFs",
+            "QmF0Y2hUdW5pbmdQYXJhbWV0ZXJzUHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5v",
+            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9haXBsYXRmb3JtL3YxO2Fp",
+            "cGxhdGZvcm2qAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2ds",
+            "ZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0",
+            "Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ManualBatchTuningParameters), global::Google.Cloud.AIPlatform.V1.ManualBatchTuningParameters.Parser, new[]{ "BatchSize" }, null, null, null, null)
           }));

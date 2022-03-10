@@ -25,21 +25,20 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci9nb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9waXBlbGluZV9zdGF0ZS5w",
-            "cm90bxIaZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaHGdvb2dsZS9hcGkv",
-            "YW5ub3RhdGlvbnMucHJvdG8qkwIKDVBpcGVsaW5lU3RhdGUSHgoaUElQRUxJ",
-            "TkVfU1RBVEVfVU5TUEVDSUZJRUQQABIZChVQSVBFTElORV9TVEFURV9RVUVV",
-            "RUQQARIaChZQSVBFTElORV9TVEFURV9QRU5ESU5HEAISGgoWUElQRUxJTkVf",
-            "U1RBVEVfUlVOTklORxADEhwKGFBJUEVMSU5FX1NUQVRFX1NVQ0NFRURFRBAE",
-            "EhkKFVBJUEVMSU5FX1NUQVRFX0ZBSUxFRBAFEh0KGVBJUEVMSU5FX1NUQVRF",
-            "X0NBTkNFTExJTkcQBhIcChhQSVBFTElORV9TVEFURV9DQU5DRUxMRUQQBxIZ",
-            "ChVQSVBFTElORV9TVEFURV9QQVVTRUQQCELWAQoeY29tLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxQhJQaXBlbGluZVN0YXRlUHJvdG9QAVpEZ29vZ2xl",
-            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9haXBsYXRm",
-            "b3JtL3YxO2FpcGxhdGZvcm2qAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5W",
-            "McoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91",
-            "ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "cm90bxIaZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEqkwIKDVBpcGVsaW5l",
+            "U3RhdGUSHgoaUElQRUxJTkVfU1RBVEVfVU5TUEVDSUZJRUQQABIZChVQSVBF",
+            "TElORV9TVEFURV9RVUVVRUQQARIaChZQSVBFTElORV9TVEFURV9QRU5ESU5H",
+            "EAISGgoWUElQRUxJTkVfU1RBVEVfUlVOTklORxADEhwKGFBJUEVMSU5FX1NU",
+            "QVRFX1NVQ0NFRURFRBAEEhkKFVBJUEVMSU5FX1NUQVRFX0ZBSUxFRBAFEh0K",
+            "GVBJUEVMSU5FX1NUQVRFX0NBTkNFTExJTkcQBhIcChhQSVBFTElORV9TVEFU",
+            "RV9DQU5DRUxMRUQQBxIZChVQSVBFTElORV9TVEFURV9QQVVTRUQQCELWAQoe",
+            "Y29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhJQaXBlbGluZVN0YXRl",
+            "UHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
+            "cy9jbG91ZC9haXBsYXRmb3JtL3YxO2FpcGxhdGZvcm2qAhpHb29nbGUuQ2xv",
+            "dWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx",
+            "6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.PipelineState), }, null, null));
     }
     #endregion

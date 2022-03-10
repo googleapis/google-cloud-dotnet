@@ -25,20 +25,20 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cipnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9qb2Jfc3RhdGUucHJvdG8S",
-            "Gmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGhxnb29nbGUvYXBpL2Fubm90",
-            "YXRpb25zLnByb3RvKvgBCghKb2JTdGF0ZRIZChVKT0JfU1RBVEVfVU5TUEVD",
-            "SUZJRUQQABIUChBKT0JfU1RBVEVfUVVFVUVEEAESFQoRSk9CX1NUQVRFX1BF",
-            "TkRJTkcQAhIVChFKT0JfU1RBVEVfUlVOTklORxADEhcKE0pPQl9TVEFURV9T",
-            "VUNDRUVERUQQBBIUChBKT0JfU1RBVEVfRkFJTEVEEAUSGAoUSk9CX1NUQVRF",
-            "X0NBTkNFTExJTkcQBhIXChNKT0JfU1RBVEVfQ0FOQ0VMTEVEEAcSFAoQSk9C",
-            "X1NUQVRFX1BBVVNFRBAIEhUKEUpPQl9TVEFURV9FWFBJUkVEEAlC0QEKHmNv",
-            "bS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUINSm9iU3RhdGVQcm90b1AB",
-            "WkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
-            "L2FpcGxhdGZvcm0vdjE7YWlwbGF0Zm9ybaoCGkdvb2dsZS5DbG91ZC5BSVBs",
-            "YXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29n",
-            "bGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "Gmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxKvgBCghKb2JTdGF0ZRIZChVK",
+            "T0JfU1RBVEVfVU5TUEVDSUZJRUQQABIUChBKT0JfU1RBVEVfUVVFVUVEEAES",
+            "FQoRSk9CX1NUQVRFX1BFTkRJTkcQAhIVChFKT0JfU1RBVEVfUlVOTklORxAD",
+            "EhcKE0pPQl9TVEFURV9TVUNDRUVERUQQBBIUChBKT0JfU1RBVEVfRkFJTEVE",
+            "EAUSGAoUSk9CX1NUQVRFX0NBTkNFTExJTkcQBhIXChNKT0JfU1RBVEVfQ0FO",
+            "Q0VMTEVEEAcSFAoQSk9CX1NUQVRFX1BBVVNFRBAIEhUKEUpPQl9TVEFURV9F",
+            "WFBJUkVEEAlC0QEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIN",
+            "Sm9iU3RhdGVQcm90b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
+            "b29nbGVhcGlzL2Nsb3VkL2FpcGxhdGZvcm0vdjE7YWlwbGF0Zm9ybaoCGkdv",
+            "b2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxh",
+            "dGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.JobState), }, null, null));
     }
     #endregion
