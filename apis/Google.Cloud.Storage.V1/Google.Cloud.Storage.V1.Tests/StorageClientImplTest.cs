@@ -73,35 +73,35 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Contains(expectedMessageSubstring, exception.Message);
         }
 
-        [Theory]
-        [InlineData("FailThenRetry")]
-        [InlineData("NonRetriableFailure")]
-        public void GetBucketTest(string testType)
+        [Fact]
+        public void GetBucket_FailThenRetry()
         {
             var bucketId = "bucket";
             var service = new FakeStorageService();
             var client = new StorageClientImpl(service);
             var request = new BucketsResource.GetRequest(service, bucketId);
 
-            if (testType == "FailThenRetry")
-            {
-                service.ExpectRequest(request, HttpStatusCode.BadGateway);
-                service.ExpectRequest(request, new Bucket() { Id = bucketId });
-                var result = client.GetBucket(bucketId);
-                Assert.Equal(bucketId, result.Id);
-            }
-            else if (testType == "NonRetriableFailure")
-            {
-                service.ExpectRequest(request, HttpStatusCode.NotFound);
-                Assert.Throws<GoogleApiException>(() => client.GetBucket(bucketId));
-            }
+            service.ExpectRequest(request, HttpStatusCode.BadGateway);
+            service.ExpectRequest(request, new Bucket() { Id = bucketId });
+            var result = client.GetBucket(bucketId);
+            Assert.Equal(bucketId, result.Id);
             service.Verify();
         }
 
-        [Theory]
-        [InlineData("FailThenRetry")]
-        [InlineData("NonRetriableFailure")]
-        public void GetObjectTest(string testType)
+        [Fact]
+        public void GetBucket_NonRetriableFailure()
+        {
+            var bucketId = "bucket";
+            var service = new FakeStorageService();
+            var client = new StorageClientImpl(service);
+            var request = new BucketsResource.GetRequest(service, bucketId);
+
+            service.ExpectRequest(request, HttpStatusCode.NotFound);
+            Assert.Throws<GoogleApiException>(() => client.GetBucket(bucketId));
+        }
+
+        [Fact]
+        public void GetObject_FailThenRetry()
         {
             var bucketId = "bucket";
             var objectName = "objectName";
@@ -110,25 +110,29 @@ namespace Google.Cloud.Storage.V1.Tests
             var obj = new Object() { Name = objectName, Bucket = bucketId };
             var request = service.Objects.Get(bucketId, objectName);
 
-            if (testType == "FailThenRetry")
-            {
-                service.ExpectRequest(request, HttpStatusCode.BadGateway);
-                service.ExpectRequest(request, new Object() { Name = objectName });
-                var result = client.GetObject(bucketId, objectName);
-                Assert.Equal(objectName, result.Name);
-            }
-            else if (testType == "NonRetriableFailure")
-            {
-                service.ExpectRequest(request, HttpStatusCode.NotFound);
-                Assert.Throws<GoogleApiException>(() => client.GetObject(bucketId, objectName));
-            }
+            service.ExpectRequest(request, HttpStatusCode.BadGateway);
+            service.ExpectRequest(request, new Object() { Name = objectName });
+            var result = client.GetObject(bucketId, objectName);
+            Assert.Equal(objectName, result.Name);
+
         }
 
-        [Theory]
-        [InlineData("NoRetryIfOptionsAbsent")]
-        [InlineData("RetryIfOptionsPresent")]
-        [InlineData("NonRetriableFailure")]
-        public void UpdateObjectTest(string testType)
+        [Fact]
+        public void GetObject_NonRetriableFailure()
+        {
+            var bucketId = "bucket";
+            var objectName = "objectName";
+            var service = new FakeStorageService();
+            var client = new StorageClientImpl(service);
+            var obj = new Object() { Name = objectName, Bucket = bucketId };
+            var request = service.Objects.Get(bucketId, objectName);
+
+            service.ExpectRequest(request, HttpStatusCode.NotFound);
+            Assert.Throws<GoogleApiException>(() => client.GetObject(bucketId, objectName));
+        }
+
+        [Fact]
+        public void UpdateObject_NoRetryIfOptionsAbsent()
         {
             var bucketId = "bucket";
             var objectName = "objectName";
@@ -137,32 +141,47 @@ namespace Google.Cloud.Storage.V1.Tests
             var obj = new Object() { Name = objectName, Bucket = bucketId };
             var request = service.Objects.Update(obj, obj.Bucket, obj.Name);
 
-            if (testType == "RetryIfOptionsPresent")
-            {
-                request.IfMetagenerationMatch = 70;
-                service.ExpectRequest(request, HttpStatusCode.BadGateway);
-                service.ExpectRequest(request, new Object() { Name = objectName });
-                var result = client.UpdateObject(obj, new UpdateObjectOptions() { IfMetagenerationMatch = 70 });
-                Assert.Equal(objectName, result.Name);
-            }
-            else if(testType == "NoRetryIfOptionsAbsent")
-            {
-                service.ExpectRequest(request, HttpStatusCode.BadGateway);
-                var exception = Assert.Throws<GoogleApiException>(() => client.UpdateObject(obj, new UpdateObjectOptions()));
-            }
-            else if(testType == "NonRetriableFailure")
-            {
-                request.IfMetagenerationMatch = 70;
-                service.ExpectRequest(request, HttpStatusCode.NotFound);
-                Assert.Throws<GoogleApiException>(() => client.UpdateObject(obj, new UpdateObjectOptions() { IfMetagenerationMatch = 70 }));
-            }
+            service.ExpectRequest(request, HttpStatusCode.BadGateway);
+            var exception = Assert.Throws<GoogleApiException>(() => client.UpdateObject(obj, new UpdateObjectOptions()));
             service.Verify();
         }
 
-        [Theory]
-        [InlineData("FailThenRetry")]
-        [InlineData("NonRetriableFailure")]
-        public void GetNotificationsTest(string testType)
+        [Fact]
+        public void UpdateObject_RetryIfOptionsPresent()
+        {
+            var bucketId = "bucket";
+            var objectName = "objectName";
+            var service = new FakeStorageService();
+            var client = new StorageClientImpl(service);
+            var obj = new Object() { Name = objectName, Bucket = bucketId };
+            var request = service.Objects.Update(obj, obj.Bucket, obj.Name);
+
+            request.IfMetagenerationMatch = 70;
+            service.ExpectRequest(request, HttpStatusCode.BadGateway);
+            service.ExpectRequest(request, new Object() { Name = objectName });
+            var result = client.UpdateObject(obj, new UpdateObjectOptions() { IfMetagenerationMatch = 70 });
+            Assert.Equal(objectName, result.Name);
+            service.Verify();
+        }
+
+        [Fact]
+        public void UpdateObject_NonRetriableFailure()
+        {
+            var bucketId = "bucket";
+            var objectName = "objectName";
+            var service = new FakeStorageService();
+            var client = new StorageClientImpl(service);
+            var obj = new Object() { Name = objectName, Bucket = bucketId };
+            var request = service.Objects.Update(obj, obj.Bucket, obj.Name);
+
+            request.IfMetagenerationMatch = 70;
+            service.ExpectRequest(request, HttpStatusCode.NotFound);
+            Assert.Throws<GoogleApiException>(() => client.UpdateObject(obj, new UpdateObjectOptions() { IfMetagenerationMatch = 70 }));
+            service.Verify();
+        }
+
+        [Fact]
+        public void GetNotifications_FailThenRetry()
         {
             var bucketId = "bucket";
             var notificationId = "notification";
@@ -170,18 +189,24 @@ namespace Google.Cloud.Storage.V1.Tests
             var client = new StorageClientImpl(service);
             var request = new NotificationsResource.GetRequest(service, bucketId, notificationId);
 
-            if (testType == "FailThenRetry")
-            {
-                service.ExpectRequest(request, HttpStatusCode.BadGateway);
-                service.ExpectRequest(request, new Notification() { Id = notificationId });
-                var result = client.GetNotification(bucketId,notificationId);
-                Assert.Equal(notificationId, result.Id);
-            }
-            else if (testType == "NonRetriableFailure")
-            {
-                service.ExpectRequest(request, HttpStatusCode.NotFound);
-                Assert.Throws<GoogleApiException>(() => client.GetNotification(bucketId, notificationId));
-            }
+            service.ExpectRequest(request, HttpStatusCode.BadGateway);
+            service.ExpectRequest(request, new Notification() { Id = notificationId });
+            var result = client.GetNotification(bucketId, notificationId);
+            Assert.Equal(notificationId, result.Id);
+            service.Verify();
+        }
+
+        [Fact]
+        public void GetNotifications_NonRetriableFailure()
+        {
+            var bucketId = "bucket";
+            var notificationId = "notification";
+            var service = new FakeStorageService();
+            var client = new StorageClientImpl(service);
+            var request = new NotificationsResource.GetRequest(service, bucketId, notificationId);
+
+            service.ExpectRequest(request, HttpStatusCode.NotFound);
+            Assert.Throws<GoogleApiException>(() => client.GetNotification(bucketId, notificationId));
             service.Verify();
         }
     }
