@@ -255,6 +255,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 Etag = "etage8ad7218",
+                MonitoringConfig = new FeaturestoreMonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
@@ -286,6 +287,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 Etag = "etage8ad7218",
+                MonitoringConfig = new FeaturestoreMonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
@@ -319,6 +321,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 Etag = "etage8ad7218",
+                MonitoringConfig = new FeaturestoreMonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
@@ -350,6 +353,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 Etag = "etage8ad7218",
+                MonitoringConfig = new FeaturestoreMonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
@@ -383,6 +387,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 Etag = "etage8ad7218",
+                MonitoringConfig = new FeaturestoreMonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
@@ -414,6 +419,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 Etag = "etage8ad7218",
+                MonitoringConfig = new FeaturestoreMonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
@@ -448,6 +454,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 Etag = "etage8ad7218",
+                MonitoringConfig = new FeaturestoreMonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
@@ -480,6 +487,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 Etag = "etage8ad7218",
+                MonitoringConfig = new FeaturestoreMonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
@@ -514,6 +522,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 Etag = "etage8ad7218",
+                MonitoringConfig = new FeaturestoreMonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
@@ -546,6 +555,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 Etag = "etage8ad7218",
+                MonitoringConfig = new FeaturestoreMonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
@@ -580,6 +590,11 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 Etag = "etage8ad7218",
+                MonitoringStatsAnomalies =
+                {
+                    new Feature.Types.MonitoringStatsAnomaly(),
+                },
+                DisableMonitoring = true,
             };
             mockGrpcClient.Setup(x => x.GetFeature(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
@@ -612,6 +627,11 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 Etag = "etage8ad7218",
+                MonitoringStatsAnomalies =
+                {
+                    new Feature.Types.MonitoringStatsAnomaly(),
+                },
+                DisableMonitoring = true,
             };
             mockGrpcClient.Setup(x => x.GetFeatureAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feature>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
@@ -646,6 +666,11 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 Etag = "etage8ad7218",
+                MonitoringStatsAnomalies =
+                {
+                    new Feature.Types.MonitoringStatsAnomaly(),
+                },
+                DisableMonitoring = true,
             };
             mockGrpcClient.Setup(x => x.GetFeature(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
@@ -678,6 +703,11 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 Etag = "etage8ad7218",
+                MonitoringStatsAnomalies =
+                {
+                    new Feature.Types.MonitoringStatsAnomaly(),
+                },
+                DisableMonitoring = true,
             };
             mockGrpcClient.Setup(x => x.GetFeatureAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feature>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
@@ -712,6 +742,11 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 Etag = "etage8ad7218",
+                MonitoringStatsAnomalies =
+                {
+                    new Feature.Types.MonitoringStatsAnomaly(),
+                },
+                DisableMonitoring = true,
             };
             mockGrpcClient.Setup(x => x.GetFeature(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
@@ -744,6 +779,11 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 Etag = "etage8ad7218",
+                MonitoringStatsAnomalies =
+                {
+                    new Feature.Types.MonitoringStatsAnomaly(),
+                },
+                DisableMonitoring = true,
             };
             mockGrpcClient.Setup(x => x.GetFeatureAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feature>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
@@ -779,6 +819,11 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 Etag = "etage8ad7218",
+                MonitoringStatsAnomalies =
+                {
+                    new Feature.Types.MonitoringStatsAnomaly(),
+                },
+                DisableMonitoring = true,
             };
             mockGrpcClient.Setup(x => x.UpdateFeature(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
@@ -812,6 +857,11 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 Etag = "etage8ad7218",
+                MonitoringStatsAnomalies =
+                {
+                    new Feature.Types.MonitoringStatsAnomaly(),
+                },
+                DisableMonitoring = true,
             };
             mockGrpcClient.Setup(x => x.UpdateFeatureAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feature>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
@@ -847,6 +897,11 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 Etag = "etage8ad7218",
+                MonitoringStatsAnomalies =
+                {
+                    new Feature.Types.MonitoringStatsAnomaly(),
+                },
+                DisableMonitoring = true,
             };
             mockGrpcClient.Setup(x => x.UpdateFeature(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);
@@ -880,6 +935,11 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                     },
                 },
                 Etag = "etage8ad7218",
+                MonitoringStatsAnomalies =
+                {
+                    new Feature.Types.MonitoringStatsAnomaly(),
+                },
+                DisableMonitoring = true,
             };
             mockGrpcClient.Setup(x => x.UpdateFeatureAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feature>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FeaturestoreServiceClient client = new FeaturestoreServiceClientImpl(mockGrpcClient.Object, null);

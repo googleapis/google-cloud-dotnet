@@ -26,32 +26,44 @@ namespace Google.Cloud.AIPlatform.V1 {
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9mZWF0dXJlLnByb3RvEhpn",
             "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRofZ29vZ2xlL2FwaS9maWVsZF9i",
-            "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxofZ29v",
-            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKvBQoHRmVhdHVyZRIRCgRu",
-            "YW1lGAEgASgJQgPgQQUSEwoLZGVzY3JpcHRpb24YAiABKAkSSQoKdmFsdWVf",
-            "dHlwZRgDIAEoDjItLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1",
-            "cmUuVmFsdWVUeXBlQgbgQQLgQQUSNAoLY3JlYXRlX3RpbWUYBCABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUY",
-            "BSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSRAoGbGFi",
-            "ZWxzGAYgAygLMi8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRmVhdHVy",
-            "ZS5MYWJlbHNFbnRyeUID4EEBEgwKBGV0YWcYByABKAkaLQoLTGFiZWxzRW50",
-            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASKkAQoJVmFsdWVU",
-            "eXBlEhoKFlZBTFVFX1RZUEVfVU5TUEVDSUZJRUQQABIICgRCT09MEAESDgoK",
-            "Qk9PTF9BUlJBWRACEgoKBkRPVUJMRRADEhAKDERPVUJMRV9BUlJBWRAEEgkK",
-            "BUlOVDY0EAkSDwoLSU5UNjRfQVJSQVkQChIKCgZTVFJJTkcQCxIQCgxTVFJJ",
-            "TkdfQVJSQVkQDBIJCgVCWVRFUxANOpoB6kGWAQohYWlwbGF0Zm9ybS5nb29n",
-            "bGVhcGlzLmNvbS9GZWF0dXJlEnFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
-            "b25zL3tsb2NhdGlvbn0vZmVhdHVyZXN0b3Jlcy97ZmVhdHVyZXN0b3JlfS9l",
-            "bnRpdHlUeXBlcy97ZW50aXR5X3R5cGV9L2ZlYXR1cmVzL3tmZWF0dXJlfULQ",
-            "AQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQgxGZWF0dXJlUHJv",
-            "dG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9j",
-            "bG91ZC9haXBsYXRmb3JtL3YxO2FpcGxhdGZvcm2qAhpHb29nbGUuQ2xvdWQu",
-            "QUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gId",
-            "R29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxo5Z29v",
+            "Z2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZmVhdHVyZV9tb25pdG9yaW5nX3N0",
+            "YXRzLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIt8I",
+            "CgdGZWF0dXJlEhEKBG5hbWUYASABKAlCA+BBBRITCgtkZXNjcmlwdGlvbhgC",
+            "IAEoCRJJCgp2YWx1ZV90eXBlGAMgASgOMi0uZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuRmVhdHVyZS5WYWx1ZVR5cGVCBuBBAuBBBRI0CgtjcmVhdGVf",
+            "dGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0",
+            "Cgt1cGRhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBCA+BBAxJECgZsYWJlbHMYBiADKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MS5GZWF0dXJlLkxhYmVsc0VudHJ5QgPgQQESDAoEZXRhZxgHIAEo",
+            "CRIfChJkaXNhYmxlX21vbml0b3JpbmcYDCABKAhCA+BBARJjChptb25pdG9y",
+            "aW5nX3N0YXRzX2Fub21hbGllcxgLIAMoCzI6Lmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxLkZlYXR1cmUuTW9uaXRvcmluZ1N0YXRzQW5vbWFseUID4EED",
+            "GqcCChZNb25pdG9yaW5nU3RhdHNBbm9tYWx5ElwKCW9iamVjdGl2ZRgBIAEo",
+            "DjJELmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmUuTW9uaXRv",
+            "cmluZ1N0YXRzQW5vbWFseS5PYmplY3RpdmVCA+BBAxJTChVmZWF0dXJlX3N0",
+            "YXRzX2Fub21hbHkYAiABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5GZWF0dXJlU3RhdHNBbm9tYWx5QgPgQQMiWgoJT2JqZWN0aXZlEhkKFU9C",
+            "SkVDVElWRV9VTlNQRUNJRklFRBAAEhsKF0lNUE9SVF9GRUFUVVJFX0FOQUxZ",
+            "U0lTEAESFQoRU05BUFNIT1RfQU5BTFlTSVMQAhotCgtMYWJlbHNFbnRyeRIL",
+            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIqQBCglWYWx1ZVR5cGUS",
+            "GgoWVkFMVUVfVFlQRV9VTlNQRUNJRklFRBAAEggKBEJPT0wQARIOCgpCT09M",
+            "X0FSUkFZEAISCgoGRE9VQkxFEAMSEAoMRE9VQkxFX0FSUkFZEAQSCQoFSU5U",
+            "NjQQCRIPCgtJTlQ2NF9BUlJBWRAKEgoKBlNUUklORxALEhAKDFNUUklOR19B",
+            "UlJBWRAMEgkKBUJZVEVTEA06mgHqQZYBCiFhaXBsYXRmb3JtLmdvb2dsZWFw",
+            "aXMuY29tL0ZlYXR1cmUScXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufS9mZWF0dXJlc3RvcmVzL3tmZWF0dXJlc3RvcmV9L2VudGl0",
+            "eVR5cGVzL3tlbnRpdHlfdHlwZX0vZmVhdHVyZXMve2ZlYXR1cmV9QtABCh5j",
+            "b20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCDEZlYXR1cmVQcm90b1AB",
+            "WkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
+            "L2FpcGxhdGZvcm0vdjE7YWlwbGF0Zm9ybaoCGkdvb2dsZS5DbG91ZC5BSVBs",
+            "YXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29n",
+            "bGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.FeatureMonitoringStatsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Feature), global::Google.Cloud.AIPlatform.V1.Feature.Parser, new[]{ "Name", "Description", "ValueType", "CreateTime", "UpdateTime", "Labels", "Etag" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Feature.Types.ValueType) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Feature), global::Google.Cloud.AIPlatform.V1.Feature.Parser, new[]{ "Name", "Description", "ValueType", "CreateTime", "UpdateTime", "Labels", "Etag", "DisableMonitoring", "MonitoringStatsAnomalies" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Feature.Types.ValueType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly), global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly.Parser, new[]{ "Objective", "FeatureStatsAnomaly" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly.Types.Objective) }, null, null),
+            null, })
           }));
     }
     #endregion
@@ -104,6 +116,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       labels_ = other.labels_.Clone();
       etag_ = other.etag_;
+      disableMonitoring_ = other.disableMonitoring_;
+      monitoringStatsAnomalies_ = other.monitoringStatsAnomalies_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -235,6 +249,42 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "disable_monitoring" field.</summary>
+    public const int DisableMonitoringFieldNumber = 12;
+    private bool disableMonitoring_;
+    /// <summary>
+    /// Optional. If not set, use the monitoring_config defined for the EntityType
+    /// this Feature belongs to. Only Features with type
+    /// ([Feature.ValueType][google.cloud.aiplatform.v1.Feature.ValueType]) BOOL,
+    /// STRING, DOUBLE or INT64 can enable monitoring.
+    ///
+    /// If set to true, all types of data monitoring are disabled despite the
+    /// config on EntityType.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool DisableMonitoring {
+      get { return disableMonitoring_; }
+      set {
+        disableMonitoring_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "monitoring_stats_anomalies" field.</summary>
+    public const int MonitoringStatsAnomaliesFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly> _repeated_monitoringStatsAnomalies_codec
+        = pb::FieldCodec.ForMessage(90, global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly> monitoringStatsAnomalies_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly>();
+    /// <summary>
+    /// Output only. The list of historical stats and anomalies with specified
+    /// objectives.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly> MonitoringStatsAnomalies {
+      get { return monitoringStatsAnomalies_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -257,6 +307,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (Etag != other.Etag) return false;
+      if (DisableMonitoring != other.DisableMonitoring) return false;
+      if(!monitoringStatsAnomalies_.Equals(other.monitoringStatsAnomalies_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -271,6 +323,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (DisableMonitoring != false) hash ^= DisableMonitoring.GetHashCode();
+      hash ^= monitoringStatsAnomalies_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -314,6 +368,11 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(58);
         output.WriteString(Etag);
       }
+      monitoringStatsAnomalies_.WriteTo(output, _repeated_monitoringStatsAnomalies_codec);
+      if (DisableMonitoring != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(DisableMonitoring);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -349,6 +408,11 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(58);
         output.WriteString(Etag);
       }
+      monitoringStatsAnomalies_.WriteTo(ref output, _repeated_monitoringStatsAnomalies_codec);
+      if (DisableMonitoring != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(DisableMonitoring);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -378,6 +442,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (Etag.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
       }
+      if (DisableMonitoring != false) {
+        size += 1 + 1;
+      }
+      size += monitoringStatsAnomalies_.CalculateSize(_repeated_monitoringStatsAnomalies_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -415,6 +483,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
+      if (other.DisableMonitoring != false) {
+        DisableMonitoring = other.DisableMonitoring;
+      }
+      monitoringStatsAnomalies_.Add(other.monitoringStatsAnomalies_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -464,6 +536,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             Etag = input.ReadString();
             break;
           }
+          case 90: {
+            monitoringStatsAnomalies_.AddEntriesFrom(input, _repeated_monitoringStatsAnomalies_codec);
+            break;
+          }
+          case 96: {
+            DisableMonitoring = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -511,6 +591,14 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 58: {
             Etag = input.ReadString();
+            break;
+          }
+          case 90: {
+            monitoringStatsAnomalies_.AddEntriesFrom(ref input, _repeated_monitoringStatsAnomalies_codec);
+            break;
+          }
+          case 96: {
+            DisableMonitoring = input.ReadBool();
             break;
           }
         }
@@ -567,6 +655,284 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// Used for Feature that is bytes.
         /// </summary>
         [pbr::OriginalName("BYTES")] Bytes = 13,
+      }
+
+      /// <summary>
+      /// A list of historical [Snapshot
+      /// Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis] or [Import Feature
+      /// Analysis] [FeaturestoreMonitoringConfig.ImportFeatureAnalysis] stats
+      /// requested by user, sorted by
+      /// [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1.FeatureStatsAnomaly.start_time]
+      /// descending.
+      /// </summary>
+      public sealed partial class MonitoringStatsAnomaly : pb::IMessage<MonitoringStatsAnomaly>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<MonitoringStatsAnomaly> _parser = new pb::MessageParser<MonitoringStatsAnomaly>(() => new MonitoringStatsAnomaly());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<MonitoringStatsAnomaly> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.Feature.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MonitoringStatsAnomaly() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MonitoringStatsAnomaly(MonitoringStatsAnomaly other) : this() {
+          objective_ = other.objective_;
+          featureStatsAnomaly_ = other.featureStatsAnomaly_ != null ? other.featureStatsAnomaly_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MonitoringStatsAnomaly Clone() {
+          return new MonitoringStatsAnomaly(this);
+        }
+
+        /// <summary>Field number for the "objective" field.</summary>
+        public const int ObjectiveFieldNumber = 1;
+        private global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly.Types.Objective objective_ = global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly.Types.Objective.Unspecified;
+        /// <summary>
+        /// Output only. The objective for each stats.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly.Types.Objective Objective {
+          get { return objective_; }
+          set {
+            objective_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "feature_stats_anomaly" field.</summary>
+        public const int FeatureStatsAnomalyFieldNumber = 2;
+        private global::Google.Cloud.AIPlatform.V1.FeatureStatsAnomaly featureStatsAnomaly_;
+        /// <summary>
+        /// Output only. The stats and anomalies generated at specific timestamp.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1.FeatureStatsAnomaly FeatureStatsAnomaly {
+          get { return featureStatsAnomaly_; }
+          set {
+            featureStatsAnomaly_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as MonitoringStatsAnomaly);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(MonitoringStatsAnomaly other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Objective != other.Objective) return false;
+          if (!object.Equals(FeatureStatsAnomaly, other.FeatureStatsAnomaly)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Objective != global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly.Types.Objective.Unspecified) hash ^= Objective.GetHashCode();
+          if (featureStatsAnomaly_ != null) hash ^= FeatureStatsAnomaly.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Objective != global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly.Types.Objective.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Objective);
+          }
+          if (featureStatsAnomaly_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(FeatureStatsAnomaly);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Objective != global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly.Types.Objective.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Objective);
+          }
+          if (featureStatsAnomaly_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(FeatureStatsAnomaly);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Objective != global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly.Types.Objective.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Objective);
+          }
+          if (featureStatsAnomaly_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(FeatureStatsAnomaly);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(MonitoringStatsAnomaly other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Objective != global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly.Types.Objective.Unspecified) {
+            Objective = other.Objective;
+          }
+          if (other.featureStatsAnomaly_ != null) {
+            if (featureStatsAnomaly_ == null) {
+              FeatureStatsAnomaly = new global::Google.Cloud.AIPlatform.V1.FeatureStatsAnomaly();
+            }
+            FeatureStatsAnomaly.MergeFrom(other.FeatureStatsAnomaly);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Objective = (global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly.Types.Objective) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                if (featureStatsAnomaly_ == null) {
+                  FeatureStatsAnomaly = new global::Google.Cloud.AIPlatform.V1.FeatureStatsAnomaly();
+                }
+                input.ReadMessage(FeatureStatsAnomaly);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Objective = (global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly.Types.Objective) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                if (featureStatsAnomaly_ == null) {
+                  FeatureStatsAnomaly = new global::Google.Cloud.AIPlatform.V1.FeatureStatsAnomaly();
+                }
+                input.ReadMessage(FeatureStatsAnomaly);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the MonitoringStatsAnomaly message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// If the objective in the request is both
+          /// Import Feature Analysis and Snapshot Analysis, this objective could be
+          /// one of them. Otherwise, this objective should be the same as the
+          /// objective in the request.
+          /// </summary>
+          public enum Objective {
+            /// <summary>
+            /// If it's OBJECTIVE_UNSPECIFIED, monitoring_stats will be empty.
+            /// </summary>
+            [pbr::OriginalName("OBJECTIVE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Stats are generated by Import Feature Analysis.
+            /// </summary>
+            [pbr::OriginalName("IMPORT_FEATURE_ANALYSIS")] ImportFeatureAnalysis = 1,
+            /// <summary>
+            /// Stats are generated by Snapshot Analysis.
+            /// </summary>
+            [pbr::OriginalName("SNAPSHOT_ANALYSIS")] SnapshotAnalysis = 2,
+          }
+
+        }
+        #endregion
+
       }
 
     }

@@ -27,26 +27,29 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Cixnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9lbnRpdHlfdHlwZS5wcm90",
             "bxIaZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaH2dvb2dsZS9hcGkvZmll",
             "bGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8a",
-            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ivQMKCkVudGl0eVR5",
-            "cGUSEQoEbmFtZRgBIAEoCUID4EEFEhgKC2Rlc2NyaXB0aW9uGAIgASgJQgPg",
-            "QQESNAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQMSRwoGbGFiZWxzGAYgAygLMjIuZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjEuRW50aXR5VHlwZS5MYWJlbHNFbnRyeUID",
-            "4EEBEhEKBGV0YWcYByABKAlCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkY",
-            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOooB6kGGAQokYWlwbGF0Zm9ybS5n",
-            "b29nbGVhcGlzLmNvbS9FbnRpdHlUeXBlEl5wcm9qZWN0cy97cHJvamVjdH0v",
-            "bG9jYXRpb25zL3tsb2NhdGlvbn0vZmVhdHVyZXN0b3Jlcy97ZmVhdHVyZXN0",
-            "b3JlfS9lbnRpdHlUeXBlcy97ZW50aXR5X3R5cGV9QtMBCh5jb20uZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjFCD0VudGl0eVR5cGVQcm90b1ABWkRnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2FpcGxh",
-            "dGZvcm0vdjE7YWlwbGF0Zm9ybaoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3Jt",
-            "LlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNs",
-            "b3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "OGdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL2ZlYXR1cmVzdG9yZV9tb25p",
+            "dG9yaW5nLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
+            "IpcECgpFbnRpdHlUeXBlEhEKBG5hbWUYASABKAlCA+BBBRIYCgtkZXNjcmlw",
+            "dGlvbhgCIAEoCUID4EEBEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAQgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkcKBmxhYmVscxgG",
+            "IAMoCzIyLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkVudGl0eVR5cGUu",
+            "TGFiZWxzRW50cnlCA+BBARIRCgRldGFnGAcgASgJQgPgQQESWAoRbW9uaXRv",
+            "cmluZ19jb25maWcYCCABKAsyOC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5GZWF0dXJlc3RvcmVNb25pdG9yaW5nQ29uZmlnQgPgQQEaLQoLTGFiZWxz",
+            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqKAepBhgEK",
+            "JGFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRW50aXR5VHlwZRJecHJvamVj",
+            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2ZlYXR1cmVzdG9y",
+            "ZXMve2ZlYXR1cmVzdG9yZX0vZW50aXR5VHlwZXMve2VudGl0eV90eXBlfULT",
+            "AQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQg9FbnRpdHlUeXBl",
+            "UHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
+            "cy9jbG91ZC9haXBsYXRmb3JtL3YxO2FpcGxhdGZvcm2qAhpHb29nbGUuQ2xv",
+            "dWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx",
+            "6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.FeaturestoreMonitoringReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.EntityType), global::Google.Cloud.AIPlatform.V1.EntityType.Parser, new[]{ "Name", "Description", "CreateTime", "UpdateTime", "Labels", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.EntityType), global::Google.Cloud.AIPlatform.V1.EntityType.Parser, new[]{ "Name", "Description", "CreateTime", "UpdateTime", "Labels", "Etag", "MonitoringConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -98,6 +101,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       labels_ = other.labels_.Clone();
       etag_ = other.etag_;
+      monitoringConfig_ = other.monitoringConfig_ != null ? other.monitoringConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -214,6 +218,29 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "monitoring_config" field.</summary>
+    public const int MonitoringConfigFieldNumber = 8;
+    private global::Google.Cloud.AIPlatform.V1.FeaturestoreMonitoringConfig monitoringConfig_;
+    /// <summary>
+    /// Optional. The default monitoring configuration for all Features with value
+    /// type
+    /// ([Feature.ValueType][google.cloud.aiplatform.v1.Feature.ValueType]) BOOL,
+    /// STRING, DOUBLE or INT64 under this EntityType.
+    ///
+    /// If this is populated with
+    /// [FeaturestoreMonitoringConfig.monitoring_interval] specified, snapshot
+    /// analysis monitoring is enabled. Otherwise, snapshot analysis monitoring is
+    /// disabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.FeaturestoreMonitoringConfig MonitoringConfig {
+      get { return monitoringConfig_; }
+      set {
+        monitoringConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -235,6 +262,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (Etag != other.Etag) return false;
+      if (!object.Equals(MonitoringConfig, other.MonitoringConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -248,6 +276,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (monitoringConfig_ != null) hash ^= MonitoringConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -287,6 +316,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(58);
         output.WriteString(Etag);
       }
+      if (monitoringConfig_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(MonitoringConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -318,6 +351,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(58);
         output.WriteString(Etag);
       }
+      if (monitoringConfig_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(MonitoringConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -343,6 +380,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       size += labels_.CalculateSize(_map_labels_codec);
       if (Etag.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (monitoringConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MonitoringConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -377,6 +417,12 @@ namespace Google.Cloud.AIPlatform.V1 {
       labels_.Add(other.labels_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
+      }
+      if (other.monitoringConfig_ != null) {
+        if (monitoringConfig_ == null) {
+          MonitoringConfig = new global::Google.Cloud.AIPlatform.V1.FeaturestoreMonitoringConfig();
+        }
+        MonitoringConfig.MergeFrom(other.MonitoringConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -423,6 +469,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             Etag = input.ReadString();
             break;
           }
+          case 66: {
+            if (monitoringConfig_ == null) {
+              MonitoringConfig = new global::Google.Cloud.AIPlatform.V1.FeaturestoreMonitoringConfig();
+            }
+            input.ReadMessage(MonitoringConfig);
+            break;
+          }
         }
       }
     #endif
@@ -466,6 +519,13 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 58: {
             Etag = input.ReadString();
+            break;
+          }
+          case 66: {
+            if (monitoringConfig_ == null) {
+              MonitoringConfig = new global::Google.Cloud.AIPlatform.V1.FeaturestoreMonitoringConfig();
+            }
+            input.ReadMessage(MonitoringConfig);
             break;
           }
         }
