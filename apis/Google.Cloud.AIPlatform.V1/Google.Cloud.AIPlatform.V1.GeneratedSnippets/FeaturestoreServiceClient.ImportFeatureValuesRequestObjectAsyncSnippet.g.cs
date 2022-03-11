@@ -45,6 +45,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
                 },
                 DisableOnlineServing = false,
                 WorkerCount = 0,
+                DisableIngestionAnalysis = false,
             };
             // Make the request
             Operation<ImportFeatureValuesResponse, ImportFeatureValuesOperationMetadata> response = await featurestoreServiceClient.ImportFeatureValuesAsync(request);
