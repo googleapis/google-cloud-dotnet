@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Requests;
 using Google.Apis.Storage.v1;
 using Google.Apis.Storage.v1.Data;
 using System;
@@ -71,6 +72,100 @@ namespace Google.Cloud.Storage.V1.Tests
             var client = new StorageClientImpl(service, clientkey);
             var exception = Assert.Throws<ArgumentException>(() => client.GetEffectiveEncryptionKey(operationKey, kmsKey));
             Assert.Contains(expectedMessageSubstring, exception.Message);
+        }
+
+        // Tests:
+        // - No retry applied
+        // - Retry then success (sometimes with conditions)
+        // - Retry with eventual failure?
+
+        [Fact]
+        public void GetBucket_NoRetry() =>
+            NoRetryHelper(service => service.Buckets.Get("bucket"), client => client.GetBucket("bucket"));
+
+        [Fact]
+        public void GetBucket_NoRetry_ForInternalServerError() =>
+            NoRetryHelper(service => service.Buckets.Get("bucket"), client => client.GetBucket("bucket"), HttpStatusCode.InternalServerError);
+
+        [Fact]
+        public void GetObject_NoRetry() =>
+            NoRetryHelper(service => service.Objects.Get("bucket", "object"), client => client.GetObject("bucket", "object"));
+
+        private static void NoRetryHelper<T>(
+            Func<StorageService, ClientServiceRequest<T>> requestProvider,
+            Action<StorageClient> clientAction,
+            HttpStatusCode statusCode = HttpStatusCode.NotFound)
+        {
+            var service = new FakeStorageService();
+            var client = new StorageClientImpl(service);
+
+            service.ExpectRequest(requestProvider(service), statusCode);
+            Assert.Throws<GoogleApiException>(() => clientAction(client));
+            service.Verify();
+        }
+
+        [Fact]
+        public void GetBucket_RetryOnce() =>
+            RetryOnceHelper(service => service.Buckets.Get("bucket"), client => client.GetBucket("bucket"));
+
+        [Fact]
+        public void GetObject_RetryOnce() =>
+            RetryOnceHelper(service => service.Buckets.Get("bucket"), client => client.GetBucket("bucket"));
+
+        [Fact]
+        public void GetObject_RetryThenFail() =>
+            RetryThenFailHelper(service => service.Buckets.Get("bucket"), client => client.GetBucket("bucket"));
+
+        [Fact]
+        public void GetHmacKey() =>
+            RetryOnceHelper(service => service.Projects.HmacKeys.Get("project", "access"), client => client.GetHmacKey("project", "access"));
+
+        [Fact]
+        public void UpdateObject_WithMetageneration_RetryOnce() =>
+            RetryOnceHelper(
+                service => new ObjectsResource.UpdateRequest(service, new Object { Bucket = "bucket", Name = "object" }, "bucket", "object") { IfMetagenerationMatch = 70 },
+                client => client.UpdateObject(new Object { Bucket = "bucket", Name = "object" }, new UpdateObjectOptions { IfMetagenerationMatch = 70 }));
+
+        [Fact]
+        public void UpdateObject_WithoutMetageneration_NoRetry() =>
+            NoRetryHelper(
+                service => new ObjectsResource.UpdateRequest(service, new Object { Bucket = "bucket", Name = "object" }, "bucket", "object"),
+                client => client.UpdateObject(new Object { Bucket = "bucket", Name = "object" }, new UpdateObjectOptions()));
+
+        [Fact]
+        public void UpdateObject_WithoutOptions_NoRetry() =>
+            NoRetryHelper(
+                service => new ObjectsResource.UpdateRequest(service, new Object { Bucket = "bucket", Name = "object" }, "bucket", "object"),
+                client => client.UpdateObject(new Object { Bucket = "bucket", Name = "object" }));
+
+        private static void RetryOnceHelper<T>(Func<StorageService, ClientServiceRequest<T>> requestProvider, Action<StorageClient> clientAction,
+            HttpStatusCode firstStatusCode = HttpStatusCode.BadGateway)
+            where T : new()
+        {
+            var service = new FakeStorageService();
+            var client = new StorageClientImpl(service);
+            var request = requestProvider(service);
+
+            service.ExpectRequest(request, firstStatusCode);
+            service.ExpectRequest(request, new T());
+            clientAction(client);
+            service.Verify();
+        }
+
+        private static void RetryThenFailHelper<T>(Func<StorageService, ClientServiceRequest<T>> requestProvider, Action<StorageClient> clientAction,
+            HttpStatusCode errorCode = HttpStatusCode.BadGateway)
+            where T : new()
+        {
+            var service = new FakeStorageService();
+            var client = new StorageClientImpl(service);
+            var request = requestProvider(service);
+
+            // TODO: put this in a loop and parameterize the expected number?
+            service.ExpectRequest(request, errorCode);
+            service.ExpectRequest(request, errorCode);
+            service.ExpectRequest(request, errorCode);
+            Assert.Throws<GoogleApiException>(() => clientAction(client));
+            service.Verify();
         }
 
         [Fact]
