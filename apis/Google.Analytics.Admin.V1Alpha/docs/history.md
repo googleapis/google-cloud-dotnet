@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-alpha11, released 2022-03-14
+
+### New features
+
+- **BREAKING CHANGE** Remove `WebDataStream`, `IosAppDataStream`, `AndroidAppDataStream` resources, and corresponding operations, as they are replaced by the `DataStream` resource ([commit 9f989fd](https://github.com/googleapis/google-cloud-dotnet/commit/9f989fd74cd939ea7b6e08cb95f3aa8d567464ce))
+- Add `restricted_metric_type` field to the `CustomMetric` resource ([commit 9f989fd](https://github.com/googleapis/google-cloud-dotnet/commit/9f989fd74cd939ea7b6e08cb95f3aa8d567464ce))
+- **BREAKING CHANGE** Move the `GlobalSiteTag` resource from the property level to the data stream level ([commit 9f989fd](https://github.com/googleapis/google-cloud-dotnet/commit/9f989fd74cd939ea7b6e08cb95f3aa8d567464ce))
 ## Version 1.0.0-alpha10, released 2022-01-17
 
 ### Bug fixes
