@@ -1,5 +1,21 @@
 # Version history
 
+## Version 3.11.0, released 2022-03-14
+
+### New features
+
+- Added ConversationModel resource and its APIs ([commit 300879d](https://github.com/googleapis/google-cloud-dotnet/commit/300879d8386f30331c7f2e5a3c04b3cb78043aaa))
+- Added ConversationDataset resource and its APIs ([commit 300879d](https://github.com/googleapis/google-cloud-dotnet/commit/300879d8386f30331c7f2e5a3c04b3cb78043aaa))
+- Added SetSuggestionFeatureConfig and ClearSuggestionFeatureConfig APIs for ConversationProfile ([commit 300879d](https://github.com/googleapis/google-cloud-dotnet/commit/300879d8386f30331c7f2e5a3c04b3cb78043aaa))
+- Added new knowledge type of Document content ([commit 300879d](https://github.com/googleapis/google-cloud-dotnet/commit/300879d8386f30331c7f2e5a3c04b3cb78043aaa))
+- Added states of Document ([commit 300879d](https://github.com/googleapis/google-cloud-dotnet/commit/300879d8386f30331c7f2e5a3c04b3cb78043aaa))
+- Added metadata for the Knowledge operation ([commit 300879d](https://github.com/googleapis/google-cloud-dotnet/commit/300879d8386f30331c7f2e5a3c04b3cb78043aaa))
+
+### Documentation improvements
+
+- Clarified the behavior of language_code in EventInput in the context of a followup event input ([commit 3449846](https://github.com/googleapis/google-cloud-dotnet/commit/3449846a23e7806e98db432bfcb00f52eee8b838))
+- Clarified wording around Cloud Storage usage ([commit 3449846](https://github.com/googleapis/google-cloud-dotnet/commit/3449846a23e7806e98db432bfcb00f52eee8b838))
+- Added a new resource name pattern for ConversationModel ([commit 3449846](https://github.com/googleapis/google-cloud-dotnet/commit/3449846a23e7806e98db432bfcb00f52eee8b838))
 ## Version 3.10.0, released 2022-02-07
 
 ### New features
