@@ -1,5 +1,14 @@
 # Version history
 
+## Version 1.10.0, released 2022-03-14
+
+### New features
+
+- Added page in TestConfig ([commit 6f8eedf](https://github.com/googleapis/google-cloud-dotnet/commit/6f8eedfe6d4e0433331bef4480db18a50d0292ce))
+
+### Documentation improvements
+
+- Clarified wording around Cloud Storage usage ([commit 6f8eedf](https://github.com/googleapis/google-cloud-dotnet/commit/6f8eedfe6d4e0433331bef4480db18a50d0292ce))
 ## Version 1.9.0, released 2022-01-17
 
 ### New features
