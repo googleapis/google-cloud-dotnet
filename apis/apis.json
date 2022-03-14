@@ -922,7 +922,7 @@
     },
     {
       "id": "Google.Cloud.Datastream.V1",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "DataStream",
       "productUrl": "https://cloud.google.com/datastream/docs",
@@ -932,8 +932,10 @@
         "synchronization"
       ],
       "dependencies": {
+        "Google.Api.Gax.Grpc.GrpcCore": "3.7.0",
         "Google.Cloud.Location": "1.0.0",
-        "Google.LongRunning": "2.3.0"
+        "Google.LongRunning": "2.3.0",
+        "Grpc.Core": "2.41.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/datastream/v1",
