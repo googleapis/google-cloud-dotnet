@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.5.0, released 2022-03-14
+
+### New features
+
+- Add Cloud_Resource Connection Support ([commit 0cf7fea](https://github.com/googleapis/google-cloud-dotnet/commit/0cf7feafbf919d447fee0b42441f0985ba86c652))
+
 ## Version 1.4.0, released 2021-08-19
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
