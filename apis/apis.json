@@ -2720,7 +2720,7 @@
     },
     {
       "id": "Google.Cloud.Security.PrivateCA.V1",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "type": "grpc",
       "productName": "Certificate Authority",
       "productUrl": "https://cloud.google.com/certificate-authority-service/",
