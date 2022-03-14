@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.12.0, released 2022-03-14
+
+### New features
+
+- Add BigQuery export APIs that help you enable writing new/updated findings from  Security Command Center to a BigQuery table in near-real time. You can then integrate the data into existing workflows and create custom analyses. You can enable this feature at the organization, folder, and project levels to export findings based on your requirements ([commit 4a00750](https://github.com/googleapis/google-cloud-dotnet/commit/4a0075066682f949bf00a3f72a299cbe8a6f8cce))
+
+### Documentation improvements
+
+- Update documentation for the Finding resource field "project_display_name" ([commit 09ff129](https://github.com/googleapis/google-cloud-dotnet/commit/09ff12926fd330d48048fbdaa58a08a3099f8da3))
+- Update documentation for the Mute fields on Findings ([commit 09ff129](https://github.com/googleapis/google-cloud-dotnet/commit/09ff12926fd330d48048fbdaa58a08a3099f8da3))
+
 ## Version 2.11.0, released 2022-02-07
 
 ### New features
