@@ -1,5 +1,26 @@
 # Version history
 
+## Version 1.5.0, released 2022-03-14
+
+### New features
+
+- Add monitoring_config to EntityType in aiplatform v1 entity_type.proto ([commit fdea2d1](https://github.com/googleapis/google-cloud-dotnet/commit/fdea2d1b2692d30184321a360088e982c5b49453))
+- Add disable_monitoring to Feature in aiplatform v1 feature.proto ([commit fdea2d1](https://github.com/googleapis/google-cloud-dotnet/commit/fdea2d1b2692d30184321a360088e982c5b49453))
+- Add monitoring_stats_anomalies to Feature in aiplatform v1 feature.proto ([commit fdea2d1](https://github.com/googleapis/google-cloud-dotnet/commit/fdea2d1b2692d30184321a360088e982c5b49453))
+- Add staleness_days to SnapshotAnalysis in aiplatform v1 featurestore_monitoring.proto ([commit fdea2d1](https://github.com/googleapis/google-cloud-dotnet/commit/fdea2d1b2692d30184321a360088e982c5b49453))
+- Add import_features_analysis to FeaturestoreMonitoringConfig in aiplatform v1 featurestore_monitoring.proto ([commit fdea2d1](https://github.com/googleapis/google-cloud-dotnet/commit/fdea2d1b2692d30184321a360088e982c5b49453))
+- Add numerical_threshold_config to FeaturestoreMonitoringConfig in aiplatform v1 featurestore_monitoring.proto ([commit fdea2d1](https://github.com/googleapis/google-cloud-dotnet/commit/fdea2d1b2692d30184321a360088e982c5b49453))
+- Add categorical_threshold_config to FeaturestoreMonitoringConfig in aiplatform v1 featurestore_monitoring.proto ([commit fdea2d1](https://github.com/googleapis/google-cloud-dotnet/commit/fdea2d1b2692d30184321a360088e982c5b49453))
+- Add objective to MonitoringStatsSpec in aiplatform v1 featurestore_service.proto ([commit fdea2d1](https://github.com/googleapis/google-cloud-dotnet/commit/fdea2d1b2692d30184321a360088e982c5b49453))
+- Add disable_monitoring to Feature in aiplatform v1beta1 feature.proto ([commit fdea2d1](https://github.com/googleapis/google-cloud-dotnet/commit/fdea2d1b2692d30184321a360088e982c5b49453))
+- Add monitoring_stats_anomalies to Feature in aiplatform v1beta1 feature.proto ([commit fdea2d1](https://github.com/googleapis/google-cloud-dotnet/commit/fdea2d1b2692d30184321a360088e982c5b49453))
+- Add staleness_days to SnapshotAnalysis in aiplatform v1beta1 featurestore_monitoring.proto ([commit fdea2d1](https://github.com/googleapis/google-cloud-dotnet/commit/fdea2d1b2692d30184321a360088e982c5b49453))
+- Add import_features_analysis to FeaturestoreMonitoringConfig in aiplatform v1beta1 featurestore_monitoring.proto ([commit fdea2d1](https://github.com/googleapis/google-cloud-dotnet/commit/fdea2d1b2692d30184321a360088e982c5b49453))
+- Add numerical_threshold_config to FeaturestoreMonitoringConfig in aiplatform v1beta1 featurestore_monitoring.proto ([commit fdea2d1](https://github.com/googleapis/google-cloud-dotnet/commit/fdea2d1b2692d30184321a360088e982c5b49453))
+- Add categorical_threshold_config to FeaturestoreMonitoringConfig in aiplatform v1beta1 featurestore_monitoring.proto ([commit fdea2d1](https://github.com/googleapis/google-cloud-dotnet/commit/fdea2d1b2692d30184321a360088e982c5b49453))
+- Add objective to MonitoringStatsSpec in aiplatform v1beta1 featurestore_service.proto ([commit fdea2d1](https://github.com/googleapis/google-cloud-dotnet/commit/fdea2d1b2692d30184321a360088e982c5b49453))
+- Add PredictRequestResponseLoggingConfig to Endpoint in aiplatform v1 endpoint.proto ([commit a3d6d2b](https://github.com/googleapis/google-cloud-dotnet/commit/a3d6d2b7af22f4a19e78435512861b6dab0b1a7d))
+
 ## Version 1.4.0, released 2022-02-28
 
 ### New features
