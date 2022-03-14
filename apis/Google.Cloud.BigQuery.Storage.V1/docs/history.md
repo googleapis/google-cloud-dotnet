@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.8.0, released 2022-03-14
+
+### New features
+
+- Update default timeout/retry information ([commit e64637d](https://github.com/googleapis/google-cloud-dotnet/commit/e64637d6ed0544c3fe2981560a8ea8c8a5532364))
+- Update parent annotation for BatchCommitWriteStreamsRequest ([commit e64637d](https://github.com/googleapis/google-cloud-dotnet/commit/e64637d6ed0544c3fe2981560a8ea8c8a5532364))
+- Expose additional StorageError enum values ([commit e64637d](https://github.com/googleapis/google-cloud-dotnet/commit/e64637d6ed0544c3fe2981560a8ea8c8a5532364))
+
+### Documentation improvements
+
+- Improve documentation for write client ([commit e64637d](https://github.com/googleapis/google-cloud-dotnet/commit/e64637d6ed0544c3fe2981560a8ea8c8a5532364))
+
 ## Version 2.7.0, released 2022-02-22
 
 ### New features
