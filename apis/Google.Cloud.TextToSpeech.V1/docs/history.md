@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.5.0, released 2022-03-14
+
+### New features
+
+- Promote CustomVoiceParams to v1 ([commit ba7f867](https://github.com/googleapis/google-cloud-dotnet/commit/ba7f867b223b52cbbf0d742fd603e3f99cc52c99))
+
+### Documentation improvements
+
+- Update comments for ListVoicesRequest ([commit 479ddef](https://github.com/googleapis/google-cloud-dotnet/commit/479ddef27f04eb184c2c2cdb621fe5caf6a4118b))
+
 ## Version 2.4.0, released 2021-11-18
 
 - [Commit fc5df69](https://github.com/googleapis/google-cloud-dotnet/commit/fc5df69):
