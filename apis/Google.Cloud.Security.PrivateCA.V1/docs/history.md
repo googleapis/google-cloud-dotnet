@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.3.0, released 2022-03-14
+
+### New features
+
+- Add `skip_grace_period` flag to DeleteCertificateAuthority API ([commit d0de3d1](https://github.com/googleapis/google-cloud-dotnet/commit/d0de3d167a94360d35b5a01185749ba735c1cf26))
+
 ## Version 2.2.0, released 2022-02-22
 
 ### New features
