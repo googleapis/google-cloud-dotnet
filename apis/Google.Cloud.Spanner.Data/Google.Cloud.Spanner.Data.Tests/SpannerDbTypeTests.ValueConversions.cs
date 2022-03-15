@@ -20,6 +20,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Numerics;
 using System.Threading;
 using Xunit;
 
@@ -55,13 +56,14 @@ namespace Google.Cloud.Spanner.Data.Tests
             { "DateField", SpannerDbType.Date, new DateTime(2017, 1, 31) },
             { "TimestampField", SpannerDbType.Timestamp, new DateTime(2017, 1, 31, 3, 15, 30) },
             { "NumericField", SpannerDbType.Numeric, SpannerNumeric.MaxValue },
+            { "PgNumericField", SpannerDbType.PgNumeric, PgNumeric.NaN },
             { "JsonField", SpannerDbType.Json, "{\"field\": \"value\"}" }
         };
 
         // Structs are serialized as lists of their values. The field names aren't present, as they're
         // specified in the type.
         private static readonly string s_sampleStructSerialized =
-            "[ \"stringValue\", \"2\", \"NaN\", true, \"2017-01-31\", \"2017-01-31T03:15:30Z\", \"99999999999999999999999999999.999999999\", \"{\\\"field\\\": \\\"value\\\"}\" ]";
+            "[ \"stringValue\", \"2\", \"NaN\", true, \"2017-01-31\", \"2017-01-31T03:15:30Z\", \"99999999999999999999999999999.999999999\", \"NaN\", \"{\\\"field\\\": \\\"value\\\"}\" ]";
 
         private static string Quote(string s) => $"\"{s}\"";
 
@@ -113,6 +115,19 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return SpannerNumeric.Epsilon;
             yield return SpannerNumeric.MaxValue;
         }
+
+        private static IEnumerable<PgNumeric> GetPgNumericsForArray()
+        {
+            yield return PgNumeric.MinValue;
+            yield return PgNumeric.MaxValue;
+            yield return PgNumeric.NaN;
+        }
+
+        private static readonly BigInteger MaxValueForPgNumeric = BigInteger.Pow(10, 147455) - 1; 
+
+        private static readonly string ExpectedMaxValueForPgNumeric = MaxValueForPgNumeric.ToString();
+
+        private static readonly string ExpectedMinValueForPgNumeric = (-MaxValueForPgNumeric).ToString();        
 
         private static IEnumerable<string> GetJsonStringsForArray()
         {
@@ -255,6 +270,25 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] {"1", SpannerDbType.Numeric, "\"1\""};
             yield return new object[] {"1.5", SpannerDbType.Numeric, "\"1.5\""};
             yield return new object[] {DBNull.Value, SpannerDbType.Numeric, "null"};
+            // PgNumeric tests.
+            yield return new object[] { PgNumeric.NaN, SpannerDbType.PgNumeric, "\"NaN\"" };
+            yield return new object[] { (byte)1, SpannerDbType.PgNumeric, "\"1\"" };
+            yield return new object[] { (sbyte)1, SpannerDbType.PgNumeric, "\"1\"" };
+            yield return new object[] { 1.0M, SpannerDbType.PgNumeric, "\"1.0\"" };
+            yield return new object[] { 1.0D, SpannerDbType.PgNumeric, "\"1\"" };
+            yield return new object[] { 1.0F, SpannerDbType.PgNumeric, "\"1\"" };
+            yield return new object[] { 1.5M, SpannerDbType.PgNumeric, "\"1.5\"" };
+            yield return new object[] { 1.5D, SpannerDbType.PgNumeric, "\"1.5\"" };
+            yield return new object[] { 1.5F, SpannerDbType.PgNumeric, "\"1.5\"" };
+            yield return new object[] { 1, SpannerDbType.PgNumeric, "\"1\"" };
+            yield return new object[] { 1U, SpannerDbType.PgNumeric, "\"1\"" };
+            yield return new object[] { 1L, SpannerDbType.PgNumeric, "\"1\"" };
+            yield return new object[] { (ulong)1, SpannerDbType.PgNumeric, "\"1\"" };
+            yield return new object[] { (short)1, SpannerDbType.PgNumeric, "\"1\"" };
+            yield return new object[] { (ushort)1, SpannerDbType.PgNumeric, "\"1\"" };
+            yield return new object[] { "1", SpannerDbType.PgNumeric, "\"1\"" };
+            yield return new object[] { "1.5", SpannerDbType.PgNumeric, "\"1.5\"" };
+            yield return new object[] { DBNull.Value, SpannerDbType.PgNumeric, "null" };
 
             // Note the difference in C# conversions from special doubles.
             yield return new object[] {double.NegativeInfinity, SpannerDbType.String, Quote("-Infinity") };
@@ -320,6 +354,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 new List<SpannerNumeric>(GetSpannerNumericsForArray()), SpannerDbType.ArrayOf(SpannerDbType.Numeric),
                 "[ \"-99999999999999999999999999999.999999999\", \"0.000000001\", \"99999999999999999999999999999.999999999\" ]"
+            };
+            yield return new object[]
+            {
+                new List<PgNumeric>(GetPgNumericsForArray()), SpannerDbType.ArrayOf(SpannerDbType.PgNumeric),
+                "[ \""+ExpectedMinValueForPgNumeric+"\", \""+ExpectedMaxValueForPgNumeric+"\", \"NaN\" ]"
             };
             // JSON can not be converted from Value to Clr, as there is no unique Clr type for JSON.
             yield return new object[]
@@ -431,6 +470,12 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] {double.NegativeInfinity, SpannerDbType.Numeric};
             yield return new object[] {double.PositiveInfinity, SpannerDbType.Numeric};
             yield return new object[] {double.NaN, SpannerDbType.Numeric};
+
+            // Spanner type = PgNumeric tests.
+            yield return new object[] { true, SpannerDbType.PgNumeric };
+            yield return new object[] { double.NegativeInfinity, SpannerDbType.PgNumeric };
+            yield return new object[] { double.PositiveInfinity, SpannerDbType.PgNumeric };
+            yield return new object[] { double.NaN, SpannerDbType.PgNumeric };
         }
 
         private static readonly CultureInfo[] s_cultures = new[]
