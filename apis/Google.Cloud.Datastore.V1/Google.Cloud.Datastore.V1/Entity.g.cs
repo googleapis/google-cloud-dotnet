@@ -25,38 +25,37 @@ namespace Google.Cloud.Datastore.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBnb29nbGUvZGF0YXN0b3JlL3YxL2VudGl0eS5wcm90bxITZ29vZ2xlLmRh",
-            "dGFzdG9yZS52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxocZ29v",
-            "Z2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3Rp",
-            "bWVzdGFtcC5wcm90bxoYZ29vZ2xlL3R5cGUvbGF0bG5nLnByb3RvIjcKC1Bh",
-            "cnRpdGlvbklkEhIKCnByb2plY3RfaWQYAiABKAkSFAoMbmFtZXNwYWNlX2lk",
-            "GAQgASgJIrcBCgNLZXkSNgoMcGFydGl0aW9uX2lkGAEgASgLMiAuZ29vZ2xl",
-            "LmRhdGFzdG9yZS52MS5QYXJ0aXRpb25JZBIyCgRwYXRoGAIgAygLMiQuZ29v",
-            "Z2xlLmRhdGFzdG9yZS52MS5LZXkuUGF0aEVsZW1lbnQaRAoLUGF0aEVsZW1l",
-            "bnQSDAoEa2luZBgBIAEoCRIMCgJpZBgCIAEoA0gAEg4KBG5hbWUYAyABKAlI",
-            "AEIJCgdpZF90eXBlIjgKCkFycmF5VmFsdWUSKgoGdmFsdWVzGAEgAygLMhou",
-            "Z29vZ2xlLmRhdGFzdG9yZS52MS5WYWx1ZSLxAwoFVmFsdWUSMAoKbnVsbF92",
-            "YWx1ZRgLIAEoDjIaLmdvb2dsZS5wcm90b2J1Zi5OdWxsVmFsdWVIABIXCg1i",
-            "b29sZWFuX3ZhbHVlGAEgASgISAASFwoNaW50ZWdlcl92YWx1ZRgCIAEoA0gA",
-            "EhYKDGRvdWJsZV92YWx1ZRgDIAEoAUgAEjUKD3RpbWVzdGFtcF92YWx1ZRgK",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIABItCglrZXlfdmFs",
-            "dWUYBSABKAsyGC5nb29nbGUuZGF0YXN0b3JlLnYxLktleUgAEhYKDHN0cmlu",
-            "Z192YWx1ZRgRIAEoCUgAEhQKCmJsb2JfdmFsdWUYEiABKAxIABIuCg9nZW9f",
-            "cG9pbnRfdmFsdWUYCCABKAsyEy5nb29nbGUudHlwZS5MYXRMbmdIABIzCgxl",
-            "bnRpdHlfdmFsdWUYBiABKAsyGy5nb29nbGUuZGF0YXN0b3JlLnYxLkVudGl0",
-            "eUgAEjYKC2FycmF5X3ZhbHVlGAkgASgLMh8uZ29vZ2xlLmRhdGFzdG9yZS52",
-            "MS5BcnJheVZhbHVlSAASDwoHbWVhbmluZxgOIAEoBRIcChRleGNsdWRlX2Zy",
-            "b21faW5kZXhlcxgTIAEoCEIMCgp2YWx1ZV90eXBlIr8BCgZFbnRpdHkSJQoD",
-            "a2V5GAEgASgLMhguZ29vZ2xlLmRhdGFzdG9yZS52MS5LZXkSPwoKcHJvcGVy",
-            "dGllcxgDIAMoCzIrLmdvb2dsZS5kYXRhc3RvcmUudjEuRW50aXR5LlByb3Bl",
-            "cnRpZXNFbnRyeRpNCg9Qcm9wZXJ0aWVzRW50cnkSCwoDa2V5GAEgASgJEikK",
-            "BXZhbHVlGAIgASgLMhouZ29vZ2xlLmRhdGFzdG9yZS52MS5WYWx1ZToCOAFC",
-            "vQEKF2NvbS5nb29nbGUuZGF0YXN0b3JlLnYxQgtFbnRpdHlQcm90b1ABWjxn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2RhdGFzdG9y",
-            "ZS92MTtkYXRhc3RvcmWqAhlHb29nbGUuQ2xvdWQuRGF0YXN0b3JlLlYxygIZ",
-            "R29vZ2xlXENsb3VkXERhdGFzdG9yZVxWMeoCHEdvb2dsZTo6Q2xvdWQ6OkRh",
-            "dGFzdG9yZTo6VjFiBnByb3RvMw=="));
+            "dGFzdG9yZS52MRocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29v",
+            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoYZ29vZ2xlL3R5cGUvbGF0",
+            "bG5nLnByb3RvIjcKC1BhcnRpdGlvbklkEhIKCnByb2plY3RfaWQYAiABKAkS",
+            "FAoMbmFtZXNwYWNlX2lkGAQgASgJIrcBCgNLZXkSNgoMcGFydGl0aW9uX2lk",
+            "GAEgASgLMiAuZ29vZ2xlLmRhdGFzdG9yZS52MS5QYXJ0aXRpb25JZBIyCgRw",
+            "YXRoGAIgAygLMiQuZ29vZ2xlLmRhdGFzdG9yZS52MS5LZXkuUGF0aEVsZW1l",
+            "bnQaRAoLUGF0aEVsZW1lbnQSDAoEa2luZBgBIAEoCRIMCgJpZBgCIAEoA0gA",
+            "Eg4KBG5hbWUYAyABKAlIAEIJCgdpZF90eXBlIjgKCkFycmF5VmFsdWUSKgoG",
+            "dmFsdWVzGAEgAygLMhouZ29vZ2xlLmRhdGFzdG9yZS52MS5WYWx1ZSLxAwoF",
+            "VmFsdWUSMAoKbnVsbF92YWx1ZRgLIAEoDjIaLmdvb2dsZS5wcm90b2J1Zi5O",
+            "dWxsVmFsdWVIABIXCg1ib29sZWFuX3ZhbHVlGAEgASgISAASFwoNaW50ZWdl",
+            "cl92YWx1ZRgCIAEoA0gAEhYKDGRvdWJsZV92YWx1ZRgDIAEoAUgAEjUKD3Rp",
+            "bWVzdGFtcF92YWx1ZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBIABItCglrZXlfdmFsdWUYBSABKAsyGC5nb29nbGUuZGF0YXN0b3JlLnYx",
+            "LktleUgAEhYKDHN0cmluZ192YWx1ZRgRIAEoCUgAEhQKCmJsb2JfdmFsdWUY",
+            "EiABKAxIABIuCg9nZW9fcG9pbnRfdmFsdWUYCCABKAsyEy5nb29nbGUudHlw",
+            "ZS5MYXRMbmdIABIzCgxlbnRpdHlfdmFsdWUYBiABKAsyGy5nb29nbGUuZGF0",
+            "YXN0b3JlLnYxLkVudGl0eUgAEjYKC2FycmF5X3ZhbHVlGAkgASgLMh8uZ29v",
+            "Z2xlLmRhdGFzdG9yZS52MS5BcnJheVZhbHVlSAASDwoHbWVhbmluZxgOIAEo",
+            "BRIcChRleGNsdWRlX2Zyb21faW5kZXhlcxgTIAEoCEIMCgp2YWx1ZV90eXBl",
+            "Ir8BCgZFbnRpdHkSJQoDa2V5GAEgASgLMhguZ29vZ2xlLmRhdGFzdG9yZS52",
+            "MS5LZXkSPwoKcHJvcGVydGllcxgDIAMoCzIrLmdvb2dsZS5kYXRhc3RvcmUu",
+            "djEuRW50aXR5LlByb3BlcnRpZXNFbnRyeRpNCg9Qcm9wZXJ0aWVzRW50cnkS",
+            "CwoDa2V5GAEgASgJEikKBXZhbHVlGAIgASgLMhouZ29vZ2xlLmRhdGFzdG9y",
+            "ZS52MS5WYWx1ZToCOAFCvQEKF2NvbS5nb29nbGUuZGF0YXN0b3JlLnYxQgtF",
+            "bnRpdHlQcm90b1ABWjxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
+            "bGVhcGlzL2RhdGFzdG9yZS92MTtkYXRhc3RvcmWqAhlHb29nbGUuQ2xvdWQu",
+            "RGF0YXN0b3JlLlYxygIZR29vZ2xlXENsb3VkXERhdGFzdG9yZVxWMeoCHEdv",
+            "b2dsZTo6Q2xvdWQ6OkRhdGFzdG9yZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.PartitionId), global::Google.Cloud.Datastore.V1.PartitionId.Parser, new[]{ "ProjectId", "NamespaceId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Key), global::Google.Cloud.Datastore.V1.Key.Parser, new[]{ "PartitionId", "Path" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Key.Types.PathElement), global::Google.Cloud.Datastore.V1.Key.Types.PathElement.Parser, new[]{ "Kind", "Id", "Name" }, new[]{ "IdType" }, null, null, null)}),
@@ -88,8 +87,7 @@ namespace Google.Cloud.Datastore.V1 {
   ///
   /// Foreign partition IDs (in which the project ID does
   /// not match the context project ID ) are discouraged.
-  /// Reads and writes of foreign partition IDs may fail if the project is not in
-  /// an active state.
+  /// Reads and writes of foreign partition IDs may fail if the project is not in an active state.
   /// </summary>
   public sealed partial class PartitionId : pb::IMessage<PartitionId>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1270,8 +1268,8 @@ namespace Google.Cloud.Datastore.V1 {
     public const int StringValueFieldNumber = 17;
     /// <summary>
     /// A UTF-8 encoded string value.
-    /// When `exclude_from_indexes` is false (it is indexed), may have at most
-    /// 1500 bytes. Otherwise, may be set to at most 1,000,000 bytes.
+    /// When `exclude_from_indexes` is false (it is indexed) , may have at most 1500 bytes.
+    /// Otherwise, may be set to at most 1,000,000 bytes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
