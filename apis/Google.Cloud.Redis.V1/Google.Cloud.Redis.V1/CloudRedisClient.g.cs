@@ -49,6 +49,7 @@ namespace Google.Cloud.Redis.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListInstancesSettings = existing.ListInstancesSettings;
             GetInstanceSettings = existing.GetInstanceSettings;
+            GetInstanceAuthStringSettings = existing.GetInstanceAuthStringSettings;
             CreateInstanceSettings = existing.CreateInstanceSettings;
             CreateInstanceOperationsSettings = existing.CreateInstanceOperationsSettings.Clone();
             UpdateInstanceSettings = existing.UpdateInstanceSettings;
@@ -91,6 +92,18 @@ namespace Google.Cloud.Redis.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudRedisClient.GetInstanceAuthString</c> and <c>CloudRedisClient.GetInstanceAuthStringAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetInstanceAuthStringSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -762,6 +775,141 @@ namespace Google.Cloud.Redis.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Instance> GetInstanceAsync(InstanceName name, st::CancellationToken cancellationToken) =>
             GetInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+        /// instance the response will be empty. This information is not included in
+        /// the details returned to GetInstance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InstanceAuthString GetInstanceAuthString(GetInstanceAuthStringRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+        /// instance the response will be empty. This information is not included in
+        /// the details returned to GetInstance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstanceAuthString> GetInstanceAuthStringAsync(GetInstanceAuthStringRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+        /// instance the response will be empty. This information is not included in
+        /// the details returned to GetInstance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstanceAuthString> GetInstanceAuthStringAsync(GetInstanceAuthStringRequest request, st::CancellationToken cancellationToken) =>
+            GetInstanceAuthStringAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+        /// instance the response will be empty. This information is not included in
+        /// the details returned to GetInstance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InstanceAuthString GetInstanceAuthString(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInstanceAuthString(new GetInstanceAuthStringRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+        /// instance the response will be empty. This information is not included in
+        /// the details returned to GetInstance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstanceAuthString> GetInstanceAuthStringAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInstanceAuthStringAsync(new GetInstanceAuthStringRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+        /// instance the response will be empty. This information is not included in
+        /// the details returned to GetInstance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstanceAuthString> GetInstanceAuthStringAsync(string name, st::CancellationToken cancellationToken) =>
+            GetInstanceAuthStringAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+        /// instance the response will be empty. This information is not included in
+        /// the details returned to GetInstance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InstanceAuthString GetInstanceAuthString(InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInstanceAuthString(new GetInstanceAuthStringRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+        /// instance the response will be empty. This information is not included in
+        /// the details returned to GetInstance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstanceAuthString> GetInstanceAuthStringAsync(InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInstanceAuthStringAsync(new GetInstanceAuthStringRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+        /// instance the response will be empty. This information is not included in
+        /// the details returned to GetInstance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstanceAuthString> GetInstanceAuthStringAsync(InstanceName name, st::CancellationToken cancellationToken) =>
+            GetInstanceAuthStringAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a Redis instance based on the specified tier and memory size.
@@ -2066,6 +2214,8 @@ namespace Google.Cloud.Redis.V1
 
         private readonly gaxgrpc::ApiCall<GetInstanceRequest, Instance> _callGetInstance;
 
+        private readonly gaxgrpc::ApiCall<GetInstanceAuthStringRequest, InstanceAuthString> _callGetInstanceAuthString;
+
         private readonly gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> _callCreateInstance;
 
         private readonly gaxgrpc::ApiCall<UpdateInstanceRequest, lro::Operation> _callUpdateInstance;
@@ -2103,6 +2253,9 @@ namespace Google.Cloud.Redis.V1
             _callGetInstance = clientHelper.BuildApiCall<GetInstanceRequest, Instance>(grpcClient.GetInstanceAsync, grpcClient.GetInstance, effectiveSettings.GetInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetInstance);
             Modify_GetInstanceApiCall(ref _callGetInstance);
+            _callGetInstanceAuthString = clientHelper.BuildApiCall<GetInstanceAuthStringRequest, InstanceAuthString>(grpcClient.GetInstanceAuthStringAsync, grpcClient.GetInstanceAuthString, effectiveSettings.GetInstanceAuthStringSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetInstanceAuthString);
+            Modify_GetInstanceAuthStringApiCall(ref _callGetInstanceAuthString);
             _callCreateInstance = clientHelper.BuildApiCall<CreateInstanceRequest, lro::Operation>(grpcClient.CreateInstanceAsync, grpcClient.CreateInstance, effectiveSettings.CreateInstanceSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateInstance);
             Modify_CreateInstanceApiCall(ref _callCreateInstance);
@@ -2133,6 +2286,8 @@ namespace Google.Cloud.Redis.V1
 
         partial void Modify_GetInstanceApiCall(ref gaxgrpc::ApiCall<GetInstanceRequest, Instance> call);
 
+        partial void Modify_GetInstanceAuthStringApiCall(ref gaxgrpc::ApiCall<GetInstanceAuthStringRequest, InstanceAuthString> call);
+
         partial void Modify_CreateInstanceApiCall(ref gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> call);
 
         partial void Modify_UpdateInstanceApiCall(ref gaxgrpc::ApiCall<UpdateInstanceRequest, lro::Operation> call);
@@ -2155,6 +2310,8 @@ namespace Google.Cloud.Redis.V1
         partial void Modify_ListInstancesRequest(ref ListInstancesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetInstanceRequest(ref GetInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetInstanceAuthStringRequest(ref GetInstanceAuthStringRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateInstanceRequest(ref CreateInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2232,6 +2389,34 @@ namespace Google.Cloud.Redis.V1
         {
             Modify_GetInstanceRequest(ref request, ref callSettings);
             return _callGetInstance.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+        /// instance the response will be empty. This information is not included in
+        /// the details returned to GetInstance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override InstanceAuthString GetInstanceAuthString(GetInstanceAuthStringRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetInstanceAuthStringRequest(ref request, ref callSettings);
+            return _callGetInstanceAuthString.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+        /// instance the response will be empty. This information is not included in
+        /// the details returned to GetInstance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<InstanceAuthString> GetInstanceAuthStringAsync(GetInstanceAuthStringRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetInstanceAuthStringRequest(ref request, ref callSettings);
+            return _callGetInstanceAuthString.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>CreateInstance</c>.</summary>

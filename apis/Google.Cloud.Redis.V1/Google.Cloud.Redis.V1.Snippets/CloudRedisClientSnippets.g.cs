@@ -390,6 +390,93 @@ namespace Google.Cloud.Redis.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetInstanceAuthString</summary>
+        public void GetInstanceAuthStringRequestObject()
+        {
+            // Snippet: GetInstanceAuthString(GetInstanceAuthStringRequest, CallSettings)
+            // Create client
+            CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
+            // Initialize request argument(s)
+            GetInstanceAuthStringRequest request = new GetInstanceAuthStringRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+            };
+            // Make the request
+            InstanceAuthString response = cloudRedisClient.GetInstanceAuthString(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInstanceAuthStringAsync</summary>
+        public async Task GetInstanceAuthStringRequestObjectAsync()
+        {
+            // Snippet: GetInstanceAuthStringAsync(GetInstanceAuthStringRequest, CallSettings)
+            // Additional: GetInstanceAuthStringAsync(GetInstanceAuthStringRequest, CancellationToken)
+            // Create client
+            CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
+            // Initialize request argument(s)
+            GetInstanceAuthStringRequest request = new GetInstanceAuthStringRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+            };
+            // Make the request
+            InstanceAuthString response = await cloudRedisClient.GetInstanceAuthStringAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInstanceAuthString</summary>
+        public void GetInstanceAuthString()
+        {
+            // Snippet: GetInstanceAuthString(string, CallSettings)
+            // Create client
+            CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
+            // Make the request
+            InstanceAuthString response = cloudRedisClient.GetInstanceAuthString(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInstanceAuthStringAsync</summary>
+        public async Task GetInstanceAuthStringAsync()
+        {
+            // Snippet: GetInstanceAuthStringAsync(string, CallSettings)
+            // Additional: GetInstanceAuthStringAsync(string, CancellationToken)
+            // Create client
+            CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
+            // Make the request
+            InstanceAuthString response = await cloudRedisClient.GetInstanceAuthStringAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInstanceAuthString</summary>
+        public void GetInstanceAuthStringResourceNames()
+        {
+            // Snippet: GetInstanceAuthString(InstanceName, CallSettings)
+            // Create client
+            CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
+            // Initialize request argument(s)
+            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            // Make the request
+            InstanceAuthString response = cloudRedisClient.GetInstanceAuthString(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInstanceAuthStringAsync</summary>
+        public async Task GetInstanceAuthStringResourceNamesAsync()
+        {
+            // Snippet: GetInstanceAuthStringAsync(InstanceName, CallSettings)
+            // Additional: GetInstanceAuthStringAsync(InstanceName, CancellationToken)
+            // Create client
+            CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            // Make the request
+            InstanceAuthString response = await cloudRedisClient.GetInstanceAuthStringAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateInstance</summary>
         public void CreateInstanceRequestObject()
         {

@@ -40,6 +40,12 @@
                 "GetInstanceAsync"
               ]
             },
+            "GetInstanceAuthString": {
+              "methods": [
+                "GetInstanceAuthString",
+                "GetInstanceAuthStringAsync"
+              ]
+            },
             "ImportInstance": {
               "methods": [
                 "ImportInstance",

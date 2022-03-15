@@ -321,6 +321,161 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "redis_v1_generated_CloudRedis_GetInstanceAuthString_sync",
+      "title": "GetInstanceAuthStringRequestObject",
+      "description": "Snippet for GetInstanceAuthString",
+      "file": "CloudRedisClient.GetInstanceAuthStringRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAuthString",
+        "fullName": "Google.Cloud.Redis.V1.CloudRedisClient.GetInstanceAuthString",
+        "resultType": "Google.Cloud.Redis.V1.InstanceAuthString",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "GetInstanceAuthString",
+          "fullName": "google.cloud.redis.v1.CloudRedis.GetInstanceAuthString",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedis_GetInstanceAuthString_async",
+      "title": "GetInstanceAuthStringRequestObjectAsync",
+      "description": "Snippet for GetInstanceAuthStringAsync",
+      "file": "CloudRedisClient.GetInstanceAuthStringRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAuthStringAsync",
+        "fullName": "Google.Cloud.Redis.V1.CloudRedisClient.GetInstanceAuthStringAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.V1.InstanceAuthString>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "GetInstanceAuthString",
+          "fullName": "google.cloud.redis.v1.CloudRedis.GetInstanceAuthString",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedis_GetInstanceAuthString_sync_flattened",
+      "title": "GetInstanceAuthString",
+      "description": "Snippet for GetInstanceAuthString",
+      "file": "CloudRedisClient.GetInstanceAuthStringSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAuthString",
+        "fullName": "Google.Cloud.Redis.V1.CloudRedisClient.GetInstanceAuthString",
+        "resultType": "Google.Cloud.Redis.V1.InstanceAuthString",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "GetInstanceAuthString",
+          "fullName": "google.cloud.redis.v1.CloudRedis.GetInstanceAuthString",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedis_GetInstanceAuthString_async_flattened",
+      "title": "GetInstanceAuthStringAsync",
+      "description": "Snippet for GetInstanceAuthStringAsync",
+      "file": "CloudRedisClient.GetInstanceAuthStringAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAuthStringAsync",
+        "fullName": "Google.Cloud.Redis.V1.CloudRedisClient.GetInstanceAuthStringAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.V1.InstanceAuthString>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "GetInstanceAuthString",
+          "fullName": "google.cloud.redis.v1.CloudRedis.GetInstanceAuthString",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedis_GetInstanceAuthString_sync_flattened_resourceNames",
+      "title": "GetInstanceAuthStringResourceNames",
+      "description": "Snippet for GetInstanceAuthString",
+      "file": "CloudRedisClient.GetInstanceAuthStringResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAuthString",
+        "fullName": "Google.Cloud.Redis.V1.CloudRedisClient.GetInstanceAuthString",
+        "resultType": "Google.Cloud.Redis.V1.InstanceAuthString",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "GetInstanceAuthString",
+          "fullName": "google.cloud.redis.v1.CloudRedis.GetInstanceAuthString",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedis_GetInstanceAuthString_async_flattened_resourceNames",
+      "title": "GetInstanceAuthStringResourceNamesAsync",
+      "description": "Snippet for GetInstanceAuthStringAsync",
+      "file": "CloudRedisClient.GetInstanceAuthStringResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAuthStringAsync",
+        "fullName": "Google.Cloud.Redis.V1.CloudRedisClient.GetInstanceAuthStringAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.V1.InstanceAuthString>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "GetInstanceAuthString",
+          "fullName": "google.cloud.redis.v1.CloudRedis.GetInstanceAuthString",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "redis_v1_generated_CloudRedis_CreateInstance_sync",
       "title": "CreateInstanceRequestObject",
       "description": "Snippet for CreateInstance",
