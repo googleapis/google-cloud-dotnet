@@ -28,10 +28,12 @@ namespace Google.Cloud.Redis.V1 {
             "b2dsZS5jbG91ZC5yZWRpcy52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5w",
             "cm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2dsZS9hcGkvZmll",
             "bGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8a",
-            "I2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25zLnByb3RvGiBnb29nbGUv",
-            "cHJvdG9idWYvZmllbGRfbWFzay5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3Rp",
-            "bWVzdGFtcC5wcm90byIuCghOb2RlSW5mbxIPCgJpZBgBIAEoCUID4EEDEhEK",
-            "BHpvbmUYAiABKAlCA+BBAyKEDwoISW5zdGFuY2USEQoEbmFtZRgBIAEoCUID",
+            "I2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25zLnByb3RvGh5nb29nbGUv",
+            "cHJvdG9idWYvZHVyYXRpb24ucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVs",
+            "ZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
+            "Ghtnb29nbGUvdHlwZS9kYXlvZndlZWsucHJvdG8aG2dvb2dsZS90eXBlL3Rp",
+            "bWVvZmRheS5wcm90byIuCghOb2RlSW5mbxIPCgJpZBgBIAEoCUID4EEDEhEK",
+            "BHpvbmUYAiABKAlCA+BBAyKeEAoISW5zdGFuY2USEQoEbmFtZRgBIAEoCUID",
             "4EECEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRI7CgZsYWJlbHMYAyADKAsyKy5n",
             "b29nbGUuY2xvdWQucmVkaXMudjEuSW5zdGFuY2UuTGFiZWxzRW50cnkSGAoL",
             "bG9jYXRpb25faWQYBCABKAlCA+BBARIkChdhbHRlcm5hdGl2ZV9sb2NhdGlv",
@@ -53,141 +55,177 @@ namespace Google.Cloud.Redis.V1 {
             "dHMYGSADKAsyJS5nb29nbGUuY2xvdWQucmVkaXMudjEuVGxzQ2VydGlmaWNh",
             "dGVCA+BBAxJbChd0cmFuc2l0X2VuY3J5cHRpb25fbW9kZRgaIAEoDjI1Lmdv",
             "b2dsZS5jbG91ZC5yZWRpcy52MS5JbnN0YW5jZS5UcmFuc2l0RW5jcnlwdGlv",
-            "bk1vZGVCA+BBARIaCg1yZXBsaWNhX2NvdW50GB8gASgFQgPgQQESMwoFbm9k",
-            "ZXMYICADKAsyHy5nb29nbGUuY2xvdWQucmVkaXMudjEuTm9kZUluZm9CA+BB",
-            "AxIaCg1yZWFkX2VuZHBvaW50GCEgASgJQgPgQQMSHwoScmVhZF9lbmRwb2lu",
-            "dF9wb3J0GCIgASgFQgPgQQMSUQoScmVhZF9yZXBsaWNhc19tb2RlGCMgASgO",
-            "MjAuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkluc3RhbmNlLlJlYWRSZXBsaWNh",
-            "c01vZGVCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
-            "dWUYAiABKAk6AjgBGjMKEVJlZGlzQ29uZmlnc0VudHJ5EgsKA2tleRgBIAEo",
-            "CRINCgV2YWx1ZRgCIAEoCToCOAEilAEKBVN0YXRlEhUKEVNUQVRFX1VOU1BF",
-            "Q0lGSUVEEAASDAoIQ1JFQVRJTkcQARIJCgVSRUFEWRACEgwKCFVQREFUSU5H",
-            "EAMSDAoIREVMRVRJTkcQBBINCglSRVBBSVJJTkcQBRIPCgtNQUlOVEVOQU5D",
-            "RRAGEg0KCUlNUE9SVElORxAIEhAKDEZBSUxJTkdfT1ZFUhAJIjgKBFRpZXIS",
-            "FAoQVElFUl9VTlNQRUNJRklFRBAAEgkKBUJBU0lDEAESDwoLU1RBTkRBUkRf",
-            "SEEQAyJbCgtDb25uZWN0TW9kZRIcChhDT05ORUNUX01PREVfVU5TUEVDSUZJ",
-            "RUQQABISCg5ESVJFQ1RfUEVFUklORxABEhoKFlBSSVZBVEVfU0VSVklDRV9B",
-            "Q0NFU1MQAiJpChVUcmFuc2l0RW5jcnlwdGlvbk1vZGUSJwojVFJBTlNJVF9F",
-            "TkNSWVBUSU9OX01PREVfVU5TUEVDSUZJRUQQABIZChVTRVJWRVJfQVVUSEVO",
-            "VElDQVRJT04QARIMCghESVNBQkxFRBACIm0KEFJlYWRSZXBsaWNhc01vZGUS",
-            "IgoeUkVBRF9SRVBMSUNBU19NT0RFX1VOU1BFQ0lGSUVEEAASGgoWUkVBRF9S",
-            "RVBMSUNBU19ESVNBQkxFRBABEhkKFVJFQURfUkVQTElDQVNfRU5BQkxFRBAC",
-            "OmDqQV0KHXJlZGlzLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEjxwcm9qZWN0",
-            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vaW5zdGFuY2VzL3tp",
-            "bnN0YW5jZX0ieAoUTGlzdEluc3RhbmNlc1JlcXVlc3QSOQoGcGFyZW50GAEg",
-            "ASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlv",
-            "bhIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJ5ChVM",
-            "aXN0SW5zdGFuY2VzUmVzcG9uc2USMgoJaW5zdGFuY2VzGAEgAygLMh8uZ29v",
-            "Z2xlLmNsb3VkLnJlZGlzLnYxLkluc3RhbmNlEhcKD25leHRfcGFnZV90b2tl",
-            "bhgCIAEoCRITCgt1bnJlYWNoYWJsZRgDIAMoCSJJChJHZXRJbnN0YW5jZVJl",
-            "cXVlc3QSMwoEbmFtZRgBIAEoCUIl4EEC+kEfCh1yZWRpcy5nb29nbGVhcGlz",
-            "LmNvbS9JbnN0YW5jZSJTChxHZXRJbnN0YW5jZUF1dGhTdHJpbmdSZXF1ZXN0",
-            "EjMKBG5hbWUYASABKAlCJeBBAvpBHwodcmVkaXMuZ29vZ2xlYXBpcy5jb20v",
-            "SW5zdGFuY2UiKQoSSW5zdGFuY2VBdXRoU3RyaW5nEhMKC2F1dGhfc3RyaW5n",
-            "GAEgASgJIqQBChVDcmVhdGVJbnN0YW5jZVJlcXVlc3QSOQoGcGFyZW50GAEg",
-            "ASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlv",
-            "bhIYCgtpbnN0YW5jZV9pZBgCIAEoCUID4EECEjYKCGluc3RhbmNlGAMgASgL",
-            "Mh8uZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkluc3RhbmNlQgPgQQIihQEKFVVw",
-            "ZGF0ZUluc3RhbmNlUmVxdWVzdBI0Cgt1cGRhdGVfbWFzaxgBIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAhI2CghpbnN0YW5jZRgCIAEo",
-            "CzIfLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5JbnN0YW5jZUID4EECImkKFlVw",
-            "Z3JhZGVJbnN0YW5jZVJlcXVlc3QSMwoEbmFtZRgBIAEoCUIl4EEC+kEfCh1y",
-            "ZWRpcy5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRIaCg1yZWRpc192ZXJzaW9u",
-            "GAIgASgJQgPgQQIiTAoVRGVsZXRlSW5zdGFuY2VSZXF1ZXN0EjMKBG5hbWUY",
-            "ASABKAlCJeBBAvpBHwodcmVkaXMuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2Ui",
-            "HQoJR2NzU291cmNlEhAKA3VyaRgBIAEoCUID4EECIk8KC0lucHV0Q29uZmln",
-            "EjYKCmdjc19zb3VyY2UYASABKAsyIC5nb29nbGUuY2xvdWQucmVkaXMudjEu",
-            "R2NzU291cmNlSABCCAoGc291cmNlImkKFUltcG9ydEluc3RhbmNlUmVxdWVz",
-            "dBIRCgRuYW1lGAEgASgJQgPgQQISPQoMaW5wdXRfY29uZmlnGAMgASgLMiIu",
-            "Z29vZ2xlLmNsb3VkLnJlZGlzLnYxLklucHV0Q29uZmlnQgPgQQIiIgoOR2Nz",
-            "RGVzdGluYXRpb24SEAoDdXJpGAEgASgJQgPgQQIiXwoMT3V0cHV0Q29uZmln",
-            "EkAKD2djc19kZXN0aW5hdGlvbhgBIAEoCzIlLmdvb2dsZS5jbG91ZC5yZWRp",
-            "cy52MS5HY3NEZXN0aW5hdGlvbkgAQg0KC2Rlc3RpbmF0aW9uImsKFUV4cG9y",
-            "dEluc3RhbmNlUmVxdWVzdBIRCgRuYW1lGAEgASgJQgPgQQISPwoNb3V0cHV0",
-            "X2NvbmZpZxgDIAEoCzIjLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5PdXRwdXRD",
-            "b25maWdCA+BBAiKcAgoXRmFpbG92ZXJJbnN0YW5jZVJlcXVlc3QSMwoEbmFt",
-            "ZRgBIAEoCUIl4EEC+kEfCh1yZWRpcy5nb29nbGVhcGlzLmNvbS9JbnN0YW5j",
-            "ZRJkChRkYXRhX3Byb3RlY3Rpb25fbW9kZRgCIAEoDjJBLmdvb2dsZS5jbG91",
-            "ZC5yZWRpcy52MS5GYWlsb3Zlckluc3RhbmNlUmVxdWVzdC5EYXRhUHJvdGVj",
-            "dGlvbk1vZGVCA+BBASJmChJEYXRhUHJvdGVjdGlvbk1vZGUSJAogREFUQV9Q",
-            "Uk9URUNUSU9OX01PREVfVU5TUEVDSUZJRUQQABIVChFMSU1JVEVEX0RBVEFf",
-            "TE9TUxABEhMKD0ZPUkNFX0RBVEFfTE9TUxACItYBChFPcGVyYXRpb25NZXRh",
-            "ZGF0YRIvCgtjcmVhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXASLAoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wEg4KBnRhcmdldBgDIAEoCRIMCgR2ZXJiGAQgASgJEhUKDXN0",
-            "YXR1c19kZXRhaWwYBSABKAkSGAoQY2FuY2VsX3JlcXVlc3RlZBgGIAEoCBIT",
-            "CgthcGlfdmVyc2lvbhgHIAEoCSLJAQoQTG9jYXRpb25NZXRhZGF0YRJZCg9h",
-            "dmFpbGFibGVfem9uZXMYASADKAsyOy5nb29nbGUuY2xvdWQucmVkaXMudjEu",
-            "TG9jYXRpb25NZXRhZGF0YS5BdmFpbGFibGVab25lc0VudHJ5QgPgQQMaWgoT",
-            "QXZhaWxhYmxlWm9uZXNFbnRyeRILCgNrZXkYASABKAkSMgoFdmFsdWUYAiAB",
-            "KAsyIy5nb29nbGUuY2xvdWQucmVkaXMudjEuWm9uZU1ldGFkYXRhOgI4ASIO",
-            "Cgxab25lTWV0YWRhdGEiuwEKDlRsc0NlcnRpZmljYXRlEhUKDXNlcmlhbF9u",
-            "dW1iZXIYASABKAkSDAoEY2VydBgCIAEoCRI0CgtjcmVhdGVfdGltZRgDIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0CgtleHBpcmVf",
-            "dGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIY",
-            "ChBzaGExX2ZpbmdlcnByaW50GAUgASgJMvYSCgpDbG91ZFJlZGlzEqoBCg1M",
-            "aXN0SW5zdGFuY2VzEisuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkxpc3RJbnN0",
-            "YW5jZXNSZXF1ZXN0GiwuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkxpc3RJbnN0",
-            "YW5jZXNSZXNwb25zZSI+gtPkkwIvEi0vdjEve3BhcmVudD1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qfS9pbnN0YW5jZXPaQQZwYXJlbnQSlwEKC0dldEluc3Rh",
-            "bmNlEikuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkdldEluc3RhbmNlUmVxdWVz",
-            "dBofLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5JbnN0YW5jZSI8gtPkkwIvEi0v",
-            "djEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn3a",
-            "QQRuYW1lEsABChVHZXRJbnN0YW5jZUF1dGhTdHJpbmcSMy5nb29nbGUuY2xv",
-            "dWQucmVkaXMudjEuR2V0SW5zdGFuY2VBdXRoU3RyaW5nUmVxdWVzdBopLmdv",
-            "b2dsZS5jbG91ZC5yZWRpcy52MS5JbnN0YW5jZUF1dGhTdHJpbmciR4LT5JMC",
-            "OhI4L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2Vz",
-            "Lyp9L2F1dGhTdHJpbmfaQQRuYW1lEokCCg5DcmVhdGVJbnN0YW5jZRIsLmdv",
-            "b2dsZS5jbG91ZC5yZWRpcy52MS5DcmVhdGVJbnN0YW5jZVJlcXVlc3QaHS5n",
-            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqkBgtPkkwI5Ii0vdjEve3Bh",
-            "cmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9pbnN0YW5jZXM6CGluc3Rh",
-            "bmNl2kEbcGFyZW50LGluc3RhbmNlX2lkLGluc3RhbmNlykFJCh5nb29nbGUu",
-            "Y2xvdWQucmVkaXMudjEuSW5zdGFuY2USJ2dvb2dsZS5jbG91ZC5yZWRpcy52",
-            "MS5PcGVyYXRpb25NZXRhZGF0YRKLAgoOVXBkYXRlSW5zdGFuY2USLC5nb29n",
-            "bGUuY2xvdWQucmVkaXMudjEuVXBkYXRlSW5zdGFuY2VSZXF1ZXN0Gh0uZ29v",
-            "Z2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKrAYLT5JMCQjI2L3YxL3tpbnN0",
-            "YW5jZS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9",
-            "OghpbnN0YW5jZdpBFHVwZGF0ZV9tYXNrLGluc3RhbmNlykFJCh5nb29nbGUu",
-            "Y2xvdWQucmVkaXMudjEuSW5zdGFuY2USJ2dvb2dsZS5jbG91ZC5yZWRpcy52",
-            "MS5PcGVyYXRpb25NZXRhZGF0YRKDAgoPVXBncmFkZUluc3RhbmNlEi0uZ29v",
-            "Z2xlLmNsb3VkLnJlZGlzLnYxLlVwZ3JhZGVJbnN0YW5jZVJlcXVlc3QaHS5n",
-            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqEBgtPkkwI6IjUvdjEve25h",
-            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn06dXBncmFk",
-            "ZToBKtpBEm5hbWUscmVkaXNfdmVyc2lvbspBSQoeZ29vZ2xlLmNsb3VkLnJl",
-            "ZGlzLnYxLkluc3RhbmNlEidnb29nbGUuY2xvdWQucmVkaXMudjEuT3BlcmF0",
-            "aW9uTWV0YWRhdGES/wEKDkltcG9ydEluc3RhbmNlEiwuZ29vZ2xlLmNsb3Vk",
-            "LnJlZGlzLnYxLkltcG9ydEluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5sb25n",
-            "cnVubmluZy5PcGVyYXRpb24inwGC0+STAjkiNC92MS97bmFtZT1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfTppbXBvcnQ6ASraQRFuYW1l",
-            "LGlucHV0X2NvbmZpZ8pBSQoeZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkluc3Rh",
-            "bmNlEidnb29nbGUuY2xvdWQucmVkaXMudjEuT3BlcmF0aW9uTWV0YWRhdGES",
-            "gAIKDkV4cG9ydEluc3RhbmNlEiwuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkV4",
-            "cG9ydEluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
-            "YXRpb24ioAGC0+STAjkiNC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL2luc3RhbmNlcy8qfTpleHBvcnQ6ASraQRJuYW1lLG91dHB1dF9jb25m",
-            "aWfKQUkKHmdvb2dsZS5jbG91ZC5yZWRpcy52MS5JbnN0YW5jZRInZ29vZ2xl",
-            "LmNsb3VkLnJlZGlzLnYxLk9wZXJhdGlvbk1ldGFkYXRhEo0CChBGYWlsb3Zl",
-            "ckluc3RhbmNlEi4uZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkZhaWxvdmVySW5z",
-            "dGFuY2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKp",
-            "AYLT5JMCOyI2L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5z",
-            "dGFuY2VzLyp9OmZhaWxvdmVyOgEq2kEZbmFtZSxkYXRhX3Byb3RlY3Rpb25f",
-            "bW9kZcpBSQoeZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkluc3RhbmNlEidnb29n",
-            "bGUuY2xvdWQucmVkaXMudjEuT3BlcmF0aW9uTWV0YWRhdGES3gEKDkRlbGV0",
-            "ZUluc3RhbmNlEiwuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkRlbGV0ZUluc3Rh",
-            "bmNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24if4LT",
-            "5JMCLyotL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFu",
-            "Y2VzLyp92kEEbmFtZcpBQAoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5Eidnb29n",
-            "bGUuY2xvdWQucmVkaXMudjEuT3BlcmF0aW9uTWV0YWRhdGEaSMpBFHJlZGlz",
-            "Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
-            "YXV0aC9jbG91ZC1wbGF0Zm9ybUJzChljb20uZ29vZ2xlLmNsb3VkLnJlZGlz",
-            "LnYxQhhDbG91ZFJlZGlzU2VydmljZVYxUHJvdG9QAVo6Z29vZ2xlLmdvbGFu",
-            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9yZWRpcy92MTtyZWRp",
-            "c2IGcHJvdG8z"));
+            "bk1vZGVCA+BBARJJChJtYWludGVuYW5jZV9wb2xpY3kYGyABKAsyKC5nb29n",
+            "bGUuY2xvdWQucmVkaXMudjEuTWFpbnRlbmFuY2VQb2xpY3lCA+BBARJNChRt",
+            "YWludGVuYW5jZV9zY2hlZHVsZRgcIAEoCzIqLmdvb2dsZS5jbG91ZC5yZWRp",
+            "cy52MS5NYWludGVuYW5jZVNjaGVkdWxlQgPgQQMSGgoNcmVwbGljYV9jb3Vu",
+            "dBgfIAEoBUID4EEBEjMKBW5vZGVzGCAgAygLMh8uZ29vZ2xlLmNsb3VkLnJl",
+            "ZGlzLnYxLk5vZGVJbmZvQgPgQQMSGgoNcmVhZF9lbmRwb2ludBghIAEoCUID",
+            "4EEDEh8KEnJlYWRfZW5kcG9pbnRfcG9ydBgiIAEoBUID4EEDElEKEnJlYWRf",
+            "cmVwbGljYXNfbW9kZRgjIAEoDjIwLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5J",
+            "bnN0YW5jZS5SZWFkUmVwbGljYXNNb2RlQgPgQQEaLQoLTGFiZWxzRW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARozChFSZWRpc0NvbmZp",
+            "Z3NFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIpQBCgVT",
+            "dGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5HEAESCQoF",
+            "UkVBRFkQAhIMCghVUERBVElORxADEgwKCERFTEVUSU5HEAQSDQoJUkVQQUlS",
+            "SU5HEAUSDwoLTUFJTlRFTkFOQ0UQBhINCglJTVBPUlRJTkcQCBIQCgxGQUlM",
+            "SU5HX09WRVIQCSI4CgRUaWVyEhQKEFRJRVJfVU5TUEVDSUZJRUQQABIJCgVC",
+            "QVNJQxABEg8KC1NUQU5EQVJEX0hBEAMiWwoLQ29ubmVjdE1vZGUSHAoYQ09O",
+            "TkVDVF9NT0RFX1VOU1BFQ0lGSUVEEAASEgoORElSRUNUX1BFRVJJTkcQARIa",
+            "ChZQUklWQVRFX1NFUlZJQ0VfQUNDRVNTEAIiaQoVVHJhbnNpdEVuY3J5cHRp",
+            "b25Nb2RlEicKI1RSQU5TSVRfRU5DUllQVElPTl9NT0RFX1VOU1BFQ0lGSUVE",
+            "EAASGQoVU0VSVkVSX0FVVEhFTlRJQ0FUSU9OEAESDAoIRElTQUJMRUQQAiJt",
+            "ChBSZWFkUmVwbGljYXNNb2RlEiIKHlJFQURfUkVQTElDQVNfTU9ERV9VTlNQ",
+            "RUNJRklFRBAAEhoKFlJFQURfUkVQTElDQVNfRElTQUJMRUQQARIZChVSRUFE",
+            "X1JFUExJQ0FTX0VOQUJMRUQQAjpg6kFdCh1yZWRpcy5nb29nbGVhcGlzLmNv",
+            "bS9JbnN0YW5jZRI8cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L2luc3RhbmNlcy97aW5zdGFuY2V9It0CChxSZXNjaGVkdWxlTWFp",
+            "bnRlbmFuY2VSZXF1ZXN0EjMKBG5hbWUYASABKAlCJeBBAvpBHwodcmVkaXMu",
+            "Z29vZ2xlYXBpcy5jb20vSW5zdGFuY2USYAoPcmVzY2hlZHVsZV90eXBlGAIg",
+            "ASgOMkIuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLlJlc2NoZWR1bGVNYWludGVu",
+            "YW5jZVJlcXVlc3QuUmVzY2hlZHVsZVR5cGVCA+BBAhI2Cg1zY2hlZHVsZV90",
+            "aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEBIm4K",
+            "DlJlc2NoZWR1bGVUeXBlEh8KG1JFU0NIRURVTEVfVFlQRV9VTlNQRUNJRklF",
+            "RBAAEg0KCUlNTUVESUFURRABEhkKFU5FWFRfQVZBSUxBQkxFX1dJTkRPVxAC",
+            "EhEKDVNQRUNJRklDX1RJTUUQAyLxAQoRTWFpbnRlbmFuY2VQb2xpY3kSNAoL",
+            "Y3JlYXRlX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgPgQQMSNAoLdXBkYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgPgQQMSGAoLZGVzY3JpcHRpb24YAyABKAlCA+BBARJWChl3",
+            "ZWVrbHlfbWFpbnRlbmFuY2Vfd2luZG93GAQgAygLMi4uZ29vZ2xlLmNsb3Vk",
+            "LnJlZGlzLnYxLldlZWtseU1haW50ZW5hbmNlV2luZG93QgPgQQEipgEKF1dl",
+            "ZWtseU1haW50ZW5hbmNlV2luZG93EigKA2RheRgBIAEoDjIWLmdvb2dsZS50",
+            "eXBlLkRheU9mV2Vla0ID4EECEi8KCnN0YXJ0X3RpbWUYAiABKAsyFi5nb29n",
+            "bGUudHlwZS5UaW1lT2ZEYXlCA+BBAhIwCghkdXJhdGlvbhgDIAEoCzIZLmdv",
+            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEDItoBChNNYWludGVuYW5jZVNj",
+            "aGVkdWxlEjMKCnN0YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wQgPgQQMSGgoOY2FuX3Jlc2NoZWR1bGUYAyABKAhC",
+            "AhgBEj8KFnNjaGVkdWxlX2RlYWRsaW5lX3RpbWUYBSABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMieAoUTGlzdEluc3RhbmNlc1JlcXVl",
+            "c3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVh",
+            "cGlzLmNvbS9Mb2NhdGlvbhIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90",
+            "b2tlbhgDIAEoCSJ5ChVMaXN0SW5zdGFuY2VzUmVzcG9uc2USMgoJaW5zdGFu",
+            "Y2VzGAEgAygLMh8uZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkluc3RhbmNlEhcK",
+            "D25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1bnJlYWNoYWJsZRgDIAMoCSJJ",
+            "ChJHZXRJbnN0YW5jZVJlcXVlc3QSMwoEbmFtZRgBIAEoCUIl4EEC+kEfCh1y",
+            "ZWRpcy5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZSJTChxHZXRJbnN0YW5jZUF1",
+            "dGhTdHJpbmdSZXF1ZXN0EjMKBG5hbWUYASABKAlCJeBBAvpBHwodcmVkaXMu",
+            "Z29vZ2xlYXBpcy5jb20vSW5zdGFuY2UiKQoSSW5zdGFuY2VBdXRoU3RyaW5n",
+            "EhMKC2F1dGhfc3RyaW5nGAEgASgJIqQBChVDcmVhdGVJbnN0YW5jZVJlcXVl",
+            "c3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVh",
+            "cGlzLmNvbS9Mb2NhdGlvbhIYCgtpbnN0YW5jZV9pZBgCIAEoCUID4EECEjYK",
+            "CGluc3RhbmNlGAMgASgLMh8uZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkluc3Rh",
+            "bmNlQgPgQQIihQEKFVVwZGF0ZUluc3RhbmNlUmVxdWVzdBI0Cgt1cGRhdGVf",
+            "bWFzaxgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAhI2",
+            "CghpbnN0YW5jZRgCIAEoCzIfLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5JbnN0",
+            "YW5jZUID4EECImkKFlVwZ3JhZGVJbnN0YW5jZVJlcXVlc3QSMwoEbmFtZRgB",
+            "IAEoCUIl4EEC+kEfCh1yZWRpcy5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRIa",
+            "Cg1yZWRpc192ZXJzaW9uGAIgASgJQgPgQQIiTAoVRGVsZXRlSW5zdGFuY2VS",
+            "ZXF1ZXN0EjMKBG5hbWUYASABKAlCJeBBAvpBHwodcmVkaXMuZ29vZ2xlYXBp",
+            "cy5jb20vSW5zdGFuY2UiHQoJR2NzU291cmNlEhAKA3VyaRgBIAEoCUID4EEC",
+            "Ik8KC0lucHV0Q29uZmlnEjYKCmdjc19zb3VyY2UYASABKAsyIC5nb29nbGUu",
+            "Y2xvdWQucmVkaXMudjEuR2NzU291cmNlSABCCAoGc291cmNlImkKFUltcG9y",
+            "dEluc3RhbmNlUmVxdWVzdBIRCgRuYW1lGAEgASgJQgPgQQISPQoMaW5wdXRf",
+            "Y29uZmlnGAMgASgLMiIuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLklucHV0Q29u",
+            "ZmlnQgPgQQIiIgoOR2NzRGVzdGluYXRpb24SEAoDdXJpGAEgASgJQgPgQQIi",
+            "XwoMT3V0cHV0Q29uZmlnEkAKD2djc19kZXN0aW5hdGlvbhgBIAEoCzIlLmdv",
+            "b2dsZS5jbG91ZC5yZWRpcy52MS5HY3NEZXN0aW5hdGlvbkgAQg0KC2Rlc3Rp",
+            "bmF0aW9uImsKFUV4cG9ydEluc3RhbmNlUmVxdWVzdBIRCgRuYW1lGAEgASgJ",
+            "QgPgQQISPwoNb3V0cHV0X2NvbmZpZxgDIAEoCzIjLmdvb2dsZS5jbG91ZC5y",
+            "ZWRpcy52MS5PdXRwdXRDb25maWdCA+BBAiKcAgoXRmFpbG92ZXJJbnN0YW5j",
+            "ZVJlcXVlc3QSMwoEbmFtZRgBIAEoCUIl4EEC+kEfCh1yZWRpcy5nb29nbGVh",
+            "cGlzLmNvbS9JbnN0YW5jZRJkChRkYXRhX3Byb3RlY3Rpb25fbW9kZRgCIAEo",
+            "DjJBLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5GYWlsb3Zlckluc3RhbmNlUmVx",
+            "dWVzdC5EYXRhUHJvdGVjdGlvbk1vZGVCA+BBASJmChJEYXRhUHJvdGVjdGlv",
+            "bk1vZGUSJAogREFUQV9QUk9URUNUSU9OX01PREVfVU5TUEVDSUZJRUQQABIV",
+            "ChFMSU1JVEVEX0RBVEFfTE9TUxABEhMKD0ZPUkNFX0RBVEFfTE9TUxACItYB",
+            "ChFPcGVyYXRpb25NZXRhZGF0YRIvCgtjcmVhdGVfdGltZRgBIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEg4KBnRhcmdldBgDIAEoCRIMCgR2",
+            "ZXJiGAQgASgJEhUKDXN0YXR1c19kZXRhaWwYBSABKAkSGAoQY2FuY2VsX3Jl",
+            "cXVlc3RlZBgGIAEoCBITCgthcGlfdmVyc2lvbhgHIAEoCSLJAQoQTG9jYXRp",
+            "b25NZXRhZGF0YRJZCg9hdmFpbGFibGVfem9uZXMYASADKAsyOy5nb29nbGUu",
+            "Y2xvdWQucmVkaXMudjEuTG9jYXRpb25NZXRhZGF0YS5BdmFpbGFibGVab25l",
+            "c0VudHJ5QgPgQQMaWgoTQXZhaWxhYmxlWm9uZXNFbnRyeRILCgNrZXkYASAB",
+            "KAkSMgoFdmFsdWUYAiABKAsyIy5nb29nbGUuY2xvdWQucmVkaXMudjEuWm9u",
+            "ZU1ldGFkYXRhOgI4ASIOCgxab25lTWV0YWRhdGEiuwEKDlRsc0NlcnRpZmlj",
+            "YXRlEhUKDXNlcmlhbF9udW1iZXIYASABKAkSDAoEY2VydBgCIAEoCRI0Cgtj",
+            "cmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
+            "A+BBAxI0CgtleHBpcmVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXBCA+BBAxIYChBzaGExX2ZpbmdlcnByaW50GAUgASgJMqgVCgpD",
+            "bG91ZFJlZGlzEqoBCg1MaXN0SW5zdGFuY2VzEisuZ29vZ2xlLmNsb3VkLnJl",
+            "ZGlzLnYxLkxpc3RJbnN0YW5jZXNSZXF1ZXN0GiwuZ29vZ2xlLmNsb3VkLnJl",
+            "ZGlzLnYxLkxpc3RJbnN0YW5jZXNSZXNwb25zZSI+gtPkkwIvEi0vdjEve3Bh",
+            "cmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9pbnN0YW5jZXPaQQZwYXJl",
+            "bnQSlwEKC0dldEluc3RhbmNlEikuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkdl",
+            "dEluc3RhbmNlUmVxdWVzdBofLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5JbnN0",
+            "YW5jZSI8gtPkkwIvEi0vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9pbnN0YW5jZXMvKn3aQQRuYW1lEsABChVHZXRJbnN0YW5jZUF1dGhTdHJp",
+            "bmcSMy5nb29nbGUuY2xvdWQucmVkaXMudjEuR2V0SW5zdGFuY2VBdXRoU3Ry",
+            "aW5nUmVxdWVzdBopLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5JbnN0YW5jZUF1",
+            "dGhTdHJpbmciR4LT5JMCOhI4L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyovaW5zdGFuY2VzLyp9L2F1dGhTdHJpbmfaQQRuYW1lEokCCg5DcmVh",
+            "dGVJbnN0YW5jZRIsLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5DcmVhdGVJbnN0",
+            "YW5jZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqkB",
+            "gtPkkwI5Ii0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9p",
+            "bnN0YW5jZXM6CGluc3RhbmNl2kEbcGFyZW50LGluc3RhbmNlX2lkLGluc3Rh",
+            "bmNlykFJCh5nb29nbGUuY2xvdWQucmVkaXMudjEuSW5zdGFuY2USJ2dvb2ds",
+            "ZS5jbG91ZC5yZWRpcy52MS5PcGVyYXRpb25NZXRhZGF0YRKLAgoOVXBkYXRl",
+            "SW5zdGFuY2USLC5nb29nbGUuY2xvdWQucmVkaXMudjEuVXBkYXRlSW5zdGFu",
+            "Y2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKrAYLT",
+            "5JMCQjI2L3YxL3tpbnN0YW5jZS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
+            "LyovaW5zdGFuY2VzLyp9OghpbnN0YW5jZdpBFHVwZGF0ZV9tYXNrLGluc3Rh",
+            "bmNlykFJCh5nb29nbGUuY2xvdWQucmVkaXMudjEuSW5zdGFuY2USJ2dvb2ds",
+            "ZS5jbG91ZC5yZWRpcy52MS5PcGVyYXRpb25NZXRhZGF0YRKDAgoPVXBncmFk",
+            "ZUluc3RhbmNlEi0uZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLlVwZ3JhZGVJbnN0",
+            "YW5jZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqEB",
+            "gtPkkwI6IjUvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0",
+            "YW5jZXMvKn06dXBncmFkZToBKtpBEm5hbWUscmVkaXNfdmVyc2lvbspBSQoe",
+            "Z29vZ2xlLmNsb3VkLnJlZGlzLnYxLkluc3RhbmNlEidnb29nbGUuY2xvdWQu",
+            "cmVkaXMudjEuT3BlcmF0aW9uTWV0YWRhdGES/wEKDkltcG9ydEluc3RhbmNl",
+            "EiwuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkltcG9ydEluc3RhbmNlUmVxdWVz",
+            "dBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24inwGC0+STAjkiNC92",
+            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfTpp",
+            "bXBvcnQ6ASraQRFuYW1lLGlucHV0X2NvbmZpZ8pBSQoeZ29vZ2xlLmNsb3Vk",
+            "LnJlZGlzLnYxLkluc3RhbmNlEidnb29nbGUuY2xvdWQucmVkaXMudjEuT3Bl",
+            "cmF0aW9uTWV0YWRhdGESgAIKDkV4cG9ydEluc3RhbmNlEiwuZ29vZ2xlLmNs",
+            "b3VkLnJlZGlzLnYxLkV4cG9ydEluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5s",
+            "b25ncnVubmluZy5PcGVyYXRpb24ioAGC0+STAjkiNC92MS97bmFtZT1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfTpleHBvcnQ6ASraQRJu",
+            "YW1lLG91dHB1dF9jb25maWfKQUkKHmdvb2dsZS5jbG91ZC5yZWRpcy52MS5J",
+            "bnN0YW5jZRInZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLk9wZXJhdGlvbk1ldGFk",
+            "YXRhEo0CChBGYWlsb3Zlckluc3RhbmNlEi4uZ29vZ2xlLmNsb3VkLnJlZGlz",
+            "LnYxLkZhaWxvdmVySW5zdGFuY2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5u",
+            "aW5nLk9wZXJhdGlvbiKpAYLT5JMCOyI2L3YxL3tuYW1lPXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyovaW5zdGFuY2VzLyp9OmZhaWxvdmVyOgEq2kEZbmFtZSxk",
+            "YXRhX3Byb3RlY3Rpb25fbW9kZcpBSQoeZ29vZ2xlLmNsb3VkLnJlZGlzLnYx",
+            "Lkluc3RhbmNlEidnb29nbGUuY2xvdWQucmVkaXMudjEuT3BlcmF0aW9uTWV0",
+            "YWRhdGES3gEKDkRlbGV0ZUluc3RhbmNlEiwuZ29vZ2xlLmNsb3VkLnJlZGlz",
+            "LnYxLkRlbGV0ZUluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmlu",
+            "Zy5PcGVyYXRpb24if4LT5JMCLyotL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovaW5zdGFuY2VzLyp92kEEbmFtZcpBQAoVZ29vZ2xlLnByb3Rv",
+            "YnVmLkVtcHR5Eidnb29nbGUuY2xvdWQucmVkaXMudjEuT3BlcmF0aW9uTWV0",
+            "YWRhdGESrwIKFVJlc2NoZWR1bGVNYWludGVuYW5jZRIzLmdvb2dsZS5jbG91",
+            "ZC5yZWRpcy52MS5SZXNjaGVkdWxlTWFpbnRlbmFuY2VSZXF1ZXN0Gh0uZ29v",
+            "Z2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiLBAYLT5JMCSCJDL3YxL3tuYW1l",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9OnJlc2NoZWR1",
+            "bGVNYWludGVuYW5jZToBKtpBJG5hbWUsIHJlc2NoZWR1bGVfdHlwZSwgc2No",
+            "ZWR1bGVfdGltZcpBSQoeZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkluc3RhbmNl",
+            "Eidnb29nbGUuY2xvdWQucmVkaXMudjEuT3BlcmF0aW9uTWV0YWRhdGEaSMpB",
+            "FHJlZGlzLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
+            "cy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUJzChljb20uZ29vZ2xlLmNsb3Vk",
+            "LnJlZGlzLnYxQhhDbG91ZFJlZGlzU2VydmljZVYxUHJvdG9QAVo6Z29vZ2xl",
+            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9yZWRpcy92",
+            "MTtyZWRpc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.NodeInfo), global::Google.Cloud.Redis.V1.NodeInfo.Parser, new[]{ "Id", "Zone" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.Instance), global::Google.Cloud.Redis.V1.Instance.Parser, new[]{ "Name", "DisplayName", "Labels", "LocationId", "AlternativeLocationId", "RedisVersion", "ReservedIpRange", "SecondaryIpRange", "Host", "Port", "CurrentLocationId", "CreateTime", "State", "StatusMessage", "RedisConfigs", "Tier", "MemorySizeGb", "AuthorizedNetwork", "PersistenceIamIdentity", "ConnectMode", "AuthEnabled", "ServerCaCerts", "TransitEncryptionMode", "ReplicaCount", "Nodes", "ReadEndpoint", "ReadEndpointPort", "ReadReplicasMode" }, null, new[]{ typeof(global::Google.Cloud.Redis.V1.Instance.Types.State), typeof(global::Google.Cloud.Redis.V1.Instance.Types.Tier), typeof(global::Google.Cloud.Redis.V1.Instance.Types.ConnectMode), typeof(global::Google.Cloud.Redis.V1.Instance.Types.TransitEncryptionMode), typeof(global::Google.Cloud.Redis.V1.Instance.Types.ReadReplicasMode) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.Instance), global::Google.Cloud.Redis.V1.Instance.Parser, new[]{ "Name", "DisplayName", "Labels", "LocationId", "AlternativeLocationId", "RedisVersion", "ReservedIpRange", "SecondaryIpRange", "Host", "Port", "CurrentLocationId", "CreateTime", "State", "StatusMessage", "RedisConfigs", "Tier", "MemorySizeGb", "AuthorizedNetwork", "PersistenceIamIdentity", "ConnectMode", "AuthEnabled", "ServerCaCerts", "TransitEncryptionMode", "MaintenancePolicy", "MaintenanceSchedule", "ReplicaCount", "Nodes", "ReadEndpoint", "ReadEndpointPort", "ReadReplicasMode" }, null, new[]{ typeof(global::Google.Cloud.Redis.V1.Instance.Types.State), typeof(global::Google.Cloud.Redis.V1.Instance.Types.Tier), typeof(global::Google.Cloud.Redis.V1.Instance.Types.ConnectMode), typeof(global::Google.Cloud.Redis.V1.Instance.Types.TransitEncryptionMode), typeof(global::Google.Cloud.Redis.V1.Instance.Types.ReadReplicasMode) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.RescheduleMaintenanceRequest), global::Google.Cloud.Redis.V1.RescheduleMaintenanceRequest.Parser, new[]{ "Name", "RescheduleType", "ScheduleTime" }, null, new[]{ typeof(global::Google.Cloud.Redis.V1.RescheduleMaintenanceRequest.Types.RescheduleType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.MaintenancePolicy), global::Google.Cloud.Redis.V1.MaintenancePolicy.Parser, new[]{ "CreateTime", "UpdateTime", "Description", "WeeklyMaintenanceWindow" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.WeeklyMaintenanceWindow), global::Google.Cloud.Redis.V1.WeeklyMaintenanceWindow.Parser, new[]{ "Day", "StartTime", "Duration" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.MaintenanceSchedule), global::Google.Cloud.Redis.V1.MaintenanceSchedule.Parser, new[]{ "StartTime", "EndTime", "CanReschedule", "ScheduleDeadlineTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.ListInstancesRequest), global::Google.Cloud.Redis.V1.ListInstancesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.ListInstancesResponse), global::Google.Cloud.Redis.V1.ListInstancesResponse.Parser, new[]{ "Instances", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.GetInstanceRequest), global::Google.Cloud.Redis.V1.GetInstanceRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -509,6 +547,8 @@ namespace Google.Cloud.Redis.V1 {
       authEnabled_ = other.authEnabled_;
       serverCaCerts_ = other.serverCaCerts_.Clone();
       transitEncryptionMode_ = other.transitEncryptionMode_;
+      maintenancePolicy_ = other.maintenancePolicy_ != null ? other.maintenancePolicy_.Clone() : null;
+      maintenanceSchedule_ = other.maintenanceSchedule_ != null ? other.maintenanceSchedule_.Clone() : null;
       replicaCount_ = other.replicaCount_;
       nodes_ = other.nodes_.Clone();
       readEndpoint_ = other.readEndpoint_;
@@ -933,6 +973,38 @@ namespace Google.Cloud.Redis.V1 {
       }
     }
 
+    /// <summary>Field number for the "maintenance_policy" field.</summary>
+    public const int MaintenancePolicyFieldNumber = 27;
+    private global::Google.Cloud.Redis.V1.MaintenancePolicy maintenancePolicy_;
+    /// <summary>
+    /// Optional. The maintenance policy for the instance. If not provided,
+    /// maintenance events can be performed at any time.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Redis.V1.MaintenancePolicy MaintenancePolicy {
+      get { return maintenancePolicy_; }
+      set {
+        maintenancePolicy_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "maintenance_schedule" field.</summary>
+    public const int MaintenanceScheduleFieldNumber = 28;
+    private global::Google.Cloud.Redis.V1.MaintenanceSchedule maintenanceSchedule_;
+    /// <summary>
+    /// Output only. Date and time of upcoming maintenance events which have been
+    /// scheduled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Redis.V1.MaintenanceSchedule MaintenanceSchedule {
+      get { return maintenanceSchedule_; }
+      set {
+        maintenanceSchedule_ = value;
+      }
+    }
+
     /// <summary>Field number for the "replica_count" field.</summary>
     public const int ReplicaCountFieldNumber = 31;
     private int replicaCount_;
@@ -1053,6 +1125,8 @@ namespace Google.Cloud.Redis.V1 {
       if (AuthEnabled != other.AuthEnabled) return false;
       if(!serverCaCerts_.Equals(other.serverCaCerts_)) return false;
       if (TransitEncryptionMode != other.TransitEncryptionMode) return false;
+      if (!object.Equals(MaintenancePolicy, other.MaintenancePolicy)) return false;
+      if (!object.Equals(MaintenanceSchedule, other.MaintenanceSchedule)) return false;
       if (ReplicaCount != other.ReplicaCount) return false;
       if(!nodes_.Equals(other.nodes_)) return false;
       if (ReadEndpoint != other.ReadEndpoint) return false;
@@ -1088,6 +1162,8 @@ namespace Google.Cloud.Redis.V1 {
       if (AuthEnabled != false) hash ^= AuthEnabled.GetHashCode();
       hash ^= serverCaCerts_.GetHashCode();
       if (TransitEncryptionMode != global::Google.Cloud.Redis.V1.Instance.Types.TransitEncryptionMode.Unspecified) hash ^= TransitEncryptionMode.GetHashCode();
+      if (maintenancePolicy_ != null) hash ^= MaintenancePolicy.GetHashCode();
+      if (maintenanceSchedule_ != null) hash ^= MaintenanceSchedule.GetHashCode();
       if (ReplicaCount != 0) hash ^= ReplicaCount.GetHashCode();
       hash ^= nodes_.GetHashCode();
       if (ReadEndpoint.Length != 0) hash ^= ReadEndpoint.GetHashCode();
@@ -1189,6 +1265,14 @@ namespace Google.Cloud.Redis.V1 {
       if (TransitEncryptionMode != global::Google.Cloud.Redis.V1.Instance.Types.TransitEncryptionMode.Unspecified) {
         output.WriteRawTag(208, 1);
         output.WriteEnum((int) TransitEncryptionMode);
+      }
+      if (maintenancePolicy_ != null) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(MaintenancePolicy);
+      }
+      if (maintenanceSchedule_ != null) {
+        output.WriteRawTag(226, 1);
+        output.WriteMessage(MaintenanceSchedule);
       }
       if (SecondaryIpRange.Length != 0) {
         output.WriteRawTag(242, 1);
@@ -1300,6 +1384,14 @@ namespace Google.Cloud.Redis.V1 {
         output.WriteRawTag(208, 1);
         output.WriteEnum((int) TransitEncryptionMode);
       }
+      if (maintenancePolicy_ != null) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(MaintenancePolicy);
+      }
+      if (maintenanceSchedule_ != null) {
+        output.WriteRawTag(226, 1);
+        output.WriteMessage(MaintenanceSchedule);
+      }
       if (SecondaryIpRange.Length != 0) {
         output.WriteRawTag(242, 1);
         output.WriteString(SecondaryIpRange);
@@ -1394,6 +1486,12 @@ namespace Google.Cloud.Redis.V1 {
       if (TransitEncryptionMode != global::Google.Cloud.Redis.V1.Instance.Types.TransitEncryptionMode.Unspecified) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) TransitEncryptionMode);
       }
+      if (maintenancePolicy_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(MaintenancePolicy);
+      }
+      if (maintenanceSchedule_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(MaintenanceSchedule);
+      }
       if (ReplicaCount != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(ReplicaCount);
       }
@@ -1484,6 +1582,18 @@ namespace Google.Cloud.Redis.V1 {
       serverCaCerts_.Add(other.serverCaCerts_);
       if (other.TransitEncryptionMode != global::Google.Cloud.Redis.V1.Instance.Types.TransitEncryptionMode.Unspecified) {
         TransitEncryptionMode = other.TransitEncryptionMode;
+      }
+      if (other.maintenancePolicy_ != null) {
+        if (maintenancePolicy_ == null) {
+          MaintenancePolicy = new global::Google.Cloud.Redis.V1.MaintenancePolicy();
+        }
+        MaintenancePolicy.MergeFrom(other.MaintenancePolicy);
+      }
+      if (other.maintenanceSchedule_ != null) {
+        if (maintenanceSchedule_ == null) {
+          MaintenanceSchedule = new global::Google.Cloud.Redis.V1.MaintenanceSchedule();
+        }
+        MaintenanceSchedule.MergeFrom(other.MaintenanceSchedule);
       }
       if (other.ReplicaCount != 0) {
         ReplicaCount = other.ReplicaCount;
@@ -1602,6 +1712,20 @@ namespace Google.Cloud.Redis.V1 {
           }
           case 208: {
             TransitEncryptionMode = (global::Google.Cloud.Redis.V1.Instance.Types.TransitEncryptionMode) input.ReadEnum();
+            break;
+          }
+          case 218: {
+            if (maintenancePolicy_ == null) {
+              MaintenancePolicy = new global::Google.Cloud.Redis.V1.MaintenancePolicy();
+            }
+            input.ReadMessage(MaintenancePolicy);
+            break;
+          }
+          case 226: {
+            if (maintenanceSchedule_ == null) {
+              MaintenanceSchedule = new global::Google.Cloud.Redis.V1.MaintenanceSchedule();
+            }
+            input.ReadMessage(MaintenanceSchedule);
             break;
           }
           case 242: {
@@ -1732,6 +1856,20 @@ namespace Google.Cloud.Redis.V1 {
           }
           case 208: {
             TransitEncryptionMode = (global::Google.Cloud.Redis.V1.Instance.Types.TransitEncryptionMode) input.ReadEnum();
+            break;
+          }
+          case 218: {
+            if (maintenancePolicy_ == null) {
+              MaintenancePolicy = new global::Google.Cloud.Redis.V1.MaintenancePolicy();
+            }
+            input.ReadMessage(MaintenancePolicy);
+            break;
+          }
+          case 226: {
+            if (maintenanceSchedule_ == null) {
+              MaintenanceSchedule = new global::Google.Cloud.Redis.V1.MaintenanceSchedule();
+            }
+            input.ReadMessage(MaintenanceSchedule);
             break;
           }
           case 242: {
@@ -1895,6 +2033,1289 @@ namespace Google.Cloud.Redis.V1 {
   }
 
   /// <summary>
+  /// Request for [RescheduleMaintenance][google.cloud.redis.v1.CloudRedis.RescheduleMaintenance].
+  /// </summary>
+  public sealed partial class RescheduleMaintenanceRequest : pb::IMessage<RescheduleMaintenanceRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RescheduleMaintenanceRequest> _parser = new pb::MessageParser<RescheduleMaintenanceRequest>(() => new RescheduleMaintenanceRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RescheduleMaintenanceRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RescheduleMaintenanceRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RescheduleMaintenanceRequest(RescheduleMaintenanceRequest other) : this() {
+      name_ = other.name_;
+      rescheduleType_ = other.rescheduleType_;
+      scheduleTime_ = other.scheduleTime_ != null ? other.scheduleTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RescheduleMaintenanceRequest Clone() {
+      return new RescheduleMaintenanceRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Redis instance resource name using the form:
+    ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+    /// where `location_id` refers to a GCP region.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "reschedule_type" field.</summary>
+    public const int RescheduleTypeFieldNumber = 2;
+    private global::Google.Cloud.Redis.V1.RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType_ = global::Google.Cloud.Redis.V1.RescheduleMaintenanceRequest.Types.RescheduleType.Unspecified;
+    /// <summary>
+    /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as well.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Redis.V1.RescheduleMaintenanceRequest.Types.RescheduleType RescheduleType {
+      get { return rescheduleType_; }
+      set {
+        rescheduleType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "schedule_time" field.</summary>
+    public const int ScheduleTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp scheduleTime_;
+    /// <summary>
+    /// Optional. Timestamp when the maintenance shall be rescheduled to if
+    /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format, for
+    /// example `2012-11-15T16:19:00.094Z`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ScheduleTime {
+      get { return scheduleTime_; }
+      set {
+        scheduleTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RescheduleMaintenanceRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RescheduleMaintenanceRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (RescheduleType != other.RescheduleType) return false;
+      if (!object.Equals(ScheduleTime, other.ScheduleTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (RescheduleType != global::Google.Cloud.Redis.V1.RescheduleMaintenanceRequest.Types.RescheduleType.Unspecified) hash ^= RescheduleType.GetHashCode();
+      if (scheduleTime_ != null) hash ^= ScheduleTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (RescheduleType != global::Google.Cloud.Redis.V1.RescheduleMaintenanceRequest.Types.RescheduleType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) RescheduleType);
+      }
+      if (scheduleTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ScheduleTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (RescheduleType != global::Google.Cloud.Redis.V1.RescheduleMaintenanceRequest.Types.RescheduleType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) RescheduleType);
+      }
+      if (scheduleTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ScheduleTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (RescheduleType != global::Google.Cloud.Redis.V1.RescheduleMaintenanceRequest.Types.RescheduleType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RescheduleType);
+      }
+      if (scheduleTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ScheduleTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RescheduleMaintenanceRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.RescheduleType != global::Google.Cloud.Redis.V1.RescheduleMaintenanceRequest.Types.RescheduleType.Unspecified) {
+        RescheduleType = other.RescheduleType;
+      }
+      if (other.scheduleTime_ != null) {
+        if (scheduleTime_ == null) {
+          ScheduleTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ScheduleTime.MergeFrom(other.ScheduleTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            RescheduleType = (global::Google.Cloud.Redis.V1.RescheduleMaintenanceRequest.Types.RescheduleType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (scheduleTime_ == null) {
+              ScheduleTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ScheduleTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            RescheduleType = (global::Google.Cloud.Redis.V1.RescheduleMaintenanceRequest.Types.RescheduleType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (scheduleTime_ == null) {
+              ScheduleTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ScheduleTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the RescheduleMaintenanceRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Reschedule options.
+      /// </summary>
+      public enum RescheduleType {
+        /// <summary>
+        /// Not set.
+        /// </summary>
+        [pbr::OriginalName("RESCHEDULE_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// If the user wants to schedule the maintenance to happen now.
+        /// </summary>
+        [pbr::OriginalName("IMMEDIATE")] Immediate = 1,
+        /// <summary>
+        /// If the user wants to use the existing maintenance policy to find the
+        /// next available window.
+        /// </summary>
+        [pbr::OriginalName("NEXT_AVAILABLE_WINDOW")] NextAvailableWindow = 2,
+        /// <summary>
+        /// If the user wants to reschedule the maintenance to a specific time.
+        /// </summary>
+        [pbr::OriginalName("SPECIFIC_TIME")] SpecificTime = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Maintenance policy for an instance.
+  /// </summary>
+  public sealed partial class MaintenancePolicy : pb::IMessage<MaintenancePolicy>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MaintenancePolicy> _parser = new pb::MessageParser<MaintenancePolicy>(() => new MaintenancePolicy());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MaintenancePolicy> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaintenancePolicy() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaintenancePolicy(MaintenancePolicy other) : this() {
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      description_ = other.description_;
+      weeklyMaintenanceWindow_ = other.weeklyMaintenanceWindow_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaintenancePolicy Clone() {
+      return new MaintenancePolicy(this);
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. The time when the policy was created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. The time when the policy was last updated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 3;
+    private string description_ = "";
+    /// <summary>
+    /// Optional. Description of what this policy is for. Create/Update methods
+    /// return INVALID_ARGUMENT if the length is greater than 512.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "weekly_maintenance_window" field.</summary>
+    public const int WeeklyMaintenanceWindowFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Redis.V1.WeeklyMaintenanceWindow> _repeated_weeklyMaintenanceWindow_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Redis.V1.WeeklyMaintenanceWindow.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Redis.V1.WeeklyMaintenanceWindow> weeklyMaintenanceWindow_ = new pbc::RepeatedField<global::Google.Cloud.Redis.V1.WeeklyMaintenanceWindow>();
+    /// <summary>
+    /// Optional. Maintenance window that is applied to resources covered by this
+    /// policy. Minimum 1. For the current version, the maximum number of
+    /// weekly_window is expected to be one.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Redis.V1.WeeklyMaintenanceWindow> WeeklyMaintenanceWindow {
+      get { return weeklyMaintenanceWindow_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MaintenancePolicy);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MaintenancePolicy other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (Description != other.Description) return false;
+      if(!weeklyMaintenanceWindow_.Equals(other.weeklyMaintenanceWindow_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      hash ^= weeklyMaintenanceWindow_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (createTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateTime);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      weeklyMaintenanceWindow_.WriteTo(output, _repeated_weeklyMaintenanceWindow_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (createTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateTime);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      weeklyMaintenanceWindow_.WriteTo(ref output, _repeated_weeklyMaintenanceWindow_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      size += weeklyMaintenanceWindow_.CalculateSize(_repeated_weeklyMaintenanceWindow_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MaintenancePolicy other) {
+      if (other == null) {
+        return;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      weeklyMaintenanceWindow_.Add(other.weeklyMaintenanceWindow_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 18: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 34: {
+            weeklyMaintenanceWindow_.AddEntriesFrom(input, _repeated_weeklyMaintenanceWindow_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 18: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 34: {
+            weeklyMaintenanceWindow_.AddEntriesFrom(ref input, _repeated_weeklyMaintenanceWindow_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Time window in which disruptive maintenance updates occur. Non-disruptive
+  /// updates can occur inside or outside this window.
+  /// </summary>
+  public sealed partial class WeeklyMaintenanceWindow : pb::IMessage<WeeklyMaintenanceWindow>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<WeeklyMaintenanceWindow> _parser = new pb::MessageParser<WeeklyMaintenanceWindow>(() => new WeeklyMaintenanceWindow());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<WeeklyMaintenanceWindow> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WeeklyMaintenanceWindow() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WeeklyMaintenanceWindow(WeeklyMaintenanceWindow other) : this() {
+      day_ = other.day_;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      duration_ = other.duration_ != null ? other.duration_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WeeklyMaintenanceWindow Clone() {
+      return new WeeklyMaintenanceWindow(this);
+    }
+
+    /// <summary>Field number for the "day" field.</summary>
+    public const int DayFieldNumber = 1;
+    private global::Google.Type.DayOfWeek day_ = global::Google.Type.DayOfWeek.Unspecified;
+    /// <summary>
+    /// Required. The day of week that maintenance updates occur.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Type.DayOfWeek Day {
+      get { return day_; }
+      set {
+        day_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 2;
+    private global::Google.Type.TimeOfDay startTime_;
+    /// <summary>
+    /// Required. Start time of the window in UTC time.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Type.TimeOfDay StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "duration" field.</summary>
+    public const int DurationFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Duration duration_;
+    /// <summary>
+    /// Output only. Duration of the maintenance window. The current window is fixed at 1 hour.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration Duration {
+      get { return duration_; }
+      set {
+        duration_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as WeeklyMaintenanceWindow);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(WeeklyMaintenanceWindow other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Day != other.Day) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(Duration, other.Duration)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Day != global::Google.Type.DayOfWeek.Unspecified) hash ^= Day.GetHashCode();
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (duration_ != null) hash ^= Duration.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Day != global::Google.Type.DayOfWeek.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Day);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StartTime);
+      }
+      if (duration_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Duration);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Day != global::Google.Type.DayOfWeek.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Day);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StartTime);
+      }
+      if (duration_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Duration);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Day != global::Google.Type.DayOfWeek.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Day);
+      }
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (duration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Duration);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(WeeklyMaintenanceWindow other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Day != global::Google.Type.DayOfWeek.Unspecified) {
+        Day = other.Day;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Type.TimeOfDay();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.duration_ != null) {
+        if (duration_ == null) {
+          Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        Duration.MergeFrom(other.Duration);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Day = (global::Google.Type.DayOfWeek) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Type.TimeOfDay();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 26: {
+            if (duration_ == null) {
+              Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Duration);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Day = (global::Google.Type.DayOfWeek) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Type.TimeOfDay();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 26: {
+            if (duration_ == null) {
+              Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Duration);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Upcoming maintenance schedule. If no maintenance is scheduled, fields are not
+  /// populated.
+  /// </summary>
+  public sealed partial class MaintenanceSchedule : pb::IMessage<MaintenanceSchedule>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MaintenanceSchedule> _parser = new pb::MessageParser<MaintenanceSchedule>(() => new MaintenanceSchedule());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MaintenanceSchedule> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaintenanceSchedule() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaintenanceSchedule(MaintenanceSchedule other) : this() {
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      canReschedule_ = other.canReschedule_;
+      scheduleDeadlineTime_ = other.scheduleDeadlineTime_ != null ? other.scheduleDeadlineTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaintenanceSchedule Clone() {
+      return new MaintenanceSchedule(this);
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// Output only. The start time of any upcoming scheduled maintenance for this instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// Output only. The end time of any upcoming scheduled maintenance for this instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "can_reschedule" field.</summary>
+    public const int CanRescheduleFieldNumber = 3;
+    private bool canReschedule_;
+    /// <summary>
+    /// If the scheduled maintenance can be rescheduled, default is true.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool CanReschedule {
+      get { return canReschedule_; }
+      set {
+        canReschedule_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "schedule_deadline_time" field.</summary>
+    public const int ScheduleDeadlineTimeFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp scheduleDeadlineTime_;
+    /// <summary>
+    /// Output only. The deadline that the maintenance schedule start time can not go beyond,
+    /// including reschedule.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ScheduleDeadlineTime {
+      get { return scheduleDeadlineTime_; }
+      set {
+        scheduleDeadlineTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MaintenanceSchedule);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MaintenanceSchedule other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (CanReschedule != other.CanReschedule) return false;
+      if (!object.Equals(ScheduleDeadlineTime, other.ScheduleDeadlineTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (CanReschedule != false) hash ^= CanReschedule.GetHashCode();
+      if (scheduleDeadlineTime_ != null) hash ^= ScheduleDeadlineTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (CanReschedule != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(CanReschedule);
+      }
+      if (scheduleDeadlineTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ScheduleDeadlineTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (CanReschedule != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(CanReschedule);
+      }
+      if (scheduleDeadlineTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ScheduleDeadlineTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (CanReschedule != false) {
+        size += 1 + 1;
+      }
+      if (scheduleDeadlineTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ScheduleDeadlineTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MaintenanceSchedule other) {
+      if (other == null) {
+        return;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      if (other.CanReschedule != false) {
+        CanReschedule = other.CanReschedule;
+      }
+      if (other.scheduleDeadlineTime_ != null) {
+        if (scheduleDeadlineTime_ == null) {
+          ScheduleDeadlineTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ScheduleDeadlineTime.MergeFrom(other.ScheduleDeadlineTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 24: {
+            CanReschedule = input.ReadBool();
+            break;
+          }
+          case 42: {
+            if (scheduleDeadlineTime_ == null) {
+              ScheduleDeadlineTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ScheduleDeadlineTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 24: {
+            CanReschedule = input.ReadBool();
+            break;
+          }
+          case 42: {
+            if (scheduleDeadlineTime_ == null) {
+              ScheduleDeadlineTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ScheduleDeadlineTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request for [ListInstances][google.cloud.redis.v1.CloudRedis.ListInstances].
   /// </summary>
   public sealed partial class ListInstancesRequest : pb::IMessage<ListInstancesRequest>
@@ -1911,7 +3332,7 @@ namespace Google.Cloud.Redis.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2195,7 +3616,7 @@ namespace Google.Cloud.Redis.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2459,7 +3880,7 @@ namespace Google.Cloud.Redis.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2656,7 +4077,7 @@ namespace Google.Cloud.Redis.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2853,7 +4274,7 @@ namespace Google.Cloud.Redis.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3048,7 +4469,7 @@ namespace Google.Cloud.Redis.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3341,7 +4762,7 @@ namespace Google.Cloud.Redis.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3603,7 +5024,7 @@ namespace Google.Cloud.Redis.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3840,7 +5261,7 @@ namespace Google.Cloud.Redis.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4037,7 +5458,7 @@ namespace Google.Cloud.Redis.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4232,7 +5653,7 @@ namespace Google.Cloud.Redis.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4470,7 +5891,7 @@ namespace Google.Cloud.Redis.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4716,7 +6137,7 @@ namespace Google.Cloud.Redis.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4912,7 +6333,7 @@ namespace Google.Cloud.Redis.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5150,7 +6571,7 @@ namespace Google.Cloud.Redis.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5396,7 +6817,7 @@ namespace Google.Cloud.Redis.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5664,7 +7085,7 @@ namespace Google.Cloud.Redis.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6120,7 +7541,7 @@ namespace Google.Cloud.Redis.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6308,7 +7729,7 @@ namespace Google.Cloud.Redis.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6463,7 +7884,7 @@ namespace Google.Cloud.Redis.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

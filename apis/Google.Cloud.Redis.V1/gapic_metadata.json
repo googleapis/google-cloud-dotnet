@@ -58,6 +58,12 @@
                 "ListInstancesAsync"
               ]
             },
+            "RescheduleMaintenance": {
+              "methods": [
+                "RescheduleMaintenance",
+                "RescheduleMaintenanceAsync"
+              ]
+            },
             "UpdateInstance": {
               "methods": [
                 "UpdateInstance",

@@ -1406,6 +1406,161 @@
         }
       },
       "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedis_RescheduleMaintenance_sync",
+      "title": "RescheduleMaintenanceRequestObject",
+      "description": "Snippet for RescheduleMaintenance",
+      "file": "CloudRedisClient.RescheduleMaintenanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenance",
+        "fullName": "Google.Cloud.Redis.V1.CloudRedisClient.RescheduleMaintenance",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1.Instance, Google.Cloud.Redis.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.redis.v1.CloudRedis.RescheduleMaintenance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedis_RescheduleMaintenance_async",
+      "title": "RescheduleMaintenanceRequestObjectAsync",
+      "description": "Snippet for RescheduleMaintenanceAsync",
+      "file": "CloudRedisClient.RescheduleMaintenanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenanceAsync",
+        "fullName": "Google.Cloud.Redis.V1.CloudRedisClient.RescheduleMaintenanceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1.Instance, Google.Cloud.Redis.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.redis.v1.CloudRedis.RescheduleMaintenance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedis_RescheduleMaintenance_sync_flattened",
+      "title": "RescheduleMaintenance",
+      "description": "Snippet for RescheduleMaintenance",
+      "file": "CloudRedisClient.RescheduleMaintenanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenance",
+        "fullName": "Google.Cloud.Redis.V1.CloudRedisClient.RescheduleMaintenance",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1.Instance, Google.Cloud.Redis.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.redis.v1.CloudRedis.RescheduleMaintenance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedis_RescheduleMaintenance_async_flattened",
+      "title": "RescheduleMaintenanceAsync",
+      "description": "Snippet for RescheduleMaintenanceAsync",
+      "file": "CloudRedisClient.RescheduleMaintenanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenanceAsync",
+        "fullName": "Google.Cloud.Redis.V1.CloudRedisClient.RescheduleMaintenanceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1.Instance, Google.Cloud.Redis.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.redis.v1.CloudRedis.RescheduleMaintenance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedis_RescheduleMaintenance_sync_flattened_resourceNames",
+      "title": "RescheduleMaintenanceResourceNames",
+      "description": "Snippet for RescheduleMaintenance",
+      "file": "CloudRedisClient.RescheduleMaintenanceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenance",
+        "fullName": "Google.Cloud.Redis.V1.CloudRedisClient.RescheduleMaintenance",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1.Instance, Google.Cloud.Redis.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.redis.v1.CloudRedis.RescheduleMaintenance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedis_RescheduleMaintenance_async_flattened_resourceNames",
+      "title": "RescheduleMaintenanceResourceNamesAsync",
+      "description": "Snippet for RescheduleMaintenanceAsync",
+      "file": "CloudRedisClient.RescheduleMaintenanceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenanceAsync",
+        "fullName": "Google.Cloud.Redis.V1.CloudRedisClient.RescheduleMaintenanceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1.Instance, Google.Cloud.Redis.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.redis.v1.CloudRedis.RescheduleMaintenance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
     }
   ]
 }

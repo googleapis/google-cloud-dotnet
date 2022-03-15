@@ -1616,5 +1616,200 @@ namespace Google.Cloud.Redis.V1.Snippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for RescheduleMaintenance</summary>
+        public void RescheduleMaintenanceRequestObject()
+        {
+            // Snippet: RescheduleMaintenance(RescheduleMaintenanceRequest, CallSettings)
+            // Create client
+            CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
+            // Initialize request argument(s)
+            RescheduleMaintenanceRequest request = new RescheduleMaintenanceRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                RescheduleType = RescheduleMaintenanceRequest.Types.RescheduleType.Unspecified,
+                ScheduleTime = new Timestamp(),
+            };
+            // Make the request
+            Operation<Instance, OperationMetadata> response = cloudRedisClient.RescheduleMaintenance(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = cloudRedisClient.PollOnceRescheduleMaintenance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RescheduleMaintenanceAsync</summary>
+        public async Task RescheduleMaintenanceRequestObjectAsync()
+        {
+            // Snippet: RescheduleMaintenanceAsync(RescheduleMaintenanceRequest, CallSettings)
+            // Additional: RescheduleMaintenanceAsync(RescheduleMaintenanceRequest, CancellationToken)
+            // Create client
+            CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
+            // Initialize request argument(s)
+            RescheduleMaintenanceRequest request = new RescheduleMaintenanceRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                RescheduleType = RescheduleMaintenanceRequest.Types.RescheduleType.Unspecified,
+                ScheduleTime = new Timestamp(),
+            };
+            // Make the request
+            Operation<Instance, OperationMetadata> response = await cloudRedisClient.RescheduleMaintenanceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = await cloudRedisClient.PollOnceRescheduleMaintenanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RescheduleMaintenance</summary>
+        public void RescheduleMaintenance()
+        {
+            // Snippet: RescheduleMaintenance(string, RescheduleMaintenanceRequest.Types.RescheduleType, Timestamp, CallSettings)
+            // Create client
+            CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
+            RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType = RescheduleMaintenanceRequest.Types.RescheduleType.Unspecified;
+            Timestamp scheduleTime = new Timestamp();
+            // Make the request
+            Operation<Instance, OperationMetadata> response = cloudRedisClient.RescheduleMaintenance(name, rescheduleType, scheduleTime);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = cloudRedisClient.PollOnceRescheduleMaintenance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RescheduleMaintenanceAsync</summary>
+        public async Task RescheduleMaintenanceAsync()
+        {
+            // Snippet: RescheduleMaintenanceAsync(string, RescheduleMaintenanceRequest.Types.RescheduleType, Timestamp, CallSettings)
+            // Additional: RescheduleMaintenanceAsync(string, RescheduleMaintenanceRequest.Types.RescheduleType, Timestamp, CancellationToken)
+            // Create client
+            CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
+            RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType = RescheduleMaintenanceRequest.Types.RescheduleType.Unspecified;
+            Timestamp scheduleTime = new Timestamp();
+            // Make the request
+            Operation<Instance, OperationMetadata> response = await cloudRedisClient.RescheduleMaintenanceAsync(name, rescheduleType, scheduleTime);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = await cloudRedisClient.PollOnceRescheduleMaintenanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RescheduleMaintenance</summary>
+        public void RescheduleMaintenanceResourceNames()
+        {
+            // Snippet: RescheduleMaintenance(InstanceName, RescheduleMaintenanceRequest.Types.RescheduleType, Timestamp, CallSettings)
+            // Create client
+            CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
+            // Initialize request argument(s)
+            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType = RescheduleMaintenanceRequest.Types.RescheduleType.Unspecified;
+            Timestamp scheduleTime = new Timestamp();
+            // Make the request
+            Operation<Instance, OperationMetadata> response = cloudRedisClient.RescheduleMaintenance(name, rescheduleType, scheduleTime);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = cloudRedisClient.PollOnceRescheduleMaintenance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RescheduleMaintenanceAsync</summary>
+        public async Task RescheduleMaintenanceResourceNamesAsync()
+        {
+            // Snippet: RescheduleMaintenanceAsync(InstanceName, RescheduleMaintenanceRequest.Types.RescheduleType, Timestamp, CallSettings)
+            // Additional: RescheduleMaintenanceAsync(InstanceName, RescheduleMaintenanceRequest.Types.RescheduleType, Timestamp, CancellationToken)
+            // Create client
+            CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType = RescheduleMaintenanceRequest.Types.RescheduleType.Unspecified;
+            Timestamp scheduleTime = new Timestamp();
+            // Make the request
+            Operation<Instance, OperationMetadata> response = await cloudRedisClient.RescheduleMaintenanceAsync(name, rescheduleType, scheduleTime);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = await cloudRedisClient.PollOnceRescheduleMaintenanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }
