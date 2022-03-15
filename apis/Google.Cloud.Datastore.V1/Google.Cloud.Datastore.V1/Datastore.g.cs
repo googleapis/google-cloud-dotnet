@@ -3751,8 +3751,9 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "base_version" field.</summary>
     public const int BaseVersionFieldNumber = 8;
     /// <summary>
-    /// The version of the entity that this mutation is being applied to. If this
-    /// does not match the current version on the server, the mutation conflicts.
+    /// The version of the entity that this mutation is being applied
+    /// to. If this does not match the current version on the server, the
+    /// mutation conflicts.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

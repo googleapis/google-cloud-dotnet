@@ -25,70 +25,70 @@ namespace Google.Cloud.Datastore.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9nb29nbGUvZGF0YXN0b3JlL3YxL3F1ZXJ5LnByb3RvEhNnb29nbGUuZGF0",
-            "YXN0b3JlLnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGiBnb29n",
-            "bGUvZGF0YXN0b3JlL3YxL2VudGl0eS5wcm90bxoeZ29vZ2xlL3Byb3RvYnVm",
-            "L3dyYXBwZXJzLnByb3RvGhhnb29nbGUvdHlwZS9sYXRsbmcucHJvdG8irwEK",
-            "DEVudGl0eVJlc3VsdBIrCgZlbnRpdHkYASABKAsyGy5nb29nbGUuZGF0YXN0",
-            "b3JlLnYxLkVudGl0eRIPCgd2ZXJzaW9uGAQgASgDEg4KBmN1cnNvchgDIAEo",
-            "DCJRCgpSZXN1bHRUeXBlEhsKF1JFU1VMVF9UWVBFX1VOU1BFQ0lGSUVEEAAS",
-            "CAoERlVMTBABEg4KClBST0pFQ1RJT04QAhIMCghLRVlfT05MWRADIvICCgVR",
-            "dWVyeRIzCgpwcm9qZWN0aW9uGAIgAygLMh8uZ29vZ2xlLmRhdGFzdG9yZS52",
-            "MS5Qcm9qZWN0aW9uEjEKBGtpbmQYAyADKAsyIy5nb29nbGUuZGF0YXN0b3Jl",
-            "LnYxLktpbmRFeHByZXNzaW9uEisKBmZpbHRlchgEIAEoCzIbLmdvb2dsZS5k",
-            "YXRhc3RvcmUudjEuRmlsdGVyEjEKBW9yZGVyGAUgAygLMiIuZ29vZ2xlLmRh",
-            "dGFzdG9yZS52MS5Qcm9wZXJ0eU9yZGVyEjsKC2Rpc3RpbmN0X29uGAYgAygL",
-            "MiYuZ29vZ2xlLmRhdGFzdG9yZS52MS5Qcm9wZXJ0eVJlZmVyZW5jZRIUCgxz",
-            "dGFydF9jdXJzb3IYByABKAwSEgoKZW5kX2N1cnNvchgIIAEoDBIOCgZvZmZz",
-            "ZXQYCiABKAUSKgoFbGltaXQYDCABKAsyGy5nb29nbGUucHJvdG9idWYuSW50",
-            "MzJWYWx1ZSIeCg5LaW5kRXhwcmVzc2lvbhIMCgRuYW1lGAEgASgJIiEKEVBy",
-            "b3BlcnR5UmVmZXJlbmNlEgwKBG5hbWUYAiABKAkiRgoKUHJvamVjdGlvbhI4",
-            "Cghwcm9wZXJ0eRgBIAEoCzImLmdvb2dsZS5kYXRhc3RvcmUudjEuUHJvcGVy",
-            "dHlSZWZlcmVuY2Ui0QEKDVByb3BlcnR5T3JkZXISOAoIcHJvcGVydHkYASAB",
-            "KAsyJi5nb29nbGUuZGF0YXN0b3JlLnYxLlByb3BlcnR5UmVmZXJlbmNlEj8K",
-            "CWRpcmVjdGlvbhgCIAEoDjIsLmdvb2dsZS5kYXRhc3RvcmUudjEuUHJvcGVy",
-            "dHlPcmRlci5EaXJlY3Rpb24iRQoJRGlyZWN0aW9uEhkKFURJUkVDVElPTl9V",
-            "TlNQRUNJRklFRBAAEg0KCUFTQ0VORElORxABEg4KCkRFU0NFTkRJTkcQAiKZ",
-            "AQoGRmlsdGVyEkAKEGNvbXBvc2l0ZV9maWx0ZXIYASABKAsyJC5nb29nbGUu",
-            "ZGF0YXN0b3JlLnYxLkNvbXBvc2l0ZUZpbHRlckgAEj4KD3Byb3BlcnR5X2Zp",
-            "bHRlchgCIAEoCzIjLmdvb2dsZS5kYXRhc3RvcmUudjEuUHJvcGVydHlGaWx0",
-            "ZXJIAEINCgtmaWx0ZXJfdHlwZSKpAQoPQ29tcG9zaXRlRmlsdGVyEjkKAm9w",
-            "GAEgASgOMi0uZ29vZ2xlLmRhdGFzdG9yZS52MS5Db21wb3NpdGVGaWx0ZXIu",
-            "T3BlcmF0b3ISLAoHZmlsdGVycxgCIAMoCzIbLmdvb2dsZS5kYXRhc3RvcmUu",
-            "djEuRmlsdGVyIi0KCE9wZXJhdG9yEhgKFE9QRVJBVE9SX1VOU1BFQ0lGSUVE",
-            "EAASBwoDQU5EEAEixwIKDlByb3BlcnR5RmlsdGVyEjgKCHByb3BlcnR5GAEg",
-            "ASgLMiYuZ29vZ2xlLmRhdGFzdG9yZS52MS5Qcm9wZXJ0eVJlZmVyZW5jZRI4",
-            "CgJvcBgCIAEoDjIsLmdvb2dsZS5kYXRhc3RvcmUudjEuUHJvcGVydHlGaWx0",
-            "ZXIuT3BlcmF0b3ISKQoFdmFsdWUYAyABKAsyGi5nb29nbGUuZGF0YXN0b3Jl",
-            "LnYxLlZhbHVlIpUBCghPcGVyYXRvchIYChRPUEVSQVRPUl9VTlNQRUNJRklF",
-            "RBAAEg0KCUxFU1NfVEhBThABEhYKEkxFU1NfVEhBTl9PUl9FUVVBTBACEhAK",
-            "DEdSRUFURVJfVEhBThADEhkKFUdSRUFURVJfVEhBTl9PUl9FUVVBTBAEEgkK",
-            "BUVRVUFMEAUSEAoMSEFTX0FOQ0VTVE9SEAsipQIKCEdxbFF1ZXJ5EhQKDHF1",
-            "ZXJ5X3N0cmluZxgBIAEoCRIWCg5hbGxvd19saXRlcmFscxgCIAEoCBJICg5u",
-            "YW1lZF9iaW5kaW5ncxgFIAMoCzIwLmdvb2dsZS5kYXRhc3RvcmUudjEuR3Fs",
-            "UXVlcnkuTmFtZWRCaW5kaW5nc0VudHJ5EkMKE3Bvc2l0aW9uYWxfYmluZGlu",
-            "Z3MYBCADKAsyJi5nb29nbGUuZGF0YXN0b3JlLnYxLkdxbFF1ZXJ5UGFyYW1l",
-            "dGVyGlwKEk5hbWVkQmluZGluZ3NFbnRyeRILCgNrZXkYASABKAkSNQoFdmFs",
-            "dWUYAiABKAsyJi5nb29nbGUuZGF0YXN0b3JlLnYxLkdxbFF1ZXJ5UGFyYW1l",
-            "dGVyOgI4ASJkChFHcWxRdWVyeVBhcmFtZXRlchIrCgV2YWx1ZRgCIAEoCzIa",
-            "Lmdvb2dsZS5kYXRhc3RvcmUudjEuVmFsdWVIABIQCgZjdXJzb3IYAyABKAxI",
-            "AEIQCg5wYXJhbWV0ZXJfdHlwZSLeAwoQUXVlcnlSZXN1bHRCYXRjaBIXCg9z",
-            "a2lwcGVkX3Jlc3VsdHMYBiABKAUSFgoOc2tpcHBlZF9jdXJzb3IYAyABKAwS",
-            "SAoSZW50aXR5X3Jlc3VsdF90eXBlGAEgASgOMiwuZ29vZ2xlLmRhdGFzdG9y",
-            "ZS52MS5FbnRpdHlSZXN1bHQuUmVzdWx0VHlwZRI5Cg5lbnRpdHlfcmVzdWx0",
-            "cxgCIAMoCzIhLmdvb2dsZS5kYXRhc3RvcmUudjEuRW50aXR5UmVzdWx0EhIK",
-            "CmVuZF9jdXJzb3IYBCABKAwSSwoMbW9yZV9yZXN1bHRzGAUgASgOMjUuZ29v",
-            "Z2xlLmRhdGFzdG9yZS52MS5RdWVyeVJlc3VsdEJhdGNoLk1vcmVSZXN1bHRz",
-            "VHlwZRIYChBzbmFwc2hvdF92ZXJzaW9uGAcgASgDIpgBCg9Nb3JlUmVzdWx0",
-            "c1R5cGUSIQodTU9SRV9SRVNVTFRTX1RZUEVfVU5TUEVDSUZJRUQQABIQCgxO",
-            "T1RfRklOSVNIRUQQARIcChhNT1JFX1JFU1VMVFNfQUZURVJfTElNSVQQAhId",
-            "ChlNT1JFX1JFU1VMVFNfQUZURVJfQ1VSU09SEAQSEwoPTk9fTU9SRV9SRVNV",
-            "TFRTEANCvAEKF2NvbS5nb29nbGUuZGF0YXN0b3JlLnYxQgpRdWVyeVByb3Rv",
-            "UAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZGF0",
-            "YXN0b3JlL3YxO2RhdGFzdG9yZaoCGUdvb2dsZS5DbG91ZC5EYXRhc3RvcmUu",
-            "VjHKAhlHb29nbGVcQ2xvdWRcRGF0YXN0b3JlXFYx6gIcR29vZ2xlOjpDbG91",
-            "ZDo6RGF0YXN0b3JlOjpWMWIGcHJvdG8z"));
+            "YXN0b3JlLnYxGiBnb29nbGUvZGF0YXN0b3JlL3YxL2VudGl0eS5wcm90bxoe",
+            "Z29vZ2xlL3Byb3RvYnVmL3dyYXBwZXJzLnByb3RvIq8BCgxFbnRpdHlSZXN1",
+            "bHQSKwoGZW50aXR5GAEgASgLMhsuZ29vZ2xlLmRhdGFzdG9yZS52MS5FbnRp",
+            "dHkSDwoHdmVyc2lvbhgEIAEoAxIOCgZjdXJzb3IYAyABKAwiUQoKUmVzdWx0",
+            "VHlwZRIbChdSRVNVTFRfVFlQRV9VTlNQRUNJRklFRBAAEggKBEZVTEwQARIO",
+            "CgpQUk9KRUNUSU9OEAISDAoIS0VZX09OTFkQAyLyAgoFUXVlcnkSMwoKcHJv",
+            "amVjdGlvbhgCIAMoCzIfLmdvb2dsZS5kYXRhc3RvcmUudjEuUHJvamVjdGlv",
+            "bhIxCgRraW5kGAMgAygLMiMuZ29vZ2xlLmRhdGFzdG9yZS52MS5LaW5kRXhw",
+            "cmVzc2lvbhIrCgZmaWx0ZXIYBCABKAsyGy5nb29nbGUuZGF0YXN0b3JlLnYx",
+            "LkZpbHRlchIxCgVvcmRlchgFIAMoCzIiLmdvb2dsZS5kYXRhc3RvcmUudjEu",
+            "UHJvcGVydHlPcmRlchI7CgtkaXN0aW5jdF9vbhgGIAMoCzImLmdvb2dsZS5k",
+            "YXRhc3RvcmUudjEuUHJvcGVydHlSZWZlcmVuY2USFAoMc3RhcnRfY3Vyc29y",
+            "GAcgASgMEhIKCmVuZF9jdXJzb3IYCCABKAwSDgoGb2Zmc2V0GAogASgFEioK",
+            "BWxpbWl0GAwgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDMyVmFsdWUiHgoO",
+            "S2luZEV4cHJlc3Npb24SDAoEbmFtZRgBIAEoCSIhChFQcm9wZXJ0eVJlZmVy",
+            "ZW5jZRIMCgRuYW1lGAIgASgJIkYKClByb2plY3Rpb24SOAoIcHJvcGVydHkY",
+            "ASABKAsyJi5nb29nbGUuZGF0YXN0b3JlLnYxLlByb3BlcnR5UmVmZXJlbmNl",
+            "ItEBCg1Qcm9wZXJ0eU9yZGVyEjgKCHByb3BlcnR5GAEgASgLMiYuZ29vZ2xl",
+            "LmRhdGFzdG9yZS52MS5Qcm9wZXJ0eVJlZmVyZW5jZRI/CglkaXJlY3Rpb24Y",
+            "AiABKA4yLC5nb29nbGUuZGF0YXN0b3JlLnYxLlByb3BlcnR5T3JkZXIuRGly",
+            "ZWN0aW9uIkUKCURpcmVjdGlvbhIZChVESVJFQ1RJT05fVU5TUEVDSUZJRUQQ",
+            "ABINCglBU0NFTkRJTkcQARIOCgpERVNDRU5ESU5HEAIimQEKBkZpbHRlchJA",
+            "ChBjb21wb3NpdGVfZmlsdGVyGAEgASgLMiQuZ29vZ2xlLmRhdGFzdG9yZS52",
+            "MS5Db21wb3NpdGVGaWx0ZXJIABI+Cg9wcm9wZXJ0eV9maWx0ZXIYAiABKAsy",
+            "Iy5nb29nbGUuZGF0YXN0b3JlLnYxLlByb3BlcnR5RmlsdGVySABCDQoLZmls",
+            "dGVyX3R5cGUiqQEKD0NvbXBvc2l0ZUZpbHRlchI5CgJvcBgBIAEoDjItLmdv",
+            "b2dsZS5kYXRhc3RvcmUudjEuQ29tcG9zaXRlRmlsdGVyLk9wZXJhdG9yEiwK",
+            "B2ZpbHRlcnMYAiADKAsyGy5nb29nbGUuZGF0YXN0b3JlLnYxLkZpbHRlciIt",
+            "CghPcGVyYXRvchIYChRPUEVSQVRPUl9VTlNQRUNJRklFRBAAEgcKA0FORBAB",
+            "IuoCCg5Qcm9wZXJ0eUZpbHRlchI4Cghwcm9wZXJ0eRgBIAEoCzImLmdvb2ds",
+            "ZS5kYXRhc3RvcmUudjEuUHJvcGVydHlSZWZlcmVuY2USOAoCb3AYAiABKA4y",
+            "LC5nb29nbGUuZGF0YXN0b3JlLnYxLlByb3BlcnR5RmlsdGVyLk9wZXJhdG9y",
+            "EikKBXZhbHVlGAMgASgLMhouZ29vZ2xlLmRhdGFzdG9yZS52MS5WYWx1ZSK4",
+            "AQoIT3BlcmF0b3ISGAoUT1BFUkFUT1JfVU5TUEVDSUZJRUQQABINCglMRVNT",
+            "X1RIQU4QARIWChJMRVNTX1RIQU5fT1JfRVFVQUwQAhIQCgxHUkVBVEVSX1RI",
+            "QU4QAxIZChVHUkVBVEVSX1RIQU5fT1JfRVFVQUwQBBIJCgVFUVVBTBAFEgYK",
+            "AklOEAYSDQoJTk9UX0VRVUFMEAkSEAoMSEFTX0FOQ0VTVE9SEAsSCgoGTk9U",
+            "X0lOEA0ipQIKCEdxbFF1ZXJ5EhQKDHF1ZXJ5X3N0cmluZxgBIAEoCRIWCg5h",
+            "bGxvd19saXRlcmFscxgCIAEoCBJICg5uYW1lZF9iaW5kaW5ncxgFIAMoCzIw",
+            "Lmdvb2dsZS5kYXRhc3RvcmUudjEuR3FsUXVlcnkuTmFtZWRCaW5kaW5nc0Vu",
+            "dHJ5EkMKE3Bvc2l0aW9uYWxfYmluZGluZ3MYBCADKAsyJi5nb29nbGUuZGF0",
+            "YXN0b3JlLnYxLkdxbFF1ZXJ5UGFyYW1ldGVyGlwKEk5hbWVkQmluZGluZ3NF",
+            "bnRyeRILCgNrZXkYASABKAkSNQoFdmFsdWUYAiABKAsyJi5nb29nbGUuZGF0",
+            "YXN0b3JlLnYxLkdxbFF1ZXJ5UGFyYW1ldGVyOgI4ASJkChFHcWxRdWVyeVBh",
+            "cmFtZXRlchIrCgV2YWx1ZRgCIAEoCzIaLmdvb2dsZS5kYXRhc3RvcmUudjEu",
+            "VmFsdWVIABIQCgZjdXJzb3IYAyABKAxIAEIQCg5wYXJhbWV0ZXJfdHlwZSLe",
+            "AwoQUXVlcnlSZXN1bHRCYXRjaBIXCg9za2lwcGVkX3Jlc3VsdHMYBiABKAUS",
+            "FgoOc2tpcHBlZF9jdXJzb3IYAyABKAwSSAoSZW50aXR5X3Jlc3VsdF90eXBl",
+            "GAEgASgOMiwuZ29vZ2xlLmRhdGFzdG9yZS52MS5FbnRpdHlSZXN1bHQuUmVz",
+            "dWx0VHlwZRI5Cg5lbnRpdHlfcmVzdWx0cxgCIAMoCzIhLmdvb2dsZS5kYXRh",
+            "c3RvcmUudjEuRW50aXR5UmVzdWx0EhIKCmVuZF9jdXJzb3IYBCABKAwSSwoM",
+            "bW9yZV9yZXN1bHRzGAUgASgOMjUuZ29vZ2xlLmRhdGFzdG9yZS52MS5RdWVy",
+            "eVJlc3VsdEJhdGNoLk1vcmVSZXN1bHRzVHlwZRIYChBzbmFwc2hvdF92ZXJz",
+            "aW9uGAcgASgDIpgBCg9Nb3JlUmVzdWx0c1R5cGUSIQodTU9SRV9SRVNVTFRT",
+            "X1RZUEVfVU5TUEVDSUZJRUQQABIQCgxOT1RfRklOSVNIRUQQARIcChhNT1JF",
+            "X1JFU1VMVFNfQUZURVJfTElNSVQQAhIdChlNT1JFX1JFU1VMVFNfQUZURVJf",
+            "Q1VSU09SEAQSEwoPTk9fTU9SRV9SRVNVTFRTEANCvAEKF2NvbS5nb29nbGUu",
+            "ZGF0YXN0b3JlLnYxQgpRdWVyeVByb3RvUAFaPGdvb2dsZS5nb2xhbmcub3Jn",
+            "L2dlbnByb3RvL2dvb2dsZWFwaXMvZGF0YXN0b3JlL3YxO2RhdGFzdG9yZaoC",
+            "GUdvb2dsZS5DbG91ZC5EYXRhc3RvcmUuVjHKAhlHb29nbGVcQ2xvdWRcRGF0",
+            "YXN0b3JlXFYx6gIcR29vZ2xlOjpDbG91ZDo6RGF0YXN0b3JlOjpWMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Datastore.V1.EntityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.Datastore.V1.EntityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.EntityResult), global::Google.Cloud.Datastore.V1.EntityResult.Parser, new[]{ "Entity", "Version", "Cursor" }, null, new[]{ typeof(global::Google.Cloud.Datastore.V1.EntityResult.Types.ResultType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Query), global::Google.Cloud.Datastore.V1.Query.Parser, new[]{ "Projection", "Kind", "Filter", "Order", "DistinctOn", "StartCursor", "EndCursor", "Offset", "Limit" }, null, null, null, null),
@@ -2647,29 +2647,77 @@ namespace Google.Cloud.Datastore.V1 {
         /// </summary>
         [pbr::OriginalName("OPERATOR_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Less than.
+        /// The given `property` is less than the given `value`.
+        ///
+        /// Requires:
+        ///
+        /// * That `property` comes first in `order_by`.
         /// </summary>
         [pbr::OriginalName("LESS_THAN")] LessThan = 1,
         /// <summary>
-        /// Less than or equal.
+        /// The given `property` is less than or equal to the given `value`.
+        ///
+        /// Requires:
+        ///
+        /// * That `property` comes first in `order_by`.
         /// </summary>
         [pbr::OriginalName("LESS_THAN_OR_EQUAL")] LessThanOrEqual = 2,
         /// <summary>
-        /// Greater than.
+        /// The given `property` is greater than the given `value`.
+        ///
+        /// Requires:
+        ///
+        /// * That `property` comes first in `order_by`.
         /// </summary>
         [pbr::OriginalName("GREATER_THAN")] GreaterThan = 3,
         /// <summary>
-        /// Greater than or equal.
+        /// The given `property` is greater than or equal to the given `value`.
+        ///
+        /// Requires:
+        ///
+        /// * That `property` comes first in `order_by`.
         /// </summary>
         [pbr::OriginalName("GREATER_THAN_OR_EQUAL")] GreaterThanOrEqual = 4,
         /// <summary>
-        /// Equal.
+        /// The given `property` is equal to the given `value`.
         /// </summary>
         [pbr::OriginalName("EQUAL")] Equal = 5,
         /// <summary>
-        /// Has ancestor.
+        /// The given `property` is equal to at least one value in the given array.
+        ///
+        /// Requires:
+        ///
+        /// * That `value` is a non-empty `ArrayValue` with at most 10 values.
+        /// * No other `IN` or `NOT_IN` is in the same query.
+        /// </summary>
+        [pbr::OriginalName("IN")] In = 6,
+        /// <summary>
+        /// The given `property` is not equal to the given `value`.
+        ///
+        /// Requires:
+        ///
+        /// * No other `NOT_EQUAL` or `NOT_IN` is in the same query.
+        /// * That `property` comes first in the `order_by`.
+        /// </summary>
+        [pbr::OriginalName("NOT_EQUAL")] NotEqual = 9,
+        /// <summary>
+        /// Limit the result set to the given entity and its descendants.
+        ///
+        /// Requires:
+        ///
+        /// * That `value` is an entity key.
         /// </summary>
         [pbr::OriginalName("HAS_ANCESTOR")] HasAncestor = 11,
+        /// <summary>
+        /// The value of the `property` is not in the given array.
+        ///
+        /// Requires:
+        ///
+        /// * That `value` is a non-empty `ArrayValue` with at most 10 values.
+        /// * No other `IN`, `NOT_IN`, `NOT_EQUAL` is in the same query.
+        /// * That `field` comes first in the `order_by`.
+        /// </summary>
+        [pbr::OriginalName("NOT_IN")] NotIn = 13,
       }
 
     }
