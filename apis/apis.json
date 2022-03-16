@@ -2656,6 +2656,26 @@
       "serviceConfigFile": "retail_v2.yaml"
     },
     {
+      "id": "Google.Cloud.Run.V2",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Run Admin",
+      "productUrl": "https://cloud.google.com/run/docs",
+      "description": "Recommended Google client library to access the Google Cloud Run Admin API (v2)",
+      "tags": [
+        "run",
+        "admin"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "2.3.0",
+        "Google.LongRunning": "2.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/run/v2",
+      "shortName": "run",
+      "serviceConfigFile": "run_v2.yaml"
+    },
+    {
       "id": "Google.Cloud.Scheduler.V1",
       "generator": "micro",
       "protoPath": "google/cloud/scheduler/v1",
