@@ -1,0 +1,93 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.run.v2",
+  "libraryPackage": "Google.Cloud.Run.V2",
+  "services": {
+    "Revisions": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "RevisionsClient",
+          "rpcs": {
+            "DeleteRevision": {
+              "methods": [
+                "DeleteRevision",
+                "DeleteRevisionAsync"
+              ]
+            },
+            "GetRevision": {
+              "methods": [
+                "GetRevision",
+                "GetRevisionAsync"
+              ]
+            },
+            "ListRevisions": {
+              "methods": [
+                "ListRevisions",
+                "ListRevisionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Services": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ServicesClient",
+          "rpcs": {
+            "CreateService": {
+              "methods": [
+                "CreateService",
+                "CreateServiceAsync"
+              ]
+            },
+            "DeleteService": {
+              "methods": [
+                "DeleteService",
+                "DeleteServiceAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "GetService": {
+              "methods": [
+                "GetService",
+                "GetServiceAsync"
+              ]
+            },
+            "ListServices": {
+              "methods": [
+                "ListServices",
+                "ListServicesAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            },
+            "UpdateService": {
+              "methods": [
+                "UpdateService",
+                "UpdateServiceAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
