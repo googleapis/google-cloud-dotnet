@@ -1,0 +1,1362 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Run.V2",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.run.v2",
+        "version": "v2"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "run_v2_generated_Revisions_GetRevision_sync",
+      "title": "GetRevisionRequestObject",
+      "description": "Snippet for GetRevision",
+      "file": "RevisionsClient.GetRevisionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRevision",
+        "fullName": "Google.Cloud.Run.V2.RevisionsClient.GetRevision",
+        "resultType": "Google.Cloud.Run.V2.Revision",
+        "client": {
+          "shortName": "RevisionsClient",
+          "fullName": "Google.Cloud.Run.V2.RevisionsClient"
+        },
+        "method": {
+          "shortName": "GetRevision",
+          "fullName": "google.cloud.run.v2.Revisions.GetRevision",
+          "service": {
+            "shortName": "Revisions",
+            "fullName": "google.cloud.run.v2.Revisions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Revisions_GetRevision_async",
+      "title": "GetRevisionRequestObjectAsync",
+      "description": "Snippet for GetRevisionAsync",
+      "file": "RevisionsClient.GetRevisionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRevisionAsync",
+        "fullName": "Google.Cloud.Run.V2.RevisionsClient.GetRevisionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Run.V2.Revision>",
+        "client": {
+          "shortName": "RevisionsClient",
+          "fullName": "Google.Cloud.Run.V2.RevisionsClient"
+        },
+        "method": {
+          "shortName": "GetRevision",
+          "fullName": "google.cloud.run.v2.Revisions.GetRevision",
+          "service": {
+            "shortName": "Revisions",
+            "fullName": "google.cloud.run.v2.Revisions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Revisions_GetRevision_sync_flattened",
+      "title": "GetRevision",
+      "description": "Snippet for GetRevision",
+      "file": "RevisionsClient.GetRevisionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRevision",
+        "fullName": "Google.Cloud.Run.V2.RevisionsClient.GetRevision",
+        "resultType": "Google.Cloud.Run.V2.Revision",
+        "client": {
+          "shortName": "RevisionsClient",
+          "fullName": "Google.Cloud.Run.V2.RevisionsClient"
+        },
+        "method": {
+          "shortName": "GetRevision",
+          "fullName": "google.cloud.run.v2.Revisions.GetRevision",
+          "service": {
+            "shortName": "Revisions",
+            "fullName": "google.cloud.run.v2.Revisions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Revisions_GetRevision_async_flattened",
+      "title": "GetRevisionAsync",
+      "description": "Snippet for GetRevisionAsync",
+      "file": "RevisionsClient.GetRevisionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRevisionAsync",
+        "fullName": "Google.Cloud.Run.V2.RevisionsClient.GetRevisionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Run.V2.Revision>",
+        "client": {
+          "shortName": "RevisionsClient",
+          "fullName": "Google.Cloud.Run.V2.RevisionsClient"
+        },
+        "method": {
+          "shortName": "GetRevision",
+          "fullName": "google.cloud.run.v2.Revisions.GetRevision",
+          "service": {
+            "shortName": "Revisions",
+            "fullName": "google.cloud.run.v2.Revisions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Revisions_GetRevision_sync_flattened_resourceNames",
+      "title": "GetRevisionResourceNames",
+      "description": "Snippet for GetRevision",
+      "file": "RevisionsClient.GetRevisionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRevision",
+        "fullName": "Google.Cloud.Run.V2.RevisionsClient.GetRevision",
+        "resultType": "Google.Cloud.Run.V2.Revision",
+        "client": {
+          "shortName": "RevisionsClient",
+          "fullName": "Google.Cloud.Run.V2.RevisionsClient"
+        },
+        "method": {
+          "shortName": "GetRevision",
+          "fullName": "google.cloud.run.v2.Revisions.GetRevision",
+          "service": {
+            "shortName": "Revisions",
+            "fullName": "google.cloud.run.v2.Revisions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Revisions_GetRevision_async_flattened_resourceNames",
+      "title": "GetRevisionResourceNamesAsync",
+      "description": "Snippet for GetRevisionAsync",
+      "file": "RevisionsClient.GetRevisionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRevisionAsync",
+        "fullName": "Google.Cloud.Run.V2.RevisionsClient.GetRevisionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Run.V2.Revision>",
+        "client": {
+          "shortName": "RevisionsClient",
+          "fullName": "Google.Cloud.Run.V2.RevisionsClient"
+        },
+        "method": {
+          "shortName": "GetRevision",
+          "fullName": "google.cloud.run.v2.Revisions.GetRevision",
+          "service": {
+            "shortName": "Revisions",
+            "fullName": "google.cloud.run.v2.Revisions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Revisions_ListRevisions_sync",
+      "title": "ListRevisionsRequestObject",
+      "description": "Snippet for ListRevisions",
+      "file": "RevisionsClient.ListRevisionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRevisions",
+        "fullName": "Google.Cloud.Run.V2.RevisionsClient.ListRevisions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Run.V2.ListRevisionsResponse, Google.Cloud.Run.V2.Revision>",
+        "client": {
+          "shortName": "RevisionsClient",
+          "fullName": "Google.Cloud.Run.V2.RevisionsClient"
+        },
+        "method": {
+          "shortName": "ListRevisions",
+          "fullName": "google.cloud.run.v2.Revisions.ListRevisions",
+          "service": {
+            "shortName": "Revisions",
+            "fullName": "google.cloud.run.v2.Revisions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Revisions_ListRevisions_async",
+      "title": "ListRevisionsRequestObjectAsync",
+      "description": "Snippet for ListRevisionsAsync",
+      "file": "RevisionsClient.ListRevisionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRevisionsAsync",
+        "fullName": "Google.Cloud.Run.V2.RevisionsClient.ListRevisionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Run.V2.ListRevisionsResponse, Google.Cloud.Run.V2.Revision>",
+        "client": {
+          "shortName": "RevisionsClient",
+          "fullName": "Google.Cloud.Run.V2.RevisionsClient"
+        },
+        "method": {
+          "shortName": "ListRevisions",
+          "fullName": "google.cloud.run.v2.Revisions.ListRevisions",
+          "service": {
+            "shortName": "Revisions",
+            "fullName": "google.cloud.run.v2.Revisions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Revisions_ListRevisions_sync_flattened",
+      "title": "ListRevisions",
+      "description": "Snippet for ListRevisions",
+      "file": "RevisionsClient.ListRevisionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRevisions",
+        "fullName": "Google.Cloud.Run.V2.RevisionsClient.ListRevisions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Run.V2.ListRevisionsResponse, Google.Cloud.Run.V2.Revision>",
+        "client": {
+          "shortName": "RevisionsClient",
+          "fullName": "Google.Cloud.Run.V2.RevisionsClient"
+        },
+        "method": {
+          "shortName": "ListRevisions",
+          "fullName": "google.cloud.run.v2.Revisions.ListRevisions",
+          "service": {
+            "shortName": "Revisions",
+            "fullName": "google.cloud.run.v2.Revisions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Revisions_ListRevisions_async_flattened",
+      "title": "ListRevisionsAsync",
+      "description": "Snippet for ListRevisionsAsync",
+      "file": "RevisionsClient.ListRevisionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRevisionsAsync",
+        "fullName": "Google.Cloud.Run.V2.RevisionsClient.ListRevisionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Run.V2.ListRevisionsResponse, Google.Cloud.Run.V2.Revision>",
+        "client": {
+          "shortName": "RevisionsClient",
+          "fullName": "Google.Cloud.Run.V2.RevisionsClient"
+        },
+        "method": {
+          "shortName": "ListRevisions",
+          "fullName": "google.cloud.run.v2.Revisions.ListRevisions",
+          "service": {
+            "shortName": "Revisions",
+            "fullName": "google.cloud.run.v2.Revisions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Revisions_ListRevisions_sync_flattened_resourceNames",
+      "title": "ListRevisionsResourceNames",
+      "description": "Snippet for ListRevisions",
+      "file": "RevisionsClient.ListRevisionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRevisions",
+        "fullName": "Google.Cloud.Run.V2.RevisionsClient.ListRevisions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Run.V2.ListRevisionsResponse, Google.Cloud.Run.V2.Revision>",
+        "client": {
+          "shortName": "RevisionsClient",
+          "fullName": "Google.Cloud.Run.V2.RevisionsClient"
+        },
+        "method": {
+          "shortName": "ListRevisions",
+          "fullName": "google.cloud.run.v2.Revisions.ListRevisions",
+          "service": {
+            "shortName": "Revisions",
+            "fullName": "google.cloud.run.v2.Revisions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Revisions_ListRevisions_async_flattened_resourceNames",
+      "title": "ListRevisionsResourceNamesAsync",
+      "description": "Snippet for ListRevisionsAsync",
+      "file": "RevisionsClient.ListRevisionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRevisionsAsync",
+        "fullName": "Google.Cloud.Run.V2.RevisionsClient.ListRevisionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Run.V2.ListRevisionsResponse, Google.Cloud.Run.V2.Revision>",
+        "client": {
+          "shortName": "RevisionsClient",
+          "fullName": "Google.Cloud.Run.V2.RevisionsClient"
+        },
+        "method": {
+          "shortName": "ListRevisions",
+          "fullName": "google.cloud.run.v2.Revisions.ListRevisions",
+          "service": {
+            "shortName": "Revisions",
+            "fullName": "google.cloud.run.v2.Revisions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Revisions_DeleteRevision_sync",
+      "title": "DeleteRevisionRequestObject",
+      "description": "Snippet for DeleteRevision",
+      "file": "RevisionsClient.DeleteRevisionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRevision",
+        "fullName": "Google.Cloud.Run.V2.RevisionsClient.DeleteRevision",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Revision, Google.Cloud.Run.V2.Revision>",
+        "client": {
+          "shortName": "RevisionsClient",
+          "fullName": "Google.Cloud.Run.V2.RevisionsClient"
+        },
+        "method": {
+          "shortName": "DeleteRevision",
+          "fullName": "google.cloud.run.v2.Revisions.DeleteRevision",
+          "service": {
+            "shortName": "Revisions",
+            "fullName": "google.cloud.run.v2.Revisions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Revisions_DeleteRevision_async",
+      "title": "DeleteRevisionRequestObjectAsync",
+      "description": "Snippet for DeleteRevisionAsync",
+      "file": "RevisionsClient.DeleteRevisionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRevisionAsync",
+        "fullName": "Google.Cloud.Run.V2.RevisionsClient.DeleteRevisionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Revision, Google.Cloud.Run.V2.Revision>>",
+        "client": {
+          "shortName": "RevisionsClient",
+          "fullName": "Google.Cloud.Run.V2.RevisionsClient"
+        },
+        "method": {
+          "shortName": "DeleteRevision",
+          "fullName": "google.cloud.run.v2.Revisions.DeleteRevision",
+          "service": {
+            "shortName": "Revisions",
+            "fullName": "google.cloud.run.v2.Revisions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Revisions_DeleteRevision_sync_flattened",
+      "title": "DeleteRevision",
+      "description": "Snippet for DeleteRevision",
+      "file": "RevisionsClient.DeleteRevisionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRevision",
+        "fullName": "Google.Cloud.Run.V2.RevisionsClient.DeleteRevision",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Revision, Google.Cloud.Run.V2.Revision>",
+        "client": {
+          "shortName": "RevisionsClient",
+          "fullName": "Google.Cloud.Run.V2.RevisionsClient"
+        },
+        "method": {
+          "shortName": "DeleteRevision",
+          "fullName": "google.cloud.run.v2.Revisions.DeleteRevision",
+          "service": {
+            "shortName": "Revisions",
+            "fullName": "google.cloud.run.v2.Revisions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Revisions_DeleteRevision_async_flattened",
+      "title": "DeleteRevisionAsync",
+      "description": "Snippet for DeleteRevisionAsync",
+      "file": "RevisionsClient.DeleteRevisionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRevisionAsync",
+        "fullName": "Google.Cloud.Run.V2.RevisionsClient.DeleteRevisionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Revision, Google.Cloud.Run.V2.Revision>>",
+        "client": {
+          "shortName": "RevisionsClient",
+          "fullName": "Google.Cloud.Run.V2.RevisionsClient"
+        },
+        "method": {
+          "shortName": "DeleteRevision",
+          "fullName": "google.cloud.run.v2.Revisions.DeleteRevision",
+          "service": {
+            "shortName": "Revisions",
+            "fullName": "google.cloud.run.v2.Revisions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Revisions_DeleteRevision_sync_flattened_resourceNames",
+      "title": "DeleteRevisionResourceNames",
+      "description": "Snippet for DeleteRevision",
+      "file": "RevisionsClient.DeleteRevisionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRevision",
+        "fullName": "Google.Cloud.Run.V2.RevisionsClient.DeleteRevision",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Revision, Google.Cloud.Run.V2.Revision>",
+        "client": {
+          "shortName": "RevisionsClient",
+          "fullName": "Google.Cloud.Run.V2.RevisionsClient"
+        },
+        "method": {
+          "shortName": "DeleteRevision",
+          "fullName": "google.cloud.run.v2.Revisions.DeleteRevision",
+          "service": {
+            "shortName": "Revisions",
+            "fullName": "google.cloud.run.v2.Revisions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Revisions_DeleteRevision_async_flattened_resourceNames",
+      "title": "DeleteRevisionResourceNamesAsync",
+      "description": "Snippet for DeleteRevisionAsync",
+      "file": "RevisionsClient.DeleteRevisionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRevisionAsync",
+        "fullName": "Google.Cloud.Run.V2.RevisionsClient.DeleteRevisionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Revision, Google.Cloud.Run.V2.Revision>>",
+        "client": {
+          "shortName": "RevisionsClient",
+          "fullName": "Google.Cloud.Run.V2.RevisionsClient"
+        },
+        "method": {
+          "shortName": "DeleteRevision",
+          "fullName": "google.cloud.run.v2.Revisions.DeleteRevision",
+          "service": {
+            "shortName": "Revisions",
+            "fullName": "google.cloud.run.v2.Revisions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_CreateService_sync",
+      "title": "CreateServiceRequestObject",
+      "description": "Snippet for CreateService",
+      "file": "ServicesClient.CreateServiceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateService",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.CreateService",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Service, Google.Cloud.Run.V2.Service>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "CreateService",
+          "fullName": "google.cloud.run.v2.Services.CreateService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_CreateService_async",
+      "title": "CreateServiceRequestObjectAsync",
+      "description": "Snippet for CreateServiceAsync",
+      "file": "ServicesClient.CreateServiceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServiceAsync",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.CreateServiceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Service, Google.Cloud.Run.V2.Service>>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "CreateService",
+          "fullName": "google.cloud.run.v2.Services.CreateService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_CreateService_sync_flattened",
+      "title": "CreateService",
+      "description": "Snippet for CreateService",
+      "file": "ServicesClient.CreateServiceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateService",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.CreateService",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Service, Google.Cloud.Run.V2.Service>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "CreateService",
+          "fullName": "google.cloud.run.v2.Services.CreateService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_CreateService_async_flattened",
+      "title": "CreateServiceAsync",
+      "description": "Snippet for CreateServiceAsync",
+      "file": "ServicesClient.CreateServiceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServiceAsync",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.CreateServiceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Service, Google.Cloud.Run.V2.Service>>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "CreateService",
+          "fullName": "google.cloud.run.v2.Services.CreateService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_CreateService_sync_flattened_resourceNames",
+      "title": "CreateServiceResourceNames",
+      "description": "Snippet for CreateService",
+      "file": "ServicesClient.CreateServiceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateService",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.CreateService",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Service, Google.Cloud.Run.V2.Service>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "CreateService",
+          "fullName": "google.cloud.run.v2.Services.CreateService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_CreateService_async_flattened_resourceNames",
+      "title": "CreateServiceResourceNamesAsync",
+      "description": "Snippet for CreateServiceAsync",
+      "file": "ServicesClient.CreateServiceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServiceAsync",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.CreateServiceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Service, Google.Cloud.Run.V2.Service>>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "CreateService",
+          "fullName": "google.cloud.run.v2.Services.CreateService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_GetService_sync",
+      "title": "GetServiceRequestObject",
+      "description": "Snippet for GetService",
+      "file": "ServicesClient.GetServiceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetService",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.GetService",
+        "resultType": "Google.Cloud.Run.V2.Service",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "GetService",
+          "fullName": "google.cloud.run.v2.Services.GetService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_GetService_async",
+      "title": "GetServiceRequestObjectAsync",
+      "description": "Snippet for GetServiceAsync",
+      "file": "ServicesClient.GetServiceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServiceAsync",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.GetServiceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Run.V2.Service>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "GetService",
+          "fullName": "google.cloud.run.v2.Services.GetService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_GetService_sync_flattened",
+      "title": "GetService",
+      "description": "Snippet for GetService",
+      "file": "ServicesClient.GetServiceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetService",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.GetService",
+        "resultType": "Google.Cloud.Run.V2.Service",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "GetService",
+          "fullName": "google.cloud.run.v2.Services.GetService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_GetService_async_flattened",
+      "title": "GetServiceAsync",
+      "description": "Snippet for GetServiceAsync",
+      "file": "ServicesClient.GetServiceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServiceAsync",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.GetServiceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Run.V2.Service>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "GetService",
+          "fullName": "google.cloud.run.v2.Services.GetService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_GetService_sync_flattened_resourceNames",
+      "title": "GetServiceResourceNames",
+      "description": "Snippet for GetService",
+      "file": "ServicesClient.GetServiceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetService",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.GetService",
+        "resultType": "Google.Cloud.Run.V2.Service",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "GetService",
+          "fullName": "google.cloud.run.v2.Services.GetService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_GetService_async_flattened_resourceNames",
+      "title": "GetServiceResourceNamesAsync",
+      "description": "Snippet for GetServiceAsync",
+      "file": "ServicesClient.GetServiceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServiceAsync",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.GetServiceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Run.V2.Service>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "GetService",
+          "fullName": "google.cloud.run.v2.Services.GetService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_ListServices_sync",
+      "title": "ListServicesRequestObject",
+      "description": "Snippet for ListServices",
+      "file": "ServicesClient.ListServicesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServices",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.ListServices",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Run.V2.ListServicesResponse, Google.Cloud.Run.V2.Service>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "ListServices",
+          "fullName": "google.cloud.run.v2.Services.ListServices",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_ListServices_async",
+      "title": "ListServicesRequestObjectAsync",
+      "description": "Snippet for ListServicesAsync",
+      "file": "ServicesClient.ListServicesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServicesAsync",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.ListServicesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Run.V2.ListServicesResponse, Google.Cloud.Run.V2.Service>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "ListServices",
+          "fullName": "google.cloud.run.v2.Services.ListServices",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_ListServices_sync_flattened",
+      "title": "ListServices",
+      "description": "Snippet for ListServices",
+      "file": "ServicesClient.ListServicesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServices",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.ListServices",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Run.V2.ListServicesResponse, Google.Cloud.Run.V2.Service>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "ListServices",
+          "fullName": "google.cloud.run.v2.Services.ListServices",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_ListServices_async_flattened",
+      "title": "ListServicesAsync",
+      "description": "Snippet for ListServicesAsync",
+      "file": "ServicesClient.ListServicesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServicesAsync",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.ListServicesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Run.V2.ListServicesResponse, Google.Cloud.Run.V2.Service>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "ListServices",
+          "fullName": "google.cloud.run.v2.Services.ListServices",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_ListServices_sync_flattened_resourceNames",
+      "title": "ListServicesResourceNames",
+      "description": "Snippet for ListServices",
+      "file": "ServicesClient.ListServicesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServices",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.ListServices",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Run.V2.ListServicesResponse, Google.Cloud.Run.V2.Service>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "ListServices",
+          "fullName": "google.cloud.run.v2.Services.ListServices",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_ListServices_async_flattened_resourceNames",
+      "title": "ListServicesResourceNamesAsync",
+      "description": "Snippet for ListServicesAsync",
+      "file": "ServicesClient.ListServicesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServicesAsync",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.ListServicesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Run.V2.ListServicesResponse, Google.Cloud.Run.V2.Service>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "ListServices",
+          "fullName": "google.cloud.run.v2.Services.ListServices",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_UpdateService_sync",
+      "title": "UpdateServiceRequestObject",
+      "description": "Snippet for UpdateService",
+      "file": "ServicesClient.UpdateServiceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateService",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.UpdateService",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Service, Google.Cloud.Run.V2.Service>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "UpdateService",
+          "fullName": "google.cloud.run.v2.Services.UpdateService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_UpdateService_async",
+      "title": "UpdateServiceRequestObjectAsync",
+      "description": "Snippet for UpdateServiceAsync",
+      "file": "ServicesClient.UpdateServiceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServiceAsync",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.UpdateServiceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Service, Google.Cloud.Run.V2.Service>>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "UpdateService",
+          "fullName": "google.cloud.run.v2.Services.UpdateService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_UpdateService_sync_flattened",
+      "title": "UpdateService",
+      "description": "Snippet for UpdateService",
+      "file": "ServicesClient.UpdateServiceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateService",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.UpdateService",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Service, Google.Cloud.Run.V2.Service>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "UpdateService",
+          "fullName": "google.cloud.run.v2.Services.UpdateService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_UpdateService_async_flattened",
+      "title": "UpdateServiceAsync",
+      "description": "Snippet for UpdateServiceAsync",
+      "file": "ServicesClient.UpdateServiceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServiceAsync",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.UpdateServiceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Service, Google.Cloud.Run.V2.Service>>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "UpdateService",
+          "fullName": "google.cloud.run.v2.Services.UpdateService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_DeleteService_sync",
+      "title": "DeleteServiceRequestObject",
+      "description": "Snippet for DeleteService",
+      "file": "ServicesClient.DeleteServiceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteService",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.DeleteService",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Service, Google.Cloud.Run.V2.Service>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteService",
+          "fullName": "google.cloud.run.v2.Services.DeleteService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_DeleteService_async",
+      "title": "DeleteServiceRequestObjectAsync",
+      "description": "Snippet for DeleteServiceAsync",
+      "file": "ServicesClient.DeleteServiceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServiceAsync",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.DeleteServiceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Service, Google.Cloud.Run.V2.Service>>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteService",
+          "fullName": "google.cloud.run.v2.Services.DeleteService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_DeleteService_sync_flattened",
+      "title": "DeleteService",
+      "description": "Snippet for DeleteService",
+      "file": "ServicesClient.DeleteServiceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteService",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.DeleteService",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Service, Google.Cloud.Run.V2.Service>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteService",
+          "fullName": "google.cloud.run.v2.Services.DeleteService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_DeleteService_async_flattened",
+      "title": "DeleteServiceAsync",
+      "description": "Snippet for DeleteServiceAsync",
+      "file": "ServicesClient.DeleteServiceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServiceAsync",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.DeleteServiceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Service, Google.Cloud.Run.V2.Service>>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteService",
+          "fullName": "google.cloud.run.v2.Services.DeleteService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_DeleteService_sync_flattened_resourceNames",
+      "title": "DeleteServiceResourceNames",
+      "description": "Snippet for DeleteService",
+      "file": "ServicesClient.DeleteServiceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteService",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.DeleteService",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Service, Google.Cloud.Run.V2.Service>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteService",
+          "fullName": "google.cloud.run.v2.Services.DeleteService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_DeleteService_async_flattened_resourceNames",
+      "title": "DeleteServiceResourceNamesAsync",
+      "description": "Snippet for DeleteServiceAsync",
+      "file": "ServicesClient.DeleteServiceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServiceAsync",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.DeleteServiceAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Service, Google.Cloud.Run.V2.Service>>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteService",
+          "fullName": "google.cloud.run.v2.Services.DeleteService",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_GetIamPolicy_sync",
+      "title": "GetIamPolicyRequestObject",
+      "description": "Snippet for GetIamPolicy",
+      "file": "ServicesClient.GetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.GetIamPolicy",
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.run.v2.Services.GetIamPolicy",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_GetIamPolicy_async",
+      "title": "GetIamPolicyRequestObjectAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "ServicesClient.GetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.GetIamPolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.run.v2.Services.GetIamPolicy",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_SetIamPolicy_sync",
+      "title": "SetIamPolicyRequestObject",
+      "description": "Snippet for SetIamPolicy",
+      "file": "ServicesClient.SetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.SetIamPolicy",
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.run.v2.Services.SetIamPolicy",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_SetIamPolicy_async",
+      "title": "SetIamPolicyRequestObjectAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "ServicesClient.SetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.SetIamPolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.run.v2.Services.SetIamPolicy",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_TestIamPermissions_sync",
+      "title": "TestIamPermissionsRequestObject",
+      "description": "Snippet for TestIamPermissions",
+      "file": "ServicesClient.TestIamPermissionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissions",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.TestIamPermissions",
+        "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.run.v2.Services.TestIamPermissions",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "run_v2_generated_Services_TestIamPermissions_async",
+      "title": "TestIamPermissionsRequestObjectAsync",
+      "description": "Snippet for TestIamPermissionsAsync",
+      "file": "ServicesClient.TestIamPermissionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissionsAsync",
+        "fullName": "Google.Cloud.Run.V2.ServicesClient.TestIamPermissionsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
+        "client": {
+          "shortName": "ServicesClient",
+          "fullName": "Google.Cloud.Run.V2.ServicesClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.run.v2.Services.TestIamPermissions",
+          "service": {
+            "shortName": "Services",
+            "fullName": "google.cloud.run.v2.Services"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    }
+  ]
+}
