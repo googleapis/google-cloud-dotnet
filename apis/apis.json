@@ -2212,6 +2212,23 @@
       "serviceConfigFile": "notebooks_v1beta1.yaml"
     },
     {
+      "id": "Google.Cloud.Optimization.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Optimization",
+      "description": "Recommended Google client library to access the Cloud Optimization API, which provides a portfolio of solvers to address common optimization use cases starting with optimal route planning for vehicle fleets.",
+      "tags": [
+        "optimization"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/optimization/v1",
+      "shortName": "cloudoptimization",
+      "serviceConfigFile": "cloudoptimization_v1.yaml"
+    },
+    {
       "id": "Google.Cloud.Orchestration.Airflow.Service.V1",
       "version": "1.0.0",
       "type": "grpc",
