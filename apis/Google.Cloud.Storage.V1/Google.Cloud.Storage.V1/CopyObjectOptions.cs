@@ -166,6 +166,7 @@ namespace Google.Cloud.Storage.V1
             if (IfGenerationMatch != null)
             {
                 request.IfGenerationMatch = IfGenerationMatch;
+                RetryHandler.MarkAsRetriable(request);
             }
             if (IfGenerationNotMatch != null)
             {

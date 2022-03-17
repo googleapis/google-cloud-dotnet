@@ -107,6 +107,7 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckArgument(key.AccessId != null, nameof(key), "Key must contain an access ID");
             var request = Service.Projects.HmacKeys.Update(key, key.ProjectId, key.AccessId);
             options?.ModifyRequest(request);
+            RetryHandler.MarkAsRetriable(request);
             return request;
         }
 

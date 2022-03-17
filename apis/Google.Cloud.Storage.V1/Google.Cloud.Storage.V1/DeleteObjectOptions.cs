@@ -74,10 +74,12 @@ namespace Google.Cloud.Storage.V1
             if (Generation != null)
             {
                 request.Generation = Generation;
+                RetryHandler.MarkAsRetriable(request);
             }
             if (IfGenerationMatch != null)
             {
                 request.IfGenerationMatch = IfGenerationMatch;
+                RetryHandler.MarkAsRetriable(request);
             }
             if (IfGenerationNotMatch != null)
             {
