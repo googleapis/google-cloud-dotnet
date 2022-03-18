@@ -25,17 +25,17 @@ namespace Google.Cloud.Talent.V4 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvY2xvdWQvdGFsZW50L3Y0L2hpc3RvZ3JhbS5wcm90bxIWZ29v",
-            "Z2xlLmNsb3VkLnRhbGVudC52NBocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5w",
-            "cm90byIpCg5IaXN0b2dyYW1RdWVyeRIXCg9oaXN0b2dyYW1fcXVlcnkYASAB",
-            "KAkisQEKFEhpc3RvZ3JhbVF1ZXJ5UmVzdWx0EhcKD2hpc3RvZ3JhbV9xdWVy",
-            "eRgBIAEoCRJOCgloaXN0b2dyYW0YAiADKAsyOy5nb29nbGUuY2xvdWQudGFs",
-            "ZW50LnY0Lkhpc3RvZ3JhbVF1ZXJ5UmVzdWx0Lkhpc3RvZ3JhbUVudHJ5GjAK",
-            "Dkhpc3RvZ3JhbUVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoAzoC",
-            "OAFCcgoaY29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRCDkhpc3RvZ3JhbVBy",
-            "b3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
-            "Y2xvdWQvdGFsZW50L3Y0O3RhbGVudKICA0NUU2IGcHJvdG8z"));
+            "Z2xlLmNsb3VkLnRhbGVudC52NCIpCg5IaXN0b2dyYW1RdWVyeRIXCg9oaXN0",
+            "b2dyYW1fcXVlcnkYASABKAkisQEKFEhpc3RvZ3JhbVF1ZXJ5UmVzdWx0EhcK",
+            "D2hpc3RvZ3JhbV9xdWVyeRgBIAEoCRJOCgloaXN0b2dyYW0YAiADKAsyOy5n",
+            "b29nbGUuY2xvdWQudGFsZW50LnY0Lkhpc3RvZ3JhbVF1ZXJ5UmVzdWx0Lkhp",
+            "c3RvZ3JhbUVudHJ5GjAKDkhpc3RvZ3JhbUVudHJ5EgsKA2tleRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoAzoCOAFCcgoaY29tLmdvb2dsZS5jbG91ZC50YWxlbnQu",
+            "djRCDkhpc3RvZ3JhbVByb3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
+            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0O3RhbGVudKICA0NUU2IG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.HistogramQuery), global::Google.Cloud.Talent.V4.HistogramQuery.Parser, new[]{ "HistogramQuery_" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.HistogramQueryResult), global::Google.Cloud.Talent.V4.HistogramQueryResult.Parser, new[]{ "HistogramQuery", "Histogram" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })

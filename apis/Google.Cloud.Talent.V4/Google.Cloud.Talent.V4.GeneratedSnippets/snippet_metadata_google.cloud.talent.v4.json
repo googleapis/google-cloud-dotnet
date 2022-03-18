@@ -11,25 +11,25 @@
   },
   "snippets": [
     {
-      "regionTag": "jobs_v4_generated_CompanyService_CreateCompany_sync",
-      "title": "CreateCompanyRequestObject",
-      "description": "Snippet for CreateCompany",
-      "file": "CompanyServiceClient.CreateCompanyRequestObjectSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_CreateTenant_sync",
+      "title": "CreateTenantRequestObject",
+      "description": "Snippet for CreateTenant",
+      "file": "TenantServiceClient.CreateTenantRequestObjectSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "CreateCompany",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.CreateCompany",
-        "resultType": "Google.Cloud.Talent.V4.Company",
+        "shortName": "CreateTenant",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.CreateTenant",
+        "resultType": "Google.Cloud.Talent.V4.Tenant",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "CreateCompany",
-          "fullName": "google.cloud.talent.v4.CompanyService.CreateCompany",
+          "shortName": "CreateTenant",
+          "fullName": "google.cloud.talent.v4.TenantService.CreateTenant",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
@@ -37,26 +37,26 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_CreateCompany_async",
-      "title": "CreateCompanyRequestObjectAsync",
-      "description": "Snippet for CreateCompanyAsync",
-      "file": "CompanyServiceClient.CreateCompanyRequestObjectAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_CreateTenant_async",
+      "title": "CreateTenantRequestObjectAsync",
+      "description": "Snippet for CreateTenantAsync",
+      "file": "TenantServiceClient.CreateTenantRequestObjectAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "CreateCompanyAsync",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.CreateCompanyAsync",
+        "shortName": "CreateTenantAsync",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.CreateTenantAsync",
         "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Company>",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Tenant>",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "CreateCompany",
-          "fullName": "google.cloud.talent.v4.CompanyService.CreateCompany",
+          "shortName": "CreateTenant",
+          "fullName": "google.cloud.talent.v4.TenantService.CreateTenant",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
@@ -64,127 +64,127 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_CreateCompany_sync_flattened",
-      "title": "CreateCompany",
-      "description": "Snippet for CreateCompany",
-      "file": "CompanyServiceClient.CreateCompanySnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_CreateTenant_sync_flattened",
+      "title": "CreateTenant",
+      "description": "Snippet for CreateTenant",
+      "file": "TenantServiceClient.CreateTenantSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "CreateCompany",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.CreateCompany",
-        "resultType": "Google.Cloud.Talent.V4.Company",
+        "shortName": "CreateTenant",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.CreateTenant",
+        "resultType": "Google.Cloud.Talent.V4.Tenant",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "CreateCompany",
-          "fullName": "google.cloud.talent.v4.CompanyService.CreateCompany",
+          "shortName": "CreateTenant",
+          "fullName": "google.cloud.talent.v4.TenantService.CreateTenant",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_CreateCompany_async_flattened",
-      "title": "CreateCompanyAsync",
-      "description": "Snippet for CreateCompanyAsync",
-      "file": "CompanyServiceClient.CreateCompanyAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_CreateTenant_async_flattened",
+      "title": "CreateTenantAsync",
+      "description": "Snippet for CreateTenantAsync",
+      "file": "TenantServiceClient.CreateTenantAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "CreateCompanyAsync",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.CreateCompanyAsync",
+        "shortName": "CreateTenantAsync",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.CreateTenantAsync",
         "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Company>",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Tenant>",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "CreateCompany",
-          "fullName": "google.cloud.talent.v4.CompanyService.CreateCompany",
+          "shortName": "CreateTenant",
+          "fullName": "google.cloud.talent.v4.TenantService.CreateTenant",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_CreateCompany_sync_flattened_resourceNames",
-      "title": "CreateCompanyResourceNames",
-      "description": "Snippet for CreateCompany",
-      "file": "CompanyServiceClient.CreateCompanyResourceNamesSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_CreateTenant_sync_flattened_resourceNames",
+      "title": "CreateTenantResourceNames",
+      "description": "Snippet for CreateTenant",
+      "file": "TenantServiceClient.CreateTenantResourceNamesSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "CreateCompany",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.CreateCompany",
-        "resultType": "Google.Cloud.Talent.V4.Company",
+        "shortName": "CreateTenant",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.CreateTenant",
+        "resultType": "Google.Cloud.Talent.V4.Tenant",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "CreateCompany",
-          "fullName": "google.cloud.talent.v4.CompanyService.CreateCompany",
+          "shortName": "CreateTenant",
+          "fullName": "google.cloud.talent.v4.TenantService.CreateTenant",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_CreateCompany_async_flattened_resourceNames",
-      "title": "CreateCompanyResourceNamesAsync",
-      "description": "Snippet for CreateCompanyAsync",
-      "file": "CompanyServiceClient.CreateCompanyResourceNamesAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_CreateTenant_async_flattened_resourceNames",
+      "title": "CreateTenantResourceNamesAsync",
+      "description": "Snippet for CreateTenantAsync",
+      "file": "TenantServiceClient.CreateTenantResourceNamesAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "CreateCompanyAsync",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.CreateCompanyAsync",
+        "shortName": "CreateTenantAsync",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.CreateTenantAsync",
         "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Company>",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Tenant>",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "CreateCompany",
-          "fullName": "google.cloud.talent.v4.CompanyService.CreateCompany",
+          "shortName": "CreateTenant",
+          "fullName": "google.cloud.talent.v4.TenantService.CreateTenant",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_GetCompany_sync",
-      "title": "GetCompanyRequestObject",
-      "description": "Snippet for GetCompany",
-      "file": "CompanyServiceClient.GetCompanyRequestObjectSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_GetTenant_sync",
+      "title": "GetTenantRequestObject",
+      "description": "Snippet for GetTenant",
+      "file": "TenantServiceClient.GetTenantRequestObjectSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "GetCompany",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.GetCompany",
-        "resultType": "Google.Cloud.Talent.V4.Company",
+        "shortName": "GetTenant",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.GetTenant",
+        "resultType": "Google.Cloud.Talent.V4.Tenant",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "GetCompany",
-          "fullName": "google.cloud.talent.v4.CompanyService.GetCompany",
+          "shortName": "GetTenant",
+          "fullName": "google.cloud.talent.v4.TenantService.GetTenant",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
@@ -192,26 +192,26 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_GetCompany_async",
-      "title": "GetCompanyRequestObjectAsync",
-      "description": "Snippet for GetCompanyAsync",
-      "file": "CompanyServiceClient.GetCompanyRequestObjectAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_GetTenant_async",
+      "title": "GetTenantRequestObjectAsync",
+      "description": "Snippet for GetTenantAsync",
+      "file": "TenantServiceClient.GetTenantRequestObjectAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "GetCompanyAsync",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.GetCompanyAsync",
+        "shortName": "GetTenantAsync",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.GetTenantAsync",
         "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Company>",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Tenant>",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "GetCompany",
-          "fullName": "google.cloud.talent.v4.CompanyService.GetCompany",
+          "shortName": "GetTenant",
+          "fullName": "google.cloud.talent.v4.TenantService.GetTenant",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
@@ -219,127 +219,127 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_GetCompany_sync_flattened",
-      "title": "GetCompany",
-      "description": "Snippet for GetCompany",
-      "file": "CompanyServiceClient.GetCompanySnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_GetTenant_sync_flattened",
+      "title": "GetTenant",
+      "description": "Snippet for GetTenant",
+      "file": "TenantServiceClient.GetTenantSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "GetCompany",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.GetCompany",
-        "resultType": "Google.Cloud.Talent.V4.Company",
+        "shortName": "GetTenant",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.GetTenant",
+        "resultType": "Google.Cloud.Talent.V4.Tenant",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "GetCompany",
-          "fullName": "google.cloud.talent.v4.CompanyService.GetCompany",
+          "shortName": "GetTenant",
+          "fullName": "google.cloud.talent.v4.TenantService.GetTenant",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_GetCompany_async_flattened",
-      "title": "GetCompanyAsync",
-      "description": "Snippet for GetCompanyAsync",
-      "file": "CompanyServiceClient.GetCompanyAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_GetTenant_async_flattened",
+      "title": "GetTenantAsync",
+      "description": "Snippet for GetTenantAsync",
+      "file": "TenantServiceClient.GetTenantAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "GetCompanyAsync",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.GetCompanyAsync",
+        "shortName": "GetTenantAsync",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.GetTenantAsync",
         "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Company>",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Tenant>",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "GetCompany",
-          "fullName": "google.cloud.talent.v4.CompanyService.GetCompany",
+          "shortName": "GetTenant",
+          "fullName": "google.cloud.talent.v4.TenantService.GetTenant",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_GetCompany_sync_flattened_resourceNames",
-      "title": "GetCompanyResourceNames",
-      "description": "Snippet for GetCompany",
-      "file": "CompanyServiceClient.GetCompanyResourceNamesSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_GetTenant_sync_flattened_resourceNames",
+      "title": "GetTenantResourceNames",
+      "description": "Snippet for GetTenant",
+      "file": "TenantServiceClient.GetTenantResourceNamesSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "GetCompany",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.GetCompany",
-        "resultType": "Google.Cloud.Talent.V4.Company",
+        "shortName": "GetTenant",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.GetTenant",
+        "resultType": "Google.Cloud.Talent.V4.Tenant",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "GetCompany",
-          "fullName": "google.cloud.talent.v4.CompanyService.GetCompany",
+          "shortName": "GetTenant",
+          "fullName": "google.cloud.talent.v4.TenantService.GetTenant",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_GetCompany_async_flattened_resourceNames",
-      "title": "GetCompanyResourceNamesAsync",
-      "description": "Snippet for GetCompanyAsync",
-      "file": "CompanyServiceClient.GetCompanyResourceNamesAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_GetTenant_async_flattened_resourceNames",
+      "title": "GetTenantResourceNamesAsync",
+      "description": "Snippet for GetTenantAsync",
+      "file": "TenantServiceClient.GetTenantResourceNamesAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "GetCompanyAsync",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.GetCompanyAsync",
+        "shortName": "GetTenantAsync",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.GetTenantAsync",
         "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Company>",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Tenant>",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "GetCompany",
-          "fullName": "google.cloud.talent.v4.CompanyService.GetCompany",
+          "shortName": "GetTenant",
+          "fullName": "google.cloud.talent.v4.TenantService.GetTenant",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_UpdateCompany_sync",
-      "title": "UpdateCompanyRequestObject",
-      "description": "Snippet for UpdateCompany",
-      "file": "CompanyServiceClient.UpdateCompanyRequestObjectSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_UpdateTenant_sync",
+      "title": "UpdateTenantRequestObject",
+      "description": "Snippet for UpdateTenant",
+      "file": "TenantServiceClient.UpdateTenantRequestObjectSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "UpdateCompany",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.UpdateCompany",
-        "resultType": "Google.Cloud.Talent.V4.Company",
+        "shortName": "UpdateTenant",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.UpdateTenant",
+        "resultType": "Google.Cloud.Talent.V4.Tenant",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "UpdateCompany",
-          "fullName": "google.cloud.talent.v4.CompanyService.UpdateCompany",
+          "shortName": "UpdateTenant",
+          "fullName": "google.cloud.talent.v4.TenantService.UpdateTenant",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
@@ -347,26 +347,26 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_UpdateCompany_async",
-      "title": "UpdateCompanyRequestObjectAsync",
-      "description": "Snippet for UpdateCompanyAsync",
-      "file": "CompanyServiceClient.UpdateCompanyRequestObjectAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_UpdateTenant_async",
+      "title": "UpdateTenantRequestObjectAsync",
+      "description": "Snippet for UpdateTenantAsync",
+      "file": "TenantServiceClient.UpdateTenantRequestObjectAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "UpdateCompanyAsync",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.UpdateCompanyAsync",
+        "shortName": "UpdateTenantAsync",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.UpdateTenantAsync",
         "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Company>",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Tenant>",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "UpdateCompany",
-          "fullName": "google.cloud.talent.v4.CompanyService.UpdateCompany",
+          "shortName": "UpdateTenant",
+          "fullName": "google.cloud.talent.v4.TenantService.UpdateTenant",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
@@ -374,75 +374,75 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_UpdateCompany_sync_flattened",
-      "title": "UpdateCompany",
-      "description": "Snippet for UpdateCompany",
-      "file": "CompanyServiceClient.UpdateCompanySnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_UpdateTenant_sync_flattened",
+      "title": "UpdateTenant",
+      "description": "Snippet for UpdateTenant",
+      "file": "TenantServiceClient.UpdateTenantSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "UpdateCompany",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.UpdateCompany",
-        "resultType": "Google.Cloud.Talent.V4.Company",
+        "shortName": "UpdateTenant",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.UpdateTenant",
+        "resultType": "Google.Cloud.Talent.V4.Tenant",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "UpdateCompany",
-          "fullName": "google.cloud.talent.v4.CompanyService.UpdateCompany",
+          "shortName": "UpdateTenant",
+          "fullName": "google.cloud.talent.v4.TenantService.UpdateTenant",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_UpdateCompany_async_flattened",
-      "title": "UpdateCompanyAsync",
-      "description": "Snippet for UpdateCompanyAsync",
-      "file": "CompanyServiceClient.UpdateCompanyAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_UpdateTenant_async_flattened",
+      "title": "UpdateTenantAsync",
+      "description": "Snippet for UpdateTenantAsync",
+      "file": "TenantServiceClient.UpdateTenantAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "UpdateCompanyAsync",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.UpdateCompanyAsync",
+        "shortName": "UpdateTenantAsync",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.UpdateTenantAsync",
         "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Company>",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Tenant>",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "UpdateCompany",
-          "fullName": "google.cloud.talent.v4.CompanyService.UpdateCompany",
+          "shortName": "UpdateTenant",
+          "fullName": "google.cloud.talent.v4.TenantService.UpdateTenant",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_DeleteCompany_sync",
-      "title": "DeleteCompanyRequestObject",
-      "description": "Snippet for DeleteCompany",
-      "file": "CompanyServiceClient.DeleteCompanyRequestObjectSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_DeleteTenant_sync",
+      "title": "DeleteTenantRequestObject",
+      "description": "Snippet for DeleteTenant",
+      "file": "TenantServiceClient.DeleteTenantRequestObjectSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "DeleteCompany",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.DeleteCompany",
+        "shortName": "DeleteTenant",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.DeleteTenant",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "DeleteCompany",
-          "fullName": "google.cloud.talent.v4.CompanyService.DeleteCompany",
+          "shortName": "DeleteTenant",
+          "fullName": "google.cloud.talent.v4.TenantService.DeleteTenant",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
@@ -450,26 +450,26 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_DeleteCompany_async",
-      "title": "DeleteCompanyRequestObjectAsync",
-      "description": "Snippet for DeleteCompanyAsync",
-      "file": "CompanyServiceClient.DeleteCompanyRequestObjectAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_DeleteTenant_async",
+      "title": "DeleteTenantRequestObjectAsync",
+      "description": "Snippet for DeleteTenantAsync",
+      "file": "TenantServiceClient.DeleteTenantRequestObjectAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "DeleteCompanyAsync",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.DeleteCompanyAsync",
+        "shortName": "DeleteTenantAsync",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.DeleteTenantAsync",
         "async": true,
         "resultType": "System.Threading.Tasks.Task",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "DeleteCompany",
-          "fullName": "google.cloud.talent.v4.CompanyService.DeleteCompany",
+          "shortName": "DeleteTenant",
+          "fullName": "google.cloud.talent.v4.TenantService.DeleteTenant",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
@@ -477,125 +477,125 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_DeleteCompany_sync_flattened",
-      "title": "DeleteCompany",
-      "description": "Snippet for DeleteCompany",
-      "file": "CompanyServiceClient.DeleteCompanySnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_DeleteTenant_sync_flattened",
+      "title": "DeleteTenant",
+      "description": "Snippet for DeleteTenant",
+      "file": "TenantServiceClient.DeleteTenantSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "DeleteCompany",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.DeleteCompany",
+        "shortName": "DeleteTenant",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.DeleteTenant",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "DeleteCompany",
-          "fullName": "google.cloud.talent.v4.CompanyService.DeleteCompany",
+          "shortName": "DeleteTenant",
+          "fullName": "google.cloud.talent.v4.TenantService.DeleteTenant",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_DeleteCompany_async_flattened",
-      "title": "DeleteCompanyAsync",
-      "description": "Snippet for DeleteCompanyAsync",
-      "file": "CompanyServiceClient.DeleteCompanyAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_DeleteTenant_async_flattened",
+      "title": "DeleteTenantAsync",
+      "description": "Snippet for DeleteTenantAsync",
+      "file": "TenantServiceClient.DeleteTenantAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "DeleteCompanyAsync",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.DeleteCompanyAsync",
+        "shortName": "DeleteTenantAsync",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.DeleteTenantAsync",
         "async": true,
         "resultType": "System.Threading.Tasks.Task",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "DeleteCompany",
-          "fullName": "google.cloud.talent.v4.CompanyService.DeleteCompany",
+          "shortName": "DeleteTenant",
+          "fullName": "google.cloud.talent.v4.TenantService.DeleteTenant",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_DeleteCompany_sync_flattened_resourceNames",
-      "title": "DeleteCompanyResourceNames",
-      "description": "Snippet for DeleteCompany",
-      "file": "CompanyServiceClient.DeleteCompanyResourceNamesSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_DeleteTenant_sync_flattened_resourceNames",
+      "title": "DeleteTenantResourceNames",
+      "description": "Snippet for DeleteTenant",
+      "file": "TenantServiceClient.DeleteTenantResourceNamesSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "DeleteCompany",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.DeleteCompany",
+        "shortName": "DeleteTenant",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.DeleteTenant",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "DeleteCompany",
-          "fullName": "google.cloud.talent.v4.CompanyService.DeleteCompany",
+          "shortName": "DeleteTenant",
+          "fullName": "google.cloud.talent.v4.TenantService.DeleteTenant",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_DeleteCompany_async_flattened_resourceNames",
-      "title": "DeleteCompanyResourceNamesAsync",
-      "description": "Snippet for DeleteCompanyAsync",
-      "file": "CompanyServiceClient.DeleteCompanyResourceNamesAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_DeleteTenant_async_flattened_resourceNames",
+      "title": "DeleteTenantResourceNamesAsync",
+      "description": "Snippet for DeleteTenantAsync",
+      "file": "TenantServiceClient.DeleteTenantResourceNamesAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "DeleteCompanyAsync",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.DeleteCompanyAsync",
+        "shortName": "DeleteTenantAsync",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.DeleteTenantAsync",
         "async": true,
         "resultType": "System.Threading.Tasks.Task",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "DeleteCompany",
-          "fullName": "google.cloud.talent.v4.CompanyService.DeleteCompany",
+          "shortName": "DeleteTenant",
+          "fullName": "google.cloud.talent.v4.TenantService.DeleteTenant",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_ListCompanies_sync",
-      "title": "ListCompaniesRequestObject",
-      "description": "Snippet for ListCompanies",
-      "file": "CompanyServiceClient.ListCompaniesRequestObjectSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_ListTenants_sync",
+      "title": "ListTenantsRequestObject",
+      "description": "Snippet for ListTenants",
+      "file": "TenantServiceClient.ListTenantsRequestObjectSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "ListCompanies",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.ListCompanies",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4.ListCompaniesResponse, Google.Cloud.Talent.V4.Company>",
+        "shortName": "ListTenants",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.ListTenants",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4.ListTenantsResponse, Google.Cloud.Talent.V4.Tenant>",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "ListCompanies",
-          "fullName": "google.cloud.talent.v4.CompanyService.ListCompanies",
+          "shortName": "ListTenants",
+          "fullName": "google.cloud.talent.v4.TenantService.ListTenants",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
@@ -603,26 +603,26 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_ListCompanies_async",
-      "title": "ListCompaniesRequestObjectAsync",
-      "description": "Snippet for ListCompaniesAsync",
-      "file": "CompanyServiceClient.ListCompaniesRequestObjectAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_ListTenants_async",
+      "title": "ListTenantsRequestObjectAsync",
+      "description": "Snippet for ListTenantsAsync",
+      "file": "TenantServiceClient.ListTenantsRequestObjectAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "ListCompaniesAsync",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.ListCompaniesAsync",
+        "shortName": "ListTenantsAsync",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.ListTenantsAsync",
         "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4.ListCompaniesResponse, Google.Cloud.Talent.V4.Company>",
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4.ListTenantsResponse, Google.Cloud.Talent.V4.Tenant>",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "ListCompanies",
-          "fullName": "google.cloud.talent.v4.CompanyService.ListCompanies",
+          "shortName": "ListTenants",
+          "fullName": "google.cloud.talent.v4.TenantService.ListTenants",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
@@ -630,158 +630,105 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_ListCompanies_sync_flattened",
-      "title": "ListCompanies",
-      "description": "Snippet for ListCompanies",
-      "file": "CompanyServiceClient.ListCompaniesSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_ListTenants_sync_flattened",
+      "title": "ListTenants",
+      "description": "Snippet for ListTenants",
+      "file": "TenantServiceClient.ListTenantsSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "ListCompanies",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.ListCompanies",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4.ListCompaniesResponse, Google.Cloud.Talent.V4.Company>",
+        "shortName": "ListTenants",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.ListTenants",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4.ListTenantsResponse, Google.Cloud.Talent.V4.Tenant>",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "ListCompanies",
-          "fullName": "google.cloud.talent.v4.CompanyService.ListCompanies",
+          "shortName": "ListTenants",
+          "fullName": "google.cloud.talent.v4.TenantService.ListTenants",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_ListCompanies_async_flattened",
-      "title": "ListCompaniesAsync",
-      "description": "Snippet for ListCompaniesAsync",
-      "file": "CompanyServiceClient.ListCompaniesAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_ListTenants_async_flattened",
+      "title": "ListTenantsAsync",
+      "description": "Snippet for ListTenantsAsync",
+      "file": "TenantServiceClient.ListTenantsAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "ListCompaniesAsync",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.ListCompaniesAsync",
+        "shortName": "ListTenantsAsync",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.ListTenantsAsync",
         "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4.ListCompaniesResponse, Google.Cloud.Talent.V4.Company>",
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4.ListTenantsResponse, Google.Cloud.Talent.V4.Tenant>",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "ListCompanies",
-          "fullName": "google.cloud.talent.v4.CompanyService.ListCompanies",
+          "shortName": "ListTenants",
+          "fullName": "google.cloud.talent.v4.TenantService.ListTenants",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_ListCompanies_sync_flattened_resourceNames",
-      "title": "ListCompaniesResourceNames",
-      "description": "Snippet for ListCompanies",
-      "file": "CompanyServiceClient.ListCompaniesResourceNamesSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_ListTenants_sync_flattened_resourceNames",
+      "title": "ListTenantsResourceNames",
+      "description": "Snippet for ListTenants",
+      "file": "TenantServiceClient.ListTenantsResourceNamesSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "ListCompanies",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.ListCompanies",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4.ListCompaniesResponse, Google.Cloud.Talent.V4.Company>",
+        "shortName": "ListTenants",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.ListTenants",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4.ListTenantsResponse, Google.Cloud.Talent.V4.Tenant>",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "ListCompanies",
-          "fullName": "google.cloud.talent.v4.CompanyService.ListCompanies",
+          "shortName": "ListTenants",
+          "fullName": "google.cloud.talent.v4.TenantService.ListTenants",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_CompanyService_ListCompanies_async_flattened_resourceNames",
-      "title": "ListCompaniesResourceNamesAsync",
-      "description": "Snippet for ListCompaniesAsync",
-      "file": "CompanyServiceClient.ListCompaniesResourceNamesAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_TenantService_ListTenants_async_flattened_resourceNames",
+      "title": "ListTenantsResourceNamesAsync",
+      "description": "Snippet for ListTenantsAsync",
+      "file": "TenantServiceClient.ListTenantsResourceNamesAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "ListCompaniesAsync",
-        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.ListCompaniesAsync",
+        "shortName": "ListTenantsAsync",
+        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.ListTenantsAsync",
         "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4.ListCompaniesResponse, Google.Cloud.Talent.V4.Company>",
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4.ListTenantsResponse, Google.Cloud.Talent.V4.Tenant>",
         "client": {
-          "shortName": "CompanyServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+          "shortName": "TenantServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
         },
         "method": {
-          "shortName": "ListCompanies",
-          "fullName": "google.cloud.talent.v4.CompanyService.ListCompanies",
+          "shortName": "ListTenants",
+          "fullName": "google.cloud.talent.v4.TenantService.ListTenants",
           "service": {
-            "shortName": "CompanyService",
-            "fullName": "google.cloud.talent.v4.CompanyService"
+            "shortName": "TenantService",
+            "fullName": "google.cloud.talent.v4.TenantService"
           }
         }
       },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "jobs_v4_generated_Completion_CompleteQuery_sync",
-      "title": "CompleteQueryRequestObject",
-      "description": "Snippet for CompleteQuery",
-      "file": "CompletionClient.CompleteQueryRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CompleteQuery",
-        "fullName": "Google.Cloud.Talent.V4.CompletionClient.CompleteQuery",
-        "resultType": "Google.Cloud.Talent.V4.CompleteQueryResponse",
-        "client": {
-          "shortName": "CompletionClient",
-          "fullName": "Google.Cloud.Talent.V4.CompletionClient"
-        },
-        "method": {
-          "shortName": "CompleteQuery",
-          "fullName": "google.cloud.talent.v4.Completion.CompleteQuery",
-          "service": {
-            "shortName": "Completion",
-            "fullName": "google.cloud.talent.v4.Completion"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "jobs_v4_generated_Completion_CompleteQuery_async",
-      "title": "CompleteQueryRequestObjectAsync",
-      "description": "Snippet for CompleteQueryAsync",
-      "file": "CompletionClient.CompleteQueryRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CompleteQueryAsync",
-        "fullName": "Google.Cloud.Talent.V4.CompletionClient.CompleteQueryAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.CompleteQueryResponse>",
-        "client": {
-          "shortName": "CompletionClient",
-          "fullName": "Google.Cloud.Talent.V4.CompletionClient"
-        },
-        "method": {
-          "shortName": "CompleteQuery",
-          "fullName": "google.cloud.talent.v4.Completion.CompleteQuery",
-          "service": {
-            "shortName": "Completion",
-            "fullName": "google.cloud.talent.v4.Completion"
-          }
-        }
-      },
-      "canonical": true,
       "origin": "API_DEFINITION"
     },
     {
@@ -937,6 +884,59 @@
           }
         }
       },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "jobs_v4_generated_Completion_CompleteQuery_sync",
+      "title": "CompleteQueryRequestObject",
+      "description": "Snippet for CompleteQuery",
+      "file": "CompletionClient.CompleteQueryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CompleteQuery",
+        "fullName": "Google.Cloud.Talent.V4.CompletionClient.CompleteQuery",
+        "resultType": "Google.Cloud.Talent.V4.CompleteQueryResponse",
+        "client": {
+          "shortName": "CompletionClient",
+          "fullName": "Google.Cloud.Talent.V4.CompletionClient"
+        },
+        "method": {
+          "shortName": "CompleteQuery",
+          "fullName": "google.cloud.talent.v4.Completion.CompleteQuery",
+          "service": {
+            "shortName": "Completion",
+            "fullName": "google.cloud.talent.v4.Completion"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "jobs_v4_generated_Completion_CompleteQuery_async",
+      "title": "CompleteQueryRequestObjectAsync",
+      "description": "Snippet for CompleteQueryAsync",
+      "file": "CompletionClient.CompleteQueryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CompleteQueryAsync",
+        "fullName": "Google.Cloud.Talent.V4.CompletionClient.CompleteQueryAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.CompleteQueryResponse>",
+        "client": {
+          "shortName": "CompletionClient",
+          "fullName": "Google.Cloud.Talent.V4.CompletionClient"
+        },
+        "method": {
+          "shortName": "CompleteQuery",
+          "fullName": "google.cloud.talent.v4.Completion.CompleteQuery",
+          "service": {
+            "shortName": "Completion",
+            "fullName": "google.cloud.talent.v4.Completion"
+          }
+        }
+      },
+      "canonical": true,
       "origin": "API_DEFINITION"
     },
     {
@@ -2232,25 +2232,25 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_CreateTenant_sync",
-      "title": "CreateTenantRequestObject",
-      "description": "Snippet for CreateTenant",
-      "file": "TenantServiceClient.CreateTenantRequestObjectSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_CreateCompany_sync",
+      "title": "CreateCompanyRequestObject",
+      "description": "Snippet for CreateCompany",
+      "file": "CompanyServiceClient.CreateCompanyRequestObjectSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "CreateTenant",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.CreateTenant",
-        "resultType": "Google.Cloud.Talent.V4.Tenant",
+        "shortName": "CreateCompany",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.CreateCompany",
+        "resultType": "Google.Cloud.Talent.V4.Company",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "CreateTenant",
-          "fullName": "google.cloud.talent.v4.TenantService.CreateTenant",
+          "shortName": "CreateCompany",
+          "fullName": "google.cloud.talent.v4.CompanyService.CreateCompany",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
@@ -2258,26 +2258,26 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_CreateTenant_async",
-      "title": "CreateTenantRequestObjectAsync",
-      "description": "Snippet for CreateTenantAsync",
-      "file": "TenantServiceClient.CreateTenantRequestObjectAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_CreateCompany_async",
+      "title": "CreateCompanyRequestObjectAsync",
+      "description": "Snippet for CreateCompanyAsync",
+      "file": "CompanyServiceClient.CreateCompanyRequestObjectAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "CreateTenantAsync",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.CreateTenantAsync",
+        "shortName": "CreateCompanyAsync",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.CreateCompanyAsync",
         "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Tenant>",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Company>",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "CreateTenant",
-          "fullName": "google.cloud.talent.v4.TenantService.CreateTenant",
+          "shortName": "CreateCompany",
+          "fullName": "google.cloud.talent.v4.CompanyService.CreateCompany",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
@@ -2285,127 +2285,127 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_CreateTenant_sync_flattened",
-      "title": "CreateTenant",
-      "description": "Snippet for CreateTenant",
-      "file": "TenantServiceClient.CreateTenantSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_CreateCompany_sync_flattened",
+      "title": "CreateCompany",
+      "description": "Snippet for CreateCompany",
+      "file": "CompanyServiceClient.CreateCompanySnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "CreateTenant",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.CreateTenant",
-        "resultType": "Google.Cloud.Talent.V4.Tenant",
+        "shortName": "CreateCompany",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.CreateCompany",
+        "resultType": "Google.Cloud.Talent.V4.Company",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "CreateTenant",
-          "fullName": "google.cloud.talent.v4.TenantService.CreateTenant",
+          "shortName": "CreateCompany",
+          "fullName": "google.cloud.talent.v4.CompanyService.CreateCompany",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_CreateTenant_async_flattened",
-      "title": "CreateTenantAsync",
-      "description": "Snippet for CreateTenantAsync",
-      "file": "TenantServiceClient.CreateTenantAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_CreateCompany_async_flattened",
+      "title": "CreateCompanyAsync",
+      "description": "Snippet for CreateCompanyAsync",
+      "file": "CompanyServiceClient.CreateCompanyAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "CreateTenantAsync",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.CreateTenantAsync",
+        "shortName": "CreateCompanyAsync",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.CreateCompanyAsync",
         "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Tenant>",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Company>",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "CreateTenant",
-          "fullName": "google.cloud.talent.v4.TenantService.CreateTenant",
+          "shortName": "CreateCompany",
+          "fullName": "google.cloud.talent.v4.CompanyService.CreateCompany",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_CreateTenant_sync_flattened_resourceNames",
-      "title": "CreateTenantResourceNames",
-      "description": "Snippet for CreateTenant",
-      "file": "TenantServiceClient.CreateTenantResourceNamesSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_CreateCompany_sync_flattened_resourceNames",
+      "title": "CreateCompanyResourceNames",
+      "description": "Snippet for CreateCompany",
+      "file": "CompanyServiceClient.CreateCompanyResourceNamesSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "CreateTenant",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.CreateTenant",
-        "resultType": "Google.Cloud.Talent.V4.Tenant",
+        "shortName": "CreateCompany",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.CreateCompany",
+        "resultType": "Google.Cloud.Talent.V4.Company",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "CreateTenant",
-          "fullName": "google.cloud.talent.v4.TenantService.CreateTenant",
+          "shortName": "CreateCompany",
+          "fullName": "google.cloud.talent.v4.CompanyService.CreateCompany",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_CreateTenant_async_flattened_resourceNames",
-      "title": "CreateTenantResourceNamesAsync",
-      "description": "Snippet for CreateTenantAsync",
-      "file": "TenantServiceClient.CreateTenantResourceNamesAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_CreateCompany_async_flattened_resourceNames",
+      "title": "CreateCompanyResourceNamesAsync",
+      "description": "Snippet for CreateCompanyAsync",
+      "file": "CompanyServiceClient.CreateCompanyResourceNamesAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "CreateTenantAsync",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.CreateTenantAsync",
+        "shortName": "CreateCompanyAsync",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.CreateCompanyAsync",
         "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Tenant>",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Company>",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "CreateTenant",
-          "fullName": "google.cloud.talent.v4.TenantService.CreateTenant",
+          "shortName": "CreateCompany",
+          "fullName": "google.cloud.talent.v4.CompanyService.CreateCompany",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_GetTenant_sync",
-      "title": "GetTenantRequestObject",
-      "description": "Snippet for GetTenant",
-      "file": "TenantServiceClient.GetTenantRequestObjectSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_GetCompany_sync",
+      "title": "GetCompanyRequestObject",
+      "description": "Snippet for GetCompany",
+      "file": "CompanyServiceClient.GetCompanyRequestObjectSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "GetTenant",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.GetTenant",
-        "resultType": "Google.Cloud.Talent.V4.Tenant",
+        "shortName": "GetCompany",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.GetCompany",
+        "resultType": "Google.Cloud.Talent.V4.Company",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "GetTenant",
-          "fullName": "google.cloud.talent.v4.TenantService.GetTenant",
+          "shortName": "GetCompany",
+          "fullName": "google.cloud.talent.v4.CompanyService.GetCompany",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
@@ -2413,26 +2413,26 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_GetTenant_async",
-      "title": "GetTenantRequestObjectAsync",
-      "description": "Snippet for GetTenantAsync",
-      "file": "TenantServiceClient.GetTenantRequestObjectAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_GetCompany_async",
+      "title": "GetCompanyRequestObjectAsync",
+      "description": "Snippet for GetCompanyAsync",
+      "file": "CompanyServiceClient.GetCompanyRequestObjectAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "GetTenantAsync",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.GetTenantAsync",
+        "shortName": "GetCompanyAsync",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.GetCompanyAsync",
         "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Tenant>",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Company>",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "GetTenant",
-          "fullName": "google.cloud.talent.v4.TenantService.GetTenant",
+          "shortName": "GetCompany",
+          "fullName": "google.cloud.talent.v4.CompanyService.GetCompany",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
@@ -2440,127 +2440,127 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_GetTenant_sync_flattened",
-      "title": "GetTenant",
-      "description": "Snippet for GetTenant",
-      "file": "TenantServiceClient.GetTenantSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_GetCompany_sync_flattened",
+      "title": "GetCompany",
+      "description": "Snippet for GetCompany",
+      "file": "CompanyServiceClient.GetCompanySnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "GetTenant",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.GetTenant",
-        "resultType": "Google.Cloud.Talent.V4.Tenant",
+        "shortName": "GetCompany",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.GetCompany",
+        "resultType": "Google.Cloud.Talent.V4.Company",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "GetTenant",
-          "fullName": "google.cloud.talent.v4.TenantService.GetTenant",
+          "shortName": "GetCompany",
+          "fullName": "google.cloud.talent.v4.CompanyService.GetCompany",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_GetTenant_async_flattened",
-      "title": "GetTenantAsync",
-      "description": "Snippet for GetTenantAsync",
-      "file": "TenantServiceClient.GetTenantAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_GetCompany_async_flattened",
+      "title": "GetCompanyAsync",
+      "description": "Snippet for GetCompanyAsync",
+      "file": "CompanyServiceClient.GetCompanyAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "GetTenantAsync",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.GetTenantAsync",
+        "shortName": "GetCompanyAsync",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.GetCompanyAsync",
         "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Tenant>",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Company>",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "GetTenant",
-          "fullName": "google.cloud.talent.v4.TenantService.GetTenant",
+          "shortName": "GetCompany",
+          "fullName": "google.cloud.talent.v4.CompanyService.GetCompany",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_GetTenant_sync_flattened_resourceNames",
-      "title": "GetTenantResourceNames",
-      "description": "Snippet for GetTenant",
-      "file": "TenantServiceClient.GetTenantResourceNamesSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_GetCompany_sync_flattened_resourceNames",
+      "title": "GetCompanyResourceNames",
+      "description": "Snippet for GetCompany",
+      "file": "CompanyServiceClient.GetCompanyResourceNamesSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "GetTenant",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.GetTenant",
-        "resultType": "Google.Cloud.Talent.V4.Tenant",
+        "shortName": "GetCompany",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.GetCompany",
+        "resultType": "Google.Cloud.Talent.V4.Company",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "GetTenant",
-          "fullName": "google.cloud.talent.v4.TenantService.GetTenant",
+          "shortName": "GetCompany",
+          "fullName": "google.cloud.talent.v4.CompanyService.GetCompany",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_GetTenant_async_flattened_resourceNames",
-      "title": "GetTenantResourceNamesAsync",
-      "description": "Snippet for GetTenantAsync",
-      "file": "TenantServiceClient.GetTenantResourceNamesAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_GetCompany_async_flattened_resourceNames",
+      "title": "GetCompanyResourceNamesAsync",
+      "description": "Snippet for GetCompanyAsync",
+      "file": "CompanyServiceClient.GetCompanyResourceNamesAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "GetTenantAsync",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.GetTenantAsync",
+        "shortName": "GetCompanyAsync",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.GetCompanyAsync",
         "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Tenant>",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Company>",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "GetTenant",
-          "fullName": "google.cloud.talent.v4.TenantService.GetTenant",
+          "shortName": "GetCompany",
+          "fullName": "google.cloud.talent.v4.CompanyService.GetCompany",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_UpdateTenant_sync",
-      "title": "UpdateTenantRequestObject",
-      "description": "Snippet for UpdateTenant",
-      "file": "TenantServiceClient.UpdateTenantRequestObjectSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_UpdateCompany_sync",
+      "title": "UpdateCompanyRequestObject",
+      "description": "Snippet for UpdateCompany",
+      "file": "CompanyServiceClient.UpdateCompanyRequestObjectSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "UpdateTenant",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.UpdateTenant",
-        "resultType": "Google.Cloud.Talent.V4.Tenant",
+        "shortName": "UpdateCompany",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.UpdateCompany",
+        "resultType": "Google.Cloud.Talent.V4.Company",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "UpdateTenant",
-          "fullName": "google.cloud.talent.v4.TenantService.UpdateTenant",
+          "shortName": "UpdateCompany",
+          "fullName": "google.cloud.talent.v4.CompanyService.UpdateCompany",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
@@ -2568,26 +2568,26 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_UpdateTenant_async",
-      "title": "UpdateTenantRequestObjectAsync",
-      "description": "Snippet for UpdateTenantAsync",
-      "file": "TenantServiceClient.UpdateTenantRequestObjectAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_UpdateCompany_async",
+      "title": "UpdateCompanyRequestObjectAsync",
+      "description": "Snippet for UpdateCompanyAsync",
+      "file": "CompanyServiceClient.UpdateCompanyRequestObjectAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "UpdateTenantAsync",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.UpdateTenantAsync",
+        "shortName": "UpdateCompanyAsync",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.UpdateCompanyAsync",
         "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Tenant>",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Company>",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "UpdateTenant",
-          "fullName": "google.cloud.talent.v4.TenantService.UpdateTenant",
+          "shortName": "UpdateCompany",
+          "fullName": "google.cloud.talent.v4.CompanyService.UpdateCompany",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
@@ -2595,75 +2595,75 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_UpdateTenant_sync_flattened",
-      "title": "UpdateTenant",
-      "description": "Snippet for UpdateTenant",
-      "file": "TenantServiceClient.UpdateTenantSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_UpdateCompany_sync_flattened",
+      "title": "UpdateCompany",
+      "description": "Snippet for UpdateCompany",
+      "file": "CompanyServiceClient.UpdateCompanySnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "UpdateTenant",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.UpdateTenant",
-        "resultType": "Google.Cloud.Talent.V4.Tenant",
+        "shortName": "UpdateCompany",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.UpdateCompany",
+        "resultType": "Google.Cloud.Talent.V4.Company",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "UpdateTenant",
-          "fullName": "google.cloud.talent.v4.TenantService.UpdateTenant",
+          "shortName": "UpdateCompany",
+          "fullName": "google.cloud.talent.v4.CompanyService.UpdateCompany",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_UpdateTenant_async_flattened",
-      "title": "UpdateTenantAsync",
-      "description": "Snippet for UpdateTenantAsync",
-      "file": "TenantServiceClient.UpdateTenantAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_UpdateCompany_async_flattened",
+      "title": "UpdateCompanyAsync",
+      "description": "Snippet for UpdateCompanyAsync",
+      "file": "CompanyServiceClient.UpdateCompanyAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "UpdateTenantAsync",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.UpdateTenantAsync",
+        "shortName": "UpdateCompanyAsync",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.UpdateCompanyAsync",
         "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Tenant>",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4.Company>",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "UpdateTenant",
-          "fullName": "google.cloud.talent.v4.TenantService.UpdateTenant",
+          "shortName": "UpdateCompany",
+          "fullName": "google.cloud.talent.v4.CompanyService.UpdateCompany",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_DeleteTenant_sync",
-      "title": "DeleteTenantRequestObject",
-      "description": "Snippet for DeleteTenant",
-      "file": "TenantServiceClient.DeleteTenantRequestObjectSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_DeleteCompany_sync",
+      "title": "DeleteCompanyRequestObject",
+      "description": "Snippet for DeleteCompany",
+      "file": "CompanyServiceClient.DeleteCompanyRequestObjectSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "DeleteTenant",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.DeleteTenant",
+        "shortName": "DeleteCompany",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.DeleteCompany",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "DeleteTenant",
-          "fullName": "google.cloud.talent.v4.TenantService.DeleteTenant",
+          "shortName": "DeleteCompany",
+          "fullName": "google.cloud.talent.v4.CompanyService.DeleteCompany",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
@@ -2671,26 +2671,26 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_DeleteTenant_async",
-      "title": "DeleteTenantRequestObjectAsync",
-      "description": "Snippet for DeleteTenantAsync",
-      "file": "TenantServiceClient.DeleteTenantRequestObjectAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_DeleteCompany_async",
+      "title": "DeleteCompanyRequestObjectAsync",
+      "description": "Snippet for DeleteCompanyAsync",
+      "file": "CompanyServiceClient.DeleteCompanyRequestObjectAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "DeleteTenantAsync",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.DeleteTenantAsync",
+        "shortName": "DeleteCompanyAsync",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.DeleteCompanyAsync",
         "async": true,
         "resultType": "System.Threading.Tasks.Task",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "DeleteTenant",
-          "fullName": "google.cloud.talent.v4.TenantService.DeleteTenant",
+          "shortName": "DeleteCompany",
+          "fullName": "google.cloud.talent.v4.CompanyService.DeleteCompany",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
@@ -2698,152 +2698,125 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_DeleteTenant_sync_flattened",
-      "title": "DeleteTenant",
-      "description": "Snippet for DeleteTenant",
-      "file": "TenantServiceClient.DeleteTenantSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_DeleteCompany_sync_flattened",
+      "title": "DeleteCompany",
+      "description": "Snippet for DeleteCompany",
+      "file": "CompanyServiceClient.DeleteCompanySnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "DeleteTenant",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.DeleteTenant",
+        "shortName": "DeleteCompany",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.DeleteCompany",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "DeleteTenant",
-          "fullName": "google.cloud.talent.v4.TenantService.DeleteTenant",
+          "shortName": "DeleteCompany",
+          "fullName": "google.cloud.talent.v4.CompanyService.DeleteCompany",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_DeleteTenant_async_flattened",
-      "title": "DeleteTenantAsync",
-      "description": "Snippet for DeleteTenantAsync",
-      "file": "TenantServiceClient.DeleteTenantAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_DeleteCompany_async_flattened",
+      "title": "DeleteCompanyAsync",
+      "description": "Snippet for DeleteCompanyAsync",
+      "file": "CompanyServiceClient.DeleteCompanyAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "DeleteTenantAsync",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.DeleteTenantAsync",
+        "shortName": "DeleteCompanyAsync",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.DeleteCompanyAsync",
         "async": true,
         "resultType": "System.Threading.Tasks.Task",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "DeleteTenant",
-          "fullName": "google.cloud.talent.v4.TenantService.DeleteTenant",
+          "shortName": "DeleteCompany",
+          "fullName": "google.cloud.talent.v4.CompanyService.DeleteCompany",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_DeleteTenant_sync_flattened_resourceNames",
-      "title": "DeleteTenantResourceNames",
-      "description": "Snippet for DeleteTenant",
-      "file": "TenantServiceClient.DeleteTenantResourceNamesSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_DeleteCompany_sync_flattened_resourceNames",
+      "title": "DeleteCompanyResourceNames",
+      "description": "Snippet for DeleteCompany",
+      "file": "CompanyServiceClient.DeleteCompanyResourceNamesSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "DeleteTenant",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.DeleteTenant",
+        "shortName": "DeleteCompany",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.DeleteCompany",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "DeleteTenant",
-          "fullName": "google.cloud.talent.v4.TenantService.DeleteTenant",
+          "shortName": "DeleteCompany",
+          "fullName": "google.cloud.talent.v4.CompanyService.DeleteCompany",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_DeleteTenant_async_flattened_resourceNames",
-      "title": "DeleteTenantResourceNamesAsync",
-      "description": "Snippet for DeleteTenantAsync",
-      "file": "TenantServiceClient.DeleteTenantResourceNamesAsyncSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_DeleteCompany_async_flattened_resourceNames",
+      "title": "DeleteCompanyResourceNamesAsync",
+      "description": "Snippet for DeleteCompanyAsync",
+      "file": "CompanyServiceClient.DeleteCompanyResourceNamesAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "DeleteTenantAsync",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.DeleteTenantAsync",
+        "shortName": "DeleteCompanyAsync",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.DeleteCompanyAsync",
         "async": true,
         "resultType": "System.Threading.Tasks.Task",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "DeleteTenant",
-          "fullName": "google.cloud.talent.v4.TenantService.DeleteTenant",
+          "shortName": "DeleteCompany",
+          "fullName": "google.cloud.talent.v4.CompanyService.DeleteCompany",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_ListTenants_sync",
-      "title": "ListTenantsRequestObject",
-      "description": "Snippet for ListTenants",
-      "file": "TenantServiceClient.ListTenantsRequestObjectSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_ListCompanies_sync",
+      "title": "ListCompaniesRequestObject",
+      "description": "Snippet for ListCompanies",
+      "file": "CompanyServiceClient.ListCompaniesRequestObjectSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "ListTenants",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.ListTenants",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4.ListTenantsResponse, Google.Cloud.Talent.V4.Tenant>",
+        "shortName": "ListCompanies",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.ListCompanies",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4.ListCompaniesResponse, Google.Cloud.Talent.V4.Company>",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "ListTenants",
-          "fullName": "google.cloud.talent.v4.TenantService.ListTenants",
+          "shortName": "ListCompanies",
+          "fullName": "google.cloud.talent.v4.CompanyService.ListCompanies",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "jobs_v4_generated_TenantService_ListTenants_async",
-      "title": "ListTenantsRequestObjectAsync",
-      "description": "Snippet for ListTenantsAsync",
-      "file": "TenantServiceClient.ListTenantsRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListTenantsAsync",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.ListTenantsAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4.ListTenantsResponse, Google.Cloud.Talent.V4.Tenant>",
-        "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
-        },
-        "method": {
-          "shortName": "ListTenants",
-          "fullName": "google.cloud.talent.v4.TenantService.ListTenants",
-          "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
@@ -2851,102 +2824,129 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_ListTenants_sync_flattened",
-      "title": "ListTenants",
-      "description": "Snippet for ListTenants",
-      "file": "TenantServiceClient.ListTenantsSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_ListCompanies_async",
+      "title": "ListCompaniesRequestObjectAsync",
+      "description": "Snippet for ListCompaniesAsync",
+      "file": "CompanyServiceClient.ListCompaniesRequestObjectAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "ListTenants",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.ListTenants",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4.ListTenantsResponse, Google.Cloud.Talent.V4.Tenant>",
-        "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
-        },
-        "method": {
-          "shortName": "ListTenants",
-          "fullName": "google.cloud.talent.v4.TenantService.ListTenants",
-          "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "jobs_v4_generated_TenantService_ListTenants_async_flattened",
-      "title": "ListTenantsAsync",
-      "description": "Snippet for ListTenantsAsync",
-      "file": "TenantServiceClient.ListTenantsAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListTenantsAsync",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.ListTenantsAsync",
+        "shortName": "ListCompaniesAsync",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.ListCompaniesAsync",
         "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4.ListTenantsResponse, Google.Cloud.Talent.V4.Tenant>",
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4.ListCompaniesResponse, Google.Cloud.Talent.V4.Company>",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "ListTenants",
-          "fullName": "google.cloud.talent.v4.TenantService.ListTenants",
+          "shortName": "ListCompanies",
+          "fullName": "google.cloud.talent.v4.CompanyService.ListCompanies",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "jobs_v4_generated_CompanyService_ListCompanies_sync_flattened",
+      "title": "ListCompanies",
+      "description": "Snippet for ListCompanies",
+      "file": "CompanyServiceClient.ListCompaniesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCompanies",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.ListCompanies",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4.ListCompaniesResponse, Google.Cloud.Talent.V4.Company>",
+        "client": {
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+        },
+        "method": {
+          "shortName": "ListCompanies",
+          "fullName": "google.cloud.talent.v4.CompanyService.ListCompanies",
+          "service": {
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "jobs_v4_generated_TenantService_ListTenants_sync_flattened_resourceNames",
-      "title": "ListTenantsResourceNames",
-      "description": "Snippet for ListTenants",
-      "file": "TenantServiceClient.ListTenantsResourceNamesSnippet.g.cs",
+      "regionTag": "jobs_v4_generated_CompanyService_ListCompanies_async_flattened",
+      "title": "ListCompaniesAsync",
+      "description": "Snippet for ListCompaniesAsync",
+      "file": "CompanyServiceClient.ListCompaniesAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "ListTenants",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.ListTenants",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4.ListTenantsResponse, Google.Cloud.Talent.V4.Tenant>",
-        "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
-        },
-        "method": {
-          "shortName": "ListTenants",
-          "fullName": "google.cloud.talent.v4.TenantService.ListTenants",
-          "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "jobs_v4_generated_TenantService_ListTenants_async_flattened_resourceNames",
-      "title": "ListTenantsResourceNamesAsync",
-      "description": "Snippet for ListTenantsAsync",
-      "file": "TenantServiceClient.ListTenantsResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListTenantsAsync",
-        "fullName": "Google.Cloud.Talent.V4.TenantServiceClient.ListTenantsAsync",
+        "shortName": "ListCompaniesAsync",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.ListCompaniesAsync",
         "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4.ListTenantsResponse, Google.Cloud.Talent.V4.Tenant>",
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4.ListCompaniesResponse, Google.Cloud.Talent.V4.Company>",
         "client": {
-          "shortName": "TenantServiceClient",
-          "fullName": "Google.Cloud.Talent.V4.TenantServiceClient"
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
         },
         "method": {
-          "shortName": "ListTenants",
-          "fullName": "google.cloud.talent.v4.TenantService.ListTenants",
+          "shortName": "ListCompanies",
+          "fullName": "google.cloud.talent.v4.CompanyService.ListCompanies",
           "service": {
-            "shortName": "TenantService",
-            "fullName": "google.cloud.talent.v4.TenantService"
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "jobs_v4_generated_CompanyService_ListCompanies_sync_flattened_resourceNames",
+      "title": "ListCompaniesResourceNames",
+      "description": "Snippet for ListCompanies",
+      "file": "CompanyServiceClient.ListCompaniesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCompanies",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.ListCompanies",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4.ListCompaniesResponse, Google.Cloud.Talent.V4.Company>",
+        "client": {
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+        },
+        "method": {
+          "shortName": "ListCompanies",
+          "fullName": "google.cloud.talent.v4.CompanyService.ListCompanies",
+          "service": {
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "jobs_v4_generated_CompanyService_ListCompanies_async_flattened_resourceNames",
+      "title": "ListCompaniesResourceNamesAsync",
+      "description": "Snippet for ListCompaniesAsync",
+      "file": "CompanyServiceClient.ListCompaniesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCompaniesAsync",
+        "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient.ListCompaniesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4.ListCompaniesResponse, Google.Cloud.Talent.V4.Company>",
+        "client": {
+          "shortName": "CompanyServiceClient",
+          "fullName": "Google.Cloud.Talent.V4.CompanyServiceClient"
+        },
+        "method": {
+          "shortName": "ListCompanies",
+          "fullName": "google.cloud.talent.v4.CompanyService.ListCompanies",
+          "service": {
+            "shortName": "CompanyService",
+            "fullName": "google.cloud.talent.v4.CompanyService"
           }
         }
       },
