@@ -271,7 +271,7 @@ namespace Google.Cloud.Spanner.Data
                                 Fields = { StructFields.Select(f => f.ToFieldType()) }
                             }
                     };
-                default: return new V1.Type { Code = TypeCode };
+                default: return new V1.Type { Code = TypeCode, TypeAnnotation = TypeAnnotationCode };
             }
         }
 
