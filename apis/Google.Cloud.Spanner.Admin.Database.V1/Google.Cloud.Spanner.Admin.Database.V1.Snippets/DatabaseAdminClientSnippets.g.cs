@@ -1424,6 +1424,209 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CopyBackup</summary>
+        public void CopyBackupRequestObject()
+        {
+            // Snippet: CopyBackup(CopyBackupRequest, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            CopyBackupRequest request = new CopyBackupRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                BackupId = "",
+                SourceBackupAsBackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                ExpireTime = new Timestamp(),
+                EncryptionConfig = new CopyBackupEncryptionConfig(),
+            };
+            // Make the request
+            Operation<Backup, CopyBackupMetadata> response = databaseAdminClient.CopyBackup(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, CopyBackupMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, CopyBackupMetadata> retrievedResponse = databaseAdminClient.PollOnceCopyBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CopyBackupAsync</summary>
+        public async Task CopyBackupRequestObjectAsync()
+        {
+            // Snippet: CopyBackupAsync(CopyBackupRequest, CallSettings)
+            // Additional: CopyBackupAsync(CopyBackupRequest, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            CopyBackupRequest request = new CopyBackupRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                BackupId = "",
+                SourceBackupAsBackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                ExpireTime = new Timestamp(),
+                EncryptionConfig = new CopyBackupEncryptionConfig(),
+            };
+            // Make the request
+            Operation<Backup, CopyBackupMetadata> response = await databaseAdminClient.CopyBackupAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, CopyBackupMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, CopyBackupMetadata> retrievedResponse = await databaseAdminClient.PollOnceCopyBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CopyBackup</summary>
+        public void CopyBackup()
+        {
+            // Snippet: CopyBackup(string, string, string, Timestamp, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]";
+            string backupId = "";
+            string sourceBackup = "projects/[PROJECT]/instances/[INSTANCE]/backups/[BACKUP]";
+            Timestamp expireTime = new Timestamp();
+            // Make the request
+            Operation<Backup, CopyBackupMetadata> response = databaseAdminClient.CopyBackup(parent, backupId, sourceBackup, expireTime);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, CopyBackupMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, CopyBackupMetadata> retrievedResponse = databaseAdminClient.PollOnceCopyBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CopyBackupAsync</summary>
+        public async Task CopyBackupAsync()
+        {
+            // Snippet: CopyBackupAsync(string, string, string, Timestamp, CallSettings)
+            // Additional: CopyBackupAsync(string, string, string, Timestamp, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]";
+            string backupId = "";
+            string sourceBackup = "projects/[PROJECT]/instances/[INSTANCE]/backups/[BACKUP]";
+            Timestamp expireTime = new Timestamp();
+            // Make the request
+            Operation<Backup, CopyBackupMetadata> response = await databaseAdminClient.CopyBackupAsync(parent, backupId, sourceBackup, expireTime);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, CopyBackupMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, CopyBackupMetadata> retrievedResponse = await databaseAdminClient.PollOnceCopyBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CopyBackup</summary>
+        public void CopyBackupResourceNames()
+        {
+            // Snippet: CopyBackup(InstanceName, string, BackupName, Timestamp, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            InstanceName parent = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            string backupId = "";
+            BackupName sourceBackup = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]");
+            Timestamp expireTime = new Timestamp();
+            // Make the request
+            Operation<Backup, CopyBackupMetadata> response = databaseAdminClient.CopyBackup(parent, backupId, sourceBackup, expireTime);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, CopyBackupMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, CopyBackupMetadata> retrievedResponse = databaseAdminClient.PollOnceCopyBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CopyBackupAsync</summary>
+        public async Task CopyBackupResourceNamesAsync()
+        {
+            // Snippet: CopyBackupAsync(InstanceName, string, BackupName, Timestamp, CallSettings)
+            // Additional: CopyBackupAsync(InstanceName, string, BackupName, Timestamp, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName parent = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            string backupId = "";
+            BackupName sourceBackup = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]");
+            Timestamp expireTime = new Timestamp();
+            // Make the request
+            Operation<Backup, CopyBackupMetadata> response = await databaseAdminClient.CopyBackupAsync(parent, backupId, sourceBackup, expireTime);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, CopyBackupMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, CopyBackupMetadata> retrievedResponse = await databaseAdminClient.PollOnceCopyBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for GetBackup</summary>
         public void GetBackupRequestObject()
         {

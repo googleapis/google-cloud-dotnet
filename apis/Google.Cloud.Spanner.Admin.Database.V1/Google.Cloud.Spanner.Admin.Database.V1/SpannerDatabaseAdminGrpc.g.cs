@@ -3,7 +3,7 @@
 //     source: google/spanner/admin/database/v1/spanner_database_admin.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -103,6 +103,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupRequest> __Marshaller_google_spanner_admin_database_v1_CreateBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.CopyBackupRequest> __Marshaller_google_spanner_admin_database_v1_CopyBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.CopyBackupRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupRequest> __Marshaller_google_spanner_admin_database_v1_GetBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -204,6 +206,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         __ServiceName,
         "CreateBackup",
         __Marshaller_google_spanner_admin_database_v1_CreateBackupRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.CopyBackupRequest, global::Google.LongRunning.Operation> __Method_CopyBackup = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.CopyBackupRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CopyBackup",
+        __Marshaller_google_spanner_admin_database_v1_CopyBackupRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -440,6 +450,29 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateBackup(global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Starts copying a Cloud Spanner Backup.
+      /// The returned backup [long-running operation][google.longrunning.Operation]
+      /// will have a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/backups/&lt;backup>/operations/&lt;operation_id>`
+      /// and can be used to track copying of the backup. The operation is associated
+      /// with the destination backup.
+      /// The [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+      /// copying and delete the backup.
+      /// Concurrent CopyBackup requests can run on the same source backup.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CopyBackup(global::Google.Cloud.Spanner.Admin.Database.V1.CopyBackupRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1280,6 +1313,98 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateBackup, null, options, request);
       }
       /// <summary>
+      /// Starts copying a Cloud Spanner Backup.
+      /// The returned backup [long-running operation][google.longrunning.Operation]
+      /// will have a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/backups/&lt;backup>/operations/&lt;operation_id>`
+      /// and can be used to track copying of the backup. The operation is associated
+      /// with the destination backup.
+      /// The [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+      /// copying and delete the backup.
+      /// Concurrent CopyBackup requests can run on the same source backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CopyBackup(global::Google.Cloud.Spanner.Admin.Database.V1.CopyBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CopyBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Starts copying a Cloud Spanner Backup.
+      /// The returned backup [long-running operation][google.longrunning.Operation]
+      /// will have a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/backups/&lt;backup>/operations/&lt;operation_id>`
+      /// and can be used to track copying of the backup. The operation is associated
+      /// with the destination backup.
+      /// The [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+      /// copying and delete the backup.
+      /// Concurrent CopyBackup requests can run on the same source backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CopyBackup(global::Google.Cloud.Spanner.Admin.Database.V1.CopyBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CopyBackup, null, options, request);
+      }
+      /// <summary>
+      /// Starts copying a Cloud Spanner Backup.
+      /// The returned backup [long-running operation][google.longrunning.Operation]
+      /// will have a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/backups/&lt;backup>/operations/&lt;operation_id>`
+      /// and can be used to track copying of the backup. The operation is associated
+      /// with the destination backup.
+      /// The [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+      /// copying and delete the backup.
+      /// Concurrent CopyBackup requests can run on the same source backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CopyBackupAsync(global::Google.Cloud.Spanner.Admin.Database.V1.CopyBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CopyBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Starts copying a Cloud Spanner Backup.
+      /// The returned backup [long-running operation][google.longrunning.Operation]
+      /// will have a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/backups/&lt;backup>/operations/&lt;operation_id>`
+      /// and can be used to track copying of the backup. The operation is associated
+      /// with the destination backup.
+      /// The [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+      /// copying and delete the backup.
+      /// Concurrent CopyBackup requests can run on the same source backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CopyBackupAsync(global::Google.Cloud.Spanner.Admin.Database.V1.CopyBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CopyBackup, null, options, request);
+      }
+      /// <summary>
       /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1775,6 +1900,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
           .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions)
           .AddMethod(__Method_CreateBackup, serviceImpl.CreateBackup)
+          .AddMethod(__Method_CopyBackup, serviceImpl.CopyBackup)
           .AddMethod(__Method_GetBackup, serviceImpl.GetBackup)
           .AddMethod(__Method_UpdateBackup, serviceImpl.UpdateBackup)
           .AddMethod(__Method_DeleteBackup, serviceImpl.DeleteBackup)
@@ -1801,6 +1927,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
       serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));
       serviceBinder.AddMethod(__Method_CreateBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateBackup));
+      serviceBinder.AddMethod(__Method_CopyBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.CopyBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.CopyBackup));
       serviceBinder.AddMethod(__Method_GetBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupRequest, global::Google.Cloud.Spanner.Admin.Database.V1.Backup>(serviceImpl.GetBackup));
       serviceBinder.AddMethod(__Method_UpdateBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupRequest, global::Google.Cloud.Spanner.Admin.Database.V1.Backup>(serviceImpl.UpdateBackup));
       serviceBinder.AddMethod(__Method_DeleteBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteBackup));

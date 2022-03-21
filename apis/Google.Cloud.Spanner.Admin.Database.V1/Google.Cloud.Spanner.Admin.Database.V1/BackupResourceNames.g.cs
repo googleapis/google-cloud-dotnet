@@ -278,6 +278,15 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         {
             get => new gax::ResourceNameList<gcscv::DatabaseName>(ReferencingDatabases, s => string.IsNullOrEmpty(s) ? null : gcscv::DatabaseName.Parse(s, allowUnparsed: true));
         }
+
+        /// <summary>
+        /// <see cref="gcsadv::BackupName"/>-typed view over the <see cref="ReferencingBackups"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<gcsadv::BackupName> ReferencingBackupsAsBackupNames
+        {
+            get => new gax::ResourceNameList<gcsadv::BackupName>(ReferencingBackups, s => string.IsNullOrEmpty(s) ? null : gcsadv::BackupName.Parse(s, allowUnparsed: true));
+        }
     }
 
     public partial class CreateBackupRequest
@@ -310,6 +319,48 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         {
             get => string.IsNullOrEmpty(Database) ? null : gcscv::DatabaseName.Parse(Database, allowUnparsed: true);
             set => Database = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CopyBackupRequest
+    {
+        /// <summary>
+        /// <see cref="gcscv::InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gcscv::InstanceName ParentAsInstanceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gcscv::InstanceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="BackupName"/>-typed view over the <see cref="SourceBackup"/> resource name property.
+        /// </summary>
+        public BackupName SourceBackupAsBackupName
+        {
+            get => string.IsNullOrEmpty(SourceBackup) ? null : BackupName.Parse(SourceBackup, allowUnparsed: true);
+            set => SourceBackup = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CopyBackupMetadata
+    {
+        /// <summary>
+        /// <see cref="gcsadv::BackupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcsadv::BackupName BackupName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcsadv::BackupName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gcsadv::BackupName"/>-typed view over the <see cref="SourceBackup"/> resource name property.
+        /// </summary>
+        public gcsadv::BackupName SourceBackupAsBackupName
+        {
+            get => string.IsNullOrEmpty(SourceBackup) ? null : gcsadv::BackupName.Parse(SourceBackup, allowUnparsed: true);
+            set => SourceBackup = value?.ToString() ?? "";
         }
     }
 
@@ -381,6 +432,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     }
 
     public partial class CreateBackupEncryptionConfig
+    {
+        /// <summary>
+        /// <see cref="CryptoKeyName"/>-typed view over the <see cref="KmsKeyName"/> resource name property.
+        /// </summary>
+        public CryptoKeyName KmsKeyNameAsCryptoKeyName
+        {
+            get => string.IsNullOrEmpty(KmsKeyName) ? null : CryptoKeyName.Parse(KmsKeyName, allowUnparsed: true);
+            set => KmsKeyName = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CopyBackupEncryptionConfig
     {
         /// <summary>
         /// <see cref="CryptoKeyName"/>-typed view over the <see cref="KmsKeyName"/> resource name property.
