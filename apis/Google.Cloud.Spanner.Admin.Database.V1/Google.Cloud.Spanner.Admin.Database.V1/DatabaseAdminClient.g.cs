@@ -61,6 +61,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
             CreateBackupSettings = existing.CreateBackupSettings;
             CreateBackupOperationsSettings = existing.CreateBackupOperationsSettings.Clone();
+            CopyBackupSettings = existing.CopyBackupSettings;
+            CopyBackupOperationsSettings = existing.CopyBackupOperationsSettings.Clone();
             GetBackupSettings = existing.GetBackupSettings;
             UpdateBackupSettings = existing.UpdateBackupSettings;
             DeleteBackupSettings = existing.DeleteBackupSettings;
@@ -298,6 +300,36 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings CreateBackupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatabaseAdminClient.CopyBackup</c> and <c>DatabaseAdminClient.CopyBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 3600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CopyBackupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DatabaseAdminClient.CopyBackup</c> and
+        /// <c>DatabaseAdminClient.CopyBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CopyBackupOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -2539,6 +2571,374 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             CreateBackupAsync(parent, backup, backupId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Starts copying a Cloud Spanner Backup.
+        /// The returned backup [long-running operation][google.longrunning.Operation]
+        /// will have a name of the format
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// and can be used to track copying of the backup. The operation is associated
+        /// with the destination backup.
+        /// The [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+        /// copying and delete the backup.
+        /// Concurrent CopyBackup requests can run on the same source backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Backup, CopyBackupMetadata> CopyBackup(CopyBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Starts copying a Cloud Spanner Backup.
+        /// The returned backup [long-running operation][google.longrunning.Operation]
+        /// will have a name of the format
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// and can be used to track copying of the backup. The operation is associated
+        /// with the destination backup.
+        /// The [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+        /// copying and delete the backup.
+        /// Concurrent CopyBackup requests can run on the same source backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CopyBackupMetadata>> CopyBackupAsync(CopyBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Starts copying a Cloud Spanner Backup.
+        /// The returned backup [long-running operation][google.longrunning.Operation]
+        /// will have a name of the format
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// and can be used to track copying of the backup. The operation is associated
+        /// with the destination backup.
+        /// The [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+        /// copying and delete the backup.
+        /// Concurrent CopyBackup requests can run on the same source backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CopyBackupMetadata>> CopyBackupAsync(CopyBackupRequest request, st::CancellationToken cancellationToken) =>
+            CopyBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CopyBackup</c>.</summary>
+        public virtual lro::OperationsClient CopyBackupOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CopyBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Backup, CopyBackupMetadata> PollOnceCopyBackup(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Backup, CopyBackupMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CopyBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CopyBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CopyBackupMetadata>> PollOnceCopyBackupAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Backup, CopyBackupMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CopyBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Starts copying a Cloud Spanner Backup.
+        /// The returned backup [long-running operation][google.longrunning.Operation]
+        /// will have a name of the format
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// and can be used to track copying of the backup. The operation is associated
+        /// with the destination backup.
+        /// The [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+        /// copying and delete the backup.
+        /// Concurrent CopyBackup requests can run on the same source backup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the destination instance that will contain the backup copy.
+        /// Values are of the form: `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the backup copy.
+        /// The `backup_id` appended to `parent` forms the full backup_uri of the form
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// </param>
+        /// <param name="sourceBackup">
+        /// Required. The source backup to be copied.
+        /// The source backup needs to be in READY state for it to be copied.
+        /// Once CopyBackup is in progress, the source backup cannot be deleted or
+        /// cleaned up on expiration until CopyBackup is finished.
+        /// Values are of the form:
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// </param>
+        /// <param name="expireTime">
+        /// Required. The expiration time of the backup in microsecond granularity.
+        /// The expiration time must be at least 6 hours and at most 366 days
+        /// from the `create_time` of the source backup. Once the `expire_time` has
+        /// passed, the backup is eligible to be automatically deleted by Cloud Spanner
+        /// to free the resources used by the backup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Backup, CopyBackupMetadata> CopyBackup(string parent, string backupId, string sourceBackup, wkt::Timestamp expireTime, gaxgrpc::CallSettings callSettings = null) =>
+            CopyBackup(new CopyBackupRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                SourceBackup = gax::GaxPreconditions.CheckNotNullOrEmpty(sourceBackup, nameof(sourceBackup)),
+                ExpireTime = gax::GaxPreconditions.CheckNotNull(expireTime, nameof(expireTime)),
+            }, callSettings);
+
+        /// <summary>
+        /// Starts copying a Cloud Spanner Backup.
+        /// The returned backup [long-running operation][google.longrunning.Operation]
+        /// will have a name of the format
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// and can be used to track copying of the backup. The operation is associated
+        /// with the destination backup.
+        /// The [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+        /// copying and delete the backup.
+        /// Concurrent CopyBackup requests can run on the same source backup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the destination instance that will contain the backup copy.
+        /// Values are of the form: `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the backup copy.
+        /// The `backup_id` appended to `parent` forms the full backup_uri of the form
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// </param>
+        /// <param name="sourceBackup">
+        /// Required. The source backup to be copied.
+        /// The source backup needs to be in READY state for it to be copied.
+        /// Once CopyBackup is in progress, the source backup cannot be deleted or
+        /// cleaned up on expiration until CopyBackup is finished.
+        /// Values are of the form:
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// </param>
+        /// <param name="expireTime">
+        /// Required. The expiration time of the backup in microsecond granularity.
+        /// The expiration time must be at least 6 hours and at most 366 days
+        /// from the `create_time` of the source backup. Once the `expire_time` has
+        /// passed, the backup is eligible to be automatically deleted by Cloud Spanner
+        /// to free the resources used by the backup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CopyBackupMetadata>> CopyBackupAsync(string parent, string backupId, string sourceBackup, wkt::Timestamp expireTime, gaxgrpc::CallSettings callSettings = null) =>
+            CopyBackupAsync(new CopyBackupRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                SourceBackup = gax::GaxPreconditions.CheckNotNullOrEmpty(sourceBackup, nameof(sourceBackup)),
+                ExpireTime = gax::GaxPreconditions.CheckNotNull(expireTime, nameof(expireTime)),
+            }, callSettings);
+
+        /// <summary>
+        /// Starts copying a Cloud Spanner Backup.
+        /// The returned backup [long-running operation][google.longrunning.Operation]
+        /// will have a name of the format
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// and can be used to track copying of the backup. The operation is associated
+        /// with the destination backup.
+        /// The [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+        /// copying and delete the backup.
+        /// Concurrent CopyBackup requests can run on the same source backup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the destination instance that will contain the backup copy.
+        /// Values are of the form: `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the backup copy.
+        /// The `backup_id` appended to `parent` forms the full backup_uri of the form
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// </param>
+        /// <param name="sourceBackup">
+        /// Required. The source backup to be copied.
+        /// The source backup needs to be in READY state for it to be copied.
+        /// Once CopyBackup is in progress, the source backup cannot be deleted or
+        /// cleaned up on expiration until CopyBackup is finished.
+        /// Values are of the form:
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// </param>
+        /// <param name="expireTime">
+        /// Required. The expiration time of the backup in microsecond granularity.
+        /// The expiration time must be at least 6 hours and at most 366 days
+        /// from the `create_time` of the source backup. Once the `expire_time` has
+        /// passed, the backup is eligible to be automatically deleted by Cloud Spanner
+        /// to free the resources used by the backup.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CopyBackupMetadata>> CopyBackupAsync(string parent, string backupId, string sourceBackup, wkt::Timestamp expireTime, st::CancellationToken cancellationToken) =>
+            CopyBackupAsync(parent, backupId, sourceBackup, expireTime, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Starts copying a Cloud Spanner Backup.
+        /// The returned backup [long-running operation][google.longrunning.Operation]
+        /// will have a name of the format
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// and can be used to track copying of the backup. The operation is associated
+        /// with the destination backup.
+        /// The [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+        /// copying and delete the backup.
+        /// Concurrent CopyBackup requests can run on the same source backup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the destination instance that will contain the backup copy.
+        /// Values are of the form: `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the backup copy.
+        /// The `backup_id` appended to `parent` forms the full backup_uri of the form
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// </param>
+        /// <param name="sourceBackup">
+        /// Required. The source backup to be copied.
+        /// The source backup needs to be in READY state for it to be copied.
+        /// Once CopyBackup is in progress, the source backup cannot be deleted or
+        /// cleaned up on expiration until CopyBackup is finished.
+        /// Values are of the form:
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// </param>
+        /// <param name="expireTime">
+        /// Required. The expiration time of the backup in microsecond granularity.
+        /// The expiration time must be at least 6 hours and at most 366 days
+        /// from the `create_time` of the source backup. Once the `expire_time` has
+        /// passed, the backup is eligible to be automatically deleted by Cloud Spanner
+        /// to free the resources used by the backup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Backup, CopyBackupMetadata> CopyBackup(gcscv::InstanceName parent, string backupId, BackupName sourceBackup, wkt::Timestamp expireTime, gaxgrpc::CallSettings callSettings = null) =>
+            CopyBackup(new CopyBackupRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                SourceBackupAsBackupName = gax::GaxPreconditions.CheckNotNull(sourceBackup, nameof(sourceBackup)),
+                ExpireTime = gax::GaxPreconditions.CheckNotNull(expireTime, nameof(expireTime)),
+            }, callSettings);
+
+        /// <summary>
+        /// Starts copying a Cloud Spanner Backup.
+        /// The returned backup [long-running operation][google.longrunning.Operation]
+        /// will have a name of the format
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// and can be used to track copying of the backup. The operation is associated
+        /// with the destination backup.
+        /// The [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+        /// copying and delete the backup.
+        /// Concurrent CopyBackup requests can run on the same source backup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the destination instance that will contain the backup copy.
+        /// Values are of the form: `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the backup copy.
+        /// The `backup_id` appended to `parent` forms the full backup_uri of the form
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// </param>
+        /// <param name="sourceBackup">
+        /// Required. The source backup to be copied.
+        /// The source backup needs to be in READY state for it to be copied.
+        /// Once CopyBackup is in progress, the source backup cannot be deleted or
+        /// cleaned up on expiration until CopyBackup is finished.
+        /// Values are of the form:
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// </param>
+        /// <param name="expireTime">
+        /// Required. The expiration time of the backup in microsecond granularity.
+        /// The expiration time must be at least 6 hours and at most 366 days
+        /// from the `create_time` of the source backup. Once the `expire_time` has
+        /// passed, the backup is eligible to be automatically deleted by Cloud Spanner
+        /// to free the resources used by the backup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CopyBackupMetadata>> CopyBackupAsync(gcscv::InstanceName parent, string backupId, BackupName sourceBackup, wkt::Timestamp expireTime, gaxgrpc::CallSettings callSettings = null) =>
+            CopyBackupAsync(new CopyBackupRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                SourceBackupAsBackupName = gax::GaxPreconditions.CheckNotNull(sourceBackup, nameof(sourceBackup)),
+                ExpireTime = gax::GaxPreconditions.CheckNotNull(expireTime, nameof(expireTime)),
+            }, callSettings);
+
+        /// <summary>
+        /// Starts copying a Cloud Spanner Backup.
+        /// The returned backup [long-running operation][google.longrunning.Operation]
+        /// will have a name of the format
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// and can be used to track copying of the backup. The operation is associated
+        /// with the destination backup.
+        /// The [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+        /// copying and delete the backup.
+        /// Concurrent CopyBackup requests can run on the same source backup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the destination instance that will contain the backup copy.
+        /// Values are of the form: `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the backup copy.
+        /// The `backup_id` appended to `parent` forms the full backup_uri of the form
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// </param>
+        /// <param name="sourceBackup">
+        /// Required. The source backup to be copied.
+        /// The source backup needs to be in READY state for it to be copied.
+        /// Once CopyBackup is in progress, the source backup cannot be deleted or
+        /// cleaned up on expiration until CopyBackup is finished.
+        /// Values are of the form:
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;`.
+        /// </param>
+        /// <param name="expireTime">
+        /// Required. The expiration time of the backup in microsecond granularity.
+        /// The expiration time must be at least 6 hours and at most 366 days
+        /// from the `create_time` of the source backup. Once the `expire_time` has
+        /// passed, the backup is eligible to be automatically deleted by Cloud Spanner
+        /// to free the resources used by the backup.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CopyBackupMetadata>> CopyBackupAsync(gcscv::InstanceName parent, string backupId, BackupName sourceBackup, wkt::Timestamp expireTime, st::CancellationToken cancellationToken) =>
+            CopyBackupAsync(parent, backupId, sourceBackup, expireTime, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3732,6 +4132,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
 
         private readonly gaxgrpc::ApiCall<CreateBackupRequest, lro::Operation> _callCreateBackup;
 
+        private readonly gaxgrpc::ApiCall<CopyBackupRequest, lro::Operation> _callCopyBackup;
+
         private readonly gaxgrpc::ApiCall<GetBackupRequest, Backup> _callGetBackup;
 
         private readonly gaxgrpc::ApiCall<UpdateBackupRequest, Backup> _callUpdateBackup;
@@ -3759,6 +4161,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             CreateDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDatabaseOperationsSettings);
             UpdateDatabaseDdlOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDatabaseDdlOperationsSettings);
             CreateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupOperationsSettings);
+            CopyBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CopyBackupOperationsSettings);
             RestoreDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreDatabaseOperationsSettings);
             _callListDatabases = clientHelper.BuildApiCall<ListDatabasesRequest, ListDatabasesResponse>(grpcClient.ListDatabasesAsync, grpcClient.ListDatabases, effectiveSettings.ListDatabasesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDatabases);
@@ -3790,6 +4193,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             _callCreateBackup = clientHelper.BuildApiCall<CreateBackupRequest, lro::Operation>(grpcClient.CreateBackupAsync, grpcClient.CreateBackup, effectiveSettings.CreateBackupSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBackup);
             Modify_CreateBackupApiCall(ref _callCreateBackup);
+            _callCopyBackup = clientHelper.BuildApiCall<CopyBackupRequest, lro::Operation>(grpcClient.CopyBackupAsync, grpcClient.CopyBackup, effectiveSettings.CopyBackupSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCopyBackup);
+            Modify_CopyBackupApiCall(ref _callCopyBackup);
             _callGetBackup = clientHelper.BuildApiCall<GetBackupRequest, Backup>(grpcClient.GetBackupAsync, grpcClient.GetBackup, effectiveSettings.GetBackupSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetBackup);
             Modify_GetBackupApiCall(ref _callGetBackup);
@@ -3836,6 +4242,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
 
         partial void Modify_CreateBackupApiCall(ref gaxgrpc::ApiCall<CreateBackupRequest, lro::Operation> call);
 
+        partial void Modify_CopyBackupApiCall(ref gaxgrpc::ApiCall<CopyBackupRequest, lro::Operation> call);
+
         partial void Modify_GetBackupApiCall(ref gaxgrpc::ApiCall<GetBackupRequest, Backup> call);
 
         partial void Modify_UpdateBackupApiCall(ref gaxgrpc::ApiCall<UpdateBackupRequest, Backup> call);
@@ -3874,6 +4282,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateBackupRequest(ref CreateBackupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CopyBackupRequest(ref CopyBackupRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetBackupRequest(ref GetBackupRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4240,6 +4650,55 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         {
             Modify_CreateBackupRequest(ref request, ref callSettings);
             return new lro::Operation<Backup, CreateBackupMetadata>(await _callCreateBackup.Async(request, callSettings).ConfigureAwait(false), CreateBackupOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>CopyBackup</c>.</summary>
+        public override lro::OperationsClient CopyBackupOperationsClient { get; }
+
+        /// <summary>
+        /// Starts copying a Cloud Spanner Backup.
+        /// The returned backup [long-running operation][google.longrunning.Operation]
+        /// will have a name of the format
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// and can be used to track copying of the backup. The operation is associated
+        /// with the destination backup.
+        /// The [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+        /// copying and delete the backup.
+        /// Concurrent CopyBackup requests can run on the same source backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Backup, CopyBackupMetadata> CopyBackup(CopyBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CopyBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<Backup, CopyBackupMetadata>(_callCopyBackup.Sync(request, callSettings), CopyBackupOperationsClient);
+        }
+
+        /// <summary>
+        /// Starts copying a Cloud Spanner Backup.
+        /// The returned backup [long-running operation][google.longrunning.Operation]
+        /// will have a name of the format
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
+        /// and can be used to track copying of the backup. The operation is associated
+        /// with the destination backup.
+        /// The [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+        /// copying and delete the backup.
+        /// Concurrent CopyBackup requests can run on the same source backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Backup, CopyBackupMetadata>> CopyBackupAsync(CopyBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CopyBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<Backup, CopyBackupMetadata>(await _callCopyBackup.Async(request, callSettings).ConfigureAwait(false), CopyBackupOperationsClient);
         }
 
         /// <summary>

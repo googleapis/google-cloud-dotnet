@@ -1558,6 +1558,161 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_CopyBackup_sync",
+      "title": "CopyBackupRequestObject",
+      "description": "Snippet for CopyBackup",
+      "file": "DatabaseAdminClient.CopyBackupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CopyBackup",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CopyBackup",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Database.V1.Backup, Google.Cloud.Spanner.Admin.Database.V1.CopyBackupMetadata>",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "CopyBackup",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.CopyBackup",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_CopyBackup_async",
+      "title": "CopyBackupRequestObjectAsync",
+      "description": "Snippet for CopyBackupAsync",
+      "file": "DatabaseAdminClient.CopyBackupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CopyBackupAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CopyBackupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Database.V1.Backup, Google.Cloud.Spanner.Admin.Database.V1.CopyBackupMetadata>>",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "CopyBackup",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.CopyBackup",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_CopyBackup_sync_flattened",
+      "title": "CopyBackup",
+      "description": "Snippet for CopyBackup",
+      "file": "DatabaseAdminClient.CopyBackupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CopyBackup",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CopyBackup",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Database.V1.Backup, Google.Cloud.Spanner.Admin.Database.V1.CopyBackupMetadata>",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "CopyBackup",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.CopyBackup",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_CopyBackup_async_flattened",
+      "title": "CopyBackupAsync",
+      "description": "Snippet for CopyBackupAsync",
+      "file": "DatabaseAdminClient.CopyBackupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CopyBackupAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CopyBackupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Database.V1.Backup, Google.Cloud.Spanner.Admin.Database.V1.CopyBackupMetadata>>",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "CopyBackup",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.CopyBackup",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_CopyBackup_sync_flattened_resourceNames",
+      "title": "CopyBackupResourceNames",
+      "description": "Snippet for CopyBackup",
+      "file": "DatabaseAdminClient.CopyBackupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CopyBackup",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CopyBackup",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Database.V1.Backup, Google.Cloud.Spanner.Admin.Database.V1.CopyBackupMetadata>",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "CopyBackup",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.CopyBackup",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_CopyBackup_async_flattened_resourceNames",
+      "title": "CopyBackupResourceNamesAsync",
+      "description": "Snippet for CopyBackupAsync",
+      "file": "DatabaseAdminClient.CopyBackupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CopyBackupAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CopyBackupAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Database.V1.Backup, Google.Cloud.Spanner.Admin.Database.V1.CopyBackupMetadata>>",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "CopyBackup",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.CopyBackup",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "spanner_v1_generated_DatabaseAdmin_GetBackup_sync",
       "title": "GetBackupRequestObject",
       "description": "Snippet for GetBackup",
