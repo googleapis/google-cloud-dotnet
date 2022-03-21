@@ -62,6 +62,9 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 Uid = "uida2d37198",
                 MetadataManagementActivity = new MetadataManagementActivity(),
                 ReleaseChannel = Service.Types.ReleaseChannel.Stable,
+                EncryptionConfig = new EncryptionConfig(),
+                NetworkConfig = new NetworkConfig(),
+                DatabaseType = Service.Types.DatabaseType.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -104,6 +107,9 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 Uid = "uida2d37198",
                 MetadataManagementActivity = new MetadataManagementActivity(),
                 ReleaseChannel = Service.Types.ReleaseChannel.Stable,
+                EncryptionConfig = new EncryptionConfig(),
+                NetworkConfig = new NetworkConfig(),
+                DatabaseType = Service.Types.DatabaseType.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -148,6 +154,9 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 Uid = "uida2d37198",
                 MetadataManagementActivity = new MetadataManagementActivity(),
                 ReleaseChannel = Service.Types.ReleaseChannel.Stable,
+                EncryptionConfig = new EncryptionConfig(),
+                NetworkConfig = new NetworkConfig(),
+                DatabaseType = Service.Types.DatabaseType.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -190,6 +199,9 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 Uid = "uida2d37198",
                 MetadataManagementActivity = new MetadataManagementActivity(),
                 ReleaseChannel = Service.Types.ReleaseChannel.Stable,
+                EncryptionConfig = new EncryptionConfig(),
+                NetworkConfig = new NetworkConfig(),
+                DatabaseType = Service.Types.DatabaseType.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -234,6 +246,9 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 Uid = "uida2d37198",
                 MetadataManagementActivity = new MetadataManagementActivity(),
                 ReleaseChannel = Service.Types.ReleaseChannel.Stable,
+                EncryptionConfig = new EncryptionConfig(),
+                NetworkConfig = new NetworkConfig(),
+                DatabaseType = Service.Types.DatabaseType.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -276,6 +291,9 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 Uid = "uida2d37198",
                 MetadataManagementActivity = new MetadataManagementActivity(),
                 ReleaseChannel = Service.Types.ReleaseChannel.Stable,
+                EncryptionConfig = new EncryptionConfig(),
+                NetworkConfig = new NetworkConfig(),
+                DatabaseType = Service.Types.DatabaseType.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -303,6 +321,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 UpdateTime = new wkt::Timestamp(),
                 State = MetadataImport.Types.State.Updating,
                 DatabaseDump = new MetadataImport.Types.DatabaseDump(),
+                EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetMetadataImport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -328,6 +347,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 UpdateTime = new wkt::Timestamp(),
                 State = MetadataImport.Types.State.Updating,
                 DatabaseDump = new MetadataImport.Types.DatabaseDump(),
+                EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetMetadataImportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MetadataImport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -355,6 +375,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 UpdateTime = new wkt::Timestamp(),
                 State = MetadataImport.Types.State.Updating,
                 DatabaseDump = new MetadataImport.Types.DatabaseDump(),
+                EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetMetadataImport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -380,6 +401,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 UpdateTime = new wkt::Timestamp(),
                 State = MetadataImport.Types.State.Updating,
                 DatabaseDump = new MetadataImport.Types.DatabaseDump(),
+                EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetMetadataImportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MetadataImport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -407,6 +429,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 UpdateTime = new wkt::Timestamp(),
                 State = MetadataImport.Types.State.Updating,
                 DatabaseDump = new MetadataImport.Types.DatabaseDump(),
+                EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetMetadataImport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -432,6 +455,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 UpdateTime = new wkt::Timestamp(),
                 State = MetadataImport.Types.State.Updating,
                 DatabaseDump = new MetadataImport.Types.DatabaseDump(),
+                EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetMetadataImportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MetadataImport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -456,9 +480,13 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
                 CreateTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
-                State = Backup.Types.State.Active,
+                State = Backup.Types.State.Unspecified,
                 ServiceRevision = new Service(),
                 Description = "description2cf9da67",
+                RestoringServices =
+                {
+                    "restoring_servicese2c88107",
+                },
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -481,9 +509,13 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
                 CreateTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
-                State = Backup.Types.State.Active,
+                State = Backup.Types.State.Unspecified,
                 ServiceRevision = new Service(),
                 Description = "description2cf9da67",
+                RestoringServices =
+                {
+                    "restoring_servicese2c88107",
+                },
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -508,9 +540,13 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
                 CreateTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
-                State = Backup.Types.State.Active,
+                State = Backup.Types.State.Unspecified,
                 ServiceRevision = new Service(),
                 Description = "description2cf9da67",
+                RestoringServices =
+                {
+                    "restoring_servicese2c88107",
+                },
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -533,9 +569,13 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
                 CreateTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
-                State = Backup.Types.State.Active,
+                State = Backup.Types.State.Unspecified,
                 ServiceRevision = new Service(),
                 Description = "description2cf9da67",
+                RestoringServices =
+                {
+                    "restoring_servicese2c88107",
+                },
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -560,9 +600,13 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
                 CreateTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
-                State = Backup.Types.State.Active,
+                State = Backup.Types.State.Unspecified,
                 ServiceRevision = new Service(),
                 Description = "description2cf9da67",
+                RestoringServices =
+                {
+                    "restoring_servicese2c88107",
+                },
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -585,9 +629,13 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
                 CreateTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
-                State = Backup.Types.State.Active,
+                State = Backup.Types.State.Unspecified,
                 ServiceRevision = new Service(),
                 Description = "description2cf9da67",
+                RestoringServices =
+                {
+                    "restoring_servicese2c88107",
+                },
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
