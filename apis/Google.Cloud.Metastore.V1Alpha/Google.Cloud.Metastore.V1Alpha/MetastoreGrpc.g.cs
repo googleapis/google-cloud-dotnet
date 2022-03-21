@@ -3,7 +3,7 @@
 //     source: google/cloud/metastore/v1alpha/metastore.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -25,8 +25,8 @@ using grpc = global::Grpc.Core;
 namespace Google.Cloud.Metastore.V1Alpha {
   /// <summary>
   /// Configures and manages metastore services.
-  /// Metastore services are fully managed, highly available, auto-scaled,
-  /// auto-healing, OSS-native deployments of technical metadata management
+  /// Metastore services are fully managed, highly available, autoscaled,
+  /// autohealing, OSS-native deployments of technical metadata management
   /// software. Each metastore service exposes a network endpoint through which
   /// metadata queries are served. Metadata queries can originate from a variety
   /// of sources, including Apache Hive, Apache Presto, and Apache Spark.
@@ -412,7 +412,7 @@ namespace Google.Cloud.Metastore.V1Alpha {
       }
 
       /// <summary>
-      /// Creates a new Backup in a given project and location.
+      /// Creates a new backup in a given project and location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1093,7 +1093,7 @@ namespace Google.Cloud.Metastore.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_GetBackup, null, options, request);
       }
       /// <summary>
-      /// Creates a new Backup in a given project and location.
+      /// Creates a new backup in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1106,7 +1106,7 @@ namespace Google.Cloud.Metastore.V1Alpha {
         return CreateBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new Backup in a given project and location.
+      /// Creates a new backup in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1117,7 +1117,7 @@ namespace Google.Cloud.Metastore.V1Alpha {
         return CallInvoker.BlockingUnaryCall(__Method_CreateBackup, null, options, request);
       }
       /// <summary>
-      /// Creates a new Backup in a given project and location.
+      /// Creates a new backup in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1130,7 +1130,7 @@ namespace Google.Cloud.Metastore.V1Alpha {
         return CreateBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new Backup in a given project and location.
+      /// Creates a new backup in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
