@@ -28,32 +28,34 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             "dC5wcm90bxIjZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjEa",
             "H2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkv",
             "cmVzb3VyY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJv",
-            "dG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i4gIKC0RvY2tlcklt",
-            "YWdlEhEKBG5hbWUYASABKAlCA+BBAhIQCgN1cmkYAiABKAlCA+BBAhIMCgR0",
-            "YWdzGAMgAygJEhgKEGltYWdlX3NpemVfYnl0ZXMYBCABKAMSLwoLdXBsb2Fk",
-            "X3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIKCm1l",
-            "ZGlhX3R5cGUYBiABKAkSLgoKYnVpbGRfdGltZRgHIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXA6kAHqQYwBCithcnRpZmFjdHJlZ2lzdHJ5Lmdv",
-            "b2dsZWFwaXMuY29tL0RvY2tlckltYWdlEl1wcm9qZWN0cy97cHJvamVjdH0v",
-            "bG9jYXRpb25zL3tsb2NhdGlvbn0vcmVwb3NpdG9yaWVzL3tyZXBvc2l0b3J5",
-            "fS9kb2NrZXJJbWFnZXMve2RvY2tlcl9pbWFnZX0iVQoXTGlzdERvY2tlcklt",
-            "YWdlc1JlcXVlc3QSEwoGcGFyZW50GAEgASgJQgPgQQISEQoJcGFnZV9zaXpl",
-            "GAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkifAoYTGlzdERvY2tlckltYWdl",
-            "c1Jlc3BvbnNlEkcKDWRvY2tlcl9pbWFnZXMYASADKAsyMC5nb29nbGUuZGV2",
-            "dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MS5Eb2NrZXJJbWFnZRIXCg9uZXh0",
-            "X3BhZ2VfdG9rZW4YAiABKAlC+wEKJ2NvbS5nb29nbGUuZGV2dG9vbHMuYXJ0",
-            "aWZhY3RyZWdpc3RyeS52MUINQXJ0aWZhY3RQcm90b1ABWlNnb29nbGUuZ29s",
-            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2RldnRvb2xzL2FydGlmYWN0",
-            "cmVnaXN0cnkvdjE7YXJ0aWZhY3RyZWdpc3RyeaoCIEdvb2dsZS5DbG91ZC5B",
-            "cnRpZmFjdFJlZ2lzdHJ5LlYxygIgR29vZ2xlXENsb3VkXEFydGlmYWN0UmVn",
-            "aXN0cnlcVjHqAiNHb29nbGU6OkNsb3VkOjpBcnRpZmFjdFJlZ2lzdHJ5OjpW",
-            "MWIGcHJvdG8z"));
+            "dG8i4gIKC0RvY2tlckltYWdlEhEKBG5hbWUYASABKAlCA+BBAhIQCgN1cmkY",
+            "AiABKAlCA+BBAhIMCgR0YWdzGAMgAygJEhgKEGltYWdlX3NpemVfYnl0ZXMY",
+            "BCABKAMSLwoLdXBsb2FkX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wEhIKCm1lZGlhX3R5cGUYBiABKAkSLgoKYnVpbGRfdGltZRgH",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXA6kAHqQYwBCithcnRp",
+            "ZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL0RvY2tlckltYWdlEl1wcm9q",
+            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmVwb3NpdG9y",
+            "aWVzL3tyZXBvc2l0b3J5fS9kb2NrZXJJbWFnZXMve2RvY2tlcl9pbWFnZX0i",
+            "VQoXTGlzdERvY2tlckltYWdlc1JlcXVlc3QSEwoGcGFyZW50GAEgASgJQgPg",
+            "QQISEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkifAoY",
+            "TGlzdERvY2tlckltYWdlc1Jlc3BvbnNlEkcKDWRvY2tlcl9pbWFnZXMYASAD",
+            "KAsyMC5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MS5Eb2Nr",
+            "ZXJJbWFnZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiWgoVR2V0RG9ja2Vy",
+            "SW1hZ2VSZXF1ZXN0EkEKBG5hbWUYASABKAlCM+BBAvpBLQorYXJ0aWZhY3Ry",
+            "ZWdpc3RyeS5nb29nbGVhcGlzLmNvbS9Eb2NrZXJJbWFnZUL7AQonY29tLmdv",
+            "b2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxQg1BcnRpZmFjdFBy",
+            "b3RvUAFaU2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
+            "ZGV2dG9vbHMvYXJ0aWZhY3RyZWdpc3RyeS92MTthcnRpZmFjdHJlZ2lzdHJ5",
+            "qgIgR29vZ2xlLkNsb3VkLkFydGlmYWN0UmVnaXN0cnkuVjHKAiBHb29nbGVc",
+            "Q2xvdWRcQXJ0aWZhY3RSZWdpc3RyeVxWMeoCI0dvb2dsZTo6Q2xvdWQ6OkFy",
+            "dGlmYWN0UmVnaXN0cnk6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.DockerImage), global::Google.Cloud.ArtifactRegistry.V1.DockerImage.Parser, new[]{ "Name", "Uri", "Tags", "ImageSizeBytes", "UploadTime", "MediaType", "BuildTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.ListDockerImagesRequest), global::Google.Cloud.ArtifactRegistry.V1.ListDockerImagesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.ListDockerImagesResponse), global::Google.Cloud.ArtifactRegistry.V1.ListDockerImagesResponse.Parser, new[]{ "DockerImages", "NextPageToken" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.ListDockerImagesResponse), global::Google.Cloud.ArtifactRegistry.V1.ListDockerImagesResponse.Parser, new[]{ "DockerImages", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.GetDockerImageRequest), global::Google.Cloud.ArtifactRegistry.V1.GetDockerImageRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1018,6 +1020,201 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           }
           case 18: {
             NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request to get docker images.
+  /// </summary>
+  public sealed partial class GetDockerImageRequest : pb::IMessage<GetDockerImageRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetDockerImageRequest> _parser = new pb::MessageParser<GetDockerImageRequest>(() => new GetDockerImageRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetDockerImageRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetDockerImageRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetDockerImageRequest(GetDockerImageRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetDockerImageRequest Clone() {
+      return new GetDockerImageRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the docker images.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetDockerImageRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetDockerImageRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetDockerImageRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
             break;
           }
         }

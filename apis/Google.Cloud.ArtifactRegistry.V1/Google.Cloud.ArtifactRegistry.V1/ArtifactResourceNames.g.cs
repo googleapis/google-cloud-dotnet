@@ -289,4 +289,16 @@ namespace Google.Cloud.ArtifactRegistry.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class GetDockerImageRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::DockerImageName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::DockerImageName DockerImageName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::DockerImageName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }
