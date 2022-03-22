@@ -295,4 +295,28 @@ namespace Google.Cloud.ArtifactRegistry.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class CreateRepositoryRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteRepositoryRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::RepositoryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::RepositoryName RepositoryName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::RepositoryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }
