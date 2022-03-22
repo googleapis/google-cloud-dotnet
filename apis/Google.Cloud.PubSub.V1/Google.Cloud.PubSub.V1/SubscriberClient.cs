@@ -48,7 +48,9 @@ namespace Google.Cloud.PubSub.V1
     {
         private static readonly GrpcChannelOptions s_unlimitedSendReceiveChannelOptions = GrpcChannelOptions.Empty
             .WithMaxReceiveMessageSize(-1)
-            .WithMaxSendMessageSize(-1);
+            .WithMaxSendMessageSize(-1)
+            // Set max metadata size to 4 MB i.e., 4194304 bytes.
+            .WithCustomOption("grpc.max_metadata_size", 4194304);
 
         /// <summary>
         /// Reply from a message handler; whether to <see cref="Ack"/>
