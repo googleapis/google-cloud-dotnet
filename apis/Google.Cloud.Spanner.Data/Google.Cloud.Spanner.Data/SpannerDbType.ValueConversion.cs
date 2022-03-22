@@ -213,35 +213,64 @@ namespace Google.Cloud.Spanner.Data
                     throw new ArgumentException("Struct parameters must be of type SpannerStruct");
 
                 case TypeCode.Numeric:
-                    if (value is SpannerNumeric spannerNumeric)
+                    if (TypeAnnotationCode == TypeAnnotationCode.PgNumeric)
                     {
-                        return Value.ForString(spannerNumeric.ToString());
+                        if (value is PgNumeric pgNumeric)
+                        {
+                            return Value.ForString(pgNumeric.ToString());
+                        }
+                        if (value is string pgString)
+                        {
+                            return Value.ForString(V1.PgNumeric.Parse(pgString).ToString());
+                        }
+                        if (value is float || value is double || value is decimal)
+                        {
+                            return Value.ForString(V1.PgNumeric.FromDecimal(
+                                Convert.ToDecimal(value, InvariantCulture)).ToString());
+                        }
+                        if (value is sbyte || value is short || value is int || value is long)
+                        {
+                            PgNumeric numericValue = Convert.ToInt64(value, InvariantCulture);
+                            return Value.ForString(numericValue.ToString());
+                        }
+                        if (value is byte || value is ushort || value is uint || value is ulong)
+                        {
+                            PgNumeric numericValue = Convert.ToUInt64(value, InvariantCulture);
+                            return Value.ForString(numericValue.ToString());
+                        }
+                        throw new ArgumentException("PgNumeric parameters must be of one of the following types: float, double, decimal, sbyte, short, int, long, byte, ushort, uint, ulong or string");
                     }
-                    if (value is string str)
+                    else
                     {
-                        return Value.ForString(SpannerNumeric.Parse(str).ToString());
+                        if (value is SpannerNumeric spannerNumeric)
+                        {
+                            return Value.ForString(spannerNumeric.ToString());
+                        }
+                        if (value is string str)
+                        {
+                            return Value.ForString(SpannerNumeric.Parse(str).ToString());
+                        }
+                        if (value is float || value is double || value is decimal)
+                        {
+                            // We throw if there's a loss of precision. We could use
+                            // LossOfPrecisionHandling.Truncate but GoogleSQL documentation requests to
+                            // use half-away-from-zero rounding but the SpannerNumeric implementation
+                            // truncates instead.
+                            return Value.ForString(SpannerNumeric.FromDecimal(
+                                Convert.ToDecimal(value, InvariantCulture), LossOfPrecisionHandling.Throw).ToString());
+                        }
+                        if (value is sbyte || value is short || value is int || value is long)
+                        {
+                            SpannerNumeric numericValue = Convert.ToInt64(value, InvariantCulture);
+                            return Value.ForString(numericValue.ToString());
+                        }
+                        if (value is byte || value is ushort || value is uint || value is ulong)
+                        {
+                            SpannerNumeric numericValue = Convert.ToUInt64(value, InvariantCulture);
+                            return Value.ForString(numericValue.ToString());
+                        }
+                        throw new ArgumentException("Numeric parameters must be of one of the following types: float, double, decimal, sbyte, short, int, long, byte, ushort, uint, ulong or string");
                     }
-                    if (value is float || value is double || value is decimal)
-                    {
-                        // We throw if there's a loss of precision. We could use
-                        // LossOfPrecisionHandling.Truncate but GoogleSQL documentation requests to
-                        // use half-away-from-zero rounding but the SpannerNumeric implementation
-                        // truncates instead.
-                        return Value.ForString(SpannerNumeric.FromDecimal(
-                            Convert.ToDecimal(value, InvariantCulture), LossOfPrecisionHandling.Throw).ToString());
-                    }
-                    if (value is sbyte || value is short || value is int || value is long)
-                    {
-                        SpannerNumeric numericValue = Convert.ToInt64(value, InvariantCulture);
-                        return Value.ForString(numericValue.ToString());
-                    }
-                    if (value is byte || value is ushort || value is uint || value is ulong)
-                    {
-                        SpannerNumeric numericValue = Convert.ToUInt64(value, InvariantCulture);
-                        return Value.ForString(numericValue.ToString());
-                    }
-                    throw new ArgumentException("Numeric parameters must be of type SpannerNumeric or string");
-
                 default:
                     throw new ArgumentOutOfRangeException(nameof(TypeCode), TypeCode, null);
             }
@@ -563,6 +592,24 @@ namespace Google.Cloud.Spanner.Data
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
                 }
             }
+            if (targetClrType == typeof(PgNumeric))
+            {
+                if (TypeCode != TypeCode.Numeric || TypeAnnotationCode != TypeAnnotationCode.PgNumeric)
+                {
+                    throw new ArgumentException($"{targetClrType.FullName} can only be used for numeric results");
+                }
+                switch (wireValue.KindCase)
+                {
+                    case Value.KindOneofCase.NullValue:
+                        return null;
+                    case Value.KindOneofCase.StringValue:
+                        return V1.PgNumeric.Parse(wireValue.StringValue);
+                    default:
+                        throw new InvalidOperationException(
+                            $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
+                }
+            }
+
             if (typeof(IList).IsAssignableFrom(targetClrType))
             {
                 if (targetClrType == typeof(IList))

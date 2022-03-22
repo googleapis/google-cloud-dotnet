@@ -33,11 +33,11 @@ namespace Google.Cloud.Spanner.Data
         public static bool TryParse(string spannerType, out SpannerDbType spannerDbType)
         {
             spannerDbType = null;
-            if (!TryParsePartial(spannerType, out TypeCode code, out int? size, out string remainder, out TypeAnnotationCode typeAnnotationCode))
+            if (!TryParsePartial(spannerType, out V1.Type type, out int? size, out string remainder))
             {
                 return false;
             }
-            switch (code)
+            switch (type.Code)
             {
                 case TypeCode.Unspecified:
                 case TypeCode.Bool:
@@ -55,14 +55,14 @@ namespace Google.Cloud.Spanner.Data
                         return false;
                     }
                     // If there's no size, we can use cached values.
-                    spannerDbType = size == null ? FromType(new V1.Type { Code = code, TypeAnnotation = typeAnnotationCode }) : new SpannerDbType(code, typeAnnotationCode, size);
+                    spannerDbType = size == null ? FromType(type) : new SpannerDbType(type.Code, type.TypeAnnotation, size);
                     return true;
                 case TypeCode.Array:
                     if (!TryParse(remainder, out SpannerDbType elementType))
                     {
                         return false;
                     }
-                    spannerDbType = new SpannerDbType(code, elementType);
+                    spannerDbType = new SpannerDbType(type.Code, elementType);
                     return true;
                 case TypeCode.Struct:
                     // There could be nested structs, so we need to be careful about parsing the inner string.
@@ -104,7 +104,7 @@ namespace Google.Cloud.Spanner.Data
                         fields.Add(new StructField(fieldName, fieldDbType));
                         currentIndex = endFieldIndex + 1;
                     }
-                    spannerDbType = new SpannerDbType(code, fields);
+                    spannerDbType = new SpannerDbType(type.Code, fields);
                     return true;
                 default:
                     return false;
@@ -132,10 +132,9 @@ namespace Google.Cloud.Spanner.Data
         /// as a remainder.
         /// Given a string of  ARRAY{STRING}, the remainer will be 'STRING' and the returned typecode will be ARRAY.
         /// </summary>
-        private static bool TryParsePartial(string complexName, out TypeCode typeCode, out int? size, out string remainder, out TypeAnnotationCode typeAnnotationCode)
+        private static bool TryParsePartial(string complexName, out V1.Type type, out int? size, out string remainder)
         {
-            typeAnnotationCode = TypeAnnotationCode.Unspecified;
-            typeCode = TypeCode.Unspecified;
+            type = new V1.Type { Code = TypeCode.Unspecified, TypeAnnotation = TypeAnnotationCode.Unspecified };
             size = null;
             remainder = null;
             if (string.IsNullOrEmpty(complexName))
@@ -143,10 +142,18 @@ namespace Google.Cloud.Spanner.Data
                 return false;
             }
 
+            // Special handling for NUMERIC{PG}, as other types are just based on TypeCode and we need to keep the code backward compatible.
+            if (string.Equals(complexName.Trim(), "NUMERIC{PG}", StringComparison.OrdinalIgnoreCase))
+            {
+                type.Code = TypeCode.Numeric;
+                type.TypeAnnotation = TypeAnnotationCode.PgNumeric;
+                return true;
+            }
+
             int remainderStart = complexName.IndexOfAny(new[] { '<', '(' });
             remainderStart = remainderStart != -1 ? remainderStart : complexName.Length;
-            typeCode = TypeCodeExtensions.GetTypeCode(complexName.Substring(0, remainderStart));
-            if (typeCode == TypeCode.Unspecified)
+            type.Code = TypeCodeExtensions.GetTypeCode(complexName.Substring(0, remainderStart));
+            if (type.Code == TypeCode.Unspecified)
             {
                 return false;
             }
@@ -200,6 +207,11 @@ namespace Google.Cloud.Spanner.Data
                 s.Append(">");
                 return s.ToString();
             }
+            if (TypeAnnotationCode == TypeAnnotationCode.PgNumeric)
+            {
+                return "NUMERIC{PG}";
+            }
+
             return Size.HasValue ? $"{TypeCode.GetOriginalName()}({Size})" : TypeCode.GetOriginalName();
         }
     }
