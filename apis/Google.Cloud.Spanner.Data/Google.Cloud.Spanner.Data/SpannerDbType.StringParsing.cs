@@ -33,7 +33,7 @@ namespace Google.Cloud.Spanner.Data
         public static bool TryParse(string spannerType, out SpannerDbType spannerDbType)
         {
             spannerDbType = null;
-            if (!TryParsePartial(spannerType, out TypeCode code, out int? size, out string remainder))
+            if (!TryParsePartial(spannerType, out TypeCode code, out int? size, out string remainder, out TypeAnnotationCode typeAnnotationCode))
             {
                 return false;
             }
@@ -55,7 +55,7 @@ namespace Google.Cloud.Spanner.Data
                         return false;
                     }
                     // If there's no size, we can use cached values.
-                    spannerDbType = size == null ? FromTypeCode(code) : new SpannerDbType(code, size);
+                    spannerDbType = size == null ? FromType(new V1.Type { Code = code, TypeAnnotation = typeAnnotationCode }) : new SpannerDbType(code, typeAnnotationCode, size);
                     return true;
                 case TypeCode.Array:
                     if (!TryParse(remainder, out SpannerDbType elementType))
@@ -132,8 +132,9 @@ namespace Google.Cloud.Spanner.Data
         /// as a remainder.
         /// Given a string of  ARRAY{STRING}, the remainer will be 'STRING' and the returned typecode will be ARRAY.
         /// </summary>
-        private static bool TryParsePartial(string complexName, out TypeCode typeCode, out int? size, out string remainder)
+        private static bool TryParsePartial(string complexName, out TypeCode typeCode, out int? size, out string remainder, out TypeAnnotationCode typeAnnotationCode)
         {
+            typeAnnotationCode = TypeAnnotationCode.Unspecified;
             typeCode = TypeCode.Unspecified;
             size = null;
             remainder = null;

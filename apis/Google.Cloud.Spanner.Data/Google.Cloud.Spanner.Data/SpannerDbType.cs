@@ -80,26 +80,28 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public static SpannerDbType Numeric { get; } = new SpannerDbType(TypeCode.Numeric);
 
-        private static readonly Dictionary<TypeCode, SpannerDbType> s_simpleTypes
-            = new Dictionary<TypeCode, SpannerDbType>
+        private static readonly Dictionary<V1.Type, SpannerDbType> s_simpleTypes
+            = new Dictionary<V1.Type, SpannerDbType>
             {
-                {TypeCode.Unspecified, Unspecified },
-                {TypeCode.Bool, Bool },
-                {TypeCode.Int64, Int64 },
-                {TypeCode.Float64, Float64 },
-                {TypeCode.Timestamp, Timestamp },
-                {TypeCode.Date, Date },
-                {TypeCode.String, String },
-                {TypeCode.Bytes, Bytes },
-                {TypeCode.Json, Json },
-                {TypeCode.Numeric, Numeric }
+                {new V1.Type { Code = TypeCode.Unspecified } , Unspecified },
+                {new V1.Type { Code = TypeCode.Bool }, Bool },
+                {new V1.Type { Code = TypeCode.Int64 }, Int64 },
+                {new V1.Type { Code = TypeCode.Float64 }, Float64 },
+                {new V1.Type { Code = TypeCode.Timestamp }, Timestamp },
+                {new V1.Type { Code = TypeCode.Date }, Date },
+                {new V1.Type { Code = TypeCode.String }, String },
+                {new V1.Type { Code = TypeCode.Bytes }, Bytes },
+                {new V1.Type { Code = TypeCode.Json }, Json },
+                {new V1.Type { Code = TypeCode.Numeric }, Numeric }
             };
 
-        internal static SpannerDbType FromTypeCode(TypeCode code) 
-            => s_simpleTypes.TryGetValue(code, out SpannerDbType type) ? type : null;
+        internal static SpannerDbType FromType(V1.Type type) =>
+            s_simpleTypes.TryGetValue(type, out SpannerDbType dbType) ?
+            dbType : null;
 
         internal TypeCode TypeCode { get; }
 
+        internal TypeAnnotationCode TypeAnnotationCode { get; }
         /// <summary>
         /// When TypeCode is Array, this is the array element type. (Null for non-arrays.)
         /// </summary>
@@ -112,10 +114,12 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         private List<StructField> StructFields { get; }
 
-        private SpannerDbType(TypeCode typeCode, int? size = null)
+        private SpannerDbType(TypeCode typeCode, TypeAnnotationCode typeAnnotationCode = TypeAnnotationCode.Unspecified,
+            int? size = null)
         {
             GaxPreconditions.CheckNonNegative(size.GetValueOrDefault(), "Size must be nonnegative.");
             TypeCode = typeCode;
+            TypeAnnotationCode = typeAnnotationCode;
             Size = size;
         }
 
@@ -230,7 +234,7 @@ namespace Google.Cloud.Spanner.Data
                     return new SpannerDbType(TypeCode.Struct,
                         type.StructType.Fields.Select(f => new StructField(f.Name, SpannerDbType.FromProtobufType(f.Type))).ToList());
                 default:
-                    return FromTypeCode(type.Code);
+                    return FromType(type);
             }
         }
 
@@ -254,7 +258,7 @@ namespace Google.Cloud.Spanner.Data
                                 Fields = { StructFields.Select(f => f.ToFieldType()) }
                             }
                     };
-                default: return new V1.Type {Code = TypeCode};
+                default: return new V1.Type { Code = TypeCode, TypeAnnotation = TypeAnnotationCode };
             }
         }
 
@@ -331,7 +335,8 @@ namespace Google.Cloud.Spanner.Data
             {
                 throw new InvalidOperationException($"Size may only be set on types {nameof(String)} and {nameof(Bytes)}");
             }
-            return new SpannerDbType(TypeCode, size);
+
+            return new SpannerDbType(TypeCode, TypeAnnotationCode, size);
         }
 
         /// <inheritdoc />
@@ -340,21 +345,13 @@ namespace Google.Cloud.Spanner.Data
         private bool Equals(SpannerDbType other) => other != null 
             && Lists.Equals(StructFields, other.StructFields)
             && TypeCode == other.TypeCode
+            && TypeAnnotationCode == other.TypeAnnotationCode
             && Size == other.Size
             && Equals(ArrayElementType, other.ArrayElementType);
 
         /// <inheritdoc />
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                int hashCode = Lists.GetHashCode(StructFields);
-                hashCode = (hashCode * 397) ^ Size.GetValueOrDefault(0);
-                hashCode = (hashCode * 397) ^ (int)TypeCode;
-                hashCode = (hashCode * 397) ^ (ArrayElementType?.GetHashCode() ?? 0);
-                return hashCode;
-            }
-        }
+        public override int GetHashCode() => GaxEqualityHelpers.CombineHashCodes(Lists.GetHashCode(StructFields), Size.GetValueOrDefault(0).GetHashCode(),
+            TypeCode.GetHashCode(), TypeAnnotationCode.GetHashCode(), ArrayElementType?.GetHashCode() ?? 0);
 
         /// <summary>
         /// Value type representing the name and type of a field within a struct. This is like SpannerStruct.Field
