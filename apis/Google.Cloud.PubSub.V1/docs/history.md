@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.8.0, released 2022-03-22
+
+### Bug fixes
+
+- Increased grpc.max_metadata_size value to 4 M.B. This fixes an issue in SubscriberClient with exactly-once delivery. ([commit e78afdf](https://github.com/googleapis/google-cloud-dotnet/commit/e78afdf41474e38a266a46cb6ae0489ec56a5266))
+
+### New features
+
+- Add IAM mixin to Google.Cloud.PubSub.V1 ([commit fda5e80](https://github.com/googleapis/google-cloud-dotnet/commit/fda5e8020f015dd10f69ffb48f9f751792650015))
+- Add exactly once delivery flag ([commit fa0b21c](https://github.com/googleapis/google-cloud-dotnet/commit/fa0b21cba4a3cda5284d1a3b8d324b6f124be541) and [commit e7b592b](https://github.com/googleapis/google-cloud-dotnet/commit/e7b592b4d4b8ec244df4d5439e9ff5337da917a0))
+  - This is *only* for the generated code; SubscriberClient has no support yet
+
 ## Version 2.7.0, released 2021-09-23
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
