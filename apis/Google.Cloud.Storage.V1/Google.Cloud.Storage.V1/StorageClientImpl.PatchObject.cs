@@ -43,10 +43,6 @@ namespace Google.Cloud.Storage.V1
             var request = Service.Objects.Patch(obj, obj.Bucket, obj.Name);
             options?.ModifyRequest(request);
             ApplyEncryptionKey(options?.EncryptionKey, kmsNameFromOptions: null, request);
-            if(options.IfMetagenerationMatch != null)
-            {
-                RetryHandler.MarkAsRetriable(request);
-            }
             return request;
         }
     }
