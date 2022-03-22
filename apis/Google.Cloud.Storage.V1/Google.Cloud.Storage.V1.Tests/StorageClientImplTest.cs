@@ -124,7 +124,7 @@ RetryOnceHelper(service => service.Objects.Delete("bucket", "objectName"), clien
 
         [Fact]
         public void DeleteObject_RetryOnce() =>
-RetryOnce(service => service.Objects.Delete("bucket", "objectName"), client => client.DeleteObject("bucket", "objectName"),HttpStatusCode.BadGateway, "\"check\"");
+RetryOnce(service => new ObjectsResource.DeleteRequest(service, "bucket", "objectName") { Generation = 70 }, client => client.DeleteObject("bucket", "objectName", new DeleteObjectOptions { Generation = 70 }),HttpStatusCode.BadGateway, "\"check\"");
 
 
         private static void RetryOnceHelper<T>(Func<StorageService, ClientServiceRequest<T>> requestProvider, Action<StorageClient> clientAction,
@@ -289,15 +289,15 @@ RetryOnceHelper(service => service.Buckets.TestIamPermissions("bucket", new Repe
 
         [Fact]
         public void CopyObject_NoRetry() =>
-      NoRetryHelper(service => service.Objects.Copy(new Object() { Id = "id", Name = "name" }, "sourceBucket", "sourceObject", "destinationBucket", "destinationObject"), client => client.CopyObject("sourceBucket", "sourceObject", "destinationBucket", "destinationObject"));
+      NoRetryHelper(service => service.Objects.Rewrite(new Object(), "sourceBucket", "sourceObject", "destinationBucket", "destinationObject"), client => client.CopyObject("sourceBucket", "sourceObject", "destinationBucket", "destinationObject"));
 
         [Fact]
         public void CopyObject_RetryOnce() =>
-RetryOnceHelper(service => service.Objects.Copy(new Object() { Id = "id", Name = "name" }, "sourceBucket", "sourceObject", "destinationBucket", "destinationObject"), client => client.CopyObject("sourceBucket", "sourceObject", "destinationBucket", "destinationObject"));
+RetryOnceHelper(service => service.Objects.Rewrite(new Object(), "sourceBucket", "sourceObject", "destinationBucket", "destinationObject"), client => client.CopyObject("sourceBucket", "sourceObject", "destinationBucket", "destinationObject"));
 
         [Fact]
         public void CopyObject_RetryThenFail() =>
-    RetryThenFailHelper(service => service.Objects.Copy(new Object() { Id = "id", Name = "name" }, "sourceBucket", "sourceObject", "destinationBucket", "destinationObject"), client => client.CopyObject("sourceBucket", "sourceObject", "destinationBucket", "destinationObject"));
+    RetryThenFailHelper(service => service.Objects.Rewrite(new Object(), "sourceBucket", "sourceObject", "destinationBucket", "destinationObject"), client => client.CopyObject("sourceBucket", "sourceObject", "destinationBucket", "destinationObject"));
 
         [Fact]
         public void ListObject_NoRetry() =>
@@ -367,39 +367,23 @@ Collection: [(https://storage.googleapis.com/storage/v1/b/bucket/o/object/rewrit
   Content-Type: text/plain; charset=utf-8
 })]
          */
-
-        [Fact]
-        public void RewriteObject_WithMetageneration_RetryOnce() =>
-         RetryOnceHelper(service => new ObjectsResource.RewriteRequest(service, new Object { Bucket = "bucket", Name = "object" }, "bucket", "object", "destinationBucket", "destinationObject") { IfMetagenerationMatch = 70 },
-             client => client.Service.Objects.Rewrite(new Object { Bucket = "bucket", Name = "object" }, "bucket", "object", "destinationBucket", "destinationObject"));
-
-        [Fact]
-        public void RewriteObject_WithoutMetageneration_NoRetry() =>
-           NoRetryHelper(service => new ObjectsResource.RewriteRequest(service, new Object { Bucket = "bucket", Name = "object" }, "bucket", "object", "destinationBucket", "destinationObject"),
-             client => client.Service.Objects.Rewrite(new Object { Bucket = "bucket", Name = "object" }, "bucket", "object", "destinationBucket", "destinationObject"));
-
-        [Fact]
-        public void RewriteObject_RetryThenFail() =>
-RetryThenFailHelper(service => new ObjectsResource.RewriteRequest(service, new Object { Bucket = "bucket", Name = "object" }, "bucket", "object", "destinationBucket", "destinationObject") { IfMetagenerationMatch = 70 },
-             client => client.Service.Objects.Rewrite(new Object { Bucket = "bucket", Name = "object" }, "bucket", "object", "destinationBucket", "destinationObject"));
-
-
+        
         // Object test cases END
 
         [Fact]
-        public void GetServiceaccount_NoRetry() =>
+        public void GetStorageServiceAccountEmail_NoRetry() =>
     NoRetryHelper(service => new ServiceAccountResource.GetRequest(service, "project"),
-client => client.Service.Projects.ServiceAccount.Get("project"));
+client => client.GetStorageServiceAccountEmail("project"));
 
         [Fact]
-        public void GetServiceaccount_RetryOnce() =>
+        public void GetStorageServiceAccountEmail_RetryOnce() =>
     RetryOnceHelper(service => new ServiceAccountResource.GetRequest(service, "project"),
-client => client.Service.Projects.ServiceAccount.Get("project"));
+client => client.GetStorageServiceAccountEmail("project"));
 
         [Fact]
-        public void GetServiceaccount_RetryThenFail() =>
+        public void GetStorageServiceAccountEmail_RetryThenFail() =>
 RetryThenFailHelper(service => new ServiceAccountResource.GetRequest(service,"project"),
-client => client.Service.Projects.ServiceAccount.Get("project"));
+client => client.GetStorageServiceAccountEmail("project"));
 
         // HMAC Key test cases START
 
