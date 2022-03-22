@@ -96,19 +96,40 @@ namespace Google.Cloud.Storage.V1.Tests
             service.Verify();
         }
 
-        private static void RetryOnceHelper<T>(Func<StorageService, ClientServiceRequest<T>> requestProvider, Action<StorageClient> clientAction,
-           HttpStatusCode firstStatusCode = HttpStatusCode.BadGateway)
-           where T : new()
+        private static void RetryOnce<T>(Func<StorageService, ClientServiceRequest<T>> requestProvider, Action<StorageClient> clientAction,
+   HttpStatusCode firstStatusCode,
+   T response)
         {
             var service = new FakeStorageService();
             var client = new StorageClientImpl(service);
             var request = requestProvider(service);
 
             service.ExpectRequest(request, firstStatusCode);
-            service.ExpectRequest(request, new T());
+            service.ExpectRequest(request, response);
             clientAction(client);
             service.Verify();
         }
+
+        // Need to create overloaded helper method for below operations to run:
+
+        /*
+        [Fact]
+        public void DeleteObject_RetryOnce() =>
+RetryOnceHelper(service => service.Objects.Delete("bucket", "objectName"), client => client.DeleteObject("bucket", "objectName"));
+
+        [Fact]
+        public void DeleteObject_RetryThenFail() =>
+    RetryThenFailHelper(service => service.Objects.Delete("bucket", "objectName"), client => client.DeleteObject("bucket", "objectName"));
+        */
+
+        [Fact]
+        public void DeleteObject_RetryOnce() =>
+RetryOnce(service => service.Objects.Delete("bucket", "objectName"), client => client.DeleteObject("bucket", "objectName"),HttpStatusCode.BadGateway, "\"check\"");
+
+
+        private static void RetryOnceHelper<T>(Func<StorageService, ClientServiceRequest<T>> requestProvider, Action<StorageClient> clientAction,
+           HttpStatusCode firstStatusCode = HttpStatusCode.BadGateway)
+           where T : new() => RetryOnce(requestProvider, clientAction, firstStatusCode, new T());
 
         private static void RetryThenFailHelper<T>(Func<StorageService, ClientServiceRequest<T>> requestProvider, Action<StorageClient> clientAction,
             HttpStatusCode errorCode = HttpStatusCode.BadGateway, int retryCount = 3)
@@ -294,17 +315,7 @@ RetryOnceHelper(service => service.Objects.Copy(new Object() { Id = "id", Name =
         public void DeleteObject_NoRetry() =>
     NoRetryHelper(service => service.Objects.Delete("bucket", "objectName"), client => client.DeleteObject("bucket", "objectName"));
 
-        // Need to create overloaded helper method for below operations to run:
 
-        /*
-        [Fact]
-        public void DeleteObject_RetryOnce() =>
-RetryOnceHelper(service => service.Objects.Delete("bucket", "objectName"), client => client.DeleteObject("bucket", "objectName"));
-
-        [Fact]
-        public void DeleteObject_RetryThenFail() =>
-    RetryThenFailHelper(service => service.Objects.Delete("bucket", "objectName"), client => client.DeleteObject("bucket", "objectName"));
-        */
 
         [Fact]
         public void UpdateObject_WithMetageneration_RetryOnce() =>
