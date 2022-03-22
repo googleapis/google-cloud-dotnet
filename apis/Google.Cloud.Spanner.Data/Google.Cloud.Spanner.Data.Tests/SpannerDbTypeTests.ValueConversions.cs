@@ -20,6 +20,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Numerics;
 using System.Threading;
 using Xunit;
 
@@ -43,7 +44,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         private static readonly DateTime s_testDate = new DateTime(2017, 1, 31, 3, 15, 30, 500);
-        private static readonly byte[] s_bytesToEncode = {1, 2, 3, 4};
+        private static readonly byte[] s_bytesToEncode = { 1, 2, 3, 4 };
         private static readonly string s_base64Encoded = Convert.ToBase64String(s_bytesToEncode);
 
         private static readonly SpannerStruct s_sampleStruct = new SpannerStruct
@@ -55,13 +56,14 @@ namespace Google.Cloud.Spanner.Data.Tests
             { "DateField", SpannerDbType.Date, new DateTime(2017, 1, 31) },
             { "TimestampField", SpannerDbType.Timestamp, new DateTime(2017, 1, 31, 3, 15, 30) },
             { "NumericField", SpannerDbType.Numeric, SpannerNumeric.MaxValue },
+            { "PgNumericField", SpannerDbType.PgNumeric, PgNumeric.NaN },
             { "JsonField", SpannerDbType.Json, "{\"field\": \"value\"}" }
         };
 
         // Structs are serialized as lists of their values. The field names aren't present, as they're
         // specified in the type.
         private static readonly string s_sampleStructSerialized =
-            "[ \"stringValue\", \"2\", \"NaN\", true, \"2017-01-31\", \"2017-01-31T03:15:30Z\", \"99999999999999999999999999999.999999999\", \"{\\\"field\\\": \\\"value\\\"}\" ]";
+            "[ \"stringValue\", \"2\", \"NaN\", true, \"2017-01-31\", \"2017-01-31T03:15:30Z\", \"99999999999999999999999999999.999999999\", \"NaN\", \"{\\\"field\\\": \\\"value\\\"}\" ]";
 
         private static string Quote(string s) => $"\"{s}\"";
 
@@ -114,6 +116,19 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return SpannerNumeric.MaxValue;
         }
 
+        private static IEnumerable<PgNumeric> GetPgNumericsForArray()
+        {
+            yield return PgNumeric.MinValue;
+            yield return PgNumeric.MaxValue;
+            yield return PgNumeric.NaN;
+        }
+
+        private static readonly BigInteger MaxValueForPgNumeric = BigInteger.Pow(10, 147455) - 1;
+
+        private static readonly string ExpectedMaxValueForPgNumeric = MaxValueForPgNumeric.ToString();
+
+        private static readonly string ExpectedMinValueForPgNumeric = (-MaxValueForPgNumeric).ToString();
+
         private static IEnumerable<string> GetJsonStringsForArray()
         {
             yield return "";
@@ -147,130 +162,149 @@ namespace Google.Cloud.Spanner.Data.Tests
             // Testing can be one way if there is loss of information in the conversion.
 
             // Spanner type = Float64 tests.
-            yield return new object[] {true, SpannerDbType.Float64, "1"};
-            yield return new object[] {false, SpannerDbType.Float64, "0"};
-            yield return new object[] {(byte) 1, SpannerDbType.Float64, "1"};
-            yield return new object[] {(sbyte) 1, SpannerDbType.Float64, "1"};
-            yield return new object[] {1.5M, SpannerDbType.Float64, "1.5"};
-            yield return new object[] {1.5D, SpannerDbType.Float64, "1.5"};
-            yield return new object[] {1.5F, SpannerDbType.Float64, "1.5"};
-            yield return new object[] {double.NegativeInfinity, SpannerDbType.Float64, Quote("-Infinity")};
-            yield return new object[] {double.PositiveInfinity, SpannerDbType.Float64, Quote("Infinity")};
-            yield return new object[] {double.NaN, SpannerDbType.Float64, Quote("NaN")};
-            yield return new object[] {1, SpannerDbType.Float64, "1"};
-            yield return new object[] {1U, SpannerDbType.Float64, "1"};
-            yield return new object[] {1L, SpannerDbType.Float64, "1"};
-            yield return new object[] {(ulong) 1, SpannerDbType.Float64, "1"};
-            yield return new object[] {(short) 1, SpannerDbType.Float64, "1"};
-            yield return new object[] {(ushort) 1, SpannerDbType.Float64, "1"};
-            yield return new object[] {"1", SpannerDbType.Float64, "1"};
-            yield return new object[] {"1.5", SpannerDbType.Float64, "1.5"};
-            yield return new object[] {DBNull.Value, SpannerDbType.Float64, "null"};
+            yield return new object[] { true, SpannerDbType.Float64, "1" };
+            yield return new object[] { false, SpannerDbType.Float64, "0" };
+            yield return new object[] { (byte)1, SpannerDbType.Float64, "1" };
+            yield return new object[] { (sbyte)1, SpannerDbType.Float64, "1" };
+            yield return new object[] { 1.5M, SpannerDbType.Float64, "1.5" };
+            yield return new object[] { 1.5D, SpannerDbType.Float64, "1.5" };
+            yield return new object[] { 1.5F, SpannerDbType.Float64, "1.5" };
+            yield return new object[] { double.NegativeInfinity, SpannerDbType.Float64, Quote("-Infinity") };
+            yield return new object[] { double.PositiveInfinity, SpannerDbType.Float64, Quote("Infinity") };
+            yield return new object[] { double.NaN, SpannerDbType.Float64, Quote("NaN") };
+            yield return new object[] { 1, SpannerDbType.Float64, "1" };
+            yield return new object[] { 1U, SpannerDbType.Float64, "1" };
+            yield return new object[] { 1L, SpannerDbType.Float64, "1" };
+            yield return new object[] { (ulong)1, SpannerDbType.Float64, "1" };
+            yield return new object[] { (short)1, SpannerDbType.Float64, "1" };
+            yield return new object[] { (ushort)1, SpannerDbType.Float64, "1" };
+            yield return new object[] { "1", SpannerDbType.Float64, "1" };
+            yield return new object[] { "1.5", SpannerDbType.Float64, "1.5" };
+            yield return new object[] { DBNull.Value, SpannerDbType.Float64, "null" };
 
             // Spanner type = Int64 tests.
-            yield return new object[] {true, SpannerDbType.Int64, Quote("1")};
-            yield return new object[] {false, SpannerDbType.Int64, Quote("0")};
-            yield return new object[] {(char) 1, SpannerDbType.Int64, Quote("1")};
-            yield return new object[] {(byte) 1, SpannerDbType.Int64, Quote("1")};
-            yield return new object[] {(sbyte) 1, SpannerDbType.Int64, Quote("1")};
-            yield return new object[] {2M, SpannerDbType.Int64, Quote("2")};
-            yield return new object[] {1.5M, SpannerDbType.Int64, Quote("2"), TestType.ClrToValue};
-            yield return new object[] {2D, SpannerDbType.Int64, Quote("2")};
-            yield return new object[] {1.5D, SpannerDbType.Int64, Quote("2"), TestType.ClrToValue};
-            yield return new object[] {2F, SpannerDbType.Int64, Quote("2")};
-            yield return new object[] {1.5F, SpannerDbType.Int64, Quote("2"), TestType.ClrToValue};
-            yield return new object[] {1, SpannerDbType.Int64, Quote("1")};
-            yield return new object[] {1U, SpannerDbType.Int64, Quote("1")};
-            yield return new object[] {1L, SpannerDbType.Int64, Quote("1")};
-            yield return new object[] {(ulong) 1, SpannerDbType.Int64, Quote("1")};
-            yield return new object[] {(short) 1, SpannerDbType.Int64, Quote("1")};
-            yield return new object[] {(ushort) 1, SpannerDbType.Int64, Quote("1")};
-            yield return new object[] {"1", SpannerDbType.Int64, Quote("1")};
+            yield return new object[] { true, SpannerDbType.Int64, Quote("1") };
+            yield return new object[] { false, SpannerDbType.Int64, Quote("0") };
+            yield return new object[] { (char)1, SpannerDbType.Int64, Quote("1") };
+            yield return new object[] { (byte)1, SpannerDbType.Int64, Quote("1") };
+            yield return new object[] { (sbyte)1, SpannerDbType.Int64, Quote("1") };
+            yield return new object[] { 2M, SpannerDbType.Int64, Quote("2") };
+            yield return new object[] { 1.5M, SpannerDbType.Int64, Quote("2"), TestType.ClrToValue };
+            yield return new object[] { 2D, SpannerDbType.Int64, Quote("2") };
+            yield return new object[] { 1.5D, SpannerDbType.Int64, Quote("2"), TestType.ClrToValue };
+            yield return new object[] { 2F, SpannerDbType.Int64, Quote("2") };
+            yield return new object[] { 1.5F, SpannerDbType.Int64, Quote("2"), TestType.ClrToValue };
+            yield return new object[] { 1, SpannerDbType.Int64, Quote("1") };
+            yield return new object[] { 1U, SpannerDbType.Int64, Quote("1") };
+            yield return new object[] { 1L, SpannerDbType.Int64, Quote("1") };
+            yield return new object[] { (ulong)1, SpannerDbType.Int64, Quote("1") };
+            yield return new object[] { (short)1, SpannerDbType.Int64, Quote("1") };
+            yield return new object[] { (ushort)1, SpannerDbType.Int64, Quote("1") };
+            yield return new object[] { "1", SpannerDbType.Int64, Quote("1") };
 
             // Spanner type = Bool tests.
-            yield return new object[] {true, SpannerDbType.Bool, "true"};
-            yield return new object[] {false, SpannerDbType.Bool, "false"};
-            yield return new object[] {(byte) 1, SpannerDbType.Bool, "true"};
-            yield return new object[] {(byte) 0, SpannerDbType.Bool, "false"};
-            yield return new object[] {(sbyte) 1, SpannerDbType.Bool, "true"};
-            yield return new object[] {(sbyte) 0, SpannerDbType.Bool, "false"};
-            yield return new object[] {1M, SpannerDbType.Bool, "true"};
-            yield return new object[] {6.5M, SpannerDbType.Bool, "true", TestType.ClrToValue};
-            yield return new object[] {0M, SpannerDbType.Bool, "false"};
-            yield return new object[] {1D, SpannerDbType.Bool, "true"};
-            yield return new object[] {6.5D, SpannerDbType.Bool, "true", TestType.ClrToValue };
-            yield return new object[] {0D, SpannerDbType.Bool, "false"};
-            yield return new object[] {1F, SpannerDbType.Bool, "true"};
-            yield return new object[] {6.5F, SpannerDbType.Bool, "true", TestType.ClrToValue };
-            yield return new object[] {0F, SpannerDbType.Bool, "false"};
-            yield return new object[] {1, SpannerDbType.Bool, "true"};
-            yield return new object[] {11, SpannerDbType.Bool, "true", TestType.ClrToValue };
-            yield return new object[] {0, SpannerDbType.Bool, "false"};
-            yield return new object[] {1U, SpannerDbType.Bool, "true"};
-            yield return new object[] {100U, SpannerDbType.Bool, "true", TestType.ClrToValue };
-            yield return new object[] {0U, SpannerDbType.Bool, "false"};
-            yield return new object[] {1L, SpannerDbType.Bool, "true"};
-            yield return new object[] {-1L, SpannerDbType.Bool, "true", TestType.ClrToValue };
-            yield return new object[] {0L, SpannerDbType.Bool, "false"};
-            yield return new object[] {(ulong) 1, SpannerDbType.Bool, "true"};
-            yield return new object[] {(ulong) 21, SpannerDbType.Bool, "true", TestType.ClrToValue };
-            yield return new object[] {(ulong) 0, SpannerDbType.Bool, "false"};
-            yield return new object[] {(short) 1, SpannerDbType.Bool, "true"};
-            yield return new object[] {(short) -1, SpannerDbType.Bool, "true", TestType.ClrToValue };
-            yield return new object[] {(short) 0, SpannerDbType.Bool, "false"};
-            yield return new object[] {(ushort) 1, SpannerDbType.Bool, "true"};
-            yield return new object[] {(ushort) 11, SpannerDbType.Bool, "true", TestType.ClrToValue };
-            yield return new object[] {(ushort) 0, SpannerDbType.Bool, "false"};
+            yield return new object[] { true, SpannerDbType.Bool, "true" };
+            yield return new object[] { false, SpannerDbType.Bool, "false" };
+            yield return new object[] { (byte)1, SpannerDbType.Bool, "true" };
+            yield return new object[] { (byte)0, SpannerDbType.Bool, "false" };
+            yield return new object[] { (sbyte)1, SpannerDbType.Bool, "true" };
+            yield return new object[] { (sbyte)0, SpannerDbType.Bool, "false" };
+            yield return new object[] { 1M, SpannerDbType.Bool, "true" };
+            yield return new object[] { 6.5M, SpannerDbType.Bool, "true", TestType.ClrToValue };
+            yield return new object[] { 0M, SpannerDbType.Bool, "false" };
+            yield return new object[] { 1D, SpannerDbType.Bool, "true" };
+            yield return new object[] { 6.5D, SpannerDbType.Bool, "true", TestType.ClrToValue };
+            yield return new object[] { 0D, SpannerDbType.Bool, "false" };
+            yield return new object[] { 1F, SpannerDbType.Bool, "true" };
+            yield return new object[] { 6.5F, SpannerDbType.Bool, "true", TestType.ClrToValue };
+            yield return new object[] { 0F, SpannerDbType.Bool, "false" };
+            yield return new object[] { 1, SpannerDbType.Bool, "true" };
+            yield return new object[] { 11, SpannerDbType.Bool, "true", TestType.ClrToValue };
+            yield return new object[] { 0, SpannerDbType.Bool, "false" };
+            yield return new object[] { 1U, SpannerDbType.Bool, "true" };
+            yield return new object[] { 100U, SpannerDbType.Bool, "true", TestType.ClrToValue };
+            yield return new object[] { 0U, SpannerDbType.Bool, "false" };
+            yield return new object[] { 1L, SpannerDbType.Bool, "true" };
+            yield return new object[] { -1L, SpannerDbType.Bool, "true", TestType.ClrToValue };
+            yield return new object[] { 0L, SpannerDbType.Bool, "false" };
+            yield return new object[] { (ulong)1, SpannerDbType.Bool, "true" };
+            yield return new object[] { (ulong)21, SpannerDbType.Bool, "true", TestType.ClrToValue };
+            yield return new object[] { (ulong)0, SpannerDbType.Bool, "false" };
+            yield return new object[] { (short)1, SpannerDbType.Bool, "true" };
+            yield return new object[] { (short)-1, SpannerDbType.Bool, "true", TestType.ClrToValue };
+            yield return new object[] { (short)0, SpannerDbType.Bool, "false" };
+            yield return new object[] { (ushort)1, SpannerDbType.Bool, "true" };
+            yield return new object[] { (ushort)11, SpannerDbType.Bool, "true", TestType.ClrToValue };
+            yield return new object[] { (ushort)0, SpannerDbType.Bool, "false" };
 
             // Spanner type = String tests.
             // Note the casing on bool->string follows c# bool conversion semantics (by design).
-            yield return new object[] {true, SpannerDbType.String, Quote("True")};
-            yield return new object[] {false, SpannerDbType.String, Quote("False")};
-            yield return new object[] {(char) 26, SpannerDbType.String, Quote("\\u001a")};
-            yield return new object[] {(byte) 1, SpannerDbType.String, Quote("1")};
-            yield return new object[] {(sbyte) 1, SpannerDbType.String, Quote("1")};
-            yield return new object[] {1.5M, SpannerDbType.String, Quote("1.5")};
-            yield return new object[] {1.5D, SpannerDbType.String, Quote("1.5")};
-            yield return new object[] {1.5F, SpannerDbType.String, Quote("1.5")};
-            yield return new object[] {1, SpannerDbType.String, Quote("1")};
-            yield return new object[] {1U, SpannerDbType.String, Quote("1")};
-            yield return new object[] {1L, SpannerDbType.String, Quote("1")};
-            yield return new object[] {(ulong) 1, SpannerDbType.String, Quote("1")};
-            yield return new object[] {(short) 1, SpannerDbType.String, Quote("1")};
-            yield return new object[] {(ushort) 1, SpannerDbType.String, Quote("1")};
-            yield return new object[] {s_testDate, SpannerDbType.String, Quote("2017-01-31T03:15:30.5Z")};
+            yield return new object[] { true, SpannerDbType.String, Quote("True") };
+            yield return new object[] { false, SpannerDbType.String, Quote("False") };
+            yield return new object[] { (char)26, SpannerDbType.String, Quote("\\u001a") };
+            yield return new object[] { (byte)1, SpannerDbType.String, Quote("1") };
+            yield return new object[] { (sbyte)1, SpannerDbType.String, Quote("1") };
+            yield return new object[] { 1.5M, SpannerDbType.String, Quote("1.5") };
+            yield return new object[] { 1.5D, SpannerDbType.String, Quote("1.5") };
+            yield return new object[] { 1.5F, SpannerDbType.String, Quote("1.5") };
+            yield return new object[] { 1, SpannerDbType.String, Quote("1") };
+            yield return new object[] { 1U, SpannerDbType.String, Quote("1") };
+            yield return new object[] { 1L, SpannerDbType.String, Quote("1") };
+            yield return new object[] { (ulong)1, SpannerDbType.String, Quote("1") };
+            yield return new object[] { (short)1, SpannerDbType.String, Quote("1") };
+            yield return new object[] { (ushort)1, SpannerDbType.String, Quote("1") };
+            yield return new object[] { s_testDate, SpannerDbType.String, Quote("2017-01-31T03:15:30.5Z") };
             // Spanner type = Numeric tests.
-            yield return new object[] {SpannerNumeric.Epsilon, SpannerDbType.Numeric, "\"0.000000001\""};
-            yield return new object[] {(byte) 1, SpannerDbType.Numeric, "\"1\""};
-            yield return new object[] {(sbyte) 1, SpannerDbType.Numeric, "\"1\""};
-            yield return new object[] {1.5M, SpannerDbType.Numeric, "\"1.5\""};
-            yield return new object[] {1.5D, SpannerDbType.Numeric, "\"1.5\""};
-            yield return new object[] {1.5F, SpannerDbType.Numeric, "\"1.5\""};
-            yield return new object[] {1, SpannerDbType.Numeric, "\"1\""};
-            yield return new object[] {1U, SpannerDbType.Numeric, "\"1\""};
-            yield return new object[] {1L, SpannerDbType.Numeric, "\"1\""};
-            yield return new object[] {(ulong) 1, SpannerDbType.Numeric, "\"1\""};
-            yield return new object[] {(short) 1, SpannerDbType.Numeric, "\"1\""};
-            yield return new object[] {(ushort) 1, SpannerDbType.Numeric, "\"1\""};
-            yield return new object[] {"1", SpannerDbType.Numeric, "\"1\""};
-            yield return new object[] {"1.5", SpannerDbType.Numeric, "\"1.5\""};
-            yield return new object[] {DBNull.Value, SpannerDbType.Numeric, "null"};
+            yield return new object[] { SpannerNumeric.Epsilon, SpannerDbType.Numeric, Quote("0.000000001") };
+            yield return new object[] { (byte)1, SpannerDbType.Numeric, Quote("1") };
+            yield return new object[] { (sbyte)1, SpannerDbType.Numeric, Quote("1") };
+            yield return new object[] { 1.5M, SpannerDbType.Numeric, Quote("1.5") };
+            yield return new object[] { 1.5D, SpannerDbType.Numeric, Quote("1.5") };
+            yield return new object[] { 1.5F, SpannerDbType.Numeric, Quote("1.5") };
+            yield return new object[] { 1, SpannerDbType.Numeric, Quote("1") };
+            yield return new object[] { 1U, SpannerDbType.Numeric, Quote("1") };
+            yield return new object[] { 1L, SpannerDbType.Numeric, Quote("1") };
+            yield return new object[] { (ulong)1, SpannerDbType.Numeric, Quote("1") };
+            yield return new object[] { (short)1, SpannerDbType.Numeric, Quote("1") };
+            yield return new object[] { (ushort)1, SpannerDbType.Numeric, Quote("1") };
+            yield return new object[] { "1", SpannerDbType.Numeric, Quote("1") };
+            yield return new object[] { "1.5", SpannerDbType.Numeric, Quote("1.5") };
+            yield return new object[] { DBNull.Value, SpannerDbType.Numeric, "null" };
+            // PgNumeric tests.
+            yield return new object[] { PgNumeric.NaN, SpannerDbType.PgNumeric, Quote("NaN") };
+            yield return new object[] { (byte)1, SpannerDbType.PgNumeric, Quote("1") };
+            yield return new object[] { (sbyte)1, SpannerDbType.PgNumeric, Quote("1") };
+            yield return new object[] { 1.0M, SpannerDbType.PgNumeric, Quote("1.0") };
+            yield return new object[] { 1.0D, SpannerDbType.PgNumeric, Quote("1") };
+            yield return new object[] { 1.0F, SpannerDbType.PgNumeric, Quote("1") };
+            yield return new object[] { 1.5M, SpannerDbType.PgNumeric, Quote("1.5") };
+            yield return new object[] { 1.5D, SpannerDbType.PgNumeric, Quote("1.5") };
+            yield return new object[] { 1.5F, SpannerDbType.PgNumeric, Quote("1.5") };
+            yield return new object[] { 1, SpannerDbType.PgNumeric, Quote("1") };
+            yield return new object[] { 1U, SpannerDbType.PgNumeric, Quote("1") };
+            yield return new object[] { 1L, SpannerDbType.PgNumeric, Quote("1") };
+            yield return new object[] { (ulong)1, SpannerDbType.PgNumeric, Quote("1") };
+            yield return new object[] { (short)1, SpannerDbType.PgNumeric, Quote("1") };
+            yield return new object[] { (ushort)1, SpannerDbType.PgNumeric, Quote("1") };
+            yield return new object[] { "1", SpannerDbType.PgNumeric, Quote("1") };
+            yield return new object[] { "1.5", SpannerDbType.PgNumeric, Quote("1.5") };
+            yield return new object[] { DBNull.Value, SpannerDbType.PgNumeric, "null" };
 
             // Note the difference in C# conversions from special doubles.
-            yield return new object[] {double.NegativeInfinity, SpannerDbType.String, Quote("-Infinity") };
-            yield return new object[] {double.PositiveInfinity, SpannerDbType.String, Quote("Infinity") };
-            yield return new object[] {double.NaN, SpannerDbType.String, Quote("NaN")};
-            yield return new object[] {"1.5", SpannerDbType.String, Quote("1.5")};
+            yield return new object[] { double.NegativeInfinity, SpannerDbType.String, Quote("-Infinity") };
+            yield return new object[] { double.PositiveInfinity, SpannerDbType.String, Quote("Infinity") };
+            yield return new object[] { double.NaN, SpannerDbType.String, Quote("NaN") };
+            yield return new object[] { "1.5", SpannerDbType.String, Quote("1.5") };
             yield return new object[]
                 {new ToStringClass("hello"), SpannerDbType.String, Quote("hello"), TestType.ClrToValue};
 
             // Spanner type = Date+Timestamp tests.  Some of these are one way due to either a lossy conversion (date loses time)
             // or a string formatting difference.
-            yield return new object[] {s_testDate, SpannerDbType.Date, Quote("2017-01-31"), TestType.ClrToValue};
-            yield return new object[] {"1/31/2017", SpannerDbType.Date, Quote("2017-01-31"), TestType.ClrToValue};
+            yield return new object[] { s_testDate, SpannerDbType.Date, Quote("2017-01-31"), TestType.ClrToValue };
+            yield return new object[] { "1/31/2017", SpannerDbType.Date, Quote("2017-01-31"), TestType.ClrToValue };
             yield return new object[]
                 {"1/31/2017 3:15:30 AM", SpannerDbType.Date, Quote("2017-01-31"), TestType.ClrToValue};
-            yield return new object[] {s_testDate, SpannerDbType.Timestamp, Quote("2017-01-31T03:15:30.5Z")};
+            yield return new object[] { s_testDate, SpannerDbType.Timestamp, Quote("2017-01-31T03:15:30.5Z") };
             yield return new object[] {s_testDate.AddTicks(5), SpannerDbType.Timestamp,
                 Quote("2017-01-31T03:15:30.5000005Z")};
             yield return new object[]
@@ -281,9 +315,9 @@ namespace Google.Cloud.Spanner.Data.Tests
                 {"1/31/2017 3:15:30 AM", SpannerDbType.Timestamp, Quote("2017-01-31T03:15:30Z"), TestType.ClrToValue};
 
             // Spanner type = Bytes tests.
-            yield return new object[] {s_base64Encoded, SpannerDbType.Bytes, Quote(s_base64Encoded)};
-            yield return new object[] {s_bytesToEncode, SpannerDbType.Bytes, Quote(s_base64Encoded)};
-            yield return new object[] {"passthrubadbytes", SpannerDbType.Bytes, Quote("passthrubadbytes")};
+            yield return new object[] { s_base64Encoded, SpannerDbType.Bytes, Quote(s_base64Encoded) };
+            yield return new object[] { s_bytesToEncode, SpannerDbType.Bytes, Quote(s_base64Encoded) };
+            yield return new object[] { "passthrubadbytes", SpannerDbType.Bytes, Quote("passthrubadbytes") };
 
             // List test cases (list of type X).
             yield return new object[]
@@ -320,6 +354,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 new List<SpannerNumeric>(GetSpannerNumericsForArray()), SpannerDbType.ArrayOf(SpannerDbType.Numeric),
                 "[ \"-99999999999999999999999999999.999999999\", \"0.000000001\", \"99999999999999999999999999999.999999999\" ]"
+            };
+            yield return new object[]
+            {
+                new List<PgNumeric>(GetPgNumericsForArray()), SpannerDbType.ArrayOf(SpannerDbType.PgNumeric),
+                "[ \""+ExpectedMinValueForPgNumeric+"\", \""+ExpectedMaxValueForPgNumeric+"\", \"NaN\" ]"
             };
             // JSON can not be converted from Value to Clr, as there is no unique Clr type for JSON.
             yield return new object[]
@@ -401,36 +440,42 @@ namespace Google.Cloud.Spanner.Data.Tests
         public static IEnumerable<object[]> GetInvalidValueConversions()
         {
             // Spanner type = Float64 tests.
-            yield return new object[] {(char) 1, SpannerDbType.Float64};
-            yield return new object[] {s_testDate, SpannerDbType.Float64};
-            yield return new object[] {new ToStringClass("1.5"), SpannerDbType.Float64};
-            yield return new object[] {"", SpannerDbType.Float64};
+            yield return new object[] { (char)1, SpannerDbType.Float64 };
+            yield return new object[] { s_testDate, SpannerDbType.Float64 };
+            yield return new object[] { new ToStringClass("1.5"), SpannerDbType.Float64 };
+            yield return new object[] { "", SpannerDbType.Float64 };
 
             // Spanner type = Int64 tests.
-            yield return new object[] {s_testDate, SpannerDbType.Int64};
-            yield return new object[] {double.NegativeInfinity, SpannerDbType.Int64};
-            yield return new object[] {double.PositiveInfinity, SpannerDbType.Int64};
-            yield return new object[] {double.NaN, SpannerDbType.Int64};
-            yield return new object[] {"1.5", SpannerDbType.Int64};
-            yield return new object[] {new ToStringClass("1.5"), SpannerDbType.Int64};
+            yield return new object[] { s_testDate, SpannerDbType.Int64 };
+            yield return new object[] { double.NegativeInfinity, SpannerDbType.Int64 };
+            yield return new object[] { double.PositiveInfinity, SpannerDbType.Int64 };
+            yield return new object[] { double.NaN, SpannerDbType.Int64 };
+            yield return new object[] { "1.5", SpannerDbType.Int64 };
+            yield return new object[] { new ToStringClass("1.5"), SpannerDbType.Int64 };
 
             // Spanner type = Bool tests.
-            yield return new object[] {(char) 1, SpannerDbType.Bool};
-            yield return new object[] {"1", SpannerDbType.Bool};
-            yield return new object[] {new ToStringClass("true"), SpannerDbType.Bool};
+            yield return new object[] { (char)1, SpannerDbType.Bool };
+            yield return new object[] { "1", SpannerDbType.Bool };
+            yield return new object[] { new ToStringClass("true"), SpannerDbType.Bool };
 
             // Spanner type = String tests.
             // (all work)
 
             // Spanner type = Date tests.
-            yield return new object[] {new ToStringClass("hello"), SpannerDbType.Date};
-            yield return new object[] {"badjuju", SpannerDbType.Date};
+            yield return new object[] { new ToStringClass("hello"), SpannerDbType.Date };
+            yield return new object[] { "badjuju", SpannerDbType.Date };
 
             // Spanner type = Numeric tests.
-            yield return new object[] {true, SpannerDbType.Numeric};
-            yield return new object[] {double.NegativeInfinity, SpannerDbType.Numeric};
-            yield return new object[] {double.PositiveInfinity, SpannerDbType.Numeric};
-            yield return new object[] {double.NaN, SpannerDbType.Numeric};
+            yield return new object[] { true, SpannerDbType.Numeric };
+            yield return new object[] { double.NegativeInfinity, SpannerDbType.Numeric };
+            yield return new object[] { double.PositiveInfinity, SpannerDbType.Numeric };
+            yield return new object[] { double.NaN, SpannerDbType.Numeric };
+
+            // Spanner type = PgNumeric tests.
+            yield return new object[] { true, SpannerDbType.PgNumeric };
+            yield return new object[] { double.NegativeInfinity, SpannerDbType.PgNumeric };
+            yield return new object[] { double.PositiveInfinity, SpannerDbType.PgNumeric };
+            yield return new object[] { double.NaN, SpannerDbType.PgNumeric };
         }
 
         private static readonly CultureInfo[] s_cultures = new[]
@@ -445,7 +490,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             from parameters in GetValidValueConversions()
             select new object[] { culture }.Concat(parameters).ToArray();
 
-        private void AssertJsonEqual<T>(string expected, string actual) where T: IMessage, new()
+        private void AssertJsonEqual<T>(string expected, string actual) where T : IMessage, new()
         {
             var expectedObject = JsonParser.Default.Parse<T>(expected);
             var actualObject = JsonParser.Default.Parse<T>(actual);
@@ -543,7 +588,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var dbType = SpannerDbType.ArrayOf(s_sampleStruct.GetSpannerDbType());
             var actual = dbType.ConvertToClrType<List<object>>(wireValue, SpannerConversionOptions.Default);
             Assert.Equal(1, actual.Count);
-            AssertSampleStruct((SpannerStruct) actual[0]);
+            AssertSampleStruct((SpannerStruct)actual[0]);
         }
 
         [Fact]
@@ -578,7 +623,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 Assert.Equal(expectedField.Type, actualField.Type);
                 Assert.Equal(expectedField.Value, actualField.Value);
             }
-        }        
+        }
 
         [Fact]
         public void DeserializeDoubleArrayContainingNull()

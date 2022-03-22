@@ -33,7 +33,13 @@ namespace Google.Cloud.Spanner.Data
 
         private SpannerDbType _spannerDbType;
 
-        /// <inheritdoc />
+        /// <summary>
+        /// Specifies the data type of a field, a property, or a Parameter object of a .NET
+        /// Framework data provider.
+        /// </summary>
+        /// <remarks>
+        /// Using DbType of VarNumeric will always default to SpannerDbType of SpannerNumeric and never to PgNumeric.
+        /// </remarks>
         public override DbType DbType
         {
             get => (SpannerDbType?.DbType).GetValueOrDefault(DbType.Object);

@@ -34,6 +34,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                     { "", SpannerDbType.Int64, 1 },
                     { "", SpannerDbType.Json, "{\"key\": \"value\"}" },
                     { "", SpannerDbType.Numeric, SpannerNumeric.Parse("10.1") },
+                    { "", SpannerDbType.PgNumeric, PgNumeric.Parse("20.1") },
                     { "", SpannerDbType.String, "test" },
                     { "", SpannerDbType.Timestamp, new DateTime(2021, 9, 10, 9, 37, 10, DateTimeKind.Utc) }
                 });
@@ -45,6 +46,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Equal("1", key.KeyParts.Values[index++].StringValue);
             Assert.Equal("{\"key\": \"value\"}", key.KeyParts.Values[index++].StringValue);
             Assert.Equal("10.1", key.KeyParts.Values[index++].StringValue);
+            Assert.Equal("20.1", key.KeyParts.Values[index++].StringValue);
             Assert.Equal("test", key.KeyParts.Values[index++].StringValue);
             Assert.Equal("2021-09-10T09:37:10Z", key.KeyParts.Values[index++].StringValue);
         }
@@ -67,6 +69,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 1L,
                 // JSON cannot be created directly from a Clr type.
                 SpannerNumeric.Parse("10.1"),
+                PgNumeric.Parse("20.1"),
                 "test",
                 new DateTime(2021, 9, 10, 9, 37, 10, DateTimeKind.Utc)
             );
@@ -76,6 +79,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Equal(3.14, key.KeyParts.Values[index++].NumberValue);
             Assert.Equal("1", key.KeyParts.Values[index++].StringValue);
             Assert.Equal("10.1", key.KeyParts.Values[index++].StringValue);
+            Assert.Equal("20.1", key.KeyParts.Values[index++].StringValue);
             Assert.Equal("test", key.KeyParts.Values[index++].StringValue);
             Assert.Equal("2021-09-10T09:37:10Z", key.KeyParts.Values[index++].StringValue);
         }

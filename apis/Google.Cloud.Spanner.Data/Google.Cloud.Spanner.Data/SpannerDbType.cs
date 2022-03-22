@@ -80,19 +80,26 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public static SpannerDbType Numeric { get; } = new SpannerDbType(TypeCode.Numeric);
 
+        /// <summary>
+        /// Representation of PostgreSQL numeric type. 
+        /// The PostgreSQL numeric type has max precision of 147,455 and a max scale of 16383.
+        /// </summary>
+        public static SpannerDbType PgNumeric { get; } = new SpannerDbType(TypeCode.Numeric, TypeAnnotationCode.PgNumeric);
+
         private static readonly Dictionary<V1.Type, SpannerDbType> s_simpleTypes
             = new Dictionary<V1.Type, SpannerDbType>
             {
-                {new V1.Type { Code = TypeCode.Unspecified } , Unspecified },
-                {new V1.Type { Code = TypeCode.Bool }, Bool },
-                {new V1.Type { Code = TypeCode.Int64 }, Int64 },
-                {new V1.Type { Code = TypeCode.Float64 }, Float64 },
-                {new V1.Type { Code = TypeCode.Timestamp }, Timestamp },
-                {new V1.Type { Code = TypeCode.Date }, Date },
-                {new V1.Type { Code = TypeCode.String }, String },
-                {new V1.Type { Code = TypeCode.Bytes }, Bytes },
-                {new V1.Type { Code = TypeCode.Json }, Json },
-                {new V1.Type { Code = TypeCode.Numeric }, Numeric }
+                { new V1.Type { Code = TypeCode.Unspecified } , Unspecified },
+                { new V1.Type { Code = TypeCode.Bool }, Bool },
+                { new V1.Type { Code = TypeCode.Int64 }, Int64 },
+                { new V1.Type { Code = TypeCode.Float64 }, Float64 },
+                { new V1.Type { Code = TypeCode.Timestamp }, Timestamp },
+                { new V1.Type { Code = TypeCode.Date }, Date },
+                { new V1.Type { Code = TypeCode.String }, String },
+                { new V1.Type { Code = TypeCode.Bytes }, Bytes },
+                { new V1.Type { Code = TypeCode.Json }, Json },
+                { new V1.Type { Code = TypeCode.Numeric }, Numeric },
+                { new V1.Type { Code = TypeCode.Numeric, TypeAnnotation = TypeAnnotationCode.PgNumeric }, PgNumeric }
             };
 
         internal static SpannerDbType FromType(V1.Type type) =>
@@ -102,6 +109,7 @@ namespace Google.Cloud.Spanner.Data
         internal TypeCode TypeCode { get; }
 
         internal TypeAnnotationCode TypeAnnotationCode { get; }
+
         /// <summary>
         /// When TypeCode is Array, this is the array element type. (Null for non-arrays.)
         /// </summary>
@@ -151,6 +159,7 @@ namespace Google.Cloud.Spanner.Data
                     case TypeCode.Float64:
                         return DbType.Double;
                     case TypeCode.Numeric:
+                        // This handles PG numeric as well.
                         return DbType.VarNumeric;
                     case TypeCode.Timestamp:
                         return DbType.DateTime;
@@ -195,6 +204,10 @@ namespace Google.Cloud.Spanner.Data
                     case TypeCode.Struct:
                         return typeof(SpannerStruct);
                     case TypeCode.Numeric:
+                        if (TypeAnnotationCode == TypeAnnotationCode.PgNumeric)
+                        {
+                            return typeof(PgNumeric);
+                        }
                         return typeof(SpannerNumeric);
                     case TypeCode.Json:
                         return typeof(string);
@@ -315,6 +328,10 @@ namespace Google.Cloud.Spanner.Data
             {
                 return Numeric;
             }
+            if (type == typeof(PgNumeric))
+            {
+                return PgNumeric;
+            }
             if (type == typeof(string))
             {
                 return String;
@@ -342,7 +359,7 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override bool Equals(object obj) => Equals(obj as SpannerDbType);
 
-        private bool Equals(SpannerDbType other) => other != null 
+        private bool Equals(SpannerDbType other) => other != null
             && Lists.Equals(StructFields, other.StructFields)
             && TypeCode == other.TypeCode
             && TypeAnnotationCode == other.TypeAnnotationCode
