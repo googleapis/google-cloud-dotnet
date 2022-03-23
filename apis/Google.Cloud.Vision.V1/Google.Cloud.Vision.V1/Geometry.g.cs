@@ -25,18 +25,17 @@ namespace Google.Cloud.Vision.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVnb29nbGUvY2xvdWQvdmlzaW9uL3YxL2dlb21ldHJ5LnByb3RvEhZnb29n",
-            "bGUuY2xvdWQudmlzaW9uLnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnBy",
-            "b3RvIh4KBlZlcnRleBIJCgF4GAEgASgFEgkKAXkYAiABKAUiKAoQTm9ybWFs",
-            "aXplZFZlcnRleBIJCgF4GAEgASgCEgkKAXkYAiABKAIihwEKDEJvdW5kaW5n",
-            "UG9seRIwCgh2ZXJ0aWNlcxgBIAMoCzIeLmdvb2dsZS5jbG91ZC52aXNpb24u",
-            "djEuVmVydGV4EkUKE25vcm1hbGl6ZWRfdmVydGljZXMYAiADKAsyKC5nb29n",
-            "bGUuY2xvdWQudmlzaW9uLnYxLk5vcm1hbGl6ZWRWZXJ0ZXgiKwoIUG9zaXRp",
-            "b24SCQoBeBgBIAEoAhIJCgF5GAIgASgCEgkKAXoYAyABKAJCdQoaY29tLmdv",
-            "b2dsZS5jbG91ZC52aXNpb24udjFCDUdlb21ldHJ5UHJvdG9QAVo8Z29vZ2xl",
-            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC92aXNpb24v",
-            "djE7dmlzaW9u+AEBogIER0NWTmIGcHJvdG8z"));
+            "bGUuY2xvdWQudmlzaW9uLnYxIh4KBlZlcnRleBIJCgF4GAEgASgFEgkKAXkY",
+            "AiABKAUiKAoQTm9ybWFsaXplZFZlcnRleBIJCgF4GAEgASgCEgkKAXkYAiAB",
+            "KAIihwEKDEJvdW5kaW5nUG9seRIwCgh2ZXJ0aWNlcxgBIAMoCzIeLmdvb2ds",
+            "ZS5jbG91ZC52aXNpb24udjEuVmVydGV4EkUKE25vcm1hbGl6ZWRfdmVydGlj",
+            "ZXMYAiADKAsyKC5nb29nbGUuY2xvdWQudmlzaW9uLnYxLk5vcm1hbGl6ZWRW",
+            "ZXJ0ZXgiKwoIUG9zaXRpb24SCQoBeBgBIAEoAhIJCgF5GAIgASgCEgkKAXoY",
+            "AyABKAJCdQoaY29tLmdvb2dsZS5jbG91ZC52aXNpb24udjFCDUdlb21ldHJ5",
+            "UHJvdG9QAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
+            "cy9jbG91ZC92aXNpb24vdjE7dmlzaW9u+AEBogIER0NWTmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Vertex), global::Google.Cloud.Vision.V1.Vertex.Parser, new[]{ "X", "Y" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.NormalizedVertex), global::Google.Cloud.Vision.V1.NormalizedVertex.Parser, new[]{ "X", "Y" }, null, null, null, null),
