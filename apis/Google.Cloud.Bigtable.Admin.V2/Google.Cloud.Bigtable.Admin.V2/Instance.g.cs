@@ -77,15 +77,23 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "bnNhY3Rpb25hbF93cml0ZXMYAiABKAg6b+pBbAonYmlndGFibGVhZG1pbi5n",
             "b29nbGVhcGlzLmNvbS9BcHBQcm9maWxlEkFwcm9qZWN0cy97cHJvamVjdH0v",
             "aW5zdGFuY2VzL3tpbnN0YW5jZX0vYXBwUHJvZmlsZXMve2FwcF9wcm9maWxl",
-            "fUIQCg5yb3V0aW5nX3BvbGljeULQAgocY29tLmdvb2dsZS5iaWd0YWJsZS5h",
-            "ZG1pbi52MkINSW5zdGFuY2VQcm90b1ABWj1nb29nbGUuZ29sYW5nLm9yZy9n",
-            "ZW5wcm90by9nb29nbGVhcGlzL2JpZ3RhYmxlL2FkbWluL3YyO2FkbWluqgIe",
-            "R29vZ2xlLkNsb3VkLkJpZ3RhYmxlLkFkbWluLlYyygIeR29vZ2xlXENsb3Vk",
-            "XEJpZ3RhYmxlXEFkbWluXFYy6gIiR29vZ2xlOjpDbG91ZDo6QmlndGFibGU6",
-            "OkFkbWluOjpWMupBeAohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRv",
-            "S2V5ElNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "a2V5UmluZ3Mve2tleV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fWIG",
-            "cHJvdG8z"));
+            "fUIQCg5yb3V0aW5nX3BvbGljeSKIAwoJSG90VGFibGV0EgwKBG5hbWUYASAB",
+            "KAkSOwoKdGFibGVfbmFtZRgCIAEoCUIn+kEkCiJiaWd0YWJsZWFkbWluLmdv",
+            "b2dsZWFwaXMuY29tL1RhYmxlEjMKCnN0YXJ0X3RpbWUYAyABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUYBCABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEQoJc3RhcnRfa2V5",
+            "GAUgASgJEg8KB2VuZF9rZXkYBiABKAkSIwoWbm9kZV9jcHVfdXNhZ2VfcGVy",
+            "Y2VudBgHIAEoAkID4EEDOn/qQXwKJmJpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBp",
+            "cy5jb20vSG90VGFibGV0ElJwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2Vz",
+            "L3tpbnN0YW5jZX0vY2x1c3RlcnMve2NsdXN0ZXJ9L2hvdFRhYmxldHMve2hv",
+            "dF90YWJsZXR9QtACChxjb20uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyQg1J",
+            "bnN0YW5jZVByb3RvUAFaPWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
+            "b2dsZWFwaXMvYmlndGFibGUvYWRtaW4vdjI7YWRtaW6qAh5Hb29nbGUuQ2xv",
+            "dWQuQmlndGFibGUuQWRtaW4uVjLKAh5Hb29nbGVcQ2xvdWRcQmlndGFibGVc",
+            "QWRtaW5cVjLqAiJHb29nbGU6OkNsb3VkOjpCaWd0YWJsZTo6QWRtaW46OlYy",
+            "6kF4CiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXkSU3Byb2pl",
+            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97",
+            "a2V5X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0b19rZXl9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Bigtable.Admin.V2.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -96,7 +104,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterConfig), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterConfig.Parser, new[]{ "ClusterAutoscalingConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig.Parser, new[]{ "KmsKeyName" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Parser, new[]{ "Name", "Etag", "Description", "MultiClusterRoutingUseAny", "SingleClusterRouting" }, new[]{ "RoutingPolicy" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Parser, new[]{ "ClusterIds" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting.Parser, new[]{ "ClusterId", "AllowTransactionalWrites" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting.Parser, new[]{ "ClusterId", "AllowTransactionalWrites" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.HotTablet), global::Google.Cloud.Bigtable.Admin.V2.HotTablet.Parser, new[]{ "Name", "TableName", "StartTime", "EndTime", "StartKey", "EndKey", "NodeCpuUsagePercent" }, null, null, null, null)
           }));
     }
     #endregion
@@ -3057,6 +3066,468 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// A tablet is a defined by a start and end key and is explained in
+  /// https://cloud.google.com/bigtable/docs/overview#architecture and
+  /// https://cloud.google.com/bigtable/docs/performance#optimization.
+  /// A Hot tablet is a tablet that exhibits high average cpu usage during the time
+  /// interval from start time to end time.
+  /// </summary>
+  public sealed partial class HotTablet : pb::IMessage<HotTablet>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<HotTablet> _parser = new pb::MessageParser<HotTablet>(() => new HotTablet());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<HotTablet> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.Admin.V2.InstanceReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public HotTablet() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public HotTablet(HotTablet other) : this() {
+      name_ = other.name_;
+      tableName_ = other.tableName_;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      startKey_ = other.startKey_;
+      endKey_ = other.endKey_;
+      nodeCpuUsagePercent_ = other.nodeCpuUsagePercent_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public HotTablet Clone() {
+      return new HotTablet(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// The unique name of the hot tablet. Values are of the form
+    /// `projects/{project}/instances/{instance}/clusters/{cluster}/hotTablets/[a-zA-Z0-9_-]*`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "table_name" field.</summary>
+    public const int TableNameFieldNumber = 2;
+    private string tableName_ = "";
+    /// <summary>
+    /// Name of the table that contains the tablet. Values are of the form
+    /// `projects/{project}/instances/{instance}/tables/[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TableName {
+      get { return tableName_; }
+      set {
+        tableName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// Output only. The start time of the hot tablet.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// Output only. The end time of the hot tablet.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "start_key" field.</summary>
+    public const int StartKeyFieldNumber = 5;
+    private string startKey_ = "";
+    /// <summary>
+    /// Tablet Start Key (inclusive).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string StartKey {
+      get { return startKey_; }
+      set {
+        startKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "end_key" field.</summary>
+    public const int EndKeyFieldNumber = 6;
+    private string endKey_ = "";
+    /// <summary>
+    /// Tablet End Key (inclusive).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EndKey {
+      get { return endKey_; }
+      set {
+        endKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "node_cpu_usage_percent" field.</summary>
+    public const int NodeCpuUsagePercentFieldNumber = 7;
+    private float nodeCpuUsagePercent_;
+    /// <summary>
+    /// Output only. The average CPU usage spent by a node on this tablet over the start_time to
+    /// end_time time range. The percentage is the amount of CPU used by the node
+    /// to serve the tablet, from 0% (tablet was not interacted with) to 100% (the
+    /// node spent all cycles serving the hot tablet).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float NodeCpuUsagePercent {
+      get { return nodeCpuUsagePercent_; }
+      set {
+        nodeCpuUsagePercent_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as HotTablet);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(HotTablet other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (TableName != other.TableName) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (StartKey != other.StartKey) return false;
+      if (EndKey != other.EndKey) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(NodeCpuUsagePercent, other.NodeCpuUsagePercent)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (TableName.Length != 0) hash ^= TableName.GetHashCode();
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (StartKey.Length != 0) hash ^= StartKey.GetHashCode();
+      if (EndKey.Length != 0) hash ^= EndKey.GetHashCode();
+      if (NodeCpuUsagePercent != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(NodeCpuUsagePercent);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (TableName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(TableName);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(EndTime);
+      }
+      if (StartKey.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(StartKey);
+      }
+      if (EndKey.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(EndKey);
+      }
+      if (NodeCpuUsagePercent != 0F) {
+        output.WriteRawTag(61);
+        output.WriteFloat(NodeCpuUsagePercent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (TableName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(TableName);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(EndTime);
+      }
+      if (StartKey.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(StartKey);
+      }
+      if (EndKey.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(EndKey);
+      }
+      if (NodeCpuUsagePercent != 0F) {
+        output.WriteRawTag(61);
+        output.WriteFloat(NodeCpuUsagePercent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (TableName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TableName);
+      }
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (StartKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(StartKey);
+      }
+      if (EndKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EndKey);
+      }
+      if (NodeCpuUsagePercent != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(HotTablet other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.TableName.Length != 0) {
+        TableName = other.TableName;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      if (other.StartKey.Length != 0) {
+        StartKey = other.StartKey;
+      }
+      if (other.EndKey.Length != 0) {
+        EndKey = other.EndKey;
+      }
+      if (other.NodeCpuUsagePercent != 0F) {
+        NodeCpuUsagePercent = other.NodeCpuUsagePercent;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            TableName = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 34: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 42: {
+            StartKey = input.ReadString();
+            break;
+          }
+          case 50: {
+            EndKey = input.ReadString();
+            break;
+          }
+          case 61: {
+            NodeCpuUsagePercent = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            TableName = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 34: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 42: {
+            StartKey = input.ReadString();
+            break;
+          }
+          case 50: {
+            EndKey = input.ReadString();
+            break;
+          }
+          case 61: {
+            NodeCpuUsagePercent = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

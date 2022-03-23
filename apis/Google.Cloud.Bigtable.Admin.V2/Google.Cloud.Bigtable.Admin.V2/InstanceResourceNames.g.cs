@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
 using gcbav = Google.Cloud.Bigtable.Admin.V2;
+using gcbcv = Google.Cloud.Bigtable.Common.V2;
 using sys = System;
 
 namespace Google.Cloud.Bigtable.Admin.V2
@@ -705,6 +706,263 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public static bool operator !=(AppProfileName a, AppProfileName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>HotTablet</c> resource.</summary>
+    public sealed partial class HotTabletName : gax::IResourceName, sys::IEquatable<HotTabletName>
+    {
+        /// <summary>The possible contents of <see cref="HotTabletName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/instances/{instance}/clusters/{cluster}/hotTablets/{hot_tablet}</c>.
+            /// </summary>
+            ProjectInstanceClusterHotTablet = 1,
+        }
+
+        private static gax::PathTemplate s_projectInstanceClusterHotTablet = new gax::PathTemplate("projects/{project}/instances/{instance}/clusters/{cluster}/hotTablets/{hot_tablet}");
+
+        /// <summary>Creates a <see cref="HotTabletName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="HotTabletName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static HotTabletName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new HotTabletName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="HotTabletName"/> with the pattern
+        /// <c>projects/{project}/instances/{instance}/clusters/{cluster}/hotTablets/{hot_tablet}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="instanceId">The <c>Instance</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="clusterId">The <c>Cluster</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="hotTabletId">The <c>HotTablet</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="HotTabletName"/> constructed from the provided ids.</returns>
+        public static HotTabletName FromProjectInstanceClusterHotTablet(string projectId, string instanceId, string clusterId, string hotTabletId) =>
+            new HotTabletName(ResourceNameType.ProjectInstanceClusterHotTablet, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), instanceId: gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)), clusterId: gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)), hotTabletId: gax::GaxPreconditions.CheckNotNullOrEmpty(hotTabletId, nameof(hotTabletId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="HotTabletName"/> with pattern
+        /// <c>projects/{project}/instances/{instance}/clusters/{cluster}/hotTablets/{hot_tablet}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="instanceId">The <c>Instance</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="clusterId">The <c>Cluster</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="hotTabletId">The <c>HotTablet</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="HotTabletName"/> with pattern
+        /// <c>projects/{project}/instances/{instance}/clusters/{cluster}/hotTablets/{hot_tablet}</c>.
+        /// </returns>
+        public static string Format(string projectId, string instanceId, string clusterId, string hotTabletId) =>
+            FormatProjectInstanceClusterHotTablet(projectId, instanceId, clusterId, hotTabletId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="HotTabletName"/> with pattern
+        /// <c>projects/{project}/instances/{instance}/clusters/{cluster}/hotTablets/{hot_tablet}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="instanceId">The <c>Instance</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="clusterId">The <c>Cluster</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="hotTabletId">The <c>HotTablet</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="HotTabletName"/> with pattern
+        /// <c>projects/{project}/instances/{instance}/clusters/{cluster}/hotTablets/{hot_tablet}</c>.
+        /// </returns>
+        public static string FormatProjectInstanceClusterHotTablet(string projectId, string instanceId, string clusterId, string hotTabletId) =>
+            s_projectInstanceClusterHotTablet.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)), gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)), gax::GaxPreconditions.CheckNotNullOrEmpty(hotTabletId, nameof(hotTabletId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="HotTabletName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/instances/{instance}/clusters/{cluster}/hotTablets/{hot_tablet}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="hotTabletName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="HotTabletName"/> if successful.</returns>
+        public static HotTabletName Parse(string hotTabletName) => Parse(hotTabletName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="HotTabletName"/> instance; optionally allowing
+        /// an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/instances/{instance}/clusters/{cluster}/hotTablets/{hot_tablet}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="hotTabletName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="HotTabletName"/> if successful.</returns>
+        public static HotTabletName Parse(string hotTabletName, bool allowUnparsed) =>
+            TryParse(hotTabletName, allowUnparsed, out HotTabletName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="HotTabletName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/instances/{instance}/clusters/{cluster}/hotTablets/{hot_tablet}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="hotTabletName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="HotTabletName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string hotTabletName, out HotTabletName result) => TryParse(hotTabletName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="HotTabletName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/instances/{instance}/clusters/{cluster}/hotTablets/{hot_tablet}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="hotTabletName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="HotTabletName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string hotTabletName, bool allowUnparsed, out HotTabletName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(hotTabletName, nameof(hotTabletName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectInstanceClusterHotTablet.TryParseName(hotTabletName, out resourceName))
+            {
+                result = FromProjectInstanceClusterHotTablet(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(hotTabletName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private HotTabletName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string clusterId = null, string hotTabletId = null, string instanceId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            ClusterId = clusterId;
+            HotTabletId = hotTabletId;
+            InstanceId = instanceId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="HotTabletName"/> class from the component parts of pattern
+        /// <c>projects/{project}/instances/{instance}/clusters/{cluster}/hotTablets/{hot_tablet}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="instanceId">The <c>Instance</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="clusterId">The <c>Cluster</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="hotTabletId">The <c>HotTablet</c> ID. Must not be <c>null</c> or empty.</param>
+        public HotTabletName(string projectId, string instanceId, string clusterId, string hotTabletId) : this(ResourceNameType.ProjectInstanceClusterHotTablet, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), instanceId: gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)), clusterId: gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)), hotTabletId: gax::GaxPreconditions.CheckNotNullOrEmpty(hotTabletId, nameof(hotTabletId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Cluster</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ClusterId { get; }
+
+        /// <summary>
+        /// The <c>HotTablet</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string HotTabletId { get; }
+
+        /// <summary>
+        /// The <c>Instance</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string InstanceId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectInstanceClusterHotTablet: return s_projectInstanceClusterHotTablet.Expand(ProjectId, InstanceId, ClusterId, HotTabletId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as HotTabletName);
+
+        /// <inheritdoc/>
+        public bool Equals(HotTabletName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(HotTabletName a, HotTabletName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(HotTabletName a, HotTabletName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>CryptoKey</c> resource.</summary>
     public sealed partial class CryptoKeyName : gax::IResourceName, sys::IEquatable<CryptoKeyName>
     {
@@ -1004,6 +1262,27 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             get => string.IsNullOrEmpty(Name) ? null : gcbav::AppProfileName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class HotTablet
+    {
+        /// <summary>
+        /// <see cref="gcbav::HotTabletName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbav::HotTabletName HotTabletName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbav::HotTabletName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gcbcv::TableName"/>-typed view over the <see cref="TableName"/> resource name property.
+        /// </summary>
+        public gcbcv::TableName TableNameAsTableName
+        {
+            get => string.IsNullOrEmpty(TableName) ? null : gcbcv::TableName.Parse(TableName, allowUnparsed: true);
+            set => TableName = value?.ToString() ?? "";
         }
     }
 }

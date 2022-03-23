@@ -162,4 +162,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class ListHotTabletsRequest
+    {
+        /// <summary>
+        /// <see cref="ClusterName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ClusterName ParentAsClusterName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ClusterName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
 }

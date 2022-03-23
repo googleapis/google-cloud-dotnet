@@ -111,104 +111,115 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "d2FybmluZ3MYAyABKAgidgoXRGVsZXRlQXBwUHJvZmlsZVJlcXVlc3QSPQoE",
             "bmFtZRgBIAEoCUIv4EEC+kEpCidiaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMu",
             "Y29tL0FwcFByb2ZpbGUSHAoPaWdub3JlX3dhcm5pbmdzGAIgASgIQgPgQQIi",
-            "GgoYVXBkYXRlQXBwUHJvZmlsZU1ldGFkYXRhMokgChVCaWd0YWJsZUluc3Rh",
-            "bmNlQWRtaW4S2gEKDkNyZWF0ZUluc3RhbmNlEi8uZ29vZ2xlLmJpZ3RhYmxl",
-            "LmFkbWluLnYyLkNyZWF0ZUluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5sb25n",
-            "cnVubmluZy5PcGVyYXRpb24ieILT5JMCJiIhL3YyL3twYXJlbnQ9cHJvamVj",
-            "dHMvKn0vaW5zdGFuY2VzOgEq2kEkcGFyZW50LGluc3RhbmNlX2lkLGluc3Rh",
-            "bmNlLGNsdXN0ZXJzykEiCghJbnN0YW5jZRIWQ3JlYXRlSW5zdGFuY2VNZXRh",
-            "ZGF0YRKRAQoLR2V0SW5zdGFuY2USLC5nb29nbGUuYmlndGFibGUuYWRtaW4u",
-            "djIuR2V0SW5zdGFuY2VSZXF1ZXN0GiIuZ29vZ2xlLmJpZ3RhYmxlLmFkbWlu",
-            "LnYyLkluc3RhbmNlIjCC0+STAiMSIS92Mi97bmFtZT1wcm9qZWN0cy8qL2lu",
-            "c3RhbmNlcy8qfdpBBG5hbWUSpAEKDUxpc3RJbnN0YW5jZXMSLi5nb29nbGUu",
-            "YmlndGFibGUuYWRtaW4udjIuTGlzdEluc3RhbmNlc1JlcXVlc3QaLy5nb29n",
-            "bGUuYmlndGFibGUuYWRtaW4udjIuTGlzdEluc3RhbmNlc1Jlc3BvbnNlIjKC",
-            "0+STAiMSIS92Mi97cGFyZW50PXByb2plY3RzLyp9L2luc3RhbmNlc9pBBnBh",
-            "cmVudBKGAQoOVXBkYXRlSW5zdGFuY2USIi5nb29nbGUuYmlndGFibGUuYWRt",
-            "aW4udjIuSW5zdGFuY2UaIi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuSW5z",
-            "dGFuY2UiLILT5JMCJhohL3YyL3tuYW1lPXByb2plY3RzLyovaW5zdGFuY2Vz",
-            "Lyp9OgEqEugBChVQYXJ0aWFsVXBkYXRlSW5zdGFuY2USNi5nb29nbGUuYmln",
-            "dGFibGUuYWRtaW4udjIuUGFydGlhbFVwZGF0ZUluc3RhbmNlUmVxdWVzdBod",
-            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ieILT5JMCNjIqL3YyL3tp",
-            "bnN0YW5jZS5uYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyp9OghpbnN0YW5j",
-            "ZdpBFGluc3RhbmNlLHVwZGF0ZV9tYXNrykEiCghJbnN0YW5jZRIWVXBkYXRl",
-            "SW5zdGFuY2VNZXRhZGF0YRKLAQoORGVsZXRlSW5zdGFuY2USLy5nb29nbGUu",
-            "YmlndGFibGUuYWRtaW4udjIuRGVsZXRlSW5zdGFuY2VSZXF1ZXN0GhYuZ29v",
-            "Z2xlLnByb3RvYnVmLkVtcHR5IjCC0+STAiMqIS92Mi97bmFtZT1wcm9qZWN0",
-            "cy8qL2luc3RhbmNlcy8qfdpBBG5hbWUS3AEKDUNyZWF0ZUNsdXN0ZXISLi5n",
-            "b29nbGUuYmlndGFibGUuYWRtaW4udjIuQ3JlYXRlQ2x1c3RlclJlcXVlc3Qa",
-            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uInyC0+STAjciLC92Mi97",
-            "cGFyZW50PXByb2plY3RzLyovaW5zdGFuY2VzLyp9L2NsdXN0ZXJzOgdjbHVz",
-            "dGVy2kEZcGFyZW50LGNsdXN0ZXJfaWQsY2x1c3RlcspBIAoHQ2x1c3RlchIV",
-            "Q3JlYXRlQ2x1c3Rlck1ldGFkYXRhEpkBCgpHZXRDbHVzdGVyEisuZ29vZ2xl",
-            "LmJpZ3RhYmxlLmFkbWluLnYyLkdldENsdXN0ZXJSZXF1ZXN0GiEuZ29vZ2xl",
-            "LmJpZ3RhYmxlLmFkbWluLnYyLkNsdXN0ZXIiO4LT5JMCLhIsL3YyL3tuYW1l",
-            "PXByb2plY3RzLyovaW5zdGFuY2VzLyovY2x1c3RlcnMvKn3aQQRuYW1lEqwB",
-            "CgxMaXN0Q2x1c3RlcnMSLS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuTGlz",
-            "dENsdXN0ZXJzUmVxdWVzdBouLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5M",
-            "aXN0Q2x1c3RlcnNSZXNwb25zZSI9gtPkkwIuEiwvdjIve3BhcmVudD1wcm9q",
-            "ZWN0cy8qL2luc3RhbmNlcy8qfS9jbHVzdGVyc9pBBnBhcmVudBKtAQoNVXBk",
-            "YXRlQ2x1c3RlchIhLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5DbHVzdGVy",
-            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJagtPkkwIxGiwvdjIv",
-            "e25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9jbHVzdGVycy8qfToBKspB",
-            "IAoHQ2x1c3RlchIVVXBkYXRlQ2x1c3Rlck1ldGFkYXRhEvQBChRQYXJ0aWFs",
-            "VXBkYXRlQ2x1c3RlchI1Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5QYXJ0",
-            "aWFsVXBkYXRlQ2x1c3RlclJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcu",
-            "T3BlcmF0aW9uIoUBgtPkkwI/MjQvdjIve2NsdXN0ZXIubmFtZT1wcm9qZWN0",
-            "cy8qL2luc3RhbmNlcy8qL2NsdXN0ZXJzLyp9OgdjbHVzdGVy2kETY2x1c3Rl",
-            "cix1cGRhdGVfbWFza8pBJwoHQ2x1c3RlchIcUGFydGlhbFVwZGF0ZUNsdXN0",
-            "ZXJNZXRhZGF0YRKUAQoNRGVsZXRlQ2x1c3RlchIuLmdvb2dsZS5iaWd0YWJs",
-            "ZS5hZG1pbi52Mi5EZWxldGVDbHVzdGVyUmVxdWVzdBoWLmdvb2dsZS5wcm90",
-            "b2J1Zi5FbXB0eSI7gtPkkwIuKiwvdjIve25hbWU9cHJvamVjdHMvKi9pbnN0",
-            "YW5jZXMvKi9jbHVzdGVycy8qfdpBBG5hbWUS1QEKEENyZWF0ZUFwcFByb2Zp",
-            "bGUSMS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQ3JlYXRlQXBwUHJvZmls",
+            "GgoYVXBkYXRlQXBwUHJvZmlsZU1ldGFkYXRhItoBChVMaXN0SG90VGFibGV0",
+            "c1JlcXVlc3QSPAoGcGFyZW50GAEgASgJQizgQQL6QSYKJGJpZ3RhYmxlYWRt",
+            "aW4uZ29vZ2xlYXBpcy5jb20vQ2x1c3RlchIuCgpzdGFydF90aW1lGAIgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgDIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEQoJcGFnZV9zaXplGAQg",
+            "ASgFEhIKCnBhZ2VfdG9rZW4YBSABKAkiawoWTGlzdEhvdFRhYmxldHNSZXNw",
+            "b25zZRI4Cgtob3RfdGFibGV0cxgBIAMoCzIjLmdvb2dsZS5iaWd0YWJsZS5h",
+            "ZG1pbi52Mi5Ib3RUYWJsZXQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJMssh",
+            "ChVCaWd0YWJsZUluc3RhbmNlQWRtaW4S2gEKDkNyZWF0ZUluc3RhbmNlEi8u",
+            "Z29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkNyZWF0ZUluc3RhbmNlUmVxdWVz",
+            "dBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ieILT5JMCJiIhL3Yy",
+            "L3twYXJlbnQ9cHJvamVjdHMvKn0vaW5zdGFuY2VzOgEq2kEkcGFyZW50LGlu",
+            "c3RhbmNlX2lkLGluc3RhbmNlLGNsdXN0ZXJzykEiCghJbnN0YW5jZRIWQ3Jl",
+            "YXRlSW5zdGFuY2VNZXRhZGF0YRKRAQoLR2V0SW5zdGFuY2USLC5nb29nbGUu",
+            "YmlndGFibGUuYWRtaW4udjIuR2V0SW5zdGFuY2VSZXF1ZXN0GiIuZ29vZ2xl",
+            "LmJpZ3RhYmxlLmFkbWluLnYyLkluc3RhbmNlIjCC0+STAiMSIS92Mi97bmFt",
+            "ZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfdpBBG5hbWUSpAEKDUxpc3RJbnN0",
+            "YW5jZXMSLi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuTGlzdEluc3RhbmNl",
+            "c1JlcXVlc3QaLy5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuTGlzdEluc3Rh",
+            "bmNlc1Jlc3BvbnNlIjKC0+STAiMSIS92Mi97cGFyZW50PXByb2plY3RzLyp9",
+            "L2luc3RhbmNlc9pBBnBhcmVudBKGAQoOVXBkYXRlSW5zdGFuY2USIi5nb29n",
+            "bGUuYmlndGFibGUuYWRtaW4udjIuSW5zdGFuY2UaIi5nb29nbGUuYmlndGFi",
+            "bGUuYWRtaW4udjIuSW5zdGFuY2UiLILT5JMCJhohL3YyL3tuYW1lPXByb2pl",
+            "Y3RzLyovaW5zdGFuY2VzLyp9OgEqEugBChVQYXJ0aWFsVXBkYXRlSW5zdGFu",
+            "Y2USNi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuUGFydGlhbFVwZGF0ZUlu",
+            "c3RhbmNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
+            "eILT5JMCNjIqL3YyL3tpbnN0YW5jZS5uYW1lPXByb2plY3RzLyovaW5zdGFu",
+            "Y2VzLyp9OghpbnN0YW5jZdpBFGluc3RhbmNlLHVwZGF0ZV9tYXNrykEiCghJ",
+            "bnN0YW5jZRIWVXBkYXRlSW5zdGFuY2VNZXRhZGF0YRKLAQoORGVsZXRlSW5z",
+            "dGFuY2USLy5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuRGVsZXRlSW5zdGFu",
+            "Y2VSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjCC0+STAiMqIS92",
+            "Mi97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfdpBBG5hbWUS3AEKDUNy",
+            "ZWF0ZUNsdXN0ZXISLi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQ3JlYXRl",
+            "Q2x1c3RlclJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
+            "InyC0+STAjciLC92Mi97cGFyZW50PXByb2plY3RzLyovaW5zdGFuY2VzLyp9",
+            "L2NsdXN0ZXJzOgdjbHVzdGVy2kEZcGFyZW50LGNsdXN0ZXJfaWQsY2x1c3Rl",
+            "cspBIAoHQ2x1c3RlchIVQ3JlYXRlQ2x1c3Rlck1ldGFkYXRhEpkBCgpHZXRD",
+            "bHVzdGVyEisuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkdldENsdXN0ZXJS",
+            "ZXF1ZXN0GiEuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkNsdXN0ZXIiO4LT",
+            "5JMCLhIsL3YyL3tuYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovY2x1c3Rl",
+            "cnMvKn3aQQRuYW1lEqwBCgxMaXN0Q2x1c3RlcnMSLS5nb29nbGUuYmlndGFi",
+            "bGUuYWRtaW4udjIuTGlzdENsdXN0ZXJzUmVxdWVzdBouLmdvb2dsZS5iaWd0",
+            "YWJsZS5hZG1pbi52Mi5MaXN0Q2x1c3RlcnNSZXNwb25zZSI9gtPkkwIuEiwv",
+            "djIve3BhcmVudD1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfS9jbHVzdGVyc9pB",
+            "BnBhcmVudBKtAQoNVXBkYXRlQ2x1c3RlchIhLmdvb2dsZS5iaWd0YWJsZS5h",
+            "ZG1pbi52Mi5DbHVzdGVyGh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
+            "biJagtPkkwIxGiwvdjIve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9j",
+            "bHVzdGVycy8qfToBKspBIAoHQ2x1c3RlchIVVXBkYXRlQ2x1c3Rlck1ldGFk",
+            "YXRhEvQBChRQYXJ0aWFsVXBkYXRlQ2x1c3RlchI1Lmdvb2dsZS5iaWd0YWJs",
+            "ZS5hZG1pbi52Mi5QYXJ0aWFsVXBkYXRlQ2x1c3RlclJlcXVlc3QaHS5nb29n",
+            "bGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIoUBgtPkkwI/MjQvdjIve2NsdXN0",
+            "ZXIubmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2NsdXN0ZXJzLyp9Ogdj",
+            "bHVzdGVy2kETY2x1c3Rlcix1cGRhdGVfbWFza8pBJwoHQ2x1c3RlchIcUGFy",
+            "dGlhbFVwZGF0ZUNsdXN0ZXJNZXRhZGF0YRKUAQoNRGVsZXRlQ2x1c3RlchIu",
+            "Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5EZWxldGVDbHVzdGVyUmVxdWVz",
+            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI7gtPkkwIuKiwvdjIve25hbWU9",
+            "cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9jbHVzdGVycy8qfdpBBG5hbWUS1QEK",
+            "EENyZWF0ZUFwcFByb2ZpbGUSMS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIu",
+            "Q3JlYXRlQXBwUHJvZmlsZVJlcXVlc3QaJC5nb29nbGUuYmlndGFibGUuYWRt",
+            "aW4udjIuQXBwUHJvZmlsZSJogtPkkwI+Ii8vdjIve3BhcmVudD1wcm9qZWN0",
+            "cy8qL2luc3RhbmNlcy8qfS9hcHBQcm9maWxlczoLYXBwX3Byb2ZpbGXaQSFw",
+            "YXJlbnQsYXBwX3Byb2ZpbGVfaWQsYXBwX3Byb2ZpbGUSpQEKDUdldEFwcFBy",
+            "b2ZpbGUSLi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuR2V0QXBwUHJvZmls",
             "ZVJlcXVlc3QaJC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQXBwUHJvZmls",
-            "ZSJogtPkkwI+Ii8vdjIve3BhcmVudD1wcm9qZWN0cy8qL2luc3RhbmNlcy8q",
-            "fS9hcHBQcm9maWxlczoLYXBwX3Byb2ZpbGXaQSFwYXJlbnQsYXBwX3Byb2Zp",
-            "bGVfaWQsYXBwX3Byb2ZpbGUSpQEKDUdldEFwcFByb2ZpbGUSLi5nb29nbGUu",
-            "YmlndGFibGUuYWRtaW4udjIuR2V0QXBwUHJvZmlsZVJlcXVlc3QaJC5nb29n",
-            "bGUuYmlndGFibGUuYWRtaW4udjIuQXBwUHJvZmlsZSI+gtPkkwIxEi8vdjIv",
-            "e25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9hcHBQcm9maWxlcy8qfdpB",
-            "BG5hbWUSuAEKD0xpc3RBcHBQcm9maWxlcxIwLmdvb2dsZS5iaWd0YWJsZS5h",
-            "ZG1pbi52Mi5MaXN0QXBwUHJvZmlsZXNSZXF1ZXN0GjEuZ29vZ2xlLmJpZ3Rh",
-            "YmxlLmFkbWluLnYyLkxpc3RBcHBQcm9maWxlc1Jlc3BvbnNlIkCC0+STAjES",
-            "Ly92Mi97cGFyZW50PXByb2plY3RzLyovaW5zdGFuY2VzLyp9L2FwcFByb2Zp",
-            "bGVz2kEGcGFyZW50EvoBChBVcGRhdGVBcHBQcm9maWxlEjEuZ29vZ2xlLmJp",
-            "Z3RhYmxlLmFkbWluLnYyLlVwZGF0ZUFwcFByb2ZpbGVSZXF1ZXN0Gh0uZ29v",
-            "Z2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKTAYLT5JMCSjI7L3YyL3thcHBf",
-            "cHJvZmlsZS5uYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovYXBwUHJvZmls",
-            "ZXMvKn06C2FwcF9wcm9maWxl2kEXYXBwX3Byb2ZpbGUsdXBkYXRlX21hc2vK",
-            "QSYKCkFwcFByb2ZpbGUSGFVwZGF0ZUFwcFByb2ZpbGVNZXRhZGF0YRKdAQoQ",
-            "RGVsZXRlQXBwUHJvZmlsZRIxLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5E",
-            "ZWxldGVBcHBQcm9maWxlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eSI+gtPkkwIxKi8vdjIve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9h",
-            "cHBQcm9maWxlcy8qfdpBBG5hbWUSkwEKDEdldElhbVBvbGljeRIiLmdvb2ds",
-            "ZS5pYW0udjEuR2V0SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEu",
-            "UG9saWN5IkiC0+STAjciMi92Mi97cmVzb3VyY2U9cHJvamVjdHMvKi9pbnN0",
-            "YW5jZXMvKn06Z2V0SWFtUG9saWN5OgEq2kEIcmVzb3VyY2USmgEKDFNldElh",
-            "bVBvbGljeRIiLmdvb2dsZS5pYW0udjEuU2V0SWFtUG9saWN5UmVxdWVzdBoV",
-            "Lmdvb2dsZS5pYW0udjEuUG9saWN5Ik+C0+STAjciMi92Mi97cmVzb3VyY2U9",
-            "cHJvamVjdHMvKi9pbnN0YW5jZXMvKn06c2V0SWFtUG9saWN5OgEq2kEPcmVz",
-            "b3VyY2UscG9saWN5EsUBChJUZXN0SWFtUGVybWlzc2lvbnMSKC5nb29nbGUu",
-            "aWFtLnYxLlRlc3RJYW1QZXJtaXNzaW9uc1JlcXVlc3QaKS5nb29nbGUuaWFt",
-            "LnYxLlRlc3RJYW1QZXJtaXNzaW9uc1Jlc3BvbnNlIlqC0+STAj0iOC92Mi97",
-            "cmVzb3VyY2U9cHJvamVjdHMvKi9pbnN0YW5jZXMvKn06dGVzdElhbVBlcm1p",
-            "c3Npb25zOgEq2kEUcmVzb3VyY2UscGVybWlzc2lvbnMamgPKQRxiaWd0YWJs",
-            "ZWFkbWluLmdvb2dsZWFwaXMuY29t0kH3Amh0dHBzOi8vd3d3Lmdvb2dsZWFw",
-            "aXMuY29tL2F1dGgvYmlndGFibGUuYWRtaW4saHR0cHM6Ly93d3cuZ29vZ2xl",
-            "YXBpcy5jb20vYXV0aC9iaWd0YWJsZS5hZG1pbi5jbHVzdGVyLGh0dHBzOi8v",
-            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvYmlndGFibGUuYWRtaW4uaW5zdGFu",
-            "Y2UsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1iaWd0",
-            "YWJsZS5hZG1pbixodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Ns",
-            "b3VkLWJpZ3RhYmxlLmFkbWluLmNsdXN0ZXIsaHR0cHM6Ly93d3cuZ29vZ2xl",
-            "YXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29n",
-            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLnJlYWQtb25seULiAQoc",
-            "Y29tLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52MkIaQmlndGFibGVJbnN0YW5j",
-            "ZUFkbWluUHJvdG9QAVo9Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
-            "Z2xlYXBpcy9iaWd0YWJsZS9hZG1pbi92MjthZG1pbqoCHkdvb2dsZS5DbG91",
-            "ZC5CaWd0YWJsZS5BZG1pbi5WMsoCHkdvb2dsZVxDbG91ZFxCaWd0YWJsZVxB",
-            "ZG1pblxWMuoCIkdvb2dsZTo6Q2xvdWQ6OkJpZ3RhYmxlOjpBZG1pbjo6VjJi",
-            "BnByb3RvMw=="));
+            "ZSI+gtPkkwIxEi8vdjIve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9h",
+            "cHBQcm9maWxlcy8qfdpBBG5hbWUSuAEKD0xpc3RBcHBQcm9maWxlcxIwLmdv",
+            "b2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5MaXN0QXBwUHJvZmlsZXNSZXF1ZXN0",
+            "GjEuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkxpc3RBcHBQcm9maWxlc1Jl",
+            "c3BvbnNlIkCC0+STAjESLy92Mi97cGFyZW50PXByb2plY3RzLyovaW5zdGFu",
+            "Y2VzLyp9L2FwcFByb2ZpbGVz2kEGcGFyZW50EvoBChBVcGRhdGVBcHBQcm9m",
+            "aWxlEjEuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlVwZGF0ZUFwcFByb2Zp",
+            "bGVSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKTAYLT",
+            "5JMCSjI7L3YyL3thcHBfcHJvZmlsZS5uYW1lPXByb2plY3RzLyovaW5zdGFu",
+            "Y2VzLyovYXBwUHJvZmlsZXMvKn06C2FwcF9wcm9maWxl2kEXYXBwX3Byb2Zp",
+            "bGUsdXBkYXRlX21hc2vKQSYKCkFwcFByb2ZpbGUSGFVwZGF0ZUFwcFByb2Zp",
+            "bGVNZXRhZGF0YRKdAQoQRGVsZXRlQXBwUHJvZmlsZRIxLmdvb2dsZS5iaWd0",
+            "YWJsZS5hZG1pbi52Mi5EZWxldGVBcHBQcm9maWxlUmVxdWVzdBoWLmdvb2ds",
+            "ZS5wcm90b2J1Zi5FbXB0eSI+gtPkkwIxKi8vdjIve25hbWU9cHJvamVjdHMv",
+            "Ki9pbnN0YW5jZXMvKi9hcHBQcm9maWxlcy8qfdpBBG5hbWUSkwEKDEdldElh",
+            "bVBvbGljeRIiLmdvb2dsZS5pYW0udjEuR2V0SWFtUG9saWN5UmVxdWVzdBoV",
+            "Lmdvb2dsZS5pYW0udjEuUG9saWN5IkiC0+STAjciMi92Mi97cmVzb3VyY2U9",
+            "cHJvamVjdHMvKi9pbnN0YW5jZXMvKn06Z2V0SWFtUG9saWN5OgEq2kEIcmVz",
+            "b3VyY2USmgEKDFNldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEuU2V0SWFt",
+            "UG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5Ik+C0+STAjci",
+            "Mi92Mi97cmVzb3VyY2U9cHJvamVjdHMvKi9pbnN0YW5jZXMvKn06c2V0SWFt",
+            "UG9saWN5OgEq2kEPcmVzb3VyY2UscG9saWN5EsUBChJUZXN0SWFtUGVybWlz",
+            "c2lvbnMSKC5nb29nbGUuaWFtLnYxLlRlc3RJYW1QZXJtaXNzaW9uc1JlcXVl",
+            "c3QaKS5nb29nbGUuaWFtLnYxLlRlc3RJYW1QZXJtaXNzaW9uc1Jlc3BvbnNl",
+            "IlqC0+STAj0iOC92Mi97cmVzb3VyY2U9cHJvamVjdHMvKi9pbnN0YW5jZXMv",
+            "Kn06dGVzdElhbVBlcm1pc3Npb25zOgEq2kEUcmVzb3VyY2UscGVybWlzc2lv",
+            "bnMSvwEKDkxpc3RIb3RUYWJsZXRzEi8uZ29vZ2xlLmJpZ3RhYmxlLmFkbWlu",
+            "LnYyLkxpc3RIb3RUYWJsZXRzUmVxdWVzdBowLmdvb2dsZS5iaWd0YWJsZS5h",
+            "ZG1pbi52Mi5MaXN0SG90VGFibGV0c1Jlc3BvbnNlIkqC0+STAjsSOS92Mi97",
+            "cGFyZW50PXByb2plY3RzLyovaW5zdGFuY2VzLyovY2x1c3RlcnMvKn0vaG90",
+            "VGFibGV0c9pBBnBhcmVudBqaA8pBHGJpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBp",
+            "cy5jb23SQfcCaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9iaWd0",
+            "YWJsZS5hZG1pbixodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Jp",
+            "Z3RhYmxlLmFkbWluLmNsdXN0ZXIsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
+            "b20vYXV0aC9iaWd0YWJsZS5hZG1pbi5pbnN0YW5jZSxodHRwczovL3d3dy5n",
+            "b29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLWJpZ3RhYmxlLmFkbWluLGh0dHBz",
+            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtYmlndGFibGUuYWRt",
+            "aW4uY2x1c3RlcixodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Ns",
+            "b3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
+            "Y2xvdWQtcGxhdGZvcm0ucmVhZC1vbmx5QuIBChxjb20uZ29vZ2xlLmJpZ3Rh",
+            "YmxlLmFkbWluLnYyQhpCaWd0YWJsZUluc3RhbmNlQWRtaW5Qcm90b1ABWj1n",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2JpZ3RhYmxl",
+            "L2FkbWluL3YyO2FkbWluqgIeR29vZ2xlLkNsb3VkLkJpZ3RhYmxlLkFkbWlu",
+            "LlYyygIeR29vZ2xlXENsb3VkXEJpZ3RhYmxlXEFkbWluXFYy6gIiR29vZ2xl",
+            "OjpDbG91ZDo6QmlndGFibGU6OkFkbWluOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Bigtable.Admin.V2.InstanceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -235,7 +246,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse), global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse.Parser, new[]{ "AppProfiles", "NextPageToken", "FailedLocations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest), global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest.Parser, new[]{ "AppProfile", "UpdateMask", "IgnoreWarnings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest), global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest.Parser, new[]{ "Name", "IgnoreWarnings" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileMetadata), global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileMetadata.Parser, null, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileMetadata), global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileMetadata.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListHotTabletsRequest), global::Google.Cloud.Bigtable.Admin.V2.ListHotTabletsRequest.Parser, new[]{ "Parent", "StartTime", "EndTime", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListHotTabletsResponse), global::Google.Cloud.Bigtable.Admin.V2.ListHotTabletsResponse.Parser, new[]{ "HotTablets", "NextPageToken" }, null, null, null, null)
           }));
     }
     #endregion
@@ -6391,6 +6404,624 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for BigtableInstanceAdmin.ListHotTablets.
+  /// </summary>
+  public sealed partial class ListHotTabletsRequest : pb::IMessage<ListHotTabletsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListHotTabletsRequest> _parser = new pb::MessageParser<ListHotTabletsRequest>(() => new ListHotTabletsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListHotTabletsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[24]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListHotTabletsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListHotTabletsRequest(ListHotTabletsRequest other) : this() {
+      parent_ = other.parent_;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListHotTabletsRequest Clone() {
+      return new ListHotTabletsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The cluster name to list hot tablets.
+    /// Value is in the following form:
+    /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// The start time to list hot tablets. The hot tablets in the response will
+    /// have start times between the requested start time and end time. Start time
+    /// defaults to Now if it is unset, and end time defaults to Now - 24 hours if
+    /// it is unset. The start time should be less than the end time, and the
+    /// maximum allowed time range between start time and end time is 48 hours.
+    /// Start time and end time should have values between Now and Now - 14 days.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// The end time to list hot tablets.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 4;
+    private int pageSize_;
+    /// <summary>
+    /// Maximum number of results per page.
+    ///
+    /// A page_size that is empty or zero lets the server choose the number of
+    /// items to return. A page_size which is strictly positive will return at most
+    /// that many items. A negative page_size will cause an error.
+    ///
+    /// Following the first request, subsequent paginated calls do not need a
+    /// page_size field. If a page_size is set in subsequent calls, it must match
+    /// the page_size given in the first request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 5;
+    private string pageToken_ = "";
+    /// <summary>
+    /// The value of `next_page_token` returned by a previous call.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListHotTabletsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListHotTabletsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EndTime);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EndTime);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListHotTabletsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 26: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 32: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 42: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 26: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 32: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 42: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response message for BigtableInstanceAdmin.ListHotTablets.
+  /// </summary>
+  public sealed partial class ListHotTabletsResponse : pb::IMessage<ListHotTabletsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListHotTabletsResponse> _parser = new pb::MessageParser<ListHotTabletsResponse>(() => new ListHotTabletsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListHotTabletsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[25]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListHotTabletsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListHotTabletsResponse(ListHotTabletsResponse other) : this() {
+      hotTablets_ = other.hotTablets_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListHotTabletsResponse Clone() {
+      return new ListHotTabletsResponse(this);
+    }
+
+    /// <summary>Field number for the "hot_tablets" field.</summary>
+    public const int HotTabletsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Bigtable.Admin.V2.HotTablet> _repeated_hotTablets_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Bigtable.Admin.V2.HotTablet.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Bigtable.Admin.V2.HotTablet> hotTablets_ = new pbc::RepeatedField<global::Google.Cloud.Bigtable.Admin.V2.HotTablet>();
+    /// <summary>
+    /// List of hot tablets in the tables of the requested cluster that fall
+    /// within the requested time range. Hot tablets are ordered by node cpu usage
+    /// percent. If there are multiple hot tablets that correspond to the same
+    /// tablet within a 15-minute interval, only the hot tablet with the highest
+    /// node cpu usage will be included in the response.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Bigtable.Admin.V2.HotTablet> HotTablets {
+      get { return hotTablets_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// Set if not all hot tablets could be returned in a single response.
+    /// Pass this value to `page_token` in another request to get the next
+    /// page of results.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListHotTabletsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListHotTabletsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!hotTablets_.Equals(other.hotTablets_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= hotTablets_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      hotTablets_.WriteTo(output, _repeated_hotTablets_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      hotTablets_.WriteTo(ref output, _repeated_hotTablets_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += hotTablets_.CalculateSize(_repeated_hotTablets_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListHotTabletsResponse other) {
+      if (other == null) {
+        return;
+      }
+      hotTablets_.Add(other.hotTablets_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            hotTablets_.AddEntriesFrom(input, _repeated_hotTablets_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            hotTablets_.AddEntriesFrom(ref input, _repeated_hotTablets_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
         }
       }
     }
