@@ -25,20 +25,19 @@ namespace Google.Cloud.DocumentAI.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cilnb29nbGUvY2xvdWQvZG9jdW1lbnRhaS92MS9nZW9tZXRyeS5wcm90bxIa",
-            "Z29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEaHGdvb2dsZS9hcGkvYW5ub3Rh",
-            "dGlvbnMucHJvdG8iHgoGVmVydGV4EgkKAXgYASABKAUSCQoBeRgCIAEoBSIo",
-            "ChBOb3JtYWxpemVkVmVydGV4EgkKAXgYASABKAISCQoBeRgCIAEoAiKPAQoM",
-            "Qm91bmRpbmdQb2x5EjQKCHZlcnRpY2VzGAEgAygLMiIuZ29vZ2xlLmNsb3Vk",
-            "LmRvY3VtZW50YWkudjEuVmVydGV4EkkKE25vcm1hbGl6ZWRfdmVydGljZXMY",
-            "AiADKAsyLC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MS5Ob3JtYWxpemVk",
-            "VmVydGV4QtEBCh5jb20uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFCDUdl",
-            "b21ldHJ5UHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
-            "Z2xlYXBpcy9jbG91ZC9kb2N1bWVudGFpL3YxO2RvY3VtZW50YWmqAhpHb29n",
-            "bGUuQ2xvdWQuRG9jdW1lbnRBSS5WMcoCGkdvb2dsZVxDbG91ZFxEb2N1bWVu",
-            "dEFJXFYx6gIdR29vZ2xlOjpDbG91ZDo6RG9jdW1lbnRBSTo6VjFiBnByb3Rv",
-            "Mw=="));
+            "Z29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEiHgoGVmVydGV4EgkKAXgYASAB",
+            "KAUSCQoBeRgCIAEoBSIoChBOb3JtYWxpemVkVmVydGV4EgkKAXgYASABKAIS",
+            "CQoBeRgCIAEoAiKPAQoMQm91bmRpbmdQb2x5EjQKCHZlcnRpY2VzGAEgAygL",
+            "MiIuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEuVmVydGV4EkkKE25vcm1h",
+            "bGl6ZWRfdmVydGljZXMYAiADKAsyLC5nb29nbGUuY2xvdWQuZG9jdW1lbnRh",
+            "aS52MS5Ob3JtYWxpemVkVmVydGV4QtEBCh5jb20uZ29vZ2xlLmNsb3VkLmRv",
+            "Y3VtZW50YWkudjFCDUdlb21ldHJ5UHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5v",
+            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kb2N1bWVudGFpL3YxO2Rv",
+            "Y3VtZW50YWmqAhpHb29nbGUuQ2xvdWQuRG9jdW1lbnRBSS5WMcoCGkdvb2ds",
+            "ZVxDbG91ZFxEb2N1bWVudEFJXFYx6gIdR29vZ2xlOjpDbG91ZDo6RG9jdW1l",
+            "bnRBSTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Vertex), global::Google.Cloud.DocumentAI.V1.Vertex.Parser, new[]{ "X", "Y" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.NormalizedVertex), global::Google.Cloud.DocumentAI.V1.NormalizedVertex.Parser, new[]{ "X", "Y" }, null, null, null, null),
