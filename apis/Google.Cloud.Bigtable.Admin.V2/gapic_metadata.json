@@ -82,6 +82,12 @@
                 "ListClustersAsync"
               ]
             },
+            "ListHotTablets": {
+              "methods": [
+                "ListHotTablets",
+                "ListHotTabletsAsync"
+              ]
+            },
             "ListInstances": {
               "methods": [
                 "ListInstances",

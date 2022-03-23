@@ -2745,6 +2745,161 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListHotTablets_sync",
+      "title": "ListHotTabletsRequestObject",
+      "description": "Snippet for ListHotTablets",
+      "file": "BigtableInstanceAdminClient.ListHotTabletsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListHotTablets",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListHotTablets",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListHotTabletsResponse, Google.Cloud.Bigtable.Admin.V2.HotTablet>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListHotTablets",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListHotTablets",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListHotTablets_async",
+      "title": "ListHotTabletsRequestObjectAsync",
+      "description": "Snippet for ListHotTabletsAsync",
+      "file": "BigtableInstanceAdminClient.ListHotTabletsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListHotTabletsAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListHotTabletsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListHotTabletsResponse, Google.Cloud.Bigtable.Admin.V2.HotTablet>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListHotTablets",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListHotTablets",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListHotTablets_sync_flattened",
+      "title": "ListHotTablets",
+      "description": "Snippet for ListHotTablets",
+      "file": "BigtableInstanceAdminClient.ListHotTabletsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListHotTablets",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListHotTablets",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListHotTabletsResponse, Google.Cloud.Bigtable.Admin.V2.HotTablet>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListHotTablets",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListHotTablets",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListHotTablets_async_flattened",
+      "title": "ListHotTabletsAsync",
+      "description": "Snippet for ListHotTabletsAsync",
+      "file": "BigtableInstanceAdminClient.ListHotTabletsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListHotTabletsAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListHotTabletsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListHotTabletsResponse, Google.Cloud.Bigtable.Admin.V2.HotTablet>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListHotTablets",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListHotTablets",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListHotTablets_sync_flattened_resourceNames",
+      "title": "ListHotTabletsResourceNames",
+      "description": "Snippet for ListHotTablets",
+      "file": "BigtableInstanceAdminClient.ListHotTabletsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListHotTablets",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListHotTablets",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListHotTabletsResponse, Google.Cloud.Bigtable.Admin.V2.HotTablet>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListHotTablets",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListHotTablets",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListHotTablets_async_flattened_resourceNames",
+      "title": "ListHotTabletsResourceNamesAsync",
+      "description": "Snippet for ListHotTabletsAsync",
+      "file": "BigtableInstanceAdminClient.ListHotTabletsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListHotTabletsAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListHotTabletsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListHotTabletsResponse, Google.Cloud.Bigtable.Admin.V2.HotTablet>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListHotTablets",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListHotTablets",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_CreateTable_sync",
       "title": "CreateTableRequestObject",
       "description": "Snippet for CreateTable",

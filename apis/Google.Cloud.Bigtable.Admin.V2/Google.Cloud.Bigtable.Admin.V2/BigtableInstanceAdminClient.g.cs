@@ -76,6 +76,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             GetIamPolicySettings = existing.GetIamPolicySettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
+            ListHotTabletsSettings = existing.ListHotTabletsSettings;
             OnCopy(existing);
         }
 
@@ -555,6 +556,28 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.ListHotTablets</c> and <c>BigtableInstanceAdminClient.ListHotTabletsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 2</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListHotTabletsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="BigtableInstanceAdminSettings"/> object.</returns>
@@ -3445,6 +3468,134 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gax::IResourceName resource, scg::IEnumerable<string> permissions, st::CancellationToken cancellationToken) =>
             TestIamPermissionsAsync(resource, permissions, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists hot tablets in a cluster, within the time range provided. Hot
+        /// tablets are ordered based on CPU usage.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="HotTablet"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListHotTabletsResponse, HotTablet> ListHotTablets(ListHotTabletsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists hot tablets in a cluster, within the time range provided. Hot
+        /// tablets are ordered based on CPU usage.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="HotTablet"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListHotTabletsResponse, HotTablet> ListHotTabletsAsync(ListHotTabletsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists hot tablets in a cluster, within the time range provided. Hot
+        /// tablets are ordered based on CPU usage.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The cluster name to list hot tablets.
+        /// Value is in the following form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="HotTablet"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListHotTabletsResponse, HotTablet> ListHotTablets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListHotTablets(new ListHotTabletsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists hot tablets in a cluster, within the time range provided. Hot
+        /// tablets are ordered based on CPU usage.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The cluster name to list hot tablets.
+        /// Value is in the following form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="HotTablet"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListHotTabletsResponse, HotTablet> ListHotTabletsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListHotTabletsAsync(new ListHotTabletsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists hot tablets in a cluster, within the time range provided. Hot
+        /// tablets are ordered based on CPU usage.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The cluster name to list hot tablets.
+        /// Value is in the following form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="HotTablet"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListHotTabletsResponse, HotTablet> ListHotTablets(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListHotTablets(new ListHotTabletsRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists hot tablets in a cluster, within the time range provided. Hot
+        /// tablets are ordered based on CPU usage.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The cluster name to list hot tablets.
+        /// Value is in the following form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="HotTablet"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListHotTabletsResponse, HotTablet> ListHotTabletsAsync(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListHotTabletsAsync(new ListHotTabletsRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
     }
 
     /// <summary>BigtableInstanceAdmin client wrapper implementation, for convenient use.</summary>
@@ -3494,6 +3645,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         private readonly gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> _callSetIamPolicy;
 
         private readonly gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> _callTestIamPermissions;
+
+        private readonly gaxgrpc::ApiCall<ListHotTabletsRequest, ListHotTabletsResponse> _callListHotTablets;
 
         /// <summary>
         /// Constructs a client wrapper for the BigtableInstanceAdmin service, with the specified gRPC client and
@@ -3572,6 +3725,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
             _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>(grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
+            _callListHotTablets = clientHelper.BuildApiCall<ListHotTabletsRequest, ListHotTabletsResponse>(grpcClient.ListHotTabletsAsync, grpcClient.ListHotTablets, effectiveSettings.ListHotTabletsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListHotTablets);
+            Modify_ListHotTabletsApiCall(ref _callListHotTablets);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3617,6 +3773,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> call);
 
+        partial void Modify_ListHotTabletsApiCall(ref gaxgrpc::ApiCall<ListHotTabletsRequest, ListHotTabletsResponse> call);
+
         partial void OnConstruction(BigtableInstanceAdmin.BigtableInstanceAdminClient grpcClient, BigtableInstanceAdminSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC BigtableInstanceAdmin client</summary>
@@ -3661,6 +3819,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         partial void Modify_SetIamPolicyRequest(ref gciv::SetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListHotTabletsRequest(ref ListHotTabletsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateInstance</c>.</summary>
         public override lro::OperationsClient CreateInstanceOperationsClient { get; }
@@ -4223,9 +4383,39 @@ namespace Google.Cloud.Bigtable.Admin.V2
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Lists hot tablets in a cluster, within the time range provided. Hot
+        /// tablets are ordered based on CPU usage.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="HotTablet"/> resources.</returns>
+        public override gax::PagedEnumerable<ListHotTabletsResponse, HotTablet> ListHotTablets(ListHotTabletsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListHotTabletsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListHotTabletsRequest, ListHotTabletsResponse, HotTablet>(_callListHotTablets, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists hot tablets in a cluster, within the time range provided. Hot
+        /// tablets are ordered based on CPU usage.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="HotTablet"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListHotTabletsResponse, HotTablet> ListHotTabletsAsync(ListHotTabletsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListHotTabletsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListHotTabletsRequest, ListHotTabletsResponse, HotTablet>(_callListHotTablets, request, callSettings);
+        }
     }
 
     public partial class ListAppProfilesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListHotTabletsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -4233,6 +4423,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<AppProfile> GetEnumerator() => AppProfiles.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListHotTabletsResponse : gaxgrpc::IPageResponse<HotTablet>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<HotTablet> GetEnumerator() => HotTablets.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
