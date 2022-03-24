@@ -89,6 +89,16 @@ namespace Google.Cloud.AIPlatform.V1
         }
     }
 
+    public partial class ImportModelEvaluationRequest
+    {
+        /// <summary><see cref="ModelName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public ModelName ParentAsModelName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ModelName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetModelEvaluationRequest
     {
         /// <summary>
