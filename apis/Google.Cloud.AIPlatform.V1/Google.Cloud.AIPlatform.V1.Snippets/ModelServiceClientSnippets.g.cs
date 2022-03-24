@@ -1021,6 +1021,99 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ImportModelEvaluation</summary>
+        public void ImportModelEvaluationRequestObject()
+        {
+            // Snippet: ImportModelEvaluation(ImportModelEvaluationRequest, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            ImportModelEvaluationRequest request = new ImportModelEvaluationRequest
+            {
+                ParentAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                ModelEvaluation = new ModelEvaluation(),
+            };
+            // Make the request
+            ModelEvaluation response = modelServiceClient.ImportModelEvaluation(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportModelEvaluationAsync</summary>
+        public async Task ImportModelEvaluationRequestObjectAsync()
+        {
+            // Snippet: ImportModelEvaluationAsync(ImportModelEvaluationRequest, CallSettings)
+            // Additional: ImportModelEvaluationAsync(ImportModelEvaluationRequest, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ImportModelEvaluationRequest request = new ImportModelEvaluationRequest
+            {
+                ParentAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                ModelEvaluation = new ModelEvaluation(),
+            };
+            // Make the request
+            ModelEvaluation response = await modelServiceClient.ImportModelEvaluationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportModelEvaluation</summary>
+        public void ImportModelEvaluation()
+        {
+            // Snippet: ImportModelEvaluation(string, ModelEvaluation, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]";
+            ModelEvaluation modelEvaluation = new ModelEvaluation();
+            // Make the request
+            ModelEvaluation response = modelServiceClient.ImportModelEvaluation(parent, modelEvaluation);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportModelEvaluationAsync</summary>
+        public async Task ImportModelEvaluationAsync()
+        {
+            // Snippet: ImportModelEvaluationAsync(string, ModelEvaluation, CallSettings)
+            // Additional: ImportModelEvaluationAsync(string, ModelEvaluation, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]";
+            ModelEvaluation modelEvaluation = new ModelEvaluation();
+            // Make the request
+            ModelEvaluation response = await modelServiceClient.ImportModelEvaluationAsync(parent, modelEvaluation);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportModelEvaluation</summary>
+        public void ImportModelEvaluationResourceNames()
+        {
+            // Snippet: ImportModelEvaluation(ModelName, ModelEvaluation, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            ModelName parent = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]");
+            ModelEvaluation modelEvaluation = new ModelEvaluation();
+            // Make the request
+            ModelEvaluation response = modelServiceClient.ImportModelEvaluation(parent, modelEvaluation);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportModelEvaluationAsync</summary>
+        public async Task ImportModelEvaluationResourceNamesAsync()
+        {
+            // Snippet: ImportModelEvaluationAsync(ModelName, ModelEvaluation, CallSettings)
+            // Additional: ImportModelEvaluationAsync(ModelName, ModelEvaluation, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ModelName parent = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]");
+            ModelEvaluation modelEvaluation = new ModelEvaluation();
+            // Make the request
+            ModelEvaluation response = await modelServiceClient.ImportModelEvaluationAsync(parent, modelEvaluation);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetModelEvaluation</summary>
         public void GetModelEvaluationRequestObject()
         {

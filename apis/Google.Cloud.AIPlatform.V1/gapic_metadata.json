@@ -799,6 +799,12 @@
                 "GetModelEvaluationSliceAsync"
               ]
             },
+            "ImportModelEvaluation": {
+              "methods": [
+                "ImportModelEvaluation",
+                "ImportModelEvaluationAsync"
+              ]
+            },
             "ListModelEvaluationSlices": {
               "methods": [
                 "ListModelEvaluationSlices",

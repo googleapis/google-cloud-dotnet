@@ -56,6 +56,7 @@ namespace Google.Cloud.AIPlatform.V1
             DeleteModelOperationsSettings = existing.DeleteModelOperationsSettings.Clone();
             ExportModelSettings = existing.ExportModelSettings;
             ExportModelOperationsSettings = existing.ExportModelOperationsSettings.Clone();
+            ImportModelEvaluationSettings = existing.ImportModelEvaluationSettings;
             GetModelEvaluationSettings = existing.GetModelEvaluationSettings;
             ListModelEvaluationsSettings = existing.ListModelEvaluationsSettings;
             GetModelEvaluationSliceSettings = existing.GetModelEvaluationSliceSettings;
@@ -190,6 +191,18 @@ namespace Google.Cloud.AIPlatform.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ModelServiceClient.ImportModelEvaluation</c> and <c>ModelServiceClient.ImportModelEvaluationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ImportModelEvaluationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1214,6 +1227,139 @@ namespace Google.Cloud.AIPlatform.V1
             ExportModelAsync(name, outputConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Imports an externally generated ModelEvaluation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ModelEvaluation ImportModelEvaluation(ImportModelEvaluationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports an externally generated ModelEvaluation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModelEvaluation> ImportModelEvaluationAsync(ImportModelEvaluationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports an externally generated ModelEvaluation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModelEvaluation> ImportModelEvaluationAsync(ImportModelEvaluationRequest request, st::CancellationToken cancellationToken) =>
+            ImportModelEvaluationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Imports an externally generated ModelEvaluation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent model resource.
+        /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="modelEvaluation">
+        /// Required. Model evaluation resource to be imported.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ModelEvaluation ImportModelEvaluation(string parent, ModelEvaluation modelEvaluation, gaxgrpc::CallSettings callSettings = null) =>
+            ImportModelEvaluation(new ImportModelEvaluationRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ModelEvaluation = gax::GaxPreconditions.CheckNotNull(modelEvaluation, nameof(modelEvaluation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports an externally generated ModelEvaluation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent model resource.
+        /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="modelEvaluation">
+        /// Required. Model evaluation resource to be imported.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModelEvaluation> ImportModelEvaluationAsync(string parent, ModelEvaluation modelEvaluation, gaxgrpc::CallSettings callSettings = null) =>
+            ImportModelEvaluationAsync(new ImportModelEvaluationRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ModelEvaluation = gax::GaxPreconditions.CheckNotNull(modelEvaluation, nameof(modelEvaluation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports an externally generated ModelEvaluation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent model resource.
+        /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="modelEvaluation">
+        /// Required. Model evaluation resource to be imported.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModelEvaluation> ImportModelEvaluationAsync(string parent, ModelEvaluation modelEvaluation, st::CancellationToken cancellationToken) =>
+            ImportModelEvaluationAsync(parent, modelEvaluation, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Imports an externally generated ModelEvaluation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent model resource.
+        /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="modelEvaluation">
+        /// Required. Model evaluation resource to be imported.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ModelEvaluation ImportModelEvaluation(ModelName parent, ModelEvaluation modelEvaluation, gaxgrpc::CallSettings callSettings = null) =>
+            ImportModelEvaluation(new ImportModelEvaluationRequest
+            {
+                ParentAsModelName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ModelEvaluation = gax::GaxPreconditions.CheckNotNull(modelEvaluation, nameof(modelEvaluation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports an externally generated ModelEvaluation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent model resource.
+        /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="modelEvaluation">
+        /// Required. Model evaluation resource to be imported.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModelEvaluation> ImportModelEvaluationAsync(ModelName parent, ModelEvaluation modelEvaluation, gaxgrpc::CallSettings callSettings = null) =>
+            ImportModelEvaluationAsync(new ImportModelEvaluationRequest
+            {
+                ParentAsModelName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ModelEvaluation = gax::GaxPreconditions.CheckNotNull(modelEvaluation, nameof(modelEvaluation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports an externally generated ModelEvaluation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent model resource.
+        /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="modelEvaluation">
+        /// Required. Model evaluation resource to be imported.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModelEvaluation> ImportModelEvaluationAsync(ModelName parent, ModelEvaluation modelEvaluation, st::CancellationToken cancellationToken) =>
+            ImportModelEvaluationAsync(parent, modelEvaluation, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets a ModelEvaluation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1706,6 +1852,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<ExportModelRequest, lro::Operation> _callExportModel;
 
+        private readonly gaxgrpc::ApiCall<ImportModelEvaluationRequest, ModelEvaluation> _callImportModelEvaluation;
+
         private readonly gaxgrpc::ApiCall<GetModelEvaluationRequest, ModelEvaluation> _callGetModelEvaluation;
 
         private readonly gaxgrpc::ApiCall<ListModelEvaluationsRequest, ListModelEvaluationsResponse> _callListModelEvaluations;
@@ -1745,6 +1893,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callExportModel = clientHelper.BuildApiCall<ExportModelRequest, lro::Operation>(grpcClient.ExportModelAsync, grpcClient.ExportModel, effectiveSettings.ExportModelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callExportModel);
             Modify_ExportModelApiCall(ref _callExportModel);
+            _callImportModelEvaluation = clientHelper.BuildApiCall<ImportModelEvaluationRequest, ModelEvaluation>(grpcClient.ImportModelEvaluationAsync, grpcClient.ImportModelEvaluation, effectiveSettings.ImportModelEvaluationSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callImportModelEvaluation);
+            Modify_ImportModelEvaluationApiCall(ref _callImportModelEvaluation);
             _callGetModelEvaluation = clientHelper.BuildApiCall<GetModelEvaluationRequest, ModelEvaluation>(grpcClient.GetModelEvaluationAsync, grpcClient.GetModelEvaluation, effectiveSettings.GetModelEvaluationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetModelEvaluation);
             Modify_GetModelEvaluationApiCall(ref _callGetModelEvaluation);
@@ -1774,6 +1925,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_ExportModelApiCall(ref gaxgrpc::ApiCall<ExportModelRequest, lro::Operation> call);
 
+        partial void Modify_ImportModelEvaluationApiCall(ref gaxgrpc::ApiCall<ImportModelEvaluationRequest, ModelEvaluation> call);
+
         partial void Modify_GetModelEvaluationApiCall(ref gaxgrpc::ApiCall<GetModelEvaluationRequest, ModelEvaluation> call);
 
         partial void Modify_ListModelEvaluationsApiCall(ref gaxgrpc::ApiCall<ListModelEvaluationsRequest, ListModelEvaluationsResponse> call);
@@ -1798,6 +1951,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_DeleteModelRequest(ref DeleteModelRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ExportModelRequest(ref ExportModelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ImportModelEvaluationRequest(ref ImportModelEvaluationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetModelEvaluationRequest(ref GetModelEvaluationRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1970,6 +2125,30 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_ExportModelRequest(ref request, ref callSettings);
             return new lro::Operation<ExportModelResponse, ExportModelOperationMetadata>(await _callExportModel.Async(request, callSettings).ConfigureAwait(false), ExportModelOperationsClient);
+        }
+
+        /// <summary>
+        /// Imports an externally generated ModelEvaluation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ModelEvaluation ImportModelEvaluation(ImportModelEvaluationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportModelEvaluationRequest(ref request, ref callSettings);
+            return _callImportModelEvaluation.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Imports an externally generated ModelEvaluation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ModelEvaluation> ImportModelEvaluationAsync(ImportModelEvaluationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportModelEvaluationRequest(ref request, ref callSettings);
+            return _callImportModelEvaluation.Async(request, callSettings);
         }
 
         /// <summary>
