@@ -77,7 +77,7 @@ namespace Google.Cloud.Storage.V1.Tests
             client => client.UpdateBucket(new Bucket { Name = "bucket" }, new UpdateBucketOptions() { IfMetagenerationMatch = 70 }));
 
         [Fact]
-        public void UpdateBucket_WithoutMetgeneration_NoRetry() => NoRetryHelper(
+        public void UpdateBucket_WithoutMetageneration_NoRetry() => NoRetryHelper(
             service => new BucketsResource.UpdateRequest(service, new Bucket { Name = "bucket" }, "bucket") { IfMetagenerationMatch = 70 }, 
             client => client.UpdateBucket(new Bucket { Name = "bucket" }, new UpdateBucketOptions() { IfMetagenerationMatch = 70 }));
 
@@ -92,7 +92,7 @@ namespace Google.Cloud.Storage.V1.Tests
             client => client.PatchBucket(new Bucket { Name = "bucket" }, new PatchBucketOptions() { IfMetagenerationMatch = 70 }));
 
         [Fact]
-        public void PatchBucket_WithoutMetgeneration_NoRetry() => NoRetryHelper(
+        public void PatchBucket_WithoutMetageneration_NoRetry() => NoRetryHelper(
             service => new BucketsResource.PatchRequest(service, new Bucket { Name = "bucket" }, "bucket") { IfMetagenerationMatch = 70 }, 
             client => client.PatchBucket(new Bucket { Name = "bucket" }, new PatchBucketOptions() { IfMetagenerationMatch = 70 }));
 
@@ -305,7 +305,7 @@ namespace Google.Cloud.Storage.V1.Tests
             "check");
 
         [Fact]
-        public void UpdateHmacKey_WithoutMetgeneration_NoRetry() => NoRetryHelper(
+        public void UpdateHmacKey_WithoutMetageneration_NoRetry() => NoRetryHelper(
             service => service.Projects.HmacKeys.Update(new HmacKeyMetadata { ProjectId = "project", AccessId = "access" }, "project", "access"), 
             client => client.UpdateHmacKey(new HmacKeyMetadata { ProjectId = "project", AccessId = "access" }));
 
