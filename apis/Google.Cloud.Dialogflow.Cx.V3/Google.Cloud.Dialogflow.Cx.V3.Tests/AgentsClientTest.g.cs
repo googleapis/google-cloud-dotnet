@@ -58,6 +58,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
 #pragma warning restore CS0612
                 EnableSpellCorrection = true,
                 AdvancedSettings = new AdvancedSettings(),
+                Locked = true,
             };
             mockGrpcClient.Setup(x => x.GetAgent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
@@ -95,6 +96,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
 #pragma warning restore CS0612
                 EnableSpellCorrection = true,
                 AdvancedSettings = new AdvancedSettings(),
+                Locked = true,
             };
             mockGrpcClient.Setup(x => x.GetAgentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Agent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
@@ -134,6 +136,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
 #pragma warning restore CS0612
                 EnableSpellCorrection = true,
                 AdvancedSettings = new AdvancedSettings(),
+                Locked = true,
             };
             mockGrpcClient.Setup(x => x.GetAgent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
@@ -171,6 +174,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
 #pragma warning restore CS0612
                 EnableSpellCorrection = true,
                 AdvancedSettings = new AdvancedSettings(),
+                Locked = true,
             };
             mockGrpcClient.Setup(x => x.GetAgentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Agent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
@@ -210,6 +214,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
 #pragma warning restore CS0612
                 EnableSpellCorrection = true,
                 AdvancedSettings = new AdvancedSettings(),
+                Locked = true,
             };
             mockGrpcClient.Setup(x => x.GetAgent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
@@ -247,6 +252,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
 #pragma warning restore CS0612
                 EnableSpellCorrection = true,
                 AdvancedSettings = new AdvancedSettings(),
+                Locked = true,
             };
             mockGrpcClient.Setup(x => x.GetAgentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Agent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
@@ -287,6 +293,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
 #pragma warning restore CS0612
                 EnableSpellCorrection = true,
                 AdvancedSettings = new AdvancedSettings(),
+                Locked = true,
             };
             mockGrpcClient.Setup(x => x.CreateAgent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
@@ -325,6 +332,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
 #pragma warning restore CS0612
                 EnableSpellCorrection = true,
                 AdvancedSettings = new AdvancedSettings(),
+                Locked = true,
             };
             mockGrpcClient.Setup(x => x.CreateAgentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Agent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
@@ -365,6 +373,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
 #pragma warning restore CS0612
                 EnableSpellCorrection = true,
                 AdvancedSettings = new AdvancedSettings(),
+                Locked = true,
             };
             mockGrpcClient.Setup(x => x.CreateAgent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
@@ -403,6 +412,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
 #pragma warning restore CS0612
                 EnableSpellCorrection = true,
                 AdvancedSettings = new AdvancedSettings(),
+                Locked = true,
             };
             mockGrpcClient.Setup(x => x.CreateAgentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Agent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
@@ -443,6 +453,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
 #pragma warning restore CS0612
                 EnableSpellCorrection = true,
                 AdvancedSettings = new AdvancedSettings(),
+                Locked = true,
             };
             mockGrpcClient.Setup(x => x.CreateAgent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
@@ -481,6 +492,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
 #pragma warning restore CS0612
                 EnableSpellCorrection = true,
                 AdvancedSettings = new AdvancedSettings(),
+                Locked = true,
             };
             mockGrpcClient.Setup(x => x.CreateAgentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Agent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
@@ -521,6 +533,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
 #pragma warning restore CS0612
                 EnableSpellCorrection = true,
                 AdvancedSettings = new AdvancedSettings(),
+                Locked = true,
             };
             mockGrpcClient.Setup(x => x.UpdateAgent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
@@ -559,6 +572,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
 #pragma warning restore CS0612
                 EnableSpellCorrection = true,
                 AdvancedSettings = new AdvancedSettings(),
+                Locked = true,
             };
             mockGrpcClient.Setup(x => x.UpdateAgentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Agent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
@@ -599,6 +613,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
 #pragma warning restore CS0612
                 EnableSpellCorrection = true,
                 AdvancedSettings = new AdvancedSettings(),
+                Locked = true,
             };
             mockGrpcClient.Setup(x => x.UpdateAgent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
@@ -637,6 +652,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
 #pragma warning restore CS0612
                 EnableSpellCorrection = true,
                 AdvancedSettings = new AdvancedSettings(),
+                Locked = true,
             };
             mockGrpcClient.Setup(x => x.UpdateAgentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Agent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);

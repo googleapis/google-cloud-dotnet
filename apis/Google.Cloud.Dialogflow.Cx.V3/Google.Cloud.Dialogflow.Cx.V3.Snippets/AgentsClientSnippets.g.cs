@@ -645,6 +645,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             {
                 AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 AgentUri = "",
+                DataFormat = ExportAgentRequest.Types.DataFormat.Unspecified,
                 EnvironmentAsEnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
             };
             // Make the request
@@ -680,6 +681,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             {
                 AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 AgentUri = "",
+                DataFormat = ExportAgentRequest.Types.DataFormat.Unspecified,
                 EnvironmentAsEnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
             };
             // Make the request
