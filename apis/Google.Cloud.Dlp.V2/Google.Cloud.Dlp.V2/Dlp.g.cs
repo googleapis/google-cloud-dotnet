@@ -25,15 +25,15 @@ namespace Google.Cloud.Dlp.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9nb29nbGUvcHJpdmFjeS9kbHAvdjIvZGxwLnByb3RvEhVnb29nbGUucHJp",
-            "dmFjeS5kbHAudjIaF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvGh9nb29nbGUv",
-            "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNl",
-            "LnByb3RvGiNnb29nbGUvcHJpdmFjeS9kbHAvdjIvc3RvcmFnZS5wcm90bxoe",
-            "Z29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGhtnb29nbGUvcHJvdG9i",
-            "dWYvZW1wdHkucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnBy",
-            "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhdnb29nbGUv",
-            "cnBjL3N0YXR1cy5wcm90bxoWZ29vZ2xlL3R5cGUvZGF0ZS5wcm90bxobZ29v",
-            "Z2xlL3R5cGUvZGF5b2Z3ZWVrLnByb3RvGhtnb29nbGUvdHlwZS90aW1lb2Zk",
-            "YXkucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8iRwoQRXhj",
+            "dmFjeS5kbHAudjIaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aF2dv",
+            "b2dsZS9hcGkvY2xpZW50LnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
+            "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiNnb29nbGUv",
+            "cHJpdmFjeS9kbHAvdjIvc3RvcmFnZS5wcm90bxoeZ29vZ2xlL3Byb3RvYnVm",
+            "L2R1cmF0aW9uLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8a",
+            "IGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJv",
+            "dG9idWYvdGltZXN0YW1wLnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90",
+            "bxoWZ29vZ2xlL3R5cGUvZGF0ZS5wcm90bxobZ29vZ2xlL3R5cGUvZGF5b2Z3",
+            "ZWVrLnByb3RvGhtnb29nbGUvdHlwZS90aW1lb2ZkYXkucHJvdG8iRwoQRXhj",
             "bHVkZUluZm9UeXBlcxIzCgppbmZvX3R5cGVzGAEgAygLMh8uZ29vZ2xlLnBy",
             "aXZhY3kuZGxwLnYyLkluZm9UeXBlIqACCg1FeGNsdXNpb25SdWxlEkYKCmRp",
             "Y3Rpb25hcnkYASABKAsyMC5nb29nbGUucHJpdmFjeS5kbHAudjIuQ3VzdG9t",
@@ -64,13 +64,14 @@ namespace Google.Cloud.Dlp.V2 {
             "ZRgDIAMoCzJALmdvb2dsZS5wcml2YWN5LmRscC52Mi5JbnNwZWN0Q29uZmln",
             "LkZpbmRpbmdMaW1pdHMuSW5mb1R5cGVMaW1pdBpZCg1JbmZvVHlwZUxpbWl0",
             "EjIKCWluZm9fdHlwZRgBIAEoCzIfLmdvb2dsZS5wcml2YWN5LmRscC52Mi5J",
-            "bmZvVHlwZRIUCgxtYXhfZmluZGluZ3MYAiABKAUimAIKD0J5dGVDb250ZW50",
+            "bmZvVHlwZRIUCgxtYXhfZmluZGluZ3MYAiABKAUixQIKD0J5dGVDb250ZW50",
             "SXRlbRI+CgR0eXBlGAEgASgOMjAuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJ5",
-            "dGVDb250ZW50SXRlbS5CeXRlc1R5cGUSDAoEZGF0YRgCIAEoDCK2AQoJQnl0",
+            "dGVDb250ZW50SXRlbS5CeXRlc1R5cGUSDAoEZGF0YRgCIAEoDCLjAQoJQnl0",
             "ZXNUeXBlEhoKFkJZVEVTX1RZUEVfVU5TUEVDSUZJRUQQABIJCgVJTUFHRRAG",
             "Eg4KCklNQUdFX0pQRUcQARINCglJTUFHRV9CTVAQAhINCglJTUFHRV9QTkcQ",
             "AxINCglJTUFHRV9TVkcQBBINCglURVhUX1VURjgQBRIRCg1XT1JEX0RPQ1VN",
-            "RU5UEAcSBwoDUERGEAgSCAoEQVZSTxALEgcKA0NTVhAMEgcKA1RTVhANIpcB",
+            "RU5UEAcSBwoDUERGEAgSFwoTUE9XRVJQT0lOVF9ET0NVTUVOVBAJEhIKDkVY",
+            "Q0VMX0RPQ1VNRU5UEAoSCAoEQVZSTxALEgcKA0NTVhAMEgcKA1RTVhANIpcB",
             "CgtDb250ZW50SXRlbRIPCgV2YWx1ZRgDIAEoCUgAEi0KBXRhYmxlGAQgASgL",
             "MhwuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLlRhYmxlSAASOwoJYnl0ZV9pdGVt",
             "GAUgASgLMiYuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJ5dGVDb250ZW50SXRl",
@@ -995,7 +996,7 @@ namespace Google.Cloud.Dlp.V2 {
             "aW9uTG9jYXRpb24SMW9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9j",
             "YXRpb25zL3tsb2NhdGlvbn1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dlp.V2.RelationalOperator), typeof(global::Google.Cloud.Dlp.V2.MatchingType), typeof(global::Google.Cloud.Dlp.V2.ContentOption), typeof(global::Google.Cloud.Dlp.V2.MetadataType), typeof(global::Google.Cloud.Dlp.V2.InfoTypeSupportedBy), typeof(global::Google.Cloud.Dlp.V2.DlpJobType), typeof(global::Google.Cloud.Dlp.V2.StoredInfoTypeState), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ExcludeInfoTypes), global::Google.Cloud.Dlp.V2.ExcludeInfoTypes.Parser, new[]{ "InfoTypes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ExclusionRule), global::Google.Cloud.Dlp.V2.ExclusionRule.Parser, new[]{ "Dictionary", "Regex", "ExcludeInfoTypes", "MatchingType" }, new[]{ "Type" }, null, null, null),
@@ -1228,7 +1229,7 @@ namespace Google.Cloud.Dlp.V2 {
   }
 
   /// <summary>
-  /// Options describing which parts of the provided content should be scanned.
+  /// Deprecated and unused.
   /// </summary>
   public enum ContentOption {
     /// <summary>
@@ -2520,6 +2521,7 @@ namespace Google.Cloud.Dlp.V2 {
     private global::Google.Cloud.Dlp.V2.InspectConfig.Types.FindingLimits limits_;
     /// <summary>
     /// Configuration to control the number of findings returned.
+    /// This is not used for data profiling.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2536,6 +2538,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// <summary>
     /// When true, a contextual quote from the data that triggered a finding is
     /// included in the response; see Finding.quote.
+    /// This is not used for data profiling.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2551,6 +2554,7 @@ namespace Google.Cloud.Dlp.V2 {
     private bool excludeInfoTypes_;
     /// <summary>
     /// When true, excludes type information of the findings.
+    /// This is not used for data profiling.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2582,8 +2586,7 @@ namespace Google.Cloud.Dlp.V2 {
         = pb::FieldCodec.ForEnum(66, x => (int) x, x => (global::Google.Cloud.Dlp.V2.ContentOption) x);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2.ContentOption> contentOptions_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2.ContentOption>();
     /// <summary>
-    /// List of options defining data content to scan.
-    /// If empty, text, images, and other content will be included.
+    /// Deprecated and unused.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2883,8 +2886,8 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Configuration to control the number of findings returned. Cannot be set if
-      /// de-identification is requested.
+      /// Configuration to control the number of findings returned for inspection.
+      /// This is not used for de-identification or data profiling.
       /// </summary>
       public sealed partial class FindingLimits : pb::IMessage<FindingLimits>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3693,6 +3696,14 @@ namespace Google.Cloud.Dlp.V2 {
         /// pdf
         /// </summary>
         [pbr::OriginalName("PDF")] Pdf = 8,
+        /// <summary>
+        /// pptx, pptm, potx, potm, pot
+        /// </summary>
+        [pbr::OriginalName("POWERPOINT_DOCUMENT")] PowerpointDocument = 9,
+        /// <summary>
+        /// xlsx, xlsm, xltx, xltm
+        /// </summary>
+        [pbr::OriginalName("EXCEL_DOCUMENT")] ExcelDocument = 10,
         /// <summary>
         /// avro
         /// </summary>
