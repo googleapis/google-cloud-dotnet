@@ -578,13 +578,14 @@ namespace Google.Cloud.Retail.V2
             lro::Operation<ImportUserEventsResponse, ImportMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportUserEventsOperationsClient, callSettings);
 
         /// <summary>
-        /// Triggers a user event rejoin operation with latest product catalog. Events
+        /// Starts a user event rejoin operation with latest product catalog. Events
         /// will not be annotated with detailed product information if product is
         /// missing from the catalog at the time the user event is ingested, and these
         /// events are stored as unjoined events with a limited usage on training and
-        /// serving. This API can be used to trigger a 'join' operation on specified
+        /// serving. This method can be used to start a join operation on specified
         /// events with latest version of product catalog. It can also be used to
-        /// correct events joined with wrong product catalog.
+        /// correct events joined with the wrong product catalog. A rejoin operation
+        /// can take hours or days to complete.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -593,13 +594,14 @@ namespace Google.Cloud.Retail.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Triggers a user event rejoin operation with latest product catalog. Events
+        /// Starts a user event rejoin operation with latest product catalog. Events
         /// will not be annotated with detailed product information if product is
         /// missing from the catalog at the time the user event is ingested, and these
         /// events are stored as unjoined events with a limited usage on training and
-        /// serving. This API can be used to trigger a 'join' operation on specified
+        /// serving. This method can be used to start a join operation on specified
         /// events with latest version of product catalog. It can also be used to
-        /// correct events joined with wrong product catalog.
+        /// correct events joined with the wrong product catalog. A rejoin operation
+        /// can take hours or days to complete.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -608,13 +610,14 @@ namespace Google.Cloud.Retail.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Triggers a user event rejoin operation with latest product catalog. Events
+        /// Starts a user event rejoin operation with latest product catalog. Events
         /// will not be annotated with detailed product information if product is
         /// missing from the catalog at the time the user event is ingested, and these
         /// events are stored as unjoined events with a limited usage on training and
-        /// serving. This API can be used to trigger a 'join' operation on specified
+        /// serving. This method can be used to start a join operation on specified
         /// events with latest version of product catalog. It can also be used to
-        /// correct events joined with wrong product catalog.
+        /// correct events joined with the wrong product catalog. A rejoin operation
+        /// can take hours or days to complete.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -855,13 +858,14 @@ namespace Google.Cloud.Retail.V2
         public override lro::OperationsClient RejoinUserEventsOperationsClient { get; }
 
         /// <summary>
-        /// Triggers a user event rejoin operation with latest product catalog. Events
+        /// Starts a user event rejoin operation with latest product catalog. Events
         /// will not be annotated with detailed product information if product is
         /// missing from the catalog at the time the user event is ingested, and these
         /// events are stored as unjoined events with a limited usage on training and
-        /// serving. This API can be used to trigger a 'join' operation on specified
+        /// serving. This method can be used to start a join operation on specified
         /// events with latest version of product catalog. It can also be used to
-        /// correct events joined with wrong product catalog.
+        /// correct events joined with the wrong product catalog. A rejoin operation
+        /// can take hours or days to complete.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -873,13 +877,14 @@ namespace Google.Cloud.Retail.V2
         }
 
         /// <summary>
-        /// Triggers a user event rejoin operation with latest product catalog. Events
+        /// Starts a user event rejoin operation with latest product catalog. Events
         /// will not be annotated with detailed product information if product is
         /// missing from the catalog at the time the user event is ingested, and these
         /// events are stored as unjoined events with a limited usage on training and
-        /// serving. This API can be used to trigger a 'join' operation on specified
+        /// serving. This method can be used to start a join operation on specified
         /// events with latest version of product catalog. It can also be used to
-        /// correct events joined with wrong product catalog.
+        /// correct events joined with the wrong product catalog. A rejoin operation
+        /// can take hours or days to complete.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

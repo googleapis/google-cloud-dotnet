@@ -41,62 +41,62 @@ namespace Google.Cloud.Retail.V2 {
             "cmV0YWlsLnYyLlByb2R1Y3RCA+BBAiJUChVVc2VyRXZlbnRJbmxpbmVTb3Vy",
             "Y2USOwoLdXNlcl9ldmVudHMYASADKAsyIS5nb29nbGUuY2xvdWQucmV0YWls",
             "LnYyLlVzZXJFdmVudEID4EECIjkKEkltcG9ydEVycm9yc0NvbmZpZxIUCgpn",
-            "Y3NfcHJlZml4GAEgASgJSABCDQoLZGVzdGluYXRpb24i9AMKFUltcG9ydFBy",
+            "Y3NfcHJlZml4GAEgASgJSABCDQoLZGVzdGluYXRpb24i+AMKFUltcG9ydFBy",
             "b2R1Y3RzUmVxdWVzdBI0CgZwYXJlbnQYASABKAlCJOBBAvpBHgoccmV0YWls",
-            "Lmdvb2dsZWFwaXMuY29tL0JyYW5jaBISCgpyZXF1ZXN0X2lkGAYgASgJEkUK",
-            "DGlucHV0X2NvbmZpZxgCIAEoCzIqLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIu",
-            "UHJvZHVjdElucHV0Q29uZmlnQgPgQQISQQoNZXJyb3JzX2NvbmZpZxgDIAEo",
-            "CzIqLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuSW1wb3J0RXJyb3JzQ29uZmln",
-            "Ei8KC3VwZGF0ZV9tYXNrGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxk",
-            "TWFzaxJdChNyZWNvbmNpbGlhdGlvbl9tb2RlGAUgASgOMkAuZ29vZ2xlLmNs",
-            "b3VkLnJldGFpbC52Mi5JbXBvcnRQcm9kdWN0c1JlcXVlc3QuUmVjb25jaWxp",
-            "YXRpb25Nb2RlEiEKGW5vdGlmaWNhdGlvbl9wdWJzdWJfdG9waWMYByABKAki",
-            "VAoSUmVjb25jaWxpYXRpb25Nb2RlEiMKH1JFQ09OQ0lMSUFUSU9OX01PREVf",
-            "VU5TUEVDSUZJRUQQABIPCgtJTkNSRU1FTlRBTBABEggKBEZVTEwQAiLcAQoX",
-            "SW1wb3J0VXNlckV2ZW50c1JlcXVlc3QSNQoGcGFyZW50GAEgASgJQiXgQQL6",
-            "QR8KHXJldGFpbC5nb29nbGVhcGlzLmNvbS9DYXRhbG9nEkcKDGlucHV0X2Nv",
-            "bmZpZxgCIAEoCzIsLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuVXNlckV2ZW50",
-            "SW5wdXRDb25maWdCA+BBAhJBCg1lcnJvcnNfY29uZmlnGAMgASgLMiouZ29v",
-            "Z2xlLmNsb3VkLnJldGFpbC52Mi5JbXBvcnRFcnJvcnNDb25maWcixQEKG0lt",
-            "cG9ydENvbXBsZXRpb25EYXRhUmVxdWVzdBI1CgZwYXJlbnQYASABKAlCJeBB",
-            "AvpBHwodcmV0YWlsLmdvb2dsZWFwaXMuY29tL0NhdGFsb2cSTAoMaW5wdXRf",
-            "Y29uZmlnGAIgASgLMjEuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Db21wbGV0",
-            "aW9uRGF0YUlucHV0Q29uZmlnQgPgQQISIQoZbm90aWZpY2F0aW9uX3B1YnN1",
-            "Yl90b3BpYxgDIAEoCSLpAQoSUHJvZHVjdElucHV0Q29uZmlnEkwKFXByb2R1",
-            "Y3RfaW5saW5lX3NvdXJjZRgBIAEoCzIrLmdvb2dsZS5jbG91ZC5yZXRhaWwu",
-            "djIuUHJvZHVjdElubGluZVNvdXJjZUgAEjcKCmdjc19zb3VyY2UYAiABKAsy",
-            "IS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkdjc1NvdXJjZUgAEkIKEGJpZ19x",
-            "dWVyeV9zb3VyY2UYAyABKAsyJi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkJp",
-            "Z1F1ZXJ5U291cmNlSABCCAoGc291cmNlIv8BChRVc2VyRXZlbnRJbnB1dENv",
-            "bmZpZxJWChh1c2VyX2V2ZW50X2lubGluZV9zb3VyY2UYASABKAsyLS5nb29n",
-            "bGUuY2xvdWQucmV0YWlsLnYyLlVzZXJFdmVudElubGluZVNvdXJjZUID4EEC",
-            "SAASPAoKZ2NzX3NvdXJjZRgCIAEoCzIhLmdvb2dsZS5jbG91ZC5yZXRhaWwu",
-            "djIuR2NzU291cmNlQgPgQQJIABJHChBiaWdfcXVlcnlfc291cmNlGAMgASgL",
-            "MiYuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5CaWdRdWVyeVNvdXJjZUID4EEC",
-            "SABCCAoGc291cmNlIm4KGUNvbXBsZXRpb25EYXRhSW5wdXRDb25maWcSRwoQ",
-            "YmlnX3F1ZXJ5X3NvdXJjZRgBIAEoCzImLmdvb2dsZS5jbG91ZC5yZXRhaWwu",
-            "djIuQmlnUXVlcnlTb3VyY2VCA+BBAkgAQggKBnNvdXJjZSLXAQoOSW1wb3J0",
-            "TWV0YWRhdGESLwoLY3JlYXRlX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wEi8KC3VwZGF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcBIVCg1zdWNjZXNzX2NvdW50GAMgASgDEhUKDWZh",
-            "aWx1cmVfY291bnQYBCABKAMSEgoKcmVxdWVzdF9pZBgFIAEoCRIhChlub3Rp",
-            "ZmljYXRpb25fcHVic3ViX3RvcGljGAYgASgJIoYBChZJbXBvcnRQcm9kdWN0",
-            "c1Jlc3BvbnNlEikKDWVycm9yX3NhbXBsZXMYASADKAsyEi5nb29nbGUucnBj",
-            "LlN0YXR1cxJBCg1lcnJvcnNfY29uZmlnGAIgASgLMiouZ29vZ2xlLmNsb3Vk",
-            "LnJldGFpbC52Mi5JbXBvcnRFcnJvcnNDb25maWci0AEKGEltcG9ydFVzZXJF",
-            "dmVudHNSZXNwb25zZRIpCg1lcnJvcl9zYW1wbGVzGAEgAygLMhIuZ29vZ2xl",
-            "LnJwYy5TdGF0dXMSQQoNZXJyb3JzX2NvbmZpZxgCIAEoCzIqLmdvb2dsZS5j",
-            "bG91ZC5yZXRhaWwudjIuSW1wb3J0RXJyb3JzQ29uZmlnEkYKDmltcG9ydF9z",
-            "dW1tYXJ5GAMgASgLMi4uZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Vc2VyRXZl",
-            "bnRJbXBvcnRTdW1tYXJ5IlQKFlVzZXJFdmVudEltcG9ydFN1bW1hcnkSGwoT",
-            "am9pbmVkX2V2ZW50c19jb3VudBgBIAEoAxIdChV1bmpvaW5lZF9ldmVudHNf",
-            "Y291bnQYAiABKAMiSQocSW1wb3J0Q29tcGxldGlvbkRhdGFSZXNwb25zZRIp",
-            "Cg1lcnJvcl9zYW1wbGVzGAEgAygLMhIuZ29vZ2xlLnJwYy5TdGF0dXNCxgEK",
-            "GmNvbS5nb29nbGUuY2xvdWQucmV0YWlsLnYyQhFJbXBvcnRDb25maWdQcm90",
-            "b1ABWjxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
-            "b3VkL3JldGFpbC92MjtyZXRhaWyiAgZSRVRBSUyqAhZHb29nbGUuQ2xvdWQu",
-            "UmV0YWlsLlYyygIWR29vZ2xlXENsb3VkXFJldGFpbFxWMuoCGUdvb2dsZTo6",
-            "Q2xvdWQ6OlJldGFpbDo6VjJiBnByb3RvMw=="));
+            "Lmdvb2dsZWFwaXMuY29tL0JyYW5jaBIWCgpyZXF1ZXN0X2lkGAYgASgJQgIY",
+            "ARJFCgxpbnB1dF9jb25maWcYAiABKAsyKi5nb29nbGUuY2xvdWQucmV0YWls",
+            "LnYyLlByb2R1Y3RJbnB1dENvbmZpZ0ID4EECEkEKDWVycm9yc19jb25maWcY",
+            "AyABKAsyKi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkltcG9ydEVycm9yc0Nv",
+            "bmZpZxIvCgt1cGRhdGVfbWFzaxgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5G",
+            "aWVsZE1hc2sSXQoTcmVjb25jaWxpYXRpb25fbW9kZRgFIAEoDjJALmdvb2ds",
+            "ZS5jbG91ZC5yZXRhaWwudjIuSW1wb3J0UHJvZHVjdHNSZXF1ZXN0LlJlY29u",
+            "Y2lsaWF0aW9uTW9kZRIhChlub3RpZmljYXRpb25fcHVic3ViX3RvcGljGAcg",
+            "ASgJIlQKElJlY29uY2lsaWF0aW9uTW9kZRIjCh9SRUNPTkNJTElBVElPTl9N",
+            "T0RFX1VOU1BFQ0lGSUVEEAASDwoLSU5DUkVNRU5UQUwQARIICgRGVUxMEAIi",
+            "3AEKF0ltcG9ydFVzZXJFdmVudHNSZXF1ZXN0EjUKBnBhcmVudBgBIAEoCUIl",
+            "4EEC+kEfCh1yZXRhaWwuZ29vZ2xlYXBpcy5jb20vQ2F0YWxvZxJHCgxpbnB1",
+            "dF9jb25maWcYAiABKAsyLC5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlVzZXJF",
+            "dmVudElucHV0Q29uZmlnQgPgQQISQQoNZXJyb3JzX2NvbmZpZxgDIAEoCzIq",
+            "Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuSW1wb3J0RXJyb3JzQ29uZmlnIsUB",
+            "ChtJbXBvcnRDb21wbGV0aW9uRGF0YVJlcXVlc3QSNQoGcGFyZW50GAEgASgJ",
+            "QiXgQQL6QR8KHXJldGFpbC5nb29nbGVhcGlzLmNvbS9DYXRhbG9nEkwKDGlu",
+            "cHV0X2NvbmZpZxgCIAEoCzIxLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ29t",
+            "cGxldGlvbkRhdGFJbnB1dENvbmZpZ0ID4EECEiEKGW5vdGlmaWNhdGlvbl9w",
+            "dWJzdWJfdG9waWMYAyABKAki6QEKElByb2R1Y3RJbnB1dENvbmZpZxJMChVw",
+            "cm9kdWN0X2lubGluZV9zb3VyY2UYASABKAsyKy5nb29nbGUuY2xvdWQucmV0",
+            "YWlsLnYyLlByb2R1Y3RJbmxpbmVTb3VyY2VIABI3CgpnY3Nfc291cmNlGAIg",
+            "ASgLMiEuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5HY3NTb3VyY2VIABJCChBi",
+            "aWdfcXVlcnlfc291cmNlGAMgASgLMiYuZ29vZ2xlLmNsb3VkLnJldGFpbC52",
+            "Mi5CaWdRdWVyeVNvdXJjZUgAQggKBnNvdXJjZSL/AQoUVXNlckV2ZW50SW5w",
+            "dXRDb25maWcSVgoYdXNlcl9ldmVudF9pbmxpbmVfc291cmNlGAEgASgLMi0u",
+            "Z29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Vc2VyRXZlbnRJbmxpbmVTb3VyY2VC",
+            "A+BBAkgAEjwKCmdjc19zb3VyY2UYAiABKAsyIS5nb29nbGUuY2xvdWQucmV0",
+            "YWlsLnYyLkdjc1NvdXJjZUID4EECSAASRwoQYmlnX3F1ZXJ5X3NvdXJjZRgD",
+            "IAEoCzImLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQmlnUXVlcnlTb3VyY2VC",
+            "A+BBAkgAQggKBnNvdXJjZSJuChlDb21wbGV0aW9uRGF0YUlucHV0Q29uZmln",
+            "EkcKEGJpZ19xdWVyeV9zb3VyY2UYASABKAsyJi5nb29nbGUuY2xvdWQucmV0",
+            "YWlsLnYyLkJpZ1F1ZXJ5U291cmNlQgPgQQJIAEIICgZzb3VyY2Ui2wEKDklt",
+            "cG9ydE1ldGFkYXRhEi8KC2NyZWF0ZV90aW1lGAEgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcBIvCgt1cGRhdGVfdGltZRgCIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASFQoNc3VjY2Vzc19jb3VudBgDIAEoAxIV",
+            "Cg1mYWlsdXJlX2NvdW50GAQgASgDEhYKCnJlcXVlc3RfaWQYBSABKAlCAhgB",
+            "EiEKGW5vdGlmaWNhdGlvbl9wdWJzdWJfdG9waWMYBiABKAkihgEKFkltcG9y",
+            "dFByb2R1Y3RzUmVzcG9uc2USKQoNZXJyb3Jfc2FtcGxlcxgBIAMoCzISLmdv",
+            "b2dsZS5ycGMuU3RhdHVzEkEKDWVycm9yc19jb25maWcYAiABKAsyKi5nb29n",
+            "bGUuY2xvdWQucmV0YWlsLnYyLkltcG9ydEVycm9yc0NvbmZpZyLQAQoYSW1w",
+            "b3J0VXNlckV2ZW50c1Jlc3BvbnNlEikKDWVycm9yX3NhbXBsZXMYASADKAsy",
+            "Ei5nb29nbGUucnBjLlN0YXR1cxJBCg1lcnJvcnNfY29uZmlnGAIgASgLMiou",
+            "Z29vZ2xlLmNsb3VkLnJldGFpbC52Mi5JbXBvcnRFcnJvcnNDb25maWcSRgoO",
+            "aW1wb3J0X3N1bW1hcnkYAyABKAsyLi5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
+            "LlVzZXJFdmVudEltcG9ydFN1bW1hcnkiVAoWVXNlckV2ZW50SW1wb3J0U3Vt",
+            "bWFyeRIbChNqb2luZWRfZXZlbnRzX2NvdW50GAEgASgDEh0KFXVuam9pbmVk",
+            "X2V2ZW50c19jb3VudBgCIAEoAyJJChxJbXBvcnRDb21wbGV0aW9uRGF0YVJl",
+            "c3BvbnNlEikKDWVycm9yX3NhbXBsZXMYASADKAsyEi5nb29nbGUucnBjLlN0",
+            "YXR1c0LGAQoaY29tLmdvb2dsZS5jbG91ZC5yZXRhaWwudjJCEUltcG9ydENv",
+            "bmZpZ1Byb3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
+            "ZWFwaXMvY2xvdWQvcmV0YWlsL3YyO3JldGFpbKICBlJFVEFJTKoCFkdvb2ds",
+            "ZS5DbG91ZC5SZXRhaWwuVjLKAhZHb29nbGVcQ2xvdWRcUmV0YWlsXFYy6gIZ",
+            "R29vZ2xlOjpDbG91ZDo6UmV0YWlsOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.ProductReflection.Descriptor, global::Google.Cloud.Retail.V2.UserEventReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -212,6 +212,14 @@ namespace Google.Cloud.Retail.V2 {
     /// [UserEvent][google.cloud.retail.v2.UserEvent] per line.
     /// * `user_event_ga360`: Using
     ///   https://support.google.com/analytics/answer/3437719.
+    ///
+    /// Supported values for control imports:
+    ///
+    /// * 'control' (default): One JSON [Control][] per line.
+    ///
+    /// Supported values for catalog attribute imports:
+    ///
+    /// * 'catalog_attribute' (default): One CSV [CatalogAttribute][] per line.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -529,8 +537,19 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// * `user_event` (default): One JSON
     /// [UserEvent][google.cloud.retail.v2.UserEvent] per line.
-    /// * `user_event_ga360`: Using
+    /// * `user_event_ga360`:
+    ///   The schema is available here:
     ///   https://support.google.com/analytics/answer/3437719.
+    /// * `user_event_ga4`: This feature is in private preview. Please contact the
+    ///   support team for importing Google Analytics 4 events.
+    ///   The schema is available here:
+    ///   https://support.google.com/analytics/answer/7029846.
+    ///
+    /// Supported values for auto-completion imports:
+    ///
+    /// * `suggestions` (default): One JSON completion suggestion per line.
+    /// * `denylist`:  One JSON deny suggestion per line.
+    /// * `allowlist`:  One JSON allow suggestion per line.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1257,9 +1276,9 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>Field number for the "gcs_prefix" field.</summary>
     public const int GcsPrefixFieldNumber = 1;
     /// <summary>
-    /// Google Cloud Storage path for import errors. This must be an empty,
-    /// existing Cloud Storage bucket. Import errors will be written to a file in
-    /// this bucket, one per line, as a JSON-encoded
+    /// Google Cloud Storage prefix for import errors. This must be an empty,
+    /// existing Cloud Storage directory. Import errors will be written to
+    /// sharded files in this directory, one per line, as a JSON-encoded
     /// `google.rpc.Status` message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1506,16 +1525,9 @@ namespace Google.Cloud.Retail.V2 {
     public const int RequestIdFieldNumber = 6;
     private string requestId_ = "";
     /// <summary>
-    /// Unique identifier provided by client, within the ancestor
-    /// dataset scope. Ensures idempotency and used for request deduplication.
-    /// Server-generated if unspecified. Up to 128 characters long and must match
-    /// the pattern: `[a-zA-Z0-9_]+`. This is returned as [Operation.name][] in
-    /// [ImportMetadata][google.cloud.retail.v2.ImportMetadata].
-    ///
-    /// Only supported when
-    /// [ImportProductsRequest.reconciliation_mode][google.cloud.retail.v2.ImportProductsRequest.reconciliation_mode]
-    /// is set to `FULL`.
+    /// Deprecated. This field has no effect.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RequestId {
@@ -1935,16 +1947,14 @@ namespace Google.Cloud.Retail.V2 {
         /// Calculates diff and replaces the entire product dataset. Existing
         /// products may be deleted if they are not present in the source location.
         ///
-        /// Can only be while using
-        /// [BigQuerySource][google.cloud.retail.v2.BigQuerySource].
+        /// Can only be set while using
+        /// [BigQuerySource][google.cloud.retail.v2.BigQuerySource]. And the BigQuery
+        /// dataset must be created in the data location "us (multiple regions in
+        /// United States)", otherwise a PERMISSION_DENIED error is thrown.
         ///
         /// Add the IAM permission "BigQuery Data Viewer" for
         /// cloud-retail-customer-data-access@system.gserviceaccount.com before
         /// using this feature otherwise an error is thrown.
-        ///
-        /// This feature is only available for users who have Retail Search enabled.
-        /// Please submit a form [here](https://cloud.google.com/contact) to contact
-        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         [pbr::OriginalName("FULL")] Full = 2,
       }
@@ -3598,9 +3608,9 @@ namespace Google.Cloud.Retail.V2 {
     public const int RequestIdFieldNumber = 5;
     private string requestId_ = "";
     /// <summary>
-    /// Id of the request / operation. This is parroting back the requestId
-    /// that was passed in the request.
+    /// Deprecated. This field is never set.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RequestId {

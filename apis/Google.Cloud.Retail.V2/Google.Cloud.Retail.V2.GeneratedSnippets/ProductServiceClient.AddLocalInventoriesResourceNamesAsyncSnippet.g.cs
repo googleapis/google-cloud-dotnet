@@ -16,51 +16,43 @@
 
 namespace Google.Cloud.Retail.V2.Snippets
 {
-    // [START retail_v2_generated_ProductService_ImportProducts_sync]
+    // [START retail_v2_generated_ProductService_AddLocalInventories_async_flattened_resourceNames]
     using Google.Cloud.Retail.V2;
     using Google.LongRunning;
-    using Google.Protobuf.WellKnownTypes;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedProductServiceClientSnippets
     {
-        /// <summary>Snippet for ImportProducts</summary>
+        /// <summary>Snippet for AddLocalInventoriesAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated for illustrative purposes only.
         /// It may require modifications to work in your environment.
         /// </remarks>
-        public void ImportProductsRequestObject()
+        public async Task AddLocalInventoriesResourceNamesAsync()
         {
             // Create client
-            ProductServiceClient productServiceClient = ProductServiceClient.Create();
+            ProductServiceClient productServiceClient = await ProductServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ImportProductsRequest request = new ImportProductsRequest
-            {
-                ParentAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
-                InputConfig = new ProductInputConfig(),
-                ErrorsConfig = new ImportErrorsConfig(),
-                UpdateMask = new FieldMask(),
-                ReconciliationMode = ImportProductsRequest.Types.ReconciliationMode.Unspecified,
-                NotificationPubsubTopic = "",
-            };
+            ProductName product = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]");
             // Make the request
-            Operation<ImportProductsResponse, ImportMetadata> response = productServiceClient.ImportProducts(request);
+            Operation<AddLocalInventoriesResponse, AddLocalInventoriesMetadata> response = await productServiceClient.AddLocalInventoriesAsync(product);
 
             // Poll until the returned long-running operation is complete
-            Operation<ImportProductsResponse, ImportMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<AddLocalInventoriesResponse, AddLocalInventoriesMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            ImportProductsResponse result = completedResponse.Result;
+            AddLocalInventoriesResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<ImportProductsResponse, ImportMetadata> retrievedResponse = productServiceClient.PollOnceImportProducts(operationName);
+            Operation<AddLocalInventoriesResponse, AddLocalInventoriesMetadata> retrievedResponse = await productServiceClient.PollOnceAddLocalInventoriesAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                ImportProductsResponse retrievedResult = retrievedResponse.Result;
+                AddLocalInventoriesResponse retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END retail_v2_generated_ProductService_ImportProducts_sync]
+    // [END retail_v2_generated_ProductService_AddLocalInventories_async_flattened_resourceNames]
 }

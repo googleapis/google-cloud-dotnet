@@ -49,13 +49,18 @@ namespace Google.Cloud.Retail.V2 {
             "YXRpbmcSFAoMcmF0aW5nX2NvdW50GAEgASgFEhYKDmF2ZXJhZ2VfcmF0aW5n",
             "GAIgASgCEhgKEHJhdGluZ19oaXN0b2dyYW0YAyADKAUiYAoIVXNlckluZm8S",
             "DwoHdXNlcl9pZBgBIAEoCRISCgppcF9hZGRyZXNzGAIgASgJEhIKCnVzZXJf",
-            "YWdlbnQYAyABKAkSGwoTZGlyZWN0X3VzZXJfcmVxdWVzdBgEIAEoCCIhCglQ",
-            "cm9tb3Rpb24SFAoMcHJvbW90aW9uX2lkGAEgASgJQsABChpjb20uZ29vZ2xl",
-            "LmNsb3VkLnJldGFpbC52MkILQ29tbW9uUHJvdG9QAVo8Z29vZ2xlLmdvbGFu",
-            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9yZXRhaWwvdjI7cmV0",
-            "YWlsogIGUkVUQUlMqgIWR29vZ2xlLkNsb3VkLlJldGFpbC5WMsoCFkdvb2ds",
-            "ZVxDbG91ZFxSZXRhaWxcVjLqAhlHb29nbGU6OkNsb3VkOjpSZXRhaWw6OlYy",
-            "YgZwcm90bzM="));
+            "YWdlbnQYAyABKAkSGwoTZGlyZWN0X3VzZXJfcmVxdWVzdBgEIAEoCCKhAgoO",
+            "TG9jYWxJbnZlbnRvcnkSEAoIcGxhY2VfaWQYASABKAkSNQoKcHJpY2VfaW5m",
+            "bxgCIAEoCzIhLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUHJpY2VJbmZvEkoK",
+            "CmF0dHJpYnV0ZXMYAyADKAsyNi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkxv",
+            "Y2FsSW52ZW50b3J5LkF0dHJpYnV0ZXNFbnRyeRIeChFmdWxmaWxsbWVudF90",
+            "eXBlcxgEIAMoCUID4EEEGloKD0F0dHJpYnV0ZXNFbnRyeRILCgNrZXkYASAB",
+            "KAkSNgoFdmFsdWUYAiABKAsyJy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkN1",
+            "c3RvbUF0dHJpYnV0ZToCOAFCwAEKGmNvbS5nb29nbGUuY2xvdWQucmV0YWls",
+            "LnYyQgtDb21tb25Qcm90b1ABWjxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
+            "by9nb29nbGVhcGlzL2Nsb3VkL3JldGFpbC92MjtyZXRhaWyiAgZSRVRBSUyq",
+            "AhZHb29nbGUuQ2xvdWQuUmV0YWlsLlYyygIWR29vZ2xlXENsb3VkXFJldGFp",
+            "bFxWMuoCGUdvb2dsZTo6Q2xvdWQ6OlJldGFpbDo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -68,7 +73,7 @@ namespace Google.Cloud.Retail.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.PriceInfo), global::Google.Cloud.Retail.V2.PriceInfo.Parser, new[]{ "CurrencyCode", "Price", "OriginalPrice", "Cost", "PriceEffectiveTime", "PriceExpireTime", "PriceRange" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.PriceInfo.Types.PriceRange), global::Google.Cloud.Retail.V2.PriceInfo.Types.PriceRange.Parser, new[]{ "Price", "OriginalPrice" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rating), global::Google.Cloud.Retail.V2.Rating.Parser, new[]{ "RatingCount", "AverageRating", "RatingHistogram" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.UserInfo), global::Google.Cloud.Retail.V2.UserInfo.Parser, new[]{ "UserId", "IpAddress", "UserAgent", "DirectUserRequest" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Promotion), global::Google.Cloud.Retail.V2.Promotion.Parser, new[]{ "PromotionId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.LocalInventory), global::Google.Cloud.Retail.V2.LocalInventory.Parser, new[]{ "PlaceId", "PriceInfo", "Attributes", "FulfillmentTypes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -610,9 +615,8 @@ namespace Google.Cloud.Retail.V2 {
     /// The textual values of this custom attribute. For example, `["yellow",
     /// "green"]` when the key is "color".
     ///
-    /// At most 400 values are allowed. Empty values are not allowed. Each value
-    /// must be a UTF-8 encoded string with a length limit of 256 characters.
-    /// Otherwise, an INVALID_ARGUMENT error is returned.
+    /// Empty string is not allowed. Otherwise, an INVALID_ARGUMENT error is
+    /// returned.
     ///
     /// Exactly one of [text][google.cloud.retail.v2.CustomAttribute.text] or
     /// [numbers][google.cloud.retail.v2.CustomAttribute.numbers] should be set.
@@ -633,9 +637,6 @@ namespace Google.Cloud.Retail.V2 {
     /// The numerical values of this custom attribute. For example, `[2.3, 15.4]`
     /// when the key is "lengths_cm".
     ///
-    /// At most 400 values are allowed.Otherwise, an INVALID_ARGUMENT error is
-    /// returned.
-    ///
     /// Exactly one of [text][google.cloud.retail.v2.CustomAttribute.text] or
     /// [numbers][google.cloud.retail.v2.CustomAttribute.numbers] should be set.
     /// Otherwise, an INVALID_ARGUMENT error is returned.
@@ -650,7 +651,11 @@ namespace Google.Cloud.Retail.V2 {
     public const int SearchableFieldNumber = 3;
     private bool searchable_;
     /// <summary>
-    /// If true, custom attribute values are searchable by text queries in
+    /// This field will only be used when
+    /// [AttributesConfig.attribute_config_level][] of the
+    /// [Catalog][google.cloud.retail.v2.Catalog] is
+    /// 'PRODUCT_LEVEL_ATTRIBUTE_CONFIG', if true, custom attribute values are
+    /// searchable by text queries in
     /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
     ///
     /// This field is ignored in a [UserEvent][google.cloud.retail.v2.UserEvent].
@@ -684,8 +689,11 @@ namespace Google.Cloud.Retail.V2 {
     public const int IndexableFieldNumber = 4;
     private bool indexable_;
     /// <summary>
-    /// If true, custom attribute values are indexed, so that it can be filtered,
-    /// faceted or boosted in
+    /// This field will only be used when
+    /// [AttributesConfig.attribute_config_level][] of the
+    /// [Catalog][google.cloud.retail.v2.Catalog] is
+    /// 'PRODUCT_LEVEL_ATTRIBUTE_CONFIG', if true, custom attribute values are
+    /// indexed, so that it can be filtered, faceted or boosted in
     /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
     ///
     /// This field is ignored in a [UserEvent][google.cloud.retail.v2.UserEvent].
@@ -1157,7 +1165,10 @@ namespace Google.Cloud.Retail.V2 {
   }
 
   /// <summary>
-  /// [Product][google.cloud.retail.v2.Product] thumbnail/detail image.
+  /// [Product][google.cloud.retail.v2.Product] image. Recommendations AI and
+  /// Retail Search do not use product images to improve prediction and search
+  /// results. However, product images can be returned in results, and are shown in
+  /// prediction or search previews in the console.
   /// </summary>
   public sealed partial class Image : pb::IMessage<Image>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1912,7 +1923,7 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// Google Merchant Center property
     /// [price](https://support.google.com/merchants/answer/6324371). Schema.org
-    /// property [Offer.priceSpecification](https://schema.org/priceSpecification).
+    /// property [Offer.price](https://schema.org/price).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2951,6 +2962,8 @@ namespace Google.Cloud.Retail.V2 {
     /// Highly recommended for logged-in users. Unique identifier for logged-in
     /// user, such as a user name.
     ///
+    /// Always use a hashed value for this ID.
+    ///
     /// The field must be a UTF-8 encoded string with a length limit of 128
     /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     /// </summary>
@@ -2967,15 +2980,18 @@ namespace Google.Cloud.Retail.V2 {
     public const int IpAddressFieldNumber = 2;
     private string ipAddress_ = "";
     /// <summary>
-    /// The end user's IP address. Required for getting
-    /// [SearchResponse.sponsored_results][google.cloud.retail.v2.SearchResponse.sponsored_results].
-    /// This field is used to extract location information for personalization.
+    /// The end user's IP address. This field is used to extract location
+    /// information for personalization.
     ///
     /// This field must be either an IPv4 address (e.g. "104.133.9.80") or an IPv6
     /// address (e.g. "2001:0db8:85a3:0000:0000:8a2e:0370:7334"). Otherwise, an
     /// INVALID_ARGUMENT error is returned.
     ///
-    /// This should not be set when using the JavaScript tag in
+    /// This should not be set when:
+    ///
+    /// * setting
+    /// [SearchRequest.user_info][google.cloud.retail.v2.SearchRequest.user_info].
+    /// * using the JavaScript tag in
     /// [UserEventService.CollectUserEvent][google.cloud.retail.v2.UserEventService.CollectUserEvent]
     /// or if
     /// [direct_user_request][google.cloud.retail.v2.UserInfo.direct_user_request]
@@ -3245,18 +3261,19 @@ namespace Google.Cloud.Retail.V2 {
   }
 
   /// <summary>
-  /// Promotion information.
+  /// The inventory information at a place (e.g. a store) identified
+  /// by a place ID.
   /// </summary>
-  public sealed partial class Promotion : pb::IMessage<Promotion>
+  public sealed partial class LocalInventory : pb::IMessage<LocalInventory>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<Promotion> _parser = new pb::MessageParser<Promotion>(() => new Promotion());
+    private static readonly pb::MessageParser<LocalInventory> _parser = new pb::MessageParser<LocalInventory>(() => new LocalInventory());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<Promotion> Parser { get { return _parser; } }
+    public static pb::MessageParser<LocalInventory> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3272,7 +3289,7 @@ namespace Google.Cloud.Retail.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Promotion() {
+    public LocalInventory() {
       OnConstruction();
     }
 
@@ -3280,56 +3297,138 @@ namespace Google.Cloud.Retail.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Promotion(Promotion other) : this() {
-      promotionId_ = other.promotionId_;
+    public LocalInventory(LocalInventory other) : this() {
+      placeId_ = other.placeId_;
+      priceInfo_ = other.priceInfo_ != null ? other.priceInfo_.Clone() : null;
+      attributes_ = other.attributes_.Clone();
+      fulfillmentTypes_ = other.fulfillmentTypes_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Promotion Clone() {
-      return new Promotion(this);
+    public LocalInventory Clone() {
+      return new LocalInventory(this);
     }
 
-    /// <summary>Field number for the "promotion_id" field.</summary>
-    public const int PromotionIdFieldNumber = 1;
-    private string promotionId_ = "";
+    /// <summary>Field number for the "place_id" field.</summary>
+    public const int PlaceIdFieldNumber = 1;
+    private string placeId_ = "";
     /// <summary>
-    /// ID of the promotion. For example, "free gift".
-    ///
-    /// The value value must be a UTF-8 encoded string with a length limit of 128
-    /// characters, and match the pattern: `[a-zA-Z][a-zA-Z0-9_]*`. For example,
-    /// id0LikeThis or ID_1_LIKE_THIS. Otherwise, an INVALID_ARGUMENT error is
-    /// returned.
-    ///
-    /// Google Merchant Center property
-    /// [promotion](https://support.google.com/merchants/answer/7050148).
+    /// The place ID for the current set of inventory information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string PromotionId {
-      get { return promotionId_; }
+    public string PlaceId {
+      get { return placeId_; }
       set {
-        promotionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        placeId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "price_info" field.</summary>
+    public const int PriceInfoFieldNumber = 2;
+    private global::Google.Cloud.Retail.V2.PriceInfo priceInfo_;
+    /// <summary>
+    /// Product price and cost information.
+    ///
+    /// Google Merchant Center property
+    /// [price](https://support.google.com/merchants/answer/6324371).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Retail.V2.PriceInfo PriceInfo {
+      get { return priceInfo_; }
+      set {
+        priceInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "attributes" field.</summary>
+    public const int AttributesFieldNumber = 3;
+    private static readonly pbc::MapField<string, global::Google.Cloud.Retail.V2.CustomAttribute>.Codec _map_attributes_codec
+        = new pbc::MapField<string, global::Google.Cloud.Retail.V2.CustomAttribute>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Retail.V2.CustomAttribute.Parser), 26);
+    private readonly pbc::MapField<string, global::Google.Cloud.Retail.V2.CustomAttribute> attributes_ = new pbc::MapField<string, global::Google.Cloud.Retail.V2.CustomAttribute>();
+    /// <summary>
+    /// Additional local inventory attributes, for example, store name, promotion
+    /// tags, etc.
+    ///
+    /// This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
+    /// error is returned:
+    ///
+    /// * At most 30 attributes are allowed.
+    /// * The key must be a UTF-8 encoded string with a length limit of 32
+    ///   characters.
+    /// * The key must match the pattern: `[a-zA-Z0-9][a-zA-Z0-9_]*`. For example,
+    ///   key0LikeThis or KEY_1_LIKE_THIS.
+    /// * The attribute values must be of the same type (text or number).
+    /// * Only 1 value is allowed for each attribute.
+    /// * For text values, the length limit is 256 UTF-8 characters.
+    /// * The attribute does not support search. The `searchable` field should be
+    ///   unset or set to false.
+    /// * The max summed total bytes of custom attribute keys and values per
+    ///   product is 5MiB.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, global::Google.Cloud.Retail.V2.CustomAttribute> Attributes {
+      get { return attributes_; }
+    }
+
+    /// <summary>Field number for the "fulfillment_types" field.</summary>
+    public const int FulfillmentTypesFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_fulfillmentTypes_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> fulfillmentTypes_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Input only. Supported fulfillment types. Valid fulfillment type values
+    /// include commonly used types (such as pickup in store and same day
+    /// delivery), and custom types. Customers have to map custom types to their
+    /// display names before rendering UI.
+    ///
+    /// Supported values:
+    ///
+    /// * "pickup-in-store"
+    /// * "ship-to-store"
+    /// * "same-day-delivery"
+    /// * "next-day-delivery"
+    /// * "custom-type-1"
+    /// * "custom-type-2"
+    /// * "custom-type-3"
+    /// * "custom-type-4"
+    /// * "custom-type-5"
+    ///
+    /// If this field is set to an invalid value other than these, an
+    /// INVALID_ARGUMENT error is returned.
+    ///
+    /// All the elements must be distinct. Otherwise, an INVALID_ARGUMENT error is
+    /// returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> FulfillmentTypes {
+      get { return fulfillmentTypes_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as Promotion);
+      return Equals(other as LocalInventory);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(Promotion other) {
+    public bool Equals(LocalInventory other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (PromotionId != other.PromotionId) return false;
+      if (PlaceId != other.PlaceId) return false;
+      if (!object.Equals(PriceInfo, other.PriceInfo)) return false;
+      if (!Attributes.Equals(other.Attributes)) return false;
+      if(!fulfillmentTypes_.Equals(other.fulfillmentTypes_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3337,7 +3436,10 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (PromotionId.Length != 0) hash ^= PromotionId.GetHashCode();
+      if (PlaceId.Length != 0) hash ^= PlaceId.GetHashCode();
+      if (priceInfo_ != null) hash ^= PriceInfo.GetHashCode();
+      hash ^= Attributes.GetHashCode();
+      hash ^= fulfillmentTypes_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3356,10 +3458,16 @@ namespace Google.Cloud.Retail.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PromotionId.Length != 0) {
+      if (PlaceId.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(PromotionId);
+        output.WriteString(PlaceId);
       }
+      if (priceInfo_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(PriceInfo);
+      }
+      attributes_.WriteTo(output, _map_attributes_codec);
+      fulfillmentTypes_.WriteTo(output, _repeated_fulfillmentTypes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3370,10 +3478,16 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PromotionId.Length != 0) {
+      if (PlaceId.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(PromotionId);
+        output.WriteString(PlaceId);
       }
+      if (priceInfo_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(PriceInfo);
+      }
+      attributes_.WriteTo(ref output, _map_attributes_codec);
+      fulfillmentTypes_.WriteTo(ref output, _repeated_fulfillmentTypes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3384,9 +3498,14 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (PromotionId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PromotionId);
+      if (PlaceId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlaceId);
       }
+      if (priceInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PriceInfo);
+      }
+      size += attributes_.CalculateSize(_map_attributes_codec);
+      size += fulfillmentTypes_.CalculateSize(_repeated_fulfillmentTypes_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3395,13 +3514,21 @@ namespace Google.Cloud.Retail.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(Promotion other) {
+    public void MergeFrom(LocalInventory other) {
       if (other == null) {
         return;
       }
-      if (other.PromotionId.Length != 0) {
-        PromotionId = other.PromotionId;
+      if (other.PlaceId.Length != 0) {
+        PlaceId = other.PlaceId;
       }
+      if (other.priceInfo_ != null) {
+        if (priceInfo_ == null) {
+          PriceInfo = new global::Google.Cloud.Retail.V2.PriceInfo();
+        }
+        PriceInfo.MergeFrom(other.PriceInfo);
+      }
+      attributes_.Add(other.attributes_);
+      fulfillmentTypes_.Add(other.fulfillmentTypes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3418,7 +3545,22 @@ namespace Google.Cloud.Retail.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            PromotionId = input.ReadString();
+            PlaceId = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (priceInfo_ == null) {
+              PriceInfo = new global::Google.Cloud.Retail.V2.PriceInfo();
+            }
+            input.ReadMessage(PriceInfo);
+            break;
+          }
+          case 26: {
+            attributes_.AddEntriesFrom(input, _map_attributes_codec);
+            break;
+          }
+          case 34: {
+            fulfillmentTypes_.AddEntriesFrom(input, _repeated_fulfillmentTypes_codec);
             break;
           }
         }
@@ -3437,7 +3579,22 @@ namespace Google.Cloud.Retail.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            PromotionId = input.ReadString();
+            PlaceId = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (priceInfo_ == null) {
+              PriceInfo = new global::Google.Cloud.Retail.V2.PriceInfo();
+            }
+            input.ReadMessage(PriceInfo);
+            break;
+          }
+          case 26: {
+            attributes_.AddEntriesFrom(ref input, _map_attributes_codec);
+            break;
+          }
+          case 34: {
+            fulfillmentTypes_.AddEntriesFrom(ref input, _repeated_fulfillmentTypes_codec);
             break;
           }
         }

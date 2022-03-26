@@ -74,6 +74,30 @@ namespace Google.Cloud.Retail.V2
         }
     }
 
+    public partial class AddLocalInventoriesRequest
+    {
+        /// <summary>
+        /// <see cref="ProductName"/>-typed view over the <see cref="Product"/> resource name property.
+        /// </summary>
+        public ProductName ProductAsProductName
+        {
+            get => string.IsNullOrEmpty(Product) ? null : ProductName.Parse(Product, allowUnparsed: true);
+            set => Product = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RemoveLocalInventoriesRequest
+    {
+        /// <summary>
+        /// <see cref="ProductName"/>-typed view over the <see cref="Product"/> resource name property.
+        /// </summary>
+        public ProductName ProductAsProductName
+        {
+            get => string.IsNullOrEmpty(Product) ? null : ProductName.Parse(Product, allowUnparsed: true);
+            set => Product = value?.ToString() ?? "";
+        }
+    }
+
     public partial class RemoveFulfillmentPlacesRequest
     {
         /// <summary>

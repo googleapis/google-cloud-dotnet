@@ -659,7 +659,6 @@ namespace Google.Cloud.Retail.V2.Snippets
                 ErrorsConfig = new ImportErrorsConfig(),
                 UpdateMask = new FieldMask(),
                 ReconciliationMode = ImportProductsRequest.Types.ReconciliationMode.Unspecified,
-                RequestId = "",
                 NotificationPubsubTopic = "",
             };
             // Make the request
@@ -698,7 +697,6 @@ namespace Google.Cloud.Retail.V2.Snippets
                 ErrorsConfig = new ImportErrorsConfig(),
                 UpdateMask = new FieldMask(),
                 ReconciliationMode = ImportProductsRequest.Types.ReconciliationMode.Unspecified,
-                RequestId = "",
                 NotificationPubsubTopic = "",
             };
             // Make the request
@@ -1232,6 +1230,392 @@ namespace Google.Cloud.Retail.V2.Snippets
             {
                 // If it has completed, then access the result
                 RemoveFulfillmentPlacesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddLocalInventories</summary>
+        public void AddLocalInventoriesRequestObject()
+        {
+            // Snippet: AddLocalInventories(AddLocalInventoriesRequest, CallSettings)
+            // Create client
+            ProductServiceClient productServiceClient = ProductServiceClient.Create();
+            // Initialize request argument(s)
+            AddLocalInventoriesRequest request = new AddLocalInventoriesRequest
+            {
+                ProductAsProductName = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]"),
+                LocalInventories =
+                {
+                    new LocalInventory(),
+                },
+                AddMask = new FieldMask(),
+                AddTime = new Timestamp(),
+                AllowMissing = false,
+            };
+            // Make the request
+            Operation<AddLocalInventoriesResponse, AddLocalInventoriesMetadata> response = productServiceClient.AddLocalInventories(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AddLocalInventoriesResponse, AddLocalInventoriesMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AddLocalInventoriesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AddLocalInventoriesResponse, AddLocalInventoriesMetadata> retrievedResponse = productServiceClient.PollOnceAddLocalInventories(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AddLocalInventoriesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddLocalInventoriesAsync</summary>
+        public async Task AddLocalInventoriesRequestObjectAsync()
+        {
+            // Snippet: AddLocalInventoriesAsync(AddLocalInventoriesRequest, CallSettings)
+            // Additional: AddLocalInventoriesAsync(AddLocalInventoriesRequest, CancellationToken)
+            // Create client
+            ProductServiceClient productServiceClient = await ProductServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AddLocalInventoriesRequest request = new AddLocalInventoriesRequest
+            {
+                ProductAsProductName = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]"),
+                LocalInventories =
+                {
+                    new LocalInventory(),
+                },
+                AddMask = new FieldMask(),
+                AddTime = new Timestamp(),
+                AllowMissing = false,
+            };
+            // Make the request
+            Operation<AddLocalInventoriesResponse, AddLocalInventoriesMetadata> response = await productServiceClient.AddLocalInventoriesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AddLocalInventoriesResponse, AddLocalInventoriesMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AddLocalInventoriesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AddLocalInventoriesResponse, AddLocalInventoriesMetadata> retrievedResponse = await productServiceClient.PollOnceAddLocalInventoriesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AddLocalInventoriesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddLocalInventories</summary>
+        public void AddLocalInventories()
+        {
+            // Snippet: AddLocalInventories(string, CallSettings)
+            // Create client
+            ProductServiceClient productServiceClient = ProductServiceClient.Create();
+            // Initialize request argument(s)
+            string product = "projects/[PROJECT]/locations/[LOCATION]/catalogs/[CATALOG]/branches/[BRANCH]/products/[PRODUCT]";
+            // Make the request
+            Operation<AddLocalInventoriesResponse, AddLocalInventoriesMetadata> response = productServiceClient.AddLocalInventories(product);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AddLocalInventoriesResponse, AddLocalInventoriesMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AddLocalInventoriesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AddLocalInventoriesResponse, AddLocalInventoriesMetadata> retrievedResponse = productServiceClient.PollOnceAddLocalInventories(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AddLocalInventoriesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddLocalInventoriesAsync</summary>
+        public async Task AddLocalInventoriesAsync()
+        {
+            // Snippet: AddLocalInventoriesAsync(string, CallSettings)
+            // Additional: AddLocalInventoriesAsync(string, CancellationToken)
+            // Create client
+            ProductServiceClient productServiceClient = await ProductServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string product = "projects/[PROJECT]/locations/[LOCATION]/catalogs/[CATALOG]/branches/[BRANCH]/products/[PRODUCT]";
+            // Make the request
+            Operation<AddLocalInventoriesResponse, AddLocalInventoriesMetadata> response = await productServiceClient.AddLocalInventoriesAsync(product);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AddLocalInventoriesResponse, AddLocalInventoriesMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AddLocalInventoriesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AddLocalInventoriesResponse, AddLocalInventoriesMetadata> retrievedResponse = await productServiceClient.PollOnceAddLocalInventoriesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AddLocalInventoriesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddLocalInventories</summary>
+        public void AddLocalInventoriesResourceNames()
+        {
+            // Snippet: AddLocalInventories(ProductName, CallSettings)
+            // Create client
+            ProductServiceClient productServiceClient = ProductServiceClient.Create();
+            // Initialize request argument(s)
+            ProductName product = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]");
+            // Make the request
+            Operation<AddLocalInventoriesResponse, AddLocalInventoriesMetadata> response = productServiceClient.AddLocalInventories(product);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AddLocalInventoriesResponse, AddLocalInventoriesMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AddLocalInventoriesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AddLocalInventoriesResponse, AddLocalInventoriesMetadata> retrievedResponse = productServiceClient.PollOnceAddLocalInventories(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AddLocalInventoriesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddLocalInventoriesAsync</summary>
+        public async Task AddLocalInventoriesResourceNamesAsync()
+        {
+            // Snippet: AddLocalInventoriesAsync(ProductName, CallSettings)
+            // Additional: AddLocalInventoriesAsync(ProductName, CancellationToken)
+            // Create client
+            ProductServiceClient productServiceClient = await ProductServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProductName product = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]");
+            // Make the request
+            Operation<AddLocalInventoriesResponse, AddLocalInventoriesMetadata> response = await productServiceClient.AddLocalInventoriesAsync(product);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AddLocalInventoriesResponse, AddLocalInventoriesMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AddLocalInventoriesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AddLocalInventoriesResponse, AddLocalInventoriesMetadata> retrievedResponse = await productServiceClient.PollOnceAddLocalInventoriesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AddLocalInventoriesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveLocalInventories</summary>
+        public void RemoveLocalInventoriesRequestObject()
+        {
+            // Snippet: RemoveLocalInventories(RemoveLocalInventoriesRequest, CallSettings)
+            // Create client
+            ProductServiceClient productServiceClient = ProductServiceClient.Create();
+            // Initialize request argument(s)
+            RemoveLocalInventoriesRequest request = new RemoveLocalInventoriesRequest
+            {
+                ProductAsProductName = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]"),
+                PlaceIds = { "", },
+                AllowMissing = false,
+                RemoveTime = new Timestamp(),
+            };
+            // Make the request
+            Operation<RemoveLocalInventoriesResponse, RemoveLocalInventoriesMetadata> response = productServiceClient.RemoveLocalInventories(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RemoveLocalInventoriesResponse, RemoveLocalInventoriesMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RemoveLocalInventoriesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RemoveLocalInventoriesResponse, RemoveLocalInventoriesMetadata> retrievedResponse = productServiceClient.PollOnceRemoveLocalInventories(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RemoveLocalInventoriesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveLocalInventoriesAsync</summary>
+        public async Task RemoveLocalInventoriesRequestObjectAsync()
+        {
+            // Snippet: RemoveLocalInventoriesAsync(RemoveLocalInventoriesRequest, CallSettings)
+            // Additional: RemoveLocalInventoriesAsync(RemoveLocalInventoriesRequest, CancellationToken)
+            // Create client
+            ProductServiceClient productServiceClient = await ProductServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RemoveLocalInventoriesRequest request = new RemoveLocalInventoriesRequest
+            {
+                ProductAsProductName = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]"),
+                PlaceIds = { "", },
+                AllowMissing = false,
+                RemoveTime = new Timestamp(),
+            };
+            // Make the request
+            Operation<RemoveLocalInventoriesResponse, RemoveLocalInventoriesMetadata> response = await productServiceClient.RemoveLocalInventoriesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RemoveLocalInventoriesResponse, RemoveLocalInventoriesMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RemoveLocalInventoriesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RemoveLocalInventoriesResponse, RemoveLocalInventoriesMetadata> retrievedResponse = await productServiceClient.PollOnceRemoveLocalInventoriesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RemoveLocalInventoriesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveLocalInventories</summary>
+        public void RemoveLocalInventories()
+        {
+            // Snippet: RemoveLocalInventories(string, CallSettings)
+            // Create client
+            ProductServiceClient productServiceClient = ProductServiceClient.Create();
+            // Initialize request argument(s)
+            string product = "projects/[PROJECT]/locations/[LOCATION]/catalogs/[CATALOG]/branches/[BRANCH]/products/[PRODUCT]";
+            // Make the request
+            Operation<RemoveLocalInventoriesResponse, RemoveLocalInventoriesMetadata> response = productServiceClient.RemoveLocalInventories(product);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RemoveLocalInventoriesResponse, RemoveLocalInventoriesMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RemoveLocalInventoriesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RemoveLocalInventoriesResponse, RemoveLocalInventoriesMetadata> retrievedResponse = productServiceClient.PollOnceRemoveLocalInventories(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RemoveLocalInventoriesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveLocalInventoriesAsync</summary>
+        public async Task RemoveLocalInventoriesAsync()
+        {
+            // Snippet: RemoveLocalInventoriesAsync(string, CallSettings)
+            // Additional: RemoveLocalInventoriesAsync(string, CancellationToken)
+            // Create client
+            ProductServiceClient productServiceClient = await ProductServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string product = "projects/[PROJECT]/locations/[LOCATION]/catalogs/[CATALOG]/branches/[BRANCH]/products/[PRODUCT]";
+            // Make the request
+            Operation<RemoveLocalInventoriesResponse, RemoveLocalInventoriesMetadata> response = await productServiceClient.RemoveLocalInventoriesAsync(product);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RemoveLocalInventoriesResponse, RemoveLocalInventoriesMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RemoveLocalInventoriesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RemoveLocalInventoriesResponse, RemoveLocalInventoriesMetadata> retrievedResponse = await productServiceClient.PollOnceRemoveLocalInventoriesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RemoveLocalInventoriesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveLocalInventories</summary>
+        public void RemoveLocalInventoriesResourceNames()
+        {
+            // Snippet: RemoveLocalInventories(ProductName, CallSettings)
+            // Create client
+            ProductServiceClient productServiceClient = ProductServiceClient.Create();
+            // Initialize request argument(s)
+            ProductName product = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]");
+            // Make the request
+            Operation<RemoveLocalInventoriesResponse, RemoveLocalInventoriesMetadata> response = productServiceClient.RemoveLocalInventories(product);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RemoveLocalInventoriesResponse, RemoveLocalInventoriesMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RemoveLocalInventoriesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RemoveLocalInventoriesResponse, RemoveLocalInventoriesMetadata> retrievedResponse = productServiceClient.PollOnceRemoveLocalInventories(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RemoveLocalInventoriesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveLocalInventoriesAsync</summary>
+        public async Task RemoveLocalInventoriesResourceNamesAsync()
+        {
+            // Snippet: RemoveLocalInventoriesAsync(ProductName, CallSettings)
+            // Additional: RemoveLocalInventoriesAsync(ProductName, CancellationToken)
+            // Create client
+            ProductServiceClient productServiceClient = await ProductServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProductName product = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]");
+            // Make the request
+            Operation<RemoveLocalInventoriesResponse, RemoveLocalInventoriesMetadata> response = await productServiceClient.RemoveLocalInventoriesAsync(product);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RemoveLocalInventoriesResponse, RemoveLocalInventoriesMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RemoveLocalInventoriesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RemoveLocalInventoriesResponse, RemoveLocalInventoriesMetadata> retrievedResponse = await productServiceClient.PollOnceRemoveLocalInventoriesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RemoveLocalInventoriesResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }

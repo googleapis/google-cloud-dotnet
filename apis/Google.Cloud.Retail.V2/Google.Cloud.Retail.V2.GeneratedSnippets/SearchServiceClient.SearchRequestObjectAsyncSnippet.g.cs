@@ -52,10 +52,10 @@ namespace Google.Cloud.Retail.V2.Snippets
                 BoostSpec = new SearchRequest.Types.BoostSpec(),
                 QueryExpansionSpec = new SearchRequest.Types.QueryExpansionSpec(),
                 VariantRollupKeys = { "", },
-                DynamicFacetSpec = new SearchRequest.Types.DynamicFacetSpec(),
                 PageCategories = { "", },
                 CanonicalFilter = "",
                 SearchMode = SearchRequest.Types.SearchMode.Unspecified,
+                PersonalizationSpec = new SearchRequest.Types.PersonalizationSpec(),
             };
             // Make the request
             PagedAsyncEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.SearchAsync(request);

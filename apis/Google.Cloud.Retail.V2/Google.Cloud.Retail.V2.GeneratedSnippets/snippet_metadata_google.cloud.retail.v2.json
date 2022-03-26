@@ -1924,6 +1924,316 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "retail_v2_generated_ProductService_AddLocalInventories_sync",
+      "title": "AddLocalInventoriesRequestObject",
+      "description": "Snippet for AddLocalInventories",
+      "file": "ProductServiceClient.AddLocalInventoriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddLocalInventories",
+        "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.AddLocalInventories",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.AddLocalInventoriesResponse, Google.Cloud.Retail.V2.AddLocalInventoriesMetadata>",
+        "client": {
+          "shortName": "ProductServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ProductServiceClient"
+        },
+        "method": {
+          "shortName": "AddLocalInventories",
+          "fullName": "google.cloud.retail.v2.ProductService.AddLocalInventories",
+          "service": {
+            "shortName": "ProductService",
+            "fullName": "google.cloud.retail.v2.ProductService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ProductService_AddLocalInventories_async",
+      "title": "AddLocalInventoriesRequestObjectAsync",
+      "description": "Snippet for AddLocalInventoriesAsync",
+      "file": "ProductServiceClient.AddLocalInventoriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddLocalInventoriesAsync",
+        "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.AddLocalInventoriesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.AddLocalInventoriesResponse, Google.Cloud.Retail.V2.AddLocalInventoriesMetadata>>",
+        "client": {
+          "shortName": "ProductServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ProductServiceClient"
+        },
+        "method": {
+          "shortName": "AddLocalInventories",
+          "fullName": "google.cloud.retail.v2.ProductService.AddLocalInventories",
+          "service": {
+            "shortName": "ProductService",
+            "fullName": "google.cloud.retail.v2.ProductService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ProductService_AddLocalInventories_sync_flattened",
+      "title": "AddLocalInventories",
+      "description": "Snippet for AddLocalInventories",
+      "file": "ProductServiceClient.AddLocalInventoriesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddLocalInventories",
+        "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.AddLocalInventories",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.AddLocalInventoriesResponse, Google.Cloud.Retail.V2.AddLocalInventoriesMetadata>",
+        "client": {
+          "shortName": "ProductServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ProductServiceClient"
+        },
+        "method": {
+          "shortName": "AddLocalInventories",
+          "fullName": "google.cloud.retail.v2.ProductService.AddLocalInventories",
+          "service": {
+            "shortName": "ProductService",
+            "fullName": "google.cloud.retail.v2.ProductService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ProductService_AddLocalInventories_async_flattened",
+      "title": "AddLocalInventoriesAsync",
+      "description": "Snippet for AddLocalInventoriesAsync",
+      "file": "ProductServiceClient.AddLocalInventoriesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddLocalInventoriesAsync",
+        "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.AddLocalInventoriesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.AddLocalInventoriesResponse, Google.Cloud.Retail.V2.AddLocalInventoriesMetadata>>",
+        "client": {
+          "shortName": "ProductServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ProductServiceClient"
+        },
+        "method": {
+          "shortName": "AddLocalInventories",
+          "fullName": "google.cloud.retail.v2.ProductService.AddLocalInventories",
+          "service": {
+            "shortName": "ProductService",
+            "fullName": "google.cloud.retail.v2.ProductService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ProductService_AddLocalInventories_sync_flattened_resourceNames",
+      "title": "AddLocalInventoriesResourceNames",
+      "description": "Snippet for AddLocalInventories",
+      "file": "ProductServiceClient.AddLocalInventoriesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddLocalInventories",
+        "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.AddLocalInventories",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.AddLocalInventoriesResponse, Google.Cloud.Retail.V2.AddLocalInventoriesMetadata>",
+        "client": {
+          "shortName": "ProductServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ProductServiceClient"
+        },
+        "method": {
+          "shortName": "AddLocalInventories",
+          "fullName": "google.cloud.retail.v2.ProductService.AddLocalInventories",
+          "service": {
+            "shortName": "ProductService",
+            "fullName": "google.cloud.retail.v2.ProductService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ProductService_AddLocalInventories_async_flattened_resourceNames",
+      "title": "AddLocalInventoriesResourceNamesAsync",
+      "description": "Snippet for AddLocalInventoriesAsync",
+      "file": "ProductServiceClient.AddLocalInventoriesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddLocalInventoriesAsync",
+        "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.AddLocalInventoriesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.AddLocalInventoriesResponse, Google.Cloud.Retail.V2.AddLocalInventoriesMetadata>>",
+        "client": {
+          "shortName": "ProductServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ProductServiceClient"
+        },
+        "method": {
+          "shortName": "AddLocalInventories",
+          "fullName": "google.cloud.retail.v2.ProductService.AddLocalInventories",
+          "service": {
+            "shortName": "ProductService",
+            "fullName": "google.cloud.retail.v2.ProductService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ProductService_RemoveLocalInventories_sync",
+      "title": "RemoveLocalInventoriesRequestObject",
+      "description": "Snippet for RemoveLocalInventories",
+      "file": "ProductServiceClient.RemoveLocalInventoriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveLocalInventories",
+        "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.RemoveLocalInventories",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.RemoveLocalInventoriesResponse, Google.Cloud.Retail.V2.RemoveLocalInventoriesMetadata>",
+        "client": {
+          "shortName": "ProductServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ProductServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveLocalInventories",
+          "fullName": "google.cloud.retail.v2.ProductService.RemoveLocalInventories",
+          "service": {
+            "shortName": "ProductService",
+            "fullName": "google.cloud.retail.v2.ProductService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ProductService_RemoveLocalInventories_async",
+      "title": "RemoveLocalInventoriesRequestObjectAsync",
+      "description": "Snippet for RemoveLocalInventoriesAsync",
+      "file": "ProductServiceClient.RemoveLocalInventoriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveLocalInventoriesAsync",
+        "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.RemoveLocalInventoriesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.RemoveLocalInventoriesResponse, Google.Cloud.Retail.V2.RemoveLocalInventoriesMetadata>>",
+        "client": {
+          "shortName": "ProductServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ProductServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveLocalInventories",
+          "fullName": "google.cloud.retail.v2.ProductService.RemoveLocalInventories",
+          "service": {
+            "shortName": "ProductService",
+            "fullName": "google.cloud.retail.v2.ProductService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ProductService_RemoveLocalInventories_sync_flattened",
+      "title": "RemoveLocalInventories",
+      "description": "Snippet for RemoveLocalInventories",
+      "file": "ProductServiceClient.RemoveLocalInventoriesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveLocalInventories",
+        "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.RemoveLocalInventories",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.RemoveLocalInventoriesResponse, Google.Cloud.Retail.V2.RemoveLocalInventoriesMetadata>",
+        "client": {
+          "shortName": "ProductServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ProductServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveLocalInventories",
+          "fullName": "google.cloud.retail.v2.ProductService.RemoveLocalInventories",
+          "service": {
+            "shortName": "ProductService",
+            "fullName": "google.cloud.retail.v2.ProductService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ProductService_RemoveLocalInventories_async_flattened",
+      "title": "RemoveLocalInventoriesAsync",
+      "description": "Snippet for RemoveLocalInventoriesAsync",
+      "file": "ProductServiceClient.RemoveLocalInventoriesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveLocalInventoriesAsync",
+        "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.RemoveLocalInventoriesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.RemoveLocalInventoriesResponse, Google.Cloud.Retail.V2.RemoveLocalInventoriesMetadata>>",
+        "client": {
+          "shortName": "ProductServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ProductServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveLocalInventories",
+          "fullName": "google.cloud.retail.v2.ProductService.RemoveLocalInventories",
+          "service": {
+            "shortName": "ProductService",
+            "fullName": "google.cloud.retail.v2.ProductService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ProductService_RemoveLocalInventories_sync_flattened_resourceNames",
+      "title": "RemoveLocalInventoriesResourceNames",
+      "description": "Snippet for RemoveLocalInventories",
+      "file": "ProductServiceClient.RemoveLocalInventoriesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveLocalInventories",
+        "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.RemoveLocalInventories",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.RemoveLocalInventoriesResponse, Google.Cloud.Retail.V2.RemoveLocalInventoriesMetadata>",
+        "client": {
+          "shortName": "ProductServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ProductServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveLocalInventories",
+          "fullName": "google.cloud.retail.v2.ProductService.RemoveLocalInventories",
+          "service": {
+            "shortName": "ProductService",
+            "fullName": "google.cloud.retail.v2.ProductService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "retail_v2_generated_ProductService_RemoveLocalInventories_async_flattened_resourceNames",
+      "title": "RemoveLocalInventoriesResourceNamesAsync",
+      "description": "Snippet for RemoveLocalInventoriesAsync",
+      "file": "ProductServiceClient.RemoveLocalInventoriesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveLocalInventoriesAsync",
+        "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.RemoveLocalInventoriesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.RemoveLocalInventoriesResponse, Google.Cloud.Retail.V2.RemoveLocalInventoriesMetadata>>",
+        "client": {
+          "shortName": "ProductServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ProductServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveLocalInventories",
+          "fullName": "google.cloud.retail.v2.ProductService.RemoveLocalInventories",
+          "service": {
+            "shortName": "ProductService",
+            "fullName": "google.cloud.retail.v2.ProductService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "retail_v2_generated_SearchService_Search_sync",
       "title": "SearchRequestObject",
       "description": "Snippet for Search",
