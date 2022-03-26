@@ -36,6 +36,7 @@ namespace Google.Cloud.Retail.V2.Snippets
                 CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
                 BranchIdAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
                 Note = "",
+                Force = false,
             };
             // Make the request
             catalogServiceClient.SetDefaultBranch(request);

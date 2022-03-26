@@ -27,8 +27,7 @@ namespace Google.Cloud.Retail.V2 {
   /// Service for search.
   ///
   /// This feature is only available for users who have Retail Search enabled.
-  /// Please submit a form [here](https://cloud.google.com/contact) to contact
-  /// cloud sales if you are interested in using Retail Search.
+  /// Please enable Retail Search on Cloud Console before using this feature.
   /// </summary>
   public static partial class SearchService
   {
@@ -94,8 +93,7 @@ namespace Google.Cloud.Retail.V2 {
       /// Performs a search.
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please submit a form [here](https://cloud.google.com/contact) to contact
-      /// cloud sales if you are interested in using Retail Search.
+      /// Please enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -139,8 +137,7 @@ namespace Google.Cloud.Retail.V2 {
       /// Performs a search.
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please submit a form [here](https://cloud.google.com/contact) to contact
-      /// cloud sales if you are interested in using Retail Search.
+      /// Please enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -156,8 +153,7 @@ namespace Google.Cloud.Retail.V2 {
       /// Performs a search.
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please submit a form [here](https://cloud.google.com/contact) to contact
-      /// cloud sales if you are interested in using Retail Search.
+      /// Please enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -171,8 +167,7 @@ namespace Google.Cloud.Retail.V2 {
       /// Performs a search.
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please submit a form [here](https://cloud.google.com/contact) to contact
-      /// cloud sales if you are interested in using Retail Search.
+      /// Please enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -188,8 +183,7 @@ namespace Google.Cloud.Retail.V2 {
       /// Performs a search.
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please submit a form [here](https://cloud.google.com/contact) to contact
-      /// cloud sales if you are interested in using Retail Search.
+      /// Please enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

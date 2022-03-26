@@ -90,6 +90,10 @@ namespace Google.Cloud.Retail.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.AddFulfillmentPlacesRequest> __Marshaller_google_cloud_retail_v2_AddFulfillmentPlacesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.AddFulfillmentPlacesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.RemoveFulfillmentPlacesRequest> __Marshaller_google_cloud_retail_v2_RemoveFulfillmentPlacesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.RemoveFulfillmentPlacesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.AddLocalInventoriesRequest> __Marshaller_google_cloud_retail_v2_AddLocalInventoriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.AddLocalInventoriesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.RemoveLocalInventoriesRequest> __Marshaller_google_cloud_retail_v2_RemoveLocalInventoriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.RemoveLocalInventoriesRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Retail.V2.CreateProductRequest, global::Google.Cloud.Retail.V2.Product> __Method_CreateProduct = new grpc::Method<global::Google.Cloud.Retail.V2.CreateProductRequest, global::Google.Cloud.Retail.V2.Product>(
@@ -161,6 +165,22 @@ namespace Google.Cloud.Retail.V2 {
         __ServiceName,
         "RemoveFulfillmentPlaces",
         __Marshaller_google_cloud_retail_v2_RemoveFulfillmentPlacesRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Retail.V2.AddLocalInventoriesRequest, global::Google.LongRunning.Operation> __Method_AddLocalInventories = new grpc::Method<global::Google.Cloud.Retail.V2.AddLocalInventoriesRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AddLocalInventories",
+        __Marshaller_google_cloud_retail_v2_AddLocalInventoriesRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Retail.V2.RemoveLocalInventoriesRequest, global::Google.LongRunning.Operation> __Method_RemoveLocalInventories = new grpc::Method<global::Google.Cloud.Retail.V2.RemoveLocalInventoriesRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RemoveLocalInventories",
+        __Marshaller_google_cloud_retail_v2_RemoveLocalInventoriesRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -280,7 +300,8 @@ namespace Google.Cloud.Retail.V2 {
       /// [CreateProductRequest.product][google.cloud.retail.v2.CreateProductRequest.product],
       /// then any pre-existing inventory information for this product will be used.
       ///
-      /// If no inventory fields are set in [UpdateProductRequest.set_mask][],
+      /// If no inventory fields are set in
+      /// [SetInventoryRequest.set_mask][google.cloud.retail.v2.SetInventoryRequest.set_mask],
       /// then any existing inventory information will be preserved.
       ///
       /// Pre-existing inventory information can only be updated with
@@ -290,8 +311,7 @@ namespace Google.Cloud.Retail.V2 {
       /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please submit a form [here](https://cloud.google.com/contact) to contact
-      /// cloud sales if you are interested in using Retail Search.
+      /// Please enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -316,8 +336,7 @@ namespace Google.Cloud.Retail.V2 {
       /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please submit a form [here](https://cloud.google.com/contact) to contact
-      /// cloud sales if you are interested in using Retail Search.
+      /// Please enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -342,14 +361,73 @@ namespace Google.Cloud.Retail.V2 {
       /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please submit a form [here](https://cloud.google.com/contact) to contact
-      /// cloud sales if you are interested in using Retail Search.
+      /// Please enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RemoveFulfillmentPlaces(global::Google.Cloud.Retail.V2.RemoveFulfillmentPlacesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates local inventory information for a
+      /// [Product][google.cloud.retail.v2.Product] at a list of places, while
+      /// respecting the last update timestamps of each inventory field.
+      ///
+      /// This process is asynchronous and does not require the
+      /// [Product][google.cloud.retail.v2.Product] to exist before updating
+      /// inventory information. If the request is valid, the update will be enqueued
+      /// and processed downstream. As a consequence, when a response is returned,
+      /// updates are not immediately manifested in the
+      /// [Product][google.cloud.retail.v2.Product] queried by
+      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
+      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      ///
+      /// Local inventory information can only be modified using this method.
+      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
+      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct] has no
+      /// effect on local inventories.
+      ///
+      /// This feature is only available for users who have Retail Search enabled.
+      /// Please enable Retail Search on Cloud Console before using this feature.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> AddLocalInventories(global::Google.Cloud.Retail.V2.AddLocalInventoriesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Remove local inventory information for a
+      /// [Product][google.cloud.retail.v2.Product] at a list of places at a removal
+      /// timestamp.
+      ///
+      /// This process is asynchronous. If the request is valid, the removal will be
+      /// enqueued and processed downstream. As a consequence, when a response is
+      /// returned, removals are not immediately manifested in the
+      /// [Product][google.cloud.retail.v2.Product] queried by
+      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
+      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      ///
+      /// Local inventory information can only be removed using this method.
+      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
+      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct] has no
+      /// effect on local inventories.
+      ///
+      /// This feature is only available for users who have Retail Search enabled.
+      /// Please enable Retail Search on Cloud Console before using this feature.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RemoveLocalInventories(global::Google.Cloud.Retail.V2.RemoveLocalInventoriesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -724,7 +802,8 @@ namespace Google.Cloud.Retail.V2 {
       /// [CreateProductRequest.product][google.cloud.retail.v2.CreateProductRequest.product],
       /// then any pre-existing inventory information for this product will be used.
       ///
-      /// If no inventory fields are set in [UpdateProductRequest.set_mask][],
+      /// If no inventory fields are set in
+      /// [SetInventoryRequest.set_mask][google.cloud.retail.v2.SetInventoryRequest.set_mask],
       /// then any existing inventory information will be preserved.
       ///
       /// Pre-existing inventory information can only be updated with
@@ -734,8 +813,7 @@ namespace Google.Cloud.Retail.V2 {
       /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please submit a form [here](https://cloud.google.com/contact) to contact
-      /// cloud sales if you are interested in using Retail Search.
+      /// Please enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -776,7 +854,8 @@ namespace Google.Cloud.Retail.V2 {
       /// [CreateProductRequest.product][google.cloud.retail.v2.CreateProductRequest.product],
       /// then any pre-existing inventory information for this product will be used.
       ///
-      /// If no inventory fields are set in [UpdateProductRequest.set_mask][],
+      /// If no inventory fields are set in
+      /// [SetInventoryRequest.set_mask][google.cloud.retail.v2.SetInventoryRequest.set_mask],
       /// then any existing inventory information will be preserved.
       ///
       /// Pre-existing inventory information can only be updated with
@@ -786,8 +865,7 @@ namespace Google.Cloud.Retail.V2 {
       /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please submit a form [here](https://cloud.google.com/contact) to contact
-      /// cloud sales if you are interested in using Retail Search.
+      /// Please enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -826,7 +904,8 @@ namespace Google.Cloud.Retail.V2 {
       /// [CreateProductRequest.product][google.cloud.retail.v2.CreateProductRequest.product],
       /// then any pre-existing inventory information for this product will be used.
       ///
-      /// If no inventory fields are set in [UpdateProductRequest.set_mask][],
+      /// If no inventory fields are set in
+      /// [SetInventoryRequest.set_mask][google.cloud.retail.v2.SetInventoryRequest.set_mask],
       /// then any existing inventory information will be preserved.
       ///
       /// Pre-existing inventory information can only be updated with
@@ -836,8 +915,7 @@ namespace Google.Cloud.Retail.V2 {
       /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please submit a form [here](https://cloud.google.com/contact) to contact
-      /// cloud sales if you are interested in using Retail Search.
+      /// Please enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -878,7 +956,8 @@ namespace Google.Cloud.Retail.V2 {
       /// [CreateProductRequest.product][google.cloud.retail.v2.CreateProductRequest.product],
       /// then any pre-existing inventory information for this product will be used.
       ///
-      /// If no inventory fields are set in [UpdateProductRequest.set_mask][],
+      /// If no inventory fields are set in
+      /// [SetInventoryRequest.set_mask][google.cloud.retail.v2.SetInventoryRequest.set_mask],
       /// then any existing inventory information will be preserved.
       ///
       /// Pre-existing inventory information can only be updated with
@@ -888,8 +967,7 @@ namespace Google.Cloud.Retail.V2 {
       /// [RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please submit a form [here](https://cloud.google.com/contact) to contact
-      /// cloud sales if you are interested in using Retail Search.
+      /// Please enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -913,8 +991,7 @@ namespace Google.Cloud.Retail.V2 {
       /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please submit a form [here](https://cloud.google.com/contact) to contact
-      /// cloud sales if you are interested in using Retail Search.
+      /// Please enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -940,8 +1017,7 @@ namespace Google.Cloud.Retail.V2 {
       /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please submit a form [here](https://cloud.google.com/contact) to contact
-      /// cloud sales if you are interested in using Retail Search.
+      /// Please enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -965,8 +1041,7 @@ namespace Google.Cloud.Retail.V2 {
       /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please submit a form [here](https://cloud.google.com/contact) to contact
-      /// cloud sales if you are interested in using Retail Search.
+      /// Please enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -992,8 +1067,7 @@ namespace Google.Cloud.Retail.V2 {
       /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please submit a form [here](https://cloud.google.com/contact) to contact
-      /// cloud sales if you are interested in using Retail Search.
+      /// Please enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1017,8 +1091,7 @@ namespace Google.Cloud.Retail.V2 {
       /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please submit a form [here](https://cloud.google.com/contact) to contact
-      /// cloud sales if you are interested in using Retail Search.
+      /// Please enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1044,8 +1117,7 @@ namespace Google.Cloud.Retail.V2 {
       /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please submit a form [here](https://cloud.google.com/contact) to contact
-      /// cloud sales if you are interested in using Retail Search.
+      /// Please enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1069,8 +1141,7 @@ namespace Google.Cloud.Retail.V2 {
       /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please submit a form [here](https://cloud.google.com/contact) to contact
-      /// cloud sales if you are interested in using Retail Search.
+      /// Please enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1096,8 +1167,7 @@ namespace Google.Cloud.Retail.V2 {
       /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
       ///
       /// This feature is only available for users who have Retail Search enabled.
-      /// Please submit a form [here](https://cloud.google.com/contact) to contact
-      /// cloud sales if you are interested in using Retail Search.
+      /// Please enable Retail Search on Cloud Console before using this feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1106,6 +1176,246 @@ namespace Google.Cloud.Retail.V2 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RemoveFulfillmentPlacesAsync(global::Google.Cloud.Retail.V2.RemoveFulfillmentPlacesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RemoveFulfillmentPlaces, null, options, request);
+      }
+      /// <summary>
+      /// Updates local inventory information for a
+      /// [Product][google.cloud.retail.v2.Product] at a list of places, while
+      /// respecting the last update timestamps of each inventory field.
+      ///
+      /// This process is asynchronous and does not require the
+      /// [Product][google.cloud.retail.v2.Product] to exist before updating
+      /// inventory information. If the request is valid, the update will be enqueued
+      /// and processed downstream. As a consequence, when a response is returned,
+      /// updates are not immediately manifested in the
+      /// [Product][google.cloud.retail.v2.Product] queried by
+      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
+      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      ///
+      /// Local inventory information can only be modified using this method.
+      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
+      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct] has no
+      /// effect on local inventories.
+      ///
+      /// This feature is only available for users who have Retail Search enabled.
+      /// Please enable Retail Search on Cloud Console before using this feature.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation AddLocalInventories(global::Google.Cloud.Retail.V2.AddLocalInventoriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddLocalInventories(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates local inventory information for a
+      /// [Product][google.cloud.retail.v2.Product] at a list of places, while
+      /// respecting the last update timestamps of each inventory field.
+      ///
+      /// This process is asynchronous and does not require the
+      /// [Product][google.cloud.retail.v2.Product] to exist before updating
+      /// inventory information. If the request is valid, the update will be enqueued
+      /// and processed downstream. As a consequence, when a response is returned,
+      /// updates are not immediately manifested in the
+      /// [Product][google.cloud.retail.v2.Product] queried by
+      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
+      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      ///
+      /// Local inventory information can only be modified using this method.
+      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
+      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct] has no
+      /// effect on local inventories.
+      ///
+      /// This feature is only available for users who have Retail Search enabled.
+      /// Please enable Retail Search on Cloud Console before using this feature.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation AddLocalInventories(global::Google.Cloud.Retail.V2.AddLocalInventoriesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AddLocalInventories, null, options, request);
+      }
+      /// <summary>
+      /// Updates local inventory information for a
+      /// [Product][google.cloud.retail.v2.Product] at a list of places, while
+      /// respecting the last update timestamps of each inventory field.
+      ///
+      /// This process is asynchronous and does not require the
+      /// [Product][google.cloud.retail.v2.Product] to exist before updating
+      /// inventory information. If the request is valid, the update will be enqueued
+      /// and processed downstream. As a consequence, when a response is returned,
+      /// updates are not immediately manifested in the
+      /// [Product][google.cloud.retail.v2.Product] queried by
+      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
+      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      ///
+      /// Local inventory information can only be modified using this method.
+      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
+      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct] has no
+      /// effect on local inventories.
+      ///
+      /// This feature is only available for users who have Retail Search enabled.
+      /// Please enable Retail Search on Cloud Console before using this feature.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AddLocalInventoriesAsync(global::Google.Cloud.Retail.V2.AddLocalInventoriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddLocalInventoriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates local inventory information for a
+      /// [Product][google.cloud.retail.v2.Product] at a list of places, while
+      /// respecting the last update timestamps of each inventory field.
+      ///
+      /// This process is asynchronous and does not require the
+      /// [Product][google.cloud.retail.v2.Product] to exist before updating
+      /// inventory information. If the request is valid, the update will be enqueued
+      /// and processed downstream. As a consequence, when a response is returned,
+      /// updates are not immediately manifested in the
+      /// [Product][google.cloud.retail.v2.Product] queried by
+      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
+      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      ///
+      /// Local inventory information can only be modified using this method.
+      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
+      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct] has no
+      /// effect on local inventories.
+      ///
+      /// This feature is only available for users who have Retail Search enabled.
+      /// Please enable Retail Search on Cloud Console before using this feature.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AddLocalInventoriesAsync(global::Google.Cloud.Retail.V2.AddLocalInventoriesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AddLocalInventories, null, options, request);
+      }
+      /// <summary>
+      /// Remove local inventory information for a
+      /// [Product][google.cloud.retail.v2.Product] at a list of places at a removal
+      /// timestamp.
+      ///
+      /// This process is asynchronous. If the request is valid, the removal will be
+      /// enqueued and processed downstream. As a consequence, when a response is
+      /// returned, removals are not immediately manifested in the
+      /// [Product][google.cloud.retail.v2.Product] queried by
+      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
+      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      ///
+      /// Local inventory information can only be removed using this method.
+      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
+      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct] has no
+      /// effect on local inventories.
+      ///
+      /// This feature is only available for users who have Retail Search enabled.
+      /// Please enable Retail Search on Cloud Console before using this feature.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RemoveLocalInventories(global::Google.Cloud.Retail.V2.RemoveLocalInventoriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RemoveLocalInventories(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Remove local inventory information for a
+      /// [Product][google.cloud.retail.v2.Product] at a list of places at a removal
+      /// timestamp.
+      ///
+      /// This process is asynchronous. If the request is valid, the removal will be
+      /// enqueued and processed downstream. As a consequence, when a response is
+      /// returned, removals are not immediately manifested in the
+      /// [Product][google.cloud.retail.v2.Product] queried by
+      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
+      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      ///
+      /// Local inventory information can only be removed using this method.
+      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
+      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct] has no
+      /// effect on local inventories.
+      ///
+      /// This feature is only available for users who have Retail Search enabled.
+      /// Please enable Retail Search on Cloud Console before using this feature.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RemoveLocalInventories(global::Google.Cloud.Retail.V2.RemoveLocalInventoriesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RemoveLocalInventories, null, options, request);
+      }
+      /// <summary>
+      /// Remove local inventory information for a
+      /// [Product][google.cloud.retail.v2.Product] at a list of places at a removal
+      /// timestamp.
+      ///
+      /// This process is asynchronous. If the request is valid, the removal will be
+      /// enqueued and processed downstream. As a consequence, when a response is
+      /// returned, removals are not immediately manifested in the
+      /// [Product][google.cloud.retail.v2.Product] queried by
+      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
+      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      ///
+      /// Local inventory information can only be removed using this method.
+      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
+      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct] has no
+      /// effect on local inventories.
+      ///
+      /// This feature is only available for users who have Retail Search enabled.
+      /// Please enable Retail Search on Cloud Console before using this feature.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RemoveLocalInventoriesAsync(global::Google.Cloud.Retail.V2.RemoveLocalInventoriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RemoveLocalInventoriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Remove local inventory information for a
+      /// [Product][google.cloud.retail.v2.Product] at a list of places at a removal
+      /// timestamp.
+      ///
+      /// This process is asynchronous. If the request is valid, the removal will be
+      /// enqueued and processed downstream. As a consequence, when a response is
+      /// returned, removals are not immediately manifested in the
+      /// [Product][google.cloud.retail.v2.Product] queried by
+      /// [GetProduct][google.cloud.retail.v2.ProductService.GetProduct] or
+      /// [ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+      ///
+      /// Local inventory information can only be removed using this method.
+      /// [CreateProduct][google.cloud.retail.v2.ProductService.CreateProduct] and
+      /// [UpdateProduct][google.cloud.retail.v2.ProductService.UpdateProduct] has no
+      /// effect on local inventories.
+      ///
+      /// This feature is only available for users who have Retail Search enabled.
+      /// Please enable Retail Search on Cloud Console before using this feature.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RemoveLocalInventoriesAsync(global::Google.Cloud.Retail.V2.RemoveLocalInventoriesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RemoveLocalInventories, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -1129,7 +1439,9 @@ namespace Google.Cloud.Retail.V2 {
           .AddMethod(__Method_ImportProducts, serviceImpl.ImportProducts)
           .AddMethod(__Method_SetInventory, serviceImpl.SetInventory)
           .AddMethod(__Method_AddFulfillmentPlaces, serviceImpl.AddFulfillmentPlaces)
-          .AddMethod(__Method_RemoveFulfillmentPlaces, serviceImpl.RemoveFulfillmentPlaces).Build();
+          .AddMethod(__Method_RemoveFulfillmentPlaces, serviceImpl.RemoveFulfillmentPlaces)
+          .AddMethod(__Method_AddLocalInventories, serviceImpl.AddLocalInventories)
+          .AddMethod(__Method_RemoveLocalInventories, serviceImpl.RemoveLocalInventories).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -1148,6 +1460,8 @@ namespace Google.Cloud.Retail.V2 {
       serviceBinder.AddMethod(__Method_SetInventory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.SetInventoryRequest, global::Google.LongRunning.Operation>(serviceImpl.SetInventory));
       serviceBinder.AddMethod(__Method_AddFulfillmentPlaces, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.AddFulfillmentPlacesRequest, global::Google.LongRunning.Operation>(serviceImpl.AddFulfillmentPlaces));
       serviceBinder.AddMethod(__Method_RemoveFulfillmentPlaces, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.RemoveFulfillmentPlacesRequest, global::Google.LongRunning.Operation>(serviceImpl.RemoveFulfillmentPlaces));
+      serviceBinder.AddMethod(__Method_AddLocalInventories, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.AddLocalInventoriesRequest, global::Google.LongRunning.Operation>(serviceImpl.AddLocalInventories));
+      serviceBinder.AddMethod(__Method_RemoveLocalInventories, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.RemoveLocalInventoriesRequest, global::Google.LongRunning.Operation>(serviceImpl.RemoveLocalInventories));
     }
 
   }

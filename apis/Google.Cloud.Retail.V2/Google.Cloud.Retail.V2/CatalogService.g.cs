@@ -38,46 +38,46 @@ namespace Google.Cloud.Retail.V2 {
             "dWQucmV0YWlsLnYyLkNhdGFsb2cSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJ",
             "In4KFFVwZGF0ZUNhdGFsb2dSZXF1ZXN0EjUKB2NhdGFsb2cYASABKAsyHy5n",
             "b29nbGUuY2xvdWQucmV0YWlsLnYyLkNhdGFsb2dCA+BBAhIvCgt1cGRhdGVf",
-            "bWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sikgEKF1Nl",
+            "bWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sioQEKF1Nl",
             "dERlZmF1bHRCcmFuY2hSZXF1ZXN0EjMKB2NhdGFsb2cYASABKAlCIvpBHwod",
             "cmV0YWlsLmdvb2dsZWFwaXMuY29tL0NhdGFsb2cSNAoJYnJhbmNoX2lkGAIg",
             "ASgJQiH6QR4KHHJldGFpbC5nb29nbGVhcGlzLmNvbS9CcmFuY2gSDAoEbm90",
-            "ZRgDIAEoCSJOChdHZXREZWZhdWx0QnJhbmNoUmVxdWVzdBIzCgdjYXRhbG9n",
-            "GAEgASgJQiL6QR8KHXJldGFpbC5nb29nbGVhcGlzLmNvbS9DYXRhbG9nIokB",
-            "ChhHZXREZWZhdWx0QnJhbmNoUmVzcG9uc2USMQoGYnJhbmNoGAEgASgJQiH6",
-            "QR4KHHJldGFpbC5nb29nbGVhcGlzLmNvbS9CcmFuY2gSLAoIc2V0X3RpbWUY",
-            "AiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEgwKBG5vdGUYAyAB",
-            "KAkyxQYKDkNhdGFsb2dTZXJ2aWNlEqgBCgxMaXN0Q2F0YWxvZ3MSKy5nb29n",
-            "bGUuY2xvdWQucmV0YWlsLnYyLkxpc3RDYXRhbG9nc1JlcXVlc3QaLC5nb29n",
-            "bGUuY2xvdWQucmV0YWlsLnYyLkxpc3RDYXRhbG9nc1Jlc3BvbnNlIj2C0+ST",
-            "Ai4SLC92Mi97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2NhdGFs",
-            "b2dz2kEGcGFyZW50ErsBCg1VcGRhdGVDYXRhbG9nEiwuZ29vZ2xlLmNsb3Vk",
-            "LnJldGFpbC52Mi5VcGRhdGVDYXRhbG9nUmVxdWVzdBofLmdvb2dsZS5jbG91",
-            "ZC5yZXRhaWwudjIuQ2F0YWxvZyJbgtPkkwI/MjQvdjIve2NhdGFsb2cubmFt",
-            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dzLyp9OgdjYXRhbG9n",
-            "2kETY2F0YWxvZyx1cGRhdGVfbWFzaxKyAQoQU2V0RGVmYXVsdEJyYW5jaBIv",
-            "Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuU2V0RGVmYXVsdEJyYW5jaFJlcXVl",
-            "c3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiVYLT5JMCRSJAL3YyL3tjYXRh",
-            "bG9nPXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxvZ3MvKn06c2V0RGVm",
-            "YXVsdEJyYW5jaDoBKtpBB2NhdGFsb2cSyQEKEEdldERlZmF1bHRCcmFuY2gS",
-            "Ly5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkdldERlZmF1bHRCcmFuY2hSZXF1",
-            "ZXN0GjAuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5HZXREZWZhdWx0QnJhbmNo",
-            "UmVzcG9uc2UiUoLT5JMCQhJAL3YyL3tjYXRhbG9nPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovY2F0YWxvZ3MvKn06Z2V0RGVmYXVsdEJyYW5jaNpBB2NhdGFs",
-            "b2caScpBFXJldGFpbC5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdv",
-            "b2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CyAEKGmNvbS5nb29n",
-            "bGUuY2xvdWQucmV0YWlsLnYyQhNDYXRhbG9nU2VydmljZVByb3RvUAFaPGdv",
-            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvcmV0",
-            "YWlsL3YyO3JldGFpbKICBlJFVEFJTKoCFkdvb2dsZS5DbG91ZC5SZXRhaWwu",
-            "VjLKAhZHb29nbGVcQ2xvdWRcUmV0YWlsXFYy6gIZR29vZ2xlOjpDbG91ZDo6",
-            "UmV0YWlsOjpWMmIGcHJvdG8z"));
+            "ZRgDIAEoCRINCgVmb3JjZRgEIAEoCCJOChdHZXREZWZhdWx0QnJhbmNoUmVx",
+            "dWVzdBIzCgdjYXRhbG9nGAEgASgJQiL6QR8KHXJldGFpbC5nb29nbGVhcGlz",
+            "LmNvbS9DYXRhbG9nIokBChhHZXREZWZhdWx0QnJhbmNoUmVzcG9uc2USMQoG",
+            "YnJhbmNoGAEgASgJQiH6QR4KHHJldGFpbC5nb29nbGVhcGlzLmNvbS9CcmFu",
+            "Y2gSLAoIc2V0X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wEgwKBG5vdGUYAyABKAkyxQYKDkNhdGFsb2dTZXJ2aWNlEqgBCgxMaXN0",
+            "Q2F0YWxvZ3MSKy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkxpc3RDYXRhbG9n",
+            "c1JlcXVlc3QaLC5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkxpc3RDYXRhbG9n",
+            "c1Jlc3BvbnNlIj2C0+STAi4SLC92Mi97cGFyZW50PXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyp9L2NhdGFsb2dz2kEGcGFyZW50ErsBCg1VcGRhdGVDYXRhbG9n",
+            "EiwuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5VcGRhdGVDYXRhbG9nUmVxdWVz",
+            "dBofLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ2F0YWxvZyJbgtPkkwI/MjQv",
+            "djIve2NhdGFsb2cubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFs",
+            "b2dzLyp9OgdjYXRhbG9n2kETY2F0YWxvZyx1cGRhdGVfbWFzaxKyAQoQU2V0",
+            "RGVmYXVsdEJyYW5jaBIvLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuU2V0RGVm",
+            "YXVsdEJyYW5jaFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiVYLT",
+            "5JMCRSJAL3YyL3tjYXRhbG9nPXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0",
+            "YWxvZ3MvKn06c2V0RGVmYXVsdEJyYW5jaDoBKtpBB2NhdGFsb2cSyQEKEEdl",
+            "dERlZmF1bHRCcmFuY2gSLy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkdldERl",
+            "ZmF1bHRCcmFuY2hSZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5H",
+            "ZXREZWZhdWx0QnJhbmNoUmVzcG9uc2UiUoLT5JMCQhJAL3YyL3tjYXRhbG9n",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxvZ3MvKn06Z2V0RGVmYXVs",
+            "dEJyYW5jaNpBB2NhdGFsb2caScpBFXJldGFpbC5nb29nbGVhcGlzLmNvbdJB",
+            "Lmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZv",
+            "cm1CyAEKGmNvbS5nb29nbGUuY2xvdWQucmV0YWlsLnYyQhNDYXRhbG9nU2Vy",
+            "dmljZVByb3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
+            "ZWFwaXMvY2xvdWQvcmV0YWlsL3YyO3JldGFpbKICBlJFVEFJTKoCFkdvb2ds",
+            "ZS5DbG91ZC5SZXRhaWwuVjLKAhZHb29nbGVcQ2xvdWRcUmV0YWlsXFYy6gIZ",
+            "R29vZ2xlOjpDbG91ZDo6UmV0YWlsOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.CatalogReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ListCatalogsRequest), global::Google.Cloud.Retail.V2.ListCatalogsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ListCatalogsResponse), global::Google.Cloud.Retail.V2.ListCatalogsResponse.Parser, new[]{ "Catalogs", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.UpdateCatalogRequest), global::Google.Cloud.Retail.V2.UpdateCatalogRequest.Parser, new[]{ "Catalog", "UpdateMask" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SetDefaultBranchRequest), global::Google.Cloud.Retail.V2.SetDefaultBranchRequest.Parser, new[]{ "Catalog", "BranchId", "Note" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SetDefaultBranchRequest), global::Google.Cloud.Retail.V2.SetDefaultBranchRequest.Parser, new[]{ "Catalog", "BranchId", "Note", "Force" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.GetDefaultBranchRequest), global::Google.Cloud.Retail.V2.GetDefaultBranchRequest.Parser, new[]{ "Catalog" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.GetDefaultBranchResponse), global::Google.Cloud.Retail.V2.GetDefaultBranchResponse.Parser, new[]{ "Branch", "SetTime", "Note" }, null, null, null, null)
           }));
@@ -916,6 +916,7 @@ namespace Google.Cloud.Retail.V2 {
       catalog_ = other.catalog_;
       branchId_ = other.branchId_;
       note_ = other.note_;
+      force_ = other.force_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -949,6 +950,10 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// This field must be one of "0", "1" or "2". Otherwise, an INVALID_ARGUMENT
     /// error is returned.
+    ///
+    /// If there are no sufficient active products in the targeted branch and
+    /// [force][google.cloud.retail.v2.SetDefaultBranchRequest.force] is not set, a
+    /// FAILED_PRECONDITION error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -979,6 +984,23 @@ namespace Google.Cloud.Retail.V2 {
       }
     }
 
+    /// <summary>Field number for the "force" field.</summary>
+    public const int ForceFieldNumber = 4;
+    private bool force_;
+    /// <summary>
+    /// If set to true, it permits switching to a branch with
+    /// [branch_id][google.cloud.retail.v2.SetDefaultBranchRequest.branch_id] even
+    /// if it has no sufficient active products.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Force {
+      get { return force_; }
+      set {
+        force_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -997,6 +1019,7 @@ namespace Google.Cloud.Retail.V2 {
       if (Catalog != other.Catalog) return false;
       if (BranchId != other.BranchId) return false;
       if (Note != other.Note) return false;
+      if (Force != other.Force) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1007,6 +1030,7 @@ namespace Google.Cloud.Retail.V2 {
       if (Catalog.Length != 0) hash ^= Catalog.GetHashCode();
       if (BranchId.Length != 0) hash ^= BranchId.GetHashCode();
       if (Note.Length != 0) hash ^= Note.GetHashCode();
+      if (Force != false) hash ^= Force.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1037,6 +1061,10 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(26);
         output.WriteString(Note);
       }
+      if (Force != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Force);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1059,6 +1087,10 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(26);
         output.WriteString(Note);
       }
+      if (Force != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Force);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1077,6 +1109,9 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (Note.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Note);
+      }
+      if (Force != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1098,6 +1133,9 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (other.Note.Length != 0) {
         Note = other.Note;
+      }
+      if (other.Force != false) {
+        Force = other.Force;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1126,6 +1164,10 @@ namespace Google.Cloud.Retail.V2 {
             Note = input.ReadString();
             break;
           }
+          case 32: {
+            Force = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1151,6 +1193,10 @@ namespace Google.Cloud.Retail.V2 {
           }
           case 26: {
             Note = input.ReadString();
+            break;
+          }
+          case 32: {
+            Force = input.ReadBool();
             break;
           }
         }

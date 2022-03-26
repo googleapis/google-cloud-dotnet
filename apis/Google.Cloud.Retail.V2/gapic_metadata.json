@@ -85,6 +85,12 @@
                 "AddFulfillmentPlacesAsync"
               ]
             },
+            "AddLocalInventories": {
+              "methods": [
+                "AddLocalInventories",
+                "AddLocalInventoriesAsync"
+              ]
+            },
             "CreateProduct": {
               "methods": [
                 "CreateProduct",
@@ -119,6 +125,12 @@
               "methods": [
                 "RemoveFulfillmentPlaces",
                 "RemoveFulfillmentPlacesAsync"
+              ]
+            },
+            "RemoveLocalInventories": {
+              "methods": [
+                "RemoveLocalInventories",
+                "RemoveLocalInventoriesAsync"
               ]
             },
             "SetInventory": {

@@ -41,7 +41,6 @@ namespace Google.Cloud.Retail.V2.Snippets
                 ErrorsConfig = new ImportErrorsConfig(),
                 UpdateMask = new FieldMask(),
                 ReconciliationMode = ImportProductsRequest.Types.ReconciliationMode.Unspecified,
-                RequestId = "",
                 NotificationPubsubTopic = "",
             };
             // Make the request

@@ -28,104 +28,132 @@ namespace Google.Cloud.Retail.V2 {
             "bxIWZ29vZ2xlLmNsb3VkLnJldGFpbC52MhocZ29vZ2xlL2FwaS9hbm5vdGF0",
             "aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2dsZS9h",
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2Uu",
-            "cHJvdG8aKmdvb2dsZS9jbG91ZC9yZXRhaWwvdjIvaW1wb3J0X2NvbmZpZy5w",
-            "cm90bxokZ29vZ2xlL2Nsb3VkL3JldGFpbC92Mi9wcm9kdWN0LnByb3RvGiNn",
-            "b29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90bxobZ29vZ2xlL3By",
-            "b3RvYnVmL2VtcHR5LnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFz",
-            "ay5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKcAQoU",
-            "Q3JlYXRlUHJvZHVjdFJlcXVlc3QSNAoGcGFyZW50GAEgASgJQiTgQQL6QR4K",
-            "HHJldGFpbC5nb29nbGVhcGlzLmNvbS9CcmFuY2gSNQoHcHJvZHVjdBgCIAEo",
-            "CzIfLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUHJvZHVjdEID4EECEhcKCnBy",
-            "b2R1Y3RfaWQYAyABKAlCA+BBAiJIChFHZXRQcm9kdWN0UmVxdWVzdBIzCgRu",
-            "YW1lGAEgASgJQiXgQQL6QR8KHXJldGFpbC5nb29nbGVhcGlzLmNvbS9Qcm9k",
-            "dWN0IpUBChRVcGRhdGVQcm9kdWN0UmVxdWVzdBI1Cgdwcm9kdWN0GAEgASgL",
-            "Mh8uZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Qcm9kdWN0QgPgQQISLwoLdXBk",
-            "YXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrEhUK",
-            "DWFsbG93X21pc3NpbmcYAyABKAgiSwoURGVsZXRlUHJvZHVjdFJlcXVlc3QS",
-            "MwoEbmFtZRgBIAEoCUIl4EEC+kEfCh1yZXRhaWwuZ29vZ2xlYXBpcy5jb20v",
-            "UHJvZHVjdCKxAQoTTGlzdFByb2R1Y3RzUmVxdWVzdBI0CgZwYXJlbnQYASAB",
-            "KAlCJOBBAvpBHgoccmV0YWlsLmdvb2dsZWFwaXMuY29tL0JyYW5jaBIRCglw",
-            "YWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIOCgZmaWx0ZXIY",
-            "BCABKAkSLQoJcmVhZF9tYXNrGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZp",
-            "ZWxkTWFzayJiChRMaXN0UHJvZHVjdHNSZXNwb25zZRIxCghwcm9kdWN0cxgB",
-            "IAMoCzIfLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUHJvZHVjdBIXCg9uZXh0",
-            "X3BhZ2VfdG9rZW4YAiABKAkiwQEKE1NldEludmVudG9yeVJlcXVlc3QSNwoJ",
-            "aW52ZW50b3J5GAEgASgLMh8uZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Qcm9k",
-            "dWN0QgPgQQISLAoIc2V0X21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "RmllbGRNYXNrEiwKCHNldF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcBIVCg1hbGxvd19taXNzaW5nGAQgASgIIhYKFFNldEludmVu",
-            "dG9yeU1ldGFkYXRhIhYKFFNldEludmVudG9yeVJlc3BvbnNlIsUBChtBZGRG",
-            "dWxmaWxsbWVudFBsYWNlc1JlcXVlc3QSNgoHcHJvZHVjdBgBIAEoCUIl4EEC",
-            "+kEfCh1yZXRhaWwuZ29vZ2xlYXBpcy5jb20vUHJvZHVjdBIRCgR0eXBlGAIg",
-            "ASgJQgPgQQISFgoJcGxhY2VfaWRzGAMgAygJQgPgQQISLAoIYWRkX3RpbWUY",
-            "BCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhUKDWFsbG93X21p",
-            "c3NpbmcYBSABKAgiHgocQWRkRnVsZmlsbG1lbnRQbGFjZXNNZXRhZGF0YSIe",
-            "ChxBZGRGdWxmaWxsbWVudFBsYWNlc1Jlc3BvbnNlIssBCh5SZW1vdmVGdWxm",
-            "aWxsbWVudFBsYWNlc1JlcXVlc3QSNgoHcHJvZHVjdBgBIAEoCUIl4EEC+kEf",
-            "Ch1yZXRhaWwuZ29vZ2xlYXBpcy5jb20vUHJvZHVjdBIRCgR0eXBlGAIgASgJ",
-            "QgPgQQISFgoJcGxhY2VfaWRzGAMgAygJQgPgQQISLwoLcmVtb3ZlX3RpbWUY",
-            "BCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhUKDWFsbG93X21p",
-            "c3NpbmcYBSABKAgiIQofUmVtb3ZlRnVsZmlsbG1lbnRQbGFjZXNNZXRhZGF0",
-            "YSIhCh9SZW1vdmVGdWxmaWxsbWVudFBsYWNlc1Jlc3BvbnNlMo8SCg5Qcm9k",
-            "dWN0U2VydmljZRLPAQoNQ3JlYXRlUHJvZHVjdBIsLmdvb2dsZS5jbG91ZC5y",
-            "ZXRhaWwudjIuQ3JlYXRlUHJvZHVjdFJlcXVlc3QaHy5nb29nbGUuY2xvdWQu",
-            "cmV0YWlsLnYyLlByb2R1Y3Qib4LT5JMCTSJCL3YyL3twYXJlbnQ9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKi9jYXRhbG9ncy8qL2JyYW5jaGVzLyp9L3Byb2R1",
-            "Y3RzOgdwcm9kdWN02kEZcGFyZW50LHByb2R1Y3QscHJvZHVjdF9pZBKsAQoK",
-            "R2V0UHJvZHVjdBIpLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuR2V0UHJvZHVj",
-            "dFJlcXVlc3QaHy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlByb2R1Y3QiUoLT",
-            "5JMCRRJDL3YyL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxv",
-            "Z3MvKi9icmFuY2hlcy8qL3Byb2R1Y3RzLyoqfdpBBG5hbWUSvgEKDExpc3RQ",
-            "cm9kdWN0cxIrLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuTGlzdFByb2R1Y3Rz",
-            "UmVxdWVzdBosLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuTGlzdFByb2R1Y3Rz",
-            "UmVzcG9uc2UiU4LT5JMCRBJCL3YyL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKi9jYXRhbG9ncy8qL2JyYW5jaGVzLyp9L3Byb2R1Y3Rz2kEGcGFy",
-            "ZW50EtIBCg1VcGRhdGVQcm9kdWN0EiwuZ29vZ2xlLmNsb3VkLnJldGFpbC52",
-            "Mi5VcGRhdGVQcm9kdWN0UmVxdWVzdBofLmdvb2dsZS5jbG91ZC5yZXRhaWwu",
-            "djIuUHJvZHVjdCJygtPkkwJWMksvdjIve3Byb2R1Y3QubmFtZT1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dzLyovYnJhbmNoZXMvKi9wcm9kdWN0",
-            "cy8qKn06B3Byb2R1Y3TaQRNwcm9kdWN0LHVwZGF0ZV9tYXNrEqkBCg1EZWxl",
-            "dGVQcm9kdWN0EiwuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5EZWxldGVQcm9k",
-            "dWN0UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJSgtPkkwJFKkMv",
-            "djIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jYXRhbG9ncy8qL2Jy",
-            "YW5jaGVzLyovcHJvZHVjdHMvKip92kEEbmFtZRKOAgoOSW1wb3J0UHJvZHVj",
-            "dHMSLS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkltcG9ydFByb2R1Y3RzUmVx",
-            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24irQGC0+STAk4i",
-            "SS92Mi97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxvZ3Mv",
-            "Ki9icmFuY2hlcy8qfS9wcm9kdWN0czppbXBvcnQ6ASrKQVYKLWdvb2dsZS5j",
-            "bG91ZC5yZXRhaWwudjIuSW1wb3J0UHJvZHVjdHNSZXNwb25zZRIlZ29vZ2xl",
-            "LmNsb3VkLnJldGFpbC52Mi5JbXBvcnRNZXRhZGF0YRK0AgoMU2V0SW52ZW50",
-            "b3J5EisuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5TZXRJbnZlbnRvcnlSZXF1",
-            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiLXAYLT5JMCXyJa",
-            "L3YyL3tpbnZlbnRvcnkubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Nh",
-            "dGFsb2dzLyovYnJhbmNoZXMvKi9wcm9kdWN0cy8qKn06c2V0SW52ZW50b3J5",
-            "OgEq2kESaW52ZW50b3J5LHNldF9tYXNrykFaCitnb29nbGUuY2xvdWQucmV0",
-            "YWlsLnYyLlNldEludmVudG9yeVJlc3BvbnNlEitnb29nbGUuY2xvdWQucmV0",
-            "YWlsLnYyLlNldEludmVudG9yeU1ldGFkYXRhEsoCChRBZGRGdWxmaWxsbWVu",
-            "dFBsYWNlcxIzLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQWRkRnVsZmlsbG1l",
-            "bnRQbGFjZXNSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
-            "biLdAYLT5JMCYCJbL3YyL3twcm9kdWN0PXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovY2F0YWxvZ3MvKi9icmFuY2hlcy8qL3Byb2R1Y3RzLyoqfTphZGRGdWxm",
-            "aWxsbWVudFBsYWNlczoBKtpBB3Byb2R1Y3TKQWoKM2dvb2dsZS5jbG91ZC5y",
-            "ZXRhaWwudjIuQWRkRnVsZmlsbG1lbnRQbGFjZXNSZXNwb25zZRIzZ29vZ2xl",
-            "LmNsb3VkLnJldGFpbC52Mi5BZGRGdWxmaWxsbWVudFBsYWNlc01ldGFkYXRh",
-            "EtkCChdSZW1vdmVGdWxmaWxsbWVudFBsYWNlcxI2Lmdvb2dsZS5jbG91ZC5y",
-            "ZXRhaWwudjIuUmVtb3ZlRnVsZmlsbG1lbnRQbGFjZXNSZXF1ZXN0Gh0uZ29v",
-            "Z2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiLmAYLT5JMCYyJeL3YyL3twcm9k",
-            "dWN0PXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxvZ3MvKi9icmFuY2hl",
-            "cy8qL3Byb2R1Y3RzLyoqfTpyZW1vdmVGdWxmaWxsbWVudFBsYWNlczoBKtpB",
-            "B3Byb2R1Y3TKQXAKNmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUmVtb3ZlRnVs",
-            "ZmlsbG1lbnRQbGFjZXNSZXNwb25zZRI2Z29vZ2xlLmNsb3VkLnJldGFpbC52",
-            "Mi5SZW1vdmVGdWxmaWxsbWVudFBsYWNlc01ldGFkYXRhGknKQRVyZXRhaWwu",
-            "Z29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
-            "dXRoL2Nsb3VkLXBsYXRmb3JtQsgBChpjb20uZ29vZ2xlLmNsb3VkLnJldGFp",
-            "bC52MkITUHJvZHVjdFNlcnZpY2VQcm90b1ABWjxnb29nbGUuZ29sYW5nLm9y",
-            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3JldGFpbC92MjtyZXRhaWyi",
-            "AgZSRVRBSUyqAhZHb29nbGUuQ2xvdWQuUmV0YWlsLlYyygIWR29vZ2xlXENs",
-            "b3VkXFJldGFpbFxWMuoCGUdvb2dsZTo6Q2xvdWQ6OlJldGFpbDo6VjJiBnBy",
-            "b3RvMw=="));
+            "cHJvdG8aI2dvb2dsZS9jbG91ZC9yZXRhaWwvdjIvY29tbW9uLnByb3RvGipn",
+            "b29nbGUvY2xvdWQvcmV0YWlsL3YyL2ltcG9ydF9jb25maWcucHJvdG8aJGdv",
+            "b2dsZS9jbG91ZC9yZXRhaWwvdjIvcHJvZHVjdC5wcm90bxojZ29vZ2xlL2xv",
+            "bmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9l",
+            "bXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8a",
+            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8inAEKFENyZWF0ZVBy",
+            "b2R1Y3RSZXF1ZXN0EjQKBnBhcmVudBgBIAEoCUIk4EEC+kEeChxyZXRhaWwu",
+            "Z29vZ2xlYXBpcy5jb20vQnJhbmNoEjUKB3Byb2R1Y3QYAiABKAsyHy5nb29n",
+            "bGUuY2xvdWQucmV0YWlsLnYyLlByb2R1Y3RCA+BBAhIXCgpwcm9kdWN0X2lk",
+            "GAMgASgJQgPgQQIiSAoRR2V0UHJvZHVjdFJlcXVlc3QSMwoEbmFtZRgBIAEo",
+            "CUIl4EEC+kEfCh1yZXRhaWwuZ29vZ2xlYXBpcy5jb20vUHJvZHVjdCKVAQoU",
+            "VXBkYXRlUHJvZHVjdFJlcXVlc3QSNQoHcHJvZHVjdBgBIAEoCzIfLmdvb2ds",
+            "ZS5jbG91ZC5yZXRhaWwudjIuUHJvZHVjdEID4EECEi8KC3VwZGF0ZV9tYXNr",
+            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzaxIVCg1hbGxvd19t",
+            "aXNzaW5nGAMgASgIIksKFERlbGV0ZVByb2R1Y3RSZXF1ZXN0EjMKBG5hbWUY",
+            "ASABKAlCJeBBAvpBHwodcmV0YWlsLmdvb2dsZWFwaXMuY29tL1Byb2R1Y3Qi",
+            "sQEKE0xpc3RQcm9kdWN0c1JlcXVlc3QSNAoGcGFyZW50GAEgASgJQiTgQQL6",
+            "QR4KHHJldGFpbC5nb29nbGVhcGlzLmNvbS9CcmFuY2gSEQoJcGFnZV9zaXpl",
+            "GAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoGZmlsdGVyGAQgASgJEi0K",
+            "CXJlYWRfbWFzaxgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2si",
+            "YgoUTGlzdFByb2R1Y3RzUmVzcG9uc2USMQoIcHJvZHVjdHMYASADKAsyHy5n",
+            "b29nbGUuY2xvdWQucmV0YWlsLnYyLlByb2R1Y3QSFwoPbmV4dF9wYWdlX3Rv",
+            "a2VuGAIgASgJIsEBChNTZXRJbnZlbnRvcnlSZXF1ZXN0EjcKCWludmVudG9y",
+            "eRgBIAEoCzIfLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUHJvZHVjdEID4EEC",
+            "EiwKCHNldF9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFz",
+            "axIsCghzZXRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXASFQoNYWxsb3dfbWlzc2luZxgEIAEoCCIWChRTZXRJbnZlbnRvcnlNZXRh",
+            "ZGF0YSIWChRTZXRJbnZlbnRvcnlSZXNwb25zZSLFAQobQWRkRnVsZmlsbG1l",
+            "bnRQbGFjZXNSZXF1ZXN0EjYKB3Byb2R1Y3QYASABKAlCJeBBAvpBHwodcmV0",
+            "YWlsLmdvb2dsZWFwaXMuY29tL1Byb2R1Y3QSEQoEdHlwZRgCIAEoCUID4EEC",
+            "EhYKCXBsYWNlX2lkcxgDIAMoCUID4EECEiwKCGFkZF90aW1lGAQgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIVCg1hbGxvd19taXNzaW5nGAUg",
+            "ASgIIh4KHEFkZEZ1bGZpbGxtZW50UGxhY2VzTWV0YWRhdGEiHgocQWRkRnVs",
+            "ZmlsbG1lbnRQbGFjZXNSZXNwb25zZSKPAgoaQWRkTG9jYWxJbnZlbnRvcmll",
+            "c1JlcXVlc3QSNgoHcHJvZHVjdBgBIAEoCUIl4EEC+kEfCh1yZXRhaWwuZ29v",
+            "Z2xlYXBpcy5jb20vUHJvZHVjdBJGChFsb2NhbF9pbnZlbnRvcmllcxgCIAMo",
+            "CzImLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuTG9jYWxJbnZlbnRvcnlCA+BB",
+            "AhIsCghhZGRfbWFzaxgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1h",
+            "c2sSLAoIYWRkX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wEhUKDWFsbG93X21pc3NpbmcYBiABKAgiHQobQWRkTG9jYWxJbnZlbnRv",
+            "cmllc01ldGFkYXRhIh0KG0FkZExvY2FsSW52ZW50b3JpZXNSZXNwb25zZSK3",
+            "AQodUmVtb3ZlTG9jYWxJbnZlbnRvcmllc1JlcXVlc3QSNgoHcHJvZHVjdBgB",
+            "IAEoCUIl4EEC+kEfCh1yZXRhaWwuZ29vZ2xlYXBpcy5jb20vUHJvZHVjdBIW",
+            "CglwbGFjZV9pZHMYAiADKAlCA+BBAhIvCgtyZW1vdmVfdGltZRgFIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFQoNYWxsb3dfbWlzc2luZxgD",
+            "IAEoCCIgCh5SZW1vdmVMb2NhbEludmVudG9yaWVzTWV0YWRhdGEiIAoeUmVt",
+            "b3ZlTG9jYWxJbnZlbnRvcmllc1Jlc3BvbnNlIssBCh5SZW1vdmVGdWxmaWxs",
+            "bWVudFBsYWNlc1JlcXVlc3QSNgoHcHJvZHVjdBgBIAEoCUIl4EEC+kEfCh1y",
+            "ZXRhaWwuZ29vZ2xlYXBpcy5jb20vUHJvZHVjdBIRCgR0eXBlGAIgASgJQgPg",
+            "QQISFgoJcGxhY2VfaWRzGAMgAygJQgPgQQISLwoLcmVtb3ZlX3RpbWUYBCAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhUKDWFsbG93X21pc3Np",
+            "bmcYBSABKAgiIQofUmVtb3ZlRnVsZmlsbG1lbnRQbGFjZXNNZXRhZGF0YSIh",
+            "Ch9SZW1vdmVGdWxmaWxsbWVudFBsYWNlc1Jlc3BvbnNlMq4XCg5Qcm9kdWN0",
+            "U2VydmljZRLPAQoNQ3JlYXRlUHJvZHVjdBIsLmdvb2dsZS5jbG91ZC5yZXRh",
+            "aWwudjIuQ3JlYXRlUHJvZHVjdFJlcXVlc3QaHy5nb29nbGUuY2xvdWQucmV0",
+            "YWlsLnYyLlByb2R1Y3Qib4LT5JMCTSJCL3YyL3twYXJlbnQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9jYXRhbG9ncy8qL2JyYW5jaGVzLyp9L3Byb2R1Y3Rz",
+            "Ogdwcm9kdWN02kEZcGFyZW50LHByb2R1Y3QscHJvZHVjdF9pZBKsAQoKR2V0",
+            "UHJvZHVjdBIpLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuR2V0UHJvZHVjdFJl",
+            "cXVlc3QaHy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlByb2R1Y3QiUoLT5JMC",
+            "RRJDL3YyL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxvZ3Mv",
+            "Ki9icmFuY2hlcy8qL3Byb2R1Y3RzLyoqfdpBBG5hbWUSvgEKDExpc3RQcm9k",
+            "dWN0cxIrLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuTGlzdFByb2R1Y3RzUmVx",
+            "dWVzdBosLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuTGlzdFByb2R1Y3RzUmVz",
+            "cG9uc2UiU4LT5JMCRBJCL3YyL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9jYXRhbG9ncy8qL2JyYW5jaGVzLyp9L3Byb2R1Y3Rz2kEGcGFyZW50",
+            "EtIBCg1VcGRhdGVQcm9kdWN0EiwuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5V",
+            "cGRhdGVQcm9kdWN0UmVxdWVzdBofLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIu",
+            "UHJvZHVjdCJygtPkkwJWMksvdjIve3Byb2R1Y3QubmFtZT1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL2NhdGFsb2dzLyovYnJhbmNoZXMvKi9wcm9kdWN0cy8q",
+            "Kn06B3Byb2R1Y3TaQRNwcm9kdWN0LHVwZGF0ZV9tYXNrEqkBCg1EZWxldGVQ",
+            "cm9kdWN0EiwuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5EZWxldGVQcm9kdWN0",
+            "UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJSgtPkkwJFKkMvdjIv",
+            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jYXRhbG9ncy8qL2JyYW5j",
+            "aGVzLyovcHJvZHVjdHMvKip92kEEbmFtZRKOAgoOSW1wb3J0UHJvZHVjdHMS",
+            "LS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkltcG9ydFByb2R1Y3RzUmVxdWVz",
+            "dBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24irQGC0+STAk4iSS92",
+            "Mi97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxvZ3MvKi9i",
+            "cmFuY2hlcy8qfS9wcm9kdWN0czppbXBvcnQ6ASrKQVYKLWdvb2dsZS5jbG91",
+            "ZC5yZXRhaWwudjIuSW1wb3J0UHJvZHVjdHNSZXNwb25zZRIlZ29vZ2xlLmNs",
+            "b3VkLnJldGFpbC52Mi5JbXBvcnRNZXRhZGF0YRK0AgoMU2V0SW52ZW50b3J5",
+            "EisuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5TZXRJbnZlbnRvcnlSZXF1ZXN0",
+            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiLXAYLT5JMCXyJaL3Yy",
+            "L3tpbnZlbnRvcnkubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFs",
+            "b2dzLyovYnJhbmNoZXMvKi9wcm9kdWN0cy8qKn06c2V0SW52ZW50b3J5OgEq",
+            "2kESaW52ZW50b3J5LHNldF9tYXNrykFaCitnb29nbGUuY2xvdWQucmV0YWls",
+            "LnYyLlNldEludmVudG9yeVJlc3BvbnNlEitnb29nbGUuY2xvdWQucmV0YWls",
+            "LnYyLlNldEludmVudG9yeU1ldGFkYXRhEsoCChRBZGRGdWxmaWxsbWVudFBs",
+            "YWNlcxIzLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQWRkRnVsZmlsbG1lbnRQ",
+            "bGFjZXNSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiLd",
+            "AYLT5JMCYCJbL3YyL3twcm9kdWN0PXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "Y2F0YWxvZ3MvKi9icmFuY2hlcy8qL3Byb2R1Y3RzLyoqfTphZGRGdWxmaWxs",
+            "bWVudFBsYWNlczoBKtpBB3Byb2R1Y3TKQWoKM2dvb2dsZS5jbG91ZC5yZXRh",
+            "aWwudjIuQWRkRnVsZmlsbG1lbnRQbGFjZXNSZXNwb25zZRIzZ29vZ2xlLmNs",
+            "b3VkLnJldGFpbC52Mi5BZGRGdWxmaWxsbWVudFBsYWNlc01ldGFkYXRhEtkC",
+            "ChdSZW1vdmVGdWxmaWxsbWVudFBsYWNlcxI2Lmdvb2dsZS5jbG91ZC5yZXRh",
+            "aWwudjIuUmVtb3ZlRnVsZmlsbG1lbnRQbGFjZXNSZXF1ZXN0Gh0uZ29vZ2xl",
+            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiLmAYLT5JMCYyJeL3YyL3twcm9kdWN0",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxvZ3MvKi9icmFuY2hlcy8q",
+            "L3Byb2R1Y3RzLyoqfTpyZW1vdmVGdWxmaWxsbWVudFBsYWNlczoBKtpBB3By",
+            "b2R1Y3TKQXAKNmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUmVtb3ZlRnVsZmls",
+            "bG1lbnRQbGFjZXNSZXNwb25zZRI2Z29vZ2xlLmNsb3VkLnJldGFpbC52Mi5S",
+            "ZW1vdmVGdWxmaWxsbWVudFBsYWNlc01ldGFkYXRhEsUCChNBZGRMb2NhbElu",
+            "dmVudG9yaWVzEjIuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5BZGRMb2NhbElu",
+            "dmVudG9yaWVzUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
+            "b24i2gGC0+STAl8iWi92Mi97cHJvZHVjdD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL2NhdGFsb2dzLyovYnJhbmNoZXMvKi9wcm9kdWN0cy8qKn06YWRkTG9j",
+            "YWxJbnZlbnRvcmllczoBKtpBB3Byb2R1Y3TKQWgKMmdvb2dsZS5jbG91ZC5y",
+            "ZXRhaWwudjIuQWRkTG9jYWxJbnZlbnRvcmllc1Jlc3BvbnNlEjJnb29nbGUu",
+            "Y2xvdWQucmV0YWlsLnYyLkFkZExvY2FsSW52ZW50b3JpZXNNZXRhZGF0YRLU",
+            "AgoWUmVtb3ZlTG9jYWxJbnZlbnRvcmllcxI1Lmdvb2dsZS5jbG91ZC5yZXRh",
+            "aWwudjIuUmVtb3ZlTG9jYWxJbnZlbnRvcmllc1JlcXVlc3QaHS5nb29nbGUu",
+            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uIuMBgtPkkwJiIl0vdjIve3Byb2R1Y3Q9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jYXRhbG9ncy8qL2JyYW5jaGVzLyov",
+            "cHJvZHVjdHMvKip9OnJlbW92ZUxvY2FsSW52ZW50b3JpZXM6ASraQQdwcm9k",
+            "dWN0ykFuCjVnb29nbGUuY2xvdWQucmV0YWlsLnYyLlJlbW92ZUxvY2FsSW52",
+            "ZW50b3JpZXNSZXNwb25zZRI1Z29vZ2xlLmNsb3VkLnJldGFpbC52Mi5SZW1v",
+            "dmVMb2NhbEludmVudG9yaWVzTWV0YWRhdGEaScpBFXJldGFpbC5nb29nbGVh",
+            "cGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xv",
+            "dWQtcGxhdGZvcm1CyAEKGmNvbS5nb29nbGUuY2xvdWQucmV0YWlsLnYyQhNQ",
+            "cm9kdWN0U2VydmljZVByb3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
+            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvcmV0YWlsL3YyO3JldGFpbKICBlJFVEFJ",
+            "TKoCFkdvb2dsZS5DbG91ZC5SZXRhaWwuVjLKAhZHb29nbGVcQ2xvdWRcUmV0",
+            "YWlsXFYy6gIZR29vZ2xlOjpDbG91ZDo6UmV0YWlsOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor, global::Google.Cloud.Retail.V2.ProductReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.CommonReflection.Descriptor, global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor, global::Google.Cloud.Retail.V2.ProductReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.CreateProductRequest), global::Google.Cloud.Retail.V2.CreateProductRequest.Parser, new[]{ "Parent", "Product", "ProductId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.GetProductRequest), global::Google.Cloud.Retail.V2.GetProductRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -139,6 +167,12 @@ namespace Google.Cloud.Retail.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.AddFulfillmentPlacesRequest), global::Google.Cloud.Retail.V2.AddFulfillmentPlacesRequest.Parser, new[]{ "Product", "Type", "PlaceIds", "AddTime", "AllowMissing" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.AddFulfillmentPlacesMetadata), global::Google.Cloud.Retail.V2.AddFulfillmentPlacesMetadata.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.AddFulfillmentPlacesResponse), global::Google.Cloud.Retail.V2.AddFulfillmentPlacesResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.AddLocalInventoriesRequest), global::Google.Cloud.Retail.V2.AddLocalInventoriesRequest.Parser, new[]{ "Product", "LocalInventories", "AddMask", "AddTime", "AllowMissing" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.AddLocalInventoriesMetadata), global::Google.Cloud.Retail.V2.AddLocalInventoriesMetadata.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.AddLocalInventoriesResponse), global::Google.Cloud.Retail.V2.AddLocalInventoriesResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.RemoveLocalInventoriesRequest), global::Google.Cloud.Retail.V2.RemoveLocalInventoriesRequest.Parser, new[]{ "Product", "PlaceIds", "RemoveTime", "AllowMissing" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.RemoveLocalInventoriesMetadata), global::Google.Cloud.Retail.V2.RemoveLocalInventoriesMetadata.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.RemoveLocalInventoriesResponse), global::Google.Cloud.Retail.V2.RemoveLocalInventoriesResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.RemoveFulfillmentPlacesRequest), global::Google.Cloud.Retail.V2.RemoveFulfillmentPlacesRequest.Parser, new[]{ "Product", "Type", "PlaceIds", "RemoveTime", "AllowMissing" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.RemoveFulfillmentPlacesMetadata), global::Google.Cloud.Retail.V2.RemoveFulfillmentPlacesMetadata.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.RemoveFulfillmentPlacesResponse), global::Google.Cloud.Retail.V2.RemoveFulfillmentPlacesResponse.Parser, null, null, null, null, null)
@@ -1915,6 +1949,24 @@ namespace Google.Cloud.Retail.V2 {
     /// provided or default value for
     /// [SetInventoryRequest.set_time][google.cloud.retail.v2.SetInventoryRequest.set_time].
     ///
+    /// The caller can replace place IDs for a subset of fulfillment types in the
+    /// following ways:
+    ///
+    /// * Adds "fulfillment_info" in
+    /// [SetInventoryRequest.set_mask][google.cloud.retail.v2.SetInventoryRequest.set_mask]
+    /// * Specifies only the desired fulfillment types and corresponding place IDs
+    /// to update in [SetInventoryRequest.inventory.fulfillment_info][]
+    ///
+    /// The caller can clear all place IDs from a subset of fulfillment types in
+    /// the following ways:
+    ///
+    /// * Adds "fulfillment_info" in
+    /// [SetInventoryRequest.set_mask][google.cloud.retail.v2.SetInventoryRequest.set_mask]
+    /// * Specifies only the desired fulfillment types to clear in
+    /// [SetInventoryRequest.inventory.fulfillment_info][]
+    /// * Checks that only the desired fulfillment info types have empty
+    /// [SetInventoryRequest.inventory.fulfillment_info.place_ids][]
+    ///
     /// The last update time is recorded for the following inventory fields:
     /// * [Product.price_info][google.cloud.retail.v2.Product.price_info]
     /// * [Product.availability][google.cloud.retail.v2.Product.availability]
@@ -1938,8 +1990,9 @@ namespace Google.Cloud.Retail.V2 {
     private global::Google.Protobuf.WellKnownTypes.FieldMask setMask_;
     /// <summary>
     /// Indicates which inventory fields in the provided
-    /// [Product][google.cloud.retail.v2.Product] to update. If not set or set with
-    /// empty paths, all inventory fields will be updated.
+    /// [Product][google.cloud.retail.v2.Product] to update.
+    ///
+    /// At least one field must be provided.
     ///
     /// If an unsupported or unknown field is provided, an INVALID_ARGUMENT error
     /// is returned and the entire update will be ignored.
@@ -3249,6 +3302,1351 @@ namespace Google.Cloud.Retail.V2 {
   }
 
   /// <summary>
+  /// Request message for [AddLocalInventories][] method.
+  /// </summary>
+  public sealed partial class AddLocalInventoriesRequest : pb::IMessage<AddLocalInventoriesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AddLocalInventoriesRequest> _parser = new pb::MessageParser<AddLocalInventoriesRequest>(() => new AddLocalInventoriesRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AddLocalInventoriesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.ProductServiceReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddLocalInventoriesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddLocalInventoriesRequest(AddLocalInventoriesRequest other) : this() {
+      product_ = other.product_;
+      localInventories_ = other.localInventories_.Clone();
+      addMask_ = other.addMask_ != null ? other.addMask_.Clone() : null;
+      addTime_ = other.addTime_ != null ? other.addTime_.Clone() : null;
+      allowMissing_ = other.allowMissing_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddLocalInventoriesRequest Clone() {
+      return new AddLocalInventoriesRequest(this);
+    }
+
+    /// <summary>Field number for the "product" field.</summary>
+    public const int ProductFieldNumber = 1;
+    private string product_ = "";
+    /// <summary>
+    /// Required. Full resource name of [Product][google.cloud.retail.v2.Product],
+    /// such as
+    /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
+    ///
+    /// If the caller does not have permission to access the
+    /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
+    /// exists, a PERMISSION_DENIED error is returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Product {
+      get { return product_; }
+      set {
+        product_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "local_inventories" field.</summary>
+    public const int LocalInventoriesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Retail.V2.LocalInventory> _repeated_localInventories_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Retail.V2.LocalInventory.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Retail.V2.LocalInventory> localInventories_ = new pbc::RepeatedField<global::Google.Cloud.Retail.V2.LocalInventory>();
+    /// <summary>
+    /// Required. A list of inventory information at difference places. Each place
+    /// is identified by its place ID. At most 3000 inventories are allowed per
+    /// request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Retail.V2.LocalInventory> LocalInventories {
+      get { return localInventories_; }
+    }
+
+    /// <summary>Field number for the "add_mask" field.</summary>
+    public const int AddMaskFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask addMask_;
+    /// <summary>
+    /// Indicates which inventory fields in the provided list of
+    /// [LocalInventory][google.cloud.retail.v2.LocalInventory] to update. The
+    /// field is updated to the provided value.
+    ///
+    /// If a field is set while the place does not have a previous local inventory,
+    /// the local inventory at that store is created.
+    ///
+    /// If a field is set while the value of that field is not provided, the
+    /// original field value, if it exists, is deleted.
+    ///
+    /// If the mask is not set or set with empty paths, all inventory fields will
+    /// be updated.
+    ///
+    /// If an unsupported or unknown field is provided, an INVALID_ARGUMENT error
+    /// is returned and the entire update will be ignored.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask AddMask {
+      get { return addMask_; }
+      set {
+        addMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "add_time" field.</summary>
+    public const int AddTimeFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp addTime_;
+    /// <summary>
+    /// The time when the inventory updates are issued. Used to prevent
+    /// out-of-order updates on local inventory fields. If not provided, the
+    /// internal system time will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp AddTime {
+      get { return addTime_; }
+      set {
+        addTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "allow_missing" field.</summary>
+    public const int AllowMissingFieldNumber = 6;
+    private bool allowMissing_;
+    /// <summary>
+    /// If set to true, and the [Product][google.cloud.retail.v2.Product] is not
+    /// found, the local inventory will still be processed and retained for at most
+    /// 1 day and processed once the [Product][google.cloud.retail.v2.Product] is
+    /// created. If set to false, a NOT_FOUND error is returned if the
+    /// [Product][google.cloud.retail.v2.Product] is not found.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AllowMissing {
+      get { return allowMissing_; }
+      set {
+        allowMissing_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AddLocalInventoriesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AddLocalInventoriesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Product != other.Product) return false;
+      if(!localInventories_.Equals(other.localInventories_)) return false;
+      if (!object.Equals(AddMask, other.AddMask)) return false;
+      if (!object.Equals(AddTime, other.AddTime)) return false;
+      if (AllowMissing != other.AllowMissing) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Product.Length != 0) hash ^= Product.GetHashCode();
+      hash ^= localInventories_.GetHashCode();
+      if (addMask_ != null) hash ^= AddMask.GetHashCode();
+      if (addTime_ != null) hash ^= AddTime.GetHashCode();
+      if (AllowMissing != false) hash ^= AllowMissing.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Product.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Product);
+      }
+      localInventories_.WriteTo(output, _repeated_localInventories_codec);
+      if (addMask_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AddMask);
+      }
+      if (addTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(AddTime);
+      }
+      if (AllowMissing != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(AllowMissing);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Product.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Product);
+      }
+      localInventories_.WriteTo(ref output, _repeated_localInventories_codec);
+      if (addMask_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AddMask);
+      }
+      if (addTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(AddTime);
+      }
+      if (AllowMissing != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(AllowMissing);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Product.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Product);
+      }
+      size += localInventories_.CalculateSize(_repeated_localInventories_codec);
+      if (addMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AddMask);
+      }
+      if (addTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AddTime);
+      }
+      if (AllowMissing != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AddLocalInventoriesRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Product.Length != 0) {
+        Product = other.Product;
+      }
+      localInventories_.Add(other.localInventories_);
+      if (other.addMask_ != null) {
+        if (addMask_ == null) {
+          AddMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        AddMask.MergeFrom(other.AddMask);
+      }
+      if (other.addTime_ != null) {
+        if (addTime_ == null) {
+          AddTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        AddTime.MergeFrom(other.AddTime);
+      }
+      if (other.AllowMissing != false) {
+        AllowMissing = other.AllowMissing;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Product = input.ReadString();
+            break;
+          }
+          case 18: {
+            localInventories_.AddEntriesFrom(input, _repeated_localInventories_codec);
+            break;
+          }
+          case 34: {
+            if (addMask_ == null) {
+              AddMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(AddMask);
+            break;
+          }
+          case 42: {
+            if (addTime_ == null) {
+              AddTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(AddTime);
+            break;
+          }
+          case 48: {
+            AllowMissing = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Product = input.ReadString();
+            break;
+          }
+          case 18: {
+            localInventories_.AddEntriesFrom(ref input, _repeated_localInventories_codec);
+            break;
+          }
+          case 34: {
+            if (addMask_ == null) {
+              AddMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(AddMask);
+            break;
+          }
+          case 42: {
+            if (addTime_ == null) {
+              AddTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(AddTime);
+            break;
+          }
+          case 48: {
+            AllowMissing = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Metadata related to the progress of the AddLocalInventories operation.
+  /// Currently empty because there is no meaningful metadata populated from the
+  /// [AddLocalInventories][] method.
+  /// </summary>
+  public sealed partial class AddLocalInventoriesMetadata : pb::IMessage<AddLocalInventoriesMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AddLocalInventoriesMetadata> _parser = new pb::MessageParser<AddLocalInventoriesMetadata>(() => new AddLocalInventoriesMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AddLocalInventoriesMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.ProductServiceReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddLocalInventoriesMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddLocalInventoriesMetadata(AddLocalInventoriesMetadata other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddLocalInventoriesMetadata Clone() {
+      return new AddLocalInventoriesMetadata(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AddLocalInventoriesMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AddLocalInventoriesMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AddLocalInventoriesMetadata other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response of the [AddLocalInventories][] API.  Currently empty because
+  /// there is no meaningful response populated from the [AddLocalInventories][]
+  /// method.
+  /// </summary>
+  public sealed partial class AddLocalInventoriesResponse : pb::IMessage<AddLocalInventoriesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AddLocalInventoriesResponse> _parser = new pb::MessageParser<AddLocalInventoriesResponse>(() => new AddLocalInventoriesResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AddLocalInventoriesResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.ProductServiceReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddLocalInventoriesResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddLocalInventoriesResponse(AddLocalInventoriesResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddLocalInventoriesResponse Clone() {
+      return new AddLocalInventoriesResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AddLocalInventoriesResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AddLocalInventoriesResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AddLocalInventoriesResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for [RemoveLocalInventories][] method.
+  /// </summary>
+  public sealed partial class RemoveLocalInventoriesRequest : pb::IMessage<RemoveLocalInventoriesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RemoveLocalInventoriesRequest> _parser = new pb::MessageParser<RemoveLocalInventoriesRequest>(() => new RemoveLocalInventoriesRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RemoveLocalInventoriesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.ProductServiceReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveLocalInventoriesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveLocalInventoriesRequest(RemoveLocalInventoriesRequest other) : this() {
+      product_ = other.product_;
+      placeIds_ = other.placeIds_.Clone();
+      removeTime_ = other.removeTime_ != null ? other.removeTime_.Clone() : null;
+      allowMissing_ = other.allowMissing_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveLocalInventoriesRequest Clone() {
+      return new RemoveLocalInventoriesRequest(this);
+    }
+
+    /// <summary>Field number for the "product" field.</summary>
+    public const int ProductFieldNumber = 1;
+    private string product_ = "";
+    /// <summary>
+    /// Required. Full resource name of [Product][google.cloud.retail.v2.Product],
+    /// such as
+    /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
+    ///
+    /// If the caller does not have permission to access the
+    /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
+    /// exists, a PERMISSION_DENIED error is returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Product {
+      get { return product_; }
+      set {
+        product_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "place_ids" field.</summary>
+    public const int PlaceIdsFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_placeIds_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> placeIds_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Required. A list of place IDs to have their inventory deleted.
+    /// At most 3000 place IDs are allowed per request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> PlaceIds {
+      get { return placeIds_; }
+    }
+
+    /// <summary>Field number for the "remove_time" field.</summary>
+    public const int RemoveTimeFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp removeTime_;
+    /// <summary>
+    /// The time when the inventory deletions are issued. Used to prevent
+    /// out-of-order updates and deletions on local inventory fields. If not
+    /// provided, the internal system time will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp RemoveTime {
+      get { return removeTime_; }
+      set {
+        removeTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "allow_missing" field.</summary>
+    public const int AllowMissingFieldNumber = 3;
+    private bool allowMissing_;
+    /// <summary>
+    /// If set to true, and the [Product][google.cloud.retail.v2.Product] is not
+    /// found, the local inventory removal request will still be processed and
+    /// retained for at most 1 day and processed once the
+    /// [Product][google.cloud.retail.v2.Product] is created. If set to false, a
+    /// NOT_FOUND error is returned if the
+    /// [Product][google.cloud.retail.v2.Product] is not found.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AllowMissing {
+      get { return allowMissing_; }
+      set {
+        allowMissing_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RemoveLocalInventoriesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RemoveLocalInventoriesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Product != other.Product) return false;
+      if(!placeIds_.Equals(other.placeIds_)) return false;
+      if (!object.Equals(RemoveTime, other.RemoveTime)) return false;
+      if (AllowMissing != other.AllowMissing) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Product.Length != 0) hash ^= Product.GetHashCode();
+      hash ^= placeIds_.GetHashCode();
+      if (removeTime_ != null) hash ^= RemoveTime.GetHashCode();
+      if (AllowMissing != false) hash ^= AllowMissing.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Product.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Product);
+      }
+      placeIds_.WriteTo(output, _repeated_placeIds_codec);
+      if (AllowMissing != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(AllowMissing);
+      }
+      if (removeTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(RemoveTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Product.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Product);
+      }
+      placeIds_.WriteTo(ref output, _repeated_placeIds_codec);
+      if (AllowMissing != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(AllowMissing);
+      }
+      if (removeTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(RemoveTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Product.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Product);
+      }
+      size += placeIds_.CalculateSize(_repeated_placeIds_codec);
+      if (removeTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RemoveTime);
+      }
+      if (AllowMissing != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RemoveLocalInventoriesRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Product.Length != 0) {
+        Product = other.Product;
+      }
+      placeIds_.Add(other.placeIds_);
+      if (other.removeTime_ != null) {
+        if (removeTime_ == null) {
+          RemoveTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        RemoveTime.MergeFrom(other.RemoveTime);
+      }
+      if (other.AllowMissing != false) {
+        AllowMissing = other.AllowMissing;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Product = input.ReadString();
+            break;
+          }
+          case 18: {
+            placeIds_.AddEntriesFrom(input, _repeated_placeIds_codec);
+            break;
+          }
+          case 24: {
+            AllowMissing = input.ReadBool();
+            break;
+          }
+          case 42: {
+            if (removeTime_ == null) {
+              RemoveTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(RemoveTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Product = input.ReadString();
+            break;
+          }
+          case 18: {
+            placeIds_.AddEntriesFrom(ref input, _repeated_placeIds_codec);
+            break;
+          }
+          case 24: {
+            AllowMissing = input.ReadBool();
+            break;
+          }
+          case 42: {
+            if (removeTime_ == null) {
+              RemoveTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(RemoveTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Metadata related to the progress of the RemoveLocalInventories operation.
+  /// Currently empty because there is no meaningful metadata populated from the
+  /// [RemoveLocalInventories][] method.
+  /// </summary>
+  public sealed partial class RemoveLocalInventoriesMetadata : pb::IMessage<RemoveLocalInventoriesMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RemoveLocalInventoriesMetadata> _parser = new pb::MessageParser<RemoveLocalInventoriesMetadata>(() => new RemoveLocalInventoriesMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RemoveLocalInventoriesMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.ProductServiceReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveLocalInventoriesMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveLocalInventoriesMetadata(RemoveLocalInventoriesMetadata other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveLocalInventoriesMetadata Clone() {
+      return new RemoveLocalInventoriesMetadata(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RemoveLocalInventoriesMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RemoveLocalInventoriesMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RemoveLocalInventoriesMetadata other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response of the [RemoveLocalInventories][] API.  Currently empty because
+  /// there is no meaningful response populated from the [RemoveLocalInventories][]
+  /// method.
+  /// </summary>
+  public sealed partial class RemoveLocalInventoriesResponse : pb::IMessage<RemoveLocalInventoriesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RemoveLocalInventoriesResponse> _parser = new pb::MessageParser<RemoveLocalInventoriesResponse>(() => new RemoveLocalInventoriesResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RemoveLocalInventoriesResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.ProductServiceReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveLocalInventoriesResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveLocalInventoriesResponse(RemoveLocalInventoriesResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveLocalInventoriesResponse Clone() {
+      return new RemoveLocalInventoriesResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RemoveLocalInventoriesResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RemoveLocalInventoriesResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RemoveLocalInventoriesResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request message for [RemoveFulfillmentPlaces][] method.
   /// </summary>
   public sealed partial class RemoveFulfillmentPlacesRequest : pb::IMessage<RemoveFulfillmentPlacesRequest>
@@ -3265,7 +4663,7 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Retail.V2.ProductServiceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Retail.V2.ProductServiceReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3660,7 +5058,7 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Retail.V2.ProductServiceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Retail.V2.ProductServiceReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3817,7 +5215,7 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Retail.V2.ProductServiceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Retail.V2.ProductServiceReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
