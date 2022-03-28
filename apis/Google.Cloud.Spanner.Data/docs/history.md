@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.14.0, released 2022-03-28
+
+### New features
+
+- Add database dialect to Admin Database API ([commit 721f908](https://github.com/googleapis/google-cloud-dotnet/commit/721f9089a32b60f10ce480ce0addfd78d5d04205))
+- Add database dialect to Spanner V1 API ([commit d345d55](https://github.com/googleapis/google-cloud-dotnet/commit/d345d5501563547779681bdbb4f8dd1556225e82))
+- Add support for cross-region backup ([commit 599f0a3](https://github.com/googleapis/google-cloud-dotnet/commit/599f0a3da71552c40e8a310b364d448b08769e5f))
+
 ## Version 3.13.0, released 2021-12-01
 
 - [Commit 02b16d7](https://github.com/googleapis/google-cloud-dotnet/commit/02b16d7): fix: clone each SpannerParameter when cloning a parameter collection
