@@ -366,10 +366,6 @@ namespace Google.Cloud.Storage.V1.Tests
         /// <summary>
         /// Helper method to check in case of non retriable error codes
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="requestProvider"></param>
-        /// <param name="clientAction"></param>
-        /// <param name="statusCode">Non retriable error codes</param>
         private static void NoRetryHelper<T>(
             Func<StorageService, ClientServiceRequest<T>> requestProvider,
             Action<StorageClient> clientAction,
@@ -386,11 +382,6 @@ namespace Google.Cloud.Storage.V1.Tests
         /// <summary>
         /// Helper method to check if the operation is retrying in case of retirable error codes with a return response 
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="requestProvider"></param>
-        /// <param name="clientAction"></param>
-        /// <param name="response"></param>
-        /// <param name="firstStatusCode">Retriable error codes</param>
         private static void RetryOnce<T>(Func<StorageService, ClientServiceRequest<T>> requestProvider, Action<StorageClient> clientAction, T response,
             HttpStatusCode firstStatusCode = HttpStatusCode.BadGateway)
         {
@@ -407,10 +398,6 @@ namespace Google.Cloud.Storage.V1.Tests
         /// <summary>
         /// Helper method to check if the operation is retrying in case of retirable error codes
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="requestProvider"></param>
-        /// <param name="clientAction"></param>
-        /// <param name="firstStatusCode">Retriable error</param>
         private static void RetryOnceHelper<T>(Func<StorageService, ClientServiceRequest<T>> requestProvider, Action<StorageClient> clientAction,
            HttpStatusCode firstStatusCode = HttpStatusCode.BadGateway)
            where T : new() => RetryOnce(requestProvider, clientAction, new T(), firstStatusCode);
@@ -418,12 +405,6 @@ namespace Google.Cloud.Storage.V1.Tests
         /// <summary>
         /// Helper method to retry operation till max count before failing in case of retriable error codes with a return response
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="requestProvider"></param>
-        /// <param name="clientAction"></param>
-        /// <param name="response"></param>
-        /// <param name="errorCode">Retriable error</param>
-        /// <param name="retryCount">Number of times operation is retriable before backoff</param>
         private static void RetryThenFail<T>(Func<StorageService, ClientServiceRequest<T>> requestProvider, Action<StorageClient> clientAction, T response,
             HttpStatusCode errorCode = HttpStatusCode.BadGateway, int retryCount = 3)
         {
@@ -442,11 +423,6 @@ namespace Google.Cloud.Storage.V1.Tests
         /// <summary>
         /// Helper method to retry operation till max count before failing in case of retriable error codes
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="requestProvider"></param>
-        /// <param name="clientAction"></param>
-        /// <param name="errorCode">Retriable error codes</param>
-        /// <param name="retryCount">Number of times operation is retriable before backoff</param>
         private static void RetryThenFailHelper<T>(
             Func<StorageService, ClientServiceRequest<T>> requestProvider, Action<StorageClient> clientAction,
             HttpStatusCode errorCode = HttpStatusCode.BadGateway, int retryCount = 3)
