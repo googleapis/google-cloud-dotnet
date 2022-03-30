@@ -104,6 +104,7 @@ namespace Google.Cloud.Storage.V1
         {
             var request = Service.Buckets.Delete(bucket);
             options?.ModifyRequest(request);
+            RetryHandler.MarkAsRetriable(request);
             return request;
         }
     }

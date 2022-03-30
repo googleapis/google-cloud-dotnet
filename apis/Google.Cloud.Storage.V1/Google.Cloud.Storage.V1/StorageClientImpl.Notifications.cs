@@ -86,6 +86,7 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             var request = Service.Projects.ServiceAccount.Get(projectId);
             options?.ModifyRequest(request);
+            RetryHandler.MarkAsRetriable(request);
             return request;
         }
 
@@ -104,6 +105,7 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckNotNull(notificationId, nameof(notificationId));
             var request = Service.Notifications.Get(bucket, notificationId);
             options?.ModifyRequest(request);
+            RetryHandler.MarkAsRetriable(request);
             return request;
         }
 
@@ -113,6 +115,7 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckNotNull(notificationId, nameof(notificationId));
             var request = Service.Notifications.Delete(bucket, notificationId);
             options?.ModifyRequest(request);
+            RetryHandler.MarkAsRetriable(request);
             return request;
         }
 
@@ -120,6 +123,7 @@ namespace Google.Cloud.Storage.V1
         {
             var request = Service.Notifications.List(bucket);
             options?.ModifyRequest(request);
+            RetryHandler.MarkAsRetriable(request);
             return request;
         }
     }

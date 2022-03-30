@@ -103,6 +103,7 @@ namespace Google.Cloud.Storage.V1
             if (IfMetagenerationMatch != null)
             {
                 request.IfMetagenerationMatch = IfMetagenerationMatch;
+                RetryHandler.MarkAsRetriable(request);
             }
             if (IfMetagenerationNotMatch != null)
             {
