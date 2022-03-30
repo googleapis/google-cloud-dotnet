@@ -17,6 +17,7 @@ using Google.Api.Gax.Grpc;
 using Google.Cloud.PubSub.V1.Tasks;
 using Google.Cloud.PubSub.V1.Tests.Tasks;
 using Google.Protobuf;
+using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
@@ -64,6 +65,54 @@ namespace Google.Cloud.PubSub.V1.Tests
             public RpcException MoveNextEx { get; }
             public RpcException CurrentEx { get; }
             public int? DeliveryAttempt { get; }
+        }
+
+        // Class to simulate exceptions in Acknowledgement and/or ModifyAcknowledgementDeadline calls.
+        private class AckModifyAckDeadlineAction
+        {
+            public static AckModifyAckDeadlineAction Data(Exception ex, int numberOfFailures, bool onAck, bool onModifyAckDeadline) => new AckModifyAckDeadlineAction(ex, numberOfFailures, onAck, onModifyAckDeadline);
+            public static AckModifyAckDeadlineAction BadAck(Exception ex, int numberOfFailures) => new AckModifyAckDeadlineAction(ex, numberOfFailures, true, false);
+            public static AckModifyAckDeadlineAction BadModifyAckDeadline(Exception ex, int numberOfFailures) => new AckModifyAckDeadlineAction(ex, numberOfFailures, false, true);
+
+            /// <summary>
+            /// The exception to be thrown in Ack/ModifyAckDeadline call.
+            /// </summary>
+            /// <value>
+            /// The exception.
+            /// </value>
+            public Exception Exception { get; }
+
+            /// <summary>
+            /// The number of failures to be simulated in Ack/ModifyAckDeadline call.
+            /// </summary>
+            /// <value>
+            /// The number of failures.
+            /// </value>
+            public int NumberOfFailures { get; }
+
+            /// <summary>
+            /// Gets a value indicating whether the exception should be thrown in Acknowledge call.
+            /// </summary>
+            /// <value>
+            ///   <c>true</c> if [on ack]; otherwise, <c>false</c>.
+            /// </value>
+            public bool OnAck { get; }
+
+            /// <summary>
+            /// Gets a value indicating whether the exception should be thrown in ModifyAcknowledgementDeadline call.
+            /// </summary>
+            /// <value>
+            ///   <c>true</c> if [on modify ack deadline]; otherwise, <c>false</c>.
+            /// </value>
+            public bool OnModifyAckDeadline { get; }
+
+            private AckModifyAckDeadlineAction(Exception exception, int numberOfFailures, bool onAck, bool onModifyAckDeadline)
+            {
+                Exception = exception;
+                NumberOfFailures = numberOfFailures;
+                OnAck = onAck;
+                OnModifyAckDeadline = onModifyAckDeadline;
+            }
         }
 
         private class FakeSubscriberServiceApiClient : SubscriberServiceApiClient
@@ -206,7 +255,7 @@ namespace Google.Cloud.PubSub.V1.Tests
 
             public FakeSubscriberServiceApiClient(
                 IEnumerator<IEnumerable<ServerAction>> msgsEn, IScheduler scheduler, IClock clock,
-                TaskHelper taskHelper, TimeSpan writeAsyncPreDelay, bool useMsgAsId)
+                TaskHelper taskHelper, TimeSpan writeAsyncPreDelay, bool useMsgAsId, AckModifyAckDeadlineAction ackModifyAckDeadlineAction)
             {
                 _msgsEn = msgsEn;
                 _scheduler = scheduler;
@@ -214,6 +263,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 _taskHelper = taskHelper;
                 _writeAsyncPreDelay = writeAsyncPreDelay;
                 _useMsgAsId = useMsgAsId;
+                _ackModifyAckDeadlineAction = ackModifyAckDeadlineAction;
+                _numberOfAckModifyAckDeadlineFailures = 0;
             }
 
             private readonly object _lock = new object();
@@ -223,6 +274,8 @@ namespace Google.Cloud.PubSub.V1.Tests
             private readonly TaskHelper _taskHelper;
             private readonly TimeSpan _writeAsyncPreDelay; // Simulates slow network or server
             private readonly bool _useMsgAsId;
+            private readonly AckModifyAckDeadlineAction _ackModifyAckDeadlineAction; // Simulates Ack ModifyAckDeadline errors.
+            private int _numberOfAckModifyAckDeadlineFailures;
 
             private readonly List<TimedId> _extends = new List<TimedId>();
             private readonly List<TimedId> _acks = new List<TimedId>();
@@ -257,6 +310,19 @@ namespace Google.Cloud.PubSub.V1.Tests
                 {
                     await _taskHelper.ConfigureAwait(_scheduler.Delay(_writeAsyncPreDelay, CancellationToken.None));
                 }
+
+                // Simulate Ack failure if _ackModifyAckDeadlineAction is specified.
+                // All gRPC exceptions from this method are fire and forget, so no exception should propagate to the caller.
+                // Non-gRPC exceptions will propagate to the caller.
+                if (_ackModifyAckDeadlineAction?.Exception != null && _ackModifyAckDeadlineAction.OnAck)
+                {
+                    if (Interlocked.CompareExchange(ref _numberOfAckModifyAckDeadlineFailures, _ackModifyAckDeadlineAction.NumberOfFailures, _ackModifyAckDeadlineAction.NumberOfFailures) < _ackModifyAckDeadlineAction.NumberOfFailures)
+                    {
+                        Interlocked.Increment(ref _numberOfAckModifyAckDeadlineFailures);
+                        throw _ackModifyAckDeadlineAction.Exception;
+                    }
+                }
+
                 lock (_lock)
                 {
                     _acks.AddRange(ackIds.Select(id => new TimedId(_clock.GetCurrentDateTimeUtc(), id)));
@@ -269,6 +335,19 @@ namespace Google.Cloud.PubSub.V1.Tests
                 {
                     await _taskHelper.ConfigureAwait(_scheduler.Delay(_writeAsyncPreDelay, CancellationToken.None));
                 }
+
+                // Simulate ModifyAckDeadline failure if _ackModifyAckDeadlineAction is specified.
+                // All gRPC exceptions from this method are fire and forget, so no exceptions should propagate to the caller.
+                // Non-gRPC exceptions will propagate to the caller.
+                if (_ackModifyAckDeadlineAction?.Exception != null && _ackModifyAckDeadlineAction.OnModifyAckDeadline)
+                {
+                    if (Interlocked.CompareExchange(ref _numberOfAckModifyAckDeadlineFailures, _ackModifyAckDeadlineAction.NumberOfFailures, _ackModifyAckDeadlineAction.NumberOfFailures) < _ackModifyAckDeadlineAction.NumberOfFailures)
+                    {
+                        Interlocked.Increment(ref _numberOfAckModifyAckDeadlineFailures);
+                        throw _ackModifyAckDeadlineAction.Exception;
+                    }
+                }
+
                 lock (_lock)
                 {
                     var ids = ackDeadlineSeconds == 0 ? _nacks : _extends;
@@ -290,14 +369,14 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TimeSpan? ackDeadline = null, TimeSpan? ackExtendWindow = null,
                 int? flowMaxElements = null, int? flowMaxBytes = null,
                 int clientCount = 1, int threadCount = 1, TimeSpan? writeAsyncPreDelay = null,
-                bool useMsgAsId = false)
+                bool useMsgAsId = false, AckModifyAckDeadlineAction ackModifyAckDeadlineAction = null)
             {
                 var scheduler = new TestScheduler(threadCount: threadCount);
                 TaskHelper taskHelper = scheduler.TaskHelper;
                 List<DateTime> clientShutdowns = new List<DateTime>();
                 var msgEn = msgs.GetEnumerator();
                 var clients = Enumerable.Range(0, clientCount)
-                    .Select(_ => new FakeSubscriberServiceApiClient(msgEn, scheduler, scheduler.Clock, taskHelper, writeAsyncPreDelay ?? TimeSpan.Zero, useMsgAsId))
+                    .Select(_ => new FakeSubscriberServiceApiClient(msgEn, scheduler, scheduler.Clock, taskHelper, writeAsyncPreDelay ?? TimeSpan.Zero, useMsgAsId, ackModifyAckDeadlineAction))
                     .ToList();
                 var settings = new SubscriberClient.Settings
                 {
@@ -952,6 +1031,85 @@ namespace Google.Cloud.PubSub.V1.Tests
                     Assert.Equal(new int?[] { null, 2 }, deliveryAttempts);
                 });
             }
+        }
+
+        // Acknowledge / ModifyAcknowledgeDeadline calls may throw RpcException. RpcExceptions should not be thrown to the client.
+        [Theory, CombinatorialData]
+        public void AckModifyAckDeadlineFault_NotThrown([CombinatorialValues(true, false, null)] bool? ackOrModifyAck)
+        {
+            var msgs = new[] 
+            {
+                ServerAction.Data(TimeSpan.Zero, new[] { "1" }),
+                ServerAction.Data(TimeSpan.FromSeconds(5), new[] { "2" }),
+                ServerAction.Data(TimeSpan.Zero, new[] { "3" }),
+                ServerAction.Data(TimeSpan.Zero, new[] { "4" }),
+                ServerAction.Inf()
+            };
+
+            // Any RpcException thrown from Acknowledge and/ or ModifyAcknowledgementDeadline should not be thrown to the client.
+            var rpcException = new RpcException(new Status(StatusCode.InvalidArgument, ""), "");
+            // If ackOrModifyAck is null, then both Acknowledge and ModifyAcknowledgeDeadline will throw the supplied RpcException, total 2 times.
+            // If ackOrModifyAck is true, then Acknowledge will throw the supplied RpcException 2 times.
+            // If ackOrModifyAck is false, then ModifyAcknowledgementDeadline will throw the supplied RpcException 2 times.
+            var ackModifyAckDeadlineAction = 
+                ackOrModifyAck == null ? AckModifyAckDeadlineAction.Data(rpcException, 2, true, true) 
+                : ackOrModifyAck.Value ? AckModifyAckDeadlineAction.BadAck(rpcException, 2) 
+                : AckModifyAckDeadlineAction.BadModifyAckDeadline(rpcException, 2);
+
+            using var fake = Fake.Create(new[] { msgs }, ackDeadline: TimeSpan.FromSeconds(30), ackExtendWindow: TimeSpan.FromSeconds(10), ackModifyAckDeadlineAction: ackModifyAckDeadlineAction);
+            fake.Scheduler.Run(async () =>
+            {
+                var handledMsgs = new List<string>();
+                var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                {
+                    handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
+                    // Add delay greater than ackDeadline to simulate the call to ModifyAcknowledgeDeadline.
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(70), ct));
+                    return await Task.FromResult(SubscriberClient.Reply.Ack);
+                });
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                // Despite RpcException being thrown, all 4 messages should be handled.
+                Assert.Equal(new[] { "1", "2", "3", "4" }, handledMsgs);
+            });
+        }
+
+        // If Acknowledge / ModifyAcknowledgeDeadline calls throw exceptions other than RpcExceptions, they should be thrown to the client.
+        [Theory, CombinatorialData]
+        public void AckModifyAckDeadlineFault_Thrown([CombinatorialValues(true, false)] bool ackOrModifyAck)
+        {
+            var msgs = new[] 
+            {
+                ServerAction.Data(TimeSpan.Zero, new[] { "1" }),
+                ServerAction.Data(TimeSpan.FromSeconds(5), new[] { "2" }),
+                ServerAction.Data(TimeSpan.Zero, new[] { "3" }),
+                ServerAction.Data(TimeSpan.Zero, new[] { "4" }),
+                ServerAction.Inf()
+            };
+
+            // Any non-RpcException thrown from Acknowledge and/ or ModifyAcknowledgeDeadline should be thrown to the client.
+            var exception = new InvalidOperationException();
+            // If ackOrModifyAck is true, then Acknowledge will throw the supplied Exception.
+            // If ackOrModifyAck is false, then ModifyAcknowledgeDeadline will throw the supplied Exception.
+            // Since exception is thrown, the client will shutdown, so exception count is specified as 1.
+            var ackModifyAckDeadlineAction = 
+                ackOrModifyAck ? AckModifyAckDeadlineAction.BadAck(exception, 1) 
+                : AckModifyAckDeadlineAction.BadModifyAckDeadline(exception, 1);
+
+            using var fake = Fake.Create(new[] { msgs }, ackDeadline: TimeSpan.FromSeconds(30), ackExtendWindow: TimeSpan.FromSeconds(10), ackModifyAckDeadlineAction: ackModifyAckDeadlineAction);
+            fake.Scheduler.Run(async () =>
+            {
+                var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                {
+                    // Add delay greater than ackDeadline to simulate the call to ModifyAcknowledgeDeadline.
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(70), ct));
+                    return await Task.FromResult(SubscriberClient.Reply.Ack);
+                });
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
+                Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(CancellationToken.None));
+                Assert.Equal(exception, ex.AllExceptions().FirstOrDefault());
+                Assert.Equal(1, fake.ClientShutdowns.Count);
+            });
         }
     }
 }
