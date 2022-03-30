@@ -1402,8 +1402,13 @@ namespace Google.Cloud.PubSub.V1
                     }
                     else
                     {
-                        // Unrecoverable error; throw exception.
-                        throw writeTask.Exception.FlattenIfPossible();
+                        // Check if it's an RpcException. If it is, then ignore it and continue. We may want to log it later. 
+                        // Other non-gRPC unrecoverable errors will continue to be thrown.
+                        if (writeTask.Exception.As<RpcException>() is null)
+                        {
+                            // It is a non-gRPC unrecoverable error; throw exception.
+                            throw writeTask.Exception.FlattenIfPossible();
+                        }
                     }
                 }
                 // Immediately send more data if there is any to send.
