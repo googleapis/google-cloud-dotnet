@@ -333,18 +333,19 @@ namespace Google.Cloud.CertificateManager.V1 {
             "aG9yaXphdGlvbnMvKn3aQQRuYW1lykEqChVnb29nbGUucHJvdG9idWYuRW1w",
             "dHkSEU9wZXJhdGlvbk1ldGFkYXRhGlXKQSFjZXJ0aWZpY2F0ZW1hbmFnZXIu",
             "Z29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
-            "dXRoL2Nsb3VkLXBsYXRmb3JtQv8DCiZjb20uZ29vZ2xlLmNsb3VkLmNlcnRp",
+            "dXRoL2Nsb3VkLXBsYXRmb3JtQoMECiZjb20uZ29vZ2xlLmNsb3VkLmNlcnRp",
             "ZmljYXRlbWFuYWdlci52MUIXQ2VydGlmaWNhdGVNYW5hZ2VyUHJvdG9QAVpU",
             "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9j",
             "ZXJ0aWZpY2F0ZW1hbmFnZXIvdjE7Y2VydGlmaWNhdGVtYW5hZ2VyqgIiR29v",
             "Z2xlLkNsb3VkLkNlcnRpZmljYXRlTWFuYWdlci5WMcoCIkdvb2dsZVxDbG91",
             "ZFxDZXJ0aWZpY2F0ZU1hbmFnZXJcVjHqAiVHb29nbGU6OkNsb3VkOjpDZXJ0",
-            "aWZpY2F0ZU1hbmFnZXI6OlYx6kF6Ciljb21wdXRlLmdvb2dsZWFwaXMuY29t",
-            "L1RhcmdldEh0dHBzUHJveGllcxJNcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
-            "aW9ucy97bG9jYXRpb259L3RhcmdldEh0dHBzUHJveGllcy97dGFyZ2V0SHR0",
-            "cHNQcm94eX3qQXQKJ2NvbXB1dGUuZ29vZ2xlYXBpcy5jb20vVGFyZ2V0U3Ns",
-            "UHJveGllcxJJcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L3RhcmdldFNzbFByb3hpZXMve3RhcmdldFNzbFByb3h5fWIGcHJvdG8z"));
+            "aWZpY2F0ZU1hbmFnZXI6OlYx6kF8Ciljb21wdXRlLmdvb2dsZWFwaXMuY29t",
+            "L1RhcmdldEh0dHBzUHJveGllcxJPcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L3RhcmdldEh0dHBzUHJveGllcy97dGFyZ2V0X2h0",
+            "dHBzX3Byb3h5fepBdgonY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9UYXJnZXRT",
+            "c2xQcm94aWVzEktwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
+            "dGlvbn0vdGFyZ2V0U3NsUHJveGllcy97dGFyZ2V0X3NzbF9wcm94eX1iBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.CertificateManager.V1.ServingState), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -7234,7 +7235,9 @@ namespace Google.Cloud.CertificateManager.V1 {
     private readonly pbc::RepeatedField<string> sanDnsnames_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Output only. The list of Subject Alternative Names of dnsName type defined in the
-    /// certificate (see RFC 5280 4.2.1.6)
+    /// certificate (see RFC 5280 4.2.1.6).
+    /// Managed certificates that haven't been provisioned yet have this field
+    /// populated with a value of the managed.domains field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
