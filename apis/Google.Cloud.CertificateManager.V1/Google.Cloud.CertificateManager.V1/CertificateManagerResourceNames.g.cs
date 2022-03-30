@@ -1057,12 +1057,12 @@ namespace Google.Cloud.CertificateManager.V1
 
             /// <summary>
             /// A resource name with pattern
-            /// <c>projects/{project}/locations/{location}/targetHttpsProxies/{targetHttpsProxy}</c>.
+            /// <c>projects/{project}/locations/{location}/targetHttpsProxies/{target_https_proxy}</c>.
             /// </summary>
             ProjectLocationTargetHttpsProxy = 1,
         }
 
-        private static gax::PathTemplate s_projectLocationTargetHttpsProxy = new gax::PathTemplate("projects/{project}/locations/{location}/targetHttpsProxies/{targetHttpsProxy}");
+        private static gax::PathTemplate s_projectLocationTargetHttpsProxy = new gax::PathTemplate("projects/{project}/locations/{location}/targetHttpsProxies/{target_https_proxy}");
 
         /// <summary>Creates a <see cref="TargetHttpsProxiesName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -1075,7 +1075,7 @@ namespace Google.Cloud.CertificateManager.V1
 
         /// <summary>
         /// Creates a <see cref="TargetHttpsProxiesName"/> with the pattern
-        /// <c>projects/{project}/locations/{location}/targetHttpsProxies/{targetHttpsProxy}</c>.
+        /// <c>projects/{project}/locations/{location}/targetHttpsProxies/{target_https_proxy}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
@@ -1086,28 +1086,28 @@ namespace Google.Cloud.CertificateManager.V1
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="TargetHttpsProxiesName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/targetHttpsProxies/{targetHttpsProxy}</c>.
+        /// <c>projects/{project}/locations/{location}/targetHttpsProxies/{target_https_proxy}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="targetHttpsProxyId">The <c>TargetHttpsProxy</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="TargetHttpsProxiesName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/targetHttpsProxies/{targetHttpsProxy}</c>.
+        /// <c>projects/{project}/locations/{location}/targetHttpsProxies/{target_https_proxy}</c>.
         /// </returns>
         public static string Format(string projectId, string locationId, string targetHttpsProxyId) =>
             FormatProjectLocationTargetHttpsProxy(projectId, locationId, targetHttpsProxyId);
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="TargetHttpsProxiesName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/targetHttpsProxies/{targetHttpsProxy}</c>.
+        /// <c>projects/{project}/locations/{location}/targetHttpsProxies/{target_https_proxy}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="targetHttpsProxyId">The <c>TargetHttpsProxy</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="TargetHttpsProxiesName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/targetHttpsProxies/{targetHttpsProxy}</c>.
+        /// <c>projects/{project}/locations/{location}/targetHttpsProxies/{target_https_proxy}</c>.
         /// </returns>
         public static string FormatProjectLocationTargetHttpsProxy(string projectId, string locationId, string targetHttpsProxyId) =>
             s_projectLocationTargetHttpsProxy.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(targetHttpsProxyId, nameof(targetHttpsProxyId)));
@@ -1120,7 +1120,7 @@ namespace Google.Cloud.CertificateManager.V1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/targetHttpsProxies/{targetHttpsProxy}</c>
+        /// <c>projects/{project}/locations/{location}/targetHttpsProxies/{target_https_proxy}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -1138,7 +1138,7 @@ namespace Google.Cloud.CertificateManager.V1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/targetHttpsProxies/{targetHttpsProxy}</c>
+        /// <c>projects/{project}/locations/{location}/targetHttpsProxies/{target_https_proxy}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -1162,7 +1162,7 @@ namespace Google.Cloud.CertificateManager.V1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/targetHttpsProxies/{targetHttpsProxy}</c>
+        /// <c>projects/{project}/locations/{location}/targetHttpsProxies/{target_https_proxy}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -1184,7 +1184,7 @@ namespace Google.Cloud.CertificateManager.V1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/targetHttpsProxies/{targetHttpsProxy}</c>
+        /// <c>projects/{project}/locations/{location}/targetHttpsProxies/{target_https_proxy}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -1232,7 +1232,7 @@ namespace Google.Cloud.CertificateManager.V1
 
         /// <summary>
         /// Constructs a new instance of a <see cref="TargetHttpsProxiesName"/> class from the component parts of
-        /// pattern <c>projects/{project}/locations/{location}/targetHttpsProxies/{targetHttpsProxy}</c>
+        /// pattern <c>projects/{project}/locations/{location}/targetHttpsProxies/{target_https_proxy}</c>
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
@@ -1308,12 +1308,12 @@ namespace Google.Cloud.CertificateManager.V1
 
             /// <summary>
             /// A resource name with pattern
-            /// <c>projects/{project}/locations/{location}/targetSslProxies/{targetSslProxy}</c>.
+            /// <c>projects/{project}/locations/{location}/targetSslProxies/{target_ssl_proxy}</c>.
             /// </summary>
             ProjectLocationTargetSslProxy = 1,
         }
 
-        private static gax::PathTemplate s_projectLocationTargetSslProxy = new gax::PathTemplate("projects/{project}/locations/{location}/targetSslProxies/{targetSslProxy}");
+        private static gax::PathTemplate s_projectLocationTargetSslProxy = new gax::PathTemplate("projects/{project}/locations/{location}/targetSslProxies/{target_ssl_proxy}");
 
         /// <summary>Creates a <see cref="TargetSslProxiesName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -1326,7 +1326,7 @@ namespace Google.Cloud.CertificateManager.V1
 
         /// <summary>
         /// Creates a <see cref="TargetSslProxiesName"/> with the pattern
-        /// <c>projects/{project}/locations/{location}/targetSslProxies/{targetSslProxy}</c>.
+        /// <c>projects/{project}/locations/{location}/targetSslProxies/{target_ssl_proxy}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
@@ -1337,28 +1337,28 @@ namespace Google.Cloud.CertificateManager.V1
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="TargetSslProxiesName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/targetSslProxies/{targetSslProxy}</c>.
+        /// <c>projects/{project}/locations/{location}/targetSslProxies/{target_ssl_proxy}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="targetSslProxyId">The <c>TargetSslProxy</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="TargetSslProxiesName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/targetSslProxies/{targetSslProxy}</c>.
+        /// <c>projects/{project}/locations/{location}/targetSslProxies/{target_ssl_proxy}</c>.
         /// </returns>
         public static string Format(string projectId, string locationId, string targetSslProxyId) =>
             FormatProjectLocationTargetSslProxy(projectId, locationId, targetSslProxyId);
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="TargetSslProxiesName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/targetSslProxies/{targetSslProxy}</c>.
+        /// <c>projects/{project}/locations/{location}/targetSslProxies/{target_ssl_proxy}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="targetSslProxyId">The <c>TargetSslProxy</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="TargetSslProxiesName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/targetSslProxies/{targetSslProxy}</c>.
+        /// <c>projects/{project}/locations/{location}/targetSslProxies/{target_ssl_proxy}</c>.
         /// </returns>
         public static string FormatProjectLocationTargetSslProxy(string projectId, string locationId, string targetSslProxyId) =>
             s_projectLocationTargetSslProxy.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(targetSslProxyId, nameof(targetSslProxyId)));
@@ -1370,7 +1370,9 @@ namespace Google.Cloud.CertificateManager.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
-        /// <description><c>projects/{project}/locations/{location}/targetSslProxies/{targetSslProxy}</c></description>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/targetSslProxies/{target_ssl_proxy}</c>
+        /// </description>
         /// </item>
         /// </list>
         /// </remarks>
@@ -1386,7 +1388,9 @@ namespace Google.Cloud.CertificateManager.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
-        /// <description><c>projects/{project}/locations/{location}/targetSslProxies/{targetSslProxy}</c></description>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/targetSslProxies/{target_ssl_proxy}</c>
+        /// </description>
         /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
@@ -1408,7 +1412,9 @@ namespace Google.Cloud.CertificateManager.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
-        /// <description><c>projects/{project}/locations/{location}/targetSslProxies/{targetSslProxy}</c></description>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/targetSslProxies/{target_ssl_proxy}</c>
+        /// </description>
         /// </item>
         /// </list>
         /// </remarks>
@@ -1428,7 +1434,9 @@ namespace Google.Cloud.CertificateManager.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
-        /// <description><c>projects/{project}/locations/{location}/targetSslProxies/{targetSslProxy}</c></description>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/targetSslProxies/{target_ssl_proxy}</c>
+        /// </description>
         /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
@@ -1475,7 +1483,7 @@ namespace Google.Cloud.CertificateManager.V1
 
         /// <summary>
         /// Constructs a new instance of a <see cref="TargetSslProxiesName"/> class from the component parts of pattern
-        /// <c>projects/{project}/locations/{location}/targetSslProxies/{targetSslProxy}</c>
+        /// <c>projects/{project}/locations/{location}/targetSslProxies/{target_ssl_proxy}</c>
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
