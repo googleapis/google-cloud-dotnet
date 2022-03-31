@@ -26,13 +26,13 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           string.Concat(
             "Citnb29nbGUvY2xvdWQvYmlncXVlcnkvc3RvcmFnZS92MS9hdnJvLnByb3Rv",
             "EiBnb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MSIcCgpBdnJvU2No",
-            "ZW1hEg4KBnNjaGVtYRgBIAEoCSI9CghBdnJvUm93cxIeChZzZXJpYWxpemVk",
-            "X2JpbmFyeV9yb3dzGAEgASgMEhEKCXJvd19jb3VudBgCIAEoA0LCAQokY29t",
-            "Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxQglBdnJvUHJvdG9Q",
-            "AVpHZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91",
-            "ZC9iaWdxdWVyeS9zdG9yYWdlL3YxO3N0b3JhZ2WqAiBHb29nbGUuQ2xvdWQu",
-            "QmlnUXVlcnkuU3RvcmFnZS5WMcoCIEdvb2dsZVxDbG91ZFxCaWdRdWVyeVxT",
-            "dG9yYWdlXFYxYgZwcm90bzM="));
+            "ZW1hEg4KBnNjaGVtYRgBIAEoCSJBCghBdnJvUm93cxIeChZzZXJpYWxpemVk",
+            "X2JpbmFyeV9yb3dzGAEgASgMEhUKCXJvd19jb3VudBgCIAEoA0ICGAFCwgEK",
+            "JGNvbS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MUIJQXZyb1By",
+            "b3RvUAFaR2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
+            "Y2xvdWQvYmlncXVlcnkvc3RvcmFnZS92MTtzdG9yYWdlqgIgR29vZ2xlLkNs",
+            "b3VkLkJpZ1F1ZXJ5LlN0b3JhZ2UuVjHKAiBHb29nbGVcQ2xvdWRcQmlnUXVl",
+            "cnlcU3RvcmFnZVxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -307,8 +307,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     public const int RowCountFieldNumber = 2;
     private long rowCount_;
     /// <summary>
-    /// The count of rows in the returning block.
+    /// [Deprecated] The count of rows in the returning block.
+    /// Please use the format-independent ReadRowsResponse.row_count instead.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long RowCount {
