@@ -338,6 +338,26 @@
       "serviceConfigFile": "bigqueryconnection_v1.yaml"
     },
     {
+      "id": "Google.Cloud.BigQuery.DataExchange.V1Beta1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Analytics Hub",
+      "productUrl": "https://cloud.google.com/analytics-hub",
+      "description": "Recommended Google client library to access the BigQuery DataExchange API, which allows users to exchange data and analytics assets securely and efficiently.",
+      "tags": [
+        "bigquery",
+        "analytics"
+      ],
+      "dependencies": {
+        "Google.Cloud.BigQuery.DataExchange.Common": "project",
+        "Google.Cloud.Iam.V1": "2.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/bigquery/dataexchange/v1beta1",
+      "shortName": "analyticshub",
+      "serviceConfigFile": "analyticshub_v1beta1.yaml"
+    },
+    {
       "id": "Google.Cloud.BigQuery.DataExchange.Common",
       "version": "1.0.0-beta00",
       "targetFrameworks": "netstandard2.0;net461",
@@ -3836,6 +3856,14 @@
     "google/watcher/v1": "Meta-API, mostly replaced by PubSub"
   },
   "packageGroups": [
+    {
+      "id": "Google.Cloud.BigQuery.DataExchange",
+      "displayName": "BigQuery DataExchange",
+      "packageIds": [
+        "Google.Cloud.BigQuery.DataExchange.Common",
+        "Google.Cloud.BigQuery.DataExchange.V1Beta1"
+      ]
+    },
     {
       "id": "Google.Cloud.Spanner",
       "displayName": "Spanner",
