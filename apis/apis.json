@@ -338,6 +338,21 @@
       "serviceConfigFile": "bigqueryconnection_v1.yaml"
     },
     {
+      "id": "Google.Cloud.BigQuery.DataExchange.Common",
+      "version": "1.0.0-beta00",
+      "targetFrameworks": "netstandard2.0;net461",
+      "type": "other",
+      "description": "Version-agnostic types for the Google BigQuery Data Exchange API.",
+      "tags": [
+        "bigquery"
+      ],
+      "generator": "proto",
+      "protoPath": "google/cloud/bigquery/dataexchange/common",
+      "dependencies": {
+        "Google.Api.CommonProtos": "2.5.0"
+      }
+    },
+    {
       "id": "Google.Cloud.BigQuery.DataTransfer.V1",
       "generator": "micro",
       "protoPath": "google/cloud/bigquery/datatransfer/v1",
