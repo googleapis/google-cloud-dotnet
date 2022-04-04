@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.8.0, released 2022-04-04
+
+### New features
+
+- Add ListHotTablets API method and protobufs ([commit 56eea19](https://github.com/googleapis/google-cloud-dotnet/commit/56eea199afd45dcb1cef9179910e0b6307959fe0))
+
+### Documentation improvements
+
+- Update `cpu_utilization_percent` limit ([commit 01b008d](https://github.com/googleapis/google-cloud-dotnet/commit/01b008ddedb11234ef3452ef3da85d92b69fd86a))
+- Remove the limitation of all clusters in a CMEK instance must use the same key ([commit 01b008d](https://github.com/googleapis/google-cloud-dotnet/commit/01b008ddedb11234ef3452ef3da85d92b69fd86a))
+
 ## Version 2.7.0, released 2021-12-07
 
 - [Commit c8a3a3e](https://github.com/googleapis/google-cloud-dotnet/commit/c8a3a3e): feat: add Autoscaling API
