@@ -431,6 +431,524 @@
       },
       "canonical": true,
       "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "storagetransfer_v1_generated_StorageTransferService_CreateAgentPool_sync",
+      "title": "CreateAgentPoolRequestObject",
+      "description": "Snippet for CreateAgentPool",
+      "file": "StorageTransferServiceClient.CreateAgentPoolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAgentPool",
+        "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.CreateAgentPool",
+        "resultType": "Google.Cloud.StorageTransfer.V1.AgentPool",
+        "client": {
+          "shortName": "StorageTransferServiceClient",
+          "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAgentPool",
+          "fullName": "google.storagetransfer.v1.StorageTransferService.CreateAgentPool",
+          "service": {
+            "shortName": "StorageTransferService",
+            "fullName": "google.storagetransfer.v1.StorageTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "storagetransfer_v1_generated_StorageTransferService_CreateAgentPool_async",
+      "title": "CreateAgentPoolRequestObjectAsync",
+      "description": "Snippet for CreateAgentPoolAsync",
+      "file": "StorageTransferServiceClient.CreateAgentPoolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAgentPoolAsync",
+        "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.CreateAgentPoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageTransfer.V1.AgentPool>",
+        "client": {
+          "shortName": "StorageTransferServiceClient",
+          "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAgentPool",
+          "fullName": "google.storagetransfer.v1.StorageTransferService.CreateAgentPool",
+          "service": {
+            "shortName": "StorageTransferService",
+            "fullName": "google.storagetransfer.v1.StorageTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "storagetransfer_v1_generated_StorageTransferService_CreateAgentPool_sync_flattened",
+      "title": "CreateAgentPool",
+      "description": "Snippet for CreateAgentPool",
+      "file": "StorageTransferServiceClient.CreateAgentPoolSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAgentPool",
+        "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.CreateAgentPool",
+        "resultType": "Google.Cloud.StorageTransfer.V1.AgentPool",
+        "client": {
+          "shortName": "StorageTransferServiceClient",
+          "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAgentPool",
+          "fullName": "google.storagetransfer.v1.StorageTransferService.CreateAgentPool",
+          "service": {
+            "shortName": "StorageTransferService",
+            "fullName": "google.storagetransfer.v1.StorageTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "storagetransfer_v1_generated_StorageTransferService_CreateAgentPool_async_flattened",
+      "title": "CreateAgentPoolAsync",
+      "description": "Snippet for CreateAgentPoolAsync",
+      "file": "StorageTransferServiceClient.CreateAgentPoolAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAgentPoolAsync",
+        "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.CreateAgentPoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageTransfer.V1.AgentPool>",
+        "client": {
+          "shortName": "StorageTransferServiceClient",
+          "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAgentPool",
+          "fullName": "google.storagetransfer.v1.StorageTransferService.CreateAgentPool",
+          "service": {
+            "shortName": "StorageTransferService",
+            "fullName": "google.storagetransfer.v1.StorageTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "storagetransfer_v1_generated_StorageTransferService_UpdateAgentPool_sync",
+      "title": "UpdateAgentPoolRequestObject",
+      "description": "Snippet for UpdateAgentPool",
+      "file": "StorageTransferServiceClient.UpdateAgentPoolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAgentPool",
+        "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.UpdateAgentPool",
+        "resultType": "Google.Cloud.StorageTransfer.V1.AgentPool",
+        "client": {
+          "shortName": "StorageTransferServiceClient",
+          "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAgentPool",
+          "fullName": "google.storagetransfer.v1.StorageTransferService.UpdateAgentPool",
+          "service": {
+            "shortName": "StorageTransferService",
+            "fullName": "google.storagetransfer.v1.StorageTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "storagetransfer_v1_generated_StorageTransferService_UpdateAgentPool_async",
+      "title": "UpdateAgentPoolRequestObjectAsync",
+      "description": "Snippet for UpdateAgentPoolAsync",
+      "file": "StorageTransferServiceClient.UpdateAgentPoolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAgentPoolAsync",
+        "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.UpdateAgentPoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageTransfer.V1.AgentPool>",
+        "client": {
+          "shortName": "StorageTransferServiceClient",
+          "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAgentPool",
+          "fullName": "google.storagetransfer.v1.StorageTransferService.UpdateAgentPool",
+          "service": {
+            "shortName": "StorageTransferService",
+            "fullName": "google.storagetransfer.v1.StorageTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "storagetransfer_v1_generated_StorageTransferService_UpdateAgentPool_sync_flattened",
+      "title": "UpdateAgentPool",
+      "description": "Snippet for UpdateAgentPool",
+      "file": "StorageTransferServiceClient.UpdateAgentPoolSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAgentPool",
+        "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.UpdateAgentPool",
+        "resultType": "Google.Cloud.StorageTransfer.V1.AgentPool",
+        "client": {
+          "shortName": "StorageTransferServiceClient",
+          "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAgentPool",
+          "fullName": "google.storagetransfer.v1.StorageTransferService.UpdateAgentPool",
+          "service": {
+            "shortName": "StorageTransferService",
+            "fullName": "google.storagetransfer.v1.StorageTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "storagetransfer_v1_generated_StorageTransferService_UpdateAgentPool_async_flattened",
+      "title": "UpdateAgentPoolAsync",
+      "description": "Snippet for UpdateAgentPoolAsync",
+      "file": "StorageTransferServiceClient.UpdateAgentPoolAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAgentPoolAsync",
+        "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.UpdateAgentPoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageTransfer.V1.AgentPool>",
+        "client": {
+          "shortName": "StorageTransferServiceClient",
+          "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAgentPool",
+          "fullName": "google.storagetransfer.v1.StorageTransferService.UpdateAgentPool",
+          "service": {
+            "shortName": "StorageTransferService",
+            "fullName": "google.storagetransfer.v1.StorageTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "storagetransfer_v1_generated_StorageTransferService_GetAgentPool_sync",
+      "title": "GetAgentPoolRequestObject",
+      "description": "Snippet for GetAgentPool",
+      "file": "StorageTransferServiceClient.GetAgentPoolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAgentPool",
+        "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.GetAgentPool",
+        "resultType": "Google.Cloud.StorageTransfer.V1.AgentPool",
+        "client": {
+          "shortName": "StorageTransferServiceClient",
+          "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
+        },
+        "method": {
+          "shortName": "GetAgentPool",
+          "fullName": "google.storagetransfer.v1.StorageTransferService.GetAgentPool",
+          "service": {
+            "shortName": "StorageTransferService",
+            "fullName": "google.storagetransfer.v1.StorageTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "storagetransfer_v1_generated_StorageTransferService_GetAgentPool_async",
+      "title": "GetAgentPoolRequestObjectAsync",
+      "description": "Snippet for GetAgentPoolAsync",
+      "file": "StorageTransferServiceClient.GetAgentPoolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAgentPoolAsync",
+        "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.GetAgentPoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageTransfer.V1.AgentPool>",
+        "client": {
+          "shortName": "StorageTransferServiceClient",
+          "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
+        },
+        "method": {
+          "shortName": "GetAgentPool",
+          "fullName": "google.storagetransfer.v1.StorageTransferService.GetAgentPool",
+          "service": {
+            "shortName": "StorageTransferService",
+            "fullName": "google.storagetransfer.v1.StorageTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "storagetransfer_v1_generated_StorageTransferService_GetAgentPool_sync_flattened",
+      "title": "GetAgentPool",
+      "description": "Snippet for GetAgentPool",
+      "file": "StorageTransferServiceClient.GetAgentPoolSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAgentPool",
+        "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.GetAgentPool",
+        "resultType": "Google.Cloud.StorageTransfer.V1.AgentPool",
+        "client": {
+          "shortName": "StorageTransferServiceClient",
+          "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
+        },
+        "method": {
+          "shortName": "GetAgentPool",
+          "fullName": "google.storagetransfer.v1.StorageTransferService.GetAgentPool",
+          "service": {
+            "shortName": "StorageTransferService",
+            "fullName": "google.storagetransfer.v1.StorageTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "storagetransfer_v1_generated_StorageTransferService_GetAgentPool_async_flattened",
+      "title": "GetAgentPoolAsync",
+      "description": "Snippet for GetAgentPoolAsync",
+      "file": "StorageTransferServiceClient.GetAgentPoolAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAgentPoolAsync",
+        "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.GetAgentPoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageTransfer.V1.AgentPool>",
+        "client": {
+          "shortName": "StorageTransferServiceClient",
+          "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
+        },
+        "method": {
+          "shortName": "GetAgentPool",
+          "fullName": "google.storagetransfer.v1.StorageTransferService.GetAgentPool",
+          "service": {
+            "shortName": "StorageTransferService",
+            "fullName": "google.storagetransfer.v1.StorageTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "storagetransfer_v1_generated_StorageTransferService_ListAgentPools_sync",
+      "title": "ListAgentPoolsRequestObject",
+      "description": "Snippet for ListAgentPools",
+      "file": "StorageTransferServiceClient.ListAgentPoolsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAgentPools",
+        "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.ListAgentPools",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.StorageTransfer.V1.ListAgentPoolsResponse, Google.Cloud.StorageTransfer.V1.AgentPool>",
+        "client": {
+          "shortName": "StorageTransferServiceClient",
+          "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
+        },
+        "method": {
+          "shortName": "ListAgentPools",
+          "fullName": "google.storagetransfer.v1.StorageTransferService.ListAgentPools",
+          "service": {
+            "shortName": "StorageTransferService",
+            "fullName": "google.storagetransfer.v1.StorageTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "storagetransfer_v1_generated_StorageTransferService_ListAgentPools_async",
+      "title": "ListAgentPoolsRequestObjectAsync",
+      "description": "Snippet for ListAgentPoolsAsync",
+      "file": "StorageTransferServiceClient.ListAgentPoolsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAgentPoolsAsync",
+        "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.ListAgentPoolsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.StorageTransfer.V1.ListAgentPoolsResponse, Google.Cloud.StorageTransfer.V1.AgentPool>",
+        "client": {
+          "shortName": "StorageTransferServiceClient",
+          "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
+        },
+        "method": {
+          "shortName": "ListAgentPools",
+          "fullName": "google.storagetransfer.v1.StorageTransferService.ListAgentPools",
+          "service": {
+            "shortName": "StorageTransferService",
+            "fullName": "google.storagetransfer.v1.StorageTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "storagetransfer_v1_generated_StorageTransferService_ListAgentPools_sync_flattened",
+      "title": "ListAgentPools",
+      "description": "Snippet for ListAgentPools",
+      "file": "StorageTransferServiceClient.ListAgentPoolsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAgentPools",
+        "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.ListAgentPools",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.StorageTransfer.V1.ListAgentPoolsResponse, Google.Cloud.StorageTransfer.V1.AgentPool>",
+        "client": {
+          "shortName": "StorageTransferServiceClient",
+          "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
+        },
+        "method": {
+          "shortName": "ListAgentPools",
+          "fullName": "google.storagetransfer.v1.StorageTransferService.ListAgentPools",
+          "service": {
+            "shortName": "StorageTransferService",
+            "fullName": "google.storagetransfer.v1.StorageTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "storagetransfer_v1_generated_StorageTransferService_ListAgentPools_async_flattened",
+      "title": "ListAgentPoolsAsync",
+      "description": "Snippet for ListAgentPoolsAsync",
+      "file": "StorageTransferServiceClient.ListAgentPoolsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAgentPoolsAsync",
+        "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.ListAgentPoolsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.StorageTransfer.V1.ListAgentPoolsResponse, Google.Cloud.StorageTransfer.V1.AgentPool>",
+        "client": {
+          "shortName": "StorageTransferServiceClient",
+          "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
+        },
+        "method": {
+          "shortName": "ListAgentPools",
+          "fullName": "google.storagetransfer.v1.StorageTransferService.ListAgentPools",
+          "service": {
+            "shortName": "StorageTransferService",
+            "fullName": "google.storagetransfer.v1.StorageTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "storagetransfer_v1_generated_StorageTransferService_DeleteAgentPool_sync",
+      "title": "DeleteAgentPoolRequestObject",
+      "description": "Snippet for DeleteAgentPool",
+      "file": "StorageTransferServiceClient.DeleteAgentPoolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAgentPool",
+        "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.DeleteAgentPool",
+        "client": {
+          "shortName": "StorageTransferServiceClient",
+          "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAgentPool",
+          "fullName": "google.storagetransfer.v1.StorageTransferService.DeleteAgentPool",
+          "service": {
+            "shortName": "StorageTransferService",
+            "fullName": "google.storagetransfer.v1.StorageTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "storagetransfer_v1_generated_StorageTransferService_DeleteAgentPool_async",
+      "title": "DeleteAgentPoolRequestObjectAsync",
+      "description": "Snippet for DeleteAgentPoolAsync",
+      "file": "StorageTransferServiceClient.DeleteAgentPoolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAgentPoolAsync",
+        "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.DeleteAgentPoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "StorageTransferServiceClient",
+          "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAgentPool",
+          "fullName": "google.storagetransfer.v1.StorageTransferService.DeleteAgentPool",
+          "service": {
+            "shortName": "StorageTransferService",
+            "fullName": "google.storagetransfer.v1.StorageTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "storagetransfer_v1_generated_StorageTransferService_DeleteAgentPool_sync_flattened",
+      "title": "DeleteAgentPool",
+      "description": "Snippet for DeleteAgentPool",
+      "file": "StorageTransferServiceClient.DeleteAgentPoolSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAgentPool",
+        "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.DeleteAgentPool",
+        "client": {
+          "shortName": "StorageTransferServiceClient",
+          "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAgentPool",
+          "fullName": "google.storagetransfer.v1.StorageTransferService.DeleteAgentPool",
+          "service": {
+            "shortName": "StorageTransferService",
+            "fullName": "google.storagetransfer.v1.StorageTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "storagetransfer_v1_generated_StorageTransferService_DeleteAgentPool_async_flattened",
+      "title": "DeleteAgentPoolAsync",
+      "description": "Snippet for DeleteAgentPoolAsync",
+      "file": "StorageTransferServiceClient.DeleteAgentPoolAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAgentPoolAsync",
+        "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.DeleteAgentPoolAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "StorageTransferServiceClient",
+          "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAgentPool",
+          "fullName": "google.storagetransfer.v1.StorageTransferService.DeleteAgentPool",
+          "service": {
+            "shortName": "StorageTransferService",
+            "fullName": "google.storagetransfer.v1.StorageTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
     }
   ]
 }
