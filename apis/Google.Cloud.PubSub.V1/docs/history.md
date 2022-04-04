@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.9.0, released 2022-04-04
+
+### Bug fixes
+
+- Increased grpc.max_metadata_size value to 4 M.B. in PublisherClient ([commit a29a5f3](https://github.com/googleapis/google-cloud-dotnet/commit/a29a5f3e89b3be037c64ab2b74ff44199d88cff5))
+- Ignore exceptions during Ack/ModifyAckDeadline in SubscriberClient ([commit f36fd61](https://github.com/googleapis/google-cloud-dotnet/commit/f36fd619f2ce50425fda5fb9f19f6ada48fb6f40))
+
 ## Version 2.8.0, released 2022-03-22
 
 ### Bug fixes
