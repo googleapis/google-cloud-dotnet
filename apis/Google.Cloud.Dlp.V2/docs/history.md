@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.5.0, released 2022-04-04
+
+### New features
+
+- Add DataProfilePubSubMessage supporting pub/sub integration ([commit 5d46153](https://github.com/googleapis/google-cloud-dotnet/commit/5d461532af7674d5494ee29dfb9867897910b347))
+- New Bytes and File types: POWERPOINT and EXCEL ([commit 114219d](https://github.com/googleapis/google-cloud-dotnet/commit/114219d198dc22acfd4fdf2839e3bda6bc7f17af))
+
 ## Version 3.4.0, released 2021-12-07
 
 - [Commit 4ccc8e5](https://github.com/googleapis/google-cloud-dotnet/commit/4ccc8e5):
