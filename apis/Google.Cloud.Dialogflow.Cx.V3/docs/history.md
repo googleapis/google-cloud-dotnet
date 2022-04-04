@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.11.0, released 2022-04-04
+
+### New features
+
+- Added support for locking an agent for changes ([commit 7afeda7](https://github.com/googleapis/google-cloud-dotnet/commit/7afeda772cb17f1bd039bd53554df68e67cff1b9))
+- Added data format specification for export agent ([commit 7afeda7](https://github.com/googleapis/google-cloud-dotnet/commit/7afeda772cb17f1bd039bd53554df68e67cff1b9))
+
+### Documentation improvements
+
+- Improved docs format ([commit 034e33b](https://github.com/googleapis/google-cloud-dotnet/commit/034e33b72ef0ad4e40cbc6fe3838b30fbde59e57))
+
 ## Version 1.10.0, released 2022-03-14
 
 ### New features
