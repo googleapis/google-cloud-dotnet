@@ -1,5 +1,14 @@
 # Version history
 
+## Version 2.5.0, released 2022-04-04
+
+### New features
+
+- Add support for Maintenance Window ([commit fa2f5e9](https://github.com/googleapis/google-cloud-dotnet/commit/fa2f5e95b580a0aa03618408b09d798c9e6d82d8))
+- Add support for AUTH functionality ([commit bed04f2](https://github.com/googleapis/google-cloud-dotnet/commit/bed04f2667156b728fe42c748f71fddf613c02e7))
+- Add support for TLS functionality ([commit bed04f2](https://github.com/googleapis/google-cloud-dotnet/commit/bed04f2667156b728fe42c748f71fddf613c02e7))
+- Add secondary_ip_range field ([commit bed04f2](https://github.com/googleapis/google-cloud-dotnet/commit/bed04f2667156b728fe42c748f71fddf613c02e7))
+
 ## Version 2.4.0, released 2021-11-10
 
 - [Commit a7e87ee](https://github.com/googleapis/google-cloud-dotnet/commit/a7e87ee): feat: Support Multiple Read Replicas when creating Instance
