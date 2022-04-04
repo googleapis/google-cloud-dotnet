@@ -1,5 +1,13 @@
 # Version history
 
+## Version 1.6.0, released 2022-04-04
+
+### New features
+
+- Add ImportModelEvaluation in aiplatform v1 model_service.proto ([commit 9406420](https://github.com/googleapis/google-cloud-dotnet/commit/940642037b4217cf427e3042bf0e7de74abe1d37))
+- Add data_item_schema_uri, annotation_schema_uri, explanation_specs to ModelEvaluationExplanationSpec in aiplatform v1 model_evaluation.proto ([commit 9406420](https://github.com/googleapis/google-cloud-dotnet/commit/940642037b4217cf427e3042bf0e7de74abe1d37))
+- Add ImportModelEvaluation in aiplatform v1beta1 model_service.proto ([commit 9406420](https://github.com/googleapis/google-cloud-dotnet/commit/940642037b4217cf427e3042bf0e7de74abe1d37))
+
 ## Version 1.5.0, released 2022-03-14
 
 ### New features
