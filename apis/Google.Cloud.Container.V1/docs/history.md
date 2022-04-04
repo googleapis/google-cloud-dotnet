@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.7.0, released 2022-04-04
+
+### New features
+
+- Multiple new messages and properties ([commit fa099d3](https://github.com/googleapis/google-cloud-dotnet/commit/fa099d3132999c8ac0fba7b55134145f725daf2c))
+
 ## Version 2.6.0, released 2021-08-19
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
