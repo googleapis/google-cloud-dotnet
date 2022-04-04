@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.9.0, released 2022-04-04
+
+### New features
+
+- Deprecate format specific `row_count` field in Read API ([commit 682ee9e](https://github.com/googleapis/google-cloud-dotnet/commit/682ee9e031905a71c664234e6901de88438d7556))
+
 ## Version 2.8.0, released 2022-03-14
 
 ### New features
