@@ -370,5 +370,433 @@ namespace Google.Cloud.StorageTransfer.V1.Snippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for CreateAgentPool</summary>
+        public void CreateAgentPoolRequestObject()
+        {
+            // Snippet: CreateAgentPool(CreateAgentPoolRequest, CallSettings)
+            // Create client
+            StorageTransferServiceClient storageTransferServiceClient = StorageTransferServiceClient.Create();
+            // Initialize request argument(s)
+            CreateAgentPoolRequest request = new CreateAgentPoolRequest
+            {
+                ProjectId = "",
+                AgentPool = new AgentPool(),
+                AgentPoolId = "",
+            };
+            // Make the request
+            AgentPool response = storageTransferServiceClient.CreateAgentPool(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAgentPoolAsync</summary>
+        public async Task CreateAgentPoolRequestObjectAsync()
+        {
+            // Snippet: CreateAgentPoolAsync(CreateAgentPoolRequest, CallSettings)
+            // Additional: CreateAgentPoolAsync(CreateAgentPoolRequest, CancellationToken)
+            // Create client
+            StorageTransferServiceClient storageTransferServiceClient = await StorageTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateAgentPoolRequest request = new CreateAgentPoolRequest
+            {
+                ProjectId = "",
+                AgentPool = new AgentPool(),
+                AgentPoolId = "",
+            };
+            // Make the request
+            AgentPool response = await storageTransferServiceClient.CreateAgentPoolAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAgentPool</summary>
+        public void CreateAgentPool()
+        {
+            // Snippet: CreateAgentPool(string, AgentPool, string, CallSettings)
+            // Create client
+            StorageTransferServiceClient storageTransferServiceClient = StorageTransferServiceClient.Create();
+            // Initialize request argument(s)
+            string projectId = "";
+            AgentPool agentPool = new AgentPool();
+            string agentPoolId = "";
+            // Make the request
+            AgentPool response = storageTransferServiceClient.CreateAgentPool(projectId, agentPool, agentPoolId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAgentPoolAsync</summary>
+        public async Task CreateAgentPoolAsync()
+        {
+            // Snippet: CreateAgentPoolAsync(string, AgentPool, string, CallSettings)
+            // Additional: CreateAgentPoolAsync(string, AgentPool, string, CancellationToken)
+            // Create client
+            StorageTransferServiceClient storageTransferServiceClient = await StorageTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string projectId = "";
+            AgentPool agentPool = new AgentPool();
+            string agentPoolId = "";
+            // Make the request
+            AgentPool response = await storageTransferServiceClient.CreateAgentPoolAsync(projectId, agentPool, agentPoolId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAgentPool</summary>
+        public void UpdateAgentPoolRequestObject()
+        {
+            // Snippet: UpdateAgentPool(UpdateAgentPoolRequest, CallSettings)
+            // Create client
+            StorageTransferServiceClient storageTransferServiceClient = StorageTransferServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateAgentPoolRequest request = new UpdateAgentPoolRequest
+            {
+                AgentPool = new AgentPool(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            AgentPool response = storageTransferServiceClient.UpdateAgentPool(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAgentPoolAsync</summary>
+        public async Task UpdateAgentPoolRequestObjectAsync()
+        {
+            // Snippet: UpdateAgentPoolAsync(UpdateAgentPoolRequest, CallSettings)
+            // Additional: UpdateAgentPoolAsync(UpdateAgentPoolRequest, CancellationToken)
+            // Create client
+            StorageTransferServiceClient storageTransferServiceClient = await StorageTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateAgentPoolRequest request = new UpdateAgentPoolRequest
+            {
+                AgentPool = new AgentPool(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            AgentPool response = await storageTransferServiceClient.UpdateAgentPoolAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAgentPool</summary>
+        public void UpdateAgentPool()
+        {
+            // Snippet: UpdateAgentPool(AgentPool, FieldMask, CallSettings)
+            // Create client
+            StorageTransferServiceClient storageTransferServiceClient = StorageTransferServiceClient.Create();
+            // Initialize request argument(s)
+            AgentPool agentPool = new AgentPool();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            AgentPool response = storageTransferServiceClient.UpdateAgentPool(agentPool, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAgentPoolAsync</summary>
+        public async Task UpdateAgentPoolAsync()
+        {
+            // Snippet: UpdateAgentPoolAsync(AgentPool, FieldMask, CallSettings)
+            // Additional: UpdateAgentPoolAsync(AgentPool, FieldMask, CancellationToken)
+            // Create client
+            StorageTransferServiceClient storageTransferServiceClient = await StorageTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AgentPool agentPool = new AgentPool();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            AgentPool response = await storageTransferServiceClient.UpdateAgentPoolAsync(agentPool, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAgentPool</summary>
+        public void GetAgentPoolRequestObject()
+        {
+            // Snippet: GetAgentPool(GetAgentPoolRequest, CallSettings)
+            // Create client
+            StorageTransferServiceClient storageTransferServiceClient = StorageTransferServiceClient.Create();
+            // Initialize request argument(s)
+            GetAgentPoolRequest request = new GetAgentPoolRequest { Name = "", };
+            // Make the request
+            AgentPool response = storageTransferServiceClient.GetAgentPool(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAgentPoolAsync</summary>
+        public async Task GetAgentPoolRequestObjectAsync()
+        {
+            // Snippet: GetAgentPoolAsync(GetAgentPoolRequest, CallSettings)
+            // Additional: GetAgentPoolAsync(GetAgentPoolRequest, CancellationToken)
+            // Create client
+            StorageTransferServiceClient storageTransferServiceClient = await StorageTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAgentPoolRequest request = new GetAgentPoolRequest { Name = "", };
+            // Make the request
+            AgentPool response = await storageTransferServiceClient.GetAgentPoolAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAgentPool</summary>
+        public void GetAgentPool()
+        {
+            // Snippet: GetAgentPool(string, CallSettings)
+            // Create client
+            StorageTransferServiceClient storageTransferServiceClient = StorageTransferServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            AgentPool response = storageTransferServiceClient.GetAgentPool(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAgentPoolAsync</summary>
+        public async Task GetAgentPoolAsync()
+        {
+            // Snippet: GetAgentPoolAsync(string, CallSettings)
+            // Additional: GetAgentPoolAsync(string, CancellationToken)
+            // Create client
+            StorageTransferServiceClient storageTransferServiceClient = await StorageTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            AgentPool response = await storageTransferServiceClient.GetAgentPoolAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAgentPools</summary>
+        public void ListAgentPoolsRequestObject()
+        {
+            // Snippet: ListAgentPools(ListAgentPoolsRequest, CallSettings)
+            // Create client
+            StorageTransferServiceClient storageTransferServiceClient = StorageTransferServiceClient.Create();
+            // Initialize request argument(s)
+            ListAgentPoolsRequest request = new ListAgentPoolsRequest
+            {
+                ProjectId = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListAgentPoolsResponse, AgentPool> response = storageTransferServiceClient.ListAgentPools(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AgentPool item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAgentPoolsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AgentPool item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AgentPool> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AgentPool item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAgentPoolsAsync</summary>
+        public async Task ListAgentPoolsRequestObjectAsync()
+        {
+            // Snippet: ListAgentPoolsAsync(ListAgentPoolsRequest, CallSettings)
+            // Create client
+            StorageTransferServiceClient storageTransferServiceClient = await StorageTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAgentPoolsRequest request = new ListAgentPoolsRequest
+            {
+                ProjectId = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAgentPoolsResponse, AgentPool> response = storageTransferServiceClient.ListAgentPoolsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AgentPool item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAgentPoolsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AgentPool item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AgentPool> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AgentPool item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAgentPools</summary>
+        public void ListAgentPools()
+        {
+            // Snippet: ListAgentPools(string, string, int?, CallSettings)
+            // Create client
+            StorageTransferServiceClient storageTransferServiceClient = StorageTransferServiceClient.Create();
+            // Initialize request argument(s)
+            string projectId = "";
+            // Make the request
+            PagedEnumerable<ListAgentPoolsResponse, AgentPool> response = storageTransferServiceClient.ListAgentPools(projectId);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AgentPool item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAgentPoolsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AgentPool item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AgentPool> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AgentPool item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAgentPoolsAsync</summary>
+        public async Task ListAgentPoolsAsync()
+        {
+            // Snippet: ListAgentPoolsAsync(string, string, int?, CallSettings)
+            // Create client
+            StorageTransferServiceClient storageTransferServiceClient = await StorageTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string projectId = "";
+            // Make the request
+            PagedAsyncEnumerable<ListAgentPoolsResponse, AgentPool> response = storageTransferServiceClient.ListAgentPoolsAsync(projectId);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AgentPool item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAgentPoolsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AgentPool item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AgentPool> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AgentPool item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAgentPool</summary>
+        public void DeleteAgentPoolRequestObject()
+        {
+            // Snippet: DeleteAgentPool(DeleteAgentPoolRequest, CallSettings)
+            // Create client
+            StorageTransferServiceClient storageTransferServiceClient = StorageTransferServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteAgentPoolRequest request = new DeleteAgentPoolRequest { Name = "", };
+            // Make the request
+            storageTransferServiceClient.DeleteAgentPool(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAgentPoolAsync</summary>
+        public async Task DeleteAgentPoolRequestObjectAsync()
+        {
+            // Snippet: DeleteAgentPoolAsync(DeleteAgentPoolRequest, CallSettings)
+            // Additional: DeleteAgentPoolAsync(DeleteAgentPoolRequest, CancellationToken)
+            // Create client
+            StorageTransferServiceClient storageTransferServiceClient = await StorageTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteAgentPoolRequest request = new DeleteAgentPoolRequest { Name = "", };
+            // Make the request
+            await storageTransferServiceClient.DeleteAgentPoolAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAgentPool</summary>
+        public void DeleteAgentPool()
+        {
+            // Snippet: DeleteAgentPool(string, CallSettings)
+            // Create client
+            StorageTransferServiceClient storageTransferServiceClient = StorageTransferServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            storageTransferServiceClient.DeleteAgentPool(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAgentPoolAsync</summary>
+        public async Task DeleteAgentPoolAsync()
+        {
+            // Snippet: DeleteAgentPoolAsync(string, CallSettings)
+            // Additional: DeleteAgentPoolAsync(string, CancellationToken)
+            // Create client
+            StorageTransferServiceClient storageTransferServiceClient = await StorageTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            await storageTransferServiceClient.DeleteAgentPoolAsync(name);
+            // End snippet
+        }
     }
 }

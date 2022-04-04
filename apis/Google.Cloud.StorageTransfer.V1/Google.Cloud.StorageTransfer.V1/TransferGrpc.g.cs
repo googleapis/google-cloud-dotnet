@@ -3,7 +3,7 @@
 //     source: google/storagetransfer/v1/transfer.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -91,6 +91,20 @@ namespace Google.Cloud.StorageTransfer.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.StorageTransfer.V1.RunTransferJobRequest> __Marshaller_google_storagetransfer_v1_RunTransferJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageTransfer.V1.RunTransferJobRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.StorageTransfer.V1.CreateAgentPoolRequest> __Marshaller_google_storagetransfer_v1_CreateAgentPoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageTransfer.V1.CreateAgentPoolRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.StorageTransfer.V1.AgentPool> __Marshaller_google_storagetransfer_v1_AgentPool = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageTransfer.V1.AgentPool.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.StorageTransfer.V1.UpdateAgentPoolRequest> __Marshaller_google_storagetransfer_v1_UpdateAgentPoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageTransfer.V1.UpdateAgentPoolRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.StorageTransfer.V1.GetAgentPoolRequest> __Marshaller_google_storagetransfer_v1_GetAgentPoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageTransfer.V1.GetAgentPoolRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.StorageTransfer.V1.ListAgentPoolsRequest> __Marshaller_google_storagetransfer_v1_ListAgentPoolsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageTransfer.V1.ListAgentPoolsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.StorageTransfer.V1.ListAgentPoolsResponse> __Marshaller_google_storagetransfer_v1_ListAgentPoolsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageTransfer.V1.ListAgentPoolsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.StorageTransfer.V1.DeleteAgentPoolRequest> __Marshaller_google_storagetransfer_v1_DeleteAgentPoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageTransfer.V1.DeleteAgentPoolRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.StorageTransfer.V1.GetGoogleServiceAccountRequest, global::Google.Cloud.StorageTransfer.V1.GoogleServiceAccount> __Method_GetGoogleServiceAccount = new grpc::Method<global::Google.Cloud.StorageTransfer.V1.GetGoogleServiceAccountRequest, global::Google.Cloud.StorageTransfer.V1.GoogleServiceAccount>(
@@ -156,6 +170,46 @@ namespace Google.Cloud.StorageTransfer.V1 {
         __Marshaller_google_storagetransfer_v1_RunTransferJobRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.StorageTransfer.V1.CreateAgentPoolRequest, global::Google.Cloud.StorageTransfer.V1.AgentPool> __Method_CreateAgentPool = new grpc::Method<global::Google.Cloud.StorageTransfer.V1.CreateAgentPoolRequest, global::Google.Cloud.StorageTransfer.V1.AgentPool>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateAgentPool",
+        __Marshaller_google_storagetransfer_v1_CreateAgentPoolRequest,
+        __Marshaller_google_storagetransfer_v1_AgentPool);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.StorageTransfer.V1.UpdateAgentPoolRequest, global::Google.Cloud.StorageTransfer.V1.AgentPool> __Method_UpdateAgentPool = new grpc::Method<global::Google.Cloud.StorageTransfer.V1.UpdateAgentPoolRequest, global::Google.Cloud.StorageTransfer.V1.AgentPool>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAgentPool",
+        __Marshaller_google_storagetransfer_v1_UpdateAgentPoolRequest,
+        __Marshaller_google_storagetransfer_v1_AgentPool);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.StorageTransfer.V1.GetAgentPoolRequest, global::Google.Cloud.StorageTransfer.V1.AgentPool> __Method_GetAgentPool = new grpc::Method<global::Google.Cloud.StorageTransfer.V1.GetAgentPoolRequest, global::Google.Cloud.StorageTransfer.V1.AgentPool>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAgentPool",
+        __Marshaller_google_storagetransfer_v1_GetAgentPoolRequest,
+        __Marshaller_google_storagetransfer_v1_AgentPool);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.StorageTransfer.V1.ListAgentPoolsRequest, global::Google.Cloud.StorageTransfer.V1.ListAgentPoolsResponse> __Method_ListAgentPools = new grpc::Method<global::Google.Cloud.StorageTransfer.V1.ListAgentPoolsRequest, global::Google.Cloud.StorageTransfer.V1.ListAgentPoolsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAgentPools",
+        __Marshaller_google_storagetransfer_v1_ListAgentPoolsRequest,
+        __Marshaller_google_storagetransfer_v1_ListAgentPoolsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.StorageTransfer.V1.DeleteAgentPoolRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteAgentPool = new grpc::Method<global::Google.Cloud.StorageTransfer.V1.DeleteAgentPoolRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteAgentPool",
+        __Marshaller_google_storagetransfer_v1_DeleteAgentPoolRequest,
+        __Marshaller_google_protobuf_Empty);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -170,7 +224,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// Returns the Google service account that is used by Storage Transfer
       /// Service to access buckets in the project where transfers
       /// run or in other projects. Each Google service account is associated
-      /// with one Google Cloud Platform Console project. Users
+      /// with one Google Cloud project. Users
       /// should add this service account to the Google Cloud Storage bucket
       /// ACLs to grant access to Storage Transfer Service. This service
       /// account is created and owned by Storage Transfer Service and can
@@ -201,8 +255,8 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// Updates a transfer job. Updating a job's transfer spec does not affect
       /// transfer operations that are running already.
       ///
-      /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status]
-      /// field can be modified using this RPC (for example, to set a job's status to
+      /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status] field can be modified
+      /// using this RPC (for example, to set a job's status to
       /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED],
       /// [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED], or
       /// [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED]).
@@ -267,13 +321,73 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <summary>
       /// Attempts to start a new TransferOperation for the current TransferJob. A
       /// TransferJob has a maximum of one active TransferOperation. If this method
-      /// is called while a TransferOperation is active, an error wil be returned.
+      /// is called while a TransferOperation is active, an error will be returned.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RunTransferJob(global::Google.Cloud.StorageTransfer.V1.RunTransferJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates an agent pool resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.StorageTransfer.V1.AgentPool> CreateAgentPool(global::Google.Cloud.StorageTransfer.V1.CreateAgentPoolRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an existing agent pool resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.StorageTransfer.V1.AgentPool> UpdateAgentPool(global::Google.Cloud.StorageTransfer.V1.UpdateAgentPoolRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets an agent pool.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.StorageTransfer.V1.AgentPool> GetAgentPool(global::Google.Cloud.StorageTransfer.V1.GetAgentPoolRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists agent pools.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.StorageTransfer.V1.ListAgentPoolsResponse> ListAgentPools(global::Google.Cloud.StorageTransfer.V1.ListAgentPoolsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes an agent pool.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAgentPool(global::Google.Cloud.StorageTransfer.V1.DeleteAgentPoolRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -311,7 +425,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// Returns the Google service account that is used by Storage Transfer
       /// Service to access buckets in the project where transfers
       /// run or in other projects. Each Google service account is associated
-      /// with one Google Cloud Platform Console project. Users
+      /// with one Google Cloud project. Users
       /// should add this service account to the Google Cloud Storage bucket
       /// ACLs to grant access to Storage Transfer Service. This service
       /// account is created and owned by Storage Transfer Service and can
@@ -331,7 +445,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// Returns the Google service account that is used by Storage Transfer
       /// Service to access buckets in the project where transfers
       /// run or in other projects. Each Google service account is associated
-      /// with one Google Cloud Platform Console project. Users
+      /// with one Google Cloud project. Users
       /// should add this service account to the Google Cloud Storage bucket
       /// ACLs to grant access to Storage Transfer Service. This service
       /// account is created and owned by Storage Transfer Service and can
@@ -349,7 +463,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// Returns the Google service account that is used by Storage Transfer
       /// Service to access buckets in the project where transfers
       /// run or in other projects. Each Google service account is associated
-      /// with one Google Cloud Platform Console project. Users
+      /// with one Google Cloud project. Users
       /// should add this service account to the Google Cloud Storage bucket
       /// ACLs to grant access to Storage Transfer Service. This service
       /// account is created and owned by Storage Transfer Service and can
@@ -369,7 +483,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// Returns the Google service account that is used by Storage Transfer
       /// Service to access buckets in the project where transfers
       /// run or in other projects. Each Google service account is associated
-      /// with one Google Cloud Platform Console project. Users
+      /// with one Google Cloud project. Users
       /// should add this service account to the Google Cloud Storage bucket
       /// ACLs to grant access to Storage Transfer Service. This service
       /// account is created and owned by Storage Transfer Service and can
@@ -435,8 +549,8 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// Updates a transfer job. Updating a job's transfer spec does not affect
       /// transfer operations that are running already.
       ///
-      /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status]
-      /// field can be modified using this RPC (for example, to set a job's status to
+      /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status] field can be modified
+      /// using this RPC (for example, to set a job's status to
       /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED],
       /// [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED], or
       /// [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED]).
@@ -455,8 +569,8 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// Updates a transfer job. Updating a job's transfer spec does not affect
       /// transfer operations that are running already.
       ///
-      /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status]
-      /// field can be modified using this RPC (for example, to set a job's status to
+      /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status] field can be modified
+      /// using this RPC (for example, to set a job's status to
       /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED],
       /// [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED], or
       /// [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED]).
@@ -473,8 +587,8 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// Updates a transfer job. Updating a job's transfer spec does not affect
       /// transfer operations that are running already.
       ///
-      /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status]
-      /// field can be modified using this RPC (for example, to set a job's status to
+      /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status] field can be modified
+      /// using this RPC (for example, to set a job's status to
       /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED],
       /// [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED], or
       /// [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED]).
@@ -493,8 +607,8 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// Updates a transfer job. Updating a job's transfer spec does not affect
       /// transfer operations that are running already.
       ///
-      /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status]
-      /// field can be modified using this RPC (for example, to set a job's status to
+      /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status] field can be modified
+      /// using this RPC (for example, to set a job's status to
       /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED],
       /// [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED], or
       /// [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED]).
@@ -702,7 +816,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <summary>
       /// Attempts to start a new TransferOperation for the current TransferJob. A
       /// TransferJob has a maximum of one active TransferOperation. If this method
-      /// is called while a TransferOperation is active, an error wil be returned.
+      /// is called while a TransferOperation is active, an error will be returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -717,7 +831,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <summary>
       /// Attempts to start a new TransferOperation for the current TransferJob. A
       /// TransferJob has a maximum of one active TransferOperation. If this method
-      /// is called while a TransferOperation is active, an error wil be returned.
+      /// is called while a TransferOperation is active, an error will be returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -730,7 +844,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <summary>
       /// Attempts to start a new TransferOperation for the current TransferJob. A
       /// TransferJob has a maximum of one active TransferOperation. If this method
-      /// is called while a TransferOperation is active, an error wil be returned.
+      /// is called while a TransferOperation is active, an error will be returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -745,7 +859,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <summary>
       /// Attempts to start a new TransferOperation for the current TransferJob. A
       /// TransferJob has a maximum of one active TransferOperation. If this method
-      /// is called while a TransferOperation is active, an error wil be returned.
+      /// is called while a TransferOperation is active, an error will be returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -754,6 +868,246 @@ namespace Google.Cloud.StorageTransfer.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RunTransferJobAsync(global::Google.Cloud.StorageTransfer.V1.RunTransferJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RunTransferJob, null, options, request);
+      }
+      /// <summary>
+      /// Creates an agent pool resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.StorageTransfer.V1.AgentPool CreateAgentPool(global::Google.Cloud.StorageTransfer.V1.CreateAgentPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAgentPool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an agent pool resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.StorageTransfer.V1.AgentPool CreateAgentPool(global::Google.Cloud.StorageTransfer.V1.CreateAgentPoolRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateAgentPool, null, options, request);
+      }
+      /// <summary>
+      /// Creates an agent pool resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageTransfer.V1.AgentPool> CreateAgentPoolAsync(global::Google.Cloud.StorageTransfer.V1.CreateAgentPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAgentPoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an agent pool resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageTransfer.V1.AgentPool> CreateAgentPoolAsync(global::Google.Cloud.StorageTransfer.V1.CreateAgentPoolRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateAgentPool, null, options, request);
+      }
+      /// <summary>
+      /// Updates an existing agent pool resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.StorageTransfer.V1.AgentPool UpdateAgentPool(global::Google.Cloud.StorageTransfer.V1.UpdateAgentPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAgentPool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing agent pool resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.StorageTransfer.V1.AgentPool UpdateAgentPool(global::Google.Cloud.StorageTransfer.V1.UpdateAgentPoolRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAgentPool, null, options, request);
+      }
+      /// <summary>
+      /// Updates an existing agent pool resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageTransfer.V1.AgentPool> UpdateAgentPoolAsync(global::Google.Cloud.StorageTransfer.V1.UpdateAgentPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAgentPoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing agent pool resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageTransfer.V1.AgentPool> UpdateAgentPoolAsync(global::Google.Cloud.StorageTransfer.V1.UpdateAgentPoolRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAgentPool, null, options, request);
+      }
+      /// <summary>
+      /// Gets an agent pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.StorageTransfer.V1.AgentPool GetAgentPool(global::Google.Cloud.StorageTransfer.V1.GetAgentPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAgentPool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an agent pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.StorageTransfer.V1.AgentPool GetAgentPool(global::Google.Cloud.StorageTransfer.V1.GetAgentPoolRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAgentPool, null, options, request);
+      }
+      /// <summary>
+      /// Gets an agent pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageTransfer.V1.AgentPool> GetAgentPoolAsync(global::Google.Cloud.StorageTransfer.V1.GetAgentPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAgentPoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an agent pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageTransfer.V1.AgentPool> GetAgentPoolAsync(global::Google.Cloud.StorageTransfer.V1.GetAgentPoolRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAgentPool, null, options, request);
+      }
+      /// <summary>
+      /// Lists agent pools.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.StorageTransfer.V1.ListAgentPoolsResponse ListAgentPools(global::Google.Cloud.StorageTransfer.V1.ListAgentPoolsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAgentPools(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists agent pools.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.StorageTransfer.V1.ListAgentPoolsResponse ListAgentPools(global::Google.Cloud.StorageTransfer.V1.ListAgentPoolsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAgentPools, null, options, request);
+      }
+      /// <summary>
+      /// Lists agent pools.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageTransfer.V1.ListAgentPoolsResponse> ListAgentPoolsAsync(global::Google.Cloud.StorageTransfer.V1.ListAgentPoolsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAgentPoolsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists agent pools.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageTransfer.V1.ListAgentPoolsResponse> ListAgentPoolsAsync(global::Google.Cloud.StorageTransfer.V1.ListAgentPoolsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAgentPools, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an agent pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAgentPool(global::Google.Cloud.StorageTransfer.V1.DeleteAgentPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAgentPool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an agent pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAgentPool(global::Google.Cloud.StorageTransfer.V1.DeleteAgentPoolRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteAgentPool, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an agent pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAgentPoolAsync(global::Google.Cloud.StorageTransfer.V1.DeleteAgentPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAgentPoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an agent pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAgentPoolAsync(global::Google.Cloud.StorageTransfer.V1.DeleteAgentPoolRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteAgentPool, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -776,7 +1130,12 @@ namespace Google.Cloud.StorageTransfer.V1 {
           .AddMethod(__Method_ListTransferJobs, serviceImpl.ListTransferJobs)
           .AddMethod(__Method_PauseTransferOperation, serviceImpl.PauseTransferOperation)
           .AddMethod(__Method_ResumeTransferOperation, serviceImpl.ResumeTransferOperation)
-          .AddMethod(__Method_RunTransferJob, serviceImpl.RunTransferJob).Build();
+          .AddMethod(__Method_RunTransferJob, serviceImpl.RunTransferJob)
+          .AddMethod(__Method_CreateAgentPool, serviceImpl.CreateAgentPool)
+          .AddMethod(__Method_UpdateAgentPool, serviceImpl.UpdateAgentPool)
+          .AddMethod(__Method_GetAgentPool, serviceImpl.GetAgentPool)
+          .AddMethod(__Method_ListAgentPools, serviceImpl.ListAgentPools)
+          .AddMethod(__Method_DeleteAgentPool, serviceImpl.DeleteAgentPool).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -794,6 +1153,11 @@ namespace Google.Cloud.StorageTransfer.V1 {
       serviceBinder.AddMethod(__Method_PauseTransferOperation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageTransfer.V1.PauseTransferOperationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.PauseTransferOperation));
       serviceBinder.AddMethod(__Method_ResumeTransferOperation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageTransfer.V1.ResumeTransferOperationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.ResumeTransferOperation));
       serviceBinder.AddMethod(__Method_RunTransferJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageTransfer.V1.RunTransferJobRequest, global::Google.LongRunning.Operation>(serviceImpl.RunTransferJob));
+      serviceBinder.AddMethod(__Method_CreateAgentPool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageTransfer.V1.CreateAgentPoolRequest, global::Google.Cloud.StorageTransfer.V1.AgentPool>(serviceImpl.CreateAgentPool));
+      serviceBinder.AddMethod(__Method_UpdateAgentPool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageTransfer.V1.UpdateAgentPoolRequest, global::Google.Cloud.StorageTransfer.V1.AgentPool>(serviceImpl.UpdateAgentPool));
+      serviceBinder.AddMethod(__Method_GetAgentPool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageTransfer.V1.GetAgentPoolRequest, global::Google.Cloud.StorageTransfer.V1.AgentPool>(serviceImpl.GetAgentPool));
+      serviceBinder.AddMethod(__Method_ListAgentPools, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageTransfer.V1.ListAgentPoolsRequest, global::Google.Cloud.StorageTransfer.V1.ListAgentPoolsResponse>(serviceImpl.ListAgentPools));
+      serviceBinder.AddMethod(__Method_DeleteAgentPool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageTransfer.V1.DeleteAgentPoolRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAgentPool));
     }
 
   }

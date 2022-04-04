@@ -57,6 +57,11 @@ namespace Google.Cloud.StorageTransfer.V1
             ResumeTransferOperationSettings = existing.ResumeTransferOperationSettings;
             RunTransferJobSettings = existing.RunTransferJobSettings;
             RunTransferJobOperationsSettings = existing.RunTransferJobOperationsSettings.Clone();
+            CreateAgentPoolSettings = existing.CreateAgentPoolSettings;
+            UpdateAgentPoolSettings = existing.UpdateAgentPoolSettings;
+            GetAgentPoolSettings = existing.GetAgentPoolSettings;
+            ListAgentPoolsSettings = existing.ListAgentPoolsSettings;
+            DeleteAgentPoolSettings = existing.DeleteAgentPoolSettings;
             OnCopy(existing);
         }
 
@@ -70,10 +75,10 @@ namespace Google.Cloud.StorageTransfer.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetGoogleServiceAccountSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings GetGoogleServiceAccountSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -83,10 +88,10 @@ namespace Google.Cloud.StorageTransfer.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateTransferJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings CreateTransferJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -96,10 +101,10 @@ namespace Google.Cloud.StorageTransfer.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateTransferJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings UpdateTransferJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -109,10 +114,10 @@ namespace Google.Cloud.StorageTransfer.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetTransferJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings GetTransferJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -122,10 +127,10 @@ namespace Google.Cloud.StorageTransfer.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListTransferJobsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings ListTransferJobsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -135,10 +140,10 @@ namespace Google.Cloud.StorageTransfer.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings PauseTransferOperationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings PauseTransferOperationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -148,10 +153,10 @@ namespace Google.Cloud.StorageTransfer.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ResumeTransferOperationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings ResumeTransferOperationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -161,10 +166,10 @@ namespace Google.Cloud.StorageTransfer.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings RunTransferJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings RunTransferJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>StorageTransferServiceClient.RunTransferJob</c> and
@@ -183,6 +188,70 @@ namespace Google.Cloud.StorageTransfer.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageTransferServiceClient.CreateAgentPool</c> and <c>StorageTransferServiceClient.CreateAgentPoolAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAgentPoolSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageTransferServiceClient.UpdateAgentPool</c> and <c>StorageTransferServiceClient.UpdateAgentPoolAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAgentPoolSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageTransferServiceClient.GetAgentPool</c> and <c>StorageTransferServiceClient.GetAgentPoolAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAgentPoolSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageTransferServiceClient.ListAgentPools</c> and <c>StorageTransferServiceClient.ListAgentPoolsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAgentPoolsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageTransferServiceClient.DeleteAgentPool</c> and <c>StorageTransferServiceClient.DeleteAgentPoolAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteAgentPoolSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="StorageTransferServiceSettings"/> object.</returns>
@@ -354,7 +423,7 @@ namespace Google.Cloud.StorageTransfer.V1
         /// Returns the Google service account that is used by Storage Transfer
         /// Service to access buckets in the project where transfers
         /// run or in other projects. Each Google service account is associated
-        /// with one Google Cloud Platform Console project. Users
+        /// with one Google Cloud project. Users
         /// should add this service account to the Google Cloud Storage bucket
         /// ACLs to grant access to Storage Transfer Service. This service
         /// account is created and owned by Storage Transfer Service and can
@@ -370,7 +439,7 @@ namespace Google.Cloud.StorageTransfer.V1
         /// Returns the Google service account that is used by Storage Transfer
         /// Service to access buckets in the project where transfers
         /// run or in other projects. Each Google service account is associated
-        /// with one Google Cloud Platform Console project. Users
+        /// with one Google Cloud project. Users
         /// should add this service account to the Google Cloud Storage bucket
         /// ACLs to grant access to Storage Transfer Service. This service
         /// account is created and owned by Storage Transfer Service and can
@@ -386,7 +455,7 @@ namespace Google.Cloud.StorageTransfer.V1
         /// Returns the Google service account that is used by Storage Transfer
         /// Service to access buckets in the project where transfers
         /// run or in other projects. Each Google service account is associated
-        /// with one Google Cloud Platform Console project. Users
+        /// with one Google Cloud project. Users
         /// should add this service account to the Google Cloud Storage bucket
         /// ACLs to grant access to Storage Transfer Service. This service
         /// account is created and owned by Storage Transfer Service and can
@@ -429,8 +498,8 @@ namespace Google.Cloud.StorageTransfer.V1
         /// Updates a transfer job. Updating a job's transfer spec does not affect
         /// transfer operations that are running already.
         /// 
-        /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status]
-        /// field can be modified using this RPC (for example, to set a job's status to
+        /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status] field can be modified
+        /// using this RPC (for example, to set a job's status to
         /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED],
         /// [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED], or
         /// [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED]).
@@ -445,8 +514,8 @@ namespace Google.Cloud.StorageTransfer.V1
         /// Updates a transfer job. Updating a job's transfer spec does not affect
         /// transfer operations that are running already.
         /// 
-        /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status]
-        /// field can be modified using this RPC (for example, to set a job's status to
+        /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status] field can be modified
+        /// using this RPC (for example, to set a job's status to
         /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED],
         /// [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED], or
         /// [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED]).
@@ -461,8 +530,8 @@ namespace Google.Cloud.StorageTransfer.V1
         /// Updates a transfer job. Updating a job's transfer spec does not affect
         /// transfer operations that are running already.
         /// 
-        /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status]
-        /// field can be modified using this RPC (for example, to set a job's status to
+        /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status] field can be modified
+        /// using this RPC (for example, to set a job's status to
         /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED],
         /// [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED], or
         /// [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED]).
@@ -575,7 +644,7 @@ namespace Google.Cloud.StorageTransfer.V1
         /// <summary>
         /// Attempts to start a new TransferOperation for the current TransferJob. A
         /// TransferJob has a maximum of one active TransferOperation. If this method
-        /// is called while a TransferOperation is active, an error wil be returned.
+        /// is called while a TransferOperation is active, an error will be returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -586,7 +655,7 @@ namespace Google.Cloud.StorageTransfer.V1
         /// <summary>
         /// Attempts to start a new TransferOperation for the current TransferJob. A
         /// TransferJob has a maximum of one active TransferOperation. If this method
-        /// is called while a TransferOperation is active, an error wil be returned.
+        /// is called while a TransferOperation is active, an error will be returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -597,7 +666,7 @@ namespace Google.Cloud.StorageTransfer.V1
         /// <summary>
         /// Attempts to start a new TransferOperation for the current TransferJob. A
         /// TransferJob has a maximum of one active TransferOperation. If this method
-        /// is called while a TransferOperation is active, an error wil be returned.
+        /// is called while a TransferOperation is active, an error will be returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -630,6 +699,456 @@ namespace Google.Cloud.StorageTransfer.V1
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, TransferOperation>> PollOnceRunTransferJobAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<wkt::Empty, TransferOperation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RunTransferJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates an agent pool resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AgentPool CreateAgentPool(CreateAgentPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an agent pool resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AgentPool> CreateAgentPoolAsync(CreateAgentPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an agent pool resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AgentPool> CreateAgentPoolAsync(CreateAgentPoolRequest request, st::CancellationToken cancellationToken) =>
+            CreateAgentPoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an agent pool resource.
+        /// </summary>
+        /// <param name="projectId">
+        /// Required. The ID of the Google Cloud project that owns the
+        /// agent pool.
+        /// </param>
+        /// <param name="agentPool">
+        /// Required. The agent pool to create.
+        /// </param>
+        /// <param name="agentPoolId">
+        /// Required. The ID of the agent pool to create.
+        /// 
+        /// The `agent_pool_id` must meet the following requirements:
+        /// 
+        /// *   Length of 128 characters or less.
+        /// *   Not start with the string `goog`.
+        /// *   Start with a lowercase ASCII character, followed by:
+        /// *   Zero or more: lowercase Latin alphabet characters, numerals,
+        /// hyphens (`-`), periods (`.`), underscores (`_`), or tildes (`~`).
+        /// *   One or more numerals or lowercase ASCII characters.
+        /// 
+        /// As expressed by the regular expression:
+        /// `^(?!goog)[a-z]([a-z0-9-._~]*[a-z0-9])?$`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AgentPool CreateAgentPool(string projectId, AgentPool agentPool, string agentPoolId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAgentPool(new CreateAgentPoolRequest
+            {
+                ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                AgentPool = gax::GaxPreconditions.CheckNotNull(agentPool, nameof(agentPool)),
+                AgentPoolId = gax::GaxPreconditions.CheckNotNullOrEmpty(agentPoolId, nameof(agentPoolId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an agent pool resource.
+        /// </summary>
+        /// <param name="projectId">
+        /// Required. The ID of the Google Cloud project that owns the
+        /// agent pool.
+        /// </param>
+        /// <param name="agentPool">
+        /// Required. The agent pool to create.
+        /// </param>
+        /// <param name="agentPoolId">
+        /// Required. The ID of the agent pool to create.
+        /// 
+        /// The `agent_pool_id` must meet the following requirements:
+        /// 
+        /// *   Length of 128 characters or less.
+        /// *   Not start with the string `goog`.
+        /// *   Start with a lowercase ASCII character, followed by:
+        /// *   Zero or more: lowercase Latin alphabet characters, numerals,
+        /// hyphens (`-`), periods (`.`), underscores (`_`), or tildes (`~`).
+        /// *   One or more numerals or lowercase ASCII characters.
+        /// 
+        /// As expressed by the regular expression:
+        /// `^(?!goog)[a-z]([a-z0-9-._~]*[a-z0-9])?$`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AgentPool> CreateAgentPoolAsync(string projectId, AgentPool agentPool, string agentPoolId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAgentPoolAsync(new CreateAgentPoolRequest
+            {
+                ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                AgentPool = gax::GaxPreconditions.CheckNotNull(agentPool, nameof(agentPool)),
+                AgentPoolId = gax::GaxPreconditions.CheckNotNullOrEmpty(agentPoolId, nameof(agentPoolId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an agent pool resource.
+        /// </summary>
+        /// <param name="projectId">
+        /// Required. The ID of the Google Cloud project that owns the
+        /// agent pool.
+        /// </param>
+        /// <param name="agentPool">
+        /// Required. The agent pool to create.
+        /// </param>
+        /// <param name="agentPoolId">
+        /// Required. The ID of the agent pool to create.
+        /// 
+        /// The `agent_pool_id` must meet the following requirements:
+        /// 
+        /// *   Length of 128 characters or less.
+        /// *   Not start with the string `goog`.
+        /// *   Start with a lowercase ASCII character, followed by:
+        /// *   Zero or more: lowercase Latin alphabet characters, numerals,
+        /// hyphens (`-`), periods (`.`), underscores (`_`), or tildes (`~`).
+        /// *   One or more numerals or lowercase ASCII characters.
+        /// 
+        /// As expressed by the regular expression:
+        /// `^(?!goog)[a-z]([a-z0-9-._~]*[a-z0-9])?$`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AgentPool> CreateAgentPoolAsync(string projectId, AgentPool agentPool, string agentPoolId, st::CancellationToken cancellationToken) =>
+            CreateAgentPoolAsync(projectId, agentPool, agentPoolId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an existing agent pool resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AgentPool UpdateAgentPool(UpdateAgentPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an existing agent pool resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AgentPool> UpdateAgentPoolAsync(UpdateAgentPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an existing agent pool resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AgentPool> UpdateAgentPoolAsync(UpdateAgentPoolRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAgentPoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an existing agent pool resource.
+        /// </summary>
+        /// <param name="agentPool">
+        /// Required. The agent pool to update. `agent_pool` is expected to specify following
+        /// fields:
+        /// 
+        /// *  [name][google.storagetransfer.v1.AgentPool.name]
+        /// 
+        /// *  [display_name][google.storagetransfer.v1.AgentPool.display_name]
+        /// 
+        /// *  [bandwidth_limit][google.storagetransfer.v1.AgentPool.bandwidth_limit]
+        /// An `UpdateAgentPoolRequest` with any other fields is rejected
+        /// with the error [INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT].
+        /// </param>
+        /// <param name="updateMask">
+        /// The [field mask]
+        /// (https://developers.google.com/protocol-buffers/docs/reference/google.protobuf)
+        /// of the fields in `agentPool` to update in this request.
+        /// The following `agentPool` fields can be updated:
+        /// 
+        /// *  [display_name][google.storagetransfer.v1.AgentPool.display_name]
+        /// 
+        /// *  [bandwidth_limit][google.storagetransfer.v1.AgentPool.bandwidth_limit]
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AgentPool UpdateAgentPool(AgentPool agentPool, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAgentPool(new UpdateAgentPoolRequest
+            {
+                AgentPool = gax::GaxPreconditions.CheckNotNull(agentPool, nameof(agentPool)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing agent pool resource.
+        /// </summary>
+        /// <param name="agentPool">
+        /// Required. The agent pool to update. `agent_pool` is expected to specify following
+        /// fields:
+        /// 
+        /// *  [name][google.storagetransfer.v1.AgentPool.name]
+        /// 
+        /// *  [display_name][google.storagetransfer.v1.AgentPool.display_name]
+        /// 
+        /// *  [bandwidth_limit][google.storagetransfer.v1.AgentPool.bandwidth_limit]
+        /// An `UpdateAgentPoolRequest` with any other fields is rejected
+        /// with the error [INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT].
+        /// </param>
+        /// <param name="updateMask">
+        /// The [field mask]
+        /// (https://developers.google.com/protocol-buffers/docs/reference/google.protobuf)
+        /// of the fields in `agentPool` to update in this request.
+        /// The following `agentPool` fields can be updated:
+        /// 
+        /// *  [display_name][google.storagetransfer.v1.AgentPool.display_name]
+        /// 
+        /// *  [bandwidth_limit][google.storagetransfer.v1.AgentPool.bandwidth_limit]
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AgentPool> UpdateAgentPoolAsync(AgentPool agentPool, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAgentPoolAsync(new UpdateAgentPoolRequest
+            {
+                AgentPool = gax::GaxPreconditions.CheckNotNull(agentPool, nameof(agentPool)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing agent pool resource.
+        /// </summary>
+        /// <param name="agentPool">
+        /// Required. The agent pool to update. `agent_pool` is expected to specify following
+        /// fields:
+        /// 
+        /// *  [name][google.storagetransfer.v1.AgentPool.name]
+        /// 
+        /// *  [display_name][google.storagetransfer.v1.AgentPool.display_name]
+        /// 
+        /// *  [bandwidth_limit][google.storagetransfer.v1.AgentPool.bandwidth_limit]
+        /// An `UpdateAgentPoolRequest` with any other fields is rejected
+        /// with the error [INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT].
+        /// </param>
+        /// <param name="updateMask">
+        /// The [field mask]
+        /// (https://developers.google.com/protocol-buffers/docs/reference/google.protobuf)
+        /// of the fields in `agentPool` to update in this request.
+        /// The following `agentPool` fields can be updated:
+        /// 
+        /// *  [display_name][google.storagetransfer.v1.AgentPool.display_name]
+        /// 
+        /// *  [bandwidth_limit][google.storagetransfer.v1.AgentPool.bandwidth_limit]
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AgentPool> UpdateAgentPoolAsync(AgentPool agentPool, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateAgentPoolAsync(agentPool, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an agent pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AgentPool GetAgentPool(GetAgentPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an agent pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AgentPool> GetAgentPoolAsync(GetAgentPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an agent pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AgentPool> GetAgentPoolAsync(GetAgentPoolRequest request, st::CancellationToken cancellationToken) =>
+            GetAgentPoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an agent pool.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the agent pool to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AgentPool GetAgentPool(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAgentPool(new GetAgentPoolRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an agent pool.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the agent pool to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AgentPool> GetAgentPoolAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAgentPoolAsync(new GetAgentPoolRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an agent pool.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the agent pool to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AgentPool> GetAgentPoolAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAgentPoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists agent pools.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AgentPool"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAgentPoolsResponse, AgentPool> ListAgentPools(ListAgentPoolsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists agent pools.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AgentPool"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAgentPoolsResponse, AgentPool> ListAgentPoolsAsync(ListAgentPoolsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists agent pools.
+        /// </summary>
+        /// <param name="projectId">
+        /// Required. The ID of the Google Cloud project that owns the job.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AgentPool"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAgentPoolsResponse, AgentPool> ListAgentPools(string projectId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAgentPools(new ListAgentPoolsRequest
+            {
+                ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists agent pools.
+        /// </summary>
+        /// <param name="projectId">
+        /// Required. The ID of the Google Cloud project that owns the job.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AgentPool"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAgentPoolsResponse, AgentPool> ListAgentPoolsAsync(string projectId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAgentPoolsAsync(new ListAgentPoolsRequest
+            {
+                ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an agent pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAgentPool(DeleteAgentPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an agent pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAgentPoolAsync(DeleteAgentPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an agent pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAgentPoolAsync(DeleteAgentPoolRequest request, st::CancellationToken cancellationToken) =>
+            DeleteAgentPoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an agent pool.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the agent pool to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAgentPool(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAgentPool(new DeleteAgentPoolRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an agent pool.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the agent pool to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAgentPoolAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAgentPoolAsync(new DeleteAgentPoolRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an agent pool.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the agent pool to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAgentPoolAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteAgentPoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>StorageTransferService client wrapper implementation, for convenient use.</summary>
@@ -655,6 +1174,16 @@ namespace Google.Cloud.StorageTransfer.V1
         private readonly gaxgrpc::ApiCall<ResumeTransferOperationRequest, wkt::Empty> _callResumeTransferOperation;
 
         private readonly gaxgrpc::ApiCall<RunTransferJobRequest, lro::Operation> _callRunTransferJob;
+
+        private readonly gaxgrpc::ApiCall<CreateAgentPoolRequest, AgentPool> _callCreateAgentPool;
+
+        private readonly gaxgrpc::ApiCall<UpdateAgentPoolRequest, AgentPool> _callUpdateAgentPool;
+
+        private readonly gaxgrpc::ApiCall<GetAgentPoolRequest, AgentPool> _callGetAgentPool;
+
+        private readonly gaxgrpc::ApiCall<ListAgentPoolsRequest, ListAgentPoolsResponse> _callListAgentPools;
+
+        private readonly gaxgrpc::ApiCall<DeleteAgentPoolRequest, wkt::Empty> _callDeleteAgentPool;
 
         /// <summary>
         /// Constructs a client wrapper for the StorageTransferService service, with the specified gRPC client and
@@ -694,6 +1223,21 @@ namespace Google.Cloud.StorageTransfer.V1
             _callRunTransferJob = clientHelper.BuildApiCall<RunTransferJobRequest, lro::Operation>(grpcClient.RunTransferJobAsync, grpcClient.RunTransferJob, effectiveSettings.RunTransferJobSettings).WithGoogleRequestParam("job_name", request => request.JobName);
             Modify_ApiCall(ref _callRunTransferJob);
             Modify_RunTransferJobApiCall(ref _callRunTransferJob);
+            _callCreateAgentPool = clientHelper.BuildApiCall<CreateAgentPoolRequest, AgentPool>(grpcClient.CreateAgentPoolAsync, grpcClient.CreateAgentPool, effectiveSettings.CreateAgentPoolSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            Modify_ApiCall(ref _callCreateAgentPool);
+            Modify_CreateAgentPoolApiCall(ref _callCreateAgentPool);
+            _callUpdateAgentPool = clientHelper.BuildApiCall<UpdateAgentPoolRequest, AgentPool>(grpcClient.UpdateAgentPoolAsync, grpcClient.UpdateAgentPool, effectiveSettings.UpdateAgentPoolSettings).WithGoogleRequestParam("agent_pool.name", request => request.AgentPool?.Name);
+            Modify_ApiCall(ref _callUpdateAgentPool);
+            Modify_UpdateAgentPoolApiCall(ref _callUpdateAgentPool);
+            _callGetAgentPool = clientHelper.BuildApiCall<GetAgentPoolRequest, AgentPool>(grpcClient.GetAgentPoolAsync, grpcClient.GetAgentPool, effectiveSettings.GetAgentPoolSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAgentPool);
+            Modify_GetAgentPoolApiCall(ref _callGetAgentPool);
+            _callListAgentPools = clientHelper.BuildApiCall<ListAgentPoolsRequest, ListAgentPoolsResponse>(grpcClient.ListAgentPoolsAsync, grpcClient.ListAgentPools, effectiveSettings.ListAgentPoolsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            Modify_ApiCall(ref _callListAgentPools);
+            Modify_ListAgentPoolsApiCall(ref _callListAgentPools);
+            _callDeleteAgentPool = clientHelper.BuildApiCall<DeleteAgentPoolRequest, wkt::Empty>(grpcClient.DeleteAgentPoolAsync, grpcClient.DeleteAgentPool, effectiveSettings.DeleteAgentPoolSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteAgentPool);
+            Modify_DeleteAgentPoolApiCall(ref _callDeleteAgentPool);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -714,6 +1258,16 @@ namespace Google.Cloud.StorageTransfer.V1
         partial void Modify_ResumeTransferOperationApiCall(ref gaxgrpc::ApiCall<ResumeTransferOperationRequest, wkt::Empty> call);
 
         partial void Modify_RunTransferJobApiCall(ref gaxgrpc::ApiCall<RunTransferJobRequest, lro::Operation> call);
+
+        partial void Modify_CreateAgentPoolApiCall(ref gaxgrpc::ApiCall<CreateAgentPoolRequest, AgentPool> call);
+
+        partial void Modify_UpdateAgentPoolApiCall(ref gaxgrpc::ApiCall<UpdateAgentPoolRequest, AgentPool> call);
+
+        partial void Modify_GetAgentPoolApiCall(ref gaxgrpc::ApiCall<GetAgentPoolRequest, AgentPool> call);
+
+        partial void Modify_ListAgentPoolsApiCall(ref gaxgrpc::ApiCall<ListAgentPoolsRequest, ListAgentPoolsResponse> call);
+
+        partial void Modify_DeleteAgentPoolApiCall(ref gaxgrpc::ApiCall<DeleteAgentPoolRequest, wkt::Empty> call);
 
         partial void OnConstruction(StorageTransferService.StorageTransferServiceClient grpcClient, StorageTransferServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -736,11 +1290,21 @@ namespace Google.Cloud.StorageTransfer.V1
 
         partial void Modify_RunTransferJobRequest(ref RunTransferJobRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CreateAgentPoolRequest(ref CreateAgentPoolRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateAgentPoolRequest(ref UpdateAgentPoolRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAgentPoolRequest(ref GetAgentPoolRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAgentPoolsRequest(ref ListAgentPoolsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteAgentPoolRequest(ref DeleteAgentPoolRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>
         /// Returns the Google service account that is used by Storage Transfer
         /// Service to access buckets in the project where transfers
         /// run or in other projects. Each Google service account is associated
-        /// with one Google Cloud Platform Console project. Users
+        /// with one Google Cloud project. Users
         /// should add this service account to the Google Cloud Storage bucket
         /// ACLs to grant access to Storage Transfer Service. This service
         /// account is created and owned by Storage Transfer Service and can
@@ -759,7 +1323,7 @@ namespace Google.Cloud.StorageTransfer.V1
         /// Returns the Google service account that is used by Storage Transfer
         /// Service to access buckets in the project where transfers
         /// run or in other projects. Each Google service account is associated
-        /// with one Google Cloud Platform Console project. Users
+        /// with one Google Cloud project. Users
         /// should add this service account to the Google Cloud Storage bucket
         /// ACLs to grant access to Storage Transfer Service. This service
         /// account is created and owned by Storage Transfer Service and can
@@ -802,8 +1366,8 @@ namespace Google.Cloud.StorageTransfer.V1
         /// Updates a transfer job. Updating a job's transfer spec does not affect
         /// transfer operations that are running already.
         /// 
-        /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status]
-        /// field can be modified using this RPC (for example, to set a job's status to
+        /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status] field can be modified
+        /// using this RPC (for example, to set a job's status to
         /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED],
         /// [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED], or
         /// [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED]).
@@ -821,8 +1385,8 @@ namespace Google.Cloud.StorageTransfer.V1
         /// Updates a transfer job. Updating a job's transfer spec does not affect
         /// transfer operations that are running already.
         /// 
-        /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status]
-        /// field can be modified using this RPC (for example, to set a job's status to
+        /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status] field can be modified
+        /// using this RPC (for example, to set a job's status to
         /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED],
         /// [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED], or
         /// [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED]).
@@ -938,7 +1502,7 @@ namespace Google.Cloud.StorageTransfer.V1
         /// <summary>
         /// Attempts to start a new TransferOperation for the current TransferJob. A
         /// TransferJob has a maximum of one active TransferOperation. If this method
-        /// is called while a TransferOperation is active, an error wil be returned.
+        /// is called while a TransferOperation is active, an error will be returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -952,7 +1516,7 @@ namespace Google.Cloud.StorageTransfer.V1
         /// <summary>
         /// Attempts to start a new TransferOperation for the current TransferJob. A
         /// TransferJob has a maximum of one active TransferOperation. If this method
-        /// is called while a TransferOperation is active, an error wil be returned.
+        /// is called while a TransferOperation is active, an error will be returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -962,9 +1526,133 @@ namespace Google.Cloud.StorageTransfer.V1
             Modify_RunTransferJobRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, TransferOperation>(await _callRunTransferJob.Async(request, callSettings).ConfigureAwait(false), RunTransferJobOperationsClient);
         }
+
+        /// <summary>
+        /// Creates an agent pool resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AgentPool CreateAgentPool(CreateAgentPoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAgentPoolRequest(ref request, ref callSettings);
+            return _callCreateAgentPool.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates an agent pool resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AgentPool> CreateAgentPoolAsync(CreateAgentPoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAgentPoolRequest(ref request, ref callSettings);
+            return _callCreateAgentPool.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an existing agent pool resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AgentPool UpdateAgentPool(UpdateAgentPoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAgentPoolRequest(ref request, ref callSettings);
+            return _callUpdateAgentPool.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an existing agent pool resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AgentPool> UpdateAgentPoolAsync(UpdateAgentPoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAgentPoolRequest(ref request, ref callSettings);
+            return _callUpdateAgentPool.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an agent pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AgentPool GetAgentPool(GetAgentPoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAgentPoolRequest(ref request, ref callSettings);
+            return _callGetAgentPool.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an agent pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AgentPool> GetAgentPoolAsync(GetAgentPoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAgentPoolRequest(ref request, ref callSettings);
+            return _callGetAgentPool.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists agent pools.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AgentPool"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAgentPoolsResponse, AgentPool> ListAgentPools(ListAgentPoolsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAgentPoolsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAgentPoolsRequest, ListAgentPoolsResponse, AgentPool>(_callListAgentPools, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists agent pools.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AgentPool"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAgentPoolsResponse, AgentPool> ListAgentPoolsAsync(ListAgentPoolsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAgentPoolsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAgentPoolsRequest, ListAgentPoolsResponse, AgentPool>(_callListAgentPools, request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an agent pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteAgentPool(DeleteAgentPoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAgentPoolRequest(ref request, ref callSettings);
+            _callDeleteAgentPool.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an agent pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteAgentPoolAsync(DeleteAgentPoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAgentPoolRequest(ref request, ref callSettings);
+            return _callDeleteAgentPool.Async(request, callSettings);
+        }
     }
 
     public partial class ListTransferJobsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAgentPoolsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -972,6 +1660,14 @@ namespace Google.Cloud.StorageTransfer.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<TransferJob> GetEnumerator() => TransferJobs.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAgentPoolsResponse : gaxgrpc::IPageResponse<AgentPool>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AgentPool> GetEnumerator() => AgentPools.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
