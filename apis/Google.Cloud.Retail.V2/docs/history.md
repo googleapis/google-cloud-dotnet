@@ -1,5 +1,23 @@
 # Version history
 
+## Version 1.6.0, released 2022-04-04
+
+### New features
+
+- Add new AddLocalInventories and RemoveLocalInventories APIs ([commit 0af0e7a](https://github.com/googleapis/google-cloud-dotnet/commit/0af0e7ab415cdb807645c0f30121011fb289352f))
+- Users cannot switch to empty default branch unless force override ([commit 0af0e7a](https://github.com/googleapis/google-cloud-dotnet/commit/0af0e7ab415cdb807645c0f30121011fb289352f))
+- Allow search users to skip validation for invalid boost specs ([commit 0af0e7a](https://github.com/googleapis/google-cloud-dotnet/commit/0af0e7ab415cdb807645c0f30121011fb289352f))
+- Support search personalization ([commit 0af0e7a](https://github.com/googleapis/google-cloud-dotnet/commit/0af0e7ab415cdb807645c0f30121011fb289352f))
+- Search returns applied control ids in the response ([commit 0af0e7a](https://github.com/googleapis/google-cloud-dotnet/commit/0af0e7ab415cdb807645c0f30121011fb289352f))
+
+### Documentation improvements
+
+- Users can self enroll retail search feature on cloud console ([commit 0af0e7a](https://github.com/googleapis/google-cloud-dotnet/commit/0af0e7ab415cdb807645c0f30121011fb289352f))
+- Suggest search users not to send IP and use hashed user id ([commit 0af0e7a](https://github.com/googleapis/google-cloud-dotnet/commit/0af0e7ab415cdb807645c0f30121011fb289352f))
+- Deprecate request_id in ImportProductsRequest ([commit 0af0e7a](https://github.com/googleapis/google-cloud-dotnet/commit/0af0e7ab415cdb807645c0f30121011fb289352f))
+- Deprecate search dynamic_facet_spec and suggest to config on cloud console ([commit 0af0e7a](https://github.com/googleapis/google-cloud-dotnet/commit/0af0e7ab415cdb807645c0f30121011fb289352f))
+- Keep the API doc up-to-date with recent changes ([commit 0af0e7a](https://github.com/googleapis/google-cloud-dotnet/commit/0af0e7ab415cdb807645c0f30121011fb289352f))
+
 ## Version 1.5.0, released 2021-12-07
 
 - [Commit 2925818](https://github.com/googleapis/google-cloud-dotnet/commit/2925818):
