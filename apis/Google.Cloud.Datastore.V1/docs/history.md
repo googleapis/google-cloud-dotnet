@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.4.0, released 2022-04-04
+
+### New features
+
+- Add IN/NOT_IN/NOT_EQUALS support to cloud datastore proto ([commit e76f560](https://github.com/googleapis/google-cloud-dotnet/commit/e76f5605392877acebaaa0b652896e3e27b72418))
+
 ## Version 3.3.0, released 2021-08-18
 
 - [Commit d9a3648](https://github.com/googleapis/google-cloud-dotnet/commit/d9a3648): fix: Fix Firestore and Datastore for self-signed JWTs
