@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.15.0, released 2022-04-05
+
+### New features
+
+- Add support for Configurable Replication Topology ([commit 90ed562](https://github.com/googleapis/google-cloud-dotnet/commit/90ed562ce7132ad254719224f38a826a4ed910a8))
+
 ## Version 3.14.0, released 2022-03-28
 
 ### New features
