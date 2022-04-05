@@ -58,6 +58,13 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Ttl = new wkt::Duration(),
                 Etag = "etage8ad7218",
                 Rotation = new Rotation(),
+                VersionAliases =
+                {
+                    {
+                        "key8a0b6e3c",
+                        -5833447338835614944L
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -93,6 +100,13 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Ttl = new wkt::Duration(),
                 Etag = "etage8ad7218",
                 Rotation = new Rotation(),
+                VersionAliases =
+                {
+                    {
+                        "key8a0b6e3c",
+                        -5833447338835614944L
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -130,6 +144,13 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Ttl = new wkt::Duration(),
                 Etag = "etage8ad7218",
                 Rotation = new Rotation(),
+                VersionAliases =
+                {
+                    {
+                        "key8a0b6e3c",
+                        -5833447338835614944L
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -165,6 +186,13 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Ttl = new wkt::Duration(),
                 Etag = "etage8ad7218",
                 Rotation = new Rotation(),
+                VersionAliases =
+                {
+                    {
+                        "key8a0b6e3c",
+                        -5833447338835614944L
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -202,6 +230,13 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Ttl = new wkt::Duration(),
                 Etag = "etage8ad7218",
                 Rotation = new Rotation(),
+                VersionAliases =
+                {
+                    {
+                        "key8a0b6e3c",
+                        -5833447338835614944L
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -237,6 +272,13 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Ttl = new wkt::Duration(),
                 Etag = "etage8ad7218",
                 Rotation = new Rotation(),
+                VersionAliases =
+                {
+                    {
+                        "key8a0b6e3c",
+                        -5833447338835614944L
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -434,6 +476,13 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Ttl = new wkt::Duration(),
                 Etag = "etage8ad7218",
                 Rotation = new Rotation(),
+                VersionAliases =
+                {
+                    {
+                        "key8a0b6e3c",
+                        -5833447338835614944L
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -467,6 +516,13 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Ttl = new wkt::Duration(),
                 Etag = "etage8ad7218",
                 Rotation = new Rotation(),
+                VersionAliases =
+                {
+                    {
+                        "key8a0b6e3c",
+                        -5833447338835614944L
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -502,6 +558,13 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Ttl = new wkt::Duration(),
                 Etag = "etage8ad7218",
                 Rotation = new Rotation(),
+                VersionAliases =
+                {
+                    {
+                        "key8a0b6e3c",
+                        -5833447338835614944L
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -535,6 +598,13 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Ttl = new wkt::Duration(),
                 Etag = "etage8ad7218",
                 Rotation = new Rotation(),
+                VersionAliases =
+                {
+                    {
+                        "key8a0b6e3c",
+                        -5833447338835614944L
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -570,6 +640,13 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Ttl = new wkt::Duration(),
                 Etag = "etage8ad7218",
                 Rotation = new Rotation(),
+                VersionAliases =
+                {
+                    {
+                        "key8a0b6e3c",
+                        -5833447338835614944L
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -603,6 +680,13 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Ttl = new wkt::Duration(),
                 Etag = "etage8ad7218",
                 Rotation = new Rotation(),
+                VersionAliases =
+                {
+                    {
+                        "key8a0b6e3c",
+                        -5833447338835614944L
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -639,6 +723,13 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Ttl = new wkt::Duration(),
                 Etag = "etage8ad7218",
                 Rotation = new Rotation(),
+                VersionAliases =
+                {
+                    {
+                        "key8a0b6e3c",
+                        -5833447338835614944L
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -673,6 +764,13 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Ttl = new wkt::Duration(),
                 Etag = "etage8ad7218",
                 Rotation = new Rotation(),
+                VersionAliases =
+                {
+                    {
+                        "key8a0b6e3c",
+                        -5833447338835614944L
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -709,6 +807,13 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Ttl = new wkt::Duration(),
                 Etag = "etage8ad7218",
                 Rotation = new Rotation(),
+                VersionAliases =
+                {
+                    {
+                        "key8a0b6e3c",
+                        -5833447338835614944L
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -743,6 +848,13 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Ttl = new wkt::Duration(),
                 Etag = "etage8ad7218",
                 Rotation = new Rotation(),
+                VersionAliases =
+                {
+                    {
+                        "key8a0b6e3c",
+                        -5833447338835614944L
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
