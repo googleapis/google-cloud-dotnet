@@ -25,17 +25,16 @@ namespace Google.Cloud.Iam.Admin.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiRnb29nbGUvaWFtL2FkbWluL3YxL2F1ZGl0X2RhdGEucHJvdG8SE2dvb2ds",
-            "ZS5pYW0uYWRtaW4udjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i",
-            "oAEKCUF1ZGl0RGF0YRJIChBwZXJtaXNzaW9uX2RlbHRhGAEgASgLMi4uZ29v",
-            "Z2xlLmlhbS5hZG1pbi52MS5BdWRpdERhdGEuUGVybWlzc2lvbkRlbHRhGkkK",
-            "D1Blcm1pc3Npb25EZWx0YRIZChFhZGRlZF9wZXJtaXNzaW9ucxgBIAMoCRIb",
-            "ChNyZW1vdmVkX3Blcm1pc3Npb25zGAIgAygJQp0BChdjb20uZ29vZ2xlLmlh",
-            "bS5hZG1pbi52MUIOQXVkaXREYXRhUHJvdG9QAVo4Z29vZ2xlLmdvbGFuZy5v",
-            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9pYW0vYWRtaW4vdjE7YWRtaW6qAhlH",
-            "b29nbGUuQ2xvdWQuSWFtLkFkbWluLlYxygIZR29vZ2xlXENsb3VkXElhbVxB",
-            "ZG1pblxWMWIGcHJvdG8z"));
+            "ZS5pYW0uYWRtaW4udjEioAEKCUF1ZGl0RGF0YRJIChBwZXJtaXNzaW9uX2Rl",
+            "bHRhGAEgASgLMi4uZ29vZ2xlLmlhbS5hZG1pbi52MS5BdWRpdERhdGEuUGVy",
+            "bWlzc2lvbkRlbHRhGkkKD1Blcm1pc3Npb25EZWx0YRIZChFhZGRlZF9wZXJt",
+            "aXNzaW9ucxgBIAMoCRIbChNyZW1vdmVkX3Blcm1pc3Npb25zGAIgAygJQp0B",
+            "Chdjb20uZ29vZ2xlLmlhbS5hZG1pbi52MUIOQXVkaXREYXRhUHJvdG9QAVo4",
+            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9pYW0vYWRt",
+            "aW4vdjE7YWRtaW6qAhlHb29nbGUuQ2xvdWQuSWFtLkFkbWluLlYxygIZR29v",
+            "Z2xlXENsb3VkXElhbVxBZG1pblxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.Admin.V1.AuditData), global::Google.Cloud.Iam.Admin.V1.AuditData.Parser, new[]{ "PermissionDelta" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.Admin.V1.AuditData.Types.PermissionDelta), global::Google.Cloud.Iam.Admin.V1.AuditData.Types.PermissionDelta.Parser, new[]{ "AddedPermissions", "RemovedPermissions" }, null, null, null, null)})
           }));
