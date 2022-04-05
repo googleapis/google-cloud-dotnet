@@ -17,6 +17,7 @@
 namespace Google.Cloud.Iam.V1.Snippets
 {
     using Google.Api.Gax;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -33,6 +34,7 @@ namespace Google.Cloud.Iam.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = iAMPolicyClient.SetIamPolicy(request);
@@ -51,6 +53,7 @@ namespace Google.Cloud.Iam.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = await iAMPolicyClient.SetIamPolicyAsync(request);

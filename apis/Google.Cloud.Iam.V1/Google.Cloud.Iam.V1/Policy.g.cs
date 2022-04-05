@@ -25,31 +25,39 @@ namespace Google.Cloud.Iam.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chpnb29nbGUvaWFtL3YxL3BvbGljeS5wcm90bxINZ29vZ2xlLmlhbS52MRoW",
-            "Z29vZ2xlL3R5cGUvZXhwci5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9u",
-            "cy5wcm90byJRCgZQb2xpY3kSDwoHdmVyc2lvbhgBIAEoBRIoCghiaW5kaW5n",
-            "cxgEIAMoCzIWLmdvb2dsZS5pYW0udjEuQmluZGluZxIMCgRldGFnGAMgASgM",
-            "Ik4KB0JpbmRpbmcSDAoEcm9sZRgBIAEoCRIPCgdtZW1iZXJzGAIgAygJEiQK",
-            "CWNvbmRpdGlvbhgDIAEoCzIRLmdvb2dsZS50eXBlLkV4cHIigAEKC1BvbGlj",
-            "eURlbHRhEjMKDmJpbmRpbmdfZGVsdGFzGAEgAygLMhsuZ29vZ2xlLmlhbS52",
-            "MS5CaW5kaW5nRGVsdGESPAoTYXVkaXRfY29uZmlnX2RlbHRhcxgCIAMoCzIf",
-            "Lmdvb2dsZS5pYW0udjEuQXVkaXRDb25maWdEZWx0YSK9AQoMQmluZGluZ0Rl",
-            "bHRhEjIKBmFjdGlvbhgBIAEoDjIiLmdvb2dsZS5pYW0udjEuQmluZGluZ0Rl",
-            "bHRhLkFjdGlvbhIMCgRyb2xlGAIgASgJEg4KBm1lbWJlchgDIAEoCRIkCglj",
-            "b25kaXRpb24YBCABKAsyES5nb29nbGUudHlwZS5FeHByIjUKBkFjdGlvbhIW",
-            "ChJBQ1RJT05fVU5TUEVDSUZJRUQQABIHCgNBREQQARIKCgZSRU1PVkUQAiK9",
-            "AQoQQXVkaXRDb25maWdEZWx0YRI2CgZhY3Rpb24YASABKA4yJi5nb29nbGUu",
-            "aWFtLnYxLkF1ZGl0Q29uZmlnRGVsdGEuQWN0aW9uEg8KB3NlcnZpY2UYAiAB",
-            "KAkSFwoPZXhlbXB0ZWRfbWVtYmVyGAMgASgJEhAKCGxvZ190eXBlGAQgASgJ",
-            "IjUKBkFjdGlvbhIWChJBQ1RJT05fVU5TUEVDSUZJRUQQABIHCgNBREQQARIK",
-            "CgZSRU1PVkUQAkKDAQoRY29tLmdvb2dsZS5pYW0udjFCC1BvbGljeVByb3Rv",
-            "UAFaMGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvaWFt",
-            "L3YxO2lhbfgBAaoCE0dvb2dsZS5DbG91ZC5JYW0uVjHKAhNHb29nbGVcQ2xv",
-            "dWRcSWFtXFYxYgZwcm90bzM="));
+            "Z29vZ2xlL3R5cGUvZXhwci5wcm90byKEAQoGUG9saWN5Eg8KB3ZlcnNpb24Y",
+            "ASABKAUSKAoIYmluZGluZ3MYBCADKAsyFi5nb29nbGUuaWFtLnYxLkJpbmRp",
+            "bmcSMQoNYXVkaXRfY29uZmlncxgGIAMoCzIaLmdvb2dsZS5pYW0udjEuQXVk",
+            "aXRDb25maWcSDAoEZXRhZxgDIAEoDCJOCgdCaW5kaW5nEgwKBHJvbGUYASAB",
+            "KAkSDwoHbWVtYmVycxgCIAMoCRIkCgljb25kaXRpb24YAyABKAsyES5nb29n",
+            "bGUudHlwZS5FeHByIlgKC0F1ZGl0Q29uZmlnEg8KB3NlcnZpY2UYASABKAkS",
+            "OAoRYXVkaXRfbG9nX2NvbmZpZ3MYAyADKAsyHS5nb29nbGUuaWFtLnYxLkF1",
+            "ZGl0TG9nQ29uZmlnIrcBCg5BdWRpdExvZ0NvbmZpZxI3Cghsb2dfdHlwZRgB",
+            "IAEoDjIlLmdvb2dsZS5pYW0udjEuQXVkaXRMb2dDb25maWcuTG9nVHlwZRIY",
+            "ChBleGVtcHRlZF9tZW1iZXJzGAIgAygJIlIKB0xvZ1R5cGUSGAoUTE9HX1RZ",
+            "UEVfVU5TUEVDSUZJRUQQABIOCgpBRE1JTl9SRUFEEAESDgoKREFUQV9XUklU",
+            "RRACEg0KCURBVEFfUkVBRBADIoABCgtQb2xpY3lEZWx0YRIzCg5iaW5kaW5n",
+            "X2RlbHRhcxgBIAMoCzIbLmdvb2dsZS5pYW0udjEuQmluZGluZ0RlbHRhEjwK",
+            "E2F1ZGl0X2NvbmZpZ19kZWx0YXMYAiADKAsyHy5nb29nbGUuaWFtLnYxLkF1",
+            "ZGl0Q29uZmlnRGVsdGEivQEKDEJpbmRpbmdEZWx0YRIyCgZhY3Rpb24YASAB",
+            "KA4yIi5nb29nbGUuaWFtLnYxLkJpbmRpbmdEZWx0YS5BY3Rpb24SDAoEcm9s",
+            "ZRgCIAEoCRIOCgZtZW1iZXIYAyABKAkSJAoJY29uZGl0aW9uGAQgASgLMhEu",
+            "Z29vZ2xlLnR5cGUuRXhwciI1CgZBY3Rpb24SFgoSQUNUSU9OX1VOU1BFQ0lG",
+            "SUVEEAASBwoDQUREEAESCgoGUkVNT1ZFEAIivQEKEEF1ZGl0Q29uZmlnRGVs",
+            "dGESNgoGYWN0aW9uGAEgASgOMiYuZ29vZ2xlLmlhbS52MS5BdWRpdENvbmZp",
+            "Z0RlbHRhLkFjdGlvbhIPCgdzZXJ2aWNlGAIgASgJEhcKD2V4ZW1wdGVkX21l",
+            "bWJlchgDIAEoCRIQCghsb2dfdHlwZRgEIAEoCSI1CgZBY3Rpb24SFgoSQUNU",
+            "SU9OX1VOU1BFQ0lGSUVEEAASBwoDQUREEAESCgoGUkVNT1ZFEAJCgwEKEWNv",
+            "bS5nb29nbGUuaWFtLnYxQgtQb2xpY3lQcm90b1ABWjBnb29nbGUuZ29sYW5n",
+            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2lhbS92MTtpYW34AQGqAhNHb29n",
+            "bGUuQ2xvdWQuSWFtLlYxygITR29vZ2xlXENsb3VkXElhbVxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Type.ExprReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Type.ExprReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.Policy), global::Google.Cloud.Iam.V1.Policy.Parser, new[]{ "Version", "Bindings", "Etag" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.Policy), global::Google.Cloud.Iam.V1.Policy.Parser, new[]{ "Version", "Bindings", "AuditConfigs", "Etag" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.Binding), global::Google.Cloud.Iam.V1.Binding.Parser, new[]{ "Role", "Members", "Condition" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.AuditConfig), global::Google.Cloud.Iam.V1.AuditConfig.Parser, new[]{ "Service", "AuditLogConfigs" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.AuditLogConfig), global::Google.Cloud.Iam.V1.AuditLogConfig.Parser, new[]{ "LogType", "ExemptedMembers" }, null, new[]{ typeof(global::Google.Cloud.Iam.V1.AuditLogConfig.Types.LogType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.PolicyDelta), global::Google.Cloud.Iam.V1.PolicyDelta.Parser, new[]{ "BindingDeltas", "AuditConfigDeltas" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.BindingDelta), global::Google.Cloud.Iam.V1.BindingDelta.Parser, new[]{ "Action", "Role", "Member", "Condition" }, null, new[]{ typeof(global::Google.Cloud.Iam.V1.BindingDelta.Types.Action) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.AuditConfigDelta), global::Google.Cloud.Iam.V1.AuditConfigDelta.Parser, new[]{ "Action", "Service", "ExemptedMember", "LogType" }, null, new[]{ typeof(global::Google.Cloud.Iam.V1.AuditConfigDelta.Types.Action) }, null, null)
@@ -60,18 +68,23 @@ namespace Google.Cloud.Iam.V1 {
   }
   #region Messages
   /// <summary>
-  /// Defines an Identity and Access Management (IAM) policy. It is used to
-  /// specify access control policies for Cloud Platform resources.
+  /// An Identity and Access Management (IAM) policy, which specifies access
+  /// controls for Google Cloud resources.
   ///
   /// A `Policy` is a collection of `bindings`. A `binding` binds one or more
-  /// `members` to a single `role`. Members can be user accounts, service accounts,
-  /// Google groups, and domains (such as G Suite). A `role` is a named list of
-  /// permissions (defined by IAM or configured by users). A `binding` can
-  /// optionally specify a `condition`, which is a logic expression that further
-  /// constrains the role binding based on attributes about the request and/or
-  /// target resource.
+  /// `members`, or principals, to a single `role`. Principals can be user
+  /// accounts, service accounts, Google groups, and domains (such as G Suite). A
+  /// `role` is a named list of permissions; each `role` can be an IAM predefined
+  /// role or a user-created custom role.
   ///
-  /// **JSON Example**
+  /// For some types of Google Cloud resources, a `binding` can also specify a
+  /// `condition`, which is a logical expression that allows access to a resource
+  /// only if the expression evaluates to `true`. A condition can add constraints
+  /// based on attributes of the request, the resource, or both. To learn which
+  /// resources support conditions in their IAM policies, see the
+  /// [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+  ///
+  /// **JSON example:**
   ///
   ///     {
   ///       "bindings": [
@@ -86,18 +99,21 @@ namespace Google.Cloud.Iam.V1 {
   ///         },
   ///         {
   ///           "role": "roles/resourcemanager.organizationViewer",
-  ///           "members": ["user:eve@example.com"],
+  ///           "members": [
+  ///             "user:eve@example.com"
+  ///           ],
   ///           "condition": {
   ///             "title": "expirable access",
   ///             "description": "Does not grant access after Sep 2020",
-  ///             "expression": "request.time &lt;
-  ///             timestamp('2020-10-01T00:00:00.000Z')",
+  ///             "expression": "request.time &lt; timestamp('2020-10-01T00:00:00.000Z')",
   ///           }
   ///         }
-  ///       ]
+  ///       ],
+  ///       "etag": "BwWWja0YfJA=",
+  ///       "version": 3
   ///     }
   ///
-  /// **YAML Example**
+  /// **YAML example:**
   ///
   ///     bindings:
   ///     - members:
@@ -113,9 +129,11 @@ namespace Google.Cloud.Iam.V1 {
   ///         title: expirable access
   ///         description: Does not grant access after Sep 2020
   ///         expression: request.time &lt; timestamp('2020-10-01T00:00:00.000Z')
+  ///     etag: BwWWja0YfJA=
+  ///     version: 3
   ///
   /// For a description of IAM and its features, see the
-  /// [IAM developer's guide](https://cloud.google.com/iam/docs).
+  /// [IAM documentation](https://cloud.google.com/iam/docs/).
   /// </summary>
   public sealed partial class Policy : pb::IMessage<Policy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -153,6 +171,7 @@ namespace Google.Cloud.Iam.V1 {
     public Policy(Policy other) : this() {
       version_ = other.version_;
       bindings_ = other.bindings_.Clone();
+      auditConfigs_ = other.auditConfigs_.Clone();
       etag_ = other.etag_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -169,18 +188,28 @@ namespace Google.Cloud.Iam.V1 {
     /// <summary>
     /// Specifies the format of the policy.
     ///
-    /// Valid values are 0, 1, and 3. Requests specifying an invalid value will be
-    /// rejected.
+    /// Valid values are `0`, `1`, and `3`. Requests that specify an invalid value
+    /// are rejected.
     ///
-    /// Operations affecting conditional bindings must specify version 3. This can
-    /// be either setting a conditional policy, modifying a conditional binding,
-    /// or removing a binding (conditional or unconditional) from the stored
-    /// conditional policy.
-    /// Operations on non-conditional policies may specify any valid value or
-    /// leave the field unset.
+    /// Any operation that affects conditional role bindings must specify version
+    /// `3`. This requirement applies to the following operations:
     ///
-    /// If no etag is provided in the call to `setIamPolicy`, version compliance
-    /// checks against the stored policy is skipped.
+    /// * Getting a policy that includes a conditional role binding
+    /// * Adding a conditional role binding to a policy
+    /// * Changing a conditional role binding in a policy
+    /// * Removing any role binding, with or without a condition, from a policy
+    ///   that includes conditions
+    ///
+    /// **Important:** If you use IAM Conditions, you must include the `etag` field
+    /// whenever you call `setIamPolicy`. If you omit this field, then IAM allows
+    /// you to overwrite a version `3` policy with a version `1` policy, and all of
+    /// the conditions in the version `3` policy are lost.
+    ///
+    /// If a policy does not include any conditions, operations on that policy may
+    /// specify any valid version or leave the field unset.
+    ///
+    /// To learn which resources support conditions in their IAM policies, see the
+    /// [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -197,14 +226,35 @@ namespace Google.Cloud.Iam.V1 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Iam.V1.Binding.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Iam.V1.Binding> bindings_ = new pbc::RepeatedField<global::Google.Cloud.Iam.V1.Binding>();
     /// <summary>
-    /// Associates a list of `members` to a `role`. Optionally may specify a
-    /// `condition` that determines when binding is in effect.
-    /// `bindings` with no members will result in an error.
+    /// Associates a list of `members`, or principals, with a `role`. Optionally,
+    /// may specify a `condition` that determines how and when the `bindings` are
+    /// applied. Each of the `bindings` must contain at least one principal.
+    ///
+    /// The `bindings` in a `Policy` can refer to up to 1,500 principals; up to 250
+    /// of these principals can be Google groups. Each occurrence of a principal
+    /// counts towards these limits. For example, if the `bindings` grant 50
+    /// different roles to `user:alice@example.com`, and not to any other
+    /// principal, then you can add another 1,450 principals to the `bindings` in
+    /// the `Policy`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Iam.V1.Binding> Bindings {
       get { return bindings_; }
+    }
+
+    /// <summary>Field number for the "audit_configs" field.</summary>
+    public const int AuditConfigsFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Iam.V1.AuditConfig> _repeated_auditConfigs_codec
+        = pb::FieldCodec.ForMessage(50, global::Google.Cloud.Iam.V1.AuditConfig.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Iam.V1.AuditConfig> auditConfigs_ = new pbc::RepeatedField<global::Google.Cloud.Iam.V1.AuditConfig>();
+    /// <summary>
+    /// Specifies cloud audit logging configuration for this policy.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Iam.V1.AuditConfig> AuditConfigs {
+      get { return auditConfigs_; }
     }
 
     /// <summary>Field number for the "etag" field.</summary>
@@ -219,10 +269,10 @@ namespace Google.Cloud.Iam.V1 {
     /// systems are expected to put that etag in the request to `setIamPolicy` to
     /// ensure that their change will be applied to the same version of the policy.
     ///
-    /// If no `etag` is provided in the call to `setIamPolicy`, then the existing
-    /// policy is overwritten. Due to blind-set semantics of an etag-less policy,
-    /// 'setIamPolicy' will not fail even if the incoming policy version does not
-    /// meet the requirements for modifying the stored policy.
+    /// **Important:** If you use IAM Conditions, you must include the `etag` field
+    /// whenever you call `setIamPolicy`. If you omit this field, then IAM allows
+    /// you to overwrite a version `3` policy with a version `1` policy, and all of
+    /// the conditions in the version `3` policy are lost.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -250,6 +300,7 @@ namespace Google.Cloud.Iam.V1 {
       }
       if (Version != other.Version) return false;
       if(!bindings_.Equals(other.bindings_)) return false;
+      if(!auditConfigs_.Equals(other.auditConfigs_)) return false;
       if (Etag != other.Etag) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -260,6 +311,7 @@ namespace Google.Cloud.Iam.V1 {
       int hash = 1;
       if (Version != 0) hash ^= Version.GetHashCode();
       hash ^= bindings_.GetHashCode();
+      hash ^= auditConfigs_.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -288,6 +340,7 @@ namespace Google.Cloud.Iam.V1 {
         output.WriteBytes(Etag);
       }
       bindings_.WriteTo(output, _repeated_bindings_codec);
+      auditConfigs_.WriteTo(output, _repeated_auditConfigs_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -307,6 +360,7 @@ namespace Google.Cloud.Iam.V1 {
         output.WriteBytes(Etag);
       }
       bindings_.WriteTo(ref output, _repeated_bindings_codec);
+      auditConfigs_.WriteTo(ref output, _repeated_auditConfigs_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -321,6 +375,7 @@ namespace Google.Cloud.Iam.V1 {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Version);
       }
       size += bindings_.CalculateSize(_repeated_bindings_codec);
+      size += auditConfigs_.CalculateSize(_repeated_auditConfigs_codec);
       if (Etag.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Etag);
       }
@@ -340,6 +395,7 @@ namespace Google.Cloud.Iam.V1 {
         Version = other.Version;
       }
       bindings_.Add(other.bindings_);
+      auditConfigs_.Add(other.auditConfigs_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
@@ -370,6 +426,10 @@ namespace Google.Cloud.Iam.V1 {
             bindings_.AddEntriesFrom(input, _repeated_bindings_codec);
             break;
           }
+          case 50: {
+            auditConfigs_.AddEntriesFrom(input, _repeated_auditConfigs_codec);
+            break;
+          }
         }
       }
     #endif
@@ -397,6 +457,10 @@ namespace Google.Cloud.Iam.V1 {
             bindings_.AddEntriesFrom(ref input, _repeated_bindings_codec);
             break;
           }
+          case 50: {
+            auditConfigs_.AddEntriesFrom(ref input, _repeated_auditConfigs_codec);
+            break;
+          }
         }
       }
     }
@@ -405,7 +469,7 @@ namespace Google.Cloud.Iam.V1 {
   }
 
   /// <summary>
-  /// Associates `members` with a `role`.
+  /// Associates `members`, or principals, with a `role`.
   /// </summary>
   public sealed partial class Binding : pb::IMessage<Binding>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -457,7 +521,7 @@ namespace Google.Cloud.Iam.V1 {
     public const int RoleFieldNumber = 1;
     private string role_ = "";
     /// <summary>
-    /// Role that is assigned to `members`.
+    /// Role that is assigned to the list of `members`, or principals.
     /// For example, `roles/viewer`, `roles/editor`, or `roles/owner`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -475,7 +539,7 @@ namespace Google.Cloud.Iam.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> members_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Specifies the identities requesting access for a Cloud Platform resource.
+    /// Specifies the principals requesting access for a Cloud Platform resource.
     /// `members` can have the following values:
     ///
     /// * `allUsers`: A special identifier that represents anyone who is
@@ -493,6 +557,26 @@ namespace Google.Cloud.Iam.V1 {
     /// * `group:{emailid}`: An email address that represents a Google group.
     ///    For example, `admins@example.com`.
     ///
+    /// * `deleted:user:{emailid}?uid={uniqueid}`: An email address (plus unique
+    ///    identifier) representing a user that has been recently deleted. For
+    ///    example, `alice@example.com?uid=123456789012345678901`. If the user is
+    ///    recovered, this value reverts to `user:{emailid}` and the recovered user
+    ///    retains the role in the binding.
+    ///
+    /// * `deleted:serviceAccount:{emailid}?uid={uniqueid}`: An email address (plus
+    ///    unique identifier) representing a service account that has been recently
+    ///    deleted. For example,
+    ///    `my-other-app@appspot.gserviceaccount.com?uid=123456789012345678901`.
+    ///    If the service account is undeleted, this value reverts to
+    ///    `serviceAccount:{emailid}` and the undeleted service account retains the
+    ///    role in the binding.
+    ///
+    /// * `deleted:group:{emailid}?uid={uniqueid}`: An email address (plus unique
+    ///    identifier) representing a Google group that has been recently
+    ///    deleted. For example, `admins@example.com?uid=123456789012345678901`. If
+    ///    the group is recovered, this value reverts to `group:{emailid}` and the
+    ///    recovered group retains the role in the binding.
+    ///
     /// * `domain:{domain}`: The G Suite domain (primary) that represents all the
     ///    users of that domain. For example, `google.com` or `example.com`.
     /// </summary>
@@ -507,9 +591,17 @@ namespace Google.Cloud.Iam.V1 {
     private global::Google.Type.Expr condition_;
     /// <summary>
     /// The condition that is associated with this binding.
-    /// NOTE: An unsatisfied condition will not allow user access via current
-    /// binding. Different bindings, including their conditions, are examined
-    /// independently.
+    ///
+    /// If the condition evaluates to `true`, then this binding applies to the
+    /// current request.
+    ///
+    /// If the condition evaluates to `false`, then this binding does not apply to
+    /// the current request. However, a different role binding might grant the same
+    /// role to one or more of the principals in this binding.
+    ///
+    /// To learn which resources support conditions in their IAM policies, see the
+    /// [IAM
+    /// documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -701,6 +793,557 @@ namespace Google.Cloud.Iam.V1 {
   }
 
   /// <summary>
+  /// Specifies the audit configuration for a service.
+  /// The configuration determines which permission types are logged, and what
+  /// identities, if any, are exempted from logging.
+  /// An AuditConfig must have one or more AuditLogConfigs.
+  ///
+  /// If there are AuditConfigs for both `allServices` and a specific service,
+  /// the union of the two AuditConfigs is used for that service: the log_types
+  /// specified in each AuditConfig are enabled, and the exempted_members in each
+  /// AuditLogConfig are exempted.
+  ///
+  /// Example Policy with multiple AuditConfigs:
+  ///
+  ///     {
+  ///       "audit_configs": [
+  ///         {
+  ///           "service": "allServices",
+  ///           "audit_log_configs": [
+  ///             {
+  ///               "log_type": "DATA_READ",
+  ///               "exempted_members": [
+  ///                 "user:jose@example.com"
+  ///               ]
+  ///             },
+  ///             {
+  ///               "log_type": "DATA_WRITE"
+  ///             },
+  ///             {
+  ///               "log_type": "ADMIN_READ"
+  ///             }
+  ///           ]
+  ///         },
+  ///         {
+  ///           "service": "sampleservice.googleapis.com",
+  ///           "audit_log_configs": [
+  ///             {
+  ///               "log_type": "DATA_READ"
+  ///             },
+  ///             {
+  ///               "log_type": "DATA_WRITE",
+  ///               "exempted_members": [
+  ///                 "user:aliya@example.com"
+  ///               ]
+  ///             }
+  ///           ]
+  ///         }
+  ///       ]
+  ///     }
+  ///
+  /// For sampleservice, this policy enables DATA_READ, DATA_WRITE and ADMIN_READ
+  /// logging. It also exempts jose@example.com from DATA_READ logging, and
+  /// aliya@example.com from DATA_WRITE logging.
+  /// </summary>
+  public sealed partial class AuditConfig : pb::IMessage<AuditConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AuditConfig> _parser = new pb::MessageParser<AuditConfig>(() => new AuditConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AuditConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AuditConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AuditConfig(AuditConfig other) : this() {
+      service_ = other.service_;
+      auditLogConfigs_ = other.auditLogConfigs_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AuditConfig Clone() {
+      return new AuditConfig(this);
+    }
+
+    /// <summary>Field number for the "service" field.</summary>
+    public const int ServiceFieldNumber = 1;
+    private string service_ = "";
+    /// <summary>
+    /// Specifies a service that will be enabled for audit logging.
+    /// For example, `storage.googleapis.com`, `cloudsql.googleapis.com`.
+    /// `allServices` is a special value that covers all services.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Service {
+      get { return service_; }
+      set {
+        service_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "audit_log_configs" field.</summary>
+    public const int AuditLogConfigsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Iam.V1.AuditLogConfig> _repeated_auditLogConfigs_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Iam.V1.AuditLogConfig.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Iam.V1.AuditLogConfig> auditLogConfigs_ = new pbc::RepeatedField<global::Google.Cloud.Iam.V1.AuditLogConfig>();
+    /// <summary>
+    /// The configuration for logging of each type of permission.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Iam.V1.AuditLogConfig> AuditLogConfigs {
+      get { return auditLogConfigs_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AuditConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AuditConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Service != other.Service) return false;
+      if(!auditLogConfigs_.Equals(other.auditLogConfigs_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Service.Length != 0) hash ^= Service.GetHashCode();
+      hash ^= auditLogConfigs_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Service.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Service);
+      }
+      auditLogConfigs_.WriteTo(output, _repeated_auditLogConfigs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Service.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Service);
+      }
+      auditLogConfigs_.WriteTo(ref output, _repeated_auditLogConfigs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Service.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Service);
+      }
+      size += auditLogConfigs_.CalculateSize(_repeated_auditLogConfigs_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AuditConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Service.Length != 0) {
+        Service = other.Service;
+      }
+      auditLogConfigs_.Add(other.auditLogConfigs_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Service = input.ReadString();
+            break;
+          }
+          case 26: {
+            auditLogConfigs_.AddEntriesFrom(input, _repeated_auditLogConfigs_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Service = input.ReadString();
+            break;
+          }
+          case 26: {
+            auditLogConfigs_.AddEntriesFrom(ref input, _repeated_auditLogConfigs_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Provides the configuration for logging a type of permissions.
+  /// Example:
+  ///
+  ///     {
+  ///       "audit_log_configs": [
+  ///         {
+  ///           "log_type": "DATA_READ",
+  ///           "exempted_members": [
+  ///             "user:jose@example.com"
+  ///           ]
+  ///         },
+  ///         {
+  ///           "log_type": "DATA_WRITE"
+  ///         }
+  ///       ]
+  ///     }
+  ///
+  /// This enables 'DATA_READ' and 'DATA_WRITE' logging, while exempting
+  /// jose@example.com from DATA_READ logging.
+  /// </summary>
+  public sealed partial class AuditLogConfig : pb::IMessage<AuditLogConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AuditLogConfig> _parser = new pb::MessageParser<AuditLogConfig>(() => new AuditLogConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AuditLogConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AuditLogConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AuditLogConfig(AuditLogConfig other) : this() {
+      logType_ = other.logType_;
+      exemptedMembers_ = other.exemptedMembers_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AuditLogConfig Clone() {
+      return new AuditLogConfig(this);
+    }
+
+    /// <summary>Field number for the "log_type" field.</summary>
+    public const int LogTypeFieldNumber = 1;
+    private global::Google.Cloud.Iam.V1.AuditLogConfig.Types.LogType logType_ = global::Google.Cloud.Iam.V1.AuditLogConfig.Types.LogType.Unspecified;
+    /// <summary>
+    /// The log type that this config enables.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Iam.V1.AuditLogConfig.Types.LogType LogType {
+      get { return logType_; }
+      set {
+        logType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "exempted_members" field.</summary>
+    public const int ExemptedMembersFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_exemptedMembers_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> exemptedMembers_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Specifies the identities that do not cause logging for this type of
+    /// permission.
+    /// Follows the same format of [Binding.members][google.iam.v1.Binding.members].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ExemptedMembers {
+      get { return exemptedMembers_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AuditLogConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AuditLogConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (LogType != other.LogType) return false;
+      if(!exemptedMembers_.Equals(other.exemptedMembers_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (LogType != global::Google.Cloud.Iam.V1.AuditLogConfig.Types.LogType.Unspecified) hash ^= LogType.GetHashCode();
+      hash ^= exemptedMembers_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (LogType != global::Google.Cloud.Iam.V1.AuditLogConfig.Types.LogType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) LogType);
+      }
+      exemptedMembers_.WriteTo(output, _repeated_exemptedMembers_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (LogType != global::Google.Cloud.Iam.V1.AuditLogConfig.Types.LogType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) LogType);
+      }
+      exemptedMembers_.WriteTo(ref output, _repeated_exemptedMembers_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (LogType != global::Google.Cloud.Iam.V1.AuditLogConfig.Types.LogType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LogType);
+      }
+      size += exemptedMembers_.CalculateSize(_repeated_exemptedMembers_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AuditLogConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.LogType != global::Google.Cloud.Iam.V1.AuditLogConfig.Types.LogType.Unspecified) {
+        LogType = other.LogType;
+      }
+      exemptedMembers_.Add(other.exemptedMembers_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            LogType = (global::Google.Cloud.Iam.V1.AuditLogConfig.Types.LogType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            exemptedMembers_.AddEntriesFrom(input, _repeated_exemptedMembers_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            LogType = (global::Google.Cloud.Iam.V1.AuditLogConfig.Types.LogType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            exemptedMembers_.AddEntriesFrom(ref input, _repeated_exemptedMembers_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AuditLogConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The list of valid permission types for which logging can be configured.
+      /// Admin writes are always logged, and are not configurable.
+      /// </summary>
+      public enum LogType {
+        /// <summary>
+        /// Default case. Should never be this.
+        /// </summary>
+        [pbr::OriginalName("LOG_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Admin reads. Example: CloudIAM getIamPolicy
+        /// </summary>
+        [pbr::OriginalName("ADMIN_READ")] AdminRead = 1,
+        /// <summary>
+        /// Data writes. Example: CloudSQL Users create
+        /// </summary>
+        [pbr::OriginalName("DATA_WRITE")] DataWrite = 2,
+        /// <summary>
+        /// Data reads. Example: CloudSQL Users list
+        /// </summary>
+        [pbr::OriginalName("DATA_READ")] DataRead = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// The difference delta between two policies.
   /// </summary>
   public sealed partial class PolicyDelta : pb::IMessage<PolicyDelta>
@@ -717,7 +1360,7 @@ namespace Google.Cloud.Iam.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -931,7 +1574,7 @@ namespace Google.Cloud.Iam.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1287,7 +1930,7 @@ namespace Google.Cloud.Iam.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

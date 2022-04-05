@@ -157,7 +157,8 @@ namespace Google.Cloud.Iam.V1
 
     /// <summary>IAMPolicy client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// ## API Overview
+    /// API Overview
+    /// 
     /// 
     /// Manages Identity and Access Management (IAM) policies.
     /// 
@@ -266,6 +267,8 @@ namespace Google.Cloud.Iam.V1
         /// <summary>
         /// Sets the access control policy on the specified resource. Replaces any
         /// existing policy.
+        /// 
+        /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -276,6 +279,8 @@ namespace Google.Cloud.Iam.V1
         /// <summary>
         /// Sets the access control policy on the specified resource. Replaces any
         /// existing policy.
+        /// 
+        /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -286,6 +291,8 @@ namespace Google.Cloud.Iam.V1
         /// <summary>
         /// Sets the access control policy on the specified resource. Replaces any
         /// existing policy.
+        /// 
+        /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -329,7 +336,7 @@ namespace Google.Cloud.Iam.V1
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
         /// If the resource does not exist, this will return an empty set of
-        /// permissions, not a NOT_FOUND error.
+        /// permissions, not a `NOT_FOUND` error.
         /// 
         /// Note: This operation is designed to be used for building permission-aware
         /// UIs and command-line tools, not for authorization checking. This operation
@@ -344,7 +351,7 @@ namespace Google.Cloud.Iam.V1
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
         /// If the resource does not exist, this will return an empty set of
-        /// permissions, not a NOT_FOUND error.
+        /// permissions, not a `NOT_FOUND` error.
         /// 
         /// Note: This operation is designed to be used for building permission-aware
         /// UIs and command-line tools, not for authorization checking. This operation
@@ -359,7 +366,7 @@ namespace Google.Cloud.Iam.V1
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
         /// If the resource does not exist, this will return an empty set of
-        /// permissions, not a NOT_FOUND error.
+        /// permissions, not a `NOT_FOUND` error.
         /// 
         /// Note: This operation is designed to be used for building permission-aware
         /// UIs and command-line tools, not for authorization checking. This operation
@@ -374,7 +381,8 @@ namespace Google.Cloud.Iam.V1
 
     /// <summary>IAMPolicy client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// ## API Overview
+    /// API Overview
+    /// 
     /// 
     /// Manages Identity and Access Management (IAM) policies.
     /// 
@@ -452,6 +460,8 @@ namespace Google.Cloud.Iam.V1
         /// <summary>
         /// Sets the access control policy on the specified resource. Replaces any
         /// existing policy.
+        /// 
+        /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -465,6 +475,8 @@ namespace Google.Cloud.Iam.V1
         /// <summary>
         /// Sets the access control policy on the specified resource. Replaces any
         /// existing policy.
+        /// 
+        /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -506,7 +518,7 @@ namespace Google.Cloud.Iam.V1
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
         /// If the resource does not exist, this will return an empty set of
-        /// permissions, not a NOT_FOUND error.
+        /// permissions, not a `NOT_FOUND` error.
         /// 
         /// Note: This operation is designed to be used for building permission-aware
         /// UIs and command-line tools, not for authorization checking. This operation
@@ -524,7 +536,7 @@ namespace Google.Cloud.Iam.V1
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
         /// If the resource does not exist, this will return an empty set of
-        /// permissions, not a NOT_FOUND error.
+        /// permissions, not a `NOT_FOUND` error.
         /// 
         /// Note: This operation is designed to be used for building permission-aware
         /// UIs and command-line tools, not for authorization checking. This operation

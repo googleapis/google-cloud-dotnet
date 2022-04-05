@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using proto = Google.Protobuf;
+using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -36,12 +37,14 @@ namespace Google.Cloud.Iam.V1.Tests
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new wkt::FieldMask(),
             };
             Policy expectedResponse = new Policy
             {
                 Version = 271578922,
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings = { new Binding(), },
+                AuditConfigs = { new AuditConfig(), },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IAMPolicyClient client = new IAMPolicyClientImpl(mockGrpcClient.Object, null);
@@ -58,12 +61,14 @@ namespace Google.Cloud.Iam.V1.Tests
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new wkt::FieldMask(),
             };
             Policy expectedResponse = new Policy
             {
                 Version = 271578922,
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings = { new Binding(), },
+                AuditConfigs = { new AuditConfig(), },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IAMPolicyClient client = new IAMPolicyClientImpl(mockGrpcClient.Object, null);
@@ -88,6 +93,7 @@ namespace Google.Cloud.Iam.V1.Tests
                 Version = 271578922,
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings = { new Binding(), },
+                AuditConfigs = { new AuditConfig(), },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IAMPolicyClient client = new IAMPolicyClientImpl(mockGrpcClient.Object, null);
@@ -110,6 +116,7 @@ namespace Google.Cloud.Iam.V1.Tests
                 Version = 271578922,
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings = { new Binding(), },
+                AuditConfigs = { new AuditConfig(), },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IAMPolicyClient client = new IAMPolicyClientImpl(mockGrpcClient.Object, null);
