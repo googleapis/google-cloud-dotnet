@@ -256,6 +256,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             get => string.IsNullOrEmpty(Name) ? null : gcsaiv::InstanceConfigName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="gcsaiv::InstanceConfigName"/>-typed view over the <see cref="BaseConfig"/> resource name
+        /// property.
+        /// </summary>
+        public gcsaiv::InstanceConfigName BaseConfigAsInstanceConfigName
+        {
+            get => string.IsNullOrEmpty(BaseConfig) ? null : gcsaiv::InstanceConfigName.Parse(BaseConfig, allowUnparsed: true);
+            set => BaseConfig = value?.ToString() ?? "";
+        }
     }
 
     public partial class Instance
@@ -300,6 +310,42 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcsaiv::InstanceConfigName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateInstanceConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteInstanceConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcsaiv::InstanceConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcsaiv::InstanceConfigName InstanceConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcsaiv::InstanceConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListInstanceConfigOperationsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
         }
     }
 

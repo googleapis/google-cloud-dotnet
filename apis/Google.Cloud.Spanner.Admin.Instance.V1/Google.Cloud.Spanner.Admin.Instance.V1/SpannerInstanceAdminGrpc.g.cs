@@ -92,6 +92,20 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig> __Marshaller_google_spanner_admin_instance_v1_InstanceConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigRequest> __Marshaller_google_spanner_admin_instance_v1_CreateInstanceConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigRequest> __Marshaller_google_spanner_admin_instance_v1_UpdateInstanceConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceConfigRequest> __Marshaller_google_spanner_admin_instance_v1_DeleteInstanceConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsRequest> __Marshaller_google_spanner_admin_instance_v1_ListInstanceConfigOperationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse> __Marshaller_google_spanner_admin_instance_v1_ListInstanceConfigOperationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest> __Marshaller_google_spanner_admin_instance_v1_ListInstancesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse> __Marshaller_google_spanner_admin_instance_v1_ListInstancesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse.Parser));
@@ -102,13 +116,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest> __Marshaller_google_spanner_admin_instance_v1_CreateInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest> __Marshaller_google_spanner_admin_instance_v1_UpdateInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest> __Marshaller_google_spanner_admin_instance_v1_DeleteInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -135,6 +145,38 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         "GetInstanceConfig",
         __Marshaller_google_spanner_admin_instance_v1_GetInstanceConfigRequest,
         __Marshaller_google_spanner_admin_instance_v1_InstanceConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigRequest, global::Google.LongRunning.Operation> __Method_CreateInstanceConfig = new grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateInstanceConfig",
+        __Marshaller_google_spanner_admin_instance_v1_CreateInstanceConfigRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigRequest, global::Google.LongRunning.Operation> __Method_UpdateInstanceConfig = new grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateInstanceConfig",
+        __Marshaller_google_spanner_admin_instance_v1_UpdateInstanceConfigRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteInstanceConfig = new grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteInstanceConfig",
+        __Marshaller_google_spanner_admin_instance_v1_DeleteInstanceConfigRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse> __Method_ListInstanceConfigOperations = new grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListInstanceConfigOperations",
+        __Marshaller_google_spanner_admin_instance_v1_ListInstanceConfigOperationsRequest,
+        __Marshaller_google_spanner_admin_instance_v1_ListInstanceConfigOperationsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse> __Method_ListInstances = new grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse>(
@@ -230,6 +272,153 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig> GetInstanceConfig(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates an instance config and begins preparing it to be used. The
+      /// returned [long-running operation][google.longrunning.Operation]
+      /// can be used to track the progress of preparing the new
+      /// instance config. The instance config name is assigned by the caller. If the
+      /// named instance config already exists, `CreateInstanceConfig` returns
+      /// `ALREADY_EXISTS`.
+      ///
+      /// Immediately after the request returns:
+      ///
+      ///   * The instance config is readable via the API, with all requested
+      ///     attributes. The instance config's
+      ///     [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
+      ///     field is set to true. Its state is `CREATING`.
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * Cancelling the operation renders the instance config immediately
+      ///     unreadable via the API.
+      ///   * Except for deleting the creating resource, all other attempts to modify
+      ///     the instance config are rejected.
+      ///
+      /// Upon completion of the returned operation:
+      ///
+      ///   * Instances can be created using the instance configuration.
+      ///   * The instance config's
+      ///   [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
+      ///   field becomes false. Its state becomes `READY`.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format
+      /// `&lt;instance_config_name>/operations/&lt;operation_id>` and can be used to track
+      /// creation of the instance config. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
+      /// successful.
+      ///
+      /// Authorization requires `spanner.instanceConfigs.create` permission on
+      /// the resource [parent][CreateInstanceConfigRequest.parent].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateInstanceConfig(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an instance config. The returned
+      /// [long-running operation][google.longrunning.Operation] can be used to track
+      /// the progress of updating the instance. If the named instance config does
+      /// not exist, returns `NOT_FOUND`.
+      ///
+      /// Only user managed configurations can be updated.
+      ///
+      /// Immediately after the request returns:
+      ///
+      ///   * The instance config's
+      ///     [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
+      ///     field is set to true.
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * Cancelling the operation sets its metadata's
+      ///     [cancel_time][UpdateInstanceConfigMetadata.cancel_time]. The operation
+      ///     is guaranteed to succeed at undoing all changes,
+      ///     after which point it terminates with a `CANCELLED` status.
+      ///   * All other attempts to modify the instance config are rejected.
+      ///   * Reading the instance config via the API continues to give the
+      ///     pre-request values.
+      ///
+      /// Upon completion of the returned operation:
+      ///
+      ///   * Creating instances using the instance configuration uses the new
+      ///     values.
+      ///   * The instance config's new values are readable via the API.
+      ///   * The instance config's
+      ///   [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
+      ///   field becomes false.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format
+      /// `&lt;instance_config_name>/operations/&lt;operation_id>` and can be used to track
+      /// the instance config modification.  The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
+      /// successful.
+      ///
+      /// Authorization requires `spanner.instanceConfigs.update` permission on
+      /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateInstanceConfig(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes the instance config. Deletion is only allowed when no
+      /// instances are using the configuration. If any instances are using
+      /// the config, returns `FAILED_PRECONDITION`.
+      ///
+      /// Only user managed configurations can be deleted.
+      ///
+      /// Authorization requires `spanner.instanceConfigs.delete` permission on
+      /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteInstanceConfig(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists the user-managed instance config [long-running
+      /// operations][google.longrunning.Operation] in the given project. An instance
+      /// config operation has a name of the form
+      /// `projects/&lt;project>/instanceConfigs/&lt;instance_config>/operations/&lt;operation>`.
+      /// The long-running operation
+      /// [metadata][google.longrunning.Operation.metadata] field type
+      /// `metadata.type_url` describes the type of the metadata. Operations returned
+      /// include those that have completed/failed/canceled within the last 7 days,
+      /// and pending operations. Operations returned are ordered by
+      /// `operation.metadata.value.start_time` in descending order starting
+      /// from the most recently started operation.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse> ListInstanceConfigOperations(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -549,6 +738,594 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig> GetInstanceConfigAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetInstanceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Creates an instance config and begins preparing it to be used. The
+      /// returned [long-running operation][google.longrunning.Operation]
+      /// can be used to track the progress of preparing the new
+      /// instance config. The instance config name is assigned by the caller. If the
+      /// named instance config already exists, `CreateInstanceConfig` returns
+      /// `ALREADY_EXISTS`.
+      ///
+      /// Immediately after the request returns:
+      ///
+      ///   * The instance config is readable via the API, with all requested
+      ///     attributes. The instance config's
+      ///     [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
+      ///     field is set to true. Its state is `CREATING`.
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * Cancelling the operation renders the instance config immediately
+      ///     unreadable via the API.
+      ///   * Except for deleting the creating resource, all other attempts to modify
+      ///     the instance config are rejected.
+      ///
+      /// Upon completion of the returned operation:
+      ///
+      ///   * Instances can be created using the instance configuration.
+      ///   * The instance config's
+      ///   [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
+      ///   field becomes false. Its state becomes `READY`.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format
+      /// `&lt;instance_config_name>/operations/&lt;operation_id>` and can be used to track
+      /// creation of the instance config. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
+      /// successful.
+      ///
+      /// Authorization requires `spanner.instanceConfigs.create` permission on
+      /// the resource [parent][CreateInstanceConfigRequest.parent].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateInstanceConfig(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateInstanceConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an instance config and begins preparing it to be used. The
+      /// returned [long-running operation][google.longrunning.Operation]
+      /// can be used to track the progress of preparing the new
+      /// instance config. The instance config name is assigned by the caller. If the
+      /// named instance config already exists, `CreateInstanceConfig` returns
+      /// `ALREADY_EXISTS`.
+      ///
+      /// Immediately after the request returns:
+      ///
+      ///   * The instance config is readable via the API, with all requested
+      ///     attributes. The instance config's
+      ///     [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
+      ///     field is set to true. Its state is `CREATING`.
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * Cancelling the operation renders the instance config immediately
+      ///     unreadable via the API.
+      ///   * Except for deleting the creating resource, all other attempts to modify
+      ///     the instance config are rejected.
+      ///
+      /// Upon completion of the returned operation:
+      ///
+      ///   * Instances can be created using the instance configuration.
+      ///   * The instance config's
+      ///   [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
+      ///   field becomes false. Its state becomes `READY`.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format
+      /// `&lt;instance_config_name>/operations/&lt;operation_id>` and can be used to track
+      /// creation of the instance config. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
+      /// successful.
+      ///
+      /// Authorization requires `spanner.instanceConfigs.create` permission on
+      /// the resource [parent][CreateInstanceConfigRequest.parent].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateInstanceConfig(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateInstanceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Creates an instance config and begins preparing it to be used. The
+      /// returned [long-running operation][google.longrunning.Operation]
+      /// can be used to track the progress of preparing the new
+      /// instance config. The instance config name is assigned by the caller. If the
+      /// named instance config already exists, `CreateInstanceConfig` returns
+      /// `ALREADY_EXISTS`.
+      ///
+      /// Immediately after the request returns:
+      ///
+      ///   * The instance config is readable via the API, with all requested
+      ///     attributes. The instance config's
+      ///     [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
+      ///     field is set to true. Its state is `CREATING`.
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * Cancelling the operation renders the instance config immediately
+      ///     unreadable via the API.
+      ///   * Except for deleting the creating resource, all other attempts to modify
+      ///     the instance config are rejected.
+      ///
+      /// Upon completion of the returned operation:
+      ///
+      ///   * Instances can be created using the instance configuration.
+      ///   * The instance config's
+      ///   [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
+      ///   field becomes false. Its state becomes `READY`.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format
+      /// `&lt;instance_config_name>/operations/&lt;operation_id>` and can be used to track
+      /// creation of the instance config. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
+      /// successful.
+      ///
+      /// Authorization requires `spanner.instanceConfigs.create` permission on
+      /// the resource [parent][CreateInstanceConfigRequest.parent].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateInstanceConfigAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateInstanceConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an instance config and begins preparing it to be used. The
+      /// returned [long-running operation][google.longrunning.Operation]
+      /// can be used to track the progress of preparing the new
+      /// instance config. The instance config name is assigned by the caller. If the
+      /// named instance config already exists, `CreateInstanceConfig` returns
+      /// `ALREADY_EXISTS`.
+      ///
+      /// Immediately after the request returns:
+      ///
+      ///   * The instance config is readable via the API, with all requested
+      ///     attributes. The instance config's
+      ///     [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
+      ///     field is set to true. Its state is `CREATING`.
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * Cancelling the operation renders the instance config immediately
+      ///     unreadable via the API.
+      ///   * Except for deleting the creating resource, all other attempts to modify
+      ///     the instance config are rejected.
+      ///
+      /// Upon completion of the returned operation:
+      ///
+      ///   * Instances can be created using the instance configuration.
+      ///   * The instance config's
+      ///   [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
+      ///   field becomes false. Its state becomes `READY`.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format
+      /// `&lt;instance_config_name>/operations/&lt;operation_id>` and can be used to track
+      /// creation of the instance config. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
+      /// successful.
+      ///
+      /// Authorization requires `spanner.instanceConfigs.create` permission on
+      /// the resource [parent][CreateInstanceConfigRequest.parent].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateInstanceConfigAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateInstanceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates an instance config. The returned
+      /// [long-running operation][google.longrunning.Operation] can be used to track
+      /// the progress of updating the instance. If the named instance config does
+      /// not exist, returns `NOT_FOUND`.
+      ///
+      /// Only user managed configurations can be updated.
+      ///
+      /// Immediately after the request returns:
+      ///
+      ///   * The instance config's
+      ///     [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
+      ///     field is set to true.
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * Cancelling the operation sets its metadata's
+      ///     [cancel_time][UpdateInstanceConfigMetadata.cancel_time]. The operation
+      ///     is guaranteed to succeed at undoing all changes,
+      ///     after which point it terminates with a `CANCELLED` status.
+      ///   * All other attempts to modify the instance config are rejected.
+      ///   * Reading the instance config via the API continues to give the
+      ///     pre-request values.
+      ///
+      /// Upon completion of the returned operation:
+      ///
+      ///   * Creating instances using the instance configuration uses the new
+      ///     values.
+      ///   * The instance config's new values are readable via the API.
+      ///   * The instance config's
+      ///   [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
+      ///   field becomes false.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format
+      /// `&lt;instance_config_name>/operations/&lt;operation_id>` and can be used to track
+      /// the instance config modification.  The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
+      /// successful.
+      ///
+      /// Authorization requires `spanner.instanceConfigs.update` permission on
+      /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateInstanceConfig(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateInstanceConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an instance config. The returned
+      /// [long-running operation][google.longrunning.Operation] can be used to track
+      /// the progress of updating the instance. If the named instance config does
+      /// not exist, returns `NOT_FOUND`.
+      ///
+      /// Only user managed configurations can be updated.
+      ///
+      /// Immediately after the request returns:
+      ///
+      ///   * The instance config's
+      ///     [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
+      ///     field is set to true.
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * Cancelling the operation sets its metadata's
+      ///     [cancel_time][UpdateInstanceConfigMetadata.cancel_time]. The operation
+      ///     is guaranteed to succeed at undoing all changes,
+      ///     after which point it terminates with a `CANCELLED` status.
+      ///   * All other attempts to modify the instance config are rejected.
+      ///   * Reading the instance config via the API continues to give the
+      ///     pre-request values.
+      ///
+      /// Upon completion of the returned operation:
+      ///
+      ///   * Creating instances using the instance configuration uses the new
+      ///     values.
+      ///   * The instance config's new values are readable via the API.
+      ///   * The instance config's
+      ///   [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
+      ///   field becomes false.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format
+      /// `&lt;instance_config_name>/operations/&lt;operation_id>` and can be used to track
+      /// the instance config modification.  The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
+      /// successful.
+      ///
+      /// Authorization requires `spanner.instanceConfigs.update` permission on
+      /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateInstanceConfig(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateInstanceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates an instance config. The returned
+      /// [long-running operation][google.longrunning.Operation] can be used to track
+      /// the progress of updating the instance. If the named instance config does
+      /// not exist, returns `NOT_FOUND`.
+      ///
+      /// Only user managed configurations can be updated.
+      ///
+      /// Immediately after the request returns:
+      ///
+      ///   * The instance config's
+      ///     [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
+      ///     field is set to true.
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * Cancelling the operation sets its metadata's
+      ///     [cancel_time][UpdateInstanceConfigMetadata.cancel_time]. The operation
+      ///     is guaranteed to succeed at undoing all changes,
+      ///     after which point it terminates with a `CANCELLED` status.
+      ///   * All other attempts to modify the instance config are rejected.
+      ///   * Reading the instance config via the API continues to give the
+      ///     pre-request values.
+      ///
+      /// Upon completion of the returned operation:
+      ///
+      ///   * Creating instances using the instance configuration uses the new
+      ///     values.
+      ///   * The instance config's new values are readable via the API.
+      ///   * The instance config's
+      ///   [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
+      ///   field becomes false.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format
+      /// `&lt;instance_config_name>/operations/&lt;operation_id>` and can be used to track
+      /// the instance config modification.  The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
+      /// successful.
+      ///
+      /// Authorization requires `spanner.instanceConfigs.update` permission on
+      /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateInstanceConfigAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateInstanceConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an instance config. The returned
+      /// [long-running operation][google.longrunning.Operation] can be used to track
+      /// the progress of updating the instance. If the named instance config does
+      /// not exist, returns `NOT_FOUND`.
+      ///
+      /// Only user managed configurations can be updated.
+      ///
+      /// Immediately after the request returns:
+      ///
+      ///   * The instance config's
+      ///     [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
+      ///     field is set to true.
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * Cancelling the operation sets its metadata's
+      ///     [cancel_time][UpdateInstanceConfigMetadata.cancel_time]. The operation
+      ///     is guaranteed to succeed at undoing all changes,
+      ///     after which point it terminates with a `CANCELLED` status.
+      ///   * All other attempts to modify the instance config are rejected.
+      ///   * Reading the instance config via the API continues to give the
+      ///     pre-request values.
+      ///
+      /// Upon completion of the returned operation:
+      ///
+      ///   * Creating instances using the instance configuration uses the new
+      ///     values.
+      ///   * The instance config's new values are readable via the API.
+      ///   * The instance config's
+      ///   [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
+      ///   field becomes false.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format
+      /// `&lt;instance_config_name>/operations/&lt;operation_id>` and can be used to track
+      /// the instance config modification.  The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
+      /// successful.
+      ///
+      /// Authorization requires `spanner.instanceConfigs.update` permission on
+      /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateInstanceConfigAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateInstanceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the instance config. Deletion is only allowed when no
+      /// instances are using the configuration. If any instances are using
+      /// the config, returns `FAILED_PRECONDITION`.
+      ///
+      /// Only user managed configurations can be deleted.
+      ///
+      /// Authorization requires `spanner.instanceConfigs.delete` permission on
+      /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteInstanceConfig(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteInstanceConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the instance config. Deletion is only allowed when no
+      /// instances are using the configuration. If any instances are using
+      /// the config, returns `FAILED_PRECONDITION`.
+      ///
+      /// Only user managed configurations can be deleted.
+      ///
+      /// Authorization requires `spanner.instanceConfigs.delete` permission on
+      /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteInstanceConfig(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteInstanceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the instance config. Deletion is only allowed when no
+      /// instances are using the configuration. If any instances are using
+      /// the config, returns `FAILED_PRECONDITION`.
+      ///
+      /// Only user managed configurations can be deleted.
+      ///
+      /// Authorization requires `spanner.instanceConfigs.delete` permission on
+      /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteInstanceConfigAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteInstanceConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the instance config. Deletion is only allowed when no
+      /// instances are using the configuration. If any instances are using
+      /// the config, returns `FAILED_PRECONDITION`.
+      ///
+      /// Only user managed configurations can be deleted.
+      ///
+      /// Authorization requires `spanner.instanceConfigs.delete` permission on
+      /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteInstanceConfigAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteInstanceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Lists the user-managed instance config [long-running
+      /// operations][google.longrunning.Operation] in the given project. An instance
+      /// config operation has a name of the form
+      /// `projects/&lt;project>/instanceConfigs/&lt;instance_config>/operations/&lt;operation>`.
+      /// The long-running operation
+      /// [metadata][google.longrunning.Operation.metadata] field type
+      /// `metadata.type_url` describes the type of the metadata. Operations returned
+      /// include those that have completed/failed/canceled within the last 7 days,
+      /// and pending operations. Operations returned are ordered by
+      /// `operation.metadata.value.start_time` in descending order starting
+      /// from the most recently started operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse ListInstanceConfigOperations(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListInstanceConfigOperations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the user-managed instance config [long-running
+      /// operations][google.longrunning.Operation] in the given project. An instance
+      /// config operation has a name of the form
+      /// `projects/&lt;project>/instanceConfigs/&lt;instance_config>/operations/&lt;operation>`.
+      /// The long-running operation
+      /// [metadata][google.longrunning.Operation.metadata] field type
+      /// `metadata.type_url` describes the type of the metadata. Operations returned
+      /// include those that have completed/failed/canceled within the last 7 days,
+      /// and pending operations. Operations returned are ordered by
+      /// `operation.metadata.value.start_time` in descending order starting
+      /// from the most recently started operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse ListInstanceConfigOperations(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListInstanceConfigOperations, null, options, request);
+      }
+      /// <summary>
+      /// Lists the user-managed instance config [long-running
+      /// operations][google.longrunning.Operation] in the given project. An instance
+      /// config operation has a name of the form
+      /// `projects/&lt;project>/instanceConfigs/&lt;instance_config>/operations/&lt;operation>`.
+      /// The long-running operation
+      /// [metadata][google.longrunning.Operation.metadata] field type
+      /// `metadata.type_url` describes the type of the metadata. Operations returned
+      /// include those that have completed/failed/canceled within the last 7 days,
+      /// and pending operations. Operations returned are ordered by
+      /// `operation.metadata.value.start_time` in descending order starting
+      /// from the most recently started operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse> ListInstanceConfigOperationsAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListInstanceConfigOperationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the user-managed instance config [long-running
+      /// operations][google.longrunning.Operation] in the given project. An instance
+      /// config operation has a name of the form
+      /// `projects/&lt;project>/instanceConfigs/&lt;instance_config>/operations/&lt;operation>`.
+      /// The long-running operation
+      /// [metadata][google.longrunning.Operation.metadata] field type
+      /// `metadata.type_url` describes the type of the metadata. Operations returned
+      /// include those that have completed/failed/canceled within the last 7 days,
+      /// and pending operations. Operations returned are ordered by
+      /// `operation.metadata.value.start_time` in descending order starting
+      /// from the most recently started operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse> ListInstanceConfigOperationsAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListInstanceConfigOperations, null, options, request);
       }
       /// <summary>
       /// Lists all instances in the given project.
@@ -1330,6 +2107,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListInstanceConfigs, serviceImpl.ListInstanceConfigs)
           .AddMethod(__Method_GetInstanceConfig, serviceImpl.GetInstanceConfig)
+          .AddMethod(__Method_CreateInstanceConfig, serviceImpl.CreateInstanceConfig)
+          .AddMethod(__Method_UpdateInstanceConfig, serviceImpl.UpdateInstanceConfig)
+          .AddMethod(__Method_DeleteInstanceConfig, serviceImpl.DeleteInstanceConfig)
+          .AddMethod(__Method_ListInstanceConfigOperations, serviceImpl.ListInstanceConfigOperations)
           .AddMethod(__Method_ListInstances, serviceImpl.ListInstances)
           .AddMethod(__Method_GetInstance, serviceImpl.GetInstance)
           .AddMethod(__Method_CreateInstance, serviceImpl.CreateInstance)
@@ -1349,6 +2130,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     {
       serviceBinder.AddMethod(__Method_ListInstanceConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse>(serviceImpl.ListInstanceConfigs));
       serviceBinder.AddMethod(__Method_GetInstanceConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig>(serviceImpl.GetInstanceConfig));
+      serviceBinder.AddMethod(__Method_CreateInstanceConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateInstanceConfig));
+      serviceBinder.AddMethod(__Method_UpdateInstanceConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateInstanceConfig));
+      serviceBinder.AddMethod(__Method_DeleteInstanceConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteInstanceConfig));
+      serviceBinder.AddMethod(__Method_ListInstanceConfigOperations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse>(serviceImpl.ListInstanceConfigOperations));
       serviceBinder.AddMethod(__Method_ListInstances, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse>(serviceImpl.ListInstances));
       serviceBinder.AddMethod(__Method_GetInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.Instance>(serviceImpl.GetInstance));
       serviceBinder.AddMethod(__Method_CreateInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateInstance));
