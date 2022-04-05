@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.4.0, released 2022-04-05
+
+### New features
+
+- AuditConfig for IAM v1 ([commit bc4cfd8](https://github.com/googleapis/google-cloud-dotnet/commit/bc4cfd8e05ffc261decc84a05027c99aba1f6acb))
+
 ## Version 2.3.0, released 2021-11-08
 
 - [Commit 753d624](https://github.com/googleapis/google-cloud-dotnet/commit/753d624): chore: Remove old "pseudo-handwritten" resource names file
