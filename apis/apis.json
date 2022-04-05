@@ -1954,7 +1954,7 @@
         "Grpc.Core": "2.41.0"
       },
       "shortName": "logging",
-      "serviceConfigFile": "logging.yaml"
+      "serviceConfigFile": "logging_v2.yaml"
     },
     {
       "id": "Google.Cloud.ManagedIdentities.V1",
