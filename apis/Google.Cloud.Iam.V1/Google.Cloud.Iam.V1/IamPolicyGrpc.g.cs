@@ -3,7 +3,7 @@
 //     source: google/iam/v1/iam_policy.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2019 Google LLC.
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,7 +17,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-//
 #pragma warning disable 0414, 1591
 #region Designer generated code
 
@@ -25,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Iam.V1 {
   /// <summary>
-  /// ## API Overview
+  /// API Overview
   ///
   /// Manages Identity and Access Management (IAM) policies.
   ///
@@ -136,6 +135,8 @@ namespace Google.Cloud.Iam.V1 {
       /// <summary>
       /// Sets the access control policy on the specified resource. Replaces any
       /// existing policy.
+      ///
+      /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -163,7 +164,7 @@ namespace Google.Cloud.Iam.V1 {
       /// <summary>
       /// Returns permissions that a caller has on the specified resource.
       /// If the resource does not exist, this will return an empty set of
-      /// permissions, not a NOT_FOUND error.
+      /// permissions, not a `NOT_FOUND` error.
       ///
       /// Note: This operation is designed to be used for building permission-aware
       /// UIs and command-line tools, not for authorization checking. This operation
@@ -210,6 +211,8 @@ namespace Google.Cloud.Iam.V1 {
       /// <summary>
       /// Sets the access control policy on the specified resource. Replaces any
       /// existing policy.
+      ///
+      /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -224,6 +227,8 @@ namespace Google.Cloud.Iam.V1 {
       /// <summary>
       /// Sets the access control policy on the specified resource. Replaces any
       /// existing policy.
+      ///
+      /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -236,6 +241,8 @@ namespace Google.Cloud.Iam.V1 {
       /// <summary>
       /// Sets the access control policy on the specified resource. Replaces any
       /// existing policy.
+      ///
+      /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -250,6 +257,8 @@ namespace Google.Cloud.Iam.V1 {
       /// <summary>
       /// Sets the access control policy on the specified resource. Replaces any
       /// existing policy.
+      ///
+      /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -318,7 +327,7 @@ namespace Google.Cloud.Iam.V1 {
       /// <summary>
       /// Returns permissions that a caller has on the specified resource.
       /// If the resource does not exist, this will return an empty set of
-      /// permissions, not a NOT_FOUND error.
+      /// permissions, not a `NOT_FOUND` error.
       ///
       /// Note: This operation is designed to be used for building permission-aware
       /// UIs and command-line tools, not for authorization checking. This operation
@@ -337,7 +346,7 @@ namespace Google.Cloud.Iam.V1 {
       /// <summary>
       /// Returns permissions that a caller has on the specified resource.
       /// If the resource does not exist, this will return an empty set of
-      /// permissions, not a NOT_FOUND error.
+      /// permissions, not a `NOT_FOUND` error.
       ///
       /// Note: This operation is designed to be used for building permission-aware
       /// UIs and command-line tools, not for authorization checking. This operation
@@ -354,7 +363,7 @@ namespace Google.Cloud.Iam.V1 {
       /// <summary>
       /// Returns permissions that a caller has on the specified resource.
       /// If the resource does not exist, this will return an empty set of
-      /// permissions, not a NOT_FOUND error.
+      /// permissions, not a `NOT_FOUND` error.
       ///
       /// Note: This operation is designed to be used for building permission-aware
       /// UIs and command-line tools, not for authorization checking. This operation
@@ -373,7 +382,7 @@ namespace Google.Cloud.Iam.V1 {
       /// <summary>
       /// Returns permissions that a caller has on the specified resource.
       /// If the resource does not exist, this will return an empty set of
-      /// permissions, not a NOT_FOUND error.
+      /// permissions, not a `NOT_FOUND` error.
       ///
       /// Note: This operation is designed to be used for building permission-aware
       /// UIs and command-line tools, not for authorization checking. This operation

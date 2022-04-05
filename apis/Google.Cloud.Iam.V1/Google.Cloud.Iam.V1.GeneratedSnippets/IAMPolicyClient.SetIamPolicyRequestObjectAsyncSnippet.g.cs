@@ -19,6 +19,7 @@ namespace Google.Cloud.Iam.V1.Snippets
     // [START api_v1_generated_IAMPolicy_SetIamPolicy_async]
     using Google.Api.Gax;
     using Google.Cloud.Iam.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedIAMPolicyClientSnippets
@@ -37,6 +38,7 @@ namespace Google.Cloud.Iam.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = await iAMPolicyClient.SetIamPolicyAsync(request);

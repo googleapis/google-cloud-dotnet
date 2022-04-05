@@ -24,15 +24,14 @@ namespace Google.Cloud.Iam.V1 {
     static OptionsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chtnb29nbGUvaWFtL3YxL29wdGlvbnMucHJvdG8SDWdvb2dsZS5pYW0udjEa",
-            "HGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8iNAoQR2V0UG9saWN5T3B0",
-            "aW9ucxIgChhyZXF1ZXN0ZWRfcG9saWN5X3ZlcnNpb24YASABKAVChAEKEWNv",
-            "bS5nb29nbGUuaWFtLnYxQgxPcHRpb25zUHJvdG9QAVowZ29vZ2xlLmdvbGFu",
-            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9pYW0vdjE7aWFt+AEBqgITR29v",
-            "Z2xlLkNsb3VkLklhbS5WMcoCE0dvb2dsZVxDbG91ZFxJYW1cVjFiBnByb3Rv",
-            "Mw=="));
+            "Chtnb29nbGUvaWFtL3YxL29wdGlvbnMucHJvdG8SDWdvb2dsZS5pYW0udjEi",
+            "NAoQR2V0UG9saWN5T3B0aW9ucxIgChhyZXF1ZXN0ZWRfcG9saWN5X3ZlcnNp",
+            "b24YASABKAVChAEKEWNvbS5nb29nbGUuaWFtLnYxQgxPcHRpb25zUHJvdG9Q",
+            "AVowZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9pYW0v",
+            "djE7aWFt+AEBqgITR29vZ2xlLkNsb3VkLklhbS5WMcoCE0dvb2dsZVxDbG91",
+            "ZFxJYW1cVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.GetPolicyOptions), global::Google.Cloud.Iam.V1.GetPolicyOptions.Parser, new[]{ "RequestedPolicyVersion" }, null, null, null, null)
           }));
@@ -92,14 +91,24 @@ namespace Google.Cloud.Iam.V1 {
     public const int RequestedPolicyVersionFieldNumber = 1;
     private int requestedPolicyVersion_;
     /// <summary>
-    /// Optional. The policy format version to be returned.
+    /// Optional. The maximum policy version that will be used to format the
+    /// policy.
     ///
     /// Valid values are 0, 1, and 3. Requests specifying an invalid value will be
     /// rejected.
     ///
-    /// Requests for policies with any conditional bindings must specify version 3.
-    /// Policies without any conditional bindings may specify any valid value or
-    /// leave the field unset.
+    /// Requests for policies with any conditional role bindings must specify
+    /// version 3. Policies with no conditional role bindings may specify any valid
+    /// value or leave the field unset.
+    ///
+    /// The policy in the response might use the policy version that you specified,
+    /// or it might use a lower policy version. For example, if you specify version
+    /// 3, but the policy has no conditional role bindings, the response uses
+    /// version 1.
+    ///
+    /// To learn which resources support conditions in their IAM policies, see the
+    /// [IAM
+    /// documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
