@@ -318,6 +318,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 {
                     new ExecutionConfig(),
                 },
+                AnthosCluster = new AnthosCluster(),
             };
             mockGrpcClient.Setup(x => x.GetTarget(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
@@ -364,6 +365,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 {
                     new ExecutionConfig(),
                 },
+                AnthosCluster = new AnthosCluster(),
             };
             mockGrpcClient.Setup(x => x.GetTargetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Target>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
@@ -412,6 +414,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 {
                     new ExecutionConfig(),
                 },
+                AnthosCluster = new AnthosCluster(),
             };
             mockGrpcClient.Setup(x => x.GetTarget(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
@@ -458,6 +461,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 {
                     new ExecutionConfig(),
                 },
+                AnthosCluster = new AnthosCluster(),
             };
             mockGrpcClient.Setup(x => x.GetTargetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Target>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
@@ -506,6 +510,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 {
                     new ExecutionConfig(),
                 },
+                AnthosCluster = new AnthosCluster(),
             };
             mockGrpcClient.Setup(x => x.GetTarget(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
@@ -552,6 +557,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 {
                     new ExecutionConfig(),
                 },
+                AnthosCluster = new AnthosCluster(),
             };
             mockGrpcClient.Setup(x => x.GetTargetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Target>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
@@ -1101,6 +1107,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 Etag = "etage8ad7218",
                 DeployingBuildAsBuildName = BuildName.FromProjectLocationBuild("[PROJECT]", "[LOCATION]", "[BUILD]"),
                 TargetId = "target_id16dfe255",
+                DeployFailureCause = Rollout.Types.FailureCause.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetRollout(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
@@ -1148,6 +1155,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 Etag = "etage8ad7218",
                 DeployingBuildAsBuildName = BuildName.FromProjectLocationBuild("[PROJECT]", "[LOCATION]", "[BUILD]"),
                 TargetId = "target_id16dfe255",
+                DeployFailureCause = Rollout.Types.FailureCause.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetRolloutAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Rollout>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
@@ -1197,6 +1205,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 Etag = "etage8ad7218",
                 DeployingBuildAsBuildName = BuildName.FromProjectLocationBuild("[PROJECT]", "[LOCATION]", "[BUILD]"),
                 TargetId = "target_id16dfe255",
+                DeployFailureCause = Rollout.Types.FailureCause.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetRollout(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
@@ -1244,6 +1253,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 Etag = "etage8ad7218",
                 DeployingBuildAsBuildName = BuildName.FromProjectLocationBuild("[PROJECT]", "[LOCATION]", "[BUILD]"),
                 TargetId = "target_id16dfe255",
+                DeployFailureCause = Rollout.Types.FailureCause.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetRolloutAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Rollout>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
@@ -1293,6 +1303,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 Etag = "etage8ad7218",
                 DeployingBuildAsBuildName = BuildName.FromProjectLocationBuild("[PROJECT]", "[LOCATION]", "[BUILD]"),
                 TargetId = "target_id16dfe255",
+                DeployFailureCause = Rollout.Types.FailureCause.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetRollout(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
@@ -1340,6 +1351,7 @@ namespace Google.Cloud.Deploy.V1.Tests
                 Etag = "etage8ad7218",
                 DeployingBuildAsBuildName = BuildName.FromProjectLocationBuild("[PROJECT]", "[LOCATION]", "[BUILD]"),
                 TargetId = "target_id16dfe255",
+                DeployFailureCause = Rollout.Types.FailureCause.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetRolloutAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Rollout>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudDeployClient client = new CloudDeployClientImpl(mockGrpcClient.Object, null);
