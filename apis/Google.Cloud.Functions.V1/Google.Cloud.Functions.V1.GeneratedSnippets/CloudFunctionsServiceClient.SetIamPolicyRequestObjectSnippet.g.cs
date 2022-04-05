@@ -20,6 +20,7 @@ namespace Google.Cloud.Functions.V1.Snippets
     using Google.Api.Gax;
     using Google.Cloud.Functions.V1;
     using Google.Cloud.Iam.V1;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedCloudFunctionsServiceClientSnippets
     {
@@ -37,6 +38,7 @@ namespace Google.Cloud.Functions.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = cloudFunctionsServiceClient.SetIamPolicy(request);

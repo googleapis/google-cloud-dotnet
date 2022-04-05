@@ -35,6 +35,7 @@ namespace Google.Cloud.Iap.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = identityAwareProxyAdminServiceClient.SetIamPolicy(request);
@@ -53,6 +54,7 @@ namespace Google.Cloud.Iap.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = await identityAwareProxyAdminServiceClient.SetIamPolicyAsync(request);

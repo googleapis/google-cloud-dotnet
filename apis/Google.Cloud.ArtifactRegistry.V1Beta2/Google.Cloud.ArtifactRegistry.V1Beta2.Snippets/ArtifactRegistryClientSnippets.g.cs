@@ -2379,6 +2379,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = artifactRegistryClient.SetIamPolicy(request);
@@ -2397,6 +2398,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = await artifactRegistryClient.SetIamPolicyAsync(request);

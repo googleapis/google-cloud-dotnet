@@ -3716,6 +3716,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = securityCenterClient.SetIamPolicy(request);
@@ -3734,6 +3735,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = await securityCenterClient.SetIamPolicyAsync(request);

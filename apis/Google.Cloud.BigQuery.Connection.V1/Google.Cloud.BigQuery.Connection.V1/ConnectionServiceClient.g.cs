@@ -1050,7 +1050,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// </param>
         /// <param name="options">
         /// OPTIONAL: A `GetPolicyOptions` object for specifying options to
-        /// `GetIamPolicy`. This field is only used by Cloud IAM.
+        /// `GetIamPolicy`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1072,7 +1072,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// </param>
         /// <param name="options">
         /// OPTIONAL: A `GetPolicyOptions` object for specifying options to
-        /// `GetIamPolicy`. This field is only used by Cloud IAM.
+        /// `GetIamPolicy`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1094,7 +1094,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// </param>
         /// <param name="options">
         /// OPTIONAL: A `GetPolicyOptions` object for specifying options to
-        /// `GetIamPolicy`. This field is only used by Cloud IAM.
+        /// `GetIamPolicy`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1112,7 +1112,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// </param>
         /// <param name="options">
         /// OPTIONAL: A `GetPolicyOptions` object for specifying options to
-        /// `GetIamPolicy`. This field is only used by Cloud IAM.
+        /// `GetIamPolicy`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1134,7 +1134,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// </param>
         /// <param name="options">
         /// OPTIONAL: A `GetPolicyOptions` object for specifying options to
-        /// `GetIamPolicy`. This field is only used by Cloud IAM.
+        /// `GetIamPolicy`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1156,7 +1156,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// </param>
         /// <param name="options">
         /// OPTIONAL: A `GetPolicyOptions` object for specifying options to
-        /// `GetIamPolicy`. This field is only used by Cloud IAM.
+        /// `GetIamPolicy`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

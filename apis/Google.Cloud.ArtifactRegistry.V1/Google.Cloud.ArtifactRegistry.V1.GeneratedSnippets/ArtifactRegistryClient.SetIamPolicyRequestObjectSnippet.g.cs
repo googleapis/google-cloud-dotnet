@@ -20,6 +20,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
     using Google.Api.Gax;
     using Google.Cloud.ArtifactRegistry.V1;
     using Google.Cloud.Iam.V1;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedArtifactRegistryClientSnippets
     {
@@ -37,6 +38,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = artifactRegistryClient.SetIamPolicy(request);

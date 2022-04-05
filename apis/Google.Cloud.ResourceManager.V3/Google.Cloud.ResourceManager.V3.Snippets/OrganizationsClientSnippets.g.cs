@@ -19,6 +19,7 @@ namespace Google.Cloud.ResourceManager.V3.Snippets
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Iam.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -394,6 +395,7 @@ namespace Google.Cloud.ResourceManager.V3.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = organizationsClient.SetIamPolicy(request);
@@ -412,6 +414,7 @@ namespace Google.Cloud.ResourceManager.V3.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = await organizationsClient.SetIamPolicyAsync(request);

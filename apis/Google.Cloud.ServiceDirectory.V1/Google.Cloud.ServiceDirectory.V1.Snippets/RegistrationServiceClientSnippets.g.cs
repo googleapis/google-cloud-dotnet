@@ -1924,6 +1924,7 @@ namespace Google.Cloud.ServiceDirectory.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = registrationServiceClient.SetIamPolicy(request);
@@ -1942,6 +1943,7 @@ namespace Google.Cloud.ServiceDirectory.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = await registrationServiceClient.SetIamPolicyAsync(request);

@@ -20,6 +20,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Snippets
     using Google.Api.Gax;
     using Google.Cloud.Iam.V1;
     using Google.Cloud.ServiceDirectory.V1Beta1;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedRegistrationServiceClientSnippets
     {
@@ -37,6 +38,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = registrationServiceClient.SetIamPolicy(request);

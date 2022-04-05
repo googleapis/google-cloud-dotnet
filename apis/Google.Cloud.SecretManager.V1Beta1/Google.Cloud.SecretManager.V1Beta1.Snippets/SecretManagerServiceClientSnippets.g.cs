@@ -1455,6 +1455,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = secretManagerServiceClient.SetIamPolicy(request);
@@ -1473,6 +1474,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = await secretManagerServiceClient.SetIamPolicyAsync(request);

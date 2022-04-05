@@ -2647,6 +2647,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = bigtableTableAdminClient.SetIamPolicy(request);
@@ -2665,6 +2666,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = await bigtableTableAdminClient.SetIamPolicyAsync(request);
