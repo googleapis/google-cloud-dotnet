@@ -940,6 +940,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = cloudBillingClient.SetIamPolicy(request);
@@ -958,6 +959,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = await cloudBillingClient.SetIamPolicyAsync(request);

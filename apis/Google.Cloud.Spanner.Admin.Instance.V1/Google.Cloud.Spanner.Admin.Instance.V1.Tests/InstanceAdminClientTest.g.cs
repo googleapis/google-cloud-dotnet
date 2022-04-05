@@ -526,6 +526,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
+                UpdateMask = new wkt::FieldMask(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -534,6 +535,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 Bindings =
                 {
                     new gciv::Binding(),
+                },
+                AuditConfigs =
+                {
+                    new gciv::AuditConfig(),
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -552,6 +557,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
+                UpdateMask = new wkt::FieldMask(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -560,6 +566,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 Bindings =
                 {
                     new gciv::Binding(),
+                },
+                AuditConfigs =
+                {
+                    new gciv::AuditConfig(),
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -589,6 +599,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 {
                     new gciv::Binding(),
                 },
+                AuditConfigs =
+                {
+                    new gciv::AuditConfig(),
+                },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
@@ -614,6 +628,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 Bindings =
                 {
                     new gciv::Binding(),
+                },
+                AuditConfigs =
+                {
+                    new gciv::AuditConfig(),
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -643,6 +661,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 {
                     new gciv::Binding(),
                 },
+                AuditConfigs =
+                {
+                    new gciv::AuditConfig(),
+                },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
@@ -668,6 +690,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 Bindings =
                 {
                     new gciv::Binding(),
+                },
+                AuditConfigs =
+                {
+                    new gciv::AuditConfig(),
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -697,6 +723,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 {
                     new gciv::Binding(),
                 },
+                AuditConfigs =
+                {
+                    new gciv::AuditConfig(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
@@ -722,6 +752,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 Bindings =
                 {
                     new gciv::Binding(),
+                },
+                AuditConfigs =
+                {
+                    new gciv::AuditConfig(),
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -750,6 +784,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 {
                     new gciv::Binding(),
                 },
+                AuditConfigs =
+                {
+                    new gciv::AuditConfig(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
@@ -774,6 +812,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 Bindings =
                 {
                     new gciv::Binding(),
+                },
+                AuditConfigs =
+                {
+                    new gciv::AuditConfig(),
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -802,6 +844,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 {
                     new gciv::Binding(),
                 },
+                AuditConfigs =
+                {
+                    new gciv::AuditConfig(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
@@ -826,6 +872,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 Bindings =
                 {
                     new gciv::Binding(),
+                },
+                AuditConfigs =
+                {
+                    new gciv::AuditConfig(),
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));

@@ -20,6 +20,7 @@ namespace Google.Cloud.Iot.V1.Snippets
     using Google.Api.Gax;
     using Google.Cloud.Iam.V1;
     using Google.Cloud.Iot.V1;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedDeviceManagerClientSnippets
     {
@@ -37,6 +38,7 @@ namespace Google.Cloud.Iot.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = deviceManagerClient.SetIamPolicy(request);

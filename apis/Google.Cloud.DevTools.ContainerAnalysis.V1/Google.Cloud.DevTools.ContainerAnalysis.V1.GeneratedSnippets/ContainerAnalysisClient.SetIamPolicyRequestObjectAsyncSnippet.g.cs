@@ -20,6 +20,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets
     using Google.Api.Gax;
     using Google.Cloud.DevTools.ContainerAnalysis.V1;
     using Google.Cloud.Iam.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedContainerAnalysisClientSnippets
@@ -38,6 +39,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = await containerAnalysisClient.SetIamPolicyAsync(request);

@@ -1481,6 +1481,7 @@ namespace Google.Cloud.ResourceManager.V3.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = projectsClient.SetIamPolicy(request);
@@ -1499,6 +1500,7 @@ namespace Google.Cloud.ResourceManager.V3.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = await projectsClient.SetIamPolicyAsync(request);

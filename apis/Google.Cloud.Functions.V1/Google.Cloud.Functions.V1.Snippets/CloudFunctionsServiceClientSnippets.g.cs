@@ -875,6 +875,7 @@ namespace Google.Cloud.Functions.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = cloudFunctionsServiceClient.SetIamPolicy(request);
@@ -893,6 +894,7 @@ namespace Google.Cloud.Functions.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = await cloudFunctionsServiceClient.SetIamPolicyAsync(request);

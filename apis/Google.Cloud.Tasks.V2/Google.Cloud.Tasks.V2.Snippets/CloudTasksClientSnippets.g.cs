@@ -999,6 +999,7 @@ namespace Google.Cloud.Tasks.V2.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = cloudTasksClient.SetIamPolicy(request);
@@ -1017,6 +1018,7 @@ namespace Google.Cloud.Tasks.V2.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = await cloudTasksClient.SetIamPolicyAsync(request);

@@ -1537,6 +1537,7 @@ namespace Google.Cloud.Iot.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = deviceManagerClient.SetIamPolicy(request);
@@ -1555,6 +1556,7 @@ namespace Google.Cloud.Iot.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = await deviceManagerClient.SetIamPolicyAsync(request);

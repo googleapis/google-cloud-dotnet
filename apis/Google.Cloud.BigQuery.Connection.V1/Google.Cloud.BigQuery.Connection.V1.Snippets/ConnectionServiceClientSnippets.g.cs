@@ -780,6 +780,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = connectionServiceClient.SetIamPolicy(request);
@@ -798,6 +799,7 @@ namespace Google.Cloud.BigQuery.Connection.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = await connectionServiceClient.SetIamPolicyAsync(request);

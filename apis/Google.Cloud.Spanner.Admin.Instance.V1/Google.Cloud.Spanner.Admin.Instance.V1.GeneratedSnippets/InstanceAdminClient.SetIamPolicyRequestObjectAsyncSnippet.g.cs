@@ -20,6 +20,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
     using Google.Api.Gax;
     using Google.Cloud.Iam.V1;
     using Google.Cloud.Spanner.Admin.Instance.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedInstanceAdminClientSnippets
@@ -38,6 +39,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = await instanceAdminClient.SetIamPolicyAsync(request);

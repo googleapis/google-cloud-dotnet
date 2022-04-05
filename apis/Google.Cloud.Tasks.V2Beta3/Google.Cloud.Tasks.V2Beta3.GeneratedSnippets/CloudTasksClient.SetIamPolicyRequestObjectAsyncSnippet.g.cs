@@ -19,6 +19,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
     // [START cloudtasks_v2beta3_generated_CloudTasks_SetIamPolicy_async]
     using Google.Api.Gax;
     using Google.Cloud.Iam.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
     using gctv = Google.Cloud.Tasks.V2Beta3;
 
@@ -38,6 +39,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = await cloudTasksClient.SetIamPolicyAsync(request);

@@ -1283,6 +1283,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = policyTagManagerClient.SetIamPolicy(request);
@@ -1301,6 +1302,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = await policyTagManagerClient.SetIamPolicyAsync(request);

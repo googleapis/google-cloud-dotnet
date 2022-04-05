@@ -955,6 +955,7 @@ namespace Google.Cloud.Run.V2.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = servicesClient.SetIamPolicy(request);
@@ -973,6 +974,7 @@ namespace Google.Cloud.Run.V2.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = await servicesClient.SetIamPolicyAsync(request);

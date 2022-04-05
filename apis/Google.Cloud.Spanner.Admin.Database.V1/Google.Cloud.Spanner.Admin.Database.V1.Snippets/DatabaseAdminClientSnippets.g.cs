@@ -963,6 +963,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = databaseAdminClient.SetIamPolicy(request);
@@ -981,6 +982,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             {
                 ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = await databaseAdminClient.SetIamPolicyAsync(request);
