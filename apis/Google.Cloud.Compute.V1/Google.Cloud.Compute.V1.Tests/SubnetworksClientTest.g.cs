@@ -66,6 +66,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
                 GatewayAddress = "gateway_address39dbeaef",
                 Ipv6AccessType = "ipv6_access_type7faa3985",
+                InternalIpv6Prefix = "internal_ipv6_prefix34f88d6b",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -113,6 +114,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
                 GatewayAddress = "gateway_address39dbeaef",
                 Ipv6AccessType = "ipv6_access_type7faa3985",
+                InternalIpv6Prefix = "internal_ipv6_prefix34f88d6b",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subnetwork>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -162,6 +164,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
                 GatewayAddress = "gateway_address39dbeaef",
                 Ipv6AccessType = "ipv6_access_type7faa3985",
+                InternalIpv6Prefix = "internal_ipv6_prefix34f88d6b",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -209,6 +212,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
                 GatewayAddress = "gateway_address39dbeaef",
                 Ipv6AccessType = "ipv6_access_type7faa3985",
+                InternalIpv6Prefix = "internal_ipv6_prefix34f88d6b",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subnetwork>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);

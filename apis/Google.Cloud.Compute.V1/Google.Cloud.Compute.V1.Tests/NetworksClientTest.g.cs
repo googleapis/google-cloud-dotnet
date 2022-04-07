@@ -43,7 +43,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 Mtu = 1280318054,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
+                NetworkFirewallPolicyEnforcementOrder = "network_firewall_policy_enforcement_order54f14f22",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                SelfLinkWithId = "self_link_with_id6d1e3896",
                 IPv4Range = "I_pv4_range613b129f",
                 Peerings =
                 {
@@ -51,11 +53,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 GatewayIPv4 = "gateway_i_pv47f9ce361",
                 AutoCreateSubnetworks = false,
+                InternalIpv6Range = "internal_ipv6_range9d13ac25",
                 Subnetworks =
                 {
                     "subnetworks81f34af0",
                 },
                 Description = "description2cf9da67",
+                EnableUlaInternalIpv6 = false,
                 SelfLink = "self_link7e87f12d",
                 RoutingConfig = new NetworkRoutingConfig(),
             };
@@ -82,7 +86,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 Mtu = 1280318054,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
+                NetworkFirewallPolicyEnforcementOrder = "network_firewall_policy_enforcement_order54f14f22",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                SelfLinkWithId = "self_link_with_id6d1e3896",
                 IPv4Range = "I_pv4_range613b129f",
                 Peerings =
                 {
@@ -90,11 +96,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 GatewayIPv4 = "gateway_i_pv47f9ce361",
                 AutoCreateSubnetworks = false,
+                InternalIpv6Range = "internal_ipv6_range9d13ac25",
                 Subnetworks =
                 {
                     "subnetworks81f34af0",
                 },
                 Description = "description2cf9da67",
+                EnableUlaInternalIpv6 = false,
                 SelfLink = "self_link7e87f12d",
                 RoutingConfig = new NetworkRoutingConfig(),
             };
@@ -123,7 +131,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 Mtu = 1280318054,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
+                NetworkFirewallPolicyEnforcementOrder = "network_firewall_policy_enforcement_order54f14f22",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                SelfLinkWithId = "self_link_with_id6d1e3896",
                 IPv4Range = "I_pv4_range613b129f",
                 Peerings =
                 {
@@ -131,11 +141,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 GatewayIPv4 = "gateway_i_pv47f9ce361",
                 AutoCreateSubnetworks = false,
+                InternalIpv6Range = "internal_ipv6_range9d13ac25",
                 Subnetworks =
                 {
                     "subnetworks81f34af0",
                 },
                 Description = "description2cf9da67",
+                EnableUlaInternalIpv6 = false,
                 SelfLink = "self_link7e87f12d",
                 RoutingConfig = new NetworkRoutingConfig(),
             };
@@ -162,7 +174,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 Mtu = 1280318054,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
+                NetworkFirewallPolicyEnforcementOrder = "network_firewall_policy_enforcement_order54f14f22",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                SelfLinkWithId = "self_link_with_id6d1e3896",
                 IPv4Range = "I_pv4_range613b129f",
                 Peerings =
                 {
@@ -170,11 +184,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 GatewayIPv4 = "gateway_i_pv47f9ce361",
                 AutoCreateSubnetworks = false,
+                InternalIpv6Range = "internal_ipv6_range9d13ac25",
                 Subnetworks =
                 {
                     "subnetworks81f34af0",
                 },
                 Description = "description2cf9da67",
+                EnableUlaInternalIpv6 = false,
                 SelfLink = "self_link7e87f12d",
                 RoutingConfig = new NetworkRoutingConfig(),
             };

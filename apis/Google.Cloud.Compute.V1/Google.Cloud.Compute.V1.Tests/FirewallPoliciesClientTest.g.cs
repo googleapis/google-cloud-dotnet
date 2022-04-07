@@ -49,6 +49,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new FirewallPolicyRule(),
                 },
+                Region = "regionedb20d96",
                 Fingerprint = "fingerprint009e6052",
                 RuleTupleCount = -1393850828,
                 Description = "description2cf9da67",
@@ -88,6 +89,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new FirewallPolicyRule(),
                 },
+                Region = "regionedb20d96",
                 Fingerprint = "fingerprint009e6052",
                 RuleTupleCount = -1393850828,
                 Description = "description2cf9da67",
@@ -129,6 +131,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new FirewallPolicyRule(),
                 },
+                Region = "regionedb20d96",
                 Fingerprint = "fingerprint009e6052",
                 RuleTupleCount = -1393850828,
                 Description = "description2cf9da67",
@@ -168,6 +171,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new FirewallPolicyRule(),
                 },
+                Region = "regionedb20d96",
                 Fingerprint = "fingerprint009e6052",
                 RuleTupleCount = -1393850828,
                 Description = "description2cf9da67",
@@ -408,6 +412,7 @@ namespace Google.Cloud.Compute.V1.Tests
             FirewallPolicyRule expectedResponse = new FirewallPolicyRule
             {
                 Kind = "kindf7aa39d9",
+                RuleName = "rule_namea38fc8f6",
                 Match = new FirewallPolicyRuleMatcher(),
                 Direction = "direction7bc372ef",
                 Action = "action09558c41",
@@ -419,6 +424,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 TargetServiceAccounts =
                 {
                     "target_service_accounts61bf1663",
+                },
+                TargetSecureTags =
+                {
+                    new FirewallPolicyRuleSecureTag(),
                 },
                 TargetResources =
                 {
@@ -445,6 +454,7 @@ namespace Google.Cloud.Compute.V1.Tests
             FirewallPolicyRule expectedResponse = new FirewallPolicyRule
             {
                 Kind = "kindf7aa39d9",
+                RuleName = "rule_namea38fc8f6",
                 Match = new FirewallPolicyRuleMatcher(),
                 Direction = "direction7bc372ef",
                 Action = "action09558c41",
@@ -456,6 +466,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 TargetServiceAccounts =
                 {
                     "target_service_accounts61bf1663",
+                },
+                TargetSecureTags =
+                {
+                    new FirewallPolicyRuleSecureTag(),
                 },
                 TargetResources =
                 {
@@ -483,6 +497,7 @@ namespace Google.Cloud.Compute.V1.Tests
             FirewallPolicyRule expectedResponse = new FirewallPolicyRule
             {
                 Kind = "kindf7aa39d9",
+                RuleName = "rule_namea38fc8f6",
                 Match = new FirewallPolicyRuleMatcher(),
                 Direction = "direction7bc372ef",
                 Action = "action09558c41",
@@ -494,6 +509,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 TargetServiceAccounts =
                 {
                     "target_service_accounts61bf1663",
+                },
+                TargetSecureTags =
+                {
+                    new FirewallPolicyRuleSecureTag(),
                 },
                 TargetResources =
                 {
@@ -519,6 +538,7 @@ namespace Google.Cloud.Compute.V1.Tests
             FirewallPolicyRule expectedResponse = new FirewallPolicyRule
             {
                 Kind = "kindf7aa39d9",
+                RuleName = "rule_namea38fc8f6",
                 Match = new FirewallPolicyRuleMatcher(),
                 Direction = "direction7bc372ef",
                 Action = "action09558c41",
@@ -530,6 +550,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 TargetServiceAccounts =
                 {
                     "target_service_accounts61bf1663",
+                },
+                TargetSecureTags =
+                {
+                    new FirewallPolicyRuleSecureTag(),
                 },
                 TargetResources =
                 {

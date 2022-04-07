@@ -1808,6 +1808,45 @@
         }
       }
     },
+    "NetworkEdgeSecurityServices": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "NetworkEdgeSecurityServicesClient",
+          "rpcs": {
+            "AggregatedList": {
+              "methods": [
+                "AggregatedList",
+                "AggregatedListAsync"
+              ]
+            },
+            "Delete": {
+              "methods": [
+                "Delete",
+                "DeleteAsync"
+              ]
+            },
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "Insert": {
+              "methods": [
+                "Insert",
+                "InsertAsync"
+              ]
+            },
+            "Patch": {
+              "methods": [
+                "Patch",
+                "PatchAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "NetworkEndpointGroups": {
       "clients": {
         "grpc": {
@@ -1859,6 +1898,111 @@
               "methods": [
                 "ListNetworkEndpoints",
                 "ListNetworkEndpointsAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "NetworkFirewallPolicies": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "NetworkFirewallPoliciesClient",
+          "rpcs": {
+            "AddAssociation": {
+              "methods": [
+                "AddAssociation",
+                "AddAssociationAsync"
+              ]
+            },
+            "AddRule": {
+              "methods": [
+                "AddRule",
+                "AddRuleAsync"
+              ]
+            },
+            "CloneRules": {
+              "methods": [
+                "CloneRules",
+                "CloneRulesAsync"
+              ]
+            },
+            "Delete": {
+              "methods": [
+                "Delete",
+                "DeleteAsync"
+              ]
+            },
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "GetAssociation": {
+              "methods": [
+                "GetAssociation",
+                "GetAssociationAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "GetRule": {
+              "methods": [
+                "GetRule",
+                "GetRuleAsync"
+              ]
+            },
+            "Insert": {
+              "methods": [
+                "Insert",
+                "InsertAsync"
+              ]
+            },
+            "List": {
+              "methods": [
+                "List",
+                "ListAsync"
+              ]
+            },
+            "Patch": {
+              "methods": [
+                "Patch",
+                "PatchAsync"
+              ]
+            },
+            "PatchRule": {
+              "methods": [
+                "PatchRule",
+                "PatchRuleAsync"
+              ]
+            },
+            "RemoveAssociation": {
+              "methods": [
+                "RemoveAssociation",
+                "RemoveAssociationAsync"
+              ]
+            },
+            "RemoveRule": {
+              "methods": [
+                "RemoveRule",
+                "RemoveRuleAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
               ]
             },
             "TestIamPermissions": {
@@ -2864,6 +3008,117 @@
         }
       }
     },
+    "RegionNetworkFirewallPolicies": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "RegionNetworkFirewallPoliciesClient",
+          "rpcs": {
+            "AddAssociation": {
+              "methods": [
+                "AddAssociation",
+                "AddAssociationAsync"
+              ]
+            },
+            "AddRule": {
+              "methods": [
+                "AddRule",
+                "AddRuleAsync"
+              ]
+            },
+            "CloneRules": {
+              "methods": [
+                "CloneRules",
+                "CloneRulesAsync"
+              ]
+            },
+            "Delete": {
+              "methods": [
+                "Delete",
+                "DeleteAsync"
+              ]
+            },
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "GetAssociation": {
+              "methods": [
+                "GetAssociation",
+                "GetAssociationAsync"
+              ]
+            },
+            "GetEffectiveFirewalls": {
+              "methods": [
+                "GetEffectiveFirewalls",
+                "GetEffectiveFirewallsAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "GetRule": {
+              "methods": [
+                "GetRule",
+                "GetRuleAsync"
+              ]
+            },
+            "Insert": {
+              "methods": [
+                "Insert",
+                "InsertAsync"
+              ]
+            },
+            "List": {
+              "methods": [
+                "List",
+                "ListAsync"
+              ]
+            },
+            "Patch": {
+              "methods": [
+                "Patch",
+                "PatchAsync"
+              ]
+            },
+            "PatchRule": {
+              "methods": [
+                "PatchRule",
+                "PatchRuleAsync"
+              ]
+            },
+            "RemoveAssociation": {
+              "methods": [
+                "RemoveAssociation",
+                "RemoveAssociationAsync"
+              ]
+            },
+            "RemoveRule": {
+              "methods": [
+                "RemoveRule",
+                "RemoveRuleAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "RegionNotificationEndpoints": {
       "clients": {
         "grpc": {
@@ -2924,6 +3179,45 @@
               "methods": [
                 "Wait",
                 "WaitAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "RegionSecurityPolicies": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "RegionSecurityPoliciesClient",
+          "rpcs": {
+            "Delete": {
+              "methods": [
+                "Delete",
+                "DeleteAsync"
+              ]
+            },
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "Insert": {
+              "methods": [
+                "Insert",
+                "InsertAsync"
+              ]
+            },
+            "List": {
+              "methods": [
+                "List",
+                "ListAsync"
+              ]
+            },
+            "Patch": {
+              "methods": [
+                "Patch",
+                "PatchAsync"
               ]
             }
           }
@@ -3029,6 +3323,12 @@
               "methods": [
                 "List",
                 "ListAsync"
+              ]
+            },
+            "Patch": {
+              "methods": [
+                "Patch",
+                "PatchAsync"
               ]
             },
             "SetSslCertificates": {
@@ -3356,6 +3656,12 @@
               "methods": [
                 "AddRule",
                 "AddRuleAsync"
+              ]
+            },
+            "AggregatedList": {
+              "methods": [
+                "AggregatedList",
+                "AggregatedListAsync"
               ]
             },
             "Delete": {
