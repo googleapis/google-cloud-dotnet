@@ -59,6 +59,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 FailoverPolicy = new BackendServiceFailoverPolicy(),
                 LocalityLbPolicy = "locality_lb_policyc8722098",
                 Region = "regionedb20d96",
+                LocalityLbPolicies =
+                {
+                    new BackendServiceLocalityLoadBalancingPolicyConfig(),
+                },
                 ConnectionTrackingPolicy = new BackendServiceConnectionTrackingPolicy(),
                 SecurityPolicy = "security_policy76596315",
                 CdnPolicy = new BackendServiceCdnPolicy(),
@@ -125,6 +129,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 FailoverPolicy = new BackendServiceFailoverPolicy(),
                 LocalityLbPolicy = "locality_lb_policyc8722098",
                 Region = "regionedb20d96",
+                LocalityLbPolicies =
+                {
+                    new BackendServiceLocalityLoadBalancingPolicyConfig(),
+                },
                 ConnectionTrackingPolicy = new BackendServiceConnectionTrackingPolicy(),
                 SecurityPolicy = "security_policy76596315",
                 CdnPolicy = new BackendServiceCdnPolicy(),
@@ -193,6 +201,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 FailoverPolicy = new BackendServiceFailoverPolicy(),
                 LocalityLbPolicy = "locality_lb_policyc8722098",
                 Region = "regionedb20d96",
+                LocalityLbPolicies =
+                {
+                    new BackendServiceLocalityLoadBalancingPolicyConfig(),
+                },
                 ConnectionTrackingPolicy = new BackendServiceConnectionTrackingPolicy(),
                 SecurityPolicy = "security_policy76596315",
                 CdnPolicy = new BackendServiceCdnPolicy(),
@@ -259,6 +271,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 FailoverPolicy = new BackendServiceFailoverPolicy(),
                 LocalityLbPolicy = "locality_lb_policyc8722098",
                 Region = "regionedb20d96",
+                LocalityLbPolicies =
+                {
+                    new BackendServiceLocalityLoadBalancingPolicyConfig(),
+                },
                 ConnectionTrackingPolicy = new BackendServiceConnectionTrackingPolicy(),
                 SecurityPolicy = "security_policy76596315",
                 CdnPolicy = new BackendServiceCdnPolicy(),

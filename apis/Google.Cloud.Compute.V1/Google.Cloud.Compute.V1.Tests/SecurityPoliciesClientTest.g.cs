@@ -44,10 +44,12 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 Type = "typee2cc9d59",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                DdosProtectionConfig = new SecurityPolicyDdosProtectionConfig(),
                 Rules =
                 {
                     new SecurityPolicyRule(),
                 },
+                Region = "regionedb20d96",
                 AdaptiveProtectionConfig = new SecurityPolicyAdaptiveProtectionConfig(),
                 Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",
@@ -79,10 +81,12 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 Type = "typee2cc9d59",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                DdosProtectionConfig = new SecurityPolicyDdosProtectionConfig(),
                 Rules =
                 {
                     new SecurityPolicyRule(),
                 },
+                Region = "regionedb20d96",
                 AdaptiveProtectionConfig = new SecurityPolicyAdaptiveProtectionConfig(),
                 Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",
@@ -116,10 +120,12 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 Type = "typee2cc9d59",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                DdosProtectionConfig = new SecurityPolicyDdosProtectionConfig(),
                 Rules =
                 {
                     new SecurityPolicyRule(),
                 },
+                Region = "regionedb20d96",
                 AdaptiveProtectionConfig = new SecurityPolicyAdaptiveProtectionConfig(),
                 Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",
@@ -151,10 +157,12 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 Type = "typee2cc9d59",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                DdosProtectionConfig = new SecurityPolicyDdosProtectionConfig(),
                 Rules =
                 {
                     new SecurityPolicyRule(),
                 },
+                Region = "regionedb20d96",
                 AdaptiveProtectionConfig = new SecurityPolicyAdaptiveProtectionConfig(),
                 Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",

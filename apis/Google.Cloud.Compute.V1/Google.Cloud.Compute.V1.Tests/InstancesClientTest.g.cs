@@ -57,6 +57,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new NetworkInterface(),
                 },
+                Params = new InstanceParams(),
                 Metadata = new Metadata(),
                 Disks = { new AttachedDisk(), },
                 StartRestricted = true,
@@ -137,6 +138,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new NetworkInterface(),
                 },
+                Params = new InstanceParams(),
                 Metadata = new Metadata(),
                 Disks = { new AttachedDisk(), },
                 StartRestricted = true,
@@ -219,6 +221,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new NetworkInterface(),
                 },
+                Params = new InstanceParams(),
                 Metadata = new Metadata(),
                 Disks = { new AttachedDisk(), },
                 StartRestricted = true,
@@ -299,6 +302,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new NetworkInterface(),
                 },
+                Params = new InstanceParams(),
                 Metadata = new Metadata(),
                 Disks = { new AttachedDisk(), },
                 StartRestricted = true,
