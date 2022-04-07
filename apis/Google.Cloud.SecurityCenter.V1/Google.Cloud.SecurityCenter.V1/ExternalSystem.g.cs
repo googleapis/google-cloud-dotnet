@@ -110,7 +110,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     private string name_ = "";
     /// <summary>
     /// External System Name e.g. jira, demisto, etc.
-    ///  e.g.: `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
+    ///  e.g.:
+    ///  `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
     /// `folders/1234/sources/5678/findings/123456/externalSystems/jira`
     /// `projects/1234/sources/5678/findings/123456/externalSystems/jira`
     /// </summary>
