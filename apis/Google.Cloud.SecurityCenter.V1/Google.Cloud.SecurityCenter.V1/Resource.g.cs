@@ -28,11 +28,11 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "dG8SHmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MRofZ29vZ2xlL2Fw",
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxorZ29vZ2xlL2Nsb3VkL3NlY3VyaXR5",
             "Y2VudGVyL3YxL2ZvbGRlci5wcm90byLWAQoIUmVzb3VyY2USDAoEbmFtZRgB",
-            "IAEoCRIPCgdwcm9qZWN0GAIgASgJEhwKFHByb2plY3RfZGlzcGxheV9uYW1l",
-            "GAMgASgJEg4KBnBhcmVudBgEIAEoCRIbChNwYXJlbnRfZGlzcGxheV9uYW1l",
-            "GAUgASgJEgwKBHR5cGUYBiABKAkSPAoHZm9sZGVycxgHIAMoCzImLmdvb2ds",
-            "ZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5Gb2xkZXJCA+BBAxIUCgxkaXNw",
-            "bGF5X25hbWUYCCABKAlC6QEKImNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHlj",
+            "IAEoCRIUCgxkaXNwbGF5X25hbWUYCCABKAkSDAoEdHlwZRgGIAEoCRIPCgdw",
+            "cm9qZWN0GAIgASgJEhwKFHByb2plY3RfZGlzcGxheV9uYW1lGAMgASgJEg4K",
+            "BnBhcmVudBgEIAEoCRIbChNwYXJlbnRfZGlzcGxheV9uYW1lGAUgASgJEjwK",
+            "B2ZvbGRlcnMYByADKAsyJi5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIu",
+            "djEuRm9sZGVyQgPgQQNC6QEKImNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHlj",
             "ZW50ZXIudjFCDVJlc291cmNlUHJvdG9QAVpMZ29vZ2xlLmdvbGFuZy5vcmcv",
             "Z2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9zZWN1cml0eWNlbnRlci92MTtz",
             "ZWN1cml0eWNlbnRlcqoCHkdvb2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5W",
@@ -41,7 +41,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.FolderReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Resource), global::Google.Cloud.SecurityCenter.V1.Resource.Parser, new[]{ "Name", "Project", "ProjectDisplayName", "Parent", "ParentDisplayName", "Type", "Folders", "DisplayName" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Resource), global::Google.Cloud.SecurityCenter.V1.Resource.Parser, new[]{ "Name", "DisplayName", "Type", "Project", "ProjectDisplayName", "Parent", "ParentDisplayName", "Folders" }, null, null, null, null)
           }));
     }
     #endregion
@@ -86,13 +86,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Resource(Resource other) : this() {
       name_ = other.name_;
+      displayName_ = other.displayName_;
+      type_ = other.type_;
       project_ = other.project_;
       projectDisplayName_ = other.projectDisplayName_;
       parent_ = other.parent_;
       parentDisplayName_ = other.parentDisplayName_;
-      type_ = other.type_;
       folders_ = other.folders_.Clone();
-      displayName_ = other.displayName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -118,6 +118,36 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
     }
 
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 8;
+    private string displayName_ = "";
+    /// <summary>
+    /// The human readable name of the resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 6;
+    private string type_ = "";
+    /// <summary>
+    /// The full resource type of the resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Type {
+      get { return type_; }
+      set {
+        type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "project" field.</summary>
     public const int ProjectFieldNumber = 2;
     private string project_ = "";
@@ -137,7 +167,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ProjectDisplayNameFieldNumber = 3;
     private string projectDisplayName_ = "";
     /// <summary>
-    /// The project id that the resource belongs to.
+    /// The project ID that the resource belongs to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -178,21 +208,6 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
     }
 
-    /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 6;
-    private string type_ = "";
-    /// <summary>
-    /// The full resource type of the resource.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Type {
-      get { return type_; }
-      set {
-        type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "folders" field.</summary>
     public const int FoldersFieldNumber = 7;
     private static readonly pb::FieldCodec<global::Google.Cloud.SecurityCenter.V1.Folder> _repeated_folders_codec
@@ -207,21 +222,6 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Folder> Folders {
       get { return folders_; }
-    }
-
-    /// <summary>Field number for the "display_name" field.</summary>
-    public const int DisplayNameFieldNumber = 8;
-    private string displayName_ = "";
-    /// <summary>
-    /// The human readable name of the resource.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string DisplayName {
-      get { return displayName_; }
-      set {
-        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -240,13 +240,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (Type != other.Type) return false;
       if (Project != other.Project) return false;
       if (ProjectDisplayName != other.ProjectDisplayName) return false;
       if (Parent != other.Parent) return false;
       if (ParentDisplayName != other.ParentDisplayName) return false;
-      if (Type != other.Type) return false;
       if(!folders_.Equals(other.folders_)) return false;
-      if (DisplayName != other.DisplayName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -255,13 +255,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (Type.Length != 0) hash ^= Type.GetHashCode();
       if (Project.Length != 0) hash ^= Project.GetHashCode();
       if (ProjectDisplayName.Length != 0) hash ^= ProjectDisplayName.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (ParentDisplayName.Length != 0) hash ^= ParentDisplayName.GetHashCode();
-      if (Type.Length != 0) hash ^= Type.GetHashCode();
       hash ^= folders_.GetHashCode();
-      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -361,6 +361,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (Type.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
+      }
       if (Project.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Project);
       }
@@ -373,13 +379,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (ParentDisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ParentDisplayName);
       }
-      if (Type.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
-      }
       size += folders_.CalculateSize(_repeated_folders_codec);
-      if (DisplayName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -395,6 +395,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.Type.Length != 0) {
+        Type = other.Type;
+      }
       if (other.Project.Length != 0) {
         Project = other.Project;
       }
@@ -407,13 +413,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (other.ParentDisplayName.Length != 0) {
         ParentDisplayName = other.ParentDisplayName;
       }
-      if (other.Type.Length != 0) {
-        Type = other.Type;
-      }
       folders_.Add(other.folders_);
-      if (other.DisplayName.Length != 0) {
-        DisplayName = other.DisplayName;
-      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
