@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Version>2.3.0</Version>
-    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+    <TargetFrameworks>netstandard2.1;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>gRPC services for the Google Long Running Operations API. This library is typically used as a dependency for other API client libraries.</Description>
     <PackageTags>LongRunning;Google;Cloud</PackageTags>
@@ -10,8 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.Gax.Grpc.GrpcCore" Version="[3.7.0, 4.0.0)" />
-    <PackageReference Include="Grpc.Core" Version="[2.41.0, 3.0.0)" PrivateAssets="None" />
+    <PackageReference Include="Google.Api.Gax.Grpc" Version="[4.0.0-alpha01, 5.0.0)" />
     <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.2.12-alpha" PrivateAssets="All" />
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="All" />
     <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
