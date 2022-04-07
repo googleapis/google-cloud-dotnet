@@ -16,7 +16,6 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
@@ -101,9 +100,8 @@ namespace Google.Cloud.Iam.V1
         public IAMPolicySettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public IAMPolicyClientBuilder()
+        public IAMPolicyClientBuilder() : base(IAMPolicyClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = IAMPolicyClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref IAMPolicyClient client);
@@ -140,19 +138,8 @@ namespace Google.Cloud.Iam.V1
             return IAMPolicyClient.Create(callInvoker, Settings);
         }
 
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => IAMPolicyClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => IAMPolicyClient.DefaultScopes;
-
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => IAMPolicyClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>IAMPolicy client wrapper, for convenient use.</summary>
@@ -196,19 +183,9 @@ namespace Google.Cloud.Iam.V1
         /// <remarks>The default IAMPolicy scopes are:<list type="bullet"></list></remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] { });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(IAMPolicy.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="IAMPolicyClient"/> using the default credentials, endpoint and settings.
