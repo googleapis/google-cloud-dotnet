@@ -193,8 +193,9 @@ namespace Google.Cloud.Spanner.Data
                     case TypeCode.Float64:
                         return typeof(double);
                     case TypeCode.Timestamp:
-                    case TypeCode.Date:
                         return typeof(DateTime);
+                    case TypeCode.Date:
+                        return typeof(SpannerDate);
                     case TypeCode.String:
                         return typeof(string);
                     case TypeCode.Bytes:
@@ -314,6 +315,10 @@ namespace Google.Cloud.Spanner.Data
             if (type == typeof(DateTime))
             {
                 return Timestamp;
+            }
+            if (type == typeof(SpannerDate))
+            {
+                return Date;
             }
             if (type == typeof(float) || type == typeof(double) || type == typeof(decimal))
             {

@@ -19,21 +19,22 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     internal class SpannerConversionOptions
     {
-        // Predefined instances; these will change as the class grows, but hopefully
-        // for most cases we can avoid creating new instances.
-        private static readonly SpannerConversionOptions s_useDBNullForNull = new SpannerConversionOptions(true);
-        private static readonly SpannerConversionOptions s_useClrDefaultForNull = new SpannerConversionOptions(false);
-
-        internal static SpannerConversionOptions Default { get; } = s_useDBNullForNull;
+        internal static SpannerConversionOptions Default { get; } = new SpannerConversionOptions(true, false);
 
         /// <summary>
         /// True to return DBNull.Value for null values; false to return a null reference.
         /// </summary>
         internal bool UseDBNull { get; }
 
-        private SpannerConversionOptions(bool useDBNull)
+        /// <summary>
+        /// True to use DateTime for Date type values; false to use SpannerDate.
+        /// </summary>
+        internal bool UseDateTimeForDate { get; }
+
+        private SpannerConversionOptions(bool useDBNull, bool useDateTimeForDate)
         {
             UseDBNull = useDBNull;
+            UseDateTimeForDate = useDateTimeForDate;
         }
 
         /// <summary>
@@ -46,6 +47,6 @@ namespace Google.Cloud.Spanner.Data
         /// Determines the right conversion options to use based on the connection string of the given connection string builder.
         /// </summary>
         internal static SpannerConversionOptions ForConnectionStringBuilder(SpannerConnectionStringBuilder builder) =>
-            builder == null ? Default : builder.UseClrDefaultForNull ? s_useClrDefaultForNull : s_useDBNullForNull;
+            builder == null ? Default : new SpannerConversionOptions(!builder.UseClrDefaultForNull, builder.UseDateTimeForDate);
     }
 }

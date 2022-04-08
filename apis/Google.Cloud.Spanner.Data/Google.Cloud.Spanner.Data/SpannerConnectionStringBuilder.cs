@@ -52,6 +52,7 @@ namespace Google.Cloud.Spanner.Data
         private const string EnableGetSchemaTableKeyword = "EnableGetSchemaTable";
         private const string LogCommitStatsKeyword = "LogCommitStats";
         private const string EmulatorDetectionKeyword = "EmulatorDetection";
+        private const string UseDateTimeForDateKeyword = "UseDateTimeForDate";
 
         private InstanceName _instanceName;
         private DatabaseName _databaseName;
@@ -95,6 +96,24 @@ namespace Google.Cloud.Spanner.Data
         {
             get => GetValueOrDefault(UseClrDefaultForNullKeyword).Equals("True", StringComparison.OrdinalIgnoreCase);
             set => this[UseClrDefaultForNullKeyword] = value.ToString(); // Always "True" or "False", regardless of culture.
+        }
+
+        /// <summary>
+        /// Option to change between the default handling of Date type values (return <see cref="SpannerDate">SpannerDate</see>) or
+        /// the backward compatible handling (return <see cref="DateTime"/>).
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// If this is <c>false</c> (the default), <see cref="SpannerDate"/> will be used to return the value of Date type column.
+        /// </para>
+        /// <para>
+        /// If this is <c>true</c>, <see cref="DateTime"/> will be used to return the value of Date type column.
+        /// </para>
+        /// </remarks>
+        public bool UseDateTimeForDate
+        {
+            get => GetValueOrDefault(UseDateTimeForDateKeyword).Equals("True", StringComparison.OrdinalIgnoreCase);
+            set => this[UseDateTimeForDateKeyword] = value.ToString(); // Always "True" or "False", regardless of culture.
         }
 
         // Note: GetSchemaTable can't be a link as it wouldn't build on netstandard1.0.

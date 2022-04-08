@@ -152,17 +152,17 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public Task BindDate() => TestBindNonNull(
             SpannerDbType.Date,
-            new DateTime(2017, 5, 26));
+            new SpannerDate(2017, 5, 26));
 
         [Fact]
         public Task BindDateArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Date),
-            new DateTime?[] {new DateTime(2017, 5, 26), null, new DateTime(2017, 5, 9)});
+            new SpannerDate?[] {new SpannerDate(2017, 5, 26), null, new SpannerDate(2017, 5, 9)});
 
         [Fact]
         public Task BindDateEmptyArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Date),
-            new DateTime?[] { });
+            new SpannerDate?[] { });
 
         [Fact]
         public Task BindFloat64() => TestBindNonNull(SpannerDbType.Float64, 1.0, r => r.GetDouble(0));

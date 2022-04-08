@@ -80,7 +80,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "StringValue", typeof(string), SpannerDbType.String },
                 { "BytesValue", typeof(byte[]), SpannerDbType.Bytes },
                 { "TimestampValue", typeof(DateTime), SpannerDbType.Timestamp },
-                { "DateValue", typeof(DateTime), SpannerDbType.Date },
+                { "DateValue", typeof(SpannerDate), SpannerDbType.Date },
                 { "JsonValue", typeof(string), SpannerDbType.Json },
                 // Array types.
                 { "BoolArrayValue", typeof(List<bool>), SpannerDbType.ArrayOf(SpannerDbType.Bool) },
@@ -91,7 +91,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "Base64ArrayValue", typeof(List<byte[]>), SpannerDbType.ArrayOf(SpannerDbType.Bytes) },
                 { "BytesArrayValue", typeof(List<byte[]>), SpannerDbType.ArrayOf(SpannerDbType.Bytes) },
                 { "TimestampArrayValue", typeof(List<DateTime>), SpannerDbType.ArrayOf(SpannerDbType.Timestamp) },
-                { "DateArrayValue", typeof(List<DateTime>), SpannerDbType.ArrayOf(SpannerDbType.Date) },
+                { "DateArrayValue", typeof(List<SpannerDate>), SpannerDbType.ArrayOf(SpannerDbType.Date) },
                 { "JsonArrayValue", typeof(List<string>), SpannerDbType.ArrayOf(SpannerDbType.Json) },
             };
 

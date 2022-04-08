@@ -179,18 +179,49 @@ namespace Google.Cloud.Spanner.Data
                         StringValue = XmlConvert.ToString(Convert.ToDateTime(value, InvariantCulture), XmlDateTimeSerializationMode.Utc)
                     };
                 case TypeCode.Date:
-                    if (value is DateTime date && date.Kind == DateTimeKind.Local)
+                    if (options != null && options.UseDateTimeForDate)
                     {
-                        // If the DateTime is local the value should be changed to unspecified
-                        // before serializing it as UTC to prevent accidentally changing to a
-                        // different date.
-                        value = DateTime.SpecifyKind(date, DateTimeKind.Unspecified);
+                        // Backward compatible code to use DateTime for Date.
+                        if (value is DateTime date && date.Kind == DateTimeKind.Local)
+                        {
+                            // If the DateTime is local the value should be changed to unspecified
+                            // before serializing it as UTC to prevent accidentally changing to a
+                            // different date.
+                            value = DateTime.SpecifyKind(date, DateTimeKind.Unspecified);
+                        }
+                        return new Value
+                        {
+                            StringValue = StripTimePart(
+                                XmlConvert.ToString(Convert.ToDateTime(value, InvariantCulture), XmlDateTimeSerializationMode.Utc))
+                        };
                     }
-                    return new Value
+                    else
                     {
-                        StringValue = StripTimePart(
-                            XmlConvert.ToString(Convert.ToDateTime(value, InvariantCulture), XmlDateTimeSerializationMode.Utc))
-                    };
+                        if (value is SpannerDate date)
+                        {
+                            return Value.ForString(date.ToString());
+                        }
+                        if (value is string spannerDate)
+                        {
+                            return Value.ForString(SpannerDate.Parse(spannerDate).ToString());
+                        }
+                        if (value is DateTime clrDateTime)
+                        {
+                            return Value.ForString(new SpannerDate(clrDateTime).ToString());
+                        }
+
+                        string message = "SpannerDate must be a valid date in one of the following types: SpannerDate, string or DateTime.";
+                        // For NET6 and above, we will have DateOnly available.
+#if NET6_0_OR_GREATER
+                        if (value is DateOnly dateOnly)
+                        {
+                           // TODO: Implement DateOnly to SpannerDate conversion and return the string.
+                        }
+
+                        message = "SpannerDate must be a valid date in one of the following types: SpannerDate, string, DateTime or DateOnly.";
+#endif
+                        throw new ArgumentException(message);
+                    }
                 case TypeCode.Array:
                     if (value is IEnumerable enumerable)
                     {
@@ -432,6 +463,20 @@ namespace Google.Cloud.Spanner.Data
                         return null;
                     case Value.KindOneofCase.StringValue:
                         return XmlConvert.ToDateTime(wireValue.StringValue, XmlDateTimeSerializationMode.Utc);
+                    default:
+                        throw new InvalidOperationException(
+                            $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
+                }
+            }
+
+            if (targetClrType == typeof(SpannerDate))
+            {
+                switch (wireValue.KindCase)
+                {
+                    case Value.KindOneofCase.NullValue:
+                        return null;
+                    case Value.KindOneofCase.StringValue:
+                        return SpannerDate.Parse(wireValue.StringValue);
                     default:
                         throw new InvalidOperationException(
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");

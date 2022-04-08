@@ -187,6 +187,19 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public void UseDateTimeForDate()
+        {
+            var connectionStringBuilder = new SpannerConnectionStringBuilder("UseDateTimeForDate=true");
+            Assert.True(connectionStringBuilder.UseDateTimeForDate);
+            connectionStringBuilder.UseDateTimeForDate = false;
+            Assert.False(connectionStringBuilder.UseDateTimeForDate);
+            // DbConnectionStringBuilder lower-cases keywords, annoyingly.
+            Assert.Equal("usedatetimefordate=False", connectionStringBuilder.ToString());
+            connectionStringBuilder = new SpannerConnectionStringBuilder("");
+            Assert.False(connectionStringBuilder.UseDateTimeForDate);
+        }
+
+        [Fact]
         public void EmulatorDetectionProperty()
         {
             var connectionStringBuilder = new SpannerConnectionStringBuilder("EmulatorDetection=EmulatorOnly");

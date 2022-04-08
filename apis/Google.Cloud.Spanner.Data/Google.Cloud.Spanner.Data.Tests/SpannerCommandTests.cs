@@ -827,7 +827,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                     {"float64", SpannerDbType.Float64, 3.14},
                     {"numeric", SpannerDbType.Numeric, SpannerNumeric.Parse("6.626")},
                     {"pgnumeric", SpannerDbType.PgNumeric, PgNumeric.Parse("16.626")},
-                    {"date", SpannerDbType.Date, new DateTime(2021, 9, 8, 0, 0, 0, DateTimeKind.Utc)},
+                    {"date", SpannerDbType.Date, new SpannerDate(2021, 9, 8)},
                     {"timestamp", SpannerDbType.Timestamp, new DateTime(2021, 9, 8, 15, 22, 59, DateTimeKind.Utc)},
                     {"bool", SpannerDbType.Bool, true},
                 }));

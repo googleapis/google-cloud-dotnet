@@ -315,12 +315,7 @@ namespace Google.Cloud.Spanner.Data
 
             private List<Mutation> GetMutations()
             {
-                // Currently, ToProtobufValue doesn't use the options it's provided. They're only
-                // required to prevent us from accidentally adding call sites that wouldn't be able to obtain
-                // valid options. For efficiency, we just pass in null for now. If we ever need real options
-                // from the connection string, uncomment the following line to initialize the options from the connection.
-                // SpannerConversionOptions options = SpannerConversionOptions.ForConnection(SpannerConnection);
-                SpannerConversionOptions conversionOptions = null;
+                SpannerConversionOptions conversionOptions = SpannerConversionOptions.ForConnection(Connection);
 
                 // Whatever we do with the parameters, we'll need them in a ListValue.
                 var listValue = new ListValue
@@ -403,8 +398,7 @@ namespace Google.Cloud.Spanner.Data
                     RequestOptions = BuildRequestOptions()
                 };
 
-                // See comment at the start of GetMutations.
-                SpannerConversionOptions options = null;
+                SpannerConversionOptions options = SpannerConversionOptions.ForConnection(Connection);
                 Parameters.FillSpannerCommandParams(out var parameters, request.ParamTypes, options);
                 request.Params = parameters;
 

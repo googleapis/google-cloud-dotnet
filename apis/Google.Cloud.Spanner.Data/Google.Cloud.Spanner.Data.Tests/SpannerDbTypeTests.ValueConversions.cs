@@ -53,7 +53,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             { "Int64Field", SpannerDbType.Int64, 2L },
             { "Float64Field", SpannerDbType.Float64, double.NaN },
             { "BoolField", SpannerDbType.Bool, true },
-            { "DateField", SpannerDbType.Date, new DateTime(2017, 1, 31) },
+            { "DateField", SpannerDbType.Date, new SpannerDate(2017, 1, 31) },
             { "TimestampField", SpannerDbType.Timestamp, new DateTime(2017, 1, 31, 3, 15, 30) },
             { "NumericField", SpannerDbType.Numeric, SpannerNumeric.MaxValue },
             { "PgNumericField", SpannerDbType.PgNumeric, PgNumeric.NaN },
@@ -95,11 +95,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return true;
         }
 
-        private static IEnumerable<DateTime> GetDatesForArray()
+        private static IEnumerable<SpannerDate> GetDatesForArray()
         {
-            yield return new DateTime(2017, 1, 31);
-            yield return new DateTime(2016, 2, 15);
-            yield return new DateTime(2015, 3, 31);
+            yield return new SpannerDate(2017, 1, 31);
+            yield return new SpannerDate(2016, 2, 15);
+            yield return new SpannerDate(2015, 3, 31);
         }
 
         private static IEnumerable<DateTime> GetTimestampsForArray()
@@ -300,7 +300,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             // Spanner type = Date+Timestamp tests.  Some of these are one way due to either a lossy conversion (date loses time)
             // or a string formatting difference.
-            yield return new object[] { s_testDate, SpannerDbType.Date, Quote("2017-01-31"), TestType.ClrToValue };
+            yield return new object[] { SpannerDate.FromDateTime(s_testDate), SpannerDbType.Date, Quote("2017-01-31"), TestType.ClrToValue };
             yield return new object[] { "1/31/2017", SpannerDbType.Date, Quote("2017-01-31"), TestType.ClrToValue };
             yield return new object[]
                 {"1/31/2017 3:15:30 AM", SpannerDbType.Date, Quote("2017-01-31"), TestType.ClrToValue};
@@ -342,7 +342,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             };
             yield return new object[]
             {
-                new List<DateTime>(GetDatesForArray()), SpannerDbType.ArrayOf(SpannerDbType.Date),
+                new List<SpannerDate>(GetDatesForArray()), SpannerDbType.ArrayOf(SpannerDbType.Date),
                 "[ \"2017-01-31\", \"2016-02-15\", \"2015-03-31\" ]"
             };
             yield return new object[]

@@ -131,7 +131,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         private async Task ExecuteWriteValuesTest(Func<SpannerParameterCollection, Task<int>> insertCommand)
         {
             var testTimestamp = new DateTime(2017, 3, 17, 15, 30, 0);
-            var testDate = new DateTime(2017, 5, 9);
+            var testDate = new SpannerDate(2017, 5, 9);
             bool?[] bArray = { true, null, false };
             long?[] lArray = { 0, null, 1 };
             double?[] dArray = { 0.0, null, 2.0 };
@@ -150,7 +150,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 null,
                 new byte[] {1, 2, 3}
             };
-            DateTime?[] dtArray = { new DateTime(2017, 3, 17), null, new DateTime(2017, 5, 9) };
+            SpannerDate?[] dtArray = { new SpannerDate(2017, 3, 17), null, new SpannerDate(2017, 5, 9) };
             DateTime?[] tmArray = { new DateTime(2017, 3, 17, 5, 30, 0), null, new DateTime(2017, 5, 9, 12, 45, 0) };
 
             var parameters = new SpannerParameterCollection
@@ -194,7 +194,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 var buffer = new byte[length];
                 Assert.Equal(3, reader.GetBytes(reader.GetOrdinal("BytesValue"), 0L, buffer, 0, (int)length));
                 Assert.Equal(testTimestamp, reader.GetFieldValue<DateTime>(reader.GetOrdinal("TimestampValue")));
-                Assert.Equal(testDate, reader.GetFieldValue<DateTime>(reader.GetOrdinal("DateValue")));
+                Assert.Equal(testDate, reader.GetFieldValue<SpannerDate>(reader.GetOrdinal("DateValue")));
                 Assert.Equal(SpannerNumeric.Parse("2.0"), reader.GetFieldValue<SpannerNumeric>(reader.GetOrdinal("NumericValue")));
                 Assert.Equal(bArray, reader.GetFieldValue<bool?[]>(reader.GetOrdinal("BoolArrayValue")));
                 Assert.Equal(lArray, reader.GetFieldValue<long?[]>(reader.GetOrdinal("Int64ArrayValue")));
@@ -203,7 +203,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(base64Array, reader.GetFieldValue<string[]>(reader.GetOrdinal("Base64ArrayValue")));
                 Assert.Equal(byteArray, reader.GetFieldValue<byte[][]>(reader.GetOrdinal("BytesArrayValue")));
                 Assert.Equal(tmArray, reader.GetFieldValue<DateTime?[]>(reader.GetOrdinal("TimestampArrayValue")));
-                Assert.Equal(dtArray, reader.GetFieldValue<DateTime?[]>(reader.GetOrdinal("DateArrayValue")));
+                Assert.Equal(dtArray, reader.GetFieldValue<SpannerDate?[]>(reader.GetOrdinal("DateArrayValue")));
                 Assert.Equal(nArray, reader.GetFieldValue<SpannerNumeric?[]>(reader.GetOrdinal("NumericArrayValue")));
                 if (!_fixture.RunningOnEmulator)
                 {
@@ -282,7 +282,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "StringArrayValue", SpannerDbType.ArrayOf(SpannerDbType.String), new string[0] },
                 { "BytesArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bytes), new byte[0][] },
                 { "TimestampArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Timestamp), new DateTime[0] },
-                { "DateArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Date), new DateTime[0] },
+                { "DateArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Date), new SpannerDate[0] },
                 { "NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), new SpannerNumeric[0] }
             };
 
