@@ -1349,7 +1349,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// [ListTags][google.cloud.datacatalog.v1.ListTags] API response.
     ///
     /// Additionally, you can search for a public tag by value with a
-    /// simple search query instead of using a ``tag:`` predicate.
+    /// simple search query in addition to using a ``tag:`` predicate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
