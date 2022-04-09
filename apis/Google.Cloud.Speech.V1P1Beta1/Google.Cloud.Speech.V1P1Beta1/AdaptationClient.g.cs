@@ -380,15 +380,16 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created. Format:
+        /// Required. The parent resource where this phrase set will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/phraseSets`
         /// 
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="phraseSet">
         /// Required. The phrase set to create.
@@ -416,15 +417,16 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created. Format:
+        /// Required. The parent resource where this phrase set will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/phraseSets`
         /// 
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="phraseSet">
         /// Required. The phrase set to create.
@@ -452,15 +454,16 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created. Format:
+        /// Required. The parent resource where this phrase set will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/phraseSets`
         /// 
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="phraseSet">
         /// Required. The phrase set to create.
@@ -483,15 +486,16 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created. Format:
+        /// Required. The parent resource where this phrase set will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/phraseSets`
         /// 
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="phraseSet">
         /// Required. The phrase set to create.
@@ -519,15 +523,16 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created. Format:
+        /// Required. The parent resource where this phrase set will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/phraseSets`
         /// 
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="phraseSet">
         /// Required. The phrase set to create.
@@ -555,15 +560,16 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created. Format:
+        /// Required. The parent resource where this phrase set will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/phraseSets`
         /// 
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="phraseSet">
         /// Required. The phrase set to create.
@@ -618,8 +624,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -640,8 +646,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -662,8 +668,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -681,8 +687,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -703,8 +709,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -725,8 +731,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -762,8 +768,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -794,8 +800,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -826,8 +832,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -858,8 +864,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -920,8 +926,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated.
@@ -949,8 +955,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated.
@@ -978,8 +984,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated.
@@ -1137,15 +1143,16 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created. Format:
+        /// Required. The parent resource where this custom class will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/customClasses`
         /// 
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="customClass">
         /// Required. The custom class to create.
@@ -1171,15 +1178,16 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created. Format:
+        /// Required. The parent resource where this custom class will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/customClasses`
         /// 
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="customClass">
         /// Required. The custom class to create.
@@ -1205,15 +1213,16 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created. Format:
+        /// Required. The parent resource where this custom class will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/customClasses`
         /// 
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="customClass">
         /// Required. The custom class to create.
@@ -1234,15 +1243,16 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created. Format:
+        /// Required. The parent resource where this custom class will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/customClasses`
         /// 
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="customClass">
         /// Required. The custom class to create.
@@ -1268,15 +1278,16 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created. Format:
+        /// Required. The parent resource where this custom class will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/customClasses`
         /// 
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="customClass">
         /// Required. The custom class to create.
@@ -1302,15 +1313,16 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created. Format:
+        /// Required. The parent resource where this custom class will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/customClasses`
         /// 
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="customClass">
         /// Required. The custom class to create.
@@ -1473,8 +1485,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1505,8 +1517,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1537,8 +1549,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1569,8 +1581,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1631,8 +1643,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated.
@@ -1660,8 +1672,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated.
@@ -1689,8 +1701,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated.
@@ -1738,8 +1750,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1760,8 +1772,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1782,8 +1794,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1801,8 +1813,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1823,8 +1835,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1845,8 +1857,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Speech-to-Text supports three locations: `global`, `us` (US North America),
         /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
         /// endpoint, use the `global` location. To specify a region, use a
-        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-        /// `eu` location value.
+        /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+        /// with matching `us` or `eu` location value.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
