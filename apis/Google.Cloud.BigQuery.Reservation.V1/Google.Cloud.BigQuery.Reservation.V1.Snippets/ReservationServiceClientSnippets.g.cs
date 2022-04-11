@@ -2566,6 +2566,70 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateAssignment</summary>
+        public void UpdateAssignmentRequestObject()
+        {
+            // Snippet: UpdateAssignment(UpdateAssignmentRequest, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateAssignmentRequest request = new UpdateAssignmentRequest
+            {
+                Assignment = new Assignment(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Assignment response = reservationServiceClient.UpdateAssignment(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAssignmentAsync</summary>
+        public async Task UpdateAssignmentRequestObjectAsync()
+        {
+            // Snippet: UpdateAssignmentAsync(UpdateAssignmentRequest, CallSettings)
+            // Additional: UpdateAssignmentAsync(UpdateAssignmentRequest, CancellationToken)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateAssignmentRequest request = new UpdateAssignmentRequest
+            {
+                Assignment = new Assignment(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Assignment response = await reservationServiceClient.UpdateAssignmentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAssignment</summary>
+        public void UpdateAssignment()
+        {
+            // Snippet: UpdateAssignment(Assignment, FieldMask, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            Assignment assignment = new Assignment();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Assignment response = reservationServiceClient.UpdateAssignment(assignment, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAssignmentAsync</summary>
+        public async Task UpdateAssignmentAsync()
+        {
+            // Snippet: UpdateAssignmentAsync(Assignment, FieldMask, CallSettings)
+            // Additional: UpdateAssignmentAsync(Assignment, FieldMask, CancellationToken)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Assignment assignment = new Assignment();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Assignment response = await reservationServiceClient.UpdateAssignmentAsync(assignment, updateMask);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetBiReservation</summary>
         public void GetBiReservationRequestObject()
         {
