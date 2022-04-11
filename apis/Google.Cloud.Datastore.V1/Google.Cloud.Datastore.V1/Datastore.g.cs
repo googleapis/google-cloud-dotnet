@@ -28,100 +28,107 @@ namespace Google.Cloud.Datastore.V1 {
             "LmRhdGFzdG9yZS52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoX",
             "Z29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVo",
             "YXZpb3IucHJvdG8aIGdvb2dsZS9kYXRhc3RvcmUvdjEvZW50aXR5LnByb3Rv",
-            "Gh9nb29nbGUvZGF0YXN0b3JlL3YxL3F1ZXJ5LnByb3RvIo0BCg1Mb29rdXBS",
-            "ZXF1ZXN0EhcKCnByb2plY3RfaWQYCCABKAlCA+BBAhI2CgxyZWFkX29wdGlv",
-            "bnMYASABKAsyIC5nb29nbGUuZGF0YXN0b3JlLnYxLlJlYWRPcHRpb25zEisK",
-            "BGtleXMYAyADKAsyGC5nb29nbGUuZGF0YXN0b3JlLnYxLktleUID4EECIqIB",
-            "Cg5Mb29rdXBSZXNwb25zZRIwCgVmb3VuZBgBIAMoCzIhLmdvb2dsZS5kYXRh",
-            "c3RvcmUudjEuRW50aXR5UmVzdWx0EjIKB21pc3NpbmcYAiADKAsyIS5nb29n",
-            "bGUuZGF0YXN0b3JlLnYxLkVudGl0eVJlc3VsdBIqCghkZWZlcnJlZBgDIAMo",
-            "CzIYLmdvb2dsZS5kYXRhc3RvcmUudjEuS2V5IokCCg9SdW5RdWVyeVJlcXVl",
-            "c3QSFwoKcHJvamVjdF9pZBgIIAEoCUID4EECEjYKDHBhcnRpdGlvbl9pZBgC",
-            "IAEoCzIgLmdvb2dsZS5kYXRhc3RvcmUudjEuUGFydGl0aW9uSWQSNgoMcmVh",
-            "ZF9vcHRpb25zGAEgASgLMiAuZ29vZ2xlLmRhdGFzdG9yZS52MS5SZWFkT3B0",
-            "aW9ucxIrCgVxdWVyeRgDIAEoCzIaLmdvb2dsZS5kYXRhc3RvcmUudjEuUXVl",
-            "cnlIABIyCglncWxfcXVlcnkYByABKAsyHS5nb29nbGUuZGF0YXN0b3JlLnYx",
-            "LkdxbFF1ZXJ5SABCDAoKcXVlcnlfdHlwZSJzChBSdW5RdWVyeVJlc3BvbnNl",
-            "EjQKBWJhdGNoGAEgASgLMiUuZ29vZ2xlLmRhdGFzdG9yZS52MS5RdWVyeVJl",
-            "c3VsdEJhdGNoEikKBXF1ZXJ5GAIgASgLMhouZ29vZ2xlLmRhdGFzdG9yZS52",
-            "MS5RdWVyeSJ4ChdCZWdpblRyYW5zYWN0aW9uUmVxdWVzdBIXCgpwcm9qZWN0",
-            "X2lkGAggASgJQgPgQQISRAoTdHJhbnNhY3Rpb25fb3B0aW9ucxgKIAEoCzIn",
-            "Lmdvb2dsZS5kYXRhc3RvcmUudjEuVHJhbnNhY3Rpb25PcHRpb25zIi8KGEJl",
-            "Z2luVHJhbnNhY3Rpb25SZXNwb25zZRITCgt0cmFuc2FjdGlvbhgBIAEoDCJE",
-            "Cg9Sb2xsYmFja1JlcXVlc3QSFwoKcHJvamVjdF9pZBgIIAEoCUID4EECEhgK",
-            "C3RyYW5zYWN0aW9uGAEgASgMQgPgQQIiEgoQUm9sbGJhY2tSZXNwb25zZSKI",
-            "AgoNQ29tbWl0UmVxdWVzdBIXCgpwcm9qZWN0X2lkGAggASgJQgPgQQISNQoE",
-            "bW9kZRgFIAEoDjInLmdvb2dsZS5kYXRhc3RvcmUudjEuQ29tbWl0UmVxdWVz",
-            "dC5Nb2RlEhUKC3RyYW5zYWN0aW9uGAEgASgMSAASMAoJbXV0YXRpb25zGAYg",
-            "AygLMh0uZ29vZ2xlLmRhdGFzdG9yZS52MS5NdXRhdGlvbiJGCgRNb2RlEhQK",
-            "EE1PREVfVU5TUEVDSUZJRUQQABIRCg1UUkFOU0FDVElPTkFMEAESFQoRTk9O",
-            "X1RSQU5TQUNUSU9OQUwQAkIWChR0cmFuc2FjdGlvbl9zZWxlY3RvciJmCg5D",
-            "b21taXRSZXNwb25zZRI9ChBtdXRhdGlvbl9yZXN1bHRzGAMgAygLMiMuZ29v",
-            "Z2xlLmRhdGFzdG9yZS52MS5NdXRhdGlvblJlc3VsdBIVCg1pbmRleF91cGRh",
-            "dGVzGAQgASgFIloKEkFsbG9jYXRlSWRzUmVxdWVzdBIXCgpwcm9qZWN0X2lk",
-            "GAggASgJQgPgQQISKwoEa2V5cxgBIAMoCzIYLmdvb2dsZS5kYXRhc3RvcmUu",
-            "djEuS2V5QgPgQQIiPQoTQWxsb2NhdGVJZHNSZXNwb25zZRImCgRrZXlzGAEg",
-            "AygLMhguZ29vZ2xlLmRhdGFzdG9yZS52MS5LZXkibgoRUmVzZXJ2ZUlkc1Jl",
-            "cXVlc3QSFwoKcHJvamVjdF9pZBgIIAEoCUID4EECEhMKC2RhdGFiYXNlX2lk",
-            "GAkgASgJEisKBGtleXMYASADKAsyGC5nb29nbGUuZGF0YXN0b3JlLnYxLktl",
-            "eUID4EECIhQKElJlc2VydmVJZHNSZXNwb25zZSKHAgoITXV0YXRpb24SLQoG",
-            "aW5zZXJ0GAQgASgLMhsuZ29vZ2xlLmRhdGFzdG9yZS52MS5FbnRpdHlIABIt",
-            "CgZ1cGRhdGUYBSABKAsyGy5nb29nbGUuZGF0YXN0b3JlLnYxLkVudGl0eUgA",
-            "Ei0KBnVwc2VydBgGIAEoCzIbLmdvb2dsZS5kYXRhc3RvcmUudjEuRW50aXR5",
-            "SAASKgoGZGVsZXRlGAcgASgLMhguZ29vZ2xlLmRhdGFzdG9yZS52MS5LZXlI",
-            "ABIWCgxiYXNlX3ZlcnNpb24YCCABKANIAUILCglvcGVyYXRpb25CHQobY29u",
-            "ZmxpY3RfZGV0ZWN0aW9uX3N0cmF0ZWd5ImMKDk11dGF0aW9uUmVzdWx0EiUK",
-            "A2tleRgDIAEoCzIYLmdvb2dsZS5kYXRhc3RvcmUudjEuS2V5Eg8KB3ZlcnNp",
-            "b24YBCABKAMSGQoRY29uZmxpY3RfZGV0ZWN0ZWQYBSABKAgi1QEKC1JlYWRP",
-            "cHRpb25zEkwKEHJlYWRfY29uc2lzdGVuY3kYASABKA4yMC5nb29nbGUuZGF0",
-            "YXN0b3JlLnYxLlJlYWRPcHRpb25zLlJlYWRDb25zaXN0ZW5jeUgAEhUKC3Ry",
-            "YW5zYWN0aW9uGAIgASgMSAAiTQoPUmVhZENvbnNpc3RlbmN5EiAKHFJFQURf",
-            "Q09OU0lTVEVOQ1lfVU5TUEVDSUZJRUQQABIKCgZTVFJPTkcQARIMCghFVkVO",
-            "VFVBTBACQhIKEGNvbnNpc3RlbmN5X3R5cGUi4wEKElRyYW5zYWN0aW9uT3B0",
-            "aW9ucxJHCgpyZWFkX3dyaXRlGAEgASgLMjEuZ29vZ2xlLmRhdGFzdG9yZS52",
-            "MS5UcmFuc2FjdGlvbk9wdGlvbnMuUmVhZFdyaXRlSAASRQoJcmVhZF9vbmx5",
-            "GAIgASgLMjAuZ29vZ2xlLmRhdGFzdG9yZS52MS5UcmFuc2FjdGlvbk9wdGlv",
-            "bnMuUmVhZE9ubHlIABopCglSZWFkV3JpdGUSHAoUcHJldmlvdXNfdHJhbnNh",
-            "Y3Rpb24YASABKAwaCgoIUmVhZE9ubHlCBgoEbW9kZTKTCgoJRGF0YXN0b3Jl",
-            "Ep0BCgZMb29rdXASIi5nb29nbGUuZGF0YXN0b3JlLnYxLkxvb2t1cFJlcXVl",
-            "c3QaIy5nb29nbGUuZGF0YXN0b3JlLnYxLkxvb2t1cFJlc3BvbnNlIkqC0+ST",
-            "AiUiIC92MS9wcm9qZWN0cy97cHJvamVjdF9pZH06bG9va3VwOgEq2kEccHJv",
-            "amVjdF9pZCxyZWFkX29wdGlvbnMsa2V5cxKGAQoIUnVuUXVlcnkSJC5nb29n",
-            "bGUuZGF0YXN0b3JlLnYxLlJ1blF1ZXJ5UmVxdWVzdBolLmdvb2dsZS5kYXRh",
-            "c3RvcmUudjEuUnVuUXVlcnlSZXNwb25zZSItgtPkkwInIiIvdjEvcHJvamVj",
-            "dHMve3Byb2plY3RfaWR9OnJ1blF1ZXJ5OgEqErMBChBCZWdpblRyYW5zYWN0",
-            "aW9uEiwuZ29vZ2xlLmRhdGFzdG9yZS52MS5CZWdpblRyYW5zYWN0aW9uUmVx",
-            "dWVzdBotLmdvb2dsZS5kYXRhc3RvcmUudjEuQmVnaW5UcmFuc2FjdGlvblJl",
-            "c3BvbnNlIkKC0+STAi8iKi92MS9wcm9qZWN0cy97cHJvamVjdF9pZH06YmVn",
-            "aW5UcmFuc2FjdGlvbjoBKtpBCnByb2plY3RfaWQSwgEKBkNvbW1pdBIiLmdv",
-            "b2dsZS5kYXRhc3RvcmUudjEuQ29tbWl0UmVxdWVzdBojLmdvb2dsZS5kYXRh",
-            "c3RvcmUudjEuQ29tbWl0UmVzcG9uc2Uib4LT5JMCJSIgL3YxL3Byb2plY3Rz",
-            "L3twcm9qZWN0X2lkfTpjb21taXQ6ASraQSVwcm9qZWN0X2lkLG1vZGUsdHJh",
-            "bnNhY3Rpb24sbXV0YXRpb25z2kEZcHJvamVjdF9pZCxtb2RlLG11dGF0aW9u",
-            "cxKfAQoIUm9sbGJhY2sSJC5nb29nbGUuZGF0YXN0b3JlLnYxLlJvbGxiYWNr",
-            "UmVxdWVzdBolLmdvb2dsZS5kYXRhc3RvcmUudjEuUm9sbGJhY2tSZXNwb25z",
-            "ZSJGgtPkkwInIiIvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9OnJvbGxiYWNr",
-            "OgEq2kEWcHJvamVjdF9pZCx0cmFuc2FjdGlvbhKkAQoLQWxsb2NhdGVJZHMS",
-            "Jy5nb29nbGUuZGF0YXN0b3JlLnYxLkFsbG9jYXRlSWRzUmVxdWVzdBooLmdv",
-            "b2dsZS5kYXRhc3RvcmUudjEuQWxsb2NhdGVJZHNSZXNwb25zZSJCgtPkkwIq",
-            "IiUvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9OmFsbG9jYXRlSWRzOgEq2kEP",
-            "cHJvamVjdF9pZCxrZXlzEqABCgpSZXNlcnZlSWRzEiYuZ29vZ2xlLmRhdGFz",
-            "dG9yZS52MS5SZXNlcnZlSWRzUmVxdWVzdBonLmdvb2dsZS5kYXRhc3RvcmUu",
-            "djEuUmVzZXJ2ZUlkc1Jlc3BvbnNlIkGC0+STAikiJC92MS9wcm9qZWN0cy97",
-            "cHJvamVjdF9pZH06cmVzZXJ2ZUlkczoBKtpBD3Byb2plY3RfaWQsa2V5cxp2",
-            "ykEYZGF0YXN0b3JlLmdvb2dsZWFwaXMuY29t0kFYaHR0cHM6Ly93d3cuZ29v",
-            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5n",
-            "b29nbGVhcGlzLmNvbS9hdXRoL2RhdGFzdG9yZULAAQoXY29tLmdvb2dsZS5k",
-            "YXRhc3RvcmUudjFCDkRhdGFzdG9yZVByb3RvUAFaPGdvb2dsZS5nb2xhbmcu",
-            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZGF0YXN0b3JlL3YxO2RhdGFzdG9y",
-            "ZaoCGUdvb2dsZS5DbG91ZC5EYXRhc3RvcmUuVjHKAhlHb29nbGVcQ2xvdWRc",
-            "RGF0YXN0b3JlXFYx6gIcR29vZ2xlOjpDbG91ZDo6RGF0YXN0b3JlOjpWMWIG",
-            "cHJvdG8z"));
+            "Gh9nb29nbGUvZGF0YXN0b3JlL3YxL3F1ZXJ5LnByb3RvGh9nb29nbGUvcHJv",
+            "dG9idWYvdGltZXN0YW1wLnByb3RvIo0BCg1Mb29rdXBSZXF1ZXN0EhcKCnBy",
+            "b2plY3RfaWQYCCABKAlCA+BBAhI2CgxyZWFkX29wdGlvbnMYASABKAsyIC5n",
+            "b29nbGUuZGF0YXN0b3JlLnYxLlJlYWRPcHRpb25zEisKBGtleXMYAyADKAsy",
+            "GC5nb29nbGUuZGF0YXN0b3JlLnYxLktleUID4EECItEBCg5Mb29rdXBSZXNw",
+            "b25zZRIwCgVmb3VuZBgBIAMoCzIhLmdvb2dsZS5kYXRhc3RvcmUudjEuRW50",
+            "aXR5UmVzdWx0EjIKB21pc3NpbmcYAiADKAsyIS5nb29nbGUuZGF0YXN0b3Jl",
+            "LnYxLkVudGl0eVJlc3VsdBIqCghkZWZlcnJlZBgDIAMoCzIYLmdvb2dsZS5k",
+            "YXRhc3RvcmUudjEuS2V5Ei0KCXJlYWRfdGltZRgHIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXAiiQIKD1J1blF1ZXJ5UmVxdWVzdBIXCgpwcm9q",
+            "ZWN0X2lkGAggASgJQgPgQQISNgoMcGFydGl0aW9uX2lkGAIgASgLMiAuZ29v",
+            "Z2xlLmRhdGFzdG9yZS52MS5QYXJ0aXRpb25JZBI2CgxyZWFkX29wdGlvbnMY",
+            "ASABKAsyIC5nb29nbGUuZGF0YXN0b3JlLnYxLlJlYWRPcHRpb25zEisKBXF1",
+            "ZXJ5GAMgASgLMhouZ29vZ2xlLmRhdGFzdG9yZS52MS5RdWVyeUgAEjIKCWdx",
+            "bF9xdWVyeRgHIAEoCzIdLmdvb2dsZS5kYXRhc3RvcmUudjEuR3FsUXVlcnlI",
+            "AEIMCgpxdWVyeV90eXBlInMKEFJ1blF1ZXJ5UmVzcG9uc2USNAoFYmF0Y2gY",
+            "ASABKAsyJS5nb29nbGUuZGF0YXN0b3JlLnYxLlF1ZXJ5UmVzdWx0QmF0Y2gS",
+            "KQoFcXVlcnkYAiABKAsyGi5nb29nbGUuZGF0YXN0b3JlLnYxLlF1ZXJ5IngK",
+            "F0JlZ2luVHJhbnNhY3Rpb25SZXF1ZXN0EhcKCnByb2plY3RfaWQYCCABKAlC",
+            "A+BBAhJEChN0cmFuc2FjdGlvbl9vcHRpb25zGAogASgLMicuZ29vZ2xlLmRh",
+            "dGFzdG9yZS52MS5UcmFuc2FjdGlvbk9wdGlvbnMiLwoYQmVnaW5UcmFuc2Fj",
+            "dGlvblJlc3BvbnNlEhMKC3RyYW5zYWN0aW9uGAEgASgMIkQKD1JvbGxiYWNr",
+            "UmVxdWVzdBIXCgpwcm9qZWN0X2lkGAggASgJQgPgQQISGAoLdHJhbnNhY3Rp",
+            "b24YASABKAxCA+BBAiISChBSb2xsYmFja1Jlc3BvbnNlIogCCg1Db21taXRS",
+            "ZXF1ZXN0EhcKCnByb2plY3RfaWQYCCABKAlCA+BBAhI1CgRtb2RlGAUgASgO",
+            "MicuZ29vZ2xlLmRhdGFzdG9yZS52MS5Db21taXRSZXF1ZXN0Lk1vZGUSFQoL",
+            "dHJhbnNhY3Rpb24YASABKAxIABIwCgltdXRhdGlvbnMYBiADKAsyHS5nb29n",
+            "bGUuZGF0YXN0b3JlLnYxLk11dGF0aW9uIkYKBE1vZGUSFAoQTU9ERV9VTlNQ",
+            "RUNJRklFRBAAEhEKDVRSQU5TQUNUSU9OQUwQARIVChFOT05fVFJBTlNBQ1RJ",
+            "T05BTBACQhYKFHRyYW5zYWN0aW9uX3NlbGVjdG9yIpcBCg5Db21taXRSZXNw",
+            "b25zZRI9ChBtdXRhdGlvbl9yZXN1bHRzGAMgAygLMiMuZ29vZ2xlLmRhdGFz",
+            "dG9yZS52MS5NdXRhdGlvblJlc3VsdBIVCg1pbmRleF91cGRhdGVzGAQgASgF",
+            "Ei8KC2NvbW1pdF90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcCJaChJBbGxvY2F0ZUlkc1JlcXVlc3QSFwoKcHJvamVjdF9pZBgIIAEo",
+            "CUID4EECEisKBGtleXMYASADKAsyGC5nb29nbGUuZGF0YXN0b3JlLnYxLktl",
+            "eUID4EECIj0KE0FsbG9jYXRlSWRzUmVzcG9uc2USJgoEa2V5cxgBIAMoCzIY",
+            "Lmdvb2dsZS5kYXRhc3RvcmUudjEuS2V5Im4KEVJlc2VydmVJZHNSZXF1ZXN0",
+            "EhcKCnByb2plY3RfaWQYCCABKAlCA+BBAhITCgtkYXRhYmFzZV9pZBgJIAEo",
+            "CRIrCgRrZXlzGAEgAygLMhguZ29vZ2xlLmRhdGFzdG9yZS52MS5LZXlCA+BB",
+            "AiIUChJSZXNlcnZlSWRzUmVzcG9uc2UiugIKCE11dGF0aW9uEi0KBmluc2Vy",
+            "dBgEIAEoCzIbLmdvb2dsZS5kYXRhc3RvcmUudjEuRW50aXR5SAASLQoGdXBk",
+            "YXRlGAUgASgLMhsuZ29vZ2xlLmRhdGFzdG9yZS52MS5FbnRpdHlIABItCgZ1",
+            "cHNlcnQYBiABKAsyGy5nb29nbGUuZGF0YXN0b3JlLnYxLkVudGl0eUgAEioK",
+            "BmRlbGV0ZRgHIAEoCzIYLmdvb2dsZS5kYXRhc3RvcmUudjEuS2V5SAASFgoM",
+            "YmFzZV92ZXJzaW9uGAggASgDSAESMQoLdXBkYXRlX3RpbWUYCyABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wSAFCCwoJb3BlcmF0aW9uQh0KG2Nv",
+            "bmZsaWN0X2RldGVjdGlvbl9zdHJhdGVneSKUAQoOTXV0YXRpb25SZXN1bHQS",
+            "JQoDa2V5GAMgASgLMhguZ29vZ2xlLmRhdGFzdG9yZS52MS5LZXkSDwoHdmVy",
+            "c2lvbhgEIAEoAxIvCgt1cGRhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXASGQoRY29uZmxpY3RfZGV0ZWN0ZWQYBSABKAgihgIK",
+            "C1JlYWRPcHRpb25zEkwKEHJlYWRfY29uc2lzdGVuY3kYASABKA4yMC5nb29n",
+            "bGUuZGF0YXN0b3JlLnYxLlJlYWRPcHRpb25zLlJlYWRDb25zaXN0ZW5jeUgA",
+            "EhUKC3RyYW5zYWN0aW9uGAIgASgMSAASLwoJcmVhZF90aW1lGAQgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgAIk0KD1JlYWRDb25zaXN0ZW5j",
+            "eRIgChxSRUFEX0NPTlNJU1RFTkNZX1VOU1BFQ0lGSUVEEAASCgoGU1RST05H",
+            "EAESDAoIRVZFTlRVQUwQAkISChBjb25zaXN0ZW5jeV90eXBlIpICChJUcmFu",
+            "c2FjdGlvbk9wdGlvbnMSRwoKcmVhZF93cml0ZRgBIAEoCzIxLmdvb2dsZS5k",
+            "YXRhc3RvcmUudjEuVHJhbnNhY3Rpb25PcHRpb25zLlJlYWRXcml0ZUgAEkUK",
+            "CXJlYWRfb25seRgCIAEoCzIwLmdvb2dsZS5kYXRhc3RvcmUudjEuVHJhbnNh",
+            "Y3Rpb25PcHRpb25zLlJlYWRPbmx5SAAaKQoJUmVhZFdyaXRlEhwKFHByZXZp",
+            "b3VzX3RyYW5zYWN0aW9uGAEgASgMGjkKCFJlYWRPbmx5Ei0KCXJlYWRfdGlt",
+            "ZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBgoEbW9kZTKT",
+            "CgoJRGF0YXN0b3JlEp0BCgZMb29rdXASIi5nb29nbGUuZGF0YXN0b3JlLnYx",
+            "Lkxvb2t1cFJlcXVlc3QaIy5nb29nbGUuZGF0YXN0b3JlLnYxLkxvb2t1cFJl",
+            "c3BvbnNlIkqC0+STAiUiIC92MS9wcm9qZWN0cy97cHJvamVjdF9pZH06bG9v",
+            "a3VwOgEq2kEccHJvamVjdF9pZCxyZWFkX29wdGlvbnMsa2V5cxKGAQoIUnVu",
+            "UXVlcnkSJC5nb29nbGUuZGF0YXN0b3JlLnYxLlJ1blF1ZXJ5UmVxdWVzdBol",
+            "Lmdvb2dsZS5kYXRhc3RvcmUudjEuUnVuUXVlcnlSZXNwb25zZSItgtPkkwIn",
+            "IiIvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9OnJ1blF1ZXJ5OgEqErMBChBC",
+            "ZWdpblRyYW5zYWN0aW9uEiwuZ29vZ2xlLmRhdGFzdG9yZS52MS5CZWdpblRy",
+            "YW5zYWN0aW9uUmVxdWVzdBotLmdvb2dsZS5kYXRhc3RvcmUudjEuQmVnaW5U",
+            "cmFuc2FjdGlvblJlc3BvbnNlIkKC0+STAi8iKi92MS9wcm9qZWN0cy97cHJv",
+            "amVjdF9pZH06YmVnaW5UcmFuc2FjdGlvbjoBKtpBCnByb2plY3RfaWQSwgEK",
+            "BkNvbW1pdBIiLmdvb2dsZS5kYXRhc3RvcmUudjEuQ29tbWl0UmVxdWVzdBoj",
+            "Lmdvb2dsZS5kYXRhc3RvcmUudjEuQ29tbWl0UmVzcG9uc2Uib4LT5JMCJSIg",
+            "L3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfTpjb21taXQ6ASraQSVwcm9qZWN0",
+            "X2lkLG1vZGUsdHJhbnNhY3Rpb24sbXV0YXRpb25z2kEZcHJvamVjdF9pZCxt",
+            "b2RlLG11dGF0aW9ucxKfAQoIUm9sbGJhY2sSJC5nb29nbGUuZGF0YXN0b3Jl",
+            "LnYxLlJvbGxiYWNrUmVxdWVzdBolLmdvb2dsZS5kYXRhc3RvcmUudjEuUm9s",
+            "bGJhY2tSZXNwb25zZSJGgtPkkwInIiIvdjEvcHJvamVjdHMve3Byb2plY3Rf",
+            "aWR9OnJvbGxiYWNrOgEq2kEWcHJvamVjdF9pZCx0cmFuc2FjdGlvbhKkAQoL",
+            "QWxsb2NhdGVJZHMSJy5nb29nbGUuZGF0YXN0b3JlLnYxLkFsbG9jYXRlSWRz",
+            "UmVxdWVzdBooLmdvb2dsZS5kYXRhc3RvcmUudjEuQWxsb2NhdGVJZHNSZXNw",
+            "b25zZSJCgtPkkwIqIiUvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9OmFsbG9j",
+            "YXRlSWRzOgEq2kEPcHJvamVjdF9pZCxrZXlzEqABCgpSZXNlcnZlSWRzEiYu",
+            "Z29vZ2xlLmRhdGFzdG9yZS52MS5SZXNlcnZlSWRzUmVxdWVzdBonLmdvb2ds",
+            "ZS5kYXRhc3RvcmUudjEuUmVzZXJ2ZUlkc1Jlc3BvbnNlIkGC0+STAikiJC92",
+            "MS9wcm9qZWN0cy97cHJvamVjdF9pZH06cmVzZXJ2ZUlkczoBKtpBD3Byb2pl",
+            "Y3RfaWQsa2V5cxp2ykEYZGF0YXN0b3JlLmdvb2dsZWFwaXMuY29t0kFYaHR0",
+            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxo",
+            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2RhdGFzdG9yZULAAQoX",
+            "Y29tLmdvb2dsZS5kYXRhc3RvcmUudjFCDkRhdGFzdG9yZVByb3RvUAFaPGdv",
+            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZGF0YXN0b3Jl",
+            "L3YxO2RhdGFzdG9yZaoCGUdvb2dsZS5DbG91ZC5EYXRhc3RvcmUuVjHKAhlH",
+            "b29nbGVcQ2xvdWRcRGF0YXN0b3JlXFYx6gIcR29vZ2xlOjpDbG91ZDo6RGF0",
+            "YXN0b3JlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Datastore.V1.EntityReflection.Descriptor, global::Google.Cloud.Datastore.V1.QueryReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Datastore.V1.EntityReflection.Descriptor, global::Google.Cloud.Datastore.V1.QueryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.LookupRequest), global::Google.Cloud.Datastore.V1.LookupRequest.Parser, new[]{ "ProjectId", "ReadOptions", "Keys" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.LookupResponse), global::Google.Cloud.Datastore.V1.LookupResponse.Parser, new[]{ "Found", "Missing", "Deferred" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.LookupResponse), global::Google.Cloud.Datastore.V1.LookupResponse.Parser, new[]{ "Found", "Missing", "Deferred", "ReadTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RunQueryRequest), global::Google.Cloud.Datastore.V1.RunQueryRequest.Parser, new[]{ "ProjectId", "PartitionId", "ReadOptions", "Query", "GqlQuery" }, new[]{ "QueryType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RunQueryResponse), global::Google.Cloud.Datastore.V1.RunQueryResponse.Parser, new[]{ "Batch", "Query" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.BeginTransactionRequest), global::Google.Cloud.Datastore.V1.BeginTransactionRequest.Parser, new[]{ "ProjectId", "TransactionOptions" }, null, null, null, null),
@@ -129,16 +136,16 @@ namespace Google.Cloud.Datastore.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RollbackRequest), global::Google.Cloud.Datastore.V1.RollbackRequest.Parser, new[]{ "ProjectId", "Transaction" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RollbackResponse), global::Google.Cloud.Datastore.V1.RollbackResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.CommitRequest), global::Google.Cloud.Datastore.V1.CommitRequest.Parser, new[]{ "ProjectId", "Mode", "Transaction", "Mutations" }, new[]{ "TransactionSelector" }, new[]{ typeof(global::Google.Cloud.Datastore.V1.CommitRequest.Types.Mode) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.CommitResponse), global::Google.Cloud.Datastore.V1.CommitResponse.Parser, new[]{ "MutationResults", "IndexUpdates" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.CommitResponse), global::Google.Cloud.Datastore.V1.CommitResponse.Parser, new[]{ "MutationResults", "IndexUpdates", "CommitTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.AllocateIdsRequest), global::Google.Cloud.Datastore.V1.AllocateIdsRequest.Parser, new[]{ "ProjectId", "Keys" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.AllocateIdsResponse), global::Google.Cloud.Datastore.V1.AllocateIdsResponse.Parser, new[]{ "Keys" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.ReserveIdsRequest), global::Google.Cloud.Datastore.V1.ReserveIdsRequest.Parser, new[]{ "ProjectId", "DatabaseId", "Keys" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.ReserveIdsResponse), global::Google.Cloud.Datastore.V1.ReserveIdsResponse.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Mutation), global::Google.Cloud.Datastore.V1.Mutation.Parser, new[]{ "Insert", "Update", "Upsert", "Delete", "BaseVersion" }, new[]{ "Operation", "ConflictDetectionStrategy" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.MutationResult), global::Google.Cloud.Datastore.V1.MutationResult.Parser, new[]{ "Key", "Version", "ConflictDetected" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.ReadOptions), global::Google.Cloud.Datastore.V1.ReadOptions.Parser, new[]{ "ReadConsistency", "Transaction" }, new[]{ "ConsistencyType" }, new[]{ typeof(global::Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Mutation), global::Google.Cloud.Datastore.V1.Mutation.Parser, new[]{ "Insert", "Update", "Upsert", "Delete", "BaseVersion", "UpdateTime" }, new[]{ "Operation", "ConflictDetectionStrategy" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.MutationResult), global::Google.Cloud.Datastore.V1.MutationResult.Parser, new[]{ "Key", "Version", "UpdateTime", "ConflictDetected" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.ReadOptions), global::Google.Cloud.Datastore.V1.ReadOptions.Parser, new[]{ "ReadConsistency", "Transaction", "ReadTime" }, new[]{ "ConsistencyType" }, new[]{ typeof(global::Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.TransactionOptions), global::Google.Cloud.Datastore.V1.TransactionOptions.Parser, new[]{ "ReadWrite", "ReadOnly" }, new[]{ "Mode" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite), global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite.Parser, new[]{ "PreviousTransaction" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadOnly), global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadOnly.Parser, null, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadOnly), global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadOnly.Parser, new[]{ "ReadTime" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -458,6 +465,7 @@ namespace Google.Cloud.Datastore.V1 {
       found_ = other.found_.Clone();
       missing_ = other.missing_.Clone();
       deferred_ = other.deferred_.Clone();
+      readTime_ = other.readTime_ != null ? other.readTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -515,6 +523,21 @@ namespace Google.Cloud.Datastore.V1 {
       get { return deferred_; }
     }
 
+    /// <summary>Field number for the "read_time" field.</summary>
+    public const int ReadTimeFieldNumber = 7;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp readTime_;
+    /// <summary>
+    /// The time at which these entities were read or found missing.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ReadTime {
+      get { return readTime_; }
+      set {
+        readTime_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -533,6 +556,7 @@ namespace Google.Cloud.Datastore.V1 {
       if(!found_.Equals(other.found_)) return false;
       if(!missing_.Equals(other.missing_)) return false;
       if(!deferred_.Equals(other.deferred_)) return false;
+      if (!object.Equals(ReadTime, other.ReadTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -543,6 +567,7 @@ namespace Google.Cloud.Datastore.V1 {
       hash ^= found_.GetHashCode();
       hash ^= missing_.GetHashCode();
       hash ^= deferred_.GetHashCode();
+      if (readTime_ != null) hash ^= ReadTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -564,6 +589,10 @@ namespace Google.Cloud.Datastore.V1 {
       found_.WriteTo(output, _repeated_found_codec);
       missing_.WriteTo(output, _repeated_missing_codec);
       deferred_.WriteTo(output, _repeated_deferred_codec);
+      if (readTime_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ReadTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -577,6 +606,10 @@ namespace Google.Cloud.Datastore.V1 {
       found_.WriteTo(ref output, _repeated_found_codec);
       missing_.WriteTo(ref output, _repeated_missing_codec);
       deferred_.WriteTo(ref output, _repeated_deferred_codec);
+      if (readTime_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ReadTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -590,6 +623,9 @@ namespace Google.Cloud.Datastore.V1 {
       size += found_.CalculateSize(_repeated_found_codec);
       size += missing_.CalculateSize(_repeated_missing_codec);
       size += deferred_.CalculateSize(_repeated_deferred_codec);
+      if (readTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadTime);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -605,6 +641,12 @@ namespace Google.Cloud.Datastore.V1 {
       found_.Add(other.found_);
       missing_.Add(other.missing_);
       deferred_.Add(other.deferred_);
+      if (other.readTime_ != null) {
+        if (readTime_ == null) {
+          ReadTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ReadTime.MergeFrom(other.ReadTime);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -632,6 +674,13 @@ namespace Google.Cloud.Datastore.V1 {
             deferred_.AddEntriesFrom(input, _repeated_deferred_codec);
             break;
           }
+          case 58: {
+            if (readTime_ == null) {
+              ReadTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ReadTime);
+            break;
+          }
         }
       }
     #endif
@@ -657,6 +706,13 @@ namespace Google.Cloud.Datastore.V1 {
           }
           case 26: {
             deferred_.AddEntriesFrom(ref input, _repeated_deferred_codec);
+            break;
+          }
+          case 58: {
+            if (readTime_ == null) {
+              ReadTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ReadTime);
             break;
           }
         }
@@ -2600,6 +2656,7 @@ namespace Google.Cloud.Datastore.V1 {
     public CommitResponse(CommitResponse other) : this() {
       mutationResults_ = other.mutationResults_.Clone();
       indexUpdates_ = other.indexUpdates_;
+      commitTime_ = other.commitTime_ != null ? other.commitTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2640,6 +2697,21 @@ namespace Google.Cloud.Datastore.V1 {
       }
     }
 
+    /// <summary>Field number for the "commit_time" field.</summary>
+    public const int CommitTimeFieldNumber = 8;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp commitTime_;
+    /// <summary>
+    /// The transaction commit timestamp. Not set for non-transactional commits.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CommitTime {
+      get { return commitTime_; }
+      set {
+        commitTime_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2657,6 +2729,7 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if(!mutationResults_.Equals(other.mutationResults_)) return false;
       if (IndexUpdates != other.IndexUpdates) return false;
+      if (!object.Equals(CommitTime, other.CommitTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2666,6 +2739,7 @@ namespace Google.Cloud.Datastore.V1 {
       int hash = 1;
       hash ^= mutationResults_.GetHashCode();
       if (IndexUpdates != 0) hash ^= IndexUpdates.GetHashCode();
+      if (commitTime_ != null) hash ^= CommitTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2689,6 +2763,10 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(32);
         output.WriteInt32(IndexUpdates);
       }
+      if (commitTime_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(CommitTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2704,6 +2782,10 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(32);
         output.WriteInt32(IndexUpdates);
       }
+      if (commitTime_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(CommitTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2717,6 +2799,9 @@ namespace Google.Cloud.Datastore.V1 {
       size += mutationResults_.CalculateSize(_repeated_mutationResults_codec);
       if (IndexUpdates != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(IndexUpdates);
+      }
+      if (commitTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CommitTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2733,6 +2818,12 @@ namespace Google.Cloud.Datastore.V1 {
       mutationResults_.Add(other.mutationResults_);
       if (other.IndexUpdates != 0) {
         IndexUpdates = other.IndexUpdates;
+      }
+      if (other.commitTime_ != null) {
+        if (commitTime_ == null) {
+          CommitTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CommitTime.MergeFrom(other.CommitTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2757,6 +2848,13 @@ namespace Google.Cloud.Datastore.V1 {
             IndexUpdates = input.ReadInt32();
             break;
           }
+          case 66: {
+            if (commitTime_ == null) {
+              CommitTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CommitTime);
+            break;
+          }
         }
       }
     #endif
@@ -2778,6 +2876,13 @@ namespace Google.Cloud.Datastore.V1 {
           }
           case 32: {
             IndexUpdates = input.ReadInt32();
+            break;
+          }
+          case 66: {
+            if (commitTime_ == null) {
+              CommitTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CommitTime);
             break;
           }
         }
@@ -3673,6 +3778,9 @@ namespace Google.Cloud.Datastore.V1 {
         case ConflictDetectionStrategyOneofCase.BaseVersion:
           BaseVersion = other.BaseVersion;
           break;
+        case ConflictDetectionStrategyOneofCase.UpdateTime:
+          UpdateTime = other.UpdateTime.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -3765,6 +3873,23 @@ namespace Google.Cloud.Datastore.V1 {
       }
     }
 
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 11;
+    /// <summary>
+    /// The update time of the entity that this mutation is being applied
+    /// to. If this does not match the current update time on the server, the
+    /// mutation conflicts.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.UpdateTime ? (global::Google.Protobuf.WellKnownTypes.Timestamp) conflictDetectionStrategy_ : null; }
+      set {
+        conflictDetectionStrategy_ = value;
+        conflictDetectionStrategyCase_ = value == null ? ConflictDetectionStrategyOneofCase.None : ConflictDetectionStrategyOneofCase.UpdateTime;
+      }
+    }
+
     private object operation_;
     /// <summary>Enum of possible cases for the "operation" oneof.</summary>
     public enum OperationOneofCase {
@@ -3793,6 +3918,7 @@ namespace Google.Cloud.Datastore.V1 {
     public enum ConflictDetectionStrategyOneofCase {
       None = 0,
       BaseVersion = 8,
+      UpdateTime = 11,
     }
     private ConflictDetectionStrategyOneofCase conflictDetectionStrategyCase_ = ConflictDetectionStrategyOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3828,6 +3954,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (!object.Equals(Upsert, other.Upsert)) return false;
       if (!object.Equals(Delete, other.Delete)) return false;
       if (BaseVersion != other.BaseVersion) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (OperationCase != other.OperationCase) return false;
       if (ConflictDetectionStrategyCase != other.ConflictDetectionStrategyCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -3842,6 +3969,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (operationCase_ == OperationOneofCase.Upsert) hash ^= Upsert.GetHashCode();
       if (operationCase_ == OperationOneofCase.Delete) hash ^= Delete.GetHashCode();
       if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.BaseVersion) hash ^= BaseVersion.GetHashCode();
+      if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.UpdateTime) hash ^= UpdateTime.GetHashCode();
       hash ^= (int) operationCase_;
       hash ^= (int) conflictDetectionStrategyCase_;
       if (_unknownFields != null) {
@@ -3882,6 +4010,10 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(64);
         output.WriteInt64(BaseVersion);
       }
+      if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.UpdateTime) {
+        output.WriteRawTag(90);
+        output.WriteMessage(UpdateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3912,6 +4044,10 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(64);
         output.WriteInt64(BaseVersion);
       }
+      if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.UpdateTime) {
+        output.WriteRawTag(90);
+        output.WriteMessage(UpdateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3936,6 +4072,9 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.BaseVersion) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(BaseVersion);
+      }
+      if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.UpdateTime) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3979,6 +4118,12 @@ namespace Google.Cloud.Datastore.V1 {
       switch (other.ConflictDetectionStrategyCase) {
         case ConflictDetectionStrategyOneofCase.BaseVersion:
           BaseVersion = other.BaseVersion;
+          break;
+        case ConflictDetectionStrategyOneofCase.UpdateTime:
+          if (UpdateTime == null) {
+            UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          }
+          UpdateTime.MergeFrom(other.UpdateTime);
           break;
       }
 
@@ -4037,6 +4182,15 @@ namespace Google.Cloud.Datastore.V1 {
             BaseVersion = input.ReadInt64();
             break;
           }
+          case 90: {
+            global::Google.Protobuf.WellKnownTypes.Timestamp subBuilder = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.UpdateTime) {
+              subBuilder.MergeFrom(UpdateTime);
+            }
+            input.ReadMessage(subBuilder);
+            UpdateTime = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -4090,6 +4244,15 @@ namespace Google.Cloud.Datastore.V1 {
           }
           case 64: {
             BaseVersion = input.ReadInt64();
+            break;
+          }
+          case 90: {
+            global::Google.Protobuf.WellKnownTypes.Timestamp subBuilder = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.UpdateTime) {
+              subBuilder.MergeFrom(UpdateTime);
+            }
+            input.ReadMessage(subBuilder);
+            UpdateTime = subBuilder;
             break;
           }
         }
@@ -4138,6 +4301,7 @@ namespace Google.Cloud.Datastore.V1 {
     public MutationResult(MutationResult other) : this() {
       key_ = other.key_ != null ? other.key_.Clone() : null;
       version_ = other.version_;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       conflictDetected_ = other.conflictDetected_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -4183,6 +4347,24 @@ namespace Google.Cloud.Datastore.V1 {
       }
     }
 
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 6;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// The update time of the entity on the server after processing the mutation.
+    /// If the mutation doesn't change anything on the server, then the timestamp
+    /// will be the update timestamp of the current entity. This field will not be
+    /// set after a 'delete'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
     /// <summary>Field number for the "conflict_detected" field.</summary>
     public const int ConflictDetectedFieldNumber = 5;
     private bool conflictDetected_;
@@ -4216,6 +4398,7 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (!object.Equals(Key, other.Key)) return false;
       if (Version != other.Version) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (ConflictDetected != other.ConflictDetected) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -4226,6 +4409,7 @@ namespace Google.Cloud.Datastore.V1 {
       int hash = 1;
       if (key_ != null) hash ^= Key.GetHashCode();
       if (Version != 0L) hash ^= Version.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (ConflictDetected != false) hash ^= ConflictDetected.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4257,6 +4441,10 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(40);
         output.WriteBool(ConflictDetected);
       }
+      if (updateTime_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(UpdateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4279,6 +4467,10 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(40);
         output.WriteBool(ConflictDetected);
       }
+      if (updateTime_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(UpdateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4294,6 +4486,9 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (Version != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Version);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
       if (ConflictDetected != false) {
         size += 1 + 1;
@@ -4318,6 +4513,12 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (other.Version != 0L) {
         Version = other.Version;
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
       }
       if (other.ConflictDetected != false) {
         ConflictDetected = other.ConflictDetected;
@@ -4352,6 +4553,13 @@ namespace Google.Cloud.Datastore.V1 {
             ConflictDetected = input.ReadBool();
             break;
           }
+          case 50: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
         }
       }
     #endif
@@ -4380,6 +4588,13 @@ namespace Google.Cloud.Datastore.V1 {
           }
           case 40: {
             ConflictDetected = input.ReadBool();
+            break;
+          }
+          case 50: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
             break;
           }
         }
@@ -4433,6 +4648,9 @@ namespace Google.Cloud.Datastore.V1 {
         case ConsistencyTypeOneofCase.Transaction:
           Transaction = other.Transaction;
           break;
+        case ConsistencyTypeOneofCase.ReadTime:
+          ReadTime = other.ReadTime.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -4477,12 +4695,30 @@ namespace Google.Cloud.Datastore.V1 {
       }
     }
 
+    /// <summary>Field number for the "read_time" field.</summary>
+    public const int ReadTimeFieldNumber = 4;
+    /// <summary>
+    /// Reads entities as they were at the given time. This may not be older
+    /// than 270 seconds.  This value is only supported for Cloud Firestore in
+    /// Datastore mode.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ReadTime {
+      get { return consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadTime ? (global::Google.Protobuf.WellKnownTypes.Timestamp) consistencyType_ : null; }
+      set {
+        consistencyType_ = value;
+        consistencyTypeCase_ = value == null ? ConsistencyTypeOneofCase.None : ConsistencyTypeOneofCase.ReadTime;
+      }
+    }
+
     private object consistencyType_;
     /// <summary>Enum of possible cases for the "consistency_type" oneof.</summary>
     public enum ConsistencyTypeOneofCase {
       None = 0,
       ReadConsistency = 1,
       Transaction = 2,
+      ReadTime = 4,
     }
     private ConsistencyTypeOneofCase consistencyTypeCase_ = ConsistencyTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4515,6 +4751,7 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (ReadConsistency != other.ReadConsistency) return false;
       if (Transaction != other.Transaction) return false;
+      if (!object.Equals(ReadTime, other.ReadTime)) return false;
       if (ConsistencyTypeCase != other.ConsistencyTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -4525,6 +4762,7 @@ namespace Google.Cloud.Datastore.V1 {
       int hash = 1;
       if (consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadConsistency) hash ^= ReadConsistency.GetHashCode();
       if (consistencyTypeCase_ == ConsistencyTypeOneofCase.Transaction) hash ^= Transaction.GetHashCode();
+      if (consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadTime) hash ^= ReadTime.GetHashCode();
       hash ^= (int) consistencyTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4552,6 +4790,10 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(18);
         output.WriteBytes(Transaction);
       }
+      if (consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadTime) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ReadTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4570,6 +4812,10 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(18);
         output.WriteBytes(Transaction);
       }
+      if (consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadTime) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ReadTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4585,6 +4831,9 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (consistencyTypeCase_ == ConsistencyTypeOneofCase.Transaction) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Transaction);
+      }
+      if (consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadTime) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4604,6 +4853,12 @@ namespace Google.Cloud.Datastore.V1 {
           break;
         case ConsistencyTypeOneofCase.Transaction:
           Transaction = other.Transaction;
+          break;
+        case ConsistencyTypeOneofCase.ReadTime:
+          if (ReadTime == null) {
+            ReadTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          }
+          ReadTime.MergeFrom(other.ReadTime);
           break;
       }
 
@@ -4631,6 +4886,15 @@ namespace Google.Cloud.Datastore.V1 {
             Transaction = input.ReadBytes();
             break;
           }
+          case 34: {
+            global::Google.Protobuf.WellKnownTypes.Timestamp subBuilder = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            if (consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadTime) {
+              subBuilder.MergeFrom(ReadTime);
+            }
+            input.ReadMessage(subBuilder);
+            ReadTime = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -4653,6 +4917,15 @@ namespace Google.Cloud.Datastore.V1 {
           }
           case 18: {
             Transaction = input.ReadBytes();
+            break;
+          }
+          case 34: {
+            global::Google.Protobuf.WellKnownTypes.Timestamp subBuilder = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            if (consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadTime) {
+              subBuilder.MergeFrom(ReadTime);
+            }
+            input.ReadMessage(subBuilder);
+            ReadTime = subBuilder;
             break;
           }
         }
@@ -5221,6 +5494,7 @@ namespace Google.Cloud.Datastore.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ReadOnly(ReadOnly other) : this() {
+          readTime_ = other.readTime_ != null ? other.readTime_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -5228,6 +5502,22 @@ namespace Google.Cloud.Datastore.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ReadOnly Clone() {
           return new ReadOnly(this);
+        }
+
+        /// <summary>Field number for the "read_time" field.</summary>
+        public const int ReadTimeFieldNumber = 1;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp readTime_;
+        /// <summary>
+        /// Reads entities at the given time.
+        /// This may not be older than 60 seconds.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp ReadTime {
+          get { return readTime_; }
+          set {
+            readTime_ = value;
+          }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5245,6 +5535,7 @@ namespace Google.Cloud.Datastore.V1 {
           if (ReferenceEquals(other, this)) {
             return true;
           }
+          if (!object.Equals(ReadTime, other.ReadTime)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -5252,6 +5543,7 @@ namespace Google.Cloud.Datastore.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
+          if (readTime_ != null) hash ^= ReadTime.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -5270,6 +5562,10 @@ namespace Google.Cloud.Datastore.V1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
+          if (readTime_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(ReadTime);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -5280,6 +5576,10 @@ namespace Google.Cloud.Datastore.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (readTime_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(ReadTime);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -5290,6 +5590,9 @@ namespace Google.Cloud.Datastore.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
+          if (readTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadTime);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -5301,6 +5604,12 @@ namespace Google.Cloud.Datastore.V1 {
         public void MergeFrom(ReadOnly other) {
           if (other == null) {
             return;
+          }
+          if (other.readTime_ != null) {
+            if (readTime_ == null) {
+              ReadTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            ReadTime.MergeFrom(other.ReadTime);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -5317,6 +5626,13 @@ namespace Google.Cloud.Datastore.V1 {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
+              case 10: {
+                if (readTime_ == null) {
+                  ReadTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(ReadTime);
+                break;
+              }
             }
           }
         #endif
@@ -5332,6 +5648,13 @@ namespace Google.Cloud.Datastore.V1 {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                 break;
+              case 10: {
+                if (readTime_ == null) {
+                  ReadTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(ReadTime);
+                break;
+              }
             }
           }
         }
