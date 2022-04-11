@@ -65,6 +65,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             SearchAssignmentsSettings = existing.SearchAssignmentsSettings;
             SearchAllAssignmentsSettings = existing.SearchAllAssignmentsSettings;
             MoveAssignmentSettings = existing.MoveAssignmentSettings;
+            UpdateAssignmentSettings = existing.UpdateAssignmentSettings;
             GetBiReservationSettings = existing.GetBiReservationSettings;
             UpdateBiReservationSettings = existing.UpdateBiReservationSettings;
             OnCopy(existing);
@@ -383,6 +384,18 @@ namespace Google.Cloud.BigQuery.Reservation.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ReservationServiceClient.UpdateAssignment</c> and <c>ReservationServiceClient.UpdateAssignmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAssignmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ReservationServiceClient.GetBiReservation</c> and <c>ReservationServiceClient.GetBiReservationAsync</c>.
         /// </summary>
         /// <remarks>
@@ -633,8 +646,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// Definition of the new reservation to create.
         /// </param>
         /// <param name="reservationId">
-        /// The reservation ID. This field must only contain lower case alphanumeric
-        /// characters or dash. Max length is 64 characters.
+        /// The reservation ID. It must only contain lower case alphanumeric
+        /// characters or dashes. It must start with a letter and must not end
+        /// with a dash. Its maximum length is 64 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -657,8 +671,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// Definition of the new reservation to create.
         /// </param>
         /// <param name="reservationId">
-        /// The reservation ID. This field must only contain lower case alphanumeric
-        /// characters or dash. Max length is 64 characters.
+        /// The reservation ID. It must only contain lower case alphanumeric
+        /// characters or dashes. It must start with a letter and must not end
+        /// with a dash. Its maximum length is 64 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -681,8 +696,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// Definition of the new reservation to create.
         /// </param>
         /// <param name="reservationId">
-        /// The reservation ID. This field must only contain lower case alphanumeric
-        /// characters or dash. Max length is 64 characters.
+        /// The reservation ID. It must only contain lower case alphanumeric
+        /// characters or dashes. It must start with a letter and must not end
+        /// with a dash. Its maximum length is 64 characters.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -700,8 +716,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// Definition of the new reservation to create.
         /// </param>
         /// <param name="reservationId">
-        /// The reservation ID. This field must only contain lower case alphanumeric
-        /// characters or dash. Max length is 64 characters.
+        /// The reservation ID. It must only contain lower case alphanumeric
+        /// characters or dashes. It must start with a letter and must not end
+        /// with a dash. Its maximum length is 64 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -724,8 +741,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// Definition of the new reservation to create.
         /// </param>
         /// <param name="reservationId">
-        /// The reservation ID. This field must only contain lower case alphanumeric
-        /// characters or dash. Max length is 64 characters.
+        /// The reservation ID. It must only contain lower case alphanumeric
+        /// characters or dashes. It must start with a letter and must not end
+        /// with a dash. Its maximum length is 64 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -748,8 +766,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// Definition of the new reservation to create.
         /// </param>
         /// <param name="reservationId">
-        /// The reservation ID. This field must only contain lower case alphanumeric
-        /// characters or dash. Max length is 64 characters.
+        /// The reservation ID. It must only contain lower case alphanumeric
+        /// characters or dashes. It must start with a letter and must not end
+        /// with a dash. Its maximum length is 64 characters.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1803,7 +1822,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// 
         /// For example, in order to downgrade from 10000 slots to 8000, you might
         /// split a 10000 capacity commitment into commitments of 2000 and 8000. Then,
-        /// you would change the plan of the first one to `FLEX` and then delete it.
+        /// you delete the first one after the commitment end time passes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1819,7 +1838,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// 
         /// For example, in order to downgrade from 10000 slots to 8000, you might
         /// split a 10000 capacity commitment into commitments of 2000 and 8000. Then,
-        /// you would change the plan of the first one to `FLEX` and then delete it.
+        /// you delete the first one after the commitment end time passes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1835,7 +1854,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// 
         /// For example, in order to downgrade from 10000 slots to 8000, you might
         /// split a 10000 capacity commitment into commitments of 2000 and 8000. Then,
-        /// you would change the plan of the first one to `FLEX` and then delete it.
+        /// you delete the first one after the commitment end time passes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1851,7 +1870,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// 
         /// For example, in order to downgrade from 10000 slots to 8000, you might
         /// split a 10000 capacity commitment into commitments of 2000 and 8000. Then,
-        /// you would change the plan of the first one to `FLEX` and then delete it.
+        /// you delete the first one after the commitment end time passes.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name e.g.,:
@@ -1877,7 +1896,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// 
         /// For example, in order to downgrade from 10000 slots to 8000, you might
         /// split a 10000 capacity commitment into commitments of 2000 and 8000. Then,
-        /// you would change the plan of the first one to `FLEX` and then delete it.
+        /// you delete the first one after the commitment end time passes.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name e.g.,:
@@ -1903,7 +1922,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// 
         /// For example, in order to downgrade from 10000 slots to 8000, you might
         /// split a 10000 capacity commitment into commitments of 2000 and 8000. Then,
-        /// you would change the plan of the first one to `FLEX` and then delete it.
+        /// you delete the first one after the commitment end time passes.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name e.g.,:
@@ -1925,7 +1944,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// 
         /// For example, in order to downgrade from 10000 slots to 8000, you might
         /// split a 10000 capacity commitment into commitments of 2000 and 8000. Then,
-        /// you would change the plan of the first one to `FLEX` and then delete it.
+        /// you delete the first one after the commitment end time passes.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name e.g.,:
@@ -1951,7 +1970,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// 
         /// For example, in order to downgrade from 10000 slots to 8000, you might
         /// split a 10000 capacity commitment into commitments of 2000 and 8000. Then,
-        /// you would change the plan of the first one to `FLEX` and then delete it.
+        /// you delete the first one after the commitment end time passes.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name e.g.,:
@@ -1977,7 +1996,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// 
         /// For example, in order to downgrade from 10000 slots to 8000, you might
         /// split a 10000 capacity commitment into commitments of 2000 and 8000. Then,
-        /// you would change the plan of the first one to `FLEX` and then delete it.
+        /// you delete the first one after the commitment end time passes.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name e.g.,:
@@ -3149,8 +3168,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             DeleteAssignmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deprecated: Looks up assignments for a specified resource for a particular region.
-        /// If the request is about a project:
+        /// Deprecated: Looks up assignments for a specified resource for a particular
+        /// region. If the request is about a project:
         /// 
         /// 1. Assignments created on the project will be returned if they exist.
         /// 2. Otherwise assignments created on the closest ancestor will be
@@ -3181,8 +3200,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deprecated: Looks up assignments for a specified resource for a particular region.
-        /// If the request is about a project:
+        /// Deprecated: Looks up assignments for a specified resource for a particular
+        /// region. If the request is about a project:
         /// 
         /// 1. Assignments created on the project will be returned if they exist.
         /// 2. Otherwise assignments created on the closest ancestor will be
@@ -3213,8 +3232,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deprecated: Looks up assignments for a specified resource for a particular region.
-        /// If the request is about a project:
+        /// Deprecated: Looks up assignments for a specified resource for a particular
+        /// region. If the request is about a project:
         /// 
         /// 1. Assignments created on the project will be returned if they exist.
         /// 2. Otherwise assignments created on the closest ancestor will be
@@ -3272,8 +3291,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             }, callSettings);
 
         /// <summary>
-        /// Deprecated: Looks up assignments for a specified resource for a particular region.
-        /// If the request is about a project:
+        /// Deprecated: Looks up assignments for a specified resource for a particular
+        /// region. If the request is about a project:
         /// 
         /// 1. Assignments created on the project will be returned if they exist.
         /// 2. Otherwise assignments created on the closest ancestor will be
@@ -3331,8 +3350,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             }, callSettings);
 
         /// <summary>
-        /// Deprecated: Looks up assignments for a specified resource for a particular region.
-        /// If the request is about a project:
+        /// Deprecated: Looks up assignments for a specified resource for a particular
+        /// region. If the request is about a project:
         /// 
         /// 1. Assignments created on the project will be returned if they exist.
         /// 2. Otherwise assignments created on the closest ancestor will be
@@ -3390,8 +3409,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             }, callSettings);
 
         /// <summary>
-        /// Deprecated: Looks up assignments for a specified resource for a particular region.
-        /// If the request is about a project:
+        /// Deprecated: Looks up assignments for a specified resource for a particular
+        /// region. If the request is about a project:
         /// 
         /// 1. Assignments created on the project will be returned if they exist.
         /// 2. Otherwise assignments created on the closest ancestor will be
@@ -3906,6 +3925,95 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             MoveAssignmentAsync(name, destinationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates an existing assignment.
+        /// 
+        /// Only the `priority` field can be updated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Assignment UpdateAssignment(UpdateAssignmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an existing assignment.
+        /// 
+        /// Only the `priority` field can be updated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Assignment> UpdateAssignmentAsync(UpdateAssignmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an existing assignment.
+        /// 
+        /// Only the `priority` field can be updated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Assignment> UpdateAssignmentAsync(UpdateAssignmentRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAssignmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an existing assignment.
+        /// 
+        /// Only the `priority` field can be updated.
+        /// </summary>
+        /// <param name="assignment">
+        /// Content of the assignment to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Standard field mask for the set of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Assignment UpdateAssignment(Assignment assignment, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAssignment(new UpdateAssignmentRequest
+            {
+                Assignment = assignment,
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing assignment.
+        /// 
+        /// Only the `priority` field can be updated.
+        /// </summary>
+        /// <param name="assignment">
+        /// Content of the assignment to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Standard field mask for the set of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Assignment> UpdateAssignmentAsync(Assignment assignment, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAssignmentAsync(new UpdateAssignmentRequest
+            {
+                Assignment = assignment,
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing assignment.
+        /// 
+        /// Only the `priority` field can be updated.
+        /// </summary>
+        /// <param name="assignment">
+        /// Content of the assignment to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Standard field mask for the set of fields to be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Assignment> UpdateAssignmentAsync(Assignment assignment, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateAssignmentAsync(assignment, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Retrieves a BI reservation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4192,6 +4300,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
 
         private readonly gaxgrpc::ApiCall<MoveAssignmentRequest, Assignment> _callMoveAssignment;
 
+        private readonly gaxgrpc::ApiCall<UpdateAssignmentRequest, Assignment> _callUpdateAssignment;
+
         private readonly gaxgrpc::ApiCall<GetBiReservationRequest, BiReservation> _callGetBiReservation;
 
         private readonly gaxgrpc::ApiCall<UpdateBiReservationRequest, BiReservation> _callUpdateBiReservation;
@@ -4262,6 +4372,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             _callMoveAssignment = clientHelper.BuildApiCall<MoveAssignmentRequest, Assignment>(grpcClient.MoveAssignmentAsync, grpcClient.MoveAssignment, effectiveSettings.MoveAssignmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callMoveAssignment);
             Modify_MoveAssignmentApiCall(ref _callMoveAssignment);
+            _callUpdateAssignment = clientHelper.BuildApiCall<UpdateAssignmentRequest, Assignment>(grpcClient.UpdateAssignmentAsync, grpcClient.UpdateAssignment, effectiveSettings.UpdateAssignmentSettings).WithGoogleRequestParam("assignment.name", request => request.Assignment?.Name);
+            Modify_ApiCall(ref _callUpdateAssignment);
+            Modify_UpdateAssignmentApiCall(ref _callUpdateAssignment);
             _callGetBiReservation = clientHelper.BuildApiCall<GetBiReservationRequest, BiReservation>(grpcClient.GetBiReservationAsync, grpcClient.GetBiReservation, effectiveSettings.GetBiReservationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetBiReservation);
             Modify_GetBiReservationApiCall(ref _callGetBiReservation);
@@ -4309,6 +4422,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
 
         partial void Modify_MoveAssignmentApiCall(ref gaxgrpc::ApiCall<MoveAssignmentRequest, Assignment> call);
 
+        partial void Modify_UpdateAssignmentApiCall(ref gaxgrpc::ApiCall<UpdateAssignmentRequest, Assignment> call);
+
         partial void Modify_GetBiReservationApiCall(ref gaxgrpc::ApiCall<GetBiReservationRequest, BiReservation> call);
 
         partial void Modify_UpdateBiReservationApiCall(ref gaxgrpc::ApiCall<UpdateBiReservationRequest, BiReservation> call);
@@ -4353,6 +4468,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         partial void Modify_SearchAllAssignmentsRequest(ref SearchAllAssignmentsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_MoveAssignmentRequest(ref MoveAssignmentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateAssignmentRequest(ref UpdateAssignmentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetBiReservationRequest(ref GetBiReservationRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4626,7 +4743,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// 
         /// For example, in order to downgrade from 10000 slots to 8000, you might
         /// split a 10000 capacity commitment into commitments of 2000 and 8000. Then,
-        /// you would change the plan of the first one to `FLEX` and then delete it.
+        /// you delete the first one after the commitment end time passes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4645,7 +4762,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// 
         /// For example, in order to downgrade from 10000 slots to 8000, you might
         /// split a 10000 capacity commitment into commitments of 2000 and 8000. Then,
-        /// you would change the plan of the first one to `FLEX` and then delete it.
+        /// you delete the first one after the commitment end time passes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4901,8 +5018,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         }
 
         /// <summary>
-        /// Deprecated: Looks up assignments for a specified resource for a particular region.
-        /// If the request is about a project:
+        /// Deprecated: Looks up assignments for a specified resource for a particular
+        /// region. If the request is about a project:
         /// 
         /// 1. Assignments created on the project will be returned if they exist.
         /// 2. Otherwise assignments created on the closest ancestor will be
@@ -4936,8 +5053,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         }
 
         /// <summary>
-        /// Deprecated: Looks up assignments for a specified resource for a particular region.
-        /// If the request is about a project:
+        /// Deprecated: Looks up assignments for a specified resource for a particular
+        /// region. If the request is about a project:
         /// 
         /// 1. Assignments created on the project will be returned if they exist.
         /// 2. Otherwise assignments created on the closest ancestor will be
@@ -5062,6 +5179,34 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         {
             Modify_MoveAssignmentRequest(ref request, ref callSettings);
             return _callMoveAssignment.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an existing assignment.
+        /// 
+        /// Only the `priority` field can be updated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Assignment UpdateAssignment(UpdateAssignmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAssignmentRequest(ref request, ref callSettings);
+            return _callUpdateAssignment.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an existing assignment.
+        /// 
+        /// Only the `priority` field can be updated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Assignment> UpdateAssignmentAsync(UpdateAssignmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAssignmentRequest(ref request, ref callSettings);
+            return _callUpdateAssignment.Async(request, callSettings);
         }
 
         /// <summary>

@@ -46,6 +46,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 IgnoreIdleSlots = true,
                 CreationTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
+                Concurrency = 3987187644333433879L,
             };
             mockGrpcClient.Setup(x => x.CreateReservation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -71,6 +73,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 IgnoreIdleSlots = true,
                 CreationTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
+                Concurrency = 3987187644333433879L,
             };
             mockGrpcClient.Setup(x => x.CreateReservationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Reservation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -98,6 +102,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 IgnoreIdleSlots = true,
                 CreationTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
+                Concurrency = 3987187644333433879L,
             };
             mockGrpcClient.Setup(x => x.CreateReservation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -123,6 +129,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 IgnoreIdleSlots = true,
                 CreationTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
+                Concurrency = 3987187644333433879L,
             };
             mockGrpcClient.Setup(x => x.CreateReservationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Reservation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -150,6 +158,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 IgnoreIdleSlots = true,
                 CreationTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
+                Concurrency = 3987187644333433879L,
             };
             mockGrpcClient.Setup(x => x.CreateReservation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -175,6 +185,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 IgnoreIdleSlots = true,
                 CreationTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
+                Concurrency = 3987187644333433879L,
             };
             mockGrpcClient.Setup(x => x.CreateReservationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Reservation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -200,6 +212,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 IgnoreIdleSlots = true,
                 CreationTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
+                Concurrency = 3987187644333433879L,
             };
             mockGrpcClient.Setup(x => x.GetReservation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -223,6 +237,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 IgnoreIdleSlots = true,
                 CreationTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
+                Concurrency = 3987187644333433879L,
             };
             mockGrpcClient.Setup(x => x.GetReservationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Reservation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -248,6 +264,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 IgnoreIdleSlots = true,
                 CreationTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
+                Concurrency = 3987187644333433879L,
             };
             mockGrpcClient.Setup(x => x.GetReservation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -271,6 +289,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 IgnoreIdleSlots = true,
                 CreationTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
+                Concurrency = 3987187644333433879L,
             };
             mockGrpcClient.Setup(x => x.GetReservationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Reservation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -296,6 +316,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 IgnoreIdleSlots = true,
                 CreationTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
+                Concurrency = 3987187644333433879L,
             };
             mockGrpcClient.Setup(x => x.GetReservation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -319,6 +341,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 IgnoreIdleSlots = true,
                 CreationTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
+                Concurrency = 3987187644333433879L,
             };
             mockGrpcClient.Setup(x => x.GetReservationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Reservation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -438,6 +462,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 IgnoreIdleSlots = true,
                 CreationTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
+                Concurrency = 3987187644333433879L,
             };
             mockGrpcClient.Setup(x => x.UpdateReservation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -462,6 +488,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 IgnoreIdleSlots = true,
                 CreationTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
+                Concurrency = 3987187644333433879L,
             };
             mockGrpcClient.Setup(x => x.UpdateReservationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Reservation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -488,6 +516,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 IgnoreIdleSlots = true,
                 CreationTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
+                Concurrency = 3987187644333433879L,
             };
             mockGrpcClient.Setup(x => x.UpdateReservation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -512,6 +542,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 IgnoreIdleSlots = true,
                 CreationTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
+                Concurrency = 3987187644333433879L,
             };
             mockGrpcClient.Setup(x => x.UpdateReservationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Reservation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -543,6 +575,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 FailureStatus = new gr::Status(),
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 CommitmentStartTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
             };
             mockGrpcClient.Setup(x => x.CreateCapacityCommitment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -572,6 +605,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 FailureStatus = new gr::Status(),
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 CommitmentStartTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
             };
             mockGrpcClient.Setup(x => x.CreateCapacityCommitmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CapacityCommitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -601,6 +635,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 FailureStatus = new gr::Status(),
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 CommitmentStartTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
             };
             mockGrpcClient.Setup(x => x.CreateCapacityCommitment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -628,6 +663,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 FailureStatus = new gr::Status(),
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 CommitmentStartTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
             };
             mockGrpcClient.Setup(x => x.CreateCapacityCommitmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CapacityCommitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -657,6 +693,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 FailureStatus = new gr::Status(),
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 CommitmentStartTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
             };
             mockGrpcClient.Setup(x => x.CreateCapacityCommitment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -684,6 +721,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 FailureStatus = new gr::Status(),
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 CommitmentStartTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
             };
             mockGrpcClient.Setup(x => x.CreateCapacityCommitmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CapacityCommitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -712,6 +750,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 FailureStatus = new gr::Status(),
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 CommitmentStartTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
             };
             mockGrpcClient.Setup(x => x.GetCapacityCommitment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -738,6 +777,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 FailureStatus = new gr::Status(),
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 CommitmentStartTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
             };
             mockGrpcClient.Setup(x => x.GetCapacityCommitmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CapacityCommitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -766,6 +806,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 FailureStatus = new gr::Status(),
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 CommitmentStartTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
             };
             mockGrpcClient.Setup(x => x.GetCapacityCommitment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -792,6 +833,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 FailureStatus = new gr::Status(),
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 CommitmentStartTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
             };
             mockGrpcClient.Setup(x => x.GetCapacityCommitmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CapacityCommitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -820,6 +862,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 FailureStatus = new gr::Status(),
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 CommitmentStartTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
             };
             mockGrpcClient.Setup(x => x.GetCapacityCommitment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -846,6 +889,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 FailureStatus = new gr::Status(),
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 CommitmentStartTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
             };
             mockGrpcClient.Setup(x => x.GetCapacityCommitmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CapacityCommitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -970,6 +1014,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 FailureStatus = new gr::Status(),
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 CommitmentStartTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
             };
             mockGrpcClient.Setup(x => x.UpdateCapacityCommitment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -997,6 +1042,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 FailureStatus = new gr::Status(),
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 CommitmentStartTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
             };
             mockGrpcClient.Setup(x => x.UpdateCapacityCommitmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CapacityCommitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1026,6 +1072,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 FailureStatus = new gr::Status(),
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 CommitmentStartTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
             };
             mockGrpcClient.Setup(x => x.UpdateCapacityCommitment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1053,6 +1100,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 FailureStatus = new gr::Status(),
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 CommitmentStartTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
             };
             mockGrpcClient.Setup(x => x.UpdateCapacityCommitmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CapacityCommitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1217,6 +1265,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 FailureStatus = new gr::Status(),
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 CommitmentStartTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
             };
             mockGrpcClient.Setup(x => x.MergeCapacityCommitments(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1247,6 +1296,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 FailureStatus = new gr::Status(),
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 CommitmentStartTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
             };
             mockGrpcClient.Setup(x => x.MergeCapacityCommitmentsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CapacityCommitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1279,6 +1329,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 FailureStatus = new gr::Status(),
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 CommitmentStartTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
             };
             mockGrpcClient.Setup(x => x.MergeCapacityCommitments(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1309,6 +1360,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 FailureStatus = new gr::Status(),
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 CommitmentStartTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
             };
             mockGrpcClient.Setup(x => x.MergeCapacityCommitmentsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CapacityCommitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1341,6 +1393,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 FailureStatus = new gr::Status(),
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 CommitmentStartTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
             };
             mockGrpcClient.Setup(x => x.MergeCapacityCommitments(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1371,6 +1424,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 FailureStatus = new gr::Status(),
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 CommitmentStartTime = new wkt::Timestamp(),
+                MultiRegionAuxiliary = true,
             };
             mockGrpcClient.Setup(x => x.MergeCapacityCommitmentsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CapacityCommitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1765,6 +1819,102 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void UpdateAssignmentRequestObject()
+        {
+            moq::Mock<ReservationService.ReservationServiceClient> mockGrpcClient = new moq::Mock<ReservationService.ReservationServiceClient>(moq::MockBehavior.Strict);
+            UpdateAssignmentRequest request = new UpdateAssignmentRequest
+            {
+                Assignment = new Assignment(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Assignment expectedResponse = new Assignment
+            {
+                AssignmentName = AssignmentName.FromProjectLocationReservationAssignment("[PROJECT]", "[LOCATION]", "[RESERVATION]", "[ASSIGNMENT]"),
+                JobType = Assignment.Types.JobType.Pipeline,
+                Assignee = "assignee3de7fd68",
+                State = Assignment.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.UpdateAssignment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
+            Assignment response = client.UpdateAssignment(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateAssignmentRequestObjectAsync()
+        {
+            moq::Mock<ReservationService.ReservationServiceClient> mockGrpcClient = new moq::Mock<ReservationService.ReservationServiceClient>(moq::MockBehavior.Strict);
+            UpdateAssignmentRequest request = new UpdateAssignmentRequest
+            {
+                Assignment = new Assignment(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Assignment expectedResponse = new Assignment
+            {
+                AssignmentName = AssignmentName.FromProjectLocationReservationAssignment("[PROJECT]", "[LOCATION]", "[RESERVATION]", "[ASSIGNMENT]"),
+                JobType = Assignment.Types.JobType.Pipeline,
+                Assignee = "assignee3de7fd68",
+                State = Assignment.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.UpdateAssignmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Assignment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
+            Assignment responseCallSettings = await client.UpdateAssignmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Assignment responseCancellationToken = await client.UpdateAssignmentAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateAssignment()
+        {
+            moq::Mock<ReservationService.ReservationServiceClient> mockGrpcClient = new moq::Mock<ReservationService.ReservationServiceClient>(moq::MockBehavior.Strict);
+            UpdateAssignmentRequest request = new UpdateAssignmentRequest
+            {
+                Assignment = new Assignment(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Assignment expectedResponse = new Assignment
+            {
+                AssignmentName = AssignmentName.FromProjectLocationReservationAssignment("[PROJECT]", "[LOCATION]", "[RESERVATION]", "[ASSIGNMENT]"),
+                JobType = Assignment.Types.JobType.Pipeline,
+                Assignee = "assignee3de7fd68",
+                State = Assignment.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.UpdateAssignment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
+            Assignment response = client.UpdateAssignment(request.Assignment, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateAssignmentAsync()
+        {
+            moq::Mock<ReservationService.ReservationServiceClient> mockGrpcClient = new moq::Mock<ReservationService.ReservationServiceClient>(moq::MockBehavior.Strict);
+            UpdateAssignmentRequest request = new UpdateAssignmentRequest
+            {
+                Assignment = new Assignment(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Assignment expectedResponse = new Assignment
+            {
+                AssignmentName = AssignmentName.FromProjectLocationReservationAssignment("[PROJECT]", "[LOCATION]", "[RESERVATION]", "[ASSIGNMENT]"),
+                JobType = Assignment.Types.JobType.Pipeline,
+                Assignee = "assignee3de7fd68",
+                State = Assignment.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.UpdateAssignmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Assignment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
+            Assignment responseCallSettings = await client.UpdateAssignmentAsync(request.Assignment, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Assignment responseCancellationToken = await client.UpdateAssignmentAsync(request.Assignment, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetBiReservationRequestObject()
         {
             moq::Mock<ReservationService.ReservationServiceClient> mockGrpcClient = new moq::Mock<ReservationService.ReservationServiceClient>(moq::MockBehavior.Strict);
@@ -1777,6 +1927,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 UpdateTime = new wkt::Timestamp(),
                 Size = -7217254403942597129L,
+                PreferredTables =
+                {
+                    new TableReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetBiReservation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1798,6 +1952,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 UpdateTime = new wkt::Timestamp(),
                 Size = -7217254403942597129L,
+                PreferredTables =
+                {
+                    new TableReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetBiReservationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BiReservation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1821,6 +1979,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 UpdateTime = new wkt::Timestamp(),
                 Size = -7217254403942597129L,
+                PreferredTables =
+                {
+                    new TableReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetBiReservation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1842,6 +2004,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 UpdateTime = new wkt::Timestamp(),
                 Size = -7217254403942597129L,
+                PreferredTables =
+                {
+                    new TableReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetBiReservationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BiReservation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1865,6 +2031,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 UpdateTime = new wkt::Timestamp(),
                 Size = -7217254403942597129L,
+                PreferredTables =
+                {
+                    new TableReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetBiReservation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1886,6 +2056,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 UpdateTime = new wkt::Timestamp(),
                 Size = -7217254403942597129L,
+                PreferredTables =
+                {
+                    new TableReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetBiReservationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BiReservation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1910,6 +2084,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 UpdateTime = new wkt::Timestamp(),
                 Size = -7217254403942597129L,
+                PreferredTables =
+                {
+                    new TableReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateBiReservation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1932,6 +2110,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 UpdateTime = new wkt::Timestamp(),
                 Size = -7217254403942597129L,
+                PreferredTables =
+                {
+                    new TableReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateBiReservationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BiReservation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1956,6 +2138,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 UpdateTime = new wkt::Timestamp(),
                 Size = -7217254403942597129L,
+                PreferredTables =
+                {
+                    new TableReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateBiReservation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1978,6 +2164,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 UpdateTime = new wkt::Timestamp(),
                 Size = -7217254403942597129L,
+                PreferredTables =
+                {
+                    new TableReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateBiReservationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BiReservation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
