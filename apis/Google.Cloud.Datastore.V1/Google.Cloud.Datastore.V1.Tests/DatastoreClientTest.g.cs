@@ -16,6 +16,7 @@
 
 using gaxgrpc = Google.Api.Gax.Grpc;
 using proto = Google.Protobuf;
+using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -42,6 +43,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 Found = { new EntityResult(), },
                 Missing = { new EntityResult(), },
                 Deferred = { new Key(), },
+                ReadTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.Lookup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
@@ -65,6 +67,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 Found = { new EntityResult(), },
                 Missing = { new EntityResult(), },
                 Deferred = { new Key(), },
+                ReadTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.LookupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LookupResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
@@ -90,6 +93,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 Found = { new EntityResult(), },
                 Missing = { new EntityResult(), },
                 Deferred = { new Key(), },
+                ReadTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.Lookup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
@@ -113,6 +117,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                 Found = { new EntityResult(), },
                 Missing = { new EntityResult(), },
                 Deferred = { new Key(), },
+                ReadTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.LookupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LookupResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
@@ -273,6 +278,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                     new MutationResult(),
                 },
                 IndexUpdates = 1466771529,
+                CommitTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.Commit(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
@@ -299,6 +305,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                     new MutationResult(),
                 },
                 IndexUpdates = 1466771529,
+                CommitTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CommitAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
@@ -327,6 +334,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                     new MutationResult(),
                 },
                 IndexUpdates = 1466771529,
+                CommitTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.Commit(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
@@ -353,6 +361,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                     new MutationResult(),
                 },
                 IndexUpdates = 1466771529,
+                CommitTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CommitAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
@@ -380,6 +389,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                     new MutationResult(),
                 },
                 IndexUpdates = 1466771529,
+                CommitTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.Commit(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
@@ -405,6 +415,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                     new MutationResult(),
                 },
                 IndexUpdates = 1466771529,
+                CommitTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CommitAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
