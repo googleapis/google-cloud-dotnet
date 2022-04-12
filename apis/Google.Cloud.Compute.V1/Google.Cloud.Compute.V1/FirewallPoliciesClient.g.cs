@@ -1413,7 +1413,7 @@ namespace Google.Cloud.Compute.V1
             Insert(new InsertFirewallPolicyRequest
             {
                 FirewallPolicyResource = gax::GaxPreconditions.CheckNotNull(firewallPolicyResource, nameof(firewallPolicyResource)),
-                ParentId = parentId ?? "",
+                ParentId = gax::GaxPreconditions.CheckNotNullOrEmpty(parentId, nameof(parentId)),
             }, callSettings);
 
         /// <summary>
@@ -1431,7 +1431,7 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(new InsertFirewallPolicyRequest
             {
                 FirewallPolicyResource = gax::GaxPreconditions.CheckNotNull(firewallPolicyResource, nameof(firewallPolicyResource)),
-                ParentId = parentId ?? "",
+                ParentId = gax::GaxPreconditions.CheckNotNullOrEmpty(parentId, nameof(parentId)),
             }, callSettings);
 
         /// <summary>
