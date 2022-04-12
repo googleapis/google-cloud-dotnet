@@ -49,11 +49,17 @@ namespace Google.Cloud.BigQuery.V2
     /// </remarks>
     public abstract partial class BigQueryClient : IDisposable
     {
+        /// <summary>
+        /// Google Drive Scope is required when Big Query Table has Google Sheet as a data source.
+        /// </summary>
+        private const string GoogleDriveScope = "https://www.googleapis.com/auth/drive";
+
         private static readonly string[] s_scopes = new[] {
                 BigqueryService.Scope.Bigquery,
                 BigqueryService.Scope.BigqueryInsertdata,
                 BigqueryService.Scope.DevstorageFullControl,
-                BigqueryService.Scope.CloudPlatform
+                BigqueryService.Scope.CloudPlatform,
+                GoogleDriveScope
             };
 
         internal static ScopedCredentialProvider ScopedCredentialProvider { get; } =
