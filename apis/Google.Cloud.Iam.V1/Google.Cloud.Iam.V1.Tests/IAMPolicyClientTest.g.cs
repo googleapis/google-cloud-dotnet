@@ -47,7 +47,7 @@ namespace Google.Cloud.Iam.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMPolicyClient client = new IAMPolicyClientImpl(mockGrpcClient.Object, null);
+            IAMPolicyClient client = new IAMPolicyClientImpl(mockGrpcClient.Object, null, null);
             Policy response = client.SetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -71,7 +71,7 @@ namespace Google.Cloud.Iam.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMPolicyClient client = new IAMPolicyClientImpl(mockGrpcClient.Object, null);
+            IAMPolicyClient client = new IAMPolicyClientImpl(mockGrpcClient.Object, null, null);
             Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
@@ -96,7 +96,7 @@ namespace Google.Cloud.Iam.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMPolicyClient client = new IAMPolicyClientImpl(mockGrpcClient.Object, null);
+            IAMPolicyClient client = new IAMPolicyClientImpl(mockGrpcClient.Object, null, null);
             Policy response = client.GetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -119,7 +119,7 @@ namespace Google.Cloud.Iam.V1.Tests
                 AuditConfigs = { new AuditConfig(), },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMPolicyClient client = new IAMPolicyClientImpl(mockGrpcClient.Object, null);
+            IAMPolicyClient client = new IAMPolicyClientImpl(mockGrpcClient.Object, null, null);
             Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
@@ -147,7 +147,7 @@ namespace Google.Cloud.Iam.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMPolicyClient client = new IAMPolicyClientImpl(mockGrpcClient.Object, null);
+            IAMPolicyClient client = new IAMPolicyClientImpl(mockGrpcClient.Object, null, null);
             TestIamPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -173,7 +173,7 @@ namespace Google.Cloud.Iam.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMPolicyClient client = new IAMPolicyClientImpl(mockGrpcClient.Object, null);
+            IAMPolicyClient client = new IAMPolicyClientImpl(mockGrpcClient.Object, null, null);
             TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);
