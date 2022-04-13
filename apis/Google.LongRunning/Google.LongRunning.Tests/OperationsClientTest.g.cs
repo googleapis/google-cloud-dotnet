@@ -45,7 +45,7 @@ namespace Google.LongRunning.Tests
                 Response = new wkt::Any(),
             };
             mockGrpcClient.Setup(x => x.GetOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
+            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null, null);
             Operation response = client.GetOperation(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -68,7 +68,7 @@ namespace Google.LongRunning.Tests
                 Response = new wkt::Any(),
             };
             mockGrpcClient.Setup(x => x.GetOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
+            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null, null);
             Operation responseCallSettings = await client.GetOperationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Operation responseCancellationToken = await client.GetOperationAsync(request, st::CancellationToken.None);
@@ -93,7 +93,7 @@ namespace Google.LongRunning.Tests
                 Response = new wkt::Any(),
             };
             mockGrpcClient.Setup(x => x.GetOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
+            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null, null);
             Operation response = client.GetOperation(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -116,7 +116,7 @@ namespace Google.LongRunning.Tests
                 Response = new wkt::Any(),
             };
             mockGrpcClient.Setup(x => x.GetOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
+            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null, null);
             Operation responseCallSettings = await client.GetOperationAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Operation responseCancellationToken = await client.GetOperationAsync(request.Name, st::CancellationToken.None);
@@ -134,7 +134,7 @@ namespace Google.LongRunning.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
+            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteOperation(request);
             mockGrpcClient.VerifyAll();
         }
@@ -149,7 +149,7 @@ namespace Google.LongRunning.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
+            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteOperationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteOperationAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -165,7 +165,7 @@ namespace Google.LongRunning.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
+            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteOperation(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -180,7 +180,7 @@ namespace Google.LongRunning.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
+            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteOperationAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteOperationAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -196,7 +196,7 @@ namespace Google.LongRunning.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
+            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null, null);
             client.CancelOperation(request);
             mockGrpcClient.VerifyAll();
         }
@@ -211,7 +211,7 @@ namespace Google.LongRunning.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
+            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelOperationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelOperationAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -227,7 +227,7 @@ namespace Google.LongRunning.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
+            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null, null);
             client.CancelOperation(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -242,7 +242,7 @@ namespace Google.LongRunning.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
+            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelOperationAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelOperationAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -266,7 +266,7 @@ namespace Google.LongRunning.Tests
                 Response = new wkt::Any(),
             };
             mockGrpcClient.Setup(x => x.WaitOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
+            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null, null);
             Operation response = client.WaitOperation(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -290,7 +290,7 @@ namespace Google.LongRunning.Tests
                 Response = new wkt::Any(),
             };
             mockGrpcClient.Setup(x => x.WaitOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
+            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null, null);
             Operation responseCallSettings = await client.WaitOperationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Operation responseCancellationToken = await client.WaitOperationAsync(request, st::CancellationToken.None);

@@ -20,6 +20,7 @@ using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -180,14 +181,14 @@ namespace Google.LongRunning
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return OperationsClient.Create(callInvoker, Settings);
+            return OperationsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<OperationsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return OperationsClient.Create(callInvoker, Settings);
+            return OperationsClient.Create(callInvoker, Settings, Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -248,8 +249,9 @@ namespace Google.LongRunning
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="OperationsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="OperationsClient"/>.</returns>
-        internal static OperationsClient Create(grpccore::CallInvoker callInvoker, OperationsSettings settings = null)
+        internal static OperationsClient Create(grpccore::CallInvoker callInvoker, OperationsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -258,7 +260,7 @@ namespace Google.LongRunning
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Operations.OperationsClient grpcClient = new Operations.OperationsClient(callInvoker);
-            return new OperationsClientImpl(grpcClient, settings);
+            return new OperationsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -732,24 +734,25 @@ namespace Google.LongRunning
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="OperationsSettings"/> used within this client.</param>
-        public OperationsClientImpl(Operations.OperationsClient grpcClient, OperationsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public OperationsClientImpl(Operations.OperationsClient grpcClient, OperationsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             OperationsSettings effectiveSettings = settings ?? OperationsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListOperations = clientHelper.BuildApiCall<ListOperationsRequest, ListOperationsResponse>(grpcClient.ListOperationsAsync, grpcClient.ListOperations, effectiveSettings.ListOperationsSettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListOperations = clientHelper.BuildApiCall<ListOperationsRequest, ListOperationsResponse>("ListOperations", grpcClient.ListOperationsAsync, grpcClient.ListOperations, effectiveSettings.ListOperationsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListOperations);
             Modify_ListOperationsApiCall(ref _callListOperations);
-            _callGetOperation = clientHelper.BuildApiCall<GetOperationRequest, Operation>(grpcClient.GetOperationAsync, grpcClient.GetOperation, effectiveSettings.GetOperationSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetOperation = clientHelper.BuildApiCall<GetOperationRequest, Operation>("GetOperation", grpcClient.GetOperationAsync, grpcClient.GetOperation, effectiveSettings.GetOperationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetOperation);
             Modify_GetOperationApiCall(ref _callGetOperation);
-            _callDeleteOperation = clientHelper.BuildApiCall<DeleteOperationRequest, wkt::Empty>(grpcClient.DeleteOperationAsync, grpcClient.DeleteOperation, effectiveSettings.DeleteOperationSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteOperation = clientHelper.BuildApiCall<DeleteOperationRequest, wkt::Empty>("DeleteOperation", grpcClient.DeleteOperationAsync, grpcClient.DeleteOperation, effectiveSettings.DeleteOperationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteOperation);
             Modify_DeleteOperationApiCall(ref _callDeleteOperation);
-            _callCancelOperation = clientHelper.BuildApiCall<CancelOperationRequest, wkt::Empty>(grpcClient.CancelOperationAsync, grpcClient.CancelOperation, effectiveSettings.CancelOperationSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCancelOperation = clientHelper.BuildApiCall<CancelOperationRequest, wkt::Empty>("CancelOperation", grpcClient.CancelOperationAsync, grpcClient.CancelOperation, effectiveSettings.CancelOperationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCancelOperation);
             Modify_CancelOperationApiCall(ref _callCancelOperation);
-            _callWaitOperation = clientHelper.BuildApiCall<WaitOperationRequest, Operation>(grpcClient.WaitOperationAsync, grpcClient.WaitOperation, effectiveSettings.WaitOperationSettings);
+            _callWaitOperation = clientHelper.BuildApiCall<WaitOperationRequest, Operation>("WaitOperation", grpcClient.WaitOperationAsync, grpcClient.WaitOperation, effectiveSettings.WaitOperationSettings);
             Modify_ApiCall(ref _callWaitOperation);
             Modify_WaitOperationApiCall(ref _callWaitOperation);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
