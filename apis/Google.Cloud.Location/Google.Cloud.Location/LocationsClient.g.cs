@@ -19,6 +19,7 @@ using gaxgrpc = Google.Api.Gax.Grpc;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -116,14 +117,14 @@ namespace Google.Cloud.Location
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return LocationsClient.Create(callInvoker, Settings);
+            return LocationsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<LocationsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return LocationsClient.Create(callInvoker, Settings);
+            return LocationsClient.Create(callInvoker, Settings, Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -185,8 +186,9 @@ namespace Google.Cloud.Location
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="LocationsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="LocationsClient"/>.</returns>
-        internal static LocationsClient Create(grpccore::CallInvoker callInvoker, LocationsSettings settings = null)
+        internal static LocationsClient Create(grpccore::CallInvoker callInvoker, LocationsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -195,7 +197,7 @@ namespace Google.Cloud.Location
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Locations.LocationsClient grpcClient = new Locations.LocationsClient(callInvoker);
-            return new LocationsClientImpl(grpcClient, settings);
+            return new LocationsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -277,15 +279,16 @@ namespace Google.Cloud.Location
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="LocationsSettings"/> used within this client.</param>
-        public LocationsClientImpl(Locations.LocationsClient grpcClient, LocationsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public LocationsClientImpl(Locations.LocationsClient grpcClient, LocationsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             LocationsSettings effectiveSettings = settings ?? LocationsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListLocations = clientHelper.BuildApiCall<ListLocationsRequest, ListLocationsResponse>(grpcClient.ListLocationsAsync, grpcClient.ListLocations, effectiveSettings.ListLocationsSettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListLocations = clientHelper.BuildApiCall<ListLocationsRequest, ListLocationsResponse>("ListLocations", grpcClient.ListLocationsAsync, grpcClient.ListLocations, effectiveSettings.ListLocationsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListLocations);
             Modify_ListLocationsApiCall(ref _callListLocations);
-            _callGetLocation = clientHelper.BuildApiCall<GetLocationRequest, Location>(grpcClient.GetLocationAsync, grpcClient.GetLocation, effectiveSettings.GetLocationSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetLocation = clientHelper.BuildApiCall<GetLocationRequest, Location>("GetLocation", grpcClient.GetLocationAsync, grpcClient.GetLocation, effectiveSettings.GetLocationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetLocation);
             Modify_GetLocationApiCall(ref _callGetLocation);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

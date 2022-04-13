@@ -50,7 +50,7 @@ namespace Google.Cloud.Location.Tests
                 DisplayName = "display_name137f65c2",
             };
             mockGrpcClient.Setup(x => x.GetLocation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LocationsClient client = new LocationsClientImpl(mockGrpcClient.Object, null);
+            LocationsClient client = new LocationsClientImpl(mockGrpcClient.Object, null, null);
             Location response = client.GetLocation(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -79,7 +79,7 @@ namespace Google.Cloud.Location.Tests
                 DisplayName = "display_name137f65c2",
             };
             mockGrpcClient.Setup(x => x.GetLocationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Location>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LocationsClient client = new LocationsClientImpl(mockGrpcClient.Object, null);
+            LocationsClient client = new LocationsClientImpl(mockGrpcClient.Object, null, null);
             Location responseCallSettings = await client.GetLocationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Location responseCancellationToken = await client.GetLocationAsync(request, st::CancellationToken.None);
