@@ -1876,7 +1876,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/artifacts/{artifact}`
         /// </param>
         /// <param name="updateMask">
-        /// Required. A FieldMask indicating which fields should be updated.
+        /// Optional. A FieldMask indicating which fields should be updated.
         /// Functionality of this field is not yet supported.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1885,7 +1885,7 @@ namespace Google.Cloud.AIPlatform.V1
             UpdateArtifact(new UpdateArtifactRequest
             {
                 Artifact = gax::GaxPreconditions.CheckNotNull(artifact, nameof(artifact)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
             }, callSettings);
 
         /// <summary>
@@ -1899,7 +1899,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/artifacts/{artifact}`
         /// </param>
         /// <param name="updateMask">
-        /// Required. A FieldMask indicating which fields should be updated.
+        /// Optional. A FieldMask indicating which fields should be updated.
         /// Functionality of this field is not yet supported.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1908,7 +1908,7 @@ namespace Google.Cloud.AIPlatform.V1
             UpdateArtifactAsync(new UpdateArtifactRequest
             {
                 Artifact = gax::GaxPreconditions.CheckNotNull(artifact, nameof(artifact)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
             }, callSettings);
 
         /// <summary>
@@ -1922,7 +1922,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/artifacts/{artifact}`
         /// </param>
         /// <param name="updateMask">
-        /// Required. A FieldMask indicating which fields should be updated.
+        /// Optional. A FieldMask indicating which fields should be updated.
         /// Functionality of this field is not yet supported.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2696,7 +2696,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/contexts/{context}`
         /// </param>
         /// <param name="updateMask">
-        /// Required. A FieldMask indicating which fields should be updated.
+        /// Optional. A FieldMask indicating which fields should be updated.
         /// Functionality of this field is not yet supported.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2705,7 +2705,7 @@ namespace Google.Cloud.AIPlatform.V1
             UpdateContext(new UpdateContextRequest
             {
                 Context = gax::GaxPreconditions.CheckNotNull(context, nameof(context)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
             }, callSettings);
 
         /// <summary>
@@ -2719,7 +2719,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/contexts/{context}`
         /// </param>
         /// <param name="updateMask">
-        /// Required. A FieldMask indicating which fields should be updated.
+        /// Optional. A FieldMask indicating which fields should be updated.
         /// Functionality of this field is not yet supported.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2728,7 +2728,7 @@ namespace Google.Cloud.AIPlatform.V1
             UpdateContextAsync(new UpdateContextRequest
             {
                 Context = gax::GaxPreconditions.CheckNotNull(context, nameof(context)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
             }, callSettings);
 
         /// <summary>
@@ -2742,7 +2742,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/contexts/{context}`
         /// </param>
         /// <param name="updateMask">
-        /// Required. A FieldMask indicating which fields should be updated.
+        /// Optional. A FieldMask indicating which fields should be updated.
         /// Functionality of this field is not yet supported.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4122,7 +4122,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/executions/{execution}`
         /// </param>
         /// <param name="updateMask">
-        /// Required. A FieldMask indicating which fields should be updated.
+        /// Optional. A FieldMask indicating which fields should be updated.
         /// Functionality of this field is not yet supported.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4131,7 +4131,7 @@ namespace Google.Cloud.AIPlatform.V1
             UpdateExecution(new UpdateExecutionRequest
             {
                 Execution = gax::GaxPreconditions.CheckNotNull(execution, nameof(execution)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
             }, callSettings);
 
         /// <summary>
@@ -4145,7 +4145,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/executions/{execution}`
         /// </param>
         /// <param name="updateMask">
-        /// Required. A FieldMask indicating which fields should be updated.
+        /// Optional. A FieldMask indicating which fields should be updated.
         /// Functionality of this field is not yet supported.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4154,7 +4154,7 @@ namespace Google.Cloud.AIPlatform.V1
             UpdateExecutionAsync(new UpdateExecutionRequest
             {
                 Execution = gax::GaxPreconditions.CheckNotNull(execution, nameof(execution)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
             }, callSettings);
 
         /// <summary>
@@ -4168,7 +4168,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/executions/{execution}`
         /// </param>
         /// <param name="updateMask">
-        /// Required. A FieldMask indicating which fields should be updated.
+        /// Optional. A FieldMask indicating which fields should be updated.
         /// Functionality of this field is not yet supported.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>

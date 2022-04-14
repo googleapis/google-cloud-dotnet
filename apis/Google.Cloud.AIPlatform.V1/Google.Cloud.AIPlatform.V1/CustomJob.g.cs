@@ -53,43 +53,45 @@ namespace Google.Cloud.AIPlatform.V1 {
             "aXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOmnqQWYK",
             "I2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vQ3VzdG9tSm9iEj9wcm9qZWN0",
             "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY3VzdG9tSm9icy97",
-            "Y3VzdG9tX2pvYn0ilQMKDUN1c3RvbUpvYlNwZWMSSgoRd29ya2VyX3Bvb2xf",
+            "Y3VzdG9tX2pvYn0itgMKDUN1c3RvbUpvYlNwZWMSSgoRd29ya2VyX3Bvb2xf",
             "c3BlY3MYASADKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Xb3Jr",
             "ZXJQb29sU3BlY0ID4EECEjoKCnNjaGVkdWxpbmcYAyABKAsyJi5nb29nbGUu",
             "Y2xvdWQuYWlwbGF0Zm9ybS52MS5TY2hlZHVsaW5nEhcKD3NlcnZpY2VfYWNj",
             "b3VudBgEIAEoCRI0CgduZXR3b3JrGAUgASgJQiP6QSAKHmNvbXB1dGUuZ29v",
-            "Z2xlYXBpcy5jb20vTmV0d29yaxJJChViYXNlX291dHB1dF9kaXJlY3RvcnkY",
-            "BiABKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5HY3NEZXN0aW5h",
-            "dGlvbhJCCgt0ZW5zb3Jib2FyZBgHIAEoCUIt4EEB+kEnCiVhaXBsYXRmb3Jt",
-            "Lmdvb2dsZWFwaXMuY29tL1RlbnNvcmJvYXJkEh4KEWVuYWJsZV93ZWJfYWNj",
-            "ZXNzGAogASgIQgPgQQEixwIKDldvcmtlclBvb2xTcGVjEkMKDmNvbnRhaW5l",
-            "cl9zcGVjGAYgASgLMikuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQ29u",
-            "dGFpbmVyU3BlY0gAEkwKE3B5dGhvbl9wYWNrYWdlX3NwZWMYByABKAsyLS5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5QeXRob25QYWNrYWdlU3BlY0gA",
-            "EkUKDG1hY2hpbmVfc3BlYxgBIAEoCzInLmdvb2dsZS5jbG91ZC5haXBsYXRm",
-            "b3JtLnYxLk1hY2hpbmVTcGVjQgbgQQHgQQUSGgoNcmVwbGljYV9jb3VudBgC",
-            "IAEoA0ID4EEBEjcKCWRpc2tfc3BlYxgFIAEoCzIkLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxLkRpc2tTcGVjQgYKBHRhc2sidwoNQ29udGFpbmVyU3Bl",
-            "YxIWCglpbWFnZV91cmkYASABKAlCA+BBAhIPCgdjb21tYW5kGAIgAygJEgwK",
-            "BGFyZ3MYAyADKAkSLwoDZW52GAQgAygLMiIuZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjEuRW52VmFyIqoBChFQeXRob25QYWNrYWdlU3BlYxIfChJleGVj",
-            "dXRvcl9pbWFnZV91cmkYASABKAlCA+BBAhIZCgxwYWNrYWdlX3VyaXMYAiAD",
-            "KAlCA+BBAhIaCg1weXRob25fbW9kdWxlGAMgASgJQgPgQQISDAoEYXJncxgE",
-            "IAMoCRIvCgNlbnYYBSADKAsyIi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MS5FbnZWYXIiXwoKU2NoZWR1bGluZxIqCgd0aW1lb3V0GAEgASgLMhkuZ29v",
-            "Z2xlLnByb3RvYnVmLkR1cmF0aW9uEiUKHXJlc3RhcnRfam9iX29uX3dvcmtl",
-            "cl9yZXN0YXJ0GAMgASgIQtIBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjFCDkN1c3RvbUpvYlByb3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYWlwbGF0Zm9ybS92MTthaXBsYXRm",
-            "b3JtqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xv",
-            "dWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06",
-            "OlYxYgZwcm90bzM="));
+            "Z2xlYXBpcy5jb20vTmV0d29yaxIfChJyZXNlcnZlZF9pcF9yYW5nZXMYDSAD",
+            "KAlCA+BBARJJChViYXNlX291dHB1dF9kaXJlY3RvcnkYBiABKAsyKi5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5HY3NEZXN0aW5hdGlvbhJCCgt0ZW5z",
+            "b3Jib2FyZBgHIAEoCUIt4EEB+kEnCiVhaXBsYXRmb3JtLmdvb2dsZWFwaXMu",
+            "Y29tL1RlbnNvcmJvYXJkEh4KEWVuYWJsZV93ZWJfYWNjZXNzGAogASgIQgPg",
+            "QQEihgMKDldvcmtlclBvb2xTcGVjEkMKDmNvbnRhaW5lcl9zcGVjGAYgASgL",
+            "MikuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQ29udGFpbmVyU3BlY0gA",
+            "EkwKE3B5dGhvbl9wYWNrYWdlX3NwZWMYByABKAsyLS5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MS5QeXRob25QYWNrYWdlU3BlY0gAEkUKDG1hY2hpbmVf",
+            "c3BlYxgBIAEoCzInLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1hY2hp",
+            "bmVTcGVjQgbgQQHgQQUSGgoNcmVwbGljYV9jb3VudBgCIAEoA0ID4EEBEj0K",
+            "Cm5mc19tb3VudHMYBCADKAsyJC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5OZnNNb3VudEID4EEBEjcKCWRpc2tfc3BlYxgFIAEoCzIkLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLkRpc2tTcGVjQgYKBHRhc2sidwoNQ29udGFp",
+            "bmVyU3BlYxIWCglpbWFnZV91cmkYASABKAlCA+BBAhIPCgdjb21tYW5kGAIg",
+            "AygJEgwKBGFyZ3MYAyADKAkSLwoDZW52GAQgAygLMiIuZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjEuRW52VmFyIqoBChFQeXRob25QYWNrYWdlU3BlYxIf",
+            "ChJleGVjdXRvcl9pbWFnZV91cmkYASABKAlCA+BBAhIZCgxwYWNrYWdlX3Vy",
+            "aXMYAiADKAlCA+BBAhIaCg1weXRob25fbW9kdWxlGAMgASgJQgPgQQISDAoE",
+            "YXJncxgEIAMoCRIvCgNlbnYYBSADKAsyIi5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MS5FbnZWYXIiXwoKU2NoZWR1bGluZxIqCgd0aW1lb3V0GAEgASgL",
+            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEiUKHXJlc3RhcnRfam9iX29u",
+            "X3dvcmtlcl9yZXN0YXJ0GAMgASgIQtIBCh5jb20uZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjFCDkN1c3RvbUpvYlByb3RvUAFaRGdvb2dsZS5nb2xhbmcu",
+            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYWlwbGF0Zm9ybS92MTth",
+            "aXBsYXRmb3JtqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29n",
+            "bGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxh",
+            "dGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.JobStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.CustomJob), global::Google.Cloud.AIPlatform.V1.CustomJob.Parser, new[]{ "Name", "DisplayName", "JobSpec", "State", "CreateTime", "StartTime", "EndTime", "UpdateTime", "Error", "Labels", "EncryptionSpec", "WebAccessUris" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.CustomJobSpec), global::Google.Cloud.AIPlatform.V1.CustomJobSpec.Parser, new[]{ "WorkerPoolSpecs", "Scheduling", "ServiceAccount", "Network", "BaseOutputDirectory", "Tensorboard", "EnableWebAccess" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.WorkerPoolSpec), global::Google.Cloud.AIPlatform.V1.WorkerPoolSpec.Parser, new[]{ "ContainerSpec", "PythonPackageSpec", "MachineSpec", "ReplicaCount", "DiskSpec" }, new[]{ "Task" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.CustomJobSpec), global::Google.Cloud.AIPlatform.V1.CustomJobSpec.Parser, new[]{ "WorkerPoolSpecs", "Scheduling", "ServiceAccount", "Network", "ReservedIpRanges", "BaseOutputDirectory", "Tensorboard", "EnableWebAccess" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.WorkerPoolSpec), global::Google.Cloud.AIPlatform.V1.WorkerPoolSpec.Parser, new[]{ "ContainerSpec", "PythonPackageSpec", "MachineSpec", "ReplicaCount", "NfsMounts", "DiskSpec" }, new[]{ "Task" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ContainerSpec), global::Google.Cloud.AIPlatform.V1.ContainerSpec.Parser, new[]{ "ImageUri", "Command", "Args", "Env" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PythonPackageSpec), global::Google.Cloud.AIPlatform.V1.PythonPackageSpec.Parser, new[]{ "ExecutorImageUri", "PackageUris", "PythonModule", "Args", "Env" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Scheduling), global::Google.Cloud.AIPlatform.V1.Scheduling.Parser, new[]{ "Timeout", "RestartJobOnWorkerRestart" }, null, null, null, null)
@@ -843,6 +845,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       scheduling_ = other.scheduling_ != null ? other.scheduling_.Clone() : null;
       serviceAccount_ = other.serviceAccount_;
       network_ = other.network_;
+      reservedIpRanges_ = other.reservedIpRanges_.Clone();
       baseOutputDirectory_ = other.baseOutputDirectory_ != null ? other.baseOutputDirectory_.Clone() : null;
       tensorboard_ = other.tensorboard_;
       enableWebAccess_ = other.enableWebAccess_;
@@ -930,6 +933,27 @@ namespace Google.Cloud.AIPlatform.V1 {
       set {
         network_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "reserved_ip_ranges" field.</summary>
+    public const int ReservedIpRangesFieldNumber = 13;
+    private static readonly pb::FieldCodec<string> _repeated_reservedIpRanges_codec
+        = pb::FieldCodec.ForString(106);
+    private readonly pbc::RepeatedField<string> reservedIpRanges_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. A list of names for the reserved ip ranges under the VPC network
+    /// that can be used for this job.
+    ///
+    /// If set, we will deploy the job within the provided ip ranges. Otherwise,
+    /// the job will be deployed to any ip ranges under the provided VPC
+    /// network.
+    ///
+    /// Example: ['vertex-ai-ip-range'].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ReservedIpRanges {
+      get { return reservedIpRanges_; }
     }
 
     /// <summary>Field number for the "base_output_directory" field.</summary>
@@ -1025,6 +1049,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(Scheduling, other.Scheduling)) return false;
       if (ServiceAccount != other.ServiceAccount) return false;
       if (Network != other.Network) return false;
+      if(!reservedIpRanges_.Equals(other.reservedIpRanges_)) return false;
       if (!object.Equals(BaseOutputDirectory, other.BaseOutputDirectory)) return false;
       if (Tensorboard != other.Tensorboard) return false;
       if (EnableWebAccess != other.EnableWebAccess) return false;
@@ -1039,6 +1064,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (scheduling_ != null) hash ^= Scheduling.GetHashCode();
       if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
       if (Network.Length != 0) hash ^= Network.GetHashCode();
+      hash ^= reservedIpRanges_.GetHashCode();
       if (baseOutputDirectory_ != null) hash ^= BaseOutputDirectory.GetHashCode();
       if (Tensorboard.Length != 0) hash ^= Tensorboard.GetHashCode();
       if (EnableWebAccess != false) hash ^= EnableWebAccess.GetHashCode();
@@ -1085,6 +1111,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(80);
         output.WriteBool(EnableWebAccess);
       }
+      reservedIpRanges_.WriteTo(output, _repeated_reservedIpRanges_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1120,6 +1147,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(80);
         output.WriteBool(EnableWebAccess);
       }
+      reservedIpRanges_.WriteTo(ref output, _repeated_reservedIpRanges_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1140,6 +1168,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (Network.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Network);
       }
+      size += reservedIpRanges_.CalculateSize(_repeated_reservedIpRanges_codec);
       if (baseOutputDirectory_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BaseOutputDirectory);
       }
@@ -1174,6 +1203,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other.Network.Length != 0) {
         Network = other.Network;
       }
+      reservedIpRanges_.Add(other.reservedIpRanges_);
       if (other.baseOutputDirectory_ != null) {
         if (baseOutputDirectory_ == null) {
           BaseOutputDirectory = new global::Google.Cloud.AIPlatform.V1.GcsDestination();
@@ -1235,6 +1265,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             EnableWebAccess = input.ReadBool();
             break;
           }
+          case 106: {
+            reservedIpRanges_.AddEntriesFrom(input, _repeated_reservedIpRanges_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1284,6 +1318,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             EnableWebAccess = input.ReadBool();
             break;
           }
+          case 106: {
+            reservedIpRanges_.AddEntriesFrom(ref input, _repeated_reservedIpRanges_codec);
+            break;
+          }
         }
       }
     }
@@ -1330,6 +1368,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public WorkerPoolSpec(WorkerPoolSpec other) : this() {
       machineSpec_ = other.machineSpec_ != null ? other.machineSpec_.Clone() : null;
       replicaCount_ = other.replicaCount_;
+      nfsMounts_ = other.nfsMounts_.Clone();
       diskSpec_ = other.diskSpec_ != null ? other.diskSpec_.Clone() : null;
       switch (other.TaskCase) {
         case TaskOneofCase.ContainerSpec:
@@ -1409,6 +1448,20 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "nfs_mounts" field.</summary>
+    public const int NfsMountsFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.NfsMount> _repeated_nfsMounts_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Cloud.AIPlatform.V1.NfsMount.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.NfsMount> nfsMounts_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.NfsMount>();
+    /// <summary>
+    /// Optional. List of NFS mount spec.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.NfsMount> NfsMounts {
+      get { return nfsMounts_; }
+    }
+
     /// <summary>Field number for the "disk_spec" field.</summary>
     public const int DiskSpecFieldNumber = 5;
     private global::Google.Cloud.AIPlatform.V1.DiskSpec diskSpec_;
@@ -1464,6 +1517,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(PythonPackageSpec, other.PythonPackageSpec)) return false;
       if (!object.Equals(MachineSpec, other.MachineSpec)) return false;
       if (ReplicaCount != other.ReplicaCount) return false;
+      if(!nfsMounts_.Equals(other.nfsMounts_)) return false;
       if (!object.Equals(DiskSpec, other.DiskSpec)) return false;
       if (TaskCase != other.TaskCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1477,6 +1531,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (taskCase_ == TaskOneofCase.PythonPackageSpec) hash ^= PythonPackageSpec.GetHashCode();
       if (machineSpec_ != null) hash ^= MachineSpec.GetHashCode();
       if (ReplicaCount != 0L) hash ^= ReplicaCount.GetHashCode();
+      hash ^= nfsMounts_.GetHashCode();
       if (diskSpec_ != null) hash ^= DiskSpec.GetHashCode();
       hash ^= (int) taskCase_;
       if (_unknownFields != null) {
@@ -1505,6 +1560,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(16);
         output.WriteInt64(ReplicaCount);
       }
+      nfsMounts_.WriteTo(output, _repeated_nfsMounts_codec);
       if (diskSpec_ != null) {
         output.WriteRawTag(42);
         output.WriteMessage(DiskSpec);
@@ -1535,6 +1591,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(16);
         output.WriteInt64(ReplicaCount);
       }
+      nfsMounts_.WriteTo(ref output, _repeated_nfsMounts_codec);
       if (diskSpec_ != null) {
         output.WriteRawTag(42);
         output.WriteMessage(DiskSpec);
@@ -1569,6 +1626,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ReplicaCount != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(ReplicaCount);
       }
+      size += nfsMounts_.CalculateSize(_repeated_nfsMounts_codec);
       if (diskSpec_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DiskSpec);
       }
@@ -1593,6 +1651,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other.ReplicaCount != 0L) {
         ReplicaCount = other.ReplicaCount;
       }
+      nfsMounts_.Add(other.nfsMounts_);
       if (other.diskSpec_ != null) {
         if (diskSpec_ == null) {
           DiskSpec = new global::Google.Cloud.AIPlatform.V1.DiskSpec();
@@ -1638,6 +1697,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 16: {
             ReplicaCount = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            nfsMounts_.AddEntriesFrom(input, _repeated_nfsMounts_codec);
             break;
           }
           case 42: {
@@ -1689,6 +1752,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 16: {
             ReplicaCount = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            nfsMounts_.AddEntriesFrom(ref input, _repeated_nfsMounts_codec);
             break;
           }
           case 42: {

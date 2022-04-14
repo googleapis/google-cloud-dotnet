@@ -36,7 +36,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmVzdG9yZS5MYWJlbHNFbnRy",
             "eUID4EEBEmAKFW9ubGluZV9zZXJ2aW5nX2NvbmZpZxgHIAEoCzI8Lmdvb2ds",
             "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmVzdG9yZS5PbmxpbmVTZXJ2",
-            "aW5nQ29uZmlnQgPgQQISQgoFc3RhdGUYCCABKA4yLi5nb29nbGUuY2xvdWQu",
+            "aW5nQ29uZmlnQgPgQQESQgoFc3RhdGUYCCABKA4yLi5nb29nbGUuY2xvdWQu",
             "YWlwbGF0Zm9ybS52MS5GZWF0dXJlc3RvcmUuU3RhdGVCA+BBAxJICg9lbmNy",
             "eXB0aW9uX3NwZWMYCiABKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
             "MS5FbmNyeXB0aW9uU3BlY0ID4EEBGi8KE09ubGluZVNlcnZpbmdDb25maWcS",
@@ -208,7 +208,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int OnlineServingConfigFieldNumber = 7;
     private global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig onlineServingConfig_;
     /// <summary>
-    /// Required. Config for online serving resources.
+    /// Optional. Config for online storage resources. If unset, the featurestore will
+    /// not have an online store and cannot be used for online serving.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -581,7 +582,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Possible states a Featurestore can have.
+      /// Possible states a featurestore can have.
       /// </summary>
       public enum State {
         /// <summary>
@@ -589,20 +590,22 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// </summary>
         [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// State when the Featurestore configuration is not being updated and the
-        /// fields reflect the current configuration of the Featurestore. The
-        /// Featurestore is usable in this state.
+        /// State when the featurestore configuration is not being updated and the
+        /// fields reflect the current configuration of the featurestore. The
+        /// featurestore is usable in this state.
         /// </summary>
         [pbr::OriginalName("STABLE")] Stable = 1,
         /// <summary>
-        /// State when the Featurestore configuration is being updated and the fields
-        /// reflect the updated configuration of the Featurestore, not the current
-        /// one. For example, `online_serving_config.fixed_node_count` can take
-        /// minutes to update. While the update is in progress, the Featurestore
-        /// will be in the UPDATING state and the value of `fixed_node_count` will be
-        /// the updated value. Until the update completes, the actual number of nodes
-        /// can still be the original value of `fixed_node_count`. The Featurestore
-        /// is still usable in this state.
+        /// The state of the featurestore configuration when it is being updated.
+        /// During an update, the fields reflect either the original configuration
+        /// or the updated configuration of the featurestore. For example,
+        /// `online_serving_config.fixed_node_count` can take minutes to update.
+        /// While the update is in progress, the featurestore is in the UPDATING
+        /// state, and the value of `fixed_node_count` can be the original value or
+        /// the updated value, depending on the progress of the operation. Until the
+        /// update completes, the actual number of nodes can still be the original
+        /// value of `fixed_node_count`. The featurestore is still usable in this
+        /// state.
         /// </summary>
         [pbr::OriginalName("UPDATING")] Updating = 2,
       }
@@ -659,11 +662,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int FixedNodeCountFieldNumber = 2;
         private int fixedNodeCount_;
         /// <summary>
-        /// The number of nodes for each cluster. The number of nodes will not
-        /// scale automatically but can be scaled manually by providing different
-        /// values when updating.
-        /// Only one of `fixed_node_count` and `scaling` can be set. Setting one will
-        /// reset the other.
+        /// The number of nodes for the online store. The number of nodes doesn't
+        /// scale automatically, but you can manually update the number of
+        /// nodes. If set to 0, the featurestore will not have an
+        /// online store and cannot be used for online serving.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

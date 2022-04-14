@@ -2159,6 +2159,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// * `end_time`: Supports `=`, `!=`, `&lt;`, `>`, `&lt;=`, and `>=` comparisons.
     ///   Values must be in RFC 3339 format.
     /// * `labels`: Supports key-value equality and key presence.
+    /// * `template_uri`: Supports `=`, `!=` comparisons, and `:` wildcard.
+    /// * `template_metadata.version_name`: Supports `=`, `!=` comparisons, and `:`
+    /// wildcard.
     ///
     /// Filter expressions can be combined together using logical operators
     /// (`AND` &amp; `OR`).

@@ -117,7 +117,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
   #region Messages
   /// <summary>
-  /// Next ID: 7
+  /// Next ID: 8
   /// </summary>
   public sealed partial class ModelMonitoringObjectiveConfig : pb::IMessage<ModelMonitoringObjectiveConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
