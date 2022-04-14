@@ -46,7 +46,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -90,7 +90,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -136,7 +136,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -180,7 +180,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -226,7 +226,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -270,7 +270,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -315,7 +315,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -358,7 +358,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -403,7 +403,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -446,7 +446,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -491,7 +491,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -534,7 +534,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -686,7 +686,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -742,7 +742,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -800,7 +800,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -856,7 +856,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -914,7 +914,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -970,7 +970,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -1027,7 +1027,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -1082,7 +1082,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -1139,7 +1139,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -1194,7 +1194,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -1251,7 +1251,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -1306,7 +1306,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -1461,7 +1461,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -1503,7 +1503,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -1547,7 +1547,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -1589,7 +1589,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -1633,7 +1633,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -1675,7 +1675,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -1718,7 +1718,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -1759,7 +1759,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -1802,7 +1802,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -1843,7 +1843,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -1886,7 +1886,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -1927,7 +1927,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -2071,7 +2071,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2120,7 +2120,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2171,7 +2171,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2220,7 +2220,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2271,7 +2271,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2320,7 +2320,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2370,7 +2370,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2418,7 +2418,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2468,7 +2468,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2516,7 +2516,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2566,7 +2566,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2614,7 +2614,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2758,7 +2758,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -2789,6 +2789,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreateModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -2812,7 +2813,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -2843,6 +2844,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreateModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelDeploymentMonitoringJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -2868,7 +2870,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -2899,6 +2901,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreateModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -2922,7 +2925,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -2953,6 +2956,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreateModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelDeploymentMonitoringJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -2978,7 +2982,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -3009,6 +3013,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreateModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -3032,7 +3037,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -3063,6 +3068,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreateModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelDeploymentMonitoringJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -3087,7 +3093,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -3118,6 +3124,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -3140,7 +3147,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -3171,6 +3178,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelDeploymentMonitoringJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -3195,7 +3203,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -3226,6 +3234,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -3248,7 +3257,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -3279,6 +3288,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelDeploymentMonitoringJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -3303,7 +3313,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -3334,6 +3344,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -3356,7 +3367,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -3387,6 +3398,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelDeploymentMonitoringJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);

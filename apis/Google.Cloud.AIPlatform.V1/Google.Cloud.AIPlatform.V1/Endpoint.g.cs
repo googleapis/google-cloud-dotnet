@@ -353,7 +353,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int EnablePrivateServiceConnectFieldNumber = 17;
     private bool enablePrivateServiceConnect_;
     /// <summary>
-    /// If true, expose the Endpoint via private service connect.
+    /// Deprecated: If true, expose the Endpoint via private service connect.
     ///
     /// Only one of the fields, [network][google.cloud.aiplatform.v1.Endpoint.network] or
     /// [enable_private_service_connect][google.cloud.aiplatform.v1.Endpoint.enable_private_service_connect],
@@ -1973,7 +1973,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Cloud.AIPlatform.V1.BigQueryDestination bigqueryDestination_;
     /// <summary>
     /// BigQuery table for logging.
-    /// If only given project, a new dataset will be created with name
+    /// If only given a project, a new dataset will be created with name
     /// `logging_&lt;endpoint-display-name>_&lt;endpoint-id>` where
     /// &lt;endpoint-display-name> will be made BigQuery-dataset-name compatible (e.g.
     /// most special characters will become underscores). If no table name is
