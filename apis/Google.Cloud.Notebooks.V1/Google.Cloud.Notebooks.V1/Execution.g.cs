@@ -27,7 +27,7 @@ namespace Google.Cloud.Notebooks.V1 {
             "Cilnb29nbGUvY2xvdWQvbm90ZWJvb2tzL3YxL2V4ZWN1dGlvbi5wcm90bxIZ",
             "Z29vZ2xlLmNsb3VkLm5vdGVib29rcy52MRofZ29vZ2xlL2FwaS9maWVsZF9i",
             "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxofZ29v",
-            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLxCQoRRXhlY3V0aW9uVGVt",
+            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKGCgoRRXhlY3V0aW9uVGVt",
             "cGxhdGUSUQoKc2NhbGVfdGllchgBIAEoDjI2Lmdvb2dsZS5jbG91ZC5ub3Rl",
             "Ym9va3MudjEuRXhlY3V0aW9uVGVtcGxhdGUuU2NhbGVUaWVyQgUYAeBBAhIT",
             "CgttYXN0ZXJfdHlwZRgCIAEoCRJjChJhY2NlbGVyYXRvcl9jb25maWcYAyAB",
@@ -41,42 +41,43 @@ namespace Google.Cloud.Notebooks.V1 {
             "b2JfdHlwZRgLIAEoDjI0Lmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuRXhl",
             "Y3V0aW9uVGVtcGxhdGUuSm9iVHlwZRJeChNkYXRhcHJvY19wYXJhbWV0ZXJz",
             "GAwgASgLMj8uZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MS5FeGVjdXRpb25U",
-            "ZW1wbGF0ZS5EYXRhcHJvY1BhcmFtZXRlcnNIABqFAQoaU2NoZWR1bGVyQWNj",
-            "ZWxlcmF0b3JDb25maWcSUwoEdHlwZRgBIAEoDjJFLmdvb2dsZS5jbG91ZC5u",
-            "b3RlYm9va3MudjEuRXhlY3V0aW9uVGVtcGxhdGUuU2NoZWR1bGVyQWNjZWxl",
-            "cmF0b3JUeXBlEhIKCmNvcmVfY291bnQYAiABKAMaJQoSRGF0YXByb2NQYXJh",
-            "bWV0ZXJzEg8KB2NsdXN0ZXIYASABKAkaLQoLTGFiZWxzRW50cnkSCwoDa2V5",
-            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJ7CglTY2FsZVRpZXISGgoWU0NB",
-            "TEVfVElFUl9VTlNQRUNJRklFRBAAEgkKBUJBU0lDEAESDgoKU1RBTkRBUkRf",
-            "MRACEg0KCVBSRU1JVU1fMRADEg0KCUJBU0lDX0dQVRAEEg0KCUJBU0lDX1RQ",
-            "VRAFEgoKBkNVU1RPTRAGIswBChhTY2hlZHVsZXJBY2NlbGVyYXRvclR5cGUS",
-            "KgomU0NIRURVTEVSX0FDQ0VMRVJBVE9SX1RZUEVfVU5TUEVDSUZJRUQQABIU",
-            "ChBOVklESUFfVEVTTEFfSzgwEAESFQoRTlZJRElBX1RFU0xBX1AxMDAQAhIV",
-            "ChFOVklESUFfVEVTTEFfVjEwMBADEhMKD05WSURJQV9URVNMQV9QNBAEEhMK",
-            "D05WSURJQV9URVNMQV9UNBAFEgoKBlRQVV9WMhAGEgoKBlRQVV9WMxAHIkAK",
-            "B0pvYlR5cGUSGAoUSk9CX1RZUEVfVU5TUEVDSUZJRUQQABINCglWRVJURVhf",
-            "QUkQARIMCghEQVRBUFJPQxACQhAKDmpvYl9wYXJhbWV0ZXJzIoIFCglFeGVj",
-            "dXRpb24SSAoSZXhlY3V0aW9uX3RlbXBsYXRlGAEgASgLMiwuZ29vZ2xlLmNs",
-            "b3VkLm5vdGVib29rcy52MS5FeGVjdXRpb25UZW1wbGF0ZRIRCgRuYW1lGAIg",
-            "ASgJQgPgQQMSGQoMZGlzcGxheV9uYW1lGAMgASgJQgPgQQMSEwoLZGVzY3Jp",
-            "cHRpb24YBCABKAkSNAoLY3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBiABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSPgoFc3RhdGUYByABKA4y",
-            "Ki5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxLkV4ZWN1dGlvbi5TdGF0ZUID",
-            "4EEDEhwKFG91dHB1dF9ub3RlYm9va19maWxlGAggASgJEhQKB2pvYl91cmkY",
-            "CSABKAlCA+BBAyKfAQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIK",
-            "CgZRVUVVRUQQARINCglQUkVQQVJJTkcQAhILCgdSVU5OSU5HEAMSDQoJU1VD",
-            "Q0VFREVEEAQSCgoGRkFJTEVEEAUSDgoKQ0FOQ0VMTElORxAGEg0KCUNBTkNF",
-            "TExFRBAHEgsKB0VYUElSRUQQCRIQCgxJTklUSUFMSVpJTkcQCjpm6kFjCiJu",
-            "b3RlYm9va3MuZ29vZ2xlYXBpcy5jb20vRXhlY3V0aW9uEj1wcm9qZWN0cy97",
-            "cHJvamVjdH0vbG9jYXRpb24ve2xvY2F0aW9ufS9leGVjdXRpb25zL3tleGVj",
-            "dXRpb259QnUKHWNvbS5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxQg5FeGVj",
-            "dXRpb25Qcm90b1ABWkJnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
-            "bGVhcGlzL2Nsb3VkL25vdGVib29rcy92MTtub3RlYm9va3NiBnByb3RvMw=="));
+            "ZW1wbGF0ZS5EYXRhcHJvY1BhcmFtZXRlcnNIABITCgtrZXJuZWxfc3BlYxgN",
+            "IAEoCRqFAQoaU2NoZWR1bGVyQWNjZWxlcmF0b3JDb25maWcSUwoEdHlwZRgB",
+            "IAEoDjJFLmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuRXhlY3V0aW9uVGVt",
+            "cGxhdGUuU2NoZWR1bGVyQWNjZWxlcmF0b3JUeXBlEhIKCmNvcmVfY291bnQY",
+            "AiABKAMaJQoSRGF0YXByb2NQYXJhbWV0ZXJzEg8KB2NsdXN0ZXIYASABKAka",
+            "LQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
+            "ASJ7CglTY2FsZVRpZXISGgoWU0NBTEVfVElFUl9VTlNQRUNJRklFRBAAEgkK",
+            "BUJBU0lDEAESDgoKU1RBTkRBUkRfMRACEg0KCVBSRU1JVU1fMRADEg0KCUJB",
+            "U0lDX0dQVRAEEg0KCUJBU0lDX1RQVRAFEgoKBkNVU1RPTRAGIswBChhTY2hl",
+            "ZHVsZXJBY2NlbGVyYXRvclR5cGUSKgomU0NIRURVTEVSX0FDQ0VMRVJBVE9S",
+            "X1RZUEVfVU5TUEVDSUZJRUQQABIUChBOVklESUFfVEVTTEFfSzgwEAESFQoR",
+            "TlZJRElBX1RFU0xBX1AxMDAQAhIVChFOVklESUFfVEVTTEFfVjEwMBADEhMK",
+            "D05WSURJQV9URVNMQV9QNBAEEhMKD05WSURJQV9URVNMQV9UNBAFEgoKBlRQ",
+            "VV9WMhAGEgoKBlRQVV9WMxAHIkAKB0pvYlR5cGUSGAoUSk9CX1RZUEVfVU5T",
+            "UEVDSUZJRUQQABINCglWRVJURVhfQUkQARIMCghEQVRBUFJPQxACQhAKDmpv",
+            "Yl9wYXJhbWV0ZXJzIoIFCglFeGVjdXRpb24SSAoSZXhlY3V0aW9uX3RlbXBs",
+            "YXRlGAEgASgLMiwuZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MS5FeGVjdXRp",
+            "b25UZW1wbGF0ZRIRCgRuYW1lGAIgASgJQgPgQQMSGQoMZGlzcGxheV9uYW1l",
+            "GAMgASgJQgPgQQMSEwoLZGVzY3JpcHRpb24YBCABKAkSNAoLY3JlYXRlX3Rp",
+            "bWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoL",
+            "dXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgPgQQMSPgoFc3RhdGUYByABKA4yKi5nb29nbGUuY2xvdWQubm90ZWJvb2tz",
+            "LnYxLkV4ZWN1dGlvbi5TdGF0ZUID4EEDEhwKFG91dHB1dF9ub3RlYm9va19m",
+            "aWxlGAggASgJEhQKB2pvYl91cmkYCSABKAlCA+BBAyKfAQoFU3RhdGUSFQoR",
+            "U1RBVEVfVU5TUEVDSUZJRUQQABIKCgZRVUVVRUQQARINCglQUkVQQVJJTkcQ",
+            "AhILCgdSVU5OSU5HEAMSDQoJU1VDQ0VFREVEEAQSCgoGRkFJTEVEEAUSDgoK",
+            "Q0FOQ0VMTElORxAGEg0KCUNBTkNFTExFRBAHEgsKB0VYUElSRUQQCRIQCgxJ",
+            "TklUSUFMSVpJTkcQCjpm6kFjCiJub3RlYm9va3MuZ29vZ2xlYXBpcy5jb20v",
+            "RXhlY3V0aW9uEj1wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb24ve2xvY2F0",
+            "aW9ufS9leGVjdXRpb25zL3tleGVjdXRpb259QnUKHWNvbS5nb29nbGUuY2xv",
+            "dWQubm90ZWJvb2tzLnYxQg5FeGVjdXRpb25Qcm90b1ABWkJnb29nbGUuZ29s",
+            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL25vdGVib29rcy92",
+            "MTtub3RlYm9va3NiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.ExecutionTemplate), global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Parser, new[]{ "ScaleTier", "MasterType", "AcceleratorConfig", "Labels", "InputNotebookFile", "ContainerImageUri", "OutputNotebookFolder", "ParamsYamlFile", "Parameters", "ServiceAccount", "JobType", "DataprocParameters" }, new[]{ "JobParameters" }, new[]{ typeof(global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.ScaleTier), typeof(global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.SchedulerAcceleratorType), typeof(global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.JobType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.SchedulerAcceleratorConfig), global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.SchedulerAcceleratorConfig.Parser, new[]{ "Type", "CoreCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.ExecutionTemplate), global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Parser, new[]{ "ScaleTier", "MasterType", "AcceleratorConfig", "Labels", "InputNotebookFile", "ContainerImageUri", "OutputNotebookFolder", "ParamsYamlFile", "Parameters", "ServiceAccount", "JobType", "DataprocParameters", "KernelSpec" }, new[]{ "JobParameters" }, new[]{ typeof(global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.ScaleTier), typeof(global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.SchedulerAcceleratorType), typeof(global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.JobType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.SchedulerAcceleratorConfig), global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.SchedulerAcceleratorConfig.Parser, new[]{ "Type", "CoreCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.DataprocParameters), global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.DataprocParameters.Parser, new[]{ "Cluster" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.Execution), global::Google.Cloud.Notebooks.V1.Execution.Parser, new[]{ "ExecutionTemplate", "Name", "DisplayName", "Description", "CreateTime", "UpdateTime", "State", "OutputNotebookFile", "JobUri" }, null, new[]{ typeof(global::Google.Cloud.Notebooks.V1.Execution.Types.State) }, null, null)
@@ -134,6 +135,7 @@ namespace Google.Cloud.Notebooks.V1 {
       parameters_ = other.parameters_;
       serviceAccount_ = other.serviceAccount_;
       jobType_ = other.jobType_;
+      kernelSpec_ = other.kernelSpec_;
       switch (other.JobParametersCase) {
         case JobParametersOneofCase.DataprocParameters:
           DataprocParameters = other.DataprocParameters.Clone();
@@ -394,6 +396,23 @@ namespace Google.Cloud.Notebooks.V1 {
       }
     }
 
+    /// <summary>Field number for the "kernel_spec" field.</summary>
+    public const int KernelSpecFieldNumber = 13;
+    private string kernelSpec_ = "";
+    /// <summary>
+    /// Name of the kernel spec to use. This must be specified if the
+    /// kernel spec name on the execution target does not match the name in the
+    /// input notebook file.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string KernelSpec {
+      get { return kernelSpec_; }
+      set {
+        kernelSpec_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     private object jobParameters_;
     /// <summary>Enum of possible cases for the "job_parameters" oneof.</summary>
     public enum JobParametersOneofCase {
@@ -441,6 +460,7 @@ namespace Google.Cloud.Notebooks.V1 {
       if (ServiceAccount != other.ServiceAccount) return false;
       if (JobType != other.JobType) return false;
       if (!object.Equals(DataprocParameters, other.DataprocParameters)) return false;
+      if (KernelSpec != other.KernelSpec) return false;
       if (JobParametersCase != other.JobParametersCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -461,6 +481,7 @@ namespace Google.Cloud.Notebooks.V1 {
       if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
       if (JobType != global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.JobType.Unspecified) hash ^= JobType.GetHashCode();
       if (jobParametersCase_ == JobParametersOneofCase.DataprocParameters) hash ^= DataprocParameters.GetHashCode();
+      if (KernelSpec.Length != 0) hash ^= KernelSpec.GetHashCode();
       hash ^= (int) jobParametersCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -525,6 +546,10 @@ namespace Google.Cloud.Notebooks.V1 {
         output.WriteRawTag(98);
         output.WriteMessage(DataprocParameters);
       }
+      if (KernelSpec.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(KernelSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -580,6 +605,10 @@ namespace Google.Cloud.Notebooks.V1 {
         output.WriteRawTag(98);
         output.WriteMessage(DataprocParameters);
       }
+      if (KernelSpec.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(KernelSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -623,6 +652,9 @@ namespace Google.Cloud.Notebooks.V1 {
       }
       if (jobParametersCase_ == JobParametersOneofCase.DataprocParameters) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DataprocParameters);
+      }
+      if (KernelSpec.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KernelSpec);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -669,6 +701,9 @@ namespace Google.Cloud.Notebooks.V1 {
       }
       if (other.JobType != global::Google.Cloud.Notebooks.V1.ExecutionTemplate.Types.JobType.Unspecified) {
         JobType = other.JobType;
+      }
+      if (other.KernelSpec.Length != 0) {
+        KernelSpec = other.KernelSpec;
       }
       switch (other.JobParametersCase) {
         case JobParametersOneofCase.DataprocParameters:
@@ -750,6 +785,10 @@ namespace Google.Cloud.Notebooks.V1 {
             DataprocParameters = subBuilder;
             break;
           }
+          case 106: {
+            KernelSpec = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -819,6 +858,10 @@ namespace Google.Cloud.Notebooks.V1 {
             }
             input.ReadMessage(subBuilder);
             DataprocParameters = subBuilder;
+            break;
+          }
+          case 106: {
+            KernelSpec = input.ReadString();
             break;
           }
         }
