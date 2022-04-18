@@ -228,6 +228,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
+                Connections = { new Connection(), },
+                Description = "description2cf9da67",
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
             };
@@ -284,6 +286,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
+                Connections = { new Connection(), },
+                Description = "description2cf9da67",
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
             };
@@ -342,6 +346,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
+                Connections = { new Connection(), },
+                Description = "description2cf9da67",
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
             };
@@ -398,6 +404,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
+                Connections = { new Connection(), },
+                Description = "description2cf9da67",
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
             };
@@ -456,6 +464,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
+                Connections = { new Connection(), },
+                Description = "description2cf9da67",
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
             };
@@ -512,6 +522,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
+                Connections = { new Connection(), },
+                Description = "description2cf9da67",
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
             };
@@ -2540,6 +2552,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
+                Connections = { new Connection(), },
+                Description = "description2cf9da67",
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
             };
@@ -2596,6 +2610,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
+                Connections = { new Connection(), },
+                Description = "description2cf9da67",
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
             };
@@ -2654,6 +2670,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
+                Connections = { new Connection(), },
+                Description = "description2cf9da67",
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
             };
@@ -2710,6 +2728,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
+                Connections = { new Connection(), },
+                Description = "description2cf9da67",
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
             };
@@ -2768,6 +2788,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
+                Connections = { new Connection(), },
+                Description = "description2cf9da67",
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
             };
@@ -2824,6 +2846,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
+                Connections = { new Connection(), },
+                Description = "description2cf9da67",
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
             };
@@ -2881,6 +2905,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
+                Connections = { new Connection(), },
+                Description = "description2cf9da67",
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
             };
@@ -2936,6 +2962,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
+                Connections = { new Connection(), },
+                Description = "description2cf9da67",
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
             };
@@ -2993,6 +3021,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
+                Connections = { new Connection(), },
+                Description = "description2cf9da67",
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
             };
@@ -3048,6 +3078,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
+                Connections = { new Connection(), },
+                Description = "description2cf9da67",
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
             };
@@ -3105,6 +3137,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
+                Connections = { new Connection(), },
+                Description = "description2cf9da67",
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
             };
@@ -3160,6 +3194,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
+                Connections = { new Connection(), },
+                Description = "description2cf9da67",
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
             };
@@ -3689,6 +3725,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
+                Connections = { new Connection(), },
+                Description = "description2cf9da67",
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
             };
@@ -3744,6 +3782,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
+                Connections = { new Connection(), },
+                Description = "description2cf9da67",
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
             };
@@ -3800,6 +3840,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
+                Connections = { new Connection(), },
+                Description = "description2cf9da67",
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
             };
@@ -3854,6 +3896,8 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 MitreAttack = new MitreAttack(),
                 Access = new Access(),
                 MuteInitiator = "mute_initiator3bd7566e",
+                Connections = { new Connection(), },
+                Description = "description2cf9da67",
                 IamBindings = { new IamBinding(), },
                 NextSteps = "next_stepsc5904826",
             };
