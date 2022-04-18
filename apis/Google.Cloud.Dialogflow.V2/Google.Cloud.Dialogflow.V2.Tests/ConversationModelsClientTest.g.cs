@@ -151,7 +151,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             ConversationModelEvaluation expectedResponse = new ConversationModelEvaluation
             {
-                ConversationModelEvaluationName = ConversationModelEvaluationName.FromProjectConversationModel("[PROJECT]", "[CONVERSATION_MODEL]"),
+                ConversationModelEvaluationName = ConversationModelEvaluationName.FromProjectConversationModelEvaluation("[PROJECT]", "[CONVERSATION_MODEL]", "[EVALUATION]"),
                 DisplayName = "display_name137f65c2",
                 CreateTime = new wkt::Timestamp(),
                 SmartReplyMetrics = new SmartReplyMetrics(),
@@ -175,7 +175,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             ConversationModelEvaluation expectedResponse = new ConversationModelEvaluation
             {
-                ConversationModelEvaluationName = ConversationModelEvaluationName.FromProjectConversationModel("[PROJECT]", "[CONVERSATION_MODEL]"),
+                ConversationModelEvaluationName = ConversationModelEvaluationName.FromProjectConversationModelEvaluation("[PROJECT]", "[CONVERSATION_MODEL]", "[EVALUATION]"),
                 DisplayName = "display_name137f65c2",
                 CreateTime = new wkt::Timestamp(),
                 SmartReplyMetrics = new SmartReplyMetrics(),
@@ -201,7 +201,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             ConversationModelEvaluation expectedResponse = new ConversationModelEvaluation
             {
-                ConversationModelEvaluationName = ConversationModelEvaluationName.FromProjectConversationModel("[PROJECT]", "[CONVERSATION_MODEL]"),
+                ConversationModelEvaluationName = ConversationModelEvaluationName.FromProjectConversationModelEvaluation("[PROJECT]", "[CONVERSATION_MODEL]", "[EVALUATION]"),
                 DisplayName = "display_name137f65c2",
                 CreateTime = new wkt::Timestamp(),
                 SmartReplyMetrics = new SmartReplyMetrics(),
@@ -225,7 +225,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             ConversationModelEvaluation expectedResponse = new ConversationModelEvaluation
             {
-                ConversationModelEvaluationName = ConversationModelEvaluationName.FromProjectConversationModel("[PROJECT]", "[CONVERSATION_MODEL]"),
+                ConversationModelEvaluationName = ConversationModelEvaluationName.FromProjectConversationModelEvaluation("[PROJECT]", "[CONVERSATION_MODEL]", "[EVALUATION]"),
                 DisplayName = "display_name137f65c2",
                 CreateTime = new wkt::Timestamp(),
                 SmartReplyMetrics = new SmartReplyMetrics(),
