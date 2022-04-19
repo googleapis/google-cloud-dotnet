@@ -56,5 +56,40 @@ namespace Google.Cloud.Eventarc.Publishing.V1.Snippets
             PublishChannelConnectionEventsResponse response = await publisherClient.PublishChannelConnectionEventsAsync(request);
             // End snippet
         }
+
+        /// <summary>Snippet for PublishEvents</summary>
+        public void PublishEventsRequestObject()
+        {
+            // Snippet: PublishEvents(PublishEventsRequest, CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            PublishEventsRequest request = new PublishEventsRequest
+            {
+                Channel = "",
+                Events = { new Any(), },
+            };
+            // Make the request
+            PublishEventsResponse response = publisherClient.PublishEvents(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PublishEventsAsync</summary>
+        public async Task PublishEventsRequestObjectAsync()
+        {
+            // Snippet: PublishEventsAsync(PublishEventsRequest, CallSettings)
+            // Additional: PublishEventsAsync(PublishEventsRequest, CancellationToken)
+            // Create client
+            PublisherClient publisherClient = await PublisherClient.CreateAsync();
+            // Initialize request argument(s)
+            PublishEventsRequest request = new PublishEventsRequest
+            {
+                Channel = "",
+                Events = { new Any(), },
+            };
+            // Make the request
+            PublishEventsResponse response = await publisherClient.PublishEventsAsync(request);
+            // End snippet
+        }
     }
 }

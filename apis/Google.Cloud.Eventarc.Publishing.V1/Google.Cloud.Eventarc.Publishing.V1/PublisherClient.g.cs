@@ -44,6 +44,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             PublishChannelConnectionEventsSettings = existing.PublishChannelConnectionEventsSettings;
+            PublishEventsSettings = existing.PublishEventsSettings;
             OnCopy(existing);
         }
 
@@ -61,6 +62,18 @@ namespace Google.Cloud.Eventarc.Publishing.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings PublishChannelConnectionEventsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PublisherClient.PublishEvents</c> and <c>PublisherClient.PublishEventsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PublishEventsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="PublisherSettings"/> object.</returns>
@@ -271,6 +284,33 @@ namespace Google.Cloud.Eventarc.Publishing.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<PublishChannelConnectionEventsResponse> PublishChannelConnectionEventsAsync(PublishChannelConnectionEventsRequest request, st::CancellationToken cancellationToken) =>
             PublishChannelConnectionEventsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Publish events to a subscriber's channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PublishEventsResponse PublishEvents(PublishEventsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Publish events to a subscriber's channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublishEventsResponse> PublishEventsAsync(PublishEventsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Publish events to a subscriber's channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublishEventsResponse> PublishEventsAsync(PublishEventsRequest request, st::CancellationToken cancellationToken) =>
+            PublishEventsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Publisher client wrapper implementation, for convenient use.</summary>
@@ -304,6 +344,8 @@ namespace Google.Cloud.Eventarc.Publishing.V1
     {
         private readonly gaxgrpc::ApiCall<PublishChannelConnectionEventsRequest, PublishChannelConnectionEventsResponse> _callPublishChannelConnectionEvents;
 
+        private readonly gaxgrpc::ApiCall<PublishEventsRequest, PublishEventsResponse> _callPublishEvents;
+
         /// <summary>
         /// Constructs a client wrapper for the Publisher service, with the specified gRPC client and settings.
         /// </summary>
@@ -317,6 +359,9 @@ namespace Google.Cloud.Eventarc.Publishing.V1
             _callPublishChannelConnectionEvents = clientHelper.BuildApiCall<PublishChannelConnectionEventsRequest, PublishChannelConnectionEventsResponse>(grpcClient.PublishChannelConnectionEventsAsync, grpcClient.PublishChannelConnectionEvents, effectiveSettings.PublishChannelConnectionEventsSettings).WithGoogleRequestParam("channel_connection", request => request.ChannelConnection);
             Modify_ApiCall(ref _callPublishChannelConnectionEvents);
             Modify_PublishChannelConnectionEventsApiCall(ref _callPublishChannelConnectionEvents);
+            _callPublishEvents = clientHelper.BuildApiCall<PublishEventsRequest, PublishEventsResponse>(grpcClient.PublishEventsAsync, grpcClient.PublishEvents, effectiveSettings.PublishEventsSettings).WithGoogleRequestParam("channel", request => request.Channel);
+            Modify_ApiCall(ref _callPublishEvents);
+            Modify_PublishEventsApiCall(ref _callPublishEvents);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -324,12 +369,16 @@ namespace Google.Cloud.Eventarc.Publishing.V1
 
         partial void Modify_PublishChannelConnectionEventsApiCall(ref gaxgrpc::ApiCall<PublishChannelConnectionEventsRequest, PublishChannelConnectionEventsResponse> call);
 
+        partial void Modify_PublishEventsApiCall(ref gaxgrpc::ApiCall<PublishEventsRequest, PublishEventsResponse> call);
+
         partial void OnConstruction(Publisher.PublisherClient grpcClient, PublisherSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Publisher client</summary>
         public override Publisher.PublisherClient GrpcClient { get; }
 
         partial void Modify_PublishChannelConnectionEventsRequest(ref PublishChannelConnectionEventsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PublishEventsRequest(ref PublishEventsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Publish events to a ChannelConnection in a partner's project.
@@ -353,6 +402,30 @@ namespace Google.Cloud.Eventarc.Publishing.V1
         {
             Modify_PublishChannelConnectionEventsRequest(ref request, ref callSettings);
             return _callPublishChannelConnectionEvents.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Publish events to a subscriber's channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PublishEventsResponse PublishEvents(PublishEventsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PublishEventsRequest(ref request, ref callSettings);
+            return _callPublishEvents.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Publish events to a subscriber's channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PublishEventsResponse> PublishEventsAsync(PublishEventsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PublishEventsRequest(ref request, ref callSettings);
+            return _callPublishEvents.Async(request, callSettings);
         }
     }
 }
