@@ -51,7 +51,7 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 ServiceAccount = "service_accounta3c1b923",
                 MachineType = "machine_type68ce40fa",
                 AcceleratorConfig = new Instance.Types.AcceleratorConfig(),
-                State = Instance.Types.State.Initializing,
+                State = Instance.Types.State.Deleted,
                 InstallGpuDriver = true,
                 CustomGpuDriverPath = "custom_gpu_driver_path24577c2a",
                 BootDiskType = Instance.Types.DiskType.PdSsd,
@@ -78,7 +78,7 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
-                DataDiskType = Instance.Types.DiskType.Unspecified,
+                DataDiskType = Instance.Types.DiskType.PdStandard,
                 DataDiskSizeGb = 8597103336273737467L,
                 NoRemoveDataDisk = true,
                 Disks =
@@ -97,6 +97,8 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 Tags = { "tags52c47ad5", },
                 NicType = Instance.Types.NicType.Gvnic,
                 ReservationAffinity = new ReservationAffinity(),
+                Creator = "creator253324ee",
+                CanIpForward = true,
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NotebookServiceClient client = new NotebookServiceClientImpl(mockGrpcClient.Object, null);
@@ -128,7 +130,7 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 ServiceAccount = "service_accounta3c1b923",
                 MachineType = "machine_type68ce40fa",
                 AcceleratorConfig = new Instance.Types.AcceleratorConfig(),
-                State = Instance.Types.State.Initializing,
+                State = Instance.Types.State.Deleted,
                 InstallGpuDriver = true,
                 CustomGpuDriverPath = "custom_gpu_driver_path24577c2a",
                 BootDiskType = Instance.Types.DiskType.PdSsd,
@@ -155,7 +157,7 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
-                DataDiskType = Instance.Types.DiskType.Unspecified,
+                DataDiskType = Instance.Types.DiskType.PdStandard,
                 DataDiskSizeGb = 8597103336273737467L,
                 NoRemoveDataDisk = true,
                 Disks =
@@ -174,6 +176,8 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 Tags = { "tags52c47ad5", },
                 NicType = Instance.Types.NicType.Gvnic,
                 ReservationAffinity = new ReservationAffinity(),
+                Creator = "creator253324ee",
+                CanIpForward = true,
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NotebookServiceClient client = new NotebookServiceClientImpl(mockGrpcClient.Object, null);
@@ -207,7 +211,7 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 ServiceAccount = "service_accounta3c1b923",
                 MachineType = "machine_type68ce40fa",
                 AcceleratorConfig = new Instance.Types.AcceleratorConfig(),
-                State = Instance.Types.State.Initializing,
+                State = Instance.Types.State.Deleted,
                 InstallGpuDriver = true,
                 CustomGpuDriverPath = "custom_gpu_driver_path24577c2a",
                 BootDiskType = Instance.Types.DiskType.PdSsd,
@@ -234,7 +238,7 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
-                DataDiskType = Instance.Types.DiskType.Unspecified,
+                DataDiskType = Instance.Types.DiskType.PdStandard,
                 DataDiskSizeGb = 8597103336273737467L,
                 NoRemoveDataDisk = true,
                 Disks =
@@ -253,6 +257,8 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 Tags = { "tags52c47ad5", },
                 NicType = Instance.Types.NicType.Gvnic,
                 ReservationAffinity = new ReservationAffinity(),
+                Creator = "creator253324ee",
+                CanIpForward = true,
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NotebookServiceClient client = new NotebookServiceClientImpl(mockGrpcClient.Object, null);
@@ -284,7 +290,7 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 ServiceAccount = "service_accounta3c1b923",
                 MachineType = "machine_type68ce40fa",
                 AcceleratorConfig = new Instance.Types.AcceleratorConfig(),
-                State = Instance.Types.State.Initializing,
+                State = Instance.Types.State.Deleted,
                 InstallGpuDriver = true,
                 CustomGpuDriverPath = "custom_gpu_driver_path24577c2a",
                 BootDiskType = Instance.Types.DiskType.PdSsd,
@@ -311,7 +317,7 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
-                DataDiskType = Instance.Types.DiskType.Unspecified,
+                DataDiskType = Instance.Types.DiskType.PdStandard,
                 DataDiskSizeGb = 8597103336273737467L,
                 NoRemoveDataDisk = true,
                 Disks =
@@ -330,12 +336,82 @@ namespace Google.Cloud.Notebooks.V1.Tests
                 Tags = { "tags52c47ad5", },
                 NicType = Instance.Types.NicType.Gvnic,
                 ReservationAffinity = new ReservationAffinity(),
+                Creator = "creator253324ee",
+                CanIpForward = true,
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NotebookServiceClient client = new NotebookServiceClientImpl(mockGrpcClient.Object, null);
             Instance responseCallSettings = await client.GetInstanceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Instance responseCancellationToken = await client.GetInstanceAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateInstanceMetadataItemsRequestObject()
+        {
+            moq::Mock<NotebookService.NotebookServiceClient> mockGrpcClient = new moq::Mock<NotebookService.NotebookServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateInstanceMetadataItemsRequest request = new UpdateInstanceMetadataItemsRequest
+            {
+                Name = "name1c9368b0",
+                Items =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+            };
+            UpdateInstanceMetadataItemsResponse expectedResponse = new UpdateInstanceMetadataItemsResponse
+            {
+                Items =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+            };
+            mockGrpcClient.Setup(x => x.UpdateInstanceMetadataItems(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            NotebookServiceClient client = new NotebookServiceClientImpl(mockGrpcClient.Object, null);
+            UpdateInstanceMetadataItemsResponse response = client.UpdateInstanceMetadataItems(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateInstanceMetadataItemsRequestObjectAsync()
+        {
+            moq::Mock<NotebookService.NotebookServiceClient> mockGrpcClient = new moq::Mock<NotebookService.NotebookServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateInstanceMetadataItemsRequest request = new UpdateInstanceMetadataItemsRequest
+            {
+                Name = "name1c9368b0",
+                Items =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+            };
+            UpdateInstanceMetadataItemsResponse expectedResponse = new UpdateInstanceMetadataItemsResponse
+            {
+                Items =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+            };
+            mockGrpcClient.Setup(x => x.UpdateInstanceMetadataItemsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UpdateInstanceMetadataItemsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            NotebookServiceClient client = new NotebookServiceClientImpl(mockGrpcClient.Object, null);
+            UpdateInstanceMetadataItemsResponse responseCallSettings = await client.UpdateInstanceMetadataItemsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            UpdateInstanceMetadataItemsResponse responseCancellationToken = await client.UpdateInstanceMetadataItemsAsync(request, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -348,6 +424,7 @@ namespace Google.Cloud.Notebooks.V1.Tests
             IsInstanceUpgradeableRequest request = new IsInstanceUpgradeableRequest
             {
                 NotebookInstance = "notebook_instance62ef1454",
+                Type = UpgradeType.Unspecified,
             };
             IsInstanceUpgradeableResponse expectedResponse = new IsInstanceUpgradeableResponse
             {
@@ -371,6 +448,7 @@ namespace Google.Cloud.Notebooks.V1.Tests
             IsInstanceUpgradeableRequest request = new IsInstanceUpgradeableRequest
             {
                 NotebookInstance = "notebook_instance62ef1454",
+                Type = UpgradeType.Unspecified,
             };
             IsInstanceUpgradeableResponse expectedResponse = new IsInstanceUpgradeableResponse
             {

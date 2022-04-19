@@ -32,7 +32,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Create client
             NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
             // Initialize request argument(s)
-            UpgradeInstanceRequest request = new UpgradeInstanceRequest { Name = "", };
+            UpgradeInstanceRequest request = new UpgradeInstanceRequest
+            {
+                Name = "",
+                Type = UpgradeType.Unspecified,
+            };
             // Make the request
             Operation<Instance, OperationMetadata> response = notebookServiceClient.UpgradeInstance(request);
 

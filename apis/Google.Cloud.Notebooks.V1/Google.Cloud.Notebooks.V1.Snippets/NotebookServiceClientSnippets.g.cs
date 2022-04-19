@@ -797,6 +797,41 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateInstanceMetadataItems</summary>
+        public void UpdateInstanceMetadataItemsRequestObject()
+        {
+            // Snippet: UpdateInstanceMetadataItems(UpdateInstanceMetadataItemsRequest, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateInstanceMetadataItemsRequest request = new UpdateInstanceMetadataItemsRequest
+            {
+                Name = "",
+                Items = { { "", "" }, },
+            };
+            // Make the request
+            UpdateInstanceMetadataItemsResponse response = notebookServiceClient.UpdateInstanceMetadataItems(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateInstanceMetadataItemsAsync</summary>
+        public async Task UpdateInstanceMetadataItemsRequestObjectAsync()
+        {
+            // Snippet: UpdateInstanceMetadataItemsAsync(UpdateInstanceMetadataItemsRequest, CallSettings)
+            // Additional: UpdateInstanceMetadataItemsAsync(UpdateInstanceMetadataItemsRequest, CancellationToken)
+            // Create client
+            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateInstanceMetadataItemsRequest request = new UpdateInstanceMetadataItemsRequest
+            {
+                Name = "",
+                Items = { { "", "" }, },
+            };
+            // Make the request
+            UpdateInstanceMetadataItemsResponse response = await notebookServiceClient.UpdateInstanceMetadataItemsAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteInstance</summary>
         public void DeleteInstanceRequestObject()
         {
@@ -1171,6 +1206,7 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             IsInstanceUpgradeableRequest request = new IsInstanceUpgradeableRequest
             {
                 NotebookInstance = "",
+                Type = UpgradeType.Unspecified,
             };
             // Make the request
             IsInstanceUpgradeableResponse response = notebookServiceClient.IsInstanceUpgradeable(request);
@@ -1188,6 +1224,7 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             IsInstanceUpgradeableRequest request = new IsInstanceUpgradeableRequest
             {
                 NotebookInstance = "",
+                Type = UpgradeType.Unspecified,
             };
             // Make the request
             IsInstanceUpgradeableResponse response = await notebookServiceClient.IsInstanceUpgradeableAsync(request);
@@ -1288,7 +1325,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Create client
             NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
             // Initialize request argument(s)
-            UpgradeInstanceRequest request = new UpgradeInstanceRequest { Name = "", };
+            UpgradeInstanceRequest request = new UpgradeInstanceRequest
+            {
+                Name = "",
+                Type = UpgradeType.Unspecified,
+            };
             // Make the request
             Operation<Instance, OperationMetadata> response = notebookServiceClient.UpgradeInstance(request);
 
@@ -1318,7 +1359,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Create client
             NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpgradeInstanceRequest request = new UpgradeInstanceRequest { Name = "", };
+            UpgradeInstanceRequest request = new UpgradeInstanceRequest
+            {
+                Name = "",
+                Type = UpgradeType.Unspecified,
+            };
             // Make the request
             Operation<Instance, OperationMetadata> response = await notebookServiceClient.UpgradeInstanceAsync(request);
 
@@ -1414,7 +1459,12 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Create client
             NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
             // Initialize request argument(s)
-            UpgradeInstanceInternalRequest request = new UpgradeInstanceInternalRequest { Name = "", VmId = "", };
+            UpgradeInstanceInternalRequest request = new UpgradeInstanceInternalRequest
+            {
+                Name = "",
+                VmId = "",
+                Type = UpgradeType.Unspecified,
+            };
             // Make the request
             Operation<Instance, OperationMetadata> response = notebookServiceClient.UpgradeInstanceInternal(request);
 
@@ -1444,7 +1494,12 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Create client
             NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpgradeInstanceInternalRequest request = new UpgradeInstanceInternalRequest { Name = "", VmId = "", };
+            UpgradeInstanceInternalRequest request = new UpgradeInstanceInternalRequest
+            {
+                Name = "",
+                VmId = "",
+                Type = UpgradeType.Unspecified,
+            };
             // Make the request
             Operation<Instance, OperationMetadata> response = await notebookServiceClient.UpgradeInstanceInternalAsync(request);
 

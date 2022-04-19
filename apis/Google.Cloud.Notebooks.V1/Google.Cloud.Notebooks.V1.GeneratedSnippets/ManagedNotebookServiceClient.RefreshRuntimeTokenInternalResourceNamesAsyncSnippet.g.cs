@@ -16,30 +16,27 @@
 
 namespace Google.Cloud.Notebooks.V1.Snippets
 {
-    // [START notebooks_v1_generated_NotebookService_IsInstanceUpgradeable_async]
+    // [START notebooks_v1_generated_ManagedNotebookService_RefreshRuntimeTokenInternal_async_flattened_resourceNames]
     using Google.Cloud.Notebooks.V1;
     using System.Threading.Tasks;
 
-    public sealed partial class GeneratedNotebookServiceClientSnippets
+    public sealed partial class GeneratedManagedNotebookServiceClientSnippets
     {
-        /// <summary>Snippet for IsInstanceUpgradeableAsync</summary>
+        /// <summary>Snippet for RefreshRuntimeTokenInternalAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated for illustrative purposes only.
         /// It may require modifications to work in your environment.
         /// </remarks>
-        public async Task IsInstanceUpgradeableRequestObjectAsync()
+        public async Task RefreshRuntimeTokenInternalResourceNamesAsync()
         {
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            ManagedNotebookServiceClient managedNotebookServiceClient = await ManagedNotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            IsInstanceUpgradeableRequest request = new IsInstanceUpgradeableRequest
-            {
-                NotebookInstance = "",
-                Type = UpgradeType.Unspecified,
-            };
+            RuntimeName name = RuntimeName.FromProjectLocationRuntime("[PROJECT]", "[LOCATION]", "[RUNTIME]");
+            string vmId = "";
             // Make the request
-            IsInstanceUpgradeableResponse response = await notebookServiceClient.IsInstanceUpgradeableAsync(request);
+            RefreshRuntimeTokenInternalResponse response = await managedNotebookServiceClient.RefreshRuntimeTokenInternalAsync(name, vmId);
         }
     }
-    // [END notebooks_v1_generated_NotebookService_IsInstanceUpgradeable_async]
+    // [END notebooks_v1_generated_ManagedNotebookService_RefreshRuntimeTokenInternal_async_flattened_resourceNames]
 }

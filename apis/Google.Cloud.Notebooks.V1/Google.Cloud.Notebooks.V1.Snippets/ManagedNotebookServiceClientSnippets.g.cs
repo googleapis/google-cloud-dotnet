@@ -402,6 +402,7 @@ namespace Google.Cloud.Notebooks.V1.Snippets
                 ParentAsRuntimeName = RuntimeName.FromProjectLocationRuntime("[PROJECT]", "[LOCATION]", "[RUNTIME]"),
                 RuntimeId = "",
                 Runtime = new Runtime(),
+                RequestId = "",
             };
             // Make the request
             Operation<Runtime, OperationMetadata> response = managedNotebookServiceClient.CreateRuntime(request);
@@ -437,6 +438,7 @@ namespace Google.Cloud.Notebooks.V1.Snippets
                 ParentAsRuntimeName = RuntimeName.FromProjectLocationRuntime("[PROJECT]", "[LOCATION]", "[RUNTIME]"),
                 RuntimeId = "",
                 Runtime = new Runtime(),
+                RequestId = "",
             };
             // Make the request
             Operation<Runtime, OperationMetadata> response = await managedNotebookServiceClient.CreateRuntimeAsync(request);
@@ -595,6 +597,7 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             DeleteRuntimeRequest request = new DeleteRuntimeRequest
             {
                 RuntimeName = RuntimeName.FromProjectLocationRuntime("[PROJECT]", "[LOCATION]", "[RUNTIME]"),
+                RequestId = "",
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = managedNotebookServiceClient.DeleteRuntime(request);
@@ -628,6 +631,7 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             DeleteRuntimeRequest request = new DeleteRuntimeRequest
             {
                 RuntimeName = RuntimeName.FromProjectLocationRuntime("[PROJECT]", "[LOCATION]", "[RUNTIME]"),
+                RequestId = "",
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = await managedNotebookServiceClient.DeleteRuntimeAsync(request);
@@ -775,7 +779,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Create client
             ManagedNotebookServiceClient managedNotebookServiceClient = ManagedNotebookServiceClient.Create();
             // Initialize request argument(s)
-            StartRuntimeRequest request = new StartRuntimeRequest { Name = "", };
+            StartRuntimeRequest request = new StartRuntimeRequest
+            {
+                Name = "",
+                RequestId = "",
+            };
             // Make the request
             Operation<Runtime, OperationMetadata> response = managedNotebookServiceClient.StartRuntime(request);
 
@@ -805,7 +813,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Create client
             ManagedNotebookServiceClient managedNotebookServiceClient = await ManagedNotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            StartRuntimeRequest request = new StartRuntimeRequest { Name = "", };
+            StartRuntimeRequest request = new StartRuntimeRequest
+            {
+                Name = "",
+                RequestId = "",
+            };
             // Make the request
             Operation<Runtime, OperationMetadata> response = await managedNotebookServiceClient.StartRuntimeAsync(request);
 
@@ -893,7 +905,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Create client
             ManagedNotebookServiceClient managedNotebookServiceClient = ManagedNotebookServiceClient.Create();
             // Initialize request argument(s)
-            StopRuntimeRequest request = new StopRuntimeRequest { Name = "", };
+            StopRuntimeRequest request = new StopRuntimeRequest
+            {
+                Name = "",
+                RequestId = "",
+            };
             // Make the request
             Operation<Runtime, OperationMetadata> response = managedNotebookServiceClient.StopRuntime(request);
 
@@ -923,7 +939,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Create client
             ManagedNotebookServiceClient managedNotebookServiceClient = await ManagedNotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            StopRuntimeRequest request = new StopRuntimeRequest { Name = "", };
+            StopRuntimeRequest request = new StopRuntimeRequest
+            {
+                Name = "",
+                RequestId = "",
+            };
             // Make the request
             Operation<Runtime, OperationMetadata> response = await managedNotebookServiceClient.StopRuntimeAsync(request);
 
@@ -1016,6 +1036,7 @@ namespace Google.Cloud.Notebooks.V1.Snippets
                 Name = "",
                 MachineType = "",
                 AcceleratorConfig = new RuntimeAcceleratorConfig(),
+                RequestId = "",
             };
             // Make the request
             Operation<Runtime, OperationMetadata> response = managedNotebookServiceClient.SwitchRuntime(request);
@@ -1051,6 +1072,7 @@ namespace Google.Cloud.Notebooks.V1.Snippets
                 Name = "",
                 MachineType = "",
                 AcceleratorConfig = new RuntimeAcceleratorConfig(),
+                RequestId = "",
             };
             // Make the request
             Operation<Runtime, OperationMetadata> response = await managedNotebookServiceClient.SwitchRuntimeAsync(request);
@@ -1139,7 +1161,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Create client
             ManagedNotebookServiceClient managedNotebookServiceClient = ManagedNotebookServiceClient.Create();
             // Initialize request argument(s)
-            ResetRuntimeRequest request = new ResetRuntimeRequest { Name = "", };
+            ResetRuntimeRequest request = new ResetRuntimeRequest
+            {
+                Name = "",
+                RequestId = "",
+            };
             // Make the request
             Operation<Runtime, OperationMetadata> response = managedNotebookServiceClient.ResetRuntime(request);
 
@@ -1169,7 +1195,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Create client
             ManagedNotebookServiceClient managedNotebookServiceClient = await ManagedNotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ResetRuntimeRequest request = new ResetRuntimeRequest { Name = "", };
+            ResetRuntimeRequest request = new ResetRuntimeRequest
+            {
+                Name = "",
+                RequestId = "",
+            };
             // Make the request
             Operation<Runtime, OperationMetadata> response = await managedNotebookServiceClient.ResetRuntimeAsync(request);
 
@@ -1434,6 +1464,99 @@ namespace Google.Cloud.Notebooks.V1.Snippets
                 // If it has completed, then access the result
                 Runtime retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RefreshRuntimeTokenInternal</summary>
+        public void RefreshRuntimeTokenInternalRequestObject()
+        {
+            // Snippet: RefreshRuntimeTokenInternal(RefreshRuntimeTokenInternalRequest, CallSettings)
+            // Create client
+            ManagedNotebookServiceClient managedNotebookServiceClient = ManagedNotebookServiceClient.Create();
+            // Initialize request argument(s)
+            RefreshRuntimeTokenInternalRequest request = new RefreshRuntimeTokenInternalRequest
+            {
+                RuntimeName = RuntimeName.FromProjectLocationRuntime("[PROJECT]", "[LOCATION]", "[RUNTIME]"),
+                VmId = "",
+            };
+            // Make the request
+            RefreshRuntimeTokenInternalResponse response = managedNotebookServiceClient.RefreshRuntimeTokenInternal(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RefreshRuntimeTokenInternalAsync</summary>
+        public async Task RefreshRuntimeTokenInternalRequestObjectAsync()
+        {
+            // Snippet: RefreshRuntimeTokenInternalAsync(RefreshRuntimeTokenInternalRequest, CallSettings)
+            // Additional: RefreshRuntimeTokenInternalAsync(RefreshRuntimeTokenInternalRequest, CancellationToken)
+            // Create client
+            ManagedNotebookServiceClient managedNotebookServiceClient = await ManagedNotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RefreshRuntimeTokenInternalRequest request = new RefreshRuntimeTokenInternalRequest
+            {
+                RuntimeName = RuntimeName.FromProjectLocationRuntime("[PROJECT]", "[LOCATION]", "[RUNTIME]"),
+                VmId = "",
+            };
+            // Make the request
+            RefreshRuntimeTokenInternalResponse response = await managedNotebookServiceClient.RefreshRuntimeTokenInternalAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RefreshRuntimeTokenInternal</summary>
+        public void RefreshRuntimeTokenInternal()
+        {
+            // Snippet: RefreshRuntimeTokenInternal(string, string, CallSettings)
+            // Create client
+            ManagedNotebookServiceClient managedNotebookServiceClient = ManagedNotebookServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/runtimes/[RUNTIME]";
+            string vmId = "";
+            // Make the request
+            RefreshRuntimeTokenInternalResponse response = managedNotebookServiceClient.RefreshRuntimeTokenInternal(name, vmId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RefreshRuntimeTokenInternalAsync</summary>
+        public async Task RefreshRuntimeTokenInternalAsync()
+        {
+            // Snippet: RefreshRuntimeTokenInternalAsync(string, string, CallSettings)
+            // Additional: RefreshRuntimeTokenInternalAsync(string, string, CancellationToken)
+            // Create client
+            ManagedNotebookServiceClient managedNotebookServiceClient = await ManagedNotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/runtimes/[RUNTIME]";
+            string vmId = "";
+            // Make the request
+            RefreshRuntimeTokenInternalResponse response = await managedNotebookServiceClient.RefreshRuntimeTokenInternalAsync(name, vmId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RefreshRuntimeTokenInternal</summary>
+        public void RefreshRuntimeTokenInternalResourceNames()
+        {
+            // Snippet: RefreshRuntimeTokenInternal(RuntimeName, string, CallSettings)
+            // Create client
+            ManagedNotebookServiceClient managedNotebookServiceClient = ManagedNotebookServiceClient.Create();
+            // Initialize request argument(s)
+            RuntimeName name = RuntimeName.FromProjectLocationRuntime("[PROJECT]", "[LOCATION]", "[RUNTIME]");
+            string vmId = "";
+            // Make the request
+            RefreshRuntimeTokenInternalResponse response = managedNotebookServiceClient.RefreshRuntimeTokenInternal(name, vmId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RefreshRuntimeTokenInternalAsync</summary>
+        public async Task RefreshRuntimeTokenInternalResourceNamesAsync()
+        {
+            // Snippet: RefreshRuntimeTokenInternalAsync(RuntimeName, string, CallSettings)
+            // Additional: RefreshRuntimeTokenInternalAsync(RuntimeName, string, CancellationToken)
+            // Create client
+            ManagedNotebookServiceClient managedNotebookServiceClient = await ManagedNotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RuntimeName name = RuntimeName.FromProjectLocationRuntime("[PROJECT]", "[LOCATION]", "[RUNTIME]");
+            string vmId = "";
+            // Make the request
+            RefreshRuntimeTokenInternalResponse response = await managedNotebookServiceClient.RefreshRuntimeTokenInternalAsync(name, vmId);
             // End snippet
         }
     }

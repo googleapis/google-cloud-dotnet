@@ -36,6 +36,7 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             DeleteRuntimeRequest request = new DeleteRuntimeRequest
             {
                 RuntimeName = RuntimeName.FromProjectLocationRuntime("[PROJECT]", "[LOCATION]", "[RUNTIME]"),
+                RequestId = "",
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = managedNotebookServiceClient.DeleteRuntime(request);

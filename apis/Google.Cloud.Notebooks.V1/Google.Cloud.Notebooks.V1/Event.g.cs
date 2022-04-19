@@ -25,18 +25,22 @@ namespace Google.Cloud.Notebooks.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVnb29nbGUvY2xvdWQvbm90ZWJvb2tzL3YxL2V2ZW50LnByb3RvEhlnb29n",
-            "bGUuY2xvdWQubm90ZWJvb2tzLnYxGh9nb29nbGUvcHJvdG9idWYvdGltZXN0",
-            "YW1wLnByb3RvIqUBCgVFdmVudBIvCgtyZXBvcnRfdGltZRgBIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASOAoEdHlwZRgCIAEoDjIqLmdvb2ds",
-            "ZS5jbG91ZC5ub3RlYm9va3MudjEuRXZlbnQuRXZlbnRUeXBlIjEKCUV2ZW50",
-            "VHlwZRIaChZFVkVOVF9UWVBFX1VOU1BFQ0lGSUVEEAASCAoESURMRRABQnEK",
-            "HWNvbS5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxQgpFdmVudFByb3RvUAFa",
-            "Qmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
-            "bm90ZWJvb2tzL3YxO25vdGVib29rc2IGcHJvdG8z"));
+            "bGUuY2xvdWQubm90ZWJvb2tzLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
+            "aW9yLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIsYC",
+            "CgVFdmVudBIvCgtyZXBvcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXASOAoEdHlwZRgCIAEoDjIqLmdvb2dsZS5jbG91ZC5ub3Rl",
+            "Ym9va3MudjEuRXZlbnQuRXZlbnRUeXBlEkMKB2RldGFpbHMYAyADKAsyLS5n",
+            "b29nbGUuY2xvdWQubm90ZWJvb2tzLnYxLkV2ZW50LkRldGFpbHNFbnRyeUID",
+            "4EEBGi4KDERldGFpbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBIl0KCUV2ZW50VHlwZRIaChZFVkVOVF9UWVBFX1VOU1BFQ0lGSUVE",
+            "EAASCAoESURMRRABEg0KCUhFQVJUQkVBVBACEgoKBkhFQUxUSBADEg8KC01B",
+            "SU5URU5BTkNFEARCcQodY29tLmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjFC",
+            "CkV2ZW50UHJvdG9QAVpCZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
+            "Z2xlYXBpcy9jbG91ZC9ub3RlYm9va3MvdjE7bm90ZWJvb2tzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.Event), global::Google.Cloud.Notebooks.V1.Event.Parser, new[]{ "ReportTime", "Type" }, null, new[]{ typeof(global::Google.Cloud.Notebooks.V1.Event.Types.EventType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Notebooks.V1.Event), global::Google.Cloud.Notebooks.V1.Event.Parser, new[]{ "ReportTime", "Type", "Details" }, null, new[]{ typeof(global::Google.Cloud.Notebooks.V1.Event.Types.EventType) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -82,6 +86,7 @@ namespace Google.Cloud.Notebooks.V1 {
     public Event(Event other) : this() {
       reportTime_ = other.reportTime_ != null ? other.reportTime_.Clone() : null;
       type_ = other.type_;
+      details_ = other.details_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -121,6 +126,20 @@ namespace Google.Cloud.Notebooks.V1 {
       }
     }
 
+    /// <summary>Field number for the "details" field.</summary>
+    public const int DetailsFieldNumber = 3;
+    private static readonly pbc::MapField<string, string>.Codec _map_details_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
+    private readonly pbc::MapField<string, string> details_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. Event details. This field is used to pass event information.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Details {
+      get { return details_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -138,6 +157,7 @@ namespace Google.Cloud.Notebooks.V1 {
       }
       if (!object.Equals(ReportTime, other.ReportTime)) return false;
       if (Type != other.Type) return false;
+      if (!Details.Equals(other.Details)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,6 +167,7 @@ namespace Google.Cloud.Notebooks.V1 {
       int hash = 1;
       if (reportTime_ != null) hash ^= ReportTime.GetHashCode();
       if (Type != global::Google.Cloud.Notebooks.V1.Event.Types.EventType.Unspecified) hash ^= Type.GetHashCode();
+      hash ^= Details.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -173,6 +194,7 @@ namespace Google.Cloud.Notebooks.V1 {
         output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
+      details_.WriteTo(output, _map_details_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -191,6 +213,7 @@ namespace Google.Cloud.Notebooks.V1 {
         output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
+      details_.WriteTo(ref output, _map_details_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -207,6 +230,7 @@ namespace Google.Cloud.Notebooks.V1 {
       if (Type != global::Google.Cloud.Notebooks.V1.Event.Types.EventType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
+      size += details_.CalculateSize(_map_details_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -228,6 +252,7 @@ namespace Google.Cloud.Notebooks.V1 {
       if (other.Type != global::Google.Cloud.Notebooks.V1.Event.Types.EventType.Unspecified) {
         Type = other.Type;
       }
+      details_.Add(other.details_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -252,6 +277,10 @@ namespace Google.Cloud.Notebooks.V1 {
           }
           case 16: {
             Type = (global::Google.Cloud.Notebooks.V1.Event.Types.EventType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            details_.AddEntriesFrom(input, _map_details_codec);
             break;
           }
         }
@@ -280,6 +309,10 @@ namespace Google.Cloud.Notebooks.V1 {
             Type = (global::Google.Cloud.Notebooks.V1.Event.Types.EventType) input.ReadEnum();
             break;
           }
+          case 26: {
+            details_.AddEntriesFrom(ref input, _map_details_codec);
+            break;
+          }
         }
       }
     }
@@ -291,7 +324,7 @@ namespace Google.Cloud.Notebooks.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The definition of the even types.
+      /// The definition of the event types.
       /// </summary>
       public enum EventType {
         /// <summary>
@@ -302,6 +335,24 @@ namespace Google.Cloud.Notebooks.V1 {
         /// The instance / runtime is idle
         /// </summary>
         [pbr::OriginalName("IDLE")] Idle = 1,
+        /// <summary>
+        /// The instance / runtime is available.
+        /// This event indicates that instance / runtime underlying compute is
+        /// operational.
+        /// </summary>
+        [pbr::OriginalName("HEARTBEAT")] Heartbeat = 2,
+        /// <summary>
+        /// The instance / runtime health is available.
+        /// This event indicates that instance / runtime health information.
+        /// </summary>
+        [pbr::OriginalName("HEALTH")] Health = 3,
+        /// <summary>
+        /// The instance / runtime is available.
+        /// This event allows instance / runtime to send Host maintenance
+        /// information to Control Plane.
+        /// https://cloud.google.com/compute/docs/gpus/gpu-host-maintenance
+        /// </summary>
+        [pbr::OriginalName("MAINTENANCE")] Maintenance = 4,
       }
 
     }
