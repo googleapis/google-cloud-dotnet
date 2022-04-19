@@ -2,4 +2,4 @@
 
 set -e
 
-dotnet run -p Grafeas.V1.FixGeneratedCode
+dotnet run --project Grafeas.V1.FixGeneratedCode
