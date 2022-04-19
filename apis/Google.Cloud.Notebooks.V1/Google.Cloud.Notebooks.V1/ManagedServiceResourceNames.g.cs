@@ -78,4 +78,16 @@ namespace Google.Cloud.Notebooks.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class RefreshRuntimeTokenInternalRequest
+    {
+        /// <summary>
+        /// <see cref="gcnv::RuntimeName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcnv::RuntimeName RuntimeName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcnv::RuntimeName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

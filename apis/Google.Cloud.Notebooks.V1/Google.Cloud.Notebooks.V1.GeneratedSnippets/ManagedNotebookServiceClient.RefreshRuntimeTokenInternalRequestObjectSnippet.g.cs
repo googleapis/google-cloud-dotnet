@@ -16,30 +16,29 @@
 
 namespace Google.Cloud.Notebooks.V1.Snippets
 {
-    // [START notebooks_v1_generated_NotebookService_IsInstanceUpgradeable_async]
+    // [START notebooks_v1_generated_ManagedNotebookService_RefreshRuntimeTokenInternal_sync]
     using Google.Cloud.Notebooks.V1;
-    using System.Threading.Tasks;
 
-    public sealed partial class GeneratedNotebookServiceClientSnippets
+    public sealed partial class GeneratedManagedNotebookServiceClientSnippets
     {
-        /// <summary>Snippet for IsInstanceUpgradeableAsync</summary>
+        /// <summary>Snippet for RefreshRuntimeTokenInternal</summary>
         /// <remarks>
         /// This snippet has been automatically generated for illustrative purposes only.
         /// It may require modifications to work in your environment.
         /// </remarks>
-        public async Task IsInstanceUpgradeableRequestObjectAsync()
+        public void RefreshRuntimeTokenInternalRequestObject()
         {
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            ManagedNotebookServiceClient managedNotebookServiceClient = ManagedNotebookServiceClient.Create();
             // Initialize request argument(s)
-            IsInstanceUpgradeableRequest request = new IsInstanceUpgradeableRequest
+            RefreshRuntimeTokenInternalRequest request = new RefreshRuntimeTokenInternalRequest
             {
-                NotebookInstance = "",
-                Type = UpgradeType.Unspecified,
+                RuntimeName = RuntimeName.FromProjectLocationRuntime("[PROJECT]", "[LOCATION]", "[RUNTIME]"),
+                VmId = "",
             };
             // Make the request
-            IsInstanceUpgradeableResponse response = await notebookServiceClient.IsInstanceUpgradeableAsync(request);
+            RefreshRuntimeTokenInternalResponse response = managedNotebookServiceClient.RefreshRuntimeTokenInternal(request);
         }
     }
-    // [END notebooks_v1_generated_NotebookService_IsInstanceUpgradeable_async]
+    // [END notebooks_v1_generated_ManagedNotebookService_RefreshRuntimeTokenInternal_sync]
 }

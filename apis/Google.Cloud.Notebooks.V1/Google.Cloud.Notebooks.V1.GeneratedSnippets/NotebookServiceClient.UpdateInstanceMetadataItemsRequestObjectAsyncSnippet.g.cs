@@ -16,30 +16,30 @@
 
 namespace Google.Cloud.Notebooks.V1.Snippets
 {
-    // [START notebooks_v1_generated_NotebookService_IsInstanceUpgradeable_async]
+    // [START notebooks_v1_generated_NotebookService_UpdateInstanceMetadataItems_async]
     using Google.Cloud.Notebooks.V1;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedNotebookServiceClientSnippets
     {
-        /// <summary>Snippet for IsInstanceUpgradeableAsync</summary>
+        /// <summary>Snippet for UpdateInstanceMetadataItemsAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated for illustrative purposes only.
         /// It may require modifications to work in your environment.
         /// </remarks>
-        public async Task IsInstanceUpgradeableRequestObjectAsync()
+        public async Task UpdateInstanceMetadataItemsRequestObjectAsync()
         {
             // Create client
             NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            IsInstanceUpgradeableRequest request = new IsInstanceUpgradeableRequest
+            UpdateInstanceMetadataItemsRequest request = new UpdateInstanceMetadataItemsRequest
             {
-                NotebookInstance = "",
-                Type = UpgradeType.Unspecified,
+                Name = "",
+                Items = { { "", "" }, },
             };
             // Make the request
-            IsInstanceUpgradeableResponse response = await notebookServiceClient.IsInstanceUpgradeableAsync(request);
+            UpdateInstanceMetadataItemsResponse response = await notebookServiceClient.UpdateInstanceMetadataItemsAsync(request);
         }
     }
-    // [END notebooks_v1_generated_NotebookService_IsInstanceUpgradeable_async]
+    // [END notebooks_v1_generated_NotebookService_UpdateInstanceMetadataItems_async]
 }

@@ -62,6 +62,7 @@ namespace Google.Cloud.Notebooks.V1
             UpdateShieldedInstanceConfigOperationsSettings = existing.UpdateShieldedInstanceConfigOperationsSettings.Clone();
             SetInstanceLabelsSettings = existing.SetInstanceLabelsSettings;
             SetInstanceLabelsOperationsSettings = existing.SetInstanceLabelsOperationsSettings.Clone();
+            UpdateInstanceMetadataItemsSettings = existing.UpdateInstanceMetadataItemsSettings;
             DeleteInstanceSettings = existing.DeleteInstanceSettings;
             DeleteInstanceOperationsSettings = existing.DeleteInstanceOperationsSettings.Clone();
             StartInstanceSettings = existing.StartInstanceSettings;
@@ -342,6 +343,25 @@ namespace Google.Cloud.Notebooks.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NotebookServiceClient.UpdateInstanceMetadataItems</c> and
+        /// <c>NotebookServiceClient.UpdateInstanceMetadataItemsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateInstanceMetadataItemsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1643,6 +1663,33 @@ namespace Google.Cloud.Notebooks.V1
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> PollOnceSetInstanceLabelsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<Instance, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetInstanceLabelsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Add/update metadata items for an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UpdateInstanceMetadataItemsResponse UpdateInstanceMetadataItems(UpdateInstanceMetadataItemsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Add/update metadata items for an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UpdateInstanceMetadataItemsResponse> UpdateInstanceMetadataItemsAsync(UpdateInstanceMetadataItemsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Add/update metadata items for an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UpdateInstanceMetadataItemsResponse> UpdateInstanceMetadataItemsAsync(UpdateInstanceMetadataItemsRequest request, st::CancellationToken cancellationToken) =>
+            UpdateInstanceMetadataItemsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a single Instance.
@@ -3584,7 +3631,7 @@ namespace Google.Cloud.Notebooks.V1
             DeleteExecutionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new Scheduled Notebook in a given project and location.
+        /// Creates a new Execution in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3593,7 +3640,7 @@ namespace Google.Cloud.Notebooks.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new Scheduled Notebook in a given project and location.
+        /// Creates a new Execution in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3602,7 +3649,7 @@ namespace Google.Cloud.Notebooks.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new Scheduled Notebook in a given project and location.
+        /// Creates a new Execution in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3637,7 +3684,7 @@ namespace Google.Cloud.Notebooks.V1
             lro::Operation<Execution, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateExecutionOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a new Scheduled Notebook in a given project and location.
+        /// Creates a new Execution in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. Format:
@@ -3660,7 +3707,7 @@ namespace Google.Cloud.Notebooks.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Scheduled Notebook in a given project and location.
+        /// Creates a new Execution in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. Format:
@@ -3683,7 +3730,7 @@ namespace Google.Cloud.Notebooks.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Scheduled Notebook in a given project and location.
+        /// Creates a new Execution in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. Format:
@@ -3701,7 +3748,7 @@ namespace Google.Cloud.Notebooks.V1
             CreateExecutionAsync(parent, execution, executionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new Scheduled Notebook in a given project and location.
+        /// Creates a new Execution in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. Format:
@@ -3724,7 +3771,7 @@ namespace Google.Cloud.Notebooks.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Scheduled Notebook in a given project and location.
+        /// Creates a new Execution in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. Format:
@@ -3747,7 +3794,7 @@ namespace Google.Cloud.Notebooks.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Scheduled Notebook in a given project and location.
+        /// Creates a new Execution in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. Format:
@@ -3788,6 +3835,8 @@ namespace Google.Cloud.Notebooks.V1
         private readonly gaxgrpc::ApiCall<UpdateShieldedInstanceConfigRequest, lro::Operation> _callUpdateShieldedInstanceConfig;
 
         private readonly gaxgrpc::ApiCall<SetInstanceLabelsRequest, lro::Operation> _callSetInstanceLabels;
+
+        private readonly gaxgrpc::ApiCall<UpdateInstanceMetadataItemsRequest, UpdateInstanceMetadataItemsResponse> _callUpdateInstanceMetadataItems;
 
         private readonly gaxgrpc::ApiCall<DeleteInstanceRequest, lro::Operation> _callDeleteInstance;
 
@@ -3894,6 +3943,9 @@ namespace Google.Cloud.Notebooks.V1
             _callSetInstanceLabels = clientHelper.BuildApiCall<SetInstanceLabelsRequest, lro::Operation>(grpcClient.SetInstanceLabelsAsync, grpcClient.SetInstanceLabels, effectiveSettings.SetInstanceLabelsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callSetInstanceLabels);
             Modify_SetInstanceLabelsApiCall(ref _callSetInstanceLabels);
+            _callUpdateInstanceMetadataItems = clientHelper.BuildApiCall<UpdateInstanceMetadataItemsRequest, UpdateInstanceMetadataItemsResponse>(grpcClient.UpdateInstanceMetadataItemsAsync, grpcClient.UpdateInstanceMetadataItems, effectiveSettings.UpdateInstanceMetadataItemsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callUpdateInstanceMetadataItems);
+            Modify_UpdateInstanceMetadataItemsApiCall(ref _callUpdateInstanceMetadataItems);
             _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, lro::Operation>(grpcClient.DeleteInstanceAsync, grpcClient.DeleteInstance, effectiveSettings.DeleteInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteInstance);
             Modify_DeleteInstanceApiCall(ref _callDeleteInstance);
@@ -3986,6 +4038,8 @@ namespace Google.Cloud.Notebooks.V1
 
         partial void Modify_SetInstanceLabelsApiCall(ref gaxgrpc::ApiCall<SetInstanceLabelsRequest, lro::Operation> call);
 
+        partial void Modify_UpdateInstanceMetadataItemsApiCall(ref gaxgrpc::ApiCall<UpdateInstanceMetadataItemsRequest, UpdateInstanceMetadataItemsResponse> call);
+
         partial void Modify_DeleteInstanceApiCall(ref gaxgrpc::ApiCall<DeleteInstanceRequest, lro::Operation> call);
 
         partial void Modify_StartInstanceApiCall(ref gaxgrpc::ApiCall<StartInstanceRequest, lro::Operation> call);
@@ -4054,6 +4108,8 @@ namespace Google.Cloud.Notebooks.V1
         partial void Modify_UpdateShieldedInstanceConfigRequest(ref UpdateShieldedInstanceConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetInstanceLabelsRequest(ref SetInstanceLabelsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateInstanceMetadataItemsRequest(ref UpdateInstanceMetadataItemsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteInstanceRequest(ref DeleteInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4342,6 +4398,30 @@ namespace Google.Cloud.Notebooks.V1
         {
             Modify_SetInstanceLabelsRequest(ref request, ref callSettings);
             return new lro::Operation<Instance, OperationMetadata>(await _callSetInstanceLabels.Async(request, callSettings).ConfigureAwait(false), SetInstanceLabelsOperationsClient);
+        }
+
+        /// <summary>
+        /// Add/update metadata items for an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override UpdateInstanceMetadataItemsResponse UpdateInstanceMetadataItems(UpdateInstanceMetadataItemsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateInstanceMetadataItemsRequest(ref request, ref callSettings);
+            return _callUpdateInstanceMetadataItems.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Add/update metadata items for an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<UpdateInstanceMetadataItemsResponse> UpdateInstanceMetadataItemsAsync(UpdateInstanceMetadataItemsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateInstanceMetadataItemsRequest(ref request, ref callSettings);
+            return _callUpdateInstanceMetadataItems.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>DeleteInstance</c>.</summary>
@@ -4926,7 +5006,7 @@ namespace Google.Cloud.Notebooks.V1
         public override lro::OperationsClient CreateExecutionOperationsClient { get; }
 
         /// <summary>
-        /// Creates a new Scheduled Notebook in a given project and location.
+        /// Creates a new Execution in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4938,7 +5018,7 @@ namespace Google.Cloud.Notebooks.V1
         }
 
         /// <summary>
-        /// Creates a new Scheduled Notebook in a given project and location.
+        /// Creates a new Execution in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
