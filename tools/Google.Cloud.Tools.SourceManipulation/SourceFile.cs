@@ -210,6 +210,15 @@ namespace Google.Cloud.Tools.SourceManipulation
             Rewrite(new MemberAccessRewriter(oldAccessExpression, newAccessExpression));
 
         /// <summary>
+        /// Replaces one member access expression with another expression.
+        /// </summary>
+        /// <param name="oldAccessExpression">The expression to replace</param>
+        /// <param name="newAccessExpression">The new expression</param>
+        /// <returns>The modified source file.</returns>
+        public SourceFile RewriteIdentifierName(string oldIdentifierName, string newExpression) =>
+            Rewrite(new IdentifierNameRewriter(oldIdentifierName, newExpression));
+
+        /// <summary>
         /// Rewrites the source code using the given rewriter.
         /// </summary>
         /// <returns>The modified source file.</returns>
@@ -297,6 +306,27 @@ namespace Google.Cloud.Tools.SourceManipulation
                 var existingAccessExpression = node.GetText().ToString();
                 return existingAccessExpression == _oldAccessExpression
                     ? SyntaxFactory.ParseExpression(_newAccessExpression).WithTriviaFrom(node)
+                    : node;
+            }
+        }
+
+        private class IdentifierNameRewriter : CSharpSyntaxRewriter
+        {
+            private readonly string _oldIdentifierName;
+            private readonly string _newExpression;
+
+            public IdentifierNameRewriter(string oldIdentifierName, string newExpression)
+                : base(visitIntoStructuredTrivia: false)
+            {
+                _oldIdentifierName = oldIdentifierName;
+                _newExpression = newExpression;
+            }
+
+            public override SyntaxNode VisitIdentifierName(IdentifierNameSyntax node)
+            {
+                var existingExpression = node.GetText().ToString();
+                return existingExpression == _oldIdentifierName
+                    ? SyntaxFactory.ParseExpression(_newExpression).WithTriviaFrom(node)
                     : node;
             }
         }

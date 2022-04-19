@@ -34,12 +34,9 @@ namespace Grafeas.V1.FixGeneratedCode
 
             SourceFile.Load(Path.Combine(layout.SourceDirectory, "Grafeas.V1", "GrafeasClient.g.cs"))
                 .RemoveProperty("GrafeasClient", "DefaultEndpoint")
-                .RemoveProperty("GrafeasClient", "ChannelPool")
-                .RemoveMethod("GrafeasClient", "CreateAsync", "CancellationToken")
-                .RemoveMethod("GrafeasClient", "Create")
-                .RemoveMethod("GrafeasClient", "ShutdownDefaultChannelsAsync")
-                .RemoveMethod("GrafeasClientBuilder", "GetDefaultEndpoint")
                 .RemoveMethod("GrafeasClientBuilder", "GetChannelPool")
+                // When constructing the ServiceMetadata, just use a null endpoint.
+                .RewriteIdentifierName("DefaultEndpoint", "null")
                 .Save();
 
             SourceFile.Load(Path.Combine(layout.SourceDirectory, "Grafeas.V1.Snippets", "GrafeasClientSnippets.g.cs"))
