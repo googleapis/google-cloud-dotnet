@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.ClientTesting;
+using Google.Cloud.Iam.V1;
 using Grpc.Core;
 using System;
 using System.Collections.Concurrent;
@@ -511,15 +512,19 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             await publisherApi.CreateTopicAsync(topicName).ConfigureAwait(false);
             await publisherApi.CreateTopicAsync(dlqTopicName).ConfigureAwait(false);
             // Allow pubsub-managed service account to publish to the DLQ topic.
-            await publisherApi.SetIamPolicyAsync(dlqTopicName.ToString(), new Iam.V1.Policy
+            await publisherApi.IAMPolicyClient.SetIamPolicyAsync(new SetIamPolicyRequest
             {
-                Bindings =
+                ResourceAsResourceName = dlqTopicName,
+                Policy = new Policy
                 {
-                    new Iam.V1.Binding
+                    Bindings =
                     {
-                        Members = { $"serviceAccount:{pubsubServiceAccount}" },
-                        Role = "roles/pubsub.publisher",
-                    },
+                        new Binding
+                        {
+                            Members = { $"serviceAccount:{pubsubServiceAccount}" },
+                            Role = "roles/pubsub.publisher",
+                        },
+                    }
                 }
             }).ConfigureAwait(false);
 
@@ -538,14 +543,18 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                 AckDeadlineSeconds = 60,
             }).ConfigureAwait(false);
             // Allow pubsub-managed service account to ACK message in subscription (so it won't be sent to client again).
-            await subscriberApi.SetIamPolicyAsync(subscriptionName.ToString(), new Iam.V1.Policy
+            await subscriberApi.IAMPolicyClient.SetIamPolicyAsync(new SetIamPolicyRequest
             {
-                Bindings =
+                ResourceAsResourceName = subscriptionName,
+                Policy = new Iam.V1.Policy
                 {
-                    new Iam.V1.Binding
+                    Bindings =
                     {
-                        Members = { $"serviceAccount:{pubsubServiceAccount}" },
-                        Role = "roles/pubsub.subscriber",
+                        new Iam.V1.Binding
+                        {
+                            Members = { $"serviceAccount:{pubsubServiceAccount}" },
+                            Role = "roles/pubsub.subscriber",
+                        }
                     }
                 }
             }).ConfigureAwait(false);
