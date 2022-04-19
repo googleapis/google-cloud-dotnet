@@ -39,9 +39,5 @@ namespace Grafeas.V1
         /// <inheritdoc />
         protected override ChannelPool GetChannelPool() =>
             throw new InvalidOperationException("GrafeasClient has no channel pool");
-
-        /// <inheritdoc />
-        protected override string GetDefaultEndpoint() =>
-            throw new InvalidOperationException("Grafeas has no default endpoint");
     }
 }
