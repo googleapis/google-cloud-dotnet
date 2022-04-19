@@ -27,9 +27,18 @@ namespace Google.Cloud.Tools.ReleaseManager
 {
     public class GenerateProjectsCommand : CommandBase
     {
+        /// <summary>
+        /// In "new major version mode", *all* references between different APIs become project references
+        /// in the csproj file, and all GAX/gRPC references are treated as being for the default versions,
+        /// regardless of anything explicitly specified. This makes it easier to create new major versions
+        /// without manually changing apis.json.
+        /// </summary>
+        /// <remarks>This isn't a constant, as otherwise the compiler complains about unreachable code.</remarks>
+        private static readonly bool NewMajorVersionMode = true;
+
         private static readonly Regex AnyVersionPattern = new Regex(@"^[0-9]\d*\.\d+\.\d+(\.\d+)?(-.*)?$");
         private static readonly Regex StableVersionPattern = new Regex(@"^[1-9]\d*\.\d+\.\d+(\.\d+)?$");
-        private static readonly Regex AnyDesktopFramework = new Regex(@";net\d+");
+        private static readonly Regex AnyDesktopFramework = new Regex(@";net4\d+");
 
         // Project references which don't just follow the pattern of ..\..\{package}\{package}\{package}.csproj
         private static readonly Dictionary<string, string> KnownProjectReferences = new Dictionary<string, string>
@@ -43,35 +52,34 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         private static readonly Dictionary<ApiType, string> PackageTypeToDefaultTargetFrameworks = new Dictionary<ApiType, string>
         {
-            { ApiType.Rest, "netstandard2.0;net461" },
-            { ApiType.Grpc, "netstandard2.0;net461" },
-            { ApiType.Regapic, "netstandard2.0;net461" }
+            { ApiType.Rest, "netstandard2.1;net462" },
+            { ApiType.Grpc, "netstandard2.1;net462" },
+            { ApiType.Regapic, "netstandard2.1;net462" }
         };
 
-        private const string DefaultTestTargetFrameworks = "netcoreapp2.1;net461";
+        private const string DefaultTestTargetFrameworks = "netcoreapp3.1;net462";
 
         private static Dictionary<ApiType, string[]> PackageTypeToImplicitDependencies = new Dictionary<ApiType, string[]>
         {
             {  ApiType.Rest, new[] { "Google.Api.Gax.Rest" } },
-            {  ApiType.Grpc, new[] { "Grpc.Core", "Google.Api.Gax.Grpc.GrpcCore" } },
+            {  ApiType.Grpc, new[] { "Grpc.Core", "Google.Api.Gax.Grpc" } },
             {  ApiType.Regapic, new[] { "Google.Api.Gax.Grpc" } },
         };
 
+        // TODO: remove this, as we don't have any analyzers at the moment.
         private const string AnalyzersTargetFramework = "netstandard1.3";
         private const string AnalyzersTestTargetFramework = "netcoreapp2.0";
 
         private const string ProjectVersionValue = "project";
         private const string DefaultVersionValue = "default";
         private const string GrpcPackage = "Grpc.Core";
-        private const string DefaultGaxVersion = "3.7.0";
+        private const string DefaultGaxVersion = "4.0.0-alpha02";
         private const string GrpcVersion = "2.41.0";
         private static readonly Dictionary<string, string> DefaultPackageVersions = new Dictionary<string, string>
         {
             { "Google.Api.Gax", DefaultGaxVersion },
             { "Google.Api.Gax.Rest", DefaultGaxVersion },
             { "Google.Api.Gax.Grpc", DefaultGaxVersion },
-            { "Google.Api.Gax.Grpc.GrpcCore", DefaultGaxVersion },
-            { "Google.Api.Gax.Grpc.Gcp", DefaultGaxVersion },
             { "Google.Api.Gax.Testing", DefaultGaxVersion },
             { "Google.Api.Gax.Grpc.Testing", DefaultGaxVersion },
             { GrpcPackage, GrpcVersion },
@@ -235,7 +243,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             {
                 // TODO: What about 2.0.0-beta00 etc? We'd need to know what version to link to.
                 // We can cross that bridge when we come to it.
-                if (api.Version == "1.0.0-beta00" || api.Version == "1.0.0-alpha00")
+                if (api.Version == "1.0.0-beta00" || api.Version == "1.0.0-alpha00" || api.ReleaseLevelOverride == "unreleased")
                 {
                     continue;
                 }
@@ -629,7 +637,10 @@ api-name: {api.Id}
                 // In particular, stable releases *must* override versions of GRPC and GAX.
                 foreach (var dependency in api.Dependencies)
                 {
-                    dependencies[dependency.Key] = dependency.Value;
+                    dependencies[dependency.Key] = !NewMajorVersionMode ? dependency.Value
+                        : DefaultPackageVersions.TryGetValue(dependency.Key, out var defaultVersion) ? defaultVersion
+                        : apiNames.Contains(dependency.Key) ? ProjectVersionValue
+                        : dependency.Value;
                 }
             }
 
@@ -695,7 +706,7 @@ api-name: {api.Id}
             }
             var propertyGroup =
                 new XElement("PropertyGroup",
-                    new XElement("TargetFramework", "netcoreapp2.1"),
+                    new XElement("TargetFramework", "net6.0"),
                     new XElement("OutputType", "Exe"),
                     new XElement("IsPackable", false));
             var dependenciesElement =
@@ -715,7 +726,7 @@ api-name: {api.Id}
             dependencies.Add(api.Id, "project");
             var propertyGroup =
                 new XElement("PropertyGroup",
-                    new XElement("TargetFramework", "netcoreapp2.1"),
+                    new XElement("TargetFramework", "net6.0"),
                     new XElement("OutputType", "Exe"),
                     new XElement("IsPackable", false),
                     new XElement("StartupObject", api.Id + ".Samples.Program"));
@@ -744,7 +755,10 @@ api-name: {api.Id}
             // Deliberately not using Add, so that a project can override the defaults.
             foreach (var dependency in api.TestDependencies)
             {
-                dependencies[dependency.Key] = dependency.Value;
+                dependencies[dependency.Key] = !NewMajorVersionMode ? dependency.Value
+                        : DefaultPackageVersions.TryGetValue(dependency.Key, out var defaultVersion) ? defaultVersion
+                        : apiNames.Contains(dependency.Key) ? ProjectVersionValue
+                        : dependency.Value;
             }
 
             var testTargetFrameworks = GetTestTargetFrameworks(api, isForAnalyzers);

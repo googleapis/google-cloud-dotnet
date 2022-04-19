@@ -35,7 +35,7 @@
     {
       "id": "Google.Apps.Script.Type",
       "version": "2.0.0-alpha02",
-      "targetFrameworks": "netstandard2.0;net461",
+      "targetFrameworks": "netstandard2.1;net462",
       "type": "other",
       "description": "Version-agnostic types for Apps Script APIs.",
       "tags": [
@@ -281,7 +281,7 @@
     {
       "id": "Google.Cloud.Audit",
       "version": "2.0.0-alpha02",
-      "targetFrameworks": "netstandard2.0;net461",
+      "targetFrameworks": "netstandard2.1;net462",
       "productName": "Google Cloud Audit",
       "productUrl": "https://cloud.google.com/logging/docs/audit",
       "type": "other",
@@ -340,6 +340,7 @@
     {
       "id": "Google.Cloud.BigQuery.DataExchange.V1Beta1",
       "version": "2.0.0-alpha02",
+      "releaseLevelOverride": "unreleased",
       "type": "grpc",
       "productName": "Analytics Hub",
       "productUrl": "https://cloud.google.com/analytics-hub",
@@ -360,7 +361,8 @@
     {
       "id": "Google.Cloud.BigQuery.DataExchange.Common",
       "version": "2.0.0-alpha02",
-      "targetFrameworks": "netstandard2.0;net461",
+      "releaseLevelOverride": "unreleased",
+      "targetFrameworks": "netstandard2.1;net462",
       "type": "other",
       "noVersionHistory": true,
       "description": "Version-agnostic types for the Google BigQuery Data Exchange API.",
@@ -481,7 +483,7 @@
     {
       "id": "Google.Cloud.Bigtable.Common.V2",
       "type": "other",
-      "targetFrameworks": "netstandard2.0;net461",
+      "targetFrameworks": "netstandard2.1;net462",
       "version": "3.0.0-alpha02",
       "description": "Common code used by Bigtable V2 APIs",
       "tags": [
@@ -507,7 +509,6 @@
         "Bigtable"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc.Gcp": "3.7.0",
         "Google.Api.Gax.Grpc": "3.7.0",
         "Google.Cloud.Bigtable.Common.V2": "2.1.0",
         "Grpc.Core": "2.41.0"
@@ -708,7 +709,7 @@
     {
       "id": "Google.Cloud.Common",
       "version": "2.0.0-alpha02",
-      "targetFrameworks": "netstandard2.0;net461",
+      "targetFrameworks": "netstandard2.1;net462",
       "type": "other",
       "description": "Common protos for Cloud APIs.",
       "tags": [],
@@ -1052,8 +1053,8 @@
       "id": "Google.Cloud.DevTools.Common",
       "version": "3.0.0-alpha02",
       "type": "other",
-      "targetFrameworks": "netstandard2.0;net461",
-      "testTargetFrameworks": "netcoreapp2.1;net461",
+      "targetFrameworks": "netstandard2.1;net462",
+      "testTargetFrameworks": "netcoreapp3.1;net462",
       "description": "Common Protocol Buffer messages for Google Cloud Developer Tools APIs.",
       "tags": [
         "Tools"
@@ -1143,8 +1144,8 @@
       "id": "Google.Cloud.Diagnostics.Common",
       "version": "5.0.0-alpha02",
       "type": "other",
-      "targetFrameworks": "netstandard2.0",
-      "testTargetFrameworks": "netcoreapp2.1;netcoreapp3.1;net461",
+      "targetFrameworks": "netstandard2.1;net462",
+      "testTargetFrameworks": "netcoreapp3.1;net462;net6.0",
       "description": "Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components.",
       "tags": [
         "Error",
@@ -1421,8 +1422,8 @@
       "listingDescription": "Firestore Administration (e.g. index management)",
       "productName": "Firestore Admin",
       "productUrl": "https://firebase.google.com",
-      "targetFrameworks": "netstandard2.0;net461",
-      "testTargetFrameworks": "netcoreapp2.1;net461",
+      "targetFrameworks": "netstandard2.1;net462",
+      "testTargetFrameworks": "netcoreapp3.1;net462",
       "version": "3.0.0-alpha02",
       "type": "grpc",
       "description": "Recommended Google client library to access the Firestore Admin API.",
@@ -1448,8 +1449,8 @@
       "version": "3.0.0-alpha02",
       "type": "other",
       "metadataType": "GAPIC_MANUAL",
-      "targetFrameworks": "netstandard2.0;net461",
-      "testTargetFrameworks": "netcoreapp2.1;net461",
+      "targetFrameworks": "netstandard2.1;net462",
+      "testTargetFrameworks": "netcoreapp3.1;net462",
       "description": "Recommended Google client library to access the Firestore API.",
       "tags": [
         "firestore",
@@ -1479,8 +1480,8 @@
       "listingDescription": "Firestore low-level API access",
       "version": "3.0.0-alpha02",
       "type": "grpc",
-      "targetFrameworks": "netstandard2.0;net461",
-      "testTargetFrameworks": "netcoreapp2.1;net461",
+      "targetFrameworks": "netstandard2.1;net462",
+      "testTargetFrameworks": "netcoreapp3.1;net462",
       "description": "Low-level Google client library to access the Firestore API. Users are recommended to use the Google.Cloud.Firestore package instead.",
       "tags": [
         "firestore",
@@ -1903,8 +1904,8 @@
       "version": "4.0.0-alpha02",
       "type": "other",
       "metadataType": "INTEGRATION",
-      "targetFrameworks": "netstandard2.0;net461",
-      "testTargetFrameworks": "netcoreapp2.1;net461",
+      "targetFrameworks": "netstandard2.1;net462",
+      "testTargetFrameworks": "netcoreapp3.1;net462",
       "description": "Log4Net client library for the Google Cloud Logging API.",
       "tags": [
         "Log4Net",
@@ -1925,10 +1926,11 @@
     {
       "id": "Google.Cloud.Logging.Console",
       "version": "2.0.0-alpha02",
+      "releaseLevelOverride": "unreleased",
       "type": "other",
       "metadataType": "INTEGRATION",
-      "targetFrameworks": "netstandard2.0",
-      "testTargetFrameworks": "netcoreapp2.1",
+      "targetFrameworks": "netstandard2.1",
+      "testTargetFrameworks": "netcoreapp3.1;net6.0",
       "description": "ConsoleFormatter for Google Cloud Logging.",
       "tags": [
         "Logging",
@@ -1945,8 +1947,8 @@
       "version": "4.0.0-alpha02",
       "type": "other",
       "metadataType": "INTEGRATION",
-      "targetFrameworks": "netstandard2.0;net461",
-      "testTargetFrameworks": "netcoreapp2.1;net461",
+      "targetFrameworks": "netstandard2.1;net462",
+      "testTargetFrameworks": "netcoreapp3.1;net462",
       "description": "NLog target for the Google Cloud Logging API.",
       "tags": [
         "NLog",
@@ -1970,7 +1972,7 @@
       "protoPath": "google/logging/type",
       "version": "4.0.0-alpha02",
       "type": "other",
-      "targetFrameworks": "netstandard2.0;net461",
+      "targetFrameworks": "netstandard2.1;net462",
       "description": "Version-agnostic types for the Google Cloud Logging API.",
       "tags": [
         "Logging",
@@ -2296,6 +2298,7 @@
     {
       "id": "Google.Cloud.Optimization.V1",
       "version": "2.0.0-alpha02",
+      "releaseLevelOverride": "unreleased",
       "type": "grpc",
       "productName": "Cloud Optimization",
       "description": "Recommended Google client library to access the Cloud Optimization API, which provides a portfolio of solvers to address common optimization use cases starting with optimal route planning for vehicle fleets.",
@@ -2338,7 +2341,7 @@
       "protoPath": "google/cloud/orgpolicy/v1",
       "version": "3.0.0-alpha02",
       "type": "other",
-      "targetFrameworks": "netstandard2.0;net461",
+      "targetFrameworks": "netstandard2.1;net462",
       "description": "OrgPolicy API messages.",
       "tags": [],
       "dependencies": {
@@ -2418,7 +2421,7 @@
       "protoPath": "google/cloud/oslogin/common",
       "version": "3.0.0-alpha02",
       "type": "other",
-      "targetFrameworks": "netstandard2.0;net461",
+      "targetFrameworks": "netstandard2.1;net462",
       "description": "Version-agnostic types for the Google OS Login API.",
       "tags": [
         "OsLogin",
@@ -2757,6 +2760,7 @@
     {
       "id": "Google.Cloud.Run.V2",
       "version": "2.0.0-alpha02",
+      "releaseLevelOverride": "unreleased",
       "type": "grpc",
       "productName": "Cloud Run Admin",
       "productUrl": "https://cloud.google.com/run/docs",
@@ -3120,8 +3124,8 @@
     },
     {
       "id": "Google.Cloud.Spanner.Data",
-      "targetFrameworks": "netstandard2.0;net461",
-      "testTargetFrameworks": "netcoreapp2.1;net461",
+      "targetFrameworks": "netstandard2.1;net462",
+      "testTargetFrameworks": "netcoreapp3.1;net462",
       "version": "4.0.0-alpha02",
       "type": "other",
       "metadataType": "INTEGRATION",
@@ -3135,8 +3139,7 @@
         "Google.Cloud.Spanner.Admin.Database.V1": "project",
         "Google.Cloud.Spanner.Admin.Instance.V1": "project",
         "Google.Cloud.Spanner.V1": "project",
-        "Grpc.Core": "2.41.0",
-        "Grpc.Gcp": "2.0.0"
+        "Grpc.Core": "2.41.0"
       },
       "testDependencies": {
         "CoreCompat.EnterpriseLibrary.TransientFaultHandling": "6.0.1304-r3",
@@ -3148,7 +3151,7 @@
     {
       "id": "Google.Cloud.Spanner.Common.V1",
       "type": "other",
-      "targetFrameworks": "netstandard2.0;net461",
+      "targetFrameworks": "netstandard2.1;net462",
       "version": "4.0.0-alpha02",
       "description": "Common resource names used by all Spanner V1 APIs",
       "tags": [
@@ -3511,6 +3514,7 @@
     {
       "id": "Google.Cloud.Video.LiveStream.V1",
       "version": "2.0.0-alpha02",
+      "releaseLevelOverride": "unreleased",
       "type": "grpc",
       "productName": "Live Stream",
       "productUrl": "https://cloud.google.com/livestream/docs/",
@@ -3531,6 +3535,7 @@
     {
       "id": "Google.Cloud.Video.Stitcher.V1",
       "version": "2.0.0-alpha02",
+      "releaseLevelOverride": "unreleased",
       "type": "grpc",
       "productName": "Video Stitcher",
       "productUrl": "https://cloud.google.com/video-stitcher/docs",
@@ -3697,7 +3702,7 @@
     {
       "id": "Google.Cloud.Workflows.Common.V1",
       "type": "other",
-      "targetFrameworks": "netstandard2.0;net461",
+      "targetFrameworks": "netstandard2.1;net462",
       "version": "2.0.0-alpha02",
       "description": "Common resource names used by all Workflows V1 APIs",
       "tags": [
@@ -3711,7 +3716,7 @@
     {
       "id": "Google.Cloud.Workflows.Common.V1Beta",
       "type": "other",
-      "targetFrameworks": "netstandard2.0;net461",
+      "targetFrameworks": "netstandard2.1;net462",
       "version": "2.0.0-alpha02",
       "description": "Common resource names used by all Workflows V1Beta APIs",
       "tags": [
@@ -3811,7 +3816,7 @@
       "protoPath": "google/identity/accesscontextmanager/type",
       "version": "2.0.0-alpha02",
       "type": "other",
-      "targetFrameworks": "netstandard2.0;net461",
+      "targetFrameworks": "netstandard2.1;net462",
       "description": "Version-agnostic types for the Google Identity Access Context Manager API.",
       "tags": [
         "identity"
