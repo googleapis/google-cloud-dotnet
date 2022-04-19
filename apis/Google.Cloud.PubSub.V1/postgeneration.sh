@@ -10,6 +10,8 @@ git -C $GOOGLEAPIS checkout google/pubsub/v1/pubsub_v1.yaml
 # Fix up the generated client to use the right gRPC types
 sed -i s/PublisherServiceApi.PublisherServiceApiClient/Publisher.PublisherClient/g Google.Cloud.PubSub.V1/PublisherServiceApiClient.g.cs
 sed -i s/SubscriberServiceApi.SubscriberServiceApiClient/Subscriber.SubscriberClient/g Google.Cloud.PubSub.V1/SubscriberServiceApiClient.g.cs
+sed -i s/PublisherServiceApi.Descriptor/Publisher.Descriptor/g Google.Cloud.PubSub.V1/PublisherServiceApiClient.g.cs
+sed -i s/SubscriberServiceApi.Descriptor/Subscriber.Descriptor/g Google.Cloud.PubSub.V1/SubscriberServiceApiClient.g.cs
 
 # Fix up unit test classes
 sed -i s/PublisherServiceApi.PublisherServiceApiClient/Publisher.PublisherClient/g Google.Cloud.PubSub.V1.Tests/PublisherServiceApiClientTest.g.cs
