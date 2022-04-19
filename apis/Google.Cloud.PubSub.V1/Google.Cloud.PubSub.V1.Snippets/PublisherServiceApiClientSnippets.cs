@@ -187,21 +187,5 @@ namespace Google.Cloud.PubSub.V1.Snippets
             Console.WriteLine($"Deleted {topicName}");
             // End snippet
         }
-
-        [Fact]
-        public void GetIamPolicy()
-        {
-            string projectId = _fixture.ProjectId;
-            string topicId = _fixture.CreateTopicId();
-
-            PublisherServiceApiClient.Create().CreateTopic(new TopicName(projectId, topicId));
-
-            // Snippet: GetIamPolicy(string,*)
-            PublisherServiceApiClient client = PublisherServiceApiClient.Create();
-            string topicName = new TopicName(projectId, topicId).ToString();
-            Policy policy = client.GetIamPolicy(topicName);
-            Console.WriteLine($"Policy for {topicName}: {policy}");
-            // End snippet
-        }
     }
 }
