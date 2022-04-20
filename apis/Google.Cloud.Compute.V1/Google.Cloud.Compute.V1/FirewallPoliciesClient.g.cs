@@ -1625,7 +1625,7 @@ namespace Google.Cloud.Compute.V1
             Move(new MoveFirewallPolicyRequest
             {
                 FirewallPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(firewallPolicy, nameof(firewallPolicy)),
-                ParentId = parentId ?? "",
+                ParentId = gax::GaxPreconditions.CheckNotNullOrEmpty(parentId, nameof(parentId)),
             }, callSettings);
 
         /// <summary>
@@ -1643,7 +1643,7 @@ namespace Google.Cloud.Compute.V1
             MoveAsync(new MoveFirewallPolicyRequest
             {
                 FirewallPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(firewallPolicy, nameof(firewallPolicy)),
-                ParentId = parentId ?? "",
+                ParentId = gax::GaxPreconditions.CheckNotNullOrEmpty(parentId, nameof(parentId)),
             }, callSettings);
 
         /// <summary>
