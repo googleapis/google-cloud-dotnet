@@ -13,6 +13,7 @@
 // limitations under the License.
 using Google.Apis.Storage.v1.Data;
 using Google.Cloud.ClientTesting;
+using Google.Cloud.Iam.V1;
 using Google.Cloud.PubSub.V1;
 using System;
 using System.Collections.Generic;
@@ -92,11 +93,11 @@ namespace Google.Cloud.Storage.V1.Snippets
             var storageClient = StorageClient.Create();
             string storageServiceAccount = $"serviceAccount:{storageClient.GetStorageServiceAccountEmail(ProjectId)}";
 
-            var policy = publisherClient.GetIamPolicy(topicName.ToString());
+            var policy = publisherClient.IAMPolicyClient.GetIamPolicy(new GetIamPolicyRequest { ResourceAsResourceName = topicName });
             var role = "roles/pubsub.publisher";
             if (policy.AddRoleMember(role, storageServiceAccount))
             {
-                publisherClient.SetIamPolicy(topicName.ToString(), policy);
+                publisherClient.IAMPolicyClient.SetIamPolicy(new SetIamPolicyRequest { ResourceAsResourceName = topicName, Policy = policy });
             }
 
             return storageClient.CreateNotification(BucketName,
