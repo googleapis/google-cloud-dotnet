@@ -387,7 +387,8 @@ namespace Google.Cloud.ServiceManagement.V1
 
     /// <summary>ServiceManager client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// [Google Service Management API](/service-management/overview)
+    /// [Google Service Management
+    /// API](https://cloud.google.com/service-infrastructure/docs/overview)
     /// </remarks>
     public abstract partial class ServiceManagerClient
     {
@@ -618,8 +619,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// public.
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the `ServiceManager` overview for naming
-        /// requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the `ServiceManager` overview for
+        /// naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -634,8 +635,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// public.
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the `ServiceManager` overview for naming
-        /// requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the `ServiceManager` overview for
+        /// naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -650,8 +651,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// public.
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the `ServiceManager` overview for naming
-        /// requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the `ServiceManager` overview for
+        /// naming requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -813,8 +814,10 @@ namespace Google.Cloud.ServiceManagement.V1
         /// <summary>
         /// Deletes a managed service. This method will change the service to the
         /// `Soft-Delete` state for 30 days. Within this period, service producers may
-        /// call [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService] to restore the service.
-        /// After 30 days, the service will be permanently deleted.
+        /// call
+        /// [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService]
+        /// to restore the service. After 30 days, the service will be permanently
+        /// deleted.
         /// 
         /// Operation&amp;lt;response: google.protobuf.Empty&amp;gt;
         /// </summary>
@@ -827,8 +830,10 @@ namespace Google.Cloud.ServiceManagement.V1
         /// <summary>
         /// Deletes a managed service. This method will change the service to the
         /// `Soft-Delete` state for 30 days. Within this period, service producers may
-        /// call [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService] to restore the service.
-        /// After 30 days, the service will be permanently deleted.
+        /// call
+        /// [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService]
+        /// to restore the service. After 30 days, the service will be permanently
+        /// deleted.
         /// 
         /// Operation&amp;lt;response: google.protobuf.Empty&amp;gt;
         /// </summary>
@@ -841,8 +846,10 @@ namespace Google.Cloud.ServiceManagement.V1
         /// <summary>
         /// Deletes a managed service. This method will change the service to the
         /// `Soft-Delete` state for 30 days. Within this period, service producers may
-        /// call [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService] to restore the service.
-        /// After 30 days, the service will be permanently deleted.
+        /// call
+        /// [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService]
+        /// to restore the service. After 30 days, the service will be permanently
+        /// deleted.
         /// 
         /// Operation&amp;lt;response: google.protobuf.Empty&amp;gt;
         /// </summary>
@@ -881,14 +888,17 @@ namespace Google.Cloud.ServiceManagement.V1
         /// <summary>
         /// Deletes a managed service. This method will change the service to the
         /// `Soft-Delete` state for 30 days. Within this period, service producers may
-        /// call [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService] to restore the service.
-        /// After 30 days, the service will be permanently deleted.
+        /// call
+        /// [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService]
+        /// to restore the service. After 30 days, the service will be permanently
+        /// deleted.
         /// 
         /// Operation&amp;lt;response: google.protobuf.Empty&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](/service-management/overview)
-        /// for naming requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the
+        /// [overview](/service-management/overview) for naming requirements.  For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -901,14 +911,17 @@ namespace Google.Cloud.ServiceManagement.V1
         /// <summary>
         /// Deletes a managed service. This method will change the service to the
         /// `Soft-Delete` state for 30 days. Within this period, service producers may
-        /// call [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService] to restore the service.
-        /// After 30 days, the service will be permanently deleted.
+        /// call
+        /// [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService]
+        /// to restore the service. After 30 days, the service will be permanently
+        /// deleted.
         /// 
         /// Operation&amp;lt;response: google.protobuf.Empty&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](/service-management/overview)
-        /// for naming requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the
+        /// [overview](/service-management/overview) for naming requirements.  For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -921,14 +934,17 @@ namespace Google.Cloud.ServiceManagement.V1
         /// <summary>
         /// Deletes a managed service. This method will change the service to the
         /// `Soft-Delete` state for 30 days. Within this period, service producers may
-        /// call [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService] to restore the service.
-        /// After 30 days, the service will be permanently deleted.
+        /// call
+        /// [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService]
+        /// to restore the service. After 30 days, the service will be permanently
+        /// deleted.
         /// 
         /// Operation&amp;lt;response: google.protobuf.Empty&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](/service-management/overview)
-        /// for naming requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the
+        /// [overview](/service-management/overview) for naming requirements.  For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1012,8 +1028,9 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Operation&amp;lt;response: UndeleteServiceResponse&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service. See the [overview](/service-management/overview)
-        /// for naming requirements. For example: `example.googleapis.com`.
+        /// Required. The name of the service. See the
+        /// [overview](/service-management/overview) for naming requirements. For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1032,8 +1049,9 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Operation&amp;lt;response: UndeleteServiceResponse&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service. See the [overview](/service-management/overview)
-        /// for naming requirements. For example: `example.googleapis.com`.
+        /// Required. The name of the service. See the
+        /// [overview](/service-management/overview) for naming requirements. For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1052,8 +1070,9 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Operation&amp;lt;response: UndeleteServiceResponse&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service. See the [overview](/service-management/overview)
-        /// for naming requirements. For example: `example.googleapis.com`.
+        /// Required. The name of the service. See the
+        /// [overview](/service-management/overview) for naming requirements. For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1085,8 +1104,9 @@ namespace Google.Cloud.ServiceManagement.V1
         /// from the newest to the oldest.
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](/service-management/overview)
-        /// for naming requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the
+        /// [overview](/service-management/overview) for naming requirements.  For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1111,8 +1131,9 @@ namespace Google.Cloud.ServiceManagement.V1
         /// from the newest to the oldest.
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](/service-management/overview)
-        /// for naming requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the
+        /// [overview](/service-management/overview) for naming requirements.  For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1163,8 +1184,9 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Gets a service configuration (version) for a managed service.
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](/service-management/overview)
-        /// for naming requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the
+        /// [overview](/service-management/overview) for naming requirements.  For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="configId">
         /// Required. The id of the service configuration resource.
@@ -1190,8 +1212,9 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Gets a service configuration (version) for a managed service.
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](/service-management/overview)
-        /// for naming requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the
+        /// [overview](/service-management/overview) for naming requirements.  For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="configId">
         /// Required. The id of the service configuration resource.
@@ -1217,8 +1240,9 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Gets a service configuration (version) for a managed service.
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](/service-management/overview)
-        /// for naming requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the
+        /// [overview](/service-management/overview) for naming requirements.  For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="configId">
         /// Required. The id of the service configuration resource.
@@ -1294,8 +1318,9 @@ namespace Google.Cloud.ServiceManagement.V1
         /// eventually.
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](/service-management/overview)
-        /// for naming requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the
+        /// [overview](/service-management/overview) for naming requirements.  For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="serviceConfig">
         /// Required. The service configuration resource.
@@ -1320,8 +1345,9 @@ namespace Google.Cloud.ServiceManagement.V1
         /// eventually.
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](/service-management/overview)
-        /// for naming requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the
+        /// [overview](/service-management/overview) for naming requirements.  For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="serviceConfig">
         /// Required. The service configuration resource.
@@ -1346,8 +1372,9 @@ namespace Google.Cloud.ServiceManagement.V1
         /// eventually.
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](/service-management/overview)
-        /// for naming requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the
+        /// [overview](/service-management/overview) for naming requirements.  For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="serviceConfig">
         /// Required. The service configuration resource.
@@ -1364,7 +1391,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Specification). This method stores the source configurations as well as the
         /// generated service configuration. To rollout the service configuration to
         /// other services,
-        /// please call [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
+        /// please call
+        /// [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
         /// 
         /// Only the 100 most recent configuration sources and ones referenced by
         /// existing service configurtions are kept for each service. The rest will be
@@ -1385,7 +1413,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Specification). This method stores the source configurations as well as the
         /// generated service configuration. To rollout the service configuration to
         /// other services,
-        /// please call [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
+        /// please call
+        /// [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
         /// 
         /// Only the 100 most recent configuration sources and ones referenced by
         /// existing service configurtions are kept for each service. The rest will be
@@ -1406,7 +1435,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Specification). This method stores the source configurations as well as the
         /// generated service configuration. To rollout the service configuration to
         /// other services,
-        /// please call [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
+        /// please call
+        /// [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
         /// 
         /// Only the 100 most recent configuration sources and ones referenced by
         /// existing service configurtions are kept for each service. The rest will be
@@ -1454,7 +1484,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Specification). This method stores the source configurations as well as the
         /// generated service configuration. To rollout the service configuration to
         /// other services,
-        /// please call [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
+        /// please call
+        /// [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
         /// 
         /// Only the 100 most recent configuration sources and ones referenced by
         /// existing service configurtions are kept for each service. The rest will be
@@ -1463,8 +1494,9 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Operation&amp;lt;response: SubmitConfigSourceResponse&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](/service-management/overview)
-        /// for naming requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the
+        /// [overview](/service-management/overview) for naming requirements.  For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="configSource">
         /// Required. The source configuration for the service.
@@ -1491,7 +1523,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Specification). This method stores the source configurations as well as the
         /// generated service configuration. To rollout the service configuration to
         /// other services,
-        /// please call [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
+        /// please call
+        /// [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
         /// 
         /// Only the 100 most recent configuration sources and ones referenced by
         /// existing service configurtions are kept for each service. The rest will be
@@ -1500,8 +1533,9 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Operation&amp;lt;response: SubmitConfigSourceResponse&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](/service-management/overview)
-        /// for naming requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the
+        /// [overview](/service-management/overview) for naming requirements.  For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="configSource">
         /// Required. The source configuration for the service.
@@ -1528,7 +1562,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Specification). This method stores the source configurations as well as the
         /// generated service configuration. To rollout the service configuration to
         /// other services,
-        /// please call [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
+        /// please call
+        /// [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
         /// 
         /// Only the 100 most recent configuration sources and ones referenced by
         /// existing service configurtions are kept for each service. The rest will be
@@ -1537,8 +1572,9 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Operation&amp;lt;response: SubmitConfigSourceResponse&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](/service-management/overview)
-        /// for naming requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the
+        /// [overview](/service-management/overview) for naming requirements.  For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="configSource">
         /// Required. The source configuration for the service.
@@ -1578,17 +1614,18 @@ namespace Google.Cloud.ServiceManagement.V1
         /// service, from the newest to the oldest.
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](/service-management/overview)
-        /// for naming requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the
+        /// [overview](/service-management/overview) for naming requirements.  For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="filter">
         /// Required. Use `filter` to return subset of rollouts.
         /// The following filters are supported:
         /// -- To limit the results to only those in
-        /// [status](google.api.servicemanagement.v1.RolloutStatus) 'SUCCESS',
+        /// status (google.api.servicemanagement.v1.RolloutStatus) 'SUCCESS',
         /// use filter='status=SUCCESS'
         /// -- To limit the results to those in
-        /// [status](google.api.servicemanagement.v1.RolloutStatus) 'CANCELLED'
+        /// status (google.api.servicemanagement.v1.RolloutStatus) 'CANCELLED'
         /// or 'FAILED', use filter='status=CANCELLED OR status=FAILED'
         /// </param>
         /// <param name="pageToken">
@@ -1615,17 +1652,18 @@ namespace Google.Cloud.ServiceManagement.V1
         /// service, from the newest to the oldest.
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](/service-management/overview)
-        /// for naming requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the
+        /// [overview](/service-management/overview) for naming requirements.  For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="filter">
         /// Required. Use `filter` to return subset of rollouts.
         /// The following filters are supported:
         /// -- To limit the results to only those in
-        /// [status](google.api.servicemanagement.v1.RolloutStatus) 'SUCCESS',
+        /// status (google.api.servicemanagement.v1.RolloutStatus) 'SUCCESS',
         /// use filter='status=SUCCESS'
         /// -- To limit the results to those in
-        /// [status](google.api.servicemanagement.v1.RolloutStatus) 'CANCELLED'
+        /// status (google.api.servicemanagement.v1.RolloutStatus) 'CANCELLED'
         /// or 'FAILED', use filter='status=CANCELLED OR status=FAILED'
         /// </param>
         /// <param name="pageToken">
@@ -1648,7 +1686,8 @@ namespace Google.Cloud.ServiceManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets a service configuration [rollout][google.api.servicemanagement.v1.Rollout].
+        /// Gets a service configuration
+        /// [rollout][google.api.servicemanagement.v1.Rollout].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1657,7 +1696,8 @@ namespace Google.Cloud.ServiceManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a service configuration [rollout][google.api.servicemanagement.v1.Rollout].
+        /// Gets a service configuration
+        /// [rollout][google.api.servicemanagement.v1.Rollout].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1666,7 +1706,8 @@ namespace Google.Cloud.ServiceManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a service configuration [rollout][google.api.servicemanagement.v1.Rollout].
+        /// Gets a service configuration
+        /// [rollout][google.api.servicemanagement.v1.Rollout].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1675,11 +1716,13 @@ namespace Google.Cloud.ServiceManagement.V1
             GetServiceRolloutAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a service configuration [rollout][google.api.servicemanagement.v1.Rollout].
+        /// Gets a service configuration
+        /// [rollout][google.api.servicemanagement.v1.Rollout].
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](/service-management/overview)
-        /// for naming requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the
+        /// [overview](/service-management/overview) for naming requirements.  For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="rolloutId">
         /// Required. The id of the rollout resource.
@@ -1694,11 +1737,13 @@ namespace Google.Cloud.ServiceManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets a service configuration [rollout][google.api.servicemanagement.v1.Rollout].
+        /// Gets a service configuration
+        /// [rollout][google.api.servicemanagement.v1.Rollout].
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](/service-management/overview)
-        /// for naming requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the
+        /// [overview](/service-management/overview) for naming requirements.  For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="rolloutId">
         /// Required. The id of the rollout resource.
@@ -1713,11 +1758,13 @@ namespace Google.Cloud.ServiceManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets a service configuration [rollout][google.api.servicemanagement.v1.Rollout].
+        /// Gets a service configuration
+        /// [rollout][google.api.servicemanagement.v1.Rollout].
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](/service-management/overview)
-        /// for naming requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the
+        /// [overview](/service-management/overview) for naming requirements.  For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="rolloutId">
         /// Required. The id of the rollout resource.
@@ -1837,8 +1884,9 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Operation&amp;lt;response: Rollout&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](/service-management/overview)
-        /// for naming requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the
+        /// [overview](/service-management/overview) for naming requirements.  For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="rollout">
         /// Required. The rollout resource. The `service_name` field is output only.
@@ -1869,8 +1917,9 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Operation&amp;lt;response: Rollout&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](/service-management/overview)
-        /// for naming requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the
+        /// [overview](/service-management/overview) for naming requirements.  For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="rollout">
         /// Required. The rollout resource. The `service_name` field is output only.
@@ -1901,8 +1950,9 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Operation&amp;lt;response: Rollout&amp;gt;
         /// </summary>
         /// <param name="serviceName">
-        /// Required. The name of the service.  See the [overview](/service-management/overview)
-        /// for naming requirements.  For example: `example.googleapis.com`.
+        /// Required. The name of the service.  See the
+        /// [overview](/service-management/overview) for naming requirements.  For
+        /// example: `example.googleapis.com`.
         /// </param>
         /// <param name="rollout">
         /// Required. The rollout resource. The `service_name` field is output only.
@@ -2076,7 +2126,8 @@ namespace Google.Cloud.ServiceManagement.V1
 
     /// <summary>ServiceManager client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// [Google Service Management API](/service-management/overview)
+    /// [Google Service Management
+    /// API](https://cloud.google.com/service-infrastructure/docs/overview)
     /// </remarks>
     public sealed partial class ServiceManagerClientImpl : ServiceManagerClient
     {
@@ -2333,8 +2384,10 @@ namespace Google.Cloud.ServiceManagement.V1
         /// <summary>
         /// Deletes a managed service. This method will change the service to the
         /// `Soft-Delete` state for 30 days. Within this period, service producers may
-        /// call [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService] to restore the service.
-        /// After 30 days, the service will be permanently deleted.
+        /// call
+        /// [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService]
+        /// to restore the service. After 30 days, the service will be permanently
+        /// deleted.
         /// 
         /// Operation&amp;lt;response: google.protobuf.Empty&amp;gt;
         /// </summary>
@@ -2350,8 +2403,10 @@ namespace Google.Cloud.ServiceManagement.V1
         /// <summary>
         /// Deletes a managed service. This method will change the service to the
         /// `Soft-Delete` state for 30 days. Within this period, service producers may
-        /// call [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService] to restore the service.
-        /// After 30 days, the service will be permanently deleted.
+        /// call
+        /// [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService]
+        /// to restore the service. After 30 days, the service will be permanently
+        /// deleted.
         /// 
         /// Operation&amp;lt;response: google.protobuf.Empty&amp;gt;
         /// </summary>
@@ -2499,7 +2554,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Specification). This method stores the source configurations as well as the
         /// generated service configuration. To rollout the service configuration to
         /// other services,
-        /// please call [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
+        /// please call
+        /// [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
         /// 
         /// Only the 100 most recent configuration sources and ones referenced by
         /// existing service configurtions are kept for each service. The rest will be
@@ -2523,7 +2579,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// Specification). This method stores the source configurations as well as the
         /// generated service configuration. To rollout the service configuration to
         /// other services,
-        /// please call [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
+        /// please call
+        /// [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
         /// 
         /// Only the 100 most recent configuration sources and ones referenced by
         /// existing service configurtions are kept for each service. The rest will be
@@ -2567,7 +2624,8 @@ namespace Google.Cloud.ServiceManagement.V1
         }
 
         /// <summary>
-        /// Gets a service configuration [rollout][google.api.servicemanagement.v1.Rollout].
+        /// Gets a service configuration
+        /// [rollout][google.api.servicemanagement.v1.Rollout].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2579,7 +2637,8 @@ namespace Google.Cloud.ServiceManagement.V1
         }
 
         /// <summary>
-        /// Gets a service configuration [rollout][google.api.servicemanagement.v1.Rollout].
+        /// Gets a service configuration
+        /// [rollout][google.api.servicemanagement.v1.Rollout].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

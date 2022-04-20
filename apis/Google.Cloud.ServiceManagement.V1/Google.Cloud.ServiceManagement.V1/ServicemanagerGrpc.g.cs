@@ -24,7 +24,8 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.ServiceManagement.V1 {
   /// <summary>
-  /// [Google Service Management API](/service-management/overview)
+  /// [Google Service Management
+  /// API](https://cloud.google.com/service-infrastructure/docs/overview)
   /// </summary>
   public static partial class ServiceManager
   {
@@ -274,8 +275,10 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <summary>
       /// Deletes a managed service. This method will change the service to the
       /// `Soft-Delete` state for 30 days. Within this period, service producers may
-      /// call [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService] to restore the service.
-      /// After 30 days, the service will be permanently deleted.
+      /// call
+      /// [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService]
+      /// to restore the service. After 30 days, the service will be permanently
+      /// deleted.
       ///
       /// Operation&lt;response: google.protobuf.Empty>
       /// </summary>
@@ -356,7 +359,8 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// Specification). This method stores the source configurations as well as the
       /// generated service configuration. To rollout the service configuration to
       /// other services,
-      /// please call [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
+      /// please call
+      /// [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
       ///
       /// Only the 100 most recent configuration sources and ones referenced by
       /// existing service configurtions are kept for each service. The rest will be
@@ -387,7 +391,8 @@ namespace Google.Cloud.ServiceManagement.V1 {
       }
 
       /// <summary>
-      /// Gets a service configuration [rollout][google.api.servicemanagement.v1.Rollout].
+      /// Gets a service configuration
+      /// [rollout][google.api.servicemanagement.v1.Rollout].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -681,8 +686,10 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <summary>
       /// Deletes a managed service. This method will change the service to the
       /// `Soft-Delete` state for 30 days. Within this period, service producers may
-      /// call [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService] to restore the service.
-      /// After 30 days, the service will be permanently deleted.
+      /// call
+      /// [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService]
+      /// to restore the service. After 30 days, the service will be permanently
+      /// deleted.
       ///
       /// Operation&lt;response: google.protobuf.Empty>
       /// </summary>
@@ -699,8 +706,10 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <summary>
       /// Deletes a managed service. This method will change the service to the
       /// `Soft-Delete` state for 30 days. Within this period, service producers may
-      /// call [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService] to restore the service.
-      /// After 30 days, the service will be permanently deleted.
+      /// call
+      /// [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService]
+      /// to restore the service. After 30 days, the service will be permanently
+      /// deleted.
       ///
       /// Operation&lt;response: google.protobuf.Empty>
       /// </summary>
@@ -715,8 +724,10 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <summary>
       /// Deletes a managed service. This method will change the service to the
       /// `Soft-Delete` state for 30 days. Within this period, service producers may
-      /// call [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService] to restore the service.
-      /// After 30 days, the service will be permanently deleted.
+      /// call
+      /// [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService]
+      /// to restore the service. After 30 days, the service will be permanently
+      /// deleted.
       ///
       /// Operation&lt;response: google.protobuf.Empty>
       /// </summary>
@@ -733,8 +744,10 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <summary>
       /// Deletes a managed service. This method will change the service to the
       /// `Soft-Delete` state for 30 days. Within this period, service producers may
-      /// call [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService] to restore the service.
-      /// After 30 days, the service will be permanently deleted.
+      /// call
+      /// [UndeleteService][google.api.servicemanagement.v1.ServiceManager.UndeleteService]
+      /// to restore the service. After 30 days, the service will be permanently
+      /// deleted.
       ///
       /// Operation&lt;response: google.protobuf.Empty>
       /// </summary>
@@ -997,7 +1010,8 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// Specification). This method stores the source configurations as well as the
       /// generated service configuration. To rollout the service configuration to
       /// other services,
-      /// please call [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
+      /// please call
+      /// [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
       ///
       /// Only the 100 most recent configuration sources and ones referenced by
       /// existing service configurtions are kept for each service. The rest will be
@@ -1022,7 +1036,8 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// Specification). This method stores the source configurations as well as the
       /// generated service configuration. To rollout the service configuration to
       /// other services,
-      /// please call [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
+      /// please call
+      /// [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
       ///
       /// Only the 100 most recent configuration sources and ones referenced by
       /// existing service configurtions are kept for each service. The rest will be
@@ -1045,7 +1060,8 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// Specification). This method stores the source configurations as well as the
       /// generated service configuration. To rollout the service configuration to
       /// other services,
-      /// please call [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
+      /// please call
+      /// [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
       ///
       /// Only the 100 most recent configuration sources and ones referenced by
       /// existing service configurtions are kept for each service. The rest will be
@@ -1070,7 +1086,8 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// Specification). This method stores the source configurations as well as the
       /// generated service configuration. To rollout the service configuration to
       /// other services,
-      /// please call [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
+      /// please call
+      /// [CreateServiceRollout][google.api.servicemanagement.v1.ServiceManager.CreateServiceRollout].
       ///
       /// Only the 100 most recent configuration sources and ones referenced by
       /// existing service configurtions are kept for each service. The rest will be
@@ -1139,7 +1156,8 @@ namespace Google.Cloud.ServiceManagement.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListServiceRollouts, null, options, request);
       }
       /// <summary>
-      /// Gets a service configuration [rollout][google.api.servicemanagement.v1.Rollout].
+      /// Gets a service configuration
+      /// [rollout][google.api.servicemanagement.v1.Rollout].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1152,7 +1170,8 @@ namespace Google.Cloud.ServiceManagement.V1 {
         return GetServiceRollout(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a service configuration [rollout][google.api.servicemanagement.v1.Rollout].
+      /// Gets a service configuration
+      /// [rollout][google.api.servicemanagement.v1.Rollout].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1163,7 +1182,8 @@ namespace Google.Cloud.ServiceManagement.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetServiceRollout, null, options, request);
       }
       /// <summary>
-      /// Gets a service configuration [rollout][google.api.servicemanagement.v1.Rollout].
+      /// Gets a service configuration
+      /// [rollout][google.api.servicemanagement.v1.Rollout].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1176,7 +1196,8 @@ namespace Google.Cloud.ServiceManagement.V1 {
         return GetServiceRolloutAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a service configuration [rollout][google.api.servicemanagement.v1.Rollout].
+      /// Gets a service configuration
+      /// [rollout][google.api.servicemanagement.v1.Rollout].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
