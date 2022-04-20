@@ -12,17 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax.Grpc.GrpcCore;
 using Google.Api.Gax.ResourceNames;
 using Google.Cloud.Bigtable.Admin.V2;
 using Google.Cloud.Bigtable.Common.V2;
 using Google.Cloud.ClientTesting;
-using Google.Rpc;
 using Grpc.Core;
-using Grpc.Gcp;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -56,11 +52,15 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             if (!string.IsNullOrEmpty(emulatorHost))
             {
                 projectId = "emulator-test-project";
+                // FIXME: We need to create an appropriate call invoker with insecure credentials...
+                // It probably doesn't need to be a GcpCallInvoker though.
+                EmulatorCallInvoker = null;
+                 /*
                 EmulatorCallInvoker = new GcpCallInvoker(
                     emulatorHost,
                     ChannelCredentials.Insecure,
                     GrpcCoreAdapter.Instance.ConvertOptions(BigtableServiceApiSettings.GetDefault().CreateChannelOptions()));
-
+                 */
                 instanceId = "doesnt-matter";
             }
             else
