@@ -16,6 +16,7 @@ using Google.Apis.Download;
 using Google.Apis.Storage.v1.Data;
 using Google.Apis.Upload;
 using Google.Cloud.ClientTesting;
+using Google.Cloud.Iam.V1;
 using Google.Cloud.PubSub.V1;
 using System;
 using System.Collections.Generic;
@@ -949,14 +950,20 @@ namespace Google.Cloud.Storage.V1.Snippets
             string storageServiceAccount = $"serviceAccount:{storageClient.GetStorageServiceAccountEmail(projectId)}";
 
             // Fetch the IAM policy for the topic.
-            Iam.V1.Policy policy = publisherClient.GetIamPolicy(topicName.ToString());
+            GetIamPolicyRequest getPolicyRequest = new GetIamPolicyRequest { ResourceAsResourceName = topicName };
+            Iam.V1.Policy policy = publisherClient.IAMPolicyClient.GetIamPolicy(getPolicyRequest);
             var role = "roles/pubsub.publisher";
 
             // Ensure the Storage Service Account is in the publisher role, setting the IAM policy for the topic
             // on the server if necessary.
             if (policy.AddRoleMember(role, storageServiceAccount))
             {
-                publisherClient.SetIamPolicy(topicName.ToString(), policy);
+                SetIamPolicyRequest setPolicyRequest = new SetIamPolicyRequest
+                {
+                    ResourceAsResourceName = topicName,
+                    Policy = policy
+                };
+                publisherClient.IAMPolicyClient.SetIamPolicy(setPolicyRequest);
             }
 
             // Now that the topic is ready, we can create a notification configuration for Storage
