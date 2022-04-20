@@ -151,6 +151,18 @@ for api in ${apis[*]}
 do
   [[ -d "$api" ]] && apidir=$api || apidir=apis/$api
 
+  if [[ "$api" == "Google.Cloud.Diagnostics.AspNetCore" ]]
+  then
+    echo "Not building AspNetCore - will be removed"
+    continue
+  fi
+
+  if [[ "$api" == "Google.Cloud.Diagnostics.AspNetCore3" ]]
+  then
+    echo "Not building AspNetCore3 - needs work before it will build"
+    continue
+  fi
+
   log_build_action "Building $apidir"
   dotnet build -nologo -clp:NoSummary -v quiet -c Release $apidir
   
