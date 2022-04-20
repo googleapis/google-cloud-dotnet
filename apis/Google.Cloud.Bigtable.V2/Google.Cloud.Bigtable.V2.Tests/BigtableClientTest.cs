@@ -14,16 +14,14 @@
 
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Bigtable.Common.V2;
+using Google.Cloud.ClientTesting;
 using Google.Protobuf;
 using Grpc.Core;
-using Grpc.Gcp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Moq;
 using Xunit;
-using Google.Cloud.ClientTesting;
 
 namespace Google.Cloud.Bigtable.V2.Tests
 {
@@ -32,9 +30,9 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public void AppProfileId()
         {
-            var callInvoker = new GcpCallInvoker(
+            var callInvoker = new Channel(
                 target: BigtableServiceApiClient.DefaultEndpoint.ToString(),
-                credentials: ChannelCredentials.Insecure);
+                credentials: ChannelCredentials.Insecure).CreateCallInvoker();
             var client = CreateClient(callInvoker, null);
             Assert.Null(client.AppProfileId);
 

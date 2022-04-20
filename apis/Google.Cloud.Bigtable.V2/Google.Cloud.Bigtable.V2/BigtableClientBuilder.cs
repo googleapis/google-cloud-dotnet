@@ -31,9 +31,8 @@ namespace Google.Cloud.Bigtable.V2
         public BigtableServiceApiSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public BigtableClientBuilder()
+        public BigtableClientBuilder() : base(BigtableServiceApiClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = BigtableServiceApiClient.UseJwtAccessWithScopes;
         }
 
         /// <inheritdoc/>
@@ -54,14 +53,5 @@ namespace Google.Cloud.Bigtable.V2
 
         /// <inheritdoc />
         protected override ChannelPool GetChannelPool() => throw new NotImplementedException();
-
-        /// <inheritdoc />
-        protected override string GetDefaultEndpoint() => throw new NotImplementedException();
-
-        /// <inheritdoc />
-        protected override IReadOnlyList<string> GetDefaultScopes() => throw new NotImplementedException();
-
-        /// <inheritdoc />
-        protected override GrpcAdapter DefaultGrpcAdapter => throw new NotImplementedException();
     }
 }
