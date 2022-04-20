@@ -23,6 +23,7 @@ using System.Threading.Tasks;
 using Xunit;
 using Object = Google.Apis.Storage.v1.Data.Object;
 using Encoding = System.Text.Encoding;
+using Google.Cloud.Iam.V1;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
@@ -63,12 +64,12 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             publisherClient.CreateTopic(topicName);
 
             // Make sure the Storage service account has permission to publish to the topic.
-            var policy = publisherClient.GetIamPolicy(topicName.ToString());
+            var policy = publisherClient.IAMPolicyClient.GetIamPolicy(new GetIamPolicyRequest { ResourceAsResourceName = topicName });
             var role = "roles/pubsub.publisher";
             string storageServiceAccount = $"serviceAccount:{storageClient.GetStorageServiceAccountEmail(_fixture.ProjectId)}";
             if (policy.AddRoleMember(role, storageServiceAccount))
             {
-                publisherClient.SetIamPolicy(topicName.ToString(), policy);
+                publisherClient.IAMPolicyClient.SetIamPolicy(new SetIamPolicyRequest { ResourceAsResourceName = topicName, Policy = policy });
             }
 
             try
