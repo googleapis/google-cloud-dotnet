@@ -13,19 +13,21 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
+using Google.Api.Gax.Grpc.Gcp;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Grpc.Core;
-using Grpc.Gcp;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using static Grpc.Gcp.AffinityConfig.Types;
+using static Google.Api.Gax.Grpc.Gcp.AffinityConfig.Types;
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -35,7 +37,13 @@ namespace Google.Cloud.Spanner.Data
     /// required.
     /// </summary>
     public sealed class SessionPoolManager
-    {
+    {        
+        // TODO: Should these be configurable?
+        private static readonly GrpcChannelOptions s_grpcChannelOptions = GrpcChannelOptions.Empty
+            .WithKeepAliveTime(TimeSpan.FromMinutes(1))
+            .WithEnableServiceConfigResolution(false)
+            .WithMaxReceiveMessageSize(int.MaxValue);
+
         /// <summary>
         /// Static constructor to ensure that the static initializers aren't run before the first explicit
         /// reference to the class. This in turn ensures that a call to <see cref="Logger.SetDefaultLogger(Logger)" />
@@ -312,20 +320,25 @@ namespace Google.Cloud.Spanner.Data
                 Method = { s_methodConfigs }
             };
 
-            var grpcOptions = new List<ChannelOption>
-            {
-                // Keep the channel alive for streaming requests.
-                new ChannelOption("grpc.keepalive_time_ms", 60_000),
-                new ChannelOption(GcpCallInvoker.ApiConfigChannelArg, apiConfig.ToString())
-            };
-
-            var callInvoker = new GcpCallInvoker(channelOptions.Endpoint, credentials, grpcOptions);
+            // Constructor, currently internal: GcpCallInvoker(ServiceMetadata serviceMetadata, string target, ChannelCredentials credentials, GrpcChannelOptions options, ApiConfig apiConfig, GrpcAdapter adapter)
+            //var callInvoker = new GcpCallInvoker(channelOptions.Endpoint, credentials, s_grpcChannelOptions, apiConfig);
+            var callInvoker = CreateGcpCallInvoker(channelOptions.Endpoint, credentials, s_grpcChannelOptions, apiConfig);
 
             return new SpannerClientBuilder
             {
                 CallInvoker = callInvoker,
                 Settings = spannerSettings
             }.Build();
+        }
+
+        // FIXME: Remove the reflection here...
+        private static CallInvoker CreateGcpCallInvoker(string endpoint, ChannelCredentials credentials, GrpcChannelOptions options, ApiConfig apiConfig)
+        {
+            var serviceMetadata = (ServiceMetadata) typeof(SpannerClient).GetProperty("ServiceMetadata", BindingFlags.NonPublic | BindingFlags.Static).GetValue(null);
+            var grpcAdapter = typeof(GrpcAdapter).GetMethod("GetFallbackAdapter", BindingFlags.Static | BindingFlags.NonPublic).Invoke(null, new object[] { serviceMetadata });
+            var type = typeof(GcpCallInvokerPool).Assembly.GetType("Google.Api.Gax.Grpc.Gcp.GcpCallInvoker");
+            var ctor = type.GetConstructor(BindingFlags.NonPublic, null, new[] { typeof(ServiceMetadata), typeof(string), typeof(ChannelCredentials), typeof(GrpcChannelOptions), typeof(ApiConfig), typeof(GrpcAdapter) }, null);
+            return (CallInvoker) ctor.Invoke(new object[] { serviceMetadata, endpoint, credentials, options, apiConfig, grpcAdapter });
         }
     }
 }

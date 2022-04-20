@@ -273,13 +273,20 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public new SpannerTransaction BeginTransaction() => (SpannerTransaction)base.BeginTransaction();
 
+        // FIXME: This is "new" because there's now BeginTransactionAsync in the BCL.
+        // We should probably override BeginDbTransactionAsync...
+
         /// <summary>
         /// Begins a new read/write transaction.
         /// This method is thread safe.
         /// </summary>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
         /// <returns>A new <see cref="SpannerTransaction" /></returns>
+#if NET462
         public Task<SpannerTransaction> BeginTransactionAsync(CancellationToken cancellationToken = default) =>
+#else
+        public new Task<SpannerTransaction> BeginTransactionAsync(CancellationToken cancellationToken = default) =>
+#endif
             BeginTransactionImplAsync(ReadWriteTransactionOptions, TransactionMode.ReadWrite, cancellationToken);
 
         /// <summary>
