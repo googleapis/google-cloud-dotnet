@@ -354,12 +354,19 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="timestamp">Returns the UTC timestamp when the data was written to the database.</param>
         public void Commit(out DateTime timestamp) => timestamp = Task.Run(() => CommitAsync(default)).ResultWithUnwrappedExceptions();
 
+        // FIXME: This is "new" because there's now CommitAsync in the BCL. That returns just Task, rather than Task<DateTime>,
+        // which is awkward...        
+
         /// <summary>
         /// Commits the database transaction asynchronously.
         /// </summary>
         /// <param name="cancellationToken">A cancellation token used for this task.</param>
         /// <returns>Returns the UTC timestamp when the data was written to the database.</returns>
+#if NET462
         public Task<DateTime> CommitAsync(CancellationToken cancellationToken = default)
+#else
+        public new Task<DateTime> CommitAsync(CancellationToken cancellationToken = default)
+#endif
         {
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot commit a readonly transaction.");
             var request = new CommitRequest { Mutations = { _mutations }, ReturnCommitStats = LogCommitStats, RequestOptions = BuildCommitRequestOptions() };
@@ -389,7 +396,11 @@ namespace Google.Cloud.Spanner.Data
         /// Rolls back a transaction asynchronously.
         /// </summary>
         /// <param name="cancellationToken">A cancellation token used for this task.</param>
+#if NET462
         public Task RollbackAsync(CancellationToken cancellationToken = default)
+#else
+        public override Task RollbackAsync(CancellationToken cancellationToken = default)
+#endif
         {
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot roll back a readonly transaction.");
             var callSettings = SpannerConnection.CreateCallSettings(settings => settings.RollbackSettings, CommitTimeout, cancellationToken);
