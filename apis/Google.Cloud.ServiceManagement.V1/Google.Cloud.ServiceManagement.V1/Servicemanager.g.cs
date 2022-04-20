@@ -781,8 +781,8 @@ namespace Google.Cloud.ServiceManagement.V1 {
     public const int ServiceNameFieldNumber = 1;
     private string serviceName_ = "";
     /// <summary>
-    /// Required. The name of the service.  See the `ServiceManager` overview for naming
-    /// requirements.  For example: `example.googleapis.com`.
+    /// Required. The name of the service.  See the `ServiceManager` overview for
+    /// naming requirements.  For example: `example.googleapis.com`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1181,8 +1181,9 @@ namespace Google.Cloud.ServiceManagement.V1 {
     public const int ServiceNameFieldNumber = 1;
     private string serviceName_ = "";
     /// <summary>
-    /// Required. The name of the service.  See the [overview](/service-management/overview)
-    /// for naming requirements.  For example: `example.googleapis.com`.
+    /// Required. The name of the service.  See the
+    /// [overview](/service-management/overview) for naming requirements.  For
+    /// example: `example.googleapis.com`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1377,8 +1378,9 @@ namespace Google.Cloud.ServiceManagement.V1 {
     public const int ServiceNameFieldNumber = 1;
     private string serviceName_ = "";
     /// <summary>
-    /// Required. The name of the service. See the [overview](/service-management/overview)
-    /// for naming requirements. For example: `example.googleapis.com`.
+    /// Required. The name of the service. See the
+    /// [overview](/service-management/overview) for naming requirements. For
+    /// example: `example.googleapis.com`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1779,8 +1781,9 @@ namespace Google.Cloud.ServiceManagement.V1 {
     public const int ServiceNameFieldNumber = 1;
     private string serviceName_ = "";
     /// <summary>
-    /// Required. The name of the service.  See the [overview](/service-management/overview)
-    /// for naming requirements.  For example: `example.googleapis.com`.
+    /// Required. The name of the service.  See the
+    /// [overview](/service-management/overview) for naming requirements.  For
+    /// example: `example.googleapis.com`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2081,8 +2084,9 @@ namespace Google.Cloud.ServiceManagement.V1 {
     public const int ServiceNameFieldNumber = 1;
     private string serviceName_ = "";
     /// <summary>
-    /// Required. The name of the service.  See the [overview](/service-management/overview)
-    /// for naming requirements.  For example: `example.googleapis.com`.
+    /// Required. The name of the service.  See the
+    /// [overview](/service-management/overview) for naming requirements.  For
+    /// example: `example.googleapis.com`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2581,8 +2585,9 @@ namespace Google.Cloud.ServiceManagement.V1 {
     public const int ServiceNameFieldNumber = 1;
     private string serviceName_ = "";
     /// <summary>
-    /// Required. The name of the service.  See the [overview](/service-management/overview)
-    /// for naming requirements.  For example: `example.googleapis.com`.
+    /// Required. The name of the service.  See the
+    /// [overview](/service-management/overview) for naming requirements.  For
+    /// example: `example.googleapis.com`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2827,8 +2832,9 @@ namespace Google.Cloud.ServiceManagement.V1 {
     public const int ServiceNameFieldNumber = 1;
     private string serviceName_ = "";
     /// <summary>
-    /// Required. The name of the service.  See the [overview](/service-management/overview)
-    /// for naming requirements.  For example: `example.googleapis.com`.
+    /// Required. The name of the service.  See the
+    /// [overview](/service-management/overview) for naming requirements.  For
+    /// example: `example.googleapis.com`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3317,8 +3323,9 @@ namespace Google.Cloud.ServiceManagement.V1 {
     public const int ServiceNameFieldNumber = 1;
     private string serviceName_ = "";
     /// <summary>
-    /// Required. The name of the service.  See the [overview](/service-management/overview)
-    /// for naming requirements.  For example: `example.googleapis.com`.
+    /// Required. The name of the service.  See the
+    /// [overview](/service-management/overview) for naming requirements.  For
+    /// example: `example.googleapis.com`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3564,8 +3571,9 @@ namespace Google.Cloud.ServiceManagement.V1 {
     public const int ServiceNameFieldNumber = 1;
     private string serviceName_ = "";
     /// <summary>
-    /// Required. The name of the service.  See the [overview](/service-management/overview)
-    /// for naming requirements.  For example: `example.googleapis.com`.
+    /// Required. The name of the service.  See the
+    /// [overview](/service-management/overview) for naming requirements.  For
+    /// example: `example.googleapis.com`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3614,10 +3622,10 @@ namespace Google.Cloud.ServiceManagement.V1 {
     /// Required. Use `filter` to return subset of rollouts.
     /// The following filters are supported:
     ///   -- To limit the results to only those in
-    ///      [status](google.api.servicemanagement.v1.RolloutStatus) 'SUCCESS',
+    ///      status (google.api.servicemanagement.v1.RolloutStatus) 'SUCCESS',
     ///      use filter='status=SUCCESS'
     ///   -- To limit the results to those in
-    ///      [status](google.api.servicemanagement.v1.RolloutStatus) 'CANCELLED'
+    ///      status (google.api.servicemanagement.v1.RolloutStatus) 'CANCELLED'
     ///      or 'FAILED', use filter='status=CANCELLED OR status=FAILED'
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4110,8 +4118,9 @@ namespace Google.Cloud.ServiceManagement.V1 {
     public const int ServiceNameFieldNumber = 1;
     private string serviceName_ = "";
     /// <summary>
-    /// Required. The name of the service.  See the [overview](/service-management/overview)
-    /// for naming requirements.  For example: `example.googleapis.com`.
+    /// Required. The name of the service.  See the
+    /// [overview](/service-management/overview) for naming requirements.  For
+    /// example: `example.googleapis.com`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
