@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>netcoreapp3.1;net6.0</TargetFrameworks>
-    <TestTargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netcoreapp2.1</TestTargetFrameworks>
+    <TestTargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netcoreapp3.1;net6.0</TestTargetFrameworks>
     <IsPackable>false</IsPackable>
     <NoWarn>1701;1702;1705;xUnit2004;xUnit2013;AD0001</NoWarn>
   </PropertyGroup>
