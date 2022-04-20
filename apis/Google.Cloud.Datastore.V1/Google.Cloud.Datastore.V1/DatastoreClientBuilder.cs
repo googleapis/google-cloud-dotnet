@@ -19,7 +19,7 @@ namespace Google.Cloud.Datastore.V1
     // Support for DatastoreDbBuilder.
     public sealed partial class DatastoreClientBuilder : ClientBuilderBase<DatastoreClient>
     {
-        internal DatastoreClientBuilder(DatastoreDbBuilder builder)
+        internal DatastoreClientBuilder(DatastoreDbBuilder builder) : this()
         {
             Settings = builder.Settings;
             CopyCommonSettings(builder);

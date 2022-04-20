@@ -31,6 +31,11 @@ namespace Google.Cloud.Datastore.V1
         private static readonly string[] s_requiredEmulatorVariables = { s_emulatorHostVariable };
         private static readonly string[] s_allEmulatorVariables = { s_emulatorHostVariable, s_emulatorProjectVariable };
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public DatastoreDbBuilder() : base(DatastoreClient.ServiceMetadata)
+        {
+        }
+
         /// <summary>
         /// The settings to use for RPCs, or null for the default settings.
         /// </summary>
@@ -68,22 +73,10 @@ namespace Google.Cloud.Datastore.V1
         public override Task<DatastoreDb> BuildAsync(CancellationToken cancellationToken = default) =>
             PrepareBuilder().BuildAsync(cancellationToken);
 
-        // We never end up using these methods, at least with the current implementation
-        /// <inheritdoc />
-        protected override string GetDefaultEndpoint() =>
-            throw new InvalidOperationException($"This method should never execute in {nameof(DatastoreDbBuilder)}");
-
-        /// <inheritdoc />
-        protected override IReadOnlyList<string> GetDefaultScopes() =>
-            throw new InvalidOperationException($"This method should never execute in {nameof(DatastoreDbBuilder)}");
-
+        // We never end up using this method, at least with the current implementation
         /// <inheritdoc />
         protected override ChannelPool GetChannelPool() =>
             throw new InvalidOperationException($"This method should never execute in {nameof(DatastoreDbBuilder)}");
-
-        /// <inheritdoc />
-        protected override GrpcAdapter DefaultGrpcAdapter =>
-            throw new InvalidOperationException($"This property should never execute in {nameof(DatastoreDbBuilder)}");
 
         /// <summary>
         /// Common code for handling project ID, namespace ID and emulator detection.
