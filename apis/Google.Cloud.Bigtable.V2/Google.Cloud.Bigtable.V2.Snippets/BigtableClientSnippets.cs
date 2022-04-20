@@ -13,12 +13,9 @@
 // limitations under the License.
 
 using Google.Api.Gax.Grpc;
-using Google.Api.Gax.Grpc.GrpcCore;
 using Google.Cloud.Bigtable.Common.V2;
 using Google.Cloud.Bigtable.V2.IntegrationTests;
 using Google.Cloud.ClientTesting;
-using Grpc.Core;
-using Grpc.Gcp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -105,7 +102,8 @@ namespace Google.Cloud.Bigtable.V2.Snippets
                 }
             }
         }
-
+        /*
+         * FIXME: Reinstate this if we decide we want to.
         [Fact]
         public async Task CustomCallInvoker()
         {
@@ -157,7 +155,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
 
             await callInvoker.ShutdownAsync();
             // End sample
-        }
+        }*/
 
         [Fact]
         public async Task CheckAndMutateRowAsync()
