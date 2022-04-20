@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Description>Cleans up databases created by integration tests</Description>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <IsPackable>False</IsPackable>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
