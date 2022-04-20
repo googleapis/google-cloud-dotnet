@@ -7,4 +7,4 @@ sed -i 's/ApiTransports.Grpc/ApiTransports.Rest/g' Google.Cloud.Compute.V1/*.g.c
 
 # Generate enum constants
 dotnet build Google.Cloud.Compute.V1.EnumConstantGenerator
-dotnet run --no-build -p Google.Cloud.Compute.V1.EnumConstantGenerator > Google.Cloud.Compute.V1/ComputeEnumConstants.g.cs
+dotnet run --no-build --project Google.Cloud.Compute.V1.EnumConstantGenerator > Google.Cloud.Compute.V1/ComputeEnumConstants.g.cs
