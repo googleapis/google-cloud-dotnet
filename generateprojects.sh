@@ -1,3 +1,3 @@
 #!/bin/bash
 
-dotnet run -p tools/Google.Cloud.Tools.ReleaseManager generate-projects
+dotnet run --project tools/Google.Cloud.Tools.ReleaseManager generate-projects
