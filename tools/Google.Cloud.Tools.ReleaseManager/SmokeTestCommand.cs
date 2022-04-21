@@ -28,7 +28,7 @@ namespace Google.Cloud.Tools.ReleaseManager
     /// </summary>
     public class SmokeTestCommand : CommandBase
     {
-        private const string TestTargetFramework = "netcoreapp2.1";
+        private const string TestTargetFramework = "netcoreapp3.1";
         private const string TestProjectEnvironmentVariable = "TEST_PROJECT";
 
         public SmokeTestCommand()
