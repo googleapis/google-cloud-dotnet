@@ -25,6 +25,26 @@ jobs:
         git checkout -b main ${{ github.event.pull_request.base.sha }}
         git checkout pr-head
 
+    # We need just the .NET Core 2.1 runtime for testing
+    # TODO: Remove this once we definitely don't have anything that
+    # needs .NET Core 2.1 any more
+    - name: Setup .NET Core 2.1
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 2.1.x
+
+    # Install .NET Core 3.1 for testing
+    - name: Setup .NET Core 3.1
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 3.1.x
+
+    # Install .NET 6 for building
+    - name: Setup .NET 6.0
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x
+
     - name: Detect PR changes
       env:
         ALLOW_BREAKING_CHANGES: ${{contains(github.event.pull_request.labels.*.name, 'allow breaking changes')}}
