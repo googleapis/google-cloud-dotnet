@@ -35,7 +35,7 @@ namespace Google.Cloud.Tools.ReleaseManager
     /// </summary>
     public class SuggestSmokeTestsCommand : CommandBase
     {
-        private const string TestTargetFramework = "netcoreapp2.1";
+        private const string TestTargetFramework = "netcoreapp3.1";
 
         public SuggestSmokeTestsCommand()
             : base("suggest-smoke-tests", "Analyzes a client library for possible simple smoke tests", "id")
