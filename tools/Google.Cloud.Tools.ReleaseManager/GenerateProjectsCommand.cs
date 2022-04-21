@@ -765,7 +765,8 @@ api-name: {api.Id}
             var propertyGroup =
                 new XElement("PropertyGroup",
                     new XElement("TargetFrameworks", testTargetFrameworks),
-                    new XElement("TestTargetFrameworks", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), AnyDesktopFramework.Replace(testTargetFrameworks, "")),
+                    // Note: this would normally be TestTargetFrameworks, but that appears to be broken in .NET 6. I don't know why.
+                    new XElement("TargetFrameworks", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), AnyDesktopFramework.Replace(testTargetFrameworks, "")),
                     new XElement("IsPackable", false),
                     // 1701, 1702 and 1705 are disabled by default.
                     // xUnit2004 prevents Assert.Equal(true, value) etc, preferring Assert.True and Assert.False, but
