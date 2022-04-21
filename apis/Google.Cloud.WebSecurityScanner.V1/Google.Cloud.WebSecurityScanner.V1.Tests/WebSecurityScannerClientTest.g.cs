@@ -58,7 +58,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 StaticIpScan = false,
             };
             mockGrpcClient.Setup(x => x.CreateScanConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null);
+            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
             ScanConfig response = client.CreateScanConfig(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -95,7 +95,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 StaticIpScan = false,
             };
             mockGrpcClient.Setup(x => x.CreateScanConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ScanConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null);
+            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
             ScanConfig responseCallSettings = await client.CreateScanConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ScanConfig responseCancellationToken = await client.CreateScanConfigAsync(request, st::CancellationToken.None);
@@ -113,7 +113,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteScanConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null);
+            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteScanConfig(request);
             mockGrpcClient.VerifyAll();
         }
@@ -128,7 +128,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteScanConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null);
+            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteScanConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteScanConfigAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -164,7 +164,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 StaticIpScan = false,
             };
             mockGrpcClient.Setup(x => x.GetScanConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null);
+            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
             ScanConfig response = client.GetScanConfig(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -200,7 +200,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 StaticIpScan = false,
             };
             mockGrpcClient.Setup(x => x.GetScanConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ScanConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null);
+            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
             ScanConfig responseCallSettings = await client.GetScanConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ScanConfig responseCancellationToken = await client.GetScanConfigAsync(request, st::CancellationToken.None);
@@ -239,7 +239,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 StaticIpScan = false,
             };
             mockGrpcClient.Setup(x => x.UpdateScanConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null);
+            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
             ScanConfig response = client.UpdateScanConfig(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -276,7 +276,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 StaticIpScan = false,
             };
             mockGrpcClient.Setup(x => x.UpdateScanConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ScanConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null);
+            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
             ScanConfig responseCallSettings = await client.UpdateScanConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ScanConfig responseCancellationToken = await client.UpdateScanConfigAsync(request, st::CancellationToken.None);
@@ -310,7 +310,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.StartScanRun(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null);
+            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
             ScanRun response = client.StartScanRun(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -342,7 +342,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.StartScanRunAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ScanRun>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null);
+            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
             ScanRun responseCallSettings = await client.StartScanRunAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ScanRun responseCancellationToken = await client.StartScanRunAsync(request, st::CancellationToken.None);
@@ -376,7 +376,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetScanRun(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null);
+            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
             ScanRun response = client.GetScanRun(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -408,7 +408,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetScanRunAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ScanRun>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null);
+            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
             ScanRun responseCallSettings = await client.GetScanRunAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ScanRun responseCancellationToken = await client.GetScanRunAsync(request, st::CancellationToken.None);
@@ -442,7 +442,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.StopScanRun(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null);
+            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
             ScanRun response = client.StopScanRun(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -474,7 +474,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.StopScanRunAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ScanRun>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null);
+            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
             ScanRun responseCallSettings = await client.StopScanRunAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ScanRun responseCancellationToken = await client.StopScanRunAsync(request, st::CancellationToken.None);
@@ -511,7 +511,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
             };
             mockGrpcClient.Setup(x => x.GetFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null);
+            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
             Finding response = client.GetFinding(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -546,7 +546,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 Severity = Finding.Types.Severity.Medium,
             };
             mockGrpcClient.Setup(x => x.GetFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null);
+            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
             Finding responseCallSettings = await client.GetFindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Finding responseCancellationToken = await client.GetFindingAsync(request, st::CancellationToken.None);
@@ -570,7 +570,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ListFindingTypeStats(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null);
+            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
             ListFindingTypeStatsResponse response = client.ListFindingTypeStats(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -592,7 +592,7 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ListFindingTypeStatsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListFindingTypeStatsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null);
+            WebSecurityScannerClient client = new WebSecurityScannerClientImpl(mockGrpcClient.Object, null, null);
             ListFindingTypeStatsResponse responseCallSettings = await client.ListFindingTypeStatsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListFindingTypeStatsResponse responseCancellationToken = await client.ListFindingTypeStatsAsync(request, st::CancellationToken.None);

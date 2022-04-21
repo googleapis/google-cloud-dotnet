@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -142,9 +142,8 @@ namespace Google.Cloud.DataQnA.V1Alpha
         public QuestionServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public QuestionServiceClientBuilder()
+        public QuestionServiceClientBuilder() : base(QuestionServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = QuestionServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref QuestionServiceClient client);
@@ -171,29 +170,18 @@ namespace Google.Cloud.DataQnA.V1Alpha
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return QuestionServiceClient.Create(callInvoker, Settings);
+            return QuestionServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<QuestionServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return QuestionServiceClient.Create(callInvoker, Settings);
+            return QuestionServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => QuestionServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => QuestionServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => QuestionServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>QuestionService client wrapper, for convenient use.</summary>
@@ -234,19 +222,10 @@ namespace Google.Cloud.DataQnA.V1Alpha
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(QuestionService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="QuestionServiceClient"/> using the default credentials, endpoint and
@@ -273,8 +252,9 @@ namespace Google.Cloud.DataQnA.V1Alpha
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="QuestionServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="QuestionServiceClient"/>.</returns>
-        internal static QuestionServiceClient Create(grpccore::CallInvoker callInvoker, QuestionServiceSettings settings = null)
+        internal static QuestionServiceClient Create(grpccore::CallInvoker callInvoker, QuestionServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -283,7 +263,7 @@ namespace Google.Cloud.DataQnA.V1Alpha
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             QuestionService.QuestionServiceClient grpcClient = new QuestionService.QuestionServiceClient(callInvoker);
-            return new QuestionServiceClientImpl(grpcClient, settings);
+            return new QuestionServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -871,24 +851,25 @@ namespace Google.Cloud.DataQnA.V1Alpha
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="QuestionServiceSettings"/> used within this client.</param>
-        public QuestionServiceClientImpl(QuestionService.QuestionServiceClient grpcClient, QuestionServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public QuestionServiceClientImpl(QuestionService.QuestionServiceClient grpcClient, QuestionServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             QuestionServiceSettings effectiveSettings = settings ?? QuestionServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callGetQuestion = clientHelper.BuildApiCall<GetQuestionRequest, Question>(grpcClient.GetQuestionAsync, grpcClient.GetQuestion, effectiveSettings.GetQuestionSettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callGetQuestion = clientHelper.BuildApiCall<GetQuestionRequest, Question>("GetQuestion", grpcClient.GetQuestionAsync, grpcClient.GetQuestion, effectiveSettings.GetQuestionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetQuestion);
             Modify_GetQuestionApiCall(ref _callGetQuestion);
-            _callCreateQuestion = clientHelper.BuildApiCall<CreateQuestionRequest, Question>(grpcClient.CreateQuestionAsync, grpcClient.CreateQuestion, effectiveSettings.CreateQuestionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateQuestion = clientHelper.BuildApiCall<CreateQuestionRequest, Question>("CreateQuestion", grpcClient.CreateQuestionAsync, grpcClient.CreateQuestion, effectiveSettings.CreateQuestionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateQuestion);
             Modify_CreateQuestionApiCall(ref _callCreateQuestion);
-            _callExecuteQuestion = clientHelper.BuildApiCall<ExecuteQuestionRequest, Question>(grpcClient.ExecuteQuestionAsync, grpcClient.ExecuteQuestion, effectiveSettings.ExecuteQuestionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callExecuteQuestion = clientHelper.BuildApiCall<ExecuteQuestionRequest, Question>("ExecuteQuestion", grpcClient.ExecuteQuestionAsync, grpcClient.ExecuteQuestion, effectiveSettings.ExecuteQuestionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callExecuteQuestion);
             Modify_ExecuteQuestionApiCall(ref _callExecuteQuestion);
-            _callGetUserFeedback = clientHelper.BuildApiCall<GetUserFeedbackRequest, UserFeedback>(grpcClient.GetUserFeedbackAsync, grpcClient.GetUserFeedback, effectiveSettings.GetUserFeedbackSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetUserFeedback = clientHelper.BuildApiCall<GetUserFeedbackRequest, UserFeedback>("GetUserFeedback", grpcClient.GetUserFeedbackAsync, grpcClient.GetUserFeedback, effectiveSettings.GetUserFeedbackSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetUserFeedback);
             Modify_GetUserFeedbackApiCall(ref _callGetUserFeedback);
-            _callUpdateUserFeedback = clientHelper.BuildApiCall<UpdateUserFeedbackRequest, UserFeedback>(grpcClient.UpdateUserFeedbackAsync, grpcClient.UpdateUserFeedback, effectiveSettings.UpdateUserFeedbackSettings).WithGoogleRequestParam("user_feedback.name", request => request.UserFeedback?.Name);
+            _callUpdateUserFeedback = clientHelper.BuildApiCall<UpdateUserFeedbackRequest, UserFeedback>("UpdateUserFeedback", grpcClient.UpdateUserFeedbackAsync, grpcClient.UpdateUserFeedback, effectiveSettings.UpdateUserFeedbackSettings).WithGoogleRequestParam("user_feedback.name", request => request.UserFeedback?.Name);
             Modify_ApiCall(ref _callUpdateUserFeedback);
             Modify_UpdateUserFeedbackApiCall(ref _callUpdateUserFeedback);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -76,9 +76,8 @@ namespace Google.Cloud.Talent.V4Beta1
         public EventServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public EventServiceClientBuilder()
+        public EventServiceClientBuilder() : base(EventServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = EventServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref EventServiceClient client);
@@ -105,29 +104,18 @@ namespace Google.Cloud.Talent.V4Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return EventServiceClient.Create(callInvoker, Settings);
+            return EventServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<EventServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return EventServiceClient.Create(callInvoker, Settings);
+            return EventServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => EventServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => EventServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => EventServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>EventService client wrapper, for convenient use.</summary>
@@ -156,19 +144,10 @@ namespace Google.Cloud.Talent.V4Beta1
             "https://www.googleapis.com/auth/jobs",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(EventService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="EventServiceClient"/> using the default credentials, endpoint and
@@ -195,8 +174,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="EventServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="EventServiceClient"/>.</returns>
-        internal static EventServiceClient Create(grpccore::CallInvoker callInvoker, EventServiceSettings settings = null)
+        internal static EventServiceClient Create(grpccore::CallInvoker callInvoker, EventServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -205,7 +185,7 @@ namespace Google.Cloud.Talent.V4Beta1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             EventService.EventServiceClient grpcClient = new EventService.EventServiceClient(callInvoker);
-            return new EventServiceClientImpl(grpcClient, settings);
+            return new EventServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -532,12 +512,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="EventServiceSettings"/> used within this client.</param>
-        public EventServiceClientImpl(EventService.EventServiceClient grpcClient, EventServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public EventServiceClientImpl(EventService.EventServiceClient grpcClient, EventServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             EventServiceSettings effectiveSettings = settings ?? EventServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCreateClientEvent = clientHelper.BuildApiCall<CreateClientEventRequest, ClientEvent>(grpcClient.CreateClientEventAsync, grpcClient.CreateClientEvent, effectiveSettings.CreateClientEventSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCreateClientEvent = clientHelper.BuildApiCall<CreateClientEventRequest, ClientEvent>("CreateClientEvent", grpcClient.CreateClientEventAsync, grpcClient.CreateClientEvent, effectiveSettings.CreateClientEventSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateClientEvent);
             Modify_CreateClientEventApiCall(ref _callCreateClientEvent);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -53,7 +53,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Deprecated = new DeprecationStatus(),
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ZonesClient client = new ZonesClientImpl(mockGrpcClient.Object, null);
+            ZonesClient client = new ZonesClientImpl(mockGrpcClient.Object, null, null);
             Zone response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -86,7 +86,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Deprecated = new DeprecationStatus(),
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Zone>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ZonesClient client = new ZonesClientImpl(mockGrpcClient.Object, null);
+            ZonesClient client = new ZonesClientImpl(mockGrpcClient.Object, null, null);
             Zone responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Zone responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -121,7 +121,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Deprecated = new DeprecationStatus(),
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ZonesClient client = new ZonesClientImpl(mockGrpcClient.Object, null);
+            ZonesClient client = new ZonesClientImpl(mockGrpcClient.Object, null, null);
             Zone response = client.Get(request.Project, request.Zone);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -154,7 +154,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Deprecated = new DeprecationStatus(),
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Zone>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ZonesClient client = new ZonesClientImpl(mockGrpcClient.Object, null);
+            ZonesClient client = new ZonesClientImpl(mockGrpcClient.Object, null, null);
             Zone responseCallSettings = await client.GetAsync(request.Project, request.Zone, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Zone responseCancellationToken = await client.GetAsync(request.Project, request.Zone, st::CancellationToken.None);

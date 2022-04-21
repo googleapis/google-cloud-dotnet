@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -148,9 +148,8 @@ namespace Google.Cloud.ResourceManager.V3
         public TagBindingsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public TagBindingsClientBuilder()
+        public TagBindingsClientBuilder() : base(TagBindingsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = TagBindingsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref TagBindingsClient client);
@@ -177,29 +176,18 @@ namespace Google.Cloud.ResourceManager.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TagBindingsClient.Create(callInvoker, Settings);
+            return TagBindingsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<TagBindingsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TagBindingsClient.Create(callInvoker, Settings);
+            return TagBindingsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => TagBindingsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => TagBindingsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => TagBindingsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>TagBindings client wrapper, for convenient use.</summary>
@@ -229,19 +217,10 @@ namespace Google.Cloud.ResourceManager.V3
             "https://www.googleapis.com/auth/cloud-platform.read-only",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(TagBindings.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="TagBindingsClient"/> using the default credentials, endpoint and
@@ -268,8 +247,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="TagBindingsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="TagBindingsClient"/>.</returns>
-        internal static TagBindingsClient Create(grpccore::CallInvoker callInvoker, TagBindingsSettings settings = null)
+        internal static TagBindingsClient Create(grpccore::CallInvoker callInvoker, TagBindingsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -278,7 +258,7 @@ namespace Google.Cloud.ResourceManager.V3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             TagBindings.TagBindingsClient grpcClient = new TagBindings.TagBindingsClient(callInvoker);
-            return new TagBindingsClientImpl(grpcClient, settings);
+            return new TagBindingsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -703,20 +683,21 @@ namespace Google.Cloud.ResourceManager.V3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="TagBindingsSettings"/> used within this client.</param>
-        public TagBindingsClientImpl(TagBindings.TagBindingsClient grpcClient, TagBindingsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public TagBindingsClientImpl(TagBindings.TagBindingsClient grpcClient, TagBindingsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             TagBindingsSettings effectiveSettings = settings ?? TagBindingsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateTagBindingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTagBindingOperationsSettings);
-            DeleteTagBindingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTagBindingOperationsSettings);
-            _callListTagBindings = clientHelper.BuildApiCall<ListTagBindingsRequest, ListTagBindingsResponse>(grpcClient.ListTagBindingsAsync, grpcClient.ListTagBindings, effectiveSettings.ListTagBindingsSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateTagBindingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTagBindingOperationsSettings, logger);
+            DeleteTagBindingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTagBindingOperationsSettings, logger);
+            _callListTagBindings = clientHelper.BuildApiCall<ListTagBindingsRequest, ListTagBindingsResponse>("ListTagBindings", grpcClient.ListTagBindingsAsync, grpcClient.ListTagBindings, effectiveSettings.ListTagBindingsSettings);
             Modify_ApiCall(ref _callListTagBindings);
             Modify_ListTagBindingsApiCall(ref _callListTagBindings);
-            _callCreateTagBinding = clientHelper.BuildApiCall<CreateTagBindingRequest, lro::Operation>(grpcClient.CreateTagBindingAsync, grpcClient.CreateTagBinding, effectiveSettings.CreateTagBindingSettings);
+            _callCreateTagBinding = clientHelper.BuildApiCall<CreateTagBindingRequest, lro::Operation>("CreateTagBinding", grpcClient.CreateTagBindingAsync, grpcClient.CreateTagBinding, effectiveSettings.CreateTagBindingSettings);
             Modify_ApiCall(ref _callCreateTagBinding);
             Modify_CreateTagBindingApiCall(ref _callCreateTagBinding);
-            _callDeleteTagBinding = clientHelper.BuildApiCall<DeleteTagBindingRequest, lro::Operation>(grpcClient.DeleteTagBindingAsync, grpcClient.DeleteTagBinding, effectiveSettings.DeleteTagBindingSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteTagBinding = clientHelper.BuildApiCall<DeleteTagBindingRequest, lro::Operation>("DeleteTagBinding", grpcClient.DeleteTagBindingAsync, grpcClient.DeleteTagBinding, effectiveSettings.DeleteTagBindingSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTagBinding);
             Modify_DeleteTagBindingApiCall(ref _callDeleteTagBinding);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

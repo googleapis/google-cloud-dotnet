@@ -58,7 +58,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 PeeringdbFacilityId = "peeringdb_facility_idcce67e85",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InterconnectLocationsClient client = new InterconnectLocationsClientImpl(mockGrpcClient.Object, null);
+            InterconnectLocationsClient client = new InterconnectLocationsClientImpl(mockGrpcClient.Object, null, null);
             InterconnectLocation response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -96,7 +96,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 PeeringdbFacilityId = "peeringdb_facility_idcce67e85",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InterconnectLocation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InterconnectLocationsClient client = new InterconnectLocationsClientImpl(mockGrpcClient.Object, null);
+            InterconnectLocationsClient client = new InterconnectLocationsClientImpl(mockGrpcClient.Object, null, null);
             InterconnectLocation responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InterconnectLocation responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -136,7 +136,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 PeeringdbFacilityId = "peeringdb_facility_idcce67e85",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InterconnectLocationsClient client = new InterconnectLocationsClientImpl(mockGrpcClient.Object, null);
+            InterconnectLocationsClient client = new InterconnectLocationsClientImpl(mockGrpcClient.Object, null, null);
             InterconnectLocation response = client.Get(request.Project, request.InterconnectLocation);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -174,7 +174,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 PeeringdbFacilityId = "peeringdb_facility_idcce67e85",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InterconnectLocation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InterconnectLocationsClient client = new InterconnectLocationsClientImpl(mockGrpcClient.Object, null);
+            InterconnectLocationsClient client = new InterconnectLocationsClientImpl(mockGrpcClient.Object, null, null);
             InterconnectLocation responseCallSettings = await client.GetAsync(request.Project, request.InterconnectLocation, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InterconnectLocation responseCancellationToken = await client.GetAsync(request.Project, request.InterconnectLocation, st::CancellationToken.None);

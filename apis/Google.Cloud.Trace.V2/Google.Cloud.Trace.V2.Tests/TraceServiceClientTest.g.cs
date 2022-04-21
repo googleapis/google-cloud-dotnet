@@ -40,7 +40,7 @@ namespace Google.Cloud.Trace.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.BatchWriteSpans(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
+            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null, null);
             client.BatchWriteSpans(request);
             mockGrpcClient.VerifyAll();
         }
@@ -56,7 +56,7 @@ namespace Google.Cloud.Trace.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.BatchWriteSpansAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
+            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.BatchWriteSpansAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.BatchWriteSpansAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -73,7 +73,7 @@ namespace Google.Cloud.Trace.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.BatchWriteSpans(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
+            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null, null);
             client.BatchWriteSpans(request.Name, request.Spans);
             mockGrpcClient.VerifyAll();
         }
@@ -89,7 +89,7 @@ namespace Google.Cloud.Trace.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.BatchWriteSpansAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
+            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.BatchWriteSpansAsync(request.Name, request.Spans, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.BatchWriteSpansAsync(request.Name, request.Spans, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -106,7 +106,7 @@ namespace Google.Cloud.Trace.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.BatchWriteSpans(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
+            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null, null);
             client.BatchWriteSpans(request.ProjectName, request.Spans);
             mockGrpcClient.VerifyAll();
         }
@@ -122,7 +122,7 @@ namespace Google.Cloud.Trace.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.BatchWriteSpansAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
+            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.BatchWriteSpansAsync(request.ProjectName, request.Spans, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.BatchWriteSpansAsync(request.ProjectName, request.Spans, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -167,7 +167,7 @@ namespace Google.Cloud.Trace.V2.Tests
                 SpanKind = Span.Types.SpanKind.Consumer,
             };
             mockGrpcClient.Setup(x => x.CreateSpan(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
+            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null, null);
             Span response = client.CreateSpan(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -212,7 +212,7 @@ namespace Google.Cloud.Trace.V2.Tests
                 SpanKind = Span.Types.SpanKind.Consumer,
             };
             mockGrpcClient.Setup(x => x.CreateSpanAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Span>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
+            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null, null);
             Span responseCallSettings = await client.CreateSpanAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Span responseCancellationToken = await client.CreateSpanAsync(request, st::CancellationToken.None);

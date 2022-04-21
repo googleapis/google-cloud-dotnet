@@ -57,7 +57,7 @@ namespace Grafeas.V1.Tests
                 Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrence(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Occurrence response = client.GetOccurrence(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -93,7 +93,7 @@ namespace Grafeas.V1.Tests
                 Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrenceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Occurrence>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Occurrence responseCallSettings = await client.GetOccurrenceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Occurrence responseCancellationToken = await client.GetOccurrenceAsync(request, st::CancellationToken.None);
@@ -131,7 +131,7 @@ namespace Grafeas.V1.Tests
                 Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrence(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Occurrence response = client.GetOccurrence(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -167,7 +167,7 @@ namespace Grafeas.V1.Tests
                 Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrenceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Occurrence>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Occurrence responseCallSettings = await client.GetOccurrenceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Occurrence responseCancellationToken = await client.GetOccurrenceAsync(request.Name, st::CancellationToken.None);
@@ -205,7 +205,7 @@ namespace Grafeas.V1.Tests
                 Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrence(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Occurrence response = client.GetOccurrence(request.OccurrenceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -241,7 +241,7 @@ namespace Grafeas.V1.Tests
                 Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrenceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Occurrence>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Occurrence responseCallSettings = await client.GetOccurrenceAsync(request.OccurrenceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Occurrence responseCancellationToken = await client.GetOccurrenceAsync(request.OccurrenceName, st::CancellationToken.None);
@@ -259,7 +259,7 @@ namespace Grafeas.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteOccurrence(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteOccurrence(request);
             mockGrpcClient.VerifyAll();
         }
@@ -274,7 +274,7 @@ namespace Grafeas.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteOccurrenceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteOccurrenceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteOccurrenceAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -290,7 +290,7 @@ namespace Grafeas.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteOccurrence(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteOccurrence(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -305,7 +305,7 @@ namespace Grafeas.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteOccurrenceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteOccurrenceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteOccurrenceAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -321,7 +321,7 @@ namespace Grafeas.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteOccurrence(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteOccurrence(request.OccurrenceName);
             mockGrpcClient.VerifyAll();
         }
@@ -336,7 +336,7 @@ namespace Grafeas.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteOccurrenceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteOccurrenceAsync(request.OccurrenceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteOccurrenceAsync(request.OccurrenceName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -373,7 +373,7 @@ namespace Grafeas.V1.Tests
                 Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.CreateOccurrence(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Occurrence response = client.CreateOccurrence(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -410,7 +410,7 @@ namespace Grafeas.V1.Tests
                 Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.CreateOccurrenceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Occurrence>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Occurrence responseCallSettings = await client.CreateOccurrenceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Occurrence responseCancellationToken = await client.CreateOccurrenceAsync(request, st::CancellationToken.None);
@@ -449,7 +449,7 @@ namespace Grafeas.V1.Tests
                 Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.CreateOccurrence(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Occurrence response = client.CreateOccurrence(request.Parent, request.Occurrence);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -486,7 +486,7 @@ namespace Grafeas.V1.Tests
                 Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.CreateOccurrenceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Occurrence>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Occurrence responseCallSettings = await client.CreateOccurrenceAsync(request.Parent, request.Occurrence, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Occurrence responseCancellationToken = await client.CreateOccurrenceAsync(request.Parent, request.Occurrence, st::CancellationToken.None);
@@ -525,7 +525,7 @@ namespace Grafeas.V1.Tests
                 Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.CreateOccurrence(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Occurrence response = client.CreateOccurrence(request.ParentAsProjectName, request.Occurrence);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -562,7 +562,7 @@ namespace Grafeas.V1.Tests
                 Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.CreateOccurrenceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Occurrence>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Occurrence responseCallSettings = await client.CreateOccurrenceAsync(request.ParentAsProjectName, request.Occurrence, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Occurrence responseCancellationToken = await client.CreateOccurrenceAsync(request.ParentAsProjectName, request.Occurrence, st::CancellationToken.None);
@@ -584,7 +584,7 @@ namespace Grafeas.V1.Tests
                 Occurrences = { new Occurrence(), },
             };
             mockGrpcClient.Setup(x => x.BatchCreateOccurrences(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateOccurrencesResponse response = client.BatchCreateOccurrences(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -604,7 +604,7 @@ namespace Grafeas.V1.Tests
                 Occurrences = { new Occurrence(), },
             };
             mockGrpcClient.Setup(x => x.BatchCreateOccurrencesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCreateOccurrencesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateOccurrencesResponse responseCallSettings = await client.BatchCreateOccurrencesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchCreateOccurrencesResponse responseCancellationToken = await client.BatchCreateOccurrencesAsync(request, st::CancellationToken.None);
@@ -626,7 +626,7 @@ namespace Grafeas.V1.Tests
                 Occurrences = { new Occurrence(), },
             };
             mockGrpcClient.Setup(x => x.BatchCreateOccurrences(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateOccurrencesResponse response = client.BatchCreateOccurrences(request.Parent, request.Occurrences);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -646,7 +646,7 @@ namespace Grafeas.V1.Tests
                 Occurrences = { new Occurrence(), },
             };
             mockGrpcClient.Setup(x => x.BatchCreateOccurrencesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCreateOccurrencesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateOccurrencesResponse responseCallSettings = await client.BatchCreateOccurrencesAsync(request.Parent, request.Occurrences, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchCreateOccurrencesResponse responseCancellationToken = await client.BatchCreateOccurrencesAsync(request.Parent, request.Occurrences, st::CancellationToken.None);
@@ -668,7 +668,7 @@ namespace Grafeas.V1.Tests
                 Occurrences = { new Occurrence(), },
             };
             mockGrpcClient.Setup(x => x.BatchCreateOccurrences(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateOccurrencesResponse response = client.BatchCreateOccurrences(request.ParentAsProjectName, request.Occurrences);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -688,7 +688,7 @@ namespace Grafeas.V1.Tests
                 Occurrences = { new Occurrence(), },
             };
             mockGrpcClient.Setup(x => x.BatchCreateOccurrencesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCreateOccurrencesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateOccurrencesResponse responseCallSettings = await client.BatchCreateOccurrencesAsync(request.ParentAsProjectName, request.Occurrences, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchCreateOccurrencesResponse responseCancellationToken = await client.BatchCreateOccurrencesAsync(request.ParentAsProjectName, request.Occurrences, st::CancellationToken.None);
@@ -728,7 +728,7 @@ namespace Grafeas.V1.Tests
                 Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.UpdateOccurrence(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Occurrence response = client.UpdateOccurrence(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -766,7 +766,7 @@ namespace Grafeas.V1.Tests
                 Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.UpdateOccurrenceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Occurrence>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Occurrence responseCallSettings = await client.UpdateOccurrenceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Occurrence responseCancellationToken = await client.UpdateOccurrenceAsync(request, st::CancellationToken.None);
@@ -806,7 +806,7 @@ namespace Grafeas.V1.Tests
                 Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.UpdateOccurrence(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Occurrence response = client.UpdateOccurrence(request.Name, request.Occurrence, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -844,7 +844,7 @@ namespace Grafeas.V1.Tests
                 Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.UpdateOccurrenceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Occurrence>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Occurrence responseCallSettings = await client.UpdateOccurrenceAsync(request.Name, request.Occurrence, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Occurrence responseCancellationToken = await client.UpdateOccurrenceAsync(request.Name, request.Occurrence, request.UpdateMask, st::CancellationToken.None);
@@ -884,7 +884,7 @@ namespace Grafeas.V1.Tests
                 Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.UpdateOccurrence(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Occurrence response = client.UpdateOccurrence(request.OccurrenceName, request.Occurrence, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -922,7 +922,7 @@ namespace Grafeas.V1.Tests
                 Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.UpdateOccurrenceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Occurrence>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Occurrence responseCallSettings = await client.UpdateOccurrenceAsync(request.OccurrenceName, request.Occurrence, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Occurrence responseCancellationToken = await client.UpdateOccurrenceAsync(request.OccurrenceName, request.Occurrence, request.UpdateMask, st::CancellationToken.None);
@@ -964,7 +964,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrenceNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note response = client.GetOccurrenceNote(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1004,7 +1004,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrenceNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note responseCallSettings = await client.GetOccurrenceNoteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Note responseCancellationToken = await client.GetOccurrenceNoteAsync(request, st::CancellationToken.None);
@@ -1046,7 +1046,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrenceNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note response = client.GetOccurrenceNote(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1086,7 +1086,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrenceNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note responseCallSettings = await client.GetOccurrenceNoteAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Note responseCancellationToken = await client.GetOccurrenceNoteAsync(request.Name, st::CancellationToken.None);
@@ -1128,7 +1128,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrenceNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note response = client.GetOccurrenceNote(request.OccurrenceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1168,7 +1168,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrenceNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note responseCallSettings = await client.GetOccurrenceNoteAsync(request.OccurrenceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Note responseCancellationToken = await client.GetOccurrenceNoteAsync(request.OccurrenceName, st::CancellationToken.None);
@@ -1210,7 +1210,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note response = client.GetNote(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1250,7 +1250,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note responseCallSettings = await client.GetNoteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Note responseCancellationToken = await client.GetNoteAsync(request, st::CancellationToken.None);
@@ -1292,7 +1292,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note response = client.GetNote(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1332,7 +1332,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note responseCallSettings = await client.GetNoteAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Note responseCancellationToken = await client.GetNoteAsync(request.Name, st::CancellationToken.None);
@@ -1374,7 +1374,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note response = client.GetNote(request.NoteName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1414,7 +1414,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note responseCallSettings = await client.GetNoteAsync(request.NoteName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Note responseCancellationToken = await client.GetNoteAsync(request.NoteName, st::CancellationToken.None);
@@ -1432,7 +1432,7 @@ namespace Grafeas.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteNote(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1447,7 +1447,7 @@ namespace Grafeas.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteNoteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteNoteAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1463,7 +1463,7 @@ namespace Grafeas.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteNote(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1478,7 +1478,7 @@ namespace Grafeas.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteNoteAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteNoteAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1494,7 +1494,7 @@ namespace Grafeas.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteNote(request.NoteName);
             mockGrpcClient.VerifyAll();
         }
@@ -1509,7 +1509,7 @@ namespace Grafeas.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteNoteAsync(request.NoteName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteNoteAsync(request.NoteName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1551,7 +1551,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.CreateNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note response = client.CreateNote(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1593,7 +1593,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.CreateNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note responseCallSettings = await client.CreateNoteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Note responseCancellationToken = await client.CreateNoteAsync(request, st::CancellationToken.None);
@@ -1637,7 +1637,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.CreateNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note response = client.CreateNote(request.Parent, request.NoteId, request.Note);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1679,7 +1679,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.CreateNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note responseCallSettings = await client.CreateNoteAsync(request.Parent, request.NoteId, request.Note, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Note responseCancellationToken = await client.CreateNoteAsync(request.Parent, request.NoteId, request.Note, st::CancellationToken.None);
@@ -1723,7 +1723,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.CreateNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note response = client.CreateNote(request.ParentAsProjectName, request.NoteId, request.Note);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1765,7 +1765,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.CreateNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note responseCallSettings = await client.CreateNoteAsync(request.ParentAsProjectName, request.NoteId, request.Note, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Note responseCancellationToken = await client.CreateNoteAsync(request.ParentAsProjectName, request.NoteId, request.Note, st::CancellationToken.None);
@@ -1790,7 +1790,7 @@ namespace Grafeas.V1.Tests
             };
             BatchCreateNotesResponse expectedResponse = new BatchCreateNotesResponse { Notes = { new Note(), }, };
             mockGrpcClient.Setup(x => x.BatchCreateNotes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateNotesResponse response = client.BatchCreateNotes(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1813,7 +1813,7 @@ namespace Grafeas.V1.Tests
             };
             BatchCreateNotesResponse expectedResponse = new BatchCreateNotesResponse { Notes = { new Note(), }, };
             mockGrpcClient.Setup(x => x.BatchCreateNotesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCreateNotesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateNotesResponse responseCallSettings = await client.BatchCreateNotesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchCreateNotesResponse responseCancellationToken = await client.BatchCreateNotesAsync(request, st::CancellationToken.None);
@@ -1838,7 +1838,7 @@ namespace Grafeas.V1.Tests
             };
             BatchCreateNotesResponse expectedResponse = new BatchCreateNotesResponse { Notes = { new Note(), }, };
             mockGrpcClient.Setup(x => x.BatchCreateNotes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateNotesResponse response = client.BatchCreateNotes(request.Parent, request.Notes);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1861,7 +1861,7 @@ namespace Grafeas.V1.Tests
             };
             BatchCreateNotesResponse expectedResponse = new BatchCreateNotesResponse { Notes = { new Note(), }, };
             mockGrpcClient.Setup(x => x.BatchCreateNotesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCreateNotesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateNotesResponse responseCallSettings = await client.BatchCreateNotesAsync(request.Parent, request.Notes, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchCreateNotesResponse responseCancellationToken = await client.BatchCreateNotesAsync(request.Parent, request.Notes, st::CancellationToken.None);
@@ -1886,7 +1886,7 @@ namespace Grafeas.V1.Tests
             };
             BatchCreateNotesResponse expectedResponse = new BatchCreateNotesResponse { Notes = { new Note(), }, };
             mockGrpcClient.Setup(x => x.BatchCreateNotes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateNotesResponse response = client.BatchCreateNotes(request.ParentAsProjectName, request.Notes);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1909,7 +1909,7 @@ namespace Grafeas.V1.Tests
             };
             BatchCreateNotesResponse expectedResponse = new BatchCreateNotesResponse { Notes = { new Note(), }, };
             mockGrpcClient.Setup(x => x.BatchCreateNotesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCreateNotesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             BatchCreateNotesResponse responseCallSettings = await client.BatchCreateNotesAsync(request.ParentAsProjectName, request.Notes, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchCreateNotesResponse responseCancellationToken = await client.BatchCreateNotesAsync(request.ParentAsProjectName, request.Notes, st::CancellationToken.None);
@@ -1953,7 +1953,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.UpdateNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note response = client.UpdateNote(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1995,7 +1995,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.UpdateNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note responseCallSettings = await client.UpdateNoteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Note responseCancellationToken = await client.UpdateNoteAsync(request, st::CancellationToken.None);
@@ -2039,7 +2039,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.UpdateNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note response = client.UpdateNote(request.Name, request.Note, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2081,7 +2081,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.UpdateNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note responseCallSettings = await client.UpdateNoteAsync(request.Name, request.Note, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Note responseCancellationToken = await client.UpdateNoteAsync(request.Name, request.Note, request.UpdateMask, st::CancellationToken.None);
@@ -2125,7 +2125,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.UpdateNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note response = client.UpdateNote(request.NoteName, request.Note, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2167,7 +2167,7 @@ namespace Grafeas.V1.Tests
                 DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.UpdateNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
+            GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null, null);
             Note responseCallSettings = await client.UpdateNoteAsync(request.NoteName, request.Note, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Note responseCancellationToken = await client.UpdateNoteAsync(request.NoteName, request.Note, request.UpdateMask, st::CancellationToken.None);

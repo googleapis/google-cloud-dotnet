@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -234,9 +234,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         public RecaptchaEnterpriseServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public RecaptchaEnterpriseServiceClientBuilder()
+        public RecaptchaEnterpriseServiceClientBuilder() : base(RecaptchaEnterpriseServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = RecaptchaEnterpriseServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref RecaptchaEnterpriseServiceClient client);
@@ -263,29 +262,18 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return RecaptchaEnterpriseServiceClient.Create(callInvoker, Settings);
+            return RecaptchaEnterpriseServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<RecaptchaEnterpriseServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return RecaptchaEnterpriseServiceClient.Create(callInvoker, Settings);
+            return RecaptchaEnterpriseServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => RecaptchaEnterpriseServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => RecaptchaEnterpriseServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => RecaptchaEnterpriseServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>RecaptchaEnterpriseService client wrapper, for convenient use.</summary>
@@ -312,19 +300,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(RecaptchaEnterpriseService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="RecaptchaEnterpriseServiceClient"/> using the default credentials,
@@ -354,8 +333,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="RecaptchaEnterpriseServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="RecaptchaEnterpriseServiceClient"/>.</returns>
-        internal static RecaptchaEnterpriseServiceClient Create(grpccore::CallInvoker callInvoker, RecaptchaEnterpriseServiceSettings settings = null)
+        internal static RecaptchaEnterpriseServiceClient Create(grpccore::CallInvoker callInvoker, RecaptchaEnterpriseServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -364,7 +344,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient grpcClient = new RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient(callInvoker);
-            return new RecaptchaEnterpriseServiceClientImpl(grpcClient, settings);
+            return new RecaptchaEnterpriseServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1387,45 +1367,46 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <param name="settings">
         /// The base <see cref="RecaptchaEnterpriseServiceSettings"/> used within this client.
         /// </param>
-        public RecaptchaEnterpriseServiceClientImpl(RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient grpcClient, RecaptchaEnterpriseServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public RecaptchaEnterpriseServiceClientImpl(RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient grpcClient, RecaptchaEnterpriseServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             RecaptchaEnterpriseServiceSettings effectiveSettings = settings ?? RecaptchaEnterpriseServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCreateAssessment = clientHelper.BuildApiCall<CreateAssessmentRequest, Assessment>(grpcClient.CreateAssessmentAsync, grpcClient.CreateAssessment, effectiveSettings.CreateAssessmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCreateAssessment = clientHelper.BuildApiCall<CreateAssessmentRequest, Assessment>("CreateAssessment", grpcClient.CreateAssessmentAsync, grpcClient.CreateAssessment, effectiveSettings.CreateAssessmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateAssessment);
             Modify_CreateAssessmentApiCall(ref _callCreateAssessment);
-            _callAnnotateAssessment = clientHelper.BuildApiCall<AnnotateAssessmentRequest, AnnotateAssessmentResponse>(grpcClient.AnnotateAssessmentAsync, grpcClient.AnnotateAssessment, effectiveSettings.AnnotateAssessmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callAnnotateAssessment = clientHelper.BuildApiCall<AnnotateAssessmentRequest, AnnotateAssessmentResponse>("AnnotateAssessment", grpcClient.AnnotateAssessmentAsync, grpcClient.AnnotateAssessment, effectiveSettings.AnnotateAssessmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callAnnotateAssessment);
             Modify_AnnotateAssessmentApiCall(ref _callAnnotateAssessment);
-            _callCreateKey = clientHelper.BuildApiCall<CreateKeyRequest, Key>(grpcClient.CreateKeyAsync, grpcClient.CreateKey, effectiveSettings.CreateKeySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateKey = clientHelper.BuildApiCall<CreateKeyRequest, Key>("CreateKey", grpcClient.CreateKeyAsync, grpcClient.CreateKey, effectiveSettings.CreateKeySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateKey);
             Modify_CreateKeyApiCall(ref _callCreateKey);
-            _callListKeys = clientHelper.BuildApiCall<ListKeysRequest, ListKeysResponse>(grpcClient.ListKeysAsync, grpcClient.ListKeys, effectiveSettings.ListKeysSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListKeys = clientHelper.BuildApiCall<ListKeysRequest, ListKeysResponse>("ListKeys", grpcClient.ListKeysAsync, grpcClient.ListKeys, effectiveSettings.ListKeysSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListKeys);
             Modify_ListKeysApiCall(ref _callListKeys);
-            _callGetKey = clientHelper.BuildApiCall<GetKeyRequest, Key>(grpcClient.GetKeyAsync, grpcClient.GetKey, effectiveSettings.GetKeySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetKey = clientHelper.BuildApiCall<GetKeyRequest, Key>("GetKey", grpcClient.GetKeyAsync, grpcClient.GetKey, effectiveSettings.GetKeySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetKey);
             Modify_GetKeyApiCall(ref _callGetKey);
-            _callUpdateKey = clientHelper.BuildApiCall<UpdateKeyRequest, Key>(grpcClient.UpdateKeyAsync, grpcClient.UpdateKey, effectiveSettings.UpdateKeySettings).WithGoogleRequestParam("key.name", request => request.Key?.Name);
+            _callUpdateKey = clientHelper.BuildApiCall<UpdateKeyRequest, Key>("UpdateKey", grpcClient.UpdateKeyAsync, grpcClient.UpdateKey, effectiveSettings.UpdateKeySettings).WithGoogleRequestParam("key.name", request => request.Key?.Name);
             Modify_ApiCall(ref _callUpdateKey);
             Modify_UpdateKeyApiCall(ref _callUpdateKey);
-            _callDeleteKey = clientHelper.BuildApiCall<DeleteKeyRequest, wkt::Empty>(grpcClient.DeleteKeyAsync, grpcClient.DeleteKey, effectiveSettings.DeleteKeySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteKey = clientHelper.BuildApiCall<DeleteKeyRequest, wkt::Empty>("DeleteKey", grpcClient.DeleteKeyAsync, grpcClient.DeleteKey, effectiveSettings.DeleteKeySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteKey);
             Modify_DeleteKeyApiCall(ref _callDeleteKey);
-            _callMigrateKey = clientHelper.BuildApiCall<MigrateKeyRequest, Key>(grpcClient.MigrateKeyAsync, grpcClient.MigrateKey, effectiveSettings.MigrateKeySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callMigrateKey = clientHelper.BuildApiCall<MigrateKeyRequest, Key>("MigrateKey", grpcClient.MigrateKeyAsync, grpcClient.MigrateKey, effectiveSettings.MigrateKeySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callMigrateKey);
             Modify_MigrateKeyApiCall(ref _callMigrateKey);
-            _callGetMetrics = clientHelper.BuildApiCall<GetMetricsRequest, Metrics>(grpcClient.GetMetricsAsync, grpcClient.GetMetrics, effectiveSettings.GetMetricsSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetMetrics = clientHelper.BuildApiCall<GetMetricsRequest, Metrics>("GetMetrics", grpcClient.GetMetricsAsync, grpcClient.GetMetrics, effectiveSettings.GetMetricsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetMetrics);
             Modify_GetMetricsApiCall(ref _callGetMetrics);
-            _callListRelatedAccountGroups = clientHelper.BuildApiCall<ListRelatedAccountGroupsRequest, ListRelatedAccountGroupsResponse>(grpcClient.ListRelatedAccountGroupsAsync, grpcClient.ListRelatedAccountGroups, effectiveSettings.ListRelatedAccountGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListRelatedAccountGroups = clientHelper.BuildApiCall<ListRelatedAccountGroupsRequest, ListRelatedAccountGroupsResponse>("ListRelatedAccountGroups", grpcClient.ListRelatedAccountGroupsAsync, grpcClient.ListRelatedAccountGroups, effectiveSettings.ListRelatedAccountGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListRelatedAccountGroups);
             Modify_ListRelatedAccountGroupsApiCall(ref _callListRelatedAccountGroups);
-            _callListRelatedAccountGroupMemberships = clientHelper.BuildApiCall<ListRelatedAccountGroupMembershipsRequest, ListRelatedAccountGroupMembershipsResponse>(grpcClient.ListRelatedAccountGroupMembershipsAsync, grpcClient.ListRelatedAccountGroupMemberships, effectiveSettings.ListRelatedAccountGroupMembershipsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListRelatedAccountGroupMemberships = clientHelper.BuildApiCall<ListRelatedAccountGroupMembershipsRequest, ListRelatedAccountGroupMembershipsResponse>("ListRelatedAccountGroupMemberships", grpcClient.ListRelatedAccountGroupMembershipsAsync, grpcClient.ListRelatedAccountGroupMemberships, effectiveSettings.ListRelatedAccountGroupMembershipsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListRelatedAccountGroupMemberships);
             Modify_ListRelatedAccountGroupMembershipsApiCall(ref _callListRelatedAccountGroupMemberships);
-            _callSearchRelatedAccountGroupMemberships = clientHelper.BuildApiCall<SearchRelatedAccountGroupMembershipsRequest, SearchRelatedAccountGroupMembershipsResponse>(grpcClient.SearchRelatedAccountGroupMembershipsAsync, grpcClient.SearchRelatedAccountGroupMemberships, effectiveSettings.SearchRelatedAccountGroupMembershipsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callSearchRelatedAccountGroupMemberships = clientHelper.BuildApiCall<SearchRelatedAccountGroupMembershipsRequest, SearchRelatedAccountGroupMembershipsResponse>("SearchRelatedAccountGroupMemberships", grpcClient.SearchRelatedAccountGroupMembershipsAsync, grpcClient.SearchRelatedAccountGroupMemberships, effectiveSettings.SearchRelatedAccountGroupMembershipsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callSearchRelatedAccountGroupMemberships);
             Modify_SearchRelatedAccountGroupMembershipsApiCall(ref _callSearchRelatedAccountGroupMemberships);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

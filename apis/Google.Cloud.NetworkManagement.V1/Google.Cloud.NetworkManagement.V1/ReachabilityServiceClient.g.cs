@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -226,9 +226,8 @@ namespace Google.Cloud.NetworkManagement.V1
         public ReachabilityServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ReachabilityServiceClientBuilder()
+        public ReachabilityServiceClientBuilder() : base(ReachabilityServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ReachabilityServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ReachabilityServiceClient client);
@@ -255,29 +254,18 @@ namespace Google.Cloud.NetworkManagement.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ReachabilityServiceClient.Create(callInvoker, Settings);
+            return ReachabilityServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ReachabilityServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ReachabilityServiceClient.Create(callInvoker, Settings);
+            return ReachabilityServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ReachabilityServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ReachabilityServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ReachabilityServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ReachabilityService client wrapper, for convenient use.</summary>
@@ -311,19 +299,10 @@ namespace Google.Cloud.NetworkManagement.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ReachabilityService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ReachabilityServiceClient"/> using the default credentials, endpoint and
@@ -353,8 +332,9 @@ namespace Google.Cloud.NetworkManagement.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ReachabilityServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ReachabilityServiceClient"/>.</returns>
-        internal static ReachabilityServiceClient Create(grpccore::CallInvoker callInvoker, ReachabilityServiceSettings settings = null)
+        internal static ReachabilityServiceClient Create(grpccore::CallInvoker callInvoker, ReachabilityServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -363,7 +343,7 @@ namespace Google.Cloud.NetworkManagement.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ReachabilityService.ReachabilityServiceClient grpcClient = new ReachabilityService.ReachabilityServiceClient(callInvoker);
-            return new ReachabilityServiceClientImpl(grpcClient, settings);
+            return new ReachabilityServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1130,31 +1110,32 @@ namespace Google.Cloud.NetworkManagement.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ReachabilityServiceSettings"/> used within this client.</param>
-        public ReachabilityServiceClientImpl(ReachabilityService.ReachabilityServiceClient grpcClient, ReachabilityServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ReachabilityServiceClientImpl(ReachabilityService.ReachabilityServiceClient grpcClient, ReachabilityServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ReachabilityServiceSettings effectiveSettings = settings ?? ReachabilityServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateConnectivityTestOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateConnectivityTestOperationsSettings);
-            UpdateConnectivityTestOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateConnectivityTestOperationsSettings);
-            RerunConnectivityTestOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RerunConnectivityTestOperationsSettings);
-            DeleteConnectivityTestOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteConnectivityTestOperationsSettings);
-            _callListConnectivityTests = clientHelper.BuildApiCall<ListConnectivityTestsRequest, ListConnectivityTestsResponse>(grpcClient.ListConnectivityTestsAsync, grpcClient.ListConnectivityTests, effectiveSettings.ListConnectivityTestsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateConnectivityTestOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateConnectivityTestOperationsSettings, logger);
+            UpdateConnectivityTestOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateConnectivityTestOperationsSettings, logger);
+            RerunConnectivityTestOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RerunConnectivityTestOperationsSettings, logger);
+            DeleteConnectivityTestOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteConnectivityTestOperationsSettings, logger);
+            _callListConnectivityTests = clientHelper.BuildApiCall<ListConnectivityTestsRequest, ListConnectivityTestsResponse>("ListConnectivityTests", grpcClient.ListConnectivityTestsAsync, grpcClient.ListConnectivityTests, effectiveSettings.ListConnectivityTestsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListConnectivityTests);
             Modify_ListConnectivityTestsApiCall(ref _callListConnectivityTests);
-            _callGetConnectivityTest = clientHelper.BuildApiCall<GetConnectivityTestRequest, ConnectivityTest>(grpcClient.GetConnectivityTestAsync, grpcClient.GetConnectivityTest, effectiveSettings.GetConnectivityTestSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetConnectivityTest = clientHelper.BuildApiCall<GetConnectivityTestRequest, ConnectivityTest>("GetConnectivityTest", grpcClient.GetConnectivityTestAsync, grpcClient.GetConnectivityTest, effectiveSettings.GetConnectivityTestSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetConnectivityTest);
             Modify_GetConnectivityTestApiCall(ref _callGetConnectivityTest);
-            _callCreateConnectivityTest = clientHelper.BuildApiCall<CreateConnectivityTestRequest, lro::Operation>(grpcClient.CreateConnectivityTestAsync, grpcClient.CreateConnectivityTest, effectiveSettings.CreateConnectivityTestSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateConnectivityTest = clientHelper.BuildApiCall<CreateConnectivityTestRequest, lro::Operation>("CreateConnectivityTest", grpcClient.CreateConnectivityTestAsync, grpcClient.CreateConnectivityTest, effectiveSettings.CreateConnectivityTestSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateConnectivityTest);
             Modify_CreateConnectivityTestApiCall(ref _callCreateConnectivityTest);
-            _callUpdateConnectivityTest = clientHelper.BuildApiCall<UpdateConnectivityTestRequest, lro::Operation>(grpcClient.UpdateConnectivityTestAsync, grpcClient.UpdateConnectivityTest, effectiveSettings.UpdateConnectivityTestSettings).WithGoogleRequestParam("resource.name", request => request.Resource?.Name);
+            _callUpdateConnectivityTest = clientHelper.BuildApiCall<UpdateConnectivityTestRequest, lro::Operation>("UpdateConnectivityTest", grpcClient.UpdateConnectivityTestAsync, grpcClient.UpdateConnectivityTest, effectiveSettings.UpdateConnectivityTestSettings).WithGoogleRequestParam("resource.name", request => request.Resource?.Name);
             Modify_ApiCall(ref _callUpdateConnectivityTest);
             Modify_UpdateConnectivityTestApiCall(ref _callUpdateConnectivityTest);
-            _callRerunConnectivityTest = clientHelper.BuildApiCall<RerunConnectivityTestRequest, lro::Operation>(grpcClient.RerunConnectivityTestAsync, grpcClient.RerunConnectivityTest, effectiveSettings.RerunConnectivityTestSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callRerunConnectivityTest = clientHelper.BuildApiCall<RerunConnectivityTestRequest, lro::Operation>("RerunConnectivityTest", grpcClient.RerunConnectivityTestAsync, grpcClient.RerunConnectivityTest, effectiveSettings.RerunConnectivityTestSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRerunConnectivityTest);
             Modify_RerunConnectivityTestApiCall(ref _callRerunConnectivityTest);
-            _callDeleteConnectivityTest = clientHelper.BuildApiCall<DeleteConnectivityTestRequest, lro::Operation>(grpcClient.DeleteConnectivityTestAsync, grpcClient.DeleteConnectivityTest, effectiveSettings.DeleteConnectivityTestSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteConnectivityTest = clientHelper.BuildApiCall<DeleteConnectivityTestRequest, lro::Operation>("DeleteConnectivityTest", grpcClient.DeleteConnectivityTestAsync, grpcClient.DeleteConnectivityTest, effectiveSettings.DeleteConnectivityTestSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteConnectivityTest);
             Modify_DeleteConnectivityTestApiCall(ref _callDeleteConnectivityTest);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

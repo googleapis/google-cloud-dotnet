@@ -50,7 +50,7 @@ namespace Google.Cloud.Datastore.Admin.V1.Tests
                 State = Index.Types.State.Deleting,
             };
             mockGrpcClient.Setup(x => x.GetIndex(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastoreAdminClient client = new DatastoreAdminClientImpl(mockGrpcClient.Object, null);
+            DatastoreAdminClient client = new DatastoreAdminClientImpl(mockGrpcClient.Object, null, null);
             Index response = client.GetIndex(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -79,7 +79,7 @@ namespace Google.Cloud.Datastore.Admin.V1.Tests
                 State = Index.Types.State.Deleting,
             };
             mockGrpcClient.Setup(x => x.GetIndexAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Index>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastoreAdminClient client = new DatastoreAdminClientImpl(mockGrpcClient.Object, null);
+            DatastoreAdminClient client = new DatastoreAdminClientImpl(mockGrpcClient.Object, null, null);
             Index responseCallSettings = await client.GetIndexAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Index responseCancellationToken = await client.GetIndexAsync(request, st::CancellationToken.None);

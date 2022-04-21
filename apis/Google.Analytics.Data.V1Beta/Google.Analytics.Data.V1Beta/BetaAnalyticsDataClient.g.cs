@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -164,9 +164,8 @@ namespace Google.Analytics.Data.V1Beta
         public BetaAnalyticsDataSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public BetaAnalyticsDataClientBuilder()
+        public BetaAnalyticsDataClientBuilder() : base(BetaAnalyticsDataClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = BetaAnalyticsDataClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref BetaAnalyticsDataClient client);
@@ -193,29 +192,18 @@ namespace Google.Analytics.Data.V1Beta
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return BetaAnalyticsDataClient.Create(callInvoker, Settings);
+            return BetaAnalyticsDataClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<BetaAnalyticsDataClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return BetaAnalyticsDataClient.Create(callInvoker, Settings);
+            return BetaAnalyticsDataClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => BetaAnalyticsDataClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => BetaAnalyticsDataClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => BetaAnalyticsDataClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>BetaAnalyticsData client wrapper, for convenient use.</summary>
@@ -244,19 +232,10 @@ namespace Google.Analytics.Data.V1Beta
             "https://www.googleapis.com/auth/analytics.readonly",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(BetaAnalyticsData.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="BetaAnalyticsDataClient"/> using the default credentials, endpoint and
@@ -283,8 +262,9 @@ namespace Google.Analytics.Data.V1Beta
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="BetaAnalyticsDataSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="BetaAnalyticsDataClient"/>.</returns>
-        internal static BetaAnalyticsDataClient Create(grpccore::CallInvoker callInvoker, BetaAnalyticsDataSettings settings = null)
+        internal static BetaAnalyticsDataClient Create(grpccore::CallInvoker callInvoker, BetaAnalyticsDataSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -293,7 +273,7 @@ namespace Google.Analytics.Data.V1Beta
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             BetaAnalyticsData.BetaAnalyticsDataClient grpcClient = new BetaAnalyticsData.BetaAnalyticsDataClient(callInvoker);
-            return new BetaAnalyticsDataClientImpl(grpcClient, settings);
+            return new BetaAnalyticsDataClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -815,30 +795,31 @@ namespace Google.Analytics.Data.V1Beta
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="BetaAnalyticsDataSettings"/> used within this client.</param>
-        public BetaAnalyticsDataClientImpl(BetaAnalyticsData.BetaAnalyticsDataClient grpcClient, BetaAnalyticsDataSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public BetaAnalyticsDataClientImpl(BetaAnalyticsData.BetaAnalyticsDataClient grpcClient, BetaAnalyticsDataSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             BetaAnalyticsDataSettings effectiveSettings = settings ?? BetaAnalyticsDataSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callRunReport = clientHelper.BuildApiCall<RunReportRequest, RunReportResponse>(grpcClient.RunReportAsync, grpcClient.RunReport, effectiveSettings.RunReportSettings).WithGoogleRequestParam("property", request => request.Property);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callRunReport = clientHelper.BuildApiCall<RunReportRequest, RunReportResponse>("RunReport", grpcClient.RunReportAsync, grpcClient.RunReport, effectiveSettings.RunReportSettings).WithGoogleRequestParam("property", request => request.Property);
             Modify_ApiCall(ref _callRunReport);
             Modify_RunReportApiCall(ref _callRunReport);
-            _callRunPivotReport = clientHelper.BuildApiCall<RunPivotReportRequest, RunPivotReportResponse>(grpcClient.RunPivotReportAsync, grpcClient.RunPivotReport, effectiveSettings.RunPivotReportSettings).WithGoogleRequestParam("property", request => request.Property);
+            _callRunPivotReport = clientHelper.BuildApiCall<RunPivotReportRequest, RunPivotReportResponse>("RunPivotReport", grpcClient.RunPivotReportAsync, grpcClient.RunPivotReport, effectiveSettings.RunPivotReportSettings).WithGoogleRequestParam("property", request => request.Property);
             Modify_ApiCall(ref _callRunPivotReport);
             Modify_RunPivotReportApiCall(ref _callRunPivotReport);
-            _callBatchRunReports = clientHelper.BuildApiCall<BatchRunReportsRequest, BatchRunReportsResponse>(grpcClient.BatchRunReportsAsync, grpcClient.BatchRunReports, effectiveSettings.BatchRunReportsSettings).WithGoogleRequestParam("property", request => request.Property);
+            _callBatchRunReports = clientHelper.BuildApiCall<BatchRunReportsRequest, BatchRunReportsResponse>("BatchRunReports", grpcClient.BatchRunReportsAsync, grpcClient.BatchRunReports, effectiveSettings.BatchRunReportsSettings).WithGoogleRequestParam("property", request => request.Property);
             Modify_ApiCall(ref _callBatchRunReports);
             Modify_BatchRunReportsApiCall(ref _callBatchRunReports);
-            _callBatchRunPivotReports = clientHelper.BuildApiCall<BatchRunPivotReportsRequest, BatchRunPivotReportsResponse>(grpcClient.BatchRunPivotReportsAsync, grpcClient.BatchRunPivotReports, effectiveSettings.BatchRunPivotReportsSettings).WithGoogleRequestParam("property", request => request.Property);
+            _callBatchRunPivotReports = clientHelper.BuildApiCall<BatchRunPivotReportsRequest, BatchRunPivotReportsResponse>("BatchRunPivotReports", grpcClient.BatchRunPivotReportsAsync, grpcClient.BatchRunPivotReports, effectiveSettings.BatchRunPivotReportsSettings).WithGoogleRequestParam("property", request => request.Property);
             Modify_ApiCall(ref _callBatchRunPivotReports);
             Modify_BatchRunPivotReportsApiCall(ref _callBatchRunPivotReports);
-            _callGetMetadata = clientHelper.BuildApiCall<GetMetadataRequest, Metadata>(grpcClient.GetMetadataAsync, grpcClient.GetMetadata, effectiveSettings.GetMetadataSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetMetadata = clientHelper.BuildApiCall<GetMetadataRequest, Metadata>("GetMetadata", grpcClient.GetMetadataAsync, grpcClient.GetMetadata, effectiveSettings.GetMetadataSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetMetadata);
             Modify_GetMetadataApiCall(ref _callGetMetadata);
-            _callRunRealtimeReport = clientHelper.BuildApiCall<RunRealtimeReportRequest, RunRealtimeReportResponse>(grpcClient.RunRealtimeReportAsync, grpcClient.RunRealtimeReport, effectiveSettings.RunRealtimeReportSettings).WithGoogleRequestParam("property", request => request.Property);
+            _callRunRealtimeReport = clientHelper.BuildApiCall<RunRealtimeReportRequest, RunRealtimeReportResponse>("RunRealtimeReport", grpcClient.RunRealtimeReportAsync, grpcClient.RunRealtimeReport, effectiveSettings.RunRealtimeReportSettings).WithGoogleRequestParam("property", request => request.Property);
             Modify_ApiCall(ref _callRunRealtimeReport);
             Modify_RunRealtimeReportApiCall(ref _callRunRealtimeReport);
-            _callCheckCompatibility = clientHelper.BuildApiCall<CheckCompatibilityRequest, CheckCompatibilityResponse>(grpcClient.CheckCompatibilityAsync, grpcClient.CheckCompatibility, effectiveSettings.CheckCompatibilitySettings).WithGoogleRequestParam("property", request => request.Property);
+            _callCheckCompatibility = clientHelper.BuildApiCall<CheckCompatibilityRequest, CheckCompatibilityResponse>("CheckCompatibility", grpcClient.CheckCompatibilityAsync, grpcClient.CheckCompatibility, effectiveSettings.CheckCompatibilitySettings).WithGoogleRequestParam("property", request => request.Property);
             Modify_ApiCall(ref _callCheckCompatibility);
             Modify_CheckCompatibilityApiCall(ref _callCheckCompatibility);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

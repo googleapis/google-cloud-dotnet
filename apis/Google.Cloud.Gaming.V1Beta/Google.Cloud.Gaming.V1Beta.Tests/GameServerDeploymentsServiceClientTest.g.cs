@@ -53,7 +53,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetGameServerDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerDeployment response = client.GetGameServerDeployment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -84,7 +84,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetGameServerDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GameServerDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerDeployment responseCallSettings = await client.GetGameServerDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GameServerDeployment responseCancellationToken = await client.GetGameServerDeploymentAsync(request, st::CancellationToken.None);
@@ -117,7 +117,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetGameServerDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerDeployment response = client.GetGameServerDeployment(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -148,7 +148,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetGameServerDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GameServerDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerDeployment responseCallSettings = await client.GetGameServerDeploymentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GameServerDeployment responseCancellationToken = await client.GetGameServerDeploymentAsync(request.Name, st::CancellationToken.None);
@@ -181,7 +181,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetGameServerDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerDeployment response = client.GetGameServerDeployment(request.GameServerDeploymentName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -212,7 +212,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetGameServerDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GameServerDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerDeployment responseCallSettings = await client.GetGameServerDeploymentAsync(request.GameServerDeploymentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GameServerDeployment responseCancellationToken = await client.GetGameServerDeploymentAsync(request.GameServerDeploymentName, st::CancellationToken.None);
@@ -242,7 +242,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetGameServerDeploymentRollout(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerDeploymentRollout response = client.GetGameServerDeploymentRollout(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -270,7 +270,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetGameServerDeploymentRolloutAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GameServerDeploymentRollout>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerDeploymentRollout responseCallSettings = await client.GetGameServerDeploymentRolloutAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GameServerDeploymentRollout responseCancellationToken = await client.GetGameServerDeploymentRolloutAsync(request, st::CancellationToken.None);
@@ -300,7 +300,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetGameServerDeploymentRollout(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerDeploymentRollout response = client.GetGameServerDeploymentRollout(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -328,7 +328,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetGameServerDeploymentRolloutAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GameServerDeploymentRollout>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerDeploymentRollout responseCallSettings = await client.GetGameServerDeploymentRolloutAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GameServerDeploymentRollout responseCancellationToken = await client.GetGameServerDeploymentRolloutAsync(request.Name, st::CancellationToken.None);
@@ -358,7 +358,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetGameServerDeploymentRollout(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerDeploymentRollout response = client.GetGameServerDeploymentRollout(request.GameServerDeploymentName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -386,7 +386,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetGameServerDeploymentRolloutAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GameServerDeploymentRollout>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerDeploymentRollout responseCallSettings = await client.GetGameServerDeploymentRolloutAsync(request.GameServerDeploymentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GameServerDeploymentRollout responseCancellationToken = await client.GetGameServerDeploymentRolloutAsync(request.GameServerDeploymentName, st::CancellationToken.None);
@@ -415,7 +415,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 TargetState = new TargetState(),
             };
             mockGrpcClient.Setup(x => x.PreviewGameServerDeploymentRollout(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null, null);
             PreviewGameServerDeploymentRolloutResponse response = client.PreviewGameServerDeploymentRollout(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -442,7 +442,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 TargetState = new TargetState(),
             };
             mockGrpcClient.Setup(x => x.PreviewGameServerDeploymentRolloutAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PreviewGameServerDeploymentRolloutResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null, null);
             PreviewGameServerDeploymentRolloutResponse responseCallSettings = await client.PreviewGameServerDeploymentRolloutAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PreviewGameServerDeploymentRolloutResponse responseCancellationToken = await client.PreviewGameServerDeploymentRolloutAsync(request, st::CancellationToken.None);
@@ -471,7 +471,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.FetchDeploymentState(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null, null);
             FetchDeploymentStateResponse response = client.FetchDeploymentState(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -498,7 +498,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.FetchDeploymentStateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FetchDeploymentStateResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null, null);
             FetchDeploymentStateResponse responseCallSettings = await client.FetchDeploymentStateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FetchDeploymentStateResponse responseCancellationToken = await client.FetchDeploymentStateAsync(request, st::CancellationToken.None);

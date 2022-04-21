@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -446,9 +446,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         public NetworkSecuritySettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public NetworkSecurityClientBuilder()
+        public NetworkSecurityClientBuilder() : base(NetworkSecurityClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = NetworkSecurityClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref NetworkSecurityClient client);
@@ -475,29 +474,18 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return NetworkSecurityClient.Create(callInvoker, Settings);
+            return NetworkSecurityClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<NetworkSecurityClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return NetworkSecurityClient.Create(callInvoker, Settings);
+            return NetworkSecurityClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => NetworkSecurityClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => NetworkSecurityClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => NetworkSecurityClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>NetworkSecurity client wrapper, for convenient use.</summary>
@@ -527,19 +515,10 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(NetworkSecurity.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="NetworkSecurityClient"/> using the default credentials, endpoint and
@@ -566,8 +545,9 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="NetworkSecuritySettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="NetworkSecurityClient"/>.</returns>
-        internal static NetworkSecurityClient Create(grpccore::CallInvoker callInvoker, NetworkSecuritySettings settings = null)
+        internal static NetworkSecurityClient Create(grpccore::CallInvoker callInvoker, NetworkSecuritySettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -576,7 +556,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             NetworkSecurity.NetworkSecurityClient grpcClient = new NetworkSecurity.NetworkSecurityClient(callInvoker);
-            return new NetworkSecurityClientImpl(grpcClient, settings);
+            return new NetworkSecurityClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -2687,63 +2667,64 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="NetworkSecuritySettings"/> used within this client.</param>
-        public NetworkSecurityClientImpl(NetworkSecurity.NetworkSecurityClient grpcClient, NetworkSecuritySettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public NetworkSecurityClientImpl(NetworkSecurity.NetworkSecurityClient grpcClient, NetworkSecuritySettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             NetworkSecuritySettings effectiveSettings = settings ?? NetworkSecuritySettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateAuthorizationPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAuthorizationPolicyOperationsSettings);
-            UpdateAuthorizationPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAuthorizationPolicyOperationsSettings);
-            DeleteAuthorizationPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAuthorizationPolicyOperationsSettings);
-            CreateServerTlsPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateServerTlsPolicyOperationsSettings);
-            UpdateServerTlsPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateServerTlsPolicyOperationsSettings);
-            DeleteServerTlsPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteServerTlsPolicyOperationsSettings);
-            CreateClientTlsPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateClientTlsPolicyOperationsSettings);
-            UpdateClientTlsPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateClientTlsPolicyOperationsSettings);
-            DeleteClientTlsPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteClientTlsPolicyOperationsSettings);
-            _callListAuthorizationPolicies = clientHelper.BuildApiCall<ListAuthorizationPoliciesRequest, ListAuthorizationPoliciesResponse>(grpcClient.ListAuthorizationPoliciesAsync, grpcClient.ListAuthorizationPolicies, effectiveSettings.ListAuthorizationPoliciesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateAuthorizationPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAuthorizationPolicyOperationsSettings, logger);
+            UpdateAuthorizationPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAuthorizationPolicyOperationsSettings, logger);
+            DeleteAuthorizationPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAuthorizationPolicyOperationsSettings, logger);
+            CreateServerTlsPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateServerTlsPolicyOperationsSettings, logger);
+            UpdateServerTlsPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateServerTlsPolicyOperationsSettings, logger);
+            DeleteServerTlsPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteServerTlsPolicyOperationsSettings, logger);
+            CreateClientTlsPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateClientTlsPolicyOperationsSettings, logger);
+            UpdateClientTlsPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateClientTlsPolicyOperationsSettings, logger);
+            DeleteClientTlsPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteClientTlsPolicyOperationsSettings, logger);
+            _callListAuthorizationPolicies = clientHelper.BuildApiCall<ListAuthorizationPoliciesRequest, ListAuthorizationPoliciesResponse>("ListAuthorizationPolicies", grpcClient.ListAuthorizationPoliciesAsync, grpcClient.ListAuthorizationPolicies, effectiveSettings.ListAuthorizationPoliciesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAuthorizationPolicies);
             Modify_ListAuthorizationPoliciesApiCall(ref _callListAuthorizationPolicies);
-            _callGetAuthorizationPolicy = clientHelper.BuildApiCall<GetAuthorizationPolicyRequest, AuthorizationPolicy>(grpcClient.GetAuthorizationPolicyAsync, grpcClient.GetAuthorizationPolicy, effectiveSettings.GetAuthorizationPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetAuthorizationPolicy = clientHelper.BuildApiCall<GetAuthorizationPolicyRequest, AuthorizationPolicy>("GetAuthorizationPolicy", grpcClient.GetAuthorizationPolicyAsync, grpcClient.GetAuthorizationPolicy, effectiveSettings.GetAuthorizationPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAuthorizationPolicy);
             Modify_GetAuthorizationPolicyApiCall(ref _callGetAuthorizationPolicy);
-            _callCreateAuthorizationPolicy = clientHelper.BuildApiCall<CreateAuthorizationPolicyRequest, lro::Operation>(grpcClient.CreateAuthorizationPolicyAsync, grpcClient.CreateAuthorizationPolicy, effectiveSettings.CreateAuthorizationPolicySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateAuthorizationPolicy = clientHelper.BuildApiCall<CreateAuthorizationPolicyRequest, lro::Operation>("CreateAuthorizationPolicy", grpcClient.CreateAuthorizationPolicyAsync, grpcClient.CreateAuthorizationPolicy, effectiveSettings.CreateAuthorizationPolicySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateAuthorizationPolicy);
             Modify_CreateAuthorizationPolicyApiCall(ref _callCreateAuthorizationPolicy);
-            _callUpdateAuthorizationPolicy = clientHelper.BuildApiCall<UpdateAuthorizationPolicyRequest, lro::Operation>(grpcClient.UpdateAuthorizationPolicyAsync, grpcClient.UpdateAuthorizationPolicy, effectiveSettings.UpdateAuthorizationPolicySettings).WithGoogleRequestParam("authorization_policy.name", request => request.AuthorizationPolicy?.Name);
+            _callUpdateAuthorizationPolicy = clientHelper.BuildApiCall<UpdateAuthorizationPolicyRequest, lro::Operation>("UpdateAuthorizationPolicy", grpcClient.UpdateAuthorizationPolicyAsync, grpcClient.UpdateAuthorizationPolicy, effectiveSettings.UpdateAuthorizationPolicySettings).WithGoogleRequestParam("authorization_policy.name", request => request.AuthorizationPolicy?.Name);
             Modify_ApiCall(ref _callUpdateAuthorizationPolicy);
             Modify_UpdateAuthorizationPolicyApiCall(ref _callUpdateAuthorizationPolicy);
-            _callDeleteAuthorizationPolicy = clientHelper.BuildApiCall<DeleteAuthorizationPolicyRequest, lro::Operation>(grpcClient.DeleteAuthorizationPolicyAsync, grpcClient.DeleteAuthorizationPolicy, effectiveSettings.DeleteAuthorizationPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteAuthorizationPolicy = clientHelper.BuildApiCall<DeleteAuthorizationPolicyRequest, lro::Operation>("DeleteAuthorizationPolicy", grpcClient.DeleteAuthorizationPolicyAsync, grpcClient.DeleteAuthorizationPolicy, effectiveSettings.DeleteAuthorizationPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAuthorizationPolicy);
             Modify_DeleteAuthorizationPolicyApiCall(ref _callDeleteAuthorizationPolicy);
-            _callListServerTlsPolicies = clientHelper.BuildApiCall<ListServerTlsPoliciesRequest, ListServerTlsPoliciesResponse>(grpcClient.ListServerTlsPoliciesAsync, grpcClient.ListServerTlsPolicies, effectiveSettings.ListServerTlsPoliciesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListServerTlsPolicies = clientHelper.BuildApiCall<ListServerTlsPoliciesRequest, ListServerTlsPoliciesResponse>("ListServerTlsPolicies", grpcClient.ListServerTlsPoliciesAsync, grpcClient.ListServerTlsPolicies, effectiveSettings.ListServerTlsPoliciesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListServerTlsPolicies);
             Modify_ListServerTlsPoliciesApiCall(ref _callListServerTlsPolicies);
-            _callGetServerTlsPolicy = clientHelper.BuildApiCall<GetServerTlsPolicyRequest, ServerTlsPolicy>(grpcClient.GetServerTlsPolicyAsync, grpcClient.GetServerTlsPolicy, effectiveSettings.GetServerTlsPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetServerTlsPolicy = clientHelper.BuildApiCall<GetServerTlsPolicyRequest, ServerTlsPolicy>("GetServerTlsPolicy", grpcClient.GetServerTlsPolicyAsync, grpcClient.GetServerTlsPolicy, effectiveSettings.GetServerTlsPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetServerTlsPolicy);
             Modify_GetServerTlsPolicyApiCall(ref _callGetServerTlsPolicy);
-            _callCreateServerTlsPolicy = clientHelper.BuildApiCall<CreateServerTlsPolicyRequest, lro::Operation>(grpcClient.CreateServerTlsPolicyAsync, grpcClient.CreateServerTlsPolicy, effectiveSettings.CreateServerTlsPolicySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateServerTlsPolicy = clientHelper.BuildApiCall<CreateServerTlsPolicyRequest, lro::Operation>("CreateServerTlsPolicy", grpcClient.CreateServerTlsPolicyAsync, grpcClient.CreateServerTlsPolicy, effectiveSettings.CreateServerTlsPolicySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateServerTlsPolicy);
             Modify_CreateServerTlsPolicyApiCall(ref _callCreateServerTlsPolicy);
-            _callUpdateServerTlsPolicy = clientHelper.BuildApiCall<UpdateServerTlsPolicyRequest, lro::Operation>(grpcClient.UpdateServerTlsPolicyAsync, grpcClient.UpdateServerTlsPolicy, effectiveSettings.UpdateServerTlsPolicySettings).WithGoogleRequestParam("server_tls_policy.name", request => request.ServerTlsPolicy?.Name);
+            _callUpdateServerTlsPolicy = clientHelper.BuildApiCall<UpdateServerTlsPolicyRequest, lro::Operation>("UpdateServerTlsPolicy", grpcClient.UpdateServerTlsPolicyAsync, grpcClient.UpdateServerTlsPolicy, effectiveSettings.UpdateServerTlsPolicySettings).WithGoogleRequestParam("server_tls_policy.name", request => request.ServerTlsPolicy?.Name);
             Modify_ApiCall(ref _callUpdateServerTlsPolicy);
             Modify_UpdateServerTlsPolicyApiCall(ref _callUpdateServerTlsPolicy);
-            _callDeleteServerTlsPolicy = clientHelper.BuildApiCall<DeleteServerTlsPolicyRequest, lro::Operation>(grpcClient.DeleteServerTlsPolicyAsync, grpcClient.DeleteServerTlsPolicy, effectiveSettings.DeleteServerTlsPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteServerTlsPolicy = clientHelper.BuildApiCall<DeleteServerTlsPolicyRequest, lro::Operation>("DeleteServerTlsPolicy", grpcClient.DeleteServerTlsPolicyAsync, grpcClient.DeleteServerTlsPolicy, effectiveSettings.DeleteServerTlsPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteServerTlsPolicy);
             Modify_DeleteServerTlsPolicyApiCall(ref _callDeleteServerTlsPolicy);
-            _callListClientTlsPolicies = clientHelper.BuildApiCall<ListClientTlsPoliciesRequest, ListClientTlsPoliciesResponse>(grpcClient.ListClientTlsPoliciesAsync, grpcClient.ListClientTlsPolicies, effectiveSettings.ListClientTlsPoliciesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListClientTlsPolicies = clientHelper.BuildApiCall<ListClientTlsPoliciesRequest, ListClientTlsPoliciesResponse>("ListClientTlsPolicies", grpcClient.ListClientTlsPoliciesAsync, grpcClient.ListClientTlsPolicies, effectiveSettings.ListClientTlsPoliciesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListClientTlsPolicies);
             Modify_ListClientTlsPoliciesApiCall(ref _callListClientTlsPolicies);
-            _callGetClientTlsPolicy = clientHelper.BuildApiCall<GetClientTlsPolicyRequest, ClientTlsPolicy>(grpcClient.GetClientTlsPolicyAsync, grpcClient.GetClientTlsPolicy, effectiveSettings.GetClientTlsPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetClientTlsPolicy = clientHelper.BuildApiCall<GetClientTlsPolicyRequest, ClientTlsPolicy>("GetClientTlsPolicy", grpcClient.GetClientTlsPolicyAsync, grpcClient.GetClientTlsPolicy, effectiveSettings.GetClientTlsPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetClientTlsPolicy);
             Modify_GetClientTlsPolicyApiCall(ref _callGetClientTlsPolicy);
-            _callCreateClientTlsPolicy = clientHelper.BuildApiCall<CreateClientTlsPolicyRequest, lro::Operation>(grpcClient.CreateClientTlsPolicyAsync, grpcClient.CreateClientTlsPolicy, effectiveSettings.CreateClientTlsPolicySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateClientTlsPolicy = clientHelper.BuildApiCall<CreateClientTlsPolicyRequest, lro::Operation>("CreateClientTlsPolicy", grpcClient.CreateClientTlsPolicyAsync, grpcClient.CreateClientTlsPolicy, effectiveSettings.CreateClientTlsPolicySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateClientTlsPolicy);
             Modify_CreateClientTlsPolicyApiCall(ref _callCreateClientTlsPolicy);
-            _callUpdateClientTlsPolicy = clientHelper.BuildApiCall<UpdateClientTlsPolicyRequest, lro::Operation>(grpcClient.UpdateClientTlsPolicyAsync, grpcClient.UpdateClientTlsPolicy, effectiveSettings.UpdateClientTlsPolicySettings).WithGoogleRequestParam("client_tls_policy.name", request => request.ClientTlsPolicy?.Name);
+            _callUpdateClientTlsPolicy = clientHelper.BuildApiCall<UpdateClientTlsPolicyRequest, lro::Operation>("UpdateClientTlsPolicy", grpcClient.UpdateClientTlsPolicyAsync, grpcClient.UpdateClientTlsPolicy, effectiveSettings.UpdateClientTlsPolicySettings).WithGoogleRequestParam("client_tls_policy.name", request => request.ClientTlsPolicy?.Name);
             Modify_ApiCall(ref _callUpdateClientTlsPolicy);
             Modify_UpdateClientTlsPolicyApiCall(ref _callUpdateClientTlsPolicy);
-            _callDeleteClientTlsPolicy = clientHelper.BuildApiCall<DeleteClientTlsPolicyRequest, lro::Operation>(grpcClient.DeleteClientTlsPolicyAsync, grpcClient.DeleteClientTlsPolicy, effectiveSettings.DeleteClientTlsPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteClientTlsPolicy = clientHelper.BuildApiCall<DeleteClientTlsPolicyRequest, lro::Operation>("DeleteClientTlsPolicy", grpcClient.DeleteClientTlsPolicyAsync, grpcClient.DeleteClientTlsPolicy, effectiveSettings.DeleteClientTlsPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteClientTlsPolicy);
             Modify_DeleteClientTlsPolicyApiCall(ref _callDeleteClientTlsPolicy);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

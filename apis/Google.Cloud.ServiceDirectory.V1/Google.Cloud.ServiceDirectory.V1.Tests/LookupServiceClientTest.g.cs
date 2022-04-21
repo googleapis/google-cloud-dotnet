@@ -41,7 +41,7 @@ namespace Google.Cloud.ServiceDirectory.V1.Tests
                 Service = new Service(),
             };
             mockGrpcClient.Setup(x => x.ResolveService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LookupServiceClient client = new LookupServiceClientImpl(mockGrpcClient.Object, null);
+            LookupServiceClient client = new LookupServiceClientImpl(mockGrpcClient.Object, null, null);
             ResolveServiceResponse response = client.ResolveService(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -62,7 +62,7 @@ namespace Google.Cloud.ServiceDirectory.V1.Tests
                 Service = new Service(),
             };
             mockGrpcClient.Setup(x => x.ResolveServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ResolveServiceResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LookupServiceClient client = new LookupServiceClientImpl(mockGrpcClient.Object, null);
+            LookupServiceClient client = new LookupServiceClientImpl(mockGrpcClient.Object, null, null);
             ResolveServiceResponse responseCallSettings = await client.ResolveServiceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ResolveServiceResponse responseCancellationToken = await client.ResolveServiceAsync(request, st::CancellationToken.None);

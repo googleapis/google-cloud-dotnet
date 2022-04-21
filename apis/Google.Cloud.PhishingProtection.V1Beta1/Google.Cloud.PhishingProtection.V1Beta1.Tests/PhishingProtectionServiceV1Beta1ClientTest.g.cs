@@ -38,7 +38,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Tests
             };
             ReportPhishingResponse expectedResponse = new ReportPhishingResponse { };
             mockGrpcClient.Setup(x => x.ReportPhishing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PhishingProtectionServiceV1Beta1Client client = new PhishingProtectionServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            PhishingProtectionServiceV1Beta1Client client = new PhishingProtectionServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             ReportPhishingResponse response = client.ReportPhishing(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -55,7 +55,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Tests
             };
             ReportPhishingResponse expectedResponse = new ReportPhishingResponse { };
             mockGrpcClient.Setup(x => x.ReportPhishingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReportPhishingResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PhishingProtectionServiceV1Beta1Client client = new PhishingProtectionServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            PhishingProtectionServiceV1Beta1Client client = new PhishingProtectionServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             ReportPhishingResponse responseCallSettings = await client.ReportPhishingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReportPhishingResponse responseCancellationToken = await client.ReportPhishingAsync(request, st::CancellationToken.None);
@@ -74,7 +74,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Tests
             };
             ReportPhishingResponse expectedResponse = new ReportPhishingResponse { };
             mockGrpcClient.Setup(x => x.ReportPhishing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PhishingProtectionServiceV1Beta1Client client = new PhishingProtectionServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            PhishingProtectionServiceV1Beta1Client client = new PhishingProtectionServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             ReportPhishingResponse response = client.ReportPhishing(request.Parent, request.Uri);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -91,7 +91,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Tests
             };
             ReportPhishingResponse expectedResponse = new ReportPhishingResponse { };
             mockGrpcClient.Setup(x => x.ReportPhishingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReportPhishingResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PhishingProtectionServiceV1Beta1Client client = new PhishingProtectionServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            PhishingProtectionServiceV1Beta1Client client = new PhishingProtectionServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             ReportPhishingResponse responseCallSettings = await client.ReportPhishingAsync(request.Parent, request.Uri, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReportPhishingResponse responseCancellationToken = await client.ReportPhishingAsync(request.Parent, request.Uri, st::CancellationToken.None);
@@ -110,7 +110,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Tests
             };
             ReportPhishingResponse expectedResponse = new ReportPhishingResponse { };
             mockGrpcClient.Setup(x => x.ReportPhishing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PhishingProtectionServiceV1Beta1Client client = new PhishingProtectionServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            PhishingProtectionServiceV1Beta1Client client = new PhishingProtectionServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             ReportPhishingResponse response = client.ReportPhishing(request.ParentAsProjectName, request.Uri);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -127,7 +127,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Tests
             };
             ReportPhishingResponse expectedResponse = new ReportPhishingResponse { };
             mockGrpcClient.Setup(x => x.ReportPhishingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReportPhishingResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PhishingProtectionServiceV1Beta1Client client = new PhishingProtectionServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            PhishingProtectionServiceV1Beta1Client client = new PhishingProtectionServiceV1Beta1ClientImpl(mockGrpcClient.Object, null, null);
             ReportPhishingResponse responseCallSettings = await client.ReportPhishingAsync(request.ParentAsProjectName, request.Uri, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReportPhishingResponse responseCancellationToken = await client.ReportPhishingAsync(request.ParentAsProjectName, request.Uri, st::CancellationToken.None);

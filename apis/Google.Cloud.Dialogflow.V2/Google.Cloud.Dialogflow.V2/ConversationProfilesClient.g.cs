@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -245,9 +245,8 @@ namespace Google.Cloud.Dialogflow.V2
         public ConversationProfilesSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ConversationProfilesClientBuilder()
+        public ConversationProfilesClientBuilder() : base(ConversationProfilesClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ConversationProfilesClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ConversationProfilesClient client);
@@ -274,29 +273,18 @@ namespace Google.Cloud.Dialogflow.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ConversationProfilesClient.Create(callInvoker, Settings);
+            return ConversationProfilesClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ConversationProfilesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ConversationProfilesClient.Create(callInvoker, Settings);
+            return ConversationProfilesClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ConversationProfilesClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ConversationProfilesClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ConversationProfilesClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ConversationProfiles client wrapper, for convenient use.</summary>
@@ -325,19 +313,10 @@ namespace Google.Cloud.Dialogflow.V2
             "https://www.googleapis.com/auth/dialogflow",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ConversationProfiles.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ConversationProfilesClient"/> using the default credentials, endpoint
@@ -367,8 +346,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ConversationProfilesSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ConversationProfilesClient"/>.</returns>
-        internal static ConversationProfilesClient Create(grpccore::CallInvoker callInvoker, ConversationProfilesSettings settings = null)
+        internal static ConversationProfilesClient Create(grpccore::CallInvoker callInvoker, ConversationProfilesSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -377,7 +357,7 @@ namespace Google.Cloud.Dialogflow.V2
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ConversationProfiles.ConversationProfilesClient grpcClient = new ConversationProfiles.ConversationProfilesClient(callInvoker);
-            return new ConversationProfilesClientImpl(grpcClient, settings);
+            return new ConversationProfilesClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1496,32 +1476,33 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ConversationProfilesSettings"/> used within this client.</param>
-        public ConversationProfilesClientImpl(ConversationProfiles.ConversationProfilesClient grpcClient, ConversationProfilesSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ConversationProfilesClientImpl(ConversationProfiles.ConversationProfilesClient grpcClient, ConversationProfilesSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ConversationProfilesSettings effectiveSettings = settings ?? ConversationProfilesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            SetSuggestionFeatureConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetSuggestionFeatureConfigOperationsSettings);
-            ClearSuggestionFeatureConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ClearSuggestionFeatureConfigOperationsSettings);
-            _callListConversationProfiles = clientHelper.BuildApiCall<ListConversationProfilesRequest, ListConversationProfilesResponse>(grpcClient.ListConversationProfilesAsync, grpcClient.ListConversationProfiles, effectiveSettings.ListConversationProfilesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            SetSuggestionFeatureConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetSuggestionFeatureConfigOperationsSettings, logger);
+            ClearSuggestionFeatureConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ClearSuggestionFeatureConfigOperationsSettings, logger);
+            _callListConversationProfiles = clientHelper.BuildApiCall<ListConversationProfilesRequest, ListConversationProfilesResponse>("ListConversationProfiles", grpcClient.ListConversationProfilesAsync, grpcClient.ListConversationProfiles, effectiveSettings.ListConversationProfilesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListConversationProfiles);
             Modify_ListConversationProfilesApiCall(ref _callListConversationProfiles);
-            _callGetConversationProfile = clientHelper.BuildApiCall<GetConversationProfileRequest, ConversationProfile>(grpcClient.GetConversationProfileAsync, grpcClient.GetConversationProfile, effectiveSettings.GetConversationProfileSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetConversationProfile = clientHelper.BuildApiCall<GetConversationProfileRequest, ConversationProfile>("GetConversationProfile", grpcClient.GetConversationProfileAsync, grpcClient.GetConversationProfile, effectiveSettings.GetConversationProfileSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetConversationProfile);
             Modify_GetConversationProfileApiCall(ref _callGetConversationProfile);
-            _callCreateConversationProfile = clientHelper.BuildApiCall<CreateConversationProfileRequest, ConversationProfile>(grpcClient.CreateConversationProfileAsync, grpcClient.CreateConversationProfile, effectiveSettings.CreateConversationProfileSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateConversationProfile = clientHelper.BuildApiCall<CreateConversationProfileRequest, ConversationProfile>("CreateConversationProfile", grpcClient.CreateConversationProfileAsync, grpcClient.CreateConversationProfile, effectiveSettings.CreateConversationProfileSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateConversationProfile);
             Modify_CreateConversationProfileApiCall(ref _callCreateConversationProfile);
-            _callUpdateConversationProfile = clientHelper.BuildApiCall<UpdateConversationProfileRequest, ConversationProfile>(grpcClient.UpdateConversationProfileAsync, grpcClient.UpdateConversationProfile, effectiveSettings.UpdateConversationProfileSettings).WithGoogleRequestParam("conversation_profile.name", request => request.ConversationProfile?.Name);
+            _callUpdateConversationProfile = clientHelper.BuildApiCall<UpdateConversationProfileRequest, ConversationProfile>("UpdateConversationProfile", grpcClient.UpdateConversationProfileAsync, grpcClient.UpdateConversationProfile, effectiveSettings.UpdateConversationProfileSettings).WithGoogleRequestParam("conversation_profile.name", request => request.ConversationProfile?.Name);
             Modify_ApiCall(ref _callUpdateConversationProfile);
             Modify_UpdateConversationProfileApiCall(ref _callUpdateConversationProfile);
-            _callDeleteConversationProfile = clientHelper.BuildApiCall<DeleteConversationProfileRequest, wkt::Empty>(grpcClient.DeleteConversationProfileAsync, grpcClient.DeleteConversationProfile, effectiveSettings.DeleteConversationProfileSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteConversationProfile = clientHelper.BuildApiCall<DeleteConversationProfileRequest, wkt::Empty>("DeleteConversationProfile", grpcClient.DeleteConversationProfileAsync, grpcClient.DeleteConversationProfile, effectiveSettings.DeleteConversationProfileSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteConversationProfile);
             Modify_DeleteConversationProfileApiCall(ref _callDeleteConversationProfile);
-            _callSetSuggestionFeatureConfig = clientHelper.BuildApiCall<SetSuggestionFeatureConfigRequest, lro::Operation>(grpcClient.SetSuggestionFeatureConfigAsync, grpcClient.SetSuggestionFeatureConfig, effectiveSettings.SetSuggestionFeatureConfigSettings).WithGoogleRequestParam("conversation_profile", request => request.ConversationProfile);
+            _callSetSuggestionFeatureConfig = clientHelper.BuildApiCall<SetSuggestionFeatureConfigRequest, lro::Operation>("SetSuggestionFeatureConfig", grpcClient.SetSuggestionFeatureConfigAsync, grpcClient.SetSuggestionFeatureConfig, effectiveSettings.SetSuggestionFeatureConfigSettings).WithGoogleRequestParam("conversation_profile", request => request.ConversationProfile);
             Modify_ApiCall(ref _callSetSuggestionFeatureConfig);
             Modify_SetSuggestionFeatureConfigApiCall(ref _callSetSuggestionFeatureConfig);
-            _callClearSuggestionFeatureConfig = clientHelper.BuildApiCall<ClearSuggestionFeatureConfigRequest, lro::Operation>(grpcClient.ClearSuggestionFeatureConfigAsync, grpcClient.ClearSuggestionFeatureConfig, effectiveSettings.ClearSuggestionFeatureConfigSettings).WithGoogleRequestParam("conversation_profile", request => request.ConversationProfile);
+            _callClearSuggestionFeatureConfig = clientHelper.BuildApiCall<ClearSuggestionFeatureConfigRequest, lro::Operation>("ClearSuggestionFeatureConfig", grpcClient.ClearSuggestionFeatureConfigAsync, grpcClient.ClearSuggestionFeatureConfig, effectiveSettings.ClearSuggestionFeatureConfigSettings).WithGoogleRequestParam("conversation_profile", request => request.ConversationProfile);
             Modify_ApiCall(ref _callClearSuggestionFeatureConfig);
             Modify_ClearSuggestionFeatureConfigApiCall(ref _callClearSuggestionFeatureConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

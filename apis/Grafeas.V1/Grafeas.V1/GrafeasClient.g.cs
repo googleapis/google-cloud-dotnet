@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -318,9 +318,8 @@ namespace Grafeas.V1
         public GrafeasSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public GrafeasClientBuilder()
+        public GrafeasClientBuilder() : base(GrafeasClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = GrafeasClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref GrafeasClient client);
@@ -347,23 +346,15 @@ namespace Grafeas.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return GrafeasClient.Create(callInvoker, Settings);
+            return GrafeasClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<GrafeasClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return GrafeasClient.Create(callInvoker, Settings);
+            return GrafeasClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => GrafeasClient.DefaultScopes;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Grafeas client wrapper, for convenient use.</summary>
@@ -390,17 +381,28 @@ namespace Grafeas.V1
         /// <remarks>The default Grafeas scopes are:<list type="bullet"></list></remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] { });
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Grafeas.Descriptor, null, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
+
+        /// <summary>
+        /// Asynchronously creates a <see cref="GrafeasClient"/> using the default credentials, endpoint and settings. 
+        /// To specify custom credentials or other settings, use <see cref="GrafeasClientBuilder"/>.
+        /// </summary>
+        /// <param name="cancellationToken">
+        /// The <see cref="st::CancellationToken"/> to use while creating the client.
+        /// </param>
+        /// <returns>The task representing the created <see cref="GrafeasClient"/>.</returns>
+        public static stt::Task<GrafeasClient> CreateAsync(st::CancellationToken cancellationToken = default) =>
+            new GrafeasClientBuilder().BuildAsync(cancellationToken);
+
+        /// <summary>
+        /// Synchronously creates a <see cref="GrafeasClient"/> using the default credentials, endpoint and settings. To
+        /// specify custom credentials or other settings, use <see cref="GrafeasClientBuilder"/>.
+        /// </summary>
+        /// <returns>The created <see cref="GrafeasClient"/>.</returns>
+        public static GrafeasClient Create() => new GrafeasClientBuilder().Build();
 
         /// <summary>
         /// Creates a <see cref="GrafeasClient"/> which uses the specified call invoker for remote operations.
@@ -409,8 +411,9 @@ namespace Grafeas.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="GrafeasSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="GrafeasClient"/>.</returns>
-        internal static GrafeasClient Create(grpccore::CallInvoker callInvoker, GrafeasSettings settings = null)
+        internal static GrafeasClient Create(grpccore::CallInvoker callInvoker, GrafeasSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -419,8 +422,21 @@ namespace Grafeas.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Grafeas.GrafeasClient grpcClient = new Grafeas.GrafeasClient(callInvoker);
-            return new GrafeasClientImpl(grpcClient, settings);
+            return new GrafeasClientImpl(grpcClient, settings, logger);
         }
+
+        /// <summary>
+        /// Shuts down any channels automatically created by <see cref="Create()"/> and
+        /// <see cref="CreateAsync(st::CancellationToken)"/>. Channels which weren't automatically created are not
+        /// affected.
+        /// </summary>
+        /// <remarks>
+        /// After calling this method, further calls to <see cref="Create()"/> and
+        /// <see cref="CreateAsync(st::CancellationToken)"/> will create new channels, which could in turn be shut down
+        /// by another call to this method.
+        /// </remarks>
+        /// <returns>A task representing the asynchronous shutdown operation.</returns>
+        public static stt::Task ShutdownDefaultChannelsAsync() => ChannelPool.ShutdownChannelsAsync();
 
         /// <summary>The underlying gRPC Grafeas client</summary>
         public virtual Grafeas.GrafeasClient GrpcClient => throw new sys::NotImplementedException();
@@ -2362,51 +2378,52 @@ namespace Grafeas.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="GrafeasSettings"/> used within this client.</param>
-        public GrafeasClientImpl(Grafeas.GrafeasClient grpcClient, GrafeasSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public GrafeasClientImpl(Grafeas.GrafeasClient grpcClient, GrafeasSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             GrafeasSettings effectiveSettings = settings ?? GrafeasSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callGetOccurrence = clientHelper.BuildApiCall<GetOccurrenceRequest, Occurrence>(grpcClient.GetOccurrenceAsync, grpcClient.GetOccurrence, effectiveSettings.GetOccurrenceSettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callGetOccurrence = clientHelper.BuildApiCall<GetOccurrenceRequest, Occurrence>("GetOccurrence", grpcClient.GetOccurrenceAsync, grpcClient.GetOccurrence, effectiveSettings.GetOccurrenceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetOccurrence);
             Modify_GetOccurrenceApiCall(ref _callGetOccurrence);
-            _callListOccurrences = clientHelper.BuildApiCall<ListOccurrencesRequest, ListOccurrencesResponse>(grpcClient.ListOccurrencesAsync, grpcClient.ListOccurrences, effectiveSettings.ListOccurrencesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListOccurrences = clientHelper.BuildApiCall<ListOccurrencesRequest, ListOccurrencesResponse>("ListOccurrences", grpcClient.ListOccurrencesAsync, grpcClient.ListOccurrences, effectiveSettings.ListOccurrencesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListOccurrences);
             Modify_ListOccurrencesApiCall(ref _callListOccurrences);
-            _callDeleteOccurrence = clientHelper.BuildApiCall<DeleteOccurrenceRequest, wkt::Empty>(grpcClient.DeleteOccurrenceAsync, grpcClient.DeleteOccurrence, effectiveSettings.DeleteOccurrenceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteOccurrence = clientHelper.BuildApiCall<DeleteOccurrenceRequest, wkt::Empty>("DeleteOccurrence", grpcClient.DeleteOccurrenceAsync, grpcClient.DeleteOccurrence, effectiveSettings.DeleteOccurrenceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteOccurrence);
             Modify_DeleteOccurrenceApiCall(ref _callDeleteOccurrence);
-            _callCreateOccurrence = clientHelper.BuildApiCall<CreateOccurrenceRequest, Occurrence>(grpcClient.CreateOccurrenceAsync, grpcClient.CreateOccurrence, effectiveSettings.CreateOccurrenceSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateOccurrence = clientHelper.BuildApiCall<CreateOccurrenceRequest, Occurrence>("CreateOccurrence", grpcClient.CreateOccurrenceAsync, grpcClient.CreateOccurrence, effectiveSettings.CreateOccurrenceSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateOccurrence);
             Modify_CreateOccurrenceApiCall(ref _callCreateOccurrence);
-            _callBatchCreateOccurrences = clientHelper.BuildApiCall<BatchCreateOccurrencesRequest, BatchCreateOccurrencesResponse>(grpcClient.BatchCreateOccurrencesAsync, grpcClient.BatchCreateOccurrences, effectiveSettings.BatchCreateOccurrencesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callBatchCreateOccurrences = clientHelper.BuildApiCall<BatchCreateOccurrencesRequest, BatchCreateOccurrencesResponse>("BatchCreateOccurrences", grpcClient.BatchCreateOccurrencesAsync, grpcClient.BatchCreateOccurrences, effectiveSettings.BatchCreateOccurrencesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchCreateOccurrences);
             Modify_BatchCreateOccurrencesApiCall(ref _callBatchCreateOccurrences);
-            _callUpdateOccurrence = clientHelper.BuildApiCall<UpdateOccurrenceRequest, Occurrence>(grpcClient.UpdateOccurrenceAsync, grpcClient.UpdateOccurrence, effectiveSettings.UpdateOccurrenceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateOccurrence = clientHelper.BuildApiCall<UpdateOccurrenceRequest, Occurrence>("UpdateOccurrence", grpcClient.UpdateOccurrenceAsync, grpcClient.UpdateOccurrence, effectiveSettings.UpdateOccurrenceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateOccurrence);
             Modify_UpdateOccurrenceApiCall(ref _callUpdateOccurrence);
-            _callGetOccurrenceNote = clientHelper.BuildApiCall<GetOccurrenceNoteRequest, Note>(grpcClient.GetOccurrenceNoteAsync, grpcClient.GetOccurrenceNote, effectiveSettings.GetOccurrenceNoteSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetOccurrenceNote = clientHelper.BuildApiCall<GetOccurrenceNoteRequest, Note>("GetOccurrenceNote", grpcClient.GetOccurrenceNoteAsync, grpcClient.GetOccurrenceNote, effectiveSettings.GetOccurrenceNoteSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetOccurrenceNote);
             Modify_GetOccurrenceNoteApiCall(ref _callGetOccurrenceNote);
-            _callGetNote = clientHelper.BuildApiCall<GetNoteRequest, Note>(grpcClient.GetNoteAsync, grpcClient.GetNote, effectiveSettings.GetNoteSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetNote = clientHelper.BuildApiCall<GetNoteRequest, Note>("GetNote", grpcClient.GetNoteAsync, grpcClient.GetNote, effectiveSettings.GetNoteSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetNote);
             Modify_GetNoteApiCall(ref _callGetNote);
-            _callListNotes = clientHelper.BuildApiCall<ListNotesRequest, ListNotesResponse>(grpcClient.ListNotesAsync, grpcClient.ListNotes, effectiveSettings.ListNotesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListNotes = clientHelper.BuildApiCall<ListNotesRequest, ListNotesResponse>("ListNotes", grpcClient.ListNotesAsync, grpcClient.ListNotes, effectiveSettings.ListNotesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListNotes);
             Modify_ListNotesApiCall(ref _callListNotes);
-            _callDeleteNote = clientHelper.BuildApiCall<DeleteNoteRequest, wkt::Empty>(grpcClient.DeleteNoteAsync, grpcClient.DeleteNote, effectiveSettings.DeleteNoteSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteNote = clientHelper.BuildApiCall<DeleteNoteRequest, wkt::Empty>("DeleteNote", grpcClient.DeleteNoteAsync, grpcClient.DeleteNote, effectiveSettings.DeleteNoteSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteNote);
             Modify_DeleteNoteApiCall(ref _callDeleteNote);
-            _callCreateNote = clientHelper.BuildApiCall<CreateNoteRequest, Note>(grpcClient.CreateNoteAsync, grpcClient.CreateNote, effectiveSettings.CreateNoteSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateNote = clientHelper.BuildApiCall<CreateNoteRequest, Note>("CreateNote", grpcClient.CreateNoteAsync, grpcClient.CreateNote, effectiveSettings.CreateNoteSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateNote);
             Modify_CreateNoteApiCall(ref _callCreateNote);
-            _callBatchCreateNotes = clientHelper.BuildApiCall<BatchCreateNotesRequest, BatchCreateNotesResponse>(grpcClient.BatchCreateNotesAsync, grpcClient.BatchCreateNotes, effectiveSettings.BatchCreateNotesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callBatchCreateNotes = clientHelper.BuildApiCall<BatchCreateNotesRequest, BatchCreateNotesResponse>("BatchCreateNotes", grpcClient.BatchCreateNotesAsync, grpcClient.BatchCreateNotes, effectiveSettings.BatchCreateNotesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchCreateNotes);
             Modify_BatchCreateNotesApiCall(ref _callBatchCreateNotes);
-            _callUpdateNote = clientHelper.BuildApiCall<UpdateNoteRequest, Note>(grpcClient.UpdateNoteAsync, grpcClient.UpdateNote, effectiveSettings.UpdateNoteSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateNote = clientHelper.BuildApiCall<UpdateNoteRequest, Note>("UpdateNote", grpcClient.UpdateNoteAsync, grpcClient.UpdateNote, effectiveSettings.UpdateNoteSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateNote);
             Modify_UpdateNoteApiCall(ref _callUpdateNote);
-            _callListNoteOccurrences = clientHelper.BuildApiCall<ListNoteOccurrencesRequest, ListNoteOccurrencesResponse>(grpcClient.ListNoteOccurrencesAsync, grpcClient.ListNoteOccurrences, effectiveSettings.ListNoteOccurrencesSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callListNoteOccurrences = clientHelper.BuildApiCall<ListNoteOccurrencesRequest, ListNoteOccurrencesResponse>("ListNoteOccurrences", grpcClient.ListNoteOccurrencesAsync, grpcClient.ListNoteOccurrences, effectiveSettings.ListNoteOccurrencesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListNoteOccurrences);
             Modify_ListNoteOccurrencesApiCall(ref _callListNoteOccurrences);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

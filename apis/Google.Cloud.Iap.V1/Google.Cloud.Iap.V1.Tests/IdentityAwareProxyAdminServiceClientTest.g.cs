@@ -54,7 +54,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -84,7 +84,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
@@ -115,7 +115,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -144,7 +144,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
@@ -172,7 +172,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -198,7 +198,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);
@@ -221,7 +221,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 ApplicationSettings = new ApplicationSettings(),
             };
             mockGrpcClient.Setup(x => x.GetIapSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             IapSettings response = client.GetIapSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -242,7 +242,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 ApplicationSettings = new ApplicationSettings(),
             };
             mockGrpcClient.Setup(x => x.GetIapSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IapSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             IapSettings responseCallSettings = await client.GetIapSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             IapSettings responseCancellationToken = await client.GetIapSettingsAsync(request, st::CancellationToken.None);
@@ -266,7 +266,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 ApplicationSettings = new ApplicationSettings(),
             };
             mockGrpcClient.Setup(x => x.UpdateIapSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             IapSettings response = client.UpdateIapSettings(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -288,7 +288,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 ApplicationSettings = new ApplicationSettings(),
             };
             mockGrpcClient.Setup(x => x.UpdateIapSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IapSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyAdminServiceClient client = new IdentityAwareProxyAdminServiceClientImpl(mockGrpcClient.Object, null, null);
             IapSettings responseCallSettings = await client.UpdateIapSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             IapSettings responseCancellationToken = await client.UpdateIapSettingsAsync(request, st::CancellationToken.None);

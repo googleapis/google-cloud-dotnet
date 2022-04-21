@@ -28,14 +28,14 @@ namespace Google.Cloud.DataCatalog.V1 {
             "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEaH2dvb2dsZS9wcm90b2J1Zi90",
             "aW1lc3RhbXAucHJvdG8iUQoPUGVyc29uYWxEZXRhaWxzEg8KB3N0YXJyZWQY",
             "ASABKAgSLQoJc3Rhcl90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcCptChBJbnRlZ3JhdGVkU3lzdGVtEiEKHUlOVEVHUkFURURfU1lT",
+            "bWVzdGFtcCp7ChBJbnRlZ3JhdGVkU3lzdGVtEiEKHUlOVEVHUkFURURfU1lT",
             "VEVNX1VOU1BFQ0lGSUVEEAASDAoIQklHUVVFUlkQARIQCgxDTE9VRF9QVUJT",
-            "VUIQAhIWChJEQVRBUFJPQ19NRVRBU1RPUkUQA0LLAQofY29tLmdvb2dsZS5j",
-            "bG91ZC5kYXRhY2F0YWxvZy52MVABWkZnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL2Nsb3VkL2RhdGFjYXRhbG9nL3YxO2RhdGFjYXRh",
-            "bG9n+AEBqgIbR29vZ2xlLkNsb3VkLkRhdGFDYXRhbG9nLlYxygIbR29vZ2xl",
-            "XENsb3VkXERhdGFDYXRhbG9nXFYx6gIeR29vZ2xlOjpDbG91ZDo6RGF0YUNh",
-            "dGFsb2c6OlYxYgZwcm90bzM="));
+            "VUIQAhIWChJEQVRBUFJPQ19NRVRBU1RPUkUQAxIMCghEQVRBUExFWBAEQssB",
+            "Ch9jb20uZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxUAFaRmdvb2dsZS5n",
+            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZGF0YWNhdGFs",
+            "b2cvdjE7ZGF0YWNhdGFsb2f4AQGqAhtHb29nbGUuQ2xvdWQuRGF0YUNhdGFs",
+            "b2cuVjHKAhtHb29nbGVcQ2xvdWRcRGF0YUNhdGFsb2dcVjHqAh5Hb29nbGU6",
+            "OkNsb3VkOjpEYXRhQ2F0YWxvZzo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.DataCatalog.V1.IntegratedSystem), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -66,6 +66,10 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// Dataproc Metastore.
     /// </summary>
     [pbr::OriginalName("DATAPROC_METASTORE")] DataprocMetastore = 3,
+    /// <summary>
+    /// Dataplex.
+    /// </summary>
+    [pbr::OriginalName("DATAPLEX")] Dataplex = 4,
   }
 
   #endregion

@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gciv = Google.Cloud.Iam.V1;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -245,9 +245,8 @@ namespace Google.Cloud.ResourceManager.V3
         public TagValuesSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public TagValuesClientBuilder()
+        public TagValuesClientBuilder() : base(TagValuesClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = TagValuesClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref TagValuesClient client);
@@ -274,29 +273,18 @@ namespace Google.Cloud.ResourceManager.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TagValuesClient.Create(callInvoker, Settings);
+            return TagValuesClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<TagValuesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TagValuesClient.Create(callInvoker, Settings);
+            return TagValuesClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => TagValuesClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => TagValuesClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => TagValuesClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>TagValues client wrapper, for convenient use.</summary>
@@ -325,19 +313,10 @@ namespace Google.Cloud.ResourceManager.V3
             "https://www.googleapis.com/auth/cloud-platform.read-only",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(TagValues.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="TagValuesClient"/> using the default credentials, endpoint and settings.
@@ -364,8 +343,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="TagValuesSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="TagValuesClient"/>.</returns>
-        internal static TagValuesClient Create(grpccore::CallInvoker callInvoker, TagValuesSettings settings = null)
+        internal static TagValuesClient Create(grpccore::CallInvoker callInvoker, TagValuesSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -374,7 +354,7 @@ namespace Google.Cloud.ResourceManager.V3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             TagValues.TagValuesClient grpcClient = new TagValues.TagValuesClient(callInvoker);
-            return new TagValuesClientImpl(grpcClient, settings);
+            return new TagValuesClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1569,36 +1549,37 @@ namespace Google.Cloud.ResourceManager.V3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="TagValuesSettings"/> used within this client.</param>
-        public TagValuesClientImpl(TagValues.TagValuesClient grpcClient, TagValuesSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public TagValuesClientImpl(TagValues.TagValuesClient grpcClient, TagValuesSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             TagValuesSettings effectiveSettings = settings ?? TagValuesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateTagValueOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTagValueOperationsSettings);
-            UpdateTagValueOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTagValueOperationsSettings);
-            DeleteTagValueOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTagValueOperationsSettings);
-            _callListTagValues = clientHelper.BuildApiCall<ListTagValuesRequest, ListTagValuesResponse>(grpcClient.ListTagValuesAsync, grpcClient.ListTagValues, effectiveSettings.ListTagValuesSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateTagValueOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTagValueOperationsSettings, logger);
+            UpdateTagValueOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTagValueOperationsSettings, logger);
+            DeleteTagValueOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTagValueOperationsSettings, logger);
+            _callListTagValues = clientHelper.BuildApiCall<ListTagValuesRequest, ListTagValuesResponse>("ListTagValues", grpcClient.ListTagValuesAsync, grpcClient.ListTagValues, effectiveSettings.ListTagValuesSettings);
             Modify_ApiCall(ref _callListTagValues);
             Modify_ListTagValuesApiCall(ref _callListTagValues);
-            _callGetTagValue = clientHelper.BuildApiCall<GetTagValueRequest, TagValue>(grpcClient.GetTagValueAsync, grpcClient.GetTagValue, effectiveSettings.GetTagValueSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetTagValue = clientHelper.BuildApiCall<GetTagValueRequest, TagValue>("GetTagValue", grpcClient.GetTagValueAsync, grpcClient.GetTagValue, effectiveSettings.GetTagValueSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTagValue);
             Modify_GetTagValueApiCall(ref _callGetTagValue);
-            _callCreateTagValue = clientHelper.BuildApiCall<CreateTagValueRequest, lro::Operation>(grpcClient.CreateTagValueAsync, grpcClient.CreateTagValue, effectiveSettings.CreateTagValueSettings);
+            _callCreateTagValue = clientHelper.BuildApiCall<CreateTagValueRequest, lro::Operation>("CreateTagValue", grpcClient.CreateTagValueAsync, grpcClient.CreateTagValue, effectiveSettings.CreateTagValueSettings);
             Modify_ApiCall(ref _callCreateTagValue);
             Modify_CreateTagValueApiCall(ref _callCreateTagValue);
-            _callUpdateTagValue = clientHelper.BuildApiCall<UpdateTagValueRequest, lro::Operation>(grpcClient.UpdateTagValueAsync, grpcClient.UpdateTagValue, effectiveSettings.UpdateTagValueSettings).WithGoogleRequestParam("tag_value.name", request => request.TagValue?.Name);
+            _callUpdateTagValue = clientHelper.BuildApiCall<UpdateTagValueRequest, lro::Operation>("UpdateTagValue", grpcClient.UpdateTagValueAsync, grpcClient.UpdateTagValue, effectiveSettings.UpdateTagValueSettings).WithGoogleRequestParam("tag_value.name", request => request.TagValue?.Name);
             Modify_ApiCall(ref _callUpdateTagValue);
             Modify_UpdateTagValueApiCall(ref _callUpdateTagValue);
-            _callDeleteTagValue = clientHelper.BuildApiCall<DeleteTagValueRequest, lro::Operation>(grpcClient.DeleteTagValueAsync, grpcClient.DeleteTagValue, effectiveSettings.DeleteTagValueSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteTagValue = clientHelper.BuildApiCall<DeleteTagValueRequest, lro::Operation>("DeleteTagValue", grpcClient.DeleteTagValueAsync, grpcClient.DeleteTagValue, effectiveSettings.DeleteTagValueSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTagValue);
             Modify_DeleteTagValueApiCall(ref _callDeleteTagValue);
-            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>(grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
-            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>(grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
-            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>(grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

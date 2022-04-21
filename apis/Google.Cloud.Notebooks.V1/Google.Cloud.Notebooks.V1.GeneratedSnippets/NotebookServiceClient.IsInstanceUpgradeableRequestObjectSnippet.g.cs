@@ -34,6 +34,7 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             IsInstanceUpgradeableRequest request = new IsInstanceUpgradeableRequest
             {
                 NotebookInstance = "",
+                Type = UpgradeType.Unspecified,
             };
             // Make the request
             IsInstanceUpgradeableResponse response = notebookServiceClient.IsInstanceUpgradeable(request);

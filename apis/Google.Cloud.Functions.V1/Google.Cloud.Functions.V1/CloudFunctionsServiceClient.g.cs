@@ -16,7 +16,6 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using lro = Google.LongRunning;
@@ -24,6 +23,7 @@ using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -312,9 +312,8 @@ namespace Google.Cloud.Functions.V1
         public CloudFunctionsServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public CloudFunctionsServiceClientBuilder()
+        public CloudFunctionsServiceClientBuilder() : base(CloudFunctionsServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = CloudFunctionsServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref CloudFunctionsServiceClient client);
@@ -341,29 +340,18 @@ namespace Google.Cloud.Functions.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return CloudFunctionsServiceClient.Create(callInvoker, Settings);
+            return CloudFunctionsServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<CloudFunctionsServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return CloudFunctionsServiceClient.Create(callInvoker, Settings);
+            return CloudFunctionsServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => CloudFunctionsServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => CloudFunctionsServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => CloudFunctionsServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>CloudFunctionsService client wrapper, for convenient use.</summary>
@@ -390,19 +378,10 @@ namespace Google.Cloud.Functions.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(CloudFunctionsService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="CloudFunctionsServiceClient"/> using the default credentials, endpoint
@@ -432,8 +411,9 @@ namespace Google.Cloud.Functions.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="CloudFunctionsServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="CloudFunctionsServiceClient"/>.</returns>
-        internal static CloudFunctionsServiceClient Create(grpccore::CallInvoker callInvoker, CloudFunctionsServiceSettings settings = null)
+        internal static CloudFunctionsServiceClient Create(grpccore::CallInvoker callInvoker, CloudFunctionsServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -442,7 +422,7 @@ namespace Google.Cloud.Functions.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             CloudFunctionsService.CloudFunctionsServiceClient grpcClient = new CloudFunctionsService.CloudFunctionsServiceClient(callInvoker);
-            return new CloudFunctionsServiceClientImpl(grpcClient, settings);
+            return new CloudFunctionsServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1428,45 +1408,46 @@ namespace Google.Cloud.Functions.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="CloudFunctionsServiceSettings"/> used within this client.</param>
-        public CloudFunctionsServiceClientImpl(CloudFunctionsService.CloudFunctionsServiceClient grpcClient, CloudFunctionsServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public CloudFunctionsServiceClientImpl(CloudFunctionsService.CloudFunctionsServiceClient grpcClient, CloudFunctionsServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             CloudFunctionsServiceSettings effectiveSettings = settings ?? CloudFunctionsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateFunctionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateFunctionOperationsSettings);
-            UpdateFunctionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateFunctionOperationsSettings);
-            DeleteFunctionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFunctionOperationsSettings);
-            _callListFunctions = clientHelper.BuildApiCall<ListFunctionsRequest, ListFunctionsResponse>(grpcClient.ListFunctionsAsync, grpcClient.ListFunctions, effectiveSettings.ListFunctionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateFunctionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateFunctionOperationsSettings, logger);
+            UpdateFunctionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateFunctionOperationsSettings, logger);
+            DeleteFunctionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFunctionOperationsSettings, logger);
+            _callListFunctions = clientHelper.BuildApiCall<ListFunctionsRequest, ListFunctionsResponse>("ListFunctions", grpcClient.ListFunctionsAsync, grpcClient.ListFunctions, effectiveSettings.ListFunctionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListFunctions);
             Modify_ListFunctionsApiCall(ref _callListFunctions);
-            _callGetFunction = clientHelper.BuildApiCall<GetFunctionRequest, CloudFunction>(grpcClient.GetFunctionAsync, grpcClient.GetFunction, effectiveSettings.GetFunctionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetFunction = clientHelper.BuildApiCall<GetFunctionRequest, CloudFunction>("GetFunction", grpcClient.GetFunctionAsync, grpcClient.GetFunction, effectiveSettings.GetFunctionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetFunction);
             Modify_GetFunctionApiCall(ref _callGetFunction);
-            _callCreateFunction = clientHelper.BuildApiCall<CreateFunctionRequest, lro::Operation>(grpcClient.CreateFunctionAsync, grpcClient.CreateFunction, effectiveSettings.CreateFunctionSettings).WithGoogleRequestParam("location", request => request.Location);
+            _callCreateFunction = clientHelper.BuildApiCall<CreateFunctionRequest, lro::Operation>("CreateFunction", grpcClient.CreateFunctionAsync, grpcClient.CreateFunction, effectiveSettings.CreateFunctionSettings).WithGoogleRequestParam("location", request => request.Location);
             Modify_ApiCall(ref _callCreateFunction);
             Modify_CreateFunctionApiCall(ref _callCreateFunction);
-            _callUpdateFunction = clientHelper.BuildApiCall<UpdateFunctionRequest, lro::Operation>(grpcClient.UpdateFunctionAsync, grpcClient.UpdateFunction, effectiveSettings.UpdateFunctionSettings).WithGoogleRequestParam("function.name", request => request.Function?.Name);
+            _callUpdateFunction = clientHelper.BuildApiCall<UpdateFunctionRequest, lro::Operation>("UpdateFunction", grpcClient.UpdateFunctionAsync, grpcClient.UpdateFunction, effectiveSettings.UpdateFunctionSettings).WithGoogleRequestParam("function.name", request => request.Function?.Name);
             Modify_ApiCall(ref _callUpdateFunction);
             Modify_UpdateFunctionApiCall(ref _callUpdateFunction);
-            _callDeleteFunction = clientHelper.BuildApiCall<DeleteFunctionRequest, lro::Operation>(grpcClient.DeleteFunctionAsync, grpcClient.DeleteFunction, effectiveSettings.DeleteFunctionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteFunction = clientHelper.BuildApiCall<DeleteFunctionRequest, lro::Operation>("DeleteFunction", grpcClient.DeleteFunctionAsync, grpcClient.DeleteFunction, effectiveSettings.DeleteFunctionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteFunction);
             Modify_DeleteFunctionApiCall(ref _callDeleteFunction);
-            _callCallFunction = clientHelper.BuildApiCall<CallFunctionRequest, CallFunctionResponse>(grpcClient.CallFunctionAsync, grpcClient.CallFunction, effectiveSettings.CallFunctionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCallFunction = clientHelper.BuildApiCall<CallFunctionRequest, CallFunctionResponse>("CallFunction", grpcClient.CallFunctionAsync, grpcClient.CallFunction, effectiveSettings.CallFunctionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCallFunction);
             Modify_CallFunctionApiCall(ref _callCallFunction);
-            _callGenerateUploadUrl = clientHelper.BuildApiCall<GenerateUploadUrlRequest, GenerateUploadUrlResponse>(grpcClient.GenerateUploadUrlAsync, grpcClient.GenerateUploadUrl, effectiveSettings.GenerateUploadUrlSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callGenerateUploadUrl = clientHelper.BuildApiCall<GenerateUploadUrlRequest, GenerateUploadUrlResponse>("GenerateUploadUrl", grpcClient.GenerateUploadUrlAsync, grpcClient.GenerateUploadUrl, effectiveSettings.GenerateUploadUrlSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callGenerateUploadUrl);
             Modify_GenerateUploadUrlApiCall(ref _callGenerateUploadUrl);
-            _callGenerateDownloadUrl = clientHelper.BuildApiCall<GenerateDownloadUrlRequest, GenerateDownloadUrlResponse>(grpcClient.GenerateDownloadUrlAsync, grpcClient.GenerateDownloadUrl, effectiveSettings.GenerateDownloadUrlSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGenerateDownloadUrl = clientHelper.BuildApiCall<GenerateDownloadUrlRequest, GenerateDownloadUrlResponse>("GenerateDownloadUrl", grpcClient.GenerateDownloadUrlAsync, grpcClient.GenerateDownloadUrl, effectiveSettings.GenerateDownloadUrlSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGenerateDownloadUrl);
             Modify_GenerateDownloadUrlApiCall(ref _callGenerateDownloadUrl);
-            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>(grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
-            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>(grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
-            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>(grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

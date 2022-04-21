@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -221,9 +221,8 @@ namespace Google.Area120.Tables.V1Alpha1
         public TablesServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public TablesServiceClientBuilder()
+        public TablesServiceClientBuilder() : base(TablesServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = TablesServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref TablesServiceClient client);
@@ -250,29 +249,18 @@ namespace Google.Area120.Tables.V1Alpha1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TablesServiceClient.Create(callInvoker, Settings);
+            return TablesServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<TablesServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TablesServiceClient.Create(callInvoker, Settings);
+            return TablesServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => TablesServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => TablesServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => TablesServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>TablesService client wrapper, for convenient use.</summary>
@@ -320,19 +308,10 @@ namespace Google.Area120.Tables.V1Alpha1
             "https://www.googleapis.com/auth/tables",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(TablesService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="TablesServiceClient"/> using the default credentials, endpoint and
@@ -359,8 +338,9 @@ namespace Google.Area120.Tables.V1Alpha1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="TablesServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="TablesServiceClient"/>.</returns>
-        internal static TablesServiceClient Create(grpccore::CallInvoker callInvoker, TablesServiceSettings settings = null)
+        internal static TablesServiceClient Create(grpccore::CallInvoker callInvoker, TablesServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -369,7 +349,7 @@ namespace Google.Area120.Tables.V1Alpha1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             TablesService.TablesServiceClient grpcClient = new TablesService.TablesServiceClient(callInvoker);
-            return new TablesServiceClientImpl(grpcClient, settings);
+            return new TablesServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1221,45 +1201,46 @@ namespace Google.Area120.Tables.V1Alpha1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="TablesServiceSettings"/> used within this client.</param>
-        public TablesServiceClientImpl(TablesService.TablesServiceClient grpcClient, TablesServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public TablesServiceClientImpl(TablesService.TablesServiceClient grpcClient, TablesServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             TablesServiceSettings effectiveSettings = settings ?? TablesServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callGetTable = clientHelper.BuildApiCall<GetTableRequest, Table>(grpcClient.GetTableAsync, grpcClient.GetTable, effectiveSettings.GetTableSettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callGetTable = clientHelper.BuildApiCall<GetTableRequest, Table>("GetTable", grpcClient.GetTableAsync, grpcClient.GetTable, effectiveSettings.GetTableSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTable);
             Modify_GetTableApiCall(ref _callGetTable);
-            _callListTables = clientHelper.BuildApiCall<ListTablesRequest, ListTablesResponse>(grpcClient.ListTablesAsync, grpcClient.ListTables, effectiveSettings.ListTablesSettings);
+            _callListTables = clientHelper.BuildApiCall<ListTablesRequest, ListTablesResponse>("ListTables", grpcClient.ListTablesAsync, grpcClient.ListTables, effectiveSettings.ListTablesSettings);
             Modify_ApiCall(ref _callListTables);
             Modify_ListTablesApiCall(ref _callListTables);
-            _callGetWorkspace = clientHelper.BuildApiCall<GetWorkspaceRequest, Workspace>(grpcClient.GetWorkspaceAsync, grpcClient.GetWorkspace, effectiveSettings.GetWorkspaceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetWorkspace = clientHelper.BuildApiCall<GetWorkspaceRequest, Workspace>("GetWorkspace", grpcClient.GetWorkspaceAsync, grpcClient.GetWorkspace, effectiveSettings.GetWorkspaceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetWorkspace);
             Modify_GetWorkspaceApiCall(ref _callGetWorkspace);
-            _callListWorkspaces = clientHelper.BuildApiCall<ListWorkspacesRequest, ListWorkspacesResponse>(grpcClient.ListWorkspacesAsync, grpcClient.ListWorkspaces, effectiveSettings.ListWorkspacesSettings);
+            _callListWorkspaces = clientHelper.BuildApiCall<ListWorkspacesRequest, ListWorkspacesResponse>("ListWorkspaces", grpcClient.ListWorkspacesAsync, grpcClient.ListWorkspaces, effectiveSettings.ListWorkspacesSettings);
             Modify_ApiCall(ref _callListWorkspaces);
             Modify_ListWorkspacesApiCall(ref _callListWorkspaces);
-            _callGetRow = clientHelper.BuildApiCall<GetRowRequest, Row>(grpcClient.GetRowAsync, grpcClient.GetRow, effectiveSettings.GetRowSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetRow = clientHelper.BuildApiCall<GetRowRequest, Row>("GetRow", grpcClient.GetRowAsync, grpcClient.GetRow, effectiveSettings.GetRowSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetRow);
             Modify_GetRowApiCall(ref _callGetRow);
-            _callListRows = clientHelper.BuildApiCall<ListRowsRequest, ListRowsResponse>(grpcClient.ListRowsAsync, grpcClient.ListRows, effectiveSettings.ListRowsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListRows = clientHelper.BuildApiCall<ListRowsRequest, ListRowsResponse>("ListRows", grpcClient.ListRowsAsync, grpcClient.ListRows, effectiveSettings.ListRowsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListRows);
             Modify_ListRowsApiCall(ref _callListRows);
-            _callCreateRow = clientHelper.BuildApiCall<CreateRowRequest, Row>(grpcClient.CreateRowAsync, grpcClient.CreateRow, effectiveSettings.CreateRowSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateRow = clientHelper.BuildApiCall<CreateRowRequest, Row>("CreateRow", grpcClient.CreateRowAsync, grpcClient.CreateRow, effectiveSettings.CreateRowSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateRow);
             Modify_CreateRowApiCall(ref _callCreateRow);
-            _callBatchCreateRows = clientHelper.BuildApiCall<BatchCreateRowsRequest, BatchCreateRowsResponse>(grpcClient.BatchCreateRowsAsync, grpcClient.BatchCreateRows, effectiveSettings.BatchCreateRowsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callBatchCreateRows = clientHelper.BuildApiCall<BatchCreateRowsRequest, BatchCreateRowsResponse>("BatchCreateRows", grpcClient.BatchCreateRowsAsync, grpcClient.BatchCreateRows, effectiveSettings.BatchCreateRowsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchCreateRows);
             Modify_BatchCreateRowsApiCall(ref _callBatchCreateRows);
-            _callUpdateRow = clientHelper.BuildApiCall<UpdateRowRequest, Row>(grpcClient.UpdateRowAsync, grpcClient.UpdateRow, effectiveSettings.UpdateRowSettings).WithGoogleRequestParam("row.name", request => request.Row?.Name);
+            _callUpdateRow = clientHelper.BuildApiCall<UpdateRowRequest, Row>("UpdateRow", grpcClient.UpdateRowAsync, grpcClient.UpdateRow, effectiveSettings.UpdateRowSettings).WithGoogleRequestParam("row.name", request => request.Row?.Name);
             Modify_ApiCall(ref _callUpdateRow);
             Modify_UpdateRowApiCall(ref _callUpdateRow);
-            _callBatchUpdateRows = clientHelper.BuildApiCall<BatchUpdateRowsRequest, BatchUpdateRowsResponse>(grpcClient.BatchUpdateRowsAsync, grpcClient.BatchUpdateRows, effectiveSettings.BatchUpdateRowsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callBatchUpdateRows = clientHelper.BuildApiCall<BatchUpdateRowsRequest, BatchUpdateRowsResponse>("BatchUpdateRows", grpcClient.BatchUpdateRowsAsync, grpcClient.BatchUpdateRows, effectiveSettings.BatchUpdateRowsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchUpdateRows);
             Modify_BatchUpdateRowsApiCall(ref _callBatchUpdateRows);
-            _callDeleteRow = clientHelper.BuildApiCall<DeleteRowRequest, wkt::Empty>(grpcClient.DeleteRowAsync, grpcClient.DeleteRow, effectiveSettings.DeleteRowSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteRow = clientHelper.BuildApiCall<DeleteRowRequest, wkt::Empty>("DeleteRow", grpcClient.DeleteRowAsync, grpcClient.DeleteRow, effectiveSettings.DeleteRowSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteRow);
             Modify_DeleteRowApiCall(ref _callDeleteRow);
-            _callBatchDeleteRows = clientHelper.BuildApiCall<BatchDeleteRowsRequest, wkt::Empty>(grpcClient.BatchDeleteRowsAsync, grpcClient.BatchDeleteRows, effectiveSettings.BatchDeleteRowsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callBatchDeleteRows = clientHelper.BuildApiCall<BatchDeleteRowsRequest, wkt::Empty>("BatchDeleteRows", grpcClient.BatchDeleteRowsAsync, grpcClient.BatchDeleteRows, effectiveSettings.BatchDeleteRowsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchDeleteRows);
             Modify_BatchDeleteRowsApiCall(ref _callBatchDeleteRows);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

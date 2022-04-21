@@ -55,7 +55,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetServiceAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccount response = client.GetServiceAccount(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -84,7 +84,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetServiceAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccount>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccount responseCallSettings = await client.GetServiceAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServiceAccount responseCancellationToken = await client.GetServiceAccountAsync(request, st::CancellationToken.None);
@@ -115,7 +115,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetServiceAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccount response = client.GetServiceAccount(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -144,7 +144,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetServiceAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccount>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccount responseCallSettings = await client.GetServiceAccountAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServiceAccount responseCancellationToken = await client.GetServiceAccountAsync(request.Name, st::CancellationToken.None);
@@ -175,7 +175,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetServiceAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccount response = client.GetServiceAccount(request.ServiceAccountName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -204,7 +204,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.GetServiceAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccount>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccount responseCallSettings = await client.GetServiceAccountAsync(request.ServiceAccountName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServiceAccount responseCancellationToken = await client.GetServiceAccountAsync(request.ServiceAccountName, st::CancellationToken.None);
@@ -237,7 +237,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateServiceAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccount response = client.CreateServiceAccount(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -268,7 +268,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateServiceAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccount>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccount responseCallSettings = await client.CreateServiceAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServiceAccount responseCancellationToken = await client.CreateServiceAccountAsync(request, st::CancellationToken.None);
@@ -301,7 +301,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateServiceAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccount response = client.CreateServiceAccount(request.Name, request.AccountId, request.ServiceAccount);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -332,7 +332,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateServiceAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccount>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccount responseCallSettings = await client.CreateServiceAccountAsync(request.Name, request.AccountId, request.ServiceAccount, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServiceAccount responseCancellationToken = await client.CreateServiceAccountAsync(request.Name, request.AccountId, request.ServiceAccount, st::CancellationToken.None);
@@ -365,7 +365,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateServiceAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccount response = client.CreateServiceAccount(request.ProjectName, request.AccountId, request.ServiceAccount);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -396,7 +396,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.CreateServiceAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccount>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccount responseCallSettings = await client.CreateServiceAccountAsync(request.ProjectName, request.AccountId, request.ServiceAccount, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServiceAccount responseCancellationToken = await client.CreateServiceAccountAsync(request.ProjectName, request.AccountId, request.ServiceAccount, st::CancellationToken.None);
@@ -437,7 +437,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateServiceAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccount response = client.UpdateServiceAccount(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -476,7 +476,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.UpdateServiceAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccount>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccount responseCallSettings = await client.UpdateServiceAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServiceAccount responseCancellationToken = await client.UpdateServiceAccountAsync(request, st::CancellationToken.None);
@@ -508,7 +508,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.PatchServiceAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccount response = client.PatchServiceAccount(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -538,7 +538,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Disabled = false,
             };
             mockGrpcClient.Setup(x => x.PatchServiceAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccount>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccount responseCallSettings = await client.PatchServiceAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServiceAccount responseCancellationToken = await client.PatchServiceAccountAsync(request, st::CancellationToken.None);
@@ -556,7 +556,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteServiceAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteServiceAccount(request);
             mockGrpcClient.VerifyAll();
         }
@@ -571,7 +571,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteServiceAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteServiceAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteServiceAccountAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -587,7 +587,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteServiceAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteServiceAccount(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -602,7 +602,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteServiceAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteServiceAccountAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteServiceAccountAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -618,7 +618,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteServiceAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteServiceAccount(request.ServiceAccountName);
             mockGrpcClient.VerifyAll();
         }
@@ -633,7 +633,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteServiceAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteServiceAccountAsync(request.ServiceAccountName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteServiceAccountAsync(request.ServiceAccountName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -652,7 +652,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 RestoredAccount = new ServiceAccount(),
             };
             mockGrpcClient.Setup(x => x.UndeleteServiceAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             UndeleteServiceAccountResponse response = client.UndeleteServiceAccount(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -671,7 +671,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 RestoredAccount = new ServiceAccount(),
             };
             mockGrpcClient.Setup(x => x.UndeleteServiceAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UndeleteServiceAccountResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             UndeleteServiceAccountResponse responseCallSettings = await client.UndeleteServiceAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UndeleteServiceAccountResponse responseCancellationToken = await client.UndeleteServiceAccountAsync(request, st::CancellationToken.None);
@@ -689,7 +689,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.EnableServiceAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             client.EnableServiceAccount(request);
             mockGrpcClient.VerifyAll();
         }
@@ -704,7 +704,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.EnableServiceAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             await client.EnableServiceAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.EnableServiceAccountAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -720,7 +720,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DisableServiceAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             client.DisableServiceAccount(request);
             mockGrpcClient.VerifyAll();
         }
@@ -735,7 +735,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DisableServiceAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             await client.DisableServiceAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DisableServiceAccountAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -761,7 +761,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ListServiceAccountKeys(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ListServiceAccountKeysResponse response = client.ListServiceAccountKeys(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -787,7 +787,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ListServiceAccountKeysAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListServiceAccountKeysResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ListServiceAccountKeysResponse responseCallSettings = await client.ListServiceAccountKeysAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListServiceAccountKeysResponse responseCancellationToken = await client.ListServiceAccountKeysAsync(request, st::CancellationToken.None);
@@ -815,7 +815,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ListServiceAccountKeys(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ListServiceAccountKeysResponse response = client.ListServiceAccountKeys(request.Name, request.KeyTypes);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -841,7 +841,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ListServiceAccountKeysAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListServiceAccountKeysResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ListServiceAccountKeysResponse responseCallSettings = await client.ListServiceAccountKeysAsync(request.Name, request.KeyTypes, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListServiceAccountKeysResponse responseCancellationToken = await client.ListServiceAccountKeysAsync(request.Name, request.KeyTypes, st::CancellationToken.None);
@@ -869,7 +869,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ListServiceAccountKeys(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ListServiceAccountKeysResponse response = client.ListServiceAccountKeys(request.ServiceAccountName, request.KeyTypes);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -895,7 +895,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ListServiceAccountKeysAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListServiceAccountKeysResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ListServiceAccountKeysResponse responseCallSettings = await client.ListServiceAccountKeysAsync(request.ServiceAccountName, request.KeyTypes, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListServiceAccountKeysResponse responseCancellationToken = await client.ListServiceAccountKeysAsync(request.ServiceAccountName, request.KeyTypes, st::CancellationToken.None);
@@ -925,7 +925,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
             };
             mockGrpcClient.Setup(x => x.GetServiceAccountKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccountKey response = client.GetServiceAccountKey(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -953,7 +953,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
             };
             mockGrpcClient.Setup(x => x.GetServiceAccountKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccountKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccountKey responseCallSettings = await client.GetServiceAccountKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServiceAccountKey responseCancellationToken = await client.GetServiceAccountKeyAsync(request, st::CancellationToken.None);
@@ -983,7 +983,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
             };
             mockGrpcClient.Setup(x => x.GetServiceAccountKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccountKey response = client.GetServiceAccountKey(request.Name, request.PublicKeyType);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1011,7 +1011,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
             };
             mockGrpcClient.Setup(x => x.GetServiceAccountKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccountKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccountKey responseCallSettings = await client.GetServiceAccountKeyAsync(request.Name, request.PublicKeyType, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServiceAccountKey responseCancellationToken = await client.GetServiceAccountKeyAsync(request.Name, request.PublicKeyType, st::CancellationToken.None);
@@ -1041,7 +1041,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
             };
             mockGrpcClient.Setup(x => x.GetServiceAccountKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccountKey response = client.GetServiceAccountKey(request.KeyName, request.PublicKeyType);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1069,7 +1069,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
             };
             mockGrpcClient.Setup(x => x.GetServiceAccountKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccountKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccountKey responseCallSettings = await client.GetServiceAccountKeyAsync(request.KeyName, request.PublicKeyType, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServiceAccountKey responseCancellationToken = await client.GetServiceAccountKeyAsync(request.KeyName, request.PublicKeyType, st::CancellationToken.None);
@@ -1100,7 +1100,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
             };
             mockGrpcClient.Setup(x => x.CreateServiceAccountKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccountKey response = client.CreateServiceAccountKey(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1129,7 +1129,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
             };
             mockGrpcClient.Setup(x => x.CreateServiceAccountKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccountKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccountKey responseCallSettings = await client.CreateServiceAccountKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServiceAccountKey responseCancellationToken = await client.CreateServiceAccountKeyAsync(request, st::CancellationToken.None);
@@ -1160,7 +1160,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
             };
             mockGrpcClient.Setup(x => x.CreateServiceAccountKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccountKey response = client.CreateServiceAccountKey(request.Name, request.PrivateKeyType, request.KeyAlgorithm);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1189,7 +1189,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
             };
             mockGrpcClient.Setup(x => x.CreateServiceAccountKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccountKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccountKey responseCallSettings = await client.CreateServiceAccountKeyAsync(request.Name, request.PrivateKeyType, request.KeyAlgorithm, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServiceAccountKey responseCancellationToken = await client.CreateServiceAccountKeyAsync(request.Name, request.PrivateKeyType, request.KeyAlgorithm, st::CancellationToken.None);
@@ -1220,7 +1220,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
             };
             mockGrpcClient.Setup(x => x.CreateServiceAccountKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccountKey response = client.CreateServiceAccountKey(request.ServiceAccountName, request.PrivateKeyType, request.KeyAlgorithm);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1249,7 +1249,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
             };
             mockGrpcClient.Setup(x => x.CreateServiceAccountKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccountKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccountKey responseCallSettings = await client.CreateServiceAccountKeyAsync(request.ServiceAccountName, request.PrivateKeyType, request.KeyAlgorithm, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServiceAccountKey responseCancellationToken = await client.CreateServiceAccountKeyAsync(request.ServiceAccountName, request.PrivateKeyType, request.KeyAlgorithm, st::CancellationToken.None);
@@ -1279,7 +1279,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
             };
             mockGrpcClient.Setup(x => x.UploadServiceAccountKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccountKey response = client.UploadServiceAccountKey(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1307,7 +1307,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 KeyType = ListServiceAccountKeysRequest.Types.KeyType.SystemManaged,
             };
             mockGrpcClient.Setup(x => x.UploadServiceAccountKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceAccountKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             ServiceAccountKey responseCallSettings = await client.UploadServiceAccountKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServiceAccountKey responseCancellationToken = await client.UploadServiceAccountKeyAsync(request, st::CancellationToken.None);
@@ -1325,7 +1325,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteServiceAccountKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteServiceAccountKey(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1340,7 +1340,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteServiceAccountKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteServiceAccountKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteServiceAccountKeyAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1356,7 +1356,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteServiceAccountKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteServiceAccountKey(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1371,7 +1371,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteServiceAccountKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteServiceAccountKeyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteServiceAccountKeyAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1387,7 +1387,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteServiceAccountKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteServiceAccountKey(request.KeyName);
             mockGrpcClient.VerifyAll();
         }
@@ -1402,7 +1402,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteServiceAccountKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteServiceAccountKeyAsync(request.KeyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteServiceAccountKeyAsync(request.KeyName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1427,7 +1427,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.SignBlob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
 #pragma warning disable CS0612
             SignBlobResponse response = client.SignBlob(request);
 #pragma warning restore CS0612
@@ -1454,7 +1454,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.SignBlobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SignBlobResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
 #pragma warning disable CS0612
             SignBlobResponse responseCallSettings = await client.SignBlobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
 #pragma warning restore CS0612
@@ -1485,7 +1485,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.SignBlob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
 #pragma warning disable CS0612
             SignBlobResponse response = client.SignBlob(request.Name, request.BytesToSign);
 #pragma warning restore CS0612
@@ -1512,7 +1512,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.SignBlobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SignBlobResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
 #pragma warning disable CS0612
             SignBlobResponse responseCallSettings = await client.SignBlobAsync(request.Name, request.BytesToSign, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
 #pragma warning restore CS0612
@@ -1543,7 +1543,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.SignBlob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
 #pragma warning disable CS0612
             SignBlobResponse response = client.SignBlob(request.ServiceAccountName, request.BytesToSign);
 #pragma warning restore CS0612
@@ -1570,7 +1570,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.SignBlobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SignBlobResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
 #pragma warning disable CS0612
             SignBlobResponse responseCallSettings = await client.SignBlobAsync(request.ServiceAccountName, request.BytesToSign, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
 #pragma warning restore CS0612
@@ -1601,7 +1601,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.SignJwt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
 #pragma warning disable CS0612
             SignJwtResponse response = client.SignJwt(request);
 #pragma warning restore CS0612
@@ -1628,7 +1628,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.SignJwtAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SignJwtResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
 #pragma warning disable CS0612
             SignJwtResponse responseCallSettings = await client.SignJwtAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
 #pragma warning restore CS0612
@@ -1659,7 +1659,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.SignJwt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
 #pragma warning disable CS0612
             SignJwtResponse response = client.SignJwt(request.Name, request.Payload);
 #pragma warning restore CS0612
@@ -1686,7 +1686,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.SignJwtAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SignJwtResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
 #pragma warning disable CS0612
             SignJwtResponse responseCallSettings = await client.SignJwtAsync(request.Name, request.Payload, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
 #pragma warning restore CS0612
@@ -1717,7 +1717,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.SignJwt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
 #pragma warning disable CS0612
             SignJwtResponse response = client.SignJwt(request.ServiceAccountName, request.Payload);
 #pragma warning restore CS0612
@@ -1744,7 +1744,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
 #pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.SignJwtAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SignJwtResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
 #pragma warning disable CS0612
             SignJwtResponse responseCallSettings = await client.SignJwtAsync(request.ServiceAccountName, request.Payload, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
 #pragma warning restore CS0612
@@ -1779,7 +1779,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1808,7 +1808,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
@@ -1838,7 +1838,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request.Resource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1866,7 +1866,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.Resource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.Resource, st::CancellationToken.None);
@@ -1896,7 +1896,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request.ResourceAsResourceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1924,7 +1924,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.ResourceAsResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.ResourceAsResourceName, st::CancellationToken.None);
@@ -1956,7 +1956,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1986,7 +1986,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
@@ -2017,7 +2017,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request.Resource, request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2046,7 +2046,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.Resource, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.Resource, request.Policy, st::CancellationToken.None);
@@ -2077,7 +2077,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request.ResourceAsResourceName, request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2106,7 +2106,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, st::CancellationToken.None);
@@ -2134,7 +2134,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2160,7 +2160,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);
@@ -2188,7 +2188,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.Resource, request.Permissions);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2214,7 +2214,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, st::CancellationToken.None);
@@ -2242,7 +2242,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.ResourceAsResourceName, request.Permissions);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2268,7 +2268,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, st::CancellationToken.None);
@@ -2298,7 +2298,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.GetRole(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             Role response = client.GetRole(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2326,7 +2326,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.GetRoleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Role>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             Role responseCallSettings = await client.GetRoleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Role responseCancellationToken = await client.GetRoleAsync(request, st::CancellationToken.None);
@@ -2358,7 +2358,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.CreateRole(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             Role response = client.CreateRole(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2388,7 +2388,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.CreateRoleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Role>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             Role responseCallSettings = await client.CreateRoleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Role responseCancellationToken = await client.CreateRoleAsync(request, st::CancellationToken.None);
@@ -2420,7 +2420,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.UpdateRole(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             Role response = client.UpdateRole(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2450,7 +2450,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.UpdateRoleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Role>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             Role responseCallSettings = await client.UpdateRoleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Role responseCancellationToken = await client.UpdateRoleAsync(request, st::CancellationToken.None);
@@ -2481,7 +2481,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.DeleteRole(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             Role response = client.DeleteRole(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2510,7 +2510,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.DeleteRoleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Role>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             Role responseCallSettings = await client.DeleteRoleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Role responseCancellationToken = await client.DeleteRoleAsync(request, st::CancellationToken.None);
@@ -2541,7 +2541,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.UndeleteRole(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             Role response = client.UndeleteRole(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2570,7 +2570,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.UndeleteRoleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Role>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             Role responseCallSettings = await client.UndeleteRoleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Role responseCancellationToken = await client.UndeleteRoleAsync(request, st::CancellationToken.None);
@@ -2594,7 +2594,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.QueryAuditableServices(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             QueryAuditableServicesResponse response = client.QueryAuditableServices(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2616,7 +2616,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.QueryAuditableServicesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<QueryAuditableServicesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             QueryAuditableServicesResponse responseCallSettings = await client.QueryAuditableServicesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             QueryAuditableServicesResponse responseCancellationToken = await client.QueryAuditableServicesAsync(request, st::CancellationToken.None);
@@ -2638,7 +2638,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 LintResults = { new LintResult(), },
             };
             mockGrpcClient.Setup(x => x.LintPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             LintPolicyResponse response = client.LintPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2658,7 +2658,7 @@ namespace Google.Cloud.Iam.Admin.V1.Tests
                 LintResults = { new LintResult(), },
             };
             mockGrpcClient.Setup(x => x.LintPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LintPolicyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null);
+            IAMClient client = new IAMClientImpl(mockGrpcClient.Object, null, null);
             LintPolicyResponse responseCallSettings = await client.LintPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LintPolicyResponse responseCancellationToken = await client.LintPolicyAsync(request, st::CancellationToken.None);

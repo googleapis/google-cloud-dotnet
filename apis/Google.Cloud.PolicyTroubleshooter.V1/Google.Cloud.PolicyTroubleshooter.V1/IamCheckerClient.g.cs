@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -75,9 +75,8 @@ namespace Google.Cloud.PolicyTroubleshooter.V1
         public IamCheckerSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public IamCheckerClientBuilder()
+        public IamCheckerClientBuilder() : base(IamCheckerClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = IamCheckerClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref IamCheckerClient client);
@@ -104,29 +103,18 @@ namespace Google.Cloud.PolicyTroubleshooter.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return IamCheckerClient.Create(callInvoker, Settings);
+            return IamCheckerClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<IamCheckerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return IamCheckerClient.Create(callInvoker, Settings);
+            return IamCheckerClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => IamCheckerClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => IamCheckerClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => IamCheckerClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>IamChecker client wrapper, for convenient use.</summary>
@@ -155,19 +143,10 @@ namespace Google.Cloud.PolicyTroubleshooter.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(IamChecker.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="IamCheckerClient"/> using the default credentials, endpoint and
@@ -194,8 +173,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="IamCheckerSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="IamCheckerClient"/>.</returns>
-        internal static IamCheckerClient Create(grpccore::CallInvoker callInvoker, IamCheckerSettings settings = null)
+        internal static IamCheckerClient Create(grpccore::CallInvoker callInvoker, IamCheckerSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -204,7 +184,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             IamChecker.IamCheckerClient grpcClient = new IamChecker.IamCheckerClient(callInvoker);
-            return new IamCheckerClientImpl(grpcClient, settings);
+            return new IamCheckerClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -269,12 +249,13 @@ namespace Google.Cloud.PolicyTroubleshooter.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="IamCheckerSettings"/> used within this client.</param>
-        public IamCheckerClientImpl(IamChecker.IamCheckerClient grpcClient, IamCheckerSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public IamCheckerClientImpl(IamChecker.IamCheckerClient grpcClient, IamCheckerSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             IamCheckerSettings effectiveSettings = settings ?? IamCheckerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callTroubleshootIamPolicy = clientHelper.BuildApiCall<TroubleshootIamPolicyRequest, TroubleshootIamPolicyResponse>(grpcClient.TroubleshootIamPolicyAsync, grpcClient.TroubleshootIamPolicy, effectiveSettings.TroubleshootIamPolicySettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callTroubleshootIamPolicy = clientHelper.BuildApiCall<TroubleshootIamPolicyRequest, TroubleshootIamPolicyResponse>("TroubleshootIamPolicy", grpcClient.TroubleshootIamPolicyAsync, grpcClient.TroubleshootIamPolicy, effectiveSettings.TroubleshootIamPolicySettings);
             Modify_ApiCall(ref _callTroubleshootIamPolicy);
             Modify_TroubleshootIamPolicyApiCall(ref _callTroubleshootIamPolicy);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

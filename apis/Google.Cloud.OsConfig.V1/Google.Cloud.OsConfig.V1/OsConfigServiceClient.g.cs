@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -301,9 +301,8 @@ namespace Google.Cloud.OsConfig.V1
         public OsConfigServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public OsConfigServiceClientBuilder()
+        public OsConfigServiceClientBuilder() : base(OsConfigServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = OsConfigServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref OsConfigServiceClient client);
@@ -330,29 +329,18 @@ namespace Google.Cloud.OsConfig.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return OsConfigServiceClient.Create(callInvoker, Settings);
+            return OsConfigServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<OsConfigServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return OsConfigServiceClient.Create(callInvoker, Settings);
+            return OsConfigServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => OsConfigServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => OsConfigServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => OsConfigServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>OsConfigService client wrapper, for convenient use.</summary>
@@ -382,19 +370,10 @@ namespace Google.Cloud.OsConfig.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(OsConfigService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="OsConfigServiceClient"/> using the default credentials, endpoint and
@@ -421,8 +400,9 @@ namespace Google.Cloud.OsConfig.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="OsConfigServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="OsConfigServiceClient"/>.</returns>
-        internal static OsConfigServiceClient Create(grpccore::CallInvoker callInvoker, OsConfigServiceSettings settings = null)
+        internal static OsConfigServiceClient Create(grpccore::CallInvoker callInvoker, OsConfigServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -431,7 +411,7 @@ namespace Google.Cloud.OsConfig.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             OsConfigService.OsConfigServiceClient grpcClient = new OsConfigService.OsConfigServiceClient(callInvoker);
-            return new OsConfigServiceClientImpl(grpcClient, settings);
+            return new OsConfigServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1739,45 +1719,46 @@ namespace Google.Cloud.OsConfig.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="OsConfigServiceSettings"/> used within this client.</param>
-        public OsConfigServiceClientImpl(OsConfigService.OsConfigServiceClient grpcClient, OsConfigServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public OsConfigServiceClientImpl(OsConfigService.OsConfigServiceClient grpcClient, OsConfigServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             OsConfigServiceSettings effectiveSettings = settings ?? OsConfigServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callExecutePatchJob = clientHelper.BuildApiCall<ExecutePatchJobRequest, PatchJob>(grpcClient.ExecutePatchJobAsync, grpcClient.ExecutePatchJob, effectiveSettings.ExecutePatchJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callExecutePatchJob = clientHelper.BuildApiCall<ExecutePatchJobRequest, PatchJob>("ExecutePatchJob", grpcClient.ExecutePatchJobAsync, grpcClient.ExecutePatchJob, effectiveSettings.ExecutePatchJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callExecutePatchJob);
             Modify_ExecutePatchJobApiCall(ref _callExecutePatchJob);
-            _callGetPatchJob = clientHelper.BuildApiCall<GetPatchJobRequest, PatchJob>(grpcClient.GetPatchJobAsync, grpcClient.GetPatchJob, effectiveSettings.GetPatchJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetPatchJob = clientHelper.BuildApiCall<GetPatchJobRequest, PatchJob>("GetPatchJob", grpcClient.GetPatchJobAsync, grpcClient.GetPatchJob, effectiveSettings.GetPatchJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetPatchJob);
             Modify_GetPatchJobApiCall(ref _callGetPatchJob);
-            _callCancelPatchJob = clientHelper.BuildApiCall<CancelPatchJobRequest, PatchJob>(grpcClient.CancelPatchJobAsync, grpcClient.CancelPatchJob, effectiveSettings.CancelPatchJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCancelPatchJob = clientHelper.BuildApiCall<CancelPatchJobRequest, PatchJob>("CancelPatchJob", grpcClient.CancelPatchJobAsync, grpcClient.CancelPatchJob, effectiveSettings.CancelPatchJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCancelPatchJob);
             Modify_CancelPatchJobApiCall(ref _callCancelPatchJob);
-            _callListPatchJobs = clientHelper.BuildApiCall<ListPatchJobsRequest, ListPatchJobsResponse>(grpcClient.ListPatchJobsAsync, grpcClient.ListPatchJobs, effectiveSettings.ListPatchJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListPatchJobs = clientHelper.BuildApiCall<ListPatchJobsRequest, ListPatchJobsResponse>("ListPatchJobs", grpcClient.ListPatchJobsAsync, grpcClient.ListPatchJobs, effectiveSettings.ListPatchJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListPatchJobs);
             Modify_ListPatchJobsApiCall(ref _callListPatchJobs);
-            _callListPatchJobInstanceDetails = clientHelper.BuildApiCall<ListPatchJobInstanceDetailsRequest, ListPatchJobInstanceDetailsResponse>(grpcClient.ListPatchJobInstanceDetailsAsync, grpcClient.ListPatchJobInstanceDetails, effectiveSettings.ListPatchJobInstanceDetailsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListPatchJobInstanceDetails = clientHelper.BuildApiCall<ListPatchJobInstanceDetailsRequest, ListPatchJobInstanceDetailsResponse>("ListPatchJobInstanceDetails", grpcClient.ListPatchJobInstanceDetailsAsync, grpcClient.ListPatchJobInstanceDetails, effectiveSettings.ListPatchJobInstanceDetailsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListPatchJobInstanceDetails);
             Modify_ListPatchJobInstanceDetailsApiCall(ref _callListPatchJobInstanceDetails);
-            _callCreatePatchDeployment = clientHelper.BuildApiCall<CreatePatchDeploymentRequest, PatchDeployment>(grpcClient.CreatePatchDeploymentAsync, grpcClient.CreatePatchDeployment, effectiveSettings.CreatePatchDeploymentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreatePatchDeployment = clientHelper.BuildApiCall<CreatePatchDeploymentRequest, PatchDeployment>("CreatePatchDeployment", grpcClient.CreatePatchDeploymentAsync, grpcClient.CreatePatchDeployment, effectiveSettings.CreatePatchDeploymentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreatePatchDeployment);
             Modify_CreatePatchDeploymentApiCall(ref _callCreatePatchDeployment);
-            _callGetPatchDeployment = clientHelper.BuildApiCall<GetPatchDeploymentRequest, PatchDeployment>(grpcClient.GetPatchDeploymentAsync, grpcClient.GetPatchDeployment, effectiveSettings.GetPatchDeploymentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetPatchDeployment = clientHelper.BuildApiCall<GetPatchDeploymentRequest, PatchDeployment>("GetPatchDeployment", grpcClient.GetPatchDeploymentAsync, grpcClient.GetPatchDeployment, effectiveSettings.GetPatchDeploymentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetPatchDeployment);
             Modify_GetPatchDeploymentApiCall(ref _callGetPatchDeployment);
-            _callListPatchDeployments = clientHelper.BuildApiCall<ListPatchDeploymentsRequest, ListPatchDeploymentsResponse>(grpcClient.ListPatchDeploymentsAsync, grpcClient.ListPatchDeployments, effectiveSettings.ListPatchDeploymentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListPatchDeployments = clientHelper.BuildApiCall<ListPatchDeploymentsRequest, ListPatchDeploymentsResponse>("ListPatchDeployments", grpcClient.ListPatchDeploymentsAsync, grpcClient.ListPatchDeployments, effectiveSettings.ListPatchDeploymentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListPatchDeployments);
             Modify_ListPatchDeploymentsApiCall(ref _callListPatchDeployments);
-            _callDeletePatchDeployment = clientHelper.BuildApiCall<DeletePatchDeploymentRequest, wkt::Empty>(grpcClient.DeletePatchDeploymentAsync, grpcClient.DeletePatchDeployment, effectiveSettings.DeletePatchDeploymentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeletePatchDeployment = clientHelper.BuildApiCall<DeletePatchDeploymentRequest, wkt::Empty>("DeletePatchDeployment", grpcClient.DeletePatchDeploymentAsync, grpcClient.DeletePatchDeployment, effectiveSettings.DeletePatchDeploymentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeletePatchDeployment);
             Modify_DeletePatchDeploymentApiCall(ref _callDeletePatchDeployment);
-            _callUpdatePatchDeployment = clientHelper.BuildApiCall<UpdatePatchDeploymentRequest, PatchDeployment>(grpcClient.UpdatePatchDeploymentAsync, grpcClient.UpdatePatchDeployment, effectiveSettings.UpdatePatchDeploymentSettings).WithGoogleRequestParam("patch_deployment.name", request => request.PatchDeployment?.Name);
+            _callUpdatePatchDeployment = clientHelper.BuildApiCall<UpdatePatchDeploymentRequest, PatchDeployment>("UpdatePatchDeployment", grpcClient.UpdatePatchDeploymentAsync, grpcClient.UpdatePatchDeployment, effectiveSettings.UpdatePatchDeploymentSettings).WithGoogleRequestParam("patch_deployment.name", request => request.PatchDeployment?.Name);
             Modify_ApiCall(ref _callUpdatePatchDeployment);
             Modify_UpdatePatchDeploymentApiCall(ref _callUpdatePatchDeployment);
-            _callPausePatchDeployment = clientHelper.BuildApiCall<PausePatchDeploymentRequest, PatchDeployment>(grpcClient.PausePatchDeploymentAsync, grpcClient.PausePatchDeployment, effectiveSettings.PausePatchDeploymentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callPausePatchDeployment = clientHelper.BuildApiCall<PausePatchDeploymentRequest, PatchDeployment>("PausePatchDeployment", grpcClient.PausePatchDeploymentAsync, grpcClient.PausePatchDeployment, effectiveSettings.PausePatchDeploymentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callPausePatchDeployment);
             Modify_PausePatchDeploymentApiCall(ref _callPausePatchDeployment);
-            _callResumePatchDeployment = clientHelper.BuildApiCall<ResumePatchDeploymentRequest, PatchDeployment>(grpcClient.ResumePatchDeploymentAsync, grpcClient.ResumePatchDeployment, effectiveSettings.ResumePatchDeploymentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callResumePatchDeployment = clientHelper.BuildApiCall<ResumePatchDeploymentRequest, PatchDeployment>("ResumePatchDeployment", grpcClient.ResumePatchDeploymentAsync, grpcClient.ResumePatchDeployment, effectiveSettings.ResumePatchDeploymentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callResumePatchDeployment);
             Modify_ResumePatchDeploymentApiCall(ref _callResumePatchDeployment);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

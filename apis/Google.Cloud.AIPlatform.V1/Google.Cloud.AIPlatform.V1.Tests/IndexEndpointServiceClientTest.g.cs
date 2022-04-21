@@ -57,10 +57,12 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetIndexEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
+            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             IndexEndpoint response = client.GetIndexEndpoint(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -95,10 +97,12 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetIndexEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IndexEndpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
+            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             IndexEndpoint responseCallSettings = await client.GetIndexEndpointAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             IndexEndpoint responseCancellationToken = await client.GetIndexEndpointAsync(request, st::CancellationToken.None);
@@ -135,10 +139,12 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetIndexEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
+            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             IndexEndpoint response = client.GetIndexEndpoint(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -173,10 +179,12 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetIndexEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IndexEndpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
+            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             IndexEndpoint responseCallSettings = await client.GetIndexEndpointAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             IndexEndpoint responseCancellationToken = await client.GetIndexEndpointAsync(request.Name, st::CancellationToken.None);
@@ -213,10 +221,12 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetIndexEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
+            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             IndexEndpoint response = client.GetIndexEndpoint(request.IndexEndpointName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -251,10 +261,12 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetIndexEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IndexEndpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
+            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             IndexEndpoint responseCallSettings = await client.GetIndexEndpointAsync(request.IndexEndpointName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             IndexEndpoint responseCancellationToken = await client.GetIndexEndpointAsync(request.IndexEndpointName, st::CancellationToken.None);
@@ -292,10 +304,12 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.UpdateIndexEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
+            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             IndexEndpoint response = client.UpdateIndexEndpoint(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -331,10 +345,12 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.UpdateIndexEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IndexEndpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
+            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             IndexEndpoint responseCallSettings = await client.UpdateIndexEndpointAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             IndexEndpoint responseCancellationToken = await client.UpdateIndexEndpointAsync(request, st::CancellationToken.None);
@@ -372,10 +388,12 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.UpdateIndexEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
+            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             IndexEndpoint response = client.UpdateIndexEndpoint(request.IndexEndpoint, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -411,10 +429,12 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+#pragma warning disable CS0612
                 EnablePrivateServiceConnect = false,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.UpdateIndexEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IndexEndpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
+            IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null, null);
             IndexEndpoint responseCallSettings = await client.UpdateIndexEndpointAsync(request.IndexEndpoint, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             IndexEndpoint responseCancellationToken = await client.UpdateIndexEndpointAsync(request.IndexEndpoint, request.UpdateMask, st::CancellationToken.None);

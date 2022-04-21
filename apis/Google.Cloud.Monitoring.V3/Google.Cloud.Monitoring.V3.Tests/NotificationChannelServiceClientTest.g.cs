@@ -56,7 +56,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 LaunchStage = ga::LaunchStage.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannelDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannelDescriptor response = client.GetNotificationChannelDescriptor(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -89,7 +89,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 LaunchStage = ga::LaunchStage.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannelDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannelDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannelDescriptor responseCallSettings = await client.GetNotificationChannelDescriptorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationChannelDescriptor responseCancellationToken = await client.GetNotificationChannelDescriptorAsync(request, st::CancellationToken.None);
@@ -124,7 +124,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 LaunchStage = ga::LaunchStage.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannelDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannelDescriptor response = client.GetNotificationChannelDescriptor(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -157,7 +157,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 LaunchStage = ga::LaunchStage.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannelDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannelDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannelDescriptor responseCallSettings = await client.GetNotificationChannelDescriptorAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationChannelDescriptor responseCancellationToken = await client.GetNotificationChannelDescriptorAsync(request.Name, st::CancellationToken.None);
@@ -192,7 +192,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 LaunchStage = ga::LaunchStage.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannelDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannelDescriptor response = client.GetNotificationChannelDescriptor(request.NotificationChannelDescriptorName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -225,7 +225,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 LaunchStage = ga::LaunchStage.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannelDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannelDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannelDescriptor responseCallSettings = await client.GetNotificationChannelDescriptorAsync(request.NotificationChannelDescriptorName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationChannelDescriptor responseCancellationToken = await client.GetNotificationChannelDescriptorAsync(request.NotificationChannelDescriptorName, st::CancellationToken.None);
@@ -260,7 +260,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 LaunchStage = ga::LaunchStage.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannelDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannelDescriptor response = client.GetNotificationChannelDescriptor(request.ResourceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -293,7 +293,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 LaunchStage = ga::LaunchStage.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannelDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannelDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannelDescriptor responseCallSettings = await client.GetNotificationChannelDescriptorAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationChannelDescriptor responseCancellationToken = await client.GetNotificationChannelDescriptorAsync(request.ResourceName, st::CancellationToken.None);
@@ -338,7 +338,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel response = client.GetNotificationChannel(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -381,7 +381,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel responseCallSettings = await client.GetNotificationChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationChannel responseCancellationToken = await client.GetNotificationChannelAsync(request, st::CancellationToken.None);
@@ -426,7 +426,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel response = client.GetNotificationChannel(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -469,7 +469,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel responseCallSettings = await client.GetNotificationChannelAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationChannel responseCancellationToken = await client.GetNotificationChannelAsync(request.Name, st::CancellationToken.None);
@@ -514,7 +514,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel response = client.GetNotificationChannel(request.NotificationChannelName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -557,7 +557,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel responseCallSettings = await client.GetNotificationChannelAsync(request.NotificationChannelName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationChannel responseCancellationToken = await client.GetNotificationChannelAsync(request.NotificationChannelName, st::CancellationToken.None);
@@ -602,7 +602,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel response = client.GetNotificationChannel(request.ResourceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -645,7 +645,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel responseCallSettings = await client.GetNotificationChannelAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationChannel responseCancellationToken = await client.GetNotificationChannelAsync(request.ResourceName, st::CancellationToken.None);
@@ -691,7 +691,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel response = client.CreateNotificationChannel(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -735,7 +735,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel responseCallSettings = await client.CreateNotificationChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationChannel responseCancellationToken = await client.CreateNotificationChannelAsync(request, st::CancellationToken.None);
@@ -781,7 +781,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel response = client.CreateNotificationChannel(request.Name, request.NotificationChannel);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -825,7 +825,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel responseCallSettings = await client.CreateNotificationChannelAsync(request.Name, request.NotificationChannel, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationChannel responseCancellationToken = await client.CreateNotificationChannelAsync(request.Name, request.NotificationChannel, st::CancellationToken.None);
@@ -871,7 +871,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel response = client.CreateNotificationChannel(request.ProjectName, request.NotificationChannel);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -915,7 +915,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel responseCallSettings = await client.CreateNotificationChannelAsync(request.ProjectName, request.NotificationChannel, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationChannel responseCancellationToken = await client.CreateNotificationChannelAsync(request.ProjectName, request.NotificationChannel, st::CancellationToken.None);
@@ -961,7 +961,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel response = client.CreateNotificationChannel(request.OrganizationName, request.NotificationChannel);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1005,7 +1005,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel responseCallSettings = await client.CreateNotificationChannelAsync(request.OrganizationName, request.NotificationChannel, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationChannel responseCancellationToken = await client.CreateNotificationChannelAsync(request.OrganizationName, request.NotificationChannel, st::CancellationToken.None);
@@ -1051,7 +1051,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel response = client.CreateNotificationChannel(request.FolderName, request.NotificationChannel);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1095,7 +1095,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel responseCallSettings = await client.CreateNotificationChannelAsync(request.FolderName, request.NotificationChannel, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationChannel responseCancellationToken = await client.CreateNotificationChannelAsync(request.FolderName, request.NotificationChannel, st::CancellationToken.None);
@@ -1141,7 +1141,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel response = client.CreateNotificationChannel(request.ResourceName, request.NotificationChannel);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1185,7 +1185,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel responseCallSettings = await client.CreateNotificationChannelAsync(request.ResourceName, request.NotificationChannel, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationChannel responseCancellationToken = await client.CreateNotificationChannelAsync(request.ResourceName, request.NotificationChannel, st::CancellationToken.None);
@@ -1231,7 +1231,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel response = client.UpdateNotificationChannel(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1275,7 +1275,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel responseCallSettings = await client.UpdateNotificationChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationChannel responseCancellationToken = await client.UpdateNotificationChannelAsync(request, st::CancellationToken.None);
@@ -1321,7 +1321,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel response = client.UpdateNotificationChannel(request.UpdateMask, request.NotificationChannel);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1365,7 +1365,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel responseCallSettings = await client.UpdateNotificationChannelAsync(request.UpdateMask, request.NotificationChannel, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationChannel responseCancellationToken = await client.UpdateNotificationChannelAsync(request.UpdateMask, request.NotificationChannel, st::CancellationToken.None);
@@ -1384,7 +1384,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteNotificationChannel(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1400,7 +1400,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteNotificationChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteNotificationChannelAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1417,7 +1417,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteNotificationChannel(request.Name, request.Force);
             mockGrpcClient.VerifyAll();
         }
@@ -1433,7 +1433,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteNotificationChannelAsync(request.Name, request.Force, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteNotificationChannelAsync(request.Name, request.Force, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1450,7 +1450,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteNotificationChannel(request.NotificationChannelName, request.Force);
             mockGrpcClient.VerifyAll();
         }
@@ -1466,7 +1466,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteNotificationChannelAsync(request.NotificationChannelName, request.Force, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteNotificationChannelAsync(request.NotificationChannelName, request.Force, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1483,7 +1483,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteNotificationChannel(request.ResourceName, request.Force);
             mockGrpcClient.VerifyAll();
         }
@@ -1499,7 +1499,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteNotificationChannelAsync(request.ResourceName, request.Force, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteNotificationChannelAsync(request.ResourceName, request.Force, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1515,7 +1515,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.SendNotificationChannelVerificationCode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             client.SendNotificationChannelVerificationCode(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1530,7 +1530,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.SendNotificationChannelVerificationCodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.SendNotificationChannelVerificationCodeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.SendNotificationChannelVerificationCodeAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1546,7 +1546,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.SendNotificationChannelVerificationCode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             client.SendNotificationChannelVerificationCode(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1561,7 +1561,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.SendNotificationChannelVerificationCodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.SendNotificationChannelVerificationCodeAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.SendNotificationChannelVerificationCodeAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1577,7 +1577,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.SendNotificationChannelVerificationCode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             client.SendNotificationChannelVerificationCode(request.NotificationChannelName);
             mockGrpcClient.VerifyAll();
         }
@@ -1592,7 +1592,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.SendNotificationChannelVerificationCodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.SendNotificationChannelVerificationCodeAsync(request.NotificationChannelName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.SendNotificationChannelVerificationCodeAsync(request.NotificationChannelName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1608,7 +1608,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.SendNotificationChannelVerificationCode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             client.SendNotificationChannelVerificationCode(request.ResourceName);
             mockGrpcClient.VerifyAll();
         }
@@ -1623,7 +1623,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.SendNotificationChannelVerificationCodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.SendNotificationChannelVerificationCodeAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.SendNotificationChannelVerificationCodeAsync(request.ResourceName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1644,7 +1644,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannelVerificationCode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             GetNotificationChannelVerificationCodeResponse response = client.GetNotificationChannelVerificationCode(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1665,7 +1665,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannelVerificationCodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GetNotificationChannelVerificationCodeResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             GetNotificationChannelVerificationCodeResponse responseCallSettings = await client.GetNotificationChannelVerificationCodeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GetNotificationChannelVerificationCodeResponse responseCancellationToken = await client.GetNotificationChannelVerificationCodeAsync(request, st::CancellationToken.None);
@@ -1687,7 +1687,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannelVerificationCode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             GetNotificationChannelVerificationCodeResponse response = client.GetNotificationChannelVerificationCode(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1707,7 +1707,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannelVerificationCodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GetNotificationChannelVerificationCodeResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             GetNotificationChannelVerificationCodeResponse responseCallSettings = await client.GetNotificationChannelVerificationCodeAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GetNotificationChannelVerificationCodeResponse responseCancellationToken = await client.GetNotificationChannelVerificationCodeAsync(request.Name, st::CancellationToken.None);
@@ -1729,7 +1729,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannelVerificationCode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             GetNotificationChannelVerificationCodeResponse response = client.GetNotificationChannelVerificationCode(request.NotificationChannelName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1749,7 +1749,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannelVerificationCodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GetNotificationChannelVerificationCodeResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             GetNotificationChannelVerificationCodeResponse responseCallSettings = await client.GetNotificationChannelVerificationCodeAsync(request.NotificationChannelName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GetNotificationChannelVerificationCodeResponse responseCancellationToken = await client.GetNotificationChannelVerificationCodeAsync(request.NotificationChannelName, st::CancellationToken.None);
@@ -1771,7 +1771,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannelVerificationCode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             GetNotificationChannelVerificationCodeResponse response = client.GetNotificationChannelVerificationCode(request.ResourceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1791,7 +1791,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetNotificationChannelVerificationCodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GetNotificationChannelVerificationCodeResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             GetNotificationChannelVerificationCodeResponse responseCallSettings = await client.GetNotificationChannelVerificationCodeAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GetNotificationChannelVerificationCodeResponse responseCancellationToken = await client.GetNotificationChannelVerificationCodeAsync(request.ResourceName, st::CancellationToken.None);
@@ -1837,7 +1837,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.VerifyNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel response = client.VerifyNotificationChannel(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1881,7 +1881,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.VerifyNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel responseCallSettings = await client.VerifyNotificationChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationChannel responseCancellationToken = await client.VerifyNotificationChannelAsync(request, st::CancellationToken.None);
@@ -1927,7 +1927,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.VerifyNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel response = client.VerifyNotificationChannel(request.Name, request.Code);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1971,7 +1971,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.VerifyNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel responseCallSettings = await client.VerifyNotificationChannelAsync(request.Name, request.Code, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationChannel responseCancellationToken = await client.VerifyNotificationChannelAsync(request.Name, request.Code, st::CancellationToken.None);
@@ -2017,7 +2017,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.VerifyNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel response = client.VerifyNotificationChannel(request.NotificationChannelName, request.Code);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2061,7 +2061,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.VerifyNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel responseCallSettings = await client.VerifyNotificationChannelAsync(request.NotificationChannelName, request.Code, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationChannel responseCancellationToken = await client.VerifyNotificationChannelAsync(request.NotificationChannelName, request.Code, st::CancellationToken.None);
@@ -2107,7 +2107,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.VerifyNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel response = client.VerifyNotificationChannel(request.ResourceName, request.Code);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2151,7 +2151,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.VerifyNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             NotificationChannel responseCallSettings = await client.VerifyNotificationChannelAsync(request.ResourceName, request.Code, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NotificationChannel responseCancellationToken = await client.VerifyNotificationChannelAsync(request.ResourceName, request.Code, st::CancellationToken.None);

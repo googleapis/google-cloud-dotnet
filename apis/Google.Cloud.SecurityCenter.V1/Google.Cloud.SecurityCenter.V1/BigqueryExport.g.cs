@@ -235,9 +235,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int MostRecentEditorFieldNumber = 7;
     private string mostRecentEditor_ = "";
     /// <summary>
-    /// Output only. Email address of the user who last edited the big query
-    /// export. This field is set by the server and will be ignored if provided on
-    /// export creation or update.
+    /// Output only. Email address of the user who last edited the big query export.
+    /// This field is set by the server and will be ignored if provided on export
+    /// creation or update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -252,8 +252,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int PrincipalFieldNumber = 8;
     private string principal_ = "";
     /// <summary>
-    /// Output only. The service account that needs permission to create table,
-    /// upload data to the big query dataset.
+    /// Output only. The service account that needs permission to create table, upload data to
+    /// the big query dataset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

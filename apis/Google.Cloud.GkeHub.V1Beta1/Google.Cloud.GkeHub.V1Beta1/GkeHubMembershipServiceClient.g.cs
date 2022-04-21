@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -285,9 +285,8 @@ namespace Google.Cloud.GkeHub.V1Beta1
         public GkeHubMembershipServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public GkeHubMembershipServiceClientBuilder()
+        public GkeHubMembershipServiceClientBuilder() : base(GkeHubMembershipServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = GkeHubMembershipServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref GkeHubMembershipServiceClient client);
@@ -314,29 +313,18 @@ namespace Google.Cloud.GkeHub.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return GkeHubMembershipServiceClient.Create(callInvoker, Settings);
+            return GkeHubMembershipServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<GkeHubMembershipServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return GkeHubMembershipServiceClient.Create(callInvoker, Settings);
+            return GkeHubMembershipServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => GkeHubMembershipServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => GkeHubMembershipServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => GkeHubMembershipServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>GkeHubMembershipService client wrapper, for convenient use.</summary>
@@ -371,19 +359,10 @@ namespace Google.Cloud.GkeHub.V1Beta1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(GkeHubMembershipService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="GkeHubMembershipServiceClient"/> using the default credentials, endpoint
@@ -413,8 +392,9 @@ namespace Google.Cloud.GkeHub.V1Beta1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="GkeHubMembershipServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="GkeHubMembershipServiceClient"/>.</returns>
-        internal static GkeHubMembershipServiceClient Create(grpccore::CallInvoker callInvoker, GkeHubMembershipServiceSettings settings = null)
+        internal static GkeHubMembershipServiceClient Create(grpccore::CallInvoker callInvoker, GkeHubMembershipServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -423,7 +403,7 @@ namespace Google.Cloud.GkeHub.V1Beta1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             GkeHubMembershipService.GkeHubMembershipServiceClient grpcClient = new GkeHubMembershipService.GkeHubMembershipServiceClient(callInvoker);
-            return new GkeHubMembershipServiceClientImpl(grpcClient, settings);
+            return new GkeHubMembershipServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1169,36 +1149,37 @@ namespace Google.Cloud.GkeHub.V1Beta1
         /// <param name="settings">
         /// The base <see cref="GkeHubMembershipServiceSettings"/> used within this client.
         /// </param>
-        public GkeHubMembershipServiceClientImpl(GkeHubMembershipService.GkeHubMembershipServiceClient grpcClient, GkeHubMembershipServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public GkeHubMembershipServiceClientImpl(GkeHubMembershipService.GkeHubMembershipServiceClient grpcClient, GkeHubMembershipServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             GkeHubMembershipServiceSettings effectiveSettings = settings ?? GkeHubMembershipServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateMembershipOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateMembershipOperationsSettings);
-            DeleteMembershipOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteMembershipOperationsSettings);
-            UpdateMembershipOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateMembershipOperationsSettings);
-            _callListMemberships = clientHelper.BuildApiCall<ListMembershipsRequest, ListMembershipsResponse>(grpcClient.ListMembershipsAsync, grpcClient.ListMemberships, effectiveSettings.ListMembershipsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateMembershipOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateMembershipOperationsSettings, logger);
+            DeleteMembershipOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteMembershipOperationsSettings, logger);
+            UpdateMembershipOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateMembershipOperationsSettings, logger);
+            _callListMemberships = clientHelper.BuildApiCall<ListMembershipsRequest, ListMembershipsResponse>("ListMemberships", grpcClient.ListMembershipsAsync, grpcClient.ListMemberships, effectiveSettings.ListMembershipsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListMemberships);
             Modify_ListMembershipsApiCall(ref _callListMemberships);
-            _callGetMembership = clientHelper.BuildApiCall<GetMembershipRequest, Membership>(grpcClient.GetMembershipAsync, grpcClient.GetMembership, effectiveSettings.GetMembershipSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetMembership = clientHelper.BuildApiCall<GetMembershipRequest, Membership>("GetMembership", grpcClient.GetMembershipAsync, grpcClient.GetMembership, effectiveSettings.GetMembershipSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetMembership);
             Modify_GetMembershipApiCall(ref _callGetMembership);
-            _callCreateMembership = clientHelper.BuildApiCall<CreateMembershipRequest, lro::Operation>(grpcClient.CreateMembershipAsync, grpcClient.CreateMembership, effectiveSettings.CreateMembershipSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateMembership = clientHelper.BuildApiCall<CreateMembershipRequest, lro::Operation>("CreateMembership", grpcClient.CreateMembershipAsync, grpcClient.CreateMembership, effectiveSettings.CreateMembershipSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateMembership);
             Modify_CreateMembershipApiCall(ref _callCreateMembership);
-            _callDeleteMembership = clientHelper.BuildApiCall<DeleteMembershipRequest, lro::Operation>(grpcClient.DeleteMembershipAsync, grpcClient.DeleteMembership, effectiveSettings.DeleteMembershipSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteMembership = clientHelper.BuildApiCall<DeleteMembershipRequest, lro::Operation>("DeleteMembership", grpcClient.DeleteMembershipAsync, grpcClient.DeleteMembership, effectiveSettings.DeleteMembershipSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteMembership);
             Modify_DeleteMembershipApiCall(ref _callDeleteMembership);
-            _callUpdateMembership = clientHelper.BuildApiCall<UpdateMembershipRequest, lro::Operation>(grpcClient.UpdateMembershipAsync, grpcClient.UpdateMembership, effectiveSettings.UpdateMembershipSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateMembership = clientHelper.BuildApiCall<UpdateMembershipRequest, lro::Operation>("UpdateMembership", grpcClient.UpdateMembershipAsync, grpcClient.UpdateMembership, effectiveSettings.UpdateMembershipSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateMembership);
             Modify_UpdateMembershipApiCall(ref _callUpdateMembership);
-            _callGenerateConnectManifest = clientHelper.BuildApiCall<GenerateConnectManifestRequest, GenerateConnectManifestResponse>(grpcClient.GenerateConnectManifestAsync, grpcClient.GenerateConnectManifest, effectiveSettings.GenerateConnectManifestSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGenerateConnectManifest = clientHelper.BuildApiCall<GenerateConnectManifestRequest, GenerateConnectManifestResponse>("GenerateConnectManifest", grpcClient.GenerateConnectManifestAsync, grpcClient.GenerateConnectManifest, effectiveSettings.GenerateConnectManifestSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGenerateConnectManifest);
             Modify_GenerateConnectManifestApiCall(ref _callGenerateConnectManifest);
-            _callValidateExclusivity = clientHelper.BuildApiCall<ValidateExclusivityRequest, ValidateExclusivityResponse>(grpcClient.ValidateExclusivityAsync, grpcClient.ValidateExclusivity, effectiveSettings.ValidateExclusivitySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callValidateExclusivity = clientHelper.BuildApiCall<ValidateExclusivityRequest, ValidateExclusivityResponse>("ValidateExclusivity", grpcClient.ValidateExclusivityAsync, grpcClient.ValidateExclusivity, effectiveSettings.ValidateExclusivitySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callValidateExclusivity);
             Modify_ValidateExclusivityApiCall(ref _callValidateExclusivity);
-            _callGenerateExclusivityManifest = clientHelper.BuildApiCall<GenerateExclusivityManifestRequest, GenerateExclusivityManifestResponse>(grpcClient.GenerateExclusivityManifestAsync, grpcClient.GenerateExclusivityManifest, effectiveSettings.GenerateExclusivityManifestSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGenerateExclusivityManifest = clientHelper.BuildApiCall<GenerateExclusivityManifestRequest, GenerateExclusivityManifestResponse>("GenerateExclusivityManifest", grpcClient.GenerateExclusivityManifestAsync, grpcClient.GenerateExclusivityManifest, effectiveSettings.GenerateExclusivityManifestSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGenerateExclusivityManifest);
             Modify_GenerateExclusivityManifestApiCall(ref _callGenerateExclusivityManifest);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

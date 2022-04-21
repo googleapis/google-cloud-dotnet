@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -138,9 +138,8 @@ namespace Google.Cloud.Dataproc.V1
         public BatchControllerSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public BatchControllerClientBuilder()
+        public BatchControllerClientBuilder() : base(BatchControllerClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = BatchControllerClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref BatchControllerClient client);
@@ -167,29 +166,18 @@ namespace Google.Cloud.Dataproc.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return BatchControllerClient.Create(callInvoker, Settings);
+            return BatchControllerClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<BatchControllerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return BatchControllerClient.Create(callInvoker, Settings);
+            return BatchControllerClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => BatchControllerClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => BatchControllerClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => BatchControllerClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>BatchController client wrapper, for convenient use.</summary>
@@ -216,19 +204,10 @@ namespace Google.Cloud.Dataproc.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(BatchController.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="BatchControllerClient"/> using the default credentials, endpoint and
@@ -255,8 +234,9 @@ namespace Google.Cloud.Dataproc.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="BatchControllerSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="BatchControllerClient"/>.</returns>
-        internal static BatchControllerClient Create(grpccore::CallInvoker callInvoker, BatchControllerSettings settings = null)
+        internal static BatchControllerClient Create(grpccore::CallInvoker callInvoker, BatchControllerSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -265,7 +245,7 @@ namespace Google.Cloud.Dataproc.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             BatchController.BatchControllerClient grpcClient = new BatchController.BatchControllerClient(callInvoker);
-            return new BatchControllerClientImpl(grpcClient, settings);
+            return new BatchControllerClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -830,22 +810,23 @@ namespace Google.Cloud.Dataproc.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="BatchControllerSettings"/> used within this client.</param>
-        public BatchControllerClientImpl(BatchController.BatchControllerClient grpcClient, BatchControllerSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public BatchControllerClientImpl(BatchController.BatchControllerClient grpcClient, BatchControllerSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             BatchControllerSettings effectiveSettings = settings ?? BatchControllerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateBatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBatchOperationsSettings);
-            _callCreateBatch = clientHelper.BuildApiCall<CreateBatchRequest, lro::Operation>(grpcClient.CreateBatchAsync, grpcClient.CreateBatch, effectiveSettings.CreateBatchSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateBatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBatchOperationsSettings, logger);
+            _callCreateBatch = clientHelper.BuildApiCall<CreateBatchRequest, lro::Operation>("CreateBatch", grpcClient.CreateBatchAsync, grpcClient.CreateBatch, effectiveSettings.CreateBatchSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBatch);
             Modify_CreateBatchApiCall(ref _callCreateBatch);
-            _callGetBatch = clientHelper.BuildApiCall<GetBatchRequest, Batch>(grpcClient.GetBatchAsync, grpcClient.GetBatch, effectiveSettings.GetBatchSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetBatch = clientHelper.BuildApiCall<GetBatchRequest, Batch>("GetBatch", grpcClient.GetBatchAsync, grpcClient.GetBatch, effectiveSettings.GetBatchSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetBatch);
             Modify_GetBatchApiCall(ref _callGetBatch);
-            _callListBatches = clientHelper.BuildApiCall<ListBatchesRequest, ListBatchesResponse>(grpcClient.ListBatchesAsync, grpcClient.ListBatches, effectiveSettings.ListBatchesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListBatches = clientHelper.BuildApiCall<ListBatchesRequest, ListBatchesResponse>("ListBatches", grpcClient.ListBatchesAsync, grpcClient.ListBatches, effectiveSettings.ListBatchesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListBatches);
             Modify_ListBatchesApiCall(ref _callListBatches);
-            _callDeleteBatch = clientHelper.BuildApiCall<DeleteBatchRequest, wkt::Empty>(grpcClient.DeleteBatchAsync, grpcClient.DeleteBatch, effectiveSettings.DeleteBatchSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteBatch = clientHelper.BuildApiCall<DeleteBatchRequest, wkt::Empty>("DeleteBatch", grpcClient.DeleteBatchAsync, grpcClient.DeleteBatch, effectiveSettings.DeleteBatchSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteBatch);
             Modify_DeleteBatchApiCall(ref _callDeleteBatch);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

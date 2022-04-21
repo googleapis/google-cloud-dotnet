@@ -46,7 +46,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -69,7 +69,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomJob response = client.CreateCustomJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -90,7 +90,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -113,7 +113,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomJob responseCallSettings = await client.CreateCustomJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomJob responseCancellationToken = await client.CreateCustomJobAsync(request, st::CancellationToken.None);
@@ -136,7 +136,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -159,7 +159,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomJob response = client.CreateCustomJob(request.Parent, request.CustomJob);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -180,7 +180,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -203,7 +203,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomJob responseCallSettings = await client.CreateCustomJobAsync(request.Parent, request.CustomJob, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomJob responseCancellationToken = await client.CreateCustomJobAsync(request.Parent, request.CustomJob, st::CancellationToken.None);
@@ -226,7 +226,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -249,7 +249,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomJob response = client.CreateCustomJob(request.ParentAsLocationName, request.CustomJob);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -270,7 +270,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -293,7 +293,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomJob responseCallSettings = await client.CreateCustomJobAsync(request.ParentAsLocationName, request.CustomJob, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomJob responseCancellationToken = await client.CreateCustomJobAsync(request.ParentAsLocationName, request.CustomJob, st::CancellationToken.None);
@@ -315,7 +315,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -338,7 +338,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomJob response = client.GetCustomJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -358,7 +358,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -381,7 +381,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomJob responseCallSettings = await client.GetCustomJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomJob responseCancellationToken = await client.GetCustomJobAsync(request, st::CancellationToken.None);
@@ -403,7 +403,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -426,7 +426,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomJob response = client.GetCustomJob(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -446,7 +446,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -469,7 +469,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomJob responseCallSettings = await client.GetCustomJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomJob responseCancellationToken = await client.GetCustomJobAsync(request.Name, st::CancellationToken.None);
@@ -491,7 +491,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -514,7 +514,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomJob response = client.GetCustomJob(request.CustomJobName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -534,7 +534,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CustomJobName = CustomJobName.FromProjectLocationCustomJob("[PROJECT]", "[LOCATION]", "[CUSTOM_JOB]"),
                 DisplayName = "display_name137f65c2",
                 JobSpec = new CustomJobSpec(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -557,7 +557,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             CustomJob responseCallSettings = await client.GetCustomJobAsync(request.CustomJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomJob responseCancellationToken = await client.GetCustomJobAsync(request.CustomJobName, st::CancellationToken.None);
@@ -576,7 +576,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelCustomJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CancelCustomJob(request);
             mockGrpcClient.VerifyAll();
         }
@@ -592,7 +592,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelCustomJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelCustomJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelCustomJobAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -609,7 +609,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelCustomJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CancelCustomJob(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -625,7 +625,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelCustomJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelCustomJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelCustomJobAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -642,7 +642,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelCustomJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CancelCustomJob(request.CustomJobName);
             mockGrpcClient.VerifyAll();
         }
@@ -658,7 +658,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelCustomJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelCustomJobAsync(request.CustomJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelCustomJobAsync(request.CustomJobName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -686,7 +686,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -714,7 +714,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateDataLabelingJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             DataLabelingJob response = client.CreateDataLabelingJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -742,7 +742,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -770,7 +770,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateDataLabelingJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataLabelingJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             DataLabelingJob responseCallSettings = await client.CreateDataLabelingJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataLabelingJob responseCancellationToken = await client.CreateDataLabelingJobAsync(request, st::CancellationToken.None);
@@ -800,7 +800,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -828,7 +828,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateDataLabelingJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             DataLabelingJob response = client.CreateDataLabelingJob(request.Parent, request.DataLabelingJob);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -856,7 +856,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -884,7 +884,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateDataLabelingJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataLabelingJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             DataLabelingJob responseCallSettings = await client.CreateDataLabelingJobAsync(request.Parent, request.DataLabelingJob, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataLabelingJob responseCancellationToken = await client.CreateDataLabelingJobAsync(request.Parent, request.DataLabelingJob, st::CancellationToken.None);
@@ -914,7 +914,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -942,7 +942,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateDataLabelingJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             DataLabelingJob response = client.CreateDataLabelingJob(request.ParentAsLocationName, request.DataLabelingJob);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -970,7 +970,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -998,7 +998,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateDataLabelingJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataLabelingJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             DataLabelingJob responseCallSettings = await client.CreateDataLabelingJobAsync(request.ParentAsLocationName, request.DataLabelingJob, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataLabelingJob responseCancellationToken = await client.CreateDataLabelingJobAsync(request.ParentAsLocationName, request.DataLabelingJob, st::CancellationToken.None);
@@ -1027,7 +1027,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -1055,7 +1055,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetDataLabelingJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             DataLabelingJob response = client.GetDataLabelingJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1082,7 +1082,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -1110,7 +1110,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetDataLabelingJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataLabelingJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             DataLabelingJob responseCallSettings = await client.GetDataLabelingJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataLabelingJob responseCancellationToken = await client.GetDataLabelingJobAsync(request, st::CancellationToken.None);
@@ -1139,7 +1139,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -1167,7 +1167,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetDataLabelingJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             DataLabelingJob response = client.GetDataLabelingJob(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1194,7 +1194,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -1222,7 +1222,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetDataLabelingJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataLabelingJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             DataLabelingJob responseCallSettings = await client.GetDataLabelingJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataLabelingJob responseCancellationToken = await client.GetDataLabelingJobAsync(request.Name, st::CancellationToken.None);
@@ -1251,7 +1251,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -1279,7 +1279,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetDataLabelingJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             DataLabelingJob response = client.GetDataLabelingJob(request.DataLabelingJobName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1306,7 +1306,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 InstructionUri = "instruction_uri3b1c9f62",
                 InputsSchemaUri = "inputs_schema_uri668b3ec5",
                 Inputs = new wkt::Value(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -1334,7 +1334,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetDataLabelingJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataLabelingJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             DataLabelingJob responseCallSettings = await client.GetDataLabelingJobAsync(request.DataLabelingJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataLabelingJob responseCancellationToken = await client.GetDataLabelingJobAsync(request.DataLabelingJobName, st::CancellationToken.None);
@@ -1353,7 +1353,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelDataLabelingJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CancelDataLabelingJob(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1369,7 +1369,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelDataLabelingJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelDataLabelingJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelDataLabelingJobAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1386,7 +1386,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelDataLabelingJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CancelDataLabelingJob(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1402,7 +1402,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelDataLabelingJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelDataLabelingJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelDataLabelingJobAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1419,7 +1419,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelDataLabelingJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CancelDataLabelingJob(request.DataLabelingJobName);
             mockGrpcClient.VerifyAll();
         }
@@ -1435,7 +1435,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelDataLabelingJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelDataLabelingJobAsync(request.DataLabelingJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelDataLabelingJobAsync(request.DataLabelingJobName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1461,7 +1461,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -1477,7 +1477,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.CreateHyperparameterTuningJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             HyperparameterTuningJob response = client.CreateHyperparameterTuningJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1503,7 +1503,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -1519,7 +1519,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.CreateHyperparameterTuningJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<HyperparameterTuningJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             HyperparameterTuningJob responseCallSettings = await client.CreateHyperparameterTuningJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             HyperparameterTuningJob responseCancellationToken = await client.CreateHyperparameterTuningJobAsync(request, st::CancellationToken.None);
@@ -1547,7 +1547,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -1563,7 +1563,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.CreateHyperparameterTuningJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             HyperparameterTuningJob response = client.CreateHyperparameterTuningJob(request.Parent, request.HyperparameterTuningJob);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1589,7 +1589,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -1605,7 +1605,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.CreateHyperparameterTuningJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<HyperparameterTuningJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             HyperparameterTuningJob responseCallSettings = await client.CreateHyperparameterTuningJobAsync(request.Parent, request.HyperparameterTuningJob, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             HyperparameterTuningJob responseCancellationToken = await client.CreateHyperparameterTuningJobAsync(request.Parent, request.HyperparameterTuningJob, st::CancellationToken.None);
@@ -1633,7 +1633,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -1649,7 +1649,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.CreateHyperparameterTuningJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             HyperparameterTuningJob response = client.CreateHyperparameterTuningJob(request.ParentAsLocationName, request.HyperparameterTuningJob);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1675,7 +1675,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -1691,7 +1691,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.CreateHyperparameterTuningJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<HyperparameterTuningJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             HyperparameterTuningJob responseCallSettings = await client.CreateHyperparameterTuningJobAsync(request.ParentAsLocationName, request.HyperparameterTuningJob, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             HyperparameterTuningJob responseCancellationToken = await client.CreateHyperparameterTuningJobAsync(request.ParentAsLocationName, request.HyperparameterTuningJob, st::CancellationToken.None);
@@ -1718,7 +1718,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -1734,7 +1734,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetHyperparameterTuningJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             HyperparameterTuningJob response = client.GetHyperparameterTuningJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1759,7 +1759,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -1775,7 +1775,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetHyperparameterTuningJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<HyperparameterTuningJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             HyperparameterTuningJob responseCallSettings = await client.GetHyperparameterTuningJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             HyperparameterTuningJob responseCancellationToken = await client.GetHyperparameterTuningJobAsync(request, st::CancellationToken.None);
@@ -1802,7 +1802,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -1818,7 +1818,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetHyperparameterTuningJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             HyperparameterTuningJob response = client.GetHyperparameterTuningJob(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1843,7 +1843,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -1859,7 +1859,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetHyperparameterTuningJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<HyperparameterTuningJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             HyperparameterTuningJob responseCallSettings = await client.GetHyperparameterTuningJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             HyperparameterTuningJob responseCancellationToken = await client.GetHyperparameterTuningJobAsync(request.Name, st::CancellationToken.None);
@@ -1886,7 +1886,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -1902,7 +1902,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetHyperparameterTuningJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             HyperparameterTuningJob response = client.GetHyperparameterTuningJob(request.HyperparameterTuningJobName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1927,7 +1927,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 MaxFailedTrialCount = -966014448,
                 TrialJobSpec = new CustomJobSpec(),
                 Trials = { new Trial(), },
-                State = JobState.Paused,
+                State = JobState.Queued,
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
@@ -1943,7 +1943,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
             };
             mockGrpcClient.Setup(x => x.GetHyperparameterTuningJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<HyperparameterTuningJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             HyperparameterTuningJob responseCallSettings = await client.GetHyperparameterTuningJobAsync(request.HyperparameterTuningJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             HyperparameterTuningJob responseCancellationToken = await client.GetHyperparameterTuningJobAsync(request.HyperparameterTuningJobName, st::CancellationToken.None);
@@ -1962,7 +1962,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelHyperparameterTuningJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CancelHyperparameterTuningJob(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1978,7 +1978,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelHyperparameterTuningJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelHyperparameterTuningJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelHyperparameterTuningJobAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1995,7 +1995,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelHyperparameterTuningJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CancelHyperparameterTuningJob(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -2011,7 +2011,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelHyperparameterTuningJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelHyperparameterTuningJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelHyperparameterTuningJobAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2028,7 +2028,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelHyperparameterTuningJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CancelHyperparameterTuningJob(request.HyperparameterTuningJobName);
             mockGrpcClient.VerifyAll();
         }
@@ -2044,7 +2044,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelHyperparameterTuningJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelHyperparameterTuningJobAsync(request.HyperparameterTuningJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelHyperparameterTuningJobAsync(request.HyperparameterTuningJobName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2071,7 +2071,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2093,7 +2093,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
             };
             mockGrpcClient.Setup(x => x.CreateBatchPredictionJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchPredictionJob response = client.CreateBatchPredictionJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2120,7 +2120,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2142,7 +2142,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
             };
             mockGrpcClient.Setup(x => x.CreateBatchPredictionJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchPredictionJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchPredictionJob responseCallSettings = await client.CreateBatchPredictionJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchPredictionJob responseCancellationToken = await client.CreateBatchPredictionJobAsync(request, st::CancellationToken.None);
@@ -2171,7 +2171,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2193,7 +2193,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
             };
             mockGrpcClient.Setup(x => x.CreateBatchPredictionJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchPredictionJob response = client.CreateBatchPredictionJob(request.Parent, request.BatchPredictionJob);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2220,7 +2220,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2242,7 +2242,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
             };
             mockGrpcClient.Setup(x => x.CreateBatchPredictionJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchPredictionJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchPredictionJob responseCallSettings = await client.CreateBatchPredictionJobAsync(request.Parent, request.BatchPredictionJob, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchPredictionJob responseCancellationToken = await client.CreateBatchPredictionJobAsync(request.Parent, request.BatchPredictionJob, st::CancellationToken.None);
@@ -2271,7 +2271,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2293,7 +2293,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
             };
             mockGrpcClient.Setup(x => x.CreateBatchPredictionJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchPredictionJob response = client.CreateBatchPredictionJob(request.ParentAsLocationName, request.BatchPredictionJob);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2320,7 +2320,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2342,7 +2342,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
             };
             mockGrpcClient.Setup(x => x.CreateBatchPredictionJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchPredictionJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchPredictionJob responseCallSettings = await client.CreateBatchPredictionJobAsync(request.ParentAsLocationName, request.BatchPredictionJob, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchPredictionJob responseCancellationToken = await client.CreateBatchPredictionJobAsync(request.ParentAsLocationName, request.BatchPredictionJob, st::CancellationToken.None);
@@ -2370,7 +2370,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2392,7 +2392,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
             };
             mockGrpcClient.Setup(x => x.GetBatchPredictionJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchPredictionJob response = client.GetBatchPredictionJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2418,7 +2418,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2440,7 +2440,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
             };
             mockGrpcClient.Setup(x => x.GetBatchPredictionJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchPredictionJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchPredictionJob responseCallSettings = await client.GetBatchPredictionJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchPredictionJob responseCancellationToken = await client.GetBatchPredictionJobAsync(request, st::CancellationToken.None);
@@ -2468,7 +2468,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2490,7 +2490,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
             };
             mockGrpcClient.Setup(x => x.GetBatchPredictionJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchPredictionJob response = client.GetBatchPredictionJob(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2516,7 +2516,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2538,7 +2538,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
             };
             mockGrpcClient.Setup(x => x.GetBatchPredictionJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchPredictionJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchPredictionJob responseCallSettings = await client.GetBatchPredictionJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchPredictionJob responseCancellationToken = await client.GetBatchPredictionJobAsync(request.Name, st::CancellationToken.None);
@@ -2566,7 +2566,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2588,7 +2588,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
             };
             mockGrpcClient.Setup(x => x.GetBatchPredictionJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchPredictionJob response = client.GetBatchPredictionJob(request.BatchPredictionJobName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2614,7 +2614,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 DedicatedResources = new BatchDedicatedResources(),
                 ManualBatchTuningParameters = new ManualBatchTuningParameters(),
                 OutputInfo = new BatchPredictionJob.Types.OutputInfo(),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 Error = new gr::Status(),
                 PartialFailures = { new gr::Status(), },
                 ResourcesConsumed = new ResourcesConsumed(),
@@ -2636,7 +2636,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 UnmanagedContainerModel = new UnmanagedContainerModel(),
             };
             mockGrpcClient.Setup(x => x.GetBatchPredictionJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchPredictionJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             BatchPredictionJob responseCallSettings = await client.GetBatchPredictionJobAsync(request.BatchPredictionJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchPredictionJob responseCancellationToken = await client.GetBatchPredictionJobAsync(request.BatchPredictionJobName, st::CancellationToken.None);
@@ -2655,7 +2655,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelBatchPredictionJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CancelBatchPredictionJob(request);
             mockGrpcClient.VerifyAll();
         }
@@ -2671,7 +2671,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelBatchPredictionJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelBatchPredictionJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelBatchPredictionJobAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2688,7 +2688,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelBatchPredictionJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CancelBatchPredictionJob(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -2704,7 +2704,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelBatchPredictionJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelBatchPredictionJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelBatchPredictionJobAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2721,7 +2721,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelBatchPredictionJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             client.CancelBatchPredictionJob(request.BatchPredictionJobName);
             mockGrpcClient.VerifyAll();
         }
@@ -2737,7 +2737,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.CancelBatchPredictionJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.CancelBatchPredictionJobAsync(request.BatchPredictionJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.CancelBatchPredictionJobAsync(request.BatchPredictionJobName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2758,7 +2758,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -2789,9 +2789,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreateModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelDeploymentMonitoringJob response = client.CreateModelDeploymentMonitoringJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2812,7 +2813,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -2843,9 +2844,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreateModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelDeploymentMonitoringJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelDeploymentMonitoringJob responseCallSettings = await client.CreateModelDeploymentMonitoringJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ModelDeploymentMonitoringJob responseCancellationToken = await client.CreateModelDeploymentMonitoringJobAsync(request, st::CancellationToken.None);
@@ -2868,7 +2870,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -2899,9 +2901,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreateModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelDeploymentMonitoringJob response = client.CreateModelDeploymentMonitoringJob(request.Parent, request.ModelDeploymentMonitoringJob);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2922,7 +2925,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -2953,9 +2956,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreateModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelDeploymentMonitoringJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelDeploymentMonitoringJob responseCallSettings = await client.CreateModelDeploymentMonitoringJobAsync(request.Parent, request.ModelDeploymentMonitoringJob, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ModelDeploymentMonitoringJob responseCancellationToken = await client.CreateModelDeploymentMonitoringJobAsync(request.Parent, request.ModelDeploymentMonitoringJob, st::CancellationToken.None);
@@ -2978,7 +2982,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -3009,9 +3013,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreateModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelDeploymentMonitoringJob response = client.CreateModelDeploymentMonitoringJob(request.ParentAsLocationName, request.ModelDeploymentMonitoringJob);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3032,7 +3037,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -3063,9 +3068,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.CreateModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelDeploymentMonitoringJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelDeploymentMonitoringJob responseCallSettings = await client.CreateModelDeploymentMonitoringJobAsync(request.ParentAsLocationName, request.ModelDeploymentMonitoringJob, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ModelDeploymentMonitoringJob responseCancellationToken = await client.CreateModelDeploymentMonitoringJobAsync(request.ParentAsLocationName, request.ModelDeploymentMonitoringJob, st::CancellationToken.None);
@@ -3087,7 +3093,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -3118,9 +3124,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelDeploymentMonitoringJob response = client.GetModelDeploymentMonitoringJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3140,7 +3147,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -3171,9 +3178,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelDeploymentMonitoringJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelDeploymentMonitoringJob responseCallSettings = await client.GetModelDeploymentMonitoringJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ModelDeploymentMonitoringJob responseCancellationToken = await client.GetModelDeploymentMonitoringJobAsync(request, st::CancellationToken.None);
@@ -3195,7 +3203,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -3226,9 +3234,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelDeploymentMonitoringJob response = client.GetModelDeploymentMonitoringJob(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3248,7 +3257,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -3279,9 +3288,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelDeploymentMonitoringJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelDeploymentMonitoringJob responseCallSettings = await client.GetModelDeploymentMonitoringJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ModelDeploymentMonitoringJob responseCancellationToken = await client.GetModelDeploymentMonitoringJobAsync(request.Name, st::CancellationToken.None);
@@ -3303,7 +3313,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -3334,9 +3344,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelDeploymentMonitoringJob response = client.GetModelDeploymentMonitoringJob(request.ModelDeploymentMonitoringJobName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -3356,7 +3367,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
                 DisplayName = "display_name137f65c2",
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                State = JobState.Paused,
+                State = JobState.Queued,
                 ScheduleState = ModelDeploymentMonitoringJob.Types.MonitoringScheduleState.Unspecified,
                 ModelDeploymentMonitoringObjectiveConfigs =
                 {
@@ -3387,9 +3398,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 EncryptionSpec = new EncryptionSpec(),
                 EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
+                LatestMonitoringPipelineMetadata = new ModelDeploymentMonitoringJob.Types.LatestMonitoringPipelineMetadata(),
             };
             mockGrpcClient.Setup(x => x.GetModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelDeploymentMonitoringJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             ModelDeploymentMonitoringJob responseCallSettings = await client.GetModelDeploymentMonitoringJobAsync(request.ModelDeploymentMonitoringJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ModelDeploymentMonitoringJob responseCancellationToken = await client.GetModelDeploymentMonitoringJobAsync(request.ModelDeploymentMonitoringJobName, st::CancellationToken.None);
@@ -3408,7 +3420,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.PauseModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             client.PauseModelDeploymentMonitoringJob(request);
             mockGrpcClient.VerifyAll();
         }
@@ -3424,7 +3436,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.PauseModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.PauseModelDeploymentMonitoringJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.PauseModelDeploymentMonitoringJobAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -3441,7 +3453,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.PauseModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             client.PauseModelDeploymentMonitoringJob(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -3457,7 +3469,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.PauseModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.PauseModelDeploymentMonitoringJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.PauseModelDeploymentMonitoringJobAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -3474,7 +3486,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.PauseModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             client.PauseModelDeploymentMonitoringJob(request.ModelDeploymentMonitoringJobName);
             mockGrpcClient.VerifyAll();
         }
@@ -3490,7 +3502,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.PauseModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.PauseModelDeploymentMonitoringJobAsync(request.ModelDeploymentMonitoringJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.PauseModelDeploymentMonitoringJobAsync(request.ModelDeploymentMonitoringJobName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -3507,7 +3519,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ResumeModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             client.ResumeModelDeploymentMonitoringJob(request);
             mockGrpcClient.VerifyAll();
         }
@@ -3523,7 +3535,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ResumeModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.ResumeModelDeploymentMonitoringJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.ResumeModelDeploymentMonitoringJobAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -3540,7 +3552,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ResumeModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             client.ResumeModelDeploymentMonitoringJob(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -3556,7 +3568,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ResumeModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.ResumeModelDeploymentMonitoringJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.ResumeModelDeploymentMonitoringJobAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -3573,7 +3585,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ResumeModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             client.ResumeModelDeploymentMonitoringJob(request.ModelDeploymentMonitoringJobName);
             mockGrpcClient.VerifyAll();
         }
@@ -3589,7 +3601,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ResumeModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.ResumeModelDeploymentMonitoringJobAsync(request.ModelDeploymentMonitoringJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.ResumeModelDeploymentMonitoringJobAsync(request.ModelDeploymentMonitoringJobName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

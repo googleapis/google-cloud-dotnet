@@ -59,7 +59,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Tier = Agent.Types.Tier.Standard,
             };
             mockGrpcClient.Setup(x => x.GetAgent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null, null);
             Agent response = client.GetAgent(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -95,7 +95,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Tier = Agent.Types.Tier.Standard,
             };
             mockGrpcClient.Setup(x => x.GetAgentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Agent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null, null);
             Agent responseCallSettings = await client.GetAgentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Agent responseCancellationToken = await client.GetAgentAsync(request, st::CancellationToken.None);
@@ -133,7 +133,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Tier = Agent.Types.Tier.Standard,
             };
             mockGrpcClient.Setup(x => x.GetAgent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null, null);
             Agent response = client.GetAgent(request.Parent);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -169,7 +169,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Tier = Agent.Types.Tier.Standard,
             };
             mockGrpcClient.Setup(x => x.GetAgentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Agent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null, null);
             Agent responseCallSettings = await client.GetAgentAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Agent responseCancellationToken = await client.GetAgentAsync(request.Parent, st::CancellationToken.None);
@@ -207,7 +207,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Tier = Agent.Types.Tier.Standard,
             };
             mockGrpcClient.Setup(x => x.GetAgent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null, null);
             Agent response = client.GetAgent(request.ParentAsProjectName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -243,7 +243,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Tier = Agent.Types.Tier.Standard,
             };
             mockGrpcClient.Setup(x => x.GetAgentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Agent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null, null);
             Agent responseCallSettings = await client.GetAgentAsync(request.ParentAsProjectName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Agent responseCancellationToken = await client.GetAgentAsync(request.ParentAsProjectName, st::CancellationToken.None);
@@ -281,7 +281,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Tier = Agent.Types.Tier.Standard,
             };
             mockGrpcClient.Setup(x => x.GetAgent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null, null);
             Agent response = client.GetAgent(request.ParentAsLocationName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -317,7 +317,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Tier = Agent.Types.Tier.Standard,
             };
             mockGrpcClient.Setup(x => x.GetAgentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Agent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null, null);
             Agent responseCallSettings = await client.GetAgentAsync(request.ParentAsLocationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Agent responseCancellationToken = await client.GetAgentAsync(request.ParentAsLocationName, st::CancellationToken.None);
@@ -356,7 +356,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Tier = Agent.Types.Tier.Standard,
             };
             mockGrpcClient.Setup(x => x.SetAgent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null, null);
             Agent response = client.SetAgent(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -393,7 +393,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Tier = Agent.Types.Tier.Standard,
             };
             mockGrpcClient.Setup(x => x.SetAgentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Agent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null, null);
             Agent responseCallSettings = await client.SetAgentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Agent responseCancellationToken = await client.SetAgentAsync(request, st::CancellationToken.None);
@@ -428,7 +428,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Tier = Agent.Types.Tier.Standard,
             };
             mockGrpcClient.Setup(x => x.SetAgent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null, null);
             Agent response = client.SetAgent(request.Agent);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -461,7 +461,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Tier = Agent.Types.Tier.Standard,
             };
             mockGrpcClient.Setup(x => x.SetAgentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Agent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null, null);
             Agent responseCallSettings = await client.SetAgentAsync(request.Agent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Agent responseCancellationToken = await client.SetAgentAsync(request.Agent, st::CancellationToken.None);
@@ -480,7 +480,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAgent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAgent(request);
             mockGrpcClient.VerifyAll();
         }
@@ -496,7 +496,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAgentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAgentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAgentAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -513,7 +513,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAgent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAgent(request.Parent);
             mockGrpcClient.VerifyAll();
         }
@@ -529,7 +529,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAgentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAgentAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAgentAsync(request.Parent, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -546,7 +546,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAgent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAgent(request.ParentAsProjectName);
             mockGrpcClient.VerifyAll();
         }
@@ -562,7 +562,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAgentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAgentAsync(request.ParentAsProjectName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAgentAsync(request.ParentAsProjectName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -579,7 +579,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAgent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteAgent(request.ParentAsLocationName);
             mockGrpcClient.VerifyAll();
         }
@@ -595,7 +595,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAgentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteAgentAsync(request.ParentAsLocationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAgentAsync(request.ParentAsLocationName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -619,7 +619,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetValidationResult(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null, null);
             ValidationResult response = client.GetValidationResult(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -643,7 +643,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetValidationResultAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ValidationResult>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null, null);
             ValidationResult responseCallSettings = await client.GetValidationResultAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ValidationResult responseCancellationToken = await client.GetValidationResultAsync(request, st::CancellationToken.None);

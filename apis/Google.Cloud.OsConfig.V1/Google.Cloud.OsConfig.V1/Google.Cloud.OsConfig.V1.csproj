@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>1.8.0</Version>
-    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+    <Version>2.0.0-alpha02</Version>
+    <TargetFrameworks>netstandard2.1;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library for the Cloud OS Config API (v1). These are OS management tools that can be used for patch management, patch compliance, and configuration management on VM instances.</Description>
     <PackageTags>OsConfig;Management;Patch;Compliance;Configuration;Google;Cloud</PackageTags>
@@ -10,8 +10,8 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.Gax.Grpc.GrpcCore" Version="[3.7.0, 4.0.0)" />
-    <PackageReference Include="Google.LongRunning" Version="[2.3.0, 3.0.0)" />
+    <PackageReference Include="Google.Api.Gax.Grpc" Version="[4.0.0-alpha02, 5.0.0)" />
+    <ProjectReference Include="..\..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj" />
     <PackageReference Include="Grpc.Core" Version="[2.41.0, 3.0.0)" PrivateAssets="None" />
     <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.2.12-alpha" PrivateAssets="All" />
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="All" />

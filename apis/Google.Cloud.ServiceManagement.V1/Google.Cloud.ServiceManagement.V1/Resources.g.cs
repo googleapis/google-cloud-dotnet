@@ -146,7 +146,8 @@ namespace Google.Cloud.ServiceManagement.V1 {
     public const int ServiceNameFieldNumber = 2;
     private string serviceName_ = "";
     /// <summary>
-    /// The name of the service. See the [overview](/service-management/overview)
+    /// The name of the service. See the
+    /// [overview](https://cloud.google.com/service-infrastructure/docs/overview)
     /// for naming requirements.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2205,8 +2206,9 @@ namespace Google.Cloud.ServiceManagement.V1 {
     public const int RolloutIdFieldNumber = 1;
     private string rolloutId_ = "";
     /// <summary>
-    /// Optional. Unique identifier of this Rollout. Must be no longer than 63 characters
-    /// and only lower case letters, digits, '.', '_' and '-' are allowed.
+    /// Optional. Unique identifier of this Rollout. Must be no longer than 63
+    /// characters and only lower case letters, digits, '.', '_' and '-' are
+    /// allowed.
     ///
     /// If not specified by client, the server will generate one. The generated id
     /// will have the form of &lt;date>&lt;revision number>, where "date" is the create

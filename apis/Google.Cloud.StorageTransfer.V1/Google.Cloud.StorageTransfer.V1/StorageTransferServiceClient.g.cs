@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -268,9 +268,8 @@ namespace Google.Cloud.StorageTransfer.V1
         public StorageTransferServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public StorageTransferServiceClientBuilder()
+        public StorageTransferServiceClientBuilder() : base(StorageTransferServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = StorageTransferServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref StorageTransferServiceClient client);
@@ -297,29 +296,18 @@ namespace Google.Cloud.StorageTransfer.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return StorageTransferServiceClient.Create(callInvoker, Settings);
+            return StorageTransferServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<StorageTransferServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return StorageTransferServiceClient.Create(callInvoker, Settings);
+            return StorageTransferServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => StorageTransferServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => StorageTransferServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => StorageTransferServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>StorageTransferService client wrapper, for convenient use.</summary>
@@ -348,19 +336,10 @@ namespace Google.Cloud.StorageTransfer.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(StorageTransferService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="StorageTransferServiceClient"/> using the default credentials, endpoint
@@ -390,8 +369,9 @@ namespace Google.Cloud.StorageTransfer.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="StorageTransferServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="StorageTransferServiceClient"/>.</returns>
-        internal static StorageTransferServiceClient Create(grpccore::CallInvoker callInvoker, StorageTransferServiceSettings settings = null)
+        internal static StorageTransferServiceClient Create(grpccore::CallInvoker callInvoker, StorageTransferServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -400,7 +380,7 @@ namespace Google.Cloud.StorageTransfer.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             StorageTransferService.StorageTransferServiceClient grpcClient = new StorageTransferService.StorageTransferServiceClient(callInvoker);
-            return new StorageTransferServiceClientImpl(grpcClient, settings);
+            return new StorageTransferServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1193,49 +1173,50 @@ namespace Google.Cloud.StorageTransfer.V1
         /// <param name="settings">
         /// The base <see cref="StorageTransferServiceSettings"/> used within this client.
         /// </param>
-        public StorageTransferServiceClientImpl(StorageTransferService.StorageTransferServiceClient grpcClient, StorageTransferServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public StorageTransferServiceClientImpl(StorageTransferService.StorageTransferServiceClient grpcClient, StorageTransferServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             StorageTransferServiceSettings effectiveSettings = settings ?? StorageTransferServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            RunTransferJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RunTransferJobOperationsSettings);
-            _callGetGoogleServiceAccount = clientHelper.BuildApiCall<GetGoogleServiceAccountRequest, GoogleServiceAccount>(grpcClient.GetGoogleServiceAccountAsync, grpcClient.GetGoogleServiceAccount, effectiveSettings.GetGoogleServiceAccountSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            RunTransferJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RunTransferJobOperationsSettings, logger);
+            _callGetGoogleServiceAccount = clientHelper.BuildApiCall<GetGoogleServiceAccountRequest, GoogleServiceAccount>("GetGoogleServiceAccount", grpcClient.GetGoogleServiceAccountAsync, grpcClient.GetGoogleServiceAccount, effectiveSettings.GetGoogleServiceAccountSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callGetGoogleServiceAccount);
             Modify_GetGoogleServiceAccountApiCall(ref _callGetGoogleServiceAccount);
-            _callCreateTransferJob = clientHelper.BuildApiCall<CreateTransferJobRequest, TransferJob>(grpcClient.CreateTransferJobAsync, grpcClient.CreateTransferJob, effectiveSettings.CreateTransferJobSettings);
+            _callCreateTransferJob = clientHelper.BuildApiCall<CreateTransferJobRequest, TransferJob>("CreateTransferJob", grpcClient.CreateTransferJobAsync, grpcClient.CreateTransferJob, effectiveSettings.CreateTransferJobSettings);
             Modify_ApiCall(ref _callCreateTransferJob);
             Modify_CreateTransferJobApiCall(ref _callCreateTransferJob);
-            _callUpdateTransferJob = clientHelper.BuildApiCall<UpdateTransferJobRequest, TransferJob>(grpcClient.UpdateTransferJobAsync, grpcClient.UpdateTransferJob, effectiveSettings.UpdateTransferJobSettings).WithGoogleRequestParam("job_name", request => request.JobName);
+            _callUpdateTransferJob = clientHelper.BuildApiCall<UpdateTransferJobRequest, TransferJob>("UpdateTransferJob", grpcClient.UpdateTransferJobAsync, grpcClient.UpdateTransferJob, effectiveSettings.UpdateTransferJobSettings).WithGoogleRequestParam("job_name", request => request.JobName);
             Modify_ApiCall(ref _callUpdateTransferJob);
             Modify_UpdateTransferJobApiCall(ref _callUpdateTransferJob);
-            _callGetTransferJob = clientHelper.BuildApiCall<GetTransferJobRequest, TransferJob>(grpcClient.GetTransferJobAsync, grpcClient.GetTransferJob, effectiveSettings.GetTransferJobSettings).WithGoogleRequestParam("job_name", request => request.JobName);
+            _callGetTransferJob = clientHelper.BuildApiCall<GetTransferJobRequest, TransferJob>("GetTransferJob", grpcClient.GetTransferJobAsync, grpcClient.GetTransferJob, effectiveSettings.GetTransferJobSettings).WithGoogleRequestParam("job_name", request => request.JobName);
             Modify_ApiCall(ref _callGetTransferJob);
             Modify_GetTransferJobApiCall(ref _callGetTransferJob);
-            _callListTransferJobs = clientHelper.BuildApiCall<ListTransferJobsRequest, ListTransferJobsResponse>(grpcClient.ListTransferJobsAsync, grpcClient.ListTransferJobs, effectiveSettings.ListTransferJobsSettings);
+            _callListTransferJobs = clientHelper.BuildApiCall<ListTransferJobsRequest, ListTransferJobsResponse>("ListTransferJobs", grpcClient.ListTransferJobsAsync, grpcClient.ListTransferJobs, effectiveSettings.ListTransferJobsSettings);
             Modify_ApiCall(ref _callListTransferJobs);
             Modify_ListTransferJobsApiCall(ref _callListTransferJobs);
-            _callPauseTransferOperation = clientHelper.BuildApiCall<PauseTransferOperationRequest, wkt::Empty>(grpcClient.PauseTransferOperationAsync, grpcClient.PauseTransferOperation, effectiveSettings.PauseTransferOperationSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callPauseTransferOperation = clientHelper.BuildApiCall<PauseTransferOperationRequest, wkt::Empty>("PauseTransferOperation", grpcClient.PauseTransferOperationAsync, grpcClient.PauseTransferOperation, effectiveSettings.PauseTransferOperationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callPauseTransferOperation);
             Modify_PauseTransferOperationApiCall(ref _callPauseTransferOperation);
-            _callResumeTransferOperation = clientHelper.BuildApiCall<ResumeTransferOperationRequest, wkt::Empty>(grpcClient.ResumeTransferOperationAsync, grpcClient.ResumeTransferOperation, effectiveSettings.ResumeTransferOperationSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callResumeTransferOperation = clientHelper.BuildApiCall<ResumeTransferOperationRequest, wkt::Empty>("ResumeTransferOperation", grpcClient.ResumeTransferOperationAsync, grpcClient.ResumeTransferOperation, effectiveSettings.ResumeTransferOperationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callResumeTransferOperation);
             Modify_ResumeTransferOperationApiCall(ref _callResumeTransferOperation);
-            _callRunTransferJob = clientHelper.BuildApiCall<RunTransferJobRequest, lro::Operation>(grpcClient.RunTransferJobAsync, grpcClient.RunTransferJob, effectiveSettings.RunTransferJobSettings).WithGoogleRequestParam("job_name", request => request.JobName);
+            _callRunTransferJob = clientHelper.BuildApiCall<RunTransferJobRequest, lro::Operation>("RunTransferJob", grpcClient.RunTransferJobAsync, grpcClient.RunTransferJob, effectiveSettings.RunTransferJobSettings).WithGoogleRequestParam("job_name", request => request.JobName);
             Modify_ApiCall(ref _callRunTransferJob);
             Modify_RunTransferJobApiCall(ref _callRunTransferJob);
-            _callCreateAgentPool = clientHelper.BuildApiCall<CreateAgentPoolRequest, AgentPool>(grpcClient.CreateAgentPoolAsync, grpcClient.CreateAgentPool, effectiveSettings.CreateAgentPoolSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callCreateAgentPool = clientHelper.BuildApiCall<CreateAgentPoolRequest, AgentPool>("CreateAgentPool", grpcClient.CreateAgentPoolAsync, grpcClient.CreateAgentPool, effectiveSettings.CreateAgentPoolSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callCreateAgentPool);
             Modify_CreateAgentPoolApiCall(ref _callCreateAgentPool);
-            _callUpdateAgentPool = clientHelper.BuildApiCall<UpdateAgentPoolRequest, AgentPool>(grpcClient.UpdateAgentPoolAsync, grpcClient.UpdateAgentPool, effectiveSettings.UpdateAgentPoolSettings).WithGoogleRequestParam("agent_pool.name", request => request.AgentPool?.Name);
+            _callUpdateAgentPool = clientHelper.BuildApiCall<UpdateAgentPoolRequest, AgentPool>("UpdateAgentPool", grpcClient.UpdateAgentPoolAsync, grpcClient.UpdateAgentPool, effectiveSettings.UpdateAgentPoolSettings).WithGoogleRequestParam("agent_pool.name", request => request.AgentPool?.Name);
             Modify_ApiCall(ref _callUpdateAgentPool);
             Modify_UpdateAgentPoolApiCall(ref _callUpdateAgentPool);
-            _callGetAgentPool = clientHelper.BuildApiCall<GetAgentPoolRequest, AgentPool>(grpcClient.GetAgentPoolAsync, grpcClient.GetAgentPool, effectiveSettings.GetAgentPoolSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetAgentPool = clientHelper.BuildApiCall<GetAgentPoolRequest, AgentPool>("GetAgentPool", grpcClient.GetAgentPoolAsync, grpcClient.GetAgentPool, effectiveSettings.GetAgentPoolSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAgentPool);
             Modify_GetAgentPoolApiCall(ref _callGetAgentPool);
-            _callListAgentPools = clientHelper.BuildApiCall<ListAgentPoolsRequest, ListAgentPoolsResponse>(grpcClient.ListAgentPoolsAsync, grpcClient.ListAgentPools, effectiveSettings.ListAgentPoolsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callListAgentPools = clientHelper.BuildApiCall<ListAgentPoolsRequest, ListAgentPoolsResponse>("ListAgentPools", grpcClient.ListAgentPoolsAsync, grpcClient.ListAgentPools, effectiveSettings.ListAgentPoolsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callListAgentPools);
             Modify_ListAgentPoolsApiCall(ref _callListAgentPools);
-            _callDeleteAgentPool = clientHelper.BuildApiCall<DeleteAgentPoolRequest, wkt::Empty>(grpcClient.DeleteAgentPoolAsync, grpcClient.DeleteAgentPool, effectiveSettings.DeleteAgentPoolSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteAgentPool = clientHelper.BuildApiCall<DeleteAgentPoolRequest, wkt::Empty>("DeleteAgentPool", grpcClient.DeleteAgentPoolAsync, grpcClient.DeleteAgentPool, effectiveSettings.DeleteAgentPoolSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAgentPool);
             Modify_DeleteAgentPoolApiCall(ref _callDeleteAgentPool);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

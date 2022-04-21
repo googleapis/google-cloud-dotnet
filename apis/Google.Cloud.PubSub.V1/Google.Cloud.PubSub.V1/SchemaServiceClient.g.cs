@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -151,9 +151,8 @@ namespace Google.Cloud.PubSub.V1
         public SchemaServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public SchemaServiceClientBuilder()
+        public SchemaServiceClientBuilder() : base(SchemaServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = SchemaServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref SchemaServiceClient client);
@@ -180,29 +179,18 @@ namespace Google.Cloud.PubSub.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SchemaServiceClient.Create(callInvoker, Settings);
+            return SchemaServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<SchemaServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SchemaServiceClient.Create(callInvoker, Settings);
+            return SchemaServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => SchemaServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => SchemaServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => SchemaServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>SchemaService client wrapper, for convenient use.</summary>
@@ -231,19 +219,10 @@ namespace Google.Cloud.PubSub.V1
             "https://www.googleapis.com/auth/pubsub",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(SchemaService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="SchemaServiceClient"/> using the default credentials, endpoint and
@@ -270,8 +249,9 @@ namespace Google.Cloud.PubSub.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="SchemaServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="SchemaServiceClient"/>.</returns>
-        internal static SchemaServiceClient Create(grpccore::CallInvoker callInvoker, SchemaServiceSettings settings = null)
+        internal static SchemaServiceClient Create(grpccore::CallInvoker callInvoker, SchemaServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -280,7 +260,7 @@ namespace Google.Cloud.PubSub.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             SchemaService.SchemaServiceClient grpcClient = new SchemaService.SchemaServiceClient(callInvoker);
-            return new SchemaServiceClientImpl(grpcClient, settings);
+            return new SchemaServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1029,28 +1009,29 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="SchemaServiceSettings"/> used within this client.</param>
-        public SchemaServiceClientImpl(SchemaService.SchemaServiceClient grpcClient, SchemaServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public SchemaServiceClientImpl(SchemaService.SchemaServiceClient grpcClient, SchemaServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             SchemaServiceSettings effectiveSettings = settings ?? SchemaServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings);
-            _callCreateSchema = clientHelper.BuildApiCall<CreateSchemaRequest, Schema>(grpcClient.CreateSchemaAsync, grpcClient.CreateSchema, effectiveSettings.CreateSchemaSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
+            _callCreateSchema = clientHelper.BuildApiCall<CreateSchemaRequest, Schema>("CreateSchema", grpcClient.CreateSchemaAsync, grpcClient.CreateSchema, effectiveSettings.CreateSchemaSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSchema);
             Modify_CreateSchemaApiCall(ref _callCreateSchema);
-            _callGetSchema = clientHelper.BuildApiCall<GetSchemaRequest, Schema>(grpcClient.GetSchemaAsync, grpcClient.GetSchema, effectiveSettings.GetSchemaSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetSchema = clientHelper.BuildApiCall<GetSchemaRequest, Schema>("GetSchema", grpcClient.GetSchemaAsync, grpcClient.GetSchema, effectiveSettings.GetSchemaSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSchema);
             Modify_GetSchemaApiCall(ref _callGetSchema);
-            _callListSchemas = clientHelper.BuildApiCall<ListSchemasRequest, ListSchemasResponse>(grpcClient.ListSchemasAsync, grpcClient.ListSchemas, effectiveSettings.ListSchemasSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListSchemas = clientHelper.BuildApiCall<ListSchemasRequest, ListSchemasResponse>("ListSchemas", grpcClient.ListSchemasAsync, grpcClient.ListSchemas, effectiveSettings.ListSchemasSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSchemas);
             Modify_ListSchemasApiCall(ref _callListSchemas);
-            _callDeleteSchema = clientHelper.BuildApiCall<DeleteSchemaRequest, wkt::Empty>(grpcClient.DeleteSchemaAsync, grpcClient.DeleteSchema, effectiveSettings.DeleteSchemaSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteSchema = clientHelper.BuildApiCall<DeleteSchemaRequest, wkt::Empty>("DeleteSchema", grpcClient.DeleteSchemaAsync, grpcClient.DeleteSchema, effectiveSettings.DeleteSchemaSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteSchema);
             Modify_DeleteSchemaApiCall(ref _callDeleteSchema);
-            _callValidateSchema = clientHelper.BuildApiCall<ValidateSchemaRequest, ValidateSchemaResponse>(grpcClient.ValidateSchemaAsync, grpcClient.ValidateSchema, effectiveSettings.ValidateSchemaSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callValidateSchema = clientHelper.BuildApiCall<ValidateSchemaRequest, ValidateSchemaResponse>("ValidateSchema", grpcClient.ValidateSchemaAsync, grpcClient.ValidateSchema, effectiveSettings.ValidateSchemaSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callValidateSchema);
             Modify_ValidateSchemaApiCall(ref _callValidateSchema);
-            _callValidateMessage = clientHelper.BuildApiCall<ValidateMessageRequest, ValidateMessageResponse>(grpcClient.ValidateMessageAsync, grpcClient.ValidateMessage, effectiveSettings.ValidateMessageSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callValidateMessage = clientHelper.BuildApiCall<ValidateMessageRequest, ValidateMessageResponse>("ValidateMessage", grpcClient.ValidateMessageAsync, grpcClient.ValidateMessage, effectiveSettings.ValidateMessageSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callValidateMessage);
             Modify_ValidateMessageApiCall(ref _callValidateMessage);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

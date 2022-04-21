@@ -47,7 +47,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetFulfillment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FulfillmentsClient client = new FulfillmentsClientImpl(mockGrpcClient.Object, null);
+            FulfillmentsClient client = new FulfillmentsClientImpl(mockGrpcClient.Object, null, null);
             Fulfillment response = client.GetFulfillment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -73,7 +73,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetFulfillmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Fulfillment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FulfillmentsClient client = new FulfillmentsClientImpl(mockGrpcClient.Object, null);
+            FulfillmentsClient client = new FulfillmentsClientImpl(mockGrpcClient.Object, null, null);
             Fulfillment responseCallSettings = await client.GetFulfillmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Fulfillment responseCancellationToken = await client.GetFulfillmentAsync(request, st::CancellationToken.None);
@@ -101,7 +101,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetFulfillment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FulfillmentsClient client = new FulfillmentsClientImpl(mockGrpcClient.Object, null);
+            FulfillmentsClient client = new FulfillmentsClientImpl(mockGrpcClient.Object, null, null);
             Fulfillment response = client.GetFulfillment(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -127,7 +127,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetFulfillmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Fulfillment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FulfillmentsClient client = new FulfillmentsClientImpl(mockGrpcClient.Object, null);
+            FulfillmentsClient client = new FulfillmentsClientImpl(mockGrpcClient.Object, null, null);
             Fulfillment responseCallSettings = await client.GetFulfillmentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Fulfillment responseCancellationToken = await client.GetFulfillmentAsync(request.Name, st::CancellationToken.None);
@@ -155,7 +155,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetFulfillment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FulfillmentsClient client = new FulfillmentsClientImpl(mockGrpcClient.Object, null);
+            FulfillmentsClient client = new FulfillmentsClientImpl(mockGrpcClient.Object, null, null);
             Fulfillment response = client.GetFulfillment(request.FulfillmentName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -181,7 +181,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetFulfillmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Fulfillment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FulfillmentsClient client = new FulfillmentsClientImpl(mockGrpcClient.Object, null);
+            FulfillmentsClient client = new FulfillmentsClientImpl(mockGrpcClient.Object, null, null);
             Fulfillment responseCallSettings = await client.GetFulfillmentAsync(request.FulfillmentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Fulfillment responseCancellationToken = await client.GetFulfillmentAsync(request.FulfillmentName, st::CancellationToken.None);
@@ -210,7 +210,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateFulfillment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FulfillmentsClient client = new FulfillmentsClientImpl(mockGrpcClient.Object, null);
+            FulfillmentsClient client = new FulfillmentsClientImpl(mockGrpcClient.Object, null, null);
             Fulfillment response = client.UpdateFulfillment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -237,7 +237,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateFulfillmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Fulfillment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FulfillmentsClient client = new FulfillmentsClientImpl(mockGrpcClient.Object, null);
+            FulfillmentsClient client = new FulfillmentsClientImpl(mockGrpcClient.Object, null, null);
             Fulfillment responseCallSettings = await client.UpdateFulfillmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Fulfillment responseCancellationToken = await client.UpdateFulfillmentAsync(request, st::CancellationToken.None);
@@ -266,7 +266,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateFulfillment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FulfillmentsClient client = new FulfillmentsClientImpl(mockGrpcClient.Object, null);
+            FulfillmentsClient client = new FulfillmentsClientImpl(mockGrpcClient.Object, null, null);
             Fulfillment response = client.UpdateFulfillment(request.Fulfillment, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -293,7 +293,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateFulfillmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Fulfillment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FulfillmentsClient client = new FulfillmentsClientImpl(mockGrpcClient.Object, null);
+            FulfillmentsClient client = new FulfillmentsClientImpl(mockGrpcClient.Object, null, null);
             Fulfillment responseCallSettings = await client.UpdateFulfillmentAsync(request.Fulfillment, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Fulfillment responseCancellationToken = await client.UpdateFulfillmentAsync(request.Fulfillment, request.UpdateMask, st::CancellationToken.None);

@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -188,9 +188,8 @@ namespace Google.Cloud.AppEngine.V1
         public DomainMappingsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public DomainMappingsClientBuilder()
+        public DomainMappingsClientBuilder() : base(DomainMappingsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = DomainMappingsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref DomainMappingsClient client);
@@ -217,29 +216,18 @@ namespace Google.Cloud.AppEngine.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return DomainMappingsClient.Create(callInvoker, Settings);
+            return DomainMappingsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<DomainMappingsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return DomainMappingsClient.Create(callInvoker, Settings);
+            return DomainMappingsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => DomainMappingsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => DomainMappingsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => DomainMappingsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>DomainMappings client wrapper, for convenient use.</summary>
@@ -270,19 +258,10 @@ namespace Google.Cloud.AppEngine.V1
             "https://www.googleapis.com/auth/cloud-platform.read-only",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(DomainMappings.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="DomainMappingsClient"/> using the default credentials, endpoint and
@@ -309,8 +288,9 @@ namespace Google.Cloud.AppEngine.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="DomainMappingsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="DomainMappingsClient"/>.</returns>
-        internal static DomainMappingsClient Create(grpccore::CallInvoker callInvoker, DomainMappingsSettings settings = null)
+        internal static DomainMappingsClient Create(grpccore::CallInvoker callInvoker, DomainMappingsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -319,7 +299,7 @@ namespace Google.Cloud.AppEngine.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             DomainMappings.DomainMappingsClient grpcClient = new DomainMappings.DomainMappingsClient(callInvoker);
-            return new DomainMappingsClientImpl(grpcClient, settings);
+            return new DomainMappingsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -588,27 +568,28 @@ namespace Google.Cloud.AppEngine.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="DomainMappingsSettings"/> used within this client.</param>
-        public DomainMappingsClientImpl(DomainMappings.DomainMappingsClient grpcClient, DomainMappingsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public DomainMappingsClientImpl(DomainMappings.DomainMappingsClient grpcClient, DomainMappingsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             DomainMappingsSettings effectiveSettings = settings ?? DomainMappingsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateDomainMappingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDomainMappingOperationsSettings);
-            UpdateDomainMappingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDomainMappingOperationsSettings);
-            DeleteDomainMappingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDomainMappingOperationsSettings);
-            _callListDomainMappings = clientHelper.BuildApiCall<ListDomainMappingsRequest, ListDomainMappingsResponse>(grpcClient.ListDomainMappingsAsync, grpcClient.ListDomainMappings, effectiveSettings.ListDomainMappingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateDomainMappingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDomainMappingOperationsSettings, logger);
+            UpdateDomainMappingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDomainMappingOperationsSettings, logger);
+            DeleteDomainMappingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDomainMappingOperationsSettings, logger);
+            _callListDomainMappings = clientHelper.BuildApiCall<ListDomainMappingsRequest, ListDomainMappingsResponse>("ListDomainMappings", grpcClient.ListDomainMappingsAsync, grpcClient.ListDomainMappings, effectiveSettings.ListDomainMappingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDomainMappings);
             Modify_ListDomainMappingsApiCall(ref _callListDomainMappings);
-            _callGetDomainMapping = clientHelper.BuildApiCall<GetDomainMappingRequest, DomainMapping>(grpcClient.GetDomainMappingAsync, grpcClient.GetDomainMapping, effectiveSettings.GetDomainMappingSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetDomainMapping = clientHelper.BuildApiCall<GetDomainMappingRequest, DomainMapping>("GetDomainMapping", grpcClient.GetDomainMappingAsync, grpcClient.GetDomainMapping, effectiveSettings.GetDomainMappingSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDomainMapping);
             Modify_GetDomainMappingApiCall(ref _callGetDomainMapping);
-            _callCreateDomainMapping = clientHelper.BuildApiCall<CreateDomainMappingRequest, lro::Operation>(grpcClient.CreateDomainMappingAsync, grpcClient.CreateDomainMapping, effectiveSettings.CreateDomainMappingSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateDomainMapping = clientHelper.BuildApiCall<CreateDomainMappingRequest, lro::Operation>("CreateDomainMapping", grpcClient.CreateDomainMappingAsync, grpcClient.CreateDomainMapping, effectiveSettings.CreateDomainMappingSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDomainMapping);
             Modify_CreateDomainMappingApiCall(ref _callCreateDomainMapping);
-            _callUpdateDomainMapping = clientHelper.BuildApiCall<UpdateDomainMappingRequest, lro::Operation>(grpcClient.UpdateDomainMappingAsync, grpcClient.UpdateDomainMapping, effectiveSettings.UpdateDomainMappingSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateDomainMapping = clientHelper.BuildApiCall<UpdateDomainMappingRequest, lro::Operation>("UpdateDomainMapping", grpcClient.UpdateDomainMappingAsync, grpcClient.UpdateDomainMapping, effectiveSettings.UpdateDomainMappingSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateDomainMapping);
             Modify_UpdateDomainMappingApiCall(ref _callUpdateDomainMapping);
-            _callDeleteDomainMapping = clientHelper.BuildApiCall<DeleteDomainMappingRequest, lro::Operation>(grpcClient.DeleteDomainMappingAsync, grpcClient.DeleteDomainMapping, effectiveSettings.DeleteDomainMappingSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteDomainMapping = clientHelper.BuildApiCall<DeleteDomainMappingRequest, lro::Operation>("DeleteDomainMapping", grpcClient.DeleteDomainMappingAsync, grpcClient.DeleteDomainMapping, effectiveSettings.DeleteDomainMappingSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDomainMapping);
             Modify_DeleteDomainMappingApiCall(ref _callDeleteDomainMapping);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

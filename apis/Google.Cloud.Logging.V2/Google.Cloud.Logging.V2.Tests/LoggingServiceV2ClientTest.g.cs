@@ -38,7 +38,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteLog(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteLog(request);
             mockGrpcClient.VerifyAll();
         }
@@ -53,7 +53,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteLogAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteLogAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteLogAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -69,7 +69,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteLog(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteLog(request.LogName);
             mockGrpcClient.VerifyAll();
         }
@@ -84,7 +84,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteLogAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteLogAsync(request.LogName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteLogAsync(request.LogName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -100,7 +100,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteLog(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteLog(request.LogNameAsLogName);
             mockGrpcClient.VerifyAll();
         }
@@ -115,7 +115,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteLogAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteLogAsync(request.LogNameAsLogName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteLogAsync(request.LogNameAsLogName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -142,7 +142,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             WriteLogEntriesResponse expectedResponse = new WriteLogEntriesResponse { };
             mockGrpcClient.Setup(x => x.WriteLogEntries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             WriteLogEntriesResponse response = client.WriteLogEntries(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -169,7 +169,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             WriteLogEntriesResponse expectedResponse = new WriteLogEntriesResponse { };
             mockGrpcClient.Setup(x => x.WriteLogEntriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteLogEntriesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             WriteLogEntriesResponse responseCallSettings = await client.WriteLogEntriesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WriteLogEntriesResponse responseCancellationToken = await client.WriteLogEntriesAsync(request, st::CancellationToken.None);
@@ -196,7 +196,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             WriteLogEntriesResponse expectedResponse = new WriteLogEntriesResponse { };
             mockGrpcClient.Setup(x => x.WriteLogEntries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             WriteLogEntriesResponse response = client.WriteLogEntries(request.LogName, request.Resource, request.Labels, request.Entries);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -221,7 +221,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             WriteLogEntriesResponse expectedResponse = new WriteLogEntriesResponse { };
             mockGrpcClient.Setup(x => x.WriteLogEntriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteLogEntriesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             WriteLogEntriesResponse responseCallSettings = await client.WriteLogEntriesAsync(request.LogName, request.Resource, request.Labels, request.Entries, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WriteLogEntriesResponse responseCancellationToken = await client.WriteLogEntriesAsync(request.LogName, request.Resource, request.Labels, request.Entries, st::CancellationToken.None);
@@ -248,7 +248,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             WriteLogEntriesResponse expectedResponse = new WriteLogEntriesResponse { };
             mockGrpcClient.Setup(x => x.WriteLogEntries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             WriteLogEntriesResponse response = client.WriteLogEntries(request.LogNameAsLogName, request.Resource, request.Labels, request.Entries);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -273,7 +273,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             WriteLogEntriesResponse expectedResponse = new WriteLogEntriesResponse { };
             mockGrpcClient.Setup(x => x.WriteLogEntriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteLogEntriesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null, null);
             WriteLogEntriesResponse responseCallSettings = await client.WriteLogEntriesAsync(request.LogNameAsLogName, request.Resource, request.Labels, request.Entries, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WriteLogEntriesResponse responseCancellationToken = await client.WriteLogEntriesAsync(request.LogNameAsLogName, request.Resource, request.Labels, request.Entries, st::CancellationToken.None);

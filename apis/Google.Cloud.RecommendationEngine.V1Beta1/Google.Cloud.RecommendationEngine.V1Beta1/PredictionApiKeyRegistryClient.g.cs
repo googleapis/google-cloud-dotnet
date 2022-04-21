@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -136,9 +136,8 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         public PredictionApiKeyRegistrySettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public PredictionApiKeyRegistryClientBuilder()
+        public PredictionApiKeyRegistryClientBuilder() : base(PredictionApiKeyRegistryClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = PredictionApiKeyRegistryClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref PredictionApiKeyRegistryClient client);
@@ -165,29 +164,18 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return PredictionApiKeyRegistryClient.Create(callInvoker, Settings);
+            return PredictionApiKeyRegistryClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<PredictionApiKeyRegistryClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return PredictionApiKeyRegistryClient.Create(callInvoker, Settings);
+            return PredictionApiKeyRegistryClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => PredictionApiKeyRegistryClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => PredictionApiKeyRegistryClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => PredictionApiKeyRegistryClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>PredictionApiKeyRegistry client wrapper, for convenient use.</summary>
@@ -218,19 +206,10 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(PredictionApiKeyRegistry.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="PredictionApiKeyRegistryClient"/> using the default credentials,
@@ -260,8 +239,9 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="PredictionApiKeyRegistrySettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="PredictionApiKeyRegistryClient"/>.</returns>
-        internal static PredictionApiKeyRegistryClient Create(grpccore::CallInvoker callInvoker, PredictionApiKeyRegistrySettings settings = null)
+        internal static PredictionApiKeyRegistryClient Create(grpccore::CallInvoker callInvoker, PredictionApiKeyRegistrySettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -270,7 +250,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             PredictionApiKeyRegistry.PredictionApiKeyRegistryClient grpcClient = new PredictionApiKeyRegistry.PredictionApiKeyRegistryClient(callInvoker);
-            return new PredictionApiKeyRegistryClientImpl(grpcClient, settings);
+            return new PredictionApiKeyRegistryClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -676,18 +656,19 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// <param name="settings">
         /// The base <see cref="PredictionApiKeyRegistrySettings"/> used within this client.
         /// </param>
-        public PredictionApiKeyRegistryClientImpl(PredictionApiKeyRegistry.PredictionApiKeyRegistryClient grpcClient, PredictionApiKeyRegistrySettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public PredictionApiKeyRegistryClientImpl(PredictionApiKeyRegistry.PredictionApiKeyRegistryClient grpcClient, PredictionApiKeyRegistrySettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             PredictionApiKeyRegistrySettings effectiveSettings = settings ?? PredictionApiKeyRegistrySettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCreatePredictionApiKeyRegistration = clientHelper.BuildApiCall<CreatePredictionApiKeyRegistrationRequest, PredictionApiKeyRegistration>(grpcClient.CreatePredictionApiKeyRegistrationAsync, grpcClient.CreatePredictionApiKeyRegistration, effectiveSettings.CreatePredictionApiKeyRegistrationSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCreatePredictionApiKeyRegistration = clientHelper.BuildApiCall<CreatePredictionApiKeyRegistrationRequest, PredictionApiKeyRegistration>("CreatePredictionApiKeyRegistration", grpcClient.CreatePredictionApiKeyRegistrationAsync, grpcClient.CreatePredictionApiKeyRegistration, effectiveSettings.CreatePredictionApiKeyRegistrationSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreatePredictionApiKeyRegistration);
             Modify_CreatePredictionApiKeyRegistrationApiCall(ref _callCreatePredictionApiKeyRegistration);
-            _callListPredictionApiKeyRegistrations = clientHelper.BuildApiCall<ListPredictionApiKeyRegistrationsRequest, ListPredictionApiKeyRegistrationsResponse>(grpcClient.ListPredictionApiKeyRegistrationsAsync, grpcClient.ListPredictionApiKeyRegistrations, effectiveSettings.ListPredictionApiKeyRegistrationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListPredictionApiKeyRegistrations = clientHelper.BuildApiCall<ListPredictionApiKeyRegistrationsRequest, ListPredictionApiKeyRegistrationsResponse>("ListPredictionApiKeyRegistrations", grpcClient.ListPredictionApiKeyRegistrationsAsync, grpcClient.ListPredictionApiKeyRegistrations, effectiveSettings.ListPredictionApiKeyRegistrationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListPredictionApiKeyRegistrations);
             Modify_ListPredictionApiKeyRegistrationsApiCall(ref _callListPredictionApiKeyRegistrations);
-            _callDeletePredictionApiKeyRegistration = clientHelper.BuildApiCall<DeletePredictionApiKeyRegistrationRequest, wkt::Empty>(grpcClient.DeletePredictionApiKeyRegistrationAsync, grpcClient.DeletePredictionApiKeyRegistration, effectiveSettings.DeletePredictionApiKeyRegistrationSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeletePredictionApiKeyRegistration = clientHelper.BuildApiCall<DeletePredictionApiKeyRegistrationRequest, wkt::Empty>("DeletePredictionApiKeyRegistration", grpcClient.DeletePredictionApiKeyRegistrationAsync, grpcClient.DeletePredictionApiKeyRegistration, effectiveSettings.DeletePredictionApiKeyRegistrationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeletePredictionApiKeyRegistration);
             Modify_DeletePredictionApiKeyRegistrationApiCall(ref _callDeletePredictionApiKeyRegistration);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

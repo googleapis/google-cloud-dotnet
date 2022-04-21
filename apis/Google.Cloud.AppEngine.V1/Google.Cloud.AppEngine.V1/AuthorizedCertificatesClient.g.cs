@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -137,9 +137,8 @@ namespace Google.Cloud.AppEngine.V1
         public AuthorizedCertificatesSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public AuthorizedCertificatesClientBuilder()
+        public AuthorizedCertificatesClientBuilder() : base(AuthorizedCertificatesClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = AuthorizedCertificatesClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref AuthorizedCertificatesClient client);
@@ -166,29 +165,18 @@ namespace Google.Cloud.AppEngine.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AuthorizedCertificatesClient.Create(callInvoker, Settings);
+            return AuthorizedCertificatesClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<AuthorizedCertificatesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AuthorizedCertificatesClient.Create(callInvoker, Settings);
+            return AuthorizedCertificatesClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => AuthorizedCertificatesClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => AuthorizedCertificatesClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => AuthorizedCertificatesClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>AuthorizedCertificates client wrapper, for convenient use.</summary>
@@ -220,19 +208,10 @@ namespace Google.Cloud.AppEngine.V1
             "https://www.googleapis.com/auth/cloud-platform.read-only",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(AuthorizedCertificates.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="AuthorizedCertificatesClient"/> using the default credentials, endpoint
@@ -262,8 +241,9 @@ namespace Google.Cloud.AppEngine.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="AuthorizedCertificatesSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="AuthorizedCertificatesClient"/>.</returns>
-        internal static AuthorizedCertificatesClient Create(grpccore::CallInvoker callInvoker, AuthorizedCertificatesSettings settings = null)
+        internal static AuthorizedCertificatesClient Create(grpccore::CallInvoker callInvoker, AuthorizedCertificatesSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -272,7 +252,7 @@ namespace Google.Cloud.AppEngine.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             AuthorizedCertificates.AuthorizedCertificatesClient grpcClient = new AuthorizedCertificates.AuthorizedCertificatesClient(callInvoker);
-            return new AuthorizedCertificatesClientImpl(grpcClient, settings);
+            return new AuthorizedCertificatesClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -455,24 +435,25 @@ namespace Google.Cloud.AppEngine.V1
         /// <param name="settings">
         /// The base <see cref="AuthorizedCertificatesSettings"/> used within this client.
         /// </param>
-        public AuthorizedCertificatesClientImpl(AuthorizedCertificates.AuthorizedCertificatesClient grpcClient, AuthorizedCertificatesSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public AuthorizedCertificatesClientImpl(AuthorizedCertificates.AuthorizedCertificatesClient grpcClient, AuthorizedCertificatesSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             AuthorizedCertificatesSettings effectiveSettings = settings ?? AuthorizedCertificatesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListAuthorizedCertificates = clientHelper.BuildApiCall<ListAuthorizedCertificatesRequest, ListAuthorizedCertificatesResponse>(grpcClient.ListAuthorizedCertificatesAsync, grpcClient.ListAuthorizedCertificates, effectiveSettings.ListAuthorizedCertificatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListAuthorizedCertificates = clientHelper.BuildApiCall<ListAuthorizedCertificatesRequest, ListAuthorizedCertificatesResponse>("ListAuthorizedCertificates", grpcClient.ListAuthorizedCertificatesAsync, grpcClient.ListAuthorizedCertificates, effectiveSettings.ListAuthorizedCertificatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAuthorizedCertificates);
             Modify_ListAuthorizedCertificatesApiCall(ref _callListAuthorizedCertificates);
-            _callGetAuthorizedCertificate = clientHelper.BuildApiCall<GetAuthorizedCertificateRequest, AuthorizedCertificate>(grpcClient.GetAuthorizedCertificateAsync, grpcClient.GetAuthorizedCertificate, effectiveSettings.GetAuthorizedCertificateSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetAuthorizedCertificate = clientHelper.BuildApiCall<GetAuthorizedCertificateRequest, AuthorizedCertificate>("GetAuthorizedCertificate", grpcClient.GetAuthorizedCertificateAsync, grpcClient.GetAuthorizedCertificate, effectiveSettings.GetAuthorizedCertificateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAuthorizedCertificate);
             Modify_GetAuthorizedCertificateApiCall(ref _callGetAuthorizedCertificate);
-            _callCreateAuthorizedCertificate = clientHelper.BuildApiCall<CreateAuthorizedCertificateRequest, AuthorizedCertificate>(grpcClient.CreateAuthorizedCertificateAsync, grpcClient.CreateAuthorizedCertificate, effectiveSettings.CreateAuthorizedCertificateSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateAuthorizedCertificate = clientHelper.BuildApiCall<CreateAuthorizedCertificateRequest, AuthorizedCertificate>("CreateAuthorizedCertificate", grpcClient.CreateAuthorizedCertificateAsync, grpcClient.CreateAuthorizedCertificate, effectiveSettings.CreateAuthorizedCertificateSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateAuthorizedCertificate);
             Modify_CreateAuthorizedCertificateApiCall(ref _callCreateAuthorizedCertificate);
-            _callUpdateAuthorizedCertificate = clientHelper.BuildApiCall<UpdateAuthorizedCertificateRequest, AuthorizedCertificate>(grpcClient.UpdateAuthorizedCertificateAsync, grpcClient.UpdateAuthorizedCertificate, effectiveSettings.UpdateAuthorizedCertificateSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateAuthorizedCertificate = clientHelper.BuildApiCall<UpdateAuthorizedCertificateRequest, AuthorizedCertificate>("UpdateAuthorizedCertificate", grpcClient.UpdateAuthorizedCertificateAsync, grpcClient.UpdateAuthorizedCertificate, effectiveSettings.UpdateAuthorizedCertificateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateAuthorizedCertificate);
             Modify_UpdateAuthorizedCertificateApiCall(ref _callUpdateAuthorizedCertificate);
-            _callDeleteAuthorizedCertificate = clientHelper.BuildApiCall<DeleteAuthorizedCertificateRequest, wkt::Empty>(grpcClient.DeleteAuthorizedCertificateAsync, grpcClient.DeleteAuthorizedCertificate, effectiveSettings.DeleteAuthorizedCertificateSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteAuthorizedCertificate = clientHelper.BuildApiCall<DeleteAuthorizedCertificateRequest, wkt::Empty>("DeleteAuthorizedCertificate", grpcClient.DeleteAuthorizedCertificateAsync, grpcClient.DeleteAuthorizedCertificate, effectiveSettings.DeleteAuthorizedCertificateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAuthorizedCertificate);
             Modify_DeleteAuthorizedCertificateApiCall(ref _callDeleteAuthorizedCertificate);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

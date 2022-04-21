@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -267,9 +267,8 @@ namespace Google.Cloud.Gaming.V1
         public GameServerClustersServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public GameServerClustersServiceClientBuilder()
+        public GameServerClustersServiceClientBuilder() : base(GameServerClustersServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = GameServerClustersServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref GameServerClustersServiceClient client);
@@ -296,29 +295,18 @@ namespace Google.Cloud.Gaming.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return GameServerClustersServiceClient.Create(callInvoker, Settings);
+            return GameServerClustersServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<GameServerClustersServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return GameServerClustersServiceClient.Create(callInvoker, Settings);
+            return GameServerClustersServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => GameServerClustersServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => GameServerClustersServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => GameServerClustersServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>GameServerClustersService client wrapper, for convenient use.</summary>
@@ -346,19 +334,10 @@ namespace Google.Cloud.Gaming.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(GameServerClustersService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="GameServerClustersServiceClient"/> using the default credentials,
@@ -388,8 +367,9 @@ namespace Google.Cloud.Gaming.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="GameServerClustersServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="GameServerClustersServiceClient"/>.</returns>
-        internal static GameServerClustersServiceClient Create(grpccore::CallInvoker callInvoker, GameServerClustersServiceSettings settings = null)
+        internal static GameServerClustersServiceClient Create(grpccore::CallInvoker callInvoker, GameServerClustersServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -398,7 +378,7 @@ namespace Google.Cloud.Gaming.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             GameServerClustersService.GameServerClustersServiceClient grpcClient = new GameServerClustersService.GameServerClustersServiceClient(callInvoker);
-            return new GameServerClustersServiceClientImpl(grpcClient, settings);
+            return new GameServerClustersServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1195,36 +1175,37 @@ namespace Google.Cloud.Gaming.V1
         /// <param name="settings">
         /// The base <see cref="GameServerClustersServiceSettings"/> used within this client.
         /// </param>
-        public GameServerClustersServiceClientImpl(GameServerClustersService.GameServerClustersServiceClient grpcClient, GameServerClustersServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public GameServerClustersServiceClientImpl(GameServerClustersService.GameServerClustersServiceClient grpcClient, GameServerClustersServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             GameServerClustersServiceSettings effectiveSettings = settings ?? GameServerClustersServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateGameServerClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGameServerClusterOperationsSettings);
-            DeleteGameServerClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGameServerClusterOperationsSettings);
-            UpdateGameServerClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateGameServerClusterOperationsSettings);
-            _callListGameServerClusters = clientHelper.BuildApiCall<ListGameServerClustersRequest, ListGameServerClustersResponse>(grpcClient.ListGameServerClustersAsync, grpcClient.ListGameServerClusters, effectiveSettings.ListGameServerClustersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateGameServerClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGameServerClusterOperationsSettings, logger);
+            DeleteGameServerClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGameServerClusterOperationsSettings, logger);
+            UpdateGameServerClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateGameServerClusterOperationsSettings, logger);
+            _callListGameServerClusters = clientHelper.BuildApiCall<ListGameServerClustersRequest, ListGameServerClustersResponse>("ListGameServerClusters", grpcClient.ListGameServerClustersAsync, grpcClient.ListGameServerClusters, effectiveSettings.ListGameServerClustersSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListGameServerClusters);
             Modify_ListGameServerClustersApiCall(ref _callListGameServerClusters);
-            _callGetGameServerCluster = clientHelper.BuildApiCall<GetGameServerClusterRequest, GameServerCluster>(grpcClient.GetGameServerClusterAsync, grpcClient.GetGameServerCluster, effectiveSettings.GetGameServerClusterSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetGameServerCluster = clientHelper.BuildApiCall<GetGameServerClusterRequest, GameServerCluster>("GetGameServerCluster", grpcClient.GetGameServerClusterAsync, grpcClient.GetGameServerCluster, effectiveSettings.GetGameServerClusterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetGameServerCluster);
             Modify_GetGameServerClusterApiCall(ref _callGetGameServerCluster);
-            _callCreateGameServerCluster = clientHelper.BuildApiCall<CreateGameServerClusterRequest, lro::Operation>(grpcClient.CreateGameServerClusterAsync, grpcClient.CreateGameServerCluster, effectiveSettings.CreateGameServerClusterSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateGameServerCluster = clientHelper.BuildApiCall<CreateGameServerClusterRequest, lro::Operation>("CreateGameServerCluster", grpcClient.CreateGameServerClusterAsync, grpcClient.CreateGameServerCluster, effectiveSettings.CreateGameServerClusterSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateGameServerCluster);
             Modify_CreateGameServerClusterApiCall(ref _callCreateGameServerCluster);
-            _callPreviewCreateGameServerCluster = clientHelper.BuildApiCall<PreviewCreateGameServerClusterRequest, PreviewCreateGameServerClusterResponse>(grpcClient.PreviewCreateGameServerClusterAsync, grpcClient.PreviewCreateGameServerCluster, effectiveSettings.PreviewCreateGameServerClusterSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callPreviewCreateGameServerCluster = clientHelper.BuildApiCall<PreviewCreateGameServerClusterRequest, PreviewCreateGameServerClusterResponse>("PreviewCreateGameServerCluster", grpcClient.PreviewCreateGameServerClusterAsync, grpcClient.PreviewCreateGameServerCluster, effectiveSettings.PreviewCreateGameServerClusterSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callPreviewCreateGameServerCluster);
             Modify_PreviewCreateGameServerClusterApiCall(ref _callPreviewCreateGameServerCluster);
-            _callDeleteGameServerCluster = clientHelper.BuildApiCall<DeleteGameServerClusterRequest, lro::Operation>(grpcClient.DeleteGameServerClusterAsync, grpcClient.DeleteGameServerCluster, effectiveSettings.DeleteGameServerClusterSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteGameServerCluster = clientHelper.BuildApiCall<DeleteGameServerClusterRequest, lro::Operation>("DeleteGameServerCluster", grpcClient.DeleteGameServerClusterAsync, grpcClient.DeleteGameServerCluster, effectiveSettings.DeleteGameServerClusterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteGameServerCluster);
             Modify_DeleteGameServerClusterApiCall(ref _callDeleteGameServerCluster);
-            _callPreviewDeleteGameServerCluster = clientHelper.BuildApiCall<PreviewDeleteGameServerClusterRequest, PreviewDeleteGameServerClusterResponse>(grpcClient.PreviewDeleteGameServerClusterAsync, grpcClient.PreviewDeleteGameServerCluster, effectiveSettings.PreviewDeleteGameServerClusterSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callPreviewDeleteGameServerCluster = clientHelper.BuildApiCall<PreviewDeleteGameServerClusterRequest, PreviewDeleteGameServerClusterResponse>("PreviewDeleteGameServerCluster", grpcClient.PreviewDeleteGameServerClusterAsync, grpcClient.PreviewDeleteGameServerCluster, effectiveSettings.PreviewDeleteGameServerClusterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callPreviewDeleteGameServerCluster);
             Modify_PreviewDeleteGameServerClusterApiCall(ref _callPreviewDeleteGameServerCluster);
-            _callUpdateGameServerCluster = clientHelper.BuildApiCall<UpdateGameServerClusterRequest, lro::Operation>(grpcClient.UpdateGameServerClusterAsync, grpcClient.UpdateGameServerCluster, effectiveSettings.UpdateGameServerClusterSettings).WithGoogleRequestParam("game_server_cluster.name", request => request.GameServerCluster?.Name);
+            _callUpdateGameServerCluster = clientHelper.BuildApiCall<UpdateGameServerClusterRequest, lro::Operation>("UpdateGameServerCluster", grpcClient.UpdateGameServerClusterAsync, grpcClient.UpdateGameServerCluster, effectiveSettings.UpdateGameServerClusterSettings).WithGoogleRequestParam("game_server_cluster.name", request => request.GameServerCluster?.Name);
             Modify_ApiCall(ref _callUpdateGameServerCluster);
             Modify_UpdateGameServerClusterApiCall(ref _callUpdateGameServerCluster);
-            _callPreviewUpdateGameServerCluster = clientHelper.BuildApiCall<PreviewUpdateGameServerClusterRequest, PreviewUpdateGameServerClusterResponse>(grpcClient.PreviewUpdateGameServerClusterAsync, grpcClient.PreviewUpdateGameServerCluster, effectiveSettings.PreviewUpdateGameServerClusterSettings).WithGoogleRequestParam("game_server_cluster.name", request => request.GameServerCluster?.Name);
+            _callPreviewUpdateGameServerCluster = clientHelper.BuildApiCall<PreviewUpdateGameServerClusterRequest, PreviewUpdateGameServerClusterResponse>("PreviewUpdateGameServerCluster", grpcClient.PreviewUpdateGameServerClusterAsync, grpcClient.PreviewUpdateGameServerCluster, effectiveSettings.PreviewUpdateGameServerClusterSettings).WithGoogleRequestParam("game_server_cluster.name", request => request.GameServerCluster?.Name);
             Modify_ApiCall(ref _callPreviewUpdateGameServerCluster);
             Modify_PreviewUpdateGameServerClusterApiCall(ref _callPreviewUpdateGameServerCluster);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

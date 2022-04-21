@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -487,9 +487,8 @@ namespace Google.Cloud.Logging.V2
         public ConfigServiceV2Settings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ConfigServiceV2ClientBuilder()
+        public ConfigServiceV2ClientBuilder() : base(ConfigServiceV2Client.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ConfigServiceV2Client.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ConfigServiceV2Client client);
@@ -516,29 +515,18 @@ namespace Google.Cloud.Logging.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ConfigServiceV2Client.Create(callInvoker, Settings);
+            return ConfigServiceV2Client.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ConfigServiceV2Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ConfigServiceV2Client.Create(callInvoker, Settings);
+            return ConfigServiceV2Client.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ConfigServiceV2Client.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ConfigServiceV2Client.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ConfigServiceV2Client.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ConfigServiceV2 client wrapper, for convenient use.</summary>
@@ -571,19 +559,10 @@ namespace Google.Cloud.Logging.V2
             "https://www.googleapis.com/auth/logging.read",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ConfigServiceV2.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ConfigServiceV2Client"/> using the default credentials, endpoint and
@@ -610,8 +589,9 @@ namespace Google.Cloud.Logging.V2
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ConfigServiceV2Settings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ConfigServiceV2Client"/>.</returns>
-        internal static ConfigServiceV2Client Create(grpccore::CallInvoker callInvoker, ConfigServiceV2Settings settings = null)
+        internal static ConfigServiceV2Client Create(grpccore::CallInvoker callInvoker, ConfigServiceV2Settings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -620,7 +600,7 @@ namespace Google.Cloud.Logging.V2
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ConfigServiceV2.ConfigServiceV2Client grpcClient = new ConfigServiceV2.ConfigServiceV2Client(callInvoker);
-            return new ConfigServiceV2ClientImpl(grpcClient, settings);
+            return new ConfigServiceV2ClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -5102,88 +5082,89 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ConfigServiceV2Settings"/> used within this client.</param>
-        public ConfigServiceV2ClientImpl(ConfigServiceV2.ConfigServiceV2Client grpcClient, ConfigServiceV2Settings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ConfigServiceV2ClientImpl(ConfigServiceV2.ConfigServiceV2Client grpcClient, ConfigServiceV2Settings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ConfigServiceV2Settings effectiveSettings = settings ?? ConfigServiceV2Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CopyLogEntriesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CopyLogEntriesOperationsSettings);
-            _callListBuckets = clientHelper.BuildApiCall<ListBucketsRequest, ListBucketsResponse>(grpcClient.ListBucketsAsync, grpcClient.ListBuckets, effectiveSettings.ListBucketsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CopyLogEntriesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CopyLogEntriesOperationsSettings, logger);
+            _callListBuckets = clientHelper.BuildApiCall<ListBucketsRequest, ListBucketsResponse>("ListBuckets", grpcClient.ListBucketsAsync, grpcClient.ListBuckets, effectiveSettings.ListBucketsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListBuckets);
             Modify_ListBucketsApiCall(ref _callListBuckets);
-            _callGetBucket = clientHelper.BuildApiCall<GetBucketRequest, LogBucket>(grpcClient.GetBucketAsync, grpcClient.GetBucket, effectiveSettings.GetBucketSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetBucket = clientHelper.BuildApiCall<GetBucketRequest, LogBucket>("GetBucket", grpcClient.GetBucketAsync, grpcClient.GetBucket, effectiveSettings.GetBucketSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetBucket);
             Modify_GetBucketApiCall(ref _callGetBucket);
-            _callCreateBucket = clientHelper.BuildApiCall<CreateBucketRequest, LogBucket>(grpcClient.CreateBucketAsync, grpcClient.CreateBucket, effectiveSettings.CreateBucketSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateBucket = clientHelper.BuildApiCall<CreateBucketRequest, LogBucket>("CreateBucket", grpcClient.CreateBucketAsync, grpcClient.CreateBucket, effectiveSettings.CreateBucketSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBucket);
             Modify_CreateBucketApiCall(ref _callCreateBucket);
-            _callUpdateBucket = clientHelper.BuildApiCall<UpdateBucketRequest, LogBucket>(grpcClient.UpdateBucketAsync, grpcClient.UpdateBucket, effectiveSettings.UpdateBucketSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateBucket = clientHelper.BuildApiCall<UpdateBucketRequest, LogBucket>("UpdateBucket", grpcClient.UpdateBucketAsync, grpcClient.UpdateBucket, effectiveSettings.UpdateBucketSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateBucket);
             Modify_UpdateBucketApiCall(ref _callUpdateBucket);
-            _callDeleteBucket = clientHelper.BuildApiCall<DeleteBucketRequest, wkt::Empty>(grpcClient.DeleteBucketAsync, grpcClient.DeleteBucket, effectiveSettings.DeleteBucketSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteBucket = clientHelper.BuildApiCall<DeleteBucketRequest, wkt::Empty>("DeleteBucket", grpcClient.DeleteBucketAsync, grpcClient.DeleteBucket, effectiveSettings.DeleteBucketSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteBucket);
             Modify_DeleteBucketApiCall(ref _callDeleteBucket);
-            _callUndeleteBucket = clientHelper.BuildApiCall<UndeleteBucketRequest, wkt::Empty>(grpcClient.UndeleteBucketAsync, grpcClient.UndeleteBucket, effectiveSettings.UndeleteBucketSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUndeleteBucket = clientHelper.BuildApiCall<UndeleteBucketRequest, wkt::Empty>("UndeleteBucket", grpcClient.UndeleteBucketAsync, grpcClient.UndeleteBucket, effectiveSettings.UndeleteBucketSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUndeleteBucket);
             Modify_UndeleteBucketApiCall(ref _callUndeleteBucket);
-            _callListViews = clientHelper.BuildApiCall<ListViewsRequest, ListViewsResponse>(grpcClient.ListViewsAsync, grpcClient.ListViews, effectiveSettings.ListViewsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListViews = clientHelper.BuildApiCall<ListViewsRequest, ListViewsResponse>("ListViews", grpcClient.ListViewsAsync, grpcClient.ListViews, effectiveSettings.ListViewsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListViews);
             Modify_ListViewsApiCall(ref _callListViews);
-            _callGetView = clientHelper.BuildApiCall<GetViewRequest, LogView>(grpcClient.GetViewAsync, grpcClient.GetView, effectiveSettings.GetViewSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetView = clientHelper.BuildApiCall<GetViewRequest, LogView>("GetView", grpcClient.GetViewAsync, grpcClient.GetView, effectiveSettings.GetViewSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetView);
             Modify_GetViewApiCall(ref _callGetView);
-            _callCreateView = clientHelper.BuildApiCall<CreateViewRequest, LogView>(grpcClient.CreateViewAsync, grpcClient.CreateView, effectiveSettings.CreateViewSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateView = clientHelper.BuildApiCall<CreateViewRequest, LogView>("CreateView", grpcClient.CreateViewAsync, grpcClient.CreateView, effectiveSettings.CreateViewSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateView);
             Modify_CreateViewApiCall(ref _callCreateView);
-            _callUpdateView = clientHelper.BuildApiCall<UpdateViewRequest, LogView>(grpcClient.UpdateViewAsync, grpcClient.UpdateView, effectiveSettings.UpdateViewSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateView = clientHelper.BuildApiCall<UpdateViewRequest, LogView>("UpdateView", grpcClient.UpdateViewAsync, grpcClient.UpdateView, effectiveSettings.UpdateViewSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateView);
             Modify_UpdateViewApiCall(ref _callUpdateView);
-            _callDeleteView = clientHelper.BuildApiCall<DeleteViewRequest, wkt::Empty>(grpcClient.DeleteViewAsync, grpcClient.DeleteView, effectiveSettings.DeleteViewSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteView = clientHelper.BuildApiCall<DeleteViewRequest, wkt::Empty>("DeleteView", grpcClient.DeleteViewAsync, grpcClient.DeleteView, effectiveSettings.DeleteViewSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteView);
             Modify_DeleteViewApiCall(ref _callDeleteView);
-            _callListSinks = clientHelper.BuildApiCall<ListSinksRequest, ListSinksResponse>(grpcClient.ListSinksAsync, grpcClient.ListSinks, effectiveSettings.ListSinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListSinks = clientHelper.BuildApiCall<ListSinksRequest, ListSinksResponse>("ListSinks", grpcClient.ListSinksAsync, grpcClient.ListSinks, effectiveSettings.ListSinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSinks);
             Modify_ListSinksApiCall(ref _callListSinks);
-            _callGetSink = clientHelper.BuildApiCall<GetSinkRequest, LogSink>(grpcClient.GetSinkAsync, grpcClient.GetSink, effectiveSettings.GetSinkSettings).WithGoogleRequestParam("sink_name", request => request.SinkName);
+            _callGetSink = clientHelper.BuildApiCall<GetSinkRequest, LogSink>("GetSink", grpcClient.GetSinkAsync, grpcClient.GetSink, effectiveSettings.GetSinkSettings).WithGoogleRequestParam("sink_name", request => request.SinkName);
             Modify_ApiCall(ref _callGetSink);
             Modify_GetSinkApiCall(ref _callGetSink);
-            _callCreateSink = clientHelper.BuildApiCall<CreateSinkRequest, LogSink>(grpcClient.CreateSinkAsync, grpcClient.CreateSink, effectiveSettings.CreateSinkSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateSink = clientHelper.BuildApiCall<CreateSinkRequest, LogSink>("CreateSink", grpcClient.CreateSinkAsync, grpcClient.CreateSink, effectiveSettings.CreateSinkSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSink);
             Modify_CreateSinkApiCall(ref _callCreateSink);
-            _callUpdateSink = clientHelper.BuildApiCall<UpdateSinkRequest, LogSink>(grpcClient.UpdateSinkAsync, grpcClient.UpdateSink, effectiveSettings.UpdateSinkSettings).WithGoogleRequestParam("sink_name", request => request.SinkName);
+            _callUpdateSink = clientHelper.BuildApiCall<UpdateSinkRequest, LogSink>("UpdateSink", grpcClient.UpdateSinkAsync, grpcClient.UpdateSink, effectiveSettings.UpdateSinkSettings).WithGoogleRequestParam("sink_name", request => request.SinkName);
             Modify_ApiCall(ref _callUpdateSink);
             Modify_UpdateSinkApiCall(ref _callUpdateSink);
-            _callDeleteSink = clientHelper.BuildApiCall<DeleteSinkRequest, wkt::Empty>(grpcClient.DeleteSinkAsync, grpcClient.DeleteSink, effectiveSettings.DeleteSinkSettings).WithGoogleRequestParam("sink_name", request => request.SinkName);
+            _callDeleteSink = clientHelper.BuildApiCall<DeleteSinkRequest, wkt::Empty>("DeleteSink", grpcClient.DeleteSinkAsync, grpcClient.DeleteSink, effectiveSettings.DeleteSinkSettings).WithGoogleRequestParam("sink_name", request => request.SinkName);
             Modify_ApiCall(ref _callDeleteSink);
             Modify_DeleteSinkApiCall(ref _callDeleteSink);
-            _callListExclusions = clientHelper.BuildApiCall<ListExclusionsRequest, ListExclusionsResponse>(grpcClient.ListExclusionsAsync, grpcClient.ListExclusions, effectiveSettings.ListExclusionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListExclusions = clientHelper.BuildApiCall<ListExclusionsRequest, ListExclusionsResponse>("ListExclusions", grpcClient.ListExclusionsAsync, grpcClient.ListExclusions, effectiveSettings.ListExclusionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListExclusions);
             Modify_ListExclusionsApiCall(ref _callListExclusions);
-            _callGetExclusion = clientHelper.BuildApiCall<GetExclusionRequest, LogExclusion>(grpcClient.GetExclusionAsync, grpcClient.GetExclusion, effectiveSettings.GetExclusionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetExclusion = clientHelper.BuildApiCall<GetExclusionRequest, LogExclusion>("GetExclusion", grpcClient.GetExclusionAsync, grpcClient.GetExclusion, effectiveSettings.GetExclusionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetExclusion);
             Modify_GetExclusionApiCall(ref _callGetExclusion);
-            _callCreateExclusion = clientHelper.BuildApiCall<CreateExclusionRequest, LogExclusion>(grpcClient.CreateExclusionAsync, grpcClient.CreateExclusion, effectiveSettings.CreateExclusionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateExclusion = clientHelper.BuildApiCall<CreateExclusionRequest, LogExclusion>("CreateExclusion", grpcClient.CreateExclusionAsync, grpcClient.CreateExclusion, effectiveSettings.CreateExclusionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateExclusion);
             Modify_CreateExclusionApiCall(ref _callCreateExclusion);
-            _callUpdateExclusion = clientHelper.BuildApiCall<UpdateExclusionRequest, LogExclusion>(grpcClient.UpdateExclusionAsync, grpcClient.UpdateExclusion, effectiveSettings.UpdateExclusionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateExclusion = clientHelper.BuildApiCall<UpdateExclusionRequest, LogExclusion>("UpdateExclusion", grpcClient.UpdateExclusionAsync, grpcClient.UpdateExclusion, effectiveSettings.UpdateExclusionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateExclusion);
             Modify_UpdateExclusionApiCall(ref _callUpdateExclusion);
-            _callDeleteExclusion = clientHelper.BuildApiCall<DeleteExclusionRequest, wkt::Empty>(grpcClient.DeleteExclusionAsync, grpcClient.DeleteExclusion, effectiveSettings.DeleteExclusionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteExclusion = clientHelper.BuildApiCall<DeleteExclusionRequest, wkt::Empty>("DeleteExclusion", grpcClient.DeleteExclusionAsync, grpcClient.DeleteExclusion, effectiveSettings.DeleteExclusionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteExclusion);
             Modify_DeleteExclusionApiCall(ref _callDeleteExclusion);
-            _callGetCmekSettings = clientHelper.BuildApiCall<GetCmekSettingsRequest, CmekSettings>(grpcClient.GetCmekSettingsAsync, grpcClient.GetCmekSettings, effectiveSettings.GetCmekSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetCmekSettings = clientHelper.BuildApiCall<GetCmekSettingsRequest, CmekSettings>("GetCmekSettings", grpcClient.GetCmekSettingsAsync, grpcClient.GetCmekSettings, effectiveSettings.GetCmekSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCmekSettings);
             Modify_GetCmekSettingsApiCall(ref _callGetCmekSettings);
-            _callUpdateCmekSettings = clientHelper.BuildApiCall<UpdateCmekSettingsRequest, CmekSettings>(grpcClient.UpdateCmekSettingsAsync, grpcClient.UpdateCmekSettings, effectiveSettings.UpdateCmekSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateCmekSettings = clientHelper.BuildApiCall<UpdateCmekSettingsRequest, CmekSettings>("UpdateCmekSettings", grpcClient.UpdateCmekSettingsAsync, grpcClient.UpdateCmekSettings, effectiveSettings.UpdateCmekSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateCmekSettings);
             Modify_UpdateCmekSettingsApiCall(ref _callUpdateCmekSettings);
-            _callGetSettings = clientHelper.BuildApiCall<GetSettingsRequest, Settings>(grpcClient.GetSettingsAsync, grpcClient.GetSettings, effectiveSettings.GetSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetSettings = clientHelper.BuildApiCall<GetSettingsRequest, Settings>("GetSettings", grpcClient.GetSettingsAsync, grpcClient.GetSettings, effectiveSettings.GetSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSettings);
             Modify_GetSettingsApiCall(ref _callGetSettings);
-            _callUpdateSettings = clientHelper.BuildApiCall<UpdateSettingsRequest, Settings>(grpcClient.UpdateSettingsAsync, grpcClient.UpdateSettings, effectiveSettings.UpdateSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateSettings = clientHelper.BuildApiCall<UpdateSettingsRequest, Settings>("UpdateSettings", grpcClient.UpdateSettingsAsync, grpcClient.UpdateSettings, effectiveSettings.UpdateSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateSettings);
             Modify_UpdateSettingsApiCall(ref _callUpdateSettings);
-            _callCopyLogEntries = clientHelper.BuildApiCall<CopyLogEntriesRequest, lro::Operation>(grpcClient.CopyLogEntriesAsync, grpcClient.CopyLogEntries, effectiveSettings.CopyLogEntriesSettings);
+            _callCopyLogEntries = clientHelper.BuildApiCall<CopyLogEntriesRequest, lro::Operation>("CopyLogEntries", grpcClient.CopyLogEntriesAsync, grpcClient.CopyLogEntries, effectiveSettings.CopyLogEntriesSettings);
             Modify_ApiCall(ref _callCopyLogEntries);
             Modify_CopyLogEntriesApiCall(ref _callCopyLogEntries);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

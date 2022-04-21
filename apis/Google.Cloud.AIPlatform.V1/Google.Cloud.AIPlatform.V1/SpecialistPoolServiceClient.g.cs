@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -196,9 +196,8 @@ namespace Google.Cloud.AIPlatform.V1
         public SpecialistPoolServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public SpecialistPoolServiceClientBuilder()
+        public SpecialistPoolServiceClientBuilder() : base(SpecialistPoolServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = SpecialistPoolServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref SpecialistPoolServiceClient client);
@@ -225,29 +224,18 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SpecialistPoolServiceClient.Create(callInvoker, Settings);
+            return SpecialistPoolServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<SpecialistPoolServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SpecialistPoolServiceClient.Create(callInvoker, Settings);
+            return SpecialistPoolServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => SpecialistPoolServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => SpecialistPoolServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => SpecialistPoolServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>SpecialistPoolService client wrapper, for convenient use.</summary>
@@ -279,19 +267,10 @@ namespace Google.Cloud.AIPlatform.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(SpecialistPoolService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="SpecialistPoolServiceClient"/> using the default credentials, endpoint
@@ -321,8 +300,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="SpecialistPoolServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="SpecialistPoolServiceClient"/>.</returns>
-        internal static SpecialistPoolServiceClient Create(grpccore::CallInvoker callInvoker, SpecialistPoolServiceSettings settings = null)
+        internal static SpecialistPoolServiceClient Create(grpccore::CallInvoker callInvoker, SpecialistPoolServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -331,7 +311,7 @@ namespace Google.Cloud.AIPlatform.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             SpecialistPoolService.SpecialistPoolServiceClient grpcClient = new SpecialistPoolService.SpecialistPoolServiceClient(callInvoker);
-            return new SpecialistPoolServiceClientImpl(grpcClient, settings);
+            return new SpecialistPoolServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1015,27 +995,28 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="SpecialistPoolServiceSettings"/> used within this client.</param>
-        public SpecialistPoolServiceClientImpl(SpecialistPoolService.SpecialistPoolServiceClient grpcClient, SpecialistPoolServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public SpecialistPoolServiceClientImpl(SpecialistPoolService.SpecialistPoolServiceClient grpcClient, SpecialistPoolServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             SpecialistPoolServiceSettings effectiveSettings = settings ?? SpecialistPoolServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateSpecialistPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSpecialistPoolOperationsSettings);
-            DeleteSpecialistPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSpecialistPoolOperationsSettings);
-            UpdateSpecialistPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateSpecialistPoolOperationsSettings);
-            _callCreateSpecialistPool = clientHelper.BuildApiCall<CreateSpecialistPoolRequest, lro::Operation>(grpcClient.CreateSpecialistPoolAsync, grpcClient.CreateSpecialistPool, effectiveSettings.CreateSpecialistPoolSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateSpecialistPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSpecialistPoolOperationsSettings, logger);
+            DeleteSpecialistPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSpecialistPoolOperationsSettings, logger);
+            UpdateSpecialistPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateSpecialistPoolOperationsSettings, logger);
+            _callCreateSpecialistPool = clientHelper.BuildApiCall<CreateSpecialistPoolRequest, lro::Operation>("CreateSpecialistPool", grpcClient.CreateSpecialistPoolAsync, grpcClient.CreateSpecialistPool, effectiveSettings.CreateSpecialistPoolSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSpecialistPool);
             Modify_CreateSpecialistPoolApiCall(ref _callCreateSpecialistPool);
-            _callGetSpecialistPool = clientHelper.BuildApiCall<GetSpecialistPoolRequest, SpecialistPool>(grpcClient.GetSpecialistPoolAsync, grpcClient.GetSpecialistPool, effectiveSettings.GetSpecialistPoolSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetSpecialistPool = clientHelper.BuildApiCall<GetSpecialistPoolRequest, SpecialistPool>("GetSpecialistPool", grpcClient.GetSpecialistPoolAsync, grpcClient.GetSpecialistPool, effectiveSettings.GetSpecialistPoolSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSpecialistPool);
             Modify_GetSpecialistPoolApiCall(ref _callGetSpecialistPool);
-            _callListSpecialistPools = clientHelper.BuildApiCall<ListSpecialistPoolsRequest, ListSpecialistPoolsResponse>(grpcClient.ListSpecialistPoolsAsync, grpcClient.ListSpecialistPools, effectiveSettings.ListSpecialistPoolsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListSpecialistPools = clientHelper.BuildApiCall<ListSpecialistPoolsRequest, ListSpecialistPoolsResponse>("ListSpecialistPools", grpcClient.ListSpecialistPoolsAsync, grpcClient.ListSpecialistPools, effectiveSettings.ListSpecialistPoolsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSpecialistPools);
             Modify_ListSpecialistPoolsApiCall(ref _callListSpecialistPools);
-            _callDeleteSpecialistPool = clientHelper.BuildApiCall<DeleteSpecialistPoolRequest, lro::Operation>(grpcClient.DeleteSpecialistPoolAsync, grpcClient.DeleteSpecialistPool, effectiveSettings.DeleteSpecialistPoolSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteSpecialistPool = clientHelper.BuildApiCall<DeleteSpecialistPoolRequest, lro::Operation>("DeleteSpecialistPool", grpcClient.DeleteSpecialistPoolAsync, grpcClient.DeleteSpecialistPool, effectiveSettings.DeleteSpecialistPoolSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteSpecialistPool);
             Modify_DeleteSpecialistPoolApiCall(ref _callDeleteSpecialistPool);
-            _callUpdateSpecialistPool = clientHelper.BuildApiCall<UpdateSpecialistPoolRequest, lro::Operation>(grpcClient.UpdateSpecialistPoolAsync, grpcClient.UpdateSpecialistPool, effectiveSettings.UpdateSpecialistPoolSettings).WithGoogleRequestParam("specialist_pool.name", request => request.SpecialistPool?.Name);
+            _callUpdateSpecialistPool = clientHelper.BuildApiCall<UpdateSpecialistPoolRequest, lro::Operation>("UpdateSpecialistPool", grpcClient.UpdateSpecialistPoolAsync, grpcClient.UpdateSpecialistPool, effectiveSettings.UpdateSpecialistPoolSettings).WithGoogleRequestParam("specialist_pool.name", request => request.SpecialistPool?.Name);
             Modify_ApiCall(ref _callUpdateSpecialistPool);
             Modify_UpdateSpecialistPoolApiCall(ref _callUpdateSpecialistPool);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

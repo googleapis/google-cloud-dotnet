@@ -56,7 +56,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.GetConversationProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             ConversationProfile response = client.GetConversationProfile(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -89,7 +89,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.GetConversationProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             ConversationProfile responseCallSettings = await client.GetConversationProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConversationProfile responseCancellationToken = await client.GetConversationProfileAsync(request, st::CancellationToken.None);
@@ -124,7 +124,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.GetConversationProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             ConversationProfile response = client.GetConversationProfile(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -157,7 +157,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.GetConversationProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             ConversationProfile responseCallSettings = await client.GetConversationProfileAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConversationProfile responseCancellationToken = await client.GetConversationProfileAsync(request.Name, st::CancellationToken.None);
@@ -192,7 +192,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.GetConversationProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             ConversationProfile response = client.GetConversationProfile(request.ConversationProfileName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -225,7 +225,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.GetConversationProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             ConversationProfile responseCallSettings = await client.GetConversationProfileAsync(request.ConversationProfileName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConversationProfile responseCancellationToken = await client.GetConversationProfileAsync(request.ConversationProfileName, st::CancellationToken.None);
@@ -261,7 +261,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.CreateConversationProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             ConversationProfile response = client.CreateConversationProfile(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -295,7 +295,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.CreateConversationProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             ConversationProfile responseCallSettings = await client.CreateConversationProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConversationProfile responseCancellationToken = await client.CreateConversationProfileAsync(request, st::CancellationToken.None);
@@ -331,7 +331,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.CreateConversationProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             ConversationProfile response = client.CreateConversationProfile(request.Parent, request.ConversationProfile);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -365,7 +365,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.CreateConversationProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             ConversationProfile responseCallSettings = await client.CreateConversationProfileAsync(request.Parent, request.ConversationProfile, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConversationProfile responseCancellationToken = await client.CreateConversationProfileAsync(request.Parent, request.ConversationProfile, st::CancellationToken.None);
@@ -401,7 +401,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.CreateConversationProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             ConversationProfile response = client.CreateConversationProfile(request.ParentAsProjectName, request.ConversationProfile);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -435,7 +435,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.CreateConversationProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             ConversationProfile responseCallSettings = await client.CreateConversationProfileAsync(request.ParentAsProjectName, request.ConversationProfile, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConversationProfile responseCancellationToken = await client.CreateConversationProfileAsync(request.ParentAsProjectName, request.ConversationProfile, st::CancellationToken.None);
@@ -471,7 +471,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.CreateConversationProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             ConversationProfile response = client.CreateConversationProfile(request.ParentAsLocationName, request.ConversationProfile);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -505,7 +505,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.CreateConversationProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             ConversationProfile responseCallSettings = await client.CreateConversationProfileAsync(request.ParentAsLocationName, request.ConversationProfile, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConversationProfile responseCancellationToken = await client.CreateConversationProfileAsync(request.ParentAsLocationName, request.ConversationProfile, st::CancellationToken.None);
@@ -541,7 +541,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.UpdateConversationProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             ConversationProfile response = client.UpdateConversationProfile(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -575,7 +575,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.UpdateConversationProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             ConversationProfile responseCallSettings = await client.UpdateConversationProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConversationProfile responseCancellationToken = await client.UpdateConversationProfileAsync(request, st::CancellationToken.None);
@@ -611,7 +611,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.UpdateConversationProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             ConversationProfile response = client.UpdateConversationProfile(request.ConversationProfile, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -645,7 +645,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.UpdateConversationProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             ConversationProfile responseCallSettings = await client.UpdateConversationProfileAsync(request.ConversationProfile, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConversationProfile responseCancellationToken = await client.UpdateConversationProfileAsync(request.ConversationProfile, request.UpdateMask, st::CancellationToken.None);
@@ -664,7 +664,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConversationProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteConversationProfile(request);
             mockGrpcClient.VerifyAll();
         }
@@ -680,7 +680,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConversationProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteConversationProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteConversationProfileAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -697,7 +697,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConversationProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteConversationProfile(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -713,7 +713,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConversationProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteConversationProfileAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteConversationProfileAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -730,7 +730,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConversationProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteConversationProfile(request.ConversationProfileName);
             mockGrpcClient.VerifyAll();
         }
@@ -746,7 +746,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteConversationProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
+            ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteConversationProfileAsync(request.ConversationProfileName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteConversationProfileAsync(request.ConversationProfileName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

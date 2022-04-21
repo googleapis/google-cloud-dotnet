@@ -53,7 +53,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 TraceId = "trace_id105c890f",
             };
             mockGrpcClient.Setup(x => x.CreateReadSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null);
+            BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null, null);
             ReadSession response = client.CreateReadSession(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -84,7 +84,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 TraceId = "trace_id105c890f",
             };
             mockGrpcClient.Setup(x => x.CreateReadSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReadSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null);
+            BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null, null);
             ReadSession responseCallSettings = await client.CreateReadSessionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReadSession responseCancellationToken = await client.CreateReadSessionAsync(request, st::CancellationToken.None);
@@ -117,7 +117,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 TraceId = "trace_id105c890f",
             };
             mockGrpcClient.Setup(x => x.CreateReadSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null);
+            BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null, null);
             ReadSession response = client.CreateReadSession(request.Parent, request.ReadSession, request.MaxStreamCount);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -148,7 +148,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 TraceId = "trace_id105c890f",
             };
             mockGrpcClient.Setup(x => x.CreateReadSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReadSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null);
+            BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null, null);
             ReadSession responseCallSettings = await client.CreateReadSessionAsync(request.Parent, request.ReadSession, request.MaxStreamCount, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReadSession responseCancellationToken = await client.CreateReadSessionAsync(request.Parent, request.ReadSession, request.MaxStreamCount, st::CancellationToken.None);
@@ -181,7 +181,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 TraceId = "trace_id105c890f",
             };
             mockGrpcClient.Setup(x => x.CreateReadSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null);
+            BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null, null);
             ReadSession response = client.CreateReadSession(request.ParentAsProjectName, request.ReadSession, request.MaxStreamCount);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -212,7 +212,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 TraceId = "trace_id105c890f",
             };
             mockGrpcClient.Setup(x => x.CreateReadSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReadSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null);
+            BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null, null);
             ReadSession responseCallSettings = await client.CreateReadSessionAsync(request.ParentAsProjectName, request.ReadSession, request.MaxStreamCount, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReadSession responseCancellationToken = await client.CreateReadSessionAsync(request.ParentAsProjectName, request.ReadSession, request.MaxStreamCount, st::CancellationToken.None);
@@ -235,7 +235,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 RemainderStream = new ReadStream(),
             };
             mockGrpcClient.Setup(x => x.SplitReadStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null);
+            BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null, null);
             SplitReadStreamResponse response = client.SplitReadStream(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -256,7 +256,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 RemainderStream = new ReadStream(),
             };
             mockGrpcClient.Setup(x => x.SplitReadStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SplitReadStreamResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null);
+            BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null, null);
             SplitReadStreamResponse responseCallSettings = await client.SplitReadStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SplitReadStreamResponse responseCancellationToken = await client.SplitReadStreamAsync(request, st::CancellationToken.None);

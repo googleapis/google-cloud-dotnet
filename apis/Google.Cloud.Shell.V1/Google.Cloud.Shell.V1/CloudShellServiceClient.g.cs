@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -215,9 +215,8 @@ namespace Google.Cloud.Shell.V1
         public CloudShellServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public CloudShellServiceClientBuilder()
+        public CloudShellServiceClientBuilder() : base(CloudShellServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = CloudShellServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref CloudShellServiceClient client);
@@ -244,29 +243,18 @@ namespace Google.Cloud.Shell.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return CloudShellServiceClient.Create(callInvoker, Settings);
+            return CloudShellServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<CloudShellServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return CloudShellServiceClient.Create(callInvoker, Settings);
+            return CloudShellServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => CloudShellServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => CloudShellServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => CloudShellServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>CloudShellService client wrapper, for convenient use.</summary>
@@ -299,19 +287,10 @@ namespace Google.Cloud.Shell.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(CloudShellService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="CloudShellServiceClient"/> using the default credentials, endpoint and
@@ -338,8 +317,9 @@ namespace Google.Cloud.Shell.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="CloudShellServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="CloudShellServiceClient"/>.</returns>
-        internal static CloudShellServiceClient Create(grpccore::CallInvoker callInvoker, CloudShellServiceSettings settings = null)
+        internal static CloudShellServiceClient Create(grpccore::CallInvoker callInvoker, CloudShellServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -348,7 +328,7 @@ namespace Google.Cloud.Shell.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             CloudShellService.CloudShellServiceClient grpcClient = new CloudShellService.CloudShellServiceClient(callInvoker);
-            return new CloudShellServiceClientImpl(grpcClient, settings);
+            return new CloudShellServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -758,28 +738,29 @@ namespace Google.Cloud.Shell.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="CloudShellServiceSettings"/> used within this client.</param>
-        public CloudShellServiceClientImpl(CloudShellService.CloudShellServiceClient grpcClient, CloudShellServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public CloudShellServiceClientImpl(CloudShellService.CloudShellServiceClient grpcClient, CloudShellServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             CloudShellServiceSettings effectiveSettings = settings ?? CloudShellServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            StartEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartEnvironmentOperationsSettings);
-            AuthorizeEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AuthorizeEnvironmentOperationsSettings);
-            AddPublicKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AddPublicKeyOperationsSettings);
-            RemovePublicKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RemovePublicKeyOperationsSettings);
-            _callGetEnvironment = clientHelper.BuildApiCall<GetEnvironmentRequest, Environment>(grpcClient.GetEnvironmentAsync, grpcClient.GetEnvironment, effectiveSettings.GetEnvironmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            StartEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartEnvironmentOperationsSettings, logger);
+            AuthorizeEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AuthorizeEnvironmentOperationsSettings, logger);
+            AddPublicKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AddPublicKeyOperationsSettings, logger);
+            RemovePublicKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RemovePublicKeyOperationsSettings, logger);
+            _callGetEnvironment = clientHelper.BuildApiCall<GetEnvironmentRequest, Environment>("GetEnvironment", grpcClient.GetEnvironmentAsync, grpcClient.GetEnvironment, effectiveSettings.GetEnvironmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetEnvironment);
             Modify_GetEnvironmentApiCall(ref _callGetEnvironment);
-            _callStartEnvironment = clientHelper.BuildApiCall<StartEnvironmentRequest, lro::Operation>(grpcClient.StartEnvironmentAsync, grpcClient.StartEnvironment, effectiveSettings.StartEnvironmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callStartEnvironment = clientHelper.BuildApiCall<StartEnvironmentRequest, lro::Operation>("StartEnvironment", grpcClient.StartEnvironmentAsync, grpcClient.StartEnvironment, effectiveSettings.StartEnvironmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callStartEnvironment);
             Modify_StartEnvironmentApiCall(ref _callStartEnvironment);
-            _callAuthorizeEnvironment = clientHelper.BuildApiCall<AuthorizeEnvironmentRequest, lro::Operation>(grpcClient.AuthorizeEnvironmentAsync, grpcClient.AuthorizeEnvironment, effectiveSettings.AuthorizeEnvironmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callAuthorizeEnvironment = clientHelper.BuildApiCall<AuthorizeEnvironmentRequest, lro::Operation>("AuthorizeEnvironment", grpcClient.AuthorizeEnvironmentAsync, grpcClient.AuthorizeEnvironment, effectiveSettings.AuthorizeEnvironmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callAuthorizeEnvironment);
             Modify_AuthorizeEnvironmentApiCall(ref _callAuthorizeEnvironment);
-            _callAddPublicKey = clientHelper.BuildApiCall<AddPublicKeyRequest, lro::Operation>(grpcClient.AddPublicKeyAsync, grpcClient.AddPublicKey, effectiveSettings.AddPublicKeySettings).WithGoogleRequestParam("environment", request => request.Environment);
+            _callAddPublicKey = clientHelper.BuildApiCall<AddPublicKeyRequest, lro::Operation>("AddPublicKey", grpcClient.AddPublicKeyAsync, grpcClient.AddPublicKey, effectiveSettings.AddPublicKeySettings).WithGoogleRequestParam("environment", request => request.Environment);
             Modify_ApiCall(ref _callAddPublicKey);
             Modify_AddPublicKeyApiCall(ref _callAddPublicKey);
-            _callRemovePublicKey = clientHelper.BuildApiCall<RemovePublicKeyRequest, lro::Operation>(grpcClient.RemovePublicKeyAsync, grpcClient.RemovePublicKey, effectiveSettings.RemovePublicKeySettings).WithGoogleRequestParam("environment", request => request.Environment);
+            _callRemovePublicKey = clientHelper.BuildApiCall<RemovePublicKeyRequest, lro::Operation>("RemovePublicKey", grpcClient.RemovePublicKeyAsync, grpcClient.RemovePublicKey, effectiveSettings.RemovePublicKeySettings).WithGoogleRequestParam("environment", request => request.Environment);
             Modify_ApiCall(ref _callRemovePublicKey);
             Modify_RemovePublicKeyApiCall(ref _callRemovePublicKey);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

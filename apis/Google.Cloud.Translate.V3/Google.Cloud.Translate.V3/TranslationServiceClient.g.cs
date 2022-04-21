@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -312,9 +312,8 @@ namespace Google.Cloud.Translate.V3
         public TranslationServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public TranslationServiceClientBuilder()
+        public TranslationServiceClientBuilder() : base(TranslationServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = TranslationServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref TranslationServiceClient client);
@@ -341,29 +340,18 @@ namespace Google.Cloud.Translate.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TranslationServiceClient.Create(callInvoker, Settings);
+            return TranslationServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<TranslationServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TranslationServiceClient.Create(callInvoker, Settings);
+            return TranslationServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => TranslationServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => TranslationServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => TranslationServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>TranslationService client wrapper, for convenient use.</summary>
@@ -392,19 +380,10 @@ namespace Google.Cloud.Translate.V3
             "https://www.googleapis.com/auth/cloud-translation",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(TranslationService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="TranslationServiceClient"/> using the default credentials, endpoint and
@@ -434,8 +413,9 @@ namespace Google.Cloud.Translate.V3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="TranslationServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="TranslationServiceClient"/>.</returns>
-        internal static TranslationServiceClient Create(grpccore::CallInvoker callInvoker, TranslationServiceSettings settings = null)
+        internal static TranslationServiceClient Create(grpccore::CallInvoker callInvoker, TranslationServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -444,7 +424,7 @@ namespace Google.Cloud.Translate.V3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             TranslationService.TranslationServiceClient grpcClient = new TranslationService.TranslationServiceClient(callInvoker);
-            return new TranslationServiceClientImpl(grpcClient, settings);
+            return new TranslationServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -2808,43 +2788,44 @@ namespace Google.Cloud.Translate.V3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="TranslationServiceSettings"/> used within this client.</param>
-        public TranslationServiceClientImpl(TranslationService.TranslationServiceClient grpcClient, TranslationServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public TranslationServiceClientImpl(TranslationService.TranslationServiceClient grpcClient, TranslationServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             TranslationServiceSettings effectiveSettings = settings ?? TranslationServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            BatchTranslateTextOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchTranslateTextOperationsSettings);
-            BatchTranslateDocumentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchTranslateDocumentOperationsSettings);
-            CreateGlossaryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGlossaryOperationsSettings);
-            DeleteGlossaryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGlossaryOperationsSettings);
-            _callTranslateText = clientHelper.BuildApiCall<TranslateTextRequest, TranslateTextResponse>(grpcClient.TranslateTextAsync, grpcClient.TranslateText, effectiveSettings.TranslateTextSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            BatchTranslateTextOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchTranslateTextOperationsSettings, logger);
+            BatchTranslateDocumentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchTranslateDocumentOperationsSettings, logger);
+            CreateGlossaryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGlossaryOperationsSettings, logger);
+            DeleteGlossaryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGlossaryOperationsSettings, logger);
+            _callTranslateText = clientHelper.BuildApiCall<TranslateTextRequest, TranslateTextResponse>("TranslateText", grpcClient.TranslateTextAsync, grpcClient.TranslateText, effectiveSettings.TranslateTextSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callTranslateText);
             Modify_TranslateTextApiCall(ref _callTranslateText);
-            _callDetectLanguage = clientHelper.BuildApiCall<DetectLanguageRequest, DetectLanguageResponse>(grpcClient.DetectLanguageAsync, grpcClient.DetectLanguage, effectiveSettings.DetectLanguageSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callDetectLanguage = clientHelper.BuildApiCall<DetectLanguageRequest, DetectLanguageResponse>("DetectLanguage", grpcClient.DetectLanguageAsync, grpcClient.DetectLanguage, effectiveSettings.DetectLanguageSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callDetectLanguage);
             Modify_DetectLanguageApiCall(ref _callDetectLanguage);
-            _callGetSupportedLanguages = clientHelper.BuildApiCall<GetSupportedLanguagesRequest, SupportedLanguages>(grpcClient.GetSupportedLanguagesAsync, grpcClient.GetSupportedLanguages, effectiveSettings.GetSupportedLanguagesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callGetSupportedLanguages = clientHelper.BuildApiCall<GetSupportedLanguagesRequest, SupportedLanguages>("GetSupportedLanguages", grpcClient.GetSupportedLanguagesAsync, grpcClient.GetSupportedLanguages, effectiveSettings.GetSupportedLanguagesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callGetSupportedLanguages);
             Modify_GetSupportedLanguagesApiCall(ref _callGetSupportedLanguages);
-            _callTranslateDocument = clientHelper.BuildApiCall<TranslateDocumentRequest, TranslateDocumentResponse>(grpcClient.TranslateDocumentAsync, grpcClient.TranslateDocument, effectiveSettings.TranslateDocumentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callTranslateDocument = clientHelper.BuildApiCall<TranslateDocumentRequest, TranslateDocumentResponse>("TranslateDocument", grpcClient.TranslateDocumentAsync, grpcClient.TranslateDocument, effectiveSettings.TranslateDocumentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callTranslateDocument);
             Modify_TranslateDocumentApiCall(ref _callTranslateDocument);
-            _callBatchTranslateText = clientHelper.BuildApiCall<BatchTranslateTextRequest, lro::Operation>(grpcClient.BatchTranslateTextAsync, grpcClient.BatchTranslateText, effectiveSettings.BatchTranslateTextSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callBatchTranslateText = clientHelper.BuildApiCall<BatchTranslateTextRequest, lro::Operation>("BatchTranslateText", grpcClient.BatchTranslateTextAsync, grpcClient.BatchTranslateText, effectiveSettings.BatchTranslateTextSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchTranslateText);
             Modify_BatchTranslateTextApiCall(ref _callBatchTranslateText);
-            _callBatchTranslateDocument = clientHelper.BuildApiCall<BatchTranslateDocumentRequest, lro::Operation>(grpcClient.BatchTranslateDocumentAsync, grpcClient.BatchTranslateDocument, effectiveSettings.BatchTranslateDocumentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callBatchTranslateDocument = clientHelper.BuildApiCall<BatchTranslateDocumentRequest, lro::Operation>("BatchTranslateDocument", grpcClient.BatchTranslateDocumentAsync, grpcClient.BatchTranslateDocument, effectiveSettings.BatchTranslateDocumentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchTranslateDocument);
             Modify_BatchTranslateDocumentApiCall(ref _callBatchTranslateDocument);
-            _callCreateGlossary = clientHelper.BuildApiCall<CreateGlossaryRequest, lro::Operation>(grpcClient.CreateGlossaryAsync, grpcClient.CreateGlossary, effectiveSettings.CreateGlossarySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateGlossary = clientHelper.BuildApiCall<CreateGlossaryRequest, lro::Operation>("CreateGlossary", grpcClient.CreateGlossaryAsync, grpcClient.CreateGlossary, effectiveSettings.CreateGlossarySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateGlossary);
             Modify_CreateGlossaryApiCall(ref _callCreateGlossary);
-            _callListGlossaries = clientHelper.BuildApiCall<ListGlossariesRequest, ListGlossariesResponse>(grpcClient.ListGlossariesAsync, grpcClient.ListGlossaries, effectiveSettings.ListGlossariesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListGlossaries = clientHelper.BuildApiCall<ListGlossariesRequest, ListGlossariesResponse>("ListGlossaries", grpcClient.ListGlossariesAsync, grpcClient.ListGlossaries, effectiveSettings.ListGlossariesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListGlossaries);
             Modify_ListGlossariesApiCall(ref _callListGlossaries);
-            _callGetGlossary = clientHelper.BuildApiCall<GetGlossaryRequest, Glossary>(grpcClient.GetGlossaryAsync, grpcClient.GetGlossary, effectiveSettings.GetGlossarySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetGlossary = clientHelper.BuildApiCall<GetGlossaryRequest, Glossary>("GetGlossary", grpcClient.GetGlossaryAsync, grpcClient.GetGlossary, effectiveSettings.GetGlossarySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetGlossary);
             Modify_GetGlossaryApiCall(ref _callGetGlossary);
-            _callDeleteGlossary = clientHelper.BuildApiCall<DeleteGlossaryRequest, lro::Operation>(grpcClient.DeleteGlossaryAsync, grpcClient.DeleteGlossary, effectiveSettings.DeleteGlossarySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteGlossary = clientHelper.BuildApiCall<DeleteGlossaryRequest, lro::Operation>("DeleteGlossary", grpcClient.DeleteGlossaryAsync, grpcClient.DeleteGlossary, effectiveSettings.DeleteGlossarySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteGlossary);
             Modify_DeleteGlossaryApiCall(ref _callDeleteGlossary);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

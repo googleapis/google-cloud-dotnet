@@ -11,25 +11,25 @@
   },
   "snippets": [
     {
-      "regionTag": "dataflow_v1beta3_generated_SnapshotsV1Beta3_GetSnapshot_sync",
-      "title": "GetSnapshotRequestObject",
-      "description": "Snippet for GetSnapshot",
-      "file": "SnapshotsV1Beta3Client.GetSnapshotRequestObjectSnippet.g.cs",
+      "regionTag": "dataflow_v1beta3_generated_FlexTemplatesService_LaunchFlexTemplate_sync",
+      "title": "LaunchFlexTemplateRequestObject",
+      "description": "Snippet for LaunchFlexTemplate",
+      "file": "FlexTemplatesServiceClient.LaunchFlexTemplateRequestObjectSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "GetSnapshot",
-        "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client.GetSnapshot",
-        "resultType": "Google.Cloud.Dataflow.V1Beta3.Snapshot",
+        "shortName": "LaunchFlexTemplate",
+        "fullName": "Google.Cloud.Dataflow.V1Beta3.FlexTemplatesServiceClient.LaunchFlexTemplate",
+        "resultType": "Google.Cloud.Dataflow.V1Beta3.LaunchFlexTemplateResponse",
         "client": {
-          "shortName": "SnapshotsV1Beta3Client",
-          "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client"
+          "shortName": "FlexTemplatesServiceClient",
+          "fullName": "Google.Cloud.Dataflow.V1Beta3.FlexTemplatesServiceClient"
         },
         "method": {
-          "shortName": "GetSnapshot",
-          "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3.GetSnapshot",
+          "shortName": "LaunchFlexTemplate",
+          "fullName": "google.dataflow.v1beta3.FlexTemplatesService.LaunchFlexTemplate",
           "service": {
-            "shortName": "SnapshotsV1Beta3",
-            "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3"
+            "shortName": "FlexTemplatesService",
+            "fullName": "google.dataflow.v1beta3.FlexTemplatesService"
           }
         }
       },
@@ -37,132 +37,26 @@
       "origin": "API_DEFINITION"
     },
     {
-      "regionTag": "dataflow_v1beta3_generated_SnapshotsV1Beta3_GetSnapshot_async",
-      "title": "GetSnapshotRequestObjectAsync",
-      "description": "Snippet for GetSnapshotAsync",
-      "file": "SnapshotsV1Beta3Client.GetSnapshotRequestObjectAsyncSnippet.g.cs",
+      "regionTag": "dataflow_v1beta3_generated_FlexTemplatesService_LaunchFlexTemplate_async",
+      "title": "LaunchFlexTemplateRequestObjectAsync",
+      "description": "Snippet for LaunchFlexTemplateAsync",
+      "file": "FlexTemplatesServiceClient.LaunchFlexTemplateRequestObjectAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "GetSnapshotAsync",
-        "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client.GetSnapshotAsync",
+        "shortName": "LaunchFlexTemplateAsync",
+        "fullName": "Google.Cloud.Dataflow.V1Beta3.FlexTemplatesServiceClient.LaunchFlexTemplateAsync",
         "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataflow.V1Beta3.Snapshot>",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataflow.V1Beta3.LaunchFlexTemplateResponse>",
         "client": {
-          "shortName": "SnapshotsV1Beta3Client",
-          "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client"
+          "shortName": "FlexTemplatesServiceClient",
+          "fullName": "Google.Cloud.Dataflow.V1Beta3.FlexTemplatesServiceClient"
         },
         "method": {
-          "shortName": "GetSnapshot",
-          "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3.GetSnapshot",
+          "shortName": "LaunchFlexTemplate",
+          "fullName": "google.dataflow.v1beta3.FlexTemplatesService.LaunchFlexTemplate",
           "service": {
-            "shortName": "SnapshotsV1Beta3",
-            "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataflow_v1beta3_generated_SnapshotsV1Beta3_DeleteSnapshot_sync",
-      "title": "DeleteSnapshotRequestObject",
-      "description": "Snippet for DeleteSnapshot",
-      "file": "SnapshotsV1Beta3Client.DeleteSnapshotRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteSnapshot",
-        "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client.DeleteSnapshot",
-        "resultType": "Google.Cloud.Dataflow.V1Beta3.DeleteSnapshotResponse",
-        "client": {
-          "shortName": "SnapshotsV1Beta3Client",
-          "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client"
-        },
-        "method": {
-          "shortName": "DeleteSnapshot",
-          "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3.DeleteSnapshot",
-          "service": {
-            "shortName": "SnapshotsV1Beta3",
-            "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataflow_v1beta3_generated_SnapshotsV1Beta3_DeleteSnapshot_async",
-      "title": "DeleteSnapshotRequestObjectAsync",
-      "description": "Snippet for DeleteSnapshotAsync",
-      "file": "SnapshotsV1Beta3Client.DeleteSnapshotRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteSnapshotAsync",
-        "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client.DeleteSnapshotAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataflow.V1Beta3.DeleteSnapshotResponse>",
-        "client": {
-          "shortName": "SnapshotsV1Beta3Client",
-          "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client"
-        },
-        "method": {
-          "shortName": "DeleteSnapshot",
-          "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3.DeleteSnapshot",
-          "service": {
-            "shortName": "SnapshotsV1Beta3",
-            "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataflow_v1beta3_generated_SnapshotsV1Beta3_ListSnapshots_sync",
-      "title": "ListSnapshotsRequestObject",
-      "description": "Snippet for ListSnapshots",
-      "file": "SnapshotsV1Beta3Client.ListSnapshotsRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListSnapshots",
-        "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client.ListSnapshots",
-        "resultType": "Google.Cloud.Dataflow.V1Beta3.ListSnapshotsResponse",
-        "client": {
-          "shortName": "SnapshotsV1Beta3Client",
-          "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client"
-        },
-        "method": {
-          "shortName": "ListSnapshots",
-          "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3.ListSnapshots",
-          "service": {
-            "shortName": "SnapshotsV1Beta3",
-            "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataflow_v1beta3_generated_SnapshotsV1Beta3_ListSnapshots_async",
-      "title": "ListSnapshotsRequestObjectAsync",
-      "description": "Snippet for ListSnapshotsAsync",
-      "file": "SnapshotsV1Beta3Client.ListSnapshotsRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListSnapshotsAsync",
-        "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client.ListSnapshotsAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataflow.V1Beta3.ListSnapshotsResponse>",
-        "client": {
-          "shortName": "SnapshotsV1Beta3Client",
-          "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client"
-        },
-        "method": {
-          "shortName": "ListSnapshots",
-          "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3.ListSnapshots",
-          "service": {
-            "shortName": "SnapshotsV1Beta3",
-            "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3"
+            "shortName": "FlexTemplatesService",
+            "fullName": "google.dataflow.v1beta3.FlexTemplatesService"
           }
         }
       },
@@ -753,6 +647,165 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "dataflow_v1beta3_generated_SnapshotsV1Beta3_GetSnapshot_sync",
+      "title": "GetSnapshotRequestObject",
+      "description": "Snippet for GetSnapshot",
+      "file": "SnapshotsV1Beta3Client.GetSnapshotRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSnapshot",
+        "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client.GetSnapshot",
+        "resultType": "Google.Cloud.Dataflow.V1Beta3.Snapshot",
+        "client": {
+          "shortName": "SnapshotsV1Beta3Client",
+          "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client"
+        },
+        "method": {
+          "shortName": "GetSnapshot",
+          "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3.GetSnapshot",
+          "service": {
+            "shortName": "SnapshotsV1Beta3",
+            "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataflow_v1beta3_generated_SnapshotsV1Beta3_GetSnapshot_async",
+      "title": "GetSnapshotRequestObjectAsync",
+      "description": "Snippet for GetSnapshotAsync",
+      "file": "SnapshotsV1Beta3Client.GetSnapshotRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSnapshotAsync",
+        "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client.GetSnapshotAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataflow.V1Beta3.Snapshot>",
+        "client": {
+          "shortName": "SnapshotsV1Beta3Client",
+          "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client"
+        },
+        "method": {
+          "shortName": "GetSnapshot",
+          "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3.GetSnapshot",
+          "service": {
+            "shortName": "SnapshotsV1Beta3",
+            "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataflow_v1beta3_generated_SnapshotsV1Beta3_DeleteSnapshot_sync",
+      "title": "DeleteSnapshotRequestObject",
+      "description": "Snippet for DeleteSnapshot",
+      "file": "SnapshotsV1Beta3Client.DeleteSnapshotRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSnapshot",
+        "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client.DeleteSnapshot",
+        "resultType": "Google.Cloud.Dataflow.V1Beta3.DeleteSnapshotResponse",
+        "client": {
+          "shortName": "SnapshotsV1Beta3Client",
+          "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client"
+        },
+        "method": {
+          "shortName": "DeleteSnapshot",
+          "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3.DeleteSnapshot",
+          "service": {
+            "shortName": "SnapshotsV1Beta3",
+            "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataflow_v1beta3_generated_SnapshotsV1Beta3_DeleteSnapshot_async",
+      "title": "DeleteSnapshotRequestObjectAsync",
+      "description": "Snippet for DeleteSnapshotAsync",
+      "file": "SnapshotsV1Beta3Client.DeleteSnapshotRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSnapshotAsync",
+        "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client.DeleteSnapshotAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataflow.V1Beta3.DeleteSnapshotResponse>",
+        "client": {
+          "shortName": "SnapshotsV1Beta3Client",
+          "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client"
+        },
+        "method": {
+          "shortName": "DeleteSnapshot",
+          "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3.DeleteSnapshot",
+          "service": {
+            "shortName": "SnapshotsV1Beta3",
+            "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataflow_v1beta3_generated_SnapshotsV1Beta3_ListSnapshots_sync",
+      "title": "ListSnapshotsRequestObject",
+      "description": "Snippet for ListSnapshots",
+      "file": "SnapshotsV1Beta3Client.ListSnapshotsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSnapshots",
+        "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client.ListSnapshots",
+        "resultType": "Google.Cloud.Dataflow.V1Beta3.ListSnapshotsResponse",
+        "client": {
+          "shortName": "SnapshotsV1Beta3Client",
+          "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client"
+        },
+        "method": {
+          "shortName": "ListSnapshots",
+          "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3.ListSnapshots",
+          "service": {
+            "shortName": "SnapshotsV1Beta3",
+            "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "dataflow_v1beta3_generated_SnapshotsV1Beta3_ListSnapshots_async",
+      "title": "ListSnapshotsRequestObjectAsync",
+      "description": "Snippet for ListSnapshotsAsync",
+      "file": "SnapshotsV1Beta3Client.ListSnapshotsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSnapshotsAsync",
+        "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client.ListSnapshotsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataflow.V1Beta3.ListSnapshotsResponse>",
+        "client": {
+          "shortName": "SnapshotsV1Beta3Client",
+          "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client"
+        },
+        "method": {
+          "shortName": "ListSnapshots",
+          "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3.ListSnapshots",
+          "service": {
+            "shortName": "SnapshotsV1Beta3",
+            "fullName": "google.dataflow.v1beta3.SnapshotsV1Beta3"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "dataflow_v1beta3_generated_TemplatesService_CreateJobFromTemplate_sync",
       "title": "CreateJobFromTemplateRequestObject",
       "description": "Snippet for CreateJobFromTemplate",
@@ -905,59 +958,6 @@
           "service": {
             "shortName": "TemplatesService",
             "fullName": "google.dataflow.v1beta3.TemplatesService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataflow_v1beta3_generated_FlexTemplatesService_LaunchFlexTemplate_sync",
-      "title": "LaunchFlexTemplateRequestObject",
-      "description": "Snippet for LaunchFlexTemplate",
-      "file": "FlexTemplatesServiceClient.LaunchFlexTemplateRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "LaunchFlexTemplate",
-        "fullName": "Google.Cloud.Dataflow.V1Beta3.FlexTemplatesServiceClient.LaunchFlexTemplate",
-        "resultType": "Google.Cloud.Dataflow.V1Beta3.LaunchFlexTemplateResponse",
-        "client": {
-          "shortName": "FlexTemplatesServiceClient",
-          "fullName": "Google.Cloud.Dataflow.V1Beta3.FlexTemplatesServiceClient"
-        },
-        "method": {
-          "shortName": "LaunchFlexTemplate",
-          "fullName": "google.dataflow.v1beta3.FlexTemplatesService.LaunchFlexTemplate",
-          "service": {
-            "shortName": "FlexTemplatesService",
-            "fullName": "google.dataflow.v1beta3.FlexTemplatesService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "dataflow_v1beta3_generated_FlexTemplatesService_LaunchFlexTemplate_async",
-      "title": "LaunchFlexTemplateRequestObjectAsync",
-      "description": "Snippet for LaunchFlexTemplateAsync",
-      "file": "FlexTemplatesServiceClient.LaunchFlexTemplateRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "LaunchFlexTemplateAsync",
-        "fullName": "Google.Cloud.Dataflow.V1Beta3.FlexTemplatesServiceClient.LaunchFlexTemplateAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataflow.V1Beta3.LaunchFlexTemplateResponse>",
-        "client": {
-          "shortName": "FlexTemplatesServiceClient",
-          "fullName": "Google.Cloud.Dataflow.V1Beta3.FlexTemplatesServiceClient"
-        },
-        "method": {
-          "shortName": "LaunchFlexTemplate",
-          "fullName": "google.dataflow.v1beta3.FlexTemplatesService.LaunchFlexTemplate",
-          "service": {
-            "shortName": "FlexTemplatesService",
-            "fullName": "google.dataflow.v1beta3.FlexTemplatesService"
           }
         }
       },

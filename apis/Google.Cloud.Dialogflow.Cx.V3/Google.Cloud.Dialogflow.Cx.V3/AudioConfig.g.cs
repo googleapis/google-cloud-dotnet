@@ -65,12 +65,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "X0FVRElPX0VOQ09ESU5HX0xJTkVBUl8xNhABEh0KGU9VVFBVVF9BVURJT19F",
             "TkNPRElOR19NUDMQAhIlCiFPVVRQVVRfQVVESU9fRU5DT0RJTkdfTVAzXzY0",
             "X0tCUFMQBBIiCh5PVVRQVVRfQVVESU9fRU5DT0RJTkdfT0dHX09QVVMQAxIf",
-            "ChtPVVRQVVRfQVVESU9fRU5DT0RJTkdfTVVMQVcQBULEAQohY29tLmdvb2ds",
+            "ChtPVVRQVVRfQVVESU9fRU5DT0RJTkdfTVVMQVcQBUKcAgohY29tLmdvb2ds",
             "ZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzQhBBdWRpb0NvbmZpZ1Byb3RvUAFa",
             "P2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
             "ZGlhbG9nZmxvdy9jeC92MztjePgBAaICAkRGqgIdR29vZ2xlLkNsb3VkLkRp",
             "YWxvZ2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNsb3VkOjpEaWFsb2dmbG93OjpD",
-            "WDo6VjNiBnByb3RvMw=="));
+            "WDo6VjPqQVUKG2F1dG9tbC5nb29nbGVhcGlzLmNvbS9Nb2RlbBI2cHJvamVj",
+            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L21vZGVscy97bW9k",
+            "ZWx9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.Cx.V3.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.Cx.V3.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.Cx.V3.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.Cx.V3.OutputAudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {

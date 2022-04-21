@@ -40,7 +40,7 @@ namespace Google.Cloud.TextToSpeech.V1Beta1.Tests
                 Voices = { new Voice(), },
             };
             mockGrpcClient.Setup(x => x.ListVoices(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null);
+            TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null, null);
             ListVoicesResponse response = client.ListVoices(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -59,7 +59,7 @@ namespace Google.Cloud.TextToSpeech.V1Beta1.Tests
                 Voices = { new Voice(), },
             };
             mockGrpcClient.Setup(x => x.ListVoicesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListVoicesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null);
+            TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null, null);
             ListVoicesResponse responseCallSettings = await client.ListVoicesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListVoicesResponse responseCancellationToken = await client.ListVoicesAsync(request, st::CancellationToken.None);
@@ -80,7 +80,7 @@ namespace Google.Cloud.TextToSpeech.V1Beta1.Tests
                 Voices = { new Voice(), },
             };
             mockGrpcClient.Setup(x => x.ListVoices(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null);
+            TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null, null);
             ListVoicesResponse response = client.ListVoices(request.LanguageCode);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -99,7 +99,7 @@ namespace Google.Cloud.TextToSpeech.V1Beta1.Tests
                 Voices = { new Voice(), },
             };
             mockGrpcClient.Setup(x => x.ListVoicesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListVoicesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null);
+            TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null, null);
             ListVoicesResponse responseCallSettings = await client.ListVoicesAsync(request.LanguageCode, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListVoicesResponse responseCancellationToken = await client.ListVoicesAsync(request.LanguageCode, st::CancellationToken.None);
@@ -128,7 +128,7 @@ namespace Google.Cloud.TextToSpeech.V1Beta1.Tests
                 AudioConfig = new AudioConfig(),
             };
             mockGrpcClient.Setup(x => x.SynthesizeSpeech(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null);
+            TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null, null);
             SynthesizeSpeechResponse response = client.SynthesizeSpeech(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -155,7 +155,7 @@ namespace Google.Cloud.TextToSpeech.V1Beta1.Tests
                 AudioConfig = new AudioConfig(),
             };
             mockGrpcClient.Setup(x => x.SynthesizeSpeechAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SynthesizeSpeechResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null);
+            TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null, null);
             SynthesizeSpeechResponse responseCallSettings = await client.SynthesizeSpeechAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SynthesizeSpeechResponse responseCancellationToken = await client.SynthesizeSpeechAsync(request, st::CancellationToken.None);
@@ -180,7 +180,7 @@ namespace Google.Cloud.TextToSpeech.V1Beta1.Tests
                 AudioConfig = new AudioConfig(),
             };
             mockGrpcClient.Setup(x => x.SynthesizeSpeech(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null);
+            TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null, null);
             SynthesizeSpeechResponse response = client.SynthesizeSpeech(request.Input, request.Voice, request.AudioConfig);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -203,7 +203,7 @@ namespace Google.Cloud.TextToSpeech.V1Beta1.Tests
                 AudioConfig = new AudioConfig(),
             };
             mockGrpcClient.Setup(x => x.SynthesizeSpeechAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SynthesizeSpeechResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null);
+            TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null, null);
             SynthesizeSpeechResponse responseCallSettings = await client.SynthesizeSpeechAsync(request.Input, request.Voice, request.AudioConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SynthesizeSpeechResponse responseCancellationToken = await client.SynthesizeSpeechAsync(request.Input, request.Voice, request.AudioConfig, st::CancellationToken.None);

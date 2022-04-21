@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -197,9 +197,8 @@ namespace Google.Cloud.Scheduler.V1
         public CloudSchedulerSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public CloudSchedulerClientBuilder()
+        public CloudSchedulerClientBuilder() : base(CloudSchedulerClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = CloudSchedulerClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref CloudSchedulerClient client);
@@ -226,29 +225,18 @@ namespace Google.Cloud.Scheduler.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return CloudSchedulerClient.Create(callInvoker, Settings);
+            return CloudSchedulerClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<CloudSchedulerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return CloudSchedulerClient.Create(callInvoker, Settings);
+            return CloudSchedulerClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => CloudSchedulerClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => CloudSchedulerClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => CloudSchedulerClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>CloudScheduler client wrapper, for convenient use.</summary>
@@ -276,19 +264,10 @@ namespace Google.Cloud.Scheduler.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(CloudScheduler.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="CloudSchedulerClient"/> using the default credentials, endpoint and
@@ -315,8 +294,9 @@ namespace Google.Cloud.Scheduler.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="CloudSchedulerSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="CloudSchedulerClient"/>.</returns>
-        internal static CloudSchedulerClient Create(grpccore::CallInvoker callInvoker, CloudSchedulerSettings settings = null)
+        internal static CloudSchedulerClient Create(grpccore::CallInvoker callInvoker, CloudSchedulerSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -325,7 +305,7 @@ namespace Google.Cloud.Scheduler.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             CloudScheduler.CloudSchedulerClient grpcClient = new CloudScheduler.CloudSchedulerClient(callInvoker);
-            return new CloudSchedulerClientImpl(grpcClient, settings);
+            return new CloudSchedulerClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1463,33 +1443,34 @@ namespace Google.Cloud.Scheduler.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="CloudSchedulerSettings"/> used within this client.</param>
-        public CloudSchedulerClientImpl(CloudScheduler.CloudSchedulerClient grpcClient, CloudSchedulerSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public CloudSchedulerClientImpl(CloudScheduler.CloudSchedulerClient grpcClient, CloudSchedulerSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             CloudSchedulerSettings effectiveSettings = settings ?? CloudSchedulerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListJobs = clientHelper.BuildApiCall<ListJobsRequest, ListJobsResponse>(grpcClient.ListJobsAsync, grpcClient.ListJobs, effectiveSettings.ListJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListJobs = clientHelper.BuildApiCall<ListJobsRequest, ListJobsResponse>("ListJobs", grpcClient.ListJobsAsync, grpcClient.ListJobs, effectiveSettings.ListJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListJobs);
             Modify_ListJobsApiCall(ref _callListJobs);
-            _callGetJob = clientHelper.BuildApiCall<GetJobRequest, Job>(grpcClient.GetJobAsync, grpcClient.GetJob, effectiveSettings.GetJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetJob = clientHelper.BuildApiCall<GetJobRequest, Job>("GetJob", grpcClient.GetJobAsync, grpcClient.GetJob, effectiveSettings.GetJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetJob);
             Modify_GetJobApiCall(ref _callGetJob);
-            _callCreateJob = clientHelper.BuildApiCall<CreateJobRequest, Job>(grpcClient.CreateJobAsync, grpcClient.CreateJob, effectiveSettings.CreateJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateJob = clientHelper.BuildApiCall<CreateJobRequest, Job>("CreateJob", grpcClient.CreateJobAsync, grpcClient.CreateJob, effectiveSettings.CreateJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateJob);
             Modify_CreateJobApiCall(ref _callCreateJob);
-            _callUpdateJob = clientHelper.BuildApiCall<UpdateJobRequest, Job>(grpcClient.UpdateJobAsync, grpcClient.UpdateJob, effectiveSettings.UpdateJobSettings).WithGoogleRequestParam("job.name", request => request.Job?.Name);
+            _callUpdateJob = clientHelper.BuildApiCall<UpdateJobRequest, Job>("UpdateJob", grpcClient.UpdateJobAsync, grpcClient.UpdateJob, effectiveSettings.UpdateJobSettings).WithGoogleRequestParam("job.name", request => request.Job?.Name);
             Modify_ApiCall(ref _callUpdateJob);
             Modify_UpdateJobApiCall(ref _callUpdateJob);
-            _callDeleteJob = clientHelper.BuildApiCall<DeleteJobRequest, wkt::Empty>(grpcClient.DeleteJobAsync, grpcClient.DeleteJob, effectiveSettings.DeleteJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteJob = clientHelper.BuildApiCall<DeleteJobRequest, wkt::Empty>("DeleteJob", grpcClient.DeleteJobAsync, grpcClient.DeleteJob, effectiveSettings.DeleteJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteJob);
             Modify_DeleteJobApiCall(ref _callDeleteJob);
-            _callPauseJob = clientHelper.BuildApiCall<PauseJobRequest, Job>(grpcClient.PauseJobAsync, grpcClient.PauseJob, effectiveSettings.PauseJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callPauseJob = clientHelper.BuildApiCall<PauseJobRequest, Job>("PauseJob", grpcClient.PauseJobAsync, grpcClient.PauseJob, effectiveSettings.PauseJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callPauseJob);
             Modify_PauseJobApiCall(ref _callPauseJob);
-            _callResumeJob = clientHelper.BuildApiCall<ResumeJobRequest, Job>(grpcClient.ResumeJobAsync, grpcClient.ResumeJob, effectiveSettings.ResumeJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callResumeJob = clientHelper.BuildApiCall<ResumeJobRequest, Job>("ResumeJob", grpcClient.ResumeJobAsync, grpcClient.ResumeJob, effectiveSettings.ResumeJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callResumeJob);
             Modify_ResumeJobApiCall(ref _callResumeJob);
-            _callRunJob = clientHelper.BuildApiCall<RunJobRequest, Job>(grpcClient.RunJobAsync, grpcClient.RunJob, effectiveSettings.RunJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callRunJob = clientHelper.BuildApiCall<RunJobRequest, Job>("RunJob", grpcClient.RunJobAsync, grpcClient.RunJob, effectiveSettings.RunJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRunJob);
             Modify_RunJobApiCall(ref _callRunJob);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

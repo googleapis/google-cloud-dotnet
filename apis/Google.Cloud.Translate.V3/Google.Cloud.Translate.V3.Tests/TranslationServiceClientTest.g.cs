@@ -60,7 +60,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 GlossaryTranslations = { new Translation(), },
             };
             mockGrpcClient.Setup(x => x.TranslateText(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             TranslateTextResponse response = client.TranslateText(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -97,7 +97,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 GlossaryTranslations = { new Translation(), },
             };
             mockGrpcClient.Setup(x => x.TranslateTextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TranslateTextResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             TranslateTextResponse responseCallSettings = await client.TranslateTextAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TranslateTextResponse responseCancellationToken = await client.TranslateTextAsync(request, st::CancellationToken.None);
@@ -125,7 +125,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 GlossaryTranslations = { new Translation(), },
             };
             mockGrpcClient.Setup(x => x.TranslateText(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             TranslateTextResponse response = client.TranslateText(request.Parent, request.TargetLanguageCode, request.Contents);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -151,7 +151,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 GlossaryTranslations = { new Translation(), },
             };
             mockGrpcClient.Setup(x => x.TranslateTextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TranslateTextResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             TranslateTextResponse responseCallSettings = await client.TranslateTextAsync(request.Parent, request.TargetLanguageCode, request.Contents, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TranslateTextResponse responseCancellationToken = await client.TranslateTextAsync(request.Parent, request.TargetLanguageCode, request.Contents, st::CancellationToken.None);
@@ -179,7 +179,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 GlossaryTranslations = { new Translation(), },
             };
             mockGrpcClient.Setup(x => x.TranslateText(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             TranslateTextResponse response = client.TranslateText(request.ParentAsLocationName, request.TargetLanguageCode, request.Contents);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -205,7 +205,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 GlossaryTranslations = { new Translation(), },
             };
             mockGrpcClient.Setup(x => x.TranslateTextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TranslateTextResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             TranslateTextResponse responseCallSettings = await client.TranslateTextAsync(request.ParentAsLocationName, request.TargetLanguageCode, request.Contents, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TranslateTextResponse responseCancellationToken = await client.TranslateTextAsync(request.ParentAsLocationName, request.TargetLanguageCode, request.Contents, st::CancellationToken.None);
@@ -236,7 +236,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 GlossaryTranslations = { new Translation(), },
             };
             mockGrpcClient.Setup(x => x.TranslateText(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             TranslateTextResponse response = client.TranslateText(request.Parent, request.Model, request.MimeType, request.SourceLanguageCode, request.TargetLanguageCode, request.Contents);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -265,7 +265,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 GlossaryTranslations = { new Translation(), },
             };
             mockGrpcClient.Setup(x => x.TranslateTextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TranslateTextResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             TranslateTextResponse responseCallSettings = await client.TranslateTextAsync(request.Parent, request.Model, request.MimeType, request.SourceLanguageCode, request.TargetLanguageCode, request.Contents, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TranslateTextResponse responseCancellationToken = await client.TranslateTextAsync(request.Parent, request.Model, request.MimeType, request.SourceLanguageCode, request.TargetLanguageCode, request.Contents, st::CancellationToken.None);
@@ -296,7 +296,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 GlossaryTranslations = { new Translation(), },
             };
             mockGrpcClient.Setup(x => x.TranslateText(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             TranslateTextResponse response = client.TranslateText(request.ParentAsLocationName, request.Model, request.MimeType, request.SourceLanguageCode, request.TargetLanguageCode, request.Contents);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -325,7 +325,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 GlossaryTranslations = { new Translation(), },
             };
             mockGrpcClient.Setup(x => x.TranslateTextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TranslateTextResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             TranslateTextResponse responseCallSettings = await client.TranslateTextAsync(request.ParentAsLocationName, request.Model, request.MimeType, request.SourceLanguageCode, request.TargetLanguageCode, request.Contents, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TranslateTextResponse responseCancellationToken = await client.TranslateTextAsync(request.ParentAsLocationName, request.Model, request.MimeType, request.SourceLanguageCode, request.TargetLanguageCode, request.Contents, st::CancellationToken.None);
@@ -360,7 +360,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.DetectLanguage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             DetectLanguageResponse response = client.DetectLanguage(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -393,7 +393,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.DetectLanguageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DetectLanguageResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             DetectLanguageResponse responseCallSettings = await client.DetectLanguageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DetectLanguageResponse responseCancellationToken = await client.DetectLanguageAsync(request, st::CancellationToken.None);
@@ -421,7 +421,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.DetectLanguage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             DetectLanguageResponse response = client.DetectLanguage(request.Parent, request.Model, request.MimeType, request.Content);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -447,7 +447,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.DetectLanguageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DetectLanguageResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             DetectLanguageResponse responseCallSettings = await client.DetectLanguageAsync(request.Parent, request.Model, request.MimeType, request.Content, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DetectLanguageResponse responseCancellationToken = await client.DetectLanguageAsync(request.Parent, request.Model, request.MimeType, request.Content, st::CancellationToken.None);
@@ -475,7 +475,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.DetectLanguage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             DetectLanguageResponse response = client.DetectLanguage(request.ParentAsLocationName, request.Model, request.MimeType, request.Content);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -501,7 +501,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.DetectLanguageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DetectLanguageResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             DetectLanguageResponse responseCallSettings = await client.DetectLanguageAsync(request.ParentAsLocationName, request.Model, request.MimeType, request.Content, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DetectLanguageResponse responseCancellationToken = await client.DetectLanguageAsync(request.ParentAsLocationName, request.Model, request.MimeType, request.Content, st::CancellationToken.None);
@@ -528,7 +528,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSupportedLanguages(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             SupportedLanguages response = client.GetSupportedLanguages(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -553,7 +553,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSupportedLanguagesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SupportedLanguages>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             SupportedLanguages responseCallSettings = await client.GetSupportedLanguagesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SupportedLanguages responseCancellationToken = await client.GetSupportedLanguagesAsync(request, st::CancellationToken.None);
@@ -580,7 +580,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSupportedLanguages(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             SupportedLanguages response = client.GetSupportedLanguages(request.Parent, request.Model, request.DisplayLanguageCode);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -605,7 +605,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSupportedLanguagesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SupportedLanguages>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             SupportedLanguages responseCallSettings = await client.GetSupportedLanguagesAsync(request.Parent, request.Model, request.DisplayLanguageCode, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SupportedLanguages responseCancellationToken = await client.GetSupportedLanguagesAsync(request.Parent, request.Model, request.DisplayLanguageCode, st::CancellationToken.None);
@@ -632,7 +632,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSupportedLanguages(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             SupportedLanguages response = client.GetSupportedLanguages(request.ParentAsLocationName, request.Model, request.DisplayLanguageCode);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -657,7 +657,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSupportedLanguagesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SupportedLanguages>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             SupportedLanguages responseCallSettings = await client.GetSupportedLanguagesAsync(request.ParentAsLocationName, request.Model, request.DisplayLanguageCode, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SupportedLanguages responseCancellationToken = await client.GetSupportedLanguagesAsync(request.ParentAsLocationName, request.Model, request.DisplayLanguageCode, st::CancellationToken.None);
@@ -695,7 +695,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 GlossaryConfig = new TranslateTextGlossaryConfig(),
             };
             mockGrpcClient.Setup(x => x.TranslateDocument(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             TranslateDocumentResponse response = client.TranslateDocument(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -731,7 +731,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 GlossaryConfig = new TranslateTextGlossaryConfig(),
             };
             mockGrpcClient.Setup(x => x.TranslateDocumentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TranslateDocumentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             TranslateDocumentResponse responseCallSettings = await client.TranslateDocumentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TranslateDocumentResponse responseCancellationToken = await client.TranslateDocumentAsync(request, st::CancellationToken.None);
@@ -759,7 +759,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetGlossary(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             Glossary response = client.GetGlossary(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -785,7 +785,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetGlossaryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Glossary>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             Glossary responseCallSettings = await client.GetGlossaryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Glossary responseCancellationToken = await client.GetGlossaryAsync(request, st::CancellationToken.None);
@@ -813,7 +813,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetGlossary(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             Glossary response = client.GetGlossary(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -839,7 +839,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetGlossaryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Glossary>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             Glossary responseCallSettings = await client.GetGlossaryAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Glossary responseCancellationToken = await client.GetGlossaryAsync(request.Name, st::CancellationToken.None);
@@ -867,7 +867,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetGlossary(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             Glossary response = client.GetGlossary(request.GlossaryName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -893,7 +893,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 EndTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetGlossaryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Glossary>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null, null);
             Glossary responseCallSettings = await client.GetGlossaryAsync(request.GlossaryName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Glossary responseCancellationToken = await client.GetGlossaryAsync(request.GlossaryName, st::CancellationToken.None);

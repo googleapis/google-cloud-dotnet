@@ -38,6 +38,7 @@ namespace Google.Cloud.Notebooks.V1.Snippets
                 ParentAsRuntimeName = RuntimeName.FromProjectLocationRuntime("[PROJECT]", "[LOCATION]", "[RUNTIME]"),
                 RuntimeId = "",
                 Runtime = new Runtime(),
+                RequestId = "",
             };
             // Make the request
             Operation<Runtime, OperationMetadata> response = await managedNotebookServiceClient.CreateRuntimeAsync(request);

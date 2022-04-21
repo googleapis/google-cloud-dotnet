@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -47,6 +47,7 @@ namespace Google.Cloud.Compute.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             AddRuleSettings = existing.AddRuleSettings;
             AddRuleOperationsSettings = existing.AddRuleOperationsSettings.Clone();
+            AggregatedListSettings = existing.AggregatedListSettings;
             DeleteSettings = existing.DeleteSettings;
             DeleteOperationsSettings = existing.DeleteOperationsSettings.Clone();
             GetSettings = existing.GetSettings;
@@ -95,6 +96,27 @@ namespace Google.Cloud.Compute.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityPoliciesClient.AggregatedList</c> and <c>SecurityPoliciesClient.AggregatedListAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AggregatedListSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -346,9 +368,8 @@ namespace Google.Cloud.Compute.V1
         public SecurityPoliciesSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public SecurityPoliciesClientBuilder()
+        public SecurityPoliciesClientBuilder() : base(SecurityPoliciesClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = SecurityPoliciesClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref SecurityPoliciesClient client);
@@ -375,29 +396,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SecurityPoliciesClient.Create(callInvoker, Settings);
+            return SecurityPoliciesClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<SecurityPoliciesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SecurityPoliciesClient.Create(callInvoker, Settings);
+            return SecurityPoliciesClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => SecurityPoliciesClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => SecurityPoliciesClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => SecurityPoliciesClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>SecurityPolicies client wrapper, for convenient use.</summary>
@@ -426,19 +436,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(SecurityPolicies.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="SecurityPoliciesClient"/> using the default credentials, endpoint and
@@ -465,8 +466,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="SecurityPoliciesSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="SecurityPoliciesClient"/>.</returns>
-        internal static SecurityPoliciesClient Create(grpccore::CallInvoker callInvoker, SecurityPoliciesSettings settings = null)
+        internal static SecurityPoliciesClient Create(grpccore::CallInvoker callInvoker, SecurityPoliciesSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -475,7 +477,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             SecurityPolicies.SecurityPoliciesClient grpcClient = new SecurityPolicies.SecurityPoliciesClient(callInvoker);
-            return new SecurityPoliciesClientImpl(grpcClient, settings);
+            return new SecurityPoliciesClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -607,6 +609,76 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> AddRuleAsync(string project, string securityPolicy, SecurityPolicyRule securityPolicyRuleResource, st::CancellationToken cancellationToken) =>
             AddRuleAsync(project, securityPolicy, securityPolicyRuleResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the list of all SecurityPolicy resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SecurityPoliciesAggregatedList, scg::KeyValuePair<string, SecurityPoliciesScopedList>> AggregatedList(AggregatedListSecurityPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the list of all SecurityPolicy resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<SecurityPoliciesAggregatedList, scg::KeyValuePair<string, SecurityPoliciesScopedList>> AggregatedListAsync(AggregatedListSecurityPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the list of all SecurityPolicy resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="project">
+        /// Name of the project scoping this request.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SecurityPoliciesAggregatedList, scg::KeyValuePair<string, SecurityPoliciesScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            AggregatedList(new AggregatedListSecurityPoliciesRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the list of all SecurityPolicy resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="project">
+        /// Name of the project scoping this request.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<SecurityPoliciesAggregatedList, scg::KeyValuePair<string, SecurityPoliciesScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            AggregatedListAsync(new AggregatedListSecurityPoliciesRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
 
         /// <summary>
         /// Deletes the specified policy.
@@ -1440,6 +1512,8 @@ namespace Google.Cloud.Compute.V1
     {
         private readonly gaxgrpc::ApiCall<AddRuleSecurityPolicyRequest, Operation> _callAddRule;
 
+        private readonly gaxgrpc::ApiCall<AggregatedListSecurityPoliciesRequest, SecurityPoliciesAggregatedList> _callAggregatedList;
+
         private readonly gaxgrpc::ApiCall<DeleteSecurityPolicyRequest, Operation> _callDelete;
 
         private readonly gaxgrpc::ApiCall<GetSecurityPolicyRequest, SecurityPolicy> _callGet;
@@ -1463,45 +1537,49 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="SecurityPoliciesSettings"/> used within this client.</param>
-        public SecurityPoliciesClientImpl(SecurityPolicies.SecurityPoliciesClient grpcClient, SecurityPoliciesSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public SecurityPoliciesClientImpl(SecurityPolicies.SecurityPoliciesClient grpcClient, SecurityPoliciesSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             SecurityPoliciesSettings effectiveSettings = settings ?? SecurityPoliciesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            AddRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AddRuleOperationsSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings);
-            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings);
-            PatchRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchRuleOperationsSettings);
-            RemoveRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.RemoveRuleOperationsSettings);
-            _callAddRule = clientHelper.BuildApiCall<AddRuleSecurityPolicyRequest, Operation>(grpcClient.AddRuleAsync, grpcClient.AddRule, effectiveSettings.AddRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            AddRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AddRuleOperationsSettings, logger);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings, logger);
+            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings, logger);
+            PatchRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchRuleOperationsSettings, logger);
+            RemoveRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.RemoveRuleOperationsSettings, logger);
+            _callAddRule = clientHelper.BuildApiCall<AddRuleSecurityPolicyRequest, Operation>("AddRule", grpcClient.AddRuleAsync, grpcClient.AddRule, effectiveSettings.AddRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
             Modify_ApiCall(ref _callAddRule);
             Modify_AddRuleApiCall(ref _callAddRule);
-            _callDelete = clientHelper.BuildApiCall<DeleteSecurityPolicyRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
+            _callAggregatedList = clientHelper.BuildApiCall<AggregatedListSecurityPoliciesRequest, SecurityPoliciesAggregatedList>("AggregatedList", grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
+            Modify_ApiCall(ref _callAggregatedList);
+            Modify_AggregatedListApiCall(ref _callAggregatedList);
+            _callDelete = clientHelper.BuildApiCall<DeleteSecurityPolicyRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
-            _callGet = clientHelper.BuildApiCall<GetSecurityPolicyRequest, SecurityPolicy>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
+            _callGet = clientHelper.BuildApiCall<GetSecurityPolicyRequest, SecurityPolicy>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callGetRule = clientHelper.BuildApiCall<GetRuleSecurityPolicyRequest, SecurityPolicyRule>(grpcClient.GetRuleAsync, grpcClient.GetRule, effectiveSettings.GetRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
+            _callGetRule = clientHelper.BuildApiCall<GetRuleSecurityPolicyRequest, SecurityPolicyRule>("GetRule", grpcClient.GetRuleAsync, grpcClient.GetRule, effectiveSettings.GetRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
             Modify_ApiCall(ref _callGetRule);
             Modify_GetRuleApiCall(ref _callGetRule);
-            _callInsert = clientHelper.BuildApiCall<InsertSecurityPolicyRequest, Operation>(grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callInsert = clientHelper.BuildApiCall<InsertSecurityPolicyRequest, Operation>("Insert", grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
-            _callList = clientHelper.BuildApiCall<ListSecurityPoliciesRequest, SecurityPolicyList>(grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callList = clientHelper.BuildApiCall<ListSecurityPoliciesRequest, SecurityPolicyList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
-            _callListPreconfiguredExpressionSets = clientHelper.BuildApiCall<ListPreconfiguredExpressionSetsSecurityPoliciesRequest, SecurityPoliciesListPreconfiguredExpressionSetsResponse>(grpcClient.ListPreconfiguredExpressionSetsAsync, grpcClient.ListPreconfiguredExpressionSets, effectiveSettings.ListPreconfiguredExpressionSetsSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callListPreconfiguredExpressionSets = clientHelper.BuildApiCall<ListPreconfiguredExpressionSetsSecurityPoliciesRequest, SecurityPoliciesListPreconfiguredExpressionSetsResponse>("ListPreconfiguredExpressionSets", grpcClient.ListPreconfiguredExpressionSetsAsync, grpcClient.ListPreconfiguredExpressionSets, effectiveSettings.ListPreconfiguredExpressionSetsSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callListPreconfiguredExpressionSets);
             Modify_ListPreconfiguredExpressionSetsApiCall(ref _callListPreconfiguredExpressionSets);
-            _callPatch = clientHelper.BuildApiCall<PatchSecurityPolicyRequest, Operation>(grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
+            _callPatch = clientHelper.BuildApiCall<PatchSecurityPolicyRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
-            _callPatchRule = clientHelper.BuildApiCall<PatchRuleSecurityPolicyRequest, Operation>(grpcClient.PatchRuleAsync, grpcClient.PatchRule, effectiveSettings.PatchRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
+            _callPatchRule = clientHelper.BuildApiCall<PatchRuleSecurityPolicyRequest, Operation>("PatchRule", grpcClient.PatchRuleAsync, grpcClient.PatchRule, effectiveSettings.PatchRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
             Modify_ApiCall(ref _callPatchRule);
             Modify_PatchRuleApiCall(ref _callPatchRule);
-            _callRemoveRule = clientHelper.BuildApiCall<RemoveRuleSecurityPolicyRequest, Operation>(grpcClient.RemoveRuleAsync, grpcClient.RemoveRule, effectiveSettings.RemoveRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
+            _callRemoveRule = clientHelper.BuildApiCall<RemoveRuleSecurityPolicyRequest, Operation>("RemoveRule", grpcClient.RemoveRuleAsync, grpcClient.RemoveRule, effectiveSettings.RemoveRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
             Modify_ApiCall(ref _callRemoveRule);
             Modify_RemoveRuleApiCall(ref _callRemoveRule);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -1510,6 +1588,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
         partial void Modify_AddRuleApiCall(ref gaxgrpc::ApiCall<AddRuleSecurityPolicyRequest, Operation> call);
+
+        partial void Modify_AggregatedListApiCall(ref gaxgrpc::ApiCall<AggregatedListSecurityPoliciesRequest, SecurityPoliciesAggregatedList> call);
 
         partial void Modify_DeleteApiCall(ref gaxgrpc::ApiCall<DeleteSecurityPolicyRequest, Operation> call);
 
@@ -1535,6 +1615,8 @@ namespace Google.Cloud.Compute.V1
         public override SecurityPolicies.SecurityPoliciesClient GrpcClient { get; }
 
         partial void Modify_AddRuleSecurityPolicyRequest(ref AddRuleSecurityPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AggregatedListSecurityPoliciesRequest(ref AggregatedListSecurityPoliciesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteSecurityPolicyRequest(ref DeleteSecurityPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1585,6 +1667,32 @@ namespace Google.Cloud.Compute.V1
             GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddRuleOperationsClient);
+        }
+
+        /// <summary>
+        /// Retrieves the list of all SecurityPolicy resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public override gax::PagedEnumerable<SecurityPoliciesAggregatedList, scg::KeyValuePair<string, SecurityPoliciesScopedList>> AggregatedList(AggregatedListSecurityPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AggregatedListSecurityPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<AggregatedListSecurityPoliciesRequest, SecurityPoliciesAggregatedList, scg::KeyValuePair<string, SecurityPoliciesScopedList>>(_callAggregatedList, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves the list of all SecurityPolicy resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<SecurityPoliciesAggregatedList, scg::KeyValuePair<string, SecurityPoliciesScopedList>> AggregatedListAsync(AggregatedListSecurityPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AggregatedListSecurityPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<AggregatedListSecurityPoliciesRequest, SecurityPoliciesAggregatedList, scg::KeyValuePair<string, SecurityPoliciesScopedList>>(_callAggregatedList, request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>Delete</c>.</summary>
@@ -1849,6 +1957,16 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class AggregatedListSecurityPoliciesRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
     public partial class ListSecurityPoliciesRequest : gaxgrpc::IPageRequest
     {
         /// <inheritdoc/>
@@ -1859,10 +1977,11 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
-    public partial class SecurityPolicyList : gaxgrpc::IPageResponse<SecurityPolicy>
+    public partial class SecurityPoliciesAggregatedList : gaxgrpc::IPageResponse<scg::KeyValuePair<string, SecurityPoliciesScopedList>>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
-        public scg::IEnumerator<SecurityPolicy> GetEnumerator() => Items.GetEnumerator();
+        public scg::IEnumerator<scg::KeyValuePair<string, SecurityPoliciesScopedList>> GetEnumerator() =>
+            Items.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

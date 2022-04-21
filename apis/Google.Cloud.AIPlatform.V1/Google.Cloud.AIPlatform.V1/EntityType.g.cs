@@ -222,10 +222,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int MonitoringConfigFieldNumber = 8;
     private global::Google.Cloud.AIPlatform.V1.FeaturestoreMonitoringConfig monitoringConfig_;
     /// <summary>
-    /// Optional. The default monitoring configuration for all Features with value
-    /// type
-    /// ([Feature.ValueType][google.cloud.aiplatform.v1.Feature.ValueType]) BOOL,
-    /// STRING, DOUBLE or INT64 under this EntityType.
+    /// Optional. The default monitoring configuration for all Features with value type
+    /// ([Feature.ValueType][google.cloud.aiplatform.v1.Feature.ValueType]) BOOL, STRING, DOUBLE or INT64 under this
+    /// EntityType.
     ///
     /// If this is populated with
     /// [FeaturestoreMonitoringConfig.monitoring_interval] specified, snapshot

@@ -40,7 +40,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 Brands = { new Brand(), },
             };
             mockGrpcClient.Setup(x => x.ListBrands(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null, null);
             ListBrandsResponse response = client.ListBrands(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -59,7 +59,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 Brands = { new Brand(), },
             };
             mockGrpcClient.Setup(x => x.ListBrandsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListBrandsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null, null);
             ListBrandsResponse responseCallSettings = await client.ListBrandsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListBrandsResponse responseCancellationToken = await client.ListBrandsAsync(request, st::CancellationToken.None);
@@ -84,7 +84,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 OrgInternalOnly = false,
             };
             mockGrpcClient.Setup(x => x.CreateBrand(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null, null);
             Brand response = client.CreateBrand(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -107,7 +107,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 OrgInternalOnly = false,
             };
             mockGrpcClient.Setup(x => x.CreateBrandAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Brand>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null, null);
             Brand responseCallSettings = await client.CreateBrandAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Brand responseCancellationToken = await client.CreateBrandAsync(request, st::CancellationToken.None);
@@ -131,7 +131,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 OrgInternalOnly = false,
             };
             mockGrpcClient.Setup(x => x.GetBrand(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null, null);
             Brand response = client.GetBrand(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -153,7 +153,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 OrgInternalOnly = false,
             };
             mockGrpcClient.Setup(x => x.GetBrandAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Brand>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null, null);
             Brand responseCallSettings = await client.GetBrandAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Brand responseCancellationToken = await client.GetBrandAsync(request, st::CancellationToken.None);
@@ -177,7 +177,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 DisplayName = "display_name137f65c2",
             };
             mockGrpcClient.Setup(x => x.CreateIdentityAwareProxyClient(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null, null);
             IdentityAwareProxyClient response = client.CreateIdentityAwareProxyClient(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -199,7 +199,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 DisplayName = "display_name137f65c2",
             };
             mockGrpcClient.Setup(x => x.CreateIdentityAwareProxyClientAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IdentityAwareProxyClient>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null, null);
             IdentityAwareProxyClient responseCallSettings = await client.CreateIdentityAwareProxyClientAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             IdentityAwareProxyClient responseCancellationToken = await client.CreateIdentityAwareProxyClientAsync(request, st::CancellationToken.None);
@@ -222,7 +222,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 DisplayName = "display_name137f65c2",
             };
             mockGrpcClient.Setup(x => x.GetIdentityAwareProxyClient(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null, null);
             IdentityAwareProxyClient response = client.GetIdentityAwareProxyClient(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -243,7 +243,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 DisplayName = "display_name137f65c2",
             };
             mockGrpcClient.Setup(x => x.GetIdentityAwareProxyClientAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IdentityAwareProxyClient>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null, null);
             IdentityAwareProxyClient responseCallSettings = await client.GetIdentityAwareProxyClientAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             IdentityAwareProxyClient responseCancellationToken = await client.GetIdentityAwareProxyClientAsync(request, st::CancellationToken.None);
@@ -266,7 +266,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 DisplayName = "display_name137f65c2",
             };
             mockGrpcClient.Setup(x => x.ResetIdentityAwareProxyClientSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null, null);
             IdentityAwareProxyClient response = client.ResetIdentityAwareProxyClientSecret(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -287,7 +287,7 @@ namespace Google.Cloud.Iap.V1.Tests
                 DisplayName = "display_name137f65c2",
             };
             mockGrpcClient.Setup(x => x.ResetIdentityAwareProxyClientSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IdentityAwareProxyClient>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null, null);
             IdentityAwareProxyClient responseCallSettings = await client.ResetIdentityAwareProxyClientSecretAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             IdentityAwareProxyClient responseCancellationToken = await client.ResetIdentityAwareProxyClientSecretAsync(request, st::CancellationToken.None);
@@ -305,7 +305,7 @@ namespace Google.Cloud.Iap.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteIdentityAwareProxyClient(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteIdentityAwareProxyClient(request);
             mockGrpcClient.VerifyAll();
         }
@@ -320,7 +320,7 @@ namespace Google.Cloud.Iap.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteIdentityAwareProxyClientAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null);
+            IdentityAwareProxyOAuthServiceClient client = new IdentityAwareProxyOAuthServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteIdentityAwareProxyClientAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteIdentityAwareProxyClientAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

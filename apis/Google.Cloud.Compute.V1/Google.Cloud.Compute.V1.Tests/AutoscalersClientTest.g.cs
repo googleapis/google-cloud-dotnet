@@ -65,7 +65,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AutoscalersClient client = new AutoscalersClientImpl(mockGrpcClient.Object, null);
+            AutoscalersClient client = new AutoscalersClientImpl(mockGrpcClient.Object, null, null);
             Autoscaler response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -109,7 +109,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Autoscaler>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AutoscalersClient client = new AutoscalersClientImpl(mockGrpcClient.Object, null);
+            AutoscalersClient client = new AutoscalersClientImpl(mockGrpcClient.Object, null, null);
             Autoscaler responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Autoscaler responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -155,7 +155,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AutoscalersClient client = new AutoscalersClientImpl(mockGrpcClient.Object, null);
+            AutoscalersClient client = new AutoscalersClientImpl(mockGrpcClient.Object, null, null);
             Autoscaler response = client.Get(request.Project, request.Zone, request.Autoscaler);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -199,7 +199,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Autoscaler>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AutoscalersClient client = new AutoscalersClientImpl(mockGrpcClient.Object, null);
+            AutoscalersClient client = new AutoscalersClientImpl(mockGrpcClient.Object, null, null);
             Autoscaler responseCallSettings = await client.GetAsync(request.Project, request.Zone, request.Autoscaler, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Autoscaler responseCancellationToken = await client.GetAsync(request.Project, request.Zone, request.Autoscaler, st::CancellationToken.None);

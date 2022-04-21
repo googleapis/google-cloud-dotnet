@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -407,9 +407,8 @@ namespace Google.Cloud.Iot.V1
         public DeviceManagerSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public DeviceManagerClientBuilder()
+        public DeviceManagerClientBuilder() : base(DeviceManagerClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = DeviceManagerClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref DeviceManagerClient client);
@@ -436,29 +435,18 @@ namespace Google.Cloud.Iot.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return DeviceManagerClient.Create(callInvoker, Settings);
+            return DeviceManagerClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<DeviceManagerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return DeviceManagerClient.Create(callInvoker, Settings);
+            return DeviceManagerClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => DeviceManagerClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => DeviceManagerClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => DeviceManagerClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>DeviceManager client wrapper, for convenient use.</summary>
@@ -487,19 +475,10 @@ namespace Google.Cloud.Iot.V1
             "https://www.googleapis.com/auth/cloudiot",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(DeviceManager.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="DeviceManagerClient"/> using the default credentials, endpoint and
@@ -526,8 +505,9 @@ namespace Google.Cloud.Iot.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="DeviceManagerSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="DeviceManagerClient"/>.</returns>
-        internal static DeviceManagerClient Create(grpccore::CallInvoker callInvoker, DeviceManagerSettings settings = null)
+        internal static DeviceManagerClient Create(grpccore::CallInvoker callInvoker, DeviceManagerSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -536,7 +516,7 @@ namespace Google.Cloud.Iot.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             DeviceManager.DeviceManagerClient grpcClient = new DeviceManager.DeviceManagerClient(callInvoker);
-            return new DeviceManagerClientImpl(grpcClient, settings);
+            return new DeviceManagerClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -3485,66 +3465,67 @@ namespace Google.Cloud.Iot.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="DeviceManagerSettings"/> used within this client.</param>
-        public DeviceManagerClientImpl(DeviceManager.DeviceManagerClient grpcClient, DeviceManagerSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public DeviceManagerClientImpl(DeviceManager.DeviceManagerClient grpcClient, DeviceManagerSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             DeviceManagerSettings effectiveSettings = settings ?? DeviceManagerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCreateDeviceRegistry = clientHelper.BuildApiCall<CreateDeviceRegistryRequest, DeviceRegistry>(grpcClient.CreateDeviceRegistryAsync, grpcClient.CreateDeviceRegistry, effectiveSettings.CreateDeviceRegistrySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCreateDeviceRegistry = clientHelper.BuildApiCall<CreateDeviceRegistryRequest, DeviceRegistry>("CreateDeviceRegistry", grpcClient.CreateDeviceRegistryAsync, grpcClient.CreateDeviceRegistry, effectiveSettings.CreateDeviceRegistrySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDeviceRegistry);
             Modify_CreateDeviceRegistryApiCall(ref _callCreateDeviceRegistry);
-            _callGetDeviceRegistry = clientHelper.BuildApiCall<GetDeviceRegistryRequest, DeviceRegistry>(grpcClient.GetDeviceRegistryAsync, grpcClient.GetDeviceRegistry, effectiveSettings.GetDeviceRegistrySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetDeviceRegistry = clientHelper.BuildApiCall<GetDeviceRegistryRequest, DeviceRegistry>("GetDeviceRegistry", grpcClient.GetDeviceRegistryAsync, grpcClient.GetDeviceRegistry, effectiveSettings.GetDeviceRegistrySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDeviceRegistry);
             Modify_GetDeviceRegistryApiCall(ref _callGetDeviceRegistry);
-            _callUpdateDeviceRegistry = clientHelper.BuildApiCall<UpdateDeviceRegistryRequest, DeviceRegistry>(grpcClient.UpdateDeviceRegistryAsync, grpcClient.UpdateDeviceRegistry, effectiveSettings.UpdateDeviceRegistrySettings).WithGoogleRequestParam("device_registry.name", request => request.DeviceRegistry?.Name);
+            _callUpdateDeviceRegistry = clientHelper.BuildApiCall<UpdateDeviceRegistryRequest, DeviceRegistry>("UpdateDeviceRegistry", grpcClient.UpdateDeviceRegistryAsync, grpcClient.UpdateDeviceRegistry, effectiveSettings.UpdateDeviceRegistrySettings).WithGoogleRequestParam("device_registry.name", request => request.DeviceRegistry?.Name);
             Modify_ApiCall(ref _callUpdateDeviceRegistry);
             Modify_UpdateDeviceRegistryApiCall(ref _callUpdateDeviceRegistry);
-            _callDeleteDeviceRegistry = clientHelper.BuildApiCall<DeleteDeviceRegistryRequest, wkt::Empty>(grpcClient.DeleteDeviceRegistryAsync, grpcClient.DeleteDeviceRegistry, effectiveSettings.DeleteDeviceRegistrySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteDeviceRegistry = clientHelper.BuildApiCall<DeleteDeviceRegistryRequest, wkt::Empty>("DeleteDeviceRegistry", grpcClient.DeleteDeviceRegistryAsync, grpcClient.DeleteDeviceRegistry, effectiveSettings.DeleteDeviceRegistrySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDeviceRegistry);
             Modify_DeleteDeviceRegistryApiCall(ref _callDeleteDeviceRegistry);
-            _callListDeviceRegistries = clientHelper.BuildApiCall<ListDeviceRegistriesRequest, ListDeviceRegistriesResponse>(grpcClient.ListDeviceRegistriesAsync, grpcClient.ListDeviceRegistries, effectiveSettings.ListDeviceRegistriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListDeviceRegistries = clientHelper.BuildApiCall<ListDeviceRegistriesRequest, ListDeviceRegistriesResponse>("ListDeviceRegistries", grpcClient.ListDeviceRegistriesAsync, grpcClient.ListDeviceRegistries, effectiveSettings.ListDeviceRegistriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDeviceRegistries);
             Modify_ListDeviceRegistriesApiCall(ref _callListDeviceRegistries);
-            _callCreateDevice = clientHelper.BuildApiCall<CreateDeviceRequest, Device>(grpcClient.CreateDeviceAsync, grpcClient.CreateDevice, effectiveSettings.CreateDeviceSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateDevice = clientHelper.BuildApiCall<CreateDeviceRequest, Device>("CreateDevice", grpcClient.CreateDeviceAsync, grpcClient.CreateDevice, effectiveSettings.CreateDeviceSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDevice);
             Modify_CreateDeviceApiCall(ref _callCreateDevice);
-            _callGetDevice = clientHelper.BuildApiCall<GetDeviceRequest, Device>(grpcClient.GetDeviceAsync, grpcClient.GetDevice, effectiveSettings.GetDeviceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetDevice = clientHelper.BuildApiCall<GetDeviceRequest, Device>("GetDevice", grpcClient.GetDeviceAsync, grpcClient.GetDevice, effectiveSettings.GetDeviceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDevice);
             Modify_GetDeviceApiCall(ref _callGetDevice);
-            _callUpdateDevice = clientHelper.BuildApiCall<UpdateDeviceRequest, Device>(grpcClient.UpdateDeviceAsync, grpcClient.UpdateDevice, effectiveSettings.UpdateDeviceSettings).WithGoogleRequestParam("device.name", request => request.Device?.Name);
+            _callUpdateDevice = clientHelper.BuildApiCall<UpdateDeviceRequest, Device>("UpdateDevice", grpcClient.UpdateDeviceAsync, grpcClient.UpdateDevice, effectiveSettings.UpdateDeviceSettings).WithGoogleRequestParam("device.name", request => request.Device?.Name);
             Modify_ApiCall(ref _callUpdateDevice);
             Modify_UpdateDeviceApiCall(ref _callUpdateDevice);
-            _callDeleteDevice = clientHelper.BuildApiCall<DeleteDeviceRequest, wkt::Empty>(grpcClient.DeleteDeviceAsync, grpcClient.DeleteDevice, effectiveSettings.DeleteDeviceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteDevice = clientHelper.BuildApiCall<DeleteDeviceRequest, wkt::Empty>("DeleteDevice", grpcClient.DeleteDeviceAsync, grpcClient.DeleteDevice, effectiveSettings.DeleteDeviceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDevice);
             Modify_DeleteDeviceApiCall(ref _callDeleteDevice);
-            _callListDevices = clientHelper.BuildApiCall<ListDevicesRequest, ListDevicesResponse>(grpcClient.ListDevicesAsync, grpcClient.ListDevices, effectiveSettings.ListDevicesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListDevices = clientHelper.BuildApiCall<ListDevicesRequest, ListDevicesResponse>("ListDevices", grpcClient.ListDevicesAsync, grpcClient.ListDevices, effectiveSettings.ListDevicesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDevices);
             Modify_ListDevicesApiCall(ref _callListDevices);
-            _callModifyCloudToDeviceConfig = clientHelper.BuildApiCall<ModifyCloudToDeviceConfigRequest, DeviceConfig>(grpcClient.ModifyCloudToDeviceConfigAsync, grpcClient.ModifyCloudToDeviceConfig, effectiveSettings.ModifyCloudToDeviceConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callModifyCloudToDeviceConfig = clientHelper.BuildApiCall<ModifyCloudToDeviceConfigRequest, DeviceConfig>("ModifyCloudToDeviceConfig", grpcClient.ModifyCloudToDeviceConfigAsync, grpcClient.ModifyCloudToDeviceConfig, effectiveSettings.ModifyCloudToDeviceConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callModifyCloudToDeviceConfig);
             Modify_ModifyCloudToDeviceConfigApiCall(ref _callModifyCloudToDeviceConfig);
-            _callListDeviceConfigVersions = clientHelper.BuildApiCall<ListDeviceConfigVersionsRequest, ListDeviceConfigVersionsResponse>(grpcClient.ListDeviceConfigVersionsAsync, grpcClient.ListDeviceConfigVersions, effectiveSettings.ListDeviceConfigVersionsSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callListDeviceConfigVersions = clientHelper.BuildApiCall<ListDeviceConfigVersionsRequest, ListDeviceConfigVersionsResponse>("ListDeviceConfigVersions", grpcClient.ListDeviceConfigVersionsAsync, grpcClient.ListDeviceConfigVersions, effectiveSettings.ListDeviceConfigVersionsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListDeviceConfigVersions);
             Modify_ListDeviceConfigVersionsApiCall(ref _callListDeviceConfigVersions);
-            _callListDeviceStates = clientHelper.BuildApiCall<ListDeviceStatesRequest, ListDeviceStatesResponse>(grpcClient.ListDeviceStatesAsync, grpcClient.ListDeviceStates, effectiveSettings.ListDeviceStatesSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callListDeviceStates = clientHelper.BuildApiCall<ListDeviceStatesRequest, ListDeviceStatesResponse>("ListDeviceStates", grpcClient.ListDeviceStatesAsync, grpcClient.ListDeviceStates, effectiveSettings.ListDeviceStatesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListDeviceStates);
             Modify_ListDeviceStatesApiCall(ref _callListDeviceStates);
-            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>(grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
-            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>(grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
-            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>(grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
-            _callSendCommandToDevice = clientHelper.BuildApiCall<SendCommandToDeviceRequest, SendCommandToDeviceResponse>(grpcClient.SendCommandToDeviceAsync, grpcClient.SendCommandToDevice, effectiveSettings.SendCommandToDeviceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callSendCommandToDevice = clientHelper.BuildApiCall<SendCommandToDeviceRequest, SendCommandToDeviceResponse>("SendCommandToDevice", grpcClient.SendCommandToDeviceAsync, grpcClient.SendCommandToDevice, effectiveSettings.SendCommandToDeviceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callSendCommandToDevice);
             Modify_SendCommandToDeviceApiCall(ref _callSendCommandToDevice);
-            _callBindDeviceToGateway = clientHelper.BuildApiCall<BindDeviceToGatewayRequest, BindDeviceToGatewayResponse>(grpcClient.BindDeviceToGatewayAsync, grpcClient.BindDeviceToGateway, effectiveSettings.BindDeviceToGatewaySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callBindDeviceToGateway = clientHelper.BuildApiCall<BindDeviceToGatewayRequest, BindDeviceToGatewayResponse>("BindDeviceToGateway", grpcClient.BindDeviceToGatewayAsync, grpcClient.BindDeviceToGateway, effectiveSettings.BindDeviceToGatewaySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBindDeviceToGateway);
             Modify_BindDeviceToGatewayApiCall(ref _callBindDeviceToGateway);
-            _callUnbindDeviceFromGateway = clientHelper.BuildApiCall<UnbindDeviceFromGatewayRequest, UnbindDeviceFromGatewayResponse>(grpcClient.UnbindDeviceFromGatewayAsync, grpcClient.UnbindDeviceFromGateway, effectiveSettings.UnbindDeviceFromGatewaySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callUnbindDeviceFromGateway = clientHelper.BuildApiCall<UnbindDeviceFromGatewayRequest, UnbindDeviceFromGatewayResponse>("UnbindDeviceFromGateway", grpcClient.UnbindDeviceFromGatewayAsync, grpcClient.UnbindDeviceFromGateway, effectiveSettings.UnbindDeviceFromGatewaySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callUnbindDeviceFromGateway);
             Modify_UnbindDeviceFromGatewayApiCall(ref _callUnbindDeviceFromGateway);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

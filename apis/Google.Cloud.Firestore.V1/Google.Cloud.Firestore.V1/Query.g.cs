@@ -1295,7 +1295,10 @@ namespace Google.Cloud.Firestore.V1 {
         private readonly pbc::RepeatedField<global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Filter> filters_ = new pbc::RepeatedField<global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Filter>();
         /// <summary>
         /// The list of filters to combine.
-        /// Must contain at least one filter.
+        ///
+        /// Requires:
+        ///
+        /// * At least one filter is present.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1462,7 +1465,7 @@ namespace Google.Cloud.Firestore.V1 {
             /// </summary>
             [pbr::OriginalName("OPERATOR_UNSPECIFIED")] Unspecified = 0,
             /// <summary>
-            /// The results are required to satisfy each of the combined filters.
+            /// Documents are required to satisfy all of the combined filters.
             /// </summary>
             [pbr::OriginalName("AND")] And = 1,
           }

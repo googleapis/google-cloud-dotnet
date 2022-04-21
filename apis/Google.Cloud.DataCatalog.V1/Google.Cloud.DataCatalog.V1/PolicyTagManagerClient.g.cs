@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -236,9 +236,8 @@ namespace Google.Cloud.DataCatalog.V1
         public PolicyTagManagerSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public PolicyTagManagerClientBuilder()
+        public PolicyTagManagerClientBuilder() : base(PolicyTagManagerClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = PolicyTagManagerClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref PolicyTagManagerClient client);
@@ -265,29 +264,18 @@ namespace Google.Cloud.DataCatalog.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return PolicyTagManagerClient.Create(callInvoker, Settings);
+            return PolicyTagManagerClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<PolicyTagManagerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return PolicyTagManagerClient.Create(callInvoker, Settings);
+            return PolicyTagManagerClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => PolicyTagManagerClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => PolicyTagManagerClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => PolicyTagManagerClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>PolicyTagManager client wrapper, for convenient use.</summary>
@@ -319,19 +307,10 @@ namespace Google.Cloud.DataCatalog.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(PolicyTagManager.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="PolicyTagManagerClient"/> using the default credentials, endpoint and
@@ -358,8 +337,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="PolicyTagManagerSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="PolicyTagManagerClient"/>.</returns>
-        internal static PolicyTagManagerClient Create(grpccore::CallInvoker callInvoker, PolicyTagManagerSettings settings = null)
+        internal static PolicyTagManagerClient Create(grpccore::CallInvoker callInvoker, PolicyTagManagerSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -368,7 +348,7 @@ namespace Google.Cloud.DataCatalog.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             PolicyTagManager.PolicyTagManagerClient grpcClient = new PolicyTagManager.PolicyTagManagerClient(callInvoker);
-            return new PolicyTagManagerClientImpl(grpcClient, settings);
+            return new PolicyTagManagerClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1671,48 +1651,49 @@ namespace Google.Cloud.DataCatalog.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="PolicyTagManagerSettings"/> used within this client.</param>
-        public PolicyTagManagerClientImpl(PolicyTagManager.PolicyTagManagerClient grpcClient, PolicyTagManagerSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public PolicyTagManagerClientImpl(PolicyTagManager.PolicyTagManagerClient grpcClient, PolicyTagManagerSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             PolicyTagManagerSettings effectiveSettings = settings ?? PolicyTagManagerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCreateTaxonomy = clientHelper.BuildApiCall<CreateTaxonomyRequest, Taxonomy>(grpcClient.CreateTaxonomyAsync, grpcClient.CreateTaxonomy, effectiveSettings.CreateTaxonomySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCreateTaxonomy = clientHelper.BuildApiCall<CreateTaxonomyRequest, Taxonomy>("CreateTaxonomy", grpcClient.CreateTaxonomyAsync, grpcClient.CreateTaxonomy, effectiveSettings.CreateTaxonomySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTaxonomy);
             Modify_CreateTaxonomyApiCall(ref _callCreateTaxonomy);
-            _callDeleteTaxonomy = clientHelper.BuildApiCall<DeleteTaxonomyRequest, wkt::Empty>(grpcClient.DeleteTaxonomyAsync, grpcClient.DeleteTaxonomy, effectiveSettings.DeleteTaxonomySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteTaxonomy = clientHelper.BuildApiCall<DeleteTaxonomyRequest, wkt::Empty>("DeleteTaxonomy", grpcClient.DeleteTaxonomyAsync, grpcClient.DeleteTaxonomy, effectiveSettings.DeleteTaxonomySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTaxonomy);
             Modify_DeleteTaxonomyApiCall(ref _callDeleteTaxonomy);
-            _callUpdateTaxonomy = clientHelper.BuildApiCall<UpdateTaxonomyRequest, Taxonomy>(grpcClient.UpdateTaxonomyAsync, grpcClient.UpdateTaxonomy, effectiveSettings.UpdateTaxonomySettings).WithGoogleRequestParam("taxonomy.name", request => request.Taxonomy?.Name);
+            _callUpdateTaxonomy = clientHelper.BuildApiCall<UpdateTaxonomyRequest, Taxonomy>("UpdateTaxonomy", grpcClient.UpdateTaxonomyAsync, grpcClient.UpdateTaxonomy, effectiveSettings.UpdateTaxonomySettings).WithGoogleRequestParam("taxonomy.name", request => request.Taxonomy?.Name);
             Modify_ApiCall(ref _callUpdateTaxonomy);
             Modify_UpdateTaxonomyApiCall(ref _callUpdateTaxonomy);
-            _callListTaxonomies = clientHelper.BuildApiCall<ListTaxonomiesRequest, ListTaxonomiesResponse>(grpcClient.ListTaxonomiesAsync, grpcClient.ListTaxonomies, effectiveSettings.ListTaxonomiesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListTaxonomies = clientHelper.BuildApiCall<ListTaxonomiesRequest, ListTaxonomiesResponse>("ListTaxonomies", grpcClient.ListTaxonomiesAsync, grpcClient.ListTaxonomies, effectiveSettings.ListTaxonomiesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTaxonomies);
             Modify_ListTaxonomiesApiCall(ref _callListTaxonomies);
-            _callGetTaxonomy = clientHelper.BuildApiCall<GetTaxonomyRequest, Taxonomy>(grpcClient.GetTaxonomyAsync, grpcClient.GetTaxonomy, effectiveSettings.GetTaxonomySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetTaxonomy = clientHelper.BuildApiCall<GetTaxonomyRequest, Taxonomy>("GetTaxonomy", grpcClient.GetTaxonomyAsync, grpcClient.GetTaxonomy, effectiveSettings.GetTaxonomySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTaxonomy);
             Modify_GetTaxonomyApiCall(ref _callGetTaxonomy);
-            _callCreatePolicyTag = clientHelper.BuildApiCall<CreatePolicyTagRequest, PolicyTag>(grpcClient.CreatePolicyTagAsync, grpcClient.CreatePolicyTag, effectiveSettings.CreatePolicyTagSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreatePolicyTag = clientHelper.BuildApiCall<CreatePolicyTagRequest, PolicyTag>("CreatePolicyTag", grpcClient.CreatePolicyTagAsync, grpcClient.CreatePolicyTag, effectiveSettings.CreatePolicyTagSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreatePolicyTag);
             Modify_CreatePolicyTagApiCall(ref _callCreatePolicyTag);
-            _callDeletePolicyTag = clientHelper.BuildApiCall<DeletePolicyTagRequest, wkt::Empty>(grpcClient.DeletePolicyTagAsync, grpcClient.DeletePolicyTag, effectiveSettings.DeletePolicyTagSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeletePolicyTag = clientHelper.BuildApiCall<DeletePolicyTagRequest, wkt::Empty>("DeletePolicyTag", grpcClient.DeletePolicyTagAsync, grpcClient.DeletePolicyTag, effectiveSettings.DeletePolicyTagSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeletePolicyTag);
             Modify_DeletePolicyTagApiCall(ref _callDeletePolicyTag);
-            _callUpdatePolicyTag = clientHelper.BuildApiCall<UpdatePolicyTagRequest, PolicyTag>(grpcClient.UpdatePolicyTagAsync, grpcClient.UpdatePolicyTag, effectiveSettings.UpdatePolicyTagSettings).WithGoogleRequestParam("policy_tag.name", request => request.PolicyTag?.Name);
+            _callUpdatePolicyTag = clientHelper.BuildApiCall<UpdatePolicyTagRequest, PolicyTag>("UpdatePolicyTag", grpcClient.UpdatePolicyTagAsync, grpcClient.UpdatePolicyTag, effectiveSettings.UpdatePolicyTagSettings).WithGoogleRequestParam("policy_tag.name", request => request.PolicyTag?.Name);
             Modify_ApiCall(ref _callUpdatePolicyTag);
             Modify_UpdatePolicyTagApiCall(ref _callUpdatePolicyTag);
-            _callListPolicyTags = clientHelper.BuildApiCall<ListPolicyTagsRequest, ListPolicyTagsResponse>(grpcClient.ListPolicyTagsAsync, grpcClient.ListPolicyTags, effectiveSettings.ListPolicyTagsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListPolicyTags = clientHelper.BuildApiCall<ListPolicyTagsRequest, ListPolicyTagsResponse>("ListPolicyTags", grpcClient.ListPolicyTagsAsync, grpcClient.ListPolicyTags, effectiveSettings.ListPolicyTagsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListPolicyTags);
             Modify_ListPolicyTagsApiCall(ref _callListPolicyTags);
-            _callGetPolicyTag = clientHelper.BuildApiCall<GetPolicyTagRequest, PolicyTag>(grpcClient.GetPolicyTagAsync, grpcClient.GetPolicyTag, effectiveSettings.GetPolicyTagSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetPolicyTag = clientHelper.BuildApiCall<GetPolicyTagRequest, PolicyTag>("GetPolicyTag", grpcClient.GetPolicyTagAsync, grpcClient.GetPolicyTag, effectiveSettings.GetPolicyTagSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetPolicyTag);
             Modify_GetPolicyTagApiCall(ref _callGetPolicyTag);
-            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>(grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
-            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>(grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
-            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>(grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

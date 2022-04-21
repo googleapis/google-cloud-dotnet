@@ -89,7 +89,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBuild(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             Build response = client.GetBuild(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -154,7 +154,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBuildAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Build>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             Build responseCallSettings = await client.GetBuildAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Build responseCancellationToken = await client.GetBuildAsync(request, st::CancellationToken.None);
@@ -220,7 +220,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBuild(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             Build response = client.GetBuild(request.ProjectId, request.Id);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -284,7 +284,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBuildAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Build>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             Build responseCallSettings = await client.GetBuildAsync(request.ProjectId, request.Id, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Build responseCancellationToken = await client.GetBuildAsync(request.ProjectId, request.Id, st::CancellationToken.None);
@@ -351,7 +351,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.CancelBuild(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             Build response = client.CancelBuild(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -416,7 +416,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.CancelBuildAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Build>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             Build responseCallSettings = await client.CancelBuildAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Build responseCancellationToken = await client.CancelBuildAsync(request, st::CancellationToken.None);
@@ -482,7 +482,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.CancelBuild(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             Build response = client.CancelBuild(request.ProjectId, request.Id);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -546,7 +546,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.CancelBuildAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Build>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             Build responseCallSettings = await client.CancelBuildAsync(request.ProjectId, request.Id, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Build responseCancellationToken = await client.CancelBuildAsync(request.ProjectId, request.Id, st::CancellationToken.None);
@@ -600,7 +600,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.CreateBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             BuildTrigger response = client.CreateBuildTrigger(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -652,7 +652,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.CreateBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             BuildTrigger responseCallSettings = await client.CreateBuildTriggerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BuildTrigger responseCancellationToken = await client.CreateBuildTriggerAsync(request, st::CancellationToken.None);
@@ -705,7 +705,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.CreateBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             BuildTrigger response = client.CreateBuildTrigger(request.ProjectId, request.Trigger);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -756,7 +756,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.CreateBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             BuildTrigger responseCallSettings = await client.CreateBuildTriggerAsync(request.ProjectId, request.Trigger, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BuildTrigger responseCancellationToken = await client.CreateBuildTriggerAsync(request.ProjectId, request.Trigger, st::CancellationToken.None);
@@ -810,7 +810,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.GetBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             BuildTrigger response = client.GetBuildTrigger(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -862,7 +862,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.GetBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             BuildTrigger responseCallSettings = await client.GetBuildTriggerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BuildTrigger responseCancellationToken = await client.GetBuildTriggerAsync(request, st::CancellationToken.None);
@@ -915,7 +915,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.GetBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             BuildTrigger response = client.GetBuildTrigger(request.ProjectId, request.TriggerId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -966,7 +966,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.GetBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             BuildTrigger responseCallSettings = await client.GetBuildTriggerAsync(request.ProjectId, request.TriggerId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BuildTrigger responseCancellationToken = await client.GetBuildTriggerAsync(request.ProjectId, request.TriggerId, st::CancellationToken.None);
@@ -987,7 +987,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteBuildTrigger(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1005,7 +1005,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteBuildTriggerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteBuildTriggerAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1023,7 +1023,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteBuildTrigger(request.ProjectId, request.TriggerId);
             mockGrpcClient.VerifyAll();
         }
@@ -1040,7 +1040,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteBuildTriggerAsync(request.ProjectId, request.TriggerId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteBuildTriggerAsync(request.ProjectId, request.TriggerId, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1092,7 +1092,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.UpdateBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             BuildTrigger response = client.UpdateBuildTrigger(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1144,7 +1144,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.UpdateBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             BuildTrigger responseCallSettings = await client.UpdateBuildTriggerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BuildTrigger responseCancellationToken = await client.UpdateBuildTriggerAsync(request, st::CancellationToken.None);
@@ -1198,7 +1198,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.UpdateBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             BuildTrigger response = client.UpdateBuildTrigger(request.ProjectId, request.TriggerId, request.Trigger);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1250,7 +1250,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.UpdateBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             BuildTrigger responseCallSettings = await client.UpdateBuildTriggerAsync(request.ProjectId, request.TriggerId, request.Trigger, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BuildTrigger responseCancellationToken = await client.UpdateBuildTriggerAsync(request.ProjectId, request.TriggerId, request.Trigger, st::CancellationToken.None);
@@ -1273,7 +1273,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             };
             ReceiveTriggerWebhookResponse expectedResponse = new ReceiveTriggerWebhookResponse { };
             mockGrpcClient.Setup(x => x.ReceiveTriggerWebhook(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             ReceiveTriggerWebhookResponse response = client.ReceiveTriggerWebhook(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1294,7 +1294,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             };
             ReceiveTriggerWebhookResponse expectedResponse = new ReceiveTriggerWebhookResponse { };
             mockGrpcClient.Setup(x => x.ReceiveTriggerWebhookAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReceiveTriggerWebhookResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             ReceiveTriggerWebhookResponse responseCallSettings = await client.ReceiveTriggerWebhookAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ReceiveTriggerWebhookResponse responseCancellationToken = await client.ReceiveTriggerWebhookAsync(request, st::CancellationToken.None);
@@ -1331,7 +1331,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 PrivatePoolV1Config = new PrivatePoolV1Config(),
             };
             mockGrpcClient.Setup(x => x.GetWorkerPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             WorkerPool response = client.GetWorkerPool(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1366,7 +1366,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 PrivatePoolV1Config = new PrivatePoolV1Config(),
             };
             mockGrpcClient.Setup(x => x.GetWorkerPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkerPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             WorkerPool responseCallSettings = await client.GetWorkerPoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WorkerPool responseCancellationToken = await client.GetWorkerPoolAsync(request, st::CancellationToken.None);
@@ -1403,7 +1403,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 PrivatePoolV1Config = new PrivatePoolV1Config(),
             };
             mockGrpcClient.Setup(x => x.GetWorkerPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             WorkerPool response = client.GetWorkerPool(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1438,7 +1438,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 PrivatePoolV1Config = new PrivatePoolV1Config(),
             };
             mockGrpcClient.Setup(x => x.GetWorkerPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkerPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             WorkerPool responseCallSettings = await client.GetWorkerPoolAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WorkerPool responseCancellationToken = await client.GetWorkerPoolAsync(request.Name, st::CancellationToken.None);
@@ -1475,7 +1475,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 PrivatePoolV1Config = new PrivatePoolV1Config(),
             };
             mockGrpcClient.Setup(x => x.GetWorkerPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             WorkerPool response = client.GetWorkerPool(request.WorkerPoolName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1510,7 +1510,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 PrivatePoolV1Config = new PrivatePoolV1Config(),
             };
             mockGrpcClient.Setup(x => x.GetWorkerPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkerPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null, null);
             WorkerPool responseCallSettings = await client.GetWorkerPoolAsync(request.WorkerPoolName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             WorkerPool responseCancellationToken = await client.GetWorkerPoolAsync(request.WorkerPoolName, st::CancellationToken.None);

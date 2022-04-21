@@ -59,7 +59,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionSslCertificatesClient client = new RegionSslCertificatesClientImpl(mockGrpcClient.Object, null);
+            RegionSslCertificatesClient client = new RegionSslCertificatesClientImpl(mockGrpcClient.Object, null, null);
             SslCertificate response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -97,7 +97,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SslCertificate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionSslCertificatesClient client = new RegionSslCertificatesClientImpl(mockGrpcClient.Object, null);
+            RegionSslCertificatesClient client = new RegionSslCertificatesClientImpl(mockGrpcClient.Object, null, null);
             SslCertificate responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SslCertificate responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -137,7 +137,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionSslCertificatesClient client = new RegionSslCertificatesClientImpl(mockGrpcClient.Object, null);
+            RegionSslCertificatesClient client = new RegionSslCertificatesClientImpl(mockGrpcClient.Object, null, null);
             SslCertificate response = client.Get(request.Project, request.Region, request.SslCertificate);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -175,7 +175,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SslCertificate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionSslCertificatesClient client = new RegionSslCertificatesClientImpl(mockGrpcClient.Object, null);
+            RegionSslCertificatesClient client = new RegionSslCertificatesClientImpl(mockGrpcClient.Object, null, null);
             SslCertificate responseCallSettings = await client.GetAsync(request.Project, request.Region, request.SslCertificate, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SslCertificate responseCancellationToken = await client.GetAsync(request.Project, request.Region, request.SslCertificate, st::CancellationToken.None);

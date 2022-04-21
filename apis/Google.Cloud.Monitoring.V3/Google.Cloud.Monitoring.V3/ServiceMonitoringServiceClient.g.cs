@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -243,9 +243,8 @@ namespace Google.Cloud.Monitoring.V3
         public ServiceMonitoringServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ServiceMonitoringServiceClientBuilder()
+        public ServiceMonitoringServiceClientBuilder() : base(ServiceMonitoringServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ServiceMonitoringServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ServiceMonitoringServiceClient client);
@@ -272,29 +271,18 @@ namespace Google.Cloud.Monitoring.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ServiceMonitoringServiceClient.Create(callInvoker, Settings);
+            return ServiceMonitoringServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ServiceMonitoringServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ServiceMonitoringServiceClient.Create(callInvoker, Settings);
+            return ServiceMonitoringServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ServiceMonitoringServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ServiceMonitoringServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ServiceMonitoringServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ServiceMonitoringService client wrapper, for convenient use.</summary>
@@ -328,19 +316,10 @@ namespace Google.Cloud.Monitoring.V3
             "https://www.googleapis.com/auth/monitoring.read",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ServiceMonitoringService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ServiceMonitoringServiceClient"/> using the default credentials,
@@ -370,8 +349,9 @@ namespace Google.Cloud.Monitoring.V3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ServiceMonitoringServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ServiceMonitoringServiceClient"/>.</returns>
-        internal static ServiceMonitoringServiceClient Create(grpccore::CallInvoker callInvoker, ServiceMonitoringServiceSettings settings = null)
+        internal static ServiceMonitoringServiceClient Create(grpccore::CallInvoker callInvoker, ServiceMonitoringServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -380,7 +360,7 @@ namespace Google.Cloud.Monitoring.V3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ServiceMonitoringService.ServiceMonitoringServiceClient grpcClient = new ServiceMonitoringService.ServiceMonitoringServiceClient(callInvoker);
-            return new ServiceMonitoringServiceClientImpl(grpcClient, settings);
+            return new ServiceMonitoringServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -2252,39 +2232,40 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="settings">
         /// The base <see cref="ServiceMonitoringServiceSettings"/> used within this client.
         /// </param>
-        public ServiceMonitoringServiceClientImpl(ServiceMonitoringService.ServiceMonitoringServiceClient grpcClient, ServiceMonitoringServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ServiceMonitoringServiceClientImpl(ServiceMonitoringService.ServiceMonitoringServiceClient grpcClient, ServiceMonitoringServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ServiceMonitoringServiceSettings effectiveSettings = settings ?? ServiceMonitoringServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCreateService = clientHelper.BuildApiCall<CreateServiceRequest, Service>(grpcClient.CreateServiceAsync, grpcClient.CreateService, effectiveSettings.CreateServiceSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCreateService = clientHelper.BuildApiCall<CreateServiceRequest, Service>("CreateService", grpcClient.CreateServiceAsync, grpcClient.CreateService, effectiveSettings.CreateServiceSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateService);
             Modify_CreateServiceApiCall(ref _callCreateService);
-            _callGetService = clientHelper.BuildApiCall<GetServiceRequest, Service>(grpcClient.GetServiceAsync, grpcClient.GetService, effectiveSettings.GetServiceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetService = clientHelper.BuildApiCall<GetServiceRequest, Service>("GetService", grpcClient.GetServiceAsync, grpcClient.GetService, effectiveSettings.GetServiceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetService);
             Modify_GetServiceApiCall(ref _callGetService);
-            _callListServices = clientHelper.BuildApiCall<ListServicesRequest, ListServicesResponse>(grpcClient.ListServicesAsync, grpcClient.ListServices, effectiveSettings.ListServicesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListServices = clientHelper.BuildApiCall<ListServicesRequest, ListServicesResponse>("ListServices", grpcClient.ListServicesAsync, grpcClient.ListServices, effectiveSettings.ListServicesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListServices);
             Modify_ListServicesApiCall(ref _callListServices);
-            _callUpdateService = clientHelper.BuildApiCall<UpdateServiceRequest, Service>(grpcClient.UpdateServiceAsync, grpcClient.UpdateService, effectiveSettings.UpdateServiceSettings).WithGoogleRequestParam("service.name", request => request.Service?.Name);
+            _callUpdateService = clientHelper.BuildApiCall<UpdateServiceRequest, Service>("UpdateService", grpcClient.UpdateServiceAsync, grpcClient.UpdateService, effectiveSettings.UpdateServiceSettings).WithGoogleRequestParam("service.name", request => request.Service?.Name);
             Modify_ApiCall(ref _callUpdateService);
             Modify_UpdateServiceApiCall(ref _callUpdateService);
-            _callDeleteService = clientHelper.BuildApiCall<DeleteServiceRequest, wkt::Empty>(grpcClient.DeleteServiceAsync, grpcClient.DeleteService, effectiveSettings.DeleteServiceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteService = clientHelper.BuildApiCall<DeleteServiceRequest, wkt::Empty>("DeleteService", grpcClient.DeleteServiceAsync, grpcClient.DeleteService, effectiveSettings.DeleteServiceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteService);
             Modify_DeleteServiceApiCall(ref _callDeleteService);
-            _callCreateServiceLevelObjective = clientHelper.BuildApiCall<CreateServiceLevelObjectiveRequest, ServiceLevelObjective>(grpcClient.CreateServiceLevelObjectiveAsync, grpcClient.CreateServiceLevelObjective, effectiveSettings.CreateServiceLevelObjectiveSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateServiceLevelObjective = clientHelper.BuildApiCall<CreateServiceLevelObjectiveRequest, ServiceLevelObjective>("CreateServiceLevelObjective", grpcClient.CreateServiceLevelObjectiveAsync, grpcClient.CreateServiceLevelObjective, effectiveSettings.CreateServiceLevelObjectiveSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateServiceLevelObjective);
             Modify_CreateServiceLevelObjectiveApiCall(ref _callCreateServiceLevelObjective);
-            _callGetServiceLevelObjective = clientHelper.BuildApiCall<GetServiceLevelObjectiveRequest, ServiceLevelObjective>(grpcClient.GetServiceLevelObjectiveAsync, grpcClient.GetServiceLevelObjective, effectiveSettings.GetServiceLevelObjectiveSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetServiceLevelObjective = clientHelper.BuildApiCall<GetServiceLevelObjectiveRequest, ServiceLevelObjective>("GetServiceLevelObjective", grpcClient.GetServiceLevelObjectiveAsync, grpcClient.GetServiceLevelObjective, effectiveSettings.GetServiceLevelObjectiveSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetServiceLevelObjective);
             Modify_GetServiceLevelObjectiveApiCall(ref _callGetServiceLevelObjective);
-            _callListServiceLevelObjectives = clientHelper.BuildApiCall<ListServiceLevelObjectivesRequest, ListServiceLevelObjectivesResponse>(grpcClient.ListServiceLevelObjectivesAsync, grpcClient.ListServiceLevelObjectives, effectiveSettings.ListServiceLevelObjectivesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListServiceLevelObjectives = clientHelper.BuildApiCall<ListServiceLevelObjectivesRequest, ListServiceLevelObjectivesResponse>("ListServiceLevelObjectives", grpcClient.ListServiceLevelObjectivesAsync, grpcClient.ListServiceLevelObjectives, effectiveSettings.ListServiceLevelObjectivesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListServiceLevelObjectives);
             Modify_ListServiceLevelObjectivesApiCall(ref _callListServiceLevelObjectives);
-            _callUpdateServiceLevelObjective = clientHelper.BuildApiCall<UpdateServiceLevelObjectiveRequest, ServiceLevelObjective>(grpcClient.UpdateServiceLevelObjectiveAsync, grpcClient.UpdateServiceLevelObjective, effectiveSettings.UpdateServiceLevelObjectiveSettings).WithGoogleRequestParam("service_level_objective.name", request => request.ServiceLevelObjective?.Name);
+            _callUpdateServiceLevelObjective = clientHelper.BuildApiCall<UpdateServiceLevelObjectiveRequest, ServiceLevelObjective>("UpdateServiceLevelObjective", grpcClient.UpdateServiceLevelObjectiveAsync, grpcClient.UpdateServiceLevelObjective, effectiveSettings.UpdateServiceLevelObjectiveSettings).WithGoogleRequestParam("service_level_objective.name", request => request.ServiceLevelObjective?.Name);
             Modify_ApiCall(ref _callUpdateServiceLevelObjective);
             Modify_UpdateServiceLevelObjectiveApiCall(ref _callUpdateServiceLevelObjective);
-            _callDeleteServiceLevelObjective = clientHelper.BuildApiCall<DeleteServiceLevelObjectiveRequest, wkt::Empty>(grpcClient.DeleteServiceLevelObjectiveAsync, grpcClient.DeleteServiceLevelObjective, effectiveSettings.DeleteServiceLevelObjectiveSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteServiceLevelObjective = clientHelper.BuildApiCall<DeleteServiceLevelObjectiveRequest, wkt::Empty>("DeleteServiceLevelObjective", grpcClient.DeleteServiceLevelObjectiveAsync, grpcClient.DeleteServiceLevelObjective, effectiveSettings.DeleteServiceLevelObjectiveSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteServiceLevelObjective);
             Modify_DeleteServiceLevelObjectiveApiCall(ref _callDeleteServiceLevelObjective);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

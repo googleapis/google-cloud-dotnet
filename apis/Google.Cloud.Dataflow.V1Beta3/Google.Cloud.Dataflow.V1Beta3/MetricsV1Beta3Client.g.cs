@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -105,9 +105,8 @@ namespace Google.Cloud.Dataflow.V1Beta3
         public MetricsV1Beta3Settings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public MetricsV1Beta3ClientBuilder()
+        public MetricsV1Beta3ClientBuilder() : base(MetricsV1Beta3Client.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = MetricsV1Beta3Client.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref MetricsV1Beta3Client client);
@@ -134,29 +133,18 @@ namespace Google.Cloud.Dataflow.V1Beta3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return MetricsV1Beta3Client.Create(callInvoker, Settings);
+            return MetricsV1Beta3Client.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<MetricsV1Beta3Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return MetricsV1Beta3Client.Create(callInvoker, Settings);
+            return MetricsV1Beta3Client.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => MetricsV1Beta3Client.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => MetricsV1Beta3Client.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => MetricsV1Beta3Client.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>MetricsV1Beta3 client wrapper, for convenient use.</summary>
@@ -190,19 +178,10 @@ namespace Google.Cloud.Dataflow.V1Beta3
             "https://www.googleapis.com/auth/userinfo.email",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(MetricsV1Beta3.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="MetricsV1Beta3Client"/> using the default credentials, endpoint and
@@ -229,8 +208,9 @@ namespace Google.Cloud.Dataflow.V1Beta3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="MetricsV1Beta3Settings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="MetricsV1Beta3Client"/>.</returns>
-        internal static MetricsV1Beta3Client Create(grpccore::CallInvoker callInvoker, MetricsV1Beta3Settings settings = null)
+        internal static MetricsV1Beta3Client Create(grpccore::CallInvoker callInvoker, MetricsV1Beta3Settings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -239,7 +219,7 @@ namespace Google.Cloud.Dataflow.V1Beta3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             MetricsV1Beta3.MetricsV1Beta3Client grpcClient = new MetricsV1Beta3.MetricsV1Beta3Client(callInvoker);
-            return new MetricsV1Beta3ClientImpl(grpcClient, settings);
+            return new MetricsV1Beta3ClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -368,18 +348,19 @@ namespace Google.Cloud.Dataflow.V1Beta3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="MetricsV1Beta3Settings"/> used within this client.</param>
-        public MetricsV1Beta3ClientImpl(MetricsV1Beta3.MetricsV1Beta3Client grpcClient, MetricsV1Beta3Settings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public MetricsV1Beta3ClientImpl(MetricsV1Beta3.MetricsV1Beta3Client grpcClient, MetricsV1Beta3Settings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             MetricsV1Beta3Settings effectiveSettings = settings ?? MetricsV1Beta3Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callGetJobMetrics = clientHelper.BuildApiCall<GetJobMetricsRequest, JobMetrics>(grpcClient.GetJobMetricsAsync, grpcClient.GetJobMetrics, effectiveSettings.GetJobMetricsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("job_id", request => request.JobId);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callGetJobMetrics = clientHelper.BuildApiCall<GetJobMetricsRequest, JobMetrics>("GetJobMetrics", grpcClient.GetJobMetricsAsync, grpcClient.GetJobMetrics, effectiveSettings.GetJobMetricsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("job_id", request => request.JobId);
             Modify_ApiCall(ref _callGetJobMetrics);
             Modify_GetJobMetricsApiCall(ref _callGetJobMetrics);
-            _callGetJobExecutionDetails = clientHelper.BuildApiCall<GetJobExecutionDetailsRequest, JobExecutionDetails>(grpcClient.GetJobExecutionDetailsAsync, grpcClient.GetJobExecutionDetails, effectiveSettings.GetJobExecutionDetailsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("job_id", request => request.JobId);
+            _callGetJobExecutionDetails = clientHelper.BuildApiCall<GetJobExecutionDetailsRequest, JobExecutionDetails>("GetJobExecutionDetails", grpcClient.GetJobExecutionDetailsAsync, grpcClient.GetJobExecutionDetails, effectiveSettings.GetJobExecutionDetailsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("job_id", request => request.JobId);
             Modify_ApiCall(ref _callGetJobExecutionDetails);
             Modify_GetJobExecutionDetailsApiCall(ref _callGetJobExecutionDetails);
-            _callGetStageExecutionDetails = clientHelper.BuildApiCall<GetStageExecutionDetailsRequest, StageExecutionDetails>(grpcClient.GetStageExecutionDetailsAsync, grpcClient.GetStageExecutionDetails, effectiveSettings.GetStageExecutionDetailsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("job_id", request => request.JobId).WithGoogleRequestParam("stage_id", request => request.StageId);
+            _callGetStageExecutionDetails = clientHelper.BuildApiCall<GetStageExecutionDetailsRequest, StageExecutionDetails>("GetStageExecutionDetails", grpcClient.GetStageExecutionDetailsAsync, grpcClient.GetStageExecutionDetails, effectiveSettings.GetStageExecutionDetailsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("job_id", request => request.JobId).WithGoogleRequestParam("stage_id", request => request.StageId);
             Modify_ApiCall(ref _callGetStageExecutionDetails);
             Modify_GetStageExecutionDetailsApiCall(ref _callGetStageExecutionDetails);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

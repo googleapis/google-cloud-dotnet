@@ -61,7 +61,7 @@ namespace Google.Cloud.NetworkManagement.V1.Tests
                 ReachabilityDetails = new ReachabilityDetails(),
             };
             mockGrpcClient.Setup(x => x.GetConnectivityTest(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ReachabilityServiceClient client = new ReachabilityServiceClientImpl(mockGrpcClient.Object, null);
+            ReachabilityServiceClient client = new ReachabilityServiceClientImpl(mockGrpcClient.Object, null, null);
             ConnectivityTest response = client.GetConnectivityTest(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -100,7 +100,7 @@ namespace Google.Cloud.NetworkManagement.V1.Tests
                 ReachabilityDetails = new ReachabilityDetails(),
             };
             mockGrpcClient.Setup(x => x.GetConnectivityTestAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConnectivityTest>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ReachabilityServiceClient client = new ReachabilityServiceClientImpl(mockGrpcClient.Object, null);
+            ReachabilityServiceClient client = new ReachabilityServiceClientImpl(mockGrpcClient.Object, null, null);
             ConnectivityTest responseCallSettings = await client.GetConnectivityTestAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConnectivityTest responseCancellationToken = await client.GetConnectivityTestAsync(request, st::CancellationToken.None);
@@ -141,7 +141,7 @@ namespace Google.Cloud.NetworkManagement.V1.Tests
                 ReachabilityDetails = new ReachabilityDetails(),
             };
             mockGrpcClient.Setup(x => x.GetConnectivityTest(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ReachabilityServiceClient client = new ReachabilityServiceClientImpl(mockGrpcClient.Object, null);
+            ReachabilityServiceClient client = new ReachabilityServiceClientImpl(mockGrpcClient.Object, null, null);
             ConnectivityTest response = client.GetConnectivityTest(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -180,7 +180,7 @@ namespace Google.Cloud.NetworkManagement.V1.Tests
                 ReachabilityDetails = new ReachabilityDetails(),
             };
             mockGrpcClient.Setup(x => x.GetConnectivityTestAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConnectivityTest>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ReachabilityServiceClient client = new ReachabilityServiceClientImpl(mockGrpcClient.Object, null);
+            ReachabilityServiceClient client = new ReachabilityServiceClientImpl(mockGrpcClient.Object, null, null);
             ConnectivityTest responseCallSettings = await client.GetConnectivityTestAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConnectivityTest responseCancellationToken = await client.GetConnectivityTestAsync(request.Name, st::CancellationToken.None);

@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -472,9 +472,8 @@ namespace Google.Cloud.Metastore.V1
         public DataprocMetastoreSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public DataprocMetastoreClientBuilder()
+        public DataprocMetastoreClientBuilder() : base(DataprocMetastoreClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = DataprocMetastoreClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref DataprocMetastoreClient client);
@@ -501,29 +500,18 @@ namespace Google.Cloud.Metastore.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return DataprocMetastoreClient.Create(callInvoker, Settings);
+            return DataprocMetastoreClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<DataprocMetastoreClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return DataprocMetastoreClient.Create(callInvoker, Settings);
+            return DataprocMetastoreClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => DataprocMetastoreClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => DataprocMetastoreClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => DataprocMetastoreClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>DataprocMetastore client wrapper, for convenient use.</summary>
@@ -566,19 +554,10 @@ namespace Google.Cloud.Metastore.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(DataprocMetastore.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="DataprocMetastoreClient"/> using the default credentials, endpoint and
@@ -605,8 +584,9 @@ namespace Google.Cloud.Metastore.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="DataprocMetastoreSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="DataprocMetastoreClient"/>.</returns>
-        internal static DataprocMetastoreClient Create(grpccore::CallInvoker callInvoker, DataprocMetastoreSettings settings = null)
+        internal static DataprocMetastoreClient Create(grpccore::CallInvoker callInvoker, DataprocMetastoreSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -615,7 +595,7 @@ namespace Google.Cloud.Metastore.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             DataprocMetastore.DataprocMetastoreClient grpcClient = new DataprocMetastore.DataprocMetastoreClient(callInvoker);
-            return new DataprocMetastoreClientImpl(grpcClient, settings);
+            return new DataprocMetastoreClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -2934,63 +2914,64 @@ namespace Google.Cloud.Metastore.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="DataprocMetastoreSettings"/> used within this client.</param>
-        public DataprocMetastoreClientImpl(DataprocMetastore.DataprocMetastoreClient grpcClient, DataprocMetastoreSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public DataprocMetastoreClientImpl(DataprocMetastore.DataprocMetastoreClient grpcClient, DataprocMetastoreSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             DataprocMetastoreSettings effectiveSettings = settings ?? DataprocMetastoreSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateServiceOperationsSettings);
-            UpdateServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateServiceOperationsSettings);
-            DeleteServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteServiceOperationsSettings);
-            CreateMetadataImportOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateMetadataImportOperationsSettings);
-            UpdateMetadataImportOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateMetadataImportOperationsSettings);
-            ExportMetadataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportMetadataOperationsSettings);
-            RestoreServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreServiceOperationsSettings);
-            CreateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupOperationsSettings);
-            DeleteBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupOperationsSettings);
-            _callListServices = clientHelper.BuildApiCall<ListServicesRequest, ListServicesResponse>(grpcClient.ListServicesAsync, grpcClient.ListServices, effectiveSettings.ListServicesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateServiceOperationsSettings, logger);
+            UpdateServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateServiceOperationsSettings, logger);
+            DeleteServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteServiceOperationsSettings, logger);
+            CreateMetadataImportOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateMetadataImportOperationsSettings, logger);
+            UpdateMetadataImportOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateMetadataImportOperationsSettings, logger);
+            ExportMetadataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportMetadataOperationsSettings, logger);
+            RestoreServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreServiceOperationsSettings, logger);
+            CreateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupOperationsSettings, logger);
+            DeleteBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupOperationsSettings, logger);
+            _callListServices = clientHelper.BuildApiCall<ListServicesRequest, ListServicesResponse>("ListServices", grpcClient.ListServicesAsync, grpcClient.ListServices, effectiveSettings.ListServicesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListServices);
             Modify_ListServicesApiCall(ref _callListServices);
-            _callGetService = clientHelper.BuildApiCall<GetServiceRequest, Service>(grpcClient.GetServiceAsync, grpcClient.GetService, effectiveSettings.GetServiceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetService = clientHelper.BuildApiCall<GetServiceRequest, Service>("GetService", grpcClient.GetServiceAsync, grpcClient.GetService, effectiveSettings.GetServiceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetService);
             Modify_GetServiceApiCall(ref _callGetService);
-            _callCreateService = clientHelper.BuildApiCall<CreateServiceRequest, lro::Operation>(grpcClient.CreateServiceAsync, grpcClient.CreateService, effectiveSettings.CreateServiceSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateService = clientHelper.BuildApiCall<CreateServiceRequest, lro::Operation>("CreateService", grpcClient.CreateServiceAsync, grpcClient.CreateService, effectiveSettings.CreateServiceSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateService);
             Modify_CreateServiceApiCall(ref _callCreateService);
-            _callUpdateService = clientHelper.BuildApiCall<UpdateServiceRequest, lro::Operation>(grpcClient.UpdateServiceAsync, grpcClient.UpdateService, effectiveSettings.UpdateServiceSettings).WithGoogleRequestParam("service.name", request => request.Service?.Name);
+            _callUpdateService = clientHelper.BuildApiCall<UpdateServiceRequest, lro::Operation>("UpdateService", grpcClient.UpdateServiceAsync, grpcClient.UpdateService, effectiveSettings.UpdateServiceSettings).WithGoogleRequestParam("service.name", request => request.Service?.Name);
             Modify_ApiCall(ref _callUpdateService);
             Modify_UpdateServiceApiCall(ref _callUpdateService);
-            _callDeleteService = clientHelper.BuildApiCall<DeleteServiceRequest, lro::Operation>(grpcClient.DeleteServiceAsync, grpcClient.DeleteService, effectiveSettings.DeleteServiceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteService = clientHelper.BuildApiCall<DeleteServiceRequest, lro::Operation>("DeleteService", grpcClient.DeleteServiceAsync, grpcClient.DeleteService, effectiveSettings.DeleteServiceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteService);
             Modify_DeleteServiceApiCall(ref _callDeleteService);
-            _callListMetadataImports = clientHelper.BuildApiCall<ListMetadataImportsRequest, ListMetadataImportsResponse>(grpcClient.ListMetadataImportsAsync, grpcClient.ListMetadataImports, effectiveSettings.ListMetadataImportsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListMetadataImports = clientHelper.BuildApiCall<ListMetadataImportsRequest, ListMetadataImportsResponse>("ListMetadataImports", grpcClient.ListMetadataImportsAsync, grpcClient.ListMetadataImports, effectiveSettings.ListMetadataImportsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListMetadataImports);
             Modify_ListMetadataImportsApiCall(ref _callListMetadataImports);
-            _callGetMetadataImport = clientHelper.BuildApiCall<GetMetadataImportRequest, MetadataImport>(grpcClient.GetMetadataImportAsync, grpcClient.GetMetadataImport, effectiveSettings.GetMetadataImportSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetMetadataImport = clientHelper.BuildApiCall<GetMetadataImportRequest, MetadataImport>("GetMetadataImport", grpcClient.GetMetadataImportAsync, grpcClient.GetMetadataImport, effectiveSettings.GetMetadataImportSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetMetadataImport);
             Modify_GetMetadataImportApiCall(ref _callGetMetadataImport);
-            _callCreateMetadataImport = clientHelper.BuildApiCall<CreateMetadataImportRequest, lro::Operation>(grpcClient.CreateMetadataImportAsync, grpcClient.CreateMetadataImport, effectiveSettings.CreateMetadataImportSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateMetadataImport = clientHelper.BuildApiCall<CreateMetadataImportRequest, lro::Operation>("CreateMetadataImport", grpcClient.CreateMetadataImportAsync, grpcClient.CreateMetadataImport, effectiveSettings.CreateMetadataImportSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateMetadataImport);
             Modify_CreateMetadataImportApiCall(ref _callCreateMetadataImport);
-            _callUpdateMetadataImport = clientHelper.BuildApiCall<UpdateMetadataImportRequest, lro::Operation>(grpcClient.UpdateMetadataImportAsync, grpcClient.UpdateMetadataImport, effectiveSettings.UpdateMetadataImportSettings).WithGoogleRequestParam("metadata_import.name", request => request.MetadataImport?.Name);
+            _callUpdateMetadataImport = clientHelper.BuildApiCall<UpdateMetadataImportRequest, lro::Operation>("UpdateMetadataImport", grpcClient.UpdateMetadataImportAsync, grpcClient.UpdateMetadataImport, effectiveSettings.UpdateMetadataImportSettings).WithGoogleRequestParam("metadata_import.name", request => request.MetadataImport?.Name);
             Modify_ApiCall(ref _callUpdateMetadataImport);
             Modify_UpdateMetadataImportApiCall(ref _callUpdateMetadataImport);
-            _callExportMetadata = clientHelper.BuildApiCall<ExportMetadataRequest, lro::Operation>(grpcClient.ExportMetadataAsync, grpcClient.ExportMetadata, effectiveSettings.ExportMetadataSettings).WithGoogleRequestParam("service", request => request.Service);
+            _callExportMetadata = clientHelper.BuildApiCall<ExportMetadataRequest, lro::Operation>("ExportMetadata", grpcClient.ExportMetadataAsync, grpcClient.ExportMetadata, effectiveSettings.ExportMetadataSettings).WithGoogleRequestParam("service", request => request.Service);
             Modify_ApiCall(ref _callExportMetadata);
             Modify_ExportMetadataApiCall(ref _callExportMetadata);
-            _callRestoreService = clientHelper.BuildApiCall<RestoreServiceRequest, lro::Operation>(grpcClient.RestoreServiceAsync, grpcClient.RestoreService, effectiveSettings.RestoreServiceSettings).WithGoogleRequestParam("service", request => request.Service);
+            _callRestoreService = clientHelper.BuildApiCall<RestoreServiceRequest, lro::Operation>("RestoreService", grpcClient.RestoreServiceAsync, grpcClient.RestoreService, effectiveSettings.RestoreServiceSettings).WithGoogleRequestParam("service", request => request.Service);
             Modify_ApiCall(ref _callRestoreService);
             Modify_RestoreServiceApiCall(ref _callRestoreService);
-            _callListBackups = clientHelper.BuildApiCall<ListBackupsRequest, ListBackupsResponse>(grpcClient.ListBackupsAsync, grpcClient.ListBackups, effectiveSettings.ListBackupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListBackups = clientHelper.BuildApiCall<ListBackupsRequest, ListBackupsResponse>("ListBackups", grpcClient.ListBackupsAsync, grpcClient.ListBackups, effectiveSettings.ListBackupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListBackups);
             Modify_ListBackupsApiCall(ref _callListBackups);
-            _callGetBackup = clientHelper.BuildApiCall<GetBackupRequest, Backup>(grpcClient.GetBackupAsync, grpcClient.GetBackup, effectiveSettings.GetBackupSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetBackup = clientHelper.BuildApiCall<GetBackupRequest, Backup>("GetBackup", grpcClient.GetBackupAsync, grpcClient.GetBackup, effectiveSettings.GetBackupSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetBackup);
             Modify_GetBackupApiCall(ref _callGetBackup);
-            _callCreateBackup = clientHelper.BuildApiCall<CreateBackupRequest, lro::Operation>(grpcClient.CreateBackupAsync, grpcClient.CreateBackup, effectiveSettings.CreateBackupSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateBackup = clientHelper.BuildApiCall<CreateBackupRequest, lro::Operation>("CreateBackup", grpcClient.CreateBackupAsync, grpcClient.CreateBackup, effectiveSettings.CreateBackupSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBackup);
             Modify_CreateBackupApiCall(ref _callCreateBackup);
-            _callDeleteBackup = clientHelper.BuildApiCall<DeleteBackupRequest, lro::Operation>(grpcClient.DeleteBackupAsync, grpcClient.DeleteBackup, effectiveSettings.DeleteBackupSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteBackup = clientHelper.BuildApiCall<DeleteBackupRequest, lro::Operation>("DeleteBackup", grpcClient.DeleteBackupAsync, grpcClient.DeleteBackup, effectiveSettings.DeleteBackupSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteBackup);
             Modify_DeleteBackupApiCall(ref _callDeleteBackup);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

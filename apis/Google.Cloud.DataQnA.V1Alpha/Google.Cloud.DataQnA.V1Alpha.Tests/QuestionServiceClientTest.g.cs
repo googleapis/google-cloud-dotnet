@@ -57,7 +57,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 DebugInfo = new wkt::Any(),
             };
             mockGrpcClient.Setup(x => x.GetQuestion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             Question response = client.GetQuestion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -92,7 +92,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 DebugInfo = new wkt::Any(),
             };
             mockGrpcClient.Setup(x => x.GetQuestionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Question>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             Question responseCallSettings = await client.GetQuestionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Question responseCancellationToken = await client.GetQuestionAsync(request, st::CancellationToken.None);
@@ -128,7 +128,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 DebugInfo = new wkt::Any(),
             };
             mockGrpcClient.Setup(x => x.GetQuestion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             Question response = client.GetQuestion(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -162,7 +162,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 DebugInfo = new wkt::Any(),
             };
             mockGrpcClient.Setup(x => x.GetQuestionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Question>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             Question responseCallSettings = await client.GetQuestionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Question responseCancellationToken = await client.GetQuestionAsync(request.Name, st::CancellationToken.None);
@@ -198,7 +198,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 DebugInfo = new wkt::Any(),
             };
             mockGrpcClient.Setup(x => x.GetQuestion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             Question response = client.GetQuestion(request.QuestionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -232,7 +232,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 DebugInfo = new wkt::Any(),
             };
             mockGrpcClient.Setup(x => x.GetQuestionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Question>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             Question responseCallSettings = await client.GetQuestionAsync(request.QuestionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Question responseCancellationToken = await client.GetQuestionAsync(request.QuestionName, st::CancellationToken.None);
@@ -269,7 +269,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 DebugInfo = new wkt::Any(),
             };
             mockGrpcClient.Setup(x => x.CreateQuestion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             Question response = client.CreateQuestion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -304,7 +304,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 DebugInfo = new wkt::Any(),
             };
             mockGrpcClient.Setup(x => x.CreateQuestionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Question>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             Question responseCallSettings = await client.CreateQuestionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Question responseCancellationToken = await client.CreateQuestionAsync(request, st::CancellationToken.None);
@@ -341,7 +341,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 DebugInfo = new wkt::Any(),
             };
             mockGrpcClient.Setup(x => x.CreateQuestion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             Question response = client.CreateQuestion(request.Parent, request.Question);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -376,7 +376,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 DebugInfo = new wkt::Any(),
             };
             mockGrpcClient.Setup(x => x.CreateQuestionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Question>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             Question responseCallSettings = await client.CreateQuestionAsync(request.Parent, request.Question, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Question responseCancellationToken = await client.CreateQuestionAsync(request.Parent, request.Question, st::CancellationToken.None);
@@ -413,7 +413,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 DebugInfo = new wkt::Any(),
             };
             mockGrpcClient.Setup(x => x.CreateQuestion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             Question response = client.CreateQuestion(request.ParentAsLocationName, request.Question);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -448,7 +448,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 DebugInfo = new wkt::Any(),
             };
             mockGrpcClient.Setup(x => x.CreateQuestionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Question>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             Question responseCallSettings = await client.CreateQuestionAsync(request.ParentAsLocationName, request.Question, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Question responseCancellationToken = await client.CreateQuestionAsync(request.ParentAsLocationName, request.Question, st::CancellationToken.None);
@@ -485,7 +485,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 DebugInfo = new wkt::Any(),
             };
             mockGrpcClient.Setup(x => x.ExecuteQuestion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             Question response = client.ExecuteQuestion(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -520,7 +520,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 DebugInfo = new wkt::Any(),
             };
             mockGrpcClient.Setup(x => x.ExecuteQuestionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Question>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             Question responseCallSettings = await client.ExecuteQuestionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Question responseCancellationToken = await client.ExecuteQuestionAsync(request, st::CancellationToken.None);
@@ -557,7 +557,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 DebugInfo = new wkt::Any(),
             };
             mockGrpcClient.Setup(x => x.ExecuteQuestion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             Question response = client.ExecuteQuestion(request.Name, request.InterpretationIndex);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -592,7 +592,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 DebugInfo = new wkt::Any(),
             };
             mockGrpcClient.Setup(x => x.ExecuteQuestionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Question>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             Question responseCallSettings = await client.ExecuteQuestionAsync(request.Name, request.InterpretationIndex, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Question responseCancellationToken = await client.ExecuteQuestionAsync(request.Name, request.InterpretationIndex, st::CancellationToken.None);
@@ -615,7 +615,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 Rating = UserFeedback.Types.UserFeedbackRating.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetUserFeedback(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             UserFeedback response = client.GetUserFeedback(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -636,7 +636,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 Rating = UserFeedback.Types.UserFeedbackRating.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetUserFeedbackAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UserFeedback>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             UserFeedback responseCallSettings = await client.GetUserFeedbackAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UserFeedback responseCancellationToken = await client.GetUserFeedbackAsync(request, st::CancellationToken.None);
@@ -659,7 +659,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 Rating = UserFeedback.Types.UserFeedbackRating.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetUserFeedback(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             UserFeedback response = client.GetUserFeedback(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -680,7 +680,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 Rating = UserFeedback.Types.UserFeedbackRating.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetUserFeedbackAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UserFeedback>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             UserFeedback responseCallSettings = await client.GetUserFeedbackAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UserFeedback responseCancellationToken = await client.GetUserFeedbackAsync(request.Name, st::CancellationToken.None);
@@ -703,7 +703,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 Rating = UserFeedback.Types.UserFeedbackRating.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetUserFeedback(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             UserFeedback response = client.GetUserFeedback(request.UserFeedbackName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -724,7 +724,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 Rating = UserFeedback.Types.UserFeedbackRating.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetUserFeedbackAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UserFeedback>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             UserFeedback responseCallSettings = await client.GetUserFeedbackAsync(request.UserFeedbackName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UserFeedback responseCancellationToken = await client.GetUserFeedbackAsync(request.UserFeedbackName, st::CancellationToken.None);
@@ -748,7 +748,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 Rating = UserFeedback.Types.UserFeedbackRating.Unspecified,
             };
             mockGrpcClient.Setup(x => x.UpdateUserFeedback(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             UserFeedback response = client.UpdateUserFeedback(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -770,7 +770,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 Rating = UserFeedback.Types.UserFeedbackRating.Unspecified,
             };
             mockGrpcClient.Setup(x => x.UpdateUserFeedbackAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UserFeedback>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             UserFeedback responseCallSettings = await client.UpdateUserFeedbackAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UserFeedback responseCancellationToken = await client.UpdateUserFeedbackAsync(request, st::CancellationToken.None);
@@ -794,7 +794,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 Rating = UserFeedback.Types.UserFeedbackRating.Unspecified,
             };
             mockGrpcClient.Setup(x => x.UpdateUserFeedback(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             UserFeedback response = client.UpdateUserFeedback(request.UserFeedback, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -816,7 +816,7 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 Rating = UserFeedback.Types.UserFeedbackRating.Unspecified,
             };
             mockGrpcClient.Setup(x => x.UpdateUserFeedbackAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UserFeedback>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
+            QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null, null);
             UserFeedback responseCallSettings = await client.UpdateUserFeedbackAsync(request.UserFeedback, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UserFeedback responseCancellationToken = await client.UpdateUserFeedbackAsync(request.UserFeedback, request.UpdateMask, st::CancellationToken.None);

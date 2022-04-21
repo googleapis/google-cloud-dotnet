@@ -32,7 +32,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Create client
             ManagedNotebookServiceClient managedNotebookServiceClient = ManagedNotebookServiceClient.Create();
             // Initialize request argument(s)
-            StartRuntimeRequest request = new StartRuntimeRequest { Name = "", };
+            StartRuntimeRequest request = new StartRuntimeRequest
+            {
+                Name = "",
+                RequestId = "",
+            };
             // Make the request
             Operation<Runtime, OperationMetadata> response = managedNotebookServiceClient.StartRuntime(request);
 

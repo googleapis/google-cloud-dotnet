@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -101,9 +101,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public ChangelogsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ChangelogsClientBuilder()
+        public ChangelogsClientBuilder() : base(ChangelogsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ChangelogsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ChangelogsClient client);
@@ -130,29 +129,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ChangelogsClient.Create(callInvoker, Settings);
+            return ChangelogsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ChangelogsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ChangelogsClient.Create(callInvoker, Settings);
+            return ChangelogsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ChangelogsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ChangelogsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ChangelogsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Changelogs client wrapper, for convenient use.</summary>
@@ -181,19 +169,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             "https://www.googleapis.com/auth/dialogflow",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Changelogs.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ChangelogsClient"/> using the default credentials, endpoint and
@@ -220,8 +199,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ChangelogsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ChangelogsClient"/>.</returns>
-        internal static ChangelogsClient Create(grpccore::CallInvoker callInvoker, ChangelogsSettings settings = null)
+        internal static ChangelogsClient Create(grpccore::CallInvoker callInvoker, ChangelogsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -230,7 +210,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Changelogs.ChangelogsClient grpcClient = new Changelogs.ChangelogsClient(callInvoker);
-            return new ChangelogsClientImpl(grpcClient, settings);
+            return new ChangelogsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -500,15 +480,16 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ChangelogsSettings"/> used within this client.</param>
-        public ChangelogsClientImpl(Changelogs.ChangelogsClient grpcClient, ChangelogsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ChangelogsClientImpl(Changelogs.ChangelogsClient grpcClient, ChangelogsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ChangelogsSettings effectiveSettings = settings ?? ChangelogsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListChangelogs = clientHelper.BuildApiCall<ListChangelogsRequest, ListChangelogsResponse>(grpcClient.ListChangelogsAsync, grpcClient.ListChangelogs, effectiveSettings.ListChangelogsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListChangelogs = clientHelper.BuildApiCall<ListChangelogsRequest, ListChangelogsResponse>("ListChangelogs", grpcClient.ListChangelogsAsync, grpcClient.ListChangelogs, effectiveSettings.ListChangelogsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListChangelogs);
             Modify_ListChangelogsApiCall(ref _callListChangelogs);
-            _callGetChangelog = clientHelper.BuildApiCall<GetChangelogRequest, Changelog>(grpcClient.GetChangelogAsync, grpcClient.GetChangelog, effectiveSettings.GetChangelogSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetChangelog = clientHelper.BuildApiCall<GetChangelogRequest, Changelog>("GetChangelog", grpcClient.GetChangelogAsync, grpcClient.GetChangelog, effectiveSettings.GetChangelogSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetChangelog);
             Modify_GetChangelogApiCall(ref _callGetChangelog);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

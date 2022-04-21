@@ -44,7 +44,7 @@ namespace Google.Cloud.ServiceUsage.V1.Tests
                 Parent = "parent7858e4d0",
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ServiceUsageClient client = new ServiceUsageClientImpl(mockGrpcClient.Object, null);
+            ServiceUsageClient client = new ServiceUsageClientImpl(mockGrpcClient.Object, null, null);
             Service response = client.GetService(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -67,7 +67,7 @@ namespace Google.Cloud.ServiceUsage.V1.Tests
                 Parent = "parent7858e4d0",
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ServiceUsageClient client = new ServiceUsageClientImpl(mockGrpcClient.Object, null);
+            ServiceUsageClient client = new ServiceUsageClientImpl(mockGrpcClient.Object, null, null);
             Service responseCallSettings = await client.GetServiceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Service responseCancellationToken = await client.GetServiceAsync(request, st::CancellationToken.None);
@@ -90,7 +90,7 @@ namespace Google.Cloud.ServiceUsage.V1.Tests
                 Services = { new Service(), },
             };
             mockGrpcClient.Setup(x => x.BatchGetServices(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ServiceUsageClient client = new ServiceUsageClientImpl(mockGrpcClient.Object, null);
+            ServiceUsageClient client = new ServiceUsageClientImpl(mockGrpcClient.Object, null, null);
             BatchGetServicesResponse response = client.BatchGetServices(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -111,7 +111,7 @@ namespace Google.Cloud.ServiceUsage.V1.Tests
                 Services = { new Service(), },
             };
             mockGrpcClient.Setup(x => x.BatchGetServicesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchGetServicesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ServiceUsageClient client = new ServiceUsageClientImpl(mockGrpcClient.Object, null);
+            ServiceUsageClient client = new ServiceUsageClientImpl(mockGrpcClient.Object, null, null);
             BatchGetServicesResponse responseCallSettings = await client.BatchGetServicesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BatchGetServicesResponse responseCancellationToken = await client.BatchGetServicesAsync(request, st::CancellationToken.None);

@@ -49,7 +49,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
                 Checksum = new ComputeThreatListDiffResponse.Types.Checksum(),
             };
             mockGrpcClient.Setup(x => x.ComputeThreatListDiff(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
+            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null, null);
             ComputeThreatListDiffResponse response = client.ComputeThreatListDiff(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -75,7 +75,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
                 Checksum = new ComputeThreatListDiffResponse.Types.Checksum(),
             };
             mockGrpcClient.Setup(x => x.ComputeThreatListDiffAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ComputeThreatListDiffResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
+            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null, null);
             ComputeThreatListDiffResponse responseCallSettings = await client.ComputeThreatListDiffAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ComputeThreatListDiffResponse responseCancellationToken = await client.ComputeThreatListDiffAsync(request, st::CancellationToken.None);
@@ -103,7 +103,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
                 Checksum = new ComputeThreatListDiffResponse.Types.Checksum(),
             };
             mockGrpcClient.Setup(x => x.ComputeThreatListDiff(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
+            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null, null);
             ComputeThreatListDiffResponse response = client.ComputeThreatListDiff(request.ThreatType, request.VersionToken, request.Constraints);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -129,7 +129,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
                 Checksum = new ComputeThreatListDiffResponse.Types.Checksum(),
             };
             mockGrpcClient.Setup(x => x.ComputeThreatListDiffAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ComputeThreatListDiffResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
+            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null, null);
             ComputeThreatListDiffResponse responseCallSettings = await client.ComputeThreatListDiffAsync(request.ThreatType, request.VersionToken, request.Constraints, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ComputeThreatListDiffResponse responseCancellationToken = await client.ComputeThreatListDiffAsync(request.ThreatType, request.VersionToken, request.Constraints, st::CancellationToken.None);
@@ -154,7 +154,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
                 Threat = new SearchUrisResponse.Types.ThreatUri(),
             };
             mockGrpcClient.Setup(x => x.SearchUris(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
+            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null, null);
             SearchUrisResponse response = client.SearchUris(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -177,7 +177,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
                 Threat = new SearchUrisResponse.Types.ThreatUri(),
             };
             mockGrpcClient.Setup(x => x.SearchUrisAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchUrisResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
+            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null, null);
             SearchUrisResponse responseCallSettings = await client.SearchUrisAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SearchUrisResponse responseCancellationToken = await client.SearchUrisAsync(request, st::CancellationToken.None);
@@ -202,7 +202,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
                 Threat = new SearchUrisResponse.Types.ThreatUri(),
             };
             mockGrpcClient.Setup(x => x.SearchUris(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
+            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null, null);
             SearchUrisResponse response = client.SearchUris(request.Uri, request.ThreatTypes);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -225,7 +225,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
                 Threat = new SearchUrisResponse.Types.ThreatUri(),
             };
             mockGrpcClient.Setup(x => x.SearchUrisAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchUrisResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
+            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null, null);
             SearchUrisResponse responseCallSettings = await client.SearchUrisAsync(request.Uri, request.ThreatTypes, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SearchUrisResponse responseCancellationToken = await client.SearchUrisAsync(request.Uri, request.ThreatTypes, st::CancellationToken.None);
@@ -254,7 +254,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
                 NegativeExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.SearchHashes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
+            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null, null);
             SearchHashesResponse response = client.SearchHashes(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -281,7 +281,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
                 NegativeExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.SearchHashesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchHashesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
+            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null, null);
             SearchHashesResponse responseCallSettings = await client.SearchHashesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SearchHashesResponse responseCancellationToken = await client.SearchHashesAsync(request, st::CancellationToken.None);
@@ -310,7 +310,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
                 NegativeExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.SearchHashes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
+            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null, null);
             SearchHashesResponse response = client.SearchHashes(request.HashPrefix, request.ThreatTypes);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -337,7 +337,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
                 NegativeExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.SearchHashesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchHashesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
+            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null, null);
             SearchHashesResponse responseCallSettings = await client.SearchHashesAsync(request.HashPrefix, request.ThreatTypes, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SearchHashesResponse responseCancellationToken = await client.SearchHashesAsync(request.HashPrefix, request.ThreatTypes, st::CancellationToken.None);
@@ -356,7 +356,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
             };
             Submission expectedResponse = new Submission { Uri = "uri3db70593", };
             mockGrpcClient.Setup(x => x.CreateSubmission(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
+            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null, null);
             Submission response = client.CreateSubmission(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -373,7 +373,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
             };
             Submission expectedResponse = new Submission { Uri = "uri3db70593", };
             mockGrpcClient.Setup(x => x.CreateSubmissionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Submission>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
+            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null, null);
             Submission responseCallSettings = await client.CreateSubmissionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Submission responseCancellationToken = await client.CreateSubmissionAsync(request, st::CancellationToken.None);
@@ -392,7 +392,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
             };
             Submission expectedResponse = new Submission { Uri = "uri3db70593", };
             mockGrpcClient.Setup(x => x.CreateSubmission(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
+            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null, null);
             Submission response = client.CreateSubmission(request.Parent, request.Submission);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -409,7 +409,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
             };
             Submission expectedResponse = new Submission { Uri = "uri3db70593", };
             mockGrpcClient.Setup(x => x.CreateSubmissionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Submission>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
+            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null, null);
             Submission responseCallSettings = await client.CreateSubmissionAsync(request.Parent, request.Submission, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Submission responseCancellationToken = await client.CreateSubmissionAsync(request.Parent, request.Submission, st::CancellationToken.None);
@@ -428,7 +428,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
             };
             Submission expectedResponse = new Submission { Uri = "uri3db70593", };
             mockGrpcClient.Setup(x => x.CreateSubmission(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
+            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null, null);
             Submission response = client.CreateSubmission(request.ParentAsProjectName, request.Submission);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -445,7 +445,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
             };
             Submission expectedResponse = new Submission { Uri = "uri3db70593", };
             mockGrpcClient.Setup(x => x.CreateSubmissionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Submission>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
+            WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null, null);
             Submission responseCallSettings = await client.CreateSubmissionAsync(request.ParentAsProjectName, request.Submission, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Submission responseCancellationToken = await client.CreateSubmissionAsync(request.ParentAsProjectName, request.Submission, st::CancellationToken.None);

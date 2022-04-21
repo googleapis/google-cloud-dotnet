@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -119,9 +119,8 @@ namespace Google.Cloud.Debugger.V2
         public Controller2Settings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public Controller2ClientBuilder()
+        public Controller2ClientBuilder() : base(Controller2Client.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = Controller2Client.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref Controller2Client client);
@@ -148,29 +147,18 @@ namespace Google.Cloud.Debugger.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return Controller2Client.Create(callInvoker, Settings);
+            return Controller2Client.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<Controller2Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return Controller2Client.Create(callInvoker, Settings);
+            return Controller2Client.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => Controller2Client.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => Controller2Client.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => Controller2Client.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Controller2 client wrapper, for convenient use.</summary>
@@ -218,19 +206,10 @@ namespace Google.Cloud.Debugger.V2
             "https://www.googleapis.com/auth/cloud_debugger",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Controller2.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="Controller2Client"/> using the default credentials, endpoint and
@@ -257,8 +236,9 @@ namespace Google.Cloud.Debugger.V2
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="Controller2Settings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="Controller2Client"/>.</returns>
-        internal static Controller2Client Create(grpccore::CallInvoker callInvoker, Controller2Settings settings = null)
+        internal static Controller2Client Create(grpccore::CallInvoker callInvoker, Controller2Settings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -267,7 +247,7 @@ namespace Google.Cloud.Debugger.V2
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Controller2.Controller2Client grpcClient = new Controller2.Controller2Client(callInvoker);
-            return new Controller2ClientImpl(grpcClient, settings);
+            return new Controller2ClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -712,18 +692,19 @@ namespace Google.Cloud.Debugger.V2
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="Controller2Settings"/> used within this client.</param>
-        public Controller2ClientImpl(Controller2.Controller2Client grpcClient, Controller2Settings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public Controller2ClientImpl(Controller2.Controller2Client grpcClient, Controller2Settings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             Controller2Settings effectiveSettings = settings ?? Controller2Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callRegisterDebuggee = clientHelper.BuildApiCall<RegisterDebuggeeRequest, RegisterDebuggeeResponse>(grpcClient.RegisterDebuggeeAsync, grpcClient.RegisterDebuggee, effectiveSettings.RegisterDebuggeeSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callRegisterDebuggee = clientHelper.BuildApiCall<RegisterDebuggeeRequest, RegisterDebuggeeResponse>("RegisterDebuggee", grpcClient.RegisterDebuggeeAsync, grpcClient.RegisterDebuggee, effectiveSettings.RegisterDebuggeeSettings);
             Modify_ApiCall(ref _callRegisterDebuggee);
             Modify_RegisterDebuggeeApiCall(ref _callRegisterDebuggee);
-            _callListActiveBreakpoints = clientHelper.BuildApiCall<ListActiveBreakpointsRequest, ListActiveBreakpointsResponse>(grpcClient.ListActiveBreakpointsAsync, grpcClient.ListActiveBreakpoints, effectiveSettings.ListActiveBreakpointsSettings).WithGoogleRequestParam("debuggee_id", request => request.DebuggeeId);
+            _callListActiveBreakpoints = clientHelper.BuildApiCall<ListActiveBreakpointsRequest, ListActiveBreakpointsResponse>("ListActiveBreakpoints", grpcClient.ListActiveBreakpointsAsync, grpcClient.ListActiveBreakpoints, effectiveSettings.ListActiveBreakpointsSettings).WithGoogleRequestParam("debuggee_id", request => request.DebuggeeId);
             Modify_ApiCall(ref _callListActiveBreakpoints);
             Modify_ListActiveBreakpointsApiCall(ref _callListActiveBreakpoints);
-            _callUpdateActiveBreakpoint = clientHelper.BuildApiCall<UpdateActiveBreakpointRequest, UpdateActiveBreakpointResponse>(grpcClient.UpdateActiveBreakpointAsync, grpcClient.UpdateActiveBreakpoint, effectiveSettings.UpdateActiveBreakpointSettings).WithGoogleRequestParam("debuggee_id", request => request.DebuggeeId).WithGoogleRequestParam("breakpoint.id", request => request.Breakpoint?.Id);
+            _callUpdateActiveBreakpoint = clientHelper.BuildApiCall<UpdateActiveBreakpointRequest, UpdateActiveBreakpointResponse>("UpdateActiveBreakpoint", grpcClient.UpdateActiveBreakpointAsync, grpcClient.UpdateActiveBreakpoint, effectiveSettings.UpdateActiveBreakpointSettings).WithGoogleRequestParam("debuggee_id", request => request.DebuggeeId).WithGoogleRequestParam("breakpoint.id", request => request.Breakpoint?.Id);
             Modify_ApiCall(ref _callUpdateActiveBreakpoint);
             Modify_UpdateActiveBreakpointApiCall(ref _callUpdateActiveBreakpoint);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

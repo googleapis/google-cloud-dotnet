@@ -83,7 +83,7 @@ namespace Google.Cloud.Notebooks.V1Beta1.Tests
                 NoRemoveDataDisk = true,
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotebookServiceClient client = new NotebookServiceClientImpl(mockGrpcClient.Object, null);
+            NotebookServiceClient client = new NotebookServiceClientImpl(mockGrpcClient.Object, null, null);
             Instance response = client.GetInstance(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -144,7 +144,7 @@ namespace Google.Cloud.Notebooks.V1Beta1.Tests
                 NoRemoveDataDisk = true,
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotebookServiceClient client = new NotebookServiceClientImpl(mockGrpcClient.Object, null);
+            NotebookServiceClient client = new NotebookServiceClientImpl(mockGrpcClient.Object, null, null);
             Instance responseCallSettings = await client.GetInstanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Instance responseCancellationToken = await client.GetInstanceAsync(request, st::CancellationToken.None);
@@ -168,7 +168,7 @@ namespace Google.Cloud.Notebooks.V1Beta1.Tests
                 UpgradeInfo = "upgrade_info29eca0a2",
             };
             mockGrpcClient.Setup(x => x.IsInstanceUpgradeable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotebookServiceClient client = new NotebookServiceClientImpl(mockGrpcClient.Object, null);
+            NotebookServiceClient client = new NotebookServiceClientImpl(mockGrpcClient.Object, null, null);
             IsInstanceUpgradeableResponse response = client.IsInstanceUpgradeable(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -190,7 +190,7 @@ namespace Google.Cloud.Notebooks.V1Beta1.Tests
                 UpgradeInfo = "upgrade_info29eca0a2",
             };
             mockGrpcClient.Setup(x => x.IsInstanceUpgradeableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IsInstanceUpgradeableResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotebookServiceClient client = new NotebookServiceClientImpl(mockGrpcClient.Object, null);
+            NotebookServiceClient client = new NotebookServiceClientImpl(mockGrpcClient.Object, null, null);
             IsInstanceUpgradeableResponse responseCallSettings = await client.IsInstanceUpgradeableAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             IsInstanceUpgradeableResponse responseCancellationToken = await client.IsInstanceUpgradeableAsync(request, st::CancellationToken.None);
@@ -218,7 +218,7 @@ namespace Google.Cloud.Notebooks.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NotebookServiceClient client = new NotebookServiceClientImpl(mockGrpcClient.Object, null);
+            NotebookServiceClient client = new NotebookServiceClientImpl(mockGrpcClient.Object, null, null);
             Environment response = client.GetEnvironment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -244,7 +244,7 @@ namespace Google.Cloud.Notebooks.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Environment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NotebookServiceClient client = new NotebookServiceClientImpl(mockGrpcClient.Object, null);
+            NotebookServiceClient client = new NotebookServiceClientImpl(mockGrpcClient.Object, null, null);
             Environment responseCallSettings = await client.GetEnvironmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Environment responseCancellationToken = await client.GetEnvironmentAsync(request, st::CancellationToken.None);

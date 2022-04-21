@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -181,9 +181,8 @@ namespace Google.Cloud.Datastore.V1
         public DatastoreSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public DatastoreClientBuilder()
+        public DatastoreClientBuilder() : base(DatastoreClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = DatastoreClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref DatastoreClient client);
@@ -210,29 +209,18 @@ namespace Google.Cloud.Datastore.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return DatastoreClient.Create(callInvoker, Settings);
+            return DatastoreClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<DatastoreClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return DatastoreClient.Create(callInvoker, Settings);
+            return DatastoreClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => DatastoreClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => DatastoreClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => DatastoreClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Datastore client wrapper, for convenient use.</summary>
@@ -266,19 +254,10 @@ namespace Google.Cloud.Datastore.V1
             "https://www.googleapis.com/auth/datastore",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Datastore.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="DatastoreClient"/> using the default credentials, endpoint and settings.
@@ -305,8 +284,9 @@ namespace Google.Cloud.Datastore.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="DatastoreSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="DatastoreClient"/>.</returns>
-        internal static DatastoreClient Create(grpccore::CallInvoker callInvoker, DatastoreSettings settings = null)
+        internal static DatastoreClient Create(grpccore::CallInvoker callInvoker, DatastoreSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -315,7 +295,7 @@ namespace Google.Cloud.Datastore.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Datastore.DatastoreClient grpcClient = new Datastore.DatastoreClient(callInvoker);
-            return new DatastoreClientImpl(grpcClient, settings);
+            return new DatastoreClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1075,30 +1055,31 @@ namespace Google.Cloud.Datastore.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="DatastoreSettings"/> used within this client.</param>
-        public DatastoreClientImpl(Datastore.DatastoreClient grpcClient, DatastoreSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public DatastoreClientImpl(Datastore.DatastoreClient grpcClient, DatastoreSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             DatastoreSettings effectiveSettings = settings ?? DatastoreSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callLookup = clientHelper.BuildApiCall<LookupRequest, LookupResponse>(grpcClient.LookupAsync, grpcClient.Lookup, effectiveSettings.LookupSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callLookup = clientHelper.BuildApiCall<LookupRequest, LookupResponse>("Lookup", grpcClient.LookupAsync, grpcClient.Lookup, effectiveSettings.LookupSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callLookup);
             Modify_LookupApiCall(ref _callLookup);
-            _callRunQuery = clientHelper.BuildApiCall<RunQueryRequest, RunQueryResponse>(grpcClient.RunQueryAsync, grpcClient.RunQuery, effectiveSettings.RunQuerySettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callRunQuery = clientHelper.BuildApiCall<RunQueryRequest, RunQueryResponse>("RunQuery", grpcClient.RunQueryAsync, grpcClient.RunQuery, effectiveSettings.RunQuerySettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callRunQuery);
             Modify_RunQueryApiCall(ref _callRunQuery);
-            _callBeginTransaction = clientHelper.BuildApiCall<BeginTransactionRequest, BeginTransactionResponse>(grpcClient.BeginTransactionAsync, grpcClient.BeginTransaction, effectiveSettings.BeginTransactionSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callBeginTransaction = clientHelper.BuildApiCall<BeginTransactionRequest, BeginTransactionResponse>("BeginTransaction", grpcClient.BeginTransactionAsync, grpcClient.BeginTransaction, effectiveSettings.BeginTransactionSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callBeginTransaction);
             Modify_BeginTransactionApiCall(ref _callBeginTransaction);
-            _callCommit = clientHelper.BuildApiCall<CommitRequest, CommitResponse>(grpcClient.CommitAsync, grpcClient.Commit, effectiveSettings.CommitSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callCommit = clientHelper.BuildApiCall<CommitRequest, CommitResponse>("Commit", grpcClient.CommitAsync, grpcClient.Commit, effectiveSettings.CommitSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callCommit);
             Modify_CommitApiCall(ref _callCommit);
-            _callRollback = clientHelper.BuildApiCall<RollbackRequest, RollbackResponse>(grpcClient.RollbackAsync, grpcClient.Rollback, effectiveSettings.RollbackSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callRollback = clientHelper.BuildApiCall<RollbackRequest, RollbackResponse>("Rollback", grpcClient.RollbackAsync, grpcClient.Rollback, effectiveSettings.RollbackSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callRollback);
             Modify_RollbackApiCall(ref _callRollback);
-            _callAllocateIds = clientHelper.BuildApiCall<AllocateIdsRequest, AllocateIdsResponse>(grpcClient.AllocateIdsAsync, grpcClient.AllocateIds, effectiveSettings.AllocateIdsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callAllocateIds = clientHelper.BuildApiCall<AllocateIdsRequest, AllocateIdsResponse>("AllocateIds", grpcClient.AllocateIdsAsync, grpcClient.AllocateIds, effectiveSettings.AllocateIdsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callAllocateIds);
             Modify_AllocateIdsApiCall(ref _callAllocateIds);
-            _callReserveIds = clientHelper.BuildApiCall<ReserveIdsRequest, ReserveIdsResponse>(grpcClient.ReserveIdsAsync, grpcClient.ReserveIds, effectiveSettings.ReserveIdsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callReserveIds = clientHelper.BuildApiCall<ReserveIdsRequest, ReserveIdsResponse>("ReserveIds", grpcClient.ReserveIdsAsync, grpcClient.ReserveIds, effectiveSettings.ReserveIdsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callReserveIds);
             Modify_ReserveIdsApiCall(ref _callReserveIds);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

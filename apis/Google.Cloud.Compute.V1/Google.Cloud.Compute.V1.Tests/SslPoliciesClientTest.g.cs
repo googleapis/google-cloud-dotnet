@@ -59,7 +59,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);
+            SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null, null);
             SslPolicy response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -97,7 +97,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SslPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);
+            SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null, null);
             SslPolicy responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SslPolicy responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -137,7 +137,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);
+            SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null, null);
             SslPolicy response = client.Get(request.Project, request.SslPolicy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -175,7 +175,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SslPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);
+            SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null, null);
             SslPolicy responseCallSettings = await client.GetAsync(request.Project, request.SslPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SslPolicy responseCancellationToken = await client.GetAsync(request.Project, request.SslPolicy, st::CancellationToken.None);
@@ -205,7 +205,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ListAvailableFeatures(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);
+            SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null, null);
             SslPoliciesListAvailableFeaturesResponse response = client.ListAvailableFeatures(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -233,7 +233,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ListAvailableFeaturesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SslPoliciesListAvailableFeaturesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);
+            SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null, null);
             SslPoliciesListAvailableFeaturesResponse responseCallSettings = await client.ListAvailableFeaturesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SslPoliciesListAvailableFeaturesResponse responseCancellationToken = await client.ListAvailableFeaturesAsync(request, st::CancellationToken.None);
@@ -258,7 +258,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ListAvailableFeatures(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);
+            SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null, null);
             SslPoliciesListAvailableFeaturesResponse response = client.ListAvailableFeatures(request.Project);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -281,7 +281,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ListAvailableFeaturesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SslPoliciesListAvailableFeaturesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);
+            SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null, null);
             SslPoliciesListAvailableFeaturesResponse responseCallSettings = await client.ListAvailableFeaturesAsync(request.Project, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SslPoliciesListAvailableFeaturesResponse responseCancellationToken = await client.ListAvailableFeaturesAsync(request.Project, st::CancellationToken.None);

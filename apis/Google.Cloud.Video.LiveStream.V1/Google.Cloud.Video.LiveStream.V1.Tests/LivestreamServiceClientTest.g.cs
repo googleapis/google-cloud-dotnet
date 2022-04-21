@@ -68,7 +68,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 LogConfig = new LogConfig(),
             };
             mockGrpcClient.Setup(x => x.GetChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Channel response = client.GetChannel(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -113,7 +113,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 LogConfig = new LogConfig(),
             };
             mockGrpcClient.Setup(x => x.GetChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Channel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Channel responseCallSettings = await client.GetChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Channel responseCancellationToken = await client.GetChannelAsync(request, st::CancellationToken.None);
@@ -160,7 +160,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 LogConfig = new LogConfig(),
             };
             mockGrpcClient.Setup(x => x.GetChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Channel response = client.GetChannel(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -205,7 +205,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 LogConfig = new LogConfig(),
             };
             mockGrpcClient.Setup(x => x.GetChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Channel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Channel responseCallSettings = await client.GetChannelAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Channel responseCancellationToken = await client.GetChannelAsync(request.Name, st::CancellationToken.None);
@@ -252,7 +252,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 LogConfig = new LogConfig(),
             };
             mockGrpcClient.Setup(x => x.GetChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Channel response = client.GetChannel(request.ChannelName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -297,7 +297,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 LogConfig = new LogConfig(),
             };
             mockGrpcClient.Setup(x => x.GetChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Channel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Channel responseCallSettings = await client.GetChannelAsync(request.ChannelName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Channel responseCancellationToken = await client.GetChannelAsync(request.ChannelName, st::CancellationToken.None);
@@ -334,7 +334,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 InputStreamProperty = new InputStreamProperty(),
             };
             mockGrpcClient.Setup(x => x.GetInput(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Input response = client.GetInput(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -369,7 +369,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 InputStreamProperty = new InputStreamProperty(),
             };
             mockGrpcClient.Setup(x => x.GetInputAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Input>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Input responseCallSettings = await client.GetInputAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Input responseCancellationToken = await client.GetInputAsync(request, st::CancellationToken.None);
@@ -406,7 +406,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 InputStreamProperty = new InputStreamProperty(),
             };
             mockGrpcClient.Setup(x => x.GetInput(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Input response = client.GetInput(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -441,7 +441,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 InputStreamProperty = new InputStreamProperty(),
             };
             mockGrpcClient.Setup(x => x.GetInputAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Input>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Input responseCallSettings = await client.GetInputAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Input responseCancellationToken = await client.GetInputAsync(request.Name, st::CancellationToken.None);
@@ -478,7 +478,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 InputStreamProperty = new InputStreamProperty(),
             };
             mockGrpcClient.Setup(x => x.GetInput(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Input response = client.GetInput(request.InputName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -513,7 +513,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 InputStreamProperty = new InputStreamProperty(),
             };
             mockGrpcClient.Setup(x => x.GetInputAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Input>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Input responseCallSettings = await client.GetInputAsync(request.InputName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Input responseCancellationToken = await client.GetInputAsync(request.InputName, st::CancellationToken.None);
@@ -552,7 +552,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Event response = client.CreateEvent(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -589,7 +589,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Event>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Event responseCallSettings = await client.CreateEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Event responseCancellationToken = await client.CreateEventAsync(request, st::CancellationToken.None);
@@ -627,7 +627,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Event response = client.CreateEvent(request.Parent, request.Event, request.EventId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -663,7 +663,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Event>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Event responseCallSettings = await client.CreateEventAsync(request.Parent, request.Event, request.EventId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Event responseCancellationToken = await client.CreateEventAsync(request.Parent, request.Event, request.EventId, st::CancellationToken.None);
@@ -701,7 +701,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Event response = client.CreateEvent(request.ParentAsChannelName, request.Event, request.EventId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -737,7 +737,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Event>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Event responseCallSettings = await client.CreateEventAsync(request.ParentAsChannelName, request.Event, request.EventId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Event responseCancellationToken = await client.CreateEventAsync(request.ParentAsChannelName, request.Event, request.EventId, st::CancellationToken.None);
@@ -773,7 +773,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Event response = client.GetEvent(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -807,7 +807,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Event>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Event responseCallSettings = await client.GetEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Event responseCancellationToken = await client.GetEventAsync(request, st::CancellationToken.None);
@@ -843,7 +843,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Event response = client.GetEvent(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -877,7 +877,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Event>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Event responseCallSettings = await client.GetEventAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Event responseCancellationToken = await client.GetEventAsync(request.Name, st::CancellationToken.None);
@@ -913,7 +913,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Event response = client.GetEvent(request.EventName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -947,7 +947,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Event>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             Event responseCallSettings = await client.GetEventAsync(request.EventName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Event responseCancellationToken = await client.GetEventAsync(request.EventName, st::CancellationToken.None);
@@ -967,7 +967,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteEvent(request);
             mockGrpcClient.VerifyAll();
         }
@@ -984,7 +984,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteEventAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1001,7 +1001,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteEvent(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1017,7 +1017,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteEventAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteEventAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1034,7 +1034,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteEvent(request.EventName);
             mockGrpcClient.VerifyAll();
         }
@@ -1050,7 +1050,7 @@ namespace Google.Cloud.Video.LiveStream.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null);
+            LivestreamServiceClient client = new LivestreamServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteEventAsync(request.EventName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteEventAsync(request.EventName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

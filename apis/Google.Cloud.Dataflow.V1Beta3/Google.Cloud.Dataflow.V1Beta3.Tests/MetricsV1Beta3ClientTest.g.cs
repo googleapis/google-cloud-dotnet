@@ -44,7 +44,7 @@ namespace Google.Cloud.Dataflow.V1Beta3.Tests
                 Metrics = { new MetricUpdate(), },
             };
             mockGrpcClient.Setup(x => x.GetJobMetrics(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MetricsV1Beta3Client client = new MetricsV1Beta3ClientImpl(mockGrpcClient.Object, null);
+            MetricsV1Beta3Client client = new MetricsV1Beta3ClientImpl(mockGrpcClient.Object, null, null);
             JobMetrics response = client.GetJobMetrics(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -67,7 +67,7 @@ namespace Google.Cloud.Dataflow.V1Beta3.Tests
                 Metrics = { new MetricUpdate(), },
             };
             mockGrpcClient.Setup(x => x.GetJobMetricsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobMetrics>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MetricsV1Beta3Client client = new MetricsV1Beta3ClientImpl(mockGrpcClient.Object, null);
+            MetricsV1Beta3Client client = new MetricsV1Beta3ClientImpl(mockGrpcClient.Object, null, null);
             JobMetrics responseCallSettings = await client.GetJobMetricsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             JobMetrics responseCancellationToken = await client.GetJobMetricsAsync(request, st::CancellationToken.None);

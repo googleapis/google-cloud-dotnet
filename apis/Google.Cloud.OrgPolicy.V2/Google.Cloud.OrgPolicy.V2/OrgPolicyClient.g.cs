@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -219,9 +219,8 @@ namespace Google.Cloud.OrgPolicy.V2
         public OrgPolicySettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public OrgPolicyClientBuilder()
+        public OrgPolicyClientBuilder() : base(OrgPolicyClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = OrgPolicyClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref OrgPolicyClient client);
@@ -248,29 +247,18 @@ namespace Google.Cloud.OrgPolicy.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return OrgPolicyClient.Create(callInvoker, Settings);
+            return OrgPolicyClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<OrgPolicyClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return OrgPolicyClient.Create(callInvoker, Settings);
+            return OrgPolicyClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => OrgPolicyClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => OrgPolicyClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => OrgPolicyClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>OrgPolicy client wrapper, for convenient use.</summary>
@@ -316,19 +304,10 @@ namespace Google.Cloud.OrgPolicy.V2
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(OrgPolicy.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="OrgPolicyClient"/> using the default credentials, endpoint and settings.
@@ -355,8 +334,9 @@ namespace Google.Cloud.OrgPolicy.V2
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="OrgPolicySettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="OrgPolicyClient"/>.</returns>
-        internal static OrgPolicyClient Create(grpccore::CallInvoker callInvoker, OrgPolicySettings settings = null)
+        internal static OrgPolicyClient Create(grpccore::CallInvoker callInvoker, OrgPolicySettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -365,7 +345,7 @@ namespace Google.Cloud.OrgPolicy.V2
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             OrgPolicy.OrgPolicyClient grpcClient = new OrgPolicy.OrgPolicyClient(callInvoker);
-            return new OrgPolicyClientImpl(grpcClient, settings);
+            return new OrgPolicyClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1842,30 +1822,31 @@ namespace Google.Cloud.OrgPolicy.V2
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="OrgPolicySettings"/> used within this client.</param>
-        public OrgPolicyClientImpl(OrgPolicy.OrgPolicyClient grpcClient, OrgPolicySettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public OrgPolicyClientImpl(OrgPolicy.OrgPolicyClient grpcClient, OrgPolicySettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             OrgPolicySettings effectiveSettings = settings ?? OrgPolicySettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListConstraints = clientHelper.BuildApiCall<ListConstraintsRequest, ListConstraintsResponse>(grpcClient.ListConstraintsAsync, grpcClient.ListConstraints, effectiveSettings.ListConstraintsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListConstraints = clientHelper.BuildApiCall<ListConstraintsRequest, ListConstraintsResponse>("ListConstraints", grpcClient.ListConstraintsAsync, grpcClient.ListConstraints, effectiveSettings.ListConstraintsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListConstraints);
             Modify_ListConstraintsApiCall(ref _callListConstraints);
-            _callListPolicies = clientHelper.BuildApiCall<ListPoliciesRequest, ListPoliciesResponse>(grpcClient.ListPoliciesAsync, grpcClient.ListPolicies, effectiveSettings.ListPoliciesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListPolicies = clientHelper.BuildApiCall<ListPoliciesRequest, ListPoliciesResponse>("ListPolicies", grpcClient.ListPoliciesAsync, grpcClient.ListPolicies, effectiveSettings.ListPoliciesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListPolicies);
             Modify_ListPoliciesApiCall(ref _callListPolicies);
-            _callGetPolicy = clientHelper.BuildApiCall<GetPolicyRequest, Policy>(grpcClient.GetPolicyAsync, grpcClient.GetPolicy, effectiveSettings.GetPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetPolicy = clientHelper.BuildApiCall<GetPolicyRequest, Policy>("GetPolicy", grpcClient.GetPolicyAsync, grpcClient.GetPolicy, effectiveSettings.GetPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetPolicy);
             Modify_GetPolicyApiCall(ref _callGetPolicy);
-            _callGetEffectivePolicy = clientHelper.BuildApiCall<GetEffectivePolicyRequest, Policy>(grpcClient.GetEffectivePolicyAsync, grpcClient.GetEffectivePolicy, effectiveSettings.GetEffectivePolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetEffectivePolicy = clientHelper.BuildApiCall<GetEffectivePolicyRequest, Policy>("GetEffectivePolicy", grpcClient.GetEffectivePolicyAsync, grpcClient.GetEffectivePolicy, effectiveSettings.GetEffectivePolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetEffectivePolicy);
             Modify_GetEffectivePolicyApiCall(ref _callGetEffectivePolicy);
-            _callCreatePolicy = clientHelper.BuildApiCall<CreatePolicyRequest, Policy>(grpcClient.CreatePolicyAsync, grpcClient.CreatePolicy, effectiveSettings.CreatePolicySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreatePolicy = clientHelper.BuildApiCall<CreatePolicyRequest, Policy>("CreatePolicy", grpcClient.CreatePolicyAsync, grpcClient.CreatePolicy, effectiveSettings.CreatePolicySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreatePolicy);
             Modify_CreatePolicyApiCall(ref _callCreatePolicy);
-            _callUpdatePolicy = clientHelper.BuildApiCall<UpdatePolicyRequest, Policy>(grpcClient.UpdatePolicyAsync, grpcClient.UpdatePolicy, effectiveSettings.UpdatePolicySettings).WithGoogleRequestParam("policy.name", request => request.Policy?.Name);
+            _callUpdatePolicy = clientHelper.BuildApiCall<UpdatePolicyRequest, Policy>("UpdatePolicy", grpcClient.UpdatePolicyAsync, grpcClient.UpdatePolicy, effectiveSettings.UpdatePolicySettings).WithGoogleRequestParam("policy.name", request => request.Policy?.Name);
             Modify_ApiCall(ref _callUpdatePolicy);
             Modify_UpdatePolicyApiCall(ref _callUpdatePolicy);
-            _callDeletePolicy = clientHelper.BuildApiCall<DeletePolicyRequest, wkt::Empty>(grpcClient.DeletePolicyAsync, grpcClient.DeletePolicy, effectiveSettings.DeletePolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeletePolicy = clientHelper.BuildApiCall<DeletePolicyRequest, wkt::Empty>("DeletePolicy", grpcClient.DeletePolicyAsync, grpcClient.DeletePolicy, effectiveSettings.DeletePolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeletePolicy);
             Modify_DeletePolicyApiCall(ref _callDeletePolicy);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

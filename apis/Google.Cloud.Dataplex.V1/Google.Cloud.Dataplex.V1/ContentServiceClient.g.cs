@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -130,9 +130,8 @@ namespace Google.Cloud.Dataplex.V1
         public ContentServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ContentServiceClientBuilder()
+        public ContentServiceClientBuilder() : base(ContentServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ContentServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ContentServiceClient client);
@@ -159,29 +158,18 @@ namespace Google.Cloud.Dataplex.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ContentServiceClient.Create(callInvoker, Settings);
+            return ContentServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ContentServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ContentServiceClient.Create(callInvoker, Settings);
+            return ContentServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ContentServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ContentServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ContentServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ContentService client wrapper, for convenient use.</summary>
@@ -208,19 +196,10 @@ namespace Google.Cloud.Dataplex.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ContentService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ContentServiceClient"/> using the default credentials, endpoint and
@@ -247,8 +226,9 @@ namespace Google.Cloud.Dataplex.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ContentServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ContentServiceClient"/>.</returns>
-        internal static ContentServiceClient Create(grpccore::CallInvoker callInvoker, ContentServiceSettings settings = null)
+        internal static ContentServiceClient Create(grpccore::CallInvoker callInvoker, ContentServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -257,7 +237,7 @@ namespace Google.Cloud.Dataplex.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ContentService.ContentServiceClient grpcClient = new ContentService.ContentServiceClient(callInvoker);
-            return new ContentServiceClientImpl(grpcClient, settings);
+            return new ContentServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -851,24 +831,25 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ContentServiceSettings"/> used within this client.</param>
-        public ContentServiceClientImpl(ContentService.ContentServiceClient grpcClient, ContentServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ContentServiceClientImpl(ContentService.ContentServiceClient grpcClient, ContentServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ContentServiceSettings effectiveSettings = settings ?? ContentServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCreateContent = clientHelper.BuildApiCall<CreateContentRequest, Content>(grpcClient.CreateContentAsync, grpcClient.CreateContent, effectiveSettings.CreateContentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCreateContent = clientHelper.BuildApiCall<CreateContentRequest, Content>("CreateContent", grpcClient.CreateContentAsync, grpcClient.CreateContent, effectiveSettings.CreateContentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateContent);
             Modify_CreateContentApiCall(ref _callCreateContent);
-            _callUpdateContent = clientHelper.BuildApiCall<UpdateContentRequest, Content>(grpcClient.UpdateContentAsync, grpcClient.UpdateContent, effectiveSettings.UpdateContentSettings).WithGoogleRequestParam("content.name", request => request.Content?.Name);
+            _callUpdateContent = clientHelper.BuildApiCall<UpdateContentRequest, Content>("UpdateContent", grpcClient.UpdateContentAsync, grpcClient.UpdateContent, effectiveSettings.UpdateContentSettings).WithGoogleRequestParam("content.name", request => request.Content?.Name);
             Modify_ApiCall(ref _callUpdateContent);
             Modify_UpdateContentApiCall(ref _callUpdateContent);
-            _callDeleteContent = clientHelper.BuildApiCall<DeleteContentRequest, wkt::Empty>(grpcClient.DeleteContentAsync, grpcClient.DeleteContent, effectiveSettings.DeleteContentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteContent = clientHelper.BuildApiCall<DeleteContentRequest, wkt::Empty>("DeleteContent", grpcClient.DeleteContentAsync, grpcClient.DeleteContent, effectiveSettings.DeleteContentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteContent);
             Modify_DeleteContentApiCall(ref _callDeleteContent);
-            _callGetContent = clientHelper.BuildApiCall<GetContentRequest, Content>(grpcClient.GetContentAsync, grpcClient.GetContent, effectiveSettings.GetContentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetContent = clientHelper.BuildApiCall<GetContentRequest, Content>("GetContent", grpcClient.GetContentAsync, grpcClient.GetContent, effectiveSettings.GetContentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetContent);
             Modify_GetContentApiCall(ref _callGetContent);
-            _callListContent = clientHelper.BuildApiCall<ListContentRequest, ListContentResponse>(grpcClient.ListContentAsync, grpcClient.ListContent, effectiveSettings.ListContentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListContent = clientHelper.BuildApiCall<ListContentRequest, ListContentResponse>("ListContent", grpcClient.ListContentAsync, grpcClient.ListContent, effectiveSettings.ListContentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListContent);
             Modify_ListContentApiCall(ref _callListContent);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

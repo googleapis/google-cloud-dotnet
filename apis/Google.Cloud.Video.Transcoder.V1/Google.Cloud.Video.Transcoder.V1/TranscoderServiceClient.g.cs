@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -170,9 +170,8 @@ namespace Google.Cloud.Video.Transcoder.V1
         public TranscoderServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public TranscoderServiceClientBuilder()
+        public TranscoderServiceClientBuilder() : base(TranscoderServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = TranscoderServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref TranscoderServiceClient client);
@@ -199,29 +198,18 @@ namespace Google.Cloud.Video.Transcoder.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TranscoderServiceClient.Create(callInvoker, Settings);
+            return TranscoderServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<TranscoderServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TranscoderServiceClient.Create(callInvoker, Settings);
+            return TranscoderServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => TranscoderServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => TranscoderServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => TranscoderServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>TranscoderService client wrapper, for convenient use.</summary>
@@ -253,19 +241,10 @@ namespace Google.Cloud.Video.Transcoder.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(TranscoderService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="TranscoderServiceClient"/> using the default credentials, endpoint and
@@ -292,8 +271,9 @@ namespace Google.Cloud.Video.Transcoder.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="TranscoderServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="TranscoderServiceClient"/>.</returns>
-        internal static TranscoderServiceClient Create(grpccore::CallInvoker callInvoker, TranscoderServiceSettings settings = null)
+        internal static TranscoderServiceClient Create(grpccore::CallInvoker callInvoker, TranscoderServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -302,7 +282,7 @@ namespace Google.Cloud.Video.Transcoder.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             TranscoderService.TranscoderServiceClient grpcClient = new TranscoderService.TranscoderServiceClient(callInvoker);
-            return new TranscoderServiceClientImpl(grpcClient, settings);
+            return new TranscoderServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1348,33 +1328,34 @@ namespace Google.Cloud.Video.Transcoder.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="TranscoderServiceSettings"/> used within this client.</param>
-        public TranscoderServiceClientImpl(TranscoderService.TranscoderServiceClient grpcClient, TranscoderServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public TranscoderServiceClientImpl(TranscoderService.TranscoderServiceClient grpcClient, TranscoderServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             TranscoderServiceSettings effectiveSettings = settings ?? TranscoderServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCreateJob = clientHelper.BuildApiCall<CreateJobRequest, Job>(grpcClient.CreateJobAsync, grpcClient.CreateJob, effectiveSettings.CreateJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCreateJob = clientHelper.BuildApiCall<CreateJobRequest, Job>("CreateJob", grpcClient.CreateJobAsync, grpcClient.CreateJob, effectiveSettings.CreateJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateJob);
             Modify_CreateJobApiCall(ref _callCreateJob);
-            _callListJobs = clientHelper.BuildApiCall<ListJobsRequest, ListJobsResponse>(grpcClient.ListJobsAsync, grpcClient.ListJobs, effectiveSettings.ListJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListJobs = clientHelper.BuildApiCall<ListJobsRequest, ListJobsResponse>("ListJobs", grpcClient.ListJobsAsync, grpcClient.ListJobs, effectiveSettings.ListJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListJobs);
             Modify_ListJobsApiCall(ref _callListJobs);
-            _callGetJob = clientHelper.BuildApiCall<GetJobRequest, Job>(grpcClient.GetJobAsync, grpcClient.GetJob, effectiveSettings.GetJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetJob = clientHelper.BuildApiCall<GetJobRequest, Job>("GetJob", grpcClient.GetJobAsync, grpcClient.GetJob, effectiveSettings.GetJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetJob);
             Modify_GetJobApiCall(ref _callGetJob);
-            _callDeleteJob = clientHelper.BuildApiCall<DeleteJobRequest, wkt::Empty>(grpcClient.DeleteJobAsync, grpcClient.DeleteJob, effectiveSettings.DeleteJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteJob = clientHelper.BuildApiCall<DeleteJobRequest, wkt::Empty>("DeleteJob", grpcClient.DeleteJobAsync, grpcClient.DeleteJob, effectiveSettings.DeleteJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteJob);
             Modify_DeleteJobApiCall(ref _callDeleteJob);
-            _callCreateJobTemplate = clientHelper.BuildApiCall<CreateJobTemplateRequest, JobTemplate>(grpcClient.CreateJobTemplateAsync, grpcClient.CreateJobTemplate, effectiveSettings.CreateJobTemplateSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateJobTemplate = clientHelper.BuildApiCall<CreateJobTemplateRequest, JobTemplate>("CreateJobTemplate", grpcClient.CreateJobTemplateAsync, grpcClient.CreateJobTemplate, effectiveSettings.CreateJobTemplateSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateJobTemplate);
             Modify_CreateJobTemplateApiCall(ref _callCreateJobTemplate);
-            _callListJobTemplates = clientHelper.BuildApiCall<ListJobTemplatesRequest, ListJobTemplatesResponse>(grpcClient.ListJobTemplatesAsync, grpcClient.ListJobTemplates, effectiveSettings.ListJobTemplatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListJobTemplates = clientHelper.BuildApiCall<ListJobTemplatesRequest, ListJobTemplatesResponse>("ListJobTemplates", grpcClient.ListJobTemplatesAsync, grpcClient.ListJobTemplates, effectiveSettings.ListJobTemplatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListJobTemplates);
             Modify_ListJobTemplatesApiCall(ref _callListJobTemplates);
-            _callGetJobTemplate = clientHelper.BuildApiCall<GetJobTemplateRequest, JobTemplate>(grpcClient.GetJobTemplateAsync, grpcClient.GetJobTemplate, effectiveSettings.GetJobTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetJobTemplate = clientHelper.BuildApiCall<GetJobTemplateRequest, JobTemplate>("GetJobTemplate", grpcClient.GetJobTemplateAsync, grpcClient.GetJobTemplate, effectiveSettings.GetJobTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetJobTemplate);
             Modify_GetJobTemplateApiCall(ref _callGetJobTemplate);
-            _callDeleteJobTemplate = clientHelper.BuildApiCall<DeleteJobTemplateRequest, wkt::Empty>(grpcClient.DeleteJobTemplateAsync, grpcClient.DeleteJobTemplate, effectiveSettings.DeleteJobTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteJobTemplate = clientHelper.BuildApiCall<DeleteJobTemplateRequest, wkt::Empty>("DeleteJobTemplate", grpcClient.DeleteJobTemplateAsync, grpcClient.DeleteJobTemplate, effectiveSettings.DeleteJobTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteJobTemplate);
             Modify_DeleteJobTemplateApiCall(ref _callDeleteJobTemplate);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -160,9 +160,8 @@ namespace Google.Cloud.Kms.V1
         public EkmServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public EkmServiceClientBuilder()
+        public EkmServiceClientBuilder() : base(EkmServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = EkmServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref EkmServiceClient client);
@@ -189,29 +188,18 @@ namespace Google.Cloud.Kms.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return EkmServiceClient.Create(callInvoker, Settings);
+            return EkmServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<EkmServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return EkmServiceClient.Create(callInvoker, Settings);
+            return EkmServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => EkmServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => EkmServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => EkmServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>EkmService client wrapper, for convenient use.</summary>
@@ -244,19 +232,10 @@ namespace Google.Cloud.Kms.V1
             "https://www.googleapis.com/auth/cloudkms",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(EkmService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="EkmServiceClient"/> using the default credentials, endpoint and
@@ -283,8 +262,9 @@ namespace Google.Cloud.Kms.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="EkmServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="EkmServiceClient"/>.</returns>
-        internal static EkmServiceClient Create(grpccore::CallInvoker callInvoker, EkmServiceSettings settings = null)
+        internal static EkmServiceClient Create(grpccore::CallInvoker callInvoker, EkmServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -293,7 +273,7 @@ namespace Google.Cloud.Kms.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             EkmService.EkmServiceClient grpcClient = new EkmService.EkmServiceClient(callInvoker);
-            return new EkmServiceClientImpl(grpcClient, settings);
+            return new EkmServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -843,22 +823,23 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="EkmServiceSettings"/> used within this client.</param>
-        public EkmServiceClientImpl(EkmService.EkmServiceClient grpcClient, EkmServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public EkmServiceClientImpl(EkmService.EkmServiceClient grpcClient, EkmServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             EkmServiceSettings effectiveSettings = settings ?? EkmServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings);
-            _callListEkmConnections = clientHelper.BuildApiCall<ListEkmConnectionsRequest, ListEkmConnectionsResponse>(grpcClient.ListEkmConnectionsAsync, grpcClient.ListEkmConnections, effectiveSettings.ListEkmConnectionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
+            _callListEkmConnections = clientHelper.BuildApiCall<ListEkmConnectionsRequest, ListEkmConnectionsResponse>("ListEkmConnections", grpcClient.ListEkmConnectionsAsync, grpcClient.ListEkmConnections, effectiveSettings.ListEkmConnectionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListEkmConnections);
             Modify_ListEkmConnectionsApiCall(ref _callListEkmConnections);
-            _callGetEkmConnection = clientHelper.BuildApiCall<GetEkmConnectionRequest, EkmConnection>(grpcClient.GetEkmConnectionAsync, grpcClient.GetEkmConnection, effectiveSettings.GetEkmConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetEkmConnection = clientHelper.BuildApiCall<GetEkmConnectionRequest, EkmConnection>("GetEkmConnection", grpcClient.GetEkmConnectionAsync, grpcClient.GetEkmConnection, effectiveSettings.GetEkmConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetEkmConnection);
             Modify_GetEkmConnectionApiCall(ref _callGetEkmConnection);
-            _callCreateEkmConnection = clientHelper.BuildApiCall<CreateEkmConnectionRequest, EkmConnection>(grpcClient.CreateEkmConnectionAsync, grpcClient.CreateEkmConnection, effectiveSettings.CreateEkmConnectionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateEkmConnection = clientHelper.BuildApiCall<CreateEkmConnectionRequest, EkmConnection>("CreateEkmConnection", grpcClient.CreateEkmConnectionAsync, grpcClient.CreateEkmConnection, effectiveSettings.CreateEkmConnectionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateEkmConnection);
             Modify_CreateEkmConnectionApiCall(ref _callCreateEkmConnection);
-            _callUpdateEkmConnection = clientHelper.BuildApiCall<UpdateEkmConnectionRequest, EkmConnection>(grpcClient.UpdateEkmConnectionAsync, grpcClient.UpdateEkmConnection, effectiveSettings.UpdateEkmConnectionSettings).WithGoogleRequestParam("ekm_connection.name", request => request.EkmConnection?.Name);
+            _callUpdateEkmConnection = clientHelper.BuildApiCall<UpdateEkmConnectionRequest, EkmConnection>("UpdateEkmConnection", grpcClient.UpdateEkmConnectionAsync, grpcClient.UpdateEkmConnection, effectiveSettings.UpdateEkmConnectionSettings).WithGoogleRequestParam("ekm_connection.name", request => request.EkmConnection?.Name);
             Modify_ApiCall(ref _callUpdateEkmConnection);
             Modify_UpdateEkmConnectionApiCall(ref _callUpdateEkmConnection);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

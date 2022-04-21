@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -226,9 +226,8 @@ namespace Google.Cloud.Compute.V1
         public SslPoliciesSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public SslPoliciesClientBuilder()
+        public SslPoliciesClientBuilder() : base(SslPoliciesClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = SslPoliciesClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref SslPoliciesClient client);
@@ -255,29 +254,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SslPoliciesClient.Create(callInvoker, Settings);
+            return SslPoliciesClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<SslPoliciesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SslPoliciesClient.Create(callInvoker, Settings);
+            return SslPoliciesClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => SslPoliciesClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => SslPoliciesClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => SslPoliciesClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>SslPolicies client wrapper, for convenient use.</summary>
@@ -306,19 +294,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(SslPolicies.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="SslPoliciesClient"/> using the default credentials, endpoint and
@@ -345,8 +324,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="SslPoliciesSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="SslPoliciesClient"/>.</returns>
-        internal static SslPoliciesClient Create(grpccore::CallInvoker callInvoker, SslPoliciesSettings settings = null)
+        internal static SslPoliciesClient Create(grpccore::CallInvoker callInvoker, SslPoliciesSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -355,7 +335,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             SslPolicies.SslPoliciesClient grpcClient = new SslPolicies.SslPoliciesClient(callInvoker);
-            return new SslPoliciesClientImpl(grpcClient, settings);
+            return new SslPoliciesClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -927,30 +907,31 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="SslPoliciesSettings"/> used within this client.</param>
-        public SslPoliciesClientImpl(SslPolicies.SslPoliciesClient grpcClient, SslPoliciesSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public SslPoliciesClientImpl(SslPolicies.SslPoliciesClient grpcClient, SslPoliciesSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             SslPoliciesSettings effectiveSettings = settings ?? SslPoliciesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings);
-            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings);
-            _callDelete = clientHelper.BuildApiCall<DeleteSslPolicyRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("ssl_policy", request => request.SslPolicy);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings, logger);
+            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings, logger);
+            _callDelete = clientHelper.BuildApiCall<DeleteSslPolicyRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("ssl_policy", request => request.SslPolicy);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
-            _callGet = clientHelper.BuildApiCall<GetSslPolicyRequest, SslPolicy>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("ssl_policy", request => request.SslPolicy);
+            _callGet = clientHelper.BuildApiCall<GetSslPolicyRequest, SslPolicy>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("ssl_policy", request => request.SslPolicy);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callInsert = clientHelper.BuildApiCall<InsertSslPolicyRequest, Operation>(grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callInsert = clientHelper.BuildApiCall<InsertSslPolicyRequest, Operation>("Insert", grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
-            _callList = clientHelper.BuildApiCall<ListSslPoliciesRequest, SslPoliciesList>(grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callList = clientHelper.BuildApiCall<ListSslPoliciesRequest, SslPoliciesList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
-            _callListAvailableFeatures = clientHelper.BuildApiCall<ListAvailableFeaturesSslPoliciesRequest, SslPoliciesListAvailableFeaturesResponse>(grpcClient.ListAvailableFeaturesAsync, grpcClient.ListAvailableFeatures, effectiveSettings.ListAvailableFeaturesSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callListAvailableFeatures = clientHelper.BuildApiCall<ListAvailableFeaturesSslPoliciesRequest, SslPoliciesListAvailableFeaturesResponse>("ListAvailableFeatures", grpcClient.ListAvailableFeaturesAsync, grpcClient.ListAvailableFeatures, effectiveSettings.ListAvailableFeaturesSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callListAvailableFeatures);
             Modify_ListAvailableFeaturesApiCall(ref _callListAvailableFeatures);
-            _callPatch = clientHelper.BuildApiCall<PatchSslPolicyRequest, Operation>(grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("ssl_policy", request => request.SslPolicy);
+            _callPatch = clientHelper.BuildApiCall<PatchSslPolicyRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("ssl_policy", request => request.SslPolicy);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -67,7 +67,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetBatch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null);
+            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null, null);
             Batch response = client.GetBatch(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -112,7 +112,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetBatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Batch>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null);
+            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null, null);
             Batch responseCallSettings = await client.GetBatchAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Batch responseCancellationToken = await client.GetBatchAsync(request, st::CancellationToken.None);
@@ -159,7 +159,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetBatch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null);
+            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null, null);
             Batch response = client.GetBatch(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -204,7 +204,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetBatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Batch>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null);
+            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null, null);
             Batch responseCallSettings = await client.GetBatchAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Batch responseCancellationToken = await client.GetBatchAsync(request.Name, st::CancellationToken.None);
@@ -251,7 +251,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetBatch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null);
+            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null, null);
             Batch response = client.GetBatch(request.BatchName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -296,7 +296,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetBatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Batch>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null);
+            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null, null);
             Batch responseCallSettings = await client.GetBatchAsync(request.BatchName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Batch responseCancellationToken = await client.GetBatchAsync(request.BatchName, st::CancellationToken.None);
@@ -315,7 +315,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBatch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null);
+            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteBatch(request);
             mockGrpcClient.VerifyAll();
         }
@@ -331,7 +331,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null);
+            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteBatchAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteBatchAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -348,7 +348,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBatch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null);
+            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteBatch(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -364,7 +364,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null);
+            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteBatchAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteBatchAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -381,7 +381,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBatch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null);
+            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteBatch(request.BatchName);
             mockGrpcClient.VerifyAll();
         }
@@ -397,7 +397,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null);
+            BatchControllerClient client = new BatchControllerClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteBatchAsync(request.BatchName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteBatchAsync(request.BatchName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

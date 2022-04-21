@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -65,6 +65,7 @@ namespace Google.Cloud.Notebooks.V1
             ResetRuntimeOperationsSettings = existing.ResetRuntimeOperationsSettings.Clone();
             ReportRuntimeEventSettings = existing.ReportRuntimeEventSettings;
             ReportRuntimeEventOperationsSettings = existing.ReportRuntimeEventOperationsSettings.Clone();
+            RefreshRuntimeTokenInternalSettings = existing.RefreshRuntimeTokenInternalSettings;
             OnCopy(existing);
         }
 
@@ -314,6 +315,25 @@ namespace Google.Cloud.Notebooks.V1
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ManagedNotebookServiceClient.RefreshRuntimeTokenInternal</c> and
+        /// <c>ManagedNotebookServiceClient.RefreshRuntimeTokenInternalAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RefreshRuntimeTokenInternalSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ManagedNotebookServiceSettings"/> object.</returns>
         public ManagedNotebookServiceSettings Clone() => new ManagedNotebookServiceSettings(this);
@@ -329,9 +349,8 @@ namespace Google.Cloud.Notebooks.V1
         public ManagedNotebookServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ManagedNotebookServiceClientBuilder()
+        public ManagedNotebookServiceClientBuilder() : base(ManagedNotebookServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ManagedNotebookServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ManagedNotebookServiceClient client);
@@ -358,29 +377,18 @@ namespace Google.Cloud.Notebooks.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ManagedNotebookServiceClient.Create(callInvoker, Settings);
+            return ManagedNotebookServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ManagedNotebookServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ManagedNotebookServiceClient.Create(callInvoker, Settings);
+            return ManagedNotebookServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ManagedNotebookServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ManagedNotebookServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ManagedNotebookServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ManagedNotebookService client wrapper, for convenient use.</summary>
@@ -407,19 +415,10 @@ namespace Google.Cloud.Notebooks.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ManagedNotebookService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ManagedNotebookServiceClient"/> using the default credentials, endpoint
@@ -449,8 +448,9 @@ namespace Google.Cloud.Notebooks.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ManagedNotebookServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ManagedNotebookServiceClient"/>.</returns>
-        internal static ManagedNotebookServiceClient Create(grpccore::CallInvoker callInvoker, ManagedNotebookServiceSettings settings = null)
+        internal static ManagedNotebookServiceClient Create(grpccore::CallInvoker callInvoker, ManagedNotebookServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -459,7 +459,7 @@ namespace Google.Cloud.Notebooks.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ManagedNotebookService.ManagedNotebookServiceClient grpcClient = new ManagedNotebookService.ManagedNotebookServiceClient(callInvoker);
-            return new ManagedNotebookServiceClientImpl(grpcClient, settings);
+            return new ManagedNotebookServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1599,6 +1599,154 @@ namespace Google.Cloud.Notebooks.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Runtime, OperationMetadata>> ReportRuntimeEventAsync(RuntimeName name, st::CancellationToken cancellationToken) =>
             ReportRuntimeEventAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an access token for the consumer service account that the customer
+        /// attached to the runtime. Only accessible from the tenant instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RefreshRuntimeTokenInternalResponse RefreshRuntimeTokenInternal(RefreshRuntimeTokenInternalRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an access token for the consumer service account that the customer
+        /// attached to the runtime. Only accessible from the tenant instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RefreshRuntimeTokenInternalResponse> RefreshRuntimeTokenInternalAsync(RefreshRuntimeTokenInternalRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an access token for the consumer service account that the customer
+        /// attached to the runtime. Only accessible from the tenant instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RefreshRuntimeTokenInternalResponse> RefreshRuntimeTokenInternalAsync(RefreshRuntimeTokenInternalRequest request, st::CancellationToken cancellationToken) =>
+            RefreshRuntimeTokenInternalAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an access token for the consumer service account that the customer
+        /// attached to the runtime. Only accessible from the tenant instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+        /// </param>
+        /// <param name="vmId">
+        /// Required. The VM hardware token for authenticating the VM.
+        /// https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RefreshRuntimeTokenInternalResponse RefreshRuntimeTokenInternal(string name, string vmId, gaxgrpc::CallSettings callSettings = null) =>
+            RefreshRuntimeTokenInternal(new RefreshRuntimeTokenInternalRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                VmId = gax::GaxPreconditions.CheckNotNullOrEmpty(vmId, nameof(vmId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an access token for the consumer service account that the customer
+        /// attached to the runtime. Only accessible from the tenant instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+        /// </param>
+        /// <param name="vmId">
+        /// Required. The VM hardware token for authenticating the VM.
+        /// https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RefreshRuntimeTokenInternalResponse> RefreshRuntimeTokenInternalAsync(string name, string vmId, gaxgrpc::CallSettings callSettings = null) =>
+            RefreshRuntimeTokenInternalAsync(new RefreshRuntimeTokenInternalRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                VmId = gax::GaxPreconditions.CheckNotNullOrEmpty(vmId, nameof(vmId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an access token for the consumer service account that the customer
+        /// attached to the runtime. Only accessible from the tenant instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+        /// </param>
+        /// <param name="vmId">
+        /// Required. The VM hardware token for authenticating the VM.
+        /// https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RefreshRuntimeTokenInternalResponse> RefreshRuntimeTokenInternalAsync(string name, string vmId, st::CancellationToken cancellationToken) =>
+            RefreshRuntimeTokenInternalAsync(name, vmId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an access token for the consumer service account that the customer
+        /// attached to the runtime. Only accessible from the tenant instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+        /// </param>
+        /// <param name="vmId">
+        /// Required. The VM hardware token for authenticating the VM.
+        /// https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RefreshRuntimeTokenInternalResponse RefreshRuntimeTokenInternal(RuntimeName name, string vmId, gaxgrpc::CallSettings callSettings = null) =>
+            RefreshRuntimeTokenInternal(new RefreshRuntimeTokenInternalRequest
+            {
+                RuntimeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                VmId = gax::GaxPreconditions.CheckNotNullOrEmpty(vmId, nameof(vmId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an access token for the consumer service account that the customer
+        /// attached to the runtime. Only accessible from the tenant instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+        /// </param>
+        /// <param name="vmId">
+        /// Required. The VM hardware token for authenticating the VM.
+        /// https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RefreshRuntimeTokenInternalResponse> RefreshRuntimeTokenInternalAsync(RuntimeName name, string vmId, gaxgrpc::CallSettings callSettings = null) =>
+            RefreshRuntimeTokenInternalAsync(new RefreshRuntimeTokenInternalRequest
+            {
+                RuntimeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                VmId = gax::GaxPreconditions.CheckNotNullOrEmpty(vmId, nameof(vmId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an access token for the consumer service account that the customer
+        /// attached to the runtime. Only accessible from the tenant instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+        /// </param>
+        /// <param name="vmId">
+        /// Required. The VM hardware token for authenticating the VM.
+        /// https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RefreshRuntimeTokenInternalResponse> RefreshRuntimeTokenInternalAsync(RuntimeName name, string vmId, st::CancellationToken cancellationToken) =>
+            RefreshRuntimeTokenInternalAsync(name, vmId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ManagedNotebookService client wrapper implementation, for convenient use.</summary>
@@ -1625,6 +1773,8 @@ namespace Google.Cloud.Notebooks.V1
 
         private readonly gaxgrpc::ApiCall<ReportRuntimeEventRequest, lro::Operation> _callReportRuntimeEvent;
 
+        private readonly gaxgrpc::ApiCall<RefreshRuntimeTokenInternalRequest, RefreshRuntimeTokenInternalResponse> _callRefreshRuntimeTokenInternal;
+
         /// <summary>
         /// Constructs a client wrapper for the ManagedNotebookService service, with the specified gRPC client and
         /// settings.
@@ -1633,45 +1783,49 @@ namespace Google.Cloud.Notebooks.V1
         /// <param name="settings">
         /// The base <see cref="ManagedNotebookServiceSettings"/> used within this client.
         /// </param>
-        public ManagedNotebookServiceClientImpl(ManagedNotebookService.ManagedNotebookServiceClient grpcClient, ManagedNotebookServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ManagedNotebookServiceClientImpl(ManagedNotebookService.ManagedNotebookServiceClient grpcClient, ManagedNotebookServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ManagedNotebookServiceSettings effectiveSettings = settings ?? ManagedNotebookServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRuntimeOperationsSettings);
-            DeleteRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRuntimeOperationsSettings);
-            StartRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartRuntimeOperationsSettings);
-            StopRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StopRuntimeOperationsSettings);
-            SwitchRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SwitchRuntimeOperationsSettings);
-            ResetRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ResetRuntimeOperationsSettings);
-            ReportRuntimeEventOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReportRuntimeEventOperationsSettings);
-            _callListRuntimes = clientHelper.BuildApiCall<ListRuntimesRequest, ListRuntimesResponse>(grpcClient.ListRuntimesAsync, grpcClient.ListRuntimes, effectiveSettings.ListRuntimesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRuntimeOperationsSettings, logger);
+            DeleteRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRuntimeOperationsSettings, logger);
+            StartRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartRuntimeOperationsSettings, logger);
+            StopRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StopRuntimeOperationsSettings, logger);
+            SwitchRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SwitchRuntimeOperationsSettings, logger);
+            ResetRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ResetRuntimeOperationsSettings, logger);
+            ReportRuntimeEventOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReportRuntimeEventOperationsSettings, logger);
+            _callListRuntimes = clientHelper.BuildApiCall<ListRuntimesRequest, ListRuntimesResponse>("ListRuntimes", grpcClient.ListRuntimesAsync, grpcClient.ListRuntimes, effectiveSettings.ListRuntimesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListRuntimes);
             Modify_ListRuntimesApiCall(ref _callListRuntimes);
-            _callGetRuntime = clientHelper.BuildApiCall<GetRuntimeRequest, Runtime>(grpcClient.GetRuntimeAsync, grpcClient.GetRuntime, effectiveSettings.GetRuntimeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetRuntime = clientHelper.BuildApiCall<GetRuntimeRequest, Runtime>("GetRuntime", grpcClient.GetRuntimeAsync, grpcClient.GetRuntime, effectiveSettings.GetRuntimeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetRuntime);
             Modify_GetRuntimeApiCall(ref _callGetRuntime);
-            _callCreateRuntime = clientHelper.BuildApiCall<CreateRuntimeRequest, lro::Operation>(grpcClient.CreateRuntimeAsync, grpcClient.CreateRuntime, effectiveSettings.CreateRuntimeSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateRuntime = clientHelper.BuildApiCall<CreateRuntimeRequest, lro::Operation>("CreateRuntime", grpcClient.CreateRuntimeAsync, grpcClient.CreateRuntime, effectiveSettings.CreateRuntimeSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateRuntime);
             Modify_CreateRuntimeApiCall(ref _callCreateRuntime);
-            _callDeleteRuntime = clientHelper.BuildApiCall<DeleteRuntimeRequest, lro::Operation>(grpcClient.DeleteRuntimeAsync, grpcClient.DeleteRuntime, effectiveSettings.DeleteRuntimeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteRuntime = clientHelper.BuildApiCall<DeleteRuntimeRequest, lro::Operation>("DeleteRuntime", grpcClient.DeleteRuntimeAsync, grpcClient.DeleteRuntime, effectiveSettings.DeleteRuntimeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteRuntime);
             Modify_DeleteRuntimeApiCall(ref _callDeleteRuntime);
-            _callStartRuntime = clientHelper.BuildApiCall<StartRuntimeRequest, lro::Operation>(grpcClient.StartRuntimeAsync, grpcClient.StartRuntime, effectiveSettings.StartRuntimeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callStartRuntime = clientHelper.BuildApiCall<StartRuntimeRequest, lro::Operation>("StartRuntime", grpcClient.StartRuntimeAsync, grpcClient.StartRuntime, effectiveSettings.StartRuntimeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callStartRuntime);
             Modify_StartRuntimeApiCall(ref _callStartRuntime);
-            _callStopRuntime = clientHelper.BuildApiCall<StopRuntimeRequest, lro::Operation>(grpcClient.StopRuntimeAsync, grpcClient.StopRuntime, effectiveSettings.StopRuntimeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callStopRuntime = clientHelper.BuildApiCall<StopRuntimeRequest, lro::Operation>("StopRuntime", grpcClient.StopRuntimeAsync, grpcClient.StopRuntime, effectiveSettings.StopRuntimeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callStopRuntime);
             Modify_StopRuntimeApiCall(ref _callStopRuntime);
-            _callSwitchRuntime = clientHelper.BuildApiCall<SwitchRuntimeRequest, lro::Operation>(grpcClient.SwitchRuntimeAsync, grpcClient.SwitchRuntime, effectiveSettings.SwitchRuntimeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callSwitchRuntime = clientHelper.BuildApiCall<SwitchRuntimeRequest, lro::Operation>("SwitchRuntime", grpcClient.SwitchRuntimeAsync, grpcClient.SwitchRuntime, effectiveSettings.SwitchRuntimeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callSwitchRuntime);
             Modify_SwitchRuntimeApiCall(ref _callSwitchRuntime);
-            _callResetRuntime = clientHelper.BuildApiCall<ResetRuntimeRequest, lro::Operation>(grpcClient.ResetRuntimeAsync, grpcClient.ResetRuntime, effectiveSettings.ResetRuntimeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callResetRuntime = clientHelper.BuildApiCall<ResetRuntimeRequest, lro::Operation>("ResetRuntime", grpcClient.ResetRuntimeAsync, grpcClient.ResetRuntime, effectiveSettings.ResetRuntimeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callResetRuntime);
             Modify_ResetRuntimeApiCall(ref _callResetRuntime);
-            _callReportRuntimeEvent = clientHelper.BuildApiCall<ReportRuntimeEventRequest, lro::Operation>(grpcClient.ReportRuntimeEventAsync, grpcClient.ReportRuntimeEvent, effectiveSettings.ReportRuntimeEventSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callReportRuntimeEvent = clientHelper.BuildApiCall<ReportRuntimeEventRequest, lro::Operation>("ReportRuntimeEvent", grpcClient.ReportRuntimeEventAsync, grpcClient.ReportRuntimeEvent, effectiveSettings.ReportRuntimeEventSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callReportRuntimeEvent);
             Modify_ReportRuntimeEventApiCall(ref _callReportRuntimeEvent);
+            _callRefreshRuntimeTokenInternal = clientHelper.BuildApiCall<RefreshRuntimeTokenInternalRequest, RefreshRuntimeTokenInternalResponse>("RefreshRuntimeTokenInternal", grpcClient.RefreshRuntimeTokenInternalAsync, grpcClient.RefreshRuntimeTokenInternal, effectiveSettings.RefreshRuntimeTokenInternalSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRefreshRuntimeTokenInternal);
+            Modify_RefreshRuntimeTokenInternalApiCall(ref _callRefreshRuntimeTokenInternal);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1695,6 +1849,8 @@ namespace Google.Cloud.Notebooks.V1
 
         partial void Modify_ReportRuntimeEventApiCall(ref gaxgrpc::ApiCall<ReportRuntimeEventRequest, lro::Operation> call);
 
+        partial void Modify_RefreshRuntimeTokenInternalApiCall(ref gaxgrpc::ApiCall<RefreshRuntimeTokenInternalRequest, RefreshRuntimeTokenInternalResponse> call);
+
         partial void OnConstruction(ManagedNotebookService.ManagedNotebookServiceClient grpcClient, ManagedNotebookServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ManagedNotebookService client</summary>
@@ -1717,6 +1873,8 @@ namespace Google.Cloud.Notebooks.V1
         partial void Modify_ResetRuntimeRequest(ref ResetRuntimeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ReportRuntimeEventRequest(ref ReportRuntimeEventRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RefreshRuntimeTokenInternalRequest(ref RefreshRuntimeTokenInternalRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Runtimes in a given project and location.
@@ -1971,6 +2129,32 @@ namespace Google.Cloud.Notebooks.V1
         {
             Modify_ReportRuntimeEventRequest(ref request, ref callSettings);
             return new lro::Operation<Runtime, OperationMetadata>(await _callReportRuntimeEvent.Async(request, callSettings).ConfigureAwait(false), ReportRuntimeEventOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets an access token for the consumer service account that the customer
+        /// attached to the runtime. Only accessible from the tenant instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RefreshRuntimeTokenInternalResponse RefreshRuntimeTokenInternal(RefreshRuntimeTokenInternalRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RefreshRuntimeTokenInternalRequest(ref request, ref callSettings);
+            return _callRefreshRuntimeTokenInternal.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an access token for the consumer service account that the customer
+        /// attached to the runtime. Only accessible from the tenant instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RefreshRuntimeTokenInternalResponse> RefreshRuntimeTokenInternalAsync(RefreshRuntimeTokenInternalRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RefreshRuntimeTokenInternalRequest(ref request, ref callSettings);
+            return _callRefreshRuntimeTokenInternal.Async(request, callSettings);
         }
     }
 

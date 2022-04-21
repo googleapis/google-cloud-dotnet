@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -687,9 +687,8 @@ namespace Google.Cloud.Dlp.V2
         public DlpServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public DlpServiceClientBuilder()
+        public DlpServiceClientBuilder() : base(DlpServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = DlpServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref DlpServiceClient client);
@@ -716,29 +715,18 @@ namespace Google.Cloud.Dlp.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return DlpServiceClient.Create(callInvoker, Settings);
+            return DlpServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<DlpServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return DlpServiceClient.Create(callInvoker, Settings);
+            return DlpServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => DlpServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => DlpServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => DlpServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>DlpService client wrapper, for convenient use.</summary>
@@ -772,19 +760,10 @@ namespace Google.Cloud.Dlp.V2
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(DlpService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="DlpServiceClient"/> using the default credentials, endpoint and
@@ -811,8 +790,9 @@ namespace Google.Cloud.Dlp.V2
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="DlpServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="DlpServiceClient"/>.</returns>
-        internal static DlpServiceClient Create(grpccore::CallInvoker callInvoker, DlpServiceSettings settings = null)
+        internal static DlpServiceClient Create(grpccore::CallInvoker callInvoker, DlpServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -821,7 +801,7 @@ namespace Google.Cloud.Dlp.V2
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             DlpService.DlpServiceClient grpcClient = new DlpService.DlpServiceClient(callInvoker);
-            return new DlpServiceClientImpl(grpcClient, settings);
+            return new DlpServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -8373,111 +8353,112 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="DlpServiceSettings"/> used within this client.</param>
-        public DlpServiceClientImpl(DlpService.DlpServiceClient grpcClient, DlpServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public DlpServiceClientImpl(DlpService.DlpServiceClient grpcClient, DlpServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             DlpServiceSettings effectiveSettings = settings ?? DlpServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callInspectContent = clientHelper.BuildApiCall<InspectContentRequest, InspectContentResponse>(grpcClient.InspectContentAsync, grpcClient.InspectContent, effectiveSettings.InspectContentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callInspectContent = clientHelper.BuildApiCall<InspectContentRequest, InspectContentResponse>("InspectContent", grpcClient.InspectContentAsync, grpcClient.InspectContent, effectiveSettings.InspectContentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callInspectContent);
             Modify_InspectContentApiCall(ref _callInspectContent);
-            _callRedactImage = clientHelper.BuildApiCall<RedactImageRequest, RedactImageResponse>(grpcClient.RedactImageAsync, grpcClient.RedactImage, effectiveSettings.RedactImageSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callRedactImage = clientHelper.BuildApiCall<RedactImageRequest, RedactImageResponse>("RedactImage", grpcClient.RedactImageAsync, grpcClient.RedactImage, effectiveSettings.RedactImageSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callRedactImage);
             Modify_RedactImageApiCall(ref _callRedactImage);
-            _callDeidentifyContent = clientHelper.BuildApiCall<DeidentifyContentRequest, DeidentifyContentResponse>(grpcClient.DeidentifyContentAsync, grpcClient.DeidentifyContent, effectiveSettings.DeidentifyContentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callDeidentifyContent = clientHelper.BuildApiCall<DeidentifyContentRequest, DeidentifyContentResponse>("DeidentifyContent", grpcClient.DeidentifyContentAsync, grpcClient.DeidentifyContent, effectiveSettings.DeidentifyContentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callDeidentifyContent);
             Modify_DeidentifyContentApiCall(ref _callDeidentifyContent);
-            _callReidentifyContent = clientHelper.BuildApiCall<ReidentifyContentRequest, ReidentifyContentResponse>(grpcClient.ReidentifyContentAsync, grpcClient.ReidentifyContent, effectiveSettings.ReidentifyContentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callReidentifyContent = clientHelper.BuildApiCall<ReidentifyContentRequest, ReidentifyContentResponse>("ReidentifyContent", grpcClient.ReidentifyContentAsync, grpcClient.ReidentifyContent, effectiveSettings.ReidentifyContentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callReidentifyContent);
             Modify_ReidentifyContentApiCall(ref _callReidentifyContent);
-            _callListInfoTypes = clientHelper.BuildApiCall<ListInfoTypesRequest, ListInfoTypesResponse>(grpcClient.ListInfoTypesAsync, grpcClient.ListInfoTypes, effectiveSettings.ListInfoTypesSettings);
+            _callListInfoTypes = clientHelper.BuildApiCall<ListInfoTypesRequest, ListInfoTypesResponse>("ListInfoTypes", grpcClient.ListInfoTypesAsync, grpcClient.ListInfoTypes, effectiveSettings.ListInfoTypesSettings);
             Modify_ApiCall(ref _callListInfoTypes);
             Modify_ListInfoTypesApiCall(ref _callListInfoTypes);
-            _callCreateInspectTemplate = clientHelper.BuildApiCall<CreateInspectTemplateRequest, InspectTemplate>(grpcClient.CreateInspectTemplateAsync, grpcClient.CreateInspectTemplate, effectiveSettings.CreateInspectTemplateSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateInspectTemplate = clientHelper.BuildApiCall<CreateInspectTemplateRequest, InspectTemplate>("CreateInspectTemplate", grpcClient.CreateInspectTemplateAsync, grpcClient.CreateInspectTemplate, effectiveSettings.CreateInspectTemplateSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateInspectTemplate);
             Modify_CreateInspectTemplateApiCall(ref _callCreateInspectTemplate);
-            _callUpdateInspectTemplate = clientHelper.BuildApiCall<UpdateInspectTemplateRequest, InspectTemplate>(grpcClient.UpdateInspectTemplateAsync, grpcClient.UpdateInspectTemplate, effectiveSettings.UpdateInspectTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateInspectTemplate = clientHelper.BuildApiCall<UpdateInspectTemplateRequest, InspectTemplate>("UpdateInspectTemplate", grpcClient.UpdateInspectTemplateAsync, grpcClient.UpdateInspectTemplate, effectiveSettings.UpdateInspectTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateInspectTemplate);
             Modify_UpdateInspectTemplateApiCall(ref _callUpdateInspectTemplate);
-            _callGetInspectTemplate = clientHelper.BuildApiCall<GetInspectTemplateRequest, InspectTemplate>(grpcClient.GetInspectTemplateAsync, grpcClient.GetInspectTemplate, effectiveSettings.GetInspectTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetInspectTemplate = clientHelper.BuildApiCall<GetInspectTemplateRequest, InspectTemplate>("GetInspectTemplate", grpcClient.GetInspectTemplateAsync, grpcClient.GetInspectTemplate, effectiveSettings.GetInspectTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetInspectTemplate);
             Modify_GetInspectTemplateApiCall(ref _callGetInspectTemplate);
-            _callListInspectTemplates = clientHelper.BuildApiCall<ListInspectTemplatesRequest, ListInspectTemplatesResponse>(grpcClient.ListInspectTemplatesAsync, grpcClient.ListInspectTemplates, effectiveSettings.ListInspectTemplatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListInspectTemplates = clientHelper.BuildApiCall<ListInspectTemplatesRequest, ListInspectTemplatesResponse>("ListInspectTemplates", grpcClient.ListInspectTemplatesAsync, grpcClient.ListInspectTemplates, effectiveSettings.ListInspectTemplatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInspectTemplates);
             Modify_ListInspectTemplatesApiCall(ref _callListInspectTemplates);
-            _callDeleteInspectTemplate = clientHelper.BuildApiCall<DeleteInspectTemplateRequest, wkt::Empty>(grpcClient.DeleteInspectTemplateAsync, grpcClient.DeleteInspectTemplate, effectiveSettings.DeleteInspectTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteInspectTemplate = clientHelper.BuildApiCall<DeleteInspectTemplateRequest, wkt::Empty>("DeleteInspectTemplate", grpcClient.DeleteInspectTemplateAsync, grpcClient.DeleteInspectTemplate, effectiveSettings.DeleteInspectTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteInspectTemplate);
             Modify_DeleteInspectTemplateApiCall(ref _callDeleteInspectTemplate);
-            _callCreateDeidentifyTemplate = clientHelper.BuildApiCall<CreateDeidentifyTemplateRequest, DeidentifyTemplate>(grpcClient.CreateDeidentifyTemplateAsync, grpcClient.CreateDeidentifyTemplate, effectiveSettings.CreateDeidentifyTemplateSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateDeidentifyTemplate = clientHelper.BuildApiCall<CreateDeidentifyTemplateRequest, DeidentifyTemplate>("CreateDeidentifyTemplate", grpcClient.CreateDeidentifyTemplateAsync, grpcClient.CreateDeidentifyTemplate, effectiveSettings.CreateDeidentifyTemplateSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDeidentifyTemplate);
             Modify_CreateDeidentifyTemplateApiCall(ref _callCreateDeidentifyTemplate);
-            _callUpdateDeidentifyTemplate = clientHelper.BuildApiCall<UpdateDeidentifyTemplateRequest, DeidentifyTemplate>(grpcClient.UpdateDeidentifyTemplateAsync, grpcClient.UpdateDeidentifyTemplate, effectiveSettings.UpdateDeidentifyTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateDeidentifyTemplate = clientHelper.BuildApiCall<UpdateDeidentifyTemplateRequest, DeidentifyTemplate>("UpdateDeidentifyTemplate", grpcClient.UpdateDeidentifyTemplateAsync, grpcClient.UpdateDeidentifyTemplate, effectiveSettings.UpdateDeidentifyTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateDeidentifyTemplate);
             Modify_UpdateDeidentifyTemplateApiCall(ref _callUpdateDeidentifyTemplate);
-            _callGetDeidentifyTemplate = clientHelper.BuildApiCall<GetDeidentifyTemplateRequest, DeidentifyTemplate>(grpcClient.GetDeidentifyTemplateAsync, grpcClient.GetDeidentifyTemplate, effectiveSettings.GetDeidentifyTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetDeidentifyTemplate = clientHelper.BuildApiCall<GetDeidentifyTemplateRequest, DeidentifyTemplate>("GetDeidentifyTemplate", grpcClient.GetDeidentifyTemplateAsync, grpcClient.GetDeidentifyTemplate, effectiveSettings.GetDeidentifyTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDeidentifyTemplate);
             Modify_GetDeidentifyTemplateApiCall(ref _callGetDeidentifyTemplate);
-            _callListDeidentifyTemplates = clientHelper.BuildApiCall<ListDeidentifyTemplatesRequest, ListDeidentifyTemplatesResponse>(grpcClient.ListDeidentifyTemplatesAsync, grpcClient.ListDeidentifyTemplates, effectiveSettings.ListDeidentifyTemplatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListDeidentifyTemplates = clientHelper.BuildApiCall<ListDeidentifyTemplatesRequest, ListDeidentifyTemplatesResponse>("ListDeidentifyTemplates", grpcClient.ListDeidentifyTemplatesAsync, grpcClient.ListDeidentifyTemplates, effectiveSettings.ListDeidentifyTemplatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDeidentifyTemplates);
             Modify_ListDeidentifyTemplatesApiCall(ref _callListDeidentifyTemplates);
-            _callDeleteDeidentifyTemplate = clientHelper.BuildApiCall<DeleteDeidentifyTemplateRequest, wkt::Empty>(grpcClient.DeleteDeidentifyTemplateAsync, grpcClient.DeleteDeidentifyTemplate, effectiveSettings.DeleteDeidentifyTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteDeidentifyTemplate = clientHelper.BuildApiCall<DeleteDeidentifyTemplateRequest, wkt::Empty>("DeleteDeidentifyTemplate", grpcClient.DeleteDeidentifyTemplateAsync, grpcClient.DeleteDeidentifyTemplate, effectiveSettings.DeleteDeidentifyTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDeidentifyTemplate);
             Modify_DeleteDeidentifyTemplateApiCall(ref _callDeleteDeidentifyTemplate);
-            _callCreateJobTrigger = clientHelper.BuildApiCall<CreateJobTriggerRequest, JobTrigger>(grpcClient.CreateJobTriggerAsync, grpcClient.CreateJobTrigger, effectiveSettings.CreateJobTriggerSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateJobTrigger = clientHelper.BuildApiCall<CreateJobTriggerRequest, JobTrigger>("CreateJobTrigger", grpcClient.CreateJobTriggerAsync, grpcClient.CreateJobTrigger, effectiveSettings.CreateJobTriggerSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateJobTrigger);
             Modify_CreateJobTriggerApiCall(ref _callCreateJobTrigger);
-            _callUpdateJobTrigger = clientHelper.BuildApiCall<UpdateJobTriggerRequest, JobTrigger>(grpcClient.UpdateJobTriggerAsync, grpcClient.UpdateJobTrigger, effectiveSettings.UpdateJobTriggerSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateJobTrigger = clientHelper.BuildApiCall<UpdateJobTriggerRequest, JobTrigger>("UpdateJobTrigger", grpcClient.UpdateJobTriggerAsync, grpcClient.UpdateJobTrigger, effectiveSettings.UpdateJobTriggerSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateJobTrigger);
             Modify_UpdateJobTriggerApiCall(ref _callUpdateJobTrigger);
-            _callHybridInspectJobTrigger = clientHelper.BuildApiCall<HybridInspectJobTriggerRequest, HybridInspectResponse>(grpcClient.HybridInspectJobTriggerAsync, grpcClient.HybridInspectJobTrigger, effectiveSettings.HybridInspectJobTriggerSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callHybridInspectJobTrigger = clientHelper.BuildApiCall<HybridInspectJobTriggerRequest, HybridInspectResponse>("HybridInspectJobTrigger", grpcClient.HybridInspectJobTriggerAsync, grpcClient.HybridInspectJobTrigger, effectiveSettings.HybridInspectJobTriggerSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callHybridInspectJobTrigger);
             Modify_HybridInspectJobTriggerApiCall(ref _callHybridInspectJobTrigger);
-            _callGetJobTrigger = clientHelper.BuildApiCall<GetJobTriggerRequest, JobTrigger>(grpcClient.GetJobTriggerAsync, grpcClient.GetJobTrigger, effectiveSettings.GetJobTriggerSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetJobTrigger = clientHelper.BuildApiCall<GetJobTriggerRequest, JobTrigger>("GetJobTrigger", grpcClient.GetJobTriggerAsync, grpcClient.GetJobTrigger, effectiveSettings.GetJobTriggerSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetJobTrigger);
             Modify_GetJobTriggerApiCall(ref _callGetJobTrigger);
-            _callListJobTriggers = clientHelper.BuildApiCall<ListJobTriggersRequest, ListJobTriggersResponse>(grpcClient.ListJobTriggersAsync, grpcClient.ListJobTriggers, effectiveSettings.ListJobTriggersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListJobTriggers = clientHelper.BuildApiCall<ListJobTriggersRequest, ListJobTriggersResponse>("ListJobTriggers", grpcClient.ListJobTriggersAsync, grpcClient.ListJobTriggers, effectiveSettings.ListJobTriggersSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListJobTriggers);
             Modify_ListJobTriggersApiCall(ref _callListJobTriggers);
-            _callDeleteJobTrigger = clientHelper.BuildApiCall<DeleteJobTriggerRequest, wkt::Empty>(grpcClient.DeleteJobTriggerAsync, grpcClient.DeleteJobTrigger, effectiveSettings.DeleteJobTriggerSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteJobTrigger = clientHelper.BuildApiCall<DeleteJobTriggerRequest, wkt::Empty>("DeleteJobTrigger", grpcClient.DeleteJobTriggerAsync, grpcClient.DeleteJobTrigger, effectiveSettings.DeleteJobTriggerSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteJobTrigger);
             Modify_DeleteJobTriggerApiCall(ref _callDeleteJobTrigger);
-            _callActivateJobTrigger = clientHelper.BuildApiCall<ActivateJobTriggerRequest, DlpJob>(grpcClient.ActivateJobTriggerAsync, grpcClient.ActivateJobTrigger, effectiveSettings.ActivateJobTriggerSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callActivateJobTrigger = clientHelper.BuildApiCall<ActivateJobTriggerRequest, DlpJob>("ActivateJobTrigger", grpcClient.ActivateJobTriggerAsync, grpcClient.ActivateJobTrigger, effectiveSettings.ActivateJobTriggerSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callActivateJobTrigger);
             Modify_ActivateJobTriggerApiCall(ref _callActivateJobTrigger);
-            _callCreateDlpJob = clientHelper.BuildApiCall<CreateDlpJobRequest, DlpJob>(grpcClient.CreateDlpJobAsync, grpcClient.CreateDlpJob, effectiveSettings.CreateDlpJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateDlpJob = clientHelper.BuildApiCall<CreateDlpJobRequest, DlpJob>("CreateDlpJob", grpcClient.CreateDlpJobAsync, grpcClient.CreateDlpJob, effectiveSettings.CreateDlpJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDlpJob);
             Modify_CreateDlpJobApiCall(ref _callCreateDlpJob);
-            _callListDlpJobs = clientHelper.BuildApiCall<ListDlpJobsRequest, ListDlpJobsResponse>(grpcClient.ListDlpJobsAsync, grpcClient.ListDlpJobs, effectiveSettings.ListDlpJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListDlpJobs = clientHelper.BuildApiCall<ListDlpJobsRequest, ListDlpJobsResponse>("ListDlpJobs", grpcClient.ListDlpJobsAsync, grpcClient.ListDlpJobs, effectiveSettings.ListDlpJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDlpJobs);
             Modify_ListDlpJobsApiCall(ref _callListDlpJobs);
-            _callGetDlpJob = clientHelper.BuildApiCall<GetDlpJobRequest, DlpJob>(grpcClient.GetDlpJobAsync, grpcClient.GetDlpJob, effectiveSettings.GetDlpJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetDlpJob = clientHelper.BuildApiCall<GetDlpJobRequest, DlpJob>("GetDlpJob", grpcClient.GetDlpJobAsync, grpcClient.GetDlpJob, effectiveSettings.GetDlpJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDlpJob);
             Modify_GetDlpJobApiCall(ref _callGetDlpJob);
-            _callDeleteDlpJob = clientHelper.BuildApiCall<DeleteDlpJobRequest, wkt::Empty>(grpcClient.DeleteDlpJobAsync, grpcClient.DeleteDlpJob, effectiveSettings.DeleteDlpJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteDlpJob = clientHelper.BuildApiCall<DeleteDlpJobRequest, wkt::Empty>("DeleteDlpJob", grpcClient.DeleteDlpJobAsync, grpcClient.DeleteDlpJob, effectiveSettings.DeleteDlpJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDlpJob);
             Modify_DeleteDlpJobApiCall(ref _callDeleteDlpJob);
-            _callCancelDlpJob = clientHelper.BuildApiCall<CancelDlpJobRequest, wkt::Empty>(grpcClient.CancelDlpJobAsync, grpcClient.CancelDlpJob, effectiveSettings.CancelDlpJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCancelDlpJob = clientHelper.BuildApiCall<CancelDlpJobRequest, wkt::Empty>("CancelDlpJob", grpcClient.CancelDlpJobAsync, grpcClient.CancelDlpJob, effectiveSettings.CancelDlpJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCancelDlpJob);
             Modify_CancelDlpJobApiCall(ref _callCancelDlpJob);
-            _callCreateStoredInfoType = clientHelper.BuildApiCall<CreateStoredInfoTypeRequest, StoredInfoType>(grpcClient.CreateStoredInfoTypeAsync, grpcClient.CreateStoredInfoType, effectiveSettings.CreateStoredInfoTypeSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateStoredInfoType = clientHelper.BuildApiCall<CreateStoredInfoTypeRequest, StoredInfoType>("CreateStoredInfoType", grpcClient.CreateStoredInfoTypeAsync, grpcClient.CreateStoredInfoType, effectiveSettings.CreateStoredInfoTypeSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateStoredInfoType);
             Modify_CreateStoredInfoTypeApiCall(ref _callCreateStoredInfoType);
-            _callUpdateStoredInfoType = clientHelper.BuildApiCall<UpdateStoredInfoTypeRequest, StoredInfoType>(grpcClient.UpdateStoredInfoTypeAsync, grpcClient.UpdateStoredInfoType, effectiveSettings.UpdateStoredInfoTypeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateStoredInfoType = clientHelper.BuildApiCall<UpdateStoredInfoTypeRequest, StoredInfoType>("UpdateStoredInfoType", grpcClient.UpdateStoredInfoTypeAsync, grpcClient.UpdateStoredInfoType, effectiveSettings.UpdateStoredInfoTypeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateStoredInfoType);
             Modify_UpdateStoredInfoTypeApiCall(ref _callUpdateStoredInfoType);
-            _callGetStoredInfoType = clientHelper.BuildApiCall<GetStoredInfoTypeRequest, StoredInfoType>(grpcClient.GetStoredInfoTypeAsync, grpcClient.GetStoredInfoType, effectiveSettings.GetStoredInfoTypeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetStoredInfoType = clientHelper.BuildApiCall<GetStoredInfoTypeRequest, StoredInfoType>("GetStoredInfoType", grpcClient.GetStoredInfoTypeAsync, grpcClient.GetStoredInfoType, effectiveSettings.GetStoredInfoTypeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetStoredInfoType);
             Modify_GetStoredInfoTypeApiCall(ref _callGetStoredInfoType);
-            _callListStoredInfoTypes = clientHelper.BuildApiCall<ListStoredInfoTypesRequest, ListStoredInfoTypesResponse>(grpcClient.ListStoredInfoTypesAsync, grpcClient.ListStoredInfoTypes, effectiveSettings.ListStoredInfoTypesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListStoredInfoTypes = clientHelper.BuildApiCall<ListStoredInfoTypesRequest, ListStoredInfoTypesResponse>("ListStoredInfoTypes", grpcClient.ListStoredInfoTypesAsync, grpcClient.ListStoredInfoTypes, effectiveSettings.ListStoredInfoTypesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListStoredInfoTypes);
             Modify_ListStoredInfoTypesApiCall(ref _callListStoredInfoTypes);
-            _callDeleteStoredInfoType = clientHelper.BuildApiCall<DeleteStoredInfoTypeRequest, wkt::Empty>(grpcClient.DeleteStoredInfoTypeAsync, grpcClient.DeleteStoredInfoType, effectiveSettings.DeleteStoredInfoTypeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteStoredInfoType = clientHelper.BuildApiCall<DeleteStoredInfoTypeRequest, wkt::Empty>("DeleteStoredInfoType", grpcClient.DeleteStoredInfoTypeAsync, grpcClient.DeleteStoredInfoType, effectiveSettings.DeleteStoredInfoTypeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteStoredInfoType);
             Modify_DeleteStoredInfoTypeApiCall(ref _callDeleteStoredInfoType);
-            _callHybridInspectDlpJob = clientHelper.BuildApiCall<HybridInspectDlpJobRequest, HybridInspectResponse>(grpcClient.HybridInspectDlpJobAsync, grpcClient.HybridInspectDlpJob, effectiveSettings.HybridInspectDlpJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callHybridInspectDlpJob = clientHelper.BuildApiCall<HybridInspectDlpJobRequest, HybridInspectResponse>("HybridInspectDlpJob", grpcClient.HybridInspectDlpJobAsync, grpcClient.HybridInspectDlpJob, effectiveSettings.HybridInspectDlpJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callHybridInspectDlpJob);
             Modify_HybridInspectDlpJobApiCall(ref _callHybridInspectDlpJob);
-            _callFinishDlpJob = clientHelper.BuildApiCall<FinishDlpJobRequest, wkt::Empty>(grpcClient.FinishDlpJobAsync, grpcClient.FinishDlpJob, effectiveSettings.FinishDlpJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callFinishDlpJob = clientHelper.BuildApiCall<FinishDlpJobRequest, wkt::Empty>("FinishDlpJob", grpcClient.FinishDlpJobAsync, grpcClient.FinishDlpJob, effectiveSettings.FinishDlpJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callFinishDlpJob);
             Modify_FinishDlpJobApiCall(ref _callFinishDlpJob);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
