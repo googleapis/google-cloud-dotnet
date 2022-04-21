@@ -20,13 +20,12 @@ using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
 using Grpc.Core;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Common;
 using System.Threading;
 using System.Threading.Tasks;
-
+using static Google.Cloud.Spanner.V1.TransactionOptions.Types;
 using Transaction = System.Transactions.Transaction;
 
 namespace Google.Cloud.Spanner.Data
@@ -48,8 +47,9 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     public sealed class SpannerConnection : DbConnection
     {
-        // Read/write transaction options; no additional state, so can be reused.
-        internal static readonly TransactionOptions s_readWriteTransactionOptions = new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() };
+        // Transaction options; no additional state, so can be reused.
+        internal static readonly TransactionOptions s_readWriteTransactionOptions = new TransactionOptions { ReadWrite = new ReadWrite() };
+        internal static readonly TransactionOptions s_partitionedDmlTransactionOptions = new TransactionOptions { PartitionedDml = new PartitionedDml() };
 
         private readonly object _sync = new object();
 
