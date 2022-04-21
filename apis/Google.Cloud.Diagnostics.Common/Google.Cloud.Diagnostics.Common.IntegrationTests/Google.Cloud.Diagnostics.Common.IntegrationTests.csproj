@@ -8,9 +8,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <DebugSymbols>true</DebugSymbols>
-    <Optimize Condition="'$(TargetFramework)' == 'net461'">false</Optimize>
-    <DebugType Condition="'$(TargetFramework)' == 'net461'">pdbonly</DebugType>
-    <DebugType Condition="'$(TargetFramework)' == 'netcoreapp2.1' or '$(TargetFramework)' == 'netcoreapp3.1'">portable</DebugType>
+    <Optimize Condition="'$(TargetFramework)' == 'net462'">false</Optimize>
+    <DebugType Condition="'$(TargetFramework)' == 'net462'">pdbonly</DebugType>
+    <DebugType Condition="'$(TargetFramework)' == 'netcoreapp3.1' or '$(TargetFramework)' == 'net6.0'">portable</DebugType>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Google.Api.Gax.Testing" Version="[3.7.0, 4.0.0)" />
@@ -27,10 +27,10 @@
     <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'net461' or '$(TargetFramework)' == 'netcoreapp2.1'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'net462'">
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="2.1.1" />
   </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1' or '$(TargetFramework)' == 'net6.0'">
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.22" />
   </ItemGroup>
 </Project>
