@@ -33,7 +33,11 @@ namespace Google.Cloud.Channel.V1.Snippets
             // Create client
             CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
             // Initialize request argument(s)
-            ListCustomersRequest request = new ListCustomersRequest { Parent = "", };
+            ListCustomersRequest request = new ListCustomersRequest
+            {
+                Parent = "",
+                Filter = "",
+            };
             // Make the request
             PagedEnumerable<ListCustomersResponse, Customer> response = cloudChannelServiceClient.ListCustomers(request);
 

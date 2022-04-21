@@ -33,7 +33,11 @@ namespace Google.Cloud.Channel.V1.Snippets
             // Create client
             CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
             // Initialize request argument(s)
-            ListCustomersRequest request = new ListCustomersRequest { Parent = "", };
+            ListCustomersRequest request = new ListCustomersRequest
+            {
+                Parent = "",
+                Filter = "",
+            };
             // Make the request
             PagedEnumerable<ListCustomersResponse, Customer> response = cloudChannelServiceClient.ListCustomers(request);
 
@@ -78,7 +82,11 @@ namespace Google.Cloud.Channel.V1.Snippets
             // Create client
             CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListCustomersRequest request = new ListCustomersRequest { Parent = "", };
+            ListCustomersRequest request = new ListCustomersRequest
+            {
+                Parent = "",
+                Filter = "",
+            };
             // Make the request
             PagedAsyncEnumerable<ListCustomersResponse, Customer> response = cloudChannelServiceClient.ListCustomersAsync(request);
 

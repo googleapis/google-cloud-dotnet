@@ -629,7 +629,7 @@ namespace Google.Cloud.Channel.V1 {
 
   /// <summary>
   /// Represents information which resellers will get as part of notification from
-  /// Cloud Pub/Sub.
+  /// Pub/Sub.
   /// </summary>
   public sealed partial class SubscriberEvent : pb::IMessage<SubscriberEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -686,7 +686,7 @@ namespace Google.Cloud.Channel.V1 {
     /// <summary>Field number for the "customer_event" field.</summary>
     public const int CustomerEventFieldNumber = 1;
     /// <summary>
-    /// Customer event send as part of Pub/Sub event to partners.
+    /// Customer event sent as part of Pub/Sub event to partners.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -701,7 +701,7 @@ namespace Google.Cloud.Channel.V1 {
     /// <summary>Field number for the "entitlement_event" field.</summary>
     public const int EntitlementEventFieldNumber = 2;
     /// <summary>
-    /// Entitlement event send as part of Pub/Sub event to partners.
+    /// Entitlement event sent as part of Pub/Sub event to partners.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
