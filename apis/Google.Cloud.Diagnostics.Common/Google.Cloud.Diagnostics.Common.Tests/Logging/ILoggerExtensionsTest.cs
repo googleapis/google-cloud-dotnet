@@ -188,9 +188,17 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
         public static Mock<ILogger> SetupLog(this Mock<ILogger> loggerMock, string expectedFinalMessage)
         {
+            // This is messy due to the type of the delegate passed as a formatter.
+            var invocationAction = new InvocationAction(invocation =>
+            {
+                var state = invocation.Arguments[2];
+                var formatter = (Delegate) invocation.Arguments[4];
+                var message = formatter.DynamicInvoke(invocation.Arguments[2], invocation.Arguments[3]);
+                Assert.Equal(expectedFinalMessage, message);
+            });
             loggerMock
-                .Setup(logger => logger.Log(It.IsAny<LogLevel>(), It.IsAny<EventId>(), It.IsAny<object>(), It.IsAny<Exception>(), It.IsAny<Func<object, Exception, string>>()))
-                .Callback<LogLevel, EventId, object, Exception, Func<object, Exception, string>>((level, eventId, state, exception, formatter) => Assert.Equal(expectedFinalMessage, formatter(state, exception)));
+                .Setup(logger => logger.Log(It.IsAny<LogLevel>(), It.IsAny<EventId>(), It.IsAny<It.IsAnyType>(), It.IsAny<Exception>(), It.IsAny<Func<It.IsAnyType, Exception, string>>()))
+                .Callback(invocationAction);
 
             return loggerMock;
         }
@@ -204,7 +212,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
         public static Mock<ILogger> VerifyLog(this Mock<ILogger> loggerMock, Times times)
         {
-            loggerMock.Verify(logger => logger.Log(It.IsAny<LogLevel>(), It.IsAny<EventId>(), It.IsAny<object>(), null, It.IsAny<Func<object, Exception, string>>()), times);
+            loggerMock.Verify(logger => logger.Log(It.IsAny<LogLevel>(), It.IsAny<EventId>(), It.IsAny<It.IsAnyType>(), null, It.IsAny<Func<It.IsAnyType, Exception, string>>()), times);
             return loggerMock;
         }
     }

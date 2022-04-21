@@ -29,8 +29,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void Library_OnlyCommonNamespace() =>
             CodeHealthTester.AssertOnlyAllowedNamespaces(
-                typeof(IConsumer<>), "Google.Cloud.Diagnostics.Common");
-        
+                typeof(IConsumer<>), "Google.Cloud.Diagnostics.Common", "System.Runtime.CompilerServices", "Microsoft.CodeAnalysis");
+
         [Fact]
         public void Library_NoComponentSpecificNamespaces() =>
             // Note: If this test fails, the other one in this file will fail as well
