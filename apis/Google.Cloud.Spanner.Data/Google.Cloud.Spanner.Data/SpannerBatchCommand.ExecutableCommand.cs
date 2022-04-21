@@ -20,7 +20,6 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Types;
-using static Google.Cloud.Spanner.V1.TransactionOptions.Types;
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -35,8 +34,6 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         private class ExecutableCommand
         {
-            private static readonly TransactionOptions s_readWriteOptions = new TransactionOptions { ReadWrite = new ReadWrite() };
-
             internal SpannerConnection Connection { get; }
             internal SpannerTransaction Transaction { get; }
             internal IList<SpannerCommand> Commands { get; }
@@ -83,7 +80,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
 
-                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, s_readWriteOptions, Priority);
+                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, Priority);
                 ExecuteBatchDmlRequest request = GetExecuteBatchDmlRequest();
                 IEnumerable<long> result = await transaction.ExecuteBatchDmlAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
                 return result.ToList().AsReadOnly();
