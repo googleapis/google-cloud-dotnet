@@ -18,17 +18,25 @@ jobs:
         submodules: true
         fetch-depth: 100
         
-    # We need just the .NET Core 2.1 runtime for testing    
+    # We need just the .NET Core 2.1 runtime for testing
+    # TODO: Remove this once we definitely don't have anything that
+    # needs .NET Core 2.1 any more
     - name: Setup .NET Core 2.1
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 2.1.x
 
-    # Install .NET Core 3.1 for building
+    # Install .NET Core 3.1 for testing
     - name: Setup .NET Core 3.1
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 3.1.x
+
+    # Install .NET 6 for building
+    - name: Setup .NET 6.0
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x
 
     # The GitHub checkout action leaves the repo in a slightly awkward
     # state. This tidies it up.
