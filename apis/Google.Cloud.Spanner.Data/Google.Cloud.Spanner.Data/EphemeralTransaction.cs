@@ -38,24 +38,17 @@ namespace Google.Cloud.Spanner.Data
 
         public Task<long> ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
-            return ExecuteHelper.WithErrorTranslationAndProfiling(Impl, "EphemeralTransaction.ExecuteDmlAsync", _connection.Logger);
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                () => _connection.RunWithRetriableTransactionAsync(Impl, cancellationToken), "EphemeralTransaction.ExecuteDmlAsync", _connection.Logger);
 
-            async Task<long> Impl()
+            async Task<long> Impl(SpannerTransaction transaction)
             {
-                using (var transaction = await _connection.BeginTransactionImplAsync(
-                    SpannerConnection.s_readWriteTransactionOptions, TransactionMode.ReadWrite, cancellationToken).ConfigureAwait(false))
-                {
-                    transaction.CommitTimeout = timeoutSeconds;
-                    transaction.CommitPriority = _commitPriority;
+                transaction.CommitTimeout = timeoutSeconds;
+                transaction.CommitPriority = _commitPriority;
 
-                    long count = await ((ISpannerTransaction)transaction)
-                        .ExecuteDmlAsync(request, cancellationToken, timeoutSeconds)
-                        .ConfigureAwait(false);
-
-                    await transaction.CommitAsync(cancellationToken).ConfigureAwait(false);
-
-                    return count;
-                }
+                return await ((ISpannerTransaction)transaction)
+                    .ExecuteDmlAsync(request, cancellationToken, timeoutSeconds)
+                    .ConfigureAwait(false);
             }
         }
 
@@ -71,6 +64,7 @@ namespace Google.Cloud.Spanner.Data
                 {
                     transaction.CommitTimeout = timeoutSeconds;
                     transaction.CommitPriority = _commitPriority;
+
                     while (true)
                     {
                         try
@@ -96,25 +90,17 @@ namespace Google.Cloud.Spanner.Data
 
         public Task<IEnumerable<long>> ExecuteBatchDmlAsync(ExecuteBatchDmlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
-            return ExecuteHelper.WithErrorTranslationAndProfiling(Impl, "EphemeralTransaction.ExecuteBatchDmlAsync", _connection.Logger);
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                () => _connection.RunWithRetriableTransactionAsync(Impl, cancellationToken), "EphemeralTransaction.ExecuteBatchDmlAsync", _connection.Logger);
 
-            async Task<IEnumerable<long>> Impl()
+            async Task<IEnumerable<long>> Impl(SpannerTransaction transaction)
             {
-                using (var transaction = await _connection.BeginTransactionImplAsync(SpannerConnection.s_readWriteTransactionOptions, TransactionMode.ReadWrite, cancellationToken).ConfigureAwait(false))
-                {
-                    transaction.CommitTimeout = timeoutSeconds;
-                    transaction.CommitPriority = _commitPriority;
+                transaction.CommitTimeout = timeoutSeconds;
+                transaction.CommitPriority = _commitPriority;
 
-                    IEnumerable<long> result;
-
-                    result = await ((ISpannerTransaction)transaction)
-                        .ExecuteBatchDmlAsync(request, cancellationToken, timeoutSeconds)
-                        .ConfigureAwait(false);
-
-                    await transaction.CommitAsync(cancellationToken).ConfigureAwait(false);
-
-                    return result;
-                }
+                return await ((ISpannerTransaction)transaction)
+                    .ExecuteBatchDmlAsync(request, cancellationToken, timeoutSeconds)
+                    .ConfigureAwait(false);
             }
         }
 
@@ -130,23 +116,20 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>The number of rows modified.</returns>
         public Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken, int timeoutSeconds)
         {
-            return ExecuteHelper.WithErrorTranslationAndProfiling(Impl, "EphemeralTransaction.ExecuteMutationsAsync", _connection.Logger);
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                () => _connection.RunWithRetriableTransactionAsync(Impl, cancellationToken), "EphemeralTransaction.ExecuteMutationsAsync", _connection.Logger);
 
-            async Task<int> Impl()
+            async Task<int> Impl(SpannerTransaction transaction)
             {
-                using (var transaction = await _connection.BeginTransactionImplAsync(SpannerConnection.s_readWriteTransactionOptions, TransactionMode.ReadWrite, cancellationToken).ConfigureAwait(false))
-                {
-                    // Importantly, we need to set timeout on the transaction, because
-                    // ExecuteMutations on SpannerTransaction doesnt actually hit the network
-                    // until you commit or rollback.
-                    transaction.CommitTimeout = timeoutSeconds;
-                    transaction.CommitPriority = _commitPriority;
-                    int count = await ((ISpannerTransaction)transaction)
-                        .ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds)
-                        .ConfigureAwait(false);
-                    await transaction.CommitAsync(cancellationToken).ConfigureAwait(false);
-                    return count;
-                }
+                // Importantly, we need to set timeout on the transaction, because
+                // ExecuteMutations on SpannerTransaction doesnt actually hit the network
+                // until you commit or rollback.
+                transaction.CommitTimeout = timeoutSeconds;
+                transaction.CommitPriority = _commitPriority;
+
+                return await ((ISpannerTransaction)transaction)
+                    .ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds)
+                    .ConfigureAwait(false);
             }
         }
 

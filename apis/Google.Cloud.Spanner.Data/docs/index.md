@@ -123,6 +123,18 @@ than once.
 Please read the [Cloud Spanner user documentation](https://cloud.google.com/spanner/docs/reference/rest/v1/TransactionOptions)
 for details on when and why transactions can be aborted.
 
+### Automatic retry of single commands
+
+When executing a single write command without specifying a transaction, an exclusive ephemeral transaction will be used 
+internally. If the transaction is aborted the command will be retried automatically. This means that, for executing
+single commands that don't need to share a transaction, you don't need to use a retriable transaction.
+
+{{sample:SpannerConnection.EphemeralRetry}}
+
+This applies to DML, Batch DML and direct row modifications. It does not apply to partioned DML commands as it is the
+Cloud Spanner service the one that handles the transaction lifecycle for partioned DML commands, which are already
+automatically retried on aborted.
+
 ### Using a commit timestamp
 
 Spanner allows you to write a commit timestamp for insert and update
