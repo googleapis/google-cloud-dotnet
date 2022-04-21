@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -173,9 +173,8 @@ namespace Google.Cloud.DocumentAI.V1
         public DocumentProcessorServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public DocumentProcessorServiceClientBuilder()
+        public DocumentProcessorServiceClientBuilder() : base(DocumentProcessorServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = DocumentProcessorServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref DocumentProcessorServiceClient client);
@@ -202,29 +201,18 @@ namespace Google.Cloud.DocumentAI.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return DocumentProcessorServiceClient.Create(callInvoker, Settings);
+            return DocumentProcessorServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<DocumentProcessorServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return DocumentProcessorServiceClient.Create(callInvoker, Settings);
+            return DocumentProcessorServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => DocumentProcessorServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => DocumentProcessorServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => DocumentProcessorServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>DocumentProcessorService client wrapper, for convenient use.</summary>
@@ -254,19 +242,10 @@ namespace Google.Cloud.DocumentAI.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(DocumentProcessorService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="DocumentProcessorServiceClient"/> using the default credentials,
@@ -296,8 +275,9 @@ namespace Google.Cloud.DocumentAI.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="DocumentProcessorServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="DocumentProcessorServiceClient"/>.</returns>
-        internal static DocumentProcessorServiceClient Create(grpccore::CallInvoker callInvoker, DocumentProcessorServiceSettings settings = null)
+        internal static DocumentProcessorServiceClient Create(grpccore::CallInvoker callInvoker, DocumentProcessorServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -306,7 +286,7 @@ namespace Google.Cloud.DocumentAI.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             DocumentProcessorService.DocumentProcessorServiceClient grpcClient = new DocumentProcessorService.DocumentProcessorServiceClient(callInvoker);
-            return new DocumentProcessorServiceClientImpl(grpcClient, settings);
+            return new DocumentProcessorServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -741,20 +721,21 @@ namespace Google.Cloud.DocumentAI.V1
         /// <param name="settings">
         /// The base <see cref="DocumentProcessorServiceSettings"/> used within this client.
         /// </param>
-        public DocumentProcessorServiceClientImpl(DocumentProcessorService.DocumentProcessorServiceClient grpcClient, DocumentProcessorServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public DocumentProcessorServiceClientImpl(DocumentProcessorService.DocumentProcessorServiceClient grpcClient, DocumentProcessorServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             DocumentProcessorServiceSettings effectiveSettings = settings ?? DocumentProcessorServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            BatchProcessDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchProcessDocumentsOperationsSettings);
-            ReviewDocumentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReviewDocumentOperationsSettings);
-            _callProcessDocument = clientHelper.BuildApiCall<ProcessRequest, ProcessResponse>(grpcClient.ProcessDocumentAsync, grpcClient.ProcessDocument, effectiveSettings.ProcessDocumentSettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            BatchProcessDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchProcessDocumentsOperationsSettings, logger);
+            ReviewDocumentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReviewDocumentOperationsSettings, logger);
+            _callProcessDocument = clientHelper.BuildApiCall<ProcessRequest, ProcessResponse>("ProcessDocument", grpcClient.ProcessDocumentAsync, grpcClient.ProcessDocument, effectiveSettings.ProcessDocumentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callProcessDocument);
             Modify_ProcessDocumentApiCall(ref _callProcessDocument);
-            _callBatchProcessDocuments = clientHelper.BuildApiCall<BatchProcessRequest, lro::Operation>(grpcClient.BatchProcessDocumentsAsync, grpcClient.BatchProcessDocuments, effectiveSettings.BatchProcessDocumentsSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callBatchProcessDocuments = clientHelper.BuildApiCall<BatchProcessRequest, lro::Operation>("BatchProcessDocuments", grpcClient.BatchProcessDocumentsAsync, grpcClient.BatchProcessDocuments, effectiveSettings.BatchProcessDocumentsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callBatchProcessDocuments);
             Modify_BatchProcessDocumentsApiCall(ref _callBatchProcessDocuments);
-            _callReviewDocument = clientHelper.BuildApiCall<ReviewDocumentRequest, lro::Operation>(grpcClient.ReviewDocumentAsync, grpcClient.ReviewDocument, effectiveSettings.ReviewDocumentSettings).WithGoogleRequestParam("human_review_config", request => request.HumanReviewConfig);
+            _callReviewDocument = clientHelper.BuildApiCall<ReviewDocumentRequest, lro::Operation>("ReviewDocument", grpcClient.ReviewDocumentAsync, grpcClient.ReviewDocument, effectiveSettings.ReviewDocumentSettings).WithGoogleRequestParam("human_review_config", request => request.HumanReviewConfig);
             Modify_ApiCall(ref _callReviewDocument);
             Modify_ReviewDocumentApiCall(ref _callReviewDocument);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

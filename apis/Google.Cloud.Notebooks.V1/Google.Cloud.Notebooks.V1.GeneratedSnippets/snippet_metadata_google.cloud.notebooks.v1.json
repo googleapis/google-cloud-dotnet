@@ -1202,6 +1202,161 @@
       "origin": "API_DEFINITION"
     },
     {
+      "regionTag": "notebooks_v1_generated_ManagedNotebookService_RefreshRuntimeTokenInternal_sync",
+      "title": "RefreshRuntimeTokenInternalRequestObject",
+      "description": "Snippet for RefreshRuntimeTokenInternal",
+      "file": "ManagedNotebookServiceClient.RefreshRuntimeTokenInternalRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RefreshRuntimeTokenInternal",
+        "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.RefreshRuntimeTokenInternal",
+        "resultType": "Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse",
+        "client": {
+          "shortName": "ManagedNotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient"
+        },
+        "method": {
+          "shortName": "RefreshRuntimeTokenInternal",
+          "fullName": "google.cloud.notebooks.v1.ManagedNotebookService.RefreshRuntimeTokenInternal",
+          "service": {
+            "shortName": "ManagedNotebookService",
+            "fullName": "google.cloud.notebooks.v1.ManagedNotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "notebooks_v1_generated_ManagedNotebookService_RefreshRuntimeTokenInternal_async",
+      "title": "RefreshRuntimeTokenInternalRequestObjectAsync",
+      "description": "Snippet for RefreshRuntimeTokenInternalAsync",
+      "file": "ManagedNotebookServiceClient.RefreshRuntimeTokenInternalRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RefreshRuntimeTokenInternalAsync",
+        "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.RefreshRuntimeTokenInternalAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse>",
+        "client": {
+          "shortName": "ManagedNotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient"
+        },
+        "method": {
+          "shortName": "RefreshRuntimeTokenInternal",
+          "fullName": "google.cloud.notebooks.v1.ManagedNotebookService.RefreshRuntimeTokenInternal",
+          "service": {
+            "shortName": "ManagedNotebookService",
+            "fullName": "google.cloud.notebooks.v1.ManagedNotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "notebooks_v1_generated_ManagedNotebookService_RefreshRuntimeTokenInternal_sync_flattened",
+      "title": "RefreshRuntimeTokenInternal",
+      "description": "Snippet for RefreshRuntimeTokenInternal",
+      "file": "ManagedNotebookServiceClient.RefreshRuntimeTokenInternalSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RefreshRuntimeTokenInternal",
+        "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.RefreshRuntimeTokenInternal",
+        "resultType": "Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse",
+        "client": {
+          "shortName": "ManagedNotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient"
+        },
+        "method": {
+          "shortName": "RefreshRuntimeTokenInternal",
+          "fullName": "google.cloud.notebooks.v1.ManagedNotebookService.RefreshRuntimeTokenInternal",
+          "service": {
+            "shortName": "ManagedNotebookService",
+            "fullName": "google.cloud.notebooks.v1.ManagedNotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "notebooks_v1_generated_ManagedNotebookService_RefreshRuntimeTokenInternal_async_flattened",
+      "title": "RefreshRuntimeTokenInternalAsync",
+      "description": "Snippet for RefreshRuntimeTokenInternalAsync",
+      "file": "ManagedNotebookServiceClient.RefreshRuntimeTokenInternalAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RefreshRuntimeTokenInternalAsync",
+        "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.RefreshRuntimeTokenInternalAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse>",
+        "client": {
+          "shortName": "ManagedNotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient"
+        },
+        "method": {
+          "shortName": "RefreshRuntimeTokenInternal",
+          "fullName": "google.cloud.notebooks.v1.ManagedNotebookService.RefreshRuntimeTokenInternal",
+          "service": {
+            "shortName": "ManagedNotebookService",
+            "fullName": "google.cloud.notebooks.v1.ManagedNotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "notebooks_v1_generated_ManagedNotebookService_RefreshRuntimeTokenInternal_sync_flattened_resourceNames",
+      "title": "RefreshRuntimeTokenInternalResourceNames",
+      "description": "Snippet for RefreshRuntimeTokenInternal",
+      "file": "ManagedNotebookServiceClient.RefreshRuntimeTokenInternalResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RefreshRuntimeTokenInternal",
+        "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.RefreshRuntimeTokenInternal",
+        "resultType": "Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse",
+        "client": {
+          "shortName": "ManagedNotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient"
+        },
+        "method": {
+          "shortName": "RefreshRuntimeTokenInternal",
+          "fullName": "google.cloud.notebooks.v1.ManagedNotebookService.RefreshRuntimeTokenInternal",
+          "service": {
+            "shortName": "ManagedNotebookService",
+            "fullName": "google.cloud.notebooks.v1.ManagedNotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "notebooks_v1_generated_ManagedNotebookService_RefreshRuntimeTokenInternal_async_flattened_resourceNames",
+      "title": "RefreshRuntimeTokenInternalResourceNamesAsync",
+      "description": "Snippet for RefreshRuntimeTokenInternalAsync",
+      "file": "ManagedNotebookServiceClient.RefreshRuntimeTokenInternalResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RefreshRuntimeTokenInternalAsync",
+        "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.RefreshRuntimeTokenInternalAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse>",
+        "client": {
+          "shortName": "ManagedNotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient"
+        },
+        "method": {
+          "shortName": "RefreshRuntimeTokenInternal",
+          "fullName": "google.cloud.notebooks.v1.ManagedNotebookService.RefreshRuntimeTokenInternal",
+          "service": {
+            "shortName": "ManagedNotebookService",
+            "fullName": "google.cloud.notebooks.v1.ManagedNotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
       "regionTag": "notebooks_v1_generated_NotebookService_ListInstances_sync",
       "title": "ListInstancesRequestObject",
       "description": "Snippet for ListInstances",
@@ -1822,6 +1977,59 @@
         "method": {
           "shortName": "SetInstanceLabels",
           "fullName": "google.cloud.notebooks.v1.NotebookService.SetInstanceLabels",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.notebooks.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "notebooks_v1_generated_NotebookService_UpdateInstanceMetadataItems_sync",
+      "title": "UpdateInstanceMetadataItemsRequestObject",
+      "description": "Snippet for UpdateInstanceMetadataItems",
+      "file": "NotebookServiceClient.UpdateInstanceMetadataItemsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInstanceMetadataItems",
+        "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.UpdateInstanceMetadataItems",
+        "resultType": "Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsResponse",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateInstanceMetadataItems",
+          "fullName": "google.cloud.notebooks.v1.NotebookService.UpdateInstanceMetadataItems",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.notebooks.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "notebooks_v1_generated_NotebookService_UpdateInstanceMetadataItems_async",
+      "title": "UpdateInstanceMetadataItemsRequestObjectAsync",
+      "description": "Snippet for UpdateInstanceMetadataItemsAsync",
+      "file": "NotebookServiceClient.UpdateInstanceMetadataItemsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInstanceMetadataItemsAsync",
+        "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.UpdateInstanceMetadataItemsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsResponse>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateInstanceMetadataItems",
+          "fullName": "google.cloud.notebooks.v1.NotebookService.UpdateInstanceMetadataItems",
           "service": {
             "shortName": "NotebookService",
             "fullName": "google.cloud.notebooks.v1.NotebookService"

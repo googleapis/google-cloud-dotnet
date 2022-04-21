@@ -44,7 +44,7 @@ namespace Google.Cloud.BinaryAuthorization.V1.Tests
                 DenialReason = "denial_reasona43b2694",
             };
             mockGrpcClient.Setup(x => x.ValidateAttestationOccurrence(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ValidationHelperV1Client client = new ValidationHelperV1ClientImpl(mockGrpcClient.Object, null);
+            ValidationHelperV1Client client = new ValidationHelperV1ClientImpl(mockGrpcClient.Object, null, null);
             ValidateAttestationOccurrenceResponse response = client.ValidateAttestationOccurrence(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -67,7 +67,7 @@ namespace Google.Cloud.BinaryAuthorization.V1.Tests
                 DenialReason = "denial_reasona43b2694",
             };
             mockGrpcClient.Setup(x => x.ValidateAttestationOccurrenceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ValidateAttestationOccurrenceResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ValidationHelperV1Client client = new ValidationHelperV1ClientImpl(mockGrpcClient.Object, null);
+            ValidationHelperV1Client client = new ValidationHelperV1ClientImpl(mockGrpcClient.Object, null, null);
             ValidateAttestationOccurrenceResponse responseCallSettings = await client.ValidateAttestationOccurrenceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ValidateAttestationOccurrenceResponse responseCancellationToken = await client.ValidateAttestationOccurrenceAsync(request, st::CancellationToken.None);

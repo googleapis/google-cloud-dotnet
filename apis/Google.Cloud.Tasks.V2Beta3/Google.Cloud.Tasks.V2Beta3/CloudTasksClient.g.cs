@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -346,9 +346,8 @@ namespace Google.Cloud.Tasks.V2Beta3
         public CloudTasksSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public CloudTasksClientBuilder()
+        public CloudTasksClientBuilder() : base(CloudTasksClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = CloudTasksClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref CloudTasksClient client);
@@ -375,29 +374,18 @@ namespace Google.Cloud.Tasks.V2Beta3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return CloudTasksClient.Create(callInvoker, Settings);
+            return CloudTasksClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<CloudTasksClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return CloudTasksClient.Create(callInvoker, Settings);
+            return CloudTasksClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => CloudTasksClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => CloudTasksClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => CloudTasksClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>CloudTasks client wrapper, for convenient use.</summary>
@@ -425,19 +413,10 @@ namespace Google.Cloud.Tasks.V2Beta3
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(CloudTasks.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="CloudTasksClient"/> using the default credentials, endpoint and
@@ -464,8 +443,9 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="CloudTasksSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="CloudTasksClient"/>.</returns>
-        internal static CloudTasksClient Create(grpccore::CallInvoker callInvoker, CloudTasksSettings settings = null)
+        internal static CloudTasksClient Create(grpccore::CallInvoker callInvoker, CloudTasksSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -474,7 +454,7 @@ namespace Google.Cloud.Tasks.V2Beta3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             CloudTasks.CloudTasksClient grpcClient = new CloudTasks.CloudTasksClient(callInvoker);
-            return new CloudTasksClientImpl(grpcClient, settings);
+            return new CloudTasksClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -3747,57 +3727,58 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="CloudTasksSettings"/> used within this client.</param>
-        public CloudTasksClientImpl(CloudTasks.CloudTasksClient grpcClient, CloudTasksSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public CloudTasksClientImpl(CloudTasks.CloudTasksClient grpcClient, CloudTasksSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             CloudTasksSettings effectiveSettings = settings ?? CloudTasksSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListQueues = clientHelper.BuildApiCall<ListQueuesRequest, ListQueuesResponse>(grpcClient.ListQueuesAsync, grpcClient.ListQueues, effectiveSettings.ListQueuesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListQueues = clientHelper.BuildApiCall<ListQueuesRequest, ListQueuesResponse>("ListQueues", grpcClient.ListQueuesAsync, grpcClient.ListQueues, effectiveSettings.ListQueuesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListQueues);
             Modify_ListQueuesApiCall(ref _callListQueues);
-            _callGetQueue = clientHelper.BuildApiCall<GetQueueRequest, Queue>(grpcClient.GetQueueAsync, grpcClient.GetQueue, effectiveSettings.GetQueueSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetQueue = clientHelper.BuildApiCall<GetQueueRequest, Queue>("GetQueue", grpcClient.GetQueueAsync, grpcClient.GetQueue, effectiveSettings.GetQueueSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetQueue);
             Modify_GetQueueApiCall(ref _callGetQueue);
-            _callCreateQueue = clientHelper.BuildApiCall<CreateQueueRequest, Queue>(grpcClient.CreateQueueAsync, grpcClient.CreateQueue, effectiveSettings.CreateQueueSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateQueue = clientHelper.BuildApiCall<CreateQueueRequest, Queue>("CreateQueue", grpcClient.CreateQueueAsync, grpcClient.CreateQueue, effectiveSettings.CreateQueueSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateQueue);
             Modify_CreateQueueApiCall(ref _callCreateQueue);
-            _callUpdateQueue = clientHelper.BuildApiCall<UpdateQueueRequest, Queue>(grpcClient.UpdateQueueAsync, grpcClient.UpdateQueue, effectiveSettings.UpdateQueueSettings).WithGoogleRequestParam("queue.name", request => request.Queue?.Name);
+            _callUpdateQueue = clientHelper.BuildApiCall<UpdateQueueRequest, Queue>("UpdateQueue", grpcClient.UpdateQueueAsync, grpcClient.UpdateQueue, effectiveSettings.UpdateQueueSettings).WithGoogleRequestParam("queue.name", request => request.Queue?.Name);
             Modify_ApiCall(ref _callUpdateQueue);
             Modify_UpdateQueueApiCall(ref _callUpdateQueue);
-            _callDeleteQueue = clientHelper.BuildApiCall<DeleteQueueRequest, wkt::Empty>(grpcClient.DeleteQueueAsync, grpcClient.DeleteQueue, effectiveSettings.DeleteQueueSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteQueue = clientHelper.BuildApiCall<DeleteQueueRequest, wkt::Empty>("DeleteQueue", grpcClient.DeleteQueueAsync, grpcClient.DeleteQueue, effectiveSettings.DeleteQueueSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteQueue);
             Modify_DeleteQueueApiCall(ref _callDeleteQueue);
-            _callPurgeQueue = clientHelper.BuildApiCall<PurgeQueueRequest, Queue>(grpcClient.PurgeQueueAsync, grpcClient.PurgeQueue, effectiveSettings.PurgeQueueSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callPurgeQueue = clientHelper.BuildApiCall<PurgeQueueRequest, Queue>("PurgeQueue", grpcClient.PurgeQueueAsync, grpcClient.PurgeQueue, effectiveSettings.PurgeQueueSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callPurgeQueue);
             Modify_PurgeQueueApiCall(ref _callPurgeQueue);
-            _callPauseQueue = clientHelper.BuildApiCall<PauseQueueRequest, Queue>(grpcClient.PauseQueueAsync, grpcClient.PauseQueue, effectiveSettings.PauseQueueSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callPauseQueue = clientHelper.BuildApiCall<PauseQueueRequest, Queue>("PauseQueue", grpcClient.PauseQueueAsync, grpcClient.PauseQueue, effectiveSettings.PauseQueueSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callPauseQueue);
             Modify_PauseQueueApiCall(ref _callPauseQueue);
-            _callResumeQueue = clientHelper.BuildApiCall<ResumeQueueRequest, Queue>(grpcClient.ResumeQueueAsync, grpcClient.ResumeQueue, effectiveSettings.ResumeQueueSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callResumeQueue = clientHelper.BuildApiCall<ResumeQueueRequest, Queue>("ResumeQueue", grpcClient.ResumeQueueAsync, grpcClient.ResumeQueue, effectiveSettings.ResumeQueueSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callResumeQueue);
             Modify_ResumeQueueApiCall(ref _callResumeQueue);
-            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>(grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
-            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>(grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
-            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>(grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
-            _callListTasks = clientHelper.BuildApiCall<ListTasksRequest, ListTasksResponse>(grpcClient.ListTasksAsync, grpcClient.ListTasks, effectiveSettings.ListTasksSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListTasks = clientHelper.BuildApiCall<ListTasksRequest, ListTasksResponse>("ListTasks", grpcClient.ListTasksAsync, grpcClient.ListTasks, effectiveSettings.ListTasksSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTasks);
             Modify_ListTasksApiCall(ref _callListTasks);
-            _callGetTask = clientHelper.BuildApiCall<GetTaskRequest, Task>(grpcClient.GetTaskAsync, grpcClient.GetTask, effectiveSettings.GetTaskSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetTask = clientHelper.BuildApiCall<GetTaskRequest, Task>("GetTask", grpcClient.GetTaskAsync, grpcClient.GetTask, effectiveSettings.GetTaskSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTask);
             Modify_GetTaskApiCall(ref _callGetTask);
-            _callCreateTask = clientHelper.BuildApiCall<CreateTaskRequest, Task>(grpcClient.CreateTaskAsync, grpcClient.CreateTask, effectiveSettings.CreateTaskSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateTask = clientHelper.BuildApiCall<CreateTaskRequest, Task>("CreateTask", grpcClient.CreateTaskAsync, grpcClient.CreateTask, effectiveSettings.CreateTaskSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTask);
             Modify_CreateTaskApiCall(ref _callCreateTask);
-            _callDeleteTask = clientHelper.BuildApiCall<DeleteTaskRequest, wkt::Empty>(grpcClient.DeleteTaskAsync, grpcClient.DeleteTask, effectiveSettings.DeleteTaskSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteTask = clientHelper.BuildApiCall<DeleteTaskRequest, wkt::Empty>("DeleteTask", grpcClient.DeleteTaskAsync, grpcClient.DeleteTask, effectiveSettings.DeleteTaskSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTask);
             Modify_DeleteTaskApiCall(ref _callDeleteTask);
-            _callRunTask = clientHelper.BuildApiCall<RunTaskRequest, Task>(grpcClient.RunTaskAsync, grpcClient.RunTask, effectiveSettings.RunTaskSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callRunTask = clientHelper.BuildApiCall<RunTaskRequest, Task>("RunTask", grpcClient.RunTaskAsync, grpcClient.RunTask, effectiveSettings.RunTaskSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRunTask);
             Modify_RunTaskApiCall(ref _callRunTask);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -98,9 +98,8 @@ namespace Google.Cloud.LifeSciences.V2Beta
         public WorkflowsServiceV2BetaSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public WorkflowsServiceV2BetaClientBuilder()
+        public WorkflowsServiceV2BetaClientBuilder() : base(WorkflowsServiceV2BetaClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = WorkflowsServiceV2BetaClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref WorkflowsServiceV2BetaClient client);
@@ -127,29 +126,18 @@ namespace Google.Cloud.LifeSciences.V2Beta
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return WorkflowsServiceV2BetaClient.Create(callInvoker, Settings);
+            return WorkflowsServiceV2BetaClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<WorkflowsServiceV2BetaClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return WorkflowsServiceV2BetaClient.Create(callInvoker, Settings);
+            return WorkflowsServiceV2BetaClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => WorkflowsServiceV2BetaClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => WorkflowsServiceV2BetaClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => WorkflowsServiceV2BetaClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>WorkflowsServiceV2Beta client wrapper, for convenient use.</summary>
@@ -177,19 +165,10 @@ namespace Google.Cloud.LifeSciences.V2Beta
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(WorkflowsServiceV2Beta.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="WorkflowsServiceV2BetaClient"/> using the default credentials, endpoint
@@ -219,8 +198,9 @@ namespace Google.Cloud.LifeSciences.V2Beta
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="WorkflowsServiceV2BetaSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="WorkflowsServiceV2BetaClient"/>.</returns>
-        internal static WorkflowsServiceV2BetaClient Create(grpccore::CallInvoker callInvoker, WorkflowsServiceV2BetaSettings settings = null)
+        internal static WorkflowsServiceV2BetaClient Create(grpccore::CallInvoker callInvoker, WorkflowsServiceV2BetaSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -229,7 +209,7 @@ namespace Google.Cloud.LifeSciences.V2Beta
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             WorkflowsServiceV2Beta.WorkflowsServiceV2BetaClient grpcClient = new WorkflowsServiceV2Beta.WorkflowsServiceV2BetaClient(callInvoker);
-            return new WorkflowsServiceV2BetaClientImpl(grpcClient, settings);
+            return new WorkflowsServiceV2BetaClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -367,13 +347,14 @@ namespace Google.Cloud.LifeSciences.V2Beta
         /// <param name="settings">
         /// The base <see cref="WorkflowsServiceV2BetaSettings"/> used within this client.
         /// </param>
-        public WorkflowsServiceV2BetaClientImpl(WorkflowsServiceV2Beta.WorkflowsServiceV2BetaClient grpcClient, WorkflowsServiceV2BetaSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public WorkflowsServiceV2BetaClientImpl(WorkflowsServiceV2Beta.WorkflowsServiceV2BetaClient grpcClient, WorkflowsServiceV2BetaSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             WorkflowsServiceV2BetaSettings effectiveSettings = settings ?? WorkflowsServiceV2BetaSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            RunPipelineOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RunPipelineOperationsSettings);
-            _callRunPipeline = clientHelper.BuildApiCall<RunPipelineRequest, lro::Operation>(grpcClient.RunPipelineAsync, grpcClient.RunPipeline, effectiveSettings.RunPipelineSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            RunPipelineOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RunPipelineOperationsSettings, logger);
+            _callRunPipeline = clientHelper.BuildApiCall<RunPipelineRequest, lro::Operation>("RunPipeline", grpcClient.RunPipelineAsync, grpcClient.RunPipeline, effectiveSettings.RunPipelineSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callRunPipeline);
             Modify_RunPipelineApiCall(ref _callRunPipeline);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

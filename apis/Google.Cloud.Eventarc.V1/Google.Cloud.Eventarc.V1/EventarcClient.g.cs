@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -400,9 +400,8 @@ namespace Google.Cloud.Eventarc.V1
         public EventarcSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public EventarcClientBuilder()
+        public EventarcClientBuilder() : base(EventarcClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = EventarcClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref EventarcClient client);
@@ -429,29 +428,18 @@ namespace Google.Cloud.Eventarc.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return EventarcClient.Create(callInvoker, Settings);
+            return EventarcClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<EventarcClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return EventarcClient.Create(callInvoker, Settings);
+            return EventarcClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => EventarcClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => EventarcClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => EventarcClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Eventarc client wrapper, for convenient use.</summary>
@@ -479,19 +467,10 @@ namespace Google.Cloud.Eventarc.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Eventarc.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="EventarcClient"/> using the default credentials, endpoint and settings. 
@@ -518,8 +497,9 @@ namespace Google.Cloud.Eventarc.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="EventarcSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="EventarcClient"/>.</returns>
-        internal static EventarcClient Create(grpccore::CallInvoker callInvoker, EventarcSettings settings = null)
+        internal static EventarcClient Create(grpccore::CallInvoker callInvoker, EventarcSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -528,7 +508,7 @@ namespace Google.Cloud.Eventarc.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Eventarc.EventarcClient grpcClient = new Eventarc.EventarcClient(callInvoker);
-            return new EventarcClientImpl(grpcClient, settings);
+            return new EventarcClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -2425,59 +2405,60 @@ namespace Google.Cloud.Eventarc.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="EventarcSettings"/> used within this client.</param>
-        public EventarcClientImpl(Eventarc.EventarcClient grpcClient, EventarcSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public EventarcClientImpl(Eventarc.EventarcClient grpcClient, EventarcSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             EventarcSettings effectiveSettings = settings ?? EventarcSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateTriggerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTriggerOperationsSettings);
-            UpdateTriggerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTriggerOperationsSettings);
-            DeleteTriggerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTriggerOperationsSettings);
-            CreateChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateChannelOperationsSettings);
-            UpdateChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateChannelOperationsSettings);
-            DeleteChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteChannelOperationsSettings);
-            CreateChannelConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateChannelConnectionOperationsSettings);
-            DeleteChannelConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteChannelConnectionOperationsSettings);
-            _callGetTrigger = clientHelper.BuildApiCall<GetTriggerRequest, Trigger>(grpcClient.GetTriggerAsync, grpcClient.GetTrigger, effectiveSettings.GetTriggerSettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateTriggerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTriggerOperationsSettings, logger);
+            UpdateTriggerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTriggerOperationsSettings, logger);
+            DeleteTriggerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTriggerOperationsSettings, logger);
+            CreateChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateChannelOperationsSettings, logger);
+            UpdateChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateChannelOperationsSettings, logger);
+            DeleteChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteChannelOperationsSettings, logger);
+            CreateChannelConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateChannelConnectionOperationsSettings, logger);
+            DeleteChannelConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteChannelConnectionOperationsSettings, logger);
+            _callGetTrigger = clientHelper.BuildApiCall<GetTriggerRequest, Trigger>("GetTrigger", grpcClient.GetTriggerAsync, grpcClient.GetTrigger, effectiveSettings.GetTriggerSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTrigger);
             Modify_GetTriggerApiCall(ref _callGetTrigger);
-            _callListTriggers = clientHelper.BuildApiCall<ListTriggersRequest, ListTriggersResponse>(grpcClient.ListTriggersAsync, grpcClient.ListTriggers, effectiveSettings.ListTriggersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListTriggers = clientHelper.BuildApiCall<ListTriggersRequest, ListTriggersResponse>("ListTriggers", grpcClient.ListTriggersAsync, grpcClient.ListTriggers, effectiveSettings.ListTriggersSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTriggers);
             Modify_ListTriggersApiCall(ref _callListTriggers);
-            _callCreateTrigger = clientHelper.BuildApiCall<CreateTriggerRequest, lro::Operation>(grpcClient.CreateTriggerAsync, grpcClient.CreateTrigger, effectiveSettings.CreateTriggerSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateTrigger = clientHelper.BuildApiCall<CreateTriggerRequest, lro::Operation>("CreateTrigger", grpcClient.CreateTriggerAsync, grpcClient.CreateTrigger, effectiveSettings.CreateTriggerSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTrigger);
             Modify_CreateTriggerApiCall(ref _callCreateTrigger);
-            _callUpdateTrigger = clientHelper.BuildApiCall<UpdateTriggerRequest, lro::Operation>(grpcClient.UpdateTriggerAsync, grpcClient.UpdateTrigger, effectiveSettings.UpdateTriggerSettings).WithGoogleRequestParam("trigger.name", request => request.Trigger?.Name);
+            _callUpdateTrigger = clientHelper.BuildApiCall<UpdateTriggerRequest, lro::Operation>("UpdateTrigger", grpcClient.UpdateTriggerAsync, grpcClient.UpdateTrigger, effectiveSettings.UpdateTriggerSettings).WithGoogleRequestParam("trigger.name", request => request.Trigger?.Name);
             Modify_ApiCall(ref _callUpdateTrigger);
             Modify_UpdateTriggerApiCall(ref _callUpdateTrigger);
-            _callDeleteTrigger = clientHelper.BuildApiCall<DeleteTriggerRequest, lro::Operation>(grpcClient.DeleteTriggerAsync, grpcClient.DeleteTrigger, effectiveSettings.DeleteTriggerSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteTrigger = clientHelper.BuildApiCall<DeleteTriggerRequest, lro::Operation>("DeleteTrigger", grpcClient.DeleteTriggerAsync, grpcClient.DeleteTrigger, effectiveSettings.DeleteTriggerSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTrigger);
             Modify_DeleteTriggerApiCall(ref _callDeleteTrigger);
-            _callGetChannel = clientHelper.BuildApiCall<GetChannelRequest, Channel>(grpcClient.GetChannelAsync, grpcClient.GetChannel, effectiveSettings.GetChannelSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetChannel = clientHelper.BuildApiCall<GetChannelRequest, Channel>("GetChannel", grpcClient.GetChannelAsync, grpcClient.GetChannel, effectiveSettings.GetChannelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetChannel);
             Modify_GetChannelApiCall(ref _callGetChannel);
-            _callListChannels = clientHelper.BuildApiCall<ListChannelsRequest, ListChannelsResponse>(grpcClient.ListChannelsAsync, grpcClient.ListChannels, effectiveSettings.ListChannelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListChannels = clientHelper.BuildApiCall<ListChannelsRequest, ListChannelsResponse>("ListChannels", grpcClient.ListChannelsAsync, grpcClient.ListChannels, effectiveSettings.ListChannelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListChannels);
             Modify_ListChannelsApiCall(ref _callListChannels);
-            _callCreateChannel = clientHelper.BuildApiCall<CreateChannelRequest, lro::Operation>(grpcClient.CreateChannelAsync, grpcClient.CreateChannel, effectiveSettings.CreateChannelSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateChannel = clientHelper.BuildApiCall<CreateChannelRequest, lro::Operation>("CreateChannel", grpcClient.CreateChannelAsync, grpcClient.CreateChannel, effectiveSettings.CreateChannelSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateChannel);
             Modify_CreateChannelApiCall(ref _callCreateChannel);
-            _callUpdateChannel = clientHelper.BuildApiCall<UpdateChannelRequest, lro::Operation>(grpcClient.UpdateChannelAsync, grpcClient.UpdateChannel, effectiveSettings.UpdateChannelSettings).WithGoogleRequestParam("channel.name", request => request.Channel?.Name);
+            _callUpdateChannel = clientHelper.BuildApiCall<UpdateChannelRequest, lro::Operation>("UpdateChannel", grpcClient.UpdateChannelAsync, grpcClient.UpdateChannel, effectiveSettings.UpdateChannelSettings).WithGoogleRequestParam("channel.name", request => request.Channel?.Name);
             Modify_ApiCall(ref _callUpdateChannel);
             Modify_UpdateChannelApiCall(ref _callUpdateChannel);
-            _callDeleteChannel = clientHelper.BuildApiCall<DeleteChannelRequest, lro::Operation>(grpcClient.DeleteChannelAsync, grpcClient.DeleteChannel, effectiveSettings.DeleteChannelSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteChannel = clientHelper.BuildApiCall<DeleteChannelRequest, lro::Operation>("DeleteChannel", grpcClient.DeleteChannelAsync, grpcClient.DeleteChannel, effectiveSettings.DeleteChannelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteChannel);
             Modify_DeleteChannelApiCall(ref _callDeleteChannel);
-            _callGetChannelConnection = clientHelper.BuildApiCall<GetChannelConnectionRequest, ChannelConnection>(grpcClient.GetChannelConnectionAsync, grpcClient.GetChannelConnection, effectiveSettings.GetChannelConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetChannelConnection = clientHelper.BuildApiCall<GetChannelConnectionRequest, ChannelConnection>("GetChannelConnection", grpcClient.GetChannelConnectionAsync, grpcClient.GetChannelConnection, effectiveSettings.GetChannelConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetChannelConnection);
             Modify_GetChannelConnectionApiCall(ref _callGetChannelConnection);
-            _callListChannelConnections = clientHelper.BuildApiCall<ListChannelConnectionsRequest, ListChannelConnectionsResponse>(grpcClient.ListChannelConnectionsAsync, grpcClient.ListChannelConnections, effectiveSettings.ListChannelConnectionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListChannelConnections = clientHelper.BuildApiCall<ListChannelConnectionsRequest, ListChannelConnectionsResponse>("ListChannelConnections", grpcClient.ListChannelConnectionsAsync, grpcClient.ListChannelConnections, effectiveSettings.ListChannelConnectionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListChannelConnections);
             Modify_ListChannelConnectionsApiCall(ref _callListChannelConnections);
-            _callCreateChannelConnection = clientHelper.BuildApiCall<CreateChannelConnectionRequest, lro::Operation>(grpcClient.CreateChannelConnectionAsync, grpcClient.CreateChannelConnection, effectiveSettings.CreateChannelConnectionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateChannelConnection = clientHelper.BuildApiCall<CreateChannelConnectionRequest, lro::Operation>("CreateChannelConnection", grpcClient.CreateChannelConnectionAsync, grpcClient.CreateChannelConnection, effectiveSettings.CreateChannelConnectionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateChannelConnection);
             Modify_CreateChannelConnectionApiCall(ref _callCreateChannelConnection);
-            _callDeleteChannelConnection = clientHelper.BuildApiCall<DeleteChannelConnectionRequest, lro::Operation>(grpcClient.DeleteChannelConnectionAsync, grpcClient.DeleteChannelConnection, effectiveSettings.DeleteChannelConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteChannelConnection = clientHelper.BuildApiCall<DeleteChannelConnectionRequest, lro::Operation>("DeleteChannelConnection", grpcClient.DeleteChannelConnectionAsync, grpcClient.DeleteChannelConnection, effectiveSettings.DeleteChannelConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteChannelConnection);
             Modify_DeleteChannelConnectionApiCall(ref _callDeleteChannelConnection);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

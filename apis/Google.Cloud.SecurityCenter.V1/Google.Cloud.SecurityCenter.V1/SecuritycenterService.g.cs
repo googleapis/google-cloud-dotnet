@@ -158,11 +158,11 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "aW5kaW5nc1Jlc3VsdC5TdGF0ZUNoYW5nZRJnCghyZXNvdXJjZRgDIAEoCzJQ",
             "Lmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5MaXN0RmluZGluZ3NS",
             "ZXNwb25zZS5MaXN0RmluZGluZ3NSZXN1bHQuUmVzb3VyY2VCA+BBAxrbAQoI",
-            "UmVzb3VyY2USDAoEbmFtZRgBIAEoCRIUCgxwcm9qZWN0X25hbWUYAiABKAkS",
-            "HAoUcHJvamVjdF9kaXNwbGF5X25hbWUYAyABKAkSEwoLcGFyZW50X25hbWUY",
-            "BCABKAkSGwoTcGFyZW50X2Rpc3BsYXlfbmFtZRgFIAEoCRIMCgR0eXBlGAYg",
-            "ASgJEjcKB2ZvbGRlcnMYByADKAsyJi5nb29nbGUuY2xvdWQuc2VjdXJpdHlj",
-            "ZW50ZXIudjEuRm9sZGVyEhQKDGRpc3BsYXlfbmFtZRgIIAEoCSJNCgtTdGF0",
+            "UmVzb3VyY2USDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5X25hbWUYCCABKAkS",
+            "DAoEdHlwZRgGIAEoCRIUCgxwcm9qZWN0X25hbWUYAiABKAkSHAoUcHJvamVj",
+            "dF9kaXNwbGF5X25hbWUYAyABKAkSEwoLcGFyZW50X25hbWUYBCABKAkSGwoT",
+            "cGFyZW50X2Rpc3BsYXlfbmFtZRgFIAEoCRI3Cgdmb2xkZXJzGAcgAygLMiYu",
+            "Z29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkZvbGRlciJNCgtTdGF0",
             "ZUNoYW5nZRIKCgZVTlVTRUQQABILCgdDSEFOR0VEEAESDQoJVU5DSEFOR0VE",
             "EAISCQoFQURERUQQAxILCgdSRU1PVkVEEAQizQEKFlNldEZpbmRpbmdTdGF0",
             "ZVJlcXVlc3QSOwoEbmFtZRgBIAEoCUIt4EEC+kEnCiVzZWN1cml0eWNlbnRl",
@@ -478,7 +478,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListAssetsRequest), global::Google.Cloud.SecurityCenter.V1.ListAssetsRequest.Parser, new[]{ "Parent", "Filter", "OrderBy", "ReadTime", "CompareDuration", "FieldMask", "PageToken", "PageSize" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse), global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse.Parser, new[]{ "ListAssetsResults", "ReadTime", "NextPageToken", "TotalSize" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse.Types.ListAssetsResult), global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse.Types.ListAssetsResult.Parser, new[]{ "Asset", "StateChange" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse.Types.ListAssetsResult.Types.StateChange) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListFindingsRequest), global::Google.Cloud.SecurityCenter.V1.ListFindingsRequest.Parser, new[]{ "Parent", "Filter", "OrderBy", "ReadTime", "CompareDuration", "FieldMask", "PageToken", "PageSize" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse), global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Parser, new[]{ "ListFindingsResults", "ReadTime", "NextPageToken", "TotalSize" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult), global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult.Parser, new[]{ "Finding", "StateChange", "Resource" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult.Types.StateChange) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult.Types.Resource), global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult.Types.Resource.Parser, new[]{ "Name", "ProjectName", "ProjectDisplayName", "ParentName", "ParentDisplayName", "Type", "Folders", "DisplayName" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse), global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Parser, new[]{ "ListFindingsResults", "ReadTime", "NextPageToken", "TotalSize" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult), global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult.Parser, new[]{ "Finding", "StateChange", "Resource" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult.Types.StateChange) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult.Types.Resource), global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult.Types.Resource.Parser, new[]{ "Name", "DisplayName", "Type", "ProjectName", "ProjectDisplayName", "ParentName", "ParentDisplayName", "Folders" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.SetFindingStateRequest), global::Google.Cloud.SecurityCenter.V1.SetFindingStateRequest.Parser, new[]{ "Name", "State", "StartTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.SetMuteRequest), global::Google.Cloud.SecurityCenter.V1.SetMuteRequest.Parser, new[]{ "Name", "Mute" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryRequest), global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryRequest.Parser, new[]{ "Parent" }, null, null, null, null),
@@ -558,8 +558,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent, at which bulk action needs to be applied. Its format
-    /// is "organizations/[organization_id]", "folders/[folder_id]",
+    /// Required. The parent, at which bulk action needs to be applied. Its format is
+    /// "organizations/[organization_id]", "folders/[folder_id]",
     /// "projects/[project_id]".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1044,8 +1044,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int FindingFieldNumber = 3;
     private global::Google.Cloud.SecurityCenter.V1.Finding finding_;
     /// <summary>
-    /// Required. The Finding being created. The name and security_marks will be
-    /// ignored as they are both output only fields on this resource.
+    /// Required. The Finding being created. The name and security_marks will be ignored as
+    /// they are both output only fields on this resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1588,8 +1588,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Resource name of the new notification config's parent. Its format
-    /// is "organizations/[organization_id]".
+    /// Required. Resource name of the new notification config's parent. Its format is
+    /// "organizations/[organization_id]".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1622,9 +1622,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int NotificationConfigFieldNumber = 3;
     private global::Google.Cloud.SecurityCenter.V1.NotificationConfig notificationConfig_;
     /// <summary>
-    /// Required. The notification config being created. The name and the service
-    /// account will be ignored as they are both output only fields on this
-    /// resource.
+    /// Required. The notification config being created. The name and the service account
+    /// will be ignored as they are both output only fields on this resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1893,8 +1892,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int SourceFieldNumber = 2;
     private global::Google.Cloud.SecurityCenter.V1.Source source_;
     /// <summary>
-    /// Required. The Source being created, only the display_name and description
-    /// will be used. All other fields will be ignored.
+    /// Required. The Source being created, only the display_name and description will be
+    /// used. All other fields will be ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3108,8 +3107,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Name of the organization to get organization settings for. Its
-    /// format is "organizations/[organization_id]/organizationSettings".
+    /// Required. Name of the organization to get organization settings for. Its format is
+    /// "organizations/[organization_id]/organizationSettings".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3599,9 +3598,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int GroupByFieldNumber = 3;
     private string groupBy_ = "";
     /// <summary>
-    /// Required. Expression that defines what assets fields to use for grouping.
-    /// The string value should follow SQL syntax: comma separated list of fields.
-    /// For example:
+    /// Required. Expression that defines what assets fields to use for grouping. The string
+    /// value should follow SQL syntax: comma separated list of fields. For
+    /// example:
     /// "security_center_properties.resource_project,security_center_properties.project".
     ///
     /// The following fields are supported when compare_duration is not set:
@@ -4481,9 +4480,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int GroupByFieldNumber = 3;
     private string groupBy_ = "";
     /// <summary>
-    /// Required. Expression that defines what assets fields to use for grouping
-    /// (including `state_change`). The string value should follow SQL syntax:
-    /// comma separated list of fields. For example: "parent,resource_name".
+    /// Required. Expression that defines what assets fields to use for grouping (including
+    /// `state_change`). The string value should follow SQL syntax: comma separated
+    /// list of fields. For example: "parent,resource_name".
     ///
     /// The following fields are supported:
     ///
@@ -5492,8 +5491,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent, which owns the collection of mute configs. Its format
-    /// is "organizations/[organization_id]", "folders/[folder_id]",
+    /// Required. The parent, which owns the collection of mute configs. Its format is
+    /// "organizations/[organization_id]", "folders/[folder_id]",
     /// "projects/[project_id]".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6505,8 +6504,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Resource name of the parent of sources to list. Its format should
-    /// be "organizations/[organization_id], folders/[folder_id], or
+    /// Required. Resource name of the parent of sources to list. Its format should be
+    /// "organizations/[organization_id], folders/[folder_id], or
     /// projects/[project_id]".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9483,13 +9482,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Resource(Resource other) : this() {
               name_ = other.name_;
+              displayName_ = other.displayName_;
+              type_ = other.type_;
               projectName_ = other.projectName_;
               projectDisplayName_ = other.projectDisplayName_;
               parentName_ = other.parentName_;
               parentDisplayName_ = other.parentDisplayName_;
-              type_ = other.type_;
               folders_ = other.folders_.Clone();
-              displayName_ = other.displayName_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -9515,6 +9514,36 @@ namespace Google.Cloud.SecurityCenter.V1 {
               }
             }
 
+            /// <summary>Field number for the "display_name" field.</summary>
+            public const int DisplayNameFieldNumber = 8;
+            private string displayName_ = "";
+            /// <summary>
+            /// The human readable name of the resource.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string DisplayName {
+              get { return displayName_; }
+              set {
+                displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "type" field.</summary>
+            public const int TypeFieldNumber = 6;
+            private string type_ = "";
+            /// <summary>
+            /// The full resource type of the resource.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Type {
+              get { return type_; }
+              set {
+                type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
             /// <summary>Field number for the "project_name" field.</summary>
             public const int ProjectNameFieldNumber = 2;
             private string projectName_ = "";
@@ -9534,7 +9563,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
             public const int ProjectDisplayNameFieldNumber = 3;
             private string projectDisplayName_ = "";
             /// <summary>
-            /// The project id that the resource belongs to.
+            /// The project ID that the resource belongs to.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9575,21 +9604,6 @@ namespace Google.Cloud.SecurityCenter.V1 {
               }
             }
 
-            /// <summary>Field number for the "type" field.</summary>
-            public const int TypeFieldNumber = 6;
-            private string type_ = "";
-            /// <summary>
-            /// The full resource type of the resource.
-            /// </summary>
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public string Type {
-              get { return type_; }
-              set {
-                type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-              }
-            }
-
             /// <summary>Field number for the "folders" field.</summary>
             public const int FoldersFieldNumber = 7;
             private static readonly pb::FieldCodec<global::Google.Cloud.SecurityCenter.V1.Folder> _repeated_folders_codec
@@ -9604,21 +9618,6 @@ namespace Google.Cloud.SecurityCenter.V1 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Folder> Folders {
               get { return folders_; }
-            }
-
-            /// <summary>Field number for the "display_name" field.</summary>
-            public const int DisplayNameFieldNumber = 8;
-            private string displayName_ = "";
-            /// <summary>
-            /// The human readable name of the resource.
-            /// </summary>
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public string DisplayName {
-              get { return displayName_; }
-              set {
-                displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-              }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9637,13 +9636,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
                 return true;
               }
               if (Name != other.Name) return false;
+              if (DisplayName != other.DisplayName) return false;
+              if (Type != other.Type) return false;
               if (ProjectName != other.ProjectName) return false;
               if (ProjectDisplayName != other.ProjectDisplayName) return false;
               if (ParentName != other.ParentName) return false;
               if (ParentDisplayName != other.ParentDisplayName) return false;
-              if (Type != other.Type) return false;
               if(!folders_.Equals(other.folders_)) return false;
-              if (DisplayName != other.DisplayName) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
 
@@ -9652,13 +9651,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
             public override int GetHashCode() {
               int hash = 1;
               if (Name.Length != 0) hash ^= Name.GetHashCode();
+              if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+              if (Type.Length != 0) hash ^= Type.GetHashCode();
               if (ProjectName.Length != 0) hash ^= ProjectName.GetHashCode();
               if (ProjectDisplayName.Length != 0) hash ^= ProjectDisplayName.GetHashCode();
               if (ParentName.Length != 0) hash ^= ParentName.GetHashCode();
               if (ParentDisplayName.Length != 0) hash ^= ParentDisplayName.GetHashCode();
-              if (Type.Length != 0) hash ^= Type.GetHashCode();
               hash ^= folders_.GetHashCode();
-              if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -9758,6 +9757,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
               if (Name.Length != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
               }
+              if (DisplayName.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+              }
+              if (Type.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
+              }
               if (ProjectName.Length != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectName);
               }
@@ -9770,13 +9775,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
               if (ParentDisplayName.Length != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(ParentDisplayName);
               }
-              if (Type.Length != 0) {
-                size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
-              }
               size += folders_.CalculateSize(_repeated_folders_codec);
-              if (DisplayName.Length != 0) {
-                size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
-              }
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
               }
@@ -9792,6 +9791,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
               if (other.Name.Length != 0) {
                 Name = other.Name;
               }
+              if (other.DisplayName.Length != 0) {
+                DisplayName = other.DisplayName;
+              }
+              if (other.Type.Length != 0) {
+                Type = other.Type;
+              }
               if (other.ProjectName.Length != 0) {
                 ProjectName = other.ProjectName;
               }
@@ -9804,13 +9809,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
               if (other.ParentDisplayName.Length != 0) {
                 ParentDisplayName = other.ParentDisplayName;
               }
-              if (other.Type.Length != 0) {
-                Type = other.Type;
-              }
               folders_.Add(other.folders_);
-              if (other.DisplayName.Length != 0) {
-                DisplayName = other.DisplayName;
-              }
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
 
@@ -10500,8 +10499,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Name of the organization to run asset discovery for. Its format
-    /// is "organizations/[organization_id]".
+    /// Required. Name of the organization to run asset discovery for. Its format is
+    /// "organizations/[organization_id]".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10952,8 +10951,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int FindingFieldNumber = 1;
     private global::Google.Cloud.SecurityCenter.V1.Finding finding_;
     /// <summary>
-    /// Required. The finding resource to update or create if it does not already
-    /// exist. parent, security_marks, and update_time will be ignored.
+    /// Required. The finding resource to update or create if it does not already exist.
+    /// parent, security_marks, and update_time will be ignored.
     ///
     /// In the case of creation, the finding id portion of the name must be
     /// alphanumeric and less than or equal to 32 characters and greater than 0
@@ -12273,7 +12272,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// The time at which the updated SecurityMarks take effect.
     /// If not set uses current server time.  Updates will be applied to the
     /// SecurityMarks that are active immediately preceding this time. Must be
-    /// smaller or equal to the server time.
+    /// earlier or equal to the server time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13089,8 +13088,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent, which owns the collection of BigQuery exports. Its
-    /// format is "organizations/[organization_id]", "folders/[folder_id]",
+    /// Required. The parent, which owns the collection of BigQuery exports. Its format is
+    /// "organizations/[organization_id]", "folders/[folder_id]",
     /// "projects/[project_id]".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

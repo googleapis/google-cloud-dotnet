@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>4.4.0</Version>
+    <Version>5.0.0-alpha02</Version>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core.</Description>

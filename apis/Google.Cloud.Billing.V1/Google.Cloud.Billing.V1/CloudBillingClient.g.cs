@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -277,9 +277,8 @@ namespace Google.Cloud.Billing.V1
         public CloudBillingSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public CloudBillingClientBuilder()
+        public CloudBillingClientBuilder() : base(CloudBillingClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = CloudBillingClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref CloudBillingClient client);
@@ -306,29 +305,18 @@ namespace Google.Cloud.Billing.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return CloudBillingClient.Create(callInvoker, Settings);
+            return CloudBillingClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<CloudBillingClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return CloudBillingClient.Create(callInvoker, Settings);
+            return CloudBillingClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => CloudBillingClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => CloudBillingClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => CloudBillingClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>CloudBilling client wrapper, for convenient use.</summary>
@@ -355,19 +343,10 @@ namespace Google.Cloud.Billing.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(CloudBilling.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="CloudBillingClient"/> using the default credentials, endpoint and
@@ -394,8 +373,9 @@ namespace Google.Cloud.Billing.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="CloudBillingSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="CloudBillingClient"/>.</returns>
-        internal static CloudBillingClient Create(grpccore::CallInvoker callInvoker, CloudBillingSettings settings = null)
+        internal static CloudBillingClient Create(grpccore::CallInvoker callInvoker, CloudBillingSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -404,7 +384,7 @@ namespace Google.Cloud.Billing.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             CloudBilling.CloudBillingClient grpcClient = new CloudBilling.CloudBillingClient(callInvoker);
-            return new CloudBillingClientImpl(grpcClient, settings);
+            return new CloudBillingClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1943,39 +1923,40 @@ namespace Google.Cloud.Billing.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="CloudBillingSettings"/> used within this client.</param>
-        public CloudBillingClientImpl(CloudBilling.CloudBillingClient grpcClient, CloudBillingSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public CloudBillingClientImpl(CloudBilling.CloudBillingClient grpcClient, CloudBillingSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             CloudBillingSettings effectiveSettings = settings ?? CloudBillingSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callGetBillingAccount = clientHelper.BuildApiCall<GetBillingAccountRequest, BillingAccount>(grpcClient.GetBillingAccountAsync, grpcClient.GetBillingAccount, effectiveSettings.GetBillingAccountSettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callGetBillingAccount = clientHelper.BuildApiCall<GetBillingAccountRequest, BillingAccount>("GetBillingAccount", grpcClient.GetBillingAccountAsync, grpcClient.GetBillingAccount, effectiveSettings.GetBillingAccountSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetBillingAccount);
             Modify_GetBillingAccountApiCall(ref _callGetBillingAccount);
-            _callListBillingAccounts = clientHelper.BuildApiCall<ListBillingAccountsRequest, ListBillingAccountsResponse>(grpcClient.ListBillingAccountsAsync, grpcClient.ListBillingAccounts, effectiveSettings.ListBillingAccountsSettings);
+            _callListBillingAccounts = clientHelper.BuildApiCall<ListBillingAccountsRequest, ListBillingAccountsResponse>("ListBillingAccounts", grpcClient.ListBillingAccountsAsync, grpcClient.ListBillingAccounts, effectiveSettings.ListBillingAccountsSettings);
             Modify_ApiCall(ref _callListBillingAccounts);
             Modify_ListBillingAccountsApiCall(ref _callListBillingAccounts);
-            _callUpdateBillingAccount = clientHelper.BuildApiCall<UpdateBillingAccountRequest, BillingAccount>(grpcClient.UpdateBillingAccountAsync, grpcClient.UpdateBillingAccount, effectiveSettings.UpdateBillingAccountSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateBillingAccount = clientHelper.BuildApiCall<UpdateBillingAccountRequest, BillingAccount>("UpdateBillingAccount", grpcClient.UpdateBillingAccountAsync, grpcClient.UpdateBillingAccount, effectiveSettings.UpdateBillingAccountSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateBillingAccount);
             Modify_UpdateBillingAccountApiCall(ref _callUpdateBillingAccount);
-            _callCreateBillingAccount = clientHelper.BuildApiCall<CreateBillingAccountRequest, BillingAccount>(grpcClient.CreateBillingAccountAsync, grpcClient.CreateBillingAccount, effectiveSettings.CreateBillingAccountSettings);
+            _callCreateBillingAccount = clientHelper.BuildApiCall<CreateBillingAccountRequest, BillingAccount>("CreateBillingAccount", grpcClient.CreateBillingAccountAsync, grpcClient.CreateBillingAccount, effectiveSettings.CreateBillingAccountSettings);
             Modify_ApiCall(ref _callCreateBillingAccount);
             Modify_CreateBillingAccountApiCall(ref _callCreateBillingAccount);
-            _callListProjectBillingInfo = clientHelper.BuildApiCall<ListProjectBillingInfoRequest, ListProjectBillingInfoResponse>(grpcClient.ListProjectBillingInfoAsync, grpcClient.ListProjectBillingInfo, effectiveSettings.ListProjectBillingInfoSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callListProjectBillingInfo = clientHelper.BuildApiCall<ListProjectBillingInfoRequest, ListProjectBillingInfoResponse>("ListProjectBillingInfo", grpcClient.ListProjectBillingInfoAsync, grpcClient.ListProjectBillingInfo, effectiveSettings.ListProjectBillingInfoSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListProjectBillingInfo);
             Modify_ListProjectBillingInfoApiCall(ref _callListProjectBillingInfo);
-            _callGetProjectBillingInfo = clientHelper.BuildApiCall<GetProjectBillingInfoRequest, ProjectBillingInfo>(grpcClient.GetProjectBillingInfoAsync, grpcClient.GetProjectBillingInfo, effectiveSettings.GetProjectBillingInfoSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetProjectBillingInfo = clientHelper.BuildApiCall<GetProjectBillingInfoRequest, ProjectBillingInfo>("GetProjectBillingInfo", grpcClient.GetProjectBillingInfoAsync, grpcClient.GetProjectBillingInfo, effectiveSettings.GetProjectBillingInfoSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetProjectBillingInfo);
             Modify_GetProjectBillingInfoApiCall(ref _callGetProjectBillingInfo);
-            _callUpdateProjectBillingInfo = clientHelper.BuildApiCall<UpdateProjectBillingInfoRequest, ProjectBillingInfo>(grpcClient.UpdateProjectBillingInfoAsync, grpcClient.UpdateProjectBillingInfo, effectiveSettings.UpdateProjectBillingInfoSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateProjectBillingInfo = clientHelper.BuildApiCall<UpdateProjectBillingInfoRequest, ProjectBillingInfo>("UpdateProjectBillingInfo", grpcClient.UpdateProjectBillingInfoAsync, grpcClient.UpdateProjectBillingInfo, effectiveSettings.UpdateProjectBillingInfoSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateProjectBillingInfo);
             Modify_UpdateProjectBillingInfoApiCall(ref _callUpdateProjectBillingInfo);
-            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>(grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
-            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>(grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
-            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>(grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

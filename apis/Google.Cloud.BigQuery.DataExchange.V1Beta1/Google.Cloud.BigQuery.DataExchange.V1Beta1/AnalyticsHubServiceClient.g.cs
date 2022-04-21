@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -404,9 +404,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         public AnalyticsHubServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public AnalyticsHubServiceClientBuilder()
+        public AnalyticsHubServiceClientBuilder() : base(AnalyticsHubServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = AnalyticsHubServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref AnalyticsHubServiceClient client);
@@ -433,29 +432,18 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AnalyticsHubServiceClient.Create(callInvoker, Settings);
+            return AnalyticsHubServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<AnalyticsHubServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AnalyticsHubServiceClient.Create(callInvoker, Settings);
+            return AnalyticsHubServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => AnalyticsHubServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => AnalyticsHubServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => AnalyticsHubServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>AnalyticsHubService client wrapper, for convenient use.</summary>
@@ -488,19 +476,10 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(AnalyticsHubService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="AnalyticsHubServiceClient"/> using the default credentials, endpoint and
@@ -530,8 +509,9 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="AnalyticsHubServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="AnalyticsHubServiceClient"/>.</returns>
-        internal static AnalyticsHubServiceClient Create(grpccore::CallInvoker callInvoker, AnalyticsHubServiceSettings settings = null)
+        internal static AnalyticsHubServiceClient Create(grpccore::CallInvoker callInvoker, AnalyticsHubServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -540,7 +520,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             AnalyticsHubService.AnalyticsHubServiceClient grpcClient = new AnalyticsHubService.AnalyticsHubServiceClient(callInvoker);
-            return new AnalyticsHubServiceClientImpl(grpcClient, settings);
+            return new AnalyticsHubServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -2032,54 +2012,55 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="AnalyticsHubServiceSettings"/> used within this client.</param>
-        public AnalyticsHubServiceClientImpl(AnalyticsHubService.AnalyticsHubServiceClient grpcClient, AnalyticsHubServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public AnalyticsHubServiceClientImpl(AnalyticsHubService.AnalyticsHubServiceClient grpcClient, AnalyticsHubServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             AnalyticsHubServiceSettings effectiveSettings = settings ?? AnalyticsHubServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListDataExchanges = clientHelper.BuildApiCall<ListDataExchangesRequest, ListDataExchangesResponse>(grpcClient.ListDataExchangesAsync, grpcClient.ListDataExchanges, effectiveSettings.ListDataExchangesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListDataExchanges = clientHelper.BuildApiCall<ListDataExchangesRequest, ListDataExchangesResponse>("ListDataExchanges", grpcClient.ListDataExchangesAsync, grpcClient.ListDataExchanges, effectiveSettings.ListDataExchangesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDataExchanges);
             Modify_ListDataExchangesApiCall(ref _callListDataExchanges);
-            _callListOrgDataExchanges = clientHelper.BuildApiCall<ListOrgDataExchangesRequest, ListOrgDataExchangesResponse>(grpcClient.ListOrgDataExchangesAsync, grpcClient.ListOrgDataExchanges, effectiveSettings.ListOrgDataExchangesSettings).WithGoogleRequestParam("organization", request => request.Organization);
+            _callListOrgDataExchanges = clientHelper.BuildApiCall<ListOrgDataExchangesRequest, ListOrgDataExchangesResponse>("ListOrgDataExchanges", grpcClient.ListOrgDataExchangesAsync, grpcClient.ListOrgDataExchanges, effectiveSettings.ListOrgDataExchangesSettings).WithGoogleRequestParam("organization", request => request.Organization);
             Modify_ApiCall(ref _callListOrgDataExchanges);
             Modify_ListOrgDataExchangesApiCall(ref _callListOrgDataExchanges);
-            _callGetDataExchange = clientHelper.BuildApiCall<GetDataExchangeRequest, DataExchange>(grpcClient.GetDataExchangeAsync, grpcClient.GetDataExchange, effectiveSettings.GetDataExchangeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetDataExchange = clientHelper.BuildApiCall<GetDataExchangeRequest, DataExchange>("GetDataExchange", grpcClient.GetDataExchangeAsync, grpcClient.GetDataExchange, effectiveSettings.GetDataExchangeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDataExchange);
             Modify_GetDataExchangeApiCall(ref _callGetDataExchange);
-            _callCreateDataExchange = clientHelper.BuildApiCall<CreateDataExchangeRequest, DataExchange>(grpcClient.CreateDataExchangeAsync, grpcClient.CreateDataExchange, effectiveSettings.CreateDataExchangeSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateDataExchange = clientHelper.BuildApiCall<CreateDataExchangeRequest, DataExchange>("CreateDataExchange", grpcClient.CreateDataExchangeAsync, grpcClient.CreateDataExchange, effectiveSettings.CreateDataExchangeSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDataExchange);
             Modify_CreateDataExchangeApiCall(ref _callCreateDataExchange);
-            _callUpdateDataExchange = clientHelper.BuildApiCall<UpdateDataExchangeRequest, DataExchange>(grpcClient.UpdateDataExchangeAsync, grpcClient.UpdateDataExchange, effectiveSettings.UpdateDataExchangeSettings).WithGoogleRequestParam("data_exchange.name", request => request.DataExchange?.Name);
+            _callUpdateDataExchange = clientHelper.BuildApiCall<UpdateDataExchangeRequest, DataExchange>("UpdateDataExchange", grpcClient.UpdateDataExchangeAsync, grpcClient.UpdateDataExchange, effectiveSettings.UpdateDataExchangeSettings).WithGoogleRequestParam("data_exchange.name", request => request.DataExchange?.Name);
             Modify_ApiCall(ref _callUpdateDataExchange);
             Modify_UpdateDataExchangeApiCall(ref _callUpdateDataExchange);
-            _callDeleteDataExchange = clientHelper.BuildApiCall<DeleteDataExchangeRequest, wkt::Empty>(grpcClient.DeleteDataExchangeAsync, grpcClient.DeleteDataExchange, effectiveSettings.DeleteDataExchangeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteDataExchange = clientHelper.BuildApiCall<DeleteDataExchangeRequest, wkt::Empty>("DeleteDataExchange", grpcClient.DeleteDataExchangeAsync, grpcClient.DeleteDataExchange, effectiveSettings.DeleteDataExchangeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDataExchange);
             Modify_DeleteDataExchangeApiCall(ref _callDeleteDataExchange);
-            _callListListings = clientHelper.BuildApiCall<ListListingsRequest, ListListingsResponse>(grpcClient.ListListingsAsync, grpcClient.ListListings, effectiveSettings.ListListingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListListings = clientHelper.BuildApiCall<ListListingsRequest, ListListingsResponse>("ListListings", grpcClient.ListListingsAsync, grpcClient.ListListings, effectiveSettings.ListListingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListListings);
             Modify_ListListingsApiCall(ref _callListListings);
-            _callGetListing = clientHelper.BuildApiCall<GetListingRequest, Listing>(grpcClient.GetListingAsync, grpcClient.GetListing, effectiveSettings.GetListingSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetListing = clientHelper.BuildApiCall<GetListingRequest, Listing>("GetListing", grpcClient.GetListingAsync, grpcClient.GetListing, effectiveSettings.GetListingSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetListing);
             Modify_GetListingApiCall(ref _callGetListing);
-            _callCreateListing = clientHelper.BuildApiCall<CreateListingRequest, Listing>(grpcClient.CreateListingAsync, grpcClient.CreateListing, effectiveSettings.CreateListingSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateListing = clientHelper.BuildApiCall<CreateListingRequest, Listing>("CreateListing", grpcClient.CreateListingAsync, grpcClient.CreateListing, effectiveSettings.CreateListingSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateListing);
             Modify_CreateListingApiCall(ref _callCreateListing);
-            _callUpdateListing = clientHelper.BuildApiCall<UpdateListingRequest, Listing>(grpcClient.UpdateListingAsync, grpcClient.UpdateListing, effectiveSettings.UpdateListingSettings).WithGoogleRequestParam("listing.name", request => request.Listing?.Name);
+            _callUpdateListing = clientHelper.BuildApiCall<UpdateListingRequest, Listing>("UpdateListing", grpcClient.UpdateListingAsync, grpcClient.UpdateListing, effectiveSettings.UpdateListingSettings).WithGoogleRequestParam("listing.name", request => request.Listing?.Name);
             Modify_ApiCall(ref _callUpdateListing);
             Modify_UpdateListingApiCall(ref _callUpdateListing);
-            _callDeleteListing = clientHelper.BuildApiCall<DeleteListingRequest, wkt::Empty>(grpcClient.DeleteListingAsync, grpcClient.DeleteListing, effectiveSettings.DeleteListingSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteListing = clientHelper.BuildApiCall<DeleteListingRequest, wkt::Empty>("DeleteListing", grpcClient.DeleteListingAsync, grpcClient.DeleteListing, effectiveSettings.DeleteListingSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteListing);
             Modify_DeleteListingApiCall(ref _callDeleteListing);
-            _callSubscribeListing = clientHelper.BuildApiCall<SubscribeListingRequest, SubscribeListingResponse>(grpcClient.SubscribeListingAsync, grpcClient.SubscribeListing, effectiveSettings.SubscribeListingSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callSubscribeListing = clientHelper.BuildApiCall<SubscribeListingRequest, SubscribeListingResponse>("SubscribeListing", grpcClient.SubscribeListingAsync, grpcClient.SubscribeListing, effectiveSettings.SubscribeListingSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callSubscribeListing);
             Modify_SubscribeListingApiCall(ref _callSubscribeListing);
-            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>(grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
-            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>(grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
-            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>(grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -60,7 +60,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SessionAffinity = "session_affinitye702dadf",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
+            TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null, null);
             TargetPool response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -99,7 +99,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SessionAffinity = "session_affinitye702dadf",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
+            TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null, null);
             TargetPool responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TargetPool responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -140,7 +140,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SessionAffinity = "session_affinitye702dadf",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
+            TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null, null);
             TargetPool response = client.Get(request.Project, request.Region, request.TargetPool);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -179,7 +179,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SessionAffinity = "session_affinitye702dadf",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
+            TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null, null);
             TargetPool responseCallSettings = await client.GetAsync(request.Project, request.Region, request.TargetPool, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TargetPool responseCancellationToken = await client.GetAsync(request.Project, request.Region, request.TargetPool, st::CancellationToken.None);
@@ -205,7 +205,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 HealthStatus = { new HealthStatus(), },
             };
             mockGrpcClient.Setup(x => x.GetHealth(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
+            TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null, null);
             TargetPoolInstanceHealth response = client.GetHealth(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -229,7 +229,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 HealthStatus = { new HealthStatus(), },
             };
             mockGrpcClient.Setup(x => x.GetHealthAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetPoolInstanceHealth>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
+            TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null, null);
             TargetPoolInstanceHealth responseCallSettings = await client.GetHealthAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TargetPoolInstanceHealth responseCancellationToken = await client.GetHealthAsync(request, st::CancellationToken.None);
@@ -255,7 +255,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 HealthStatus = { new HealthStatus(), },
             };
             mockGrpcClient.Setup(x => x.GetHealth(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
+            TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null, null);
             TargetPoolInstanceHealth response = client.GetHealth(request.Project, request.Region, request.TargetPool, request.InstanceReferenceResource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -279,7 +279,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 HealthStatus = { new HealthStatus(), },
             };
             mockGrpcClient.Setup(x => x.GetHealthAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetPoolInstanceHealth>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
+            TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null, null);
             TargetPoolInstanceHealth responseCallSettings = await client.GetHealthAsync(request.Project, request.Region, request.TargetPool, request.InstanceReferenceResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TargetPoolInstanceHealth responseCancellationToken = await client.GetHealthAsync(request.Project, request.Region, request.TargetPool, request.InstanceReferenceResource, st::CancellationToken.None);

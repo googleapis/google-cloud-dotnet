@@ -42,7 +42,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
                 Password = "password3bcc4d5f",
             };
             mockGrpcClient.Setup(x => x.ResetAdminPassword(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null, null);
             ResetAdminPasswordResponse response = client.ResetAdminPassword(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -62,7 +62,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
                 Password = "password3bcc4d5f",
             };
             mockGrpcClient.Setup(x => x.ResetAdminPasswordAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ResetAdminPasswordResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null, null);
             ResetAdminPasswordResponse responseCallSettings = await client.ResetAdminPasswordAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ResetAdminPasswordResponse responseCancellationToken = await client.ResetAdminPasswordAsync(request, st::CancellationToken.None);
@@ -84,7 +84,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
                 Password = "password3bcc4d5f",
             };
             mockGrpcClient.Setup(x => x.ResetAdminPassword(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null, null);
             ResetAdminPasswordResponse response = client.ResetAdminPassword(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -104,7 +104,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
                 Password = "password3bcc4d5f",
             };
             mockGrpcClient.Setup(x => x.ResetAdminPasswordAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ResetAdminPasswordResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null, null);
             ResetAdminPasswordResponse responseCallSettings = await client.ResetAdminPasswordAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ResetAdminPasswordResponse responseCancellationToken = await client.ResetAdminPasswordAsync(request.Name, st::CancellationToken.None);
@@ -126,7 +126,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
                 Password = "password3bcc4d5f",
             };
             mockGrpcClient.Setup(x => x.ResetAdminPassword(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null, null);
             ResetAdminPasswordResponse response = client.ResetAdminPassword(request.DomainName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -146,7 +146,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
                 Password = "password3bcc4d5f",
             };
             mockGrpcClient.Setup(x => x.ResetAdminPasswordAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ResetAdminPasswordResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null, null);
             ResetAdminPasswordResponse responseCallSettings = await client.ResetAdminPasswordAsync(request.DomainName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ResetAdminPasswordResponse responseCancellationToken = await client.ResetAdminPasswordAsync(request.DomainName, st::CancellationToken.None);
@@ -191,7 +191,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
                 Trusts = { new Trust(), },
             };
             mockGrpcClient.Setup(x => x.GetDomain(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null, null);
             Domain response = client.GetDomain(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -234,7 +234,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
                 Trusts = { new Trust(), },
             };
             mockGrpcClient.Setup(x => x.GetDomainAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Domain>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null, null);
             Domain responseCallSettings = await client.GetDomainAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Domain responseCancellationToken = await client.GetDomainAsync(request, st::CancellationToken.None);
@@ -279,7 +279,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
                 Trusts = { new Trust(), },
             };
             mockGrpcClient.Setup(x => x.GetDomain(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null, null);
             Domain response = client.GetDomain(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -322,7 +322,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
                 Trusts = { new Trust(), },
             };
             mockGrpcClient.Setup(x => x.GetDomainAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Domain>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null, null);
             Domain responseCallSettings = await client.GetDomainAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Domain responseCancellationToken = await client.GetDomainAsync(request.Name, st::CancellationToken.None);
@@ -367,7 +367,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
                 Trusts = { new Trust(), },
             };
             mockGrpcClient.Setup(x => x.GetDomain(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null, null);
             Domain response = client.GetDomain(request.DomainName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -410,7 +410,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
                 Trusts = { new Trust(), },
             };
             mockGrpcClient.Setup(x => x.GetDomainAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Domain>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null);
+            ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null, null);
             Domain responseCallSettings = await client.GetDomainAsync(request.DomainName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Domain responseCancellationToken = await client.GetDomainAsync(request.DomainName, st::CancellationToken.None);

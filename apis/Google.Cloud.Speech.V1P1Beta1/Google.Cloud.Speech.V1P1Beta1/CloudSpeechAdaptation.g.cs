@@ -189,15 +189,16 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource where this phrase set will be created. Format:
+    /// Required. The parent resource where this phrase set will be created.
+    /// Format:
     ///
     /// `projects/{project}/locations/{location}/phraseSets`
     ///
     /// Speech-to-Text supports three locations: `global`, `us` (US North America),
     /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
     /// endpoint, use the `global` location. To specify a region, use a
-    /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-    /// `eu` location value.
+    /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+    /// with matching `us` or `eu` location value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -494,8 +495,8 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     /// Speech-to-Text supports three locations: `global`, `us` (US North America),
     /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
     /// endpoint, use the `global` location. To specify a region, use a
-    /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-    /// `eu` location value.
+    /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+    /// with matching `us` or `eu` location value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -754,8 +755,8 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     /// Speech-to-Text supports three locations: `global`, `us` (US North America),
     /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
     /// endpoint, use the `global` location. To specify a region, use a
-    /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-    /// `eu` location value.
+    /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+    /// with matching `us` or `eu` location value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -959,8 +960,8 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     /// Speech-to-Text supports three locations: `global`, `us` (US North America),
     /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
     /// endpoint, use the `global` location. To specify a region, use a
-    /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-    /// `eu` location value.
+    /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+    /// with matching `us` or `eu` location value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1664,15 +1665,16 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource where this custom class will be created. Format:
+    /// Required. The parent resource where this custom class will be created.
+    /// Format:
     ///
     /// `projects/{project}/locations/{location}/customClasses`
     ///
     /// Speech-to-Text supports three locations: `global`, `us` (US North America),
     /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
     /// endpoint, use the `global` location. To specify a region, use a
-    /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-    /// `eu` location value.
+    /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+    /// with matching `us` or `eu` location value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1969,8 +1971,8 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     /// Speech-to-Text supports three locations: `global`, `us` (US North America),
     /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
     /// endpoint, use the `global` location. To specify a region, use a
-    /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-    /// `eu` location value.
+    /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+    /// with matching `us` or `eu` location value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2428,8 +2430,8 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     /// Speech-to-Text supports three locations: `global`, `us` (US North America),
     /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
     /// endpoint, use the `global` location. To specify a region, use a
-    /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-    /// `eu` location value.
+    /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+    /// with matching `us` or `eu` location value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2941,8 +2943,8 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     /// Speech-to-Text supports three locations: `global`, `us` (US North America),
     /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
     /// endpoint, use the `global` location. To specify a region, use a
-    /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
-    /// `eu` location value.
+    /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
+    /// with matching `us` or `eu` location value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

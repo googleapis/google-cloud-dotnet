@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -86,9 +86,8 @@ namespace Google.Cloud.Retail.V2
         public SearchServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public SearchServiceClientBuilder()
+        public SearchServiceClientBuilder() : base(SearchServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = SearchServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref SearchServiceClient client);
@@ -115,29 +114,18 @@ namespace Google.Cloud.Retail.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SearchServiceClient.Create(callInvoker, Settings);
+            return SearchServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<SearchServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SearchServiceClient.Create(callInvoker, Settings);
+            return SearchServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => SearchServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => SearchServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => SearchServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>SearchService client wrapper, for convenient use.</summary>
@@ -167,19 +155,10 @@ namespace Google.Cloud.Retail.V2
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(SearchService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="SearchServiceClient"/> using the default credentials, endpoint and
@@ -206,8 +185,9 @@ namespace Google.Cloud.Retail.V2
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="SearchServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="SearchServiceClient"/>.</returns>
-        internal static SearchServiceClient Create(grpccore::CallInvoker callInvoker, SearchServiceSettings settings = null)
+        internal static SearchServiceClient Create(grpccore::CallInvoker callInvoker, SearchServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -216,7 +196,7 @@ namespace Google.Cloud.Retail.V2
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             SearchService.SearchServiceClient grpcClient = new SearchService.SearchServiceClient(callInvoker);
-            return new SearchServiceClientImpl(grpcClient, settings);
+            return new SearchServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -278,12 +258,13 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="SearchServiceSettings"/> used within this client.</param>
-        public SearchServiceClientImpl(SearchService.SearchServiceClient grpcClient, SearchServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public SearchServiceClientImpl(SearchService.SearchServiceClient grpcClient, SearchServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             SearchServiceSettings effectiveSettings = settings ?? SearchServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callSearch = clientHelper.BuildApiCall<SearchRequest, SearchResponse>(grpcClient.SearchAsync, grpcClient.Search, effectiveSettings.SearchSettings).WithGoogleRequestParam("placement", request => request.Placement);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callSearch = clientHelper.BuildApiCall<SearchRequest, SearchResponse>("Search", grpcClient.SearchAsync, grpcClient.Search, effectiveSettings.SearchSettings).WithGoogleRequestParam("placement", request => request.Placement);
             Modify_ApiCall(ref _callSearch);
             Modify_SearchApiCall(ref _callSearch);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -316,9 +316,8 @@ namespace Google.Cloud.WebSecurityScanner.V1
         public WebSecurityScannerSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public WebSecurityScannerClientBuilder()
+        public WebSecurityScannerClientBuilder() : base(WebSecurityScannerClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = WebSecurityScannerClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref WebSecurityScannerClient client);
@@ -345,29 +344,18 @@ namespace Google.Cloud.WebSecurityScanner.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return WebSecurityScannerClient.Create(callInvoker, Settings);
+            return WebSecurityScannerClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<WebSecurityScannerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return WebSecurityScannerClient.Create(callInvoker, Settings);
+            return WebSecurityScannerClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => WebSecurityScannerClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => WebSecurityScannerClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => WebSecurityScannerClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>WebSecurityScanner client wrapper, for convenient use.</summary>
@@ -396,19 +384,10 @@ namespace Google.Cloud.WebSecurityScanner.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(WebSecurityScanner.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="WebSecurityScannerClient"/> using the default credentials, endpoint and
@@ -438,8 +417,9 @@ namespace Google.Cloud.WebSecurityScanner.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="WebSecurityScannerSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="WebSecurityScannerClient"/>.</returns>
-        internal static WebSecurityScannerClient Create(grpccore::CallInvoker callInvoker, WebSecurityScannerSettings settings = null)
+        internal static WebSecurityScannerClient Create(grpccore::CallInvoker callInvoker, WebSecurityScannerSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -448,7 +428,7 @@ namespace Google.Cloud.WebSecurityScanner.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             WebSecurityScanner.WebSecurityScannerClient grpcClient = new WebSecurityScanner.WebSecurityScannerClient(callInvoker);
-            return new WebSecurityScannerClientImpl(grpcClient, settings);
+            return new WebSecurityScannerClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -824,48 +804,49 @@ namespace Google.Cloud.WebSecurityScanner.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="WebSecurityScannerSettings"/> used within this client.</param>
-        public WebSecurityScannerClientImpl(WebSecurityScanner.WebSecurityScannerClient grpcClient, WebSecurityScannerSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public WebSecurityScannerClientImpl(WebSecurityScanner.WebSecurityScannerClient grpcClient, WebSecurityScannerSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             WebSecurityScannerSettings effectiveSettings = settings ?? WebSecurityScannerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCreateScanConfig = clientHelper.BuildApiCall<CreateScanConfigRequest, ScanConfig>(grpcClient.CreateScanConfigAsync, grpcClient.CreateScanConfig, effectiveSettings.CreateScanConfigSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCreateScanConfig = clientHelper.BuildApiCall<CreateScanConfigRequest, ScanConfig>("CreateScanConfig", grpcClient.CreateScanConfigAsync, grpcClient.CreateScanConfig, effectiveSettings.CreateScanConfigSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateScanConfig);
             Modify_CreateScanConfigApiCall(ref _callCreateScanConfig);
-            _callDeleteScanConfig = clientHelper.BuildApiCall<DeleteScanConfigRequest, wkt::Empty>(grpcClient.DeleteScanConfigAsync, grpcClient.DeleteScanConfig, effectiveSettings.DeleteScanConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteScanConfig = clientHelper.BuildApiCall<DeleteScanConfigRequest, wkt::Empty>("DeleteScanConfig", grpcClient.DeleteScanConfigAsync, grpcClient.DeleteScanConfig, effectiveSettings.DeleteScanConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteScanConfig);
             Modify_DeleteScanConfigApiCall(ref _callDeleteScanConfig);
-            _callGetScanConfig = clientHelper.BuildApiCall<GetScanConfigRequest, ScanConfig>(grpcClient.GetScanConfigAsync, grpcClient.GetScanConfig, effectiveSettings.GetScanConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetScanConfig = clientHelper.BuildApiCall<GetScanConfigRequest, ScanConfig>("GetScanConfig", grpcClient.GetScanConfigAsync, grpcClient.GetScanConfig, effectiveSettings.GetScanConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetScanConfig);
             Modify_GetScanConfigApiCall(ref _callGetScanConfig);
-            _callListScanConfigs = clientHelper.BuildApiCall<ListScanConfigsRequest, ListScanConfigsResponse>(grpcClient.ListScanConfigsAsync, grpcClient.ListScanConfigs, effectiveSettings.ListScanConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListScanConfigs = clientHelper.BuildApiCall<ListScanConfigsRequest, ListScanConfigsResponse>("ListScanConfigs", grpcClient.ListScanConfigsAsync, grpcClient.ListScanConfigs, effectiveSettings.ListScanConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListScanConfigs);
             Modify_ListScanConfigsApiCall(ref _callListScanConfigs);
-            _callUpdateScanConfig = clientHelper.BuildApiCall<UpdateScanConfigRequest, ScanConfig>(grpcClient.UpdateScanConfigAsync, grpcClient.UpdateScanConfig, effectiveSettings.UpdateScanConfigSettings).WithGoogleRequestParam("scan_config.name", request => request.ScanConfig?.Name);
+            _callUpdateScanConfig = clientHelper.BuildApiCall<UpdateScanConfigRequest, ScanConfig>("UpdateScanConfig", grpcClient.UpdateScanConfigAsync, grpcClient.UpdateScanConfig, effectiveSettings.UpdateScanConfigSettings).WithGoogleRequestParam("scan_config.name", request => request.ScanConfig?.Name);
             Modify_ApiCall(ref _callUpdateScanConfig);
             Modify_UpdateScanConfigApiCall(ref _callUpdateScanConfig);
-            _callStartScanRun = clientHelper.BuildApiCall<StartScanRunRequest, ScanRun>(grpcClient.StartScanRunAsync, grpcClient.StartScanRun, effectiveSettings.StartScanRunSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callStartScanRun = clientHelper.BuildApiCall<StartScanRunRequest, ScanRun>("StartScanRun", grpcClient.StartScanRunAsync, grpcClient.StartScanRun, effectiveSettings.StartScanRunSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callStartScanRun);
             Modify_StartScanRunApiCall(ref _callStartScanRun);
-            _callGetScanRun = clientHelper.BuildApiCall<GetScanRunRequest, ScanRun>(grpcClient.GetScanRunAsync, grpcClient.GetScanRun, effectiveSettings.GetScanRunSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetScanRun = clientHelper.BuildApiCall<GetScanRunRequest, ScanRun>("GetScanRun", grpcClient.GetScanRunAsync, grpcClient.GetScanRun, effectiveSettings.GetScanRunSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetScanRun);
             Modify_GetScanRunApiCall(ref _callGetScanRun);
-            _callListScanRuns = clientHelper.BuildApiCall<ListScanRunsRequest, ListScanRunsResponse>(grpcClient.ListScanRunsAsync, grpcClient.ListScanRuns, effectiveSettings.ListScanRunsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListScanRuns = clientHelper.BuildApiCall<ListScanRunsRequest, ListScanRunsResponse>("ListScanRuns", grpcClient.ListScanRunsAsync, grpcClient.ListScanRuns, effectiveSettings.ListScanRunsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListScanRuns);
             Modify_ListScanRunsApiCall(ref _callListScanRuns);
-            _callStopScanRun = clientHelper.BuildApiCall<StopScanRunRequest, ScanRun>(grpcClient.StopScanRunAsync, grpcClient.StopScanRun, effectiveSettings.StopScanRunSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callStopScanRun = clientHelper.BuildApiCall<StopScanRunRequest, ScanRun>("StopScanRun", grpcClient.StopScanRunAsync, grpcClient.StopScanRun, effectiveSettings.StopScanRunSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callStopScanRun);
             Modify_StopScanRunApiCall(ref _callStopScanRun);
-            _callListCrawledUrls = clientHelper.BuildApiCall<ListCrawledUrlsRequest, ListCrawledUrlsResponse>(grpcClient.ListCrawledUrlsAsync, grpcClient.ListCrawledUrls, effectiveSettings.ListCrawledUrlsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListCrawledUrls = clientHelper.BuildApiCall<ListCrawledUrlsRequest, ListCrawledUrlsResponse>("ListCrawledUrls", grpcClient.ListCrawledUrlsAsync, grpcClient.ListCrawledUrls, effectiveSettings.ListCrawledUrlsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCrawledUrls);
             Modify_ListCrawledUrlsApiCall(ref _callListCrawledUrls);
-            _callGetFinding = clientHelper.BuildApiCall<GetFindingRequest, Finding>(grpcClient.GetFindingAsync, grpcClient.GetFinding, effectiveSettings.GetFindingSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetFinding = clientHelper.BuildApiCall<GetFindingRequest, Finding>("GetFinding", grpcClient.GetFindingAsync, grpcClient.GetFinding, effectiveSettings.GetFindingSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetFinding);
             Modify_GetFindingApiCall(ref _callGetFinding);
-            _callListFindings = clientHelper.BuildApiCall<ListFindingsRequest, ListFindingsResponse>(grpcClient.ListFindingsAsync, grpcClient.ListFindings, effectiveSettings.ListFindingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListFindings = clientHelper.BuildApiCall<ListFindingsRequest, ListFindingsResponse>("ListFindings", grpcClient.ListFindingsAsync, grpcClient.ListFindings, effectiveSettings.ListFindingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListFindings);
             Modify_ListFindingsApiCall(ref _callListFindings);
-            _callListFindingTypeStats = clientHelper.BuildApiCall<ListFindingTypeStatsRequest, ListFindingTypeStatsResponse>(grpcClient.ListFindingTypeStatsAsync, grpcClient.ListFindingTypeStats, effectiveSettings.ListFindingTypeStatsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListFindingTypeStats = clientHelper.BuildApiCall<ListFindingTypeStatsRequest, ListFindingTypeStatsResponse>("ListFindingTypeStats", grpcClient.ListFindingTypeStatsAsync, grpcClient.ListFindingTypeStats, effectiveSettings.ListFindingTypeStatsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListFindingTypeStats);
             Modify_ListFindingTypeStatsApiCall(ref _callListFindingTypeStats);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

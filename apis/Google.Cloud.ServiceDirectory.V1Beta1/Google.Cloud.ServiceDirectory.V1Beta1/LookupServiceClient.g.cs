@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -85,9 +85,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         public LookupServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public LookupServiceClientBuilder()
+        public LookupServiceClientBuilder() : base(LookupServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = LookupServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref LookupServiceClient client);
@@ -114,29 +113,18 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return LookupServiceClient.Create(callInvoker, Settings);
+            return LookupServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<LookupServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return LookupServiceClient.Create(callInvoker, Settings);
+            return LookupServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => LookupServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => LookupServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => LookupServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>LookupService client wrapper, for convenient use.</summary>
@@ -163,19 +151,10 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(LookupService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="LookupServiceClient"/> using the default credentials, endpoint and
@@ -202,8 +181,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="LookupServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="LookupServiceClient"/>.</returns>
-        internal static LookupServiceClient Create(grpccore::CallInvoker callInvoker, LookupServiceSettings settings = null)
+        internal static LookupServiceClient Create(grpccore::CallInvoker callInvoker, LookupServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -212,7 +192,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             LookupService.LookupServiceClient grpcClient = new LookupService.LookupServiceClient(callInvoker);
-            return new LookupServiceClientImpl(grpcClient, settings);
+            return new LookupServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -278,12 +258,13 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="LookupServiceSettings"/> used within this client.</param>
-        public LookupServiceClientImpl(LookupService.LookupServiceClient grpcClient, LookupServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public LookupServiceClientImpl(LookupService.LookupServiceClient grpcClient, LookupServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             LookupServiceSettings effectiveSettings = settings ?? LookupServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callResolveService = clientHelper.BuildApiCall<ResolveServiceRequest, ResolveServiceResponse>(grpcClient.ResolveServiceAsync, grpcClient.ResolveService, effectiveSettings.ResolveServiceSettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callResolveService = clientHelper.BuildApiCall<ResolveServiceRequest, ResolveServiceResponse>("ResolveService", grpcClient.ResolveServiceAsync, grpcClient.ResolveService, effectiveSettings.ResolveServiceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callResolveService);
             Modify_ResolveServiceApiCall(ref _callResolveService);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -58,7 +58,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 DatabaseDialect = DatabaseDialect.GoogleStandardSql,
             };
             mockGrpcClient.Setup(x => x.GetDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             Database response = client.GetDatabase(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -90,7 +90,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 DatabaseDialect = DatabaseDialect.GoogleStandardSql,
             };
             mockGrpcClient.Setup(x => x.GetDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Database>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             Database responseCallSettings = await client.GetDatabaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Database responseCancellationToken = await client.GetDatabaseAsync(request, st::CancellationToken.None);
@@ -124,7 +124,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 DatabaseDialect = DatabaseDialect.GoogleStandardSql,
             };
             mockGrpcClient.Setup(x => x.GetDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             Database response = client.GetDatabase(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -156,7 +156,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 DatabaseDialect = DatabaseDialect.GoogleStandardSql,
             };
             mockGrpcClient.Setup(x => x.GetDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Database>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             Database responseCallSettings = await client.GetDatabaseAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Database responseCancellationToken = await client.GetDatabaseAsync(request.Name, st::CancellationToken.None);
@@ -190,7 +190,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 DatabaseDialect = DatabaseDialect.GoogleStandardSql,
             };
             mockGrpcClient.Setup(x => x.GetDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             Database response = client.GetDatabase(request.DatabaseName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -222,7 +222,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 DatabaseDialect = DatabaseDialect.GoogleStandardSql,
             };
             mockGrpcClient.Setup(x => x.GetDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Database>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             Database responseCallSettings = await client.GetDatabaseAsync(request.DatabaseName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Database responseCancellationToken = await client.GetDatabaseAsync(request.DatabaseName, st::CancellationToken.None);
@@ -241,7 +241,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DropDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             client.DropDatabase(request);
             mockGrpcClient.VerifyAll();
         }
@@ -257,7 +257,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DropDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             await client.DropDatabaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DropDatabaseAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -274,7 +274,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DropDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             client.DropDatabase(request.Database);
             mockGrpcClient.VerifyAll();
         }
@@ -290,7 +290,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DropDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             await client.DropDatabaseAsync(request.Database, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DropDatabaseAsync(request.Database, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -307,7 +307,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DropDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             client.DropDatabase(request.DatabaseAsDatabaseName);
             mockGrpcClient.VerifyAll();
         }
@@ -323,7 +323,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DropDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             await client.DropDatabaseAsync(request.DatabaseAsDatabaseName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DropDatabaseAsync(request.DatabaseAsDatabaseName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -346,7 +346,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetDatabaseDdl(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             GetDatabaseDdlResponse response = client.GetDatabaseDdl(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -369,7 +369,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetDatabaseDdlAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GetDatabaseDdlResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             GetDatabaseDdlResponse responseCallSettings = await client.GetDatabaseDdlAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GetDatabaseDdlResponse responseCancellationToken = await client.GetDatabaseDdlAsync(request, st::CancellationToken.None);
@@ -394,7 +394,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetDatabaseDdl(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             GetDatabaseDdlResponse response = client.GetDatabaseDdl(request.Database);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -417,7 +417,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetDatabaseDdlAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GetDatabaseDdlResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             GetDatabaseDdlResponse responseCallSettings = await client.GetDatabaseDdlAsync(request.Database, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GetDatabaseDdlResponse responseCancellationToken = await client.GetDatabaseDdlAsync(request.Database, st::CancellationToken.None);
@@ -442,7 +442,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetDatabaseDdl(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             GetDatabaseDdlResponse response = client.GetDatabaseDdl(request.DatabaseAsDatabaseName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -465,7 +465,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetDatabaseDdlAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GetDatabaseDdlResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             GetDatabaseDdlResponse responseCallSettings = await client.GetDatabaseDdlAsync(request.DatabaseAsDatabaseName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GetDatabaseDdlResponse responseCancellationToken = await client.GetDatabaseDdlAsync(request.DatabaseAsDatabaseName, st::CancellationToken.None);
@@ -498,7 +498,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -529,7 +529,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
@@ -561,7 +561,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request.Resource, request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -591,7 +591,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.Resource, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.Resource, request.Policy, st::CancellationToken.None);
@@ -623,7 +623,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request.ResourceAsResourceName, request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -653,7 +653,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, st::CancellationToken.None);
@@ -685,7 +685,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -715,7 +715,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
@@ -746,7 +746,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request.Resource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -775,7 +775,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.Resource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.Resource, st::CancellationToken.None);
@@ -806,7 +806,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request.ResourceAsResourceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -835,7 +835,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.ResourceAsResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.ResourceAsResourceName, st::CancellationToken.None);
@@ -864,7 +864,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -891,7 +891,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);
@@ -920,7 +920,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.Resource, request.Permissions);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -947,7 +947,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, st::CancellationToken.None);
@@ -976,7 +976,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.ResourceAsResourceName, request.Permissions);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1003,7 +1003,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, st::CancellationToken.None);
@@ -1042,7 +1042,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 MaxExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             Backup response = client.GetBackup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1079,7 +1079,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 MaxExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             Backup responseCallSettings = await client.GetBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Backup responseCancellationToken = await client.GetBackupAsync(request, st::CancellationToken.None);
@@ -1118,7 +1118,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 MaxExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             Backup response = client.GetBackup(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1155,7 +1155,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 MaxExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             Backup responseCallSettings = await client.GetBackupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Backup responseCancellationToken = await client.GetBackupAsync(request.Name, st::CancellationToken.None);
@@ -1194,7 +1194,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 MaxExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             Backup response = client.GetBackup(request.BackupName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1231,7 +1231,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 MaxExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             Backup responseCallSettings = await client.GetBackupAsync(request.BackupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Backup responseCancellationToken = await client.GetBackupAsync(request.BackupName, st::CancellationToken.None);
@@ -1271,7 +1271,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 MaxExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             Backup response = client.UpdateBackup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1309,7 +1309,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 MaxExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             Backup responseCallSettings = await client.UpdateBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Backup responseCancellationToken = await client.UpdateBackupAsync(request, st::CancellationToken.None);
@@ -1349,7 +1349,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 MaxExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             Backup response = client.UpdateBackup(request.Backup, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1387,7 +1387,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 MaxExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             Backup responseCallSettings = await client.UpdateBackupAsync(request.Backup, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Backup responseCancellationToken = await client.UpdateBackupAsync(request.Backup, request.UpdateMask, st::CancellationToken.None);
@@ -1406,7 +1406,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteBackup(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1422,7 +1422,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteBackupAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1439,7 +1439,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteBackup(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1455,7 +1455,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteBackupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteBackupAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1472,7 +1472,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteBackup(request.BackupName);
             mockGrpcClient.VerifyAll();
         }
@@ -1488,7 +1488,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteBackupAsync(request.BackupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteBackupAsync(request.BackupName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

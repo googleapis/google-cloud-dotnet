@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -264,9 +264,8 @@ namespace Google.Cloud.PubSub.V1
         public PublisherServiceApiSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public PublisherServiceApiClientBuilder()
+        public PublisherServiceApiClientBuilder() : base(PublisherServiceApiClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = PublisherServiceApiClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref PublisherServiceApiClient client);
@@ -293,29 +292,18 @@ namespace Google.Cloud.PubSub.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return PublisherServiceApiClient.Create(callInvoker, Settings);
+            return PublisherServiceApiClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<PublisherServiceApiClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return PublisherServiceApiClient.Create(callInvoker, Settings);
+            return PublisherServiceApiClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => PublisherServiceApiClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => PublisherServiceApiClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => PublisherServiceApiClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>PublisherServiceApi client wrapper, for convenient use.</summary>
@@ -345,19 +333,10 @@ namespace Google.Cloud.PubSub.V1
             "https://www.googleapis.com/auth/pubsub",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Publisher.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="PublisherServiceApiClient"/> using the default credentials, endpoint and
@@ -387,8 +366,9 @@ namespace Google.Cloud.PubSub.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="PublisherServiceApiSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="PublisherServiceApiClient"/>.</returns>
-        internal static PublisherServiceApiClient Create(grpccore::CallInvoker callInvoker, PublisherServiceApiSettings settings = null)
+        internal static PublisherServiceApiClient Create(grpccore::CallInvoker callInvoker, PublisherServiceApiSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -397,7 +377,7 @@ namespace Google.Cloud.PubSub.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Publisher.PublisherClient grpcClient = new Publisher.PublisherClient(callInvoker);
-            return new PublisherServiceApiClientImpl(grpcClient, settings);
+            return new PublisherServiceApiClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1451,37 +1431,38 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="PublisherServiceApiSettings"/> used within this client.</param>
-        public PublisherServiceApiClientImpl(Publisher.PublisherClient grpcClient, PublisherServiceApiSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public PublisherServiceApiClientImpl(Publisher.PublisherClient grpcClient, PublisherServiceApiSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             PublisherServiceApiSettings effectiveSettings = settings ?? PublisherServiceApiSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings);
-            _callCreateTopic = clientHelper.BuildApiCall<Topic, Topic>(grpcClient.CreateTopicAsync, grpcClient.CreateTopic, effectiveSettings.CreateTopicSettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
+            _callCreateTopic = clientHelper.BuildApiCall<Topic, Topic>("CreateTopic", grpcClient.CreateTopicAsync, grpcClient.CreateTopic, effectiveSettings.CreateTopicSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCreateTopic);
             Modify_CreateTopicApiCall(ref _callCreateTopic);
-            _callUpdateTopic = clientHelper.BuildApiCall<UpdateTopicRequest, Topic>(grpcClient.UpdateTopicAsync, grpcClient.UpdateTopic, effectiveSettings.UpdateTopicSettings).WithGoogleRequestParam("topic.name", request => request.Topic?.Name);
+            _callUpdateTopic = clientHelper.BuildApiCall<UpdateTopicRequest, Topic>("UpdateTopic", grpcClient.UpdateTopicAsync, grpcClient.UpdateTopic, effectiveSettings.UpdateTopicSettings).WithGoogleRequestParam("topic.name", request => request.Topic?.Name);
             Modify_ApiCall(ref _callUpdateTopic);
             Modify_UpdateTopicApiCall(ref _callUpdateTopic);
-            _callPublish = clientHelper.BuildApiCall<PublishRequest, PublishResponse>(grpcClient.PublishAsync, grpcClient.Publish, effectiveSettings.PublishSettings).WithGoogleRequestParam("topic", request => request.Topic);
+            _callPublish = clientHelper.BuildApiCall<PublishRequest, PublishResponse>("Publish", grpcClient.PublishAsync, grpcClient.Publish, effectiveSettings.PublishSettings).WithGoogleRequestParam("topic", request => request.Topic);
             Modify_ApiCall(ref _callPublish);
             Modify_PublishApiCall(ref _callPublish);
-            _callGetTopic = clientHelper.BuildApiCall<GetTopicRequest, Topic>(grpcClient.GetTopicAsync, grpcClient.GetTopic, effectiveSettings.GetTopicSettings).WithGoogleRequestParam("topic", request => request.Topic);
+            _callGetTopic = clientHelper.BuildApiCall<GetTopicRequest, Topic>("GetTopic", grpcClient.GetTopicAsync, grpcClient.GetTopic, effectiveSettings.GetTopicSettings).WithGoogleRequestParam("topic", request => request.Topic);
             Modify_ApiCall(ref _callGetTopic);
             Modify_GetTopicApiCall(ref _callGetTopic);
-            _callListTopics = clientHelper.BuildApiCall<ListTopicsRequest, ListTopicsResponse>(grpcClient.ListTopicsAsync, grpcClient.ListTopics, effectiveSettings.ListTopicsSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callListTopics = clientHelper.BuildApiCall<ListTopicsRequest, ListTopicsResponse>("ListTopics", grpcClient.ListTopicsAsync, grpcClient.ListTopics, effectiveSettings.ListTopicsSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callListTopics);
             Modify_ListTopicsApiCall(ref _callListTopics);
-            _callListTopicSubscriptions = clientHelper.BuildApiCall<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse>(grpcClient.ListTopicSubscriptionsAsync, grpcClient.ListTopicSubscriptions, effectiveSettings.ListTopicSubscriptionsSettings).WithGoogleRequestParam("topic", request => request.Topic);
+            _callListTopicSubscriptions = clientHelper.BuildApiCall<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse>("ListTopicSubscriptions", grpcClient.ListTopicSubscriptionsAsync, grpcClient.ListTopicSubscriptions, effectiveSettings.ListTopicSubscriptionsSettings).WithGoogleRequestParam("topic", request => request.Topic);
             Modify_ApiCall(ref _callListTopicSubscriptions);
             Modify_ListTopicSubscriptionsApiCall(ref _callListTopicSubscriptions);
-            _callListTopicSnapshots = clientHelper.BuildApiCall<ListTopicSnapshotsRequest, ListTopicSnapshotsResponse>(grpcClient.ListTopicSnapshotsAsync, grpcClient.ListTopicSnapshots, effectiveSettings.ListTopicSnapshotsSettings).WithGoogleRequestParam("topic", request => request.Topic);
+            _callListTopicSnapshots = clientHelper.BuildApiCall<ListTopicSnapshotsRequest, ListTopicSnapshotsResponse>("ListTopicSnapshots", grpcClient.ListTopicSnapshotsAsync, grpcClient.ListTopicSnapshots, effectiveSettings.ListTopicSnapshotsSettings).WithGoogleRequestParam("topic", request => request.Topic);
             Modify_ApiCall(ref _callListTopicSnapshots);
             Modify_ListTopicSnapshotsApiCall(ref _callListTopicSnapshots);
-            _callDeleteTopic = clientHelper.BuildApiCall<DeleteTopicRequest, wkt::Empty>(grpcClient.DeleteTopicAsync, grpcClient.DeleteTopic, effectiveSettings.DeleteTopicSettings).WithGoogleRequestParam("topic", request => request.Topic);
+            _callDeleteTopic = clientHelper.BuildApiCall<DeleteTopicRequest, wkt::Empty>("DeleteTopic", grpcClient.DeleteTopicAsync, grpcClient.DeleteTopic, effectiveSettings.DeleteTopicSettings).WithGoogleRequestParam("topic", request => request.Topic);
             Modify_ApiCall(ref _callDeleteTopic);
             Modify_DeleteTopicApiCall(ref _callDeleteTopic);
-            _callDetachSubscription = clientHelper.BuildApiCall<DetachSubscriptionRequest, DetachSubscriptionResponse>(grpcClient.DetachSubscriptionAsync, grpcClient.DetachSubscription, effectiveSettings.DetachSubscriptionSettings).WithGoogleRequestParam("subscription", request => request.Subscription);
+            _callDetachSubscription = clientHelper.BuildApiCall<DetachSubscriptionRequest, DetachSubscriptionResponse>("DetachSubscription", grpcClient.DetachSubscriptionAsync, grpcClient.DetachSubscription, effectiveSettings.DetachSubscriptionSettings).WithGoogleRequestParam("subscription", request => request.Subscription);
             Modify_ApiCall(ref _callDetachSubscription);
             Modify_DetachSubscriptionApiCall(ref _callDetachSubscription);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

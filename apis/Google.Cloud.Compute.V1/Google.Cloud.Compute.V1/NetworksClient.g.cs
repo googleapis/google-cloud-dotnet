@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -376,9 +376,8 @@ namespace Google.Cloud.Compute.V1
         public NetworksSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public NetworksClientBuilder()
+        public NetworksClientBuilder() : base(NetworksClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = NetworksClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref NetworksClient client);
@@ -405,29 +404,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return NetworksClient.Create(callInvoker, Settings);
+            return NetworksClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<NetworksClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return NetworksClient.Create(callInvoker, Settings);
+            return NetworksClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => NetworksClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => NetworksClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => NetworksClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>Networks client wrapper, for convenient use.</summary>
@@ -456,19 +444,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Networks.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="NetworksClient"/> using the default credentials, endpoint and settings. 
@@ -495,8 +474,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="NetworksSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="NetworksClient"/>.</returns>
-        internal static NetworksClient Create(grpccore::CallInvoker callInvoker, NetworksSettings settings = null)
+        internal static NetworksClient Create(grpccore::CallInvoker callInvoker, NetworksSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -505,7 +485,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Networks.NetworksClient grpcClient = new Networks.NetworksClient(callInvoker);
-            return new NetworksClientImpl(grpcClient, settings);
+            return new NetworksClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1618,49 +1598,50 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="NetworksSettings"/> used within this client.</param>
-        public NetworksClientImpl(Networks.NetworksClient grpcClient, NetworksSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public NetworksClientImpl(Networks.NetworksClient grpcClient, NetworksSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             NetworksSettings effectiveSettings = settings ?? NetworksSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            AddPeeringOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AddPeeringOperationsSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings);
-            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings);
-            RemovePeeringOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.RemovePeeringOperationsSettings);
-            SwitchToCustomModeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SwitchToCustomModeOperationsSettings);
-            UpdatePeeringOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.UpdatePeeringOperationsSettings);
-            _callAddPeering = clientHelper.BuildApiCall<AddPeeringNetworkRequest, Operation>(grpcClient.AddPeeringAsync, grpcClient.AddPeering, effectiveSettings.AddPeeringSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            AddPeeringOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AddPeeringOperationsSettings, logger);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings, logger);
+            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings, logger);
+            RemovePeeringOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.RemovePeeringOperationsSettings, logger);
+            SwitchToCustomModeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SwitchToCustomModeOperationsSettings, logger);
+            UpdatePeeringOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.UpdatePeeringOperationsSettings, logger);
+            _callAddPeering = clientHelper.BuildApiCall<AddPeeringNetworkRequest, Operation>("AddPeering", grpcClient.AddPeeringAsync, grpcClient.AddPeering, effectiveSettings.AddPeeringSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
             Modify_ApiCall(ref _callAddPeering);
             Modify_AddPeeringApiCall(ref _callAddPeering);
-            _callDelete = clientHelper.BuildApiCall<DeleteNetworkRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
+            _callDelete = clientHelper.BuildApiCall<DeleteNetworkRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
-            _callGet = clientHelper.BuildApiCall<GetNetworkRequest, Network>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
+            _callGet = clientHelper.BuildApiCall<GetNetworkRequest, Network>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callGetEffectiveFirewalls = clientHelper.BuildApiCall<GetEffectiveFirewallsNetworkRequest, NetworksGetEffectiveFirewallsResponse>(grpcClient.GetEffectiveFirewallsAsync, grpcClient.GetEffectiveFirewalls, effectiveSettings.GetEffectiveFirewallsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
+            _callGetEffectiveFirewalls = clientHelper.BuildApiCall<GetEffectiveFirewallsNetworkRequest, NetworksGetEffectiveFirewallsResponse>("GetEffectiveFirewalls", grpcClient.GetEffectiveFirewallsAsync, grpcClient.GetEffectiveFirewalls, effectiveSettings.GetEffectiveFirewallsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
             Modify_ApiCall(ref _callGetEffectiveFirewalls);
             Modify_GetEffectiveFirewallsApiCall(ref _callGetEffectiveFirewalls);
-            _callInsert = clientHelper.BuildApiCall<InsertNetworkRequest, Operation>(grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callInsert = clientHelper.BuildApiCall<InsertNetworkRequest, Operation>("Insert", grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
-            _callList = clientHelper.BuildApiCall<ListNetworksRequest, NetworkList>(grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callList = clientHelper.BuildApiCall<ListNetworksRequest, NetworkList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
-            _callListPeeringRoutes = clientHelper.BuildApiCall<ListPeeringRoutesNetworksRequest, ExchangedPeeringRoutesList>(grpcClient.ListPeeringRoutesAsync, grpcClient.ListPeeringRoutes, effectiveSettings.ListPeeringRoutesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
+            _callListPeeringRoutes = clientHelper.BuildApiCall<ListPeeringRoutesNetworksRequest, ExchangedPeeringRoutesList>("ListPeeringRoutes", grpcClient.ListPeeringRoutesAsync, grpcClient.ListPeeringRoutes, effectiveSettings.ListPeeringRoutesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
             Modify_ApiCall(ref _callListPeeringRoutes);
             Modify_ListPeeringRoutesApiCall(ref _callListPeeringRoutes);
-            _callPatch = clientHelper.BuildApiCall<PatchNetworkRequest, Operation>(grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
+            _callPatch = clientHelper.BuildApiCall<PatchNetworkRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
-            _callRemovePeering = clientHelper.BuildApiCall<RemovePeeringNetworkRequest, Operation>(grpcClient.RemovePeeringAsync, grpcClient.RemovePeering, effectiveSettings.RemovePeeringSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
+            _callRemovePeering = clientHelper.BuildApiCall<RemovePeeringNetworkRequest, Operation>("RemovePeering", grpcClient.RemovePeeringAsync, grpcClient.RemovePeering, effectiveSettings.RemovePeeringSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
             Modify_ApiCall(ref _callRemovePeering);
             Modify_RemovePeeringApiCall(ref _callRemovePeering);
-            _callSwitchToCustomMode = clientHelper.BuildApiCall<SwitchToCustomModeNetworkRequest, Operation>(grpcClient.SwitchToCustomModeAsync, grpcClient.SwitchToCustomMode, effectiveSettings.SwitchToCustomModeSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
+            _callSwitchToCustomMode = clientHelper.BuildApiCall<SwitchToCustomModeNetworkRequest, Operation>("SwitchToCustomMode", grpcClient.SwitchToCustomModeAsync, grpcClient.SwitchToCustomMode, effectiveSettings.SwitchToCustomModeSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
             Modify_ApiCall(ref _callSwitchToCustomMode);
             Modify_SwitchToCustomModeApiCall(ref _callSwitchToCustomMode);
-            _callUpdatePeering = clientHelper.BuildApiCall<UpdatePeeringNetworkRequest, Operation>(grpcClient.UpdatePeeringAsync, grpcClient.UpdatePeering, effectiveSettings.UpdatePeeringSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
+            _callUpdatePeering = clientHelper.BuildApiCall<UpdatePeeringNetworkRequest, Operation>("UpdatePeering", grpcClient.UpdatePeeringAsync, grpcClient.UpdatePeering, effectiveSettings.UpdatePeeringSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
             Modify_ApiCall(ref _callUpdatePeering);
             Modify_UpdatePeeringApiCall(ref _callUpdatePeering);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

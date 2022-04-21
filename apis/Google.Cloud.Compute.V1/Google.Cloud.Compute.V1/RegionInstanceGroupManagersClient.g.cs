@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -620,9 +620,8 @@ namespace Google.Cloud.Compute.V1
         public RegionInstanceGroupManagersSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public RegionInstanceGroupManagersClientBuilder()
+        public RegionInstanceGroupManagersClientBuilder() : base(RegionInstanceGroupManagersClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = RegionInstanceGroupManagersClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref RegionInstanceGroupManagersClient client);
@@ -649,29 +648,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return RegionInstanceGroupManagersClient.Create(callInvoker, Settings);
+            return RegionInstanceGroupManagersClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<RegionInstanceGroupManagersClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return RegionInstanceGroupManagersClient.Create(callInvoker, Settings);
+            return RegionInstanceGroupManagersClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => RegionInstanceGroupManagersClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => RegionInstanceGroupManagersClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => RegionInstanceGroupManagersClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>RegionInstanceGroupManagers client wrapper, for convenient use.</summary>
@@ -700,19 +688,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(RegionInstanceGroupManagers.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="RegionInstanceGroupManagersClient"/> using the default credentials,
@@ -742,8 +721,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="RegionInstanceGroupManagersSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="RegionInstanceGroupManagersClient"/>.</returns>
-        internal static RegionInstanceGroupManagersClient Create(grpccore::CallInvoker callInvoker, RegionInstanceGroupManagersSettings settings = null)
+        internal static RegionInstanceGroupManagersClient Create(grpccore::CallInvoker callInvoker, RegionInstanceGroupManagersSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -752,7 +732,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             RegionInstanceGroupManagers.RegionInstanceGroupManagersClient grpcClient = new RegionInstanceGroupManagers.RegionInstanceGroupManagersClient(callInvoker);
-            return new RegionInstanceGroupManagersClientImpl(grpcClient, settings);
+            return new RegionInstanceGroupManagersClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -2966,80 +2946,81 @@ namespace Google.Cloud.Compute.V1
         /// <param name="settings">
         /// The base <see cref="RegionInstanceGroupManagersSettings"/> used within this client.
         /// </param>
-        public RegionInstanceGroupManagersClientImpl(RegionInstanceGroupManagers.RegionInstanceGroupManagersClient grpcClient, RegionInstanceGroupManagersSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public RegionInstanceGroupManagersClientImpl(RegionInstanceGroupManagers.RegionInstanceGroupManagersClient grpcClient, RegionInstanceGroupManagersSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             RegionInstanceGroupManagersSettings effectiveSettings = settings ?? RegionInstanceGroupManagersSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            AbandonInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.AbandonInstancesOperationsSettings);
-            ApplyUpdatesToInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.ApplyUpdatesToInstancesOperationsSettings);
-            CreateInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.CreateInstancesOperationsSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings);
-            DeleteInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteInstancesOperationsSettings);
-            DeletePerInstanceConfigsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeletePerInstanceConfigsOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings);
-            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchOperationsSettings);
-            PatchPerInstanceConfigsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchPerInstanceConfigsOperationsSettings);
-            RecreateInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.RecreateInstancesOperationsSettings);
-            ResizeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.ResizeOperationsSettings);
-            SetInstanceTemplateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetInstanceTemplateOperationsSettings);
-            SetTargetPoolsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetTargetPoolsOperationsSettings);
-            UpdatePerInstanceConfigsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.UpdatePerInstanceConfigsOperationsSettings);
-            _callAbandonInstances = clientHelper.BuildApiCall<AbandonInstancesRegionInstanceGroupManagerRequest, Operation>(grpcClient.AbandonInstancesAsync, grpcClient.AbandonInstances, effectiveSettings.AbandonInstancesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            AbandonInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.AbandonInstancesOperationsSettings, logger);
+            ApplyUpdatesToInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.ApplyUpdatesToInstancesOperationsSettings, logger);
+            CreateInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.CreateInstancesOperationsSettings, logger);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings, logger);
+            DeleteInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteInstancesOperationsSettings, logger);
+            DeletePerInstanceConfigsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeletePerInstanceConfigsOperationsSettings, logger);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings, logger);
+            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchOperationsSettings, logger);
+            PatchPerInstanceConfigsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchPerInstanceConfigsOperationsSettings, logger);
+            RecreateInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.RecreateInstancesOperationsSettings, logger);
+            ResizeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.ResizeOperationsSettings, logger);
+            SetInstanceTemplateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetInstanceTemplateOperationsSettings, logger);
+            SetTargetPoolsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetTargetPoolsOperationsSettings, logger);
+            UpdatePerInstanceConfigsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.UpdatePerInstanceConfigsOperationsSettings, logger);
+            _callAbandonInstances = clientHelper.BuildApiCall<AbandonInstancesRegionInstanceGroupManagerRequest, Operation>("AbandonInstances", grpcClient.AbandonInstancesAsync, grpcClient.AbandonInstances, effectiveSettings.AbandonInstancesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
             Modify_ApiCall(ref _callAbandonInstances);
             Modify_AbandonInstancesApiCall(ref _callAbandonInstances);
-            _callApplyUpdatesToInstances = clientHelper.BuildApiCall<ApplyUpdatesToInstancesRegionInstanceGroupManagerRequest, Operation>(grpcClient.ApplyUpdatesToInstancesAsync, grpcClient.ApplyUpdatesToInstances, effectiveSettings.ApplyUpdatesToInstancesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
+            _callApplyUpdatesToInstances = clientHelper.BuildApiCall<ApplyUpdatesToInstancesRegionInstanceGroupManagerRequest, Operation>("ApplyUpdatesToInstances", grpcClient.ApplyUpdatesToInstancesAsync, grpcClient.ApplyUpdatesToInstances, effectiveSettings.ApplyUpdatesToInstancesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
             Modify_ApiCall(ref _callApplyUpdatesToInstances);
             Modify_ApplyUpdatesToInstancesApiCall(ref _callApplyUpdatesToInstances);
-            _callCreateInstances = clientHelper.BuildApiCall<CreateInstancesRegionInstanceGroupManagerRequest, Operation>(grpcClient.CreateInstancesAsync, grpcClient.CreateInstances, effectiveSettings.CreateInstancesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
+            _callCreateInstances = clientHelper.BuildApiCall<CreateInstancesRegionInstanceGroupManagerRequest, Operation>("CreateInstances", grpcClient.CreateInstancesAsync, grpcClient.CreateInstances, effectiveSettings.CreateInstancesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
             Modify_ApiCall(ref _callCreateInstances);
             Modify_CreateInstancesApiCall(ref _callCreateInstances);
-            _callDelete = clientHelper.BuildApiCall<DeleteRegionInstanceGroupManagerRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
+            _callDelete = clientHelper.BuildApiCall<DeleteRegionInstanceGroupManagerRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
-            _callDeleteInstances = clientHelper.BuildApiCall<DeleteInstancesRegionInstanceGroupManagerRequest, Operation>(grpcClient.DeleteInstancesAsync, grpcClient.DeleteInstances, effectiveSettings.DeleteInstancesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
+            _callDeleteInstances = clientHelper.BuildApiCall<DeleteInstancesRegionInstanceGroupManagerRequest, Operation>("DeleteInstances", grpcClient.DeleteInstancesAsync, grpcClient.DeleteInstances, effectiveSettings.DeleteInstancesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
             Modify_ApiCall(ref _callDeleteInstances);
             Modify_DeleteInstancesApiCall(ref _callDeleteInstances);
-            _callDeletePerInstanceConfigs = clientHelper.BuildApiCall<DeletePerInstanceConfigsRegionInstanceGroupManagerRequest, Operation>(grpcClient.DeletePerInstanceConfigsAsync, grpcClient.DeletePerInstanceConfigs, effectiveSettings.DeletePerInstanceConfigsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
+            _callDeletePerInstanceConfigs = clientHelper.BuildApiCall<DeletePerInstanceConfigsRegionInstanceGroupManagerRequest, Operation>("DeletePerInstanceConfigs", grpcClient.DeletePerInstanceConfigsAsync, grpcClient.DeletePerInstanceConfigs, effectiveSettings.DeletePerInstanceConfigsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
             Modify_ApiCall(ref _callDeletePerInstanceConfigs);
             Modify_DeletePerInstanceConfigsApiCall(ref _callDeletePerInstanceConfigs);
-            _callGet = clientHelper.BuildApiCall<GetRegionInstanceGroupManagerRequest, InstanceGroupManager>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
+            _callGet = clientHelper.BuildApiCall<GetRegionInstanceGroupManagerRequest, InstanceGroupManager>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callInsert = clientHelper.BuildApiCall<InsertRegionInstanceGroupManagerRequest, Operation>(grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
+            _callInsert = clientHelper.BuildApiCall<InsertRegionInstanceGroupManagerRequest, Operation>("Insert", grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
-            _callList = clientHelper.BuildApiCall<ListRegionInstanceGroupManagersRequest, RegionInstanceGroupManagerList>(grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
+            _callList = clientHelper.BuildApiCall<ListRegionInstanceGroupManagersRequest, RegionInstanceGroupManagerList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
-            _callListErrors = clientHelper.BuildApiCall<ListErrorsRegionInstanceGroupManagersRequest, RegionInstanceGroupManagersListErrorsResponse>(grpcClient.ListErrorsAsync, grpcClient.ListErrors, effectiveSettings.ListErrorsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
+            _callListErrors = clientHelper.BuildApiCall<ListErrorsRegionInstanceGroupManagersRequest, RegionInstanceGroupManagersListErrorsResponse>("ListErrors", grpcClient.ListErrorsAsync, grpcClient.ListErrors, effectiveSettings.ListErrorsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
             Modify_ApiCall(ref _callListErrors);
             Modify_ListErrorsApiCall(ref _callListErrors);
-            _callListManagedInstances = clientHelper.BuildApiCall<ListManagedInstancesRegionInstanceGroupManagersRequest, RegionInstanceGroupManagersListInstancesResponse>(grpcClient.ListManagedInstancesAsync, grpcClient.ListManagedInstances, effectiveSettings.ListManagedInstancesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
+            _callListManagedInstances = clientHelper.BuildApiCall<ListManagedInstancesRegionInstanceGroupManagersRequest, RegionInstanceGroupManagersListInstancesResponse>("ListManagedInstances", grpcClient.ListManagedInstancesAsync, grpcClient.ListManagedInstances, effectiveSettings.ListManagedInstancesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
             Modify_ApiCall(ref _callListManagedInstances);
             Modify_ListManagedInstancesApiCall(ref _callListManagedInstances);
-            _callListPerInstanceConfigs = clientHelper.BuildApiCall<ListPerInstanceConfigsRegionInstanceGroupManagersRequest, RegionInstanceGroupManagersListInstanceConfigsResp>(grpcClient.ListPerInstanceConfigsAsync, grpcClient.ListPerInstanceConfigs, effectiveSettings.ListPerInstanceConfigsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
+            _callListPerInstanceConfigs = clientHelper.BuildApiCall<ListPerInstanceConfigsRegionInstanceGroupManagersRequest, RegionInstanceGroupManagersListInstanceConfigsResp>("ListPerInstanceConfigs", grpcClient.ListPerInstanceConfigsAsync, grpcClient.ListPerInstanceConfigs, effectiveSettings.ListPerInstanceConfigsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
             Modify_ApiCall(ref _callListPerInstanceConfigs);
             Modify_ListPerInstanceConfigsApiCall(ref _callListPerInstanceConfigs);
-            _callPatch = clientHelper.BuildApiCall<PatchRegionInstanceGroupManagerRequest, Operation>(grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
+            _callPatch = clientHelper.BuildApiCall<PatchRegionInstanceGroupManagerRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
-            _callPatchPerInstanceConfigs = clientHelper.BuildApiCall<PatchPerInstanceConfigsRegionInstanceGroupManagerRequest, Operation>(grpcClient.PatchPerInstanceConfigsAsync, grpcClient.PatchPerInstanceConfigs, effectiveSettings.PatchPerInstanceConfigsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
+            _callPatchPerInstanceConfigs = clientHelper.BuildApiCall<PatchPerInstanceConfigsRegionInstanceGroupManagerRequest, Operation>("PatchPerInstanceConfigs", grpcClient.PatchPerInstanceConfigsAsync, grpcClient.PatchPerInstanceConfigs, effectiveSettings.PatchPerInstanceConfigsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
             Modify_ApiCall(ref _callPatchPerInstanceConfigs);
             Modify_PatchPerInstanceConfigsApiCall(ref _callPatchPerInstanceConfigs);
-            _callRecreateInstances = clientHelper.BuildApiCall<RecreateInstancesRegionInstanceGroupManagerRequest, Operation>(grpcClient.RecreateInstancesAsync, grpcClient.RecreateInstances, effectiveSettings.RecreateInstancesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
+            _callRecreateInstances = clientHelper.BuildApiCall<RecreateInstancesRegionInstanceGroupManagerRequest, Operation>("RecreateInstances", grpcClient.RecreateInstancesAsync, grpcClient.RecreateInstances, effectiveSettings.RecreateInstancesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
             Modify_ApiCall(ref _callRecreateInstances);
             Modify_RecreateInstancesApiCall(ref _callRecreateInstances);
-            _callResize = clientHelper.BuildApiCall<ResizeRegionInstanceGroupManagerRequest, Operation>(grpcClient.ResizeAsync, grpcClient.Resize, effectiveSettings.ResizeSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
+            _callResize = clientHelper.BuildApiCall<ResizeRegionInstanceGroupManagerRequest, Operation>("Resize", grpcClient.ResizeAsync, grpcClient.Resize, effectiveSettings.ResizeSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
             Modify_ApiCall(ref _callResize);
             Modify_ResizeApiCall(ref _callResize);
-            _callSetInstanceTemplate = clientHelper.BuildApiCall<SetInstanceTemplateRegionInstanceGroupManagerRequest, Operation>(grpcClient.SetInstanceTemplateAsync, grpcClient.SetInstanceTemplate, effectiveSettings.SetInstanceTemplateSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
+            _callSetInstanceTemplate = clientHelper.BuildApiCall<SetInstanceTemplateRegionInstanceGroupManagerRequest, Operation>("SetInstanceTemplate", grpcClient.SetInstanceTemplateAsync, grpcClient.SetInstanceTemplate, effectiveSettings.SetInstanceTemplateSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
             Modify_ApiCall(ref _callSetInstanceTemplate);
             Modify_SetInstanceTemplateApiCall(ref _callSetInstanceTemplate);
-            _callSetTargetPools = clientHelper.BuildApiCall<SetTargetPoolsRegionInstanceGroupManagerRequest, Operation>(grpcClient.SetTargetPoolsAsync, grpcClient.SetTargetPools, effectiveSettings.SetTargetPoolsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
+            _callSetTargetPools = clientHelper.BuildApiCall<SetTargetPoolsRegionInstanceGroupManagerRequest, Operation>("SetTargetPools", grpcClient.SetTargetPoolsAsync, grpcClient.SetTargetPools, effectiveSettings.SetTargetPoolsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
             Modify_ApiCall(ref _callSetTargetPools);
             Modify_SetTargetPoolsApiCall(ref _callSetTargetPools);
-            _callUpdatePerInstanceConfigs = clientHelper.BuildApiCall<UpdatePerInstanceConfigsRegionInstanceGroupManagerRequest, Operation>(grpcClient.UpdatePerInstanceConfigsAsync, grpcClient.UpdatePerInstanceConfigs, effectiveSettings.UpdatePerInstanceConfigsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
+            _callUpdatePerInstanceConfigs = clientHelper.BuildApiCall<UpdatePerInstanceConfigsRegionInstanceGroupManagerRequest, Operation>("UpdatePerInstanceConfigs", grpcClient.UpdatePerInstanceConfigsAsync, grpcClient.UpdatePerInstanceConfigs, effectiveSettings.UpdatePerInstanceConfigsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
             Modify_ApiCall(ref _callUpdatePerInstanceConfigs);
             Modify_UpdatePerInstanceConfigsApiCall(ref _callUpdatePerInstanceConfigs);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

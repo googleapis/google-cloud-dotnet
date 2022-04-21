@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -403,9 +403,8 @@ namespace Google.Cloud.OsConfig.V1Alpha
         public OsConfigZonalServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public OsConfigZonalServiceClientBuilder()
+        public OsConfigZonalServiceClientBuilder() : base(OsConfigZonalServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = OsConfigZonalServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref OsConfigZonalServiceClient client);
@@ -432,29 +431,18 @@ namespace Google.Cloud.OsConfig.V1Alpha
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return OsConfigZonalServiceClient.Create(callInvoker, Settings);
+            return OsConfigZonalServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<OsConfigZonalServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return OsConfigZonalServiceClient.Create(callInvoker, Settings);
+            return OsConfigZonalServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => OsConfigZonalServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => OsConfigZonalServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => OsConfigZonalServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>OsConfigZonalService client wrapper, for convenient use.</summary>
@@ -484,19 +472,10 @@ namespace Google.Cloud.OsConfig.V1Alpha
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(OsConfigZonalService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="OsConfigZonalServiceClient"/> using the default credentials, endpoint
@@ -526,8 +505,9 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="OsConfigZonalServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="OsConfigZonalServiceClient"/>.</returns>
-        internal static OsConfigZonalServiceClient Create(grpccore::CallInvoker callInvoker, OsConfigZonalServiceSettings settings = null)
+        internal static OsConfigZonalServiceClient Create(grpccore::CallInvoker callInvoker, OsConfigZonalServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -536,7 +516,7 @@ namespace Google.Cloud.OsConfig.V1Alpha
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             OsConfigZonalService.OsConfigZonalServiceClient grpcClient = new OsConfigZonalService.OsConfigZonalServiceClient(callInvoker);
-            return new OsConfigZonalServiceClientImpl(grpcClient, settings);
+            return new OsConfigZonalServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -2960,58 +2940,59 @@ namespace Google.Cloud.OsConfig.V1Alpha
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="OsConfigZonalServiceSettings"/> used within this client.</param>
-        public OsConfigZonalServiceClientImpl(OsConfigZonalService.OsConfigZonalServiceClient grpcClient, OsConfigZonalServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public OsConfigZonalServiceClientImpl(OsConfigZonalService.OsConfigZonalServiceClient grpcClient, OsConfigZonalServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             OsConfigZonalServiceSettings effectiveSettings = settings ?? OsConfigZonalServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateOSPolicyAssignmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateOSPolicyAssignmentOperationsSettings);
-            UpdateOSPolicyAssignmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateOSPolicyAssignmentOperationsSettings);
-            DeleteOSPolicyAssignmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOSPolicyAssignmentOperationsSettings);
-            _callCreateOSPolicyAssignment = clientHelper.BuildApiCall<CreateOSPolicyAssignmentRequest, lro::Operation>(grpcClient.CreateOSPolicyAssignmentAsync, grpcClient.CreateOSPolicyAssignment, effectiveSettings.CreateOSPolicyAssignmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateOSPolicyAssignmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateOSPolicyAssignmentOperationsSettings, logger);
+            UpdateOSPolicyAssignmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateOSPolicyAssignmentOperationsSettings, logger);
+            DeleteOSPolicyAssignmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOSPolicyAssignmentOperationsSettings, logger);
+            _callCreateOSPolicyAssignment = clientHelper.BuildApiCall<CreateOSPolicyAssignmentRequest, lro::Operation>("CreateOSPolicyAssignment", grpcClient.CreateOSPolicyAssignmentAsync, grpcClient.CreateOSPolicyAssignment, effectiveSettings.CreateOSPolicyAssignmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateOSPolicyAssignment);
             Modify_CreateOSPolicyAssignmentApiCall(ref _callCreateOSPolicyAssignment);
-            _callUpdateOSPolicyAssignment = clientHelper.BuildApiCall<UpdateOSPolicyAssignmentRequest, lro::Operation>(grpcClient.UpdateOSPolicyAssignmentAsync, grpcClient.UpdateOSPolicyAssignment, effectiveSettings.UpdateOSPolicyAssignmentSettings).WithGoogleRequestParam("os_policy_assignment.name", request => request.OsPolicyAssignment?.Name);
+            _callUpdateOSPolicyAssignment = clientHelper.BuildApiCall<UpdateOSPolicyAssignmentRequest, lro::Operation>("UpdateOSPolicyAssignment", grpcClient.UpdateOSPolicyAssignmentAsync, grpcClient.UpdateOSPolicyAssignment, effectiveSettings.UpdateOSPolicyAssignmentSettings).WithGoogleRequestParam("os_policy_assignment.name", request => request.OsPolicyAssignment?.Name);
             Modify_ApiCall(ref _callUpdateOSPolicyAssignment);
             Modify_UpdateOSPolicyAssignmentApiCall(ref _callUpdateOSPolicyAssignment);
-            _callGetOSPolicyAssignment = clientHelper.BuildApiCall<GetOSPolicyAssignmentRequest, OSPolicyAssignment>(grpcClient.GetOSPolicyAssignmentAsync, grpcClient.GetOSPolicyAssignment, effectiveSettings.GetOSPolicyAssignmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetOSPolicyAssignment = clientHelper.BuildApiCall<GetOSPolicyAssignmentRequest, OSPolicyAssignment>("GetOSPolicyAssignment", grpcClient.GetOSPolicyAssignmentAsync, grpcClient.GetOSPolicyAssignment, effectiveSettings.GetOSPolicyAssignmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetOSPolicyAssignment);
             Modify_GetOSPolicyAssignmentApiCall(ref _callGetOSPolicyAssignment);
-            _callListOSPolicyAssignments = clientHelper.BuildApiCall<ListOSPolicyAssignmentsRequest, ListOSPolicyAssignmentsResponse>(grpcClient.ListOSPolicyAssignmentsAsync, grpcClient.ListOSPolicyAssignments, effectiveSettings.ListOSPolicyAssignmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListOSPolicyAssignments = clientHelper.BuildApiCall<ListOSPolicyAssignmentsRequest, ListOSPolicyAssignmentsResponse>("ListOSPolicyAssignments", grpcClient.ListOSPolicyAssignmentsAsync, grpcClient.ListOSPolicyAssignments, effectiveSettings.ListOSPolicyAssignmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListOSPolicyAssignments);
             Modify_ListOSPolicyAssignmentsApiCall(ref _callListOSPolicyAssignments);
-            _callListOSPolicyAssignmentRevisions = clientHelper.BuildApiCall<ListOSPolicyAssignmentRevisionsRequest, ListOSPolicyAssignmentRevisionsResponse>(grpcClient.ListOSPolicyAssignmentRevisionsAsync, grpcClient.ListOSPolicyAssignmentRevisions, effectiveSettings.ListOSPolicyAssignmentRevisionsSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callListOSPolicyAssignmentRevisions = clientHelper.BuildApiCall<ListOSPolicyAssignmentRevisionsRequest, ListOSPolicyAssignmentRevisionsResponse>("ListOSPolicyAssignmentRevisions", grpcClient.ListOSPolicyAssignmentRevisionsAsync, grpcClient.ListOSPolicyAssignmentRevisions, effectiveSettings.ListOSPolicyAssignmentRevisionsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListOSPolicyAssignmentRevisions);
             Modify_ListOSPolicyAssignmentRevisionsApiCall(ref _callListOSPolicyAssignmentRevisions);
-            _callDeleteOSPolicyAssignment = clientHelper.BuildApiCall<DeleteOSPolicyAssignmentRequest, lro::Operation>(grpcClient.DeleteOSPolicyAssignmentAsync, grpcClient.DeleteOSPolicyAssignment, effectiveSettings.DeleteOSPolicyAssignmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteOSPolicyAssignment = clientHelper.BuildApiCall<DeleteOSPolicyAssignmentRequest, lro::Operation>("DeleteOSPolicyAssignment", grpcClient.DeleteOSPolicyAssignmentAsync, grpcClient.DeleteOSPolicyAssignment, effectiveSettings.DeleteOSPolicyAssignmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteOSPolicyAssignment);
             Modify_DeleteOSPolicyAssignmentApiCall(ref _callDeleteOSPolicyAssignment);
 #pragma warning disable CS0612
-            _callGetInstanceOSPoliciesCompliance = clientHelper.BuildApiCall<GetInstanceOSPoliciesComplianceRequest, InstanceOSPoliciesCompliance>(grpcClient.GetInstanceOSPoliciesComplianceAsync, grpcClient.GetInstanceOSPoliciesCompliance, effectiveSettings.GetInstanceOSPoliciesComplianceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetInstanceOSPoliciesCompliance = clientHelper.BuildApiCall<GetInstanceOSPoliciesComplianceRequest, InstanceOSPoliciesCompliance>("GetInstanceOSPoliciesCompliance", grpcClient.GetInstanceOSPoliciesComplianceAsync, grpcClient.GetInstanceOSPoliciesCompliance, effectiveSettings.GetInstanceOSPoliciesComplianceSettings).WithGoogleRequestParam("name", request => request.Name);
 #pragma warning restore CS0612
             Modify_ApiCall(ref _callGetInstanceOSPoliciesCompliance);
             Modify_GetInstanceOSPoliciesComplianceApiCall(ref _callGetInstanceOSPoliciesCompliance);
 #pragma warning disable CS0612
-            _callListInstanceOSPoliciesCompliances = clientHelper.BuildApiCall<ListInstanceOSPoliciesCompliancesRequest, ListInstanceOSPoliciesCompliancesResponse>(grpcClient.ListInstanceOSPoliciesCompliancesAsync, grpcClient.ListInstanceOSPoliciesCompliances, effectiveSettings.ListInstanceOSPoliciesCompliancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListInstanceOSPoliciesCompliances = clientHelper.BuildApiCall<ListInstanceOSPoliciesCompliancesRequest, ListInstanceOSPoliciesCompliancesResponse>("ListInstanceOSPoliciesCompliances", grpcClient.ListInstanceOSPoliciesCompliancesAsync, grpcClient.ListInstanceOSPoliciesCompliances, effectiveSettings.ListInstanceOSPoliciesCompliancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
 #pragma warning restore CS0612
             Modify_ApiCall(ref _callListInstanceOSPoliciesCompliances);
             Modify_ListInstanceOSPoliciesCompliancesApiCall(ref _callListInstanceOSPoliciesCompliances);
-            _callGetOSPolicyAssignmentReport = clientHelper.BuildApiCall<GetOSPolicyAssignmentReportRequest, OSPolicyAssignmentReport>(grpcClient.GetOSPolicyAssignmentReportAsync, grpcClient.GetOSPolicyAssignmentReport, effectiveSettings.GetOSPolicyAssignmentReportSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetOSPolicyAssignmentReport = clientHelper.BuildApiCall<GetOSPolicyAssignmentReportRequest, OSPolicyAssignmentReport>("GetOSPolicyAssignmentReport", grpcClient.GetOSPolicyAssignmentReportAsync, grpcClient.GetOSPolicyAssignmentReport, effectiveSettings.GetOSPolicyAssignmentReportSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetOSPolicyAssignmentReport);
             Modify_GetOSPolicyAssignmentReportApiCall(ref _callGetOSPolicyAssignmentReport);
-            _callListOSPolicyAssignmentReports = clientHelper.BuildApiCall<ListOSPolicyAssignmentReportsRequest, ListOSPolicyAssignmentReportsResponse>(grpcClient.ListOSPolicyAssignmentReportsAsync, grpcClient.ListOSPolicyAssignmentReports, effectiveSettings.ListOSPolicyAssignmentReportsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListOSPolicyAssignmentReports = clientHelper.BuildApiCall<ListOSPolicyAssignmentReportsRequest, ListOSPolicyAssignmentReportsResponse>("ListOSPolicyAssignmentReports", grpcClient.ListOSPolicyAssignmentReportsAsync, grpcClient.ListOSPolicyAssignmentReports, effectiveSettings.ListOSPolicyAssignmentReportsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListOSPolicyAssignmentReports);
             Modify_ListOSPolicyAssignmentReportsApiCall(ref _callListOSPolicyAssignmentReports);
-            _callGetInventory = clientHelper.BuildApiCall<GetInventoryRequest, Inventory>(grpcClient.GetInventoryAsync, grpcClient.GetInventory, effectiveSettings.GetInventorySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetInventory = clientHelper.BuildApiCall<GetInventoryRequest, Inventory>("GetInventory", grpcClient.GetInventoryAsync, grpcClient.GetInventory, effectiveSettings.GetInventorySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetInventory);
             Modify_GetInventoryApiCall(ref _callGetInventory);
-            _callListInventories = clientHelper.BuildApiCall<ListInventoriesRequest, ListInventoriesResponse>(grpcClient.ListInventoriesAsync, grpcClient.ListInventories, effectiveSettings.ListInventoriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListInventories = clientHelper.BuildApiCall<ListInventoriesRequest, ListInventoriesResponse>("ListInventories", grpcClient.ListInventoriesAsync, grpcClient.ListInventories, effectiveSettings.ListInventoriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInventories);
             Modify_ListInventoriesApiCall(ref _callListInventories);
-            _callGetVulnerabilityReport = clientHelper.BuildApiCall<GetVulnerabilityReportRequest, VulnerabilityReport>(grpcClient.GetVulnerabilityReportAsync, grpcClient.GetVulnerabilityReport, effectiveSettings.GetVulnerabilityReportSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetVulnerabilityReport = clientHelper.BuildApiCall<GetVulnerabilityReportRequest, VulnerabilityReport>("GetVulnerabilityReport", grpcClient.GetVulnerabilityReportAsync, grpcClient.GetVulnerabilityReport, effectiveSettings.GetVulnerabilityReportSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetVulnerabilityReport);
             Modify_GetVulnerabilityReportApiCall(ref _callGetVulnerabilityReport);
-            _callListVulnerabilityReports = clientHelper.BuildApiCall<ListVulnerabilityReportsRequest, ListVulnerabilityReportsResponse>(grpcClient.ListVulnerabilityReportsAsync, grpcClient.ListVulnerabilityReports, effectiveSettings.ListVulnerabilityReportsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListVulnerabilityReports = clientHelper.BuildApiCall<ListVulnerabilityReportsRequest, ListVulnerabilityReportsResponse>("ListVulnerabilityReports", grpcClient.ListVulnerabilityReportsAsync, grpcClient.ListVulnerabilityReports, effectiveSettings.ListVulnerabilityReportsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListVulnerabilityReports);
             Modify_ListVulnerabilityReportsApiCall(ref _callListVulnerabilityReports);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

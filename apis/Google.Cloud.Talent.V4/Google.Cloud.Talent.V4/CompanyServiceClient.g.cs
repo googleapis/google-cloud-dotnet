@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -157,9 +157,8 @@ namespace Google.Cloud.Talent.V4
         public CompanyServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public CompanyServiceClientBuilder()
+        public CompanyServiceClientBuilder() : base(CompanyServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = CompanyServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref CompanyServiceClient client);
@@ -186,29 +185,18 @@ namespace Google.Cloud.Talent.V4
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return CompanyServiceClient.Create(callInvoker, Settings);
+            return CompanyServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<CompanyServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return CompanyServiceClient.Create(callInvoker, Settings);
+            return CompanyServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => CompanyServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => CompanyServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => CompanyServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>CompanyService client wrapper, for convenient use.</summary>
@@ -237,19 +225,10 @@ namespace Google.Cloud.Talent.V4
             "https://www.googleapis.com/auth/jobs",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(CompanyService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="CompanyServiceClient"/> using the default credentials, endpoint and
@@ -276,8 +255,9 @@ namespace Google.Cloud.Talent.V4
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="CompanyServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="CompanyServiceClient"/>.</returns>
-        internal static CompanyServiceClient Create(grpccore::CallInvoker callInvoker, CompanyServiceSettings settings = null)
+        internal static CompanyServiceClient Create(grpccore::CallInvoker callInvoker, CompanyServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -286,7 +266,7 @@ namespace Google.Cloud.Talent.V4
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             CompanyService.CompanyServiceClient grpcClient = new CompanyService.CompanyServiceClient(callInvoker);
-            return new CompanyServiceClientImpl(grpcClient, settings);
+            return new CompanyServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -960,24 +940,25 @@ namespace Google.Cloud.Talent.V4
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="CompanyServiceSettings"/> used within this client.</param>
-        public CompanyServiceClientImpl(CompanyService.CompanyServiceClient grpcClient, CompanyServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public CompanyServiceClientImpl(CompanyService.CompanyServiceClient grpcClient, CompanyServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             CompanyServiceSettings effectiveSettings = settings ?? CompanyServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCreateCompany = clientHelper.BuildApiCall<CreateCompanyRequest, Company>(grpcClient.CreateCompanyAsync, grpcClient.CreateCompany, effectiveSettings.CreateCompanySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCreateCompany = clientHelper.BuildApiCall<CreateCompanyRequest, Company>("CreateCompany", grpcClient.CreateCompanyAsync, grpcClient.CreateCompany, effectiveSettings.CreateCompanySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCompany);
             Modify_CreateCompanyApiCall(ref _callCreateCompany);
-            _callGetCompany = clientHelper.BuildApiCall<GetCompanyRequest, Company>(grpcClient.GetCompanyAsync, grpcClient.GetCompany, effectiveSettings.GetCompanySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetCompany = clientHelper.BuildApiCall<GetCompanyRequest, Company>("GetCompany", grpcClient.GetCompanyAsync, grpcClient.GetCompany, effectiveSettings.GetCompanySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCompany);
             Modify_GetCompanyApiCall(ref _callGetCompany);
-            _callUpdateCompany = clientHelper.BuildApiCall<UpdateCompanyRequest, Company>(grpcClient.UpdateCompanyAsync, grpcClient.UpdateCompany, effectiveSettings.UpdateCompanySettings).WithGoogleRequestParam("company.name", request => request.Company?.Name);
+            _callUpdateCompany = clientHelper.BuildApiCall<UpdateCompanyRequest, Company>("UpdateCompany", grpcClient.UpdateCompanyAsync, grpcClient.UpdateCompany, effectiveSettings.UpdateCompanySettings).WithGoogleRequestParam("company.name", request => request.Company?.Name);
             Modify_ApiCall(ref _callUpdateCompany);
             Modify_UpdateCompanyApiCall(ref _callUpdateCompany);
-            _callDeleteCompany = clientHelper.BuildApiCall<DeleteCompanyRequest, wkt::Empty>(grpcClient.DeleteCompanyAsync, grpcClient.DeleteCompany, effectiveSettings.DeleteCompanySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteCompany = clientHelper.BuildApiCall<DeleteCompanyRequest, wkt::Empty>("DeleteCompany", grpcClient.DeleteCompanyAsync, grpcClient.DeleteCompany, effectiveSettings.DeleteCompanySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteCompany);
             Modify_DeleteCompanyApiCall(ref _callDeleteCompany);
-            _callListCompanies = clientHelper.BuildApiCall<ListCompaniesRequest, ListCompaniesResponse>(grpcClient.ListCompaniesAsync, grpcClient.ListCompanies, effectiveSettings.ListCompaniesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListCompanies = clientHelper.BuildApiCall<ListCompaniesRequest, ListCompaniesResponse>("ListCompanies", grpcClient.ListCompaniesAsync, grpcClient.ListCompanies, effectiveSettings.ListCompaniesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCompanies);
             Modify_ListCompaniesApiCall(ref _callListCompanies);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

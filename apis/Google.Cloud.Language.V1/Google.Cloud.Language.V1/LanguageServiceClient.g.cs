@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -196,9 +196,8 @@ namespace Google.Cloud.Language.V1
         public LanguageServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public LanguageServiceClientBuilder()
+        public LanguageServiceClientBuilder() : base(LanguageServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = LanguageServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref LanguageServiceClient client);
@@ -225,29 +224,18 @@ namespace Google.Cloud.Language.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return LanguageServiceClient.Create(callInvoker, Settings);
+            return LanguageServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<LanguageServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return LanguageServiceClient.Create(callInvoker, Settings);
+            return LanguageServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => LanguageServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => LanguageServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => LanguageServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>LanguageService client wrapper, for convenient use.</summary>
@@ -277,19 +265,10 @@ namespace Google.Cloud.Language.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(LanguageService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="LanguageServiceClient"/> using the default credentials, endpoint and
@@ -316,8 +295,9 @@ namespace Google.Cloud.Language.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="LanguageServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="LanguageServiceClient"/>.</returns>
-        internal static LanguageServiceClient Create(grpccore::CallInvoker callInvoker, LanguageServiceSettings settings = null)
+        internal static LanguageServiceClient Create(grpccore::CallInvoker callInvoker, LanguageServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -326,7 +306,7 @@ namespace Google.Cloud.Language.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             LanguageService.LanguageServiceClient grpcClient = new LanguageService.LanguageServiceClient(callInvoker);
-            return new LanguageServiceClientImpl(grpcClient, settings);
+            return new LanguageServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -907,27 +887,28 @@ namespace Google.Cloud.Language.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="LanguageServiceSettings"/> used within this client.</param>
-        public LanguageServiceClientImpl(LanguageService.LanguageServiceClient grpcClient, LanguageServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public LanguageServiceClientImpl(LanguageService.LanguageServiceClient grpcClient, LanguageServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             LanguageServiceSettings effectiveSettings = settings ?? LanguageServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callAnalyzeSentiment = clientHelper.BuildApiCall<AnalyzeSentimentRequest, AnalyzeSentimentResponse>(grpcClient.AnalyzeSentimentAsync, grpcClient.AnalyzeSentiment, effectiveSettings.AnalyzeSentimentSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callAnalyzeSentiment = clientHelper.BuildApiCall<AnalyzeSentimentRequest, AnalyzeSentimentResponse>("AnalyzeSentiment", grpcClient.AnalyzeSentimentAsync, grpcClient.AnalyzeSentiment, effectiveSettings.AnalyzeSentimentSettings);
             Modify_ApiCall(ref _callAnalyzeSentiment);
             Modify_AnalyzeSentimentApiCall(ref _callAnalyzeSentiment);
-            _callAnalyzeEntities = clientHelper.BuildApiCall<AnalyzeEntitiesRequest, AnalyzeEntitiesResponse>(grpcClient.AnalyzeEntitiesAsync, grpcClient.AnalyzeEntities, effectiveSettings.AnalyzeEntitiesSettings);
+            _callAnalyzeEntities = clientHelper.BuildApiCall<AnalyzeEntitiesRequest, AnalyzeEntitiesResponse>("AnalyzeEntities", grpcClient.AnalyzeEntitiesAsync, grpcClient.AnalyzeEntities, effectiveSettings.AnalyzeEntitiesSettings);
             Modify_ApiCall(ref _callAnalyzeEntities);
             Modify_AnalyzeEntitiesApiCall(ref _callAnalyzeEntities);
-            _callAnalyzeEntitySentiment = clientHelper.BuildApiCall<AnalyzeEntitySentimentRequest, AnalyzeEntitySentimentResponse>(grpcClient.AnalyzeEntitySentimentAsync, grpcClient.AnalyzeEntitySentiment, effectiveSettings.AnalyzeEntitySentimentSettings);
+            _callAnalyzeEntitySentiment = clientHelper.BuildApiCall<AnalyzeEntitySentimentRequest, AnalyzeEntitySentimentResponse>("AnalyzeEntitySentiment", grpcClient.AnalyzeEntitySentimentAsync, grpcClient.AnalyzeEntitySentiment, effectiveSettings.AnalyzeEntitySentimentSettings);
             Modify_ApiCall(ref _callAnalyzeEntitySentiment);
             Modify_AnalyzeEntitySentimentApiCall(ref _callAnalyzeEntitySentiment);
-            _callAnalyzeSyntax = clientHelper.BuildApiCall<AnalyzeSyntaxRequest, AnalyzeSyntaxResponse>(grpcClient.AnalyzeSyntaxAsync, grpcClient.AnalyzeSyntax, effectiveSettings.AnalyzeSyntaxSettings);
+            _callAnalyzeSyntax = clientHelper.BuildApiCall<AnalyzeSyntaxRequest, AnalyzeSyntaxResponse>("AnalyzeSyntax", grpcClient.AnalyzeSyntaxAsync, grpcClient.AnalyzeSyntax, effectiveSettings.AnalyzeSyntaxSettings);
             Modify_ApiCall(ref _callAnalyzeSyntax);
             Modify_AnalyzeSyntaxApiCall(ref _callAnalyzeSyntax);
-            _callClassifyText = clientHelper.BuildApiCall<ClassifyTextRequest, ClassifyTextResponse>(grpcClient.ClassifyTextAsync, grpcClient.ClassifyText, effectiveSettings.ClassifyTextSettings);
+            _callClassifyText = clientHelper.BuildApiCall<ClassifyTextRequest, ClassifyTextResponse>("ClassifyText", grpcClient.ClassifyTextAsync, grpcClient.ClassifyText, effectiveSettings.ClassifyTextSettings);
             Modify_ApiCall(ref _callClassifyText);
             Modify_ClassifyTextApiCall(ref _callClassifyText);
-            _callAnnotateText = clientHelper.BuildApiCall<AnnotateTextRequest, AnnotateTextResponse>(grpcClient.AnnotateTextAsync, grpcClient.AnnotateText, effectiveSettings.AnnotateTextSettings);
+            _callAnnotateText = clientHelper.BuildApiCall<AnnotateTextRequest, AnnotateTextResponse>("AnnotateText", grpcClient.AnnotateTextAsync, grpcClient.AnnotateText, effectiveSettings.AnnotateTextSettings);
             Modify_ApiCall(ref _callAnnotateText);
             Modify_AnnotateTextApiCall(ref _callAnnotateText);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

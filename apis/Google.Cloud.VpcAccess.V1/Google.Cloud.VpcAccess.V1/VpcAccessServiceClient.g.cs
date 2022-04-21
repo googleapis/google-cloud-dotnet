@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -157,9 +157,8 @@ namespace Google.Cloud.VpcAccess.V1
         public VpcAccessServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public VpcAccessServiceClientBuilder()
+        public VpcAccessServiceClientBuilder() : base(VpcAccessServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = VpcAccessServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref VpcAccessServiceClient client);
@@ -186,29 +185,18 @@ namespace Google.Cloud.VpcAccess.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return VpcAccessServiceClient.Create(callInvoker, Settings);
+            return VpcAccessServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<VpcAccessServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return VpcAccessServiceClient.Create(callInvoker, Settings);
+            return VpcAccessServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => VpcAccessServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => VpcAccessServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => VpcAccessServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>VpcAccessService client wrapper, for convenient use.</summary>
@@ -237,19 +225,10 @@ namespace Google.Cloud.VpcAccess.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(VpcAccessService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="VpcAccessServiceClient"/> using the default credentials, endpoint and
@@ -276,8 +255,9 @@ namespace Google.Cloud.VpcAccess.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="VpcAccessServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="VpcAccessServiceClient"/>.</returns>
-        internal static VpcAccessServiceClient Create(grpccore::CallInvoker callInvoker, VpcAccessServiceSettings settings = null)
+        internal static VpcAccessServiceClient Create(grpccore::CallInvoker callInvoker, VpcAccessServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -286,7 +266,7 @@ namespace Google.Cloud.VpcAccess.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             VpcAccessService.VpcAccessServiceClient grpcClient = new VpcAccessService.VpcAccessServiceClient(callInvoker);
-            return new VpcAccessServiceClientImpl(grpcClient, settings);
+            return new VpcAccessServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -876,23 +856,24 @@ namespace Google.Cloud.VpcAccess.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="VpcAccessServiceSettings"/> used within this client.</param>
-        public VpcAccessServiceClientImpl(VpcAccessService.VpcAccessServiceClient grpcClient, VpcAccessServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public VpcAccessServiceClientImpl(VpcAccessService.VpcAccessServiceClient grpcClient, VpcAccessServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             VpcAccessServiceSettings effectiveSettings = settings ?? VpcAccessServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateConnectorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateConnectorOperationsSettings);
-            DeleteConnectorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteConnectorOperationsSettings);
-            _callCreateConnector = clientHelper.BuildApiCall<CreateConnectorRequest, lro::Operation>(grpcClient.CreateConnectorAsync, grpcClient.CreateConnector, effectiveSettings.CreateConnectorSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateConnectorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateConnectorOperationsSettings, logger);
+            DeleteConnectorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteConnectorOperationsSettings, logger);
+            _callCreateConnector = clientHelper.BuildApiCall<CreateConnectorRequest, lro::Operation>("CreateConnector", grpcClient.CreateConnectorAsync, grpcClient.CreateConnector, effectiveSettings.CreateConnectorSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateConnector);
             Modify_CreateConnectorApiCall(ref _callCreateConnector);
-            _callGetConnector = clientHelper.BuildApiCall<GetConnectorRequest, Connector>(grpcClient.GetConnectorAsync, grpcClient.GetConnector, effectiveSettings.GetConnectorSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetConnector = clientHelper.BuildApiCall<GetConnectorRequest, Connector>("GetConnector", grpcClient.GetConnectorAsync, grpcClient.GetConnector, effectiveSettings.GetConnectorSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetConnector);
             Modify_GetConnectorApiCall(ref _callGetConnector);
-            _callListConnectors = clientHelper.BuildApiCall<ListConnectorsRequest, ListConnectorsResponse>(grpcClient.ListConnectorsAsync, grpcClient.ListConnectors, effectiveSettings.ListConnectorsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListConnectors = clientHelper.BuildApiCall<ListConnectorsRequest, ListConnectorsResponse>("ListConnectors", grpcClient.ListConnectorsAsync, grpcClient.ListConnectors, effectiveSettings.ListConnectorsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListConnectors);
             Modify_ListConnectorsApiCall(ref _callListConnectors);
-            _callDeleteConnector = clientHelper.BuildApiCall<DeleteConnectorRequest, lro::Operation>(grpcClient.DeleteConnectorAsync, grpcClient.DeleteConnector, effectiveSettings.DeleteConnectorSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteConnector = clientHelper.BuildApiCall<DeleteConnectorRequest, lro::Operation>("DeleteConnector", grpcClient.DeleteConnectorAsync, grpcClient.DeleteConnector, effectiveSettings.DeleteConnectorSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteConnector);
             Modify_DeleteConnectorApiCall(ref _callDeleteConnector);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

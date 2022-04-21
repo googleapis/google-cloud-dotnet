@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -402,9 +402,8 @@ namespace Google.Cloud.PubSub.V1
         public SubscriberServiceApiSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public SubscriberServiceApiClientBuilder()
+        public SubscriberServiceApiClientBuilder() : base(SubscriberServiceApiClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = SubscriberServiceApiClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref SubscriberServiceApiClient client);
@@ -431,29 +430,18 @@ namespace Google.Cloud.PubSub.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SubscriberServiceApiClient.Create(callInvoker, Settings);
+            return SubscriberServiceApiClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<SubscriberServiceApiClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SubscriberServiceApiClient.Create(callInvoker, Settings);
+            return SubscriberServiceApiClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => SubscriberServiceApiClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => SubscriberServiceApiClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => SubscriberServiceApiClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>SubscriberServiceApi client wrapper, for convenient use.</summary>
@@ -484,19 +472,10 @@ namespace Google.Cloud.PubSub.V1
             "https://www.googleapis.com/auth/pubsub",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Subscriber.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="SubscriberServiceApiClient"/> using the default credentials, endpoint
@@ -526,8 +505,9 @@ namespace Google.Cloud.PubSub.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="SubscriberServiceApiSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="SubscriberServiceApiClient"/>.</returns>
-        internal static SubscriberServiceApiClient Create(grpccore::CallInvoker callInvoker, SubscriberServiceApiSettings settings = null)
+        internal static SubscriberServiceApiClient Create(grpccore::CallInvoker callInvoker, SubscriberServiceApiSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -536,7 +516,7 @@ namespace Google.Cloud.PubSub.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Subscriber.SubscriberClient grpcClient = new Subscriber.SubscriberClient(callInvoker);
-            return new SubscriberServiceApiClientImpl(grpcClient, settings);
+            return new SubscriberServiceApiClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -3383,58 +3363,59 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="SubscriberServiceApiSettings"/> used within this client.</param>
-        public SubscriberServiceApiClientImpl(Subscriber.SubscriberClient grpcClient, SubscriberServiceApiSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public SubscriberServiceApiClientImpl(Subscriber.SubscriberClient grpcClient, SubscriberServiceApiSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             SubscriberServiceApiSettings effectiveSettings = settings ?? SubscriberServiceApiSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings);
-            _callCreateSubscription = clientHelper.BuildApiCall<Subscription, Subscription>(grpcClient.CreateSubscriptionAsync, grpcClient.CreateSubscription, effectiveSettings.CreateSubscriptionSettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
+            _callCreateSubscription = clientHelper.BuildApiCall<Subscription, Subscription>("CreateSubscription", grpcClient.CreateSubscriptionAsync, grpcClient.CreateSubscription, effectiveSettings.CreateSubscriptionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCreateSubscription);
             Modify_CreateSubscriptionApiCall(ref _callCreateSubscription);
-            _callGetSubscription = clientHelper.BuildApiCall<GetSubscriptionRequest, Subscription>(grpcClient.GetSubscriptionAsync, grpcClient.GetSubscription, effectiveSettings.GetSubscriptionSettings).WithGoogleRequestParam("subscription", request => request.Subscription);
+            _callGetSubscription = clientHelper.BuildApiCall<GetSubscriptionRequest, Subscription>("GetSubscription", grpcClient.GetSubscriptionAsync, grpcClient.GetSubscription, effectiveSettings.GetSubscriptionSettings).WithGoogleRequestParam("subscription", request => request.Subscription);
             Modify_ApiCall(ref _callGetSubscription);
             Modify_GetSubscriptionApiCall(ref _callGetSubscription);
-            _callUpdateSubscription = clientHelper.BuildApiCall<UpdateSubscriptionRequest, Subscription>(grpcClient.UpdateSubscriptionAsync, grpcClient.UpdateSubscription, effectiveSettings.UpdateSubscriptionSettings).WithGoogleRequestParam("subscription.name", request => request.Subscription?.Name);
+            _callUpdateSubscription = clientHelper.BuildApiCall<UpdateSubscriptionRequest, Subscription>("UpdateSubscription", grpcClient.UpdateSubscriptionAsync, grpcClient.UpdateSubscription, effectiveSettings.UpdateSubscriptionSettings).WithGoogleRequestParam("subscription.name", request => request.Subscription?.Name);
             Modify_ApiCall(ref _callUpdateSubscription);
             Modify_UpdateSubscriptionApiCall(ref _callUpdateSubscription);
-            _callListSubscriptions = clientHelper.BuildApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse>(grpcClient.ListSubscriptionsAsync, grpcClient.ListSubscriptions, effectiveSettings.ListSubscriptionsSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callListSubscriptions = clientHelper.BuildApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse>("ListSubscriptions", grpcClient.ListSubscriptionsAsync, grpcClient.ListSubscriptions, effectiveSettings.ListSubscriptionsSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callListSubscriptions);
             Modify_ListSubscriptionsApiCall(ref _callListSubscriptions);
-            _callDeleteSubscription = clientHelper.BuildApiCall<DeleteSubscriptionRequest, wkt::Empty>(grpcClient.DeleteSubscriptionAsync, grpcClient.DeleteSubscription, effectiveSettings.DeleteSubscriptionSettings).WithGoogleRequestParam("subscription", request => request.Subscription);
+            _callDeleteSubscription = clientHelper.BuildApiCall<DeleteSubscriptionRequest, wkt::Empty>("DeleteSubscription", grpcClient.DeleteSubscriptionAsync, grpcClient.DeleteSubscription, effectiveSettings.DeleteSubscriptionSettings).WithGoogleRequestParam("subscription", request => request.Subscription);
             Modify_ApiCall(ref _callDeleteSubscription);
             Modify_DeleteSubscriptionApiCall(ref _callDeleteSubscription);
-            _callModifyAckDeadline = clientHelper.BuildApiCall<ModifyAckDeadlineRequest, wkt::Empty>(grpcClient.ModifyAckDeadlineAsync, grpcClient.ModifyAckDeadline, effectiveSettings.ModifyAckDeadlineSettings).WithGoogleRequestParam("subscription", request => request.Subscription);
+            _callModifyAckDeadline = clientHelper.BuildApiCall<ModifyAckDeadlineRequest, wkt::Empty>("ModifyAckDeadline", grpcClient.ModifyAckDeadlineAsync, grpcClient.ModifyAckDeadline, effectiveSettings.ModifyAckDeadlineSettings).WithGoogleRequestParam("subscription", request => request.Subscription);
             Modify_ApiCall(ref _callModifyAckDeadline);
             Modify_ModifyAckDeadlineApiCall(ref _callModifyAckDeadline);
-            _callAcknowledge = clientHelper.BuildApiCall<AcknowledgeRequest, wkt::Empty>(grpcClient.AcknowledgeAsync, grpcClient.Acknowledge, effectiveSettings.AcknowledgeSettings).WithGoogleRequestParam("subscription", request => request.Subscription);
+            _callAcknowledge = clientHelper.BuildApiCall<AcknowledgeRequest, wkt::Empty>("Acknowledge", grpcClient.AcknowledgeAsync, grpcClient.Acknowledge, effectiveSettings.AcknowledgeSettings).WithGoogleRequestParam("subscription", request => request.Subscription);
             Modify_ApiCall(ref _callAcknowledge);
             Modify_AcknowledgeApiCall(ref _callAcknowledge);
-            _callPull = clientHelper.BuildApiCall<PullRequest, PullResponse>(grpcClient.PullAsync, grpcClient.Pull, effectiveSettings.PullSettings).WithGoogleRequestParam("subscription", request => request.Subscription);
+            _callPull = clientHelper.BuildApiCall<PullRequest, PullResponse>("Pull", grpcClient.PullAsync, grpcClient.Pull, effectiveSettings.PullSettings).WithGoogleRequestParam("subscription", request => request.Subscription);
             Modify_ApiCall(ref _callPull);
             Modify_PullApiCall(ref _callPull);
-            _callStreamingPull = clientHelper.BuildApiCall<StreamingPullRequest, StreamingPullResponse>(grpcClient.StreamingPull, effectiveSettings.StreamingPullSettings, effectiveSettings.StreamingPullStreamingSettings);
+            _callStreamingPull = clientHelper.BuildApiCall<StreamingPullRequest, StreamingPullResponse>("StreamingPull", grpcClient.StreamingPull, effectiveSettings.StreamingPullSettings, effectiveSettings.StreamingPullStreamingSettings);
             Modify_ApiCall(ref _callStreamingPull);
             Modify_StreamingPullApiCall(ref _callStreamingPull);
-            _callModifyPushConfig = clientHelper.BuildApiCall<ModifyPushConfigRequest, wkt::Empty>(grpcClient.ModifyPushConfigAsync, grpcClient.ModifyPushConfig, effectiveSettings.ModifyPushConfigSettings).WithGoogleRequestParam("subscription", request => request.Subscription);
+            _callModifyPushConfig = clientHelper.BuildApiCall<ModifyPushConfigRequest, wkt::Empty>("ModifyPushConfig", grpcClient.ModifyPushConfigAsync, grpcClient.ModifyPushConfig, effectiveSettings.ModifyPushConfigSettings).WithGoogleRequestParam("subscription", request => request.Subscription);
             Modify_ApiCall(ref _callModifyPushConfig);
             Modify_ModifyPushConfigApiCall(ref _callModifyPushConfig);
-            _callGetSnapshot = clientHelper.BuildApiCall<GetSnapshotRequest, Snapshot>(grpcClient.GetSnapshotAsync, grpcClient.GetSnapshot, effectiveSettings.GetSnapshotSettings).WithGoogleRequestParam("snapshot", request => request.Snapshot);
+            _callGetSnapshot = clientHelper.BuildApiCall<GetSnapshotRequest, Snapshot>("GetSnapshot", grpcClient.GetSnapshotAsync, grpcClient.GetSnapshot, effectiveSettings.GetSnapshotSettings).WithGoogleRequestParam("snapshot", request => request.Snapshot);
             Modify_ApiCall(ref _callGetSnapshot);
             Modify_GetSnapshotApiCall(ref _callGetSnapshot);
-            _callListSnapshots = clientHelper.BuildApiCall<ListSnapshotsRequest, ListSnapshotsResponse>(grpcClient.ListSnapshotsAsync, grpcClient.ListSnapshots, effectiveSettings.ListSnapshotsSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callListSnapshots = clientHelper.BuildApiCall<ListSnapshotsRequest, ListSnapshotsResponse>("ListSnapshots", grpcClient.ListSnapshotsAsync, grpcClient.ListSnapshots, effectiveSettings.ListSnapshotsSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callListSnapshots);
             Modify_ListSnapshotsApiCall(ref _callListSnapshots);
-            _callCreateSnapshot = clientHelper.BuildApiCall<CreateSnapshotRequest, Snapshot>(grpcClient.CreateSnapshotAsync, grpcClient.CreateSnapshot, effectiveSettings.CreateSnapshotSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCreateSnapshot = clientHelper.BuildApiCall<CreateSnapshotRequest, Snapshot>("CreateSnapshot", grpcClient.CreateSnapshotAsync, grpcClient.CreateSnapshot, effectiveSettings.CreateSnapshotSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCreateSnapshot);
             Modify_CreateSnapshotApiCall(ref _callCreateSnapshot);
-            _callUpdateSnapshot = clientHelper.BuildApiCall<UpdateSnapshotRequest, Snapshot>(grpcClient.UpdateSnapshotAsync, grpcClient.UpdateSnapshot, effectiveSettings.UpdateSnapshotSettings).WithGoogleRequestParam("snapshot.name", request => request.Snapshot?.Name);
+            _callUpdateSnapshot = clientHelper.BuildApiCall<UpdateSnapshotRequest, Snapshot>("UpdateSnapshot", grpcClient.UpdateSnapshotAsync, grpcClient.UpdateSnapshot, effectiveSettings.UpdateSnapshotSettings).WithGoogleRequestParam("snapshot.name", request => request.Snapshot?.Name);
             Modify_ApiCall(ref _callUpdateSnapshot);
             Modify_UpdateSnapshotApiCall(ref _callUpdateSnapshot);
-            _callDeleteSnapshot = clientHelper.BuildApiCall<DeleteSnapshotRequest, wkt::Empty>(grpcClient.DeleteSnapshotAsync, grpcClient.DeleteSnapshot, effectiveSettings.DeleteSnapshotSettings).WithGoogleRequestParam("snapshot", request => request.Snapshot);
+            _callDeleteSnapshot = clientHelper.BuildApiCall<DeleteSnapshotRequest, wkt::Empty>("DeleteSnapshot", grpcClient.DeleteSnapshotAsync, grpcClient.DeleteSnapshot, effectiveSettings.DeleteSnapshotSettings).WithGoogleRequestParam("snapshot", request => request.Snapshot);
             Modify_ApiCall(ref _callDeleteSnapshot);
             Modify_DeleteSnapshotApiCall(ref _callDeleteSnapshot);
-            _callSeek = clientHelper.BuildApiCall<SeekRequest, SeekResponse>(grpcClient.SeekAsync, grpcClient.Seek, effectiveSettings.SeekSettings).WithGoogleRequestParam("subscription", request => request.Subscription);
+            _callSeek = clientHelper.BuildApiCall<SeekRequest, SeekResponse>("Seek", grpcClient.SeekAsync, grpcClient.Seek, effectiveSettings.SeekSettings).WithGoogleRequestParam("subscription", request => request.Subscription);
             Modify_ApiCall(ref _callSeek);
             Modify_SeekApiCall(ref _callSeek);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

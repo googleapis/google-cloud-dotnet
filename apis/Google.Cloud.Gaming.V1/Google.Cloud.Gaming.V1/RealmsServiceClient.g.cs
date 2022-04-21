@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -220,9 +220,8 @@ namespace Google.Cloud.Gaming.V1
         public RealmsServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public RealmsServiceClientBuilder()
+        public RealmsServiceClientBuilder() : base(RealmsServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = RealmsServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref RealmsServiceClient client);
@@ -249,29 +248,18 @@ namespace Google.Cloud.Gaming.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return RealmsServiceClient.Create(callInvoker, Settings);
+            return RealmsServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<RealmsServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return RealmsServiceClient.Create(callInvoker, Settings);
+            return RealmsServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => RealmsServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => RealmsServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => RealmsServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>RealmsService client wrapper, for convenient use.</summary>
@@ -299,19 +287,10 @@ namespace Google.Cloud.Gaming.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(RealmsService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="RealmsServiceClient"/> using the default credentials, endpoint and
@@ -338,8 +317,9 @@ namespace Google.Cloud.Gaming.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="RealmsServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="RealmsServiceClient"/>.</returns>
-        internal static RealmsServiceClient Create(grpccore::CallInvoker callInvoker, RealmsServiceSettings settings = null)
+        internal static RealmsServiceClient Create(grpccore::CallInvoker callInvoker, RealmsServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -348,7 +328,7 @@ namespace Google.Cloud.Gaming.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             RealmsService.RealmsServiceClient grpcClient = new RealmsService.RealmsServiceClient(callInvoker);
-            return new RealmsServiceClientImpl(grpcClient, settings);
+            return new RealmsServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1078,30 +1058,31 @@ namespace Google.Cloud.Gaming.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="RealmsServiceSettings"/> used within this client.</param>
-        public RealmsServiceClientImpl(RealmsService.RealmsServiceClient grpcClient, RealmsServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public RealmsServiceClientImpl(RealmsService.RealmsServiceClient grpcClient, RealmsServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             RealmsServiceSettings effectiveSettings = settings ?? RealmsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateRealmOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRealmOperationsSettings);
-            DeleteRealmOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRealmOperationsSettings);
-            UpdateRealmOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRealmOperationsSettings);
-            _callListRealms = clientHelper.BuildApiCall<ListRealmsRequest, ListRealmsResponse>(grpcClient.ListRealmsAsync, grpcClient.ListRealms, effectiveSettings.ListRealmsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateRealmOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRealmOperationsSettings, logger);
+            DeleteRealmOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRealmOperationsSettings, logger);
+            UpdateRealmOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRealmOperationsSettings, logger);
+            _callListRealms = clientHelper.BuildApiCall<ListRealmsRequest, ListRealmsResponse>("ListRealms", grpcClient.ListRealmsAsync, grpcClient.ListRealms, effectiveSettings.ListRealmsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListRealms);
             Modify_ListRealmsApiCall(ref _callListRealms);
-            _callGetRealm = clientHelper.BuildApiCall<GetRealmRequest, Realm>(grpcClient.GetRealmAsync, grpcClient.GetRealm, effectiveSettings.GetRealmSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetRealm = clientHelper.BuildApiCall<GetRealmRequest, Realm>("GetRealm", grpcClient.GetRealmAsync, grpcClient.GetRealm, effectiveSettings.GetRealmSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetRealm);
             Modify_GetRealmApiCall(ref _callGetRealm);
-            _callCreateRealm = clientHelper.BuildApiCall<CreateRealmRequest, lro::Operation>(grpcClient.CreateRealmAsync, grpcClient.CreateRealm, effectiveSettings.CreateRealmSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateRealm = clientHelper.BuildApiCall<CreateRealmRequest, lro::Operation>("CreateRealm", grpcClient.CreateRealmAsync, grpcClient.CreateRealm, effectiveSettings.CreateRealmSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateRealm);
             Modify_CreateRealmApiCall(ref _callCreateRealm);
-            _callDeleteRealm = clientHelper.BuildApiCall<DeleteRealmRequest, lro::Operation>(grpcClient.DeleteRealmAsync, grpcClient.DeleteRealm, effectiveSettings.DeleteRealmSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteRealm = clientHelper.BuildApiCall<DeleteRealmRequest, lro::Operation>("DeleteRealm", grpcClient.DeleteRealmAsync, grpcClient.DeleteRealm, effectiveSettings.DeleteRealmSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteRealm);
             Modify_DeleteRealmApiCall(ref _callDeleteRealm);
-            _callUpdateRealm = clientHelper.BuildApiCall<UpdateRealmRequest, lro::Operation>(grpcClient.UpdateRealmAsync, grpcClient.UpdateRealm, effectiveSettings.UpdateRealmSettings).WithGoogleRequestParam("realm.name", request => request.Realm?.Name);
+            _callUpdateRealm = clientHelper.BuildApiCall<UpdateRealmRequest, lro::Operation>("UpdateRealm", grpcClient.UpdateRealmAsync, grpcClient.UpdateRealm, effectiveSettings.UpdateRealmSettings).WithGoogleRequestParam("realm.name", request => request.Realm?.Name);
             Modify_ApiCall(ref _callUpdateRealm);
             Modify_UpdateRealmApiCall(ref _callUpdateRealm);
-            _callPreviewRealmUpdate = clientHelper.BuildApiCall<PreviewRealmUpdateRequest, PreviewRealmUpdateResponse>(grpcClient.PreviewRealmUpdateAsync, grpcClient.PreviewRealmUpdate, effectiveSettings.PreviewRealmUpdateSettings).WithGoogleRequestParam("realm.name", request => request.Realm?.Name);
+            _callPreviewRealmUpdate = clientHelper.BuildApiCall<PreviewRealmUpdateRequest, PreviewRealmUpdateResponse>("PreviewRealmUpdate", grpcClient.PreviewRealmUpdateAsync, grpcClient.PreviewRealmUpdate, effectiveSettings.PreviewRealmUpdateSettings).WithGoogleRequestParam("realm.name", request => request.Realm?.Name);
             Modify_ApiCall(ref _callPreviewRealmUpdate);
             Modify_PreviewRealmUpdateApiCall(ref _callPreviewRealmUpdate);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

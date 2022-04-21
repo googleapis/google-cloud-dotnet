@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Audit", "Google.Cloud.Audit\Google.Cloud.Audit.csproj", "{17736BC1-0A12-4605-AC6C-5F0A53039D41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Iam.V1", "..\Google.Cloud.Iam.V1\Google.Cloud.Iam.V1\Google.Cloud.Iam.V1.csproj", "{D88E007A-EC5E-4B5F-8843-D181A0612753}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,17 @@ Global
 		{17736BC1-0A12-4605-AC6C-5F0A53039D41}.Release|x64.Build.0 = Release|Any CPU
 		{17736BC1-0A12-4605-AC6C-5F0A53039D41}.Release|x86.ActiveCfg = Release|Any CPU
 		{17736BC1-0A12-4605-AC6C-5F0A53039D41}.Release|x86.Build.0 = Release|Any CPU
+		{D88E007A-EC5E-4B5F-8843-D181A0612753}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D88E007A-EC5E-4B5F-8843-D181A0612753}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D88E007A-EC5E-4B5F-8843-D181A0612753}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D88E007A-EC5E-4B5F-8843-D181A0612753}.Debug|x64.Build.0 = Debug|Any CPU
+		{D88E007A-EC5E-4B5F-8843-D181A0612753}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D88E007A-EC5E-4B5F-8843-D181A0612753}.Debug|x86.Build.0 = Debug|Any CPU
+		{D88E007A-EC5E-4B5F-8843-D181A0612753}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D88E007A-EC5E-4B5F-8843-D181A0612753}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D88E007A-EC5E-4B5F-8843-D181A0612753}.Release|x64.ActiveCfg = Release|Any CPU
+		{D88E007A-EC5E-4B5F-8843-D181A0612753}.Release|x64.Build.0 = Release|Any CPU
+		{D88E007A-EC5E-4B5F-8843-D181A0612753}.Release|x86.ActiveCfg = Release|Any CPU
+		{D88E007A-EC5E-4B5F-8843-D181A0612753}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

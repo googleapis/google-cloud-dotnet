@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -496,9 +496,8 @@ namespace Google.Cloud.CloudBuild.V1
         public CloudBuildSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public CloudBuildClientBuilder()
+        public CloudBuildClientBuilder() : base(CloudBuildClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = CloudBuildClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref CloudBuildClient client);
@@ -525,29 +524,18 @@ namespace Google.Cloud.CloudBuild.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return CloudBuildClient.Create(callInvoker, Settings);
+            return CloudBuildClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<CloudBuildClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return CloudBuildClient.Create(callInvoker, Settings);
+            return CloudBuildClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => CloudBuildClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => CloudBuildClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => CloudBuildClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>CloudBuild client wrapper, for convenient use.</summary>
@@ -581,19 +569,10 @@ namespace Google.Cloud.CloudBuild.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(CloudBuild.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="CloudBuildClient"/> using the default credentials, endpoint and
@@ -620,8 +599,9 @@ namespace Google.Cloud.CloudBuild.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="CloudBuildSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="CloudBuildClient"/>.</returns>
-        internal static CloudBuildClient Create(grpccore::CallInvoker callInvoker, CloudBuildSettings settings = null)
+        internal static CloudBuildClient Create(grpccore::CallInvoker callInvoker, CloudBuildSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -630,7 +610,7 @@ namespace Google.Cloud.CloudBuild.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             CloudBuild.CloudBuildClient grpcClient = new CloudBuild.CloudBuildClient(callInvoker);
-            return new CloudBuildClientImpl(grpcClient, settings);
+            return new CloudBuildClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -2758,70 +2738,71 @@ namespace Google.Cloud.CloudBuild.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="CloudBuildSettings"/> used within this client.</param>
-        public CloudBuildClientImpl(CloudBuild.CloudBuildClient grpcClient, CloudBuildSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public CloudBuildClientImpl(CloudBuild.CloudBuildClient grpcClient, CloudBuildSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             CloudBuildSettings effectiveSettings = settings ?? CloudBuildSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateBuildOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBuildOperationsSettings);
-            RetryBuildOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RetryBuildOperationsSettings);
-            ApproveBuildOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ApproveBuildOperationsSettings);
-            RunBuildTriggerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RunBuildTriggerOperationsSettings);
-            CreateWorkerPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateWorkerPoolOperationsSettings);
-            DeleteWorkerPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteWorkerPoolOperationsSettings);
-            UpdateWorkerPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateWorkerPoolOperationsSettings);
-            _callCreateBuild = clientHelper.BuildApiCall<CreateBuildRequest, lro::Operation>(grpcClient.CreateBuildAsync, grpcClient.CreateBuild, effectiveSettings.CreateBuildSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateBuildOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBuildOperationsSettings, logger);
+            RetryBuildOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RetryBuildOperationsSettings, logger);
+            ApproveBuildOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ApproveBuildOperationsSettings, logger);
+            RunBuildTriggerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RunBuildTriggerOperationsSettings, logger);
+            CreateWorkerPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateWorkerPoolOperationsSettings, logger);
+            DeleteWorkerPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteWorkerPoolOperationsSettings, logger);
+            UpdateWorkerPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateWorkerPoolOperationsSettings, logger);
+            _callCreateBuild = clientHelper.BuildApiCall<CreateBuildRequest, lro::Operation>("CreateBuild", grpcClient.CreateBuildAsync, grpcClient.CreateBuild, effectiveSettings.CreateBuildSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callCreateBuild);
             Modify_CreateBuildApiCall(ref _callCreateBuild);
-            _callGetBuild = clientHelper.BuildApiCall<GetBuildRequest, Build>(grpcClient.GetBuildAsync, grpcClient.GetBuild, effectiveSettings.GetBuildSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("id", request => request.Id);
+            _callGetBuild = clientHelper.BuildApiCall<GetBuildRequest, Build>("GetBuild", grpcClient.GetBuildAsync, grpcClient.GetBuild, effectiveSettings.GetBuildSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("id", request => request.Id);
             Modify_ApiCall(ref _callGetBuild);
             Modify_GetBuildApiCall(ref _callGetBuild);
-            _callListBuilds = clientHelper.BuildApiCall<ListBuildsRequest, ListBuildsResponse>(grpcClient.ListBuildsAsync, grpcClient.ListBuilds, effectiveSettings.ListBuildsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callListBuilds = clientHelper.BuildApiCall<ListBuildsRequest, ListBuildsResponse>("ListBuilds", grpcClient.ListBuildsAsync, grpcClient.ListBuilds, effectiveSettings.ListBuildsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callListBuilds);
             Modify_ListBuildsApiCall(ref _callListBuilds);
-            _callCancelBuild = clientHelper.BuildApiCall<CancelBuildRequest, Build>(grpcClient.CancelBuildAsync, grpcClient.CancelBuild, effectiveSettings.CancelBuildSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("id", request => request.Id);
+            _callCancelBuild = clientHelper.BuildApiCall<CancelBuildRequest, Build>("CancelBuild", grpcClient.CancelBuildAsync, grpcClient.CancelBuild, effectiveSettings.CancelBuildSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("id", request => request.Id);
             Modify_ApiCall(ref _callCancelBuild);
             Modify_CancelBuildApiCall(ref _callCancelBuild);
-            _callRetryBuild = clientHelper.BuildApiCall<RetryBuildRequest, lro::Operation>(grpcClient.RetryBuildAsync, grpcClient.RetryBuild, effectiveSettings.RetryBuildSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("id", request => request.Id);
+            _callRetryBuild = clientHelper.BuildApiCall<RetryBuildRequest, lro::Operation>("RetryBuild", grpcClient.RetryBuildAsync, grpcClient.RetryBuild, effectiveSettings.RetryBuildSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("id", request => request.Id);
             Modify_ApiCall(ref _callRetryBuild);
             Modify_RetryBuildApiCall(ref _callRetryBuild);
-            _callApproveBuild = clientHelper.BuildApiCall<ApproveBuildRequest, lro::Operation>(grpcClient.ApproveBuildAsync, grpcClient.ApproveBuild, effectiveSettings.ApproveBuildSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callApproveBuild = clientHelper.BuildApiCall<ApproveBuildRequest, lro::Operation>("ApproveBuild", grpcClient.ApproveBuildAsync, grpcClient.ApproveBuild, effectiveSettings.ApproveBuildSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callApproveBuild);
             Modify_ApproveBuildApiCall(ref _callApproveBuild);
-            _callCreateBuildTrigger = clientHelper.BuildApiCall<CreateBuildTriggerRequest, BuildTrigger>(grpcClient.CreateBuildTriggerAsync, grpcClient.CreateBuildTrigger, effectiveSettings.CreateBuildTriggerSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callCreateBuildTrigger = clientHelper.BuildApiCall<CreateBuildTriggerRequest, BuildTrigger>("CreateBuildTrigger", grpcClient.CreateBuildTriggerAsync, grpcClient.CreateBuildTrigger, effectiveSettings.CreateBuildTriggerSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callCreateBuildTrigger);
             Modify_CreateBuildTriggerApiCall(ref _callCreateBuildTrigger);
-            _callGetBuildTrigger = clientHelper.BuildApiCall<GetBuildTriggerRequest, BuildTrigger>(grpcClient.GetBuildTriggerAsync, grpcClient.GetBuildTrigger, effectiveSettings.GetBuildTriggerSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("trigger_id", request => request.TriggerId);
+            _callGetBuildTrigger = clientHelper.BuildApiCall<GetBuildTriggerRequest, BuildTrigger>("GetBuildTrigger", grpcClient.GetBuildTriggerAsync, grpcClient.GetBuildTrigger, effectiveSettings.GetBuildTriggerSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("trigger_id", request => request.TriggerId);
             Modify_ApiCall(ref _callGetBuildTrigger);
             Modify_GetBuildTriggerApiCall(ref _callGetBuildTrigger);
-            _callListBuildTriggers = clientHelper.BuildApiCall<ListBuildTriggersRequest, ListBuildTriggersResponse>(grpcClient.ListBuildTriggersAsync, grpcClient.ListBuildTriggers, effectiveSettings.ListBuildTriggersSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callListBuildTriggers = clientHelper.BuildApiCall<ListBuildTriggersRequest, ListBuildTriggersResponse>("ListBuildTriggers", grpcClient.ListBuildTriggersAsync, grpcClient.ListBuildTriggers, effectiveSettings.ListBuildTriggersSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callListBuildTriggers);
             Modify_ListBuildTriggersApiCall(ref _callListBuildTriggers);
-            _callDeleteBuildTrigger = clientHelper.BuildApiCall<DeleteBuildTriggerRequest, wkt::Empty>(grpcClient.DeleteBuildTriggerAsync, grpcClient.DeleteBuildTrigger, effectiveSettings.DeleteBuildTriggerSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("trigger_id", request => request.TriggerId);
+            _callDeleteBuildTrigger = clientHelper.BuildApiCall<DeleteBuildTriggerRequest, wkt::Empty>("DeleteBuildTrigger", grpcClient.DeleteBuildTriggerAsync, grpcClient.DeleteBuildTrigger, effectiveSettings.DeleteBuildTriggerSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("trigger_id", request => request.TriggerId);
             Modify_ApiCall(ref _callDeleteBuildTrigger);
             Modify_DeleteBuildTriggerApiCall(ref _callDeleteBuildTrigger);
-            _callUpdateBuildTrigger = clientHelper.BuildApiCall<UpdateBuildTriggerRequest, BuildTrigger>(grpcClient.UpdateBuildTriggerAsync, grpcClient.UpdateBuildTrigger, effectiveSettings.UpdateBuildTriggerSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("trigger_id", request => request.TriggerId);
+            _callUpdateBuildTrigger = clientHelper.BuildApiCall<UpdateBuildTriggerRequest, BuildTrigger>("UpdateBuildTrigger", grpcClient.UpdateBuildTriggerAsync, grpcClient.UpdateBuildTrigger, effectiveSettings.UpdateBuildTriggerSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("trigger_id", request => request.TriggerId);
             Modify_ApiCall(ref _callUpdateBuildTrigger);
             Modify_UpdateBuildTriggerApiCall(ref _callUpdateBuildTrigger);
-            _callRunBuildTrigger = clientHelper.BuildApiCall<RunBuildTriggerRequest, lro::Operation>(grpcClient.RunBuildTriggerAsync, grpcClient.RunBuildTrigger, effectiveSettings.RunBuildTriggerSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("trigger_id", request => request.TriggerId);
+            _callRunBuildTrigger = clientHelper.BuildApiCall<RunBuildTriggerRequest, lro::Operation>("RunBuildTrigger", grpcClient.RunBuildTriggerAsync, grpcClient.RunBuildTrigger, effectiveSettings.RunBuildTriggerSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("trigger_id", request => request.TriggerId);
             Modify_ApiCall(ref _callRunBuildTrigger);
             Modify_RunBuildTriggerApiCall(ref _callRunBuildTrigger);
-            _callReceiveTriggerWebhook = clientHelper.BuildApiCall<ReceiveTriggerWebhookRequest, ReceiveTriggerWebhookResponse>(grpcClient.ReceiveTriggerWebhookAsync, grpcClient.ReceiveTriggerWebhook, effectiveSettings.ReceiveTriggerWebhookSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("trigger", request => request.Trigger);
+            _callReceiveTriggerWebhook = clientHelper.BuildApiCall<ReceiveTriggerWebhookRequest, ReceiveTriggerWebhookResponse>("ReceiveTriggerWebhook", grpcClient.ReceiveTriggerWebhookAsync, grpcClient.ReceiveTriggerWebhook, effectiveSettings.ReceiveTriggerWebhookSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("trigger", request => request.Trigger);
             Modify_ApiCall(ref _callReceiveTriggerWebhook);
             Modify_ReceiveTriggerWebhookApiCall(ref _callReceiveTriggerWebhook);
-            _callCreateWorkerPool = clientHelper.BuildApiCall<CreateWorkerPoolRequest, lro::Operation>(grpcClient.CreateWorkerPoolAsync, grpcClient.CreateWorkerPool, effectiveSettings.CreateWorkerPoolSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateWorkerPool = clientHelper.BuildApiCall<CreateWorkerPoolRequest, lro::Operation>("CreateWorkerPool", grpcClient.CreateWorkerPoolAsync, grpcClient.CreateWorkerPool, effectiveSettings.CreateWorkerPoolSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateWorkerPool);
             Modify_CreateWorkerPoolApiCall(ref _callCreateWorkerPool);
-            _callGetWorkerPool = clientHelper.BuildApiCall<GetWorkerPoolRequest, WorkerPool>(grpcClient.GetWorkerPoolAsync, grpcClient.GetWorkerPool, effectiveSettings.GetWorkerPoolSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetWorkerPool = clientHelper.BuildApiCall<GetWorkerPoolRequest, WorkerPool>("GetWorkerPool", grpcClient.GetWorkerPoolAsync, grpcClient.GetWorkerPool, effectiveSettings.GetWorkerPoolSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetWorkerPool);
             Modify_GetWorkerPoolApiCall(ref _callGetWorkerPool);
-            _callDeleteWorkerPool = clientHelper.BuildApiCall<DeleteWorkerPoolRequest, lro::Operation>(grpcClient.DeleteWorkerPoolAsync, grpcClient.DeleteWorkerPool, effectiveSettings.DeleteWorkerPoolSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteWorkerPool = clientHelper.BuildApiCall<DeleteWorkerPoolRequest, lro::Operation>("DeleteWorkerPool", grpcClient.DeleteWorkerPoolAsync, grpcClient.DeleteWorkerPool, effectiveSettings.DeleteWorkerPoolSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteWorkerPool);
             Modify_DeleteWorkerPoolApiCall(ref _callDeleteWorkerPool);
-            _callUpdateWorkerPool = clientHelper.BuildApiCall<UpdateWorkerPoolRequest, lro::Operation>(grpcClient.UpdateWorkerPoolAsync, grpcClient.UpdateWorkerPool, effectiveSettings.UpdateWorkerPoolSettings).WithGoogleRequestParam("worker_pool.name", request => request.WorkerPool?.Name);
+            _callUpdateWorkerPool = clientHelper.BuildApiCall<UpdateWorkerPoolRequest, lro::Operation>("UpdateWorkerPool", grpcClient.UpdateWorkerPoolAsync, grpcClient.UpdateWorkerPool, effectiveSettings.UpdateWorkerPoolSettings).WithGoogleRequestParam("worker_pool.name", request => request.WorkerPool?.Name);
             Modify_ApiCall(ref _callUpdateWorkerPool);
             Modify_UpdateWorkerPoolApiCall(ref _callUpdateWorkerPool);
-            _callListWorkerPools = clientHelper.BuildApiCall<ListWorkerPoolsRequest, ListWorkerPoolsResponse>(grpcClient.ListWorkerPoolsAsync, grpcClient.ListWorkerPools, effectiveSettings.ListWorkerPoolsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListWorkerPools = clientHelper.BuildApiCall<ListWorkerPoolsRequest, ListWorkerPoolsResponse>("ListWorkerPools", grpcClient.ListWorkerPoolsAsync, grpcClient.ListWorkerPools, effectiveSettings.ListWorkerPoolsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListWorkerPools);
             Modify_ListWorkerPoolsApiCall(ref _callListWorkerPools);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

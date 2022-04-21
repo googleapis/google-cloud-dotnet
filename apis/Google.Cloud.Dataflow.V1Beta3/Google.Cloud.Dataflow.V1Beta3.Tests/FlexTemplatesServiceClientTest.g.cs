@@ -39,7 +39,7 @@ namespace Google.Cloud.Dataflow.V1Beta3.Tests
             };
             LaunchFlexTemplateResponse expectedResponse = new LaunchFlexTemplateResponse { Job = new Job(), };
             mockGrpcClient.Setup(x => x.LaunchFlexTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FlexTemplatesServiceClient client = new FlexTemplatesServiceClientImpl(mockGrpcClient.Object, null);
+            FlexTemplatesServiceClient client = new FlexTemplatesServiceClientImpl(mockGrpcClient.Object, null, null);
             LaunchFlexTemplateResponse response = client.LaunchFlexTemplate(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -58,7 +58,7 @@ namespace Google.Cloud.Dataflow.V1Beta3.Tests
             };
             LaunchFlexTemplateResponse expectedResponse = new LaunchFlexTemplateResponse { Job = new Job(), };
             mockGrpcClient.Setup(x => x.LaunchFlexTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LaunchFlexTemplateResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FlexTemplatesServiceClient client = new FlexTemplatesServiceClientImpl(mockGrpcClient.Object, null);
+            FlexTemplatesServiceClient client = new FlexTemplatesServiceClientImpl(mockGrpcClient.Object, null, null);
             LaunchFlexTemplateResponse responseCallSettings = await client.LaunchFlexTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LaunchFlexTemplateResponse responseCancellationToken = await client.LaunchFlexTemplateAsync(request, st::CancellationToken.None);

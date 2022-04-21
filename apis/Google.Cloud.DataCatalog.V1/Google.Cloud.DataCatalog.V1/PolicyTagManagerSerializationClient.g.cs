@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -107,9 +107,8 @@ namespace Google.Cloud.DataCatalog.V1
         public PolicyTagManagerSerializationSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public PolicyTagManagerSerializationClientBuilder()
+        public PolicyTagManagerSerializationClientBuilder() : base(PolicyTagManagerSerializationClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = PolicyTagManagerSerializationClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref PolicyTagManagerSerializationClient client);
@@ -136,30 +135,18 @@ namespace Google.Cloud.DataCatalog.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return PolicyTagManagerSerializationClient.Create(callInvoker, Settings);
+            return PolicyTagManagerSerializationClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<PolicyTagManagerSerializationClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return PolicyTagManagerSerializationClient.Create(callInvoker, Settings);
+            return PolicyTagManagerSerializationClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => PolicyTagManagerSerializationClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() =>
-            PolicyTagManagerSerializationClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => PolicyTagManagerSerializationClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>PolicyTagManagerSerialization client wrapper, for convenient use.</summary>
@@ -189,19 +176,10 @@ namespace Google.Cloud.DataCatalog.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(PolicyTagManagerSerialization.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="PolicyTagManagerSerializationClient"/> using the default credentials,
@@ -232,8 +210,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="PolicyTagManagerSerializationSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="PolicyTagManagerSerializationClient"/>.</returns>
-        internal static PolicyTagManagerSerializationClient Create(grpccore::CallInvoker callInvoker, PolicyTagManagerSerializationSettings settings = null)
+        internal static PolicyTagManagerSerializationClient Create(grpccore::CallInvoker callInvoker, PolicyTagManagerSerializationSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -242,7 +221,7 @@ namespace Google.Cloud.DataCatalog.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             PolicyTagManagerSerialization.PolicyTagManagerSerializationClient grpcClient = new PolicyTagManagerSerialization.PolicyTagManagerSerializationClient(callInvoker);
-            return new PolicyTagManagerSerializationClientImpl(grpcClient, settings);
+            return new PolicyTagManagerSerializationClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -438,18 +417,19 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="settings">
         /// The base <see cref="PolicyTagManagerSerializationSettings"/> used within this client.
         /// </param>
-        public PolicyTagManagerSerializationClientImpl(PolicyTagManagerSerialization.PolicyTagManagerSerializationClient grpcClient, PolicyTagManagerSerializationSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public PolicyTagManagerSerializationClientImpl(PolicyTagManagerSerialization.PolicyTagManagerSerializationClient grpcClient, PolicyTagManagerSerializationSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             PolicyTagManagerSerializationSettings effectiveSettings = settings ?? PolicyTagManagerSerializationSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callReplaceTaxonomy = clientHelper.BuildApiCall<ReplaceTaxonomyRequest, Taxonomy>(grpcClient.ReplaceTaxonomyAsync, grpcClient.ReplaceTaxonomy, effectiveSettings.ReplaceTaxonomySettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callReplaceTaxonomy = clientHelper.BuildApiCall<ReplaceTaxonomyRequest, Taxonomy>("ReplaceTaxonomy", grpcClient.ReplaceTaxonomyAsync, grpcClient.ReplaceTaxonomy, effectiveSettings.ReplaceTaxonomySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callReplaceTaxonomy);
             Modify_ReplaceTaxonomyApiCall(ref _callReplaceTaxonomy);
-            _callImportTaxonomies = clientHelper.BuildApiCall<ImportTaxonomiesRequest, ImportTaxonomiesResponse>(grpcClient.ImportTaxonomiesAsync, grpcClient.ImportTaxonomies, effectiveSettings.ImportTaxonomiesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callImportTaxonomies = clientHelper.BuildApiCall<ImportTaxonomiesRequest, ImportTaxonomiesResponse>("ImportTaxonomies", grpcClient.ImportTaxonomiesAsync, grpcClient.ImportTaxonomies, effectiveSettings.ImportTaxonomiesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callImportTaxonomies);
             Modify_ImportTaxonomiesApiCall(ref _callImportTaxonomies);
-            _callExportTaxonomies = clientHelper.BuildApiCall<ExportTaxonomiesRequest, ExportTaxonomiesResponse>(grpcClient.ExportTaxonomiesAsync, grpcClient.ExportTaxonomies, effectiveSettings.ExportTaxonomiesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callExportTaxonomies = clientHelper.BuildApiCall<ExportTaxonomiesRequest, ExportTaxonomiesResponse>("ExportTaxonomies", grpcClient.ExportTaxonomiesAsync, grpcClient.ExportTaxonomies, effectiveSettings.ExportTaxonomiesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callExportTaxonomies);
             Modify_ExportTaxonomiesApiCall(ref _callExportTaxonomies);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

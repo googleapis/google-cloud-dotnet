@@ -44,7 +44,7 @@ namespace Google.Cloud.ResourceSettings.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetSetting(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ResourceSettingsServiceClient client = new ResourceSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            ResourceSettingsServiceClient client = new ResourceSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Setting response = client.GetSetting(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -68,7 +68,7 @@ namespace Google.Cloud.ResourceSettings.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetSettingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Setting>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ResourceSettingsServiceClient client = new ResourceSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            ResourceSettingsServiceClient client = new ResourceSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Setting responseCallSettings = await client.GetSettingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Setting responseCancellationToken = await client.GetSettingAsync(request, st::CancellationToken.None);
@@ -93,7 +93,7 @@ namespace Google.Cloud.ResourceSettings.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetSetting(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ResourceSettingsServiceClient client = new ResourceSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            ResourceSettingsServiceClient client = new ResourceSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Setting response = client.GetSetting(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -116,7 +116,7 @@ namespace Google.Cloud.ResourceSettings.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetSettingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Setting>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ResourceSettingsServiceClient client = new ResourceSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            ResourceSettingsServiceClient client = new ResourceSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Setting responseCallSettings = await client.GetSettingAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Setting responseCancellationToken = await client.GetSettingAsync(request.Name, st::CancellationToken.None);
@@ -141,7 +141,7 @@ namespace Google.Cloud.ResourceSettings.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetSetting(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ResourceSettingsServiceClient client = new ResourceSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            ResourceSettingsServiceClient client = new ResourceSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Setting response = client.GetSetting(request.SettingName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -164,7 +164,7 @@ namespace Google.Cloud.ResourceSettings.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetSettingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Setting>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ResourceSettingsServiceClient client = new ResourceSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            ResourceSettingsServiceClient client = new ResourceSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Setting responseCallSettings = await client.GetSettingAsync(request.SettingName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Setting responseCancellationToken = await client.GetSettingAsync(request.SettingName, st::CancellationToken.None);
@@ -189,7 +189,7 @@ namespace Google.Cloud.ResourceSettings.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.UpdateSetting(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ResourceSettingsServiceClient client = new ResourceSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            ResourceSettingsServiceClient client = new ResourceSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Setting response = client.UpdateSetting(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -212,7 +212,7 @@ namespace Google.Cloud.ResourceSettings.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.UpdateSettingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Setting>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ResourceSettingsServiceClient client = new ResourceSettingsServiceClientImpl(mockGrpcClient.Object, null);
+            ResourceSettingsServiceClient client = new ResourceSettingsServiceClientImpl(mockGrpcClient.Object, null, null);
             Setting responseCallSettings = await client.UpdateSettingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Setting responseCancellationToken = await client.UpdateSettingAsync(request, st::CancellationToken.None);

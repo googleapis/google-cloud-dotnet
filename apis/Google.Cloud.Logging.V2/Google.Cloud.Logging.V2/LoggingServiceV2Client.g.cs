@@ -17,12 +17,12 @@
 using ga = Google.Api;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -194,9 +194,8 @@ namespace Google.Cloud.Logging.V2
         public LoggingServiceV2Settings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public LoggingServiceV2ClientBuilder()
+        public LoggingServiceV2ClientBuilder() : base(LoggingServiceV2Client.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = LoggingServiceV2Client.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref LoggingServiceV2Client client);
@@ -223,29 +222,18 @@ namespace Google.Cloud.Logging.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return LoggingServiceV2Client.Create(callInvoker, Settings);
+            return LoggingServiceV2Client.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<LoggingServiceV2Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return LoggingServiceV2Client.Create(callInvoker, Settings);
+            return LoggingServiceV2Client.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => LoggingServiceV2Client.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => LoggingServiceV2Client.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => LoggingServiceV2Client.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>LoggingServiceV2 client wrapper, for convenient use.</summary>
@@ -280,19 +268,10 @@ namespace Google.Cloud.Logging.V2
             "https://www.googleapis.com/auth/logging.write",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(LoggingServiceV2.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="LoggingServiceV2Client"/> using the default credentials, endpoint and
@@ -319,8 +298,9 @@ namespace Google.Cloud.Logging.V2
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="LoggingServiceV2Settings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="LoggingServiceV2Client"/>.</returns>
-        internal static LoggingServiceV2Client Create(grpccore::CallInvoker callInvoker, LoggingServiceV2Settings settings = null)
+        internal static LoggingServiceV2Client Create(grpccore::CallInvoker callInvoker, LoggingServiceV2Settings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -329,7 +309,7 @@ namespace Google.Cloud.Logging.V2
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             LoggingServiceV2.LoggingServiceV2Client grpcClient = new LoggingServiceV2.LoggingServiceV2Client(callInvoker);
-            return new LoggingServiceV2ClientImpl(grpcClient, settings);
+            return new LoggingServiceV2ClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -2141,27 +2121,28 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="LoggingServiceV2Settings"/> used within this client.</param>
-        public LoggingServiceV2ClientImpl(LoggingServiceV2.LoggingServiceV2Client grpcClient, LoggingServiceV2Settings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public LoggingServiceV2ClientImpl(LoggingServiceV2.LoggingServiceV2Client grpcClient, LoggingServiceV2Settings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             LoggingServiceV2Settings effectiveSettings = settings ?? LoggingServiceV2Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callDeleteLog = clientHelper.BuildApiCall<DeleteLogRequest, wkt::Empty>(grpcClient.DeleteLogAsync, grpcClient.DeleteLog, effectiveSettings.DeleteLogSettings).WithGoogleRequestParam("log_name", request => request.LogName);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callDeleteLog = clientHelper.BuildApiCall<DeleteLogRequest, wkt::Empty>("DeleteLog", grpcClient.DeleteLogAsync, grpcClient.DeleteLog, effectiveSettings.DeleteLogSettings).WithGoogleRequestParam("log_name", request => request.LogName);
             Modify_ApiCall(ref _callDeleteLog);
             Modify_DeleteLogApiCall(ref _callDeleteLog);
-            _callWriteLogEntries = clientHelper.BuildApiCall<WriteLogEntriesRequest, WriteLogEntriesResponse>(grpcClient.WriteLogEntriesAsync, grpcClient.WriteLogEntries, effectiveSettings.WriteLogEntriesSettings);
+            _callWriteLogEntries = clientHelper.BuildApiCall<WriteLogEntriesRequest, WriteLogEntriesResponse>("WriteLogEntries", grpcClient.WriteLogEntriesAsync, grpcClient.WriteLogEntries, effectiveSettings.WriteLogEntriesSettings);
             Modify_ApiCall(ref _callWriteLogEntries);
             Modify_WriteLogEntriesApiCall(ref _callWriteLogEntries);
-            _callListLogEntries = clientHelper.BuildApiCall<ListLogEntriesRequest, ListLogEntriesResponse>(grpcClient.ListLogEntriesAsync, grpcClient.ListLogEntries, effectiveSettings.ListLogEntriesSettings);
+            _callListLogEntries = clientHelper.BuildApiCall<ListLogEntriesRequest, ListLogEntriesResponse>("ListLogEntries", grpcClient.ListLogEntriesAsync, grpcClient.ListLogEntries, effectiveSettings.ListLogEntriesSettings);
             Modify_ApiCall(ref _callListLogEntries);
             Modify_ListLogEntriesApiCall(ref _callListLogEntries);
-            _callListMonitoredResourceDescriptors = clientHelper.BuildApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse>(grpcClient.ListMonitoredResourceDescriptorsAsync, grpcClient.ListMonitoredResourceDescriptors, effectiveSettings.ListMonitoredResourceDescriptorsSettings);
+            _callListMonitoredResourceDescriptors = clientHelper.BuildApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse>("ListMonitoredResourceDescriptors", grpcClient.ListMonitoredResourceDescriptorsAsync, grpcClient.ListMonitoredResourceDescriptors, effectiveSettings.ListMonitoredResourceDescriptorsSettings);
             Modify_ApiCall(ref _callListMonitoredResourceDescriptors);
             Modify_ListMonitoredResourceDescriptorsApiCall(ref _callListMonitoredResourceDescriptors);
-            _callListLogs = clientHelper.BuildApiCall<ListLogsRequest, ListLogsResponse>(grpcClient.ListLogsAsync, grpcClient.ListLogs, effectiveSettings.ListLogsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListLogs = clientHelper.BuildApiCall<ListLogsRequest, ListLogsResponse>("ListLogs", grpcClient.ListLogsAsync, grpcClient.ListLogs, effectiveSettings.ListLogsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListLogs);
             Modify_ListLogsApiCall(ref _callListLogs);
-            _callTailLogEntries = clientHelper.BuildApiCall<TailLogEntriesRequest, TailLogEntriesResponse>(grpcClient.TailLogEntries, effectiveSettings.TailLogEntriesSettings, effectiveSettings.TailLogEntriesStreamingSettings);
+            _callTailLogEntries = clientHelper.BuildApiCall<TailLogEntriesRequest, TailLogEntriesResponse>("TailLogEntries", grpcClient.TailLogEntries, effectiveSettings.TailLogEntriesSettings, effectiveSettings.TailLogEntriesStreamingSettings);
             Modify_ApiCall(ref _callTailLogEntries);
             Modify_TailLogEntriesApiCall(ref _callTailLogEntries);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

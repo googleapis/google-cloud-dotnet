@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -431,9 +431,8 @@ namespace Google.Cloud.Compute.V1
         public ProjectsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ProjectsClientBuilder()
+        public ProjectsClientBuilder() : base(ProjectsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ProjectsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ProjectsClient client);
@@ -460,29 +459,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ProjectsClient.Create(callInvoker, Settings);
+            return ProjectsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ProjectsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ProjectsClient.Create(callInvoker, Settings);
+            return ProjectsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ProjectsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ProjectsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ProjectsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>Projects client wrapper, for convenient use.</summary>
@@ -511,19 +499,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Projects.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ProjectsClient"/> using the default credentials, endpoint and settings. 
@@ -550,8 +529,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ProjectsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ProjectsClient"/>.</returns>
-        internal static ProjectsClient Create(grpccore::CallInvoker callInvoker, ProjectsSettings settings = null)
+        internal static ProjectsClient Create(grpccore::CallInvoker callInvoker, ProjectsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -560,7 +540,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Projects.ProjectsClient grpcClient = new Projects.ProjectsClient(callInvoker);
-            return new ProjectsClientImpl(grpcClient, settings);
+            return new ProjectsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1799,57 +1779,58 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ProjectsSettings"/> used within this client.</param>
-        public ProjectsClientImpl(Projects.ProjectsClient grpcClient, ProjectsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ProjectsClientImpl(Projects.ProjectsClient grpcClient, ProjectsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ProjectsSettings effectiveSettings = settings ?? ProjectsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            DisableXpnHostOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DisableXpnHostOperationsSettings);
-            DisableXpnResourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DisableXpnResourceOperationsSettings);
-            EnableXpnHostOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.EnableXpnHostOperationsSettings);
-            EnableXpnResourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.EnableXpnResourceOperationsSettings);
-            MoveDiskOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.MoveDiskOperationsSettings);
-            MoveInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.MoveInstanceOperationsSettings);
-            SetCommonInstanceMetadataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetCommonInstanceMetadataOperationsSettings);
-            SetDefaultNetworkTierOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetDefaultNetworkTierOperationsSettings);
-            SetUsageExportBucketOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetUsageExportBucketOperationsSettings);
-            _callDisableXpnHost = clientHelper.BuildApiCall<DisableXpnHostProjectRequest, Operation>(grpcClient.DisableXpnHostAsync, grpcClient.DisableXpnHost, effectiveSettings.DisableXpnHostSettings).WithGoogleRequestParam("project", request => request.Project);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            DisableXpnHostOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DisableXpnHostOperationsSettings, logger);
+            DisableXpnResourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DisableXpnResourceOperationsSettings, logger);
+            EnableXpnHostOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.EnableXpnHostOperationsSettings, logger);
+            EnableXpnResourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.EnableXpnResourceOperationsSettings, logger);
+            MoveDiskOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.MoveDiskOperationsSettings, logger);
+            MoveInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.MoveInstanceOperationsSettings, logger);
+            SetCommonInstanceMetadataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetCommonInstanceMetadataOperationsSettings, logger);
+            SetDefaultNetworkTierOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetDefaultNetworkTierOperationsSettings, logger);
+            SetUsageExportBucketOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetUsageExportBucketOperationsSettings, logger);
+            _callDisableXpnHost = clientHelper.BuildApiCall<DisableXpnHostProjectRequest, Operation>("DisableXpnHost", grpcClient.DisableXpnHostAsync, grpcClient.DisableXpnHost, effectiveSettings.DisableXpnHostSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callDisableXpnHost);
             Modify_DisableXpnHostApiCall(ref _callDisableXpnHost);
-            _callDisableXpnResource = clientHelper.BuildApiCall<DisableXpnResourceProjectRequest, Operation>(grpcClient.DisableXpnResourceAsync, grpcClient.DisableXpnResource, effectiveSettings.DisableXpnResourceSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callDisableXpnResource = clientHelper.BuildApiCall<DisableXpnResourceProjectRequest, Operation>("DisableXpnResource", grpcClient.DisableXpnResourceAsync, grpcClient.DisableXpnResource, effectiveSettings.DisableXpnResourceSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callDisableXpnResource);
             Modify_DisableXpnResourceApiCall(ref _callDisableXpnResource);
-            _callEnableXpnHost = clientHelper.BuildApiCall<EnableXpnHostProjectRequest, Operation>(grpcClient.EnableXpnHostAsync, grpcClient.EnableXpnHost, effectiveSettings.EnableXpnHostSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callEnableXpnHost = clientHelper.BuildApiCall<EnableXpnHostProjectRequest, Operation>("EnableXpnHost", grpcClient.EnableXpnHostAsync, grpcClient.EnableXpnHost, effectiveSettings.EnableXpnHostSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callEnableXpnHost);
             Modify_EnableXpnHostApiCall(ref _callEnableXpnHost);
-            _callEnableXpnResource = clientHelper.BuildApiCall<EnableXpnResourceProjectRequest, Operation>(grpcClient.EnableXpnResourceAsync, grpcClient.EnableXpnResource, effectiveSettings.EnableXpnResourceSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callEnableXpnResource = clientHelper.BuildApiCall<EnableXpnResourceProjectRequest, Operation>("EnableXpnResource", grpcClient.EnableXpnResourceAsync, grpcClient.EnableXpnResource, effectiveSettings.EnableXpnResourceSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callEnableXpnResource);
             Modify_EnableXpnResourceApiCall(ref _callEnableXpnResource);
-            _callGet = clientHelper.BuildApiCall<GetProjectRequest, Project>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callGet = clientHelper.BuildApiCall<GetProjectRequest, Project>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callGetXpnHost = clientHelper.BuildApiCall<GetXpnHostProjectRequest, Project>(grpcClient.GetXpnHostAsync, grpcClient.GetXpnHost, effectiveSettings.GetXpnHostSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callGetXpnHost = clientHelper.BuildApiCall<GetXpnHostProjectRequest, Project>("GetXpnHost", grpcClient.GetXpnHostAsync, grpcClient.GetXpnHost, effectiveSettings.GetXpnHostSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callGetXpnHost);
             Modify_GetXpnHostApiCall(ref _callGetXpnHost);
-            _callGetXpnResources = clientHelper.BuildApiCall<GetXpnResourcesProjectsRequest, ProjectsGetXpnResources>(grpcClient.GetXpnResourcesAsync, grpcClient.GetXpnResources, effectiveSettings.GetXpnResourcesSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callGetXpnResources = clientHelper.BuildApiCall<GetXpnResourcesProjectsRequest, ProjectsGetXpnResources>("GetXpnResources", grpcClient.GetXpnResourcesAsync, grpcClient.GetXpnResources, effectiveSettings.GetXpnResourcesSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callGetXpnResources);
             Modify_GetXpnResourcesApiCall(ref _callGetXpnResources);
-            _callListXpnHosts = clientHelper.BuildApiCall<ListXpnHostsProjectsRequest, XpnHostList>(grpcClient.ListXpnHostsAsync, grpcClient.ListXpnHosts, effectiveSettings.ListXpnHostsSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callListXpnHosts = clientHelper.BuildApiCall<ListXpnHostsProjectsRequest, XpnHostList>("ListXpnHosts", grpcClient.ListXpnHostsAsync, grpcClient.ListXpnHosts, effectiveSettings.ListXpnHostsSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callListXpnHosts);
             Modify_ListXpnHostsApiCall(ref _callListXpnHosts);
-            _callMoveDisk = clientHelper.BuildApiCall<MoveDiskProjectRequest, Operation>(grpcClient.MoveDiskAsync, grpcClient.MoveDisk, effectiveSettings.MoveDiskSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callMoveDisk = clientHelper.BuildApiCall<MoveDiskProjectRequest, Operation>("MoveDisk", grpcClient.MoveDiskAsync, grpcClient.MoveDisk, effectiveSettings.MoveDiskSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callMoveDisk);
             Modify_MoveDiskApiCall(ref _callMoveDisk);
-            _callMoveInstance = clientHelper.BuildApiCall<MoveInstanceProjectRequest, Operation>(grpcClient.MoveInstanceAsync, grpcClient.MoveInstance, effectiveSettings.MoveInstanceSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callMoveInstance = clientHelper.BuildApiCall<MoveInstanceProjectRequest, Operation>("MoveInstance", grpcClient.MoveInstanceAsync, grpcClient.MoveInstance, effectiveSettings.MoveInstanceSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callMoveInstance);
             Modify_MoveInstanceApiCall(ref _callMoveInstance);
-            _callSetCommonInstanceMetadata = clientHelper.BuildApiCall<SetCommonInstanceMetadataProjectRequest, Operation>(grpcClient.SetCommonInstanceMetadataAsync, grpcClient.SetCommonInstanceMetadata, effectiveSettings.SetCommonInstanceMetadataSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callSetCommonInstanceMetadata = clientHelper.BuildApiCall<SetCommonInstanceMetadataProjectRequest, Operation>("SetCommonInstanceMetadata", grpcClient.SetCommonInstanceMetadataAsync, grpcClient.SetCommonInstanceMetadata, effectiveSettings.SetCommonInstanceMetadataSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callSetCommonInstanceMetadata);
             Modify_SetCommonInstanceMetadataApiCall(ref _callSetCommonInstanceMetadata);
-            _callSetDefaultNetworkTier = clientHelper.BuildApiCall<SetDefaultNetworkTierProjectRequest, Operation>(grpcClient.SetDefaultNetworkTierAsync, grpcClient.SetDefaultNetworkTier, effectiveSettings.SetDefaultNetworkTierSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callSetDefaultNetworkTier = clientHelper.BuildApiCall<SetDefaultNetworkTierProjectRequest, Operation>("SetDefaultNetworkTier", grpcClient.SetDefaultNetworkTierAsync, grpcClient.SetDefaultNetworkTier, effectiveSettings.SetDefaultNetworkTierSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callSetDefaultNetworkTier);
             Modify_SetDefaultNetworkTierApiCall(ref _callSetDefaultNetworkTier);
-            _callSetUsageExportBucket = clientHelper.BuildApiCall<SetUsageExportBucketProjectRequest, Operation>(grpcClient.SetUsageExportBucketAsync, grpcClient.SetUsageExportBucket, effectiveSettings.SetUsageExportBucketSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callSetUsageExportBucket = clientHelper.BuildApiCall<SetUsageExportBucketProjectRequest, Operation>("SetUsageExportBucket", grpcClient.SetUsageExportBucketAsync, grpcClient.SetUsageExportBucket, effectiveSettings.SetUsageExportBucketSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callSetUsageExportBucket);
             Modify_SetUsageExportBucketApiCall(ref _callSetUsageExportBucket);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

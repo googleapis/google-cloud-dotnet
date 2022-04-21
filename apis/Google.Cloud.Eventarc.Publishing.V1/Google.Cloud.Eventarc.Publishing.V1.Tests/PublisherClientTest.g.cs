@@ -38,7 +38,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1.Tests
             };
             PublishChannelConnectionEventsResponse expectedResponse = new PublishChannelConnectionEventsResponse { };
             mockGrpcClient.Setup(x => x.PublishChannelConnectionEvents(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PublisherClient client = new PublisherClientImpl(mockGrpcClient.Object, null);
+            PublisherClient client = new PublisherClientImpl(mockGrpcClient.Object, null, null);
             PublishChannelConnectionEventsResponse response = client.PublishChannelConnectionEvents(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -55,10 +55,46 @@ namespace Google.Cloud.Eventarc.Publishing.V1.Tests
             };
             PublishChannelConnectionEventsResponse expectedResponse = new PublishChannelConnectionEventsResponse { };
             mockGrpcClient.Setup(x => x.PublishChannelConnectionEventsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PublishChannelConnectionEventsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PublisherClient client = new PublisherClientImpl(mockGrpcClient.Object, null);
+            PublisherClient client = new PublisherClientImpl(mockGrpcClient.Object, null, null);
             PublishChannelConnectionEventsResponse responseCallSettings = await client.PublishChannelConnectionEventsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PublishChannelConnectionEventsResponse responseCancellationToken = await client.PublishChannelConnectionEventsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void PublishEventsRequestObject()
+        {
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            PublishEventsRequest request = new PublishEventsRequest
+            {
+                Channel = "channeledd285c4",
+                Events = { new wkt::Any(), },
+            };
+            PublishEventsResponse expectedResponse = new PublishEventsResponse { };
+            mockGrpcClient.Setup(x => x.PublishEvents(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            PublisherClient client = new PublisherClientImpl(mockGrpcClient.Object, null, null);
+            PublishEventsResponse response = client.PublishEvents(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task PublishEventsRequestObjectAsync()
+        {
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            PublishEventsRequest request = new PublishEventsRequest
+            {
+                Channel = "channeledd285c4",
+                Events = { new wkt::Any(), },
+            };
+            PublishEventsResponse expectedResponse = new PublishEventsResponse { };
+            mockGrpcClient.Setup(x => x.PublishEventsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PublishEventsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            PublisherClient client = new PublisherClientImpl(mockGrpcClient.Object, null, null);
+            PublishEventsResponse responseCallSettings = await client.PublishEventsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PublishEventsResponse responseCancellationToken = await client.PublishEventsAsync(request, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

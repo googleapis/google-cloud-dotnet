@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -77,9 +77,8 @@ namespace Google.Cloud.Dataflow.V1Beta3
         public MessagesV1Beta3Settings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public MessagesV1Beta3ClientBuilder()
+        public MessagesV1Beta3ClientBuilder() : base(MessagesV1Beta3Client.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = MessagesV1Beta3Client.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref MessagesV1Beta3Client client);
@@ -106,29 +105,18 @@ namespace Google.Cloud.Dataflow.V1Beta3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return MessagesV1Beta3Client.Create(callInvoker, Settings);
+            return MessagesV1Beta3Client.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<MessagesV1Beta3Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return MessagesV1Beta3Client.Create(callInvoker, Settings);
+            return MessagesV1Beta3Client.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => MessagesV1Beta3Client.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => MessagesV1Beta3Client.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => MessagesV1Beta3Client.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>MessagesV1Beta3 client wrapper, for convenient use.</summary>
@@ -162,19 +150,10 @@ namespace Google.Cloud.Dataflow.V1Beta3
             "https://www.googleapis.com/auth/userinfo.email",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(MessagesV1Beta3.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="MessagesV1Beta3Client"/> using the default credentials, endpoint and
@@ -201,8 +180,9 @@ namespace Google.Cloud.Dataflow.V1Beta3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="MessagesV1Beta3Settings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="MessagesV1Beta3Client"/>.</returns>
-        internal static MessagesV1Beta3Client Create(grpccore::CallInvoker callInvoker, MessagesV1Beta3Settings settings = null)
+        internal static MessagesV1Beta3Client Create(grpccore::CallInvoker callInvoker, MessagesV1Beta3Settings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -211,7 +191,7 @@ namespace Google.Cloud.Dataflow.V1Beta3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             MessagesV1Beta3.MessagesV1Beta3Client grpcClient = new MessagesV1Beta3.MessagesV1Beta3Client(callInvoker);
-            return new MessagesV1Beta3ClientImpl(grpcClient, settings);
+            return new MessagesV1Beta3ClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -275,12 +255,13 @@ namespace Google.Cloud.Dataflow.V1Beta3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="MessagesV1Beta3Settings"/> used within this client.</param>
-        public MessagesV1Beta3ClientImpl(MessagesV1Beta3.MessagesV1Beta3Client grpcClient, MessagesV1Beta3Settings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public MessagesV1Beta3ClientImpl(MessagesV1Beta3.MessagesV1Beta3Client grpcClient, MessagesV1Beta3Settings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             MessagesV1Beta3Settings effectiveSettings = settings ?? MessagesV1Beta3Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListJobMessages = clientHelper.BuildApiCall<ListJobMessagesRequest, ListJobMessagesResponse>(grpcClient.ListJobMessagesAsync, grpcClient.ListJobMessages, effectiveSettings.ListJobMessagesSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("job_id", request => request.JobId);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListJobMessages = clientHelper.BuildApiCall<ListJobMessagesRequest, ListJobMessagesResponse>("ListJobMessages", grpcClient.ListJobMessagesAsync, grpcClient.ListJobMessages, effectiveSettings.ListJobMessagesSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("job_id", request => request.JobId);
             Modify_ApiCall(ref _callListJobMessages);
             Modify_ListJobMessagesApiCall(ref _callListJobMessages);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

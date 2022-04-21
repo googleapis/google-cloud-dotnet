@@ -16,7 +16,6 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using lro = Google.LongRunning;
@@ -24,6 +23,7 @@ using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -323,9 +323,8 @@ namespace Google.Cloud.ResourceManager.V3
         public ProjectsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ProjectsClientBuilder()
+        public ProjectsClientBuilder() : base(ProjectsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ProjectsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ProjectsClient client);
@@ -352,29 +351,18 @@ namespace Google.Cloud.ResourceManager.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ProjectsClient.Create(callInvoker, Settings);
+            return ProjectsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ProjectsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ProjectsClient.Create(callInvoker, Settings);
+            return ProjectsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ProjectsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ProjectsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ProjectsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Projects client wrapper, for convenient use.</summary>
@@ -403,19 +391,10 @@ namespace Google.Cloud.ResourceManager.V3
             "https://www.googleapis.com/auth/cloud-platform.read-only",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Projects.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ProjectsClient"/> using the default credentials, endpoint and settings. 
@@ -442,8 +421,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ProjectsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ProjectsClient"/>.</returns>
-        internal static ProjectsClient Create(grpccore::CallInvoker callInvoker, ProjectsSettings settings = null)
+        internal static ProjectsClient Create(grpccore::CallInvoker callInvoker, ProjectsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -452,7 +432,7 @@ namespace Google.Cloud.ResourceManager.V3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Projects.ProjectsClient grpcClient = new Projects.ProjectsClient(callInvoker);
-            return new ProjectsClientImpl(grpcClient, settings);
+            return new ProjectsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -2942,47 +2922,48 @@ namespace Google.Cloud.ResourceManager.V3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ProjectsSettings"/> used within this client.</param>
-        public ProjectsClientImpl(Projects.ProjectsClient grpcClient, ProjectsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ProjectsClientImpl(Projects.ProjectsClient grpcClient, ProjectsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ProjectsSettings effectiveSettings = settings ?? ProjectsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateProjectOperationsSettings);
-            UpdateProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateProjectOperationsSettings);
-            MoveProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.MoveProjectOperationsSettings);
-            DeleteProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteProjectOperationsSettings);
-            UndeleteProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeleteProjectOperationsSettings);
-            _callGetProject = clientHelper.BuildApiCall<GetProjectRequest, Project>(grpcClient.GetProjectAsync, grpcClient.GetProject, effectiveSettings.GetProjectSettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateProjectOperationsSettings, logger);
+            UpdateProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateProjectOperationsSettings, logger);
+            MoveProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.MoveProjectOperationsSettings, logger);
+            DeleteProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteProjectOperationsSettings, logger);
+            UndeleteProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeleteProjectOperationsSettings, logger);
+            _callGetProject = clientHelper.BuildApiCall<GetProjectRequest, Project>("GetProject", grpcClient.GetProjectAsync, grpcClient.GetProject, effectiveSettings.GetProjectSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetProject);
             Modify_GetProjectApiCall(ref _callGetProject);
-            _callListProjects = clientHelper.BuildApiCall<ListProjectsRequest, ListProjectsResponse>(grpcClient.ListProjectsAsync, grpcClient.ListProjects, effectiveSettings.ListProjectsSettings);
+            _callListProjects = clientHelper.BuildApiCall<ListProjectsRequest, ListProjectsResponse>("ListProjects", grpcClient.ListProjectsAsync, grpcClient.ListProjects, effectiveSettings.ListProjectsSettings);
             Modify_ApiCall(ref _callListProjects);
             Modify_ListProjectsApiCall(ref _callListProjects);
-            _callSearchProjects = clientHelper.BuildApiCall<SearchProjectsRequest, SearchProjectsResponse>(grpcClient.SearchProjectsAsync, grpcClient.SearchProjects, effectiveSettings.SearchProjectsSettings);
+            _callSearchProjects = clientHelper.BuildApiCall<SearchProjectsRequest, SearchProjectsResponse>("SearchProjects", grpcClient.SearchProjectsAsync, grpcClient.SearchProjects, effectiveSettings.SearchProjectsSettings);
             Modify_ApiCall(ref _callSearchProjects);
             Modify_SearchProjectsApiCall(ref _callSearchProjects);
-            _callCreateProject = clientHelper.BuildApiCall<CreateProjectRequest, lro::Operation>(grpcClient.CreateProjectAsync, grpcClient.CreateProject, effectiveSettings.CreateProjectSettings);
+            _callCreateProject = clientHelper.BuildApiCall<CreateProjectRequest, lro::Operation>("CreateProject", grpcClient.CreateProjectAsync, grpcClient.CreateProject, effectiveSettings.CreateProjectSettings);
             Modify_ApiCall(ref _callCreateProject);
             Modify_CreateProjectApiCall(ref _callCreateProject);
-            _callUpdateProject = clientHelper.BuildApiCall<UpdateProjectRequest, lro::Operation>(grpcClient.UpdateProjectAsync, grpcClient.UpdateProject, effectiveSettings.UpdateProjectSettings).WithGoogleRequestParam("project.name", request => request.Project?.Name);
+            _callUpdateProject = clientHelper.BuildApiCall<UpdateProjectRequest, lro::Operation>("UpdateProject", grpcClient.UpdateProjectAsync, grpcClient.UpdateProject, effectiveSettings.UpdateProjectSettings).WithGoogleRequestParam("project.name", request => request.Project?.Name);
             Modify_ApiCall(ref _callUpdateProject);
             Modify_UpdateProjectApiCall(ref _callUpdateProject);
-            _callMoveProject = clientHelper.BuildApiCall<MoveProjectRequest, lro::Operation>(grpcClient.MoveProjectAsync, grpcClient.MoveProject, effectiveSettings.MoveProjectSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callMoveProject = clientHelper.BuildApiCall<MoveProjectRequest, lro::Operation>("MoveProject", grpcClient.MoveProjectAsync, grpcClient.MoveProject, effectiveSettings.MoveProjectSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callMoveProject);
             Modify_MoveProjectApiCall(ref _callMoveProject);
-            _callDeleteProject = clientHelper.BuildApiCall<DeleteProjectRequest, lro::Operation>(grpcClient.DeleteProjectAsync, grpcClient.DeleteProject, effectiveSettings.DeleteProjectSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteProject = clientHelper.BuildApiCall<DeleteProjectRequest, lro::Operation>("DeleteProject", grpcClient.DeleteProjectAsync, grpcClient.DeleteProject, effectiveSettings.DeleteProjectSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteProject);
             Modify_DeleteProjectApiCall(ref _callDeleteProject);
-            _callUndeleteProject = clientHelper.BuildApiCall<UndeleteProjectRequest, lro::Operation>(grpcClient.UndeleteProjectAsync, grpcClient.UndeleteProject, effectiveSettings.UndeleteProjectSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUndeleteProject = clientHelper.BuildApiCall<UndeleteProjectRequest, lro::Operation>("UndeleteProject", grpcClient.UndeleteProjectAsync, grpcClient.UndeleteProject, effectiveSettings.UndeleteProjectSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUndeleteProject);
             Modify_UndeleteProjectApiCall(ref _callUndeleteProject);
-            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>(grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
-            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>(grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
-            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>(grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

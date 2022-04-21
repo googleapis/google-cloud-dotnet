@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -154,9 +154,8 @@ namespace Google.Cloud.Dataflow.V1Beta3
         public JobsV1Beta3Settings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public JobsV1Beta3ClientBuilder()
+        public JobsV1Beta3ClientBuilder() : base(JobsV1Beta3Client.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = JobsV1Beta3Client.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref JobsV1Beta3Client client);
@@ -183,29 +182,18 @@ namespace Google.Cloud.Dataflow.V1Beta3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return JobsV1Beta3Client.Create(callInvoker, Settings);
+            return JobsV1Beta3Client.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<JobsV1Beta3Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return JobsV1Beta3Client.Create(callInvoker, Settings);
+            return JobsV1Beta3Client.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => JobsV1Beta3Client.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => JobsV1Beta3Client.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => JobsV1Beta3Client.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>JobsV1Beta3 client wrapper, for convenient use.</summary>
@@ -239,19 +227,10 @@ namespace Google.Cloud.Dataflow.V1Beta3
             "https://www.googleapis.com/auth/userinfo.email",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(JobsV1Beta3.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="JobsV1Beta3Client"/> using the default credentials, endpoint and
@@ -278,8 +257,9 @@ namespace Google.Cloud.Dataflow.V1Beta3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="JobsV1Beta3Settings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="JobsV1Beta3Client"/>.</returns>
-        internal static JobsV1Beta3Client Create(grpccore::CallInvoker callInvoker, JobsV1Beta3Settings settings = null)
+        internal static JobsV1Beta3Client Create(grpccore::CallInvoker callInvoker, JobsV1Beta3Settings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -288,7 +268,7 @@ namespace Google.Cloud.Dataflow.V1Beta3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             JobsV1Beta3.JobsV1Beta3Client grpcClient = new JobsV1Beta3.JobsV1Beta3Client(callInvoker);
-            return new JobsV1Beta3ClientImpl(grpcClient, settings);
+            return new JobsV1Beta3ClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -573,30 +553,31 @@ namespace Google.Cloud.Dataflow.V1Beta3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="JobsV1Beta3Settings"/> used within this client.</param>
-        public JobsV1Beta3ClientImpl(JobsV1Beta3.JobsV1Beta3Client grpcClient, JobsV1Beta3Settings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public JobsV1Beta3ClientImpl(JobsV1Beta3.JobsV1Beta3Client grpcClient, JobsV1Beta3Settings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             JobsV1Beta3Settings effectiveSettings = settings ?? JobsV1Beta3Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCreateJob = clientHelper.BuildApiCall<CreateJobRequest, Job>(grpcClient.CreateJobAsync, grpcClient.CreateJob, effectiveSettings.CreateJobSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCreateJob = clientHelper.BuildApiCall<CreateJobRequest, Job>("CreateJob", grpcClient.CreateJobAsync, grpcClient.CreateJob, effectiveSettings.CreateJobSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location);
             Modify_ApiCall(ref _callCreateJob);
             Modify_CreateJobApiCall(ref _callCreateJob);
-            _callGetJob = clientHelper.BuildApiCall<GetJobRequest, Job>(grpcClient.GetJobAsync, grpcClient.GetJob, effectiveSettings.GetJobSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("job_id", request => request.JobId);
+            _callGetJob = clientHelper.BuildApiCall<GetJobRequest, Job>("GetJob", grpcClient.GetJobAsync, grpcClient.GetJob, effectiveSettings.GetJobSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("job_id", request => request.JobId);
             Modify_ApiCall(ref _callGetJob);
             Modify_GetJobApiCall(ref _callGetJob);
-            _callUpdateJob = clientHelper.BuildApiCall<UpdateJobRequest, Job>(grpcClient.UpdateJobAsync, grpcClient.UpdateJob, effectiveSettings.UpdateJobSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("job_id", request => request.JobId);
+            _callUpdateJob = clientHelper.BuildApiCall<UpdateJobRequest, Job>("UpdateJob", grpcClient.UpdateJobAsync, grpcClient.UpdateJob, effectiveSettings.UpdateJobSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("job_id", request => request.JobId);
             Modify_ApiCall(ref _callUpdateJob);
             Modify_UpdateJobApiCall(ref _callUpdateJob);
-            _callListJobs = clientHelper.BuildApiCall<ListJobsRequest, ListJobsResponse>(grpcClient.ListJobsAsync, grpcClient.ListJobs, effectiveSettings.ListJobsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location);
+            _callListJobs = clientHelper.BuildApiCall<ListJobsRequest, ListJobsResponse>("ListJobs", grpcClient.ListJobsAsync, grpcClient.ListJobs, effectiveSettings.ListJobsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location);
             Modify_ApiCall(ref _callListJobs);
             Modify_ListJobsApiCall(ref _callListJobs);
-            _callAggregatedListJobs = clientHelper.BuildApiCall<ListJobsRequest, ListJobsResponse>(grpcClient.AggregatedListJobsAsync, grpcClient.AggregatedListJobs, effectiveSettings.AggregatedListJobsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callAggregatedListJobs = clientHelper.BuildApiCall<ListJobsRequest, ListJobsResponse>("AggregatedListJobs", grpcClient.AggregatedListJobsAsync, grpcClient.AggregatedListJobs, effectiveSettings.AggregatedListJobsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callAggregatedListJobs);
             Modify_AggregatedListJobsApiCall(ref _callAggregatedListJobs);
-            _callCheckActiveJobs = clientHelper.BuildApiCall<CheckActiveJobsRequest, CheckActiveJobsResponse>(grpcClient.CheckActiveJobsAsync, grpcClient.CheckActiveJobs, effectiveSettings.CheckActiveJobsSettings);
+            _callCheckActiveJobs = clientHelper.BuildApiCall<CheckActiveJobsRequest, CheckActiveJobsResponse>("CheckActiveJobs", grpcClient.CheckActiveJobsAsync, grpcClient.CheckActiveJobs, effectiveSettings.CheckActiveJobsSettings);
             Modify_ApiCall(ref _callCheckActiveJobs);
             Modify_CheckActiveJobsApiCall(ref _callCheckActiveJobs);
-            _callSnapshotJob = clientHelper.BuildApiCall<SnapshotJobRequest, Snapshot>(grpcClient.SnapshotJobAsync, grpcClient.SnapshotJob, effectiveSettings.SnapshotJobSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("job_id", request => request.JobId);
+            _callSnapshotJob = clientHelper.BuildApiCall<SnapshotJobRequest, Snapshot>("SnapshotJob", grpcClient.SnapshotJobAsync, grpcClient.SnapshotJob, effectiveSettings.SnapshotJobSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("job_id", request => request.JobId);
             Modify_ApiCall(ref _callSnapshotJob);
             Modify_SnapshotJobApiCall(ref _callSnapshotJob);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -507,9 +507,8 @@ namespace Google.Cloud.Iam.Admin.V1
         public IAMSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public IAMClientBuilder()
+        public IAMClientBuilder() : base(IAMClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = IAMClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref IAMClient client);
@@ -536,29 +535,18 @@ namespace Google.Cloud.Iam.Admin.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return IAMClient.Create(callInvoker, Settings);
+            return IAMClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<IAMClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return IAMClient.Create(callInvoker, Settings);
+            return IAMClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => IAMClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => IAMClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => IAMClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>IAM client wrapper, for convenient use.</summary>
@@ -602,19 +590,10 @@ namespace Google.Cloud.Iam.Admin.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(IAM.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="IAMClient"/> using the default credentials, endpoint and settings. To
@@ -641,8 +620,9 @@ namespace Google.Cloud.Iam.Admin.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="IAMSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="IAMClient"/>.</returns>
-        internal static IAMClient Create(grpccore::CallInvoker callInvoker, IAMSettings settings = null)
+        internal static IAMClient Create(grpccore::CallInvoker callInvoker, IAMSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -651,7 +631,7 @@ namespace Google.Cloud.Iam.Admin.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             IAM.IAMClient grpcClient = new IAM.IAMClient(callInvoker);
-            return new IAMClientImpl(grpcClient, settings);
+            return new IAMClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -4025,100 +4005,101 @@ namespace Google.Cloud.Iam.Admin.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="IAMSettings"/> used within this client.</param>
-        public IAMClientImpl(IAM.IAMClient grpcClient, IAMSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public IAMClientImpl(IAM.IAMClient grpcClient, IAMSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             IAMSettings effectiveSettings = settings ?? IAMSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListServiceAccounts = clientHelper.BuildApiCall<ListServiceAccountsRequest, ListServiceAccountsResponse>(grpcClient.ListServiceAccountsAsync, grpcClient.ListServiceAccounts, effectiveSettings.ListServiceAccountsSettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListServiceAccounts = clientHelper.BuildApiCall<ListServiceAccountsRequest, ListServiceAccountsResponse>("ListServiceAccounts", grpcClient.ListServiceAccountsAsync, grpcClient.ListServiceAccounts, effectiveSettings.ListServiceAccountsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListServiceAccounts);
             Modify_ListServiceAccountsApiCall(ref _callListServiceAccounts);
-            _callGetServiceAccount = clientHelper.BuildApiCall<GetServiceAccountRequest, ServiceAccount>(grpcClient.GetServiceAccountAsync, grpcClient.GetServiceAccount, effectiveSettings.GetServiceAccountSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetServiceAccount = clientHelper.BuildApiCall<GetServiceAccountRequest, ServiceAccount>("GetServiceAccount", grpcClient.GetServiceAccountAsync, grpcClient.GetServiceAccount, effectiveSettings.GetServiceAccountSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetServiceAccount);
             Modify_GetServiceAccountApiCall(ref _callGetServiceAccount);
-            _callCreateServiceAccount = clientHelper.BuildApiCall<CreateServiceAccountRequest, ServiceAccount>(grpcClient.CreateServiceAccountAsync, grpcClient.CreateServiceAccount, effectiveSettings.CreateServiceAccountSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCreateServiceAccount = clientHelper.BuildApiCall<CreateServiceAccountRequest, ServiceAccount>("CreateServiceAccount", grpcClient.CreateServiceAccountAsync, grpcClient.CreateServiceAccount, effectiveSettings.CreateServiceAccountSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCreateServiceAccount);
             Modify_CreateServiceAccountApiCall(ref _callCreateServiceAccount);
-            _callUpdateServiceAccount = clientHelper.BuildApiCall<ServiceAccount, ServiceAccount>(grpcClient.UpdateServiceAccountAsync, grpcClient.UpdateServiceAccount, effectiveSettings.UpdateServiceAccountSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateServiceAccount = clientHelper.BuildApiCall<ServiceAccount, ServiceAccount>("UpdateServiceAccount", grpcClient.UpdateServiceAccountAsync, grpcClient.UpdateServiceAccount, effectiveSettings.UpdateServiceAccountSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateServiceAccount);
             Modify_UpdateServiceAccountApiCall(ref _callUpdateServiceAccount);
-            _callPatchServiceAccount = clientHelper.BuildApiCall<PatchServiceAccountRequest, ServiceAccount>(grpcClient.PatchServiceAccountAsync, grpcClient.PatchServiceAccount, effectiveSettings.PatchServiceAccountSettings).WithGoogleRequestParam("service_account.name", request => request.ServiceAccount?.Name);
+            _callPatchServiceAccount = clientHelper.BuildApiCall<PatchServiceAccountRequest, ServiceAccount>("PatchServiceAccount", grpcClient.PatchServiceAccountAsync, grpcClient.PatchServiceAccount, effectiveSettings.PatchServiceAccountSettings).WithGoogleRequestParam("service_account.name", request => request.ServiceAccount?.Name);
             Modify_ApiCall(ref _callPatchServiceAccount);
             Modify_PatchServiceAccountApiCall(ref _callPatchServiceAccount);
-            _callDeleteServiceAccount = clientHelper.BuildApiCall<DeleteServiceAccountRequest, wkt::Empty>(grpcClient.DeleteServiceAccountAsync, grpcClient.DeleteServiceAccount, effectiveSettings.DeleteServiceAccountSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteServiceAccount = clientHelper.BuildApiCall<DeleteServiceAccountRequest, wkt::Empty>("DeleteServiceAccount", grpcClient.DeleteServiceAccountAsync, grpcClient.DeleteServiceAccount, effectiveSettings.DeleteServiceAccountSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteServiceAccount);
             Modify_DeleteServiceAccountApiCall(ref _callDeleteServiceAccount);
-            _callUndeleteServiceAccount = clientHelper.BuildApiCall<UndeleteServiceAccountRequest, UndeleteServiceAccountResponse>(grpcClient.UndeleteServiceAccountAsync, grpcClient.UndeleteServiceAccount, effectiveSettings.UndeleteServiceAccountSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUndeleteServiceAccount = clientHelper.BuildApiCall<UndeleteServiceAccountRequest, UndeleteServiceAccountResponse>("UndeleteServiceAccount", grpcClient.UndeleteServiceAccountAsync, grpcClient.UndeleteServiceAccount, effectiveSettings.UndeleteServiceAccountSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUndeleteServiceAccount);
             Modify_UndeleteServiceAccountApiCall(ref _callUndeleteServiceAccount);
-            _callEnableServiceAccount = clientHelper.BuildApiCall<EnableServiceAccountRequest, wkt::Empty>(grpcClient.EnableServiceAccountAsync, grpcClient.EnableServiceAccount, effectiveSettings.EnableServiceAccountSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callEnableServiceAccount = clientHelper.BuildApiCall<EnableServiceAccountRequest, wkt::Empty>("EnableServiceAccount", grpcClient.EnableServiceAccountAsync, grpcClient.EnableServiceAccount, effectiveSettings.EnableServiceAccountSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callEnableServiceAccount);
             Modify_EnableServiceAccountApiCall(ref _callEnableServiceAccount);
-            _callDisableServiceAccount = clientHelper.BuildApiCall<DisableServiceAccountRequest, wkt::Empty>(grpcClient.DisableServiceAccountAsync, grpcClient.DisableServiceAccount, effectiveSettings.DisableServiceAccountSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDisableServiceAccount = clientHelper.BuildApiCall<DisableServiceAccountRequest, wkt::Empty>("DisableServiceAccount", grpcClient.DisableServiceAccountAsync, grpcClient.DisableServiceAccount, effectiveSettings.DisableServiceAccountSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDisableServiceAccount);
             Modify_DisableServiceAccountApiCall(ref _callDisableServiceAccount);
-            _callListServiceAccountKeys = clientHelper.BuildApiCall<ListServiceAccountKeysRequest, ListServiceAccountKeysResponse>(grpcClient.ListServiceAccountKeysAsync, grpcClient.ListServiceAccountKeys, effectiveSettings.ListServiceAccountKeysSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callListServiceAccountKeys = clientHelper.BuildApiCall<ListServiceAccountKeysRequest, ListServiceAccountKeysResponse>("ListServiceAccountKeys", grpcClient.ListServiceAccountKeysAsync, grpcClient.ListServiceAccountKeys, effectiveSettings.ListServiceAccountKeysSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListServiceAccountKeys);
             Modify_ListServiceAccountKeysApiCall(ref _callListServiceAccountKeys);
-            _callGetServiceAccountKey = clientHelper.BuildApiCall<GetServiceAccountKeyRequest, ServiceAccountKey>(grpcClient.GetServiceAccountKeyAsync, grpcClient.GetServiceAccountKey, effectiveSettings.GetServiceAccountKeySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetServiceAccountKey = clientHelper.BuildApiCall<GetServiceAccountKeyRequest, ServiceAccountKey>("GetServiceAccountKey", grpcClient.GetServiceAccountKeyAsync, grpcClient.GetServiceAccountKey, effectiveSettings.GetServiceAccountKeySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetServiceAccountKey);
             Modify_GetServiceAccountKeyApiCall(ref _callGetServiceAccountKey);
-            _callCreateServiceAccountKey = clientHelper.BuildApiCall<CreateServiceAccountKeyRequest, ServiceAccountKey>(grpcClient.CreateServiceAccountKeyAsync, grpcClient.CreateServiceAccountKey, effectiveSettings.CreateServiceAccountKeySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCreateServiceAccountKey = clientHelper.BuildApiCall<CreateServiceAccountKeyRequest, ServiceAccountKey>("CreateServiceAccountKey", grpcClient.CreateServiceAccountKeyAsync, grpcClient.CreateServiceAccountKey, effectiveSettings.CreateServiceAccountKeySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCreateServiceAccountKey);
             Modify_CreateServiceAccountKeyApiCall(ref _callCreateServiceAccountKey);
-            _callUploadServiceAccountKey = clientHelper.BuildApiCall<UploadServiceAccountKeyRequest, ServiceAccountKey>(grpcClient.UploadServiceAccountKeyAsync, grpcClient.UploadServiceAccountKey, effectiveSettings.UploadServiceAccountKeySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUploadServiceAccountKey = clientHelper.BuildApiCall<UploadServiceAccountKeyRequest, ServiceAccountKey>("UploadServiceAccountKey", grpcClient.UploadServiceAccountKeyAsync, grpcClient.UploadServiceAccountKey, effectiveSettings.UploadServiceAccountKeySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUploadServiceAccountKey);
             Modify_UploadServiceAccountKeyApiCall(ref _callUploadServiceAccountKey);
-            _callDeleteServiceAccountKey = clientHelper.BuildApiCall<DeleteServiceAccountKeyRequest, wkt::Empty>(grpcClient.DeleteServiceAccountKeyAsync, grpcClient.DeleteServiceAccountKey, effectiveSettings.DeleteServiceAccountKeySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteServiceAccountKey = clientHelper.BuildApiCall<DeleteServiceAccountKeyRequest, wkt::Empty>("DeleteServiceAccountKey", grpcClient.DeleteServiceAccountKeyAsync, grpcClient.DeleteServiceAccountKey, effectiveSettings.DeleteServiceAccountKeySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteServiceAccountKey);
             Modify_DeleteServiceAccountKeyApiCall(ref _callDeleteServiceAccountKey);
 #pragma warning disable CS0612
-            _callSignBlob = clientHelper.BuildApiCall<SignBlobRequest, SignBlobResponse>(grpcClient.SignBlobAsync, grpcClient.SignBlob, effectiveSettings.SignBlobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callSignBlob = clientHelper.BuildApiCall<SignBlobRequest, SignBlobResponse>("SignBlob", grpcClient.SignBlobAsync, grpcClient.SignBlob, effectiveSettings.SignBlobSettings).WithGoogleRequestParam("name", request => request.Name);
 #pragma warning restore CS0612
             Modify_ApiCall(ref _callSignBlob);
             Modify_SignBlobApiCall(ref _callSignBlob);
 #pragma warning disable CS0612
-            _callSignJwt = clientHelper.BuildApiCall<SignJwtRequest, SignJwtResponse>(grpcClient.SignJwtAsync, grpcClient.SignJwt, effectiveSettings.SignJwtSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callSignJwt = clientHelper.BuildApiCall<SignJwtRequest, SignJwtResponse>("SignJwt", grpcClient.SignJwtAsync, grpcClient.SignJwt, effectiveSettings.SignJwtSettings).WithGoogleRequestParam("name", request => request.Name);
 #pragma warning restore CS0612
             Modify_ApiCall(ref _callSignJwt);
             Modify_SignJwtApiCall(ref _callSignJwt);
-            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>(grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
-            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>(grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
-            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>(grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
-            _callQueryGrantableRoles = clientHelper.BuildApiCall<QueryGrantableRolesRequest, QueryGrantableRolesResponse>(grpcClient.QueryGrantableRolesAsync, grpcClient.QueryGrantableRoles, effectiveSettings.QueryGrantableRolesSettings);
+            _callQueryGrantableRoles = clientHelper.BuildApiCall<QueryGrantableRolesRequest, QueryGrantableRolesResponse>("QueryGrantableRoles", grpcClient.QueryGrantableRolesAsync, grpcClient.QueryGrantableRoles, effectiveSettings.QueryGrantableRolesSettings);
             Modify_ApiCall(ref _callQueryGrantableRoles);
             Modify_QueryGrantableRolesApiCall(ref _callQueryGrantableRoles);
-            _callListRoles = clientHelper.BuildApiCall<ListRolesRequest, ListRolesResponse>(grpcClient.ListRolesAsync, grpcClient.ListRoles, effectiveSettings.ListRolesSettings);
+            _callListRoles = clientHelper.BuildApiCall<ListRolesRequest, ListRolesResponse>("ListRoles", grpcClient.ListRolesAsync, grpcClient.ListRoles, effectiveSettings.ListRolesSettings);
             Modify_ApiCall(ref _callListRoles);
             Modify_ListRolesApiCall(ref _callListRoles);
-            _callGetRole = clientHelper.BuildApiCall<GetRoleRequest, Role>(grpcClient.GetRoleAsync, grpcClient.GetRole, effectiveSettings.GetRoleSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetRole = clientHelper.BuildApiCall<GetRoleRequest, Role>("GetRole", grpcClient.GetRoleAsync, grpcClient.GetRole, effectiveSettings.GetRoleSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetRole);
             Modify_GetRoleApiCall(ref _callGetRole);
-            _callCreateRole = clientHelper.BuildApiCall<CreateRoleRequest, Role>(grpcClient.CreateRoleAsync, grpcClient.CreateRole, effectiveSettings.CreateRoleSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateRole = clientHelper.BuildApiCall<CreateRoleRequest, Role>("CreateRole", grpcClient.CreateRoleAsync, grpcClient.CreateRole, effectiveSettings.CreateRoleSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateRole);
             Modify_CreateRoleApiCall(ref _callCreateRole);
-            _callUpdateRole = clientHelper.BuildApiCall<UpdateRoleRequest, Role>(grpcClient.UpdateRoleAsync, grpcClient.UpdateRole, effectiveSettings.UpdateRoleSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateRole = clientHelper.BuildApiCall<UpdateRoleRequest, Role>("UpdateRole", grpcClient.UpdateRoleAsync, grpcClient.UpdateRole, effectiveSettings.UpdateRoleSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateRole);
             Modify_UpdateRoleApiCall(ref _callUpdateRole);
-            _callDeleteRole = clientHelper.BuildApiCall<DeleteRoleRequest, Role>(grpcClient.DeleteRoleAsync, grpcClient.DeleteRole, effectiveSettings.DeleteRoleSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteRole = clientHelper.BuildApiCall<DeleteRoleRequest, Role>("DeleteRole", grpcClient.DeleteRoleAsync, grpcClient.DeleteRole, effectiveSettings.DeleteRoleSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteRole);
             Modify_DeleteRoleApiCall(ref _callDeleteRole);
-            _callUndeleteRole = clientHelper.BuildApiCall<UndeleteRoleRequest, Role>(grpcClient.UndeleteRoleAsync, grpcClient.UndeleteRole, effectiveSettings.UndeleteRoleSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUndeleteRole = clientHelper.BuildApiCall<UndeleteRoleRequest, Role>("UndeleteRole", grpcClient.UndeleteRoleAsync, grpcClient.UndeleteRole, effectiveSettings.UndeleteRoleSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUndeleteRole);
             Modify_UndeleteRoleApiCall(ref _callUndeleteRole);
-            _callQueryTestablePermissions = clientHelper.BuildApiCall<QueryTestablePermissionsRequest, QueryTestablePermissionsResponse>(grpcClient.QueryTestablePermissionsAsync, grpcClient.QueryTestablePermissions, effectiveSettings.QueryTestablePermissionsSettings);
+            _callQueryTestablePermissions = clientHelper.BuildApiCall<QueryTestablePermissionsRequest, QueryTestablePermissionsResponse>("QueryTestablePermissions", grpcClient.QueryTestablePermissionsAsync, grpcClient.QueryTestablePermissions, effectiveSettings.QueryTestablePermissionsSettings);
             Modify_ApiCall(ref _callQueryTestablePermissions);
             Modify_QueryTestablePermissionsApiCall(ref _callQueryTestablePermissions);
-            _callQueryAuditableServices = clientHelper.BuildApiCall<QueryAuditableServicesRequest, QueryAuditableServicesResponse>(grpcClient.QueryAuditableServicesAsync, grpcClient.QueryAuditableServices, effectiveSettings.QueryAuditableServicesSettings);
+            _callQueryAuditableServices = clientHelper.BuildApiCall<QueryAuditableServicesRequest, QueryAuditableServicesResponse>("QueryAuditableServices", grpcClient.QueryAuditableServicesAsync, grpcClient.QueryAuditableServices, effectiveSettings.QueryAuditableServicesSettings);
             Modify_ApiCall(ref _callQueryAuditableServices);
             Modify_QueryAuditableServicesApiCall(ref _callQueryAuditableServices);
-            _callLintPolicy = clientHelper.BuildApiCall<LintPolicyRequest, LintPolicyResponse>(grpcClient.LintPolicyAsync, grpcClient.LintPolicy, effectiveSettings.LintPolicySettings);
+            _callLintPolicy = clientHelper.BuildApiCall<LintPolicyRequest, LintPolicyResponse>("LintPolicy", grpcClient.LintPolicyAsync, grpcClient.LintPolicy, effectiveSettings.LintPolicySettings);
             Modify_ApiCall(ref _callLintPolicy);
             Modify_LintPolicyApiCall(ref _callLintPolicy);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

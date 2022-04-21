@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -217,9 +217,8 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         public CatalogServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public CatalogServiceClientBuilder()
+        public CatalogServiceClientBuilder() : base(CatalogServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = CatalogServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref CatalogServiceClient client);
@@ -246,29 +245,18 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return CatalogServiceClient.Create(callInvoker, Settings);
+            return CatalogServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<CatalogServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return CatalogServiceClient.Create(callInvoker, Settings);
+            return CatalogServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => CatalogServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => CatalogServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => CatalogServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>CatalogService client wrapper, for convenient use.</summary>
@@ -295,19 +283,10 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(CatalogService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="CatalogServiceClient"/> using the default credentials, endpoint and
@@ -334,8 +313,9 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="CatalogServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="CatalogServiceClient"/>.</returns>
-        internal static CatalogServiceClient Create(grpccore::CallInvoker callInvoker, CatalogServiceSettings settings = null)
+        internal static CatalogServiceClient Create(grpccore::CallInvoker callInvoker, CatalogServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -344,7 +324,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             CatalogService.CatalogServiceClient grpcClient = new CatalogService.CatalogServiceClient(callInvoker);
-            return new CatalogServiceClientImpl(grpcClient, settings);
+            return new CatalogServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1313,28 +1293,29 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="CatalogServiceSettings"/> used within this client.</param>
-        public CatalogServiceClientImpl(CatalogService.CatalogServiceClient grpcClient, CatalogServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public CatalogServiceClientImpl(CatalogService.CatalogServiceClient grpcClient, CatalogServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             CatalogServiceSettings effectiveSettings = settings ?? CatalogServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            ImportCatalogItemsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportCatalogItemsOperationsSettings);
-            _callCreateCatalogItem = clientHelper.BuildApiCall<CreateCatalogItemRequest, CatalogItem>(grpcClient.CreateCatalogItemAsync, grpcClient.CreateCatalogItem, effectiveSettings.CreateCatalogItemSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            ImportCatalogItemsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportCatalogItemsOperationsSettings, logger);
+            _callCreateCatalogItem = clientHelper.BuildApiCall<CreateCatalogItemRequest, CatalogItem>("CreateCatalogItem", grpcClient.CreateCatalogItemAsync, grpcClient.CreateCatalogItem, effectiveSettings.CreateCatalogItemSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCatalogItem);
             Modify_CreateCatalogItemApiCall(ref _callCreateCatalogItem);
-            _callGetCatalogItem = clientHelper.BuildApiCall<GetCatalogItemRequest, CatalogItem>(grpcClient.GetCatalogItemAsync, grpcClient.GetCatalogItem, effectiveSettings.GetCatalogItemSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetCatalogItem = clientHelper.BuildApiCall<GetCatalogItemRequest, CatalogItem>("GetCatalogItem", grpcClient.GetCatalogItemAsync, grpcClient.GetCatalogItem, effectiveSettings.GetCatalogItemSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCatalogItem);
             Modify_GetCatalogItemApiCall(ref _callGetCatalogItem);
-            _callListCatalogItems = clientHelper.BuildApiCall<ListCatalogItemsRequest, ListCatalogItemsResponse>(grpcClient.ListCatalogItemsAsync, grpcClient.ListCatalogItems, effectiveSettings.ListCatalogItemsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListCatalogItems = clientHelper.BuildApiCall<ListCatalogItemsRequest, ListCatalogItemsResponse>("ListCatalogItems", grpcClient.ListCatalogItemsAsync, grpcClient.ListCatalogItems, effectiveSettings.ListCatalogItemsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCatalogItems);
             Modify_ListCatalogItemsApiCall(ref _callListCatalogItems);
-            _callUpdateCatalogItem = clientHelper.BuildApiCall<UpdateCatalogItemRequest, CatalogItem>(grpcClient.UpdateCatalogItemAsync, grpcClient.UpdateCatalogItem, effectiveSettings.UpdateCatalogItemSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateCatalogItem = clientHelper.BuildApiCall<UpdateCatalogItemRequest, CatalogItem>("UpdateCatalogItem", grpcClient.UpdateCatalogItemAsync, grpcClient.UpdateCatalogItem, effectiveSettings.UpdateCatalogItemSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateCatalogItem);
             Modify_UpdateCatalogItemApiCall(ref _callUpdateCatalogItem);
-            _callDeleteCatalogItem = clientHelper.BuildApiCall<DeleteCatalogItemRequest, wkt::Empty>(grpcClient.DeleteCatalogItemAsync, grpcClient.DeleteCatalogItem, effectiveSettings.DeleteCatalogItemSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteCatalogItem = clientHelper.BuildApiCall<DeleteCatalogItemRequest, wkt::Empty>("DeleteCatalogItem", grpcClient.DeleteCatalogItemAsync, grpcClient.DeleteCatalogItem, effectiveSettings.DeleteCatalogItemSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteCatalogItem);
             Modify_DeleteCatalogItemApiCall(ref _callDeleteCatalogItem);
-            _callImportCatalogItems = clientHelper.BuildApiCall<ImportCatalogItemsRequest, lro::Operation>(grpcClient.ImportCatalogItemsAsync, grpcClient.ImportCatalogItems, effectiveSettings.ImportCatalogItemsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callImportCatalogItems = clientHelper.BuildApiCall<ImportCatalogItemsRequest, lro::Operation>("ImportCatalogItems", grpcClient.ImportCatalogItemsAsync, grpcClient.ImportCatalogItems, effectiveSettings.ImportCatalogItemsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callImportCatalogItems);
             Modify_ImportCatalogItemsApiCall(ref _callImportCatalogItems);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

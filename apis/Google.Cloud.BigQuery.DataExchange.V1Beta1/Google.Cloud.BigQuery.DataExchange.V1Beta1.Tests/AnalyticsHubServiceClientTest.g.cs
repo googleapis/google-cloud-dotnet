@@ -51,7 +51,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 Icon = proto::ByteString.CopyFromUtf8("icon6164ecba"),
             };
             mockGrpcClient.Setup(x => x.GetDataExchange(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             DataExchange response = client.GetDataExchange(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -76,7 +76,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 Icon = proto::ByteString.CopyFromUtf8("icon6164ecba"),
             };
             mockGrpcClient.Setup(x => x.GetDataExchangeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataExchange>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             DataExchange responseCallSettings = await client.GetDataExchangeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataExchange responseCancellationToken = await client.GetDataExchangeAsync(request, st::CancellationToken.None);
@@ -103,7 +103,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 Icon = proto::ByteString.CopyFromUtf8("icon6164ecba"),
             };
             mockGrpcClient.Setup(x => x.GetDataExchange(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             DataExchange response = client.GetDataExchange(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -128,7 +128,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 Icon = proto::ByteString.CopyFromUtf8("icon6164ecba"),
             };
             mockGrpcClient.Setup(x => x.GetDataExchangeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataExchange>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             DataExchange responseCallSettings = await client.GetDataExchangeAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataExchange responseCancellationToken = await client.GetDataExchangeAsync(request.Name, st::CancellationToken.None);
@@ -155,7 +155,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 Icon = proto::ByteString.CopyFromUtf8("icon6164ecba"),
             };
             mockGrpcClient.Setup(x => x.GetDataExchange(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             DataExchange response = client.GetDataExchange(request.DataExchangeName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -180,7 +180,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 Icon = proto::ByteString.CopyFromUtf8("icon6164ecba"),
             };
             mockGrpcClient.Setup(x => x.GetDataExchangeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataExchange>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             DataExchange responseCallSettings = await client.GetDataExchangeAsync(request.DataExchangeName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataExchange responseCancellationToken = await client.GetDataExchangeAsync(request.DataExchangeName, st::CancellationToken.None);
@@ -209,7 +209,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 Icon = proto::ByteString.CopyFromUtf8("icon6164ecba"),
             };
             mockGrpcClient.Setup(x => x.CreateDataExchange(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             DataExchange response = client.CreateDataExchange(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -236,7 +236,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 Icon = proto::ByteString.CopyFromUtf8("icon6164ecba"),
             };
             mockGrpcClient.Setup(x => x.CreateDataExchangeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataExchange>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             DataExchange responseCallSettings = await client.CreateDataExchangeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataExchange responseCancellationToken = await client.CreateDataExchangeAsync(request, st::CancellationToken.None);
@@ -264,7 +264,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 Icon = proto::ByteString.CopyFromUtf8("icon6164ecba"),
             };
             mockGrpcClient.Setup(x => x.CreateDataExchange(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             DataExchange response = client.CreateDataExchange(request.Parent, request.DataExchange);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -290,7 +290,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 Icon = proto::ByteString.CopyFromUtf8("icon6164ecba"),
             };
             mockGrpcClient.Setup(x => x.CreateDataExchangeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataExchange>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             DataExchange responseCallSettings = await client.CreateDataExchangeAsync(request.Parent, request.DataExchange, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataExchange responseCancellationToken = await client.CreateDataExchangeAsync(request.Parent, request.DataExchange, st::CancellationToken.None);
@@ -318,7 +318,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 Icon = proto::ByteString.CopyFromUtf8("icon6164ecba"),
             };
             mockGrpcClient.Setup(x => x.CreateDataExchange(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             DataExchange response = client.CreateDataExchange(request.ParentAsLocationName, request.DataExchange);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -344,7 +344,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 Icon = proto::ByteString.CopyFromUtf8("icon6164ecba"),
             };
             mockGrpcClient.Setup(x => x.CreateDataExchangeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataExchange>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             DataExchange responseCallSettings = await client.CreateDataExchangeAsync(request.ParentAsLocationName, request.DataExchange, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataExchange responseCancellationToken = await client.CreateDataExchangeAsync(request.ParentAsLocationName, request.DataExchange, st::CancellationToken.None);
@@ -372,7 +372,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 Icon = proto::ByteString.CopyFromUtf8("icon6164ecba"),
             };
             mockGrpcClient.Setup(x => x.UpdateDataExchange(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             DataExchange response = client.UpdateDataExchange(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -398,7 +398,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 Icon = proto::ByteString.CopyFromUtf8("icon6164ecba"),
             };
             mockGrpcClient.Setup(x => x.UpdateDataExchangeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataExchange>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             DataExchange responseCallSettings = await client.UpdateDataExchangeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataExchange responseCancellationToken = await client.UpdateDataExchangeAsync(request, st::CancellationToken.None);
@@ -426,7 +426,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 Icon = proto::ByteString.CopyFromUtf8("icon6164ecba"),
             };
             mockGrpcClient.Setup(x => x.UpdateDataExchange(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             DataExchange response = client.UpdateDataExchange(request.DataExchange, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -452,7 +452,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 Icon = proto::ByteString.CopyFromUtf8("icon6164ecba"),
             };
             mockGrpcClient.Setup(x => x.UpdateDataExchangeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataExchange>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             DataExchange responseCallSettings = await client.UpdateDataExchangeAsync(request.DataExchange, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DataExchange responseCancellationToken = await client.UpdateDataExchangeAsync(request.DataExchange, request.UpdateMask, st::CancellationToken.None);
@@ -470,7 +470,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDataExchange(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDataExchange(request);
             mockGrpcClient.VerifyAll();
         }
@@ -485,7 +485,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDataExchangeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDataExchangeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDataExchangeAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -501,7 +501,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDataExchange(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDataExchange(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -516,7 +516,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDataExchangeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDataExchangeAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDataExchangeAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -532,7 +532,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDataExchange(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDataExchange(request.DataExchangeName);
             mockGrpcClient.VerifyAll();
         }
@@ -547,7 +547,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDataExchangeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDataExchangeAsync(request.DataExchangeName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDataExchangeAsync(request.DataExchangeName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -580,7 +580,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 RequestAccess = "request_accessb08507d9",
             };
             mockGrpcClient.Setup(x => x.GetListing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             Listing response = client.GetListing(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -613,7 +613,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 RequestAccess = "request_accessb08507d9",
             };
             mockGrpcClient.Setup(x => x.GetListingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Listing>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             Listing responseCallSettings = await client.GetListingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Listing responseCancellationToken = await client.GetListingAsync(request, st::CancellationToken.None);
@@ -648,7 +648,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 RequestAccess = "request_accessb08507d9",
             };
             mockGrpcClient.Setup(x => x.GetListing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             Listing response = client.GetListing(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -681,7 +681,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 RequestAccess = "request_accessb08507d9",
             };
             mockGrpcClient.Setup(x => x.GetListingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Listing>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             Listing responseCallSettings = await client.GetListingAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Listing responseCancellationToken = await client.GetListingAsync(request.Name, st::CancellationToken.None);
@@ -716,7 +716,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 RequestAccess = "request_accessb08507d9",
             };
             mockGrpcClient.Setup(x => x.GetListing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             Listing response = client.GetListing(request.ListingName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -749,7 +749,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 RequestAccess = "request_accessb08507d9",
             };
             mockGrpcClient.Setup(x => x.GetListingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Listing>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             Listing responseCallSettings = await client.GetListingAsync(request.ListingName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Listing responseCancellationToken = await client.GetListingAsync(request.ListingName, st::CancellationToken.None);
@@ -786,7 +786,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 RequestAccess = "request_accessb08507d9",
             };
             mockGrpcClient.Setup(x => x.CreateListing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             Listing response = client.CreateListing(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -821,7 +821,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 RequestAccess = "request_accessb08507d9",
             };
             mockGrpcClient.Setup(x => x.CreateListingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Listing>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             Listing responseCallSettings = await client.CreateListingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Listing responseCancellationToken = await client.CreateListingAsync(request, st::CancellationToken.None);
@@ -857,7 +857,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 RequestAccess = "request_accessb08507d9",
             };
             mockGrpcClient.Setup(x => x.CreateListing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             Listing response = client.CreateListing(request.Parent, request.Listing);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -891,7 +891,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 RequestAccess = "request_accessb08507d9",
             };
             mockGrpcClient.Setup(x => x.CreateListingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Listing>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             Listing responseCallSettings = await client.CreateListingAsync(request.Parent, request.Listing, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Listing responseCancellationToken = await client.CreateListingAsync(request.Parent, request.Listing, st::CancellationToken.None);
@@ -927,7 +927,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 RequestAccess = "request_accessb08507d9",
             };
             mockGrpcClient.Setup(x => x.CreateListing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             Listing response = client.CreateListing(request.ParentAsDataExchangeName, request.Listing);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -961,7 +961,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 RequestAccess = "request_accessb08507d9",
             };
             mockGrpcClient.Setup(x => x.CreateListingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Listing>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             Listing responseCallSettings = await client.CreateListingAsync(request.ParentAsDataExchangeName, request.Listing, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Listing responseCancellationToken = await client.CreateListingAsync(request.ParentAsDataExchangeName, request.Listing, st::CancellationToken.None);
@@ -997,7 +997,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 RequestAccess = "request_accessb08507d9",
             };
             mockGrpcClient.Setup(x => x.UpdateListing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             Listing response = client.UpdateListing(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1031,7 +1031,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 RequestAccess = "request_accessb08507d9",
             };
             mockGrpcClient.Setup(x => x.UpdateListingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Listing>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             Listing responseCallSettings = await client.UpdateListingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Listing responseCancellationToken = await client.UpdateListingAsync(request, st::CancellationToken.None);
@@ -1067,7 +1067,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 RequestAccess = "request_accessb08507d9",
             };
             mockGrpcClient.Setup(x => x.UpdateListing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             Listing response = client.UpdateListing(request.Listing, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1101,7 +1101,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 RequestAccess = "request_accessb08507d9",
             };
             mockGrpcClient.Setup(x => x.UpdateListingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Listing>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             Listing responseCallSettings = await client.UpdateListingAsync(request.Listing, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Listing responseCancellationToken = await client.UpdateListingAsync(request.Listing, request.UpdateMask, st::CancellationToken.None);
@@ -1119,7 +1119,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteListing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteListing(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1134,7 +1134,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteListingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteListingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteListingAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1150,7 +1150,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteListing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteListing(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1165,7 +1165,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteListingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteListingAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteListingAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1181,7 +1181,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteListing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteListing(request.ListingName);
             mockGrpcClient.VerifyAll();
         }
@@ -1196,7 +1196,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteListingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteListingAsync(request.ListingName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteListingAsync(request.ListingName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1213,7 +1213,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
             };
             SubscribeListingResponse expectedResponse = new SubscribeListingResponse { };
             mockGrpcClient.Setup(x => x.SubscribeListing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             SubscribeListingResponse response = client.SubscribeListing(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1230,7 +1230,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
             };
             SubscribeListingResponse expectedResponse = new SubscribeListingResponse { };
             mockGrpcClient.Setup(x => x.SubscribeListingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SubscribeListingResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             SubscribeListingResponse responseCallSettings = await client.SubscribeListingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SubscribeListingResponse responseCancellationToken = await client.SubscribeListingAsync(request, st::CancellationToken.None);
@@ -1248,7 +1248,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
             };
             SubscribeListingResponse expectedResponse = new SubscribeListingResponse { };
             mockGrpcClient.Setup(x => x.SubscribeListing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             SubscribeListingResponse response = client.SubscribeListing(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1264,7 +1264,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
             };
             SubscribeListingResponse expectedResponse = new SubscribeListingResponse { };
             mockGrpcClient.Setup(x => x.SubscribeListingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SubscribeListingResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             SubscribeListingResponse responseCallSettings = await client.SubscribeListingAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SubscribeListingResponse responseCancellationToken = await client.SubscribeListingAsync(request.Name, st::CancellationToken.None);
@@ -1282,7 +1282,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
             };
             SubscribeListingResponse expectedResponse = new SubscribeListingResponse { };
             mockGrpcClient.Setup(x => x.SubscribeListing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             SubscribeListingResponse response = client.SubscribeListing(request.ListingName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1298,7 +1298,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
             };
             SubscribeListingResponse expectedResponse = new SubscribeListingResponse { };
             mockGrpcClient.Setup(x => x.SubscribeListingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SubscribeListingResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             SubscribeListingResponse responseCallSettings = await client.SubscribeListingAsync(request.ListingName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SubscribeListingResponse responseCancellationToken = await client.SubscribeListingAsync(request.ListingName, st::CancellationToken.None);
@@ -1329,7 +1329,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1358,7 +1358,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
@@ -1390,7 +1390,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1420,7 +1420,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
@@ -1448,7 +1448,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1474,7 +1474,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyticsHubServiceClient client = new AnalyticsHubServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);

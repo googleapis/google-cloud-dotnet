@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -177,9 +177,8 @@ namespace Google.Cloud.EssentialContacts.V1
         public EssentialContactsServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public EssentialContactsServiceClientBuilder()
+        public EssentialContactsServiceClientBuilder() : base(EssentialContactsServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = EssentialContactsServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref EssentialContactsServiceClient client);
@@ -206,29 +205,18 @@ namespace Google.Cloud.EssentialContacts.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return EssentialContactsServiceClient.Create(callInvoker, Settings);
+            return EssentialContactsServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<EssentialContactsServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return EssentialContactsServiceClient.Create(callInvoker, Settings);
+            return EssentialContactsServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => EssentialContactsServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => EssentialContactsServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => EssentialContactsServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>EssentialContactsService client wrapper, for convenient use.</summary>
@@ -255,19 +243,10 @@ namespace Google.Cloud.EssentialContacts.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(EssentialContactsService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="EssentialContactsServiceClient"/> using the default credentials,
@@ -297,8 +276,9 @@ namespace Google.Cloud.EssentialContacts.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="EssentialContactsServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="EssentialContactsServiceClient"/>.</returns>
-        internal static EssentialContactsServiceClient Create(grpccore::CallInvoker callInvoker, EssentialContactsServiceSettings settings = null)
+        internal static EssentialContactsServiceClient Create(grpccore::CallInvoker callInvoker, EssentialContactsServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -307,7 +287,7 @@ namespace Google.Cloud.EssentialContacts.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             EssentialContactsService.EssentialContactsServiceClient grpcClient = new EssentialContactsService.EssentialContactsServiceClient(callInvoker);
-            return new EssentialContactsServiceClientImpl(grpcClient, settings);
+            return new EssentialContactsServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1234,30 +1214,31 @@ namespace Google.Cloud.EssentialContacts.V1
         /// <param name="settings">
         /// The base <see cref="EssentialContactsServiceSettings"/> used within this client.
         /// </param>
-        public EssentialContactsServiceClientImpl(EssentialContactsService.EssentialContactsServiceClient grpcClient, EssentialContactsServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public EssentialContactsServiceClientImpl(EssentialContactsService.EssentialContactsServiceClient grpcClient, EssentialContactsServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             EssentialContactsServiceSettings effectiveSettings = settings ?? EssentialContactsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCreateContact = clientHelper.BuildApiCall<CreateContactRequest, Contact>(grpcClient.CreateContactAsync, grpcClient.CreateContact, effectiveSettings.CreateContactSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCreateContact = clientHelper.BuildApiCall<CreateContactRequest, Contact>("CreateContact", grpcClient.CreateContactAsync, grpcClient.CreateContact, effectiveSettings.CreateContactSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateContact);
             Modify_CreateContactApiCall(ref _callCreateContact);
-            _callUpdateContact = clientHelper.BuildApiCall<UpdateContactRequest, Contact>(grpcClient.UpdateContactAsync, grpcClient.UpdateContact, effectiveSettings.UpdateContactSettings).WithGoogleRequestParam("contact.name", request => request.Contact?.Name);
+            _callUpdateContact = clientHelper.BuildApiCall<UpdateContactRequest, Contact>("UpdateContact", grpcClient.UpdateContactAsync, grpcClient.UpdateContact, effectiveSettings.UpdateContactSettings).WithGoogleRequestParam("contact.name", request => request.Contact?.Name);
             Modify_ApiCall(ref _callUpdateContact);
             Modify_UpdateContactApiCall(ref _callUpdateContact);
-            _callListContacts = clientHelper.BuildApiCall<ListContactsRequest, ListContactsResponse>(grpcClient.ListContactsAsync, grpcClient.ListContacts, effectiveSettings.ListContactsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListContacts = clientHelper.BuildApiCall<ListContactsRequest, ListContactsResponse>("ListContacts", grpcClient.ListContactsAsync, grpcClient.ListContacts, effectiveSettings.ListContactsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListContacts);
             Modify_ListContactsApiCall(ref _callListContacts);
-            _callGetContact = clientHelper.BuildApiCall<GetContactRequest, Contact>(grpcClient.GetContactAsync, grpcClient.GetContact, effectiveSettings.GetContactSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetContact = clientHelper.BuildApiCall<GetContactRequest, Contact>("GetContact", grpcClient.GetContactAsync, grpcClient.GetContact, effectiveSettings.GetContactSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetContact);
             Modify_GetContactApiCall(ref _callGetContact);
-            _callDeleteContact = clientHelper.BuildApiCall<DeleteContactRequest, wkt::Empty>(grpcClient.DeleteContactAsync, grpcClient.DeleteContact, effectiveSettings.DeleteContactSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteContact = clientHelper.BuildApiCall<DeleteContactRequest, wkt::Empty>("DeleteContact", grpcClient.DeleteContactAsync, grpcClient.DeleteContact, effectiveSettings.DeleteContactSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteContact);
             Modify_DeleteContactApiCall(ref _callDeleteContact);
-            _callComputeContacts = clientHelper.BuildApiCall<ComputeContactsRequest, ComputeContactsResponse>(grpcClient.ComputeContactsAsync, grpcClient.ComputeContacts, effectiveSettings.ComputeContactsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callComputeContacts = clientHelper.BuildApiCall<ComputeContactsRequest, ComputeContactsResponse>("ComputeContacts", grpcClient.ComputeContactsAsync, grpcClient.ComputeContacts, effectiveSettings.ComputeContactsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callComputeContacts);
             Modify_ComputeContactsApiCall(ref _callComputeContacts);
-            _callSendTestMessage = clientHelper.BuildApiCall<SendTestMessageRequest, wkt::Empty>(grpcClient.SendTestMessageAsync, grpcClient.SendTestMessage, effectiveSettings.SendTestMessageSettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callSendTestMessage = clientHelper.BuildApiCall<SendTestMessageRequest, wkt::Empty>("SendTestMessage", grpcClient.SendTestMessageAsync, grpcClient.SendTestMessage, effectiveSettings.SendTestMessageSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSendTestMessage);
             Modify_SendTestMessageApiCall(ref _callSendTestMessage);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gcoc = Google.Cloud.OsLogin.Common;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -197,9 +197,8 @@ namespace Google.Cloud.OsLogin.V1
         public OsLoginServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public OsLoginServiceClientBuilder()
+        public OsLoginServiceClientBuilder() : base(OsLoginServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = OsLoginServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref OsLoginServiceClient client);
@@ -226,29 +225,18 @@ namespace Google.Cloud.OsLogin.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return OsLoginServiceClient.Create(callInvoker, Settings);
+            return OsLoginServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<OsLoginServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return OsLoginServiceClient.Create(callInvoker, Settings);
+            return OsLoginServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => OsLoginServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => OsLoginServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => OsLoginServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>OsLoginService client wrapper, for convenient use.</summary>
@@ -280,19 +268,10 @@ namespace Google.Cloud.OsLogin.V1
             "https://www.googleapis.com/auth/compute",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(OsLoginService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="OsLoginServiceClient"/> using the default credentials, endpoint and
@@ -319,8 +298,9 @@ namespace Google.Cloud.OsLogin.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="OsLoginServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="OsLoginServiceClient"/>.</returns>
-        internal static OsLoginServiceClient Create(grpccore::CallInvoker callInvoker, OsLoginServiceSettings settings = null)
+        internal static OsLoginServiceClient Create(grpccore::CallInvoker callInvoker, OsLoginServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -329,7 +309,7 @@ namespace Google.Cloud.OsLogin.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             OsLoginService.OsLoginServiceClient grpcClient = new OsLoginService.OsLoginServiceClient(callInvoker);
-            return new OsLoginServiceClientImpl(grpcClient, settings);
+            return new OsLoginServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1407,27 +1387,28 @@ namespace Google.Cloud.OsLogin.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="OsLoginServiceSettings"/> used within this client.</param>
-        public OsLoginServiceClientImpl(OsLoginService.OsLoginServiceClient grpcClient, OsLoginServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public OsLoginServiceClientImpl(OsLoginService.OsLoginServiceClient grpcClient, OsLoginServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             OsLoginServiceSettings effectiveSettings = settings ?? OsLoginServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callDeletePosixAccount = clientHelper.BuildApiCall<DeletePosixAccountRequest, wkt::Empty>(grpcClient.DeletePosixAccountAsync, grpcClient.DeletePosixAccount, effectiveSettings.DeletePosixAccountSettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callDeletePosixAccount = clientHelper.BuildApiCall<DeletePosixAccountRequest, wkt::Empty>("DeletePosixAccount", grpcClient.DeletePosixAccountAsync, grpcClient.DeletePosixAccount, effectiveSettings.DeletePosixAccountSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeletePosixAccount);
             Modify_DeletePosixAccountApiCall(ref _callDeletePosixAccount);
-            _callDeleteSshPublicKey = clientHelper.BuildApiCall<DeleteSshPublicKeyRequest, wkt::Empty>(grpcClient.DeleteSshPublicKeyAsync, grpcClient.DeleteSshPublicKey, effectiveSettings.DeleteSshPublicKeySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteSshPublicKey = clientHelper.BuildApiCall<DeleteSshPublicKeyRequest, wkt::Empty>("DeleteSshPublicKey", grpcClient.DeleteSshPublicKeyAsync, grpcClient.DeleteSshPublicKey, effectiveSettings.DeleteSshPublicKeySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteSshPublicKey);
             Modify_DeleteSshPublicKeyApiCall(ref _callDeleteSshPublicKey);
-            _callGetLoginProfile = clientHelper.BuildApiCall<GetLoginProfileRequest, LoginProfile>(grpcClient.GetLoginProfileAsync, grpcClient.GetLoginProfile, effectiveSettings.GetLoginProfileSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetLoginProfile = clientHelper.BuildApiCall<GetLoginProfileRequest, LoginProfile>("GetLoginProfile", grpcClient.GetLoginProfileAsync, grpcClient.GetLoginProfile, effectiveSettings.GetLoginProfileSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetLoginProfile);
             Modify_GetLoginProfileApiCall(ref _callGetLoginProfile);
-            _callGetSshPublicKey = clientHelper.BuildApiCall<GetSshPublicKeyRequest, gcoc::SshPublicKey>(grpcClient.GetSshPublicKeyAsync, grpcClient.GetSshPublicKey, effectiveSettings.GetSshPublicKeySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetSshPublicKey = clientHelper.BuildApiCall<GetSshPublicKeyRequest, gcoc::SshPublicKey>("GetSshPublicKey", grpcClient.GetSshPublicKeyAsync, grpcClient.GetSshPublicKey, effectiveSettings.GetSshPublicKeySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSshPublicKey);
             Modify_GetSshPublicKeyApiCall(ref _callGetSshPublicKey);
-            _callImportSshPublicKey = clientHelper.BuildApiCall<ImportSshPublicKeyRequest, ImportSshPublicKeyResponse>(grpcClient.ImportSshPublicKeyAsync, grpcClient.ImportSshPublicKey, effectiveSettings.ImportSshPublicKeySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callImportSshPublicKey = clientHelper.BuildApiCall<ImportSshPublicKeyRequest, ImportSshPublicKeyResponse>("ImportSshPublicKey", grpcClient.ImportSshPublicKeyAsync, grpcClient.ImportSshPublicKey, effectiveSettings.ImportSshPublicKeySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callImportSshPublicKey);
             Modify_ImportSshPublicKeyApiCall(ref _callImportSshPublicKey);
-            _callUpdateSshPublicKey = clientHelper.BuildApiCall<UpdateSshPublicKeyRequest, gcoc::SshPublicKey>(grpcClient.UpdateSshPublicKeyAsync, grpcClient.UpdateSshPublicKey, effectiveSettings.UpdateSshPublicKeySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateSshPublicKey = clientHelper.BuildApiCall<UpdateSshPublicKeyRequest, gcoc::SshPublicKey>("UpdateSshPublicKey", grpcClient.UpdateSshPublicKeyAsync, grpcClient.UpdateSshPublicKey, effectiveSettings.UpdateSshPublicKeySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateSshPublicKey);
             Modify_UpdateSshPublicKeyApiCall(ref _callUpdateSshPublicKey);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

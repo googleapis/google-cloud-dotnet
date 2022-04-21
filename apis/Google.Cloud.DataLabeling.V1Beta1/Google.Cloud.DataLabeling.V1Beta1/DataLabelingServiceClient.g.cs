@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -831,9 +831,8 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         public DataLabelingServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public DataLabelingServiceClientBuilder()
+        public DataLabelingServiceClientBuilder() : base(DataLabelingServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = DataLabelingServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref DataLabelingServiceClient client);
@@ -860,29 +859,18 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return DataLabelingServiceClient.Create(callInvoker, Settings);
+            return DataLabelingServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<DataLabelingServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return DataLabelingServiceClient.Create(callInvoker, Settings);
+            return DataLabelingServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => DataLabelingServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => DataLabelingServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => DataLabelingServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>DataLabelingService client wrapper, for convenient use.</summary>
@@ -909,19 +897,10 @@ namespace Google.Cloud.DataLabeling.V1Beta1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(DataLabelingService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="DataLabelingServiceClient"/> using the default credentials, endpoint and
@@ -951,8 +930,9 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="DataLabelingServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="DataLabelingServiceClient"/>.</returns>
-        internal static DataLabelingServiceClient Create(grpccore::CallInvoker callInvoker, DataLabelingServiceSettings settings = null)
+        internal static DataLabelingServiceClient Create(grpccore::CallInvoker callInvoker, DataLabelingServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -961,7 +941,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             DataLabelingService.DataLabelingServiceClient grpcClient = new DataLabelingService.DataLabelingServiceClient(callInvoker);
-            return new DataLabelingServiceClientImpl(grpcClient, settings);
+            return new DataLabelingServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -5841,117 +5821,118 @@ namespace Google.Cloud.DataLabeling.V1Beta1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="DataLabelingServiceSettings"/> used within this client.</param>
-        public DataLabelingServiceClientImpl(DataLabelingService.DataLabelingServiceClient grpcClient, DataLabelingServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public DataLabelingServiceClientImpl(DataLabelingService.DataLabelingServiceClient grpcClient, DataLabelingServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             DataLabelingServiceSettings effectiveSettings = settings ?? DataLabelingServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            ImportDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportDataOperationsSettings);
-            ExportDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportDataOperationsSettings);
-            LabelImageOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.LabelImageOperationsSettings);
-            LabelVideoOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.LabelVideoOperationsSettings);
-            LabelTextOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.LabelTextOperationsSettings);
-            CreateInstructionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstructionOperationsSettings);
-            _callCreateDataset = clientHelper.BuildApiCall<CreateDatasetRequest, Dataset>(grpcClient.CreateDatasetAsync, grpcClient.CreateDataset, effectiveSettings.CreateDatasetSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            ImportDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportDataOperationsSettings, logger);
+            ExportDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportDataOperationsSettings, logger);
+            LabelImageOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.LabelImageOperationsSettings, logger);
+            LabelVideoOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.LabelVideoOperationsSettings, logger);
+            LabelTextOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.LabelTextOperationsSettings, logger);
+            CreateInstructionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstructionOperationsSettings, logger);
+            _callCreateDataset = clientHelper.BuildApiCall<CreateDatasetRequest, Dataset>("CreateDataset", grpcClient.CreateDatasetAsync, grpcClient.CreateDataset, effectiveSettings.CreateDatasetSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDataset);
             Modify_CreateDatasetApiCall(ref _callCreateDataset);
-            _callGetDataset = clientHelper.BuildApiCall<GetDatasetRequest, Dataset>(grpcClient.GetDatasetAsync, grpcClient.GetDataset, effectiveSettings.GetDatasetSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetDataset = clientHelper.BuildApiCall<GetDatasetRequest, Dataset>("GetDataset", grpcClient.GetDatasetAsync, grpcClient.GetDataset, effectiveSettings.GetDatasetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDataset);
             Modify_GetDatasetApiCall(ref _callGetDataset);
-            _callListDatasets = clientHelper.BuildApiCall<ListDatasetsRequest, ListDatasetsResponse>(grpcClient.ListDatasetsAsync, grpcClient.ListDatasets, effectiveSettings.ListDatasetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListDatasets = clientHelper.BuildApiCall<ListDatasetsRequest, ListDatasetsResponse>("ListDatasets", grpcClient.ListDatasetsAsync, grpcClient.ListDatasets, effectiveSettings.ListDatasetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDatasets);
             Modify_ListDatasetsApiCall(ref _callListDatasets);
-            _callDeleteDataset = clientHelper.BuildApiCall<DeleteDatasetRequest, wkt::Empty>(grpcClient.DeleteDatasetAsync, grpcClient.DeleteDataset, effectiveSettings.DeleteDatasetSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteDataset = clientHelper.BuildApiCall<DeleteDatasetRequest, wkt::Empty>("DeleteDataset", grpcClient.DeleteDatasetAsync, grpcClient.DeleteDataset, effectiveSettings.DeleteDatasetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDataset);
             Modify_DeleteDatasetApiCall(ref _callDeleteDataset);
-            _callImportData = clientHelper.BuildApiCall<ImportDataRequest, lro::Operation>(grpcClient.ImportDataAsync, grpcClient.ImportData, effectiveSettings.ImportDataSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callImportData = clientHelper.BuildApiCall<ImportDataRequest, lro::Operation>("ImportData", grpcClient.ImportDataAsync, grpcClient.ImportData, effectiveSettings.ImportDataSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callImportData);
             Modify_ImportDataApiCall(ref _callImportData);
-            _callExportData = clientHelper.BuildApiCall<ExportDataRequest, lro::Operation>(grpcClient.ExportDataAsync, grpcClient.ExportData, effectiveSettings.ExportDataSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callExportData = clientHelper.BuildApiCall<ExportDataRequest, lro::Operation>("ExportData", grpcClient.ExportDataAsync, grpcClient.ExportData, effectiveSettings.ExportDataSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callExportData);
             Modify_ExportDataApiCall(ref _callExportData);
-            _callGetDataItem = clientHelper.BuildApiCall<GetDataItemRequest, DataItem>(grpcClient.GetDataItemAsync, grpcClient.GetDataItem, effectiveSettings.GetDataItemSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetDataItem = clientHelper.BuildApiCall<GetDataItemRequest, DataItem>("GetDataItem", grpcClient.GetDataItemAsync, grpcClient.GetDataItem, effectiveSettings.GetDataItemSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDataItem);
             Modify_GetDataItemApiCall(ref _callGetDataItem);
-            _callListDataItems = clientHelper.BuildApiCall<ListDataItemsRequest, ListDataItemsResponse>(grpcClient.ListDataItemsAsync, grpcClient.ListDataItems, effectiveSettings.ListDataItemsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListDataItems = clientHelper.BuildApiCall<ListDataItemsRequest, ListDataItemsResponse>("ListDataItems", grpcClient.ListDataItemsAsync, grpcClient.ListDataItems, effectiveSettings.ListDataItemsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDataItems);
             Modify_ListDataItemsApiCall(ref _callListDataItems);
-            _callGetAnnotatedDataset = clientHelper.BuildApiCall<GetAnnotatedDatasetRequest, AnnotatedDataset>(grpcClient.GetAnnotatedDatasetAsync, grpcClient.GetAnnotatedDataset, effectiveSettings.GetAnnotatedDatasetSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetAnnotatedDataset = clientHelper.BuildApiCall<GetAnnotatedDatasetRequest, AnnotatedDataset>("GetAnnotatedDataset", grpcClient.GetAnnotatedDatasetAsync, grpcClient.GetAnnotatedDataset, effectiveSettings.GetAnnotatedDatasetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAnnotatedDataset);
             Modify_GetAnnotatedDatasetApiCall(ref _callGetAnnotatedDataset);
-            _callListAnnotatedDatasets = clientHelper.BuildApiCall<ListAnnotatedDatasetsRequest, ListAnnotatedDatasetsResponse>(grpcClient.ListAnnotatedDatasetsAsync, grpcClient.ListAnnotatedDatasets, effectiveSettings.ListAnnotatedDatasetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListAnnotatedDatasets = clientHelper.BuildApiCall<ListAnnotatedDatasetsRequest, ListAnnotatedDatasetsResponse>("ListAnnotatedDatasets", grpcClient.ListAnnotatedDatasetsAsync, grpcClient.ListAnnotatedDatasets, effectiveSettings.ListAnnotatedDatasetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAnnotatedDatasets);
             Modify_ListAnnotatedDatasetsApiCall(ref _callListAnnotatedDatasets);
-            _callDeleteAnnotatedDataset = clientHelper.BuildApiCall<DeleteAnnotatedDatasetRequest, wkt::Empty>(grpcClient.DeleteAnnotatedDatasetAsync, grpcClient.DeleteAnnotatedDataset, effectiveSettings.DeleteAnnotatedDatasetSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteAnnotatedDataset = clientHelper.BuildApiCall<DeleteAnnotatedDatasetRequest, wkt::Empty>("DeleteAnnotatedDataset", grpcClient.DeleteAnnotatedDatasetAsync, grpcClient.DeleteAnnotatedDataset, effectiveSettings.DeleteAnnotatedDatasetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAnnotatedDataset);
             Modify_DeleteAnnotatedDatasetApiCall(ref _callDeleteAnnotatedDataset);
-            _callLabelImage = clientHelper.BuildApiCall<LabelImageRequest, lro::Operation>(grpcClient.LabelImageAsync, grpcClient.LabelImage, effectiveSettings.LabelImageSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callLabelImage = clientHelper.BuildApiCall<LabelImageRequest, lro::Operation>("LabelImage", grpcClient.LabelImageAsync, grpcClient.LabelImage, effectiveSettings.LabelImageSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callLabelImage);
             Modify_LabelImageApiCall(ref _callLabelImage);
-            _callLabelVideo = clientHelper.BuildApiCall<LabelVideoRequest, lro::Operation>(grpcClient.LabelVideoAsync, grpcClient.LabelVideo, effectiveSettings.LabelVideoSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callLabelVideo = clientHelper.BuildApiCall<LabelVideoRequest, lro::Operation>("LabelVideo", grpcClient.LabelVideoAsync, grpcClient.LabelVideo, effectiveSettings.LabelVideoSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callLabelVideo);
             Modify_LabelVideoApiCall(ref _callLabelVideo);
-            _callLabelText = clientHelper.BuildApiCall<LabelTextRequest, lro::Operation>(grpcClient.LabelTextAsync, grpcClient.LabelText, effectiveSettings.LabelTextSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callLabelText = clientHelper.BuildApiCall<LabelTextRequest, lro::Operation>("LabelText", grpcClient.LabelTextAsync, grpcClient.LabelText, effectiveSettings.LabelTextSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callLabelText);
             Modify_LabelTextApiCall(ref _callLabelText);
-            _callGetExample = clientHelper.BuildApiCall<GetExampleRequest, Example>(grpcClient.GetExampleAsync, grpcClient.GetExample, effectiveSettings.GetExampleSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetExample = clientHelper.BuildApiCall<GetExampleRequest, Example>("GetExample", grpcClient.GetExampleAsync, grpcClient.GetExample, effectiveSettings.GetExampleSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetExample);
             Modify_GetExampleApiCall(ref _callGetExample);
-            _callListExamples = clientHelper.BuildApiCall<ListExamplesRequest, ListExamplesResponse>(grpcClient.ListExamplesAsync, grpcClient.ListExamples, effectiveSettings.ListExamplesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListExamples = clientHelper.BuildApiCall<ListExamplesRequest, ListExamplesResponse>("ListExamples", grpcClient.ListExamplesAsync, grpcClient.ListExamples, effectiveSettings.ListExamplesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListExamples);
             Modify_ListExamplesApiCall(ref _callListExamples);
-            _callCreateAnnotationSpecSet = clientHelper.BuildApiCall<CreateAnnotationSpecSetRequest, AnnotationSpecSet>(grpcClient.CreateAnnotationSpecSetAsync, grpcClient.CreateAnnotationSpecSet, effectiveSettings.CreateAnnotationSpecSetSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateAnnotationSpecSet = clientHelper.BuildApiCall<CreateAnnotationSpecSetRequest, AnnotationSpecSet>("CreateAnnotationSpecSet", grpcClient.CreateAnnotationSpecSetAsync, grpcClient.CreateAnnotationSpecSet, effectiveSettings.CreateAnnotationSpecSetSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateAnnotationSpecSet);
             Modify_CreateAnnotationSpecSetApiCall(ref _callCreateAnnotationSpecSet);
-            _callGetAnnotationSpecSet = clientHelper.BuildApiCall<GetAnnotationSpecSetRequest, AnnotationSpecSet>(grpcClient.GetAnnotationSpecSetAsync, grpcClient.GetAnnotationSpecSet, effectiveSettings.GetAnnotationSpecSetSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetAnnotationSpecSet = clientHelper.BuildApiCall<GetAnnotationSpecSetRequest, AnnotationSpecSet>("GetAnnotationSpecSet", grpcClient.GetAnnotationSpecSetAsync, grpcClient.GetAnnotationSpecSet, effectiveSettings.GetAnnotationSpecSetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAnnotationSpecSet);
             Modify_GetAnnotationSpecSetApiCall(ref _callGetAnnotationSpecSet);
-            _callListAnnotationSpecSets = clientHelper.BuildApiCall<ListAnnotationSpecSetsRequest, ListAnnotationSpecSetsResponse>(grpcClient.ListAnnotationSpecSetsAsync, grpcClient.ListAnnotationSpecSets, effectiveSettings.ListAnnotationSpecSetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListAnnotationSpecSets = clientHelper.BuildApiCall<ListAnnotationSpecSetsRequest, ListAnnotationSpecSetsResponse>("ListAnnotationSpecSets", grpcClient.ListAnnotationSpecSetsAsync, grpcClient.ListAnnotationSpecSets, effectiveSettings.ListAnnotationSpecSetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAnnotationSpecSets);
             Modify_ListAnnotationSpecSetsApiCall(ref _callListAnnotationSpecSets);
-            _callDeleteAnnotationSpecSet = clientHelper.BuildApiCall<DeleteAnnotationSpecSetRequest, wkt::Empty>(grpcClient.DeleteAnnotationSpecSetAsync, grpcClient.DeleteAnnotationSpecSet, effectiveSettings.DeleteAnnotationSpecSetSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteAnnotationSpecSet = clientHelper.BuildApiCall<DeleteAnnotationSpecSetRequest, wkt::Empty>("DeleteAnnotationSpecSet", grpcClient.DeleteAnnotationSpecSetAsync, grpcClient.DeleteAnnotationSpecSet, effectiveSettings.DeleteAnnotationSpecSetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAnnotationSpecSet);
             Modify_DeleteAnnotationSpecSetApiCall(ref _callDeleteAnnotationSpecSet);
-            _callCreateInstruction = clientHelper.BuildApiCall<CreateInstructionRequest, lro::Operation>(grpcClient.CreateInstructionAsync, grpcClient.CreateInstruction, effectiveSettings.CreateInstructionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateInstruction = clientHelper.BuildApiCall<CreateInstructionRequest, lro::Operation>("CreateInstruction", grpcClient.CreateInstructionAsync, grpcClient.CreateInstruction, effectiveSettings.CreateInstructionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateInstruction);
             Modify_CreateInstructionApiCall(ref _callCreateInstruction);
-            _callGetInstruction = clientHelper.BuildApiCall<GetInstructionRequest, Instruction>(grpcClient.GetInstructionAsync, grpcClient.GetInstruction, effectiveSettings.GetInstructionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetInstruction = clientHelper.BuildApiCall<GetInstructionRequest, Instruction>("GetInstruction", grpcClient.GetInstructionAsync, grpcClient.GetInstruction, effectiveSettings.GetInstructionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetInstruction);
             Modify_GetInstructionApiCall(ref _callGetInstruction);
-            _callListInstructions = clientHelper.BuildApiCall<ListInstructionsRequest, ListInstructionsResponse>(grpcClient.ListInstructionsAsync, grpcClient.ListInstructions, effectiveSettings.ListInstructionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListInstructions = clientHelper.BuildApiCall<ListInstructionsRequest, ListInstructionsResponse>("ListInstructions", grpcClient.ListInstructionsAsync, grpcClient.ListInstructions, effectiveSettings.ListInstructionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInstructions);
             Modify_ListInstructionsApiCall(ref _callListInstructions);
-            _callDeleteInstruction = clientHelper.BuildApiCall<DeleteInstructionRequest, wkt::Empty>(grpcClient.DeleteInstructionAsync, grpcClient.DeleteInstruction, effectiveSettings.DeleteInstructionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteInstruction = clientHelper.BuildApiCall<DeleteInstructionRequest, wkt::Empty>("DeleteInstruction", grpcClient.DeleteInstructionAsync, grpcClient.DeleteInstruction, effectiveSettings.DeleteInstructionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteInstruction);
             Modify_DeleteInstructionApiCall(ref _callDeleteInstruction);
-            _callGetEvaluation = clientHelper.BuildApiCall<GetEvaluationRequest, Evaluation>(grpcClient.GetEvaluationAsync, grpcClient.GetEvaluation, effectiveSettings.GetEvaluationSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetEvaluation = clientHelper.BuildApiCall<GetEvaluationRequest, Evaluation>("GetEvaluation", grpcClient.GetEvaluationAsync, grpcClient.GetEvaluation, effectiveSettings.GetEvaluationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetEvaluation);
             Modify_GetEvaluationApiCall(ref _callGetEvaluation);
-            _callSearchEvaluations = clientHelper.BuildApiCall<SearchEvaluationsRequest, SearchEvaluationsResponse>(grpcClient.SearchEvaluationsAsync, grpcClient.SearchEvaluations, effectiveSettings.SearchEvaluationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callSearchEvaluations = clientHelper.BuildApiCall<SearchEvaluationsRequest, SearchEvaluationsResponse>("SearchEvaluations", grpcClient.SearchEvaluationsAsync, grpcClient.SearchEvaluations, effectiveSettings.SearchEvaluationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callSearchEvaluations);
             Modify_SearchEvaluationsApiCall(ref _callSearchEvaluations);
-            _callSearchExampleComparisons = clientHelper.BuildApiCall<SearchExampleComparisonsRequest, SearchExampleComparisonsResponse>(grpcClient.SearchExampleComparisonsAsync, grpcClient.SearchExampleComparisons, effectiveSettings.SearchExampleComparisonsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callSearchExampleComparisons = clientHelper.BuildApiCall<SearchExampleComparisonsRequest, SearchExampleComparisonsResponse>("SearchExampleComparisons", grpcClient.SearchExampleComparisonsAsync, grpcClient.SearchExampleComparisons, effectiveSettings.SearchExampleComparisonsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callSearchExampleComparisons);
             Modify_SearchExampleComparisonsApiCall(ref _callSearchExampleComparisons);
-            _callCreateEvaluationJob = clientHelper.BuildApiCall<CreateEvaluationJobRequest, EvaluationJob>(grpcClient.CreateEvaluationJobAsync, grpcClient.CreateEvaluationJob, effectiveSettings.CreateEvaluationJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateEvaluationJob = clientHelper.BuildApiCall<CreateEvaluationJobRequest, EvaluationJob>("CreateEvaluationJob", grpcClient.CreateEvaluationJobAsync, grpcClient.CreateEvaluationJob, effectiveSettings.CreateEvaluationJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateEvaluationJob);
             Modify_CreateEvaluationJobApiCall(ref _callCreateEvaluationJob);
-            _callUpdateEvaluationJob = clientHelper.BuildApiCall<UpdateEvaluationJobRequest, EvaluationJob>(grpcClient.UpdateEvaluationJobAsync, grpcClient.UpdateEvaluationJob, effectiveSettings.UpdateEvaluationJobSettings).WithGoogleRequestParam("evaluation_job.name", request => request.EvaluationJob?.Name);
+            _callUpdateEvaluationJob = clientHelper.BuildApiCall<UpdateEvaluationJobRequest, EvaluationJob>("UpdateEvaluationJob", grpcClient.UpdateEvaluationJobAsync, grpcClient.UpdateEvaluationJob, effectiveSettings.UpdateEvaluationJobSettings).WithGoogleRequestParam("evaluation_job.name", request => request.EvaluationJob?.Name);
             Modify_ApiCall(ref _callUpdateEvaluationJob);
             Modify_UpdateEvaluationJobApiCall(ref _callUpdateEvaluationJob);
-            _callGetEvaluationJob = clientHelper.BuildApiCall<GetEvaluationJobRequest, EvaluationJob>(grpcClient.GetEvaluationJobAsync, grpcClient.GetEvaluationJob, effectiveSettings.GetEvaluationJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetEvaluationJob = clientHelper.BuildApiCall<GetEvaluationJobRequest, EvaluationJob>("GetEvaluationJob", grpcClient.GetEvaluationJobAsync, grpcClient.GetEvaluationJob, effectiveSettings.GetEvaluationJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetEvaluationJob);
             Modify_GetEvaluationJobApiCall(ref _callGetEvaluationJob);
-            _callPauseEvaluationJob = clientHelper.BuildApiCall<PauseEvaluationJobRequest, wkt::Empty>(grpcClient.PauseEvaluationJobAsync, grpcClient.PauseEvaluationJob, effectiveSettings.PauseEvaluationJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callPauseEvaluationJob = clientHelper.BuildApiCall<PauseEvaluationJobRequest, wkt::Empty>("PauseEvaluationJob", grpcClient.PauseEvaluationJobAsync, grpcClient.PauseEvaluationJob, effectiveSettings.PauseEvaluationJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callPauseEvaluationJob);
             Modify_PauseEvaluationJobApiCall(ref _callPauseEvaluationJob);
-            _callResumeEvaluationJob = clientHelper.BuildApiCall<ResumeEvaluationJobRequest, wkt::Empty>(grpcClient.ResumeEvaluationJobAsync, grpcClient.ResumeEvaluationJob, effectiveSettings.ResumeEvaluationJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callResumeEvaluationJob = clientHelper.BuildApiCall<ResumeEvaluationJobRequest, wkt::Empty>("ResumeEvaluationJob", grpcClient.ResumeEvaluationJobAsync, grpcClient.ResumeEvaluationJob, effectiveSettings.ResumeEvaluationJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callResumeEvaluationJob);
             Modify_ResumeEvaluationJobApiCall(ref _callResumeEvaluationJob);
-            _callDeleteEvaluationJob = clientHelper.BuildApiCall<DeleteEvaluationJobRequest, wkt::Empty>(grpcClient.DeleteEvaluationJobAsync, grpcClient.DeleteEvaluationJob, effectiveSettings.DeleteEvaluationJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteEvaluationJob = clientHelper.BuildApiCall<DeleteEvaluationJobRequest, wkt::Empty>("DeleteEvaluationJob", grpcClient.DeleteEvaluationJobAsync, grpcClient.DeleteEvaluationJob, effectiveSettings.DeleteEvaluationJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteEvaluationJob);
             Modify_DeleteEvaluationJobApiCall(ref _callDeleteEvaluationJob);
-            _callListEvaluationJobs = clientHelper.BuildApiCall<ListEvaluationJobsRequest, ListEvaluationJobsResponse>(grpcClient.ListEvaluationJobsAsync, grpcClient.ListEvaluationJobs, effectiveSettings.ListEvaluationJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListEvaluationJobs = clientHelper.BuildApiCall<ListEvaluationJobsRequest, ListEvaluationJobsResponse>("ListEvaluationJobs", grpcClient.ListEvaluationJobsAsync, grpcClient.ListEvaluationJobs, effectiveSettings.ListEvaluationJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListEvaluationJobs);
             Modify_ListEvaluationJobsApiCall(ref _callListEvaluationJobs);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -506,9 +506,8 @@ namespace Google.Cloud.Deploy.V1
         public CloudDeploySettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public CloudDeployClientBuilder()
+        public CloudDeployClientBuilder() : base(CloudDeployClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = CloudDeployClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref CloudDeployClient client);
@@ -535,29 +534,18 @@ namespace Google.Cloud.Deploy.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return CloudDeployClient.Create(callInvoker, Settings);
+            return CloudDeployClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<CloudDeployClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return CloudDeployClient.Create(callInvoker, Settings);
+            return CloudDeployClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => CloudDeployClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => CloudDeployClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => CloudDeployClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>CloudDeploy client wrapper, for convenient use.</summary>
@@ -585,19 +573,10 @@ namespace Google.Cloud.Deploy.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(CloudDeploy.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="CloudDeployClient"/> using the default credentials, endpoint and
@@ -624,8 +603,9 @@ namespace Google.Cloud.Deploy.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="CloudDeploySettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="CloudDeployClient"/>.</returns>
-        internal static CloudDeployClient Create(grpccore::CallInvoker callInvoker, CloudDeploySettings settings = null)
+        internal static CloudDeployClient Create(grpccore::CallInvoker callInvoker, CloudDeploySettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -634,7 +614,7 @@ namespace Google.Cloud.Deploy.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             CloudDeploy.CloudDeployClient grpcClient = new CloudDeploy.CloudDeployClient(callInvoker);
-            return new CloudDeployClientImpl(grpcClient, settings);
+            return new CloudDeployClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -3081,71 +3061,72 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="CloudDeploySettings"/> used within this client.</param>
-        public CloudDeployClientImpl(CloudDeploy.CloudDeployClient grpcClient, CloudDeploySettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public CloudDeployClientImpl(CloudDeploy.CloudDeployClient grpcClient, CloudDeploySettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             CloudDeploySettings effectiveSettings = settings ?? CloudDeploySettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateDeliveryPipelineOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDeliveryPipelineOperationsSettings);
-            UpdateDeliveryPipelineOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDeliveryPipelineOperationsSettings);
-            DeleteDeliveryPipelineOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDeliveryPipelineOperationsSettings);
-            CreateTargetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTargetOperationsSettings);
-            UpdateTargetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTargetOperationsSettings);
-            DeleteTargetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTargetOperationsSettings);
-            CreateReleaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateReleaseOperationsSettings);
-            CreateRolloutOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRolloutOperationsSettings);
-            _callListDeliveryPipelines = clientHelper.BuildApiCall<ListDeliveryPipelinesRequest, ListDeliveryPipelinesResponse>(grpcClient.ListDeliveryPipelinesAsync, grpcClient.ListDeliveryPipelines, effectiveSettings.ListDeliveryPipelinesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateDeliveryPipelineOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDeliveryPipelineOperationsSettings, logger);
+            UpdateDeliveryPipelineOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDeliveryPipelineOperationsSettings, logger);
+            DeleteDeliveryPipelineOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDeliveryPipelineOperationsSettings, logger);
+            CreateTargetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTargetOperationsSettings, logger);
+            UpdateTargetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTargetOperationsSettings, logger);
+            DeleteTargetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTargetOperationsSettings, logger);
+            CreateReleaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateReleaseOperationsSettings, logger);
+            CreateRolloutOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRolloutOperationsSettings, logger);
+            _callListDeliveryPipelines = clientHelper.BuildApiCall<ListDeliveryPipelinesRequest, ListDeliveryPipelinesResponse>("ListDeliveryPipelines", grpcClient.ListDeliveryPipelinesAsync, grpcClient.ListDeliveryPipelines, effectiveSettings.ListDeliveryPipelinesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDeliveryPipelines);
             Modify_ListDeliveryPipelinesApiCall(ref _callListDeliveryPipelines);
-            _callGetDeliveryPipeline = clientHelper.BuildApiCall<GetDeliveryPipelineRequest, DeliveryPipeline>(grpcClient.GetDeliveryPipelineAsync, grpcClient.GetDeliveryPipeline, effectiveSettings.GetDeliveryPipelineSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetDeliveryPipeline = clientHelper.BuildApiCall<GetDeliveryPipelineRequest, DeliveryPipeline>("GetDeliveryPipeline", grpcClient.GetDeliveryPipelineAsync, grpcClient.GetDeliveryPipeline, effectiveSettings.GetDeliveryPipelineSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDeliveryPipeline);
             Modify_GetDeliveryPipelineApiCall(ref _callGetDeliveryPipeline);
-            _callCreateDeliveryPipeline = clientHelper.BuildApiCall<CreateDeliveryPipelineRequest, lro::Operation>(grpcClient.CreateDeliveryPipelineAsync, grpcClient.CreateDeliveryPipeline, effectiveSettings.CreateDeliveryPipelineSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateDeliveryPipeline = clientHelper.BuildApiCall<CreateDeliveryPipelineRequest, lro::Operation>("CreateDeliveryPipeline", grpcClient.CreateDeliveryPipelineAsync, grpcClient.CreateDeliveryPipeline, effectiveSettings.CreateDeliveryPipelineSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDeliveryPipeline);
             Modify_CreateDeliveryPipelineApiCall(ref _callCreateDeliveryPipeline);
-            _callUpdateDeliveryPipeline = clientHelper.BuildApiCall<UpdateDeliveryPipelineRequest, lro::Operation>(grpcClient.UpdateDeliveryPipelineAsync, grpcClient.UpdateDeliveryPipeline, effectiveSettings.UpdateDeliveryPipelineSettings).WithGoogleRequestParam("delivery_pipeline.name", request => request.DeliveryPipeline?.Name);
+            _callUpdateDeliveryPipeline = clientHelper.BuildApiCall<UpdateDeliveryPipelineRequest, lro::Operation>("UpdateDeliveryPipeline", grpcClient.UpdateDeliveryPipelineAsync, grpcClient.UpdateDeliveryPipeline, effectiveSettings.UpdateDeliveryPipelineSettings).WithGoogleRequestParam("delivery_pipeline.name", request => request.DeliveryPipeline?.Name);
             Modify_ApiCall(ref _callUpdateDeliveryPipeline);
             Modify_UpdateDeliveryPipelineApiCall(ref _callUpdateDeliveryPipeline);
-            _callDeleteDeliveryPipeline = clientHelper.BuildApiCall<DeleteDeliveryPipelineRequest, lro::Operation>(grpcClient.DeleteDeliveryPipelineAsync, grpcClient.DeleteDeliveryPipeline, effectiveSettings.DeleteDeliveryPipelineSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteDeliveryPipeline = clientHelper.BuildApiCall<DeleteDeliveryPipelineRequest, lro::Operation>("DeleteDeliveryPipeline", grpcClient.DeleteDeliveryPipelineAsync, grpcClient.DeleteDeliveryPipeline, effectiveSettings.DeleteDeliveryPipelineSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDeliveryPipeline);
             Modify_DeleteDeliveryPipelineApiCall(ref _callDeleteDeliveryPipeline);
-            _callListTargets = clientHelper.BuildApiCall<ListTargetsRequest, ListTargetsResponse>(grpcClient.ListTargetsAsync, grpcClient.ListTargets, effectiveSettings.ListTargetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListTargets = clientHelper.BuildApiCall<ListTargetsRequest, ListTargetsResponse>("ListTargets", grpcClient.ListTargetsAsync, grpcClient.ListTargets, effectiveSettings.ListTargetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTargets);
             Modify_ListTargetsApiCall(ref _callListTargets);
-            _callGetTarget = clientHelper.BuildApiCall<GetTargetRequest, Target>(grpcClient.GetTargetAsync, grpcClient.GetTarget, effectiveSettings.GetTargetSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetTarget = clientHelper.BuildApiCall<GetTargetRequest, Target>("GetTarget", grpcClient.GetTargetAsync, grpcClient.GetTarget, effectiveSettings.GetTargetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTarget);
             Modify_GetTargetApiCall(ref _callGetTarget);
-            _callCreateTarget = clientHelper.BuildApiCall<CreateTargetRequest, lro::Operation>(grpcClient.CreateTargetAsync, grpcClient.CreateTarget, effectiveSettings.CreateTargetSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateTarget = clientHelper.BuildApiCall<CreateTargetRequest, lro::Operation>("CreateTarget", grpcClient.CreateTargetAsync, grpcClient.CreateTarget, effectiveSettings.CreateTargetSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTarget);
             Modify_CreateTargetApiCall(ref _callCreateTarget);
-            _callUpdateTarget = clientHelper.BuildApiCall<UpdateTargetRequest, lro::Operation>(grpcClient.UpdateTargetAsync, grpcClient.UpdateTarget, effectiveSettings.UpdateTargetSettings).WithGoogleRequestParam("target.name", request => request.Target?.Name);
+            _callUpdateTarget = clientHelper.BuildApiCall<UpdateTargetRequest, lro::Operation>("UpdateTarget", grpcClient.UpdateTargetAsync, grpcClient.UpdateTarget, effectiveSettings.UpdateTargetSettings).WithGoogleRequestParam("target.name", request => request.Target?.Name);
             Modify_ApiCall(ref _callUpdateTarget);
             Modify_UpdateTargetApiCall(ref _callUpdateTarget);
-            _callDeleteTarget = clientHelper.BuildApiCall<DeleteTargetRequest, lro::Operation>(grpcClient.DeleteTargetAsync, grpcClient.DeleteTarget, effectiveSettings.DeleteTargetSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteTarget = clientHelper.BuildApiCall<DeleteTargetRequest, lro::Operation>("DeleteTarget", grpcClient.DeleteTargetAsync, grpcClient.DeleteTarget, effectiveSettings.DeleteTargetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTarget);
             Modify_DeleteTargetApiCall(ref _callDeleteTarget);
-            _callListReleases = clientHelper.BuildApiCall<ListReleasesRequest, ListReleasesResponse>(grpcClient.ListReleasesAsync, grpcClient.ListReleases, effectiveSettings.ListReleasesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListReleases = clientHelper.BuildApiCall<ListReleasesRequest, ListReleasesResponse>("ListReleases", grpcClient.ListReleasesAsync, grpcClient.ListReleases, effectiveSettings.ListReleasesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListReleases);
             Modify_ListReleasesApiCall(ref _callListReleases);
-            _callGetRelease = clientHelper.BuildApiCall<GetReleaseRequest, Release>(grpcClient.GetReleaseAsync, grpcClient.GetRelease, effectiveSettings.GetReleaseSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetRelease = clientHelper.BuildApiCall<GetReleaseRequest, Release>("GetRelease", grpcClient.GetReleaseAsync, grpcClient.GetRelease, effectiveSettings.GetReleaseSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetRelease);
             Modify_GetReleaseApiCall(ref _callGetRelease);
-            _callCreateRelease = clientHelper.BuildApiCall<CreateReleaseRequest, lro::Operation>(grpcClient.CreateReleaseAsync, grpcClient.CreateRelease, effectiveSettings.CreateReleaseSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateRelease = clientHelper.BuildApiCall<CreateReleaseRequest, lro::Operation>("CreateRelease", grpcClient.CreateReleaseAsync, grpcClient.CreateRelease, effectiveSettings.CreateReleaseSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateRelease);
             Modify_CreateReleaseApiCall(ref _callCreateRelease);
-            _callApproveRollout = clientHelper.BuildApiCall<ApproveRolloutRequest, ApproveRolloutResponse>(grpcClient.ApproveRolloutAsync, grpcClient.ApproveRollout, effectiveSettings.ApproveRolloutSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callApproveRollout = clientHelper.BuildApiCall<ApproveRolloutRequest, ApproveRolloutResponse>("ApproveRollout", grpcClient.ApproveRolloutAsync, grpcClient.ApproveRollout, effectiveSettings.ApproveRolloutSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callApproveRollout);
             Modify_ApproveRolloutApiCall(ref _callApproveRollout);
-            _callListRollouts = clientHelper.BuildApiCall<ListRolloutsRequest, ListRolloutsResponse>(grpcClient.ListRolloutsAsync, grpcClient.ListRollouts, effectiveSettings.ListRolloutsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListRollouts = clientHelper.BuildApiCall<ListRolloutsRequest, ListRolloutsResponse>("ListRollouts", grpcClient.ListRolloutsAsync, grpcClient.ListRollouts, effectiveSettings.ListRolloutsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListRollouts);
             Modify_ListRolloutsApiCall(ref _callListRollouts);
-            _callGetRollout = clientHelper.BuildApiCall<GetRolloutRequest, Rollout>(grpcClient.GetRolloutAsync, grpcClient.GetRollout, effectiveSettings.GetRolloutSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetRollout = clientHelper.BuildApiCall<GetRolloutRequest, Rollout>("GetRollout", grpcClient.GetRolloutAsync, grpcClient.GetRollout, effectiveSettings.GetRolloutSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetRollout);
             Modify_GetRolloutApiCall(ref _callGetRollout);
-            _callCreateRollout = clientHelper.BuildApiCall<CreateRolloutRequest, lro::Operation>(grpcClient.CreateRolloutAsync, grpcClient.CreateRollout, effectiveSettings.CreateRolloutSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateRollout = clientHelper.BuildApiCall<CreateRolloutRequest, lro::Operation>("CreateRollout", grpcClient.CreateRolloutAsync, grpcClient.CreateRollout, effectiveSettings.CreateRolloutSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateRollout);
             Modify_CreateRolloutApiCall(ref _callCreateRollout);
-            _callGetConfig = clientHelper.BuildApiCall<GetConfigRequest, Config>(grpcClient.GetConfigAsync, grpcClient.GetConfig, effectiveSettings.GetConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetConfig = clientHelper.BuildApiCall<GetConfigRequest, Config>("GetConfig", grpcClient.GetConfigAsync, grpcClient.GetConfig, effectiveSettings.GetConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetConfig);
             Modify_GetConfigApiCall(ref _callGetConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

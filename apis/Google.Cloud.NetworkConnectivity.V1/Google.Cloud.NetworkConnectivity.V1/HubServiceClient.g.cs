@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -334,9 +334,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
         public HubServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public HubServiceClientBuilder()
+        public HubServiceClientBuilder() : base(HubServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = HubServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref HubServiceClient client);
@@ -363,29 +362,18 @@ namespace Google.Cloud.NetworkConnectivity.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return HubServiceClient.Create(callInvoker, Settings);
+            return HubServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<HubServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return HubServiceClient.Create(callInvoker, Settings);
+            return HubServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => HubServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => HubServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => HubServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>HubService client wrapper, for convenient use.</summary>
@@ -414,19 +402,10 @@ namespace Google.Cloud.NetworkConnectivity.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(HubService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="HubServiceClient"/> using the default credentials, endpoint and
@@ -453,8 +432,9 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="HubServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="HubServiceClient"/>.</returns>
-        internal static HubServiceClient Create(grpccore::CallInvoker callInvoker, HubServiceSettings settings = null)
+        internal static HubServiceClient Create(grpccore::CallInvoker callInvoker, HubServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -463,7 +443,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             HubService.HubServiceClient grpcClient = new HubService.HubServiceClient(callInvoker);
-            return new HubServiceClientImpl(grpcClient, settings);
+            return new HubServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1796,45 +1776,46 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="HubServiceSettings"/> used within this client.</param>
-        public HubServiceClientImpl(HubService.HubServiceClient grpcClient, HubServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public HubServiceClientImpl(HubService.HubServiceClient grpcClient, HubServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             HubServiceSettings effectiveSettings = settings ?? HubServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateHubOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateHubOperationsSettings);
-            UpdateHubOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateHubOperationsSettings);
-            DeleteHubOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteHubOperationsSettings);
-            CreateSpokeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSpokeOperationsSettings);
-            UpdateSpokeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateSpokeOperationsSettings);
-            DeleteSpokeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSpokeOperationsSettings);
-            _callListHubs = clientHelper.BuildApiCall<ListHubsRequest, ListHubsResponse>(grpcClient.ListHubsAsync, grpcClient.ListHubs, effectiveSettings.ListHubsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateHubOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateHubOperationsSettings, logger);
+            UpdateHubOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateHubOperationsSettings, logger);
+            DeleteHubOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteHubOperationsSettings, logger);
+            CreateSpokeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSpokeOperationsSettings, logger);
+            UpdateSpokeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateSpokeOperationsSettings, logger);
+            DeleteSpokeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSpokeOperationsSettings, logger);
+            _callListHubs = clientHelper.BuildApiCall<ListHubsRequest, ListHubsResponse>("ListHubs", grpcClient.ListHubsAsync, grpcClient.ListHubs, effectiveSettings.ListHubsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListHubs);
             Modify_ListHubsApiCall(ref _callListHubs);
-            _callGetHub = clientHelper.BuildApiCall<GetHubRequest, Hub>(grpcClient.GetHubAsync, grpcClient.GetHub, effectiveSettings.GetHubSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetHub = clientHelper.BuildApiCall<GetHubRequest, Hub>("GetHub", grpcClient.GetHubAsync, grpcClient.GetHub, effectiveSettings.GetHubSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetHub);
             Modify_GetHubApiCall(ref _callGetHub);
-            _callCreateHub = clientHelper.BuildApiCall<CreateHubRequest, lro::Operation>(grpcClient.CreateHubAsync, grpcClient.CreateHub, effectiveSettings.CreateHubSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateHub = clientHelper.BuildApiCall<CreateHubRequest, lro::Operation>("CreateHub", grpcClient.CreateHubAsync, grpcClient.CreateHub, effectiveSettings.CreateHubSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateHub);
             Modify_CreateHubApiCall(ref _callCreateHub);
-            _callUpdateHub = clientHelper.BuildApiCall<UpdateHubRequest, lro::Operation>(grpcClient.UpdateHubAsync, grpcClient.UpdateHub, effectiveSettings.UpdateHubSettings).WithGoogleRequestParam("hub.name", request => request.Hub?.Name);
+            _callUpdateHub = clientHelper.BuildApiCall<UpdateHubRequest, lro::Operation>("UpdateHub", grpcClient.UpdateHubAsync, grpcClient.UpdateHub, effectiveSettings.UpdateHubSettings).WithGoogleRequestParam("hub.name", request => request.Hub?.Name);
             Modify_ApiCall(ref _callUpdateHub);
             Modify_UpdateHubApiCall(ref _callUpdateHub);
-            _callDeleteHub = clientHelper.BuildApiCall<DeleteHubRequest, lro::Operation>(grpcClient.DeleteHubAsync, grpcClient.DeleteHub, effectiveSettings.DeleteHubSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteHub = clientHelper.BuildApiCall<DeleteHubRequest, lro::Operation>("DeleteHub", grpcClient.DeleteHubAsync, grpcClient.DeleteHub, effectiveSettings.DeleteHubSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteHub);
             Modify_DeleteHubApiCall(ref _callDeleteHub);
-            _callListSpokes = clientHelper.BuildApiCall<ListSpokesRequest, ListSpokesResponse>(grpcClient.ListSpokesAsync, grpcClient.ListSpokes, effectiveSettings.ListSpokesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListSpokes = clientHelper.BuildApiCall<ListSpokesRequest, ListSpokesResponse>("ListSpokes", grpcClient.ListSpokesAsync, grpcClient.ListSpokes, effectiveSettings.ListSpokesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSpokes);
             Modify_ListSpokesApiCall(ref _callListSpokes);
-            _callGetSpoke = clientHelper.BuildApiCall<GetSpokeRequest, Spoke>(grpcClient.GetSpokeAsync, grpcClient.GetSpoke, effectiveSettings.GetSpokeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetSpoke = clientHelper.BuildApiCall<GetSpokeRequest, Spoke>("GetSpoke", grpcClient.GetSpokeAsync, grpcClient.GetSpoke, effectiveSettings.GetSpokeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSpoke);
             Modify_GetSpokeApiCall(ref _callGetSpoke);
-            _callCreateSpoke = clientHelper.BuildApiCall<CreateSpokeRequest, lro::Operation>(grpcClient.CreateSpokeAsync, grpcClient.CreateSpoke, effectiveSettings.CreateSpokeSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateSpoke = clientHelper.BuildApiCall<CreateSpokeRequest, lro::Operation>("CreateSpoke", grpcClient.CreateSpokeAsync, grpcClient.CreateSpoke, effectiveSettings.CreateSpokeSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSpoke);
             Modify_CreateSpokeApiCall(ref _callCreateSpoke);
-            _callUpdateSpoke = clientHelper.BuildApiCall<UpdateSpokeRequest, lro::Operation>(grpcClient.UpdateSpokeAsync, grpcClient.UpdateSpoke, effectiveSettings.UpdateSpokeSettings).WithGoogleRequestParam("spoke.name", request => request.Spoke?.Name);
+            _callUpdateSpoke = clientHelper.BuildApiCall<UpdateSpokeRequest, lro::Operation>("UpdateSpoke", grpcClient.UpdateSpokeAsync, grpcClient.UpdateSpoke, effectiveSettings.UpdateSpokeSettings).WithGoogleRequestParam("spoke.name", request => request.Spoke?.Name);
             Modify_ApiCall(ref _callUpdateSpoke);
             Modify_UpdateSpokeApiCall(ref _callUpdateSpoke);
-            _callDeleteSpoke = clientHelper.BuildApiCall<DeleteSpokeRequest, lro::Operation>(grpcClient.DeleteSpokeAsync, grpcClient.DeleteSpoke, effectiveSettings.DeleteSpokeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteSpoke = clientHelper.BuildApiCall<DeleteSpokeRequest, lro::Operation>("DeleteSpoke", grpcClient.DeleteSpokeAsync, grpcClient.DeleteSpoke, effectiveSettings.DeleteSpokeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteSpoke);
             Modify_DeleteSpokeApiCall(ref _callDeleteSpoke);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

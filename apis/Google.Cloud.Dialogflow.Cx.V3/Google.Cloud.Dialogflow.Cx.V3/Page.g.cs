@@ -222,7 +222,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Required. The human-readable name of the page, unique within the agent.
+    /// Required. The human-readable name of the page, unique within the flow.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

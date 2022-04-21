@@ -17,11 +17,11 @@
 using ga = Google.Api;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -232,9 +232,8 @@ namespace Google.Cloud.Retail.V2
         public UserEventServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public UserEventServiceClientBuilder()
+        public UserEventServiceClientBuilder() : base(UserEventServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = UserEventServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref UserEventServiceClient client);
@@ -261,29 +260,18 @@ namespace Google.Cloud.Retail.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return UserEventServiceClient.Create(callInvoker, Settings);
+            return UserEventServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<UserEventServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return UserEventServiceClient.Create(callInvoker, Settings);
+            return UserEventServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => UserEventServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => UserEventServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => UserEventServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>UserEventService client wrapper, for convenient use.</summary>
@@ -310,19 +298,10 @@ namespace Google.Cloud.Retail.V2
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(UserEventService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="UserEventServiceClient"/> using the default credentials, endpoint and
@@ -349,8 +328,9 @@ namespace Google.Cloud.Retail.V2
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="UserEventServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="UserEventServiceClient"/>.</returns>
-        internal static UserEventServiceClient Create(grpccore::CallInvoker callInvoker, UserEventServiceSettings settings = null)
+        internal static UserEventServiceClient Create(grpccore::CallInvoker callInvoker, UserEventServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -359,7 +339,7 @@ namespace Google.Cloud.Retail.V2
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             UserEventService.UserEventServiceClient grpcClient = new UserEventService.UserEventServiceClient(callInvoker);
-            return new UserEventServiceClientImpl(grpcClient, settings);
+            return new UserEventServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -673,27 +653,28 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="UserEventServiceSettings"/> used within this client.</param>
-        public UserEventServiceClientImpl(UserEventService.UserEventServiceClient grpcClient, UserEventServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public UserEventServiceClientImpl(UserEventService.UserEventServiceClient grpcClient, UserEventServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             UserEventServiceSettings effectiveSettings = settings ?? UserEventServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            PurgeUserEventsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PurgeUserEventsOperationsSettings);
-            ImportUserEventsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportUserEventsOperationsSettings);
-            RejoinUserEventsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RejoinUserEventsOperationsSettings);
-            _callWriteUserEvent = clientHelper.BuildApiCall<WriteUserEventRequest, UserEvent>(grpcClient.WriteUserEventAsync, grpcClient.WriteUserEvent, effectiveSettings.WriteUserEventSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            PurgeUserEventsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PurgeUserEventsOperationsSettings, logger);
+            ImportUserEventsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportUserEventsOperationsSettings, logger);
+            RejoinUserEventsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RejoinUserEventsOperationsSettings, logger);
+            _callWriteUserEvent = clientHelper.BuildApiCall<WriteUserEventRequest, UserEvent>("WriteUserEvent", grpcClient.WriteUserEventAsync, grpcClient.WriteUserEvent, effectiveSettings.WriteUserEventSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callWriteUserEvent);
             Modify_WriteUserEventApiCall(ref _callWriteUserEvent);
-            _callCollectUserEvent = clientHelper.BuildApiCall<CollectUserEventRequest, ga::HttpBody>(grpcClient.CollectUserEventAsync, grpcClient.CollectUserEvent, effectiveSettings.CollectUserEventSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCollectUserEvent = clientHelper.BuildApiCall<CollectUserEventRequest, ga::HttpBody>("CollectUserEvent", grpcClient.CollectUserEventAsync, grpcClient.CollectUserEvent, effectiveSettings.CollectUserEventSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCollectUserEvent);
             Modify_CollectUserEventApiCall(ref _callCollectUserEvent);
-            _callPurgeUserEvents = clientHelper.BuildApiCall<PurgeUserEventsRequest, lro::Operation>(grpcClient.PurgeUserEventsAsync, grpcClient.PurgeUserEvents, effectiveSettings.PurgeUserEventsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callPurgeUserEvents = clientHelper.BuildApiCall<PurgeUserEventsRequest, lro::Operation>("PurgeUserEvents", grpcClient.PurgeUserEventsAsync, grpcClient.PurgeUserEvents, effectiveSettings.PurgeUserEventsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callPurgeUserEvents);
             Modify_PurgeUserEventsApiCall(ref _callPurgeUserEvents);
-            _callImportUserEvents = clientHelper.BuildApiCall<ImportUserEventsRequest, lro::Operation>(grpcClient.ImportUserEventsAsync, grpcClient.ImportUserEvents, effectiveSettings.ImportUserEventsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callImportUserEvents = clientHelper.BuildApiCall<ImportUserEventsRequest, lro::Operation>("ImportUserEvents", grpcClient.ImportUserEventsAsync, grpcClient.ImportUserEvents, effectiveSettings.ImportUserEventsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callImportUserEvents);
             Modify_ImportUserEventsApiCall(ref _callImportUserEvents);
-            _callRejoinUserEvents = clientHelper.BuildApiCall<RejoinUserEventsRequest, lro::Operation>(grpcClient.RejoinUserEventsAsync, grpcClient.RejoinUserEvents, effectiveSettings.RejoinUserEventsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callRejoinUserEvents = clientHelper.BuildApiCall<RejoinUserEventsRequest, lro::Operation>("RejoinUserEvents", grpcClient.RejoinUserEventsAsync, grpcClient.RejoinUserEvents, effectiveSettings.RejoinUserEventsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callRejoinUserEvents);
             Modify_RejoinUserEventsApiCall(ref _callRejoinUserEvents);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

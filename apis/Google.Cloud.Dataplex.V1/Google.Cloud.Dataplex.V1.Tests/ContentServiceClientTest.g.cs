@@ -57,7 +57,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Notebook = new Content.Types.Notebook(),
             };
             mockGrpcClient.Setup(x => x.CreateContent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null);
+            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null, null);
             Content response = client.CreateContent(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -93,7 +93,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Notebook = new Content.Types.Notebook(),
             };
             mockGrpcClient.Setup(x => x.CreateContentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Content>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null);
+            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null, null);
             Content responseCallSettings = await client.CreateContentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Content responseCancellationToken = await client.CreateContentAsync(request, st::CancellationToken.None);
@@ -130,7 +130,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Notebook = new Content.Types.Notebook(),
             };
             mockGrpcClient.Setup(x => x.CreateContent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null);
+            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null, null);
             Content response = client.CreateContent(request.Parent, request.Content);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -165,7 +165,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Notebook = new Content.Types.Notebook(),
             };
             mockGrpcClient.Setup(x => x.CreateContentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Content>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null);
+            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null, null);
             Content responseCallSettings = await client.CreateContentAsync(request.Parent, request.Content, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Content responseCancellationToken = await client.CreateContentAsync(request.Parent, request.Content, st::CancellationToken.None);
@@ -202,7 +202,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Notebook = new Content.Types.Notebook(),
             };
             mockGrpcClient.Setup(x => x.CreateContent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null);
+            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null, null);
             Content response = client.CreateContent(request.ParentAsLakeName, request.Content);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -237,7 +237,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Notebook = new Content.Types.Notebook(),
             };
             mockGrpcClient.Setup(x => x.CreateContentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Content>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null);
+            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null, null);
             Content responseCallSettings = await client.CreateContentAsync(request.ParentAsLakeName, request.Content, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Content responseCancellationToken = await client.CreateContentAsync(request.ParentAsLakeName, request.Content, st::CancellationToken.None);
@@ -275,7 +275,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Notebook = new Content.Types.Notebook(),
             };
             mockGrpcClient.Setup(x => x.UpdateContent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null);
+            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null, null);
             Content response = client.UpdateContent(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -311,7 +311,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Notebook = new Content.Types.Notebook(),
             };
             mockGrpcClient.Setup(x => x.UpdateContentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Content>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null);
+            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null, null);
             Content responseCallSettings = await client.UpdateContentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Content responseCancellationToken = await client.UpdateContentAsync(request, st::CancellationToken.None);
@@ -348,7 +348,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Notebook = new Content.Types.Notebook(),
             };
             mockGrpcClient.Setup(x => x.UpdateContent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null);
+            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null, null);
             Content response = client.UpdateContent(request.Content, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -383,7 +383,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Notebook = new Content.Types.Notebook(),
             };
             mockGrpcClient.Setup(x => x.UpdateContentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Content>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null);
+            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null, null);
             Content responseCallSettings = await client.UpdateContentAsync(request.Content, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Content responseCancellationToken = await client.UpdateContentAsync(request.Content, request.UpdateMask, st::CancellationToken.None);
@@ -401,7 +401,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteContent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null);
+            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteContent(request);
             mockGrpcClient.VerifyAll();
         }
@@ -416,7 +416,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteContentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null);
+            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteContentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteContentAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -432,7 +432,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteContent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null);
+            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteContent(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -447,7 +447,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteContentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null);
+            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteContentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteContentAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -463,7 +463,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteContent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null);
+            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteContent(request.ContentName);
             mockGrpcClient.VerifyAll();
         }
@@ -478,7 +478,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteContentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null);
+            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteContentAsync(request.ContentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteContentAsync(request.ContentName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -513,7 +513,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Notebook = new Content.Types.Notebook(),
             };
             mockGrpcClient.Setup(x => x.GetContent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null);
+            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null, null);
             Content response = client.GetContent(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -548,7 +548,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Notebook = new Content.Types.Notebook(),
             };
             mockGrpcClient.Setup(x => x.GetContentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Content>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null);
+            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null, null);
             Content responseCallSettings = await client.GetContentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Content responseCancellationToken = await client.GetContentAsync(request, st::CancellationToken.None);
@@ -584,7 +584,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Notebook = new Content.Types.Notebook(),
             };
             mockGrpcClient.Setup(x => x.GetContent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null);
+            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null, null);
             Content response = client.GetContent(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -618,7 +618,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Notebook = new Content.Types.Notebook(),
             };
             mockGrpcClient.Setup(x => x.GetContentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Content>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null);
+            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null, null);
             Content responseCallSettings = await client.GetContentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Content responseCancellationToken = await client.GetContentAsync(request.Name, st::CancellationToken.None);
@@ -654,7 +654,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Notebook = new Content.Types.Notebook(),
             };
             mockGrpcClient.Setup(x => x.GetContent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null);
+            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null, null);
             Content response = client.GetContent(request.ContentName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -688,7 +688,7 @@ namespace Google.Cloud.Dataplex.V1.Tests
                 Notebook = new Content.Types.Notebook(),
             };
             mockGrpcClient.Setup(x => x.GetContentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Content>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null);
+            ContentServiceClient client = new ContentServiceClientImpl(mockGrpcClient.Object, null, null);
             Content responseCallSettings = await client.GetContentAsync(request.ContentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Content responseCancellationToken = await client.GetContentAsync(request.ContentName, st::CancellationToken.None);

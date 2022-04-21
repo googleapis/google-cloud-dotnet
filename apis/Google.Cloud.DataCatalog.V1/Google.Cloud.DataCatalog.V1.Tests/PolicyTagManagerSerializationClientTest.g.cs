@@ -49,7 +49,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ReplaceTaxonomy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerSerializationClient client = new PolicyTagManagerSerializationClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerSerializationClient client = new PolicyTagManagerSerializationClientImpl(mockGrpcClient.Object, null, null);
             Taxonomy response = client.ReplaceTaxonomy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -77,7 +77,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ReplaceTaxonomyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Taxonomy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerSerializationClient client = new PolicyTagManagerSerializationClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerSerializationClient client = new PolicyTagManagerSerializationClientImpl(mockGrpcClient.Object, null, null);
             Taxonomy responseCallSettings = await client.ReplaceTaxonomyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Taxonomy responseCancellationToken = await client.ReplaceTaxonomyAsync(request, st::CancellationToken.None);
@@ -100,7 +100,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 Taxonomies = { new Taxonomy(), },
             };
             mockGrpcClient.Setup(x => x.ImportTaxonomies(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerSerializationClient client = new PolicyTagManagerSerializationClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerSerializationClient client = new PolicyTagManagerSerializationClientImpl(mockGrpcClient.Object, null, null);
             ImportTaxonomiesResponse response = client.ImportTaxonomies(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -121,7 +121,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 Taxonomies = { new Taxonomy(), },
             };
             mockGrpcClient.Setup(x => x.ImportTaxonomiesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportTaxonomiesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerSerializationClient client = new PolicyTagManagerSerializationClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerSerializationClient client = new PolicyTagManagerSerializationClientImpl(mockGrpcClient.Object, null, null);
             ImportTaxonomiesResponse responseCallSettings = await client.ImportTaxonomiesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ImportTaxonomiesResponse responseCancellationToken = await client.ImportTaxonomiesAsync(request, st::CancellationToken.None);
@@ -150,7 +150,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ExportTaxonomies(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PolicyTagManagerSerializationClient client = new PolicyTagManagerSerializationClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerSerializationClient client = new PolicyTagManagerSerializationClientImpl(mockGrpcClient.Object, null, null);
             ExportTaxonomiesResponse response = client.ExportTaxonomies(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -177,7 +177,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.ExportTaxonomiesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ExportTaxonomiesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PolicyTagManagerSerializationClient client = new PolicyTagManagerSerializationClientImpl(mockGrpcClient.Object, null);
+            PolicyTagManagerSerializationClient client = new PolicyTagManagerSerializationClientImpl(mockGrpcClient.Object, null, null);
             ExportTaxonomiesResponse responseCallSettings = await client.ExportTaxonomiesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ExportTaxonomiesResponse responseCancellationToken = await client.ExportTaxonomiesAsync(request, st::CancellationToken.None);

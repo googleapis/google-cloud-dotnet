@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -337,9 +337,8 @@ namespace Google.Cloud.Asset.V1
         public AssetServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public AssetServiceClientBuilder()
+        public AssetServiceClientBuilder() : base(AssetServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = AssetServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref AssetServiceClient client);
@@ -366,29 +365,18 @@ namespace Google.Cloud.Asset.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AssetServiceClient.Create(callInvoker, Settings);
+            return AssetServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<AssetServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AssetServiceClient.Create(callInvoker, Settings);
+            return AssetServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => AssetServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => AssetServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => AssetServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>AssetService client wrapper, for convenient use.</summary>
@@ -415,19 +403,10 @@ namespace Google.Cloud.Asset.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(AssetService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="AssetServiceClient"/> using the default credentials, endpoint and
@@ -454,8 +433,9 @@ namespace Google.Cloud.Asset.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="AssetServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="AssetServiceClient"/>.</returns>
-        internal static AssetServiceClient Create(grpccore::CallInvoker callInvoker, AssetServiceSettings settings = null)
+        internal static AssetServiceClient Create(grpccore::CallInvoker callInvoker, AssetServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -464,7 +444,7 @@ namespace Google.Cloud.Asset.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             AssetService.AssetServiceClient grpcClient = new AssetService.AssetServiceClient(callInvoker);
-            return new AssetServiceClientImpl(grpcClient, settings);
+            return new AssetServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1819,50 +1799,51 @@ namespace Google.Cloud.Asset.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="AssetServiceSettings"/> used within this client.</param>
-        public AssetServiceClientImpl(AssetService.AssetServiceClient grpcClient, AssetServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public AssetServiceClientImpl(AssetService.AssetServiceClient grpcClient, AssetServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             AssetServiceSettings effectiveSettings = settings ?? AssetServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            ExportAssetsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportAssetsOperationsSettings);
-            AnalyzeIamPolicyLongrunningOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AnalyzeIamPolicyLongrunningOperationsSettings);
-            _callExportAssets = clientHelper.BuildApiCall<ExportAssetsRequest, lro::Operation>(grpcClient.ExportAssetsAsync, grpcClient.ExportAssets, effectiveSettings.ExportAssetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            ExportAssetsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportAssetsOperationsSettings, logger);
+            AnalyzeIamPolicyLongrunningOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AnalyzeIamPolicyLongrunningOperationsSettings, logger);
+            _callExportAssets = clientHelper.BuildApiCall<ExportAssetsRequest, lro::Operation>("ExportAssets", grpcClient.ExportAssetsAsync, grpcClient.ExportAssets, effectiveSettings.ExportAssetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callExportAssets);
             Modify_ExportAssetsApiCall(ref _callExportAssets);
-            _callListAssets = clientHelper.BuildApiCall<ListAssetsRequest, ListAssetsResponse>(grpcClient.ListAssetsAsync, grpcClient.ListAssets, effectiveSettings.ListAssetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListAssets = clientHelper.BuildApiCall<ListAssetsRequest, ListAssetsResponse>("ListAssets", grpcClient.ListAssetsAsync, grpcClient.ListAssets, effectiveSettings.ListAssetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAssets);
             Modify_ListAssetsApiCall(ref _callListAssets);
-            _callBatchGetAssetsHistory = clientHelper.BuildApiCall<BatchGetAssetsHistoryRequest, BatchGetAssetsHistoryResponse>(grpcClient.BatchGetAssetsHistoryAsync, grpcClient.BatchGetAssetsHistory, effectiveSettings.BatchGetAssetsHistorySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callBatchGetAssetsHistory = clientHelper.BuildApiCall<BatchGetAssetsHistoryRequest, BatchGetAssetsHistoryResponse>("BatchGetAssetsHistory", grpcClient.BatchGetAssetsHistoryAsync, grpcClient.BatchGetAssetsHistory, effectiveSettings.BatchGetAssetsHistorySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchGetAssetsHistory);
             Modify_BatchGetAssetsHistoryApiCall(ref _callBatchGetAssetsHistory);
-            _callCreateFeed = clientHelper.BuildApiCall<CreateFeedRequest, Feed>(grpcClient.CreateFeedAsync, grpcClient.CreateFeed, effectiveSettings.CreateFeedSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateFeed = clientHelper.BuildApiCall<CreateFeedRequest, Feed>("CreateFeed", grpcClient.CreateFeedAsync, grpcClient.CreateFeed, effectiveSettings.CreateFeedSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateFeed);
             Modify_CreateFeedApiCall(ref _callCreateFeed);
-            _callGetFeed = clientHelper.BuildApiCall<GetFeedRequest, Feed>(grpcClient.GetFeedAsync, grpcClient.GetFeed, effectiveSettings.GetFeedSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetFeed = clientHelper.BuildApiCall<GetFeedRequest, Feed>("GetFeed", grpcClient.GetFeedAsync, grpcClient.GetFeed, effectiveSettings.GetFeedSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetFeed);
             Modify_GetFeedApiCall(ref _callGetFeed);
-            _callListFeeds = clientHelper.BuildApiCall<ListFeedsRequest, ListFeedsResponse>(grpcClient.ListFeedsAsync, grpcClient.ListFeeds, effectiveSettings.ListFeedsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListFeeds = clientHelper.BuildApiCall<ListFeedsRequest, ListFeedsResponse>("ListFeeds", grpcClient.ListFeedsAsync, grpcClient.ListFeeds, effectiveSettings.ListFeedsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListFeeds);
             Modify_ListFeedsApiCall(ref _callListFeeds);
-            _callUpdateFeed = clientHelper.BuildApiCall<UpdateFeedRequest, Feed>(grpcClient.UpdateFeedAsync, grpcClient.UpdateFeed, effectiveSettings.UpdateFeedSettings).WithGoogleRequestParam("feed.name", request => request.Feed?.Name);
+            _callUpdateFeed = clientHelper.BuildApiCall<UpdateFeedRequest, Feed>("UpdateFeed", grpcClient.UpdateFeedAsync, grpcClient.UpdateFeed, effectiveSettings.UpdateFeedSettings).WithGoogleRequestParam("feed.name", request => request.Feed?.Name);
             Modify_ApiCall(ref _callUpdateFeed);
             Modify_UpdateFeedApiCall(ref _callUpdateFeed);
-            _callDeleteFeed = clientHelper.BuildApiCall<DeleteFeedRequest, wkt::Empty>(grpcClient.DeleteFeedAsync, grpcClient.DeleteFeed, effectiveSettings.DeleteFeedSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteFeed = clientHelper.BuildApiCall<DeleteFeedRequest, wkt::Empty>("DeleteFeed", grpcClient.DeleteFeedAsync, grpcClient.DeleteFeed, effectiveSettings.DeleteFeedSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteFeed);
             Modify_DeleteFeedApiCall(ref _callDeleteFeed);
-            _callSearchAllResources = clientHelper.BuildApiCall<SearchAllResourcesRequest, SearchAllResourcesResponse>(grpcClient.SearchAllResourcesAsync, grpcClient.SearchAllResources, effectiveSettings.SearchAllResourcesSettings).WithGoogleRequestParam("scope", request => request.Scope);
+            _callSearchAllResources = clientHelper.BuildApiCall<SearchAllResourcesRequest, SearchAllResourcesResponse>("SearchAllResources", grpcClient.SearchAllResourcesAsync, grpcClient.SearchAllResources, effectiveSettings.SearchAllResourcesSettings).WithGoogleRequestParam("scope", request => request.Scope);
             Modify_ApiCall(ref _callSearchAllResources);
             Modify_SearchAllResourcesApiCall(ref _callSearchAllResources);
-            _callSearchAllIamPolicies = clientHelper.BuildApiCall<SearchAllIamPoliciesRequest, SearchAllIamPoliciesResponse>(grpcClient.SearchAllIamPoliciesAsync, grpcClient.SearchAllIamPolicies, effectiveSettings.SearchAllIamPoliciesSettings).WithGoogleRequestParam("scope", request => request.Scope);
+            _callSearchAllIamPolicies = clientHelper.BuildApiCall<SearchAllIamPoliciesRequest, SearchAllIamPoliciesResponse>("SearchAllIamPolicies", grpcClient.SearchAllIamPoliciesAsync, grpcClient.SearchAllIamPolicies, effectiveSettings.SearchAllIamPoliciesSettings).WithGoogleRequestParam("scope", request => request.Scope);
             Modify_ApiCall(ref _callSearchAllIamPolicies);
             Modify_SearchAllIamPoliciesApiCall(ref _callSearchAllIamPolicies);
-            _callAnalyzeIamPolicy = clientHelper.BuildApiCall<AnalyzeIamPolicyRequest, AnalyzeIamPolicyResponse>(grpcClient.AnalyzeIamPolicyAsync, grpcClient.AnalyzeIamPolicy, effectiveSettings.AnalyzeIamPolicySettings).WithGoogleRequestParam("analysis_query.scope", request => request.AnalysisQuery?.Scope);
+            _callAnalyzeIamPolicy = clientHelper.BuildApiCall<AnalyzeIamPolicyRequest, AnalyzeIamPolicyResponse>("AnalyzeIamPolicy", grpcClient.AnalyzeIamPolicyAsync, grpcClient.AnalyzeIamPolicy, effectiveSettings.AnalyzeIamPolicySettings).WithGoogleRequestParam("analysis_query.scope", request => request.AnalysisQuery?.Scope);
             Modify_ApiCall(ref _callAnalyzeIamPolicy);
             Modify_AnalyzeIamPolicyApiCall(ref _callAnalyzeIamPolicy);
-            _callAnalyzeIamPolicyLongrunning = clientHelper.BuildApiCall<AnalyzeIamPolicyLongrunningRequest, lro::Operation>(grpcClient.AnalyzeIamPolicyLongrunningAsync, grpcClient.AnalyzeIamPolicyLongrunning, effectiveSettings.AnalyzeIamPolicyLongrunningSettings).WithGoogleRequestParam("analysis_query.scope", request => request.AnalysisQuery?.Scope);
+            _callAnalyzeIamPolicyLongrunning = clientHelper.BuildApiCall<AnalyzeIamPolicyLongrunningRequest, lro::Operation>("AnalyzeIamPolicyLongrunning", grpcClient.AnalyzeIamPolicyLongrunningAsync, grpcClient.AnalyzeIamPolicyLongrunning, effectiveSettings.AnalyzeIamPolicyLongrunningSettings).WithGoogleRequestParam("analysis_query.scope", request => request.AnalysisQuery?.Scope);
             Modify_ApiCall(ref _callAnalyzeIamPolicyLongrunning);
             Modify_AnalyzeIamPolicyLongrunningApiCall(ref _callAnalyzeIamPolicyLongrunning);
-            _callAnalyzeMove = clientHelper.BuildApiCall<AnalyzeMoveRequest, AnalyzeMoveResponse>(grpcClient.AnalyzeMoveAsync, grpcClient.AnalyzeMove, effectiveSettings.AnalyzeMoveSettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callAnalyzeMove = clientHelper.BuildApiCall<AnalyzeMoveRequest, AnalyzeMoveResponse>("AnalyzeMove", grpcClient.AnalyzeMoveAsync, grpcClient.AnalyzeMove, effectiveSettings.AnalyzeMoveSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callAnalyzeMove);
             Modify_AnalyzeMoveApiCall(ref _callAnalyzeMove);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

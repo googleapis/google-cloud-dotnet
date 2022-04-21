@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -62,6 +62,7 @@ namespace Google.Cloud.Notebooks.V1
             UpdateShieldedInstanceConfigOperationsSettings = existing.UpdateShieldedInstanceConfigOperationsSettings.Clone();
             SetInstanceLabelsSettings = existing.SetInstanceLabelsSettings;
             SetInstanceLabelsOperationsSettings = existing.SetInstanceLabelsOperationsSettings.Clone();
+            UpdateInstanceMetadataItemsSettings = existing.UpdateInstanceMetadataItemsSettings;
             DeleteInstanceSettings = existing.DeleteInstanceSettings;
             DeleteInstanceOperationsSettings = existing.DeleteInstanceOperationsSettings.Clone();
             StartInstanceSettings = existing.StartInstanceSettings;
@@ -342,6 +343,25 @@ namespace Google.Cloud.Notebooks.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NotebookServiceClient.UpdateInstanceMetadataItems</c> and
+        /// <c>NotebookServiceClient.UpdateInstanceMetadataItemsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateInstanceMetadataItemsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -912,9 +932,8 @@ namespace Google.Cloud.Notebooks.V1
         public NotebookServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public NotebookServiceClientBuilder()
+        public NotebookServiceClientBuilder() : base(NotebookServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = NotebookServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref NotebookServiceClient client);
@@ -941,29 +960,18 @@ namespace Google.Cloud.Notebooks.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return NotebookServiceClient.Create(callInvoker, Settings);
+            return NotebookServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<NotebookServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return NotebookServiceClient.Create(callInvoker, Settings);
+            return NotebookServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => NotebookServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => NotebookServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => NotebookServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>NotebookService client wrapper, for convenient use.</summary>
@@ -990,19 +998,10 @@ namespace Google.Cloud.Notebooks.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(NotebookService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="NotebookServiceClient"/> using the default credentials, endpoint and
@@ -1029,8 +1028,9 @@ namespace Google.Cloud.Notebooks.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="NotebookServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="NotebookServiceClient"/>.</returns>
-        internal static NotebookServiceClient Create(grpccore::CallInvoker callInvoker, NotebookServiceSettings settings = null)
+        internal static NotebookServiceClient Create(grpccore::CallInvoker callInvoker, NotebookServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -1039,7 +1039,7 @@ namespace Google.Cloud.Notebooks.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             NotebookService.NotebookServiceClient grpcClient = new NotebookService.NotebookServiceClient(callInvoker);
-            return new NotebookServiceClientImpl(grpcClient, settings);
+            return new NotebookServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1643,6 +1643,33 @@ namespace Google.Cloud.Notebooks.V1
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> PollOnceSetInstanceLabelsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<Instance, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetInstanceLabelsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Add/update metadata items for an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UpdateInstanceMetadataItemsResponse UpdateInstanceMetadataItems(UpdateInstanceMetadataItemsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Add/update metadata items for an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UpdateInstanceMetadataItemsResponse> UpdateInstanceMetadataItemsAsync(UpdateInstanceMetadataItemsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Add/update metadata items for an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UpdateInstanceMetadataItemsResponse> UpdateInstanceMetadataItemsAsync(UpdateInstanceMetadataItemsRequest request, st::CancellationToken cancellationToken) =>
+            UpdateInstanceMetadataItemsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a single Instance.
@@ -3584,7 +3611,7 @@ namespace Google.Cloud.Notebooks.V1
             DeleteExecutionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new Scheduled Notebook in a given project and location.
+        /// Creates a new Execution in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3593,7 +3620,7 @@ namespace Google.Cloud.Notebooks.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new Scheduled Notebook in a given project and location.
+        /// Creates a new Execution in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3602,7 +3629,7 @@ namespace Google.Cloud.Notebooks.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new Scheduled Notebook in a given project and location.
+        /// Creates a new Execution in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3637,7 +3664,7 @@ namespace Google.Cloud.Notebooks.V1
             lro::Operation<Execution, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateExecutionOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a new Scheduled Notebook in a given project and location.
+        /// Creates a new Execution in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. Format:
@@ -3660,7 +3687,7 @@ namespace Google.Cloud.Notebooks.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Scheduled Notebook in a given project and location.
+        /// Creates a new Execution in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. Format:
@@ -3683,7 +3710,7 @@ namespace Google.Cloud.Notebooks.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Scheduled Notebook in a given project and location.
+        /// Creates a new Execution in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. Format:
@@ -3701,7 +3728,7 @@ namespace Google.Cloud.Notebooks.V1
             CreateExecutionAsync(parent, execution, executionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new Scheduled Notebook in a given project and location.
+        /// Creates a new Execution in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. Format:
@@ -3724,7 +3751,7 @@ namespace Google.Cloud.Notebooks.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Scheduled Notebook in a given project and location.
+        /// Creates a new Execution in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. Format:
@@ -3747,7 +3774,7 @@ namespace Google.Cloud.Notebooks.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Scheduled Notebook in a given project and location.
+        /// Creates a new Execution in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. Format:
@@ -3788,6 +3815,8 @@ namespace Google.Cloud.Notebooks.V1
         private readonly gaxgrpc::ApiCall<UpdateShieldedInstanceConfigRequest, lro::Operation> _callUpdateShieldedInstanceConfig;
 
         private readonly gaxgrpc::ApiCall<SetInstanceLabelsRequest, lro::Operation> _callSetInstanceLabels;
+
+        private readonly gaxgrpc::ApiCall<UpdateInstanceMetadataItemsRequest, UpdateInstanceMetadataItemsResponse> _callUpdateInstanceMetadataItems;
 
         private readonly gaxgrpc::ApiCall<DeleteInstanceRequest, lro::Operation> _callDeleteInstance;
 
@@ -3840,127 +3869,131 @@ namespace Google.Cloud.Notebooks.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="NotebookServiceSettings"/> used within this client.</param>
-        public NotebookServiceClientImpl(NotebookService.NotebookServiceClient grpcClient, NotebookServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public NotebookServiceClientImpl(NotebookService.NotebookServiceClient grpcClient, NotebookServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             NotebookServiceSettings effectiveSettings = settings ?? NotebookServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstanceOperationsSettings);
-            RegisterInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RegisterInstanceOperationsSettings);
-            SetInstanceAcceleratorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetInstanceAcceleratorOperationsSettings);
-            SetInstanceMachineTypeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetInstanceMachineTypeOperationsSettings);
-            UpdateInstanceConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateInstanceConfigOperationsSettings);
-            UpdateShieldedInstanceConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateShieldedInstanceConfigOperationsSettings);
-            SetInstanceLabelsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetInstanceLabelsOperationsSettings);
-            DeleteInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteInstanceOperationsSettings);
-            StartInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartInstanceOperationsSettings);
-            StopInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StopInstanceOperationsSettings);
-            ResetInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ResetInstanceOperationsSettings);
-            ReportInstanceInfoOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReportInstanceInfoOperationsSettings);
-            UpgradeInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpgradeInstanceOperationsSettings);
-            RollbackInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RollbackInstanceOperationsSettings);
-            UpgradeInstanceInternalOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpgradeInstanceInternalOperationsSettings);
-            CreateEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEnvironmentOperationsSettings);
-            DeleteEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteEnvironmentOperationsSettings);
-            DeleteScheduleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteScheduleOperationsSettings);
-            CreateScheduleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateScheduleOperationsSettings);
-            TriggerScheduleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.TriggerScheduleOperationsSettings);
-            DeleteExecutionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteExecutionOperationsSettings);
-            CreateExecutionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateExecutionOperationsSettings);
-            _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>(grpcClient.ListInstancesAsync, grpcClient.ListInstances, effectiveSettings.ListInstancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstanceOperationsSettings, logger);
+            RegisterInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RegisterInstanceOperationsSettings, logger);
+            SetInstanceAcceleratorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetInstanceAcceleratorOperationsSettings, logger);
+            SetInstanceMachineTypeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetInstanceMachineTypeOperationsSettings, logger);
+            UpdateInstanceConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateInstanceConfigOperationsSettings, logger);
+            UpdateShieldedInstanceConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateShieldedInstanceConfigOperationsSettings, logger);
+            SetInstanceLabelsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetInstanceLabelsOperationsSettings, logger);
+            DeleteInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteInstanceOperationsSettings, logger);
+            StartInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartInstanceOperationsSettings, logger);
+            StopInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StopInstanceOperationsSettings, logger);
+            ResetInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ResetInstanceOperationsSettings, logger);
+            ReportInstanceInfoOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReportInstanceInfoOperationsSettings, logger);
+            UpgradeInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpgradeInstanceOperationsSettings, logger);
+            RollbackInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RollbackInstanceOperationsSettings, logger);
+            UpgradeInstanceInternalOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpgradeInstanceInternalOperationsSettings, logger);
+            CreateEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEnvironmentOperationsSettings, logger);
+            DeleteEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteEnvironmentOperationsSettings, logger);
+            DeleteScheduleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteScheduleOperationsSettings, logger);
+            CreateScheduleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateScheduleOperationsSettings, logger);
+            TriggerScheduleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.TriggerScheduleOperationsSettings, logger);
+            DeleteExecutionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteExecutionOperationsSettings, logger);
+            CreateExecutionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateExecutionOperationsSettings, logger);
+            _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>("ListInstances", grpcClient.ListInstancesAsync, grpcClient.ListInstances, effectiveSettings.ListInstancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInstances);
             Modify_ListInstancesApiCall(ref _callListInstances);
-            _callGetInstance = clientHelper.BuildApiCall<GetInstanceRequest, Instance>(grpcClient.GetInstanceAsync, grpcClient.GetInstance, effectiveSettings.GetInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetInstance = clientHelper.BuildApiCall<GetInstanceRequest, Instance>("GetInstance", grpcClient.GetInstanceAsync, grpcClient.GetInstance, effectiveSettings.GetInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetInstance);
             Modify_GetInstanceApiCall(ref _callGetInstance);
-            _callCreateInstance = clientHelper.BuildApiCall<CreateInstanceRequest, lro::Operation>(grpcClient.CreateInstanceAsync, grpcClient.CreateInstance, effectiveSettings.CreateInstanceSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateInstance = clientHelper.BuildApiCall<CreateInstanceRequest, lro::Operation>("CreateInstance", grpcClient.CreateInstanceAsync, grpcClient.CreateInstance, effectiveSettings.CreateInstanceSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateInstance);
             Modify_CreateInstanceApiCall(ref _callCreateInstance);
-            _callRegisterInstance = clientHelper.BuildApiCall<RegisterInstanceRequest, lro::Operation>(grpcClient.RegisterInstanceAsync, grpcClient.RegisterInstance, effectiveSettings.RegisterInstanceSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callRegisterInstance = clientHelper.BuildApiCall<RegisterInstanceRequest, lro::Operation>("RegisterInstance", grpcClient.RegisterInstanceAsync, grpcClient.RegisterInstance, effectiveSettings.RegisterInstanceSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callRegisterInstance);
             Modify_RegisterInstanceApiCall(ref _callRegisterInstance);
-            _callSetInstanceAccelerator = clientHelper.BuildApiCall<SetInstanceAcceleratorRequest, lro::Operation>(grpcClient.SetInstanceAcceleratorAsync, grpcClient.SetInstanceAccelerator, effectiveSettings.SetInstanceAcceleratorSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callSetInstanceAccelerator = clientHelper.BuildApiCall<SetInstanceAcceleratorRequest, lro::Operation>("SetInstanceAccelerator", grpcClient.SetInstanceAcceleratorAsync, grpcClient.SetInstanceAccelerator, effectiveSettings.SetInstanceAcceleratorSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callSetInstanceAccelerator);
             Modify_SetInstanceAcceleratorApiCall(ref _callSetInstanceAccelerator);
-            _callSetInstanceMachineType = clientHelper.BuildApiCall<SetInstanceMachineTypeRequest, lro::Operation>(grpcClient.SetInstanceMachineTypeAsync, grpcClient.SetInstanceMachineType, effectiveSettings.SetInstanceMachineTypeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callSetInstanceMachineType = clientHelper.BuildApiCall<SetInstanceMachineTypeRequest, lro::Operation>("SetInstanceMachineType", grpcClient.SetInstanceMachineTypeAsync, grpcClient.SetInstanceMachineType, effectiveSettings.SetInstanceMachineTypeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callSetInstanceMachineType);
             Modify_SetInstanceMachineTypeApiCall(ref _callSetInstanceMachineType);
-            _callUpdateInstanceConfig = clientHelper.BuildApiCall<UpdateInstanceConfigRequest, lro::Operation>(grpcClient.UpdateInstanceConfigAsync, grpcClient.UpdateInstanceConfig, effectiveSettings.UpdateInstanceConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateInstanceConfig = clientHelper.BuildApiCall<UpdateInstanceConfigRequest, lro::Operation>("UpdateInstanceConfig", grpcClient.UpdateInstanceConfigAsync, grpcClient.UpdateInstanceConfig, effectiveSettings.UpdateInstanceConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateInstanceConfig);
             Modify_UpdateInstanceConfigApiCall(ref _callUpdateInstanceConfig);
-            _callUpdateShieldedInstanceConfig = clientHelper.BuildApiCall<UpdateShieldedInstanceConfigRequest, lro::Operation>(grpcClient.UpdateShieldedInstanceConfigAsync, grpcClient.UpdateShieldedInstanceConfig, effectiveSettings.UpdateShieldedInstanceConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateShieldedInstanceConfig = clientHelper.BuildApiCall<UpdateShieldedInstanceConfigRequest, lro::Operation>("UpdateShieldedInstanceConfig", grpcClient.UpdateShieldedInstanceConfigAsync, grpcClient.UpdateShieldedInstanceConfig, effectiveSettings.UpdateShieldedInstanceConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateShieldedInstanceConfig);
             Modify_UpdateShieldedInstanceConfigApiCall(ref _callUpdateShieldedInstanceConfig);
-            _callSetInstanceLabels = clientHelper.BuildApiCall<SetInstanceLabelsRequest, lro::Operation>(grpcClient.SetInstanceLabelsAsync, grpcClient.SetInstanceLabels, effectiveSettings.SetInstanceLabelsSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callSetInstanceLabels = clientHelper.BuildApiCall<SetInstanceLabelsRequest, lro::Operation>("SetInstanceLabels", grpcClient.SetInstanceLabelsAsync, grpcClient.SetInstanceLabels, effectiveSettings.SetInstanceLabelsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callSetInstanceLabels);
             Modify_SetInstanceLabelsApiCall(ref _callSetInstanceLabels);
-            _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, lro::Operation>(grpcClient.DeleteInstanceAsync, grpcClient.DeleteInstance, effectiveSettings.DeleteInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateInstanceMetadataItems = clientHelper.BuildApiCall<UpdateInstanceMetadataItemsRequest, UpdateInstanceMetadataItemsResponse>("UpdateInstanceMetadataItems", grpcClient.UpdateInstanceMetadataItemsAsync, grpcClient.UpdateInstanceMetadataItems, effectiveSettings.UpdateInstanceMetadataItemsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callUpdateInstanceMetadataItems);
+            Modify_UpdateInstanceMetadataItemsApiCall(ref _callUpdateInstanceMetadataItems);
+            _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, lro::Operation>("DeleteInstance", grpcClient.DeleteInstanceAsync, grpcClient.DeleteInstance, effectiveSettings.DeleteInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteInstance);
             Modify_DeleteInstanceApiCall(ref _callDeleteInstance);
-            _callStartInstance = clientHelper.BuildApiCall<StartInstanceRequest, lro::Operation>(grpcClient.StartInstanceAsync, grpcClient.StartInstance, effectiveSettings.StartInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callStartInstance = clientHelper.BuildApiCall<StartInstanceRequest, lro::Operation>("StartInstance", grpcClient.StartInstanceAsync, grpcClient.StartInstance, effectiveSettings.StartInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callStartInstance);
             Modify_StartInstanceApiCall(ref _callStartInstance);
-            _callStopInstance = clientHelper.BuildApiCall<StopInstanceRequest, lro::Operation>(grpcClient.StopInstanceAsync, grpcClient.StopInstance, effectiveSettings.StopInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callStopInstance = clientHelper.BuildApiCall<StopInstanceRequest, lro::Operation>("StopInstance", grpcClient.StopInstanceAsync, grpcClient.StopInstance, effectiveSettings.StopInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callStopInstance);
             Modify_StopInstanceApiCall(ref _callStopInstance);
-            _callResetInstance = clientHelper.BuildApiCall<ResetInstanceRequest, lro::Operation>(grpcClient.ResetInstanceAsync, grpcClient.ResetInstance, effectiveSettings.ResetInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callResetInstance = clientHelper.BuildApiCall<ResetInstanceRequest, lro::Operation>("ResetInstance", grpcClient.ResetInstanceAsync, grpcClient.ResetInstance, effectiveSettings.ResetInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callResetInstance);
             Modify_ResetInstanceApiCall(ref _callResetInstance);
-            _callReportInstanceInfo = clientHelper.BuildApiCall<ReportInstanceInfoRequest, lro::Operation>(grpcClient.ReportInstanceInfoAsync, grpcClient.ReportInstanceInfo, effectiveSettings.ReportInstanceInfoSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callReportInstanceInfo = clientHelper.BuildApiCall<ReportInstanceInfoRequest, lro::Operation>("ReportInstanceInfo", grpcClient.ReportInstanceInfoAsync, grpcClient.ReportInstanceInfo, effectiveSettings.ReportInstanceInfoSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callReportInstanceInfo);
             Modify_ReportInstanceInfoApiCall(ref _callReportInstanceInfo);
-            _callIsInstanceUpgradeable = clientHelper.BuildApiCall<IsInstanceUpgradeableRequest, IsInstanceUpgradeableResponse>(grpcClient.IsInstanceUpgradeableAsync, grpcClient.IsInstanceUpgradeable, effectiveSettings.IsInstanceUpgradeableSettings).WithGoogleRequestParam("notebook_instance", request => request.NotebookInstance);
+            _callIsInstanceUpgradeable = clientHelper.BuildApiCall<IsInstanceUpgradeableRequest, IsInstanceUpgradeableResponse>("IsInstanceUpgradeable", grpcClient.IsInstanceUpgradeableAsync, grpcClient.IsInstanceUpgradeable, effectiveSettings.IsInstanceUpgradeableSettings).WithGoogleRequestParam("notebook_instance", request => request.NotebookInstance);
             Modify_ApiCall(ref _callIsInstanceUpgradeable);
             Modify_IsInstanceUpgradeableApiCall(ref _callIsInstanceUpgradeable);
-            _callGetInstanceHealth = clientHelper.BuildApiCall<GetInstanceHealthRequest, GetInstanceHealthResponse>(grpcClient.GetInstanceHealthAsync, grpcClient.GetInstanceHealth, effectiveSettings.GetInstanceHealthSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetInstanceHealth = clientHelper.BuildApiCall<GetInstanceHealthRequest, GetInstanceHealthResponse>("GetInstanceHealth", grpcClient.GetInstanceHealthAsync, grpcClient.GetInstanceHealth, effectiveSettings.GetInstanceHealthSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetInstanceHealth);
             Modify_GetInstanceHealthApiCall(ref _callGetInstanceHealth);
-            _callUpgradeInstance = clientHelper.BuildApiCall<UpgradeInstanceRequest, lro::Operation>(grpcClient.UpgradeInstanceAsync, grpcClient.UpgradeInstance, effectiveSettings.UpgradeInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpgradeInstance = clientHelper.BuildApiCall<UpgradeInstanceRequest, lro::Operation>("UpgradeInstance", grpcClient.UpgradeInstanceAsync, grpcClient.UpgradeInstance, effectiveSettings.UpgradeInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpgradeInstance);
             Modify_UpgradeInstanceApiCall(ref _callUpgradeInstance);
-            _callRollbackInstance = clientHelper.BuildApiCall<RollbackInstanceRequest, lro::Operation>(grpcClient.RollbackInstanceAsync, grpcClient.RollbackInstance, effectiveSettings.RollbackInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callRollbackInstance = clientHelper.BuildApiCall<RollbackInstanceRequest, lro::Operation>("RollbackInstance", grpcClient.RollbackInstanceAsync, grpcClient.RollbackInstance, effectiveSettings.RollbackInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRollbackInstance);
             Modify_RollbackInstanceApiCall(ref _callRollbackInstance);
-            _callUpgradeInstanceInternal = clientHelper.BuildApiCall<UpgradeInstanceInternalRequest, lro::Operation>(grpcClient.UpgradeInstanceInternalAsync, grpcClient.UpgradeInstanceInternal, effectiveSettings.UpgradeInstanceInternalSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpgradeInstanceInternal = clientHelper.BuildApiCall<UpgradeInstanceInternalRequest, lro::Operation>("UpgradeInstanceInternal", grpcClient.UpgradeInstanceInternalAsync, grpcClient.UpgradeInstanceInternal, effectiveSettings.UpgradeInstanceInternalSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpgradeInstanceInternal);
             Modify_UpgradeInstanceInternalApiCall(ref _callUpgradeInstanceInternal);
-            _callListEnvironments = clientHelper.BuildApiCall<ListEnvironmentsRequest, ListEnvironmentsResponse>(grpcClient.ListEnvironmentsAsync, grpcClient.ListEnvironments, effectiveSettings.ListEnvironmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListEnvironments = clientHelper.BuildApiCall<ListEnvironmentsRequest, ListEnvironmentsResponse>("ListEnvironments", grpcClient.ListEnvironmentsAsync, grpcClient.ListEnvironments, effectiveSettings.ListEnvironmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListEnvironments);
             Modify_ListEnvironmentsApiCall(ref _callListEnvironments);
-            _callGetEnvironment = clientHelper.BuildApiCall<GetEnvironmentRequest, Environment>(grpcClient.GetEnvironmentAsync, grpcClient.GetEnvironment, effectiveSettings.GetEnvironmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetEnvironment = clientHelper.BuildApiCall<GetEnvironmentRequest, Environment>("GetEnvironment", grpcClient.GetEnvironmentAsync, grpcClient.GetEnvironment, effectiveSettings.GetEnvironmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetEnvironment);
             Modify_GetEnvironmentApiCall(ref _callGetEnvironment);
-            _callCreateEnvironment = clientHelper.BuildApiCall<CreateEnvironmentRequest, lro::Operation>(grpcClient.CreateEnvironmentAsync, grpcClient.CreateEnvironment, effectiveSettings.CreateEnvironmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateEnvironment = clientHelper.BuildApiCall<CreateEnvironmentRequest, lro::Operation>("CreateEnvironment", grpcClient.CreateEnvironmentAsync, grpcClient.CreateEnvironment, effectiveSettings.CreateEnvironmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateEnvironment);
             Modify_CreateEnvironmentApiCall(ref _callCreateEnvironment);
-            _callDeleteEnvironment = clientHelper.BuildApiCall<DeleteEnvironmentRequest, lro::Operation>(grpcClient.DeleteEnvironmentAsync, grpcClient.DeleteEnvironment, effectiveSettings.DeleteEnvironmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteEnvironment = clientHelper.BuildApiCall<DeleteEnvironmentRequest, lro::Operation>("DeleteEnvironment", grpcClient.DeleteEnvironmentAsync, grpcClient.DeleteEnvironment, effectiveSettings.DeleteEnvironmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteEnvironment);
             Modify_DeleteEnvironmentApiCall(ref _callDeleteEnvironment);
-            _callListSchedules = clientHelper.BuildApiCall<ListSchedulesRequest, ListSchedulesResponse>(grpcClient.ListSchedulesAsync, grpcClient.ListSchedules, effectiveSettings.ListSchedulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListSchedules = clientHelper.BuildApiCall<ListSchedulesRequest, ListSchedulesResponse>("ListSchedules", grpcClient.ListSchedulesAsync, grpcClient.ListSchedules, effectiveSettings.ListSchedulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSchedules);
             Modify_ListSchedulesApiCall(ref _callListSchedules);
-            _callGetSchedule = clientHelper.BuildApiCall<GetScheduleRequest, Schedule>(grpcClient.GetScheduleAsync, grpcClient.GetSchedule, effectiveSettings.GetScheduleSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetSchedule = clientHelper.BuildApiCall<GetScheduleRequest, Schedule>("GetSchedule", grpcClient.GetScheduleAsync, grpcClient.GetSchedule, effectiveSettings.GetScheduleSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSchedule);
             Modify_GetScheduleApiCall(ref _callGetSchedule);
-            _callDeleteSchedule = clientHelper.BuildApiCall<DeleteScheduleRequest, lro::Operation>(grpcClient.DeleteScheduleAsync, grpcClient.DeleteSchedule, effectiveSettings.DeleteScheduleSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteSchedule = clientHelper.BuildApiCall<DeleteScheduleRequest, lro::Operation>("DeleteSchedule", grpcClient.DeleteScheduleAsync, grpcClient.DeleteSchedule, effectiveSettings.DeleteScheduleSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteSchedule);
             Modify_DeleteScheduleApiCall(ref _callDeleteSchedule);
-            _callCreateSchedule = clientHelper.BuildApiCall<CreateScheduleRequest, lro::Operation>(grpcClient.CreateScheduleAsync, grpcClient.CreateSchedule, effectiveSettings.CreateScheduleSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateSchedule = clientHelper.BuildApiCall<CreateScheduleRequest, lro::Operation>("CreateSchedule", grpcClient.CreateScheduleAsync, grpcClient.CreateSchedule, effectiveSettings.CreateScheduleSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSchedule);
             Modify_CreateScheduleApiCall(ref _callCreateSchedule);
-            _callTriggerSchedule = clientHelper.BuildApiCall<TriggerScheduleRequest, lro::Operation>(grpcClient.TriggerScheduleAsync, grpcClient.TriggerSchedule, effectiveSettings.TriggerScheduleSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callTriggerSchedule = clientHelper.BuildApiCall<TriggerScheduleRequest, lro::Operation>("TriggerSchedule", grpcClient.TriggerScheduleAsync, grpcClient.TriggerSchedule, effectiveSettings.TriggerScheduleSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callTriggerSchedule);
             Modify_TriggerScheduleApiCall(ref _callTriggerSchedule);
-            _callListExecutions = clientHelper.BuildApiCall<ListExecutionsRequest, ListExecutionsResponse>(grpcClient.ListExecutionsAsync, grpcClient.ListExecutions, effectiveSettings.ListExecutionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListExecutions = clientHelper.BuildApiCall<ListExecutionsRequest, ListExecutionsResponse>("ListExecutions", grpcClient.ListExecutionsAsync, grpcClient.ListExecutions, effectiveSettings.ListExecutionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListExecutions);
             Modify_ListExecutionsApiCall(ref _callListExecutions);
-            _callGetExecution = clientHelper.BuildApiCall<GetExecutionRequest, Execution>(grpcClient.GetExecutionAsync, grpcClient.GetExecution, effectiveSettings.GetExecutionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetExecution = clientHelper.BuildApiCall<GetExecutionRequest, Execution>("GetExecution", grpcClient.GetExecutionAsync, grpcClient.GetExecution, effectiveSettings.GetExecutionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetExecution);
             Modify_GetExecutionApiCall(ref _callGetExecution);
-            _callDeleteExecution = clientHelper.BuildApiCall<DeleteExecutionRequest, lro::Operation>(grpcClient.DeleteExecutionAsync, grpcClient.DeleteExecution, effectiveSettings.DeleteExecutionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteExecution = clientHelper.BuildApiCall<DeleteExecutionRequest, lro::Operation>("DeleteExecution", grpcClient.DeleteExecutionAsync, grpcClient.DeleteExecution, effectiveSettings.DeleteExecutionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteExecution);
             Modify_DeleteExecutionApiCall(ref _callDeleteExecution);
-            _callCreateExecution = clientHelper.BuildApiCall<CreateExecutionRequest, lro::Operation>(grpcClient.CreateExecutionAsync, grpcClient.CreateExecution, effectiveSettings.CreateExecutionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateExecution = clientHelper.BuildApiCall<CreateExecutionRequest, lro::Operation>("CreateExecution", grpcClient.CreateExecutionAsync, grpcClient.CreateExecution, effectiveSettings.CreateExecutionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateExecution);
             Modify_CreateExecutionApiCall(ref _callCreateExecution);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -3985,6 +4018,8 @@ namespace Google.Cloud.Notebooks.V1
         partial void Modify_UpdateShieldedInstanceConfigApiCall(ref gaxgrpc::ApiCall<UpdateShieldedInstanceConfigRequest, lro::Operation> call);
 
         partial void Modify_SetInstanceLabelsApiCall(ref gaxgrpc::ApiCall<SetInstanceLabelsRequest, lro::Operation> call);
+
+        partial void Modify_UpdateInstanceMetadataItemsApiCall(ref gaxgrpc::ApiCall<UpdateInstanceMetadataItemsRequest, UpdateInstanceMetadataItemsResponse> call);
 
         partial void Modify_DeleteInstanceApiCall(ref gaxgrpc::ApiCall<DeleteInstanceRequest, lro::Operation> call);
 
@@ -4054,6 +4089,8 @@ namespace Google.Cloud.Notebooks.V1
         partial void Modify_UpdateShieldedInstanceConfigRequest(ref UpdateShieldedInstanceConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetInstanceLabelsRequest(ref SetInstanceLabelsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateInstanceMetadataItemsRequest(ref UpdateInstanceMetadataItemsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteInstanceRequest(ref DeleteInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4342,6 +4379,30 @@ namespace Google.Cloud.Notebooks.V1
         {
             Modify_SetInstanceLabelsRequest(ref request, ref callSettings);
             return new lro::Operation<Instance, OperationMetadata>(await _callSetInstanceLabels.Async(request, callSettings).ConfigureAwait(false), SetInstanceLabelsOperationsClient);
+        }
+
+        /// <summary>
+        /// Add/update metadata items for an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override UpdateInstanceMetadataItemsResponse UpdateInstanceMetadataItems(UpdateInstanceMetadataItemsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateInstanceMetadataItemsRequest(ref request, ref callSettings);
+            return _callUpdateInstanceMetadataItems.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Add/update metadata items for an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<UpdateInstanceMetadataItemsResponse> UpdateInstanceMetadataItemsAsync(UpdateInstanceMetadataItemsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateInstanceMetadataItemsRequest(ref request, ref callSettings);
+            return _callUpdateInstanceMetadataItems.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>DeleteInstance</c>.</summary>
@@ -4926,7 +4987,7 @@ namespace Google.Cloud.Notebooks.V1
         public override lro::OperationsClient CreateExecutionOperationsClient { get; }
 
         /// <summary>
-        /// Creates a new Scheduled Notebook in a given project and location.
+        /// Creates a new Execution in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4938,7 +4999,7 @@ namespace Google.Cloud.Notebooks.V1
         }
 
         /// <summary>
-        /// Creates a new Scheduled Notebook in a given project and location.
+        /// Creates a new Execution in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

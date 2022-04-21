@@ -16,7 +16,6 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
@@ -25,6 +24,7 @@ using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -1020,9 +1020,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         public CertificateAuthorityServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public CertificateAuthorityServiceClientBuilder()
+        public CertificateAuthorityServiceClientBuilder() : base(CertificateAuthorityServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = CertificateAuthorityServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref CertificateAuthorityServiceClient client);
@@ -1049,29 +1048,18 @@ namespace Google.Cloud.Security.PrivateCA.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return CertificateAuthorityServiceClient.Create(callInvoker, Settings);
+            return CertificateAuthorityServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<CertificateAuthorityServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return CertificateAuthorityServiceClient.Create(callInvoker, Settings);
+            return CertificateAuthorityServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => CertificateAuthorityServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => CertificateAuthorityServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => CertificateAuthorityServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>CertificateAuthorityService client wrapper, for convenient use.</summary>
@@ -1099,19 +1087,10 @@ namespace Google.Cloud.Security.PrivateCA.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(CertificateAuthorityService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="CertificateAuthorityServiceClient"/> using the default credentials,
@@ -1141,8 +1120,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="CertificateAuthorityServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="CertificateAuthorityServiceClient"/>.</returns>
-        internal static CertificateAuthorityServiceClient Create(grpccore::CallInvoker callInvoker, CertificateAuthorityServiceSettings settings = null)
+        internal static CertificateAuthorityServiceClient Create(grpccore::CallInvoker callInvoker, CertificateAuthorityServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -1151,7 +1131,7 @@ namespace Google.Cloud.Security.PrivateCA.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             CertificateAuthorityService.CertificateAuthorityServiceClient grpcClient = new CertificateAuthorityService.CertificateAuthorityServiceClient(callInvoker);
-            return new CertificateAuthorityServiceClientImpl(grpcClient, settings);
+            return new CertificateAuthorityServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -5079,112 +5059,113 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <param name="settings">
         /// The base <see cref="CertificateAuthorityServiceSettings"/> used within this client.
         /// </param>
-        public CertificateAuthorityServiceClientImpl(CertificateAuthorityService.CertificateAuthorityServiceClient grpcClient, CertificateAuthorityServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public CertificateAuthorityServiceClientImpl(CertificateAuthorityService.CertificateAuthorityServiceClient grpcClient, CertificateAuthorityServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             CertificateAuthorityServiceSettings effectiveSettings = settings ?? CertificateAuthorityServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            ActivateCertificateAuthorityOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ActivateCertificateAuthorityOperationsSettings);
-            CreateCertificateAuthorityOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCertificateAuthorityOperationsSettings);
-            DisableCertificateAuthorityOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DisableCertificateAuthorityOperationsSettings);
-            EnableCertificateAuthorityOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.EnableCertificateAuthorityOperationsSettings);
-            UndeleteCertificateAuthorityOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeleteCertificateAuthorityOperationsSettings);
-            DeleteCertificateAuthorityOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteCertificateAuthorityOperationsSettings);
-            UpdateCertificateAuthorityOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateCertificateAuthorityOperationsSettings);
-            CreateCaPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCaPoolOperationsSettings);
-            UpdateCaPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateCaPoolOperationsSettings);
-            DeleteCaPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteCaPoolOperationsSettings);
-            UpdateCertificateRevocationListOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateCertificateRevocationListOperationsSettings);
-            CreateCertificateTemplateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCertificateTemplateOperationsSettings);
-            DeleteCertificateTemplateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteCertificateTemplateOperationsSettings);
-            UpdateCertificateTemplateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateCertificateTemplateOperationsSettings);
-            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings);
-            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings);
-            _callCreateCertificate = clientHelper.BuildApiCall<CreateCertificateRequest, Certificate>(grpcClient.CreateCertificateAsync, grpcClient.CreateCertificate, effectiveSettings.CreateCertificateSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            ActivateCertificateAuthorityOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ActivateCertificateAuthorityOperationsSettings, logger);
+            CreateCertificateAuthorityOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCertificateAuthorityOperationsSettings, logger);
+            DisableCertificateAuthorityOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DisableCertificateAuthorityOperationsSettings, logger);
+            EnableCertificateAuthorityOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.EnableCertificateAuthorityOperationsSettings, logger);
+            UndeleteCertificateAuthorityOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeleteCertificateAuthorityOperationsSettings, logger);
+            DeleteCertificateAuthorityOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteCertificateAuthorityOperationsSettings, logger);
+            UpdateCertificateAuthorityOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateCertificateAuthorityOperationsSettings, logger);
+            CreateCaPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCaPoolOperationsSettings, logger);
+            UpdateCaPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateCaPoolOperationsSettings, logger);
+            DeleteCaPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteCaPoolOperationsSettings, logger);
+            UpdateCertificateRevocationListOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateCertificateRevocationListOperationsSettings, logger);
+            CreateCertificateTemplateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCertificateTemplateOperationsSettings, logger);
+            DeleteCertificateTemplateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteCertificateTemplateOperationsSettings, logger);
+            UpdateCertificateTemplateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateCertificateTemplateOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
+            _callCreateCertificate = clientHelper.BuildApiCall<CreateCertificateRequest, Certificate>("CreateCertificate", grpcClient.CreateCertificateAsync, grpcClient.CreateCertificate, effectiveSettings.CreateCertificateSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCertificate);
             Modify_CreateCertificateApiCall(ref _callCreateCertificate);
-            _callGetCertificate = clientHelper.BuildApiCall<GetCertificateRequest, Certificate>(grpcClient.GetCertificateAsync, grpcClient.GetCertificate, effectiveSettings.GetCertificateSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetCertificate = clientHelper.BuildApiCall<GetCertificateRequest, Certificate>("GetCertificate", grpcClient.GetCertificateAsync, grpcClient.GetCertificate, effectiveSettings.GetCertificateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCertificate);
             Modify_GetCertificateApiCall(ref _callGetCertificate);
-            _callListCertificates = clientHelper.BuildApiCall<ListCertificatesRequest, ListCertificatesResponse>(grpcClient.ListCertificatesAsync, grpcClient.ListCertificates, effectiveSettings.ListCertificatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListCertificates = clientHelper.BuildApiCall<ListCertificatesRequest, ListCertificatesResponse>("ListCertificates", grpcClient.ListCertificatesAsync, grpcClient.ListCertificates, effectiveSettings.ListCertificatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCertificates);
             Modify_ListCertificatesApiCall(ref _callListCertificates);
-            _callRevokeCertificate = clientHelper.BuildApiCall<RevokeCertificateRequest, Certificate>(grpcClient.RevokeCertificateAsync, grpcClient.RevokeCertificate, effectiveSettings.RevokeCertificateSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callRevokeCertificate = clientHelper.BuildApiCall<RevokeCertificateRequest, Certificate>("RevokeCertificate", grpcClient.RevokeCertificateAsync, grpcClient.RevokeCertificate, effectiveSettings.RevokeCertificateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRevokeCertificate);
             Modify_RevokeCertificateApiCall(ref _callRevokeCertificate);
-            _callUpdateCertificate = clientHelper.BuildApiCall<UpdateCertificateRequest, Certificate>(grpcClient.UpdateCertificateAsync, grpcClient.UpdateCertificate, effectiveSettings.UpdateCertificateSettings).WithGoogleRequestParam("certificate.name", request => request.Certificate?.Name);
+            _callUpdateCertificate = clientHelper.BuildApiCall<UpdateCertificateRequest, Certificate>("UpdateCertificate", grpcClient.UpdateCertificateAsync, grpcClient.UpdateCertificate, effectiveSettings.UpdateCertificateSettings).WithGoogleRequestParam("certificate.name", request => request.Certificate?.Name);
             Modify_ApiCall(ref _callUpdateCertificate);
             Modify_UpdateCertificateApiCall(ref _callUpdateCertificate);
-            _callActivateCertificateAuthority = clientHelper.BuildApiCall<ActivateCertificateAuthorityRequest, lro::Operation>(grpcClient.ActivateCertificateAuthorityAsync, grpcClient.ActivateCertificateAuthority, effectiveSettings.ActivateCertificateAuthoritySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callActivateCertificateAuthority = clientHelper.BuildApiCall<ActivateCertificateAuthorityRequest, lro::Operation>("ActivateCertificateAuthority", grpcClient.ActivateCertificateAuthorityAsync, grpcClient.ActivateCertificateAuthority, effectiveSettings.ActivateCertificateAuthoritySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callActivateCertificateAuthority);
             Modify_ActivateCertificateAuthorityApiCall(ref _callActivateCertificateAuthority);
-            _callCreateCertificateAuthority = clientHelper.BuildApiCall<CreateCertificateAuthorityRequest, lro::Operation>(grpcClient.CreateCertificateAuthorityAsync, grpcClient.CreateCertificateAuthority, effectiveSettings.CreateCertificateAuthoritySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateCertificateAuthority = clientHelper.BuildApiCall<CreateCertificateAuthorityRequest, lro::Operation>("CreateCertificateAuthority", grpcClient.CreateCertificateAuthorityAsync, grpcClient.CreateCertificateAuthority, effectiveSettings.CreateCertificateAuthoritySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCertificateAuthority);
             Modify_CreateCertificateAuthorityApiCall(ref _callCreateCertificateAuthority);
-            _callDisableCertificateAuthority = clientHelper.BuildApiCall<DisableCertificateAuthorityRequest, lro::Operation>(grpcClient.DisableCertificateAuthorityAsync, grpcClient.DisableCertificateAuthority, effectiveSettings.DisableCertificateAuthoritySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDisableCertificateAuthority = clientHelper.BuildApiCall<DisableCertificateAuthorityRequest, lro::Operation>("DisableCertificateAuthority", grpcClient.DisableCertificateAuthorityAsync, grpcClient.DisableCertificateAuthority, effectiveSettings.DisableCertificateAuthoritySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDisableCertificateAuthority);
             Modify_DisableCertificateAuthorityApiCall(ref _callDisableCertificateAuthority);
-            _callEnableCertificateAuthority = clientHelper.BuildApiCall<EnableCertificateAuthorityRequest, lro::Operation>(grpcClient.EnableCertificateAuthorityAsync, grpcClient.EnableCertificateAuthority, effectiveSettings.EnableCertificateAuthoritySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callEnableCertificateAuthority = clientHelper.BuildApiCall<EnableCertificateAuthorityRequest, lro::Operation>("EnableCertificateAuthority", grpcClient.EnableCertificateAuthorityAsync, grpcClient.EnableCertificateAuthority, effectiveSettings.EnableCertificateAuthoritySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callEnableCertificateAuthority);
             Modify_EnableCertificateAuthorityApiCall(ref _callEnableCertificateAuthority);
-            _callFetchCertificateAuthorityCsr = clientHelper.BuildApiCall<FetchCertificateAuthorityCsrRequest, FetchCertificateAuthorityCsrResponse>(grpcClient.FetchCertificateAuthorityCsrAsync, grpcClient.FetchCertificateAuthorityCsr, effectiveSettings.FetchCertificateAuthorityCsrSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callFetchCertificateAuthorityCsr = clientHelper.BuildApiCall<FetchCertificateAuthorityCsrRequest, FetchCertificateAuthorityCsrResponse>("FetchCertificateAuthorityCsr", grpcClient.FetchCertificateAuthorityCsrAsync, grpcClient.FetchCertificateAuthorityCsr, effectiveSettings.FetchCertificateAuthorityCsrSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callFetchCertificateAuthorityCsr);
             Modify_FetchCertificateAuthorityCsrApiCall(ref _callFetchCertificateAuthorityCsr);
-            _callGetCertificateAuthority = clientHelper.BuildApiCall<GetCertificateAuthorityRequest, CertificateAuthority>(grpcClient.GetCertificateAuthorityAsync, grpcClient.GetCertificateAuthority, effectiveSettings.GetCertificateAuthoritySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetCertificateAuthority = clientHelper.BuildApiCall<GetCertificateAuthorityRequest, CertificateAuthority>("GetCertificateAuthority", grpcClient.GetCertificateAuthorityAsync, grpcClient.GetCertificateAuthority, effectiveSettings.GetCertificateAuthoritySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCertificateAuthority);
             Modify_GetCertificateAuthorityApiCall(ref _callGetCertificateAuthority);
-            _callListCertificateAuthorities = clientHelper.BuildApiCall<ListCertificateAuthoritiesRequest, ListCertificateAuthoritiesResponse>(grpcClient.ListCertificateAuthoritiesAsync, grpcClient.ListCertificateAuthorities, effectiveSettings.ListCertificateAuthoritiesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListCertificateAuthorities = clientHelper.BuildApiCall<ListCertificateAuthoritiesRequest, ListCertificateAuthoritiesResponse>("ListCertificateAuthorities", grpcClient.ListCertificateAuthoritiesAsync, grpcClient.ListCertificateAuthorities, effectiveSettings.ListCertificateAuthoritiesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCertificateAuthorities);
             Modify_ListCertificateAuthoritiesApiCall(ref _callListCertificateAuthorities);
-            _callUndeleteCertificateAuthority = clientHelper.BuildApiCall<UndeleteCertificateAuthorityRequest, lro::Operation>(grpcClient.UndeleteCertificateAuthorityAsync, grpcClient.UndeleteCertificateAuthority, effectiveSettings.UndeleteCertificateAuthoritySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUndeleteCertificateAuthority = clientHelper.BuildApiCall<UndeleteCertificateAuthorityRequest, lro::Operation>("UndeleteCertificateAuthority", grpcClient.UndeleteCertificateAuthorityAsync, grpcClient.UndeleteCertificateAuthority, effectiveSettings.UndeleteCertificateAuthoritySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUndeleteCertificateAuthority);
             Modify_UndeleteCertificateAuthorityApiCall(ref _callUndeleteCertificateAuthority);
-            _callDeleteCertificateAuthority = clientHelper.BuildApiCall<DeleteCertificateAuthorityRequest, lro::Operation>(grpcClient.DeleteCertificateAuthorityAsync, grpcClient.DeleteCertificateAuthority, effectiveSettings.DeleteCertificateAuthoritySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteCertificateAuthority = clientHelper.BuildApiCall<DeleteCertificateAuthorityRequest, lro::Operation>("DeleteCertificateAuthority", grpcClient.DeleteCertificateAuthorityAsync, grpcClient.DeleteCertificateAuthority, effectiveSettings.DeleteCertificateAuthoritySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteCertificateAuthority);
             Modify_DeleteCertificateAuthorityApiCall(ref _callDeleteCertificateAuthority);
-            _callUpdateCertificateAuthority = clientHelper.BuildApiCall<UpdateCertificateAuthorityRequest, lro::Operation>(grpcClient.UpdateCertificateAuthorityAsync, grpcClient.UpdateCertificateAuthority, effectiveSettings.UpdateCertificateAuthoritySettings).WithGoogleRequestParam("certificate_authority.name", request => request.CertificateAuthority?.Name);
+            _callUpdateCertificateAuthority = clientHelper.BuildApiCall<UpdateCertificateAuthorityRequest, lro::Operation>("UpdateCertificateAuthority", grpcClient.UpdateCertificateAuthorityAsync, grpcClient.UpdateCertificateAuthority, effectiveSettings.UpdateCertificateAuthoritySettings).WithGoogleRequestParam("certificate_authority.name", request => request.CertificateAuthority?.Name);
             Modify_ApiCall(ref _callUpdateCertificateAuthority);
             Modify_UpdateCertificateAuthorityApiCall(ref _callUpdateCertificateAuthority);
-            _callCreateCaPool = clientHelper.BuildApiCall<CreateCaPoolRequest, lro::Operation>(grpcClient.CreateCaPoolAsync, grpcClient.CreateCaPool, effectiveSettings.CreateCaPoolSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateCaPool = clientHelper.BuildApiCall<CreateCaPoolRequest, lro::Operation>("CreateCaPool", grpcClient.CreateCaPoolAsync, grpcClient.CreateCaPool, effectiveSettings.CreateCaPoolSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCaPool);
             Modify_CreateCaPoolApiCall(ref _callCreateCaPool);
-            _callUpdateCaPool = clientHelper.BuildApiCall<UpdateCaPoolRequest, lro::Operation>(grpcClient.UpdateCaPoolAsync, grpcClient.UpdateCaPool, effectiveSettings.UpdateCaPoolSettings).WithGoogleRequestParam("ca_pool.name", request => request.CaPool?.Name);
+            _callUpdateCaPool = clientHelper.BuildApiCall<UpdateCaPoolRequest, lro::Operation>("UpdateCaPool", grpcClient.UpdateCaPoolAsync, grpcClient.UpdateCaPool, effectiveSettings.UpdateCaPoolSettings).WithGoogleRequestParam("ca_pool.name", request => request.CaPool?.Name);
             Modify_ApiCall(ref _callUpdateCaPool);
             Modify_UpdateCaPoolApiCall(ref _callUpdateCaPool);
-            _callGetCaPool = clientHelper.BuildApiCall<GetCaPoolRequest, CaPool>(grpcClient.GetCaPoolAsync, grpcClient.GetCaPool, effectiveSettings.GetCaPoolSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetCaPool = clientHelper.BuildApiCall<GetCaPoolRequest, CaPool>("GetCaPool", grpcClient.GetCaPoolAsync, grpcClient.GetCaPool, effectiveSettings.GetCaPoolSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCaPool);
             Modify_GetCaPoolApiCall(ref _callGetCaPool);
-            _callListCaPools = clientHelper.BuildApiCall<ListCaPoolsRequest, ListCaPoolsResponse>(grpcClient.ListCaPoolsAsync, grpcClient.ListCaPools, effectiveSettings.ListCaPoolsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListCaPools = clientHelper.BuildApiCall<ListCaPoolsRequest, ListCaPoolsResponse>("ListCaPools", grpcClient.ListCaPoolsAsync, grpcClient.ListCaPools, effectiveSettings.ListCaPoolsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCaPools);
             Modify_ListCaPoolsApiCall(ref _callListCaPools);
-            _callDeleteCaPool = clientHelper.BuildApiCall<DeleteCaPoolRequest, lro::Operation>(grpcClient.DeleteCaPoolAsync, grpcClient.DeleteCaPool, effectiveSettings.DeleteCaPoolSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteCaPool = clientHelper.BuildApiCall<DeleteCaPoolRequest, lro::Operation>("DeleteCaPool", grpcClient.DeleteCaPoolAsync, grpcClient.DeleteCaPool, effectiveSettings.DeleteCaPoolSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteCaPool);
             Modify_DeleteCaPoolApiCall(ref _callDeleteCaPool);
-            _callFetchCaCerts = clientHelper.BuildApiCall<FetchCaCertsRequest, FetchCaCertsResponse>(grpcClient.FetchCaCertsAsync, grpcClient.FetchCaCerts, effectiveSettings.FetchCaCertsSettings).WithGoogleRequestParam("ca_pool", request => request.CaPool);
+            _callFetchCaCerts = clientHelper.BuildApiCall<FetchCaCertsRequest, FetchCaCertsResponse>("FetchCaCerts", grpcClient.FetchCaCertsAsync, grpcClient.FetchCaCerts, effectiveSettings.FetchCaCertsSettings).WithGoogleRequestParam("ca_pool", request => request.CaPool);
             Modify_ApiCall(ref _callFetchCaCerts);
             Modify_FetchCaCertsApiCall(ref _callFetchCaCerts);
-            _callGetCertificateRevocationList = clientHelper.BuildApiCall<GetCertificateRevocationListRequest, CertificateRevocationList>(grpcClient.GetCertificateRevocationListAsync, grpcClient.GetCertificateRevocationList, effectiveSettings.GetCertificateRevocationListSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetCertificateRevocationList = clientHelper.BuildApiCall<GetCertificateRevocationListRequest, CertificateRevocationList>("GetCertificateRevocationList", grpcClient.GetCertificateRevocationListAsync, grpcClient.GetCertificateRevocationList, effectiveSettings.GetCertificateRevocationListSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCertificateRevocationList);
             Modify_GetCertificateRevocationListApiCall(ref _callGetCertificateRevocationList);
-            _callListCertificateRevocationLists = clientHelper.BuildApiCall<ListCertificateRevocationListsRequest, ListCertificateRevocationListsResponse>(grpcClient.ListCertificateRevocationListsAsync, grpcClient.ListCertificateRevocationLists, effectiveSettings.ListCertificateRevocationListsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListCertificateRevocationLists = clientHelper.BuildApiCall<ListCertificateRevocationListsRequest, ListCertificateRevocationListsResponse>("ListCertificateRevocationLists", grpcClient.ListCertificateRevocationListsAsync, grpcClient.ListCertificateRevocationLists, effectiveSettings.ListCertificateRevocationListsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCertificateRevocationLists);
             Modify_ListCertificateRevocationListsApiCall(ref _callListCertificateRevocationLists);
-            _callUpdateCertificateRevocationList = clientHelper.BuildApiCall<UpdateCertificateRevocationListRequest, lro::Operation>(grpcClient.UpdateCertificateRevocationListAsync, grpcClient.UpdateCertificateRevocationList, effectiveSettings.UpdateCertificateRevocationListSettings).WithGoogleRequestParam("certificate_revocation_list.name", request => request.CertificateRevocationList?.Name);
+            _callUpdateCertificateRevocationList = clientHelper.BuildApiCall<UpdateCertificateRevocationListRequest, lro::Operation>("UpdateCertificateRevocationList", grpcClient.UpdateCertificateRevocationListAsync, grpcClient.UpdateCertificateRevocationList, effectiveSettings.UpdateCertificateRevocationListSettings).WithGoogleRequestParam("certificate_revocation_list.name", request => request.CertificateRevocationList?.Name);
             Modify_ApiCall(ref _callUpdateCertificateRevocationList);
             Modify_UpdateCertificateRevocationListApiCall(ref _callUpdateCertificateRevocationList);
-            _callCreateCertificateTemplate = clientHelper.BuildApiCall<CreateCertificateTemplateRequest, lro::Operation>(grpcClient.CreateCertificateTemplateAsync, grpcClient.CreateCertificateTemplate, effectiveSettings.CreateCertificateTemplateSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateCertificateTemplate = clientHelper.BuildApiCall<CreateCertificateTemplateRequest, lro::Operation>("CreateCertificateTemplate", grpcClient.CreateCertificateTemplateAsync, grpcClient.CreateCertificateTemplate, effectiveSettings.CreateCertificateTemplateSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCertificateTemplate);
             Modify_CreateCertificateTemplateApiCall(ref _callCreateCertificateTemplate);
-            _callDeleteCertificateTemplate = clientHelper.BuildApiCall<DeleteCertificateTemplateRequest, lro::Operation>(grpcClient.DeleteCertificateTemplateAsync, grpcClient.DeleteCertificateTemplate, effectiveSettings.DeleteCertificateTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteCertificateTemplate = clientHelper.BuildApiCall<DeleteCertificateTemplateRequest, lro::Operation>("DeleteCertificateTemplate", grpcClient.DeleteCertificateTemplateAsync, grpcClient.DeleteCertificateTemplate, effectiveSettings.DeleteCertificateTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteCertificateTemplate);
             Modify_DeleteCertificateTemplateApiCall(ref _callDeleteCertificateTemplate);
-            _callGetCertificateTemplate = clientHelper.BuildApiCall<GetCertificateTemplateRequest, CertificateTemplate>(grpcClient.GetCertificateTemplateAsync, grpcClient.GetCertificateTemplate, effectiveSettings.GetCertificateTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetCertificateTemplate = clientHelper.BuildApiCall<GetCertificateTemplateRequest, CertificateTemplate>("GetCertificateTemplate", grpcClient.GetCertificateTemplateAsync, grpcClient.GetCertificateTemplate, effectiveSettings.GetCertificateTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCertificateTemplate);
             Modify_GetCertificateTemplateApiCall(ref _callGetCertificateTemplate);
-            _callListCertificateTemplates = clientHelper.BuildApiCall<ListCertificateTemplatesRequest, ListCertificateTemplatesResponse>(grpcClient.ListCertificateTemplatesAsync, grpcClient.ListCertificateTemplates, effectiveSettings.ListCertificateTemplatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListCertificateTemplates = clientHelper.BuildApiCall<ListCertificateTemplatesRequest, ListCertificateTemplatesResponse>("ListCertificateTemplates", grpcClient.ListCertificateTemplatesAsync, grpcClient.ListCertificateTemplates, effectiveSettings.ListCertificateTemplatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCertificateTemplates);
             Modify_ListCertificateTemplatesApiCall(ref _callListCertificateTemplates);
-            _callUpdateCertificateTemplate = clientHelper.BuildApiCall<UpdateCertificateTemplateRequest, lro::Operation>(grpcClient.UpdateCertificateTemplateAsync, grpcClient.UpdateCertificateTemplate, effectiveSettings.UpdateCertificateTemplateSettings).WithGoogleRequestParam("certificate_template.name", request => request.CertificateTemplate?.Name);
+            _callUpdateCertificateTemplate = clientHelper.BuildApiCall<UpdateCertificateTemplateRequest, lro::Operation>("UpdateCertificateTemplate", grpcClient.UpdateCertificateTemplateAsync, grpcClient.UpdateCertificateTemplate, effectiveSettings.UpdateCertificateTemplateSettings).WithGoogleRequestParam("certificate_template.name", request => request.CertificateTemplate?.Name);
             Modify_ApiCall(ref _callUpdateCertificateTemplate);
             Modify_UpdateCertificateTemplateApiCall(ref _callUpdateCertificateTemplate);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

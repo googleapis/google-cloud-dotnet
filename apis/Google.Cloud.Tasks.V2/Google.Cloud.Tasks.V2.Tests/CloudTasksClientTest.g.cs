@@ -50,7 +50,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue response = client.GetQueue(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -75,7 +75,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue responseCallSettings = await client.GetQueueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Queue responseCancellationToken = await client.GetQueueAsync(request, st::CancellationToken.None);
@@ -102,7 +102,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue response = client.GetQueue(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -127,7 +127,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue responseCallSettings = await client.GetQueueAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Queue responseCancellationToken = await client.GetQueueAsync(request.Name, st::CancellationToken.None);
@@ -154,7 +154,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue response = client.GetQueue(request.QueueName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -179,7 +179,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.GetQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue responseCallSettings = await client.GetQueueAsync(request.QueueName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Queue responseCancellationToken = await client.GetQueueAsync(request.QueueName, st::CancellationToken.None);
@@ -207,7 +207,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue response = client.CreateQueue(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -233,7 +233,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue responseCallSettings = await client.CreateQueueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Queue responseCancellationToken = await client.CreateQueueAsync(request, st::CancellationToken.None);
@@ -261,7 +261,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue response = client.CreateQueue(request.Parent, request.Queue);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -287,7 +287,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue responseCallSettings = await client.CreateQueueAsync(request.Parent, request.Queue, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Queue responseCancellationToken = await client.CreateQueueAsync(request.Parent, request.Queue, st::CancellationToken.None);
@@ -315,7 +315,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue response = client.CreateQueue(request.ParentAsLocationName, request.Queue);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -341,7 +341,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue responseCallSettings = await client.CreateQueueAsync(request.ParentAsLocationName, request.Queue, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Queue responseCancellationToken = await client.CreateQueueAsync(request.ParentAsLocationName, request.Queue, st::CancellationToken.None);
@@ -369,7 +369,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue response = client.UpdateQueue(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -395,7 +395,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue responseCallSettings = await client.UpdateQueueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Queue responseCancellationToken = await client.UpdateQueueAsync(request, st::CancellationToken.None);
@@ -423,7 +423,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue response = client.UpdateQueue(request.Queue, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -449,7 +449,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue responseCallSettings = await client.UpdateQueueAsync(request.Queue, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Queue responseCancellationToken = await client.UpdateQueueAsync(request.Queue, request.UpdateMask, st::CancellationToken.None);
@@ -467,7 +467,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteQueue(request);
             mockGrpcClient.VerifyAll();
         }
@@ -482,7 +482,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteQueueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteQueueAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -498,7 +498,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteQueue(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -513,7 +513,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteQueueAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteQueueAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -529,7 +529,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteQueue(request.QueueName);
             mockGrpcClient.VerifyAll();
         }
@@ -544,7 +544,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteQueueAsync(request.QueueName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteQueueAsync(request.QueueName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -569,7 +569,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.PurgeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue response = client.PurgeQueue(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -594,7 +594,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.PurgeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue responseCallSettings = await client.PurgeQueueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Queue responseCancellationToken = await client.PurgeQueueAsync(request, st::CancellationToken.None);
@@ -621,7 +621,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.PurgeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue response = client.PurgeQueue(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -646,7 +646,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.PurgeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue responseCallSettings = await client.PurgeQueueAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Queue responseCancellationToken = await client.PurgeQueueAsync(request.Name, st::CancellationToken.None);
@@ -673,7 +673,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.PurgeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue response = client.PurgeQueue(request.QueueName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -698,7 +698,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.PurgeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue responseCallSettings = await client.PurgeQueueAsync(request.QueueName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Queue responseCancellationToken = await client.PurgeQueueAsync(request.QueueName, st::CancellationToken.None);
@@ -725,7 +725,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.PauseQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue response = client.PauseQueue(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -750,7 +750,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.PauseQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue responseCallSettings = await client.PauseQueueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Queue responseCancellationToken = await client.PauseQueueAsync(request, st::CancellationToken.None);
@@ -777,7 +777,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.PauseQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue response = client.PauseQueue(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -802,7 +802,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.PauseQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue responseCallSettings = await client.PauseQueueAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Queue responseCancellationToken = await client.PauseQueueAsync(request.Name, st::CancellationToken.None);
@@ -829,7 +829,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.PauseQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue response = client.PauseQueue(request.QueueName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -854,7 +854,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.PauseQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue responseCallSettings = await client.PauseQueueAsync(request.QueueName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Queue responseCancellationToken = await client.PauseQueueAsync(request.QueueName, st::CancellationToken.None);
@@ -881,7 +881,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.ResumeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue response = client.ResumeQueue(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -906,7 +906,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.ResumeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue responseCallSettings = await client.ResumeQueueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Queue responseCancellationToken = await client.ResumeQueueAsync(request, st::CancellationToken.None);
@@ -933,7 +933,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.ResumeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue response = client.ResumeQueue(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -958,7 +958,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.ResumeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue responseCallSettings = await client.ResumeQueueAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Queue responseCancellationToken = await client.ResumeQueueAsync(request.Name, st::CancellationToken.None);
@@ -985,7 +985,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.ResumeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue response = client.ResumeQueue(request.QueueName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1010,7 +1010,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
             };
             mockGrpcClient.Setup(x => x.ResumeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Queue responseCallSettings = await client.ResumeQueueAsync(request.QueueName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Queue responseCancellationToken = await client.ResumeQueueAsync(request.QueueName, st::CancellationToken.None);
@@ -1041,7 +1041,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1070,7 +1070,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
@@ -1100,7 +1100,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request.Resource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1128,7 +1128,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.Resource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.Resource, st::CancellationToken.None);
@@ -1158,7 +1158,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request.ResourceAsResourceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1186,7 +1186,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.ResourceAsResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.ResourceAsResourceName, st::CancellationToken.None);
@@ -1218,7 +1218,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1248,7 +1248,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
@@ -1279,7 +1279,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request.Resource, request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1308,7 +1308,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.Resource, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.Resource, request.Policy, st::CancellationToken.None);
@@ -1339,7 +1339,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request.ResourceAsResourceName, request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1368,7 +1368,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, st::CancellationToken.None);
@@ -1396,7 +1396,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1422,7 +1422,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);
@@ -1450,7 +1450,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.Resource, request.Permissions);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1476,7 +1476,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, st::CancellationToken.None);
@@ -1504,7 +1504,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.ResourceAsResourceName, request.Permissions);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1530,7 +1530,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, st::CancellationToken.None);
@@ -1562,7 +1562,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.GetTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Task response = client.GetTask(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1592,7 +1592,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.GetTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Task responseCallSettings = await client.GetTaskAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Task responseCancellationToken = await client.GetTaskAsync(request, st::CancellationToken.None);
@@ -1623,7 +1623,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.GetTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Task response = client.GetTask(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1652,7 +1652,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.GetTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Task responseCallSettings = await client.GetTaskAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Task responseCancellationToken = await client.GetTaskAsync(request.Name, st::CancellationToken.None);
@@ -1683,7 +1683,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.GetTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Task response = client.GetTask(request.TaskName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1712,7 +1712,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.GetTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Task responseCallSettings = await client.GetTaskAsync(request.TaskName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Task responseCancellationToken = await client.GetTaskAsync(request.TaskName, st::CancellationToken.None);
@@ -1745,7 +1745,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.CreateTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Task response = client.CreateTask(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1776,7 +1776,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.CreateTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Task responseCallSettings = await client.CreateTaskAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Task responseCancellationToken = await client.CreateTaskAsync(request, st::CancellationToken.None);
@@ -1808,7 +1808,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.CreateTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Task response = client.CreateTask(request.Parent, request.Task);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1838,7 +1838,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.CreateTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Task responseCallSettings = await client.CreateTaskAsync(request.Parent, request.Task, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Task responseCancellationToken = await client.CreateTaskAsync(request.Parent, request.Task, st::CancellationToken.None);
@@ -1870,7 +1870,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.CreateTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Task response = client.CreateTask(request.ParentAsQueueName, request.Task);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1900,7 +1900,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.CreateTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Task responseCallSettings = await client.CreateTaskAsync(request.ParentAsQueueName, request.Task, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Task responseCancellationToken = await client.CreateTaskAsync(request.ParentAsQueueName, request.Task, st::CancellationToken.None);
@@ -1918,7 +1918,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTask(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1933,7 +1933,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTaskAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTaskAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1949,7 +1949,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTask(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1964,7 +1964,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTaskAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTaskAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1980,7 +1980,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTask(request.TaskName);
             mockGrpcClient.VerifyAll();
         }
@@ -1995,7 +1995,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTaskAsync(request.TaskName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTaskAsync(request.TaskName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -2025,7 +2025,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.RunTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Task response = client.RunTask(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2055,7 +2055,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.RunTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Task responseCallSettings = await client.RunTaskAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Task responseCancellationToken = await client.RunTaskAsync(request, st::CancellationToken.None);
@@ -2086,7 +2086,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.RunTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Task response = client.RunTask(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2115,7 +2115,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.RunTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Task responseCallSettings = await client.RunTaskAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Task responseCancellationToken = await client.RunTaskAsync(request.Name, st::CancellationToken.None);
@@ -2146,7 +2146,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.RunTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Task response = client.RunTask(request.TaskName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -2175,7 +2175,7 @@ namespace Google.Cloud.Tasks.V2.Tests
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.RunTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null, null);
             Task responseCallSettings = await client.RunTaskAsync(request.TaskName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Task responseCancellationToken = await client.RunTaskAsync(request.TaskName, st::CancellationToken.None);

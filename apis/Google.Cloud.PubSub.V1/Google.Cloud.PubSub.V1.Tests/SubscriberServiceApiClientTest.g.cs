@@ -82,7 +82,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Subscription response = client.CreateSubscription(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -142,7 +142,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Subscription responseCallSettings = await client.CreateSubscriptionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Subscription responseCancellationToken = await client.CreateSubscriptionAsync(request, st::CancellationToken.None);
@@ -187,7 +187,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Subscription response = client.CreateSubscription(request.Name, request.Topic, request.PushConfig, request.AckDeadlineSeconds);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -230,7 +230,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Subscription responseCallSettings = await client.CreateSubscriptionAsync(request.Name, request.Topic, request.PushConfig, request.AckDeadlineSeconds, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Subscription responseCancellationToken = await client.CreateSubscriptionAsync(request.Name, request.Topic, request.PushConfig, request.AckDeadlineSeconds, st::CancellationToken.None);
@@ -275,7 +275,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Subscription response = client.CreateSubscription(request.SubscriptionName, request.TopicAsTopicName, request.PushConfig, request.AckDeadlineSeconds);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -318,7 +318,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Subscription responseCallSettings = await client.CreateSubscriptionAsync(request.SubscriptionName, request.TopicAsTopicName, request.PushConfig, request.AckDeadlineSeconds, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Subscription responseCancellationToken = await client.CreateSubscriptionAsync(request.SubscriptionName, request.TopicAsTopicName, request.PushConfig, request.AckDeadlineSeconds, st::CancellationToken.None);
@@ -360,7 +360,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Subscription response = client.GetSubscription(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -400,7 +400,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Subscription responseCallSettings = await client.GetSubscriptionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Subscription responseCancellationToken = await client.GetSubscriptionAsync(request, st::CancellationToken.None);
@@ -442,7 +442,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Subscription response = client.GetSubscription(request.Subscription);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -482,7 +482,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Subscription responseCallSettings = await client.GetSubscriptionAsync(request.Subscription, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Subscription responseCancellationToken = await client.GetSubscriptionAsync(request.Subscription, st::CancellationToken.None);
@@ -524,7 +524,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Subscription response = client.GetSubscription(request.SubscriptionAsSubscriptionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -564,7 +564,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Subscription responseCallSettings = await client.GetSubscriptionAsync(request.SubscriptionAsSubscriptionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Subscription responseCancellationToken = await client.GetSubscriptionAsync(request.SubscriptionAsSubscriptionName, st::CancellationToken.None);
@@ -607,7 +607,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.UpdateSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Subscription response = client.UpdateSubscription(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -648,7 +648,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.UpdateSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Subscription responseCallSettings = await client.UpdateSubscriptionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Subscription responseCancellationToken = await client.UpdateSubscriptionAsync(request, st::CancellationToken.None);
@@ -667,7 +667,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSubscription(request);
             mockGrpcClient.VerifyAll();
         }
@@ -683,7 +683,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSubscriptionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSubscriptionAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -700,7 +700,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSubscription(request.Subscription);
             mockGrpcClient.VerifyAll();
         }
@@ -716,7 +716,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSubscriptionAsync(request.Subscription, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSubscriptionAsync(request.Subscription, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -733,7 +733,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSubscription(request.SubscriptionAsSubscriptionName);
             mockGrpcClient.VerifyAll();
         }
@@ -749,7 +749,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSubscriptionAsync(request.SubscriptionAsSubscriptionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSubscriptionAsync(request.SubscriptionAsSubscriptionName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -768,7 +768,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ModifyAckDeadline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             client.ModifyAckDeadline(request);
             mockGrpcClient.VerifyAll();
         }
@@ -786,7 +786,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ModifyAckDeadlineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             await client.ModifyAckDeadlineAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.ModifyAckDeadlineAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -805,7 +805,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ModifyAckDeadline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             client.ModifyAckDeadline(request.Subscription, request.AckIds, request.AckDeadlineSeconds);
             mockGrpcClient.VerifyAll();
         }
@@ -823,7 +823,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ModifyAckDeadlineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             await client.ModifyAckDeadlineAsync(request.Subscription, request.AckIds, request.AckDeadlineSeconds, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.ModifyAckDeadlineAsync(request.Subscription, request.AckIds, request.AckDeadlineSeconds, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -842,7 +842,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ModifyAckDeadline(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             client.ModifyAckDeadline(request.SubscriptionAsSubscriptionName, request.AckIds, request.AckDeadlineSeconds);
             mockGrpcClient.VerifyAll();
         }
@@ -860,7 +860,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ModifyAckDeadlineAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             await client.ModifyAckDeadlineAsync(request.SubscriptionAsSubscriptionName, request.AckIds, request.AckDeadlineSeconds, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.ModifyAckDeadlineAsync(request.SubscriptionAsSubscriptionName, request.AckIds, request.AckDeadlineSeconds, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -878,7 +878,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.Acknowledge(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             client.Acknowledge(request);
             mockGrpcClient.VerifyAll();
         }
@@ -895,7 +895,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.AcknowledgeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             await client.AcknowledgeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.AcknowledgeAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -913,7 +913,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.Acknowledge(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             client.Acknowledge(request.Subscription, request.AckIds);
             mockGrpcClient.VerifyAll();
         }
@@ -930,7 +930,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.AcknowledgeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             await client.AcknowledgeAsync(request.Subscription, request.AckIds, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.AcknowledgeAsync(request.Subscription, request.AckIds, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -948,7 +948,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.Acknowledge(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             client.Acknowledge(request.SubscriptionAsSubscriptionName, request.AckIds);
             mockGrpcClient.VerifyAll();
         }
@@ -965,7 +965,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.AcknowledgeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             await client.AcknowledgeAsync(request.SubscriptionAsSubscriptionName, request.AckIds, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.AcknowledgeAsync(request.SubscriptionAsSubscriptionName, request.AckIds, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -992,7 +992,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.Pull(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             PullResponse response = client.Pull(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1019,7 +1019,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.PullAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PullResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             PullResponse responseCallSettings = await client.PullAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PullResponse responseCancellationToken = await client.PullAsync(request, st::CancellationToken.None);
@@ -1048,7 +1048,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.Pull(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
 #pragma warning disable CS0612
             PullResponse response = client.Pull(request.Subscription, request.ReturnImmediately, request.MaxMessages);
 #pragma warning restore CS0612
@@ -1077,7 +1077,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.PullAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PullResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
 #pragma warning disable CS0612
             PullResponse responseCallSettings = await client.PullAsync(request.Subscription, request.ReturnImmediately, request.MaxMessages, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
 #pragma warning restore CS0612
@@ -1110,7 +1110,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.Pull(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
 #pragma warning disable CS0612
             PullResponse response = client.Pull(request.SubscriptionAsSubscriptionName, request.ReturnImmediately, request.MaxMessages);
 #pragma warning restore CS0612
@@ -1139,7 +1139,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.PullAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PullResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
 #pragma warning disable CS0612
             PullResponse responseCallSettings = await client.PullAsync(request.SubscriptionAsSubscriptionName, request.ReturnImmediately, request.MaxMessages, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
 #pragma warning restore CS0612
@@ -1169,7 +1169,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.Pull(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             PullResponse response = client.Pull(request.Subscription, request.MaxMessages);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1193,7 +1193,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.PullAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PullResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             PullResponse responseCallSettings = await client.PullAsync(request.Subscription, request.MaxMessages, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PullResponse responseCancellationToken = await client.PullAsync(request.Subscription, request.MaxMessages, st::CancellationToken.None);
@@ -1219,7 +1219,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.Pull(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             PullResponse response = client.Pull(request.SubscriptionAsSubscriptionName, request.MaxMessages);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1243,7 +1243,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.PullAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PullResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             PullResponse responseCallSettings = await client.PullAsync(request.SubscriptionAsSubscriptionName, request.MaxMessages, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PullResponse responseCancellationToken = await client.PullAsync(request.SubscriptionAsSubscriptionName, request.MaxMessages, st::CancellationToken.None);
@@ -1263,7 +1263,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ModifyPushConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             client.ModifyPushConfig(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1280,7 +1280,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ModifyPushConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             await client.ModifyPushConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.ModifyPushConfigAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1298,7 +1298,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ModifyPushConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             client.ModifyPushConfig(request.Subscription, request.PushConfig);
             mockGrpcClient.VerifyAll();
         }
@@ -1315,7 +1315,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ModifyPushConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             await client.ModifyPushConfigAsync(request.Subscription, request.PushConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.ModifyPushConfigAsync(request.Subscription, request.PushConfig, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1333,7 +1333,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ModifyPushConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             client.ModifyPushConfig(request.SubscriptionAsSubscriptionName, request.PushConfig);
             mockGrpcClient.VerifyAll();
         }
@@ -1350,7 +1350,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ModifyPushConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             await client.ModifyPushConfigAsync(request.SubscriptionAsSubscriptionName, request.PushConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.ModifyPushConfigAsync(request.SubscriptionAsSubscriptionName, request.PushConfig, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1379,7 +1379,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Snapshot response = client.GetSnapshot(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1408,7 +1408,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Snapshot>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Snapshot responseCallSettings = await client.GetSnapshotAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Snapshot responseCancellationToken = await client.GetSnapshotAsync(request, st::CancellationToken.None);
@@ -1439,7 +1439,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Snapshot response = client.GetSnapshot(request.Snapshot);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1468,7 +1468,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Snapshot>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Snapshot responseCallSettings = await client.GetSnapshotAsync(request.Snapshot, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Snapshot responseCancellationToken = await client.GetSnapshotAsync(request.Snapshot, st::CancellationToken.None);
@@ -1499,7 +1499,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Snapshot response = client.GetSnapshot(request.SnapshotAsSnapshotName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1528,7 +1528,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Snapshot>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Snapshot responseCallSettings = await client.GetSnapshotAsync(request.SnapshotAsSnapshotName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Snapshot responseCancellationToken = await client.GetSnapshotAsync(request.SnapshotAsSnapshotName, st::CancellationToken.None);
@@ -1567,7 +1567,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Snapshot response = client.CreateSnapshot(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1604,7 +1604,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Snapshot>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Snapshot responseCallSettings = await client.CreateSnapshotAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Snapshot responseCancellationToken = await client.CreateSnapshotAsync(request, st::CancellationToken.None);
@@ -1636,7 +1636,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Snapshot response = client.CreateSnapshot(request.Name, request.Subscription);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1666,7 +1666,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Snapshot>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Snapshot responseCallSettings = await client.CreateSnapshotAsync(request.Name, request.Subscription, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Snapshot responseCancellationToken = await client.CreateSnapshotAsync(request.Name, request.Subscription, st::CancellationToken.None);
@@ -1698,7 +1698,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Snapshot response = client.CreateSnapshot(request.SnapshotName, request.SubscriptionAsSubscriptionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1728,7 +1728,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Snapshot>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Snapshot responseCallSettings = await client.CreateSnapshotAsync(request.SnapshotName, request.SubscriptionAsSubscriptionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Snapshot responseCancellationToken = await client.CreateSnapshotAsync(request.SnapshotName, request.SubscriptionAsSubscriptionName, st::CancellationToken.None);
@@ -1760,7 +1760,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Snapshot response = client.UpdateSnapshot(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1790,7 +1790,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Snapshot>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             Snapshot responseCallSettings = await client.UpdateSnapshotAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Snapshot responseCancellationToken = await client.UpdateSnapshotAsync(request, st::CancellationToken.None);
@@ -1809,7 +1809,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSnapshot(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1825,7 +1825,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSnapshotAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSnapshotAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1842,7 +1842,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSnapshot(request.Snapshot);
             mockGrpcClient.VerifyAll();
         }
@@ -1858,7 +1858,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSnapshotAsync(request.Snapshot, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSnapshotAsync(request.Snapshot, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1875,7 +1875,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteSnapshot(request.SnapshotAsSnapshotName);
             mockGrpcClient.VerifyAll();
         }
@@ -1891,7 +1891,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteSnapshotAsync(request.SnapshotAsSnapshotName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteSnapshotAsync(request.SnapshotAsSnapshotName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1910,7 +1910,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             SeekResponse expectedResponse = new SeekResponse { };
             mockGrpcClient.Setup(x => x.Seek(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             SeekResponse response = client.Seek(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1929,7 +1929,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             SeekResponse expectedResponse = new SeekResponse { };
             mockGrpcClient.Setup(x => x.SeekAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SeekResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null, null);
             SeekResponse responseCallSettings = await client.SeekAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SeekResponse responseCancellationToken = await client.SeekAsync(request, st::CancellationToken.None);

@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -89,9 +89,8 @@ namespace Google.Cloud.Billing.V1
         public CloudCatalogSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public CloudCatalogClientBuilder()
+        public CloudCatalogClientBuilder() : base(CloudCatalogClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = CloudCatalogClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref CloudCatalogClient client);
@@ -118,29 +117,18 @@ namespace Google.Cloud.Billing.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return CloudCatalogClient.Create(callInvoker, Settings);
+            return CloudCatalogClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<CloudCatalogClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return CloudCatalogClient.Create(callInvoker, Settings);
+            return CloudCatalogClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => CloudCatalogClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => CloudCatalogClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => CloudCatalogClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>CloudCatalog client wrapper, for convenient use.</summary>
@@ -169,19 +157,10 @@ namespace Google.Cloud.Billing.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(CloudCatalog.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="CloudCatalogClient"/> using the default credentials, endpoint and
@@ -208,8 +187,9 @@ namespace Google.Cloud.Billing.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="CloudCatalogSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="CloudCatalogClient"/>.</returns>
-        internal static CloudCatalogClient Create(grpccore::CallInvoker callInvoker, CloudCatalogSettings settings = null)
+        internal static CloudCatalogClient Create(grpccore::CallInvoker callInvoker, CloudCatalogSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -218,7 +198,7 @@ namespace Google.Cloud.Billing.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             CloudCatalog.CloudCatalogClient grpcClient = new CloudCatalog.CloudCatalogClient(callInvoker);
-            return new CloudCatalogClientImpl(grpcClient, settings);
+            return new CloudCatalogClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -431,15 +411,16 @@ namespace Google.Cloud.Billing.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="CloudCatalogSettings"/> used within this client.</param>
-        public CloudCatalogClientImpl(CloudCatalog.CloudCatalogClient grpcClient, CloudCatalogSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public CloudCatalogClientImpl(CloudCatalog.CloudCatalogClient grpcClient, CloudCatalogSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             CloudCatalogSettings effectiveSettings = settings ?? CloudCatalogSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListServices = clientHelper.BuildApiCall<ListServicesRequest, ListServicesResponse>(grpcClient.ListServicesAsync, grpcClient.ListServices, effectiveSettings.ListServicesSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListServices = clientHelper.BuildApiCall<ListServicesRequest, ListServicesResponse>("ListServices", grpcClient.ListServicesAsync, grpcClient.ListServices, effectiveSettings.ListServicesSettings);
             Modify_ApiCall(ref _callListServices);
             Modify_ListServicesApiCall(ref _callListServices);
-            _callListSkus = clientHelper.BuildApiCall<ListSkusRequest, ListSkusResponse>(grpcClient.ListSkusAsync, grpcClient.ListSkus, effectiveSettings.ListSkusSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListSkus = clientHelper.BuildApiCall<ListSkusRequest, ListSkusResponse>("ListSkus", grpcClient.ListSkusAsync, grpcClient.ListSkus, effectiveSettings.ListSkusSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSkus);
             Modify_ListSkusApiCall(ref _callListSkus);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

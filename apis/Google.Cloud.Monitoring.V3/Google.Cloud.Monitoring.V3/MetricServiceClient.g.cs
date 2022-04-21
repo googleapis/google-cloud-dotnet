@@ -17,12 +17,12 @@
 using ga = Google.Api;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -225,9 +225,8 @@ namespace Google.Cloud.Monitoring.V3
         public MetricServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public MetricServiceClientBuilder()
+        public MetricServiceClientBuilder() : base(MetricServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = MetricServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref MetricServiceClient client);
@@ -254,29 +253,18 @@ namespace Google.Cloud.Monitoring.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return MetricServiceClient.Create(callInvoker, Settings);
+            return MetricServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<MetricServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return MetricServiceClient.Create(callInvoker, Settings);
+            return MetricServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => MetricServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => MetricServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => MetricServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>MetricService client wrapper, for convenient use.</summary>
@@ -310,19 +298,10 @@ namespace Google.Cloud.Monitoring.V3
             "https://www.googleapis.com/auth/monitoring.write",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(MetricService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="MetricServiceClient"/> using the default credentials, endpoint and
@@ -349,8 +328,9 @@ namespace Google.Cloud.Monitoring.V3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="MetricServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="MetricServiceClient"/>.</returns>
-        internal static MetricServiceClient Create(grpccore::CallInvoker callInvoker, MetricServiceSettings settings = null)
+        internal static MetricServiceClient Create(grpccore::CallInvoker callInvoker, MetricServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -359,7 +339,7 @@ namespace Google.Cloud.Monitoring.V3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             MetricService.MetricServiceClient grpcClient = new MetricService.MetricServiceClient(callInvoker);
-            return new MetricServiceClientImpl(grpcClient, settings);
+            return new MetricServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -2892,36 +2872,37 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="MetricServiceSettings"/> used within this client.</param>
-        public MetricServiceClientImpl(MetricService.MetricServiceClient grpcClient, MetricServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public MetricServiceClientImpl(MetricService.MetricServiceClient grpcClient, MetricServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             MetricServiceSettings effectiveSettings = settings ?? MetricServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListMonitoredResourceDescriptors = clientHelper.BuildApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse>(grpcClient.ListMonitoredResourceDescriptorsAsync, grpcClient.ListMonitoredResourceDescriptors, effectiveSettings.ListMonitoredResourceDescriptorsSettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListMonitoredResourceDescriptors = clientHelper.BuildApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse>("ListMonitoredResourceDescriptors", grpcClient.ListMonitoredResourceDescriptorsAsync, grpcClient.ListMonitoredResourceDescriptors, effectiveSettings.ListMonitoredResourceDescriptorsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListMonitoredResourceDescriptors);
             Modify_ListMonitoredResourceDescriptorsApiCall(ref _callListMonitoredResourceDescriptors);
-            _callGetMonitoredResourceDescriptor = clientHelper.BuildApiCall<GetMonitoredResourceDescriptorRequest, ga::MonitoredResourceDescriptor>(grpcClient.GetMonitoredResourceDescriptorAsync, grpcClient.GetMonitoredResourceDescriptor, effectiveSettings.GetMonitoredResourceDescriptorSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetMonitoredResourceDescriptor = clientHelper.BuildApiCall<GetMonitoredResourceDescriptorRequest, ga::MonitoredResourceDescriptor>("GetMonitoredResourceDescriptor", grpcClient.GetMonitoredResourceDescriptorAsync, grpcClient.GetMonitoredResourceDescriptor, effectiveSettings.GetMonitoredResourceDescriptorSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetMonitoredResourceDescriptor);
             Modify_GetMonitoredResourceDescriptorApiCall(ref _callGetMonitoredResourceDescriptor);
-            _callListMetricDescriptors = clientHelper.BuildApiCall<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse>(grpcClient.ListMetricDescriptorsAsync, grpcClient.ListMetricDescriptors, effectiveSettings.ListMetricDescriptorsSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callListMetricDescriptors = clientHelper.BuildApiCall<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse>("ListMetricDescriptors", grpcClient.ListMetricDescriptorsAsync, grpcClient.ListMetricDescriptors, effectiveSettings.ListMetricDescriptorsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListMetricDescriptors);
             Modify_ListMetricDescriptorsApiCall(ref _callListMetricDescriptors);
-            _callGetMetricDescriptor = clientHelper.BuildApiCall<GetMetricDescriptorRequest, ga::MetricDescriptor>(grpcClient.GetMetricDescriptorAsync, grpcClient.GetMetricDescriptor, effectiveSettings.GetMetricDescriptorSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetMetricDescriptor = clientHelper.BuildApiCall<GetMetricDescriptorRequest, ga::MetricDescriptor>("GetMetricDescriptor", grpcClient.GetMetricDescriptorAsync, grpcClient.GetMetricDescriptor, effectiveSettings.GetMetricDescriptorSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetMetricDescriptor);
             Modify_GetMetricDescriptorApiCall(ref _callGetMetricDescriptor);
-            _callCreateMetricDescriptor = clientHelper.BuildApiCall<CreateMetricDescriptorRequest, ga::MetricDescriptor>(grpcClient.CreateMetricDescriptorAsync, grpcClient.CreateMetricDescriptor, effectiveSettings.CreateMetricDescriptorSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCreateMetricDescriptor = clientHelper.BuildApiCall<CreateMetricDescriptorRequest, ga::MetricDescriptor>("CreateMetricDescriptor", grpcClient.CreateMetricDescriptorAsync, grpcClient.CreateMetricDescriptor, effectiveSettings.CreateMetricDescriptorSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCreateMetricDescriptor);
             Modify_CreateMetricDescriptorApiCall(ref _callCreateMetricDescriptor);
-            _callDeleteMetricDescriptor = clientHelper.BuildApiCall<DeleteMetricDescriptorRequest, wkt::Empty>(grpcClient.DeleteMetricDescriptorAsync, grpcClient.DeleteMetricDescriptor, effectiveSettings.DeleteMetricDescriptorSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteMetricDescriptor = clientHelper.BuildApiCall<DeleteMetricDescriptorRequest, wkt::Empty>("DeleteMetricDescriptor", grpcClient.DeleteMetricDescriptorAsync, grpcClient.DeleteMetricDescriptor, effectiveSettings.DeleteMetricDescriptorSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteMetricDescriptor);
             Modify_DeleteMetricDescriptorApiCall(ref _callDeleteMetricDescriptor);
-            _callListTimeSeries = clientHelper.BuildApiCall<ListTimeSeriesRequest, ListTimeSeriesResponse>(grpcClient.ListTimeSeriesAsync, grpcClient.ListTimeSeries, effectiveSettings.ListTimeSeriesSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callListTimeSeries = clientHelper.BuildApiCall<ListTimeSeriesRequest, ListTimeSeriesResponse>("ListTimeSeries", grpcClient.ListTimeSeriesAsync, grpcClient.ListTimeSeries, effectiveSettings.ListTimeSeriesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListTimeSeries);
             Modify_ListTimeSeriesApiCall(ref _callListTimeSeries);
-            _callCreateTimeSeries = clientHelper.BuildApiCall<CreateTimeSeriesRequest, wkt::Empty>(grpcClient.CreateTimeSeriesAsync, grpcClient.CreateTimeSeries, effectiveSettings.CreateTimeSeriesSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCreateTimeSeries = clientHelper.BuildApiCall<CreateTimeSeriesRequest, wkt::Empty>("CreateTimeSeries", grpcClient.CreateTimeSeriesAsync, grpcClient.CreateTimeSeries, effectiveSettings.CreateTimeSeriesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCreateTimeSeries);
             Modify_CreateTimeSeriesApiCall(ref _callCreateTimeSeries);
-            _callCreateServiceTimeSeries = clientHelper.BuildApiCall<CreateTimeSeriesRequest, wkt::Empty>(grpcClient.CreateServiceTimeSeriesAsync, grpcClient.CreateServiceTimeSeries, effectiveSettings.CreateServiceTimeSeriesSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCreateServiceTimeSeries = clientHelper.BuildApiCall<CreateTimeSeriesRequest, wkt::Empty>("CreateServiceTimeSeries", grpcClient.CreateServiceTimeSeriesAsync, grpcClient.CreateServiceTimeSeries, effectiveSettings.CreateServiceTimeSeriesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCreateServiceTimeSeries);
             Modify_CreateServiceTimeSeriesApiCall(ref _callCreateServiceTimeSeries);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -158,9 +158,8 @@ namespace Google.Cloud.Talent.V4Beta1
         public TenantServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public TenantServiceClientBuilder()
+        public TenantServiceClientBuilder() : base(TenantServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = TenantServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref TenantServiceClient client);
@@ -187,29 +186,18 @@ namespace Google.Cloud.Talent.V4Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TenantServiceClient.Create(callInvoker, Settings);
+            return TenantServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<TenantServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TenantServiceClient.Create(callInvoker, Settings);
+            return TenantServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => TenantServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => TenantServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => TenantServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>TenantService client wrapper, for convenient use.</summary>
@@ -238,19 +226,10 @@ namespace Google.Cloud.Talent.V4Beta1
             "https://www.googleapis.com/auth/jobs",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(TenantService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="TenantServiceClient"/> using the default credentials, endpoint and
@@ -277,8 +256,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="TenantServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="TenantServiceClient"/>.</returns>
-        internal static TenantServiceClient Create(grpccore::CallInvoker callInvoker, TenantServiceSettings settings = null)
+        internal static TenantServiceClient Create(grpccore::CallInvoker callInvoker, TenantServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -287,7 +267,7 @@ namespace Google.Cloud.Talent.V4Beta1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             TenantService.TenantServiceClient grpcClient = new TenantService.TenantServiceClient(callInvoker);
-            return new TenantServiceClientImpl(grpcClient, settings);
+            return new TenantServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -911,24 +891,25 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="TenantServiceSettings"/> used within this client.</param>
-        public TenantServiceClientImpl(TenantService.TenantServiceClient grpcClient, TenantServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public TenantServiceClientImpl(TenantService.TenantServiceClient grpcClient, TenantServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             TenantServiceSettings effectiveSettings = settings ?? TenantServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callCreateTenant = clientHelper.BuildApiCall<CreateTenantRequest, Tenant>(grpcClient.CreateTenantAsync, grpcClient.CreateTenant, effectiveSettings.CreateTenantSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callCreateTenant = clientHelper.BuildApiCall<CreateTenantRequest, Tenant>("CreateTenant", grpcClient.CreateTenantAsync, grpcClient.CreateTenant, effectiveSettings.CreateTenantSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTenant);
             Modify_CreateTenantApiCall(ref _callCreateTenant);
-            _callGetTenant = clientHelper.BuildApiCall<GetTenantRequest, Tenant>(grpcClient.GetTenantAsync, grpcClient.GetTenant, effectiveSettings.GetTenantSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetTenant = clientHelper.BuildApiCall<GetTenantRequest, Tenant>("GetTenant", grpcClient.GetTenantAsync, grpcClient.GetTenant, effectiveSettings.GetTenantSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTenant);
             Modify_GetTenantApiCall(ref _callGetTenant);
-            _callUpdateTenant = clientHelper.BuildApiCall<UpdateTenantRequest, Tenant>(grpcClient.UpdateTenantAsync, grpcClient.UpdateTenant, effectiveSettings.UpdateTenantSettings).WithGoogleRequestParam("tenant.name", request => request.Tenant?.Name);
+            _callUpdateTenant = clientHelper.BuildApiCall<UpdateTenantRequest, Tenant>("UpdateTenant", grpcClient.UpdateTenantAsync, grpcClient.UpdateTenant, effectiveSettings.UpdateTenantSettings).WithGoogleRequestParam("tenant.name", request => request.Tenant?.Name);
             Modify_ApiCall(ref _callUpdateTenant);
             Modify_UpdateTenantApiCall(ref _callUpdateTenant);
-            _callDeleteTenant = clientHelper.BuildApiCall<DeleteTenantRequest, wkt::Empty>(grpcClient.DeleteTenantAsync, grpcClient.DeleteTenant, effectiveSettings.DeleteTenantSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteTenant = clientHelper.BuildApiCall<DeleteTenantRequest, wkt::Empty>("DeleteTenant", grpcClient.DeleteTenantAsync, grpcClient.DeleteTenant, effectiveSettings.DeleteTenantSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTenant);
             Modify_DeleteTenantApiCall(ref _callDeleteTenant);
-            _callListTenants = clientHelper.BuildApiCall<ListTenantsRequest, ListTenantsResponse>(grpcClient.ListTenantsAsync, grpcClient.ListTenants, effectiveSettings.ListTenantsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListTenants = clientHelper.BuildApiCall<ListTenantsRequest, ListTenantsResponse>("ListTenants", grpcClient.ListTenantsAsync, grpcClient.ListTenants, effectiveSettings.ListTenantsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTenants);
             Modify_ListTenantsApiCall(ref _callListTenants);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

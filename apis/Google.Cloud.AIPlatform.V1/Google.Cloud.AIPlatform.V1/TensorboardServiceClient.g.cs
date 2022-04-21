@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -571,9 +571,8 @@ namespace Google.Cloud.AIPlatform.V1
         public TensorboardServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public TensorboardServiceClientBuilder()
+        public TensorboardServiceClientBuilder() : base(TensorboardServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = TensorboardServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref TensorboardServiceClient client);
@@ -600,29 +599,18 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TensorboardServiceClient.Create(callInvoker, Settings);
+            return TensorboardServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<TensorboardServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TensorboardServiceClient.Create(callInvoker, Settings);
+            return TensorboardServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => TensorboardServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => TensorboardServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => TensorboardServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>TensorboardService client wrapper, for convenient use.</summary>
@@ -651,19 +639,10 @@ namespace Google.Cloud.AIPlatform.V1
             "https://www.googleapis.com/auth/cloud-platform.read-only",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(TensorboardService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="TensorboardServiceClient"/> using the default credentials, endpoint and
@@ -693,8 +672,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="TensorboardServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="TensorboardServiceClient"/>.</returns>
-        internal static TensorboardServiceClient Create(grpccore::CallInvoker callInvoker, TensorboardServiceSettings settings = null)
+        internal static TensorboardServiceClient Create(grpccore::CallInvoker callInvoker, TensorboardServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -703,7 +683,7 @@ namespace Google.Cloud.AIPlatform.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             TensorboardService.TensorboardServiceClient grpcClient = new TensorboardService.TensorboardServiceClient(callInvoker);
-            return new TensorboardServiceClientImpl(grpcClient, settings);
+            return new TensorboardServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -4635,99 +4615,100 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="TensorboardServiceSettings"/> used within this client.</param>
-        public TensorboardServiceClientImpl(TensorboardService.TensorboardServiceClient grpcClient, TensorboardServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public TensorboardServiceClientImpl(TensorboardService.TensorboardServiceClient grpcClient, TensorboardServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             TensorboardServiceSettings effectiveSettings = settings ?? TensorboardServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateTensorboardOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTensorboardOperationsSettings);
-            UpdateTensorboardOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTensorboardOperationsSettings);
-            DeleteTensorboardOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTensorboardOperationsSettings);
-            DeleteTensorboardExperimentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTensorboardExperimentOperationsSettings);
-            DeleteTensorboardRunOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTensorboardRunOperationsSettings);
-            DeleteTensorboardTimeSeriesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTensorboardTimeSeriesOperationsSettings);
-            _callCreateTensorboard = clientHelper.BuildApiCall<CreateTensorboardRequest, lro::Operation>(grpcClient.CreateTensorboardAsync, grpcClient.CreateTensorboard, effectiveSettings.CreateTensorboardSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateTensorboardOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTensorboardOperationsSettings, logger);
+            UpdateTensorboardOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTensorboardOperationsSettings, logger);
+            DeleteTensorboardOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTensorboardOperationsSettings, logger);
+            DeleteTensorboardExperimentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTensorboardExperimentOperationsSettings, logger);
+            DeleteTensorboardRunOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTensorboardRunOperationsSettings, logger);
+            DeleteTensorboardTimeSeriesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTensorboardTimeSeriesOperationsSettings, logger);
+            _callCreateTensorboard = clientHelper.BuildApiCall<CreateTensorboardRequest, lro::Operation>("CreateTensorboard", grpcClient.CreateTensorboardAsync, grpcClient.CreateTensorboard, effectiveSettings.CreateTensorboardSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTensorboard);
             Modify_CreateTensorboardApiCall(ref _callCreateTensorboard);
-            _callGetTensorboard = clientHelper.BuildApiCall<GetTensorboardRequest, Tensorboard>(grpcClient.GetTensorboardAsync, grpcClient.GetTensorboard, effectiveSettings.GetTensorboardSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetTensorboard = clientHelper.BuildApiCall<GetTensorboardRequest, Tensorboard>("GetTensorboard", grpcClient.GetTensorboardAsync, grpcClient.GetTensorboard, effectiveSettings.GetTensorboardSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTensorboard);
             Modify_GetTensorboardApiCall(ref _callGetTensorboard);
-            _callUpdateTensorboard = clientHelper.BuildApiCall<UpdateTensorboardRequest, lro::Operation>(grpcClient.UpdateTensorboardAsync, grpcClient.UpdateTensorboard, effectiveSettings.UpdateTensorboardSettings).WithGoogleRequestParam("tensorboard.name", request => request.Tensorboard?.Name);
+            _callUpdateTensorboard = clientHelper.BuildApiCall<UpdateTensorboardRequest, lro::Operation>("UpdateTensorboard", grpcClient.UpdateTensorboardAsync, grpcClient.UpdateTensorboard, effectiveSettings.UpdateTensorboardSettings).WithGoogleRequestParam("tensorboard.name", request => request.Tensorboard?.Name);
             Modify_ApiCall(ref _callUpdateTensorboard);
             Modify_UpdateTensorboardApiCall(ref _callUpdateTensorboard);
-            _callListTensorboards = clientHelper.BuildApiCall<ListTensorboardsRequest, ListTensorboardsResponse>(grpcClient.ListTensorboardsAsync, grpcClient.ListTensorboards, effectiveSettings.ListTensorboardsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListTensorboards = clientHelper.BuildApiCall<ListTensorboardsRequest, ListTensorboardsResponse>("ListTensorboards", grpcClient.ListTensorboardsAsync, grpcClient.ListTensorboards, effectiveSettings.ListTensorboardsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTensorboards);
             Modify_ListTensorboardsApiCall(ref _callListTensorboards);
-            _callDeleteTensorboard = clientHelper.BuildApiCall<DeleteTensorboardRequest, lro::Operation>(grpcClient.DeleteTensorboardAsync, grpcClient.DeleteTensorboard, effectiveSettings.DeleteTensorboardSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteTensorboard = clientHelper.BuildApiCall<DeleteTensorboardRequest, lro::Operation>("DeleteTensorboard", grpcClient.DeleteTensorboardAsync, grpcClient.DeleteTensorboard, effectiveSettings.DeleteTensorboardSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTensorboard);
             Modify_DeleteTensorboardApiCall(ref _callDeleteTensorboard);
-            _callCreateTensorboardExperiment = clientHelper.BuildApiCall<CreateTensorboardExperimentRequest, TensorboardExperiment>(grpcClient.CreateTensorboardExperimentAsync, grpcClient.CreateTensorboardExperiment, effectiveSettings.CreateTensorboardExperimentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateTensorboardExperiment = clientHelper.BuildApiCall<CreateTensorboardExperimentRequest, TensorboardExperiment>("CreateTensorboardExperiment", grpcClient.CreateTensorboardExperimentAsync, grpcClient.CreateTensorboardExperiment, effectiveSettings.CreateTensorboardExperimentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTensorboardExperiment);
             Modify_CreateTensorboardExperimentApiCall(ref _callCreateTensorboardExperiment);
-            _callGetTensorboardExperiment = clientHelper.BuildApiCall<GetTensorboardExperimentRequest, TensorboardExperiment>(grpcClient.GetTensorboardExperimentAsync, grpcClient.GetTensorboardExperiment, effectiveSettings.GetTensorboardExperimentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetTensorboardExperiment = clientHelper.BuildApiCall<GetTensorboardExperimentRequest, TensorboardExperiment>("GetTensorboardExperiment", grpcClient.GetTensorboardExperimentAsync, grpcClient.GetTensorboardExperiment, effectiveSettings.GetTensorboardExperimentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTensorboardExperiment);
             Modify_GetTensorboardExperimentApiCall(ref _callGetTensorboardExperiment);
-            _callUpdateTensorboardExperiment = clientHelper.BuildApiCall<UpdateTensorboardExperimentRequest, TensorboardExperiment>(grpcClient.UpdateTensorboardExperimentAsync, grpcClient.UpdateTensorboardExperiment, effectiveSettings.UpdateTensorboardExperimentSettings).WithGoogleRequestParam("tensorboard_experiment.name", request => request.TensorboardExperiment?.Name);
+            _callUpdateTensorboardExperiment = clientHelper.BuildApiCall<UpdateTensorboardExperimentRequest, TensorboardExperiment>("UpdateTensorboardExperiment", grpcClient.UpdateTensorboardExperimentAsync, grpcClient.UpdateTensorboardExperiment, effectiveSettings.UpdateTensorboardExperimentSettings).WithGoogleRequestParam("tensorboard_experiment.name", request => request.TensorboardExperiment?.Name);
             Modify_ApiCall(ref _callUpdateTensorboardExperiment);
             Modify_UpdateTensorboardExperimentApiCall(ref _callUpdateTensorboardExperiment);
-            _callListTensorboardExperiments = clientHelper.BuildApiCall<ListTensorboardExperimentsRequest, ListTensorboardExperimentsResponse>(grpcClient.ListTensorboardExperimentsAsync, grpcClient.ListTensorboardExperiments, effectiveSettings.ListTensorboardExperimentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListTensorboardExperiments = clientHelper.BuildApiCall<ListTensorboardExperimentsRequest, ListTensorboardExperimentsResponse>("ListTensorboardExperiments", grpcClient.ListTensorboardExperimentsAsync, grpcClient.ListTensorboardExperiments, effectiveSettings.ListTensorboardExperimentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTensorboardExperiments);
             Modify_ListTensorboardExperimentsApiCall(ref _callListTensorboardExperiments);
-            _callDeleteTensorboardExperiment = clientHelper.BuildApiCall<DeleteTensorboardExperimentRequest, lro::Operation>(grpcClient.DeleteTensorboardExperimentAsync, grpcClient.DeleteTensorboardExperiment, effectiveSettings.DeleteTensorboardExperimentSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteTensorboardExperiment = clientHelper.BuildApiCall<DeleteTensorboardExperimentRequest, lro::Operation>("DeleteTensorboardExperiment", grpcClient.DeleteTensorboardExperimentAsync, grpcClient.DeleteTensorboardExperiment, effectiveSettings.DeleteTensorboardExperimentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTensorboardExperiment);
             Modify_DeleteTensorboardExperimentApiCall(ref _callDeleteTensorboardExperiment);
-            _callCreateTensorboardRun = clientHelper.BuildApiCall<CreateTensorboardRunRequest, TensorboardRun>(grpcClient.CreateTensorboardRunAsync, grpcClient.CreateTensorboardRun, effectiveSettings.CreateTensorboardRunSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateTensorboardRun = clientHelper.BuildApiCall<CreateTensorboardRunRequest, TensorboardRun>("CreateTensorboardRun", grpcClient.CreateTensorboardRunAsync, grpcClient.CreateTensorboardRun, effectiveSettings.CreateTensorboardRunSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTensorboardRun);
             Modify_CreateTensorboardRunApiCall(ref _callCreateTensorboardRun);
-            _callBatchCreateTensorboardRuns = clientHelper.BuildApiCall<BatchCreateTensorboardRunsRequest, BatchCreateTensorboardRunsResponse>(grpcClient.BatchCreateTensorboardRunsAsync, grpcClient.BatchCreateTensorboardRuns, effectiveSettings.BatchCreateTensorboardRunsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callBatchCreateTensorboardRuns = clientHelper.BuildApiCall<BatchCreateTensorboardRunsRequest, BatchCreateTensorboardRunsResponse>("BatchCreateTensorboardRuns", grpcClient.BatchCreateTensorboardRunsAsync, grpcClient.BatchCreateTensorboardRuns, effectiveSettings.BatchCreateTensorboardRunsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchCreateTensorboardRuns);
             Modify_BatchCreateTensorboardRunsApiCall(ref _callBatchCreateTensorboardRuns);
-            _callGetTensorboardRun = clientHelper.BuildApiCall<GetTensorboardRunRequest, TensorboardRun>(grpcClient.GetTensorboardRunAsync, grpcClient.GetTensorboardRun, effectiveSettings.GetTensorboardRunSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetTensorboardRun = clientHelper.BuildApiCall<GetTensorboardRunRequest, TensorboardRun>("GetTensorboardRun", grpcClient.GetTensorboardRunAsync, grpcClient.GetTensorboardRun, effectiveSettings.GetTensorboardRunSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTensorboardRun);
             Modify_GetTensorboardRunApiCall(ref _callGetTensorboardRun);
-            _callUpdateTensorboardRun = clientHelper.BuildApiCall<UpdateTensorboardRunRequest, TensorboardRun>(grpcClient.UpdateTensorboardRunAsync, grpcClient.UpdateTensorboardRun, effectiveSettings.UpdateTensorboardRunSettings).WithGoogleRequestParam("tensorboard_run.name", request => request.TensorboardRun?.Name);
+            _callUpdateTensorboardRun = clientHelper.BuildApiCall<UpdateTensorboardRunRequest, TensorboardRun>("UpdateTensorboardRun", grpcClient.UpdateTensorboardRunAsync, grpcClient.UpdateTensorboardRun, effectiveSettings.UpdateTensorboardRunSettings).WithGoogleRequestParam("tensorboard_run.name", request => request.TensorboardRun?.Name);
             Modify_ApiCall(ref _callUpdateTensorboardRun);
             Modify_UpdateTensorboardRunApiCall(ref _callUpdateTensorboardRun);
-            _callListTensorboardRuns = clientHelper.BuildApiCall<ListTensorboardRunsRequest, ListTensorboardRunsResponse>(grpcClient.ListTensorboardRunsAsync, grpcClient.ListTensorboardRuns, effectiveSettings.ListTensorboardRunsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListTensorboardRuns = clientHelper.BuildApiCall<ListTensorboardRunsRequest, ListTensorboardRunsResponse>("ListTensorboardRuns", grpcClient.ListTensorboardRunsAsync, grpcClient.ListTensorboardRuns, effectiveSettings.ListTensorboardRunsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTensorboardRuns);
             Modify_ListTensorboardRunsApiCall(ref _callListTensorboardRuns);
-            _callDeleteTensorboardRun = clientHelper.BuildApiCall<DeleteTensorboardRunRequest, lro::Operation>(grpcClient.DeleteTensorboardRunAsync, grpcClient.DeleteTensorboardRun, effectiveSettings.DeleteTensorboardRunSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteTensorboardRun = clientHelper.BuildApiCall<DeleteTensorboardRunRequest, lro::Operation>("DeleteTensorboardRun", grpcClient.DeleteTensorboardRunAsync, grpcClient.DeleteTensorboardRun, effectiveSettings.DeleteTensorboardRunSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTensorboardRun);
             Modify_DeleteTensorboardRunApiCall(ref _callDeleteTensorboardRun);
-            _callBatchCreateTensorboardTimeSeries = clientHelper.BuildApiCall<BatchCreateTensorboardTimeSeriesRequest, BatchCreateTensorboardTimeSeriesResponse>(grpcClient.BatchCreateTensorboardTimeSeriesAsync, grpcClient.BatchCreateTensorboardTimeSeries, effectiveSettings.BatchCreateTensorboardTimeSeriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callBatchCreateTensorboardTimeSeries = clientHelper.BuildApiCall<BatchCreateTensorboardTimeSeriesRequest, BatchCreateTensorboardTimeSeriesResponse>("BatchCreateTensorboardTimeSeries", grpcClient.BatchCreateTensorboardTimeSeriesAsync, grpcClient.BatchCreateTensorboardTimeSeries, effectiveSettings.BatchCreateTensorboardTimeSeriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchCreateTensorboardTimeSeries);
             Modify_BatchCreateTensorboardTimeSeriesApiCall(ref _callBatchCreateTensorboardTimeSeries);
-            _callCreateTensorboardTimeSeries = clientHelper.BuildApiCall<CreateTensorboardTimeSeriesRequest, TensorboardTimeSeries>(grpcClient.CreateTensorboardTimeSeriesAsync, grpcClient.CreateTensorboardTimeSeries, effectiveSettings.CreateTensorboardTimeSeriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateTensorboardTimeSeries = clientHelper.BuildApiCall<CreateTensorboardTimeSeriesRequest, TensorboardTimeSeries>("CreateTensorboardTimeSeries", grpcClient.CreateTensorboardTimeSeriesAsync, grpcClient.CreateTensorboardTimeSeries, effectiveSettings.CreateTensorboardTimeSeriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTensorboardTimeSeries);
             Modify_CreateTensorboardTimeSeriesApiCall(ref _callCreateTensorboardTimeSeries);
-            _callGetTensorboardTimeSeries = clientHelper.BuildApiCall<GetTensorboardTimeSeriesRequest, TensorboardTimeSeries>(grpcClient.GetTensorboardTimeSeriesAsync, grpcClient.GetTensorboardTimeSeries, effectiveSettings.GetTensorboardTimeSeriesSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetTensorboardTimeSeries = clientHelper.BuildApiCall<GetTensorboardTimeSeriesRequest, TensorboardTimeSeries>("GetTensorboardTimeSeries", grpcClient.GetTensorboardTimeSeriesAsync, grpcClient.GetTensorboardTimeSeries, effectiveSettings.GetTensorboardTimeSeriesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTensorboardTimeSeries);
             Modify_GetTensorboardTimeSeriesApiCall(ref _callGetTensorboardTimeSeries);
-            _callUpdateTensorboardTimeSeries = clientHelper.BuildApiCall<UpdateTensorboardTimeSeriesRequest, TensorboardTimeSeries>(grpcClient.UpdateTensorboardTimeSeriesAsync, grpcClient.UpdateTensorboardTimeSeries, effectiveSettings.UpdateTensorboardTimeSeriesSettings).WithGoogleRequestParam("tensorboard_time_series.name", request => request.TensorboardTimeSeries?.Name);
+            _callUpdateTensorboardTimeSeries = clientHelper.BuildApiCall<UpdateTensorboardTimeSeriesRequest, TensorboardTimeSeries>("UpdateTensorboardTimeSeries", grpcClient.UpdateTensorboardTimeSeriesAsync, grpcClient.UpdateTensorboardTimeSeries, effectiveSettings.UpdateTensorboardTimeSeriesSettings).WithGoogleRequestParam("tensorboard_time_series.name", request => request.TensorboardTimeSeries?.Name);
             Modify_ApiCall(ref _callUpdateTensorboardTimeSeries);
             Modify_UpdateTensorboardTimeSeriesApiCall(ref _callUpdateTensorboardTimeSeries);
-            _callListTensorboardTimeSeries = clientHelper.BuildApiCall<ListTensorboardTimeSeriesRequest, ListTensorboardTimeSeriesResponse>(grpcClient.ListTensorboardTimeSeriesAsync, grpcClient.ListTensorboardTimeSeries, effectiveSettings.ListTensorboardTimeSeriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListTensorboardTimeSeries = clientHelper.BuildApiCall<ListTensorboardTimeSeriesRequest, ListTensorboardTimeSeriesResponse>("ListTensorboardTimeSeries", grpcClient.ListTensorboardTimeSeriesAsync, grpcClient.ListTensorboardTimeSeries, effectiveSettings.ListTensorboardTimeSeriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTensorboardTimeSeries);
             Modify_ListTensorboardTimeSeriesApiCall(ref _callListTensorboardTimeSeries);
-            _callDeleteTensorboardTimeSeries = clientHelper.BuildApiCall<DeleteTensorboardTimeSeriesRequest, lro::Operation>(grpcClient.DeleteTensorboardTimeSeriesAsync, grpcClient.DeleteTensorboardTimeSeries, effectiveSettings.DeleteTensorboardTimeSeriesSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteTensorboardTimeSeries = clientHelper.BuildApiCall<DeleteTensorboardTimeSeriesRequest, lro::Operation>("DeleteTensorboardTimeSeries", grpcClient.DeleteTensorboardTimeSeriesAsync, grpcClient.DeleteTensorboardTimeSeries, effectiveSettings.DeleteTensorboardTimeSeriesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTensorboardTimeSeries);
             Modify_DeleteTensorboardTimeSeriesApiCall(ref _callDeleteTensorboardTimeSeries);
-            _callBatchReadTensorboardTimeSeriesData = clientHelper.BuildApiCall<BatchReadTensorboardTimeSeriesDataRequest, BatchReadTensorboardTimeSeriesDataResponse>(grpcClient.BatchReadTensorboardTimeSeriesDataAsync, grpcClient.BatchReadTensorboardTimeSeriesData, effectiveSettings.BatchReadTensorboardTimeSeriesDataSettings).WithGoogleRequestParam("tensorboard", request => request.Tensorboard);
+            _callBatchReadTensorboardTimeSeriesData = clientHelper.BuildApiCall<BatchReadTensorboardTimeSeriesDataRequest, BatchReadTensorboardTimeSeriesDataResponse>("BatchReadTensorboardTimeSeriesData", grpcClient.BatchReadTensorboardTimeSeriesDataAsync, grpcClient.BatchReadTensorboardTimeSeriesData, effectiveSettings.BatchReadTensorboardTimeSeriesDataSettings).WithGoogleRequestParam("tensorboard", request => request.Tensorboard);
             Modify_ApiCall(ref _callBatchReadTensorboardTimeSeriesData);
             Modify_BatchReadTensorboardTimeSeriesDataApiCall(ref _callBatchReadTensorboardTimeSeriesData);
-            _callReadTensorboardTimeSeriesData = clientHelper.BuildApiCall<ReadTensorboardTimeSeriesDataRequest, ReadTensorboardTimeSeriesDataResponse>(grpcClient.ReadTensorboardTimeSeriesDataAsync, grpcClient.ReadTensorboardTimeSeriesData, effectiveSettings.ReadTensorboardTimeSeriesDataSettings).WithGoogleRequestParam("tensorboard_time_series", request => request.TensorboardTimeSeries);
+            _callReadTensorboardTimeSeriesData = clientHelper.BuildApiCall<ReadTensorboardTimeSeriesDataRequest, ReadTensorboardTimeSeriesDataResponse>("ReadTensorboardTimeSeriesData", grpcClient.ReadTensorboardTimeSeriesDataAsync, grpcClient.ReadTensorboardTimeSeriesData, effectiveSettings.ReadTensorboardTimeSeriesDataSettings).WithGoogleRequestParam("tensorboard_time_series", request => request.TensorboardTimeSeries);
             Modify_ApiCall(ref _callReadTensorboardTimeSeriesData);
             Modify_ReadTensorboardTimeSeriesDataApiCall(ref _callReadTensorboardTimeSeriesData);
-            _callReadTensorboardBlobData = clientHelper.BuildApiCall<ReadTensorboardBlobDataRequest, ReadTensorboardBlobDataResponse>(grpcClient.ReadTensorboardBlobData, effectiveSettings.ReadTensorboardBlobDataSettings).WithGoogleRequestParam("time_series", request => request.TimeSeries);
+            _callReadTensorboardBlobData = clientHelper.BuildApiCall<ReadTensorboardBlobDataRequest, ReadTensorboardBlobDataResponse>("ReadTensorboardBlobData", grpcClient.ReadTensorboardBlobData, effectiveSettings.ReadTensorboardBlobDataSettings).WithGoogleRequestParam("time_series", request => request.TimeSeries);
             Modify_ApiCall(ref _callReadTensorboardBlobData);
             Modify_ReadTensorboardBlobDataApiCall(ref _callReadTensorboardBlobData);
-            _callWriteTensorboardExperimentData = clientHelper.BuildApiCall<WriteTensorboardExperimentDataRequest, WriteTensorboardExperimentDataResponse>(grpcClient.WriteTensorboardExperimentDataAsync, grpcClient.WriteTensorboardExperimentData, effectiveSettings.WriteTensorboardExperimentDataSettings).WithGoogleRequestParam("tensorboard_experiment", request => request.TensorboardExperiment);
+            _callWriteTensorboardExperimentData = clientHelper.BuildApiCall<WriteTensorboardExperimentDataRequest, WriteTensorboardExperimentDataResponse>("WriteTensorboardExperimentData", grpcClient.WriteTensorboardExperimentDataAsync, grpcClient.WriteTensorboardExperimentData, effectiveSettings.WriteTensorboardExperimentDataSettings).WithGoogleRequestParam("tensorboard_experiment", request => request.TensorboardExperiment);
             Modify_ApiCall(ref _callWriteTensorboardExperimentData);
             Modify_WriteTensorboardExperimentDataApiCall(ref _callWriteTensorboardExperimentData);
-            _callWriteTensorboardRunData = clientHelper.BuildApiCall<WriteTensorboardRunDataRequest, WriteTensorboardRunDataResponse>(grpcClient.WriteTensorboardRunDataAsync, grpcClient.WriteTensorboardRunData, effectiveSettings.WriteTensorboardRunDataSettings).WithGoogleRequestParam("tensorboard_run", request => request.TensorboardRun);
+            _callWriteTensorboardRunData = clientHelper.BuildApiCall<WriteTensorboardRunDataRequest, WriteTensorboardRunDataResponse>("WriteTensorboardRunData", grpcClient.WriteTensorboardRunDataAsync, grpcClient.WriteTensorboardRunData, effectiveSettings.WriteTensorboardRunDataSettings).WithGoogleRequestParam("tensorboard_run", request => request.TensorboardRun);
             Modify_ApiCall(ref _callWriteTensorboardRunData);
             Modify_WriteTensorboardRunDataApiCall(ref _callWriteTensorboardRunData);
-            _callExportTensorboardTimeSeriesData = clientHelper.BuildApiCall<ExportTensorboardTimeSeriesDataRequest, ExportTensorboardTimeSeriesDataResponse>(grpcClient.ExportTensorboardTimeSeriesDataAsync, grpcClient.ExportTensorboardTimeSeriesData, effectiveSettings.ExportTensorboardTimeSeriesDataSettings).WithGoogleRequestParam("tensorboard_time_series", request => request.TensorboardTimeSeries);
+            _callExportTensorboardTimeSeriesData = clientHelper.BuildApiCall<ExportTensorboardTimeSeriesDataRequest, ExportTensorboardTimeSeriesDataResponse>("ExportTensorboardTimeSeriesData", grpcClient.ExportTensorboardTimeSeriesDataAsync, grpcClient.ExportTensorboardTimeSeriesData, effectiveSettings.ExportTensorboardTimeSeriesDataSettings).WithGoogleRequestParam("tensorboard_time_series", request => request.TensorboardTimeSeries);
             Modify_ApiCall(ref _callExportTensorboardTimeSeriesData);
             Modify_ExportTensorboardTimeSeriesDataApiCall(ref _callExportTensorboardTimeSeriesData);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

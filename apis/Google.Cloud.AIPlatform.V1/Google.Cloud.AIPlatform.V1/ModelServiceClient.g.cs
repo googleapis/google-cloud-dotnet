@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -268,9 +268,8 @@ namespace Google.Cloud.AIPlatform.V1
         public ModelServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ModelServiceClientBuilder()
+        public ModelServiceClientBuilder() : base(ModelServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ModelServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ModelServiceClient client);
@@ -297,29 +296,18 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ModelServiceClient.Create(callInvoker, Settings);
+            return ModelServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ModelServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ModelServiceClient.Create(callInvoker, Settings);
+            return ModelServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ModelServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ModelServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ModelServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ModelService client wrapper, for convenient use.</summary>
@@ -346,19 +334,10 @@ namespace Google.Cloud.AIPlatform.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ModelService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ModelServiceClient"/> using the default credentials, endpoint and
@@ -385,8 +364,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ModelServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ModelServiceClient"/>.</returns>
-        internal static ModelServiceClient Create(grpccore::CallInvoker callInvoker, ModelServiceSettings settings = null)
+        internal static ModelServiceClient Create(grpccore::CallInvoker callInvoker, ModelServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -395,7 +375,7 @@ namespace Google.Cloud.AIPlatform.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ModelService.ModelServiceClient grpcClient = new ModelService.ModelServiceClient(callInvoker);
-            return new ModelServiceClientImpl(grpcClient, settings);
+            return new ModelServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -834,6 +814,23 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="model">
         /// Required. The Model which replaces the resource on the server.
+        /// When Model Versioning is enabled, the model.name will be used to determine
+        /// whether to update the model or model version.
+        /// 1. model.name with the @ value, e.g. models/123@1, refers to a version
+        /// specific update.
+        /// 2. model.name without the @ value, e.g. models/123, refers to a model
+        /// update.
+        /// 3. model.name with @-, e.g. models/123@-, refers to a model update.
+        /// 4. Supported model fields: display_name, description; supported
+        /// version-specific fields: version_description. Labels are supported in both
+        /// scenarios. Both the model labels and the version labels are merged when a
+        /// model is returned. When updating labels, if the request is for
+        /// model-specific update, model label gets updated. Otherwise, version labels
+        /// get updated.
+        /// 5. A model name or model version name fields update mismatch will cause a
+        /// precondition error.
+        /// 6. One request cannot update both the model and the version fields. You
+        /// must update them separately.
         /// </param>
         /// <param name="updateMask">
         /// Required. The update mask applies to the resource.
@@ -853,6 +850,23 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="model">
         /// Required. The Model which replaces the resource on the server.
+        /// When Model Versioning is enabled, the model.name will be used to determine
+        /// whether to update the model or model version.
+        /// 1. model.name with the @ value, e.g. models/123@1, refers to a version
+        /// specific update.
+        /// 2. model.name without the @ value, e.g. models/123, refers to a model
+        /// update.
+        /// 3. model.name with @-, e.g. models/123@-, refers to a model update.
+        /// 4. Supported model fields: display_name, description; supported
+        /// version-specific fields: version_description. Labels are supported in both
+        /// scenarios. Both the model labels and the version labels are merged when a
+        /// model is returned. When updating labels, if the request is for
+        /// model-specific update, model label gets updated. Otherwise, version labels
+        /// get updated.
+        /// 5. A model name or model version name fields update mismatch will cause a
+        /// precondition error.
+        /// 6. One request cannot update both the model and the version fields. You
+        /// must update them separately.
         /// </param>
         /// <param name="updateMask">
         /// Required. The update mask applies to the resource.
@@ -872,6 +886,23 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="model">
         /// Required. The Model which replaces the resource on the server.
+        /// When Model Versioning is enabled, the model.name will be used to determine
+        /// whether to update the model or model version.
+        /// 1. model.name with the @ value, e.g. models/123@1, refers to a version
+        /// specific update.
+        /// 2. model.name without the @ value, e.g. models/123, refers to a model
+        /// update.
+        /// 3. model.name with @-, e.g. models/123@-, refers to a model update.
+        /// 4. Supported model fields: display_name, description; supported
+        /// version-specific fields: version_description. Labels are supported in both
+        /// scenarios. Both the model labels and the version labels are merged when a
+        /// model is returned. When updating labels, if the request is for
+        /// model-specific update, model label gets updated. Otherwise, version labels
+        /// get updated.
+        /// 5. A model name or model version name fields update mismatch will cause a
+        /// precondition error.
+        /// 6. One request cannot update both the model and the version fields. You
+        /// must update them separately.
         /// </param>
         /// <param name="updateMask">
         /// Required. The update mask applies to the resource.
@@ -1867,45 +1898,46 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ModelServiceSettings"/> used within this client.</param>
-        public ModelServiceClientImpl(ModelService.ModelServiceClient grpcClient, ModelServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ModelServiceClientImpl(ModelService.ModelServiceClient grpcClient, ModelServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ModelServiceSettings effectiveSettings = settings ?? ModelServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            UploadModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UploadModelOperationsSettings);
-            DeleteModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteModelOperationsSettings);
-            ExportModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportModelOperationsSettings);
-            _callUploadModel = clientHelper.BuildApiCall<UploadModelRequest, lro::Operation>(grpcClient.UploadModelAsync, grpcClient.UploadModel, effectiveSettings.UploadModelSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            UploadModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UploadModelOperationsSettings, logger);
+            DeleteModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteModelOperationsSettings, logger);
+            ExportModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportModelOperationsSettings, logger);
+            _callUploadModel = clientHelper.BuildApiCall<UploadModelRequest, lro::Operation>("UploadModel", grpcClient.UploadModelAsync, grpcClient.UploadModel, effectiveSettings.UploadModelSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callUploadModel);
             Modify_UploadModelApiCall(ref _callUploadModel);
-            _callGetModel = clientHelper.BuildApiCall<GetModelRequest, Model>(grpcClient.GetModelAsync, grpcClient.GetModel, effectiveSettings.GetModelSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetModel = clientHelper.BuildApiCall<GetModelRequest, Model>("GetModel", grpcClient.GetModelAsync, grpcClient.GetModel, effectiveSettings.GetModelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetModel);
             Modify_GetModelApiCall(ref _callGetModel);
-            _callListModels = clientHelper.BuildApiCall<ListModelsRequest, ListModelsResponse>(grpcClient.ListModelsAsync, grpcClient.ListModels, effectiveSettings.ListModelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListModels = clientHelper.BuildApiCall<ListModelsRequest, ListModelsResponse>("ListModels", grpcClient.ListModelsAsync, grpcClient.ListModels, effectiveSettings.ListModelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListModels);
             Modify_ListModelsApiCall(ref _callListModels);
-            _callUpdateModel = clientHelper.BuildApiCall<UpdateModelRequest, Model>(grpcClient.UpdateModelAsync, grpcClient.UpdateModel, effectiveSettings.UpdateModelSettings).WithGoogleRequestParam("model.name", request => request.Model?.Name);
+            _callUpdateModel = clientHelper.BuildApiCall<UpdateModelRequest, Model>("UpdateModel", grpcClient.UpdateModelAsync, grpcClient.UpdateModel, effectiveSettings.UpdateModelSettings).WithGoogleRequestParam("model.name", request => request.Model?.Name);
             Modify_ApiCall(ref _callUpdateModel);
             Modify_UpdateModelApiCall(ref _callUpdateModel);
-            _callDeleteModel = clientHelper.BuildApiCall<DeleteModelRequest, lro::Operation>(grpcClient.DeleteModelAsync, grpcClient.DeleteModel, effectiveSettings.DeleteModelSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteModel = clientHelper.BuildApiCall<DeleteModelRequest, lro::Operation>("DeleteModel", grpcClient.DeleteModelAsync, grpcClient.DeleteModel, effectiveSettings.DeleteModelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteModel);
             Modify_DeleteModelApiCall(ref _callDeleteModel);
-            _callExportModel = clientHelper.BuildApiCall<ExportModelRequest, lro::Operation>(grpcClient.ExportModelAsync, grpcClient.ExportModel, effectiveSettings.ExportModelSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callExportModel = clientHelper.BuildApiCall<ExportModelRequest, lro::Operation>("ExportModel", grpcClient.ExportModelAsync, grpcClient.ExportModel, effectiveSettings.ExportModelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callExportModel);
             Modify_ExportModelApiCall(ref _callExportModel);
-            _callImportModelEvaluation = clientHelper.BuildApiCall<ImportModelEvaluationRequest, ModelEvaluation>(grpcClient.ImportModelEvaluationAsync, grpcClient.ImportModelEvaluation, effectiveSettings.ImportModelEvaluationSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callImportModelEvaluation = clientHelper.BuildApiCall<ImportModelEvaluationRequest, ModelEvaluation>("ImportModelEvaluation", grpcClient.ImportModelEvaluationAsync, grpcClient.ImportModelEvaluation, effectiveSettings.ImportModelEvaluationSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callImportModelEvaluation);
             Modify_ImportModelEvaluationApiCall(ref _callImportModelEvaluation);
-            _callGetModelEvaluation = clientHelper.BuildApiCall<GetModelEvaluationRequest, ModelEvaluation>(grpcClient.GetModelEvaluationAsync, grpcClient.GetModelEvaluation, effectiveSettings.GetModelEvaluationSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetModelEvaluation = clientHelper.BuildApiCall<GetModelEvaluationRequest, ModelEvaluation>("GetModelEvaluation", grpcClient.GetModelEvaluationAsync, grpcClient.GetModelEvaluation, effectiveSettings.GetModelEvaluationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetModelEvaluation);
             Modify_GetModelEvaluationApiCall(ref _callGetModelEvaluation);
-            _callListModelEvaluations = clientHelper.BuildApiCall<ListModelEvaluationsRequest, ListModelEvaluationsResponse>(grpcClient.ListModelEvaluationsAsync, grpcClient.ListModelEvaluations, effectiveSettings.ListModelEvaluationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListModelEvaluations = clientHelper.BuildApiCall<ListModelEvaluationsRequest, ListModelEvaluationsResponse>("ListModelEvaluations", grpcClient.ListModelEvaluationsAsync, grpcClient.ListModelEvaluations, effectiveSettings.ListModelEvaluationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListModelEvaluations);
             Modify_ListModelEvaluationsApiCall(ref _callListModelEvaluations);
-            _callGetModelEvaluationSlice = clientHelper.BuildApiCall<GetModelEvaluationSliceRequest, ModelEvaluationSlice>(grpcClient.GetModelEvaluationSliceAsync, grpcClient.GetModelEvaluationSlice, effectiveSettings.GetModelEvaluationSliceSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetModelEvaluationSlice = clientHelper.BuildApiCall<GetModelEvaluationSliceRequest, ModelEvaluationSlice>("GetModelEvaluationSlice", grpcClient.GetModelEvaluationSliceAsync, grpcClient.GetModelEvaluationSlice, effectiveSettings.GetModelEvaluationSliceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetModelEvaluationSlice);
             Modify_GetModelEvaluationSliceApiCall(ref _callGetModelEvaluationSlice);
-            _callListModelEvaluationSlices = clientHelper.BuildApiCall<ListModelEvaluationSlicesRequest, ListModelEvaluationSlicesResponse>(grpcClient.ListModelEvaluationSlicesAsync, grpcClient.ListModelEvaluationSlices, effectiveSettings.ListModelEvaluationSlicesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListModelEvaluationSlices = clientHelper.BuildApiCall<ListModelEvaluationSlicesRequest, ListModelEvaluationSlicesResponse>("ListModelEvaluationSlices", grpcClient.ListModelEvaluationSlicesAsync, grpcClient.ListModelEvaluationSlices, effectiveSettings.ListModelEvaluationSlicesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListModelEvaluationSlices);
             Modify_ListModelEvaluationSlicesApiCall(ref _callListModelEvaluationSlices);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -103,9 +103,8 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1
         public PrivateCatalogSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public PrivateCatalogClientBuilder()
+        public PrivateCatalogClientBuilder() : base(PrivateCatalogClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = PrivateCatalogClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref PrivateCatalogClient client);
@@ -132,29 +131,18 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return PrivateCatalogClient.Create(callInvoker, Settings);
+            return PrivateCatalogClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<PrivateCatalogClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return PrivateCatalogClient.Create(callInvoker, Settings);
+            return PrivateCatalogClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => PrivateCatalogClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => PrivateCatalogClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => PrivateCatalogClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>PrivateCatalog client wrapper, for convenient use.</summary>
@@ -201,19 +189,10 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(PrivateCatalog.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="PrivateCatalogClient"/> using the default credentials, endpoint and
@@ -240,8 +219,9 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="PrivateCatalogSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="PrivateCatalogClient"/>.</returns>
-        internal static PrivateCatalogClient Create(grpccore::CallInvoker callInvoker, PrivateCatalogSettings settings = null)
+        internal static PrivateCatalogClient Create(grpccore::CallInvoker callInvoker, PrivateCatalogSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -250,7 +230,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             PrivateCatalog.PrivateCatalogClient grpcClient = new PrivateCatalog.PrivateCatalogClient(callInvoker);
-            return new PrivateCatalogClientImpl(grpcClient, settings);
+            return new PrivateCatalogClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -367,18 +347,19 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="PrivateCatalogSettings"/> used within this client.</param>
-        public PrivateCatalogClientImpl(PrivateCatalog.PrivateCatalogClient grpcClient, PrivateCatalogSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public PrivateCatalogClientImpl(PrivateCatalog.PrivateCatalogClient grpcClient, PrivateCatalogSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             PrivateCatalogSettings effectiveSettings = settings ?? PrivateCatalogSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callSearchCatalogs = clientHelper.BuildApiCall<SearchCatalogsRequest, SearchCatalogsResponse>(grpcClient.SearchCatalogsAsync, grpcClient.SearchCatalogs, effectiveSettings.SearchCatalogsSettings).WithGoogleRequestParam("resource", request => request.Resource);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callSearchCatalogs = clientHelper.BuildApiCall<SearchCatalogsRequest, SearchCatalogsResponse>("SearchCatalogs", grpcClient.SearchCatalogsAsync, grpcClient.SearchCatalogs, effectiveSettings.SearchCatalogsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSearchCatalogs);
             Modify_SearchCatalogsApiCall(ref _callSearchCatalogs);
-            _callSearchProducts = clientHelper.BuildApiCall<SearchProductsRequest, SearchProductsResponse>(grpcClient.SearchProductsAsync, grpcClient.SearchProducts, effectiveSettings.SearchProductsSettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callSearchProducts = clientHelper.BuildApiCall<SearchProductsRequest, SearchProductsResponse>("SearchProducts", grpcClient.SearchProductsAsync, grpcClient.SearchProducts, effectiveSettings.SearchProductsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSearchProducts);
             Modify_SearchProductsApiCall(ref _callSearchProducts);
-            _callSearchVersions = clientHelper.BuildApiCall<SearchVersionsRequest, SearchVersionsResponse>(grpcClient.SearchVersionsAsync, grpcClient.SearchVersions, effectiveSettings.SearchVersionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callSearchVersions = clientHelper.BuildApiCall<SearchVersionsRequest, SearchVersionsResponse>("SearchVersions", grpcClient.SearchVersionsAsync, grpcClient.SearchVersions, effectiveSettings.SearchVersionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSearchVersions);
             Modify_SearchVersionsApiCall(ref _callSearchVersions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

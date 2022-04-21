@@ -67,7 +67,7 @@ namespace Google.Cloud.CloudDms.V1.Tests
                 StaticIpConnectivity = new StaticIpConnectivity(),
             };
             mockGrpcClient.Setup(x => x.GetMigrationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null);
+            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null, null);
             MigrationJob response = client.GetMigrationJob(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -111,7 +111,7 @@ namespace Google.Cloud.CloudDms.V1.Tests
                 StaticIpConnectivity = new StaticIpConnectivity(),
             };
             mockGrpcClient.Setup(x => x.GetMigrationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MigrationJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null);
+            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null, null);
             MigrationJob responseCallSettings = await client.GetMigrationJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MigrationJob responseCancellationToken = await client.GetMigrationJobAsync(request, st::CancellationToken.None);
@@ -157,7 +157,7 @@ namespace Google.Cloud.CloudDms.V1.Tests
                 StaticIpConnectivity = new StaticIpConnectivity(),
             };
             mockGrpcClient.Setup(x => x.GetMigrationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null);
+            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null, null);
             MigrationJob response = client.GetMigrationJob(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -201,7 +201,7 @@ namespace Google.Cloud.CloudDms.V1.Tests
                 StaticIpConnectivity = new StaticIpConnectivity(),
             };
             mockGrpcClient.Setup(x => x.GetMigrationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MigrationJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null);
+            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null, null);
             MigrationJob responseCallSettings = await client.GetMigrationJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MigrationJob responseCancellationToken = await client.GetMigrationJobAsync(request.Name, st::CancellationToken.None);
@@ -247,7 +247,7 @@ namespace Google.Cloud.CloudDms.V1.Tests
                 StaticIpConnectivity = new StaticIpConnectivity(),
             };
             mockGrpcClient.Setup(x => x.GetMigrationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null);
+            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null, null);
             MigrationJob response = client.GetMigrationJob(request.MigrationJobName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -291,7 +291,7 @@ namespace Google.Cloud.CloudDms.V1.Tests
                 StaticIpConnectivity = new StaticIpConnectivity(),
             };
             mockGrpcClient.Setup(x => x.GetMigrationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MigrationJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null);
+            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null, null);
             MigrationJob responseCallSettings = await client.GetMigrationJobAsync(request.MigrationJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MigrationJob responseCancellationToken = await client.GetMigrationJobAsync(request.MigrationJobName, st::CancellationToken.None);
@@ -317,7 +317,7 @@ namespace Google.Cloud.CloudDms.V1.Tests
                 Script = "scriptdec00532",
             };
             mockGrpcClient.Setup(x => x.GenerateSshScript(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null);
+            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null, null);
             SshScript response = client.GenerateSshScript(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -341,7 +341,7 @@ namespace Google.Cloud.CloudDms.V1.Tests
                 Script = "scriptdec00532",
             };
             mockGrpcClient.Setup(x => x.GenerateSshScriptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SshScript>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null);
+            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null, null);
             SshScript responseCallSettings = await client.GenerateSshScriptAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             SshScript responseCancellationToken = await client.GenerateSshScriptAsync(request, st::CancellationToken.None);
@@ -379,7 +379,7 @@ namespace Google.Cloud.CloudDms.V1.Tests
                 Cloudsql = new CloudSqlConnectionProfile(),
             };
             mockGrpcClient.Setup(x => x.GetConnectionProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null);
+            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null, null);
             ConnectionProfile response = client.GetConnectionProfile(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -415,7 +415,7 @@ namespace Google.Cloud.CloudDms.V1.Tests
                 Cloudsql = new CloudSqlConnectionProfile(),
             };
             mockGrpcClient.Setup(x => x.GetConnectionProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConnectionProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null);
+            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null, null);
             ConnectionProfile responseCallSettings = await client.GetConnectionProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConnectionProfile responseCancellationToken = await client.GetConnectionProfileAsync(request, st::CancellationToken.None);
@@ -453,7 +453,7 @@ namespace Google.Cloud.CloudDms.V1.Tests
                 Cloudsql = new CloudSqlConnectionProfile(),
             };
             mockGrpcClient.Setup(x => x.GetConnectionProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null);
+            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null, null);
             ConnectionProfile response = client.GetConnectionProfile(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -489,7 +489,7 @@ namespace Google.Cloud.CloudDms.V1.Tests
                 Cloudsql = new CloudSqlConnectionProfile(),
             };
             mockGrpcClient.Setup(x => x.GetConnectionProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConnectionProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null);
+            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null, null);
             ConnectionProfile responseCallSettings = await client.GetConnectionProfileAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConnectionProfile responseCancellationToken = await client.GetConnectionProfileAsync(request.Name, st::CancellationToken.None);
@@ -527,7 +527,7 @@ namespace Google.Cloud.CloudDms.V1.Tests
                 Cloudsql = new CloudSqlConnectionProfile(),
             };
             mockGrpcClient.Setup(x => x.GetConnectionProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null);
+            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null, null);
             ConnectionProfile response = client.GetConnectionProfile(request.ConnectionProfileName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -563,7 +563,7 @@ namespace Google.Cloud.CloudDms.V1.Tests
                 Cloudsql = new CloudSqlConnectionProfile(),
             };
             mockGrpcClient.Setup(x => x.GetConnectionProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConnectionProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null);
+            DataMigrationServiceClient client = new DataMigrationServiceClientImpl(mockGrpcClient.Object, null, null);
             ConnectionProfile responseCallSettings = await client.GetConnectionProfileAsync(request.ConnectionProfileName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConnectionProfile responseCancellationToken = await client.GetConnectionProfileAsync(request.ConnectionProfileName, st::CancellationToken.None);

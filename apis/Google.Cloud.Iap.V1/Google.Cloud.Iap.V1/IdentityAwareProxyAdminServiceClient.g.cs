@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -136,9 +136,8 @@ namespace Google.Cloud.Iap.V1
         public IdentityAwareProxyAdminServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public IdentityAwareProxyAdminServiceClientBuilder()
+        public IdentityAwareProxyAdminServiceClientBuilder() : base(IdentityAwareProxyAdminServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = IdentityAwareProxyAdminServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref IdentityAwareProxyAdminServiceClient client);
@@ -165,30 +164,18 @@ namespace Google.Cloud.Iap.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return IdentityAwareProxyAdminServiceClient.Create(callInvoker, Settings);
+            return IdentityAwareProxyAdminServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<IdentityAwareProxyAdminServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return IdentityAwareProxyAdminServiceClient.Create(callInvoker, Settings);
+            return IdentityAwareProxyAdminServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => IdentityAwareProxyAdminServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() =>
-            IdentityAwareProxyAdminServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => IdentityAwareProxyAdminServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>IdentityAwareProxyAdminService client wrapper, for convenient use.</summary>
@@ -215,19 +202,10 @@ namespace Google.Cloud.Iap.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(IdentityAwareProxyAdminService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="IdentityAwareProxyAdminServiceClient"/> using the default credentials,
@@ -258,8 +236,9 @@ namespace Google.Cloud.Iap.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="IdentityAwareProxyAdminServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="IdentityAwareProxyAdminServiceClient"/>.</returns>
-        internal static IdentityAwareProxyAdminServiceClient Create(grpccore::CallInvoker callInvoker, IdentityAwareProxyAdminServiceSettings settings = null)
+        internal static IdentityAwareProxyAdminServiceClient Create(grpccore::CallInvoker callInvoker, IdentityAwareProxyAdminServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -268,7 +247,7 @@ namespace Google.Cloud.Iap.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient grpcClient = new IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient(callInvoker);
-            return new IdentityAwareProxyAdminServiceClientImpl(grpcClient, settings);
+            return new IdentityAwareProxyAdminServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -477,24 +456,25 @@ namespace Google.Cloud.Iap.V1
         /// <param name="settings">
         /// The base <see cref="IdentityAwareProxyAdminServiceSettings"/> used within this client.
         /// </param>
-        public IdentityAwareProxyAdminServiceClientImpl(IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient grpcClient, IdentityAwareProxyAdminServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public IdentityAwareProxyAdminServiceClientImpl(IdentityAwareProxyAdminService.IdentityAwareProxyAdminServiceClient grpcClient, IdentityAwareProxyAdminServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             IdentityAwareProxyAdminServiceSettings effectiveSettings = settings ?? IdentityAwareProxyAdminServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>(grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
-            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>(grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
-            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>(grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
+            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
-            _callGetIapSettings = clientHelper.BuildApiCall<GetIapSettingsRequest, IapSettings>(grpcClient.GetIapSettingsAsync, grpcClient.GetIapSettings, effectiveSettings.GetIapSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetIapSettings = clientHelper.BuildApiCall<GetIapSettingsRequest, IapSettings>("GetIapSettings", grpcClient.GetIapSettingsAsync, grpcClient.GetIapSettings, effectiveSettings.GetIapSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetIapSettings);
             Modify_GetIapSettingsApiCall(ref _callGetIapSettings);
-            _callUpdateIapSettings = clientHelper.BuildApiCall<UpdateIapSettingsRequest, IapSettings>(grpcClient.UpdateIapSettingsAsync, grpcClient.UpdateIapSettings, effectiveSettings.UpdateIapSettingsSettings).WithGoogleRequestParam("iap_settings.name", request => request.IapSettings?.Name);
+            _callUpdateIapSettings = clientHelper.BuildApiCall<UpdateIapSettingsRequest, IapSettings>("UpdateIapSettings", grpcClient.UpdateIapSettingsAsync, grpcClient.UpdateIapSettings, effectiveSettings.UpdateIapSettingsSettings).WithGoogleRequestParam("iap_settings.name", request => request.IapSettings?.Name);
             Modify_ApiCall(ref _callUpdateIapSettings);
             Modify_UpdateIapSettingsApiCall(ref _callUpdateIapSettings);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -58,7 +58,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 FeatureSettings = new Application.Types.FeatureSettings(),
             };
             mockGrpcClient.Setup(x => x.GetApplication(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ApplicationsClient client = new ApplicationsClientImpl(mockGrpcClient.Object, null);
+            ApplicationsClient client = new ApplicationsClientImpl(mockGrpcClient.Object, null, null);
             Application response = client.GetApplication(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -94,7 +94,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 FeatureSettings = new Application.Types.FeatureSettings(),
             };
             mockGrpcClient.Setup(x => x.GetApplicationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Application>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ApplicationsClient client = new ApplicationsClientImpl(mockGrpcClient.Object, null);
+            ApplicationsClient client = new ApplicationsClientImpl(mockGrpcClient.Object, null, null);
             Application responseCallSettings = await client.GetApplicationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Application responseCancellationToken = await client.GetApplicationAsync(request, st::CancellationToken.None);

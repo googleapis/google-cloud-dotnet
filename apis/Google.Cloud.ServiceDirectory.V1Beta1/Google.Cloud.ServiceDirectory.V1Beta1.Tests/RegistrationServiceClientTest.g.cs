@@ -55,7 +55,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateNamespace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Namespace response = client.CreateNamespace(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -85,7 +85,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateNamespaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Namespace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Namespace responseCallSettings = await client.CreateNamespaceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Namespace responseCancellationToken = await client.CreateNamespaceAsync(request, st::CancellationToken.None);
@@ -117,7 +117,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateNamespace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Namespace response = client.CreateNamespace(request.Parent, request.Namespace, request.NamespaceId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -147,7 +147,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateNamespaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Namespace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Namespace responseCallSettings = await client.CreateNamespaceAsync(request.Parent, request.Namespace, request.NamespaceId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Namespace responseCancellationToken = await client.CreateNamespaceAsync(request.Parent, request.Namespace, request.NamespaceId, st::CancellationToken.None);
@@ -179,7 +179,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateNamespace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Namespace response = client.CreateNamespace(request.ParentAsLocationName, request.Namespace, request.NamespaceId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -209,7 +209,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateNamespaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Namespace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Namespace responseCallSettings = await client.CreateNamespaceAsync(request.ParentAsLocationName, request.Namespace, request.NamespaceId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Namespace responseCancellationToken = await client.CreateNamespaceAsync(request.ParentAsLocationName, request.Namespace, request.NamespaceId, st::CancellationToken.None);
@@ -239,7 +239,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetNamespace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Namespace response = client.GetNamespace(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -267,7 +267,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetNamespaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Namespace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Namespace responseCallSettings = await client.GetNamespaceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Namespace responseCancellationToken = await client.GetNamespaceAsync(request, st::CancellationToken.None);
@@ -297,7 +297,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetNamespace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Namespace response = client.GetNamespace(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -325,7 +325,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetNamespaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Namespace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Namespace responseCallSettings = await client.GetNamespaceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Namespace responseCancellationToken = await client.GetNamespaceAsync(request.Name, st::CancellationToken.None);
@@ -355,7 +355,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetNamespace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Namespace response = client.GetNamespace(request.NamespaceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -383,7 +383,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetNamespaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Namespace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Namespace responseCallSettings = await client.GetNamespaceAsync(request.NamespaceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Namespace responseCancellationToken = await client.GetNamespaceAsync(request.NamespaceName, st::CancellationToken.None);
@@ -414,7 +414,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateNamespace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Namespace response = client.UpdateNamespace(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -443,7 +443,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateNamespaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Namespace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Namespace responseCallSettings = await client.UpdateNamespaceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Namespace responseCancellationToken = await client.UpdateNamespaceAsync(request, st::CancellationToken.None);
@@ -474,7 +474,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateNamespace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Namespace response = client.UpdateNamespace(request.Namespace, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -503,7 +503,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateNamespaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Namespace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Namespace responseCallSettings = await client.UpdateNamespaceAsync(request.Namespace, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Namespace responseCancellationToken = await client.UpdateNamespaceAsync(request.Namespace, request.UpdateMask, st::CancellationToken.None);
@@ -521,7 +521,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNamespace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteNamespace(request);
             mockGrpcClient.VerifyAll();
         }
@@ -536,7 +536,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNamespaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteNamespaceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteNamespaceAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -552,7 +552,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNamespace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteNamespace(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -567,7 +567,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNamespaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteNamespaceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteNamespaceAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -583,7 +583,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNamespace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteNamespace(request.NamespaceName);
             mockGrpcClient.VerifyAll();
         }
@@ -598,7 +598,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNamespaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteNamespaceAsync(request.NamespaceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteNamespaceAsync(request.NamespaceName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -629,7 +629,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Service response = client.CreateService(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -660,7 +660,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Service responseCallSettings = await client.CreateServiceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Service responseCancellationToken = await client.CreateServiceAsync(request, st::CancellationToken.None);
@@ -693,7 +693,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Service response = client.CreateService(request.Parent, request.Service, request.ServiceId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -724,7 +724,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Service responseCallSettings = await client.CreateServiceAsync(request.Parent, request.Service, request.ServiceId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Service responseCancellationToken = await client.CreateServiceAsync(request.Parent, request.Service, request.ServiceId, st::CancellationToken.None);
@@ -757,7 +757,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Service response = client.CreateService(request.ParentAsNamespaceName, request.Service, request.ServiceId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -788,7 +788,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Service responseCallSettings = await client.CreateServiceAsync(request.ParentAsNamespaceName, request.Service, request.ServiceId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Service responseCancellationToken = await client.CreateServiceAsync(request.ParentAsNamespaceName, request.Service, request.ServiceId, st::CancellationToken.None);
@@ -819,7 +819,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Service response = client.GetService(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -848,7 +848,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Service responseCallSettings = await client.GetServiceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Service responseCancellationToken = await client.GetServiceAsync(request, st::CancellationToken.None);
@@ -879,7 +879,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Service response = client.GetService(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -908,7 +908,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Service responseCallSettings = await client.GetServiceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Service responseCancellationToken = await client.GetServiceAsync(request.Name, st::CancellationToken.None);
@@ -939,7 +939,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Service response = client.GetService(request.ServiceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -968,7 +968,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Service responseCallSettings = await client.GetServiceAsync(request.ServiceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Service responseCancellationToken = await client.GetServiceAsync(request.ServiceName, st::CancellationToken.None);
@@ -1000,7 +1000,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Service response = client.UpdateService(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1030,7 +1030,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Service responseCallSettings = await client.UpdateServiceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Service responseCancellationToken = await client.UpdateServiceAsync(request, st::CancellationToken.None);
@@ -1062,7 +1062,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Service response = client.UpdateService(request.Service, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1092,7 +1092,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Service responseCallSettings = await client.UpdateServiceAsync(request.Service, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Service responseCancellationToken = await client.UpdateServiceAsync(request.Service, request.UpdateMask, st::CancellationToken.None);
@@ -1110,7 +1110,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteService(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1125,7 +1125,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteServiceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteServiceAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1141,7 +1141,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteService(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1156,7 +1156,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteServiceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteServiceAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1172,7 +1172,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteService(request.ServiceName);
             mockGrpcClient.VerifyAll();
         }
@@ -1187,7 +1187,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteServiceAsync(request.ServiceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteServiceAsync(request.ServiceName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1220,7 +1220,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint response = client.CreateEndpoint(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1253,7 +1253,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint responseCallSettings = await client.CreateEndpointAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Endpoint responseCancellationToken = await client.CreateEndpointAsync(request, st::CancellationToken.None);
@@ -1288,7 +1288,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint response = client.CreateEndpoint(request.Parent, request.Endpoint, request.EndpointId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1321,7 +1321,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint responseCallSettings = await client.CreateEndpointAsync(request.Parent, request.Endpoint, request.EndpointId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Endpoint responseCancellationToken = await client.CreateEndpointAsync(request.Parent, request.Endpoint, request.EndpointId, st::CancellationToken.None);
@@ -1356,7 +1356,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint response = client.CreateEndpoint(request.ParentAsServiceName, request.Endpoint, request.EndpointId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1389,7 +1389,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint responseCallSettings = await client.CreateEndpointAsync(request.ParentAsServiceName, request.Endpoint, request.EndpointId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Endpoint responseCancellationToken = await client.CreateEndpointAsync(request.ParentAsServiceName, request.Endpoint, request.EndpointId, st::CancellationToken.None);
@@ -1422,7 +1422,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint response = client.GetEndpoint(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1453,7 +1453,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint responseCallSettings = await client.GetEndpointAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Endpoint responseCancellationToken = await client.GetEndpointAsync(request, st::CancellationToken.None);
@@ -1486,7 +1486,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint response = client.GetEndpoint(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1517,7 +1517,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint responseCallSettings = await client.GetEndpointAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Endpoint responseCancellationToken = await client.GetEndpointAsync(request.Name, st::CancellationToken.None);
@@ -1550,7 +1550,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint response = client.GetEndpoint(request.EndpointName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1581,7 +1581,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint responseCallSettings = await client.GetEndpointAsync(request.EndpointName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Endpoint responseCancellationToken = await client.GetEndpointAsync(request.EndpointName, st::CancellationToken.None);
@@ -1615,7 +1615,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint response = client.UpdateEndpoint(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1647,7 +1647,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint responseCallSettings = await client.UpdateEndpointAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Endpoint responseCancellationToken = await client.UpdateEndpointAsync(request, st::CancellationToken.None);
@@ -1681,7 +1681,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint response = client.UpdateEndpoint(request.Endpoint, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1713,7 +1713,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             Endpoint responseCallSettings = await client.UpdateEndpointAsync(request.Endpoint, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Endpoint responseCancellationToken = await client.UpdateEndpointAsync(request.Endpoint, request.UpdateMask, st::CancellationToken.None);
@@ -1731,7 +1731,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteEndpoint(request);
             mockGrpcClient.VerifyAll();
         }
@@ -1746,7 +1746,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteEndpointAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteEndpointAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1762,7 +1762,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteEndpoint(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -1777,7 +1777,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteEndpointAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteEndpointAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1793,7 +1793,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteEndpoint(request.EndpointName);
             mockGrpcClient.VerifyAll();
         }
@@ -1808,7 +1808,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteEndpointAsync(request.EndpointName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteEndpointAsync(request.EndpointName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -1837,7 +1837,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1866,7 +1866,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
@@ -1898,7 +1898,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1928,7 +1928,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
@@ -1956,7 +1956,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -1982,7 +1982,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
+            RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);

@@ -54,7 +54,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 ChannelPartnerId = "channel_partner_ida548fd43",
             };
             mockGrpcClient.Setup(x => x.GetCustomer(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             Customer response = client.GetCustomer(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -85,7 +85,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 ChannelPartnerId = "channel_partner_ida548fd43",
             };
             mockGrpcClient.Setup(x => x.GetCustomerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Customer>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             Customer responseCallSettings = await client.GetCustomerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Customer responseCancellationToken = await client.GetCustomerAsync(request, st::CancellationToken.None);
@@ -118,7 +118,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 ChannelPartnerId = "channel_partner_ida548fd43",
             };
             mockGrpcClient.Setup(x => x.GetCustomer(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             Customer response = client.GetCustomer(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -149,7 +149,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 ChannelPartnerId = "channel_partner_ida548fd43",
             };
             mockGrpcClient.Setup(x => x.GetCustomerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Customer>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             Customer responseCallSettings = await client.GetCustomerAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Customer responseCancellationToken = await client.GetCustomerAsync(request.Name, st::CancellationToken.None);
@@ -182,7 +182,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 ChannelPartnerId = "channel_partner_ida548fd43",
             };
             mockGrpcClient.Setup(x => x.GetCustomer(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             Customer response = client.GetCustomer(request.CustomerName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -213,7 +213,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 ChannelPartnerId = "channel_partner_ida548fd43",
             };
             mockGrpcClient.Setup(x => x.GetCustomerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Customer>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             Customer responseCallSettings = await client.GetCustomerAsync(request.CustomerName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Customer responseCancellationToken = await client.GetCustomerAsync(request.CustomerName, st::CancellationToken.None);
@@ -239,7 +239,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CheckCloudIdentityAccountsExist(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             CheckCloudIdentityAccountsExistResponse response = client.CheckCloudIdentityAccountsExist(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -263,7 +263,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CheckCloudIdentityAccountsExistAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CheckCloudIdentityAccountsExistResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             CheckCloudIdentityAccountsExistResponse responseCallSettings = await client.CheckCloudIdentityAccountsExistAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CheckCloudIdentityAccountsExistResponse responseCancellationToken = await client.CheckCloudIdentityAccountsExistAsync(request, st::CancellationToken.None);
@@ -297,7 +297,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 ChannelPartnerId = "channel_partner_ida548fd43",
             };
             mockGrpcClient.Setup(x => x.CreateCustomer(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             Customer response = client.CreateCustomer(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -329,7 +329,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 ChannelPartnerId = "channel_partner_ida548fd43",
             };
             mockGrpcClient.Setup(x => x.CreateCustomerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Customer>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             Customer responseCallSettings = await client.CreateCustomerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Customer responseCancellationToken = await client.CreateCustomerAsync(request, st::CancellationToken.None);
@@ -363,7 +363,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 ChannelPartnerId = "channel_partner_ida548fd43",
             };
             mockGrpcClient.Setup(x => x.UpdateCustomer(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             Customer response = client.UpdateCustomer(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -395,7 +395,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 ChannelPartnerId = "channel_partner_ida548fd43",
             };
             mockGrpcClient.Setup(x => x.UpdateCustomerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Customer>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             Customer responseCallSettings = await client.UpdateCustomerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Customer responseCancellationToken = await client.UpdateCustomerAsync(request, st::CancellationToken.None);
@@ -414,7 +414,7 @@ namespace Google.Cloud.Channel.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCustomer(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteCustomer(request);
             mockGrpcClient.VerifyAll();
         }
@@ -430,7 +430,7 @@ namespace Google.Cloud.Channel.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCustomerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteCustomerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteCustomerAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -447,7 +447,7 @@ namespace Google.Cloud.Channel.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCustomer(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteCustomer(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -463,7 +463,7 @@ namespace Google.Cloud.Channel.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCustomerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteCustomerAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteCustomerAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -480,7 +480,7 @@ namespace Google.Cloud.Channel.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCustomer(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteCustomer(request.CustomerName);
             mockGrpcClient.VerifyAll();
         }
@@ -496,7 +496,7 @@ namespace Google.Cloud.Channel.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCustomerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteCustomerAsync(request.CustomerName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteCustomerAsync(request.CustomerName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -533,7 +533,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 ChannelPartnerId = "channel_partner_ida548fd43",
             };
             mockGrpcClient.Setup(x => x.ImportCustomer(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             Customer response = client.ImportCustomer(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -570,7 +570,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 ChannelPartnerId = "channel_partner_ida548fd43",
             };
             mockGrpcClient.Setup(x => x.ImportCustomerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Customer>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             Customer responseCallSettings = await client.ImportCustomerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Customer responseCancellationToken = await client.ImportCustomerAsync(request, st::CancellationToken.None);
@@ -606,7 +606,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 Parameters = { new Parameter(), },
             };
             mockGrpcClient.Setup(x => x.GetEntitlement(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             Entitlement response = client.GetEntitlement(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -640,7 +640,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 Parameters = { new Parameter(), },
             };
             mockGrpcClient.Setup(x => x.GetEntitlementAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entitlement>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             Entitlement responseCallSettings = await client.GetEntitlementAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Entitlement responseCancellationToken = await client.GetEntitlementAsync(request, st::CancellationToken.None);
@@ -670,7 +670,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 ChannelPartnerCloudIdentityInfo = new CloudIdentityInfo(),
             };
             mockGrpcClient.Setup(x => x.GetChannelPartnerLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             ChannelPartnerLink response = client.GetChannelPartnerLink(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -698,7 +698,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 ChannelPartnerCloudIdentityInfo = new CloudIdentityInfo(),
             };
             mockGrpcClient.Setup(x => x.GetChannelPartnerLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ChannelPartnerLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             ChannelPartnerLink responseCallSettings = await client.GetChannelPartnerLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ChannelPartnerLink responseCancellationToken = await client.GetChannelPartnerLinkAsync(request, st::CancellationToken.None);
@@ -728,7 +728,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 ChannelPartnerCloudIdentityInfo = new CloudIdentityInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateChannelPartnerLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             ChannelPartnerLink response = client.CreateChannelPartnerLink(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -756,7 +756,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 ChannelPartnerCloudIdentityInfo = new CloudIdentityInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateChannelPartnerLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ChannelPartnerLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             ChannelPartnerLink responseCallSettings = await client.CreateChannelPartnerLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ChannelPartnerLink responseCancellationToken = await client.CreateChannelPartnerLinkAsync(request, st::CancellationToken.None);
@@ -787,7 +787,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 ChannelPartnerCloudIdentityInfo = new CloudIdentityInfo(),
             };
             mockGrpcClient.Setup(x => x.UpdateChannelPartnerLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             ChannelPartnerLink response = client.UpdateChannelPartnerLink(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -816,7 +816,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 ChannelPartnerCloudIdentityInfo = new CloudIdentityInfo(),
             };
             mockGrpcClient.Setup(x => x.UpdateChannelPartnerLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ChannelPartnerLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             ChannelPartnerLink responseCallSettings = await client.UpdateChannelPartnerLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ChannelPartnerLink responseCancellationToken = await client.UpdateChannelPartnerLinkAsync(request, st::CancellationToken.None);
@@ -852,7 +852,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.LookupOffer(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             Offer response = client.LookupOffer(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -886,7 +886,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.LookupOfferAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Offer>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             Offer responseCallSettings = await client.LookupOfferAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Offer responseCancellationToken = await client.LookupOfferAsync(request, st::CancellationToken.None);
@@ -909,7 +909,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 Topic = "topicac689b9d",
             };
             mockGrpcClient.Setup(x => x.RegisterSubscriber(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             RegisterSubscriberResponse response = client.RegisterSubscriber(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -930,7 +930,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 Topic = "topicac689b9d",
             };
             mockGrpcClient.Setup(x => x.RegisterSubscriberAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RegisterSubscriberResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             RegisterSubscriberResponse responseCallSettings = await client.RegisterSubscriberAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             RegisterSubscriberResponse responseCancellationToken = await client.RegisterSubscriberAsync(request, st::CancellationToken.None);
@@ -953,7 +953,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 Topic = "topicac689b9d",
             };
             mockGrpcClient.Setup(x => x.UnregisterSubscriber(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             UnregisterSubscriberResponse response = client.UnregisterSubscriber(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -974,7 +974,7 @@ namespace Google.Cloud.Channel.V1.Tests
                 Topic = "topicac689b9d",
             };
             mockGrpcClient.Setup(x => x.UnregisterSubscriberAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UnregisterSubscriberResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null, null);
             UnregisterSubscriberResponse responseCallSettings = await client.UnregisterSubscriberAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             UnregisterSubscriberResponse responseCancellationToken = await client.UnregisterSubscriberAsync(request, st::CancellationToken.None);
