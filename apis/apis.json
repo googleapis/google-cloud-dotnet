@@ -1145,7 +1145,7 @@
       "version": "5.0.0-alpha02",
       "type": "other",
       "targetFrameworks": "netstandard2.1;net462",
-      "testTargetFrameworks": "netcoreapp3.1;net462;net6.0",
+      "testTargetFrameworks": "netcoreapp3.1;net462",
       "description": "Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components.",
       "tags": [
         "Error",
@@ -1907,7 +1907,7 @@
       "type": "other",
       "metadataType": "INTEGRATION",
       "targetFrameworks": "netstandard2.1",
-      "testTargetFrameworks": "netcoreapp3.1;net6.0",
+      "testTargetFrameworks": "netcoreapp3.1",
       "description": "ConsoleFormatter for Google Cloud Logging.",
       "tags": [
         "Logging",
