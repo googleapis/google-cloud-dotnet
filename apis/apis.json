@@ -719,7 +719,7 @@
     },
     {
       "id": "Google.Cloud.Compute.V1",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "type": "regapic",
       "productName": "Compute Engine",
       "productUrl": "https://cloud.google.com/compute",

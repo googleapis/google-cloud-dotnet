@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.4.0, released 2022-04-21
+
+### Bug fixes
+
+- Revert proto3_optional, required removal on parent_id ([issue 714](https://github.com/googleapis/google-cloud-dotnet/issues/714)) ([commit a6d7f74](https://github.com/googleapis/google-cloud-dotnet/commit/a6d7f74ce3b8d0e15c5965a6afdf64355cb59942))
+
+BREAKING CHANGE: The above change is breaking, in terms of
+removing the `HasParentId` and `ClearParentId()` members. We are
+releasing as a minor version as these members were only introduced
+recently, and the change will definitely be needed long-term.
+
 ## Version 1.3.0, released 2022-04-13
 
 ### Bug fixes
