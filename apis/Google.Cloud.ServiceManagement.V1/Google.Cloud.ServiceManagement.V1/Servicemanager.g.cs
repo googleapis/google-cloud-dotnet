@@ -1182,7 +1182,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
     private string serviceName_ = "";
     /// <summary>
     /// Required. The name of the service.  See the
-    /// [overview](/service-management/overview) for naming requirements.  For
+    /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
     /// example: `example.googleapis.com`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1379,7 +1379,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
     private string serviceName_ = "";
     /// <summary>
     /// Required. The name of the service. See the
-    /// [overview](/service-management/overview) for naming requirements. For
+    /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements. For
     /// example: `example.googleapis.com`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1782,7 +1782,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
     private string serviceName_ = "";
     /// <summary>
     /// Required. The name of the service.  See the
-    /// [overview](/service-management/overview) for naming requirements.  For
+    /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
     /// example: `example.googleapis.com`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2085,7 +2085,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
     private string serviceName_ = "";
     /// <summary>
     /// Required. The name of the service.  See the
-    /// [overview](/service-management/overview) for naming requirements.  For
+    /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
     /// example: `example.googleapis.com`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2586,7 +2586,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
     private string serviceName_ = "";
     /// <summary>
     /// Required. The name of the service.  See the
-    /// [overview](/service-management/overview) for naming requirements.  For
+    /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
     /// example: `example.googleapis.com`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2833,7 +2833,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
     private string serviceName_ = "";
     /// <summary>
     /// Required. The name of the service.  See the
-    /// [overview](/service-management/overview) for naming requirements.  For
+    /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
     /// example: `example.googleapis.com`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3324,7 +3324,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
     private string serviceName_ = "";
     /// <summary>
     /// Required. The name of the service.  See the
-    /// [overview](/service-management/overview) for naming requirements.  For
+    /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
     /// example: `example.googleapis.com`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3572,7 +3572,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
     private string serviceName_ = "";
     /// <summary>
     /// Required. The name of the service.  See the
-    /// [overview](/service-management/overview) for naming requirements.  For
+    /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
     /// example: `example.googleapis.com`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4119,7 +4119,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
     private string serviceName_ = "";
     /// <summary>
     /// Required. The name of the service.  See the
-    /// [overview](/service-management/overview) for naming requirements.  For
+    /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
     /// example: `example.googleapis.com`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
