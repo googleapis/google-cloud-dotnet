@@ -27,11 +27,6 @@ namespace Google.Cloud.Firestore.V1
         /// for a single API request.
         /// </summary>
         public virtual FirestoreSettings Settings { get; protected set; }
-
-        /// <summary>
-        /// FIXME: This should be removed, by making ServiceMetadata public. (Or we should rename this to something else.)
-        /// </summary>
-        public static ServiceMetadata PublicServiceMetadata => ServiceMetadata;
     }
 
     public partial class FirestoreClientImpl
