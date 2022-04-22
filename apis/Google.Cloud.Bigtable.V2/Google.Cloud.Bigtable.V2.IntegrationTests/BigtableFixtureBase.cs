@@ -51,17 +51,15 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             string instanceId;
             if (!string.IsNullOrEmpty(emulatorHost))
             {
+                // TODO: Use BigtableClientBuilder emulator support to when it exists...
                 projectId = "emulator-test-project";
-                // FIXME: We need to create an appropriate call invoker with insecure credentials...
-                // It probably doesn't need to be a GcpCallInvoker though.
-                EmulatorCallInvoker = null;
-                 /*
-                EmulatorCallInvoker = new GcpCallInvoker(
-                    emulatorHost,
-                    ChannelCredentials.Insecure,
-                    GrpcCoreAdapter.Instance.ConvertOptions(BigtableServiceApiSettings.GetDefault().CreateChannelOptions()));
-                 */
                 instanceId = "doesnt-matter";
+
+                EmulatorCallInvoker = new BigtableServiceApiClientBuilder
+                {
+                    Endpoint = emulatorHost,
+                    ChannelCredentials = ChannelCredentials.Insecure
+                }.CreateGcpCallInvoker();
             }
             else
             {

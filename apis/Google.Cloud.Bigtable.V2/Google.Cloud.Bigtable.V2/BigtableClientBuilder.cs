@@ -14,12 +14,13 @@
 
 using Google.Api.Gax.Grpc;
 using System;
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Bigtable.V2
 {
+    // TODO: Add emulator support in the same way as FirestoreClient etc.
+
     /// <summary>
     /// Builder class for <see cref="BigtableClient"/> to provide simple configuration of credentials, endpoint etc.
     /// </summary>

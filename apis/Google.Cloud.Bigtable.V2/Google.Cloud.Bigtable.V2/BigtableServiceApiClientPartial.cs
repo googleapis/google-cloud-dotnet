@@ -148,7 +148,7 @@ namespace Google.Cloud.Bigtable.V2
     {
         private static readonly GrpcChannelOptions s_bigtableDefaultOptions = DefaultOptions
             .WithPrimaryUserAgent(BigtableClient.UserAgent)
-            // TODO: these were previously -1, which was treated as infinity by Grpc.Core, but is treated
+            // Note: these were previously -1, which was treated as infinity by Grpc.Core, but is treated
             // as "too small for any message" by Grpc.Net.Client. We could potentially hide that difference
             // in the adapter instead of here, but using int.MaxValue feels more sensible anyway.
             .WithMaxSendMessageSize(int.MaxValue)
@@ -162,17 +162,20 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         /// <inheritdoc />
-        protected override CallInvoker CreateCallInvoker()
+        protected override CallInvoker CreateCallInvoker() => CallInvoker ?? CreateGcpCallInvoker();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public GcpCallInvoker CreateGcpCallInvoker()
         {
-            if (CallInvoker != null)
-            {
-                return CallInvoker;
-            }
+            GaxPreconditions.CheckState(CallInvoker is null,
+                "Cannot call {0} on a builder that already has {1} set.", nameof(CreateGcpCallInvoker), nameof(CallInvoker));
             var endpoint = Endpoint ?? ServiceMetadata.DefaultEndpoint;
             var channelOptions = GetChannelOptions();
             var apiConfig = Settings.CreateApiConfig();
-            // FIXME: We need the effective gRPC adapter.
-            var grpcAdapter = GrpcAdapter;
+            var grpcAdapter = EffectiveGrpcAdapter;
             // Although *we* never allow the use of the channel pool, we can use the call invoker pool if and
             // only if the base class thinks it can use the channel pool - i.e. it's only using default credentials.
             if (base.CanUseChannelPool)
@@ -181,24 +184,38 @@ namespace Google.Cloud.Bigtable.V2
             }
             else
             {
-                // FIXME: This may not be what we want... although it's not clear why we'd need a GcpCallInvoker
-                // (as we used to create) when it's not handling multiple channels.
-                return base.CreateCallInvoker();
+                var credentials = GetChannelCredentials();
+                return new GcpCallInvoker(ServiceMetadata, endpoint, credentials, channelOptions, apiConfig, grpcAdapter);
             }
         }
 
         /// <inheritdoc />
-        protected override async Task<CallInvoker> CreateCallInvokerAsync(CancellationToken cancellationToken)
+        protected override GrpcChannelOptions GetChannelOptions()
         {
-            if (CallInvoker != null)
+            var options = UserAgent is null ? s_bigtableDefaultOptions : s_bigtableDefaultOptions.WithPrimaryUserAgent(UserAgent);
+            if (GrpcChannelOptions is object)
             {
-                return CallInvoker;
+                options = options.MergedWith(GrpcChannelOptions);
             }
+            return options;
+        }
+
+        /// <inheritdoc />
+        protected override async Task<CallInvoker> CreateCallInvokerAsync(CancellationToken cancellationToken) =>
+            CallInvoker ?? await CreateGcpCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public async Task<GcpCallInvoker> CreateGcpCallInvokerAsync(CancellationToken cancellationToken)
+        {
+            GaxPreconditions.CheckState(CallInvoker is null,
+                "Cannot call {0} on a builder that already has {1} set.", nameof(CreateGcpCallInvoker), nameof(CallInvoker));
             var endpoint = Endpoint ?? ServiceMetadata.DefaultEndpoint;
             var channelOptions = GetChannelOptions();
             var apiConfig = Settings.CreateApiConfig();
-            // FIXME: We need the effective gRPC adapter.
-            var grpcAdapter = GrpcAdapter;
+            var grpcAdapter = EffectiveGrpcAdapter;
             // Although *we* never allow the use of the channel pool, we can use the call invoker pool if and
             // only if the base class thinks it can use the channel pool - i.e. it's only using default credentials.
             if (base.CanUseChannelPool)
@@ -207,9 +224,8 @@ namespace Google.Cloud.Bigtable.V2
             }
             else
             {
-                // FIXME: This may not be what we want... although it's not clear why we'd need a GcpCallInvoker
-                // (as we used to create) when it's not handling multiple channels.
-                return await base.CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+                var credentials = await GetChannelCredentialsAsync(cancellationToken).ConfigureAwait(false);
+                return new GcpCallInvoker(ServiceMetadata, endpoint, credentials, channelOptions, apiConfig, grpcAdapter);
             }
         }
 
