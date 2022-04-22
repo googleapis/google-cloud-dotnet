@@ -236,6 +236,13 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>The value converted to a <see cref="PgNumeric"/>.</returns>
         public PgNumeric GetPgNumeric(int i) => GetFieldValue<PgNumeric>(i);
 
+        /// <summary>
+        /// Gets the value of the specified column as type <see cref="SpannerDate"/>.
+        /// </summary>
+        /// <param name="i">The index of the column to retrieve.</param>
+        /// <returns>The value converted to a <see cref="SpannerDate"/>.</returns>
+        public SpannerDate GetSpannerDate(int i) => GetFieldValue<SpannerDate>(i);
+
         /// <inheritdoc />
         public override object GetValue(int i) => this[i];
 

@@ -179,6 +179,10 @@ namespace Google.Cloud.Spanner.Data
                         StringValue = XmlConvert.ToString(Convert.ToDateTime(value, InvariantCulture), XmlDateTimeSerializationMode.Utc)
                     };
                 case TypeCode.Date:
+                    if(value is SpannerDate spannerDate)
+                    {
+                        return new Value { StringValue = spannerDate.ToString() };
+                    }
                     if (value is DateTime date && date.Kind == DateTimeKind.Local)
                     {
                         // If the DateTime is local the value should be changed to unspecified
@@ -432,6 +436,20 @@ namespace Google.Cloud.Spanner.Data
                         return null;
                     case Value.KindOneofCase.StringValue:
                         return XmlConvert.ToDateTime(wireValue.StringValue, XmlDateTimeSerializationMode.Utc);
+                    default:
+                        throw new InvalidOperationException(
+                            $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
+                }
+            }
+
+            if (targetClrType == typeof(SpannerDate))
+            {
+                switch (wireValue.KindCase)
+                {
+                    case Value.KindOneofCase.NullValue:
+                        return null;
+                    case Value.KindOneofCase.StringValue:
+                        return SpannerDate.Parse(wireValue.StringValue);
                     default:
                         throw new InvalidOperationException(
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");

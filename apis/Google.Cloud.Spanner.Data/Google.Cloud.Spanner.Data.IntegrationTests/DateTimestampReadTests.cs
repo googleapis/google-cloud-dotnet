@@ -12,8 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.V1;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
@@ -27,6 +30,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public DateTimestampReadTests(DateTimestampTableFixture fixture) =>
             _fixture = fixture;
 
+        private static bool[] s_readWriteAsDateTime = new[]
+        {
+            true,
+            false
+        };
+
         public static IEnumerable<object[]> TestDates =>
             new List<object[]>
             {
@@ -38,21 +47,69 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 new object[] { new DateTime(2020, 12, 29, 0, 0, 0, DateTimeKind.Local) },
             };
 
+        public static IEnumerable<object[]> TestDatesWithReadWriteTypes() =>
+            from writeAsDateTime in s_readWriteAsDateTime
+            from readAsDateTime in s_readWriteAsDateTime
+            from parameters in TestDates
+            select new object[] { writeAsDateTime, readAsDateTime }.Concat(parameters).ToArray();
+
         [Theory]
         [MemberData(nameof(TestDates))]
-        public async void WriteDateThenRead_ShouldBeEqual(DateTime expectedDate)
+        public async Task WriteDateThenRead_ShouldBeEqual(DateTime expectedDate)
         {
-            using (var connection = _fixture.GetConnection())
-            {
-                // Write the date value and read it back.
-                await connection.CreateInsertOrUpdateCommand(_fixture.TableName,
-                    new SpannerParameterCollection
-                    {
+            using var connection = _fixture.GetConnection();
+            // Write the date value and read it back.
+            await connection.CreateInsertOrUpdateCommand(_fixture.TableName,
+                new SpannerParameterCollection
+                {
                         new SpannerParameter("DateValue", SpannerDbType.Date, expectedDate),
-                    }
-                ).ExecuteNonQueryAsync();
+                }
+            ).ExecuteNonQueryAsync();
+            var dbDate = await connection.CreateSelectCommand($"SELECT DateValue FROM {_fixture.TableName}").ExecuteScalarAsync<DateTime>();
+            Assert.Equal(expectedDate, dbDate);
+        }
+
+        /// <summary>
+        /// Writes the date then reads it using DateTime or SpannerDate based on parameters and validates that
+        /// values are equal.
+        /// </summary>
+        /// <param name="writeAsDateTime">if set to <c>true</c> <see cref="DateTime"/> is used to write the data, else <see cref="SpannerDate"/> is used.</param>
+        /// <param name="readAsDateTime">if set to <c>true</c> <see cref="DateTime"/> is used to read the data, else <see cref="SpannerDate"/> is used.</param>
+        /// <param name="expectedDate">The expected date.</param>
+        [Theory]
+        [MemberData(nameof(TestDatesWithReadWriteTypes))]
+        public async Task WriteDateThenRead_ShouldBeEqual_UseSpannerDateAndDateTime(bool writeAsDateTime, 
+            bool readAsDateTime, 
+            DateTime expectedDate)
+        {
+            // Adding a new SpannerDate type in backward compatible fashion.
+            // We could write date as SpannerDate and read as DateTime or 
+            // write date as DateTime and read as SpannerDate. This is in addition to
+            // write date as DateTime and read as DateTime or,
+            // write date as SpannerDate and read as SpannerDate.
+            using var connection = _fixture.GetConnection();
+            // Write the date value and read it back.
+            await connection.CreateInsertOrUpdateCommand(_fixture.TableName,
+                writeAsDateTime ?
+                new SpannerParameterCollection
+                {
+                        new SpannerParameter("DateValue", SpannerDbType.Date, expectedDate)
+                }
+                : new SpannerParameterCollection
+                {
+                        new SpannerParameter("DateValue", SpannerDbType.Date, SpannerDate.FromDateTime(expectedDate))
+                }
+            ).ExecuteNonQueryAsync();
+
+            if (readAsDateTime)
+            {
                 var dbDate = await connection.CreateSelectCommand($"SELECT DateValue FROM {_fixture.TableName}").ExecuteScalarAsync<DateTime>();
                 Assert.Equal(expectedDate, dbDate);
+            }
+            else
+            {
+                var dbDate = await connection.CreateSelectCommand($"SELECT DateValue FROM {_fixture.TableName}").ExecuteScalarAsync<SpannerDate>();
+                Assert.Equal(SpannerDate.FromDateTime(expectedDate), dbDate);
             }
         }
 
@@ -68,7 +125,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         [Theory]
         [MemberData(nameof(TestTimestamps))]
-        public async void WriteTimestampThenRead_ShouldBeEqual(DateTime expectedTimestamp)
+        public async Task WriteTimestampThenRead_ShouldBeEqual(DateTime expectedTimestamp)
         {
             using (var connection = _fixture.GetConnection())
             {
