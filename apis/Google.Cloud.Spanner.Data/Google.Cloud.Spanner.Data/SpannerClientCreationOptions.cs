@@ -35,8 +35,7 @@ namespace Google.Cloud.Spanner.Data
         private static async Task<ChannelCredentials> CreatedScopedDefaultCredentials()
         {
             var appDefaultCredentials = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
-            // TODO: Use a JWT, so no scoping?
-            return appDefaultCredentials.CreateScoped(SpannerClient.DefaultScopes).ToChannelCredentials();
+            return ConvertGoogleCredential(appDefaultCredentials);
         }
 
         /// <summary>
@@ -174,9 +173,19 @@ namespace Google.Cloud.Spanner.Data
                 }
             }
 
-            // TODO: Use JWT instead? (No scopes.)
-            // TODO: Use an async overload
-            return GoogleCredential.FromFile(file).CreateScoped(SpannerClient.DefaultScopes).ToChannelCredentials();
+            var credential = await GoogleCredential.FromFileAsync(file, cancellationToken: default).ConfigureAwait(false);
+            return ConvertGoogleCredential(credential);
+        }
+
+        private static ChannelCredentials ConvertGoogleCredential(GoogleCredential credential)
+        {
+            credential = credential.CreateScoped(SpannerClient.DefaultScopes);
+            // Use self-signed JWTs for service accounts.
+            if (credential.UnderlyingCredential is ServiceAccountCredential serviceCredential)
+            {
+                credential = GoogleCredential.FromServiceAccountCredential(serviceCredential.WithUseJwtAccessWithScopes(true));
+            }
+            return credential.ToChannelCredentials();
         }
     }
 }
