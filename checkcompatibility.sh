@@ -42,7 +42,7 @@ do
   if [[ -f $new_dll ]]
   then
     echo "Comparing $base_dll"
-    dotnet run -p tools/Google.Cloud.Tools.CompareVersions -- --file1=$old_dll --file2=$new_dll >> tmp/compatibility.txt
+    dotnet run --project tools/Google.Cloud.Tools.CompareVersions -- --file1=$old_dll --file2=$new_dll >> tmp/compatibility.txt
   else
     echo "$base_dll only exists in $OLD_DIR, not $NEW_DIR"
   fi
