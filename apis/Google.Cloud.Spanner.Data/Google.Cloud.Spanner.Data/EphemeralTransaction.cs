@@ -60,7 +60,7 @@ namespace Google.Cloud.Spanner.Data
             async Task<long> Impl()
             {
                 using (var transaction = await _connection.BeginTransactionImplAsync(
-                    SpannerConnection.s_partitionedDmlTransactionOptions, TransactionMode.ReadWrite, cancellationToken).ConfigureAwait(false))
+                    SpannerConnection.PartitionedDmlTransactionOptions, TransactionMode.ReadWrite, cancellationToken).ConfigureAwait(false))
                 {
                     transaction.CommitTimeout = timeoutSeconds;
                     transaction.CommitPriority = _commitPriority;

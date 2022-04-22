@@ -48,8 +48,8 @@ namespace Google.Cloud.Spanner.Data
     public sealed class SpannerConnection : DbConnection
     {
         // Transaction options; no additional state, so can be reused.
-        internal static readonly TransactionOptions s_readWriteTransactionOptions = new TransactionOptions { ReadWrite = new ReadWrite() };
-        internal static readonly TransactionOptions s_partitionedDmlTransactionOptions = new TransactionOptions { PartitionedDml = new PartitionedDml() };
+        internal static TransactionOptions ReadWriteTransactionOptions { get; } = new TransactionOptions { ReadWrite = new ReadWrite() };
+        internal static TransactionOptions PartitionedDmlTransactionOptions { get; } = new TransactionOptions { PartitionedDml = new PartitionedDml() };
 
         private readonly object _sync = new object();
 
@@ -280,7 +280,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
         /// <returns>A new <see cref="SpannerTransaction" /></returns>
         public Task<SpannerTransaction> BeginTransactionAsync(CancellationToken cancellationToken = default) =>
-            BeginTransactionImplAsync(s_readWriteTransactionOptions, TransactionMode.ReadWrite, cancellationToken);
+            BeginTransactionImplAsync(ReadWriteTransactionOptions, TransactionMode.ReadWrite, cancellationToken);
 
         /// <summary>
         /// Executes a read-write transaction, with retries as necessary.
@@ -774,7 +774,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         internal async Task<PooledSession> AcquireReadWriteSessionAsync(CancellationToken cancellationToken) =>
-            await AcquireSessionAsync(s_readWriteTransactionOptions, cancellationToken).ConfigureAwait(false);
+            await AcquireSessionAsync(ReadWriteTransactionOptions, cancellationToken).ConfigureAwait(false);
 
         internal Task<PooledSession> AcquireSessionAsync(TransactionOptions options, CancellationToken cancellationToken)
         {
