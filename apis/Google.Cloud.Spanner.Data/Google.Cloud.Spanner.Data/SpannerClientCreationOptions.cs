@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.V1;
@@ -39,6 +38,11 @@ namespace Google.Cloud.Spanner.Data
             // TODO: Use a JWT, so no scoping?
             return appDefaultCredentials.CreateScoped(SpannerClient.DefaultScopes).ToChannelCredentials();
         }
+
+        /// <summary>
+        /// The gRPC adapter to create clients with; never null.
+        /// </summary>
+        internal GrpcAdapter GrpcAdapter { get; }
 
         /// <summary>
         /// The end-point to connect to; never null.
@@ -82,6 +86,9 @@ namespace Google.Cloud.Spanner.Data
             _credentialsOverride = emulatorBuilder?.ChannelCredentials ?? builder.CredentialOverride;
             MaximumGrpcChannels = builder.MaximumGrpcChannels;
             MaximumConcurrentStreamsLowWatermark = (uint) builder.MaxConcurrentStreamsLowWatermark;
+
+            // TODO: add a way of setting this from the SpannerConnectionStringBuilder.
+            GrpcAdapter = GrpcAdapter.GetFallbackAdapter(SpannerClient.ServiceMetadata);
         }
 
         public override bool Equals(object obj) => Equals(obj as SpannerClientCreationOptions);
@@ -93,7 +100,8 @@ namespace Google.Cloud.Spanner.Data
             Equals(_credentialsOverride, other._credentialsOverride) &&
             UsesEmulator == other.UsesEmulator &&
             MaximumGrpcChannels == other.MaximumGrpcChannels &&
-            MaximumConcurrentStreamsLowWatermark == other.MaximumConcurrentStreamsLowWatermark;
+            MaximumConcurrentStreamsLowWatermark == other.MaximumConcurrentStreamsLowWatermark &&
+            GrpcAdapter.Equals(other.GrpcAdapter);
 
         public override int GetHashCode()
         {
@@ -106,6 +114,7 @@ namespace Google.Cloud.Spanner.Data
                 hash = hash * 23 + UsesEmulator.GetHashCode();
                 hash = hash * 23 + MaximumGrpcChannels;
                 hash = hash * 23 + (int) MaximumConcurrentStreamsLowWatermark;
+                hash = hash * 23 + GrpcAdapter.GetHashCode();
                 return hash;
             }
         }
@@ -126,6 +135,7 @@ namespace Google.Cloud.Spanner.Data
                 builder.Append($"; CredentialsOverride: True");
             }
             builder.Append($"; UsesEmulator: {UsesEmulator}");
+            builder.Append($"; GrpcAdapter: {GrpcAdapter.GetType().Name}");
             return builder.ToString();
         }
 

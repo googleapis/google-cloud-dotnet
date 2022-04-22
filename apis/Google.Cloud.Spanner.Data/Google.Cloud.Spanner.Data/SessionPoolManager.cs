@@ -306,39 +306,26 @@ namespace Google.Cloud.Spanner.Data
         };
 
         /// <inheritdoc />
-        private static async Task<SpannerClient> CreateClientAsync(SpannerClientCreationOptions channelOptions, SpannerSettings spannerSettings, Logger logger)
+        private static async Task<SpannerClient> CreateClientAsync(SpannerClientCreationOptions clientCreationOptions, SpannerSettings spannerSettings, Logger logger)
         {
-            var credentials = await channelOptions.GetCredentialsAsync().ConfigureAwait(false);
+            var credentials = await clientCreationOptions.GetCredentialsAsync().ConfigureAwait(false);
 
             var apiConfig = new ApiConfig
             {
                 ChannelPool = new ChannelPoolConfig
                 {
-                    MaxSize = (uint)channelOptions.MaximumGrpcChannels,
-                    MaxConcurrentStreamsLowWatermark = channelOptions.MaximumConcurrentStreamsLowWatermark
+                    MaxSize = (uint)clientCreationOptions.MaximumGrpcChannels,
+                    MaxConcurrentStreamsLowWatermark = clientCreationOptions.MaximumConcurrentStreamsLowWatermark
                 },
                 Method = { s_methodConfigs }
             };
 
-            // Constructor, currently internal: GcpCallInvoker(ServiceMetadata serviceMetadata, string target, ChannelCredentials credentials, GrpcChannelOptions options, ApiConfig apiConfig, GrpcAdapter adapter)
-            //var callInvoker = new GcpCallInvoker(channelOptions.Endpoint, credentials, s_grpcChannelOptions, apiConfig);
-            var callInvoker = CreateGcpCallInvoker(channelOptions.Endpoint, credentials, s_grpcChannelOptions, apiConfig);
-
+            var callInvoker = new GcpCallInvoker(SpannerClient.ServiceMetadata, clientCreationOptions.Endpoint, credentials, s_grpcChannelOptions, apiConfig, clientCreationOptions.GrpcAdapter);
             return new SpannerClientBuilder
             {
                 CallInvoker = callInvoker,
                 Settings = spannerSettings
             }.Build();
-        }
-
-        // FIXME: Remove the reflection here...
-        private static CallInvoker CreateGcpCallInvoker(string endpoint, ChannelCredentials credentials, GrpcChannelOptions options, ApiConfig apiConfig)
-        {
-            var serviceMetadata = (ServiceMetadata) typeof(SpannerClient).GetProperty("ServiceMetadata", BindingFlags.NonPublic | BindingFlags.Static).GetValue(null);
-            var grpcAdapter = typeof(GrpcAdapter).GetMethod("GetFallbackAdapter", BindingFlags.Static | BindingFlags.NonPublic).Invoke(null, new object[] { serviceMetadata });
-            var type = typeof(GcpCallInvokerPool).Assembly.GetType("Google.Api.Gax.Grpc.Gcp.GcpCallInvoker");
-            var ctor = type.GetConstructor(BindingFlags.NonPublic, null, new[] { typeof(ServiceMetadata), typeof(string), typeof(ChannelCredentials), typeof(GrpcChannelOptions), typeof(ApiConfig), typeof(GrpcAdapter) }, null);
-            return (CallInvoker) ctor.Invoke(new object[] { serviceMetadata, endpoint, credentials, options, apiConfig, grpcAdapter });
         }
     }
 }
