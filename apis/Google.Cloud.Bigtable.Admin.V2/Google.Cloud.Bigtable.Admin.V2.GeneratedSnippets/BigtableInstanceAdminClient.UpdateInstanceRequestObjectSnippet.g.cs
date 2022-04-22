@@ -18,6 +18,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
 {
     // [START bigtableadmin_v2_generated_BigtableInstanceAdmin_UpdateInstance_sync]
     using Google.Cloud.Bigtable.Admin.V2;
+    using Google.Cloud.Bigtable.Common.V2;
     using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedBigtableInstanceAdminClientSnippets
