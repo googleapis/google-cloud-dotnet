@@ -605,7 +605,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
-        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(BigtableTableAdmin.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(BigtableTableAdmin.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
@@ -795,7 +795,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Table CreateTable(InstanceName parent, string tableId, Table table, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual Table CreateTable(gcbcv::InstanceName parent, string tableId, Table table, gaxgrpc::CallSettings callSettings = null) =>
             CreateTable(new CreateTableRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -822,7 +822,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Table> CreateTableAsync(InstanceName parent, string tableId, Table table, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<Table> CreateTableAsync(gcbcv::InstanceName parent, string tableId, Table table, gaxgrpc::CallSettings callSettings = null) =>
             CreateTableAsync(new CreateTableRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -849,7 +849,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Table> CreateTableAsync(InstanceName parent, string tableId, Table table, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<Table> CreateTableAsync(gcbcv::InstanceName parent, string tableId, Table table, st::CancellationToken cancellationToken) =>
             CreateTableAsync(parent, tableId, table, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1050,7 +1050,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<Table, CreateTableFromSnapshotMetadata> CreateTableFromSnapshot(InstanceName parent, string tableId, SnapshotName sourceSnapshot, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Table, CreateTableFromSnapshotMetadata> CreateTableFromSnapshot(gcbcv::InstanceName parent, string tableId, SnapshotName sourceSnapshot, gaxgrpc::CallSettings callSettings = null) =>
             CreateTableFromSnapshot(new CreateTableFromSnapshotRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -1084,7 +1084,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Table, CreateTableFromSnapshotMetadata>> CreateTableFromSnapshotAsync(InstanceName parent, string tableId, SnapshotName sourceSnapshot, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Table, CreateTableFromSnapshotMetadata>> CreateTableFromSnapshotAsync(gcbcv::InstanceName parent, string tableId, SnapshotName sourceSnapshot, gaxgrpc::CallSettings callSettings = null) =>
             CreateTableFromSnapshotAsync(new CreateTableFromSnapshotRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -1118,7 +1118,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Table, CreateTableFromSnapshotMetadata>> CreateTableFromSnapshotAsync(InstanceName parent, string tableId, SnapshotName sourceSnapshot, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Table, CreateTableFromSnapshotMetadata>> CreateTableFromSnapshotAsync(gcbcv::InstanceName parent, string tableId, SnapshotName sourceSnapshot, st::CancellationToken cancellationToken) =>
             CreateTableFromSnapshotAsync(parent, tableId, sourceSnapshot, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1206,7 +1206,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Table"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTablesResponse, Table> ListTables(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedEnumerable<ListTablesResponse, Table> ListTables(gcbcv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListTables(new ListTablesRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -1231,7 +1231,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Table"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTablesResponse, Table> ListTablesAsync(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedAsyncEnumerable<ListTablesResponse, Table> ListTablesAsync(gcbcv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListTablesAsync(new ListTablesRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),

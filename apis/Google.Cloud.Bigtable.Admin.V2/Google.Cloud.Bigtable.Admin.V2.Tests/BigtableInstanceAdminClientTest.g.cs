@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcbcv = Google.Cloud.Bigtable.Common.V2;
 using gciv = Google.Cloud.Iam.V1;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
@@ -39,11 +40,11 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             Instance expectedResponse = new Instance
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 DisplayName = "display_name137f65c2",
                 State = Instance.Types.State.NotKnown,
                 Type = Instance.Types.Type.Unspecified,
@@ -70,11 +71,11 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             Instance expectedResponse = new Instance
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 DisplayName = "display_name137f65c2",
                 State = Instance.Types.State.NotKnown,
                 Type = Instance.Types.Type.Unspecified,
@@ -103,11 +104,11 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             Instance expectedResponse = new Instance
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 DisplayName = "display_name137f65c2",
                 State = Instance.Types.State.NotKnown,
                 Type = Instance.Types.Type.Unspecified,
@@ -134,11 +135,11 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             Instance expectedResponse = new Instance
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 DisplayName = "display_name137f65c2",
                 State = Instance.Types.State.NotKnown,
                 Type = Instance.Types.Type.Unspecified,
@@ -167,11 +168,11 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             Instance expectedResponse = new Instance
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 DisplayName = "display_name137f65c2",
                 State = Instance.Types.State.NotKnown,
                 Type = Instance.Types.Type.Unspecified,
@@ -198,11 +199,11 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             Instance expectedResponse = new Instance
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 DisplayName = "display_name137f65c2",
                 State = Instance.Types.State.NotKnown,
                 Type = Instance.Types.Type.Unspecified,
@@ -389,7 +390,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             Instance request = new Instance
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 DisplayName = "display_name137f65c2",
                 State = Instance.Types.State.NotKnown,
                 Type = Instance.Types.Type.Unspecified,
@@ -404,7 +405,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             Instance expectedResponse = new Instance
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 DisplayName = "display_name137f65c2",
                 State = Instance.Types.State.NotKnown,
                 Type = Instance.Types.Type.Unspecified,
@@ -431,7 +432,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             Instance request = new Instance
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 DisplayName = "display_name137f65c2",
                 State = Instance.Types.State.NotKnown,
                 Type = Instance.Types.Type.Unspecified,
@@ -446,7 +447,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             Instance expectedResponse = new Instance
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 DisplayName = "display_name137f65c2",
                 State = Instance.Types.State.NotKnown,
                 Type = Instance.Types.Type.Unspecified,
@@ -475,7 +476,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteInstanceRequest request = new DeleteInstanceRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -491,7 +492,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteInstanceRequest request = new DeleteInstanceRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -508,7 +509,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteInstanceRequest request = new DeleteInstanceRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -524,7 +525,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteInstanceRequest request = new DeleteInstanceRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -541,7 +542,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteInstanceRequest request = new DeleteInstanceRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -557,7 +558,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteInstanceRequest request = new DeleteInstanceRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -736,7 +737,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListClustersRequest request = new ListClustersRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 PageToken = "page_tokenf09e5538",
             };
             ListClustersResponse expectedResponse = new ListClustersResponse
@@ -762,7 +763,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListClustersRequest request = new ListClustersRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 PageToken = "page_tokenf09e5538",
             };
             ListClustersResponse expectedResponse = new ListClustersResponse
@@ -790,7 +791,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListClustersRequest request = new ListClustersRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             ListClustersResponse expectedResponse = new ListClustersResponse
             {
@@ -815,7 +816,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListClustersRequest request = new ListClustersRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             ListClustersResponse expectedResponse = new ListClustersResponse
             {
@@ -842,7 +843,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListClustersRequest request = new ListClustersRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             ListClustersResponse expectedResponse = new ListClustersResponse
             {
@@ -867,7 +868,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListClustersRequest request = new ListClustersRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             ListClustersResponse expectedResponse = new ListClustersResponse
             {
@@ -993,7 +994,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateAppProfileRequest request = new CreateAppProfileRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 AppProfileId = "app_profile_id57fb0442",
                 AppProfile = new AppProfile(),
                 IgnoreWarnings = true,
@@ -1020,7 +1021,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateAppProfileRequest request = new CreateAppProfileRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 AppProfileId = "app_profile_id57fb0442",
                 AppProfile = new AppProfile(),
                 IgnoreWarnings = true,
@@ -1049,7 +1050,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateAppProfileRequest request = new CreateAppProfileRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 AppProfileId = "app_profile_id57fb0442",
                 AppProfile = new AppProfile(),
             };
@@ -1075,7 +1076,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateAppProfileRequest request = new CreateAppProfileRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 AppProfileId = "app_profile_id57fb0442",
                 AppProfile = new AppProfile(),
             };
@@ -1103,7 +1104,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateAppProfileRequest request = new CreateAppProfileRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 AppProfileId = "app_profile_id57fb0442",
                 AppProfile = new AppProfile(),
             };
@@ -1129,7 +1130,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateAppProfileRequest request = new CreateAppProfileRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 AppProfileId = "app_profile_id57fb0442",
                 AppProfile = new AppProfile(),
             };
