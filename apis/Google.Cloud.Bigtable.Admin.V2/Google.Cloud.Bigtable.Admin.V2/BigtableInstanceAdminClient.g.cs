@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcbcv = Google.Cloud.Bigtable.Common.V2;
 using gciv = Google.Cloud.Iam.V1;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
@@ -675,7 +676,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
-        internal static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(BigtableInstanceAdmin.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(BigtableInstanceAdmin.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
@@ -1126,7 +1127,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Instance GetInstance(InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual Instance GetInstance(gcbcv::InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
             GetInstance(new GetInstanceRequest
             {
                 InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -1141,7 +1142,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Instance> GetInstanceAsync(InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<Instance> GetInstanceAsync(gcbcv::InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
             GetInstanceAsync(new GetInstanceRequest
             {
                 InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -1156,7 +1157,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Instance> GetInstanceAsync(InstanceName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<Instance> GetInstanceAsync(gcbcv::InstanceName name, st::CancellationToken cancellationToken) =>
             GetInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1494,7 +1495,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void DeleteInstance(InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual void DeleteInstance(gcbcv::InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteInstance(new DeleteInstanceRequest
             {
                 InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -1509,7 +1510,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteInstanceAsync(InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task DeleteInstanceAsync(gcbcv::InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteInstanceAsync(new DeleteInstanceRequest
             {
                 InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -1524,7 +1525,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteInstanceAsync(InstanceName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task DeleteInstanceAsync(gcbcv::InstanceName name, st::CancellationToken cancellationToken) =>
             DeleteInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1717,7 +1718,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<Cluster, CreateClusterMetadata> CreateCluster(InstanceName parent, string clusterId, Cluster cluster, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Cluster, CreateClusterMetadata> CreateCluster(gcbcv::InstanceName parent, string clusterId, Cluster cluster, gaxgrpc::CallSettings callSettings = null) =>
             CreateCluster(new CreateClusterRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -1750,7 +1751,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Cluster, CreateClusterMetadata>> CreateClusterAsync(InstanceName parent, string clusterId, Cluster cluster, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Cluster, CreateClusterMetadata>> CreateClusterAsync(gcbcv::InstanceName parent, string clusterId, Cluster cluster, gaxgrpc::CallSettings callSettings = null) =>
             CreateClusterAsync(new CreateClusterRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -1783,7 +1784,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Cluster, CreateClusterMetadata>> CreateClusterAsync(InstanceName parent, string clusterId, Cluster cluster, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Cluster, CreateClusterMetadata>> CreateClusterAsync(gcbcv::InstanceName parent, string clusterId, Cluster cluster, st::CancellationToken cancellationToken) =>
             CreateClusterAsync(parent, clusterId, cluster, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1983,7 +1984,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual ListClustersResponse ListClusters(InstanceName parent, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual ListClustersResponse ListClusters(gcbcv::InstanceName parent, gaxgrpc::CallSettings callSettings = null) =>
             ListClusters(new ListClustersRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -2000,7 +2001,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ListClustersResponse> ListClustersAsync(InstanceName parent, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<ListClustersResponse> ListClustersAsync(gcbcv::InstanceName parent, gaxgrpc::CallSettings callSettings = null) =>
             ListClustersAsync(new ListClustersRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -2017,7 +2018,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ListClustersResponse> ListClustersAsync(InstanceName parent, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<ListClustersResponse> ListClustersAsync(gcbcv::InstanceName parent, st::CancellationToken cancellationToken) =>
             ListClustersAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2491,7 +2492,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual AppProfile CreateAppProfile(InstanceName parent, string appProfileId, AppProfile appProfile, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual AppProfile CreateAppProfile(gcbcv::InstanceName parent, string appProfileId, AppProfile appProfile, gaxgrpc::CallSettings callSettings = null) =>
             CreateAppProfile(new CreateAppProfileRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -2518,7 +2519,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AppProfile> CreateAppProfileAsync(InstanceName parent, string appProfileId, AppProfile appProfile, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<AppProfile> CreateAppProfileAsync(gcbcv::InstanceName parent, string appProfileId, AppProfile appProfile, gaxgrpc::CallSettings callSettings = null) =>
             CreateAppProfileAsync(new CreateAppProfileRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -2545,7 +2546,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AppProfile> CreateAppProfileAsync(InstanceName parent, string appProfileId, AppProfile appProfile, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<AppProfile> CreateAppProfileAsync(gcbcv::InstanceName parent, string appProfileId, AppProfile appProfile, st::CancellationToken cancellationToken) =>
             CreateAppProfileAsync(parent, appProfileId, appProfile, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2753,7 +2754,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AppProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(gcbcv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAppProfiles(new ListAppProfilesRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -2781,7 +2782,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AppProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(gcbcv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAppProfilesAsync(new ListAppProfilesRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
