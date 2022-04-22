@@ -31,7 +31,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         private const string TestProjectEnvironmentVariable = TestEnvironment.TestProjectEnvironmentVariable;
 
         public ProjectName ProjectName { get; private set; }
-        public Admin.V2.InstanceName InstanceName { get; private set; }
+        public InstanceName InstanceName { get; private set; }
         public TableName TableName { get; private set; }
 
         public BigtableInstanceAdminClient InstanceAdminClient { get; private set; }
@@ -79,7 +79,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             }
 
             ProjectName = new ProjectName(projectId);
-            InstanceName = new Admin.V2.InstanceName(projectId, instanceId);
+            InstanceName = new InstanceName(projectId, instanceId);
 
             Task.Run(InitBigtableInstanceAndTable).Wait();
         }
@@ -91,7 +91,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var tableName = new TableName(ProjectName.ProjectId, InstanceName.InstanceId, IdGenerator.FromGuid());
             CreatedTables.Add(tableName);
             await TableAdminClient.CreateTableAsync(
-                new Admin.V2.InstanceName(tableName.ProjectId, tableName.InstanceId),
+                new InstanceName(tableName.ProjectId, tableName.InstanceId),
                 tableName.TableId,
                 CreateDefaultTable());
             return tableName;
