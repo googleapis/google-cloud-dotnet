@@ -34,10 +34,8 @@ namespace Google.Cloud.Firestore
 
         private static readonly FirestoreSettings s_defaultSettings = AddGcclVersionHeader(new FirestoreSettings());
 
-        // FIXME: we need to work out whether we want to expose the ServiceMetadata.
-
         /// <summary>Creates a new builder with default settings.</summary>
-        public FirestoreDbBuilder() : base(FirestoreClient.PublicServiceMetadata)
+        public FirestoreDbBuilder() : base(FirestoreClient.ServiceMetadata)
         {
         }
 
