@@ -19,6 +19,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
     // [START bigtableadmin_v2_generated_BigtableTableAdmin_ListTables_async]
     using Google.Api.Gax;
     using Google.Cloud.Bigtable.Admin.V2;
+    using Google.Cloud.Bigtable.Common.V2;
     using System;
     using System.Linq;
     using System.Threading.Tasks;

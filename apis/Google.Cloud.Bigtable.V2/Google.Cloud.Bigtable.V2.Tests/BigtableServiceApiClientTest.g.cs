@@ -476,7 +476,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             PingAndWarmRequest request = new PingAndWarmRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 AppProfileId = "app_profile_id57fb0442",
             };
             PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
@@ -493,7 +493,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             PingAndWarmRequest request = new PingAndWarmRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 AppProfileId = "app_profile_id57fb0442",
             };
             PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
@@ -512,7 +512,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             PingAndWarmRequest request = new PingAndWarmRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
             mockGrpcClient.Setup(x => x.PingAndWarm(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -528,7 +528,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             PingAndWarmRequest request = new PingAndWarmRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
             mockGrpcClient.Setup(x => x.PingAndWarmAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PingAndWarmResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -546,7 +546,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             PingAndWarmRequest request = new PingAndWarmRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
             mockGrpcClient.Setup(x => x.PingAndWarm(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -562,7 +562,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             PingAndWarmRequest request = new PingAndWarmRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
             mockGrpcClient.Setup(x => x.PingAndWarmAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PingAndWarmResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -580,7 +580,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             PingAndWarmRequest request = new PingAndWarmRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 AppProfileId = "app_profile_id57fb0442",
             };
             PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
@@ -597,7 +597,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             PingAndWarmRequest request = new PingAndWarmRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 AppProfileId = "app_profile_id57fb0442",
             };
             PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
@@ -616,7 +616,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             PingAndWarmRequest request = new PingAndWarmRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 AppProfileId = "app_profile_id57fb0442",
             };
             PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };
@@ -633,7 +633,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             PingAndWarmRequest request = new PingAndWarmRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 AppProfileId = "app_profile_id57fb0442",
             };
             PingAndWarmResponse expectedResponse = new PingAndWarmResponse { };

@@ -39,7 +39,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateTableRequest request = new CreateTableRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 TableId = "table_idde1e5ba1",
                 Table = new Table(),
                 InitialSplits =
@@ -81,7 +81,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateTableRequest request = new CreateTableRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 TableId = "table_idde1e5ba1",
                 Table = new Table(),
                 InitialSplits =
@@ -125,7 +125,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateTableRequest request = new CreateTableRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 TableId = "table_idde1e5ba1",
                 Table = new Table(),
             };
@@ -163,7 +163,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateTableRequest request = new CreateTableRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 TableId = "table_idde1e5ba1",
                 Table = new Table(),
             };
@@ -203,7 +203,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateTableRequest request = new CreateTableRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 TableId = "table_idde1e5ba1",
                 Table = new Table(),
             };
@@ -241,7 +241,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateTableRequest request = new CreateTableRequest
             {
-                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = gcbcv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 TableId = "table_idde1e5ba1",
                 Table = new Table(),
             };

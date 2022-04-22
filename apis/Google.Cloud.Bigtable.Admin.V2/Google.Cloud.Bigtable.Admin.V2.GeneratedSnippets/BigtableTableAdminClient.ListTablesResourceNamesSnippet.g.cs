@@ -19,6 +19,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
     // [START bigtableadmin_v2_generated_BigtableTableAdmin_ListTables_sync_flattened_resourceNames]
     using Google.Api.Gax;
     using Google.Cloud.Bigtable.Admin.V2;
+    using Google.Cloud.Bigtable.Common.V2;
     using System;
 
     public sealed partial class GeneratedBigtableTableAdminClientSnippets

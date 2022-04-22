@@ -18,6 +18,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
 {
     // [START bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteInstance_sync_flattened_resourceNames]
     using Google.Cloud.Bigtable.Admin.V2;
+    using Google.Cloud.Bigtable.Common.V2;
 
     public sealed partial class GeneratedBigtableInstanceAdminClientSnippets
     {

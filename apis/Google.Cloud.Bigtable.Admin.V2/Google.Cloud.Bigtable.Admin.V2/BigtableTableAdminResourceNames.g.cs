@@ -22,11 +22,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class RestoreTableRequest
     {
         /// <summary>
-        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gcbcv::InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public InstanceName ParentAsInstanceName
+        public gcbcv::InstanceName ParentAsInstanceName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : InstanceName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : gcbcv::InstanceName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
 
@@ -41,11 +41,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class CreateTableRequest
     {
         /// <summary>
-        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gcbcv::InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public InstanceName ParentAsInstanceName
+        public gcbcv::InstanceName ParentAsInstanceName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : InstanceName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : gcbcv::InstanceName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -53,11 +53,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class CreateTableFromSnapshotRequest
     {
         /// <summary>
-        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gcbcv::InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public InstanceName ParentAsInstanceName
+        public gcbcv::InstanceName ParentAsInstanceName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : InstanceName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : gcbcv::InstanceName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
 
@@ -86,11 +86,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class ListTablesRequest
     {
         /// <summary>
-        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gcbcv::InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public InstanceName ParentAsInstanceName
+        public gcbcv::InstanceName ParentAsInstanceName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : InstanceName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : gcbcv::InstanceName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
