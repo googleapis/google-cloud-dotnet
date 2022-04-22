@@ -2,4 +2,4 @@
 
 set -e
 
-dotnet run -p tools/Google.Cloud.Tools.ReleaseManager -- "$@"
+dotnet run --project tools/Google.Cloud.Tools.ReleaseManager -- "$@"
