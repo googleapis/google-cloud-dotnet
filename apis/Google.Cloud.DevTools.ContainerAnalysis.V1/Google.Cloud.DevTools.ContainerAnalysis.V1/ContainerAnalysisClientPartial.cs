@@ -50,8 +50,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         public override GrafeasClient GrafeasClient => _grafeasClient;
 
         partial void OnConstruction(ContainerAnalysis.ContainerAnalysisClient grpcClient, ContainerAnalysisSettings effectiveSettings, ClientHelper clientHelper) =>
-            // FIXME: Expose the logger from ClientHelper, and use it here.
-            _grafeasClient = new GrafeasClientImpl(grpcClient.CreateGrafeasClient(), effectiveSettings.GrafeasSettings, null);
+            _grafeasClient = new GrafeasClientImpl(grpcClient.CreateGrafeasClient(), effectiveSettings.GrafeasSettings, clientHelper.Logger);
     }
 
     public static partial class ContainerAnalysis
