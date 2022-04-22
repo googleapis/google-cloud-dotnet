@@ -136,7 +136,7 @@ do
     # If we've found a smoketests.json file (which really isn't a "test directory" of course),
     # run it via ReleaseManager
     echo "Running $testdir"
-    dotnet run -p ../tools/Google.Cloud.Tools.ReleaseManager -- \
+    dotnet run --project ../tools/Google.Cloud.Tools.ReleaseManager -- \
       smoke-test $(dirname $testdir) \
       || echo "$testdir" >> $FAILURE_TEMP_FILE
   elif [[ "$testdir" =~ SmokeTests ]]
@@ -144,7 +144,7 @@ do
     # Smoke tests aren't unit tests - we just run them as console apps,
     # passing in the project ID
     echo "Running $testdir"
-    dotnet run -p $testdir -- $TEST_PROJECT || echo "$testdir" >> $FAILURE_TEMP_FILE
+    dotnet run --project $testdir -- $TEST_PROJECT || echo "$testdir" >> $FAILURE_TEMP_FILE
   elif [[ "$COVERAGE_ARG" == "yes" && -f "$testdir/coverage.xml" ]]
   then
     (cd $testdir; $DOTCOVER cover "coverage.xml" -ReturnTargetExitCode || echo "$testdir" >> $FAILURE_TEMP_FILE)

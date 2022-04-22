@@ -52,7 +52,7 @@ $DOTCOVER report --Source=coverage/all.dvcr --Output=coverage/coverage.xml --Rep
 
 # We assume the tools solution has already been restored as part of the build
 echo "Filtering xml report..."
-dotnet run -p tools/Google.Cloud.Tools.TrimCoverageReport/Google.Cloud.Tools.TrimCoverageReport.csproj -- coverage/coverage.xml coverage/coverage-filtered.xml
+dotnet run --project tools/Google.Cloud.Tools.TrimCoverageReport/Google.Cloud.Tools.TrimCoverageReport.csproj -- coverage/coverage.xml coverage/coverage-filtered.xml
 
 echo "Running ReportGenerator to create an html report..."
 
