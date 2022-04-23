@@ -83,6 +83,16 @@ namespace Google.Cloud.Channel.V1
             GetChannelPartnerLinkSettings = existing.GetChannelPartnerLinkSettings;
             CreateChannelPartnerLinkSettings = existing.CreateChannelPartnerLinkSettings;
             UpdateChannelPartnerLinkSettings = existing.UpdateChannelPartnerLinkSettings;
+            GetCustomerRepricingConfigSettings = existing.GetCustomerRepricingConfigSettings;
+            ListCustomerRepricingConfigsSettings = existing.ListCustomerRepricingConfigsSettings;
+            CreateCustomerRepricingConfigSettings = existing.CreateCustomerRepricingConfigSettings;
+            UpdateCustomerRepricingConfigSettings = existing.UpdateCustomerRepricingConfigSettings;
+            DeleteCustomerRepricingConfigSettings = existing.DeleteCustomerRepricingConfigSettings;
+            GetChannelPartnerRepricingConfigSettings = existing.GetChannelPartnerRepricingConfigSettings;
+            ListChannelPartnerRepricingConfigsSettings = existing.ListChannelPartnerRepricingConfigsSettings;
+            CreateChannelPartnerRepricingConfigSettings = existing.CreateChannelPartnerRepricingConfigSettings;
+            UpdateChannelPartnerRepricingConfigSettings = existing.UpdateChannelPartnerRepricingConfigSettings;
+            DeleteChannelPartnerRepricingConfigSettings = existing.DeleteChannelPartnerRepricingConfigSettings;
             LookupOfferSettings = existing.LookupOfferSettings;
             ListProductsSettings = existing.ListProductsSettings;
             ListSkusSettings = existing.ListSkusSettings;
@@ -714,6 +724,196 @@ namespace Google.Cloud.Channel.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateChannelPartnerLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudChannelServiceClient.GetCustomerRepricingConfig</c> and
+        /// <c>CloudChannelServiceClient.GetCustomerRepricingConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetCustomerRepricingConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudChannelServiceClient.ListCustomerRepricingConfigs</c> and
+        /// <c>CloudChannelServiceClient.ListCustomerRepricingConfigsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListCustomerRepricingConfigsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudChannelServiceClient.CreateCustomerRepricingConfig</c> and
+        /// <c>CloudChannelServiceClient.CreateCustomerRepricingConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateCustomerRepricingConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudChannelServiceClient.UpdateCustomerRepricingConfig</c> and
+        /// <c>CloudChannelServiceClient.UpdateCustomerRepricingConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateCustomerRepricingConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudChannelServiceClient.DeleteCustomerRepricingConfig</c> and
+        /// <c>CloudChannelServiceClient.DeleteCustomerRepricingConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteCustomerRepricingConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudChannelServiceClient.GetChannelPartnerRepricingConfig</c> and
+        /// <c>CloudChannelServiceClient.GetChannelPartnerRepricingConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetChannelPartnerRepricingConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudChannelServiceClient.ListChannelPartnerRepricingConfigs</c> and
+        /// <c>CloudChannelServiceClient.ListChannelPartnerRepricingConfigsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListChannelPartnerRepricingConfigsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudChannelServiceClient.CreateChannelPartnerRepricingConfig</c> and
+        /// <c>CloudChannelServiceClient.CreateChannelPartnerRepricingConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateChannelPartnerRepricingConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudChannelServiceClient.UpdateChannelPartnerRepricingConfig</c> and
+        /// <c>CloudChannelServiceClient.UpdateChannelPartnerRepricingConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateChannelPartnerRepricingConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudChannelServiceClient.DeleteChannelPartnerRepricingConfig</c> and
+        /// <c>CloudChannelServiceClient.DeleteChannelPartnerRepricingConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteChannelPartnerRepricingConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -3625,6 +3825,2805 @@ namespace Google.Cloud.Channel.V1
             UpdateChannelPartnerLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Gets information about how a Reseller modifies their bill before sending
+        /// it to a Customer.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] was not found.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise returns
+        /// an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomerRepricingConfig GetCustomerRepricingConfig(GetCustomerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information about how a Reseller modifies their bill before sending
+        /// it to a Customer.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] was not found.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise returns
+        /// an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomerRepricingConfig> GetCustomerRepricingConfigAsync(GetCustomerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information about how a Reseller modifies their bill before sending
+        /// it to a Customer.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] was not found.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise returns
+        /// an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomerRepricingConfig> GetCustomerRepricingConfigAsync(GetCustomerRepricingConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetCustomerRepricingConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about how a Reseller modifies their bill before sending
+        /// it to a Customer.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] was not found.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise returns
+        /// an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the CustomerRepricingConfig.
+        /// Format:
+        /// accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomerRepricingConfig GetCustomerRepricingConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCustomerRepricingConfig(new GetCustomerRepricingConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about how a Reseller modifies their bill before sending
+        /// it to a Customer.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] was not found.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise returns
+        /// an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the CustomerRepricingConfig.
+        /// Format:
+        /// accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomerRepricingConfig> GetCustomerRepricingConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCustomerRepricingConfigAsync(new GetCustomerRepricingConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about how a Reseller modifies their bill before sending
+        /// it to a Customer.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] was not found.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise returns
+        /// an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the CustomerRepricingConfig.
+        /// Format:
+        /// accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomerRepricingConfig> GetCustomerRepricingConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetCustomerRepricingConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about how a Reseller modifies their bill before sending
+        /// it to a Customer.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] was not found.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise returns
+        /// an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the CustomerRepricingConfig.
+        /// Format:
+        /// accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomerRepricingConfig GetCustomerRepricingConfig(CustomerRepricingConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCustomerRepricingConfig(new GetCustomerRepricingConfigRequest
+            {
+                CustomerRepricingConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about how a Reseller modifies their bill before sending
+        /// it to a Customer.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] was not found.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise returns
+        /// an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the CustomerRepricingConfig.
+        /// Format:
+        /// accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomerRepricingConfig> GetCustomerRepricingConfigAsync(CustomerRepricingConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCustomerRepricingConfigAsync(new GetCustomerRepricingConfigRequest
+            {
+                CustomerRepricingConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about how a Reseller modifies their bill before sending
+        /// it to a Customer.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] was not found.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise returns
+        /// an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the CustomerRepricingConfig.
+        /// Format:
+        /// accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomerRepricingConfig> GetCustomerRepricingConfigAsync(CustomerRepricingConfigName name, st::CancellationToken cancellationToken) =>
+            GetCustomerRepricingConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists information about how a Reseller modifies their bill before sending
+        /// it to a Customer.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resources. The
+        /// data for each resource is displayed in the ascending order of:
+        /// * customer ID
+        /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+        /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+        /// * [CustomerRepricingConfig.update_time][google.cloud.channel.v1.CustomerRepricingConfig.update_time]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CustomerRepricingConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListCustomerRepricingConfigsResponse, CustomerRepricingConfig> ListCustomerRepricingConfigs(ListCustomerRepricingConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists information about how a Reseller modifies their bill before sending
+        /// it to a Customer.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resources. The
+        /// data for each resource is displayed in the ascending order of:
+        /// * customer ID
+        /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+        /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+        /// * [CustomerRepricingConfig.update_time][google.cloud.channel.v1.CustomerRepricingConfig.update_time]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CustomerRepricingConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListCustomerRepricingConfigsResponse, CustomerRepricingConfig> ListCustomerRepricingConfigsAsync(ListCustomerRepricingConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists information about how a Reseller modifies their bill before sending
+        /// it to a Customer.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resources. The
+        /// data for each resource is displayed in the ascending order of:
+        /// * customer ID
+        /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+        /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+        /// * [CustomerRepricingConfig.update_time][google.cloud.channel.v1.CustomerRepricingConfig.update_time]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the customer.
+        /// Parent uses the format: accounts/{account_id}/customers/{customer_id}.
+        /// Supports accounts/{account_id}/customers/- to retrieve configs for all
+        /// customers.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CustomerRepricingConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListCustomerRepricingConfigsResponse, CustomerRepricingConfig> ListCustomerRepricingConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListCustomerRepricingConfigs(new ListCustomerRepricingConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists information about how a Reseller modifies their bill before sending
+        /// it to a Customer.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resources. The
+        /// data for each resource is displayed in the ascending order of:
+        /// * customer ID
+        /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+        /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+        /// * [CustomerRepricingConfig.update_time][google.cloud.channel.v1.CustomerRepricingConfig.update_time]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the customer.
+        /// Parent uses the format: accounts/{account_id}/customers/{customer_id}.
+        /// Supports accounts/{account_id}/customers/- to retrieve configs for all
+        /// customers.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CustomerRepricingConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListCustomerRepricingConfigsResponse, CustomerRepricingConfig> ListCustomerRepricingConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListCustomerRepricingConfigsAsync(new ListCustomerRepricingConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists information about how a Reseller modifies their bill before sending
+        /// it to a Customer.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resources. The
+        /// data for each resource is displayed in the ascending order of:
+        /// * customer ID
+        /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+        /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+        /// * [CustomerRepricingConfig.update_time][google.cloud.channel.v1.CustomerRepricingConfig.update_time]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the customer.
+        /// Parent uses the format: accounts/{account_id}/customers/{customer_id}.
+        /// Supports accounts/{account_id}/customers/- to retrieve configs for all
+        /// customers.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CustomerRepricingConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListCustomerRepricingConfigsResponse, CustomerRepricingConfig> ListCustomerRepricingConfigs(CustomerName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListCustomerRepricingConfigs(new ListCustomerRepricingConfigsRequest
+            {
+                ParentAsCustomerName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists information about how a Reseller modifies their bill before sending
+        /// it to a Customer.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resources. The
+        /// data for each resource is displayed in the ascending order of:
+        /// * customer ID
+        /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+        /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+        /// * [CustomerRepricingConfig.update_time][google.cloud.channel.v1.CustomerRepricingConfig.update_time]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the customer.
+        /// Parent uses the format: accounts/{account_id}/customers/{customer_id}.
+        /// Supports accounts/{account_id}/customers/- to retrieve configs for all
+        /// customers.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CustomerRepricingConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListCustomerRepricingConfigsResponse, CustomerRepricingConfig> ListCustomerRepricingConfigsAsync(CustomerName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListCustomerRepricingConfigsAsync(new ListCustomerRepricingConfigsRequest
+            {
+                ParentAsCustomerName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a CustomerRepricingConfig. Call this method to set modifications
+        /// for a specific customer's bill. You can only create configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. If needed, you can create a config for the current month,
+        /// with some restrictions.
+        /// 
+        /// When creating a config for a future month, make sure there are no existing
+        /// configs for that
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// The following restrictions are for creating configs in the current month.
+        /// 
+        /// * This functionality is reserved for recovering from an erroneous config,
+        /// and should not be used for regular business cases.
+        /// * The new config will not modify exports used with other configs.
+        /// Changes to the config may be immediate, but may take up to 24 hours.
+        /// * There is a limit of ten configs for any
+        /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+        /// or [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// * The contained [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config] vaule must be
+        /// different from the value used in the current config for a
+        /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomerRepricingConfig CreateCustomerRepricingConfig(CreateCustomerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a CustomerRepricingConfig. Call this method to set modifications
+        /// for a specific customer's bill. You can only create configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. If needed, you can create a config for the current month,
+        /// with some restrictions.
+        /// 
+        /// When creating a config for a future month, make sure there are no existing
+        /// configs for that
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// The following restrictions are for creating configs in the current month.
+        /// 
+        /// * This functionality is reserved for recovering from an erroneous config,
+        /// and should not be used for regular business cases.
+        /// * The new config will not modify exports used with other configs.
+        /// Changes to the config may be immediate, but may take up to 24 hours.
+        /// * There is a limit of ten configs for any
+        /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+        /// or [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// * The contained [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config] vaule must be
+        /// different from the value used in the current config for a
+        /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomerRepricingConfig> CreateCustomerRepricingConfigAsync(CreateCustomerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a CustomerRepricingConfig. Call this method to set modifications
+        /// for a specific customer's bill. You can only create configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. If needed, you can create a config for the current month,
+        /// with some restrictions.
+        /// 
+        /// When creating a config for a future month, make sure there are no existing
+        /// configs for that
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// The following restrictions are for creating configs in the current month.
+        /// 
+        /// * This functionality is reserved for recovering from an erroneous config,
+        /// and should not be used for regular business cases.
+        /// * The new config will not modify exports used with other configs.
+        /// Changes to the config may be immediate, but may take up to 24 hours.
+        /// * There is a limit of ten configs for any
+        /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+        /// or [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// * The contained [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config] vaule must be
+        /// different from the value used in the current config for a
+        /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomerRepricingConfig> CreateCustomerRepricingConfigAsync(CreateCustomerRepricingConfigRequest request, st::CancellationToken cancellationToken) =>
+            CreateCustomerRepricingConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a CustomerRepricingConfig. Call this method to set modifications
+        /// for a specific customer's bill. You can only create configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. If needed, you can create a config for the current month,
+        /// with some restrictions.
+        /// 
+        /// When creating a config for a future month, make sure there are no existing
+        /// configs for that
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// The following restrictions are for creating configs in the current month.
+        /// 
+        /// * This functionality is reserved for recovering from an erroneous config,
+        /// and should not be used for regular business cases.
+        /// * The new config will not modify exports used with other configs.
+        /// Changes to the config may be immediate, but may take up to 24 hours.
+        /// * There is a limit of ten configs for any
+        /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+        /// or [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// * The contained [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config] vaule must be
+        /// different from the value used in the current config for a
+        /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the customer that will receive this repricing config.
+        /// Parent uses the format: accounts/{account_id}/customers/{customer_id}
+        /// </param>
+        /// <param name="customerRepricingConfig">
+        /// Required. The CustomerRepricingConfig object to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomerRepricingConfig CreateCustomerRepricingConfig(string parent, CustomerRepricingConfig customerRepricingConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomerRepricingConfig(new CreateCustomerRepricingConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                CustomerRepricingConfig = gax::GaxPreconditions.CheckNotNull(customerRepricingConfig, nameof(customerRepricingConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a CustomerRepricingConfig. Call this method to set modifications
+        /// for a specific customer's bill. You can only create configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. If needed, you can create a config for the current month,
+        /// with some restrictions.
+        /// 
+        /// When creating a config for a future month, make sure there are no existing
+        /// configs for that
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// The following restrictions are for creating configs in the current month.
+        /// 
+        /// * This functionality is reserved for recovering from an erroneous config,
+        /// and should not be used for regular business cases.
+        /// * The new config will not modify exports used with other configs.
+        /// Changes to the config may be immediate, but may take up to 24 hours.
+        /// * There is a limit of ten configs for any
+        /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+        /// or [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// * The contained [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config] vaule must be
+        /// different from the value used in the current config for a
+        /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the customer that will receive this repricing config.
+        /// Parent uses the format: accounts/{account_id}/customers/{customer_id}
+        /// </param>
+        /// <param name="customerRepricingConfig">
+        /// Required. The CustomerRepricingConfig object to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomerRepricingConfig> CreateCustomerRepricingConfigAsync(string parent, CustomerRepricingConfig customerRepricingConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomerRepricingConfigAsync(new CreateCustomerRepricingConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                CustomerRepricingConfig = gax::GaxPreconditions.CheckNotNull(customerRepricingConfig, nameof(customerRepricingConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a CustomerRepricingConfig. Call this method to set modifications
+        /// for a specific customer's bill. You can only create configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. If needed, you can create a config for the current month,
+        /// with some restrictions.
+        /// 
+        /// When creating a config for a future month, make sure there are no existing
+        /// configs for that
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// The following restrictions are for creating configs in the current month.
+        /// 
+        /// * This functionality is reserved for recovering from an erroneous config,
+        /// and should not be used for regular business cases.
+        /// * The new config will not modify exports used with other configs.
+        /// Changes to the config may be immediate, but may take up to 24 hours.
+        /// * There is a limit of ten configs for any
+        /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+        /// or [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// * The contained [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config] vaule must be
+        /// different from the value used in the current config for a
+        /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the customer that will receive this repricing config.
+        /// Parent uses the format: accounts/{account_id}/customers/{customer_id}
+        /// </param>
+        /// <param name="customerRepricingConfig">
+        /// Required. The CustomerRepricingConfig object to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomerRepricingConfig> CreateCustomerRepricingConfigAsync(string parent, CustomerRepricingConfig customerRepricingConfig, st::CancellationToken cancellationToken) =>
+            CreateCustomerRepricingConfigAsync(parent, customerRepricingConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a CustomerRepricingConfig. Call this method to set modifications
+        /// for a specific customer's bill. You can only create configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. If needed, you can create a config for the current month,
+        /// with some restrictions.
+        /// 
+        /// When creating a config for a future month, make sure there are no existing
+        /// configs for that
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// The following restrictions are for creating configs in the current month.
+        /// 
+        /// * This functionality is reserved for recovering from an erroneous config,
+        /// and should not be used for regular business cases.
+        /// * The new config will not modify exports used with other configs.
+        /// Changes to the config may be immediate, but may take up to 24 hours.
+        /// * There is a limit of ten configs for any
+        /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+        /// or [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// * The contained [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config] vaule must be
+        /// different from the value used in the current config for a
+        /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the customer that will receive this repricing config.
+        /// Parent uses the format: accounts/{account_id}/customers/{customer_id}
+        /// </param>
+        /// <param name="customerRepricingConfig">
+        /// Required. The CustomerRepricingConfig object to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomerRepricingConfig CreateCustomerRepricingConfig(CustomerName parent, CustomerRepricingConfig customerRepricingConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomerRepricingConfig(new CreateCustomerRepricingConfigRequest
+            {
+                ParentAsCustomerName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CustomerRepricingConfig = gax::GaxPreconditions.CheckNotNull(customerRepricingConfig, nameof(customerRepricingConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a CustomerRepricingConfig. Call this method to set modifications
+        /// for a specific customer's bill. You can only create configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. If needed, you can create a config for the current month,
+        /// with some restrictions.
+        /// 
+        /// When creating a config for a future month, make sure there are no existing
+        /// configs for that
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// The following restrictions are for creating configs in the current month.
+        /// 
+        /// * This functionality is reserved for recovering from an erroneous config,
+        /// and should not be used for regular business cases.
+        /// * The new config will not modify exports used with other configs.
+        /// Changes to the config may be immediate, but may take up to 24 hours.
+        /// * There is a limit of ten configs for any
+        /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+        /// or [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// * The contained [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config] vaule must be
+        /// different from the value used in the current config for a
+        /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the customer that will receive this repricing config.
+        /// Parent uses the format: accounts/{account_id}/customers/{customer_id}
+        /// </param>
+        /// <param name="customerRepricingConfig">
+        /// Required. The CustomerRepricingConfig object to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomerRepricingConfig> CreateCustomerRepricingConfigAsync(CustomerName parent, CustomerRepricingConfig customerRepricingConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomerRepricingConfigAsync(new CreateCustomerRepricingConfigRequest
+            {
+                ParentAsCustomerName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CustomerRepricingConfig = gax::GaxPreconditions.CheckNotNull(customerRepricingConfig, nameof(customerRepricingConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a CustomerRepricingConfig. Call this method to set modifications
+        /// for a specific customer's bill. You can only create configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. If needed, you can create a config for the current month,
+        /// with some restrictions.
+        /// 
+        /// When creating a config for a future month, make sure there are no existing
+        /// configs for that
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// The following restrictions are for creating configs in the current month.
+        /// 
+        /// * This functionality is reserved for recovering from an erroneous config,
+        /// and should not be used for regular business cases.
+        /// * The new config will not modify exports used with other configs.
+        /// Changes to the config may be immediate, but may take up to 24 hours.
+        /// * There is a limit of ten configs for any
+        /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+        /// or [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// * The contained [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config] vaule must be
+        /// different from the value used in the current config for a
+        /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the customer that will receive this repricing config.
+        /// Parent uses the format: accounts/{account_id}/customers/{customer_id}
+        /// </param>
+        /// <param name="customerRepricingConfig">
+        /// Required. The CustomerRepricingConfig object to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomerRepricingConfig> CreateCustomerRepricingConfigAsync(CustomerName parent, CustomerRepricingConfig customerRepricingConfig, st::CancellationToken cancellationToken) =>
+            CreateCustomerRepricingConfigAsync(parent, customerRepricingConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a CustomerRepricingConfig. Call this method to set modifications
+        /// for a specific customer's bill. This method overwrites the existing
+        /// CustomerRepricingConfig.
+        /// 
+        /// You can only update configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. To make changes to configs for the current month, use
+        /// [CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig], taking note of its restrictions. You
+        /// cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// When updating a config in the future:
+        /// 
+        /// * This config must already exist.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomerRepricingConfig UpdateCustomerRepricingConfig(UpdateCustomerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a CustomerRepricingConfig. Call this method to set modifications
+        /// for a specific customer's bill. This method overwrites the existing
+        /// CustomerRepricingConfig.
+        /// 
+        /// You can only update configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. To make changes to configs for the current month, use
+        /// [CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig], taking note of its restrictions. You
+        /// cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// When updating a config in the future:
+        /// 
+        /// * This config must already exist.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomerRepricingConfig> UpdateCustomerRepricingConfigAsync(UpdateCustomerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a CustomerRepricingConfig. Call this method to set modifications
+        /// for a specific customer's bill. This method overwrites the existing
+        /// CustomerRepricingConfig.
+        /// 
+        /// You can only update configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. To make changes to configs for the current month, use
+        /// [CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig], taking note of its restrictions. You
+        /// cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// When updating a config in the future:
+        /// 
+        /// * This config must already exist.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomerRepricingConfig> UpdateCustomerRepricingConfigAsync(UpdateCustomerRepricingConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateCustomerRepricingConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a CustomerRepricingConfig. Call this method to set modifications
+        /// for a specific customer's bill. This method overwrites the existing
+        /// CustomerRepricingConfig.
+        /// 
+        /// You can only update configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. To make changes to configs for the current month, use
+        /// [CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig], taking note of its restrictions. You
+        /// cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// When updating a config in the future:
+        /// 
+        /// * This config must already exist.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="customerRepricingConfig">
+        /// Required. The CustomerRepricingConfig object to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomerRepricingConfig UpdateCustomerRepricingConfig(CustomerRepricingConfig customerRepricingConfig, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCustomerRepricingConfig(new UpdateCustomerRepricingConfigRequest
+            {
+                CustomerRepricingConfig = gax::GaxPreconditions.CheckNotNull(customerRepricingConfig, nameof(customerRepricingConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a CustomerRepricingConfig. Call this method to set modifications
+        /// for a specific customer's bill. This method overwrites the existing
+        /// CustomerRepricingConfig.
+        /// 
+        /// You can only update configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. To make changes to configs for the current month, use
+        /// [CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig], taking note of its restrictions. You
+        /// cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// When updating a config in the future:
+        /// 
+        /// * This config must already exist.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="customerRepricingConfig">
+        /// Required. The CustomerRepricingConfig object to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomerRepricingConfig> UpdateCustomerRepricingConfigAsync(CustomerRepricingConfig customerRepricingConfig, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCustomerRepricingConfigAsync(new UpdateCustomerRepricingConfigRequest
+            {
+                CustomerRepricingConfig = gax::GaxPreconditions.CheckNotNull(customerRepricingConfig, nameof(customerRepricingConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a CustomerRepricingConfig. Call this method to set modifications
+        /// for a specific customer's bill. This method overwrites the existing
+        /// CustomerRepricingConfig.
+        /// 
+        /// You can only update configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. To make changes to configs for the current month, use
+        /// [CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig], taking note of its restrictions. You
+        /// cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// When updating a config in the future:
+        /// 
+        /// * This config must already exist.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="customerRepricingConfig">
+        /// Required. The CustomerRepricingConfig object to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomerRepricingConfig> UpdateCustomerRepricingConfigAsync(CustomerRepricingConfig customerRepricingConfig, st::CancellationToken cancellationToken) =>
+            UpdateCustomerRepricingConfigAsync(customerRepricingConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the given [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] permanently. You can only
+        /// delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is set
+        /// to a date after the current month.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The account making the request does not own
+        /// this customer.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * FAILED_PRECONDITION: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] is active or in the
+        /// past.
+        /// * NOT_FOUND: No [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] found for the name in the
+        /// request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteCustomerRepricingConfig(DeleteCustomerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the given [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] permanently. You can only
+        /// delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is set
+        /// to a date after the current month.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The account making the request does not own
+        /// this customer.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * FAILED_PRECONDITION: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] is active or in the
+        /// past.
+        /// * NOT_FOUND: No [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] found for the name in the
+        /// request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomerRepricingConfigAsync(DeleteCustomerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the given [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] permanently. You can only
+        /// delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is set
+        /// to a date after the current month.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The account making the request does not own
+        /// this customer.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * FAILED_PRECONDITION: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] is active or in the
+        /// past.
+        /// * NOT_FOUND: No [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] found for the name in the
+        /// request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomerRepricingConfigAsync(DeleteCustomerRepricingConfigRequest request, st::CancellationToken cancellationToken) =>
+            DeleteCustomerRepricingConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the given [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] permanently. You can only
+        /// delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is set
+        /// to a date after the current month.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The account making the request does not own
+        /// this customer.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * FAILED_PRECONDITION: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] is active or in the
+        /// past.
+        /// * NOT_FOUND: No [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] found for the name in the
+        /// request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the customer repricing config rule to delete.
+        /// Format:
+        /// accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteCustomerRepricingConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomerRepricingConfig(new DeleteCustomerRepricingConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the given [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] permanently. You can only
+        /// delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is set
+        /// to a date after the current month.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The account making the request does not own
+        /// this customer.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * FAILED_PRECONDITION: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] is active or in the
+        /// past.
+        /// * NOT_FOUND: No [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] found for the name in the
+        /// request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the customer repricing config rule to delete.
+        /// Format:
+        /// accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomerRepricingConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomerRepricingConfigAsync(new DeleteCustomerRepricingConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the given [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] permanently. You can only
+        /// delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is set
+        /// to a date after the current month.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The account making the request does not own
+        /// this customer.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * FAILED_PRECONDITION: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] is active or in the
+        /// past.
+        /// * NOT_FOUND: No [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] found for the name in the
+        /// request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the customer repricing config rule to delete.
+        /// Format:
+        /// accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomerRepricingConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteCustomerRepricingConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the given [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] permanently. You can only
+        /// delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is set
+        /// to a date after the current month.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The account making the request does not own
+        /// this customer.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * FAILED_PRECONDITION: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] is active or in the
+        /// past.
+        /// * NOT_FOUND: No [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] found for the name in the
+        /// request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the customer repricing config rule to delete.
+        /// Format:
+        /// accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteCustomerRepricingConfig(CustomerRepricingConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomerRepricingConfig(new DeleteCustomerRepricingConfigRequest
+            {
+                CustomerRepricingConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the given [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] permanently. You can only
+        /// delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is set
+        /// to a date after the current month.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The account making the request does not own
+        /// this customer.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * FAILED_PRECONDITION: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] is active or in the
+        /// past.
+        /// * NOT_FOUND: No [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] found for the name in the
+        /// request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the customer repricing config rule to delete.
+        /// Format:
+        /// accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomerRepricingConfigAsync(CustomerRepricingConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomerRepricingConfigAsync(new DeleteCustomerRepricingConfigRequest
+            {
+                CustomerRepricingConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the given [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] permanently. You can only
+        /// delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is set
+        /// to a date after the current month.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The account making the request does not own
+        /// this customer.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * FAILED_PRECONDITION: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] is active or in the
+        /// past.
+        /// * NOT_FOUND: No [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] found for the name in the
+        /// request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the customer repricing config rule to delete.
+        /// Format:
+        /// accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomerRepricingConfigAsync(CustomerRepricingConfigName name, st::CancellationToken cancellationToken) =>
+            DeleteCustomerRepricingConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about how a Distributor modifies their bill before sending
+        /// it to a ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] was not found.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChannelPartnerRepricingConfig GetChannelPartnerRepricingConfig(GetChannelPartnerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information about how a Distributor modifies their bill before sending
+        /// it to a ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] was not found.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelPartnerRepricingConfig> GetChannelPartnerRepricingConfigAsync(GetChannelPartnerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information about how a Distributor modifies their bill before sending
+        /// it to a ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] was not found.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelPartnerRepricingConfig> GetChannelPartnerRepricingConfigAsync(GetChannelPartnerRepricingConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetChannelPartnerRepricingConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about how a Distributor modifies their bill before sending
+        /// it to a ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] was not found.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ChannelPartnerRepricingConfig
+        /// Format:
+        /// accounts/{account_id}/channelPartnerLinks/{channel_partner_id}/channelPartnerRepricingConfigs/{id}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChannelPartnerRepricingConfig GetChannelPartnerRepricingConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetChannelPartnerRepricingConfig(new GetChannelPartnerRepricingConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about how a Distributor modifies their bill before sending
+        /// it to a ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] was not found.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ChannelPartnerRepricingConfig
+        /// Format:
+        /// accounts/{account_id}/channelPartnerLinks/{channel_partner_id}/channelPartnerRepricingConfigs/{id}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelPartnerRepricingConfig> GetChannelPartnerRepricingConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetChannelPartnerRepricingConfigAsync(new GetChannelPartnerRepricingConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about how a Distributor modifies their bill before sending
+        /// it to a ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] was not found.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ChannelPartnerRepricingConfig
+        /// Format:
+        /// accounts/{account_id}/channelPartnerLinks/{channel_partner_id}/channelPartnerRepricingConfigs/{id}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelPartnerRepricingConfig> GetChannelPartnerRepricingConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetChannelPartnerRepricingConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about how a Distributor modifies their bill before sending
+        /// it to a ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] was not found.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ChannelPartnerRepricingConfig
+        /// Format:
+        /// accounts/{account_id}/channelPartnerLinks/{channel_partner_id}/channelPartnerRepricingConfigs/{id}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChannelPartnerRepricingConfig GetChannelPartnerRepricingConfig(ChannelPartnerRepricingConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetChannelPartnerRepricingConfig(new GetChannelPartnerRepricingConfigRequest
+            {
+                ChannelPartnerRepricingConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about how a Distributor modifies their bill before sending
+        /// it to a ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] was not found.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ChannelPartnerRepricingConfig
+        /// Format:
+        /// accounts/{account_id}/channelPartnerLinks/{channel_partner_id}/channelPartnerRepricingConfigs/{id}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelPartnerRepricingConfig> GetChannelPartnerRepricingConfigAsync(ChannelPartnerRepricingConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetChannelPartnerRepricingConfigAsync(new GetChannelPartnerRepricingConfigRequest
+            {
+                ChannelPartnerRepricingConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about how a Distributor modifies their bill before sending
+        /// it to a ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] was not found.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ChannelPartnerRepricingConfig
+        /// Format:
+        /// accounts/{account_id}/channelPartnerLinks/{channel_partner_id}/channelPartnerRepricingConfigs/{id}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelPartnerRepricingConfig> GetChannelPartnerRepricingConfigAsync(ChannelPartnerRepricingConfigName name, st::CancellationToken cancellationToken) =>
+            GetChannelPartnerRepricingConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists information about how a Reseller modifies their bill before sending
+        /// it to a ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resources.
+        /// The data for each resource is displayed in the ascending order of:
+        /// * channel partner ID
+        /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+        /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ChannelPartnerRepricingConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig> ListChannelPartnerRepricingConfigs(ListChannelPartnerRepricingConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists information about how a Reseller modifies their bill before sending
+        /// it to a ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resources.
+        /// The data for each resource is displayed in the ascending order of:
+        /// * channel partner ID
+        /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+        /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="ChannelPartnerRepricingConfig"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig> ListChannelPartnerRepricingConfigsAsync(ListChannelPartnerRepricingConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists information about how a Reseller modifies their bill before sending
+        /// it to a ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resources.
+        /// The data for each resource is displayed in the ascending order of:
+        /// * channel partner ID
+        /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+        /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the account's [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink].
+        /// Parent uses the format:
+        /// accounts/{account_id}/channelPartnerLinks/{channel_partner_id}.
+        /// Supports accounts/{account_id}/channelPartnerLinks/- to retrieve configs
+        /// for all channel partners.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ChannelPartnerRepricingConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig> ListChannelPartnerRepricingConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListChannelPartnerRepricingConfigs(new ListChannelPartnerRepricingConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists information about how a Reseller modifies their bill before sending
+        /// it to a ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resources.
+        /// The data for each resource is displayed in the ascending order of:
+        /// * channel partner ID
+        /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+        /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the account's [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink].
+        /// Parent uses the format:
+        /// accounts/{account_id}/channelPartnerLinks/{channel_partner_id}.
+        /// Supports accounts/{account_id}/channelPartnerLinks/- to retrieve configs
+        /// for all channel partners.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="ChannelPartnerRepricingConfig"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig> ListChannelPartnerRepricingConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListChannelPartnerRepricingConfigsAsync(new ListChannelPartnerRepricingConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists information about how a Reseller modifies their bill before sending
+        /// it to a ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resources.
+        /// The data for each resource is displayed in the ascending order of:
+        /// * channel partner ID
+        /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+        /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the account's [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink].
+        /// Parent uses the format:
+        /// accounts/{account_id}/channelPartnerLinks/{channel_partner_id}.
+        /// Supports accounts/{account_id}/channelPartnerLinks/- to retrieve configs
+        /// for all channel partners.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ChannelPartnerRepricingConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig> ListChannelPartnerRepricingConfigs(ChannelPartnerLinkName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListChannelPartnerRepricingConfigs(new ListChannelPartnerRepricingConfigsRequest
+            {
+                ParentAsChannelPartnerLinkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists information about how a Reseller modifies their bill before sending
+        /// it to a ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resources.
+        /// The data for each resource is displayed in the ascending order of:
+        /// * channel partner ID
+        /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+        /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the account's [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink].
+        /// Parent uses the format:
+        /// accounts/{account_id}/channelPartnerLinks/{channel_partner_id}.
+        /// Supports accounts/{account_id}/channelPartnerLinks/- to retrieve configs
+        /// for all channel partners.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="ChannelPartnerRepricingConfig"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig> ListChannelPartnerRepricingConfigsAsync(ChannelPartnerLinkName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListChannelPartnerRepricingConfigsAsync(new ListChannelPartnerRepricingConfigsRequest
+            {
+                ParentAsChannelPartnerLinkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ChannelPartnerRepricingConfig. Call this method to set
+        /// modifications for a specific ChannelPartner's bill. You can only create
+        /// configs if the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a future
+        /// month. If needed, you can create a config for the current month, with some
+        /// restrictions.
+        /// 
+        /// When creating a config for a future month, make sure there are no existing
+        /// configs for that
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// The following restrictions are for creating configs in the current month.
+        /// 
+        /// * This functionality is reserved for recovering from an erroneous config,
+        /// and should not be used for regular business cases.
+        /// * The new config will not modify exports used with other configs.
+        /// Changes to the config may be immediate, but may take up to 24 hours.
+        /// * There is a limit of ten configs for any ChannelPartner or
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// * The contained [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config] vaule
+        /// must be different from the value used in the current config for a
+        /// ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+        /// otherwise returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChannelPartnerRepricingConfig CreateChannelPartnerRepricingConfig(CreateChannelPartnerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a ChannelPartnerRepricingConfig. Call this method to set
+        /// modifications for a specific ChannelPartner's bill. You can only create
+        /// configs if the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a future
+        /// month. If needed, you can create a config for the current month, with some
+        /// restrictions.
+        /// 
+        /// When creating a config for a future month, make sure there are no existing
+        /// configs for that
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// The following restrictions are for creating configs in the current month.
+        /// 
+        /// * This functionality is reserved for recovering from an erroneous config,
+        /// and should not be used for regular business cases.
+        /// * The new config will not modify exports used with other configs.
+        /// Changes to the config may be immediate, but may take up to 24 hours.
+        /// * There is a limit of ten configs for any ChannelPartner or
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// * The contained [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config] vaule
+        /// must be different from the value used in the current config for a
+        /// ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+        /// otherwise returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelPartnerRepricingConfig> CreateChannelPartnerRepricingConfigAsync(CreateChannelPartnerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a ChannelPartnerRepricingConfig. Call this method to set
+        /// modifications for a specific ChannelPartner's bill. You can only create
+        /// configs if the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a future
+        /// month. If needed, you can create a config for the current month, with some
+        /// restrictions.
+        /// 
+        /// When creating a config for a future month, make sure there are no existing
+        /// configs for that
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// The following restrictions are for creating configs in the current month.
+        /// 
+        /// * This functionality is reserved for recovering from an erroneous config,
+        /// and should not be used for regular business cases.
+        /// * The new config will not modify exports used with other configs.
+        /// Changes to the config may be immediate, but may take up to 24 hours.
+        /// * There is a limit of ten configs for any ChannelPartner or
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// * The contained [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config] vaule
+        /// must be different from the value used in the current config for a
+        /// ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+        /// otherwise returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelPartnerRepricingConfig> CreateChannelPartnerRepricingConfigAsync(CreateChannelPartnerRepricingConfigRequest request, st::CancellationToken cancellationToken) =>
+            CreateChannelPartnerRepricingConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a ChannelPartnerRepricingConfig. Call this method to set
+        /// modifications for a specific ChannelPartner's bill. You can only create
+        /// configs if the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a future
+        /// month. If needed, you can create a config for the current month, with some
+        /// restrictions.
+        /// 
+        /// When creating a config for a future month, make sure there are no existing
+        /// configs for that
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// The following restrictions are for creating configs in the current month.
+        /// 
+        /// * This functionality is reserved for recovering from an erroneous config,
+        /// and should not be used for regular business cases.
+        /// * The new config will not modify exports used with other configs.
+        /// Changes to the config may be immediate, but may take up to 24 hours.
+        /// * There is a limit of ten configs for any ChannelPartner or
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// * The contained [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config] vaule
+        /// must be different from the value used in the current config for a
+        /// ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+        /// otherwise returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ChannelPartner that will receive the repricing
+        /// config. Parent uses the format:
+        /// accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+        /// </param>
+        /// <param name="channelPartnerRepricingConfig">
+        /// Required. The ChannelPartnerRepricingConfig object to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChannelPartnerRepricingConfig CreateChannelPartnerRepricingConfig(string parent, ChannelPartnerRepricingConfig channelPartnerRepricingConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateChannelPartnerRepricingConfig(new CreateChannelPartnerRepricingConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ChannelPartnerRepricingConfig = gax::GaxPreconditions.CheckNotNull(channelPartnerRepricingConfig, nameof(channelPartnerRepricingConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ChannelPartnerRepricingConfig. Call this method to set
+        /// modifications for a specific ChannelPartner's bill. You can only create
+        /// configs if the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a future
+        /// month. If needed, you can create a config for the current month, with some
+        /// restrictions.
+        /// 
+        /// When creating a config for a future month, make sure there are no existing
+        /// configs for that
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// The following restrictions are for creating configs in the current month.
+        /// 
+        /// * This functionality is reserved for recovering from an erroneous config,
+        /// and should not be used for regular business cases.
+        /// * The new config will not modify exports used with other configs.
+        /// Changes to the config may be immediate, but may take up to 24 hours.
+        /// * There is a limit of ten configs for any ChannelPartner or
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// * The contained [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config] vaule
+        /// must be different from the value used in the current config for a
+        /// ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+        /// otherwise returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ChannelPartner that will receive the repricing
+        /// config. Parent uses the format:
+        /// accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+        /// </param>
+        /// <param name="channelPartnerRepricingConfig">
+        /// Required. The ChannelPartnerRepricingConfig object to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelPartnerRepricingConfig> CreateChannelPartnerRepricingConfigAsync(string parent, ChannelPartnerRepricingConfig channelPartnerRepricingConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateChannelPartnerRepricingConfigAsync(new CreateChannelPartnerRepricingConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ChannelPartnerRepricingConfig = gax::GaxPreconditions.CheckNotNull(channelPartnerRepricingConfig, nameof(channelPartnerRepricingConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ChannelPartnerRepricingConfig. Call this method to set
+        /// modifications for a specific ChannelPartner's bill. You can only create
+        /// configs if the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a future
+        /// month. If needed, you can create a config for the current month, with some
+        /// restrictions.
+        /// 
+        /// When creating a config for a future month, make sure there are no existing
+        /// configs for that
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// The following restrictions are for creating configs in the current month.
+        /// 
+        /// * This functionality is reserved for recovering from an erroneous config,
+        /// and should not be used for regular business cases.
+        /// * The new config will not modify exports used with other configs.
+        /// Changes to the config may be immediate, but may take up to 24 hours.
+        /// * There is a limit of ten configs for any ChannelPartner or
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// * The contained [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config] vaule
+        /// must be different from the value used in the current config for a
+        /// ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+        /// otherwise returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ChannelPartner that will receive the repricing
+        /// config. Parent uses the format:
+        /// accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+        /// </param>
+        /// <param name="channelPartnerRepricingConfig">
+        /// Required. The ChannelPartnerRepricingConfig object to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelPartnerRepricingConfig> CreateChannelPartnerRepricingConfigAsync(string parent, ChannelPartnerRepricingConfig channelPartnerRepricingConfig, st::CancellationToken cancellationToken) =>
+            CreateChannelPartnerRepricingConfigAsync(parent, channelPartnerRepricingConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a ChannelPartnerRepricingConfig. Call this method to set
+        /// modifications for a specific ChannelPartner's bill. You can only create
+        /// configs if the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a future
+        /// month. If needed, you can create a config for the current month, with some
+        /// restrictions.
+        /// 
+        /// When creating a config for a future month, make sure there are no existing
+        /// configs for that
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// The following restrictions are for creating configs in the current month.
+        /// 
+        /// * This functionality is reserved for recovering from an erroneous config,
+        /// and should not be used for regular business cases.
+        /// * The new config will not modify exports used with other configs.
+        /// Changes to the config may be immediate, but may take up to 24 hours.
+        /// * There is a limit of ten configs for any ChannelPartner or
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// * The contained [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config] vaule
+        /// must be different from the value used in the current config for a
+        /// ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+        /// otherwise returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ChannelPartner that will receive the repricing
+        /// config. Parent uses the format:
+        /// accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+        /// </param>
+        /// <param name="channelPartnerRepricingConfig">
+        /// Required. The ChannelPartnerRepricingConfig object to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChannelPartnerRepricingConfig CreateChannelPartnerRepricingConfig(ChannelPartnerLinkName parent, ChannelPartnerRepricingConfig channelPartnerRepricingConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateChannelPartnerRepricingConfig(new CreateChannelPartnerRepricingConfigRequest
+            {
+                ParentAsChannelPartnerLinkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ChannelPartnerRepricingConfig = gax::GaxPreconditions.CheckNotNull(channelPartnerRepricingConfig, nameof(channelPartnerRepricingConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ChannelPartnerRepricingConfig. Call this method to set
+        /// modifications for a specific ChannelPartner's bill. You can only create
+        /// configs if the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a future
+        /// month. If needed, you can create a config for the current month, with some
+        /// restrictions.
+        /// 
+        /// When creating a config for a future month, make sure there are no existing
+        /// configs for that
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// The following restrictions are for creating configs in the current month.
+        /// 
+        /// * This functionality is reserved for recovering from an erroneous config,
+        /// and should not be used for regular business cases.
+        /// * The new config will not modify exports used with other configs.
+        /// Changes to the config may be immediate, but may take up to 24 hours.
+        /// * There is a limit of ten configs for any ChannelPartner or
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// * The contained [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config] vaule
+        /// must be different from the value used in the current config for a
+        /// ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+        /// otherwise returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ChannelPartner that will receive the repricing
+        /// config. Parent uses the format:
+        /// accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+        /// </param>
+        /// <param name="channelPartnerRepricingConfig">
+        /// Required. The ChannelPartnerRepricingConfig object to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelPartnerRepricingConfig> CreateChannelPartnerRepricingConfigAsync(ChannelPartnerLinkName parent, ChannelPartnerRepricingConfig channelPartnerRepricingConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateChannelPartnerRepricingConfigAsync(new CreateChannelPartnerRepricingConfigRequest
+            {
+                ParentAsChannelPartnerLinkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ChannelPartnerRepricingConfig = gax::GaxPreconditions.CheckNotNull(channelPartnerRepricingConfig, nameof(channelPartnerRepricingConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ChannelPartnerRepricingConfig. Call this method to set
+        /// modifications for a specific ChannelPartner's bill. You can only create
+        /// configs if the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a future
+        /// month. If needed, you can create a config for the current month, with some
+        /// restrictions.
+        /// 
+        /// When creating a config for a future month, make sure there are no existing
+        /// configs for that
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// The following restrictions are for creating configs in the current month.
+        /// 
+        /// * This functionality is reserved for recovering from an erroneous config,
+        /// and should not be used for regular business cases.
+        /// * The new config will not modify exports used with other configs.
+        /// Changes to the config may be immediate, but may take up to 24 hours.
+        /// * There is a limit of ten configs for any ChannelPartner or
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// * The contained [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config] vaule
+        /// must be different from the value used in the current config for a
+        /// ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+        /// otherwise returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ChannelPartner that will receive the repricing
+        /// config. Parent uses the format:
+        /// accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+        /// </param>
+        /// <param name="channelPartnerRepricingConfig">
+        /// Required. The ChannelPartnerRepricingConfig object to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelPartnerRepricingConfig> CreateChannelPartnerRepricingConfigAsync(ChannelPartnerLinkName parent, ChannelPartnerRepricingConfig channelPartnerRepricingConfig, st::CancellationToken cancellationToken) =>
+            CreateChannelPartnerRepricingConfigAsync(parent, channelPartnerRepricingConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a ChannelPartnerRepricingConfig. Call this method to set
+        /// modifications for a specific ChannelPartner's bill. This method overwrites
+        /// the existing CustomerRepricingConfig.
+        /// 
+        /// You can only update configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. To make changes to configs for the current month, use
+        /// [CreateChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig], taking note of its restrictions.
+        /// You cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// When updating a config in the future:
+        /// 
+        /// * This config must already exist.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+        /// otherwise returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChannelPartnerRepricingConfig UpdateChannelPartnerRepricingConfig(UpdateChannelPartnerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a ChannelPartnerRepricingConfig. Call this method to set
+        /// modifications for a specific ChannelPartner's bill. This method overwrites
+        /// the existing CustomerRepricingConfig.
+        /// 
+        /// You can only update configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. To make changes to configs for the current month, use
+        /// [CreateChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig], taking note of its restrictions.
+        /// You cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// When updating a config in the future:
+        /// 
+        /// * This config must already exist.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+        /// otherwise returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelPartnerRepricingConfig> UpdateChannelPartnerRepricingConfigAsync(UpdateChannelPartnerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a ChannelPartnerRepricingConfig. Call this method to set
+        /// modifications for a specific ChannelPartner's bill. This method overwrites
+        /// the existing CustomerRepricingConfig.
+        /// 
+        /// You can only update configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. To make changes to configs for the current month, use
+        /// [CreateChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig], taking note of its restrictions.
+        /// You cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// When updating a config in the future:
+        /// 
+        /// * This config must already exist.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+        /// otherwise returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelPartnerRepricingConfig> UpdateChannelPartnerRepricingConfigAsync(UpdateChannelPartnerRepricingConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateChannelPartnerRepricingConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a ChannelPartnerRepricingConfig. Call this method to set
+        /// modifications for a specific ChannelPartner's bill. This method overwrites
+        /// the existing CustomerRepricingConfig.
+        /// 
+        /// You can only update configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. To make changes to configs for the current month, use
+        /// [CreateChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig], taking note of its restrictions.
+        /// You cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// When updating a config in the future:
+        /// 
+        /// * This config must already exist.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+        /// otherwise returns an error.
+        /// </summary>
+        /// <param name="channelPartnerRepricingConfig">
+        /// Required. The ChannelPartnerRepricingConfig object to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChannelPartnerRepricingConfig UpdateChannelPartnerRepricingConfig(ChannelPartnerRepricingConfig channelPartnerRepricingConfig, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateChannelPartnerRepricingConfig(new UpdateChannelPartnerRepricingConfigRequest
+            {
+                ChannelPartnerRepricingConfig = gax::GaxPreconditions.CheckNotNull(channelPartnerRepricingConfig, nameof(channelPartnerRepricingConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a ChannelPartnerRepricingConfig. Call this method to set
+        /// modifications for a specific ChannelPartner's bill. This method overwrites
+        /// the existing CustomerRepricingConfig.
+        /// 
+        /// You can only update configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. To make changes to configs for the current month, use
+        /// [CreateChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig], taking note of its restrictions.
+        /// You cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// When updating a config in the future:
+        /// 
+        /// * This config must already exist.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+        /// otherwise returns an error.
+        /// </summary>
+        /// <param name="channelPartnerRepricingConfig">
+        /// Required. The ChannelPartnerRepricingConfig object to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelPartnerRepricingConfig> UpdateChannelPartnerRepricingConfigAsync(ChannelPartnerRepricingConfig channelPartnerRepricingConfig, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateChannelPartnerRepricingConfigAsync(new UpdateChannelPartnerRepricingConfigRequest
+            {
+                ChannelPartnerRepricingConfig = gax::GaxPreconditions.CheckNotNull(channelPartnerRepricingConfig, nameof(channelPartnerRepricingConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a ChannelPartnerRepricingConfig. Call this method to set
+        /// modifications for a specific ChannelPartner's bill. This method overwrites
+        /// the existing CustomerRepricingConfig.
+        /// 
+        /// You can only update configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. To make changes to configs for the current month, use
+        /// [CreateChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig], taking note of its restrictions.
+        /// You cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// When updating a config in the future:
+        /// 
+        /// * This config must already exist.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+        /// otherwise returns an error.
+        /// </summary>
+        /// <param name="channelPartnerRepricingConfig">
+        /// Required. The ChannelPartnerRepricingConfig object to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelPartnerRepricingConfig> UpdateChannelPartnerRepricingConfigAsync(ChannelPartnerRepricingConfig channelPartnerRepricingConfig, st::CancellationToken cancellationToken) =>
+            UpdateChannelPartnerRepricingConfigAsync(channelPartnerRepricingConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the given [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] permanently. You can
+        /// only delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is
+        /// set to a date after the current month.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The account making the request does not own
+        /// this customer.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * FAILED_PRECONDITION: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] is active or
+        /// in the past.
+        /// * NOT_FOUND: No [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] found for the name in the
+        /// request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteChannelPartnerRepricingConfig(DeleteChannelPartnerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the given [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] permanently. You can
+        /// only delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is
+        /// set to a date after the current month.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The account making the request does not own
+        /// this customer.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * FAILED_PRECONDITION: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] is active or
+        /// in the past.
+        /// * NOT_FOUND: No [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] found for the name in the
+        /// request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteChannelPartnerRepricingConfigAsync(DeleteChannelPartnerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the given [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] permanently. You can
+        /// only delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is
+        /// set to a date after the current month.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The account making the request does not own
+        /// this customer.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * FAILED_PRECONDITION: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] is active or
+        /// in the past.
+        /// * NOT_FOUND: No [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] found for the name in the
+        /// request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteChannelPartnerRepricingConfigAsync(DeleteChannelPartnerRepricingConfigRequest request, st::CancellationToken cancellationToken) =>
+            DeleteChannelPartnerRepricingConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the given [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] permanently. You can
+        /// only delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is
+        /// set to a date after the current month.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The account making the request does not own
+        /// this customer.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * FAILED_PRECONDITION: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] is active or
+        /// in the past.
+        /// * NOT_FOUND: No [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] found for the name in the
+        /// request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the channel partner repricing config rule to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteChannelPartnerRepricingConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteChannelPartnerRepricingConfig(new DeleteChannelPartnerRepricingConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the given [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] permanently. You can
+        /// only delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is
+        /// set to a date after the current month.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The account making the request does not own
+        /// this customer.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * FAILED_PRECONDITION: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] is active or
+        /// in the past.
+        /// * NOT_FOUND: No [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] found for the name in the
+        /// request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the channel partner repricing config rule to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteChannelPartnerRepricingConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteChannelPartnerRepricingConfigAsync(new DeleteChannelPartnerRepricingConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the given [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] permanently. You can
+        /// only delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is
+        /// set to a date after the current month.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The account making the request does not own
+        /// this customer.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * FAILED_PRECONDITION: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] is active or
+        /// in the past.
+        /// * NOT_FOUND: No [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] found for the name in the
+        /// request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the channel partner repricing config rule to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteChannelPartnerRepricingConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteChannelPartnerRepricingConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the given [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] permanently. You can
+        /// only delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is
+        /// set to a date after the current month.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The account making the request does not own
+        /// this customer.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * FAILED_PRECONDITION: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] is active or
+        /// in the past.
+        /// * NOT_FOUND: No [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] found for the name in the
+        /// request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the channel partner repricing config rule to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteChannelPartnerRepricingConfig(ChannelPartnerRepricingConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteChannelPartnerRepricingConfig(new DeleteChannelPartnerRepricingConfigRequest
+            {
+                ChannelPartnerRepricingConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the given [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] permanently. You can
+        /// only delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is
+        /// set to a date after the current month.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The account making the request does not own
+        /// this customer.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * FAILED_PRECONDITION: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] is active or
+        /// in the past.
+        /// * NOT_FOUND: No [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] found for the name in the
+        /// request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the channel partner repricing config rule to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteChannelPartnerRepricingConfigAsync(ChannelPartnerRepricingConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteChannelPartnerRepricingConfigAsync(new DeleteChannelPartnerRepricingConfigRequest
+            {
+                ChannelPartnerRepricingConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the given [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] permanently. You can
+        /// only delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is
+        /// set to a date after the current month.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The account making the request does not own
+        /// this customer.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * FAILED_PRECONDITION: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] is active or
+        /// in the past.
+        /// * NOT_FOUND: No [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] found for the name in the
+        /// request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the channel partner repricing config rule to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteChannelPartnerRepricingConfigAsync(ChannelPartnerRepricingConfigName name, st::CancellationToken cancellationToken) =>
+            DeleteChannelPartnerRepricingConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Returns the requested [Offer][google.cloud.channel.v1.Offer] resource.
         /// 
         /// Possible error codes:
@@ -4113,6 +7112,26 @@ namespace Google.Cloud.Channel.V1
 
         private readonly gaxgrpc::ApiCall<UpdateChannelPartnerLinkRequest, ChannelPartnerLink> _callUpdateChannelPartnerLink;
 
+        private readonly gaxgrpc::ApiCall<GetCustomerRepricingConfigRequest, CustomerRepricingConfig> _callGetCustomerRepricingConfig;
+
+        private readonly gaxgrpc::ApiCall<ListCustomerRepricingConfigsRequest, ListCustomerRepricingConfigsResponse> _callListCustomerRepricingConfigs;
+
+        private readonly gaxgrpc::ApiCall<CreateCustomerRepricingConfigRequest, CustomerRepricingConfig> _callCreateCustomerRepricingConfig;
+
+        private readonly gaxgrpc::ApiCall<UpdateCustomerRepricingConfigRequest, CustomerRepricingConfig> _callUpdateCustomerRepricingConfig;
+
+        private readonly gaxgrpc::ApiCall<DeleteCustomerRepricingConfigRequest, wkt::Empty> _callDeleteCustomerRepricingConfig;
+
+        private readonly gaxgrpc::ApiCall<GetChannelPartnerRepricingConfigRequest, ChannelPartnerRepricingConfig> _callGetChannelPartnerRepricingConfig;
+
+        private readonly gaxgrpc::ApiCall<ListChannelPartnerRepricingConfigsRequest, ListChannelPartnerRepricingConfigsResponse> _callListChannelPartnerRepricingConfigs;
+
+        private readonly gaxgrpc::ApiCall<CreateChannelPartnerRepricingConfigRequest, ChannelPartnerRepricingConfig> _callCreateChannelPartnerRepricingConfig;
+
+        private readonly gaxgrpc::ApiCall<UpdateChannelPartnerRepricingConfigRequest, ChannelPartnerRepricingConfig> _callUpdateChannelPartnerRepricingConfig;
+
+        private readonly gaxgrpc::ApiCall<DeleteChannelPartnerRepricingConfigRequest, wkt::Empty> _callDeleteChannelPartnerRepricingConfig;
+
         private readonly gaxgrpc::ApiCall<LookupOfferRequest, Offer> _callLookupOffer;
 
         private readonly gaxgrpc::ApiCall<ListProductsRequest, ListProductsResponse> _callListProducts;
@@ -4231,6 +7250,36 @@ namespace Google.Cloud.Channel.V1
             _callUpdateChannelPartnerLink = clientHelper.BuildApiCall<UpdateChannelPartnerLinkRequest, ChannelPartnerLink>(grpcClient.UpdateChannelPartnerLinkAsync, grpcClient.UpdateChannelPartnerLink, effectiveSettings.UpdateChannelPartnerLinkSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateChannelPartnerLink);
             Modify_UpdateChannelPartnerLinkApiCall(ref _callUpdateChannelPartnerLink);
+            _callGetCustomerRepricingConfig = clientHelper.BuildApiCall<GetCustomerRepricingConfigRequest, CustomerRepricingConfig>(grpcClient.GetCustomerRepricingConfigAsync, grpcClient.GetCustomerRepricingConfig, effectiveSettings.GetCustomerRepricingConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetCustomerRepricingConfig);
+            Modify_GetCustomerRepricingConfigApiCall(ref _callGetCustomerRepricingConfig);
+            _callListCustomerRepricingConfigs = clientHelper.BuildApiCall<ListCustomerRepricingConfigsRequest, ListCustomerRepricingConfigsResponse>(grpcClient.ListCustomerRepricingConfigsAsync, grpcClient.ListCustomerRepricingConfigs, effectiveSettings.ListCustomerRepricingConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListCustomerRepricingConfigs);
+            Modify_ListCustomerRepricingConfigsApiCall(ref _callListCustomerRepricingConfigs);
+            _callCreateCustomerRepricingConfig = clientHelper.BuildApiCall<CreateCustomerRepricingConfigRequest, CustomerRepricingConfig>(grpcClient.CreateCustomerRepricingConfigAsync, grpcClient.CreateCustomerRepricingConfig, effectiveSettings.CreateCustomerRepricingConfigSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateCustomerRepricingConfig);
+            Modify_CreateCustomerRepricingConfigApiCall(ref _callCreateCustomerRepricingConfig);
+            _callUpdateCustomerRepricingConfig = clientHelper.BuildApiCall<UpdateCustomerRepricingConfigRequest, CustomerRepricingConfig>(grpcClient.UpdateCustomerRepricingConfigAsync, grpcClient.UpdateCustomerRepricingConfig, effectiveSettings.UpdateCustomerRepricingConfigSettings).WithGoogleRequestParam("customer_repricing_config.name", request => request.CustomerRepricingConfig?.Name);
+            Modify_ApiCall(ref _callUpdateCustomerRepricingConfig);
+            Modify_UpdateCustomerRepricingConfigApiCall(ref _callUpdateCustomerRepricingConfig);
+            _callDeleteCustomerRepricingConfig = clientHelper.BuildApiCall<DeleteCustomerRepricingConfigRequest, wkt::Empty>(grpcClient.DeleteCustomerRepricingConfigAsync, grpcClient.DeleteCustomerRepricingConfig, effectiveSettings.DeleteCustomerRepricingConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteCustomerRepricingConfig);
+            Modify_DeleteCustomerRepricingConfigApiCall(ref _callDeleteCustomerRepricingConfig);
+            _callGetChannelPartnerRepricingConfig = clientHelper.BuildApiCall<GetChannelPartnerRepricingConfigRequest, ChannelPartnerRepricingConfig>(grpcClient.GetChannelPartnerRepricingConfigAsync, grpcClient.GetChannelPartnerRepricingConfig, effectiveSettings.GetChannelPartnerRepricingConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetChannelPartnerRepricingConfig);
+            Modify_GetChannelPartnerRepricingConfigApiCall(ref _callGetChannelPartnerRepricingConfig);
+            _callListChannelPartnerRepricingConfigs = clientHelper.BuildApiCall<ListChannelPartnerRepricingConfigsRequest, ListChannelPartnerRepricingConfigsResponse>(grpcClient.ListChannelPartnerRepricingConfigsAsync, grpcClient.ListChannelPartnerRepricingConfigs, effectiveSettings.ListChannelPartnerRepricingConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListChannelPartnerRepricingConfigs);
+            Modify_ListChannelPartnerRepricingConfigsApiCall(ref _callListChannelPartnerRepricingConfigs);
+            _callCreateChannelPartnerRepricingConfig = clientHelper.BuildApiCall<CreateChannelPartnerRepricingConfigRequest, ChannelPartnerRepricingConfig>(grpcClient.CreateChannelPartnerRepricingConfigAsync, grpcClient.CreateChannelPartnerRepricingConfig, effectiveSettings.CreateChannelPartnerRepricingConfigSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateChannelPartnerRepricingConfig);
+            Modify_CreateChannelPartnerRepricingConfigApiCall(ref _callCreateChannelPartnerRepricingConfig);
+            _callUpdateChannelPartnerRepricingConfig = clientHelper.BuildApiCall<UpdateChannelPartnerRepricingConfigRequest, ChannelPartnerRepricingConfig>(grpcClient.UpdateChannelPartnerRepricingConfigAsync, grpcClient.UpdateChannelPartnerRepricingConfig, effectiveSettings.UpdateChannelPartnerRepricingConfigSettings).WithGoogleRequestParam("channel_partner_repricing_config.name", request => request.ChannelPartnerRepricingConfig?.Name);
+            Modify_ApiCall(ref _callUpdateChannelPartnerRepricingConfig);
+            Modify_UpdateChannelPartnerRepricingConfigApiCall(ref _callUpdateChannelPartnerRepricingConfig);
+            _callDeleteChannelPartnerRepricingConfig = clientHelper.BuildApiCall<DeleteChannelPartnerRepricingConfigRequest, wkt::Empty>(grpcClient.DeleteChannelPartnerRepricingConfigAsync, grpcClient.DeleteChannelPartnerRepricingConfig, effectiveSettings.DeleteChannelPartnerRepricingConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteChannelPartnerRepricingConfig);
+            Modify_DeleteChannelPartnerRepricingConfigApiCall(ref _callDeleteChannelPartnerRepricingConfig);
             _callLookupOffer = clientHelper.BuildApiCall<LookupOfferRequest, Offer>(grpcClient.LookupOfferAsync, grpcClient.LookupOffer, effectiveSettings.LookupOfferSettings).WithGoogleRequestParam("entitlement", request => request.Entitlement);
             Modify_ApiCall(ref _callLookupOffer);
             Modify_LookupOfferApiCall(ref _callLookupOffer);
@@ -4315,6 +7364,26 @@ namespace Google.Cloud.Channel.V1
 
         partial void Modify_UpdateChannelPartnerLinkApiCall(ref gaxgrpc::ApiCall<UpdateChannelPartnerLinkRequest, ChannelPartnerLink> call);
 
+        partial void Modify_GetCustomerRepricingConfigApiCall(ref gaxgrpc::ApiCall<GetCustomerRepricingConfigRequest, CustomerRepricingConfig> call);
+
+        partial void Modify_ListCustomerRepricingConfigsApiCall(ref gaxgrpc::ApiCall<ListCustomerRepricingConfigsRequest, ListCustomerRepricingConfigsResponse> call);
+
+        partial void Modify_CreateCustomerRepricingConfigApiCall(ref gaxgrpc::ApiCall<CreateCustomerRepricingConfigRequest, CustomerRepricingConfig> call);
+
+        partial void Modify_UpdateCustomerRepricingConfigApiCall(ref gaxgrpc::ApiCall<UpdateCustomerRepricingConfigRequest, CustomerRepricingConfig> call);
+
+        partial void Modify_DeleteCustomerRepricingConfigApiCall(ref gaxgrpc::ApiCall<DeleteCustomerRepricingConfigRequest, wkt::Empty> call);
+
+        partial void Modify_GetChannelPartnerRepricingConfigApiCall(ref gaxgrpc::ApiCall<GetChannelPartnerRepricingConfigRequest, ChannelPartnerRepricingConfig> call);
+
+        partial void Modify_ListChannelPartnerRepricingConfigsApiCall(ref gaxgrpc::ApiCall<ListChannelPartnerRepricingConfigsRequest, ListChannelPartnerRepricingConfigsResponse> call);
+
+        partial void Modify_CreateChannelPartnerRepricingConfigApiCall(ref gaxgrpc::ApiCall<CreateChannelPartnerRepricingConfigRequest, ChannelPartnerRepricingConfig> call);
+
+        partial void Modify_UpdateChannelPartnerRepricingConfigApiCall(ref gaxgrpc::ApiCall<UpdateChannelPartnerRepricingConfigRequest, ChannelPartnerRepricingConfig> call);
+
+        partial void Modify_DeleteChannelPartnerRepricingConfigApiCall(ref gaxgrpc::ApiCall<DeleteChannelPartnerRepricingConfigRequest, wkt::Empty> call);
+
         partial void Modify_LookupOfferApiCall(ref gaxgrpc::ApiCall<LookupOfferRequest, Offer> call);
 
         partial void Modify_ListProductsApiCall(ref gaxgrpc::ApiCall<ListProductsRequest, ListProductsResponse> call);
@@ -4389,6 +7458,26 @@ namespace Google.Cloud.Channel.V1
         partial void Modify_CreateChannelPartnerLinkRequest(ref CreateChannelPartnerLinkRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateChannelPartnerLinkRequest(ref UpdateChannelPartnerLinkRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetCustomerRepricingConfigRequest(ref GetCustomerRepricingConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListCustomerRepricingConfigsRequest(ref ListCustomerRepricingConfigsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateCustomerRepricingConfigRequest(ref CreateCustomerRepricingConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateCustomerRepricingConfigRequest(ref UpdateCustomerRepricingConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteCustomerRepricingConfigRequest(ref DeleteCustomerRepricingConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetChannelPartnerRepricingConfigRequest(ref GetChannelPartnerRepricingConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListChannelPartnerRepricingConfigsRequest(ref ListChannelPartnerRepricingConfigsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateChannelPartnerRepricingConfigRequest(ref CreateChannelPartnerRepricingConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateChannelPartnerRepricingConfigRequest(ref UpdateChannelPartnerRepricingConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteChannelPartnerRepricingConfigRequest(ref DeleteChannelPartnerRepricingConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_LookupOfferRequest(ref LookupOfferRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5996,6 +9085,684 @@ namespace Google.Cloud.Channel.V1
         }
 
         /// <summary>
+        /// Gets information about how a Reseller modifies their bill before sending
+        /// it to a Customer.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] was not found.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise returns
+        /// an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CustomerRepricingConfig GetCustomerRepricingConfig(GetCustomerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetCustomerRepricingConfigRequest(ref request, ref callSettings);
+            return _callGetCustomerRepricingConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information about how a Reseller modifies their bill before sending
+        /// it to a Customer.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] was not found.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise returns
+        /// an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CustomerRepricingConfig> GetCustomerRepricingConfigAsync(GetCustomerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetCustomerRepricingConfigRequest(ref request, ref callSettings);
+            return _callGetCustomerRepricingConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists information about how a Reseller modifies their bill before sending
+        /// it to a Customer.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resources. The
+        /// data for each resource is displayed in the ascending order of:
+        /// * customer ID
+        /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+        /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+        /// * [CustomerRepricingConfig.update_time][google.cloud.channel.v1.CustomerRepricingConfig.update_time]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CustomerRepricingConfig"/> resources.</returns>
+        public override gax::PagedEnumerable<ListCustomerRepricingConfigsResponse, CustomerRepricingConfig> ListCustomerRepricingConfigs(ListCustomerRepricingConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListCustomerRepricingConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListCustomerRepricingConfigsRequest, ListCustomerRepricingConfigsResponse, CustomerRepricingConfig>(_callListCustomerRepricingConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists information about how a Reseller modifies their bill before sending
+        /// it to a Customer.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resources. The
+        /// data for each resource is displayed in the ascending order of:
+        /// * customer ID
+        /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+        /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+        /// * [CustomerRepricingConfig.update_time][google.cloud.channel.v1.CustomerRepricingConfig.update_time]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CustomerRepricingConfig"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListCustomerRepricingConfigsResponse, CustomerRepricingConfig> ListCustomerRepricingConfigsAsync(ListCustomerRepricingConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListCustomerRepricingConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListCustomerRepricingConfigsRequest, ListCustomerRepricingConfigsResponse, CustomerRepricingConfig>(_callListCustomerRepricingConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a CustomerRepricingConfig. Call this method to set modifications
+        /// for a specific customer's bill. You can only create configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. If needed, you can create a config for the current month,
+        /// with some restrictions.
+        /// 
+        /// When creating a config for a future month, make sure there are no existing
+        /// configs for that
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// The following restrictions are for creating configs in the current month.
+        /// 
+        /// * This functionality is reserved for recovering from an erroneous config,
+        /// and should not be used for regular business cases.
+        /// * The new config will not modify exports used with other configs.
+        /// Changes to the config may be immediate, but may take up to 24 hours.
+        /// * There is a limit of ten configs for any
+        /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+        /// or [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// * The contained [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config] vaule must be
+        /// different from the value used in the current config for a
+        /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CustomerRepricingConfig CreateCustomerRepricingConfig(CreateCustomerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCustomerRepricingConfigRequest(ref request, ref callSettings);
+            return _callCreateCustomerRepricingConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a CustomerRepricingConfig. Call this method to set modifications
+        /// for a specific customer's bill. You can only create configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. If needed, you can create a config for the current month,
+        /// with some restrictions.
+        /// 
+        /// When creating a config for a future month, make sure there are no existing
+        /// configs for that
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// The following restrictions are for creating configs in the current month.
+        /// 
+        /// * This functionality is reserved for recovering from an erroneous config,
+        /// and should not be used for regular business cases.
+        /// * The new config will not modify exports used with other configs.
+        /// Changes to the config may be immediate, but may take up to 24 hours.
+        /// * There is a limit of ten configs for any
+        /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
+        /// or [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// * The contained [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config] vaule must be
+        /// different from the value used in the current config for a
+        /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CustomerRepricingConfig> CreateCustomerRepricingConfigAsync(CreateCustomerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCustomerRepricingConfigRequest(ref request, ref callSettings);
+            return _callCreateCustomerRepricingConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a CustomerRepricingConfig. Call this method to set modifications
+        /// for a specific customer's bill. This method overwrites the existing
+        /// CustomerRepricingConfig.
+        /// 
+        /// You can only update configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. To make changes to configs for the current month, use
+        /// [CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig], taking note of its restrictions. You
+        /// cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// When updating a config in the future:
+        /// 
+        /// * This config must already exist.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CustomerRepricingConfig UpdateCustomerRepricingConfig(UpdateCustomerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCustomerRepricingConfigRequest(ref request, ref callSettings);
+            return _callUpdateCustomerRepricingConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a CustomerRepricingConfig. Call this method to set modifications
+        /// for a specific customer's bill. This method overwrites the existing
+        /// CustomerRepricingConfig.
+        /// 
+        /// You can only update configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. To make changes to configs for the current month, use
+        /// [CreateCustomerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateCustomerRepricingConfig], taking note of its restrictions. You
+        /// cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// When updating a config in the future:
+        /// 
+        /// * This config must already exist.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] specified does not exist or is
+        /// not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CustomerRepricingConfig> UpdateCustomerRepricingConfigAsync(UpdateCustomerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCustomerRepricingConfigRequest(ref request, ref callSettings);
+            return _callUpdateCustomerRepricingConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes the given [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] permanently. You can only
+        /// delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is set
+        /// to a date after the current month.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The account making the request does not own
+        /// this customer.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * FAILED_PRECONDITION: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] is active or in the
+        /// past.
+        /// * NOT_FOUND: No [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] found for the name in the
+        /// request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteCustomerRepricingConfig(DeleteCustomerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteCustomerRepricingConfigRequest(ref request, ref callSettings);
+            _callDeleteCustomerRepricingConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes the given [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] permanently. You can only
+        /// delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is set
+        /// to a date after the current month.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The account making the request does not own
+        /// this customer.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * FAILED_PRECONDITION: The [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] is active or in the
+        /// past.
+        /// * NOT_FOUND: No [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig] found for the name in the
+        /// request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteCustomerRepricingConfigAsync(DeleteCustomerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteCustomerRepricingConfigRequest(ref request, ref callSettings);
+            return _callDeleteCustomerRepricingConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information about how a Distributor modifies their bill before sending
+        /// it to a ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] was not found.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ChannelPartnerRepricingConfig GetChannelPartnerRepricingConfig(GetChannelPartnerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetChannelPartnerRepricingConfigRequest(ref request, ref callSettings);
+            return _callGetChannelPartnerRepricingConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information about how a Distributor modifies their bill before sending
+        /// it to a ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] was not found.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource, otherwise
+        /// returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ChannelPartnerRepricingConfig> GetChannelPartnerRepricingConfigAsync(GetChannelPartnerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetChannelPartnerRepricingConfigRequest(ref request, ref callSettings);
+            return _callGetChannelPartnerRepricingConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists information about how a Reseller modifies their bill before sending
+        /// it to a ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resources.
+        /// The data for each resource is displayed in the ascending order of:
+        /// * channel partner ID
+        /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+        /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ChannelPartnerRepricingConfig"/> resources.</returns>
+        public override gax::PagedEnumerable<ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig> ListChannelPartnerRepricingConfigs(ListChannelPartnerRepricingConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListChannelPartnerRepricingConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListChannelPartnerRepricingConfigsRequest, ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig>(_callListChannelPartnerRepricingConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists information about how a Reseller modifies their bill before sending
+        /// it to a ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resources.
+        /// The data for each resource is displayed in the ascending order of:
+        /// * channel partner ID
+        /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
+        /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="ChannelPartnerRepricingConfig"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig> ListChannelPartnerRepricingConfigsAsync(ListChannelPartnerRepricingConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListChannelPartnerRepricingConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListChannelPartnerRepricingConfigsRequest, ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig>(_callListChannelPartnerRepricingConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a ChannelPartnerRepricingConfig. Call this method to set
+        /// modifications for a specific ChannelPartner's bill. You can only create
+        /// configs if the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a future
+        /// month. If needed, you can create a config for the current month, with some
+        /// restrictions.
+        /// 
+        /// When creating a config for a future month, make sure there are no existing
+        /// configs for that
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// The following restrictions are for creating configs in the current month.
+        /// 
+        /// * This functionality is reserved for recovering from an erroneous config,
+        /// and should not be used for regular business cases.
+        /// * The new config will not modify exports used with other configs.
+        /// Changes to the config may be immediate, but may take up to 24 hours.
+        /// * There is a limit of ten configs for any ChannelPartner or
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// * The contained [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config] vaule
+        /// must be different from the value used in the current config for a
+        /// ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+        /// otherwise returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ChannelPartnerRepricingConfig CreateChannelPartnerRepricingConfig(CreateChannelPartnerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateChannelPartnerRepricingConfigRequest(ref request, ref callSettings);
+            return _callCreateChannelPartnerRepricingConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a ChannelPartnerRepricingConfig. Call this method to set
+        /// modifications for a specific ChannelPartner's bill. You can only create
+        /// configs if the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a future
+        /// month. If needed, you can create a config for the current month, with some
+        /// restrictions.
+        /// 
+        /// When creating a config for a future month, make sure there are no existing
+        /// configs for that
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// The following restrictions are for creating configs in the current month.
+        /// 
+        /// * This functionality is reserved for recovering from an erroneous config,
+        /// and should not be used for regular business cases.
+        /// * The new config will not modify exports used with other configs.
+        /// Changes to the config may be immediate, but may take up to 24 hours.
+        /// * There is a limit of ten configs for any ChannelPartner or
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// * The contained [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config] vaule
+        /// must be different from the value used in the current config for a
+        /// ChannelPartner.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+        /// otherwise returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ChannelPartnerRepricingConfig> CreateChannelPartnerRepricingConfigAsync(CreateChannelPartnerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateChannelPartnerRepricingConfigRequest(ref request, ref callSettings);
+            return _callCreateChannelPartnerRepricingConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a ChannelPartnerRepricingConfig. Call this method to set
+        /// modifications for a specific ChannelPartner's bill. This method overwrites
+        /// the existing CustomerRepricingConfig.
+        /// 
+        /// You can only update configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. To make changes to configs for the current month, use
+        /// [CreateChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig], taking note of its restrictions.
+        /// You cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// When updating a config in the future:
+        /// 
+        /// * This config must already exist.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+        /// otherwise returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ChannelPartnerRepricingConfig UpdateChannelPartnerRepricingConfig(UpdateChannelPartnerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateChannelPartnerRepricingConfigRequest(ref request, ref callSettings);
+            return _callUpdateChannelPartnerRepricingConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a ChannelPartnerRepricingConfig. Call this method to set
+        /// modifications for a specific ChannelPartner's bill. This method overwrites
+        /// the existing CustomerRepricingConfig.
+        /// 
+        /// You can only update configs if the
+        /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is a
+        /// future month. To make changes to configs for the current month, use
+        /// [CreateChannelPartnerRepricingConfig][google.cloud.channel.v1.CloudChannelService.CreateChannelPartnerRepricingConfig], taking note of its restrictions.
+        /// You cannot update the [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
+        /// 
+        /// When updating a config in the future:
+        /// 
+        /// * This config must already exist.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request. Also displays if the updated config is for the current month or
+        /// past months.
+        /// * NOT_FOUND: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] specified does not exist
+        /// or is not associated with the given account.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the updated [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] resource,
+        /// otherwise returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ChannelPartnerRepricingConfig> UpdateChannelPartnerRepricingConfigAsync(UpdateChannelPartnerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateChannelPartnerRepricingConfigRequest(ref request, ref callSettings);
+            return _callUpdateChannelPartnerRepricingConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes the given [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] permanently. You can
+        /// only delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is
+        /// set to a date after the current month.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The account making the request does not own
+        /// this customer.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * FAILED_PRECONDITION: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] is active or
+        /// in the past.
+        /// * NOT_FOUND: No [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] found for the name in the
+        /// request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteChannelPartnerRepricingConfig(DeleteChannelPartnerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteChannelPartnerRepricingConfigRequest(ref request, ref callSettings);
+            _callDeleteChannelPartnerRepricingConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes the given [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] permanently. You can
+        /// only delete configs if their [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month] is
+        /// set to a date after the current month.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The account making the request does not own
+        /// this customer.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * FAILED_PRECONDITION: The [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] is active or
+        /// in the past.
+        /// * NOT_FOUND: No [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig] found for the name in the
+        /// request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteChannelPartnerRepricingConfigAsync(DeleteChannelPartnerRepricingConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteChannelPartnerRepricingConfigRequest(ref request, ref callSettings);
+            return _callDeleteChannelPartnerRepricingConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Returns the requested [Offer][google.cloud.channel.v1.Offer] resource.
         /// 
         /// Possible error codes:
@@ -6410,6 +10177,14 @@ namespace Google.Cloud.Channel.V1
     {
     }
 
+    public partial class ListCustomerRepricingConfigsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListChannelPartnerRepricingConfigsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListProductsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -6470,6 +10245,23 @@ namespace Google.Cloud.Channel.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<ChannelPartnerLink> GetEnumerator() => ChannelPartnerLinks.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListCustomerRepricingConfigsResponse : gaxgrpc::IPageResponse<CustomerRepricingConfig>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<CustomerRepricingConfig> GetEnumerator() => CustomerRepricingConfigs.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListChannelPartnerRepricingConfigsResponse : gaxgrpc::IPageResponse<ChannelPartnerRepricingConfig>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ChannelPartnerRepricingConfig> GetEnumerator() =>
+            ChannelPartnerRepricingConfigs.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

@@ -52,10 +52,22 @@
                 "CreateChannelPartnerLinkAsync"
               ]
             },
+            "CreateChannelPartnerRepricingConfig": {
+              "methods": [
+                "CreateChannelPartnerRepricingConfig",
+                "CreateChannelPartnerRepricingConfigAsync"
+              ]
+            },
             "CreateCustomer": {
               "methods": [
                 "CreateCustomer",
                 "CreateCustomerAsync"
+              ]
+            },
+            "CreateCustomerRepricingConfig": {
+              "methods": [
+                "CreateCustomerRepricingConfig",
+                "CreateCustomerRepricingConfigAsync"
               ]
             },
             "CreateEntitlement": {
@@ -64,10 +76,22 @@
                 "CreateEntitlementAsync"
               ]
             },
+            "DeleteChannelPartnerRepricingConfig": {
+              "methods": [
+                "DeleteChannelPartnerRepricingConfig",
+                "DeleteChannelPartnerRepricingConfigAsync"
+              ]
+            },
             "DeleteCustomer": {
               "methods": [
                 "DeleteCustomer",
                 "DeleteCustomerAsync"
+              ]
+            },
+            "DeleteCustomerRepricingConfig": {
+              "methods": [
+                "DeleteCustomerRepricingConfig",
+                "DeleteCustomerRepricingConfigAsync"
               ]
             },
             "GetChannelPartnerLink": {
@@ -76,10 +100,22 @@
                 "GetChannelPartnerLinkAsync"
               ]
             },
+            "GetChannelPartnerRepricingConfig": {
+              "methods": [
+                "GetChannelPartnerRepricingConfig",
+                "GetChannelPartnerRepricingConfigAsync"
+              ]
+            },
             "GetCustomer": {
               "methods": [
                 "GetCustomer",
                 "GetCustomerAsync"
+              ]
+            },
+            "GetCustomerRepricingConfig": {
+              "methods": [
+                "GetCustomerRepricingConfig",
+                "GetCustomerRepricingConfigAsync"
               ]
             },
             "GetEntitlement": {
@@ -98,6 +134,18 @@
               "methods": [
                 "ListChannelPartnerLinks",
                 "ListChannelPartnerLinksAsync"
+              ]
+            },
+            "ListChannelPartnerRepricingConfigs": {
+              "methods": [
+                "ListChannelPartnerRepricingConfigs",
+                "ListChannelPartnerRepricingConfigsAsync"
+              ]
+            },
+            "ListCustomerRepricingConfigs": {
+              "methods": [
+                "ListCustomerRepricingConfigs",
+                "ListCustomerRepricingConfigsAsync"
               ]
             },
             "ListCustomers": {
@@ -214,10 +262,22 @@
                 "UpdateChannelPartnerLinkAsync"
               ]
             },
+            "UpdateChannelPartnerRepricingConfig": {
+              "methods": [
+                "UpdateChannelPartnerRepricingConfig",
+                "UpdateChannelPartnerRepricingConfigAsync"
+              ]
+            },
             "UpdateCustomer": {
               "methods": [
                 "UpdateCustomer",
                 "UpdateCustomerAsync"
+              ]
+            },
+            "UpdateCustomerRepricingConfig": {
+              "methods": [
+                "UpdateCustomerRepricingConfig",
+                "UpdateCustomerRepricingConfigAsync"
               ]
             }
           }
