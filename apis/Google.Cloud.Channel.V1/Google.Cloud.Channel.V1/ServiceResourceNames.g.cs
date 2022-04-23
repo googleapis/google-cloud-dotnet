@@ -90,6 +90,106 @@ namespace Google.Cloud.Channel.V1
         }
     }
 
+    public partial class GetCustomerRepricingConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::CustomerRepricingConfigName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gccv::CustomerRepricingConfigName CustomerRepricingConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::CustomerRepricingConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListCustomerRepricingConfigsRequest
+    {
+        /// <summary>
+        /// <see cref="CustomerName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public CustomerName ParentAsCustomerName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : CustomerName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateCustomerRepricingConfigRequest
+    {
+        /// <summary>
+        /// <see cref="CustomerName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public CustomerName ParentAsCustomerName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : CustomerName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteCustomerRepricingConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::CustomerRepricingConfigName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gccv::CustomerRepricingConfigName CustomerRepricingConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::CustomerRepricingConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetChannelPartnerRepricingConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::ChannelPartnerRepricingConfigName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gccv::ChannelPartnerRepricingConfigName ChannelPartnerRepricingConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::ChannelPartnerRepricingConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListChannelPartnerRepricingConfigsRequest
+    {
+        /// <summary>
+        /// <see cref="ChannelPartnerLinkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ChannelPartnerLinkName ParentAsChannelPartnerLinkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ChannelPartnerLinkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateChannelPartnerRepricingConfigRequest
+    {
+        /// <summary>
+        /// <see cref="ChannelPartnerLinkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ChannelPartnerLinkName ParentAsChannelPartnerLinkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ChannelPartnerLinkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteChannelPartnerRepricingConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::ChannelPartnerRepricingConfigName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gccv::ChannelPartnerRepricingConfigName ChannelPartnerRepricingConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::ChannelPartnerRepricingConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CreateEntitlementRequest
     {
         /// <summary>

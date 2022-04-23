@@ -1745,6 +1745,1216 @@ namespace Google.Cloud.Channel.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetCustomerRepricingConfig</summary>
+        public void GetCustomerRepricingConfigRequestObject()
+        {
+            // Snippet: GetCustomerRepricingConfig(GetCustomerRepricingConfigRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            GetCustomerRepricingConfigRequest request = new GetCustomerRepricingConfigRequest
+            {
+                CustomerRepricingConfigName = CustomerRepricingConfigName.FromAccountCustomerCustomerRepricingConfig("[ACCOUNT]", "[CUSTOMER]", "[CUSTOMER_REPRICING_CONFIG]"),
+            };
+            // Make the request
+            CustomerRepricingConfig response = cloudChannelServiceClient.GetCustomerRepricingConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCustomerRepricingConfigAsync</summary>
+        public async Task GetCustomerRepricingConfigRequestObjectAsync()
+        {
+            // Snippet: GetCustomerRepricingConfigAsync(GetCustomerRepricingConfigRequest, CallSettings)
+            // Additional: GetCustomerRepricingConfigAsync(GetCustomerRepricingConfigRequest, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetCustomerRepricingConfigRequest request = new GetCustomerRepricingConfigRequest
+            {
+                CustomerRepricingConfigName = CustomerRepricingConfigName.FromAccountCustomerCustomerRepricingConfig("[ACCOUNT]", "[CUSTOMER]", "[CUSTOMER_REPRICING_CONFIG]"),
+            };
+            // Make the request
+            CustomerRepricingConfig response = await cloudChannelServiceClient.GetCustomerRepricingConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCustomerRepricingConfig</summary>
+        public void GetCustomerRepricingConfig()
+        {
+            // Snippet: GetCustomerRepricingConfig(string, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "accounts/[ACCOUNT]/customers/[CUSTOMER]/customerRepricingConfigs/[CUSTOMER_REPRICING_CONFIG]";
+            // Make the request
+            CustomerRepricingConfig response = cloudChannelServiceClient.GetCustomerRepricingConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCustomerRepricingConfigAsync</summary>
+        public async Task GetCustomerRepricingConfigAsync()
+        {
+            // Snippet: GetCustomerRepricingConfigAsync(string, CallSettings)
+            // Additional: GetCustomerRepricingConfigAsync(string, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "accounts/[ACCOUNT]/customers/[CUSTOMER]/customerRepricingConfigs/[CUSTOMER_REPRICING_CONFIG]";
+            // Make the request
+            CustomerRepricingConfig response = await cloudChannelServiceClient.GetCustomerRepricingConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCustomerRepricingConfig</summary>
+        public void GetCustomerRepricingConfigResourceNames()
+        {
+            // Snippet: GetCustomerRepricingConfig(CustomerRepricingConfigName, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            CustomerRepricingConfigName name = CustomerRepricingConfigName.FromAccountCustomerCustomerRepricingConfig("[ACCOUNT]", "[CUSTOMER]", "[CUSTOMER_REPRICING_CONFIG]");
+            // Make the request
+            CustomerRepricingConfig response = cloudChannelServiceClient.GetCustomerRepricingConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCustomerRepricingConfigAsync</summary>
+        public async Task GetCustomerRepricingConfigResourceNamesAsync()
+        {
+            // Snippet: GetCustomerRepricingConfigAsync(CustomerRepricingConfigName, CallSettings)
+            // Additional: GetCustomerRepricingConfigAsync(CustomerRepricingConfigName, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CustomerRepricingConfigName name = CustomerRepricingConfigName.FromAccountCustomerCustomerRepricingConfig("[ACCOUNT]", "[CUSTOMER]", "[CUSTOMER_REPRICING_CONFIG]");
+            // Make the request
+            CustomerRepricingConfig response = await cloudChannelServiceClient.GetCustomerRepricingConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomerRepricingConfigs</summary>
+        public void ListCustomerRepricingConfigsRequestObject()
+        {
+            // Snippet: ListCustomerRepricingConfigs(ListCustomerRepricingConfigsRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            ListCustomerRepricingConfigsRequest request = new ListCustomerRepricingConfigsRequest
+            {
+                ParentAsCustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListCustomerRepricingConfigsResponse, CustomerRepricingConfig> response = cloudChannelServiceClient.ListCustomerRepricingConfigs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (CustomerRepricingConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListCustomerRepricingConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CustomerRepricingConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CustomerRepricingConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CustomerRepricingConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomerRepricingConfigsAsync</summary>
+        public async Task ListCustomerRepricingConfigsRequestObjectAsync()
+        {
+            // Snippet: ListCustomerRepricingConfigsAsync(ListCustomerRepricingConfigsRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListCustomerRepricingConfigsRequest request = new ListCustomerRepricingConfigsRequest
+            {
+                ParentAsCustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListCustomerRepricingConfigsResponse, CustomerRepricingConfig> response = cloudChannelServiceClient.ListCustomerRepricingConfigsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((CustomerRepricingConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListCustomerRepricingConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CustomerRepricingConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CustomerRepricingConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CustomerRepricingConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomerRepricingConfigs</summary>
+        public void ListCustomerRepricingConfigs()
+        {
+            // Snippet: ListCustomerRepricingConfigs(string, string, int?, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "accounts/[ACCOUNT]/customers/[CUSTOMER]";
+            // Make the request
+            PagedEnumerable<ListCustomerRepricingConfigsResponse, CustomerRepricingConfig> response = cloudChannelServiceClient.ListCustomerRepricingConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (CustomerRepricingConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListCustomerRepricingConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CustomerRepricingConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CustomerRepricingConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CustomerRepricingConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomerRepricingConfigsAsync</summary>
+        public async Task ListCustomerRepricingConfigsAsync()
+        {
+            // Snippet: ListCustomerRepricingConfigsAsync(string, string, int?, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "accounts/[ACCOUNT]/customers/[CUSTOMER]";
+            // Make the request
+            PagedAsyncEnumerable<ListCustomerRepricingConfigsResponse, CustomerRepricingConfig> response = cloudChannelServiceClient.ListCustomerRepricingConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((CustomerRepricingConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListCustomerRepricingConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CustomerRepricingConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CustomerRepricingConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CustomerRepricingConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomerRepricingConfigs</summary>
+        public void ListCustomerRepricingConfigsResourceNames()
+        {
+            // Snippet: ListCustomerRepricingConfigs(CustomerName, string, int?, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            CustomerName parent = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]");
+            // Make the request
+            PagedEnumerable<ListCustomerRepricingConfigsResponse, CustomerRepricingConfig> response = cloudChannelServiceClient.ListCustomerRepricingConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (CustomerRepricingConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListCustomerRepricingConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CustomerRepricingConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CustomerRepricingConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CustomerRepricingConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomerRepricingConfigsAsync</summary>
+        public async Task ListCustomerRepricingConfigsResourceNamesAsync()
+        {
+            // Snippet: ListCustomerRepricingConfigsAsync(CustomerName, string, int?, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CustomerName parent = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]");
+            // Make the request
+            PagedAsyncEnumerable<ListCustomerRepricingConfigsResponse, CustomerRepricingConfig> response = cloudChannelServiceClient.ListCustomerRepricingConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((CustomerRepricingConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListCustomerRepricingConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CustomerRepricingConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CustomerRepricingConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CustomerRepricingConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomerRepricingConfig</summary>
+        public void CreateCustomerRepricingConfigRequestObject()
+        {
+            // Snippet: CreateCustomerRepricingConfig(CreateCustomerRepricingConfigRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            CreateCustomerRepricingConfigRequest request = new CreateCustomerRepricingConfigRequest
+            {
+                ParentAsCustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
+                CustomerRepricingConfig = new CustomerRepricingConfig(),
+            };
+            // Make the request
+            CustomerRepricingConfig response = cloudChannelServiceClient.CreateCustomerRepricingConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomerRepricingConfigAsync</summary>
+        public async Task CreateCustomerRepricingConfigRequestObjectAsync()
+        {
+            // Snippet: CreateCustomerRepricingConfigAsync(CreateCustomerRepricingConfigRequest, CallSettings)
+            // Additional: CreateCustomerRepricingConfigAsync(CreateCustomerRepricingConfigRequest, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateCustomerRepricingConfigRequest request = new CreateCustomerRepricingConfigRequest
+            {
+                ParentAsCustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
+                CustomerRepricingConfig = new CustomerRepricingConfig(),
+            };
+            // Make the request
+            CustomerRepricingConfig response = await cloudChannelServiceClient.CreateCustomerRepricingConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomerRepricingConfig</summary>
+        public void CreateCustomerRepricingConfig()
+        {
+            // Snippet: CreateCustomerRepricingConfig(string, CustomerRepricingConfig, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "accounts/[ACCOUNT]/customers/[CUSTOMER]";
+            CustomerRepricingConfig customerRepricingConfig = new CustomerRepricingConfig();
+            // Make the request
+            CustomerRepricingConfig response = cloudChannelServiceClient.CreateCustomerRepricingConfig(parent, customerRepricingConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomerRepricingConfigAsync</summary>
+        public async Task CreateCustomerRepricingConfigAsync()
+        {
+            // Snippet: CreateCustomerRepricingConfigAsync(string, CustomerRepricingConfig, CallSettings)
+            // Additional: CreateCustomerRepricingConfigAsync(string, CustomerRepricingConfig, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "accounts/[ACCOUNT]/customers/[CUSTOMER]";
+            CustomerRepricingConfig customerRepricingConfig = new CustomerRepricingConfig();
+            // Make the request
+            CustomerRepricingConfig response = await cloudChannelServiceClient.CreateCustomerRepricingConfigAsync(parent, customerRepricingConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomerRepricingConfig</summary>
+        public void CreateCustomerRepricingConfigResourceNames()
+        {
+            // Snippet: CreateCustomerRepricingConfig(CustomerName, CustomerRepricingConfig, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            CustomerName parent = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]");
+            CustomerRepricingConfig customerRepricingConfig = new CustomerRepricingConfig();
+            // Make the request
+            CustomerRepricingConfig response = cloudChannelServiceClient.CreateCustomerRepricingConfig(parent, customerRepricingConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomerRepricingConfigAsync</summary>
+        public async Task CreateCustomerRepricingConfigResourceNamesAsync()
+        {
+            // Snippet: CreateCustomerRepricingConfigAsync(CustomerName, CustomerRepricingConfig, CallSettings)
+            // Additional: CreateCustomerRepricingConfigAsync(CustomerName, CustomerRepricingConfig, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CustomerName parent = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]");
+            CustomerRepricingConfig customerRepricingConfig = new CustomerRepricingConfig();
+            // Make the request
+            CustomerRepricingConfig response = await cloudChannelServiceClient.CreateCustomerRepricingConfigAsync(parent, customerRepricingConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomerRepricingConfig</summary>
+        public void UpdateCustomerRepricingConfigRequestObject()
+        {
+            // Snippet: UpdateCustomerRepricingConfig(UpdateCustomerRepricingConfigRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateCustomerRepricingConfigRequest request = new UpdateCustomerRepricingConfigRequest
+            {
+                CustomerRepricingConfig = new CustomerRepricingConfig(),
+            };
+            // Make the request
+            CustomerRepricingConfig response = cloudChannelServiceClient.UpdateCustomerRepricingConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomerRepricingConfigAsync</summary>
+        public async Task UpdateCustomerRepricingConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateCustomerRepricingConfigAsync(UpdateCustomerRepricingConfigRequest, CallSettings)
+            // Additional: UpdateCustomerRepricingConfigAsync(UpdateCustomerRepricingConfigRequest, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateCustomerRepricingConfigRequest request = new UpdateCustomerRepricingConfigRequest
+            {
+                CustomerRepricingConfig = new CustomerRepricingConfig(),
+            };
+            // Make the request
+            CustomerRepricingConfig response = await cloudChannelServiceClient.UpdateCustomerRepricingConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomerRepricingConfig</summary>
+        public void UpdateCustomerRepricingConfig()
+        {
+            // Snippet: UpdateCustomerRepricingConfig(CustomerRepricingConfig, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            CustomerRepricingConfig customerRepricingConfig = new CustomerRepricingConfig();
+            // Make the request
+            CustomerRepricingConfig response = cloudChannelServiceClient.UpdateCustomerRepricingConfig(customerRepricingConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomerRepricingConfigAsync</summary>
+        public async Task UpdateCustomerRepricingConfigAsync()
+        {
+            // Snippet: UpdateCustomerRepricingConfigAsync(CustomerRepricingConfig, CallSettings)
+            // Additional: UpdateCustomerRepricingConfigAsync(CustomerRepricingConfig, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CustomerRepricingConfig customerRepricingConfig = new CustomerRepricingConfig();
+            // Make the request
+            CustomerRepricingConfig response = await cloudChannelServiceClient.UpdateCustomerRepricingConfigAsync(customerRepricingConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomerRepricingConfig</summary>
+        public void DeleteCustomerRepricingConfigRequestObject()
+        {
+            // Snippet: DeleteCustomerRepricingConfig(DeleteCustomerRepricingConfigRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteCustomerRepricingConfigRequest request = new DeleteCustomerRepricingConfigRequest
+            {
+                CustomerRepricingConfigName = CustomerRepricingConfigName.FromAccountCustomerCustomerRepricingConfig("[ACCOUNT]", "[CUSTOMER]", "[CUSTOMER_REPRICING_CONFIG]"),
+            };
+            // Make the request
+            cloudChannelServiceClient.DeleteCustomerRepricingConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomerRepricingConfigAsync</summary>
+        public async Task DeleteCustomerRepricingConfigRequestObjectAsync()
+        {
+            // Snippet: DeleteCustomerRepricingConfigAsync(DeleteCustomerRepricingConfigRequest, CallSettings)
+            // Additional: DeleteCustomerRepricingConfigAsync(DeleteCustomerRepricingConfigRequest, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteCustomerRepricingConfigRequest request = new DeleteCustomerRepricingConfigRequest
+            {
+                CustomerRepricingConfigName = CustomerRepricingConfigName.FromAccountCustomerCustomerRepricingConfig("[ACCOUNT]", "[CUSTOMER]", "[CUSTOMER_REPRICING_CONFIG]"),
+            };
+            // Make the request
+            await cloudChannelServiceClient.DeleteCustomerRepricingConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomerRepricingConfig</summary>
+        public void DeleteCustomerRepricingConfig()
+        {
+            // Snippet: DeleteCustomerRepricingConfig(string, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "accounts/[ACCOUNT]/customers/[CUSTOMER]/customerRepricingConfigs/[CUSTOMER_REPRICING_CONFIG]";
+            // Make the request
+            cloudChannelServiceClient.DeleteCustomerRepricingConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomerRepricingConfigAsync</summary>
+        public async Task DeleteCustomerRepricingConfigAsync()
+        {
+            // Snippet: DeleteCustomerRepricingConfigAsync(string, CallSettings)
+            // Additional: DeleteCustomerRepricingConfigAsync(string, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "accounts/[ACCOUNT]/customers/[CUSTOMER]/customerRepricingConfigs/[CUSTOMER_REPRICING_CONFIG]";
+            // Make the request
+            await cloudChannelServiceClient.DeleteCustomerRepricingConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomerRepricingConfig</summary>
+        public void DeleteCustomerRepricingConfigResourceNames()
+        {
+            // Snippet: DeleteCustomerRepricingConfig(CustomerRepricingConfigName, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            CustomerRepricingConfigName name = CustomerRepricingConfigName.FromAccountCustomerCustomerRepricingConfig("[ACCOUNT]", "[CUSTOMER]", "[CUSTOMER_REPRICING_CONFIG]");
+            // Make the request
+            cloudChannelServiceClient.DeleteCustomerRepricingConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomerRepricingConfigAsync</summary>
+        public async Task DeleteCustomerRepricingConfigResourceNamesAsync()
+        {
+            // Snippet: DeleteCustomerRepricingConfigAsync(CustomerRepricingConfigName, CallSettings)
+            // Additional: DeleteCustomerRepricingConfigAsync(CustomerRepricingConfigName, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CustomerRepricingConfigName name = CustomerRepricingConfigName.FromAccountCustomerCustomerRepricingConfig("[ACCOUNT]", "[CUSTOMER]", "[CUSTOMER_REPRICING_CONFIG]");
+            // Make the request
+            await cloudChannelServiceClient.DeleteCustomerRepricingConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChannelPartnerRepricingConfig</summary>
+        public void GetChannelPartnerRepricingConfigRequestObject()
+        {
+            // Snippet: GetChannelPartnerRepricingConfig(GetChannelPartnerRepricingConfigRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            GetChannelPartnerRepricingConfigRequest request = new GetChannelPartnerRepricingConfigRequest
+            {
+                ChannelPartnerRepricingConfigName = ChannelPartnerRepricingConfigName.FromAccountChannelPartnerChannelPartnerRepricingConfig("[ACCOUNT]", "[CHANNEL_PARTNER]", "[CHANNEL_PARTNER_REPRICING_CONFIG]"),
+            };
+            // Make the request
+            ChannelPartnerRepricingConfig response = cloudChannelServiceClient.GetChannelPartnerRepricingConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChannelPartnerRepricingConfigAsync</summary>
+        public async Task GetChannelPartnerRepricingConfigRequestObjectAsync()
+        {
+            // Snippet: GetChannelPartnerRepricingConfigAsync(GetChannelPartnerRepricingConfigRequest, CallSettings)
+            // Additional: GetChannelPartnerRepricingConfigAsync(GetChannelPartnerRepricingConfigRequest, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetChannelPartnerRepricingConfigRequest request = new GetChannelPartnerRepricingConfigRequest
+            {
+                ChannelPartnerRepricingConfigName = ChannelPartnerRepricingConfigName.FromAccountChannelPartnerChannelPartnerRepricingConfig("[ACCOUNT]", "[CHANNEL_PARTNER]", "[CHANNEL_PARTNER_REPRICING_CONFIG]"),
+            };
+            // Make the request
+            ChannelPartnerRepricingConfig response = await cloudChannelServiceClient.GetChannelPartnerRepricingConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChannelPartnerRepricingConfig</summary>
+        public void GetChannelPartnerRepricingConfig()
+        {
+            // Snippet: GetChannelPartnerRepricingConfig(string, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "accounts/[ACCOUNT]/channelPartnerLinks/[CHANNEL_PARTNER]/channelPartnerRepricingConfigs/[CHANNEL_PARTNER_REPRICING_CONFIG]";
+            // Make the request
+            ChannelPartnerRepricingConfig response = cloudChannelServiceClient.GetChannelPartnerRepricingConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChannelPartnerRepricingConfigAsync</summary>
+        public async Task GetChannelPartnerRepricingConfigAsync()
+        {
+            // Snippet: GetChannelPartnerRepricingConfigAsync(string, CallSettings)
+            // Additional: GetChannelPartnerRepricingConfigAsync(string, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "accounts/[ACCOUNT]/channelPartnerLinks/[CHANNEL_PARTNER]/channelPartnerRepricingConfigs/[CHANNEL_PARTNER_REPRICING_CONFIG]";
+            // Make the request
+            ChannelPartnerRepricingConfig response = await cloudChannelServiceClient.GetChannelPartnerRepricingConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChannelPartnerRepricingConfig</summary>
+        public void GetChannelPartnerRepricingConfigResourceNames()
+        {
+            // Snippet: GetChannelPartnerRepricingConfig(ChannelPartnerRepricingConfigName, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            ChannelPartnerRepricingConfigName name = ChannelPartnerRepricingConfigName.FromAccountChannelPartnerChannelPartnerRepricingConfig("[ACCOUNT]", "[CHANNEL_PARTNER]", "[CHANNEL_PARTNER_REPRICING_CONFIG]");
+            // Make the request
+            ChannelPartnerRepricingConfig response = cloudChannelServiceClient.GetChannelPartnerRepricingConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChannelPartnerRepricingConfigAsync</summary>
+        public async Task GetChannelPartnerRepricingConfigResourceNamesAsync()
+        {
+            // Snippet: GetChannelPartnerRepricingConfigAsync(ChannelPartnerRepricingConfigName, CallSettings)
+            // Additional: GetChannelPartnerRepricingConfigAsync(ChannelPartnerRepricingConfigName, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ChannelPartnerRepricingConfigName name = ChannelPartnerRepricingConfigName.FromAccountChannelPartnerChannelPartnerRepricingConfig("[ACCOUNT]", "[CHANNEL_PARTNER]", "[CHANNEL_PARTNER_REPRICING_CONFIG]");
+            // Make the request
+            ChannelPartnerRepricingConfig response = await cloudChannelServiceClient.GetChannelPartnerRepricingConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannelPartnerRepricingConfigs</summary>
+        public void ListChannelPartnerRepricingConfigsRequestObject()
+        {
+            // Snippet: ListChannelPartnerRepricingConfigs(ListChannelPartnerRepricingConfigsRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            ListChannelPartnerRepricingConfigsRequest request = new ListChannelPartnerRepricingConfigsRequest
+            {
+                ParentAsChannelPartnerLinkName = ChannelPartnerLinkName.FromAccountChannelPartnerLink("[ACCOUNT]", "[CHANNEL_PARTNER_LINK]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig> response = cloudChannelServiceClient.ListChannelPartnerRepricingConfigs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ChannelPartnerRepricingConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListChannelPartnerRepricingConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ChannelPartnerRepricingConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ChannelPartnerRepricingConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ChannelPartnerRepricingConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannelPartnerRepricingConfigsAsync</summary>
+        public async Task ListChannelPartnerRepricingConfigsRequestObjectAsync()
+        {
+            // Snippet: ListChannelPartnerRepricingConfigsAsync(ListChannelPartnerRepricingConfigsRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListChannelPartnerRepricingConfigsRequest request = new ListChannelPartnerRepricingConfigsRequest
+            {
+                ParentAsChannelPartnerLinkName = ChannelPartnerLinkName.FromAccountChannelPartnerLink("[ACCOUNT]", "[CHANNEL_PARTNER_LINK]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig> response = cloudChannelServiceClient.ListChannelPartnerRepricingConfigsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ChannelPartnerRepricingConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListChannelPartnerRepricingConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ChannelPartnerRepricingConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ChannelPartnerRepricingConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ChannelPartnerRepricingConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannelPartnerRepricingConfigs</summary>
+        public void ListChannelPartnerRepricingConfigs()
+        {
+            // Snippet: ListChannelPartnerRepricingConfigs(string, string, int?, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "accounts/[ACCOUNT]/channelPartnerLinks/[CHANNEL_PARTNER_LINK]";
+            // Make the request
+            PagedEnumerable<ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig> response = cloudChannelServiceClient.ListChannelPartnerRepricingConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ChannelPartnerRepricingConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListChannelPartnerRepricingConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ChannelPartnerRepricingConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ChannelPartnerRepricingConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ChannelPartnerRepricingConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannelPartnerRepricingConfigsAsync</summary>
+        public async Task ListChannelPartnerRepricingConfigsAsync()
+        {
+            // Snippet: ListChannelPartnerRepricingConfigsAsync(string, string, int?, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "accounts/[ACCOUNT]/channelPartnerLinks/[CHANNEL_PARTNER_LINK]";
+            // Make the request
+            PagedAsyncEnumerable<ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig> response = cloudChannelServiceClient.ListChannelPartnerRepricingConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ChannelPartnerRepricingConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListChannelPartnerRepricingConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ChannelPartnerRepricingConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ChannelPartnerRepricingConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ChannelPartnerRepricingConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannelPartnerRepricingConfigs</summary>
+        public void ListChannelPartnerRepricingConfigsResourceNames()
+        {
+            // Snippet: ListChannelPartnerRepricingConfigs(ChannelPartnerLinkName, string, int?, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            ChannelPartnerLinkName parent = ChannelPartnerLinkName.FromAccountChannelPartnerLink("[ACCOUNT]", "[CHANNEL_PARTNER_LINK]");
+            // Make the request
+            PagedEnumerable<ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig> response = cloudChannelServiceClient.ListChannelPartnerRepricingConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ChannelPartnerRepricingConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListChannelPartnerRepricingConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ChannelPartnerRepricingConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ChannelPartnerRepricingConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ChannelPartnerRepricingConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannelPartnerRepricingConfigsAsync</summary>
+        public async Task ListChannelPartnerRepricingConfigsResourceNamesAsync()
+        {
+            // Snippet: ListChannelPartnerRepricingConfigsAsync(ChannelPartnerLinkName, string, int?, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ChannelPartnerLinkName parent = ChannelPartnerLinkName.FromAccountChannelPartnerLink("[ACCOUNT]", "[CHANNEL_PARTNER_LINK]");
+            // Make the request
+            PagedAsyncEnumerable<ListChannelPartnerRepricingConfigsResponse, ChannelPartnerRepricingConfig> response = cloudChannelServiceClient.ListChannelPartnerRepricingConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ChannelPartnerRepricingConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListChannelPartnerRepricingConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ChannelPartnerRepricingConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ChannelPartnerRepricingConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ChannelPartnerRepricingConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannelPartnerRepricingConfig</summary>
+        public void CreateChannelPartnerRepricingConfigRequestObject()
+        {
+            // Snippet: CreateChannelPartnerRepricingConfig(CreateChannelPartnerRepricingConfigRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            CreateChannelPartnerRepricingConfigRequest request = new CreateChannelPartnerRepricingConfigRequest
+            {
+                ParentAsChannelPartnerLinkName = ChannelPartnerLinkName.FromAccountChannelPartnerLink("[ACCOUNT]", "[CHANNEL_PARTNER_LINK]"),
+                ChannelPartnerRepricingConfig = new ChannelPartnerRepricingConfig(),
+            };
+            // Make the request
+            ChannelPartnerRepricingConfig response = cloudChannelServiceClient.CreateChannelPartnerRepricingConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannelPartnerRepricingConfigAsync</summary>
+        public async Task CreateChannelPartnerRepricingConfigRequestObjectAsync()
+        {
+            // Snippet: CreateChannelPartnerRepricingConfigAsync(CreateChannelPartnerRepricingConfigRequest, CallSettings)
+            // Additional: CreateChannelPartnerRepricingConfigAsync(CreateChannelPartnerRepricingConfigRequest, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateChannelPartnerRepricingConfigRequest request = new CreateChannelPartnerRepricingConfigRequest
+            {
+                ParentAsChannelPartnerLinkName = ChannelPartnerLinkName.FromAccountChannelPartnerLink("[ACCOUNT]", "[CHANNEL_PARTNER_LINK]"),
+                ChannelPartnerRepricingConfig = new ChannelPartnerRepricingConfig(),
+            };
+            // Make the request
+            ChannelPartnerRepricingConfig response = await cloudChannelServiceClient.CreateChannelPartnerRepricingConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannelPartnerRepricingConfig</summary>
+        public void CreateChannelPartnerRepricingConfig()
+        {
+            // Snippet: CreateChannelPartnerRepricingConfig(string, ChannelPartnerRepricingConfig, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "accounts/[ACCOUNT]/channelPartnerLinks/[CHANNEL_PARTNER_LINK]";
+            ChannelPartnerRepricingConfig channelPartnerRepricingConfig = new ChannelPartnerRepricingConfig();
+            // Make the request
+            ChannelPartnerRepricingConfig response = cloudChannelServiceClient.CreateChannelPartnerRepricingConfig(parent, channelPartnerRepricingConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannelPartnerRepricingConfigAsync</summary>
+        public async Task CreateChannelPartnerRepricingConfigAsync()
+        {
+            // Snippet: CreateChannelPartnerRepricingConfigAsync(string, ChannelPartnerRepricingConfig, CallSettings)
+            // Additional: CreateChannelPartnerRepricingConfigAsync(string, ChannelPartnerRepricingConfig, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "accounts/[ACCOUNT]/channelPartnerLinks/[CHANNEL_PARTNER_LINK]";
+            ChannelPartnerRepricingConfig channelPartnerRepricingConfig = new ChannelPartnerRepricingConfig();
+            // Make the request
+            ChannelPartnerRepricingConfig response = await cloudChannelServiceClient.CreateChannelPartnerRepricingConfigAsync(parent, channelPartnerRepricingConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannelPartnerRepricingConfig</summary>
+        public void CreateChannelPartnerRepricingConfigResourceNames()
+        {
+            // Snippet: CreateChannelPartnerRepricingConfig(ChannelPartnerLinkName, ChannelPartnerRepricingConfig, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            ChannelPartnerLinkName parent = ChannelPartnerLinkName.FromAccountChannelPartnerLink("[ACCOUNT]", "[CHANNEL_PARTNER_LINK]");
+            ChannelPartnerRepricingConfig channelPartnerRepricingConfig = new ChannelPartnerRepricingConfig();
+            // Make the request
+            ChannelPartnerRepricingConfig response = cloudChannelServiceClient.CreateChannelPartnerRepricingConfig(parent, channelPartnerRepricingConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannelPartnerRepricingConfigAsync</summary>
+        public async Task CreateChannelPartnerRepricingConfigResourceNamesAsync()
+        {
+            // Snippet: CreateChannelPartnerRepricingConfigAsync(ChannelPartnerLinkName, ChannelPartnerRepricingConfig, CallSettings)
+            // Additional: CreateChannelPartnerRepricingConfigAsync(ChannelPartnerLinkName, ChannelPartnerRepricingConfig, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ChannelPartnerLinkName parent = ChannelPartnerLinkName.FromAccountChannelPartnerLink("[ACCOUNT]", "[CHANNEL_PARTNER_LINK]");
+            ChannelPartnerRepricingConfig channelPartnerRepricingConfig = new ChannelPartnerRepricingConfig();
+            // Make the request
+            ChannelPartnerRepricingConfig response = await cloudChannelServiceClient.CreateChannelPartnerRepricingConfigAsync(parent, channelPartnerRepricingConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateChannelPartnerRepricingConfig</summary>
+        public void UpdateChannelPartnerRepricingConfigRequestObject()
+        {
+            // Snippet: UpdateChannelPartnerRepricingConfig(UpdateChannelPartnerRepricingConfigRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateChannelPartnerRepricingConfigRequest request = new UpdateChannelPartnerRepricingConfigRequest
+            {
+                ChannelPartnerRepricingConfig = new ChannelPartnerRepricingConfig(),
+            };
+            // Make the request
+            ChannelPartnerRepricingConfig response = cloudChannelServiceClient.UpdateChannelPartnerRepricingConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateChannelPartnerRepricingConfigAsync</summary>
+        public async Task UpdateChannelPartnerRepricingConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateChannelPartnerRepricingConfigAsync(UpdateChannelPartnerRepricingConfigRequest, CallSettings)
+            // Additional: UpdateChannelPartnerRepricingConfigAsync(UpdateChannelPartnerRepricingConfigRequest, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateChannelPartnerRepricingConfigRequest request = new UpdateChannelPartnerRepricingConfigRequest
+            {
+                ChannelPartnerRepricingConfig = new ChannelPartnerRepricingConfig(),
+            };
+            // Make the request
+            ChannelPartnerRepricingConfig response = await cloudChannelServiceClient.UpdateChannelPartnerRepricingConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateChannelPartnerRepricingConfig</summary>
+        public void UpdateChannelPartnerRepricingConfig()
+        {
+            // Snippet: UpdateChannelPartnerRepricingConfig(ChannelPartnerRepricingConfig, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            ChannelPartnerRepricingConfig channelPartnerRepricingConfig = new ChannelPartnerRepricingConfig();
+            // Make the request
+            ChannelPartnerRepricingConfig response = cloudChannelServiceClient.UpdateChannelPartnerRepricingConfig(channelPartnerRepricingConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateChannelPartnerRepricingConfigAsync</summary>
+        public async Task UpdateChannelPartnerRepricingConfigAsync()
+        {
+            // Snippet: UpdateChannelPartnerRepricingConfigAsync(ChannelPartnerRepricingConfig, CallSettings)
+            // Additional: UpdateChannelPartnerRepricingConfigAsync(ChannelPartnerRepricingConfig, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ChannelPartnerRepricingConfig channelPartnerRepricingConfig = new ChannelPartnerRepricingConfig();
+            // Make the request
+            ChannelPartnerRepricingConfig response = await cloudChannelServiceClient.UpdateChannelPartnerRepricingConfigAsync(channelPartnerRepricingConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannelPartnerRepricingConfig</summary>
+        public void DeleteChannelPartnerRepricingConfigRequestObject()
+        {
+            // Snippet: DeleteChannelPartnerRepricingConfig(DeleteChannelPartnerRepricingConfigRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteChannelPartnerRepricingConfigRequest request = new DeleteChannelPartnerRepricingConfigRequest
+            {
+                ChannelPartnerRepricingConfigName = ChannelPartnerRepricingConfigName.FromAccountChannelPartnerChannelPartnerRepricingConfig("[ACCOUNT]", "[CHANNEL_PARTNER]", "[CHANNEL_PARTNER_REPRICING_CONFIG]"),
+            };
+            // Make the request
+            cloudChannelServiceClient.DeleteChannelPartnerRepricingConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannelPartnerRepricingConfigAsync</summary>
+        public async Task DeleteChannelPartnerRepricingConfigRequestObjectAsync()
+        {
+            // Snippet: DeleteChannelPartnerRepricingConfigAsync(DeleteChannelPartnerRepricingConfigRequest, CallSettings)
+            // Additional: DeleteChannelPartnerRepricingConfigAsync(DeleteChannelPartnerRepricingConfigRequest, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteChannelPartnerRepricingConfigRequest request = new DeleteChannelPartnerRepricingConfigRequest
+            {
+                ChannelPartnerRepricingConfigName = ChannelPartnerRepricingConfigName.FromAccountChannelPartnerChannelPartnerRepricingConfig("[ACCOUNT]", "[CHANNEL_PARTNER]", "[CHANNEL_PARTNER_REPRICING_CONFIG]"),
+            };
+            // Make the request
+            await cloudChannelServiceClient.DeleteChannelPartnerRepricingConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannelPartnerRepricingConfig</summary>
+        public void DeleteChannelPartnerRepricingConfig()
+        {
+            // Snippet: DeleteChannelPartnerRepricingConfig(string, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "accounts/[ACCOUNT]/channelPartnerLinks/[CHANNEL_PARTNER]/channelPartnerRepricingConfigs/[CHANNEL_PARTNER_REPRICING_CONFIG]";
+            // Make the request
+            cloudChannelServiceClient.DeleteChannelPartnerRepricingConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannelPartnerRepricingConfigAsync</summary>
+        public async Task DeleteChannelPartnerRepricingConfigAsync()
+        {
+            // Snippet: DeleteChannelPartnerRepricingConfigAsync(string, CallSettings)
+            // Additional: DeleteChannelPartnerRepricingConfigAsync(string, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "accounts/[ACCOUNT]/channelPartnerLinks/[CHANNEL_PARTNER]/channelPartnerRepricingConfigs/[CHANNEL_PARTNER_REPRICING_CONFIG]";
+            // Make the request
+            await cloudChannelServiceClient.DeleteChannelPartnerRepricingConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannelPartnerRepricingConfig</summary>
+        public void DeleteChannelPartnerRepricingConfigResourceNames()
+        {
+            // Snippet: DeleteChannelPartnerRepricingConfig(ChannelPartnerRepricingConfigName, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            ChannelPartnerRepricingConfigName name = ChannelPartnerRepricingConfigName.FromAccountChannelPartnerChannelPartnerRepricingConfig("[ACCOUNT]", "[CHANNEL_PARTNER]", "[CHANNEL_PARTNER_REPRICING_CONFIG]");
+            // Make the request
+            cloudChannelServiceClient.DeleteChannelPartnerRepricingConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannelPartnerRepricingConfigAsync</summary>
+        public async Task DeleteChannelPartnerRepricingConfigResourceNamesAsync()
+        {
+            // Snippet: DeleteChannelPartnerRepricingConfigAsync(ChannelPartnerRepricingConfigName, CallSettings)
+            // Additional: DeleteChannelPartnerRepricingConfigAsync(ChannelPartnerRepricingConfigName, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ChannelPartnerRepricingConfigName name = ChannelPartnerRepricingConfigName.FromAccountChannelPartnerChannelPartnerRepricingConfig("[ACCOUNT]", "[CHANNEL_PARTNER]", "[CHANNEL_PARTNER_REPRICING_CONFIG]");
+            // Make the request
+            await cloudChannelServiceClient.DeleteChannelPartnerRepricingConfigAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for LookupOffer</summary>
         public void LookupOfferRequestObject()
         {
