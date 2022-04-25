@@ -469,6 +469,12 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             // TODO: Determine why this fails and fix.
             TestEnvironment.SkipIfVpcSc();
 
+            // Skip if we're not using Grpc.Core. Under Grpc.Net.Client it's harder to ensure that
+            // we actually have separate network connections, although that will be the default.
+            Skip.IfNot(
+                GrpcAdapter.GetFallbackAdapter(PublisherServiceApiClient.ServiceMetadata) is GrpcCoreAdapter,
+                "Subchannel counting is only available in Grpc.Core");
+
             var topicId = _fixture.CreateTopicId();
             var subscriptionId = _fixture.CreateSubscriptionId();
             var topicName = new TopicName(_fixture.ProjectId, topicId);
