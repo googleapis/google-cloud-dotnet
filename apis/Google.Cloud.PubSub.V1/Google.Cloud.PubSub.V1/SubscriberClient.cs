@@ -409,7 +409,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscriptionName">The <see cref="SubscriptionName"/> to receive messages from.</param>
         /// <param name="clients">The <see cref="SubscriberServiceApiClient"/>s to use in a <see cref="SubscriberClient"/>.
-        /// For high performance, these should all use distinct <see cref="Channel"/>s.</param>
+        /// For high performance, these should all use distinct <see cref="ChannelBase"/>s.</param>
         /// <param name="settings"><see cref="SubscriberClient.Settings"/> for creating a <see cref="SubscriberClient"/>.</param>
         /// <param name="shutdown">Function to call on this <see cref="SubscriberClientImpl"/> shutdown.</param>
         public SubscriberClientImpl(SubscriptionName subscriptionName, IEnumerable<SubscriberServiceApiClient> clients, Settings settings, Func<Task> shutdown)
@@ -841,7 +841,7 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Controls a single <see cref="Channel"/>/<see cref="SubscriberClient"/> within this
+        /// Controls a single <see cref="ChannelBase"/>/<see cref="SubscriberClient"/> within this
         /// <see cref="SubscriberClientImpl"/>. This class controls the pulling of messages, and
         /// the pushing of message acks and lease-extensions back to the server.
         /// It also manages error conditions within the channel, restarting RPCs as required.
