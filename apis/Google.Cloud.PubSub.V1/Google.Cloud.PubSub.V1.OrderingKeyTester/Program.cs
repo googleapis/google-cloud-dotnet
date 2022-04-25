@@ -1,4 +1,5 @@
 ﻿using Grpc.Core;
+using Grpc.Net.Client;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -52,7 +53,8 @@ namespace Google.Cloud.PubSub.V1.OrderingKeyTester
             var port = int.Parse(args[0]);
             var inputLines = File.ReadAllLines(args[1]).Select(line => new InputLine(line)).ToList();
             // Setup gRPC channel to pubsub emulator.
-            var channel = new Channel("127.0.0.1", port, ChannelCredentials.Insecure);
+            var options = new GrpcChannelOptions { Credentials = ChannelCredentials.Insecure };
+            var channel = GrpcChannel.ForAddress($"http://127.0.0.1:{port}", options);
 
             // Create topic and subscription names.
             var topicName = new TopicName("project", $"topic-{Guid.NewGuid()}");
