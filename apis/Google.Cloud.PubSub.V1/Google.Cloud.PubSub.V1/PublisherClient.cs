@@ -39,8 +39,8 @@ namespace Google.Cloud.PubSub.V1
     public abstract class PublisherClient
     {
         private static readonly GrpcChannelOptions s_unlimitedSendReceiveChannelOptions = GrpcChannelOptions.Empty
-            .WithMaxReceiveMessageSize(-1)
-            .WithMaxSendMessageSize(-1)
+            .WithMaxReceiveMessageSize(int.MaxValue)
+            .WithMaxSendMessageSize(int.MaxValue)
             // Set max metadata size to 4 MB i.e., 4194304 bytes.
             .WithCustomOption("grpc.max_metadata_size", 4194304);
 

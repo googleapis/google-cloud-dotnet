@@ -83,8 +83,7 @@ namespace Google.Cloud.PubSub.V1
             var effectiveBuilder = MaybeCreateEmulatorClientBuilder() ?? this;
             var endpoint = effectiveBuilder.Endpoint ?? ServiceMetadata.DefaultEndpoint;
             var credentials = await effectiveBuilder.GetChannelCredentialsAsync(cancellationToken).ConfigureAwait(false);
-            // FIXME: we don't currently expose enough in GrpcAdapter or ClientBuilderBase to make this work.
-            return null;
+            return effectiveBuilder.CreateChannel(endpoint, credentials);
         }
 
         /// <summary>
@@ -97,8 +96,7 @@ namespace Google.Cloud.PubSub.V1
             var effectiveBuilder = MaybeCreateEmulatorClientBuilder() ?? this;
             var endpoint = effectiveBuilder.Endpoint ?? ServiceMetadata.DefaultEndpoint;
             var credentials = effectiveBuilder.GetChannelCredentials();
-            // FIXME: we don't currently expose enough in GrpcAdapter or ClientBuilderBase to make this work.
-            return null;
+            return effectiveBuilder.CreateChannel(endpoint, credentials);
         }
     }
 }
