@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Grpc.Core;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -60,5 +61,16 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             builder.CopySettingsForEmulator(this);
             return builder;
         }
+
+        /// <summary>
+        /// Creates a gRPC channel for the given endpoint and credentials, using other aspects
+        /// specified in this builder (channel options and gRPC adapter).
+        /// </summary>
+        /// <remarks>This is very rarely needed by user code.</remarks>
+        /// <param name="endpoint">The endpoint for the channel.</param>
+        /// <param name="credentials">The credentials for the channel.</param>
+        /// <returns>A gRPC channel for the specified endpoint and credentials.</returns>
+        public new ChannelBase CreateChannel(string endpoint, ChannelCredentials credentials) =>
+            base.CreateChannel(endpoint, credentials);
     }
 }
