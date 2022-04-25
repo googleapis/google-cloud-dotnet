@@ -120,7 +120,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
             Console.WriteLine($"Differences from {version}");
 
-            // TODO: Remove this try/catch when *everything* has a previous minor version on netstandard2.0.
+            // TODO: Remove this try/catch when we can detect that a package has never been pushed.
             AssemblyDefinition oldMetadata;
             try
             {
@@ -136,7 +136,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 Console.WriteLine($"Returning 'identical' as the change level; please check carefully before release.");
                 return Level.Identical;
             }
-            var sourceAssembly = Path.Combine(DirectoryLayout.ForApi(api.Id).SourceDirectory, api.Id, "bin", "Release", "netstandard2.0", $"{api.Id}.dll");
+            var sourceAssembly = Path.Combine(DirectoryLayout.ForApi(api.Id).SourceDirectory, api.Id, "bin", "Release", "netstandard2.1", $"{api.Id}.dll");
             var newMetadata = Assemblies.LoadFile(sourceAssembly);
 
             var diff = Assemblies.Compare(oldMetadata, newMetadata, null);

@@ -47,7 +47,10 @@ for api in $apis
 do  
   if [[ -d tmpgit/apis/$api/$api && -d apis/$api/$api ]]
   then
-    targetVersion="netstandard2.0"
+    # We expect almost all libraries to support netstandard2.1.
+    # When moving from GAX v3 to GAX v4 this will fail as we used to target
+    # netstandard2.0, but that's a single PR (which we expect to have breaking changes anyway).
+    targetVersion="netstandard2.1"
     if [[ $api == "Google.Cloud.Diagnostics.AspNetCore3" ]]
     then
       targetVersion="netcoreapp3.1"
