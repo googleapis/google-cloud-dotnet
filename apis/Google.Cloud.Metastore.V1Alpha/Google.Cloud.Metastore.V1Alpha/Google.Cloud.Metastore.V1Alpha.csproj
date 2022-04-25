@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>1.0.0-alpha04</Version>
-    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+    <Version>2.0.0-alpha02</Version>
+    <TargetFrameworks>netstandard2.1;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library to access the Dataproc Metastore API (v1alpha) which is used to manage the lifecycle and configuration of metastore services.</Description>
     <PackageTags>dataproc;metastore;Google;Cloud</PackageTags>
@@ -10,9 +10,9 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.Gax.Grpc.GrpcCore" Version="[3.7.0, 4.0.0)" />
-    <PackageReference Include="Google.LongRunning" Version="[2.3.0, 3.0.0)" />
-    <PackageReference Include="Grpc.Core" Version="[2.41.0, 3.0.0)" PrivateAssets="None" />
+    <PackageReference Include="Google.Api.Gax.Grpc" Version="[4.0.0-alpha03, 5.0.0)" />
+    <ProjectReference Include="..\..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj" />
+    <PackageReference Include="Grpc.Core" Version="[2.41.0, 3.0.0)" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
     <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.2.12-alpha" PrivateAssets="All" />
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="All" />
     <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BinaryAuthoriz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BinaryAuthorization.V1.GeneratedSnippets", "Google.Cloud.BinaryAuthorization.V1.GeneratedSnippets\Google.Cloud.BinaryAuthorization.V1.GeneratedSnippets.csproj", "{AA65AD7C-7805-40B9-9778-0D6E2FA7BEC9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grafeas.V1", "..\Grafeas.V1\Grafeas.V1\Grafeas.V1.csproj", "{0E6A8D3A-328A-4626-94D6-914CFCECF4C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,5 +88,17 @@ Global
 		{AA65AD7C-7805-40B9-9778-0D6E2FA7BEC9}.Release|x64.Build.0 = Release|Any CPU
 		{AA65AD7C-7805-40B9-9778-0D6E2FA7BEC9}.Release|x86.ActiveCfg = Release|Any CPU
 		{AA65AD7C-7805-40B9-9778-0D6E2FA7BEC9}.Release|x86.Build.0 = Release|Any CPU
+		{0E6A8D3A-328A-4626-94D6-914CFCECF4C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E6A8D3A-328A-4626-94D6-914CFCECF4C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E6A8D3A-328A-4626-94D6-914CFCECF4C1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0E6A8D3A-328A-4626-94D6-914CFCECF4C1}.Debug|x64.Build.0 = Debug|Any CPU
+		{0E6A8D3A-328A-4626-94D6-914CFCECF4C1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0E6A8D3A-328A-4626-94D6-914CFCECF4C1}.Debug|x86.Build.0 = Debug|Any CPU
+		{0E6A8D3A-328A-4626-94D6-914CFCECF4C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E6A8D3A-328A-4626-94D6-914CFCECF4C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E6A8D3A-328A-4626-94D6-914CFCECF4C1}.Release|x64.ActiveCfg = Release|Any CPU
+		{0E6A8D3A-328A-4626-94D6-914CFCECF4C1}.Release|x64.Build.0 = Release|Any CPU
+		{0E6A8D3A-328A-4626-94D6-914CFCECF4C1}.Release|x86.ActiveCfg = Release|Any CPU
+		{0E6A8D3A-328A-4626-94D6-914CFCECF4C1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
