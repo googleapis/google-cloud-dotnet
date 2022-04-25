@@ -228,7 +228,7 @@ namespace Google.Cloud.Spanner.Data
                 var builder = Connection.Builder;
                 var channelOptions = new SpannerClientCreationOptions(builder);
                 var credentials = await channelOptions.GetCredentialsAsync().ConfigureAwait(false);
-                var channel = new Channel(channelOptions.Endpoint, credentials);
+                var channel = new DatabaseAdminClientBuilder().CreateChannel(channelOptions.Endpoint, credentials);
                 try
                 {
                     var databaseAdminClient = new DatabaseAdminClientBuilder
