@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Identity.AccessConte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Asset.V1.GeneratedSnippets", "Google.Cloud.Asset.V1.GeneratedSnippets\Google.Cloud.Asset.V1.GeneratedSnippets.csproj", "{B87A4B72-1A55-413B-88A6-F4D5C7A84191}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.OrgPolicy.V1", "..\Google.Cloud.OrgPolicy.V1\Google.Cloud.OrgPolicy.V1\Google.Cloud.OrgPolicy.V1.csproj", "{A90247DF-D876-43C8-8758-9642A00B4FEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.OsConfig.V1", "..\Google.Cloud.OsConfig.V1\Google.Cloud.OsConfig.V1\Google.Cloud.OsConfig.V1.csproj", "{F8F65250-822A-495F-8BF7-797D378F3ACE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -139,6 +143,30 @@ Global
 		{B87A4B72-1A55-413B-88A6-F4D5C7A84191}.Release|x64.Build.0 = Release|Any CPU
 		{B87A4B72-1A55-413B-88A6-F4D5C7A84191}.Release|x86.ActiveCfg = Release|Any CPU
 		{B87A4B72-1A55-413B-88A6-F4D5C7A84191}.Release|x86.Build.0 = Release|Any CPU
+		{A90247DF-D876-43C8-8758-9642A00B4FEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A90247DF-D876-43C8-8758-9642A00B4FEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A90247DF-D876-43C8-8758-9642A00B4FEF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A90247DF-D876-43C8-8758-9642A00B4FEF}.Debug|x64.Build.0 = Debug|Any CPU
+		{A90247DF-D876-43C8-8758-9642A00B4FEF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A90247DF-D876-43C8-8758-9642A00B4FEF}.Debug|x86.Build.0 = Debug|Any CPU
+		{A90247DF-D876-43C8-8758-9642A00B4FEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A90247DF-D876-43C8-8758-9642A00B4FEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A90247DF-D876-43C8-8758-9642A00B4FEF}.Release|x64.ActiveCfg = Release|Any CPU
+		{A90247DF-D876-43C8-8758-9642A00B4FEF}.Release|x64.Build.0 = Release|Any CPU
+		{A90247DF-D876-43C8-8758-9642A00B4FEF}.Release|x86.ActiveCfg = Release|Any CPU
+		{A90247DF-D876-43C8-8758-9642A00B4FEF}.Release|x86.Build.0 = Release|Any CPU
+		{F8F65250-822A-495F-8BF7-797D378F3ACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8F65250-822A-495F-8BF7-797D378F3ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8F65250-822A-495F-8BF7-797D378F3ACE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F8F65250-822A-495F-8BF7-797D378F3ACE}.Debug|x64.Build.0 = Debug|Any CPU
+		{F8F65250-822A-495F-8BF7-797D378F3ACE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F8F65250-822A-495F-8BF7-797D378F3ACE}.Debug|x86.Build.0 = Debug|Any CPU
+		{F8F65250-822A-495F-8BF7-797D378F3ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8F65250-822A-495F-8BF7-797D378F3ACE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8F65250-822A-495F-8BF7-797D378F3ACE}.Release|x64.ActiveCfg = Release|Any CPU
+		{F8F65250-822A-495F-8BF7-797D378F3ACE}.Release|x64.Build.0 = Release|Any CPU
+		{F8F65250-822A-495F-8BF7-797D378F3ACE}.Release|x86.ActiveCfg = Release|Any CPU
+		{F8F65250-822A-495F-8BF7-797D378F3ACE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.AssuredWorkloa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.AssuredWorkloads.V1Beta1.GeneratedSnippets", "Google.Cloud.AssuredWorkloads.V1Beta1.GeneratedSnippets\Google.Cloud.AssuredWorkloads.V1Beta1.GeneratedSnippets.csproj", "{A1DA8E69-866C-41F1-BC1A-904564B8142E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.LongRunning", "..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj", "{FCE3DE00-4739-49BE-8C12-74740D4B518F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,5 +88,17 @@ Global
 		{A1DA8E69-866C-41F1-BC1A-904564B8142E}.Release|x64.Build.0 = Release|Any CPU
 		{A1DA8E69-866C-41F1-BC1A-904564B8142E}.Release|x86.ActiveCfg = Release|Any CPU
 		{A1DA8E69-866C-41F1-BC1A-904564B8142E}.Release|x86.Build.0 = Release|Any CPU
+		{FCE3DE00-4739-49BE-8C12-74740D4B518F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCE3DE00-4739-49BE-8C12-74740D4B518F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCE3DE00-4739-49BE-8C12-74740D4B518F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FCE3DE00-4739-49BE-8C12-74740D4B518F}.Debug|x64.Build.0 = Debug|Any CPU
+		{FCE3DE00-4739-49BE-8C12-74740D4B518F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FCE3DE00-4739-49BE-8C12-74740D4B518F}.Debug|x86.Build.0 = Debug|Any CPU
+		{FCE3DE00-4739-49BE-8C12-74740D4B518F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCE3DE00-4739-49BE-8C12-74740D4B518F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCE3DE00-4739-49BE-8C12-74740D4B518F}.Release|x64.ActiveCfg = Release|Any CPU
+		{FCE3DE00-4739-49BE-8C12-74740D4B518F}.Release|x64.Build.0 = Release|Any CPU
+		{FCE3DE00-4739-49BE-8C12-74740D4B518F}.Release|x86.ActiveCfg = Release|Any CPU
+		{FCE3DE00-4739-49BE-8C12-74740D4B518F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
