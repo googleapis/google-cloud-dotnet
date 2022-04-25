@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFrameworks>net6.0;net462</TargetFrameworks>
     <StartupObject>Google.Cloud.Spanner.Data.Ycsb.Program</StartupObject>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
