@@ -72,8 +72,9 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         private const string ProjectVersionValue = "project";
         private const string DefaultVersionValue = "default";
-        private const string GrpcPackage = "Grpc.Core";
-        private const string DefaultGaxVersion = "4.0.0-alpha02";
+        private const string GrpcCorePackage = "Grpc.Core";
+        private const string GrpcCorePackageConditionFramework = "net462";
+        private const string DefaultGaxVersion = "4.0.0-alpha03";
         private const string GrpcVersion = "2.41.0";
         private static readonly Dictionary<string, string> DefaultPackageVersions = new Dictionary<string, string>
         {
@@ -82,7 +83,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             { "Google.Api.Gax.Grpc", DefaultGaxVersion },
             { "Google.Api.Gax.Testing", DefaultGaxVersion },
             { "Google.Api.Gax.Grpc.Testing", DefaultGaxVersion },
-            { GrpcPackage, GrpcVersion },
+            { GrpcCorePackage, GrpcVersion },
             { "Grpc.Core.Testing", GrpcVersion },
             { "Grpc.Core.Api", GrpcVersion },
             { "Google.Api.CommonProtos", "2.5.0" },
@@ -136,7 +137,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         /// </summary>
         private static readonly Dictionary<string, string> PrivateAssets = new Dictionary<string, string>
         {
-            { GrpcPackage, "None" },
+            { GrpcCorePackage, "None" },
             { CompatibilityAnalyzer, "All" },
             { ConfigureAwaitAnalyzer, "All" },
             { CSharpWorkspacesPackage, "All" },
@@ -653,7 +654,7 @@ api-name: {api.Id}
                 new XElement("Description", api.Description),
                 new XElement("PackageTags", string.Join(";", api.Tags.Concat(new[] { "Google", "Cloud" })))
             );
-            if (dependencies.ContainsKey(GrpcPackage))
+            if (dependencies.ContainsKey(GrpcCorePackage))
             {
                 propertyGroup.Add(new XElement("CodeAnalysisRuleSet", "..\\..\\..\\grpc.ruleset"));
             }
@@ -935,6 +936,15 @@ api-name: {api.Id}
             {
                 element.Add(new XAttribute("PrivateAssets", privateAssetValue));
             }
+
+            // We only include Grpc.Core when targeting .NET Framework.
+            // While in an ideal world we'd pull the condition frameworks from the project we're generating, that's
+            // awkward and in reality the only .NET Framework version we target now is .NET 4.6.2.
+            if (package == GrpcCorePackage)
+            {
+                element.Add(new XAttribute("Condition", $"'$(TargetFramework)'=='{GrpcCorePackageConditionFramework}'"));
+            }
+
             return element;
         }
 
