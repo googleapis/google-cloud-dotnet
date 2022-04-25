@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Eventarc.V1.Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Eventarc.V1.GeneratedSnippets", "Google.Cloud.Eventarc.V1.GeneratedSnippets\Google.Cloud.Eventarc.V1.GeneratedSnippets.csproj", "{78AB3540-2CA6-47B6-9B4D-707FCFEA23E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.LongRunning", "..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj", "{6001A501-ED0C-43B4-BAEE-5BCADBD6F136}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,5 +88,17 @@ Global
 		{78AB3540-2CA6-47B6-9B4D-707FCFEA23E1}.Release|x64.Build.0 = Release|Any CPU
 		{78AB3540-2CA6-47B6-9B4D-707FCFEA23E1}.Release|x86.ActiveCfg = Release|Any CPU
 		{78AB3540-2CA6-47B6-9B4D-707FCFEA23E1}.Release|x86.Build.0 = Release|Any CPU
+		{6001A501-ED0C-43B4-BAEE-5BCADBD6F136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6001A501-ED0C-43B4-BAEE-5BCADBD6F136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6001A501-ED0C-43B4-BAEE-5BCADBD6F136}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6001A501-ED0C-43B4-BAEE-5BCADBD6F136}.Debug|x64.Build.0 = Debug|Any CPU
+		{6001A501-ED0C-43B4-BAEE-5BCADBD6F136}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6001A501-ED0C-43B4-BAEE-5BCADBD6F136}.Debug|x86.Build.0 = Debug|Any CPU
+		{6001A501-ED0C-43B4-BAEE-5BCADBD6F136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6001A501-ED0C-43B4-BAEE-5BCADBD6F136}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6001A501-ED0C-43B4-BAEE-5BCADBD6F136}.Release|x64.ActiveCfg = Release|Any CPU
+		{6001A501-ED0C-43B4-BAEE-5BCADBD6F136}.Release|x64.Build.0 = Release|Any CPU
+		{6001A501-ED0C-43B4-BAEE-5BCADBD6F136}.Release|x86.ActiveCfg = Release|Any CPU
+		{6001A501-ED0C-43B4-BAEE-5BCADBD6F136}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
