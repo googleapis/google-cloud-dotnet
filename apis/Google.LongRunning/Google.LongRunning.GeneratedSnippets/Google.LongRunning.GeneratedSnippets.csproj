@@ -2,12 +2,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>netcoreapp3.1;net462</TargetFrameworks>
-    <TestTargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netcoreapp3.1</TestTargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netcoreapp3.1</TargetFrameworks>
     <IsPackable>false</IsPackable>
     <NoWarn>1701;1702;1705;xUnit2004;xUnit2013;AD0001</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Google.Api.Gax.Testing" Version="[4.0.0-alpha02, 5.0.0)" />
+    <PackageReference Include="Google.Api.Gax.Testing" Version="[4.0.0-alpha03, 5.0.0)" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
     <ProjectReference Include="..\Google.LongRunning\Google.LongRunning.csproj" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
