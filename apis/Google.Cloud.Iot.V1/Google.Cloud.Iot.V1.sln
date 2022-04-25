@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Iot.V1.Tests",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Iot.V1.GeneratedSnippets", "Google.Cloud.Iot.V1.GeneratedSnippets\Google.Cloud.Iot.V1.GeneratedSnippets.csproj", "{AF86C4DC-438D-4D7C-AAB5-D83CA9667883}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Iam.V1", "..\Google.Cloud.Iam.V1\Google.Cloud.Iam.V1\Google.Cloud.Iam.V1.csproj", "{36269900-D4EC-476E-9EEA-E520757905D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,5 +88,17 @@ Global
 		{AF86C4DC-438D-4D7C-AAB5-D83CA9667883}.Release|x64.Build.0 = Release|Any CPU
 		{AF86C4DC-438D-4D7C-AAB5-D83CA9667883}.Release|x86.ActiveCfg = Release|Any CPU
 		{AF86C4DC-438D-4D7C-AAB5-D83CA9667883}.Release|x86.Build.0 = Release|Any CPU
+		{36269900-D4EC-476E-9EEA-E520757905D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36269900-D4EC-476E-9EEA-E520757905D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36269900-D4EC-476E-9EEA-E520757905D8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{36269900-D4EC-476E-9EEA-E520757905D8}.Debug|x64.Build.0 = Debug|Any CPU
+		{36269900-D4EC-476E-9EEA-E520757905D8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{36269900-D4EC-476E-9EEA-E520757905D8}.Debug|x86.Build.0 = Debug|Any CPU
+		{36269900-D4EC-476E-9EEA-E520757905D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36269900-D4EC-476E-9EEA-E520757905D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36269900-D4EC-476E-9EEA-E520757905D8}.Release|x64.ActiveCfg = Release|Any CPU
+		{36269900-D4EC-476E-9EEA-E520757905D8}.Release|x64.Build.0 = Release|Any CPU
+		{36269900-D4EC-476E-9EEA-E520757905D8}.Release|x86.ActiveCfg = Release|Any CPU
+		{36269900-D4EC-476E-9EEA-E520757905D8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
