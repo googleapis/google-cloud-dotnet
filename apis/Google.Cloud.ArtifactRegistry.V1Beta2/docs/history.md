@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2022-04-26
+
+### Documentation improvements
+
+- More details for ListFilesRequest parent field ([commit 3602d26](https://github.com/googleapis/google-cloud-dotnet/commit/3602d266918515ebfc533a44a77986b2e9b10673))
+
 ## Version 1.0.0-beta05, released 2022-02-07
 
 ### New features
