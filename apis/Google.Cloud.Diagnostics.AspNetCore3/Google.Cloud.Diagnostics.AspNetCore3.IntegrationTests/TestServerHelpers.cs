@@ -18,20 +18,9 @@ using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
-#if NETCOREAPP3_1
 using Microsoft.Extensions.Hosting;
-#elif NETCOREAPP2_1 || NET461
-#else
-#error unknown target framework
-#endif
 
-#if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
-#elif NETCOREAPP2_1 || NET461
-namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
-#else
-#error unknown target framework
-#endif
 {
     /// <summary>
     /// Helper class containing methods to obtain the appropiate host builder
@@ -39,7 +28,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// </summary>
     public static class TestServerHelpers
     {
-#if NETCOREAPP3_1
         public static IHostBuilder GetHostBuilder(Action<IWebHostBuilder> configure = null) => GetHostBuilder<BaseStartup>(configure);
 
         public static IHostBuilder GetHostBuilder<TStartup>(Action<IWebHostBuilder> configure = null) where TStartup : class =>
@@ -83,40 +71,5 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                         name: "default",
                         pattern: "{controller=Home}/{action=Index}/{id?}"));
         }
-#elif NETCOREAPP2_1 || NET461
-        public static IWebHostBuilder GetHostBuilder(Action<IWebHostBuilder> configure = null) => GetHostBuilder<BaseStartup>(configure);
-
-        public static IWebHostBuilder GetHostBuilder<TStartup>(Action<IWebHostBuilder> configure = null) where TStartup: class
-        {
-            var hostBuilder = new WebHostBuilder().UseStartup<TStartup>();
-            configure?.Invoke(hostBuilder);
-            return hostBuilder;
-        }
-
-        public static TestServer GetTestServer(IWebHostBuilder hostBuilder) => new TestServer(hostBuilder);
-
-        public static TestServer GetTestServer<TStartup>(Action<IWebHostBuilder> configure = null) where TStartup : class =>
-            GetTestServer(GetHostBuilder<TStartup>(configure));
-
-        public static IServiceProvider GetServices(TestServer server) => server.Host.Services;
-
-        /// <summary>
-        /// Allows us to add the target framework specific configuration here,
-        /// so the code in tests is not framework dependent.
-        /// Note: This is needed because if there are several Configure calls,
-        /// only the last one is used so we cannot chain them. Instead we need
-        /// to "compose" the Configure call by ovewriting the virtual method
-        /// and calling base.
-        /// </summary>
-        public class BaseStartup
-        {
-            public virtual void ConfigureServices(IServiceCollection services) => services.AddMvc();
-
-            public virtual void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) => 
-                app.UseMvcWithDefaultRoute();
-        }
-#else
-#error unknown target framework
-#endif
     }
 }

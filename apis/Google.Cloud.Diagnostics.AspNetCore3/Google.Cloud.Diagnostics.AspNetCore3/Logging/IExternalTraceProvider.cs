@@ -14,13 +14,7 @@
 
 using System;
 
-#if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3
-#elif NETSTANDARD2_0
-namespace Google.Cloud.Diagnostics.AspNetCore
-#else
-#error unknown target framework
-#endif
 {
     /// <summary>
     /// Provides external trace information to include in a log entry

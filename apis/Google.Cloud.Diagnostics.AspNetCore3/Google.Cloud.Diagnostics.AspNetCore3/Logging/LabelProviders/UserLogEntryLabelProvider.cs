@@ -17,13 +17,7 @@ using System.Security.Claims;
 using System.Security.Principal;
 using Microsoft.AspNetCore.Http;
 
-#if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3
-#elif NETSTANDARD2_0
-namespace Google.Cloud.Diagnostics.AspNetCore
-#else
-#error unknown target framework
-#endif
 {
     /// <summary>
     /// A <see cref="ILogEntryLabelProvider"/> which adds the information of the authenticated user to the log entry labels.

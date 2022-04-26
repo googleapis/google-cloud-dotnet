@@ -19,13 +19,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-#if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3
-#elif NETSTANDARD2_0
-namespace Google.Cloud.Diagnostics.AspNetCore
-#else
-#error unknown target framework
-#endif
 {
     /// <summary>
     /// Google Cloud Error Reporting Logger. Reports exceptions to the Google Cloud Error Reporting API.

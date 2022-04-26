@@ -23,20 +23,9 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
-#if NETCOREAPP3_1
 using Microsoft.Extensions.Hosting;
-#elif NETCOREAPP2_1 || NET461
-#else
-#error unknown target framework
-#endif
 
-#if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3.Snippets
-#elif NETCOREAPP2_1 || NET461
-namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
-#else
-#error unknown target framework
-#endif
 {
     using static IntegrationTests.TestServerHelpers;
 
@@ -56,16 +45,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 
         public DiagnosticsSnippetsTests()
         {
-#if NETCOREAPP3_1
             var hostBuilder = Host.CreateDefaultBuilder()
                 .ConfigureWebHostDefaults(webBuilder => webBuilder.UseStartup<TestApplication.DiagnosticsStartup>());
             hostBuilder.ConfigureWebHost(webBuilder => webBuilder.UseTestServer());
-#elif NETCOREAPP2_1 || NET461
-            var hostBuilder = new WebHostBuilder()
-                .UseStartup<TestApplication.DiagnosticsStartup>();
-#else
-#error unknown target framework
-#endif
+
             _server = GetTestServer(hostBuilder);
             _client = _server.CreateClient();
 
