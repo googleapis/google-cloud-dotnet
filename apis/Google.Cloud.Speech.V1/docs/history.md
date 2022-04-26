@@ -1,5 +1,9 @@
 # Version history
 
+## Version 2.8.0, released 2022-04-26
+
+No API surface changes; just dependency updates.
+
 ## Version 2.7.0, released 2021-12-07
 
 - [Commit cbbd9a3](https://github.com/googleapis/google-cloud-dotnet/commit/cbbd9a3):
