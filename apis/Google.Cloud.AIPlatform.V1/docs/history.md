@@ -1,5 +1,14 @@
 # Version history
 
+## Version 1.7.0, released 2022-04-26
+
+### New features
+
+- Add reserved_ip_ranges to CustomJobSpec in aiplatform v1 custom_job.proto ([commit c6626c7](https://github.com/googleapis/google-cloud-dotnet/commit/c6626c775e5c896d2e89f46f1fee8910bb0911f9))
+- Add nfs_mounts to WorkPoolSpec in aiplatform v1 custom_job.proto ([commit c6626c7](https://github.com/googleapis/google-cloud-dotnet/commit/c6626c775e5c896d2e89f46f1fee8910bb0911f9))
+- Add JOB_STATE_UPDATING to JobState in aiplatform v1 job_state.proto ([commit c6626c7](https://github.com/googleapis/google-cloud-dotnet/commit/c6626c775e5c896d2e89f46f1fee8910bb0911f9))
+- Add MfsMount in aiplatform v1 machine_resources.proto ([commit c6626c7](https://github.com/googleapis/google-cloud-dotnet/commit/c6626c775e5c896d2e89f46f1fee8910bb0911f9))
+- Add ConvexAutomatedStoppingSpec to StudySpec in aiplatform v1 study.proto ([commit c6626c7](https://github.com/googleapis/google-cloud-dotnet/commit/c6626c775e5c896d2e89f46f1fee8910bb0911f9))
 ## Version 1.6.0, released 2022-04-04
 
 ### New features
