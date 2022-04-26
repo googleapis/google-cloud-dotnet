@@ -24,6 +24,6 @@
   <PropertyGroup>
     <!-- Make sure we get suitable stack traces for tests -->
     <DebugType>pdbonly</DebugType>
-    <DebugType Condition="'$(TargetFramework)' == 'netcoreapp2.1' Or '$(TargetFramework)' == 'netcoreapp3.1'">portable</DebugType>
+    <DebugType Condition="'$(TargetFramework)' == 'netcoreapp3.1'">portable</DebugType>
   </PropertyGroup>
 </Project>
