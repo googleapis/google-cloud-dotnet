@@ -17,13 +17,7 @@ using System.Collections.Generic;
 using Google.Api.Gax;
 using Microsoft.AspNetCore.Http;
 
-#if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3
-#elif NETSTANDARD2_0
-namespace Google.Cloud.Diagnostics.AspNetCore
-#else
-#error unknown target framework
-#endif
 {
     /// <summary>
     /// Base class for <see cref="ILogEntryLabelProvider"/> implementations which needs an <see cref="HttpContext"/> instance.
