@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.6.0, released 2022-04-26
+
+### New features
+
+- Add UpdateAssignment method ([commit 9b9e9d1](https://github.com/googleapis/google-cloud-dotnet/commit/9b9e9d197d95d59a3e88b213a2511c22683247c0))
+- Add "concurrency" and "multi_region_auxiliary" in reservation ([commit 9b9e9d1](https://github.com/googleapis/google-cloud-dotnet/commit/9b9e9d197d95d59a3e88b213a2511c22683247c0))
+- Add preferred table. ([commit 9b9e9d1](https://github.com/googleapis/google-cloud-dotnet/commit/9b9e9d197d95d59a3e88b213a2511c22683247c0))
+
+### Documentation improvements
+
+- Cleanup and clarifications ([commit 9b9e9d1](https://github.com/googleapis/google-cloud-dotnet/commit/9b9e9d197d95d59a3e88b213a2511c22683247c0))
+
 ## Version 1.5.0, released 2022-01-17
 
 ### New features
