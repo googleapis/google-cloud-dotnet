@@ -10,7 +10,7 @@
     <DebugSymbols>true</DebugSymbols>
     <Optimize Condition="'$(TargetFramework)' == 'net462'">false</Optimize>
     <DebugType Condition="'$(TargetFramework)' == 'net462'">pdbonly</DebugType>
-    <DebugType Condition="'$(TargetFramework)' == 'netcoreapp3.1' or '$(TargetFramework)' == 'net6.0'">portable</DebugType>
+    <DebugType Condition="'$(TargetFramework)' == 'netcoreapp3.1'">portable</DebugType>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Google.Api.Gax.Testing" Version="[4.0.0-alpha03, 5.0.0)" />
@@ -30,7 +30,7 @@
   <ItemGroup Condition="'$(TargetFramework)' == 'net462'">
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="2.1.1" />
   </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1' or '$(TargetFramework)' == 'net6.0'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.22" />
   </ItemGroup>
 </Project>
