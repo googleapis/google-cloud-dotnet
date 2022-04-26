@@ -19,13 +19,7 @@ using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
 
-#if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3
-#elif NETSTANDARD2_0
-namespace Google.Cloud.Diagnostics.AspNetCore
-#else
-#error unknown target framework
-#endif
 {
     /// <summary>
     /// Middleware that will, when invoked, call the next <see cref="RequestDelegate"/>,

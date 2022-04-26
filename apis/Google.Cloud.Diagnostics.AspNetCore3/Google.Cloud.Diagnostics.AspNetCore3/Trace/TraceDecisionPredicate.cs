@@ -17,13 +17,7 @@ using Google.Api.Gax;
 using Microsoft.AspNetCore.Http;
 using System;
 
-#if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3
-#elif NETSTANDARD2_0
-namespace Google.Cloud.Diagnostics.AspNetCore
-#else
-#error unknown target framework
-#endif
 {
     /// <summary>
     /// Used to determine if an <see cref="HttpRequest"/> should be traced. This will not override
