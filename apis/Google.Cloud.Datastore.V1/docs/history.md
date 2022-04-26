@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.5.0, released 2022-04-26
+
+### New features
+
+- Expose new read_time API fields, currently only available in private preview ([commit 4bc260c](https://github.com/googleapis/google-cloud-dotnet/commit/4bc260c0f34a5f5296badaefa4e6d962499cc225))
+
 ## Version 3.4.0, released 2022-04-04
 
 ### New features
