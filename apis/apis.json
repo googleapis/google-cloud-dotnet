@@ -1537,7 +1537,7 @@
     },
     {
       "id": "Google.Cloud.Gaming.V1",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "type": "grpc",
       "productName": "Game Services",
       "productUrl": "https://cloud.google.com/solutions/gaming",
