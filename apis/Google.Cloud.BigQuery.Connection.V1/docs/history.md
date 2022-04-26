@@ -1,5 +1,10 @@
 # Version history
 
+## Version 1.6.0, released 2022-04-26
+
+### New features
+
+- Add AuditConfig and an update FieldMask ([commit 7289e58](https://github.com/googleapis/google-cloud-dotnet/commit/7289e58eab6e1ae820d27539043e130b774fbc4d))
 ## Version 1.5.0, released 2022-03-14
 
 ### New features
