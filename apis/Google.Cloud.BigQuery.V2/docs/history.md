@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.4.0-beta02, released 2022-04-26
+
+### New features
+
+- Include more information on GoogleApiException.Message when possible. ([commit 2057c2e](https://github.com/googleapis/google-cloud-dotnet/commit/2057c2eea72f205fd79860094d7d28a4ae056eac))
+
+BREAKING CHANGE: If calling code depended on the exact exception message, it could be broken by this change. Customers are strongly encouraged not to depend on error message text.
 ## Version 2.4.0-beta01, released 2022-02-07
 
 ### New features
