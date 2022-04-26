@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Auth.OAuth2;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
@@ -692,7 +693,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public override TraceServiceClient GetTraceServiceClient() =>
             new TraceServiceClientBuilder
             {
-                TokenAccessMethod = (uri, cancellation) => Task.FromResult("very_fake_token")
+                Credential = GoogleCredential.FromAccessToken("very_fake_token")
             }.Build();
         
     }

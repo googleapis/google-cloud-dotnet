@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Auth.OAuth2;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
@@ -194,7 +195,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                         Version = EntryData.Version,
                         Client = new LoggingServiceV2ClientBuilder
                         {
-                            TokenAccessMethod = (uri, cancellation) => Task.FromResult("very_bad_token")
+                            Credential = GoogleCredential.FromAccessToken("very_bad_token")
                         }.Build(),
                         // This is just so that our validator finds the log entries associated to errors.
                         Options = ErrorReportingOptions.CreateInstance(
