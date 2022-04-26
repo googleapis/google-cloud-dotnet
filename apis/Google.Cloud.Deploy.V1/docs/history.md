@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.1.0, released 2022-04-26
+
+### New features
+
+- Add support for Anthos worker pool. ([commit 456b719](https://github.com/googleapis/google-cloud-dotnet/commit/456b71950b4e34b14de76a63effd2fa5e5d92ff9))
+
+### Documentation improvements
+
+- Cloud Deploy API Platform Logging documentation ([commit 456b719](https://github.com/googleapis/google-cloud-dotnet/commit/456b71950b4e34b14de76a63effd2fa5e5d92ff9))
+
 ## Version 1.0.0, released 2022-01-25
 
 No API surface changes; just dependency updates and promotion to 1.0.0.
