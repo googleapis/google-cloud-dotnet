@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.8.0, released 2022-04-26
+
+### New features
+
+- Added Dataplex specific fields ([commit f445d27](https://github.com/googleapis/google-cloud-dotnet/commit/f445d27d4a4171c8149ed4d930594ffae8b427c4))
+
+### Documentation improvements
+
+- Update taxonomy display_name comment ([commit f445d27](https://github.com/googleapis/google-cloud-dotnet/commit/f445d27d4a4171c8149ed4d930594ffae8b427c4))
+
 ## Version 1.7.0, released 2022-02-14
 
 ### New features
