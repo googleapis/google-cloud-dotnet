@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api;
+using Google.Apis.Auth.OAuth2;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
@@ -1097,7 +1098,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 ProjectId = _projectId,
                 Client = new LoggingServiceV2ClientBuilder
                 {
-                    TokenAccessMethod = (uri, cancellation) => Task.FromResult("very-bad-token")
+                    Credential = GoogleCredential.FromAccessToken("very_bad_token")
                 }.Build()
             }));
             base.ConfigureServices(services);
