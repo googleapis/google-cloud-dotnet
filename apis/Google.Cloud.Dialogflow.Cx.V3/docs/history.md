@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.12.0, released 2022-04-26
+
+### Documentation improvements
+
+- Minor wording update ([commit d4281ec](https://github.com/googleapis/google-cloud-dotnet/commit/d4281ecab7d92f097db170e837640ab28719519b))
+
 ## Version 1.11.0, released 2022-04-04
 
 ### New features
