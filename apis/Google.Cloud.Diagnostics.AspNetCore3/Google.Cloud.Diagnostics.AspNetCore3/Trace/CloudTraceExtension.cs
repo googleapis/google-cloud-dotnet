@@ -20,13 +20,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using System;
 
-#if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3
-#elif NETSTANDARD2_0
-namespace Google.Cloud.Diagnostics.AspNetCore
-#else
-#error unknown target framework
-#endif
 {
     /// <summary>
     ///  Uses the Google Cloud Trace Middleware.
@@ -38,13 +32,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// Traces requests and reports them to Google Cloud Trace.
     /// Docs: https://cloud.google.com/trace/docs/
     /// </remarks>
-#if NETCOREAPP3_1
     [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore3.AspNetCoreTraceExtensions instead.")]
-#elif NETSTANDARD2_0
-    [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore.AspNetCoreTraceExtensions instead.")]
-#else
-#error unknown target framework
-#endif
     public static class CloudTraceExtension
     {
         /// <summary>
@@ -52,15 +40,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// The time taken and metadata will be sent to the Google Cloud Trace API. To be
         /// used with <see cref="AddGoogleTrace"/>,
         /// </summary>
-#if NETCOREAPP3_1
         [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore3.AspNetCoreTraceExtensions.AddGoogleTraceForAspNetCore" +
             "for configuring Google Cloud Trace in ASP.NET Core applications. There's no need to explicitly register the middleware.")]
-#elif NETSTANDARD2_0
-        [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore.AspNetCoreTraceExtensions.AddGoogleTraceForAspNetCore" +
-            "for configuring Google Cloud Trace in ASP.NET Core applications. There's no need to explicitly register the middleware.")]
-#else
-#error unknown target framework
-#endif
         public static IApplicationBuilder UseGoogleTrace(this IApplicationBuilder app)
         {
             GaxPreconditions.CheckNotNull(app, nameof(app));
@@ -79,13 +60,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// with both exceptions will be thrown.  Otherwise only the exception from the <see cref="RequestDelegate"/>
         /// will be thrown.
         /// </remarks>
-#if NETCOREAPP3_1
         [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore3.AspNetCoreTraceExtensions.AddGoogleTraceForAspNetCore instead.")]
-#elif NETSTANDARD2_0
-        [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore.AspNetCoreTraceExtensions.AddGoogleTraceForAspNetCore instead.")]
-#else
-#error unknown target framework
-#endif
         public static IServiceCollection AddGoogleTrace(
             this IServiceCollection services, Action<TraceServiceOptions> setupAction)
         {

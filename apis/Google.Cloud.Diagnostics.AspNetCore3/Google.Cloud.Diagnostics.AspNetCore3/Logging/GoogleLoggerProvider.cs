@@ -20,13 +20,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 
-#if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3
-#elif NETSTANDARD2_0
-namespace Google.Cloud.Diagnostics.AspNetCore
-#else
-#error unknown target framework
-#endif
 {
     /// <summary>
     /// <see cref="ILoggerProvider"/> for Google Cloud Logging.

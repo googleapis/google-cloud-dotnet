@@ -27,13 +27,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
-#if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3.Snippets
-#elif NETCOREAPP2_1 || NET461
-namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
-#else
-#error unknown target framework
-#endif
 {
     using static IntegrationTests.TestServerHelpers;
 
@@ -76,7 +70,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             Assert.Contains(testId, logEntry.JsonPayload?.Fields["message"]?.StringValue);
         }
 
-#if NETCOREAPP3_1
         private static IHostBuilder GetHostBuilder()
         {
             string projectId = TestEnvironment.GetTestProjectId();
@@ -90,23 +83,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             // End sample
             return hostBuilder.ConfigureWebHost(webBuilder => webBuilder.UseTestServer());
         }
-
-#elif NETCOREAPP2_1 || NET461
-        private static IWebHostBuilder GetHostBuilder()
-        {
-            string projectId = TestEnvironment.GetTestProjectId();
-
-            // Sample: ConfigureAspNetCore
-            return new WebHostBuilder()
-                .ConfigureLogging(
-                    // Replace projectId with your Google Cloud Project ID.
-                    builder => builder.AddGoogle(new LoggingServiceOptions { ProjectId = projectId }))
-                .UseStartup<Startup>();
-            // End sample
-        }
-#else
-#error unknown target framework
-#endif
     }
 
     // Sample: Logging

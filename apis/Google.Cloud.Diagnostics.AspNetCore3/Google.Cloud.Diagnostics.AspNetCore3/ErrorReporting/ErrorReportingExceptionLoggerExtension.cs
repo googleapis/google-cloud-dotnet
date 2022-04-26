@@ -19,26 +19,14 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-#if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3
-#elif NETSTANDARD2_0
-namespace Google.Cloud.Diagnostics.AspNetCore
-#else
-#error unknown target framework
-#endif
 {
     /// <summary>
     ///  Uses the Google Cloud Error Reporting Exception Logger Middleware.
     ///  To ensure all unhandled exceptions are reported, this should be
     ///  the first piece of middleware used.
     /// </summary>
-#if NETCOREAPP3_1
     [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore3.AspNetCoreErrorReportingExtensions instead.")]
-#elif NETSTANDARD2_0
-    [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore.AspNetCoreErrorReportingExtensions instead.")]
-#else
-#error unknown target framework
-#endif
     public static class ErrorReportingExceptionLoggerExtension
     {
         /// <summary>
@@ -46,15 +34,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Error Reporting API.
         /// </summary>
         /// <param name="app">The application builder. Must not be null.</param>
-#if NETCOREAPP3_1
         [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore3.AspNetCoreErrorReportingExtensions.AddGoogleErrorReportingForAspNetCore " +
             "for configuring Google Cloud Error Reporting in ASP.NET Core applications. There's no need to explicitly register the middleware.")]
-#elif NETSTANDARD2_0
-        [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore.AspNetCoreErrorReportingExtensions.AddGoogleErrorReportingForAspNetCore " +
-            "for configuring Google Cloud Error Reporting in ASP.NET Core applications. There's no need to explicitly register the middleware.")]
-#else
-#error unknown target framework
-#endif
         public static IApplicationBuilder UseGoogleExceptionLogging(this IApplicationBuilder app)
         {
             GaxPreconditions.CheckNotNull(app, nameof(app));
@@ -79,14 +60,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// with both exceptions will be thrown.  Otherwise only the exception from the <see cref="RequestDelegate"/>
         /// will be thrown.
         /// </remarks>
-#if NETCOREAPP3_1
         [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore3.AspNetCoreErrorReportingExtensions.AddGoogleErrorReportingForAspNetCore instead.")]
-#elif NETSTANDARD2_0
-        [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore.AspNetCoreErrorReportingExtensions.AddGoogleErrorReportingForAspNetCore instead.")]
-#else
-#error unknown target framework
-#endif
-    public static IServiceCollection AddGoogleExceptionLogging(
+        public static IServiceCollection AddGoogleExceptionLogging(
             this IServiceCollection services, Action<ErrorReportingServiceOptions> setupAction)
         {
             GaxPreconditions.CheckNotNull(services, nameof(services));

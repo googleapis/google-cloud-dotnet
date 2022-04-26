@@ -18,13 +18,7 @@ using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Logging.V2;
 using Microsoft.Extensions.Logging;
 
-#if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3
-#elif NETSTANDARD2_0
-namespace Google.Cloud.Diagnostics.AspNetCore
-#else
-#error unknown target framework
-#endif
 {
     /// <summary>
     /// Extensions to add <see cref="GoogleLoggerProvider"/>s to an <see cref="ILoggerFactory"/>.
