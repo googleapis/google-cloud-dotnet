@@ -1,5 +1,9 @@
 # Version history
 
+## Version 3.4.0, released 2022-04-26
+
+No API surface changes; just dependency updates.
+
 ## Version 3.3.0, released 2022-02-07
 
 ### New features
