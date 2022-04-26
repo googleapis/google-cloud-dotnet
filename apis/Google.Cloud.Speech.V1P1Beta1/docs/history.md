@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta08, released 2022-04-26
+
+### Documentation improvements
+
+- Use full link in comment ([commit dc5c9ea](https://github.com/googleapis/google-cloud-dotnet/commit/dc5c9ea1f05e2b62e62ab9e63ca82e66a4118f97))
+
 ## Version 2.0.0-beta07, released 2021-12-07
 
 - [Commit bc7d94d](https://github.com/googleapis/google-cloud-dotnet/commit/bc7d94d): feat: add result_end_time to SpeechRecognitionResult
