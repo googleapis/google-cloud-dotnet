@@ -19,11 +19,4 @@
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\..\Google.Cloud.Diagnostics.AspNetCore\Google.Cloud.Diagnostics.AspNetCore\**\*.cs" />
-    <Compile Remove="..\..\Google.Cloud.Diagnostics.AspNetCore\Google.Cloud.Diagnostics.AspNetCore\obj\**" />
-    <Compile Remove="obj\**" />
-    <EmbeddedResource Remove="obj\**" />
-    <None Remove="obj\**" />
-  </ItemGroup>
 </Project>
