@@ -28,11 +28,4 @@
   <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests\Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\..\Google.Cloud.Diagnostics.AspNetCore\Google.Cloud.Diagnostics.AspNetCore.Snippets\**\*.cs" />
-    <Compile Remove="..\..\Google.Cloud.Diagnostics.AspNetCore\Google.Cloud.Diagnostics.AspNetCore.Snippets\obj\**" />
-    <Compile Remove="obj\**" />
-    <EmbeddedResource Remove="obj\**" />
-    <None Remove="obj\**" />
-  </ItemGroup>
 </Project>
