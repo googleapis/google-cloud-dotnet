@@ -37,13 +37,7 @@ using System.Threading.Tasks;
 using Xunit;
 using DateTime = System.DateTime;
 
-#if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
-#elif NETCOREAPP2_1 || NET461
-namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
-#else
-#error unknown target framework
-#endif
 {
     using static TestServerHelpers;
 

@@ -15,13 +15,7 @@
 using Google.Cloud.ClientTesting;
 using Xunit;
 
-#if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
-#elif NETCOREAPP2_1 || NET461
-namespace Google.Cloud.Diagnostics.AspNetCore.Tests
-#else
-#error unknown target framework
-#endif
 {
     // We have files organized in Logging, Trace and ErrorReporting folders
     // but we really only have one namespace Google.Cloud.Diagnostics.Common.
@@ -32,20 +26,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
     // that over until the next major version bump.
     public class NamespaceTests
     {
-#if NETCOREAPP3_1
         private const string BaseNamespace = "Google.Cloud.Diagnostics.AspNetCore3";
-#elif NETCOREAPP2_1 || NET461
-        private const string BaseNamespace = "Google.Cloud.Diagnostics.AspNetCore";
-#else
-#error unknown target framework
-#endif
-
 
         [Fact]
         public void Library_OnlyAspNetCoreNamespace() =>
             CodeHealthTester.AssertOnlyAllowedNamespaces(
                 typeof(AspNetCoreErrorReportingExtensions), BaseNamespace);
-        
+
         [Fact]
         public void Library_NoComponentSpecificNamespaces() =>
             // Note: If this test fails, the other one in this file will fail as well
@@ -55,6 +42,5 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                 BaseNamespace + ".ErrorReporting",
                 BaseNamespace + ".Logging",
                 BaseNamespace + ".Trace");
-        
     }
 }

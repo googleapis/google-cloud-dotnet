@@ -12,17 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-using Google.Cloud.Diagnostics.Common;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
-#if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3
-#elif NETSTANDARD2_0
-namespace Google.Cloud.Diagnostics.AspNetCore
-#else
-#error unknown target framework
-#endif
 {
     /// <summary>
     /// Provides extension methods to register <see cref="ILogEntryLabelProvider"/> implementations.
