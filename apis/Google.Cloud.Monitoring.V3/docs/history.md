@@ -1,5 +1,9 @@
 # Version history
 
+## Version 2.6.0, released 2022-04-26
+
+No API surface changes; just dependency updates.
+
 ## Version 2.5.0, released 2021-11-18
 
 - [Commit b8a8fbd](https://github.com/googleapis/google-cloud-dotnet/commit/b8a8fbd): feat: Added support for auto-close configurations
