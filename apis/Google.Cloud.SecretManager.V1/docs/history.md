@@ -1,5 +1,10 @@
 # Version history
 
+## Version 1.9.0, released 2022-04-26
+
+### New features
+
+- Added support for accessing secret versions by alias ([commit 5102b66](https://github.com/googleapis/google-cloud-dotnet/commit/5102b66e3843295b60aa3c89e74999da46bd8e15))
 ## Version 1.8.0, released 2022-02-07
 
 ### New features
