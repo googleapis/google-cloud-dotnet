@@ -33,8 +33,9 @@ namespace Google.Cloud.ClientTesting
 
         private static readonly List<string> s_exemptedNamespacePrefixs = new List<string>
         {
-            // Used for code coverage on some CI jobs.
-            "JetBrains",
+            "JetBrains", // Used for code coverage on some CI jobs.
+            "Microsoft.CodeAnalysis",
+            "System.Runtime.CompilerServices"
         };
 
         /// <summary>
