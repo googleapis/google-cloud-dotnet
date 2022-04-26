@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.13.0, released 2022-04-26
+
+### New features
+
+- Add connection and description field to finding's list of attributes ([commit a6bcaf5](https://github.com/googleapis/google-cloud-dotnet/commit/a6bcaf53ae63e568318902b157607ef4061455e9))
+- Add next_steps field to finding's list of attributes ([commit 8d16471](https://github.com/googleapis/google-cloud-dotnet/commit/8d16471a1bfc243c84e22e0b5206e7d96b4fe7d2))
+- Add iam_binding field to findings attributes. It represents particular IAM bindings, which captures a member's role addition, removal, or state ([commit b341824](https://github.com/googleapis/google-cloud-dotnet/commit/b341824885e0f7f3900447ab66565f14d20d8505))
+
 ## Version 2.12.0, released 2022-03-14
 
 ### New features
