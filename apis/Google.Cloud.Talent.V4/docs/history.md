@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.4.0, released 2022-04-26
+
+### Documentation improvements
+
+- Added functionality in the companyDisplayNames filter to support fuzzy matching ([commit 349a1e3](https://github.com/googleapis/google-cloud-dotnet/commit/349a1e3f81e7bd4fa3bfad4543889146523ac57a))
+
 ## Version 1.3.0, released 2021-12-07
 
 - [Commit 10ebf7f](https://github.com/googleapis/google-cloud-dotnet/commit/10ebf7f): docs: fix docstring formatting
