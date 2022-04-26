@@ -15,13 +15,7 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 
-#if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3
-#elif NETSTANDARD2_0
-namespace Google.Cloud.Diagnostics.AspNetCore
-#else
-#error unknown target framework
-#endif
 {
     /// <summary>
     /// A <see cref="ILogEntryLabelProvider"/> implementation which adds the <see cref="HttpContext.TraceIdentifier"/> to the log entry labels.

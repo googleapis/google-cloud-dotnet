@@ -16,13 +16,7 @@ using Google.Cloud.Diagnostics.Common;
 using System;
 using System.Collections.Generic;
 
-#if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3
-#elif NETSTANDARD2_0
-namespace Google.Cloud.Diagnostics.AspNetCore
-#else
-#error unknown target framework
-#endif
 {
     /// <summary>
     /// Provides a hook to augment labels when a log entry is being logged.
