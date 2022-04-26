@@ -1130,12 +1130,13 @@
         "Google.Api.Gax.Grpc": "3.7.0",
         "Google.Cloud.Logging.V2": "3.6.0",
         "Google.Cloud.Trace.V1": "2.3.0",
-        "Microsoft.Extensions.Http": "2.1.1",
+        "Microsoft.Extensions.Http": "6.0.0",
         "System.Diagnostics.StackTrace": "4.3.0"
       },
       "testDependencies": {
         "Google.Api.Gax.Testing": "3.7.0",
-        "Google.Cloud.ErrorReporting.V1Beta1": "2.0.0-beta05"
+        "Google.Cloud.ErrorReporting.V1Beta1": "2.0.0-beta05",
+        "Microsoft.Extensions.Hosting": "6.0.0"
       }
     },
     {
