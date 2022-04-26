@@ -15,13 +15,7 @@
 using Microsoft.AspNetCore.Http;
 using System.Threading.Tasks;
 
-#if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3
-#elif NETSTANDARD2_0
-namespace Google.Cloud.Diagnostics.AspNetCore
-#else
-#error unknown target framework
-#endif
 {
     /// <summary>
     /// Default cloud trace name provider that uses the request path as the name.

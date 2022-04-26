@@ -16,24 +16,12 @@ using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Trace.V1;
 using System;
 
-#if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3
-#elif NETSTANDARD2_0
-namespace Google.Cloud.Diagnostics.AspNetCore
-#else
-#error unknown target framework
-#endif
 {
     /// <summary>
     /// Configuration for initializing tracing.
     /// </summary>
-#if NETCOREAPP3_1
     [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore3.AspNetCoreTraceOptions instead.")]
-#elif NETSTANDARD2_0
-    [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore.AspNetCoreTraceOptions instead.")]
-#else
-#error unknown target framework
-#endif
     public sealed class TraceServiceOptions
     {
         /// <summary>

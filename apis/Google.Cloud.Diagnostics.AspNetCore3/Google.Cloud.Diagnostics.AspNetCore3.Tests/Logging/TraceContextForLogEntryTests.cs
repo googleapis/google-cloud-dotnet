@@ -16,13 +16,7 @@ using Google.Cloud.Diagnostics.Common;
 using Moq;
 using Xunit;
 
-#if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
-#elif NETCOREAPP2_1 || NET461
-namespace Google.Cloud.Diagnostics.AspNetCore.Tests
-#else
-#error unknown target framework
-#endif
 {
 #pragma warning disable CS0618 // Type or member is obsolete
     public class TraceContextForLogEntryTests
