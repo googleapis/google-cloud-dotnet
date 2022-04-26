@@ -1088,34 +1088,6 @@
       "serviceConfigFile": "containeranalysis_v1.yaml"
     },
     {
-      "id": "Google.Cloud.Diagnostics.AspNetCore",
-      "version": "5.0.0-alpha02",
-      "type": "other",
-      "metadataType": "INTEGRATION",
-      "targetFrameworks": "netstandard2.0",
-      "testTargetFrameworks": "netcoreapp2.1;net461",
-      "description": "Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core.",
-      "tags": [
-        "Error",
-        "Reporting",
-        "Stackdriver",
-        "ExceptionLogger",
-        "Trace",
-        "Diagnostics"
-      ],
-      "dependencies": {
-        "Google.Cloud.Diagnostics.Common": "project",
-        "Grpc.Core": "2.41.0",
-        "Microsoft.AspNetCore.Hosting.Abstractions": "2.1.1",
-        "Microsoft.AspNetCore.Http": "2.1.1",
-        "Microsoft.AspNetCore.Http.Extensions": "2.1.1"
-      },
-      "testDependencies": {
-        "Google.Cloud.Diagnostics.Common.IntegrationTests": "project",
-        "Google.Cloud.Diagnostics.Common.Tests": "project"
-      }
-    },
-    {
       "id": "Google.Cloud.Diagnostics.AspNetCore3",
       "version": "5.0.0-alpha02",
       "type": "other",
@@ -3927,7 +3899,6 @@
       "id": "Google.Cloud.Diagnostics",
       "displayName": "diagnostics",
       "packageIds": [
-        "Google.Cloud.Diagnostics.AspNetCore",
         "Google.Cloud.Diagnostics.AspNetCore3",
         "Google.Cloud.Diagnostics.Common"
       ]
