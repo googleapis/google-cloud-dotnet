@@ -10,7 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.Gax.Grpc" Version="[4.0.0-alpha03, 5.0.0)" />
+    <PackageReference Include="Google.Api.Gax.Grpc" Version="[4.0.0-alpha04, 5.0.0)" />
     <ProjectReference Include="..\..\Google.Cloud.Location\Google.Cloud.Location\Google.Cloud.Location.csproj" />
     <ProjectReference Include="..\..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj" />
     <PackageReference Include="Grpc.Core" Version="[2.41.0, 3.0.0)" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
