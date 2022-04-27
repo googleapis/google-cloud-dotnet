@@ -49,6 +49,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
@@ -80,6 +81,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
@@ -113,6 +115,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
@@ -144,6 +147,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
@@ -177,6 +181,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
@@ -208,6 +213,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
@@ -240,6 +246,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
@@ -270,6 +277,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
@@ -302,6 +310,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
@@ -332,6 +341,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
@@ -364,6 +374,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
@@ -394,6 +405,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
@@ -427,6 +439,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
@@ -458,6 +471,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
@@ -491,6 +505,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };
@@ -522,6 +537,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplateAsInspectTemplateName = InspectTemplateName.FromOrganizationLocationInspectTemplate("[ORGANIZATION]", "[LOCATION]", "[INSPECT_TEMPLATE]"),
+                AudioExportSettings = new SecuritySettings.Types.AudioExportSettings(),
                 InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
                 DeidentifyTemplateAsDeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationLocationDeidentifyTemplate("[ORGANIZATION]", "[LOCATION]", "[DEIDENTIFY_TEMPLATE]"),
             };

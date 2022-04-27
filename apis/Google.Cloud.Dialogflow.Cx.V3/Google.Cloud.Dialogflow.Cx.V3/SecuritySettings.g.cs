@@ -48,7 +48,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "ZC5kaWFsb2dmbG93LmN4LnYzLlNlY3VyaXR5U2V0dGluZ3NCA+BBAiJhCh1E",
             "ZWxldGVTZWN1cml0eVNldHRpbmdzUmVxdWVzdBJACgRuYW1lGAEgASgJQjLg",
             "QQL6QSwKKmRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vU2VjdXJpdHlTZXR0",
-            "aW5ncyKWCAoQU2VjdXJpdHlTZXR0aW5ncxIMCgRuYW1lGAEgASgJEhkKDGRp",
+            "aW5ncyKVCwoQU2VjdXJpdHlTZXR0aW5ncxIMCgRuYW1lGAEgASgJEhkKDGRp",
             "c3BsYXlfbmFtZRgCIAEoCUID4EECEl0KEnJlZGFjdGlvbl9zdHJhdGVneRgD",
             "IAEoDjJBLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlNlY3VyaXR5",
             "U2V0dGluZ3MuUmVkYWN0aW9uU3RyYXRlZ3kSVwoPcmVkYWN0aW9uX3Njb3Bl",
@@ -59,61 +59,70 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "Z2xlYXBpcy5jb20vRGVpZGVudGlmeVRlbXBsYXRlEh8KFXJldGVudGlvbl93",
             "aW5kb3dfZGF5cxgGIAEoBUgAElcKEHB1cmdlX2RhdGFfdHlwZXMYCCADKA4y",
             "PS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5TZWN1cml0eVNldHRp",
-            "bmdzLlB1cmdlRGF0YVR5cGUSaAoYaW5zaWdodHNfZXhwb3J0X3NldHRpbmdz",
-            "GA0gASgLMkYuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuU2VjdXJp",
-            "dHlTZXR0aW5ncy5JbnNpZ2h0c0V4cG9ydFNldHRpbmdzGjgKFkluc2lnaHRz",
-            "RXhwb3J0U2V0dGluZ3MSHgoWZW5hYmxlX2luc2lnaHRzX2V4cG9ydBgBIAEo",
-            "CCJQChFSZWRhY3Rpb25TdHJhdGVneRIiCh5SRURBQ1RJT05fU1RSQVRFR1lf",
-            "VU5TUEVDSUZJRUQQABIXChNSRURBQ1RfV0lUSF9TRVJWSUNFEAEiSgoOUmVk",
-            "YWN0aW9uU2NvcGUSHwobUkVEQUNUSU9OX1NDT1BFX1VOU1BFQ0lGSUVEEAAS",
-            "FwoTUkVEQUNUX0RJU0tfU1RPUkFHRRACIkgKDVB1cmdlRGF0YVR5cGUSHwob",
-            "UFVSR0VfREFUQV9UWVBFX1VOU1BFQ0lGSUVEEAASFgoSRElBTE9HRkxPV19I",
-            "SVNUT1JZEAE6fepBegoqZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9TZWN1",
-            "cml0eVNldHRpbmdzEkxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
-            "b2NhdGlvbn0vc2VjdXJpdHlTZXR0aW5ncy97c2VjdXJpdHlfc2V0dGluZ3N9",
-            "QhAKDmRhdGFfcmV0ZW50aW9uMu8JChdTZWN1cml0eVNldHRpbmdzU2Vydmlj",
-            "ZRLzAQoWQ3JlYXRlU2VjdXJpdHlTZXR0aW5ncxI8Lmdvb2dsZS5jbG91ZC5k",
-            "aWFsb2dmbG93LmN4LnYzLkNyZWF0ZVNlY3VyaXR5U2V0dGluZ3NSZXF1ZXN0",
-            "Gi8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuU2VjdXJpdHlTZXR0",
-            "aW5ncyJqgtPkkwJJIjQvdjMve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qfS9zZWN1cml0eVNldHRpbmdzOhFzZWN1cml0eV9zZXR0aW5nc9pBGHBh",
-            "cmVudCxzZWN1cml0eV9zZXR0aW5ncxLGAQoTR2V0U2VjdXJpdHlTZXR0aW5n",
-            "cxI5Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkdldFNlY3VyaXR5",
-            "U2V0dGluZ3NSZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gu",
-            "djMuU2VjdXJpdHlTZXR0aW5ncyJDgtPkkwI2EjQvdjMve25hbWU9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKi9zZWN1cml0eVNldHRpbmdzLyp92kEEbmFtZRKL",
-            "AgoWVXBkYXRlU2VjdXJpdHlTZXR0aW5ncxI8Lmdvb2dsZS5jbG91ZC5kaWFs",
-            "b2dmbG93LmN4LnYzLlVwZGF0ZVNlY3VyaXR5U2V0dGluZ3NSZXF1ZXN0Gi8u",
-            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuU2VjdXJpdHlTZXR0aW5n",
-            "cyKBAYLT5JMCWzJGL3YzL3tzZWN1cml0eV9zZXR0aW5ncy5uYW1lPXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovc2VjdXJpdHlTZXR0aW5ncy8qfToRc2VjdXJp",
-            "dHlfc2V0dGluZ3PaQR1zZWN1cml0eV9zZXR0aW5ncyx1cGRhdGVfbWFzaxLW",
-            "AQoUTGlzdFNlY3VyaXR5U2V0dGluZ3MSOi5nb29nbGUuY2xvdWQuZGlhbG9n",
-            "Zmxvdy5jeC52My5MaXN0U2VjdXJpdHlTZXR0aW5nc1JlcXVlc3QaOy5nb29n",
-            "bGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5MaXN0U2VjdXJpdHlTZXR0aW5n",
-            "c1Jlc3BvbnNlIkWC0+STAjYSNC92My97cGFyZW50PXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyp9L3NlY3VyaXR5U2V0dGluZ3PaQQZwYXJlbnQSswEKFkRlbGV0",
-            "ZVNlY3VyaXR5U2V0dGluZ3MSPC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5j",
-            "eC52My5EZWxldGVTZWN1cml0eVNldHRpbmdzUmVxdWVzdBoWLmdvb2dsZS5w",
-            "cm90b2J1Zi5FbXB0eSJDgtPkkwI2KjQvdjMve25hbWU9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi9zZWN1cml0eVNldHRpbmdzLyp92kEEbmFtZRp4ykEZZGlh",
-            "bG9nZmxvdy5nb29nbGVhcGlzLmNvbdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFw",
-            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xl",
-            "YXBpcy5jb20vYXV0aC9kaWFsb2dmbG93QvAECiFjb20uZ29vZ2xlLmNsb3Vk",
-            "LmRpYWxvZ2Zsb3cuY3gudjNCFVNlY3VyaXR5U2V0dGluZ3NQcm90b1ABWj9n",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2Rp",
-            "YWxvZ2Zsb3cvY3gvdjM7Y3j4AQGiAgJERqoCHUdvb2dsZS5DbG91ZC5EaWFs",
-            "b2dmbG93LkN4LlYz6gIhR29vZ2xlOjpDbG91ZDo6RGlhbG9nZmxvdzo6Q1g6",
-            "OlYz6kHIAQoiZGxwLmdvb2dsZWFwaXMuY29tL0luc3BlY3RUZW1wbGF0ZRJV",
-            "b3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9sb2NhdGlvbnMve2xvY2F0",
-            "aW9ufS9pbnNwZWN0VGVtcGxhdGVzL3tpbnNwZWN0X3RlbXBsYXRlfRJLcHJv",
-            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2luc3BlY3RU",
-            "ZW1wbGF0ZXMve2luc3BlY3RfdGVtcGxhdGV96kHXAQolZGxwLmdvb2dsZWFw",
-            "aXMuY29tL0RlaWRlbnRpZnlUZW1wbGF0ZRJbb3JnYW5pemF0aW9ucy97b3Jn",
-            "YW5pemF0aW9ufS9sb2NhdGlvbnMve2xvY2F0aW9ufS9kZWlkZW50aWZ5VGVt",
-            "cGxhdGVzL3tkZWlkZW50aWZ5X3RlbXBsYXRlfRJRcHJvamVjdHMve3Byb2pl",
-            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2RlaWRlbnRpZnlUZW1wbGF0ZXMv",
-            "e2RlaWRlbnRpZnlfdGVtcGxhdGV9YgZwcm90bzM="));
+            "bmdzLlB1cmdlRGF0YVR5cGUSYgoVYXVkaW9fZXhwb3J0X3NldHRpbmdzGAwg",
+            "ASgLMkMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuU2VjdXJpdHlT",
+            "ZXR0aW5ncy5BdWRpb0V4cG9ydFNldHRpbmdzEmgKGGluc2lnaHRzX2V4cG9y",
+            "dF9zZXR0aW5ncxgNIAEoCzJGLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4",
+            "LnYzLlNlY3VyaXR5U2V0dGluZ3MuSW5zaWdodHNFeHBvcnRTZXR0aW5ncxqY",
+            "AgoTQXVkaW9FeHBvcnRTZXR0aW5ncxISCgpnY3NfYnVja2V0GAEgASgJEhwK",
+            "FGF1ZGlvX2V4cG9ydF9wYXR0ZXJuGAIgASgJEh4KFmVuYWJsZV9hdWRpb19y",
+            "ZWRhY3Rpb24YAyABKAgSZQoMYXVkaW9fZm9ybWF0GAQgASgOMk8uZ29vZ2xl",
+            "LmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuU2VjdXJpdHlTZXR0aW5ncy5BdWRp",
+            "b0V4cG9ydFNldHRpbmdzLkF1ZGlvRm9ybWF0IkgKC0F1ZGlvRm9ybWF0EhwK",
+            "GEFVRElPX0ZPUk1BVF9VTlNQRUNJRklFRBAAEgkKBU1VTEFXEAESBwoDTVAz",
+            "EAISBwoDT0dHEAMaOAoWSW5zaWdodHNFeHBvcnRTZXR0aW5ncxIeChZlbmFi",
+            "bGVfaW5zaWdodHNfZXhwb3J0GAEgASgIIlAKEVJlZGFjdGlvblN0cmF0ZWd5",
+            "EiIKHlJFREFDVElPTl9TVFJBVEVHWV9VTlNQRUNJRklFRBAAEhcKE1JFREFD",
+            "VF9XSVRIX1NFUlZJQ0UQASJKCg5SZWRhY3Rpb25TY29wZRIfChtSRURBQ1RJ",
+            "T05fU0NPUEVfVU5TUEVDSUZJRUQQABIXChNSRURBQ1RfRElTS19TVE9SQUdF",
+            "EAIiSAoNUHVyZ2VEYXRhVHlwZRIfChtQVVJHRV9EQVRBX1RZUEVfVU5TUEVD",
+            "SUZJRUQQABIWChJESUFMT0dGTE9XX0hJU1RPUlkQATp96kF6CipkaWFsb2dm",
+            "bG93Lmdvb2dsZWFwaXMuY29tL1NlY3VyaXR5U2V0dGluZ3MSTHByb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9zZWN1cml0eVNldHRp",
+            "bmdzL3tzZWN1cml0eV9zZXR0aW5nc31CEAoOZGF0YV9yZXRlbnRpb24y7wkK",
+            "F1NlY3VyaXR5U2V0dGluZ3NTZXJ2aWNlEvMBChZDcmVhdGVTZWN1cml0eVNl",
+            "dHRpbmdzEjwuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuQ3JlYXRl",
+            "U2VjdXJpdHlTZXR0aW5nc1JlcXVlc3QaLy5nb29nbGUuY2xvdWQuZGlhbG9n",
+            "Zmxvdy5jeC52My5TZWN1cml0eVNldHRpbmdzImqC0+STAkkiNC92My97cGFy",
+            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3NlY3VyaXR5U2V0dGluZ3M6",
+            "EXNlY3VyaXR5X3NldHRpbmdz2kEYcGFyZW50LHNlY3VyaXR5X3NldHRpbmdz",
+            "EsYBChNHZXRTZWN1cml0eVNldHRpbmdzEjkuZ29vZ2xlLmNsb3VkLmRpYWxv",
+            "Z2Zsb3cuY3gudjMuR2V0U2VjdXJpdHlTZXR0aW5nc1JlcXVlc3QaLy5nb29n",
+            "bGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5TZWN1cml0eVNldHRpbmdzIkOC",
+            "0+STAjYSNC92My97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3NlY3Vy",
+            "aXR5U2V0dGluZ3MvKn3aQQRuYW1lEosCChZVcGRhdGVTZWN1cml0eVNldHRp",
+            "bmdzEjwuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuVXBkYXRlU2Vj",
+            "dXJpdHlTZXR0aW5nc1JlcXVlc3QaLy5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
+            "dy5jeC52My5TZWN1cml0eVNldHRpbmdzIoEBgtPkkwJbMkYvdjMve3NlY3Vy",
+            "aXR5X3NldHRpbmdzLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zZWN1",
+            "cml0eVNldHRpbmdzLyp9OhFzZWN1cml0eV9zZXR0aW5nc9pBHXNlY3VyaXR5",
+            "X3NldHRpbmdzLHVwZGF0ZV9tYXNrEtYBChRMaXN0U2VjdXJpdHlTZXR0aW5n",
+            "cxI6Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkxpc3RTZWN1cml0",
+            "eVNldHRpbmdzUmVxdWVzdBo7Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4",
+            "LnYzLkxpc3RTZWN1cml0eVNldHRpbmdzUmVzcG9uc2UiRYLT5JMCNhI0L3Yz",
+            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vc2VjdXJpdHlTZXR0",
+            "aW5nc9pBBnBhcmVudBKzAQoWRGVsZXRlU2VjdXJpdHlTZXR0aW5ncxI8Lmdv",
+            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkRlbGV0ZVNlY3VyaXR5U2V0",
+            "dGluZ3NSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkOC0+STAjYq",
+            "NC92My97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3NlY3VyaXR5U2V0",
+            "dGluZ3MvKn3aQQRuYW1lGnjKQRlkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29t",
+            "0kFZaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0",
+            "Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2RpYWxvZ2Zs",
+            "b3dC8AQKIWNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52M0IVU2Vj",
+            "dXJpdHlTZXR0aW5nc1Byb3RvUAFaP2dvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
+            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvZGlhbG9nZmxvdy9jeC92MztjePgBAaIC",
+            "AkRGqgIdR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuQ3guVjPqAiFHb29nbGU6",
+            "OkNsb3VkOjpEaWFsb2dmbG93OjpDWDo6VjPqQcgBCiJkbHAuZ29vZ2xlYXBp",
+            "cy5jb20vSW5zcGVjdFRlbXBsYXRlElVvcmdhbml6YXRpb25zL3tvcmdhbml6",
+            "YXRpb259L2xvY2F0aW9ucy97bG9jYXRpb259L2luc3BlY3RUZW1wbGF0ZXMv",
+            "e2luc3BlY3RfdGVtcGxhdGV9Ektwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vaW5zcGVjdFRlbXBsYXRlcy97aW5zcGVjdF90ZW1w",
+            "bGF0ZX3qQdcBCiVkbHAuZ29vZ2xlYXBpcy5jb20vRGVpZGVudGlmeVRlbXBs",
+            "YXRlEltvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0aW9ucy97",
+            "bG9jYXRpb259L2RlaWRlbnRpZnlUZW1wbGF0ZXMve2RlaWRlbnRpZnlfdGVt",
+            "cGxhdGV9ElFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
+            "bn0vZGVpZGVudGlmeVRlbXBsYXRlcy97ZGVpZGVudGlmeV90ZW1wbGF0ZX1i",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -123,7 +132,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsResponse), global::Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsResponse.Parser, new[]{ "SecuritySettings", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.CreateSecuritySettingsRequest), global::Google.Cloud.Dialogflow.Cx.V3.CreateSecuritySettingsRequest.Parser, new[]{ "Parent", "SecuritySettings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.DeleteSecuritySettingsRequest), global::Google.Cloud.Dialogflow.Cx.V3.DeleteSecuritySettingsRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings), global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Parser, new[]{ "Name", "DisplayName", "RedactionStrategy", "RedactionScope", "InspectTemplate", "DeidentifyTemplate", "RetentionWindowDays", "PurgeDataTypes", "InsightsExportSettings" }, new[]{ "DataRetention" }, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.RedactionStrategy), typeof(global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.RedactionScope), typeof(global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.PurgeDataType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.InsightsExportSettings), global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.InsightsExportSettings.Parser, new[]{ "EnableInsightsExport" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings), global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Parser, new[]{ "Name", "DisplayName", "RedactionStrategy", "RedactionScope", "InspectTemplate", "DeidentifyTemplate", "RetentionWindowDays", "PurgeDataTypes", "AudioExportSettings", "InsightsExportSettings" }, new[]{ "DataRetention" }, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.RedactionStrategy), typeof(global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.RedactionScope), typeof(global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.PurgeDataType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.AudioExportSettings), global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.AudioExportSettings.Parser, new[]{ "GcsBucket", "AudioExportPattern", "EnableAudioRedaction", "AudioFormat" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.AudioExportSettings.Types.AudioFormat) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.InsightsExportSettings), global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.InsightsExportSettings.Parser, new[]{ "EnableInsightsExport" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -1572,6 +1582,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       inspectTemplate_ = other.inspectTemplate_;
       deidentifyTemplate_ = other.deidentifyTemplate_;
       purgeDataTypes_ = other.purgeDataTypes_.Clone();
+      audioExportSettings_ = other.audioExportSettings_ != null ? other.audioExportSettings_.Clone() : null;
       insightsExportSettings_ = other.insightsExportSettings_ != null ? other.insightsExportSettings_.Clone() : null;
       switch (other.DataRetentionCase) {
         case DataRetentionOneofCase.RetentionWindowDays:
@@ -1755,6 +1766,33 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       get { return purgeDataTypes_; }
     }
 
+    /// <summary>Field number for the "audio_export_settings" field.</summary>
+    public const int AudioExportSettingsFieldNumber = 12;
+    private global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.AudioExportSettings audioExportSettings_;
+    /// <summary>
+    /// Controls audio export settings for post-conversation analytics when
+    /// ingesting audio to conversations via [Participants.AnalyzeContent][] or
+    /// [Participants.StreamingAnalyzeContent][].
+    ///
+    /// If [retention_strategy][google.cloud.dialogflow.cx.v3.SecuritySettings.retention_strategy] is set to REMOVE_AFTER_CONVERSATION or
+    /// [audio_export_settings.gcs_bucket][] is empty, audio export is disabled.
+    ///
+    /// If audio export is enabled, audio is recorded and saved to
+    /// [audio_export_settings.gcs_bucket][], subject to retention policy of
+    /// [audio_export_settings.gcs_bucket][].
+    ///
+    /// This setting won't effect audio input for implicit sessions via
+    /// [Sessions.DetectIntent][google.cloud.dialogflow.cx.v3.Sessions.DetectIntent] or [Sessions.StreamingDetectIntent][google.cloud.dialogflow.cx.v3.Sessions.StreamingDetectIntent].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.AudioExportSettings AudioExportSettings {
+      get { return audioExportSettings_; }
+      set {
+        audioExportSettings_ = value;
+      }
+    }
+
     /// <summary>Field number for the "insights_export_settings" field.</summary>
     public const int InsightsExportSettingsFieldNumber = 13;
     private global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.InsightsExportSettings insightsExportSettings_;
@@ -1817,6 +1855,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (DeidentifyTemplate != other.DeidentifyTemplate) return false;
       if (RetentionWindowDays != other.RetentionWindowDays) return false;
       if(!purgeDataTypes_.Equals(other.purgeDataTypes_)) return false;
+      if (!object.Equals(AudioExportSettings, other.AudioExportSettings)) return false;
       if (!object.Equals(InsightsExportSettings, other.InsightsExportSettings)) return false;
       if (DataRetentionCase != other.DataRetentionCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1834,6 +1873,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (DeidentifyTemplate.Length != 0) hash ^= DeidentifyTemplate.GetHashCode();
       if (dataRetentionCase_ == DataRetentionOneofCase.RetentionWindowDays) hash ^= RetentionWindowDays.GetHashCode();
       hash ^= purgeDataTypes_.GetHashCode();
+      if (audioExportSettings_ != null) hash ^= AudioExportSettings.GetHashCode();
       if (insightsExportSettings_ != null) hash ^= InsightsExportSettings.GetHashCode();
       hash ^= (int) dataRetentionCase_;
       if (_unknownFields != null) {
@@ -1879,6 +1919,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(74);
         output.WriteString(InspectTemplate);
       }
+      if (audioExportSettings_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(AudioExportSettings);
+      }
       if (insightsExportSettings_ != null) {
         output.WriteRawTag(106);
         output.WriteMessage(InsightsExportSettings);
@@ -1922,6 +1966,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(74);
         output.WriteString(InspectTemplate);
       }
+      if (audioExportSettings_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(AudioExportSettings);
+      }
       if (insightsExportSettings_ != null) {
         output.WriteRawTag(106);
         output.WriteMessage(InsightsExportSettings);
@@ -1962,6 +2010,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(RetentionWindowDays);
       }
       size += purgeDataTypes_.CalculateSize(_repeated_purgeDataTypes_codec);
+      if (audioExportSettings_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AudioExportSettings);
+      }
       if (insightsExportSettings_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(InsightsExportSettings);
       }
@@ -1996,6 +2047,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         DeidentifyTemplate = other.DeidentifyTemplate;
       }
       purgeDataTypes_.Add(other.purgeDataTypes_);
+      if (other.audioExportSettings_ != null) {
+        if (audioExportSettings_ == null) {
+          AudioExportSettings = new global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.AudioExportSettings();
+        }
+        AudioExportSettings.MergeFrom(other.AudioExportSettings);
+      }
       if (other.insightsExportSettings_ != null) {
         if (insightsExportSettings_ == null) {
           InsightsExportSettings = new global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.InsightsExportSettings();
@@ -2052,6 +2109,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             InspectTemplate = input.ReadString();
             break;
           }
+          case 98: {
+            if (audioExportSettings_ == null) {
+              AudioExportSettings = new global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.AudioExportSettings();
+            }
+            input.ReadMessage(AudioExportSettings);
+            break;
+          }
           case 106: {
             if (insightsExportSettings_ == null) {
               InsightsExportSettings = new global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.InsightsExportSettings();
@@ -2105,6 +2169,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           }
           case 74: {
             InspectTemplate = input.ReadString();
+            break;
+          }
+          case 98: {
+            if (audioExportSettings_ == null) {
+              AudioExportSettings = new global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.AudioExportSettings();
+            }
+            input.ReadMessage(AudioExportSettings);
             break;
           }
           case 106: {
@@ -2174,6 +2245,356 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
+      /// Settings for exporting audio.
+      /// </summary>
+      public sealed partial class AudioExportSettings : pb::IMessage<AudioExportSettings>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<AudioExportSettings> _parser = new pb::MessageParser<AudioExportSettings>(() => new AudioExportSettings());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<AudioExportSettings> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AudioExportSettings() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AudioExportSettings(AudioExportSettings other) : this() {
+          gcsBucket_ = other.gcsBucket_;
+          audioExportPattern_ = other.audioExportPattern_;
+          enableAudioRedaction_ = other.enableAudioRedaction_;
+          audioFormat_ = other.audioFormat_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AudioExportSettings Clone() {
+          return new AudioExportSettings(this);
+        }
+
+        /// <summary>Field number for the "gcs_bucket" field.</summary>
+        public const int GcsBucketFieldNumber = 1;
+        private string gcsBucket_ = "";
+        /// <summary>
+        /// Cloud Storage bucket to export audio record to. You need to grant
+        /// `service-&lt;Conversation Project
+        /// Number>@gcp-sa-dialogflow.iam.gserviceaccount.com` the `Storage Object
+        /// Admin` role in this bucket.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string GcsBucket {
+          get { return gcsBucket_; }
+          set {
+            gcsBucket_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "audio_export_pattern" field.</summary>
+        public const int AudioExportPatternFieldNumber = 2;
+        private string audioExportPattern_ = "";
+        /// <summary>
+        /// Filename pattern for exported audio.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string AudioExportPattern {
+          get { return audioExportPattern_; }
+          set {
+            audioExportPattern_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "enable_audio_redaction" field.</summary>
+        public const int EnableAudioRedactionFieldNumber = 3;
+        private bool enableAudioRedaction_;
+        /// <summary>
+        /// Enable audio redaction if it is true.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool EnableAudioRedaction {
+          get { return enableAudioRedaction_; }
+          set {
+            enableAudioRedaction_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "audio_format" field.</summary>
+        public const int AudioFormatFieldNumber = 4;
+        private global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.AudioExportSettings.Types.AudioFormat audioFormat_ = global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.AudioExportSettings.Types.AudioFormat.Unspecified;
+        /// <summary>
+        /// File format for exported audio file. Currently only in telephony
+        /// recordings.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.AudioExportSettings.Types.AudioFormat AudioFormat {
+          get { return audioFormat_; }
+          set {
+            audioFormat_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as AudioExportSettings);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(AudioExportSettings other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (GcsBucket != other.GcsBucket) return false;
+          if (AudioExportPattern != other.AudioExportPattern) return false;
+          if (EnableAudioRedaction != other.EnableAudioRedaction) return false;
+          if (AudioFormat != other.AudioFormat) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (GcsBucket.Length != 0) hash ^= GcsBucket.GetHashCode();
+          if (AudioExportPattern.Length != 0) hash ^= AudioExportPattern.GetHashCode();
+          if (EnableAudioRedaction != false) hash ^= EnableAudioRedaction.GetHashCode();
+          if (AudioFormat != global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.AudioExportSettings.Types.AudioFormat.Unspecified) hash ^= AudioFormat.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (GcsBucket.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(GcsBucket);
+          }
+          if (AudioExportPattern.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(AudioExportPattern);
+          }
+          if (EnableAudioRedaction != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(EnableAudioRedaction);
+          }
+          if (AudioFormat != global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.AudioExportSettings.Types.AudioFormat.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) AudioFormat);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (GcsBucket.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(GcsBucket);
+          }
+          if (AudioExportPattern.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(AudioExportPattern);
+          }
+          if (EnableAudioRedaction != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(EnableAudioRedaction);
+          }
+          if (AudioFormat != global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.AudioExportSettings.Types.AudioFormat.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) AudioFormat);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (GcsBucket.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsBucket);
+          }
+          if (AudioExportPattern.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(AudioExportPattern);
+          }
+          if (EnableAudioRedaction != false) {
+            size += 1 + 1;
+          }
+          if (AudioFormat != global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.AudioExportSettings.Types.AudioFormat.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AudioFormat);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(AudioExportSettings other) {
+          if (other == null) {
+            return;
+          }
+          if (other.GcsBucket.Length != 0) {
+            GcsBucket = other.GcsBucket;
+          }
+          if (other.AudioExportPattern.Length != 0) {
+            AudioExportPattern = other.AudioExportPattern;
+          }
+          if (other.EnableAudioRedaction != false) {
+            EnableAudioRedaction = other.EnableAudioRedaction;
+          }
+          if (other.AudioFormat != global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.AudioExportSettings.Types.AudioFormat.Unspecified) {
+            AudioFormat = other.AudioFormat;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                GcsBucket = input.ReadString();
+                break;
+              }
+              case 18: {
+                AudioExportPattern = input.ReadString();
+                break;
+              }
+              case 24: {
+                EnableAudioRedaction = input.ReadBool();
+                break;
+              }
+              case 32: {
+                AudioFormat = (global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.AudioExportSettings.Types.AudioFormat) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                GcsBucket = input.ReadString();
+                break;
+              }
+              case 18: {
+                AudioExportPattern = input.ReadString();
+                break;
+              }
+              case 24: {
+                EnableAudioRedaction = input.ReadBool();
+                break;
+              }
+              case 32: {
+                AudioFormat = (global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.AudioExportSettings.Types.AudioFormat) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the AudioExportSettings message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// File format for exported audio file. Currently only in telephony
+          /// recordings.
+          /// </summary>
+          public enum AudioFormat {
+            /// <summary>
+            /// Unspecified. Do not use.
+            /// </summary>
+            [pbr::OriginalName("AUDIO_FORMAT_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// G.711 mu-law PCM with 8kHz sample rate.
+            /// </summary>
+            [pbr::OriginalName("MULAW")] Mulaw = 1,
+            /// <summary>
+            /// MP3 file format.
+            /// </summary>
+            [pbr::OriginalName("MP3")] Mp3 = 2,
+            /// <summary>
+            /// OGG Vorbis.
+            /// </summary>
+            [pbr::OriginalName("OGG")] Ogg = 3,
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
       /// Settings for exporting conversations to
       /// [Insights](https://cloud.google.com/contact-center/insights/docs).
       /// </summary>
@@ -2191,7 +2612,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Descriptor.NestedTypes[0]; }
+          get { return global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
