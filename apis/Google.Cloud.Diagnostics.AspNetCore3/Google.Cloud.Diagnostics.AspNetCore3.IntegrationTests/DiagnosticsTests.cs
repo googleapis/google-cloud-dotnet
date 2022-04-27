@@ -112,7 +112,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
                             TestEnvironment.GetTestProjectId(), EntryData.Service, EntryData.Version,
                             traceOptions: TraceOptions.Create(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate)),
                             loggingOptions: LoggingOptions.Create(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate)),
-                            errorReportingOptions: ErrorReportingOptions.CreateInstance(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate)))));
+                            errorReportingOptions: ErrorReportingOptions.Create(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate)))));
 
             using var server = GetTestServer(hostBuilder);
             using var client = server.CreateClient();
