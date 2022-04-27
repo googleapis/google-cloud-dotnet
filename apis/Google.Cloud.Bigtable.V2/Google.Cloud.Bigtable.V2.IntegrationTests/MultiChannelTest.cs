@@ -27,7 +27,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
         public MultiChannelTest(BigtableFixture fixture) => _fixture = fixture;
 
-        [SkippableFact(Skip = "See issue 2675")]
+        [SkippableFact]
         public async Task SeparateSubchannels()
         {
             Skip.If(_fixture.RunningAgainstEmulator);
