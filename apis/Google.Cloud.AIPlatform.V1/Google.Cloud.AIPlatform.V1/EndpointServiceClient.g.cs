@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -234,9 +234,8 @@ namespace Google.Cloud.AIPlatform.V1
         public EndpointServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public EndpointServiceClientBuilder()
+        public EndpointServiceClientBuilder() : base(EndpointServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = EndpointServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref EndpointServiceClient client);
@@ -263,29 +262,18 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return EndpointServiceClient.Create(callInvoker, Settings);
+            return EndpointServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<EndpointServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return EndpointServiceClient.Create(callInvoker, Settings);
+            return EndpointServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => EndpointServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => EndpointServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => EndpointServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>EndpointService client wrapper, for convenient use.</summary>
@@ -313,19 +301,10 @@ namespace Google.Cloud.AIPlatform.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(EndpointService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="EndpointServiceClient"/> using the default credentials, endpoint and
@@ -352,8 +331,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="EndpointServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="EndpointServiceClient"/>.</returns>
-        internal static EndpointServiceClient Create(grpccore::CallInvoker callInvoker, EndpointServiceSettings settings = null)
+        internal static EndpointServiceClient Create(grpccore::CallInvoker callInvoker, EndpointServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -362,7 +342,7 @@ namespace Google.Cloud.AIPlatform.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             EndpointService.EndpointServiceClient grpcClient = new EndpointService.EndpointServiceClient(callInvoker);
-            return new EndpointServiceClientImpl(grpcClient, settings);
+            return new EndpointServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1713,34 +1693,35 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="EndpointServiceSettings"/> used within this client.</param>
-        public EndpointServiceClientImpl(EndpointService.EndpointServiceClient grpcClient, EndpointServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public EndpointServiceClientImpl(EndpointService.EndpointServiceClient grpcClient, EndpointServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             EndpointServiceSettings effectiveSettings = settings ?? EndpointServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateEndpointOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEndpointOperationsSettings);
-            DeleteEndpointOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteEndpointOperationsSettings);
-            DeployModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeployModelOperationsSettings);
-            UndeployModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeployModelOperationsSettings);
-            _callCreateEndpoint = clientHelper.BuildApiCall<CreateEndpointRequest, lro::Operation>(grpcClient.CreateEndpointAsync, grpcClient.CreateEndpoint, effectiveSettings.CreateEndpointSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateEndpointOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEndpointOperationsSettings, logger);
+            DeleteEndpointOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteEndpointOperationsSettings, logger);
+            DeployModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeployModelOperationsSettings, logger);
+            UndeployModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeployModelOperationsSettings, logger);
+            _callCreateEndpoint = clientHelper.BuildApiCall<CreateEndpointRequest, lro::Operation>("CreateEndpoint", grpcClient.CreateEndpointAsync, grpcClient.CreateEndpoint, effectiveSettings.CreateEndpointSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateEndpoint);
             Modify_CreateEndpointApiCall(ref _callCreateEndpoint);
-            _callGetEndpoint = clientHelper.BuildApiCall<GetEndpointRequest, Endpoint>(grpcClient.GetEndpointAsync, grpcClient.GetEndpoint, effectiveSettings.GetEndpointSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetEndpoint = clientHelper.BuildApiCall<GetEndpointRequest, Endpoint>("GetEndpoint", grpcClient.GetEndpointAsync, grpcClient.GetEndpoint, effectiveSettings.GetEndpointSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetEndpoint);
             Modify_GetEndpointApiCall(ref _callGetEndpoint);
-            _callListEndpoints = clientHelper.BuildApiCall<ListEndpointsRequest, ListEndpointsResponse>(grpcClient.ListEndpointsAsync, grpcClient.ListEndpoints, effectiveSettings.ListEndpointsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListEndpoints = clientHelper.BuildApiCall<ListEndpointsRequest, ListEndpointsResponse>("ListEndpoints", grpcClient.ListEndpointsAsync, grpcClient.ListEndpoints, effectiveSettings.ListEndpointsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListEndpoints);
             Modify_ListEndpointsApiCall(ref _callListEndpoints);
-            _callUpdateEndpoint = clientHelper.BuildApiCall<UpdateEndpointRequest, Endpoint>(grpcClient.UpdateEndpointAsync, grpcClient.UpdateEndpoint, effectiveSettings.UpdateEndpointSettings).WithGoogleRequestParam("endpoint.name", request => request.Endpoint?.Name);
+            _callUpdateEndpoint = clientHelper.BuildApiCall<UpdateEndpointRequest, Endpoint>("UpdateEndpoint", grpcClient.UpdateEndpointAsync, grpcClient.UpdateEndpoint, effectiveSettings.UpdateEndpointSettings).WithGoogleRequestParam("endpoint.name", request => request.Endpoint?.Name);
             Modify_ApiCall(ref _callUpdateEndpoint);
             Modify_UpdateEndpointApiCall(ref _callUpdateEndpoint);
-            _callDeleteEndpoint = clientHelper.BuildApiCall<DeleteEndpointRequest, lro::Operation>(grpcClient.DeleteEndpointAsync, grpcClient.DeleteEndpoint, effectiveSettings.DeleteEndpointSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteEndpoint = clientHelper.BuildApiCall<DeleteEndpointRequest, lro::Operation>("DeleteEndpoint", grpcClient.DeleteEndpointAsync, grpcClient.DeleteEndpoint, effectiveSettings.DeleteEndpointSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteEndpoint);
             Modify_DeleteEndpointApiCall(ref _callDeleteEndpoint);
-            _callDeployModel = clientHelper.BuildApiCall<DeployModelRequest, lro::Operation>(grpcClient.DeployModelAsync, grpcClient.DeployModel, effectiveSettings.DeployModelSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
+            _callDeployModel = clientHelper.BuildApiCall<DeployModelRequest, lro::Operation>("DeployModel", grpcClient.DeployModelAsync, grpcClient.DeployModel, effectiveSettings.DeployModelSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
             Modify_ApiCall(ref _callDeployModel);
             Modify_DeployModelApiCall(ref _callDeployModel);
-            _callUndeployModel = clientHelper.BuildApiCall<UndeployModelRequest, lro::Operation>(grpcClient.UndeployModelAsync, grpcClient.UndeployModel, effectiveSettings.UndeployModelSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
+            _callUndeployModel = clientHelper.BuildApiCall<UndeployModelRequest, lro::Operation>("UndeployModel", grpcClient.UndeployModelAsync, grpcClient.UndeployModel, effectiveSettings.UndeployModelSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
             Modify_ApiCall(ref _callUndeployModel);
             Modify_UndeployModelApiCall(ref _callUndeployModel);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

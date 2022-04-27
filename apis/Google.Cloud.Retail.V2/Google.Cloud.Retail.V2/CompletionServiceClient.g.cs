@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -128,9 +128,8 @@ namespace Google.Cloud.Retail.V2
         public CompletionServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public CompletionServiceClientBuilder()
+        public CompletionServiceClientBuilder() : base(CompletionServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = CompletionServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref CompletionServiceClient client);
@@ -157,29 +156,18 @@ namespace Google.Cloud.Retail.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return CompletionServiceClient.Create(callInvoker, Settings);
+            return CompletionServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<CompletionServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return CompletionServiceClient.Create(callInvoker, Settings);
+            return CompletionServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => CompletionServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => CompletionServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => CompletionServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>CompletionService client wrapper, for convenient use.</summary>
@@ -209,19 +197,10 @@ namespace Google.Cloud.Retail.V2
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(CompletionService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="CompletionServiceClient"/> using the default credentials, endpoint and
@@ -248,8 +227,9 @@ namespace Google.Cloud.Retail.V2
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="CompletionServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="CompletionServiceClient"/>.</returns>
-        internal static CompletionServiceClient Create(grpccore::CallInvoker callInvoker, CompletionServiceSettings settings = null)
+        internal static CompletionServiceClient Create(grpccore::CallInvoker callInvoker, CompletionServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -258,7 +238,7 @@ namespace Google.Cloud.Retail.V2
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             CompletionService.CompletionServiceClient grpcClient = new CompletionService.CompletionServiceClient(callInvoker);
-            return new CompletionServiceClientImpl(grpcClient, settings);
+            return new CompletionServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -410,16 +390,17 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="CompletionServiceSettings"/> used within this client.</param>
-        public CompletionServiceClientImpl(CompletionService.CompletionServiceClient grpcClient, CompletionServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public CompletionServiceClientImpl(CompletionService.CompletionServiceClient grpcClient, CompletionServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             CompletionServiceSettings effectiveSettings = settings ?? CompletionServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            ImportCompletionDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportCompletionDataOperationsSettings);
-            _callCompleteQuery = clientHelper.BuildApiCall<CompleteQueryRequest, CompleteQueryResponse>(grpcClient.CompleteQueryAsync, grpcClient.CompleteQuery, effectiveSettings.CompleteQuerySettings).WithGoogleRequestParam("catalog", request => request.Catalog);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            ImportCompletionDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportCompletionDataOperationsSettings, logger);
+            _callCompleteQuery = clientHelper.BuildApiCall<CompleteQueryRequest, CompleteQueryResponse>("CompleteQuery", grpcClient.CompleteQueryAsync, grpcClient.CompleteQuery, effectiveSettings.CompleteQuerySettings).WithGoogleRequestParam("catalog", request => request.Catalog);
             Modify_ApiCall(ref _callCompleteQuery);
             Modify_CompleteQueryApiCall(ref _callCompleteQuery);
-            _callImportCompletionData = clientHelper.BuildApiCall<ImportCompletionDataRequest, lro::Operation>(grpcClient.ImportCompletionDataAsync, grpcClient.ImportCompletionData, effectiveSettings.ImportCompletionDataSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callImportCompletionData = clientHelper.BuildApiCall<ImportCompletionDataRequest, lro::Operation>("ImportCompletionData", grpcClient.ImportCompletionDataAsync, grpcClient.ImportCompletionData, effectiveSettings.ImportCompletionDataSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callImportCompletionData);
             Modify_ImportCompletionDataApiCall(ref _callImportCompletionData);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

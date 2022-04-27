@@ -50,7 +50,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
                 ValidateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateContact(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             Contact response = client.CreateContact(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -78,7 +78,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
                 ValidateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateContactAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Contact>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             Contact responseCallSettings = await client.CreateContactAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Contact responseCancellationToken = await client.CreateContactAsync(request, st::CancellationToken.None);
@@ -108,7 +108,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
                 ValidateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateContact(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             Contact response = client.CreateContact(request.Parent, request.Contact);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -136,7 +136,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
                 ValidateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateContactAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Contact>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             Contact responseCallSettings = await client.CreateContactAsync(request.Parent, request.Contact, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Contact responseCancellationToken = await client.CreateContactAsync(request.Parent, request.Contact, st::CancellationToken.None);
@@ -166,7 +166,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
                 ValidateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateContact(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             Contact response = client.CreateContact(request.ParentAsProjectName, request.Contact);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -194,7 +194,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
                 ValidateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateContactAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Contact>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             Contact responseCallSettings = await client.CreateContactAsync(request.ParentAsProjectName, request.Contact, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Contact responseCancellationToken = await client.CreateContactAsync(request.ParentAsProjectName, request.Contact, st::CancellationToken.None);
@@ -224,7 +224,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
                 ValidateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateContact(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             Contact response = client.CreateContact(request.ParentAsFolderName, request.Contact);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -252,7 +252,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
                 ValidateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateContactAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Contact>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             Contact responseCallSettings = await client.CreateContactAsync(request.ParentAsFolderName, request.Contact, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Contact responseCancellationToken = await client.CreateContactAsync(request.ParentAsFolderName, request.Contact, st::CancellationToken.None);
@@ -282,7 +282,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
                 ValidateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateContact(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             Contact response = client.CreateContact(request.ParentAsOrganizationName, request.Contact);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -310,7 +310,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
                 ValidateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateContactAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Contact>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             Contact responseCallSettings = await client.CreateContactAsync(request.ParentAsOrganizationName, request.Contact, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Contact responseCancellationToken = await client.CreateContactAsync(request.ParentAsOrganizationName, request.Contact, st::CancellationToken.None);
@@ -340,7 +340,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
                 ValidateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateContact(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             Contact response = client.UpdateContact(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -368,7 +368,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
                 ValidateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateContactAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Contact>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             Contact responseCallSettings = await client.UpdateContactAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Contact responseCancellationToken = await client.UpdateContactAsync(request, st::CancellationToken.None);
@@ -398,7 +398,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
                 ValidateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateContact(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             Contact response = client.UpdateContact(request.Contact, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -426,7 +426,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
                 ValidateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateContactAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Contact>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             Contact responseCallSettings = await client.UpdateContactAsync(request.Contact, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Contact responseCancellationToken = await client.UpdateContactAsync(request.Contact, request.UpdateMask, st::CancellationToken.None);
@@ -455,7 +455,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
                 ValidateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetContact(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             Contact response = client.GetContact(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -482,7 +482,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
                 ValidateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetContactAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Contact>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             Contact responseCallSettings = await client.GetContactAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Contact responseCancellationToken = await client.GetContactAsync(request, st::CancellationToken.None);
@@ -511,7 +511,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
                 ValidateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetContact(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             Contact response = client.GetContact(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -538,7 +538,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
                 ValidateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetContactAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Contact>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             Contact responseCallSettings = await client.GetContactAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Contact responseCancellationToken = await client.GetContactAsync(request.Name, st::CancellationToken.None);
@@ -567,7 +567,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
                 ValidateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetContact(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             Contact response = client.GetContact(request.ContactName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -594,7 +594,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
                 ValidateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetContactAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Contact>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             Contact responseCallSettings = await client.GetContactAsync(request.ContactName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Contact responseCancellationToken = await client.GetContactAsync(request.ContactName, st::CancellationToken.None);
@@ -612,7 +612,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteContact(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteContact(request);
             mockGrpcClient.VerifyAll();
         }
@@ -627,7 +627,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteContactAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteContactAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteContactAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -643,7 +643,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteContact(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteContact(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -658,7 +658,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteContactAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteContactAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteContactAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -674,7 +674,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteContact(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteContact(request.ContactName);
             mockGrpcClient.VerifyAll();
         }
@@ -689,7 +689,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteContactAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteContactAsync(request.ContactName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteContactAsync(request.ContactName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -710,7 +710,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.SendTestMessage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             client.SendTestMessage(request);
             mockGrpcClient.VerifyAll();
         }
@@ -730,7 +730,7 @@ namespace Google.Cloud.EssentialContacts.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.SendTestMessageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null);
+            EssentialContactsServiceClient client = new EssentialContactsServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.SendTestMessageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.SendTestMessageAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

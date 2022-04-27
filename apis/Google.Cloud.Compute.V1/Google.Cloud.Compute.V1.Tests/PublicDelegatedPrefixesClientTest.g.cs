@@ -58,7 +58,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IsLiveMigration = true,
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PublicDelegatedPrefixesClient client = new PublicDelegatedPrefixesClientImpl(mockGrpcClient.Object, null);
+            PublicDelegatedPrefixesClient client = new PublicDelegatedPrefixesClientImpl(mockGrpcClient.Object, null, null);
             PublicDelegatedPrefix response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -95,7 +95,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IsLiveMigration = true,
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PublicDelegatedPrefix>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PublicDelegatedPrefixesClient client = new PublicDelegatedPrefixesClientImpl(mockGrpcClient.Object, null);
+            PublicDelegatedPrefixesClient client = new PublicDelegatedPrefixesClientImpl(mockGrpcClient.Object, null, null);
             PublicDelegatedPrefix responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PublicDelegatedPrefix responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -134,7 +134,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IsLiveMigration = true,
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PublicDelegatedPrefixesClient client = new PublicDelegatedPrefixesClientImpl(mockGrpcClient.Object, null);
+            PublicDelegatedPrefixesClient client = new PublicDelegatedPrefixesClientImpl(mockGrpcClient.Object, null, null);
             PublicDelegatedPrefix response = client.Get(request.Project, request.Region, request.PublicDelegatedPrefix);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -171,7 +171,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IsLiveMigration = true,
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PublicDelegatedPrefix>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PublicDelegatedPrefixesClient client = new PublicDelegatedPrefixesClientImpl(mockGrpcClient.Object, null);
+            PublicDelegatedPrefixesClient client = new PublicDelegatedPrefixesClientImpl(mockGrpcClient.Object, null, null);
             PublicDelegatedPrefix responseCallSettings = await client.GetAsync(request.Project, request.Region, request.PublicDelegatedPrefix, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PublicDelegatedPrefix responseCancellationToken = await client.GetAsync(request.Project, request.Region, request.PublicDelegatedPrefix, st::CancellationToken.None);

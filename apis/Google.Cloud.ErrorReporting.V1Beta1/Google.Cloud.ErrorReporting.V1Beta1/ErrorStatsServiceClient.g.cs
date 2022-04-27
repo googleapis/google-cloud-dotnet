@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -131,9 +131,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         public ErrorStatsServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ErrorStatsServiceClientBuilder()
+        public ErrorStatsServiceClientBuilder() : base(ErrorStatsServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ErrorStatsServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ErrorStatsServiceClient client);
@@ -160,29 +159,18 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ErrorStatsServiceClient.Create(callInvoker, Settings);
+            return ErrorStatsServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ErrorStatsServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ErrorStatsServiceClient.Create(callInvoker, Settings);
+            return ErrorStatsServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ErrorStatsServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ErrorStatsServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ErrorStatsServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ErrorStatsService client wrapper, for convenient use.</summary>
@@ -210,19 +198,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ErrorStatsService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ErrorStatsServiceClient"/> using the default credentials, endpoint and
@@ -249,8 +228,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ErrorStatsServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ErrorStatsServiceClient"/>.</returns>
-        internal static ErrorStatsServiceClient Create(grpccore::CallInvoker callInvoker, ErrorStatsServiceSettings settings = null)
+        internal static ErrorStatsServiceClient Create(grpccore::CallInvoker callInvoker, ErrorStatsServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -259,7 +239,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ErrorStatsService.ErrorStatsServiceClient grpcClient = new ErrorStatsService.ErrorStatsServiceClient(callInvoker);
-            return new ErrorStatsServiceClientImpl(grpcClient, settings);
+            return new ErrorStatsServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -760,18 +740,19 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ErrorStatsServiceSettings"/> used within this client.</param>
-        public ErrorStatsServiceClientImpl(ErrorStatsService.ErrorStatsServiceClient grpcClient, ErrorStatsServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ErrorStatsServiceClientImpl(ErrorStatsService.ErrorStatsServiceClient grpcClient, ErrorStatsServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ErrorStatsServiceSettings effectiveSettings = settings ?? ErrorStatsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListGroupStats = clientHelper.BuildApiCall<ListGroupStatsRequest, ListGroupStatsResponse>(grpcClient.ListGroupStatsAsync, grpcClient.ListGroupStats, effectiveSettings.ListGroupStatsSettings).WithGoogleRequestParam("project_name", request => request.ProjectName);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListGroupStats = clientHelper.BuildApiCall<ListGroupStatsRequest, ListGroupStatsResponse>("ListGroupStats", grpcClient.ListGroupStatsAsync, grpcClient.ListGroupStats, effectiveSettings.ListGroupStatsSettings).WithGoogleRequestParam("project_name", request => request.ProjectName);
             Modify_ApiCall(ref _callListGroupStats);
             Modify_ListGroupStatsApiCall(ref _callListGroupStats);
-            _callListEvents = clientHelper.BuildApiCall<ListEventsRequest, ListEventsResponse>(grpcClient.ListEventsAsync, grpcClient.ListEvents, effectiveSettings.ListEventsSettings).WithGoogleRequestParam("project_name", request => request.ProjectName);
+            _callListEvents = clientHelper.BuildApiCall<ListEventsRequest, ListEventsResponse>("ListEvents", grpcClient.ListEventsAsync, grpcClient.ListEvents, effectiveSettings.ListEventsSettings).WithGoogleRequestParam("project_name", request => request.ProjectName);
             Modify_ApiCall(ref _callListEvents);
             Modify_ListEventsApiCall(ref _callListEvents);
-            _callDeleteEvents = clientHelper.BuildApiCall<DeleteEventsRequest, DeleteEventsResponse>(grpcClient.DeleteEventsAsync, grpcClient.DeleteEvents, effectiveSettings.DeleteEventsSettings).WithGoogleRequestParam("project_name", request => request.ProjectName);
+            _callDeleteEvents = clientHelper.BuildApiCall<DeleteEventsRequest, DeleteEventsResponse>("DeleteEvents", grpcClient.DeleteEventsAsync, grpcClient.DeleteEvents, effectiveSettings.DeleteEventsSettings).WithGoogleRequestParam("project_name", request => request.ProjectName);
             Modify_ApiCall(ref _callDeleteEvents);
             Modify_DeleteEventsApiCall(ref _callDeleteEvents);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

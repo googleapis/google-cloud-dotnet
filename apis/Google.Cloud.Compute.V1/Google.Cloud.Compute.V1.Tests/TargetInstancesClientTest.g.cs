@@ -52,7 +52,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 NatPolicy = "nat_policy8dd30c47",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TargetInstancesClient client = new TargetInstancesClientImpl(mockGrpcClient.Object, null);
+            TargetInstancesClient client = new TargetInstancesClientImpl(mockGrpcClient.Object, null, null);
             TargetInstance response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -83,7 +83,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 NatPolicy = "nat_policy8dd30c47",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetInstance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TargetInstancesClient client = new TargetInstancesClientImpl(mockGrpcClient.Object, null);
+            TargetInstancesClient client = new TargetInstancesClientImpl(mockGrpcClient.Object, null, null);
             TargetInstance responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TargetInstance responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -116,7 +116,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 NatPolicy = "nat_policy8dd30c47",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TargetInstancesClient client = new TargetInstancesClientImpl(mockGrpcClient.Object, null);
+            TargetInstancesClient client = new TargetInstancesClientImpl(mockGrpcClient.Object, null, null);
             TargetInstance response = client.Get(request.Project, request.Zone, request.TargetInstance);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -147,7 +147,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 NatPolicy = "nat_policy8dd30c47",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetInstance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TargetInstancesClient client = new TargetInstancesClientImpl(mockGrpcClient.Object, null);
+            TargetInstancesClient client = new TargetInstancesClientImpl(mockGrpcClient.Object, null, null);
             TargetInstance responseCallSettings = await client.GetAsync(request.Project, request.Zone, request.TargetInstance, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TargetInstance responseCancellationToken = await client.GetAsync(request.Project, request.Zone, request.TargetInstance, st::CancellationToken.None);

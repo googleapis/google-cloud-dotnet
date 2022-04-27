@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -174,9 +174,8 @@ namespace Google.Cloud.Gaming.V1Beta
         public GameServerConfigsServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public GameServerConfigsServiceClientBuilder()
+        public GameServerConfigsServiceClientBuilder() : base(GameServerConfigsServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = GameServerConfigsServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref GameServerConfigsServiceClient client);
@@ -203,29 +202,18 @@ namespace Google.Cloud.Gaming.V1Beta
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return GameServerConfigsServiceClient.Create(callInvoker, Settings);
+            return GameServerConfigsServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<GameServerConfigsServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return GameServerConfigsServiceClient.Create(callInvoker, Settings);
+            return GameServerConfigsServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => GameServerConfigsServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => GameServerConfigsServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => GameServerConfigsServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>GameServerConfigsService client wrapper, for convenient use.</summary>
@@ -252,19 +240,10 @@ namespace Google.Cloud.Gaming.V1Beta
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(GameServerConfigsService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="GameServerConfigsServiceClient"/> using the default credentials,
@@ -294,8 +273,9 @@ namespace Google.Cloud.Gaming.V1Beta
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="GameServerConfigsServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="GameServerConfigsServiceClient"/>.</returns>
-        internal static GameServerConfigsServiceClient Create(grpccore::CallInvoker callInvoker, GameServerConfigsServiceSettings settings = null)
+        internal static GameServerConfigsServiceClient Create(grpccore::CallInvoker callInvoker, GameServerConfigsServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -304,7 +284,7 @@ namespace Google.Cloud.Gaming.V1Beta
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             GameServerConfigsService.GameServerConfigsServiceClient grpcClient = new GameServerConfigsService.GameServerConfigsServiceClient(callInvoker);
-            return new GameServerConfigsServiceClientImpl(grpcClient, settings);
+            return new GameServerConfigsServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -928,23 +908,24 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <param name="settings">
         /// The base <see cref="GameServerConfigsServiceSettings"/> used within this client.
         /// </param>
-        public GameServerConfigsServiceClientImpl(GameServerConfigsService.GameServerConfigsServiceClient grpcClient, GameServerConfigsServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public GameServerConfigsServiceClientImpl(GameServerConfigsService.GameServerConfigsServiceClient grpcClient, GameServerConfigsServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             GameServerConfigsServiceSettings effectiveSettings = settings ?? GameServerConfigsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateGameServerConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGameServerConfigOperationsSettings);
-            DeleteGameServerConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGameServerConfigOperationsSettings);
-            _callListGameServerConfigs = clientHelper.BuildApiCall<ListGameServerConfigsRequest, ListGameServerConfigsResponse>(grpcClient.ListGameServerConfigsAsync, grpcClient.ListGameServerConfigs, effectiveSettings.ListGameServerConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateGameServerConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGameServerConfigOperationsSettings, logger);
+            DeleteGameServerConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGameServerConfigOperationsSettings, logger);
+            _callListGameServerConfigs = clientHelper.BuildApiCall<ListGameServerConfigsRequest, ListGameServerConfigsResponse>("ListGameServerConfigs", grpcClient.ListGameServerConfigsAsync, grpcClient.ListGameServerConfigs, effectiveSettings.ListGameServerConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListGameServerConfigs);
             Modify_ListGameServerConfigsApiCall(ref _callListGameServerConfigs);
-            _callGetGameServerConfig = clientHelper.BuildApiCall<GetGameServerConfigRequest, GameServerConfig>(grpcClient.GetGameServerConfigAsync, grpcClient.GetGameServerConfig, effectiveSettings.GetGameServerConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetGameServerConfig = clientHelper.BuildApiCall<GetGameServerConfigRequest, GameServerConfig>("GetGameServerConfig", grpcClient.GetGameServerConfigAsync, grpcClient.GetGameServerConfig, effectiveSettings.GetGameServerConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetGameServerConfig);
             Modify_GetGameServerConfigApiCall(ref _callGetGameServerConfig);
-            _callCreateGameServerConfig = clientHelper.BuildApiCall<CreateGameServerConfigRequest, lro::Operation>(grpcClient.CreateGameServerConfigAsync, grpcClient.CreateGameServerConfig, effectiveSettings.CreateGameServerConfigSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateGameServerConfig = clientHelper.BuildApiCall<CreateGameServerConfigRequest, lro::Operation>("CreateGameServerConfig", grpcClient.CreateGameServerConfigAsync, grpcClient.CreateGameServerConfig, effectiveSettings.CreateGameServerConfigSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateGameServerConfig);
             Modify_CreateGameServerConfigApiCall(ref _callCreateGameServerConfig);
-            _callDeleteGameServerConfig = clientHelper.BuildApiCall<DeleteGameServerConfigRequest, lro::Operation>(grpcClient.DeleteGameServerConfigAsync, grpcClient.DeleteGameServerConfig, effectiveSettings.DeleteGameServerConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteGameServerConfig = clientHelper.BuildApiCall<DeleteGameServerConfigRequest, lro::Operation>("DeleteGameServerConfig", grpcClient.DeleteGameServerConfigAsync, grpcClient.DeleteGameServerConfig, effectiveSettings.DeleteGameServerConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteGameServerConfig);
             Modify_DeleteGameServerConfigApiCall(ref _callDeleteGameServerConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -220,9 +220,8 @@ namespace Google.Cloud.BinaryAuthorization.V1
         public BinauthzManagementServiceV1Settings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public BinauthzManagementServiceV1ClientBuilder()
+        public BinauthzManagementServiceV1ClientBuilder() : base(BinauthzManagementServiceV1Client.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = BinauthzManagementServiceV1Client.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref BinauthzManagementServiceV1Client client);
@@ -249,29 +248,18 @@ namespace Google.Cloud.BinaryAuthorization.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return BinauthzManagementServiceV1Client.Create(callInvoker, Settings);
+            return BinauthzManagementServiceV1Client.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<BinauthzManagementServiceV1Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return BinauthzManagementServiceV1Client.Create(callInvoker, Settings);
+            return BinauthzManagementServiceV1Client.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => BinauthzManagementServiceV1Client.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => BinauthzManagementServiceV1Client.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => BinauthzManagementServiceV1Client.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>BinauthzManagementServiceV1 client wrapper, for convenient use.</summary>
@@ -304,19 +292,10 @@ namespace Google.Cloud.BinaryAuthorization.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(BinauthzManagementServiceV1.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="BinauthzManagementServiceV1Client"/> using the default credentials,
@@ -346,8 +325,9 @@ namespace Google.Cloud.BinaryAuthorization.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="BinauthzManagementServiceV1Settings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="BinauthzManagementServiceV1Client"/>.</returns>
-        internal static BinauthzManagementServiceV1Client Create(grpccore::CallInvoker callInvoker, BinauthzManagementServiceV1Settings settings = null)
+        internal static BinauthzManagementServiceV1Client Create(grpccore::CallInvoker callInvoker, BinauthzManagementServiceV1Settings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -356,7 +336,7 @@ namespace Google.Cloud.BinaryAuthorization.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             BinauthzManagementServiceV1.BinauthzManagementServiceV1Client grpcClient = new BinauthzManagementServiceV1.BinauthzManagementServiceV1Client(callInvoker);
-            return new BinauthzManagementServiceV1ClientImpl(grpcClient, settings);
+            return new BinauthzManagementServiceV1ClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1301,30 +1281,31 @@ namespace Google.Cloud.BinaryAuthorization.V1
         /// <param name="settings">
         /// The base <see cref="BinauthzManagementServiceV1Settings"/> used within this client.
         /// </param>
-        public BinauthzManagementServiceV1ClientImpl(BinauthzManagementServiceV1.BinauthzManagementServiceV1Client grpcClient, BinauthzManagementServiceV1Settings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public BinauthzManagementServiceV1ClientImpl(BinauthzManagementServiceV1.BinauthzManagementServiceV1Client grpcClient, BinauthzManagementServiceV1Settings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             BinauthzManagementServiceV1Settings effectiveSettings = settings ?? BinauthzManagementServiceV1Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callGetPolicy = clientHelper.BuildApiCall<GetPolicyRequest, Policy>(grpcClient.GetPolicyAsync, grpcClient.GetPolicy, effectiveSettings.GetPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callGetPolicy = clientHelper.BuildApiCall<GetPolicyRequest, Policy>("GetPolicy", grpcClient.GetPolicyAsync, grpcClient.GetPolicy, effectiveSettings.GetPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetPolicy);
             Modify_GetPolicyApiCall(ref _callGetPolicy);
-            _callUpdatePolicy = clientHelper.BuildApiCall<UpdatePolicyRequest, Policy>(grpcClient.UpdatePolicyAsync, grpcClient.UpdatePolicy, effectiveSettings.UpdatePolicySettings).WithGoogleRequestParam("policy.name", request => request.Policy?.Name);
+            _callUpdatePolicy = clientHelper.BuildApiCall<UpdatePolicyRequest, Policy>("UpdatePolicy", grpcClient.UpdatePolicyAsync, grpcClient.UpdatePolicy, effectiveSettings.UpdatePolicySettings).WithGoogleRequestParam("policy.name", request => request.Policy?.Name);
             Modify_ApiCall(ref _callUpdatePolicy);
             Modify_UpdatePolicyApiCall(ref _callUpdatePolicy);
-            _callCreateAttestor = clientHelper.BuildApiCall<CreateAttestorRequest, Attestor>(grpcClient.CreateAttestorAsync, grpcClient.CreateAttestor, effectiveSettings.CreateAttestorSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateAttestor = clientHelper.BuildApiCall<CreateAttestorRequest, Attestor>("CreateAttestor", grpcClient.CreateAttestorAsync, grpcClient.CreateAttestor, effectiveSettings.CreateAttestorSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateAttestor);
             Modify_CreateAttestorApiCall(ref _callCreateAttestor);
-            _callGetAttestor = clientHelper.BuildApiCall<GetAttestorRequest, Attestor>(grpcClient.GetAttestorAsync, grpcClient.GetAttestor, effectiveSettings.GetAttestorSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetAttestor = clientHelper.BuildApiCall<GetAttestorRequest, Attestor>("GetAttestor", grpcClient.GetAttestorAsync, grpcClient.GetAttestor, effectiveSettings.GetAttestorSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAttestor);
             Modify_GetAttestorApiCall(ref _callGetAttestor);
-            _callUpdateAttestor = clientHelper.BuildApiCall<UpdateAttestorRequest, Attestor>(grpcClient.UpdateAttestorAsync, grpcClient.UpdateAttestor, effectiveSettings.UpdateAttestorSettings).WithGoogleRequestParam("attestor.name", request => request.Attestor?.Name);
+            _callUpdateAttestor = clientHelper.BuildApiCall<UpdateAttestorRequest, Attestor>("UpdateAttestor", grpcClient.UpdateAttestorAsync, grpcClient.UpdateAttestor, effectiveSettings.UpdateAttestorSettings).WithGoogleRequestParam("attestor.name", request => request.Attestor?.Name);
             Modify_ApiCall(ref _callUpdateAttestor);
             Modify_UpdateAttestorApiCall(ref _callUpdateAttestor);
-            _callListAttestors = clientHelper.BuildApiCall<ListAttestorsRequest, ListAttestorsResponse>(grpcClient.ListAttestorsAsync, grpcClient.ListAttestors, effectiveSettings.ListAttestorsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListAttestors = clientHelper.BuildApiCall<ListAttestorsRequest, ListAttestorsResponse>("ListAttestors", grpcClient.ListAttestorsAsync, grpcClient.ListAttestors, effectiveSettings.ListAttestorsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAttestors);
             Modify_ListAttestorsApiCall(ref _callListAttestors);
-            _callDeleteAttestor = clientHelper.BuildApiCall<DeleteAttestorRequest, wkt::Empty>(grpcClient.DeleteAttestorAsync, grpcClient.DeleteAttestor, effectiveSettings.DeleteAttestorSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteAttestor = clientHelper.BuildApiCall<DeleteAttestorRequest, wkt::Empty>("DeleteAttestor", grpcClient.DeleteAttestorAsync, grpcClient.DeleteAttestor, effectiveSettings.DeleteAttestorSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAttestor);
             Modify_DeleteAttestorApiCall(ref _callDeleteAttestor);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

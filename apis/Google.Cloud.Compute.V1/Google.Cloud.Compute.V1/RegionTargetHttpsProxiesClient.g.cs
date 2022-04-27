@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -272,9 +272,8 @@ namespace Google.Cloud.Compute.V1
         public RegionTargetHttpsProxiesSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public RegionTargetHttpsProxiesClientBuilder()
+        public RegionTargetHttpsProxiesClientBuilder() : base(RegionTargetHttpsProxiesClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = RegionTargetHttpsProxiesClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref RegionTargetHttpsProxiesClient client);
@@ -301,29 +300,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return RegionTargetHttpsProxiesClient.Create(callInvoker, Settings);
+            return RegionTargetHttpsProxiesClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<RegionTargetHttpsProxiesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return RegionTargetHttpsProxiesClient.Create(callInvoker, Settings);
+            return RegionTargetHttpsProxiesClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => RegionTargetHttpsProxiesClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => RegionTargetHttpsProxiesClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => RegionTargetHttpsProxiesClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>RegionTargetHttpsProxies client wrapper, for convenient use.</summary>
@@ -352,19 +340,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(RegionTargetHttpsProxies.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="RegionTargetHttpsProxiesClient"/> using the default credentials,
@@ -394,8 +373,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="RegionTargetHttpsProxiesSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="RegionTargetHttpsProxiesClient"/>.</returns>
-        internal static RegionTargetHttpsProxiesClient Create(grpccore::CallInvoker callInvoker, RegionTargetHttpsProxiesSettings settings = null)
+        internal static RegionTargetHttpsProxiesClient Create(grpccore::CallInvoker callInvoker, RegionTargetHttpsProxiesSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -404,7 +384,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             RegionTargetHttpsProxies.RegionTargetHttpsProxiesClient grpcClient = new RegionTargetHttpsProxies.RegionTargetHttpsProxiesClient(callInvoker);
-            return new RegionTargetHttpsProxiesClientImpl(grpcClient, settings);
+            return new RegionTargetHttpsProxiesClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1218,35 +1198,36 @@ namespace Google.Cloud.Compute.V1
         /// <param name="settings">
         /// The base <see cref="RegionTargetHttpsProxiesSettings"/> used within this client.
         /// </param>
-        public RegionTargetHttpsProxiesClientImpl(RegionTargetHttpsProxies.RegionTargetHttpsProxiesClient grpcClient, RegionTargetHttpsProxiesSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public RegionTargetHttpsProxiesClientImpl(RegionTargetHttpsProxies.RegionTargetHttpsProxiesClient grpcClient, RegionTargetHttpsProxiesSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             RegionTargetHttpsProxiesSettings effectiveSettings = settings ?? RegionTargetHttpsProxiesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings);
-            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchOperationsSettings);
-            SetSslCertificatesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetSslCertificatesOperationsSettings);
-            SetUrlMapOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetUrlMapOperationsSettings);
-            _callDelete = clientHelper.BuildApiCall<DeleteRegionTargetHttpsProxyRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_https_proxy", request => request.TargetHttpsProxy);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings, logger);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings, logger);
+            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchOperationsSettings, logger);
+            SetSslCertificatesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetSslCertificatesOperationsSettings, logger);
+            SetUrlMapOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetUrlMapOperationsSettings, logger);
+            _callDelete = clientHelper.BuildApiCall<DeleteRegionTargetHttpsProxyRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_https_proxy", request => request.TargetHttpsProxy);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
-            _callGet = clientHelper.BuildApiCall<GetRegionTargetHttpsProxyRequest, TargetHttpsProxy>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_https_proxy", request => request.TargetHttpsProxy);
+            _callGet = clientHelper.BuildApiCall<GetRegionTargetHttpsProxyRequest, TargetHttpsProxy>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_https_proxy", request => request.TargetHttpsProxy);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callInsert = clientHelper.BuildApiCall<InsertRegionTargetHttpsProxyRequest, Operation>(grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
+            _callInsert = clientHelper.BuildApiCall<InsertRegionTargetHttpsProxyRequest, Operation>("Insert", grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
-            _callList = clientHelper.BuildApiCall<ListRegionTargetHttpsProxiesRequest, TargetHttpsProxyList>(grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
+            _callList = clientHelper.BuildApiCall<ListRegionTargetHttpsProxiesRequest, TargetHttpsProxyList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
-            _callPatch = clientHelper.BuildApiCall<PatchRegionTargetHttpsProxyRequest, Operation>(grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_https_proxy", request => request.TargetHttpsProxy);
+            _callPatch = clientHelper.BuildApiCall<PatchRegionTargetHttpsProxyRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_https_proxy", request => request.TargetHttpsProxy);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
-            _callSetSslCertificates = clientHelper.BuildApiCall<SetSslCertificatesRegionTargetHttpsProxyRequest, Operation>(grpcClient.SetSslCertificatesAsync, grpcClient.SetSslCertificates, effectiveSettings.SetSslCertificatesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_https_proxy", request => request.TargetHttpsProxy);
+            _callSetSslCertificates = clientHelper.BuildApiCall<SetSslCertificatesRegionTargetHttpsProxyRequest, Operation>("SetSslCertificates", grpcClient.SetSslCertificatesAsync, grpcClient.SetSslCertificates, effectiveSettings.SetSslCertificatesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_https_proxy", request => request.TargetHttpsProxy);
             Modify_ApiCall(ref _callSetSslCertificates);
             Modify_SetSslCertificatesApiCall(ref _callSetSslCertificates);
-            _callSetUrlMap = clientHelper.BuildApiCall<SetUrlMapRegionTargetHttpsProxyRequest, Operation>(grpcClient.SetUrlMapAsync, grpcClient.SetUrlMap, effectiveSettings.SetUrlMapSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_https_proxy", request => request.TargetHttpsProxy);
+            _callSetUrlMap = clientHelper.BuildApiCall<SetUrlMapRegionTargetHttpsProxyRequest, Operation>("SetUrlMap", grpcClient.SetUrlMapAsync, grpcClient.SetUrlMap, effectiveSettings.SetUrlMapSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_https_proxy", request => request.TargetHttpsProxy);
             Modify_ApiCall(ref _callSetUrlMap);
             Modify_SetUrlMapApiCall(ref _callSetUrlMap);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

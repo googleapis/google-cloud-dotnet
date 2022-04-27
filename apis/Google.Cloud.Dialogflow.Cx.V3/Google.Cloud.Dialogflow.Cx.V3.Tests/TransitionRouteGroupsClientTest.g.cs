@@ -46,7 +46,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTransitionRouteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup response = client.GetTransitionRouteGroup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -71,7 +71,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTransitionRouteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransitionRouteGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup responseCallSettings = await client.GetTransitionRouteGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TransitionRouteGroup responseCancellationToken = await client.GetTransitionRouteGroupAsync(request, st::CancellationToken.None);
@@ -97,7 +97,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTransitionRouteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup response = client.GetTransitionRouteGroup(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -121,7 +121,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTransitionRouteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransitionRouteGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup responseCallSettings = await client.GetTransitionRouteGroupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TransitionRouteGroup responseCancellationToken = await client.GetTransitionRouteGroupAsync(request.Name, st::CancellationToken.None);
@@ -147,7 +147,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTransitionRouteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup response = client.GetTransitionRouteGroup(request.TransitionRouteGroupName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -171,7 +171,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetTransitionRouteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransitionRouteGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup responseCallSettings = await client.GetTransitionRouteGroupAsync(request.TransitionRouteGroupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TransitionRouteGroup responseCancellationToken = await client.GetTransitionRouteGroupAsync(request.TransitionRouteGroupName, st::CancellationToken.None);
@@ -199,7 +199,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTransitionRouteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup response = client.CreateTransitionRouteGroup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -225,7 +225,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTransitionRouteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransitionRouteGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup responseCallSettings = await client.CreateTransitionRouteGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TransitionRouteGroup responseCancellationToken = await client.CreateTransitionRouteGroupAsync(request, st::CancellationToken.None);
@@ -252,7 +252,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTransitionRouteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup response = client.CreateTransitionRouteGroup(request.Parent, request.TransitionRouteGroup);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -277,7 +277,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTransitionRouteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransitionRouteGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup responseCallSettings = await client.CreateTransitionRouteGroupAsync(request.Parent, request.TransitionRouteGroup, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TransitionRouteGroup responseCancellationToken = await client.CreateTransitionRouteGroupAsync(request.Parent, request.TransitionRouteGroup, st::CancellationToken.None);
@@ -304,7 +304,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTransitionRouteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup response = client.CreateTransitionRouteGroup(request.ParentAsFlowName, request.TransitionRouteGroup);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -329,7 +329,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.CreateTransitionRouteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransitionRouteGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup responseCallSettings = await client.CreateTransitionRouteGroupAsync(request.ParentAsFlowName, request.TransitionRouteGroup, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TransitionRouteGroup responseCancellationToken = await client.CreateTransitionRouteGroupAsync(request.ParentAsFlowName, request.TransitionRouteGroup, st::CancellationToken.None);
@@ -357,7 +357,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateTransitionRouteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup response = client.UpdateTransitionRouteGroup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -383,7 +383,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateTransitionRouteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransitionRouteGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup responseCallSettings = await client.UpdateTransitionRouteGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TransitionRouteGroup responseCancellationToken = await client.UpdateTransitionRouteGroupAsync(request, st::CancellationToken.None);
@@ -410,7 +410,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateTransitionRouteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup response = client.UpdateTransitionRouteGroup(request.TransitionRouteGroup, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -435,7 +435,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateTransitionRouteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransitionRouteGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             TransitionRouteGroup responseCallSettings = await client.UpdateTransitionRouteGroupAsync(request.TransitionRouteGroup, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             TransitionRouteGroup responseCancellationToken = await client.UpdateTransitionRouteGroupAsync(request.TransitionRouteGroup, request.UpdateMask, st::CancellationToken.None);
@@ -454,7 +454,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTransitionRouteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTransitionRouteGroup(request);
             mockGrpcClient.VerifyAll();
         }
@@ -470,7 +470,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTransitionRouteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTransitionRouteGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTransitionRouteGroupAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -486,7 +486,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTransitionRouteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTransitionRouteGroup(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -501,7 +501,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTransitionRouteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTransitionRouteGroupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTransitionRouteGroupAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -517,7 +517,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTransitionRouteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteTransitionRouteGroup(request.TransitionRouteGroupName);
             mockGrpcClient.VerifyAll();
         }
@@ -532,7 +532,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTransitionRouteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null);
+            TransitionRouteGroupsClient client = new TransitionRouteGroupsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteTransitionRouteGroupAsync(request.TransitionRouteGroupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTransitionRouteGroupAsync(request.TransitionRouteGroupName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

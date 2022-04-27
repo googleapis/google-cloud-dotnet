@@ -17,11 +17,11 @@
 using ga = Google.Api;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -104,9 +104,8 @@ namespace Google.Cloud.AIPlatform.V1
         public PredictionServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public PredictionServiceClientBuilder()
+        public PredictionServiceClientBuilder() : base(PredictionServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = PredictionServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref PredictionServiceClient client);
@@ -133,29 +132,18 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return PredictionServiceClient.Create(callInvoker, Settings);
+            return PredictionServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<PredictionServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return PredictionServiceClient.Create(callInvoker, Settings);
+            return PredictionServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => PredictionServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => PredictionServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => PredictionServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>PredictionService client wrapper, for convenient use.</summary>
@@ -182,19 +170,10 @@ namespace Google.Cloud.AIPlatform.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(PredictionService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="PredictionServiceClient"/> using the default credentials, endpoint and
@@ -221,8 +200,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="PredictionServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="PredictionServiceClient"/>.</returns>
-        internal static PredictionServiceClient Create(grpccore::CallInvoker callInvoker, PredictionServiceSettings settings = null)
+        internal static PredictionServiceClient Create(grpccore::CallInvoker callInvoker, PredictionServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -231,7 +211,7 @@ namespace Google.Cloud.AIPlatform.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             PredictionService.PredictionServiceClient grpcClient = new PredictionService.PredictionServiceClient(callInvoker);
-            return new PredictionServiceClientImpl(grpcClient, settings);
+            return new PredictionServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1138,18 +1118,19 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="PredictionServiceSettings"/> used within this client.</param>
-        public PredictionServiceClientImpl(PredictionService.PredictionServiceClient grpcClient, PredictionServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public PredictionServiceClientImpl(PredictionService.PredictionServiceClient grpcClient, PredictionServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             PredictionServiceSettings effectiveSettings = settings ?? PredictionServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callPredict = clientHelper.BuildApiCall<PredictRequest, PredictResponse>(grpcClient.PredictAsync, grpcClient.Predict, effectiveSettings.PredictSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callPredict = clientHelper.BuildApiCall<PredictRequest, PredictResponse>("Predict", grpcClient.PredictAsync, grpcClient.Predict, effectiveSettings.PredictSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
             Modify_ApiCall(ref _callPredict);
             Modify_PredictApiCall(ref _callPredict);
-            _callRawPredict = clientHelper.BuildApiCall<RawPredictRequest, ga::HttpBody>(grpcClient.RawPredictAsync, grpcClient.RawPredict, effectiveSettings.RawPredictSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
+            _callRawPredict = clientHelper.BuildApiCall<RawPredictRequest, ga::HttpBody>("RawPredict", grpcClient.RawPredictAsync, grpcClient.RawPredict, effectiveSettings.RawPredictSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
             Modify_ApiCall(ref _callRawPredict);
             Modify_RawPredictApiCall(ref _callRawPredict);
-            _callExplain = clientHelper.BuildApiCall<ExplainRequest, ExplainResponse>(grpcClient.ExplainAsync, grpcClient.Explain, effectiveSettings.ExplainSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
+            _callExplain = clientHelper.BuildApiCall<ExplainRequest, ExplainResponse>("Explain", grpcClient.ExplainAsync, grpcClient.Explain, effectiveSettings.ExplainSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
             Modify_ApiCall(ref _callExplain);
             Modify_ExplainApiCall(ref _callExplain);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -60,7 +60,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 VirtualClusterConfig = new VirtualClusterConfig(),
             };
             mockGrpcClient.Setup(x => x.GetCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ClusterControllerClient client = new ClusterControllerClientImpl(mockGrpcClient.Object, null);
+            ClusterControllerClient client = new ClusterControllerClientImpl(mockGrpcClient.Object, null, null);
             Cluster response = client.GetCluster(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -99,7 +99,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 VirtualClusterConfig = new VirtualClusterConfig(),
             };
             mockGrpcClient.Setup(x => x.GetClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Cluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ClusterControllerClient client = new ClusterControllerClientImpl(mockGrpcClient.Object, null);
+            ClusterControllerClient client = new ClusterControllerClientImpl(mockGrpcClient.Object, null, null);
             Cluster responseCallSettings = await client.GetClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Cluster responseCancellationToken = await client.GetClusterAsync(request, st::CancellationToken.None);
@@ -140,7 +140,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 VirtualClusterConfig = new VirtualClusterConfig(),
             };
             mockGrpcClient.Setup(x => x.GetCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ClusterControllerClient client = new ClusterControllerClientImpl(mockGrpcClient.Object, null);
+            ClusterControllerClient client = new ClusterControllerClientImpl(mockGrpcClient.Object, null, null);
             Cluster response = client.GetCluster(request.ProjectId, request.Region, request.ClusterName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -179,7 +179,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 VirtualClusterConfig = new VirtualClusterConfig(),
             };
             mockGrpcClient.Setup(x => x.GetClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Cluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ClusterControllerClient client = new ClusterControllerClientImpl(mockGrpcClient.Object, null);
+            ClusterControllerClient client = new ClusterControllerClientImpl(mockGrpcClient.Object, null, null);
             Cluster responseCallSettings = await client.GetClusterAsync(request.ProjectId, request.Region, request.ClusterName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Cluster responseCancellationToken = await client.GetClusterAsync(request.ProjectId, request.Region, request.ClusterName, st::CancellationToken.None);

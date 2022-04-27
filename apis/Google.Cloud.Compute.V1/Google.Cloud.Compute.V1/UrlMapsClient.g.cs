@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -302,9 +302,8 @@ namespace Google.Cloud.Compute.V1
         public UrlMapsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public UrlMapsClientBuilder()
+        public UrlMapsClientBuilder() : base(UrlMapsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = UrlMapsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref UrlMapsClient client);
@@ -331,29 +330,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return UrlMapsClient.Create(callInvoker, Settings);
+            return UrlMapsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<UrlMapsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return UrlMapsClient.Create(callInvoker, Settings);
+            return UrlMapsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => UrlMapsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => UrlMapsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => UrlMapsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>UrlMaps client wrapper, for convenient use.</summary>
@@ -381,19 +369,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(UrlMaps.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="UrlMapsClient"/> using the default credentials, endpoint and settings. 
@@ -420,8 +399,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="UrlMapsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="UrlMapsClient"/>.</returns>
-        internal static UrlMapsClient Create(grpccore::CallInvoker callInvoker, UrlMapsSettings settings = null)
+        internal static UrlMapsClient Create(grpccore::CallInvoker callInvoker, UrlMapsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -430,7 +410,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             UrlMaps.UrlMapsClient grpcClient = new UrlMaps.UrlMapsClient(callInvoker);
-            return new UrlMapsClientImpl(grpcClient, settings);
+            return new UrlMapsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1328,41 +1308,42 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="UrlMapsSettings"/> used within this client.</param>
-        public UrlMapsClientImpl(UrlMaps.UrlMapsClient grpcClient, UrlMapsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public UrlMapsClientImpl(UrlMaps.UrlMapsClient grpcClient, UrlMapsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             UrlMapsSettings effectiveSettings = settings ?? UrlMapsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings);
-            InvalidateCacheOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InvalidateCacheOperationsSettings);
-            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings);
-            UpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.UpdateOperationsSettings);
-            _callAggregatedList = clientHelper.BuildApiCall<AggregatedListUrlMapsRequest, UrlMapsAggregatedList>(grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings, logger);
+            InvalidateCacheOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InvalidateCacheOperationsSettings, logger);
+            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings, logger);
+            UpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.UpdateOperationsSettings, logger);
+            _callAggregatedList = clientHelper.BuildApiCall<AggregatedListUrlMapsRequest, UrlMapsAggregatedList>("AggregatedList", grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callAggregatedList);
             Modify_AggregatedListApiCall(ref _callAggregatedList);
-            _callDelete = clientHelper.BuildApiCall<DeleteUrlMapRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("url_map", request => request.UrlMap);
+            _callDelete = clientHelper.BuildApiCall<DeleteUrlMapRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("url_map", request => request.UrlMap);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
-            _callGet = clientHelper.BuildApiCall<GetUrlMapRequest, UrlMap>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("url_map", request => request.UrlMap);
+            _callGet = clientHelper.BuildApiCall<GetUrlMapRequest, UrlMap>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("url_map", request => request.UrlMap);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callInsert = clientHelper.BuildApiCall<InsertUrlMapRequest, Operation>(grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callInsert = clientHelper.BuildApiCall<InsertUrlMapRequest, Operation>("Insert", grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
-            _callInvalidateCache = clientHelper.BuildApiCall<InvalidateCacheUrlMapRequest, Operation>(grpcClient.InvalidateCacheAsync, grpcClient.InvalidateCache, effectiveSettings.InvalidateCacheSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("url_map", request => request.UrlMap);
+            _callInvalidateCache = clientHelper.BuildApiCall<InvalidateCacheUrlMapRequest, Operation>("InvalidateCache", grpcClient.InvalidateCacheAsync, grpcClient.InvalidateCache, effectiveSettings.InvalidateCacheSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("url_map", request => request.UrlMap);
             Modify_ApiCall(ref _callInvalidateCache);
             Modify_InvalidateCacheApiCall(ref _callInvalidateCache);
-            _callList = clientHelper.BuildApiCall<ListUrlMapsRequest, UrlMapList>(grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callList = clientHelper.BuildApiCall<ListUrlMapsRequest, UrlMapList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
-            _callPatch = clientHelper.BuildApiCall<PatchUrlMapRequest, Operation>(grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("url_map", request => request.UrlMap);
+            _callPatch = clientHelper.BuildApiCall<PatchUrlMapRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("url_map", request => request.UrlMap);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
-            _callUpdate = clientHelper.BuildApiCall<UpdateUrlMapRequest, Operation>(grpcClient.UpdateAsync, grpcClient.Update, effectiveSettings.UpdateSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("url_map", request => request.UrlMap);
+            _callUpdate = clientHelper.BuildApiCall<UpdateUrlMapRequest, Operation>("Update", grpcClient.UpdateAsync, grpcClient.Update, effectiveSettings.UpdateSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("url_map", request => request.UrlMap);
             Modify_ApiCall(ref _callUpdate);
             Modify_UpdateApiCall(ref _callUpdate);
-            _callValidate = clientHelper.BuildApiCall<ValidateUrlMapRequest, UrlMapsValidateResponse>(grpcClient.ValidateAsync, grpcClient.Validate, effectiveSettings.ValidateSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("url_map", request => request.UrlMap);
+            _callValidate = clientHelper.BuildApiCall<ValidateUrlMapRequest, UrlMapsValidateResponse>("Validate", grpcClient.ValidateAsync, grpcClient.Validate, effectiveSettings.ValidateSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("url_map", request => request.UrlMap);
             Modify_ApiCall(ref _callValidate);
             Modify_ValidateApiCall(ref _callValidate);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

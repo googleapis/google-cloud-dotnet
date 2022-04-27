@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -153,9 +153,8 @@ namespace Google.Cloud.Iam.Credentials.V1
         public IAMCredentialsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public IAMCredentialsClientBuilder()
+        public IAMCredentialsClientBuilder() : base(IAMCredentialsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = IAMCredentialsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref IAMCredentialsClient client);
@@ -182,29 +181,18 @@ namespace Google.Cloud.Iam.Credentials.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return IAMCredentialsClient.Create(callInvoker, Settings);
+            return IAMCredentialsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<IAMCredentialsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return IAMCredentialsClient.Create(callInvoker, Settings);
+            return IAMCredentialsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => IAMCredentialsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => IAMCredentialsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => IAMCredentialsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>IAMCredentials client wrapper, for convenient use.</summary>
@@ -239,19 +227,10 @@ namespace Google.Cloud.Iam.Credentials.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(IAMCredentials.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="IAMCredentialsClient"/> using the default credentials, endpoint and
@@ -278,8 +257,9 @@ namespace Google.Cloud.Iam.Credentials.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="IAMCredentialsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="IAMCredentialsClient"/>.</returns>
-        internal static IAMCredentialsClient Create(grpccore::CallInvoker callInvoker, IAMCredentialsSettings settings = null)
+        internal static IAMCredentialsClient Create(grpccore::CallInvoker callInvoker, IAMCredentialsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -288,7 +268,7 @@ namespace Google.Cloud.Iam.Credentials.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             IAMCredentials.IAMCredentialsClient grpcClient = new IAMCredentials.IAMCredentialsClient(callInvoker);
-            return new IAMCredentialsClientImpl(grpcClient, settings);
+            return new IAMCredentialsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1371,21 +1351,22 @@ namespace Google.Cloud.Iam.Credentials.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="IAMCredentialsSettings"/> used within this client.</param>
-        public IAMCredentialsClientImpl(IAMCredentials.IAMCredentialsClient grpcClient, IAMCredentialsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public IAMCredentialsClientImpl(IAMCredentials.IAMCredentialsClient grpcClient, IAMCredentialsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             IAMCredentialsSettings effectiveSettings = settings ?? IAMCredentialsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callGenerateAccessToken = clientHelper.BuildApiCall<GenerateAccessTokenRequest, GenerateAccessTokenResponse>(grpcClient.GenerateAccessTokenAsync, grpcClient.GenerateAccessToken, effectiveSettings.GenerateAccessTokenSettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callGenerateAccessToken = clientHelper.BuildApiCall<GenerateAccessTokenRequest, GenerateAccessTokenResponse>("GenerateAccessToken", grpcClient.GenerateAccessTokenAsync, grpcClient.GenerateAccessToken, effectiveSettings.GenerateAccessTokenSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGenerateAccessToken);
             Modify_GenerateAccessTokenApiCall(ref _callGenerateAccessToken);
-            _callGenerateIdToken = clientHelper.BuildApiCall<GenerateIdTokenRequest, GenerateIdTokenResponse>(grpcClient.GenerateIdTokenAsync, grpcClient.GenerateIdToken, effectiveSettings.GenerateIdTokenSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGenerateIdToken = clientHelper.BuildApiCall<GenerateIdTokenRequest, GenerateIdTokenResponse>("GenerateIdToken", grpcClient.GenerateIdTokenAsync, grpcClient.GenerateIdToken, effectiveSettings.GenerateIdTokenSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGenerateIdToken);
             Modify_GenerateIdTokenApiCall(ref _callGenerateIdToken);
-            _callSignBlob = clientHelper.BuildApiCall<SignBlobRequest, SignBlobResponse>(grpcClient.SignBlobAsync, grpcClient.SignBlob, effectiveSettings.SignBlobSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callSignBlob = clientHelper.BuildApiCall<SignBlobRequest, SignBlobResponse>("SignBlob", grpcClient.SignBlobAsync, grpcClient.SignBlob, effectiveSettings.SignBlobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callSignBlob);
             Modify_SignBlobApiCall(ref _callSignBlob);
-            _callSignJwt = clientHelper.BuildApiCall<SignJwtRequest, SignJwtResponse>(grpcClient.SignJwtAsync, grpcClient.SignJwt, effectiveSettings.SignJwtSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callSignJwt = clientHelper.BuildApiCall<SignJwtRequest, SignJwtResponse>("SignJwt", grpcClient.SignJwtAsync, grpcClient.SignJwt, effectiveSettings.SignJwtSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callSignJwt);
             Modify_SignJwtApiCall(ref _callSignJwt);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

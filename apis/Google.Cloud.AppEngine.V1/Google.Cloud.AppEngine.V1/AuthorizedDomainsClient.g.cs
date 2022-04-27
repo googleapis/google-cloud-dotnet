@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -78,9 +78,8 @@ namespace Google.Cloud.AppEngine.V1
         public AuthorizedDomainsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public AuthorizedDomainsClientBuilder()
+        public AuthorizedDomainsClientBuilder() : base(AuthorizedDomainsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = AuthorizedDomainsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref AuthorizedDomainsClient client);
@@ -107,29 +106,18 @@ namespace Google.Cloud.AppEngine.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AuthorizedDomainsClient.Create(callInvoker, Settings);
+            return AuthorizedDomainsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<AuthorizedDomainsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AuthorizedDomainsClient.Create(callInvoker, Settings);
+            return AuthorizedDomainsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => AuthorizedDomainsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => AuthorizedDomainsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => AuthorizedDomainsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>AuthorizedDomains client wrapper, for convenient use.</summary>
@@ -162,19 +150,10 @@ namespace Google.Cloud.AppEngine.V1
             "https://www.googleapis.com/auth/cloud-platform.read-only",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(AuthorizedDomains.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="AuthorizedDomainsClient"/> using the default credentials, endpoint and
@@ -201,8 +180,9 @@ namespace Google.Cloud.AppEngine.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="AuthorizedDomainsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="AuthorizedDomainsClient"/>.</returns>
-        internal static AuthorizedDomainsClient Create(grpccore::CallInvoker callInvoker, AuthorizedDomainsSettings settings = null)
+        internal static AuthorizedDomainsClient Create(grpccore::CallInvoker callInvoker, AuthorizedDomainsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -211,7 +191,7 @@ namespace Google.Cloud.AppEngine.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             AuthorizedDomains.AuthorizedDomainsClient grpcClient = new AuthorizedDomains.AuthorizedDomainsClient(callInvoker);
-            return new AuthorizedDomainsClientImpl(grpcClient, settings);
+            return new AuthorizedDomainsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -264,12 +244,13 @@ namespace Google.Cloud.AppEngine.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="AuthorizedDomainsSettings"/> used within this client.</param>
-        public AuthorizedDomainsClientImpl(AuthorizedDomains.AuthorizedDomainsClient grpcClient, AuthorizedDomainsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public AuthorizedDomainsClientImpl(AuthorizedDomains.AuthorizedDomainsClient grpcClient, AuthorizedDomainsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             AuthorizedDomainsSettings effectiveSettings = settings ?? AuthorizedDomainsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListAuthorizedDomains = clientHelper.BuildApiCall<ListAuthorizedDomainsRequest, ListAuthorizedDomainsResponse>(grpcClient.ListAuthorizedDomainsAsync, grpcClient.ListAuthorizedDomains, effectiveSettings.ListAuthorizedDomainsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListAuthorizedDomains = clientHelper.BuildApiCall<ListAuthorizedDomainsRequest, ListAuthorizedDomainsResponse>("ListAuthorizedDomains", grpcClient.ListAuthorizedDomainsAsync, grpcClient.ListAuthorizedDomains, effectiveSettings.ListAuthorizedDomainsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAuthorizedDomains);
             Modify_ListAuthorizedDomainsApiCall(ref _callListAuthorizedDomains);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

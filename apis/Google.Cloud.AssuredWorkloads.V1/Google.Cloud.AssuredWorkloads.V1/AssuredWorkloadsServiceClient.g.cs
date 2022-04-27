@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -156,9 +156,8 @@ namespace Google.Cloud.AssuredWorkloads.V1
         public AssuredWorkloadsServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public AssuredWorkloadsServiceClientBuilder()
+        public AssuredWorkloadsServiceClientBuilder() : base(AssuredWorkloadsServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = AssuredWorkloadsServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref AssuredWorkloadsServiceClient client);
@@ -185,29 +184,18 @@ namespace Google.Cloud.AssuredWorkloads.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AssuredWorkloadsServiceClient.Create(callInvoker, Settings);
+            return AssuredWorkloadsServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<AssuredWorkloadsServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AssuredWorkloadsServiceClient.Create(callInvoker, Settings);
+            return AssuredWorkloadsServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => AssuredWorkloadsServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => AssuredWorkloadsServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => AssuredWorkloadsServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>AssuredWorkloadsService client wrapper, for convenient use.</summary>
@@ -234,19 +222,10 @@ namespace Google.Cloud.AssuredWorkloads.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(AssuredWorkloadsService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="AssuredWorkloadsServiceClient"/> using the default credentials, endpoint
@@ -276,8 +255,9 @@ namespace Google.Cloud.AssuredWorkloads.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="AssuredWorkloadsServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="AssuredWorkloadsServiceClient"/>.</returns>
-        internal static AssuredWorkloadsServiceClient Create(grpccore::CallInvoker callInvoker, AssuredWorkloadsServiceSettings settings = null)
+        internal static AssuredWorkloadsServiceClient Create(grpccore::CallInvoker callInvoker, AssuredWorkloadsServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -286,7 +266,7 @@ namespace Google.Cloud.AssuredWorkloads.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             AssuredWorkloadsService.AssuredWorkloadsServiceClient grpcClient = new AssuredWorkloadsService.AssuredWorkloadsServiceClient(callInvoker);
-            return new AssuredWorkloadsServiceClientImpl(grpcClient, settings);
+            return new AssuredWorkloadsServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -975,25 +955,26 @@ namespace Google.Cloud.AssuredWorkloads.V1
         /// <param name="settings">
         /// The base <see cref="AssuredWorkloadsServiceSettings"/> used within this client.
         /// </param>
-        public AssuredWorkloadsServiceClientImpl(AssuredWorkloadsService.AssuredWorkloadsServiceClient grpcClient, AssuredWorkloadsServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public AssuredWorkloadsServiceClientImpl(AssuredWorkloadsService.AssuredWorkloadsServiceClient grpcClient, AssuredWorkloadsServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             AssuredWorkloadsServiceSettings effectiveSettings = settings ?? AssuredWorkloadsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateWorkloadOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateWorkloadOperationsSettings);
-            _callCreateWorkload = clientHelper.BuildApiCall<CreateWorkloadRequest, lro::Operation>(grpcClient.CreateWorkloadAsync, grpcClient.CreateWorkload, effectiveSettings.CreateWorkloadSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateWorkloadOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateWorkloadOperationsSettings, logger);
+            _callCreateWorkload = clientHelper.BuildApiCall<CreateWorkloadRequest, lro::Operation>("CreateWorkload", grpcClient.CreateWorkloadAsync, grpcClient.CreateWorkload, effectiveSettings.CreateWorkloadSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateWorkload);
             Modify_CreateWorkloadApiCall(ref _callCreateWorkload);
-            _callUpdateWorkload = clientHelper.BuildApiCall<UpdateWorkloadRequest, Workload>(grpcClient.UpdateWorkloadAsync, grpcClient.UpdateWorkload, effectiveSettings.UpdateWorkloadSettings).WithGoogleRequestParam("workload.name", request => request.Workload?.Name);
+            _callUpdateWorkload = clientHelper.BuildApiCall<UpdateWorkloadRequest, Workload>("UpdateWorkload", grpcClient.UpdateWorkloadAsync, grpcClient.UpdateWorkload, effectiveSettings.UpdateWorkloadSettings).WithGoogleRequestParam("workload.name", request => request.Workload?.Name);
             Modify_ApiCall(ref _callUpdateWorkload);
             Modify_UpdateWorkloadApiCall(ref _callUpdateWorkload);
-            _callDeleteWorkload = clientHelper.BuildApiCall<DeleteWorkloadRequest, wkt::Empty>(grpcClient.DeleteWorkloadAsync, grpcClient.DeleteWorkload, effectiveSettings.DeleteWorkloadSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteWorkload = clientHelper.BuildApiCall<DeleteWorkloadRequest, wkt::Empty>("DeleteWorkload", grpcClient.DeleteWorkloadAsync, grpcClient.DeleteWorkload, effectiveSettings.DeleteWorkloadSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteWorkload);
             Modify_DeleteWorkloadApiCall(ref _callDeleteWorkload);
-            _callGetWorkload = clientHelper.BuildApiCall<GetWorkloadRequest, Workload>(grpcClient.GetWorkloadAsync, grpcClient.GetWorkload, effectiveSettings.GetWorkloadSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetWorkload = clientHelper.BuildApiCall<GetWorkloadRequest, Workload>("GetWorkload", grpcClient.GetWorkloadAsync, grpcClient.GetWorkload, effectiveSettings.GetWorkloadSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetWorkload);
             Modify_GetWorkloadApiCall(ref _callGetWorkload);
-            _callListWorkloads = clientHelper.BuildApiCall<ListWorkloadsRequest, ListWorkloadsResponse>(grpcClient.ListWorkloadsAsync, grpcClient.ListWorkloads, effectiveSettings.ListWorkloadsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListWorkloads = clientHelper.BuildApiCall<ListWorkloadsRequest, ListWorkloadsResponse>("ListWorkloads", grpcClient.ListWorkloadsAsync, grpcClient.ListWorkloads, effectiveSettings.ListWorkloadsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListWorkloads);
             Modify_ListWorkloadsApiCall(ref _callListWorkloads);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -48,7 +48,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AllowCancellation = true,
             };
             mockGrpcClient.Setup(x => x.DetectIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SessionsClient client = new SessionsClientImpl(mockGrpcClient.Object, null);
+            SessionsClient client = new SessionsClientImpl(mockGrpcClient.Object, null, null);
             DetectIntentResponse response = client.DetectIntent(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -75,7 +75,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AllowCancellation = true,
             };
             mockGrpcClient.Setup(x => x.DetectIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DetectIntentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SessionsClient client = new SessionsClientImpl(mockGrpcClient.Object, null);
+            SessionsClient client = new SessionsClientImpl(mockGrpcClient.Object, null, null);
             DetectIntentResponse responseCallSettings = await client.DetectIntentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DetectIntentResponse responseCancellationToken = await client.DetectIntentAsync(request, st::CancellationToken.None);
@@ -103,7 +103,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TriggerEvent = "trigger_eventff063b42",
             };
             mockGrpcClient.Setup(x => x.MatchIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SessionsClient client = new SessionsClientImpl(mockGrpcClient.Object, null);
+            SessionsClient client = new SessionsClientImpl(mockGrpcClient.Object, null, null);
             MatchIntentResponse response = client.MatchIntent(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -129,7 +129,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 TriggerEvent = "trigger_eventff063b42",
             };
             mockGrpcClient.Setup(x => x.MatchIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MatchIntentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SessionsClient client = new SessionsClientImpl(mockGrpcClient.Object, null);
+            SessionsClient client = new SessionsClientImpl(mockGrpcClient.Object, null, null);
             MatchIntentResponse responseCallSettings = await client.MatchIntentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MatchIntentResponse responseCancellationToken = await client.MatchIntentAsync(request, st::CancellationToken.None);
@@ -155,7 +155,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 OutputAudioConfig = new OutputAudioConfig(),
             };
             mockGrpcClient.Setup(x => x.FulfillIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            SessionsClient client = new SessionsClientImpl(mockGrpcClient.Object, null);
+            SessionsClient client = new SessionsClientImpl(mockGrpcClient.Object, null, null);
             FulfillIntentResponse response = client.FulfillIntent(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -179,7 +179,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 OutputAudioConfig = new OutputAudioConfig(),
             };
             mockGrpcClient.Setup(x => x.FulfillIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FulfillIntentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            SessionsClient client = new SessionsClientImpl(mockGrpcClient.Object, null);
+            SessionsClient client = new SessionsClientImpl(mockGrpcClient.Object, null, null);
             FulfillIntentResponse responseCallSettings = await client.FulfillIntentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FulfillIntentResponse responseCancellationToken = await client.FulfillIntentAsync(request, st::CancellationToken.None);

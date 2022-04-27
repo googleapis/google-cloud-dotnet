@@ -11,1008 +11,6 @@
   },
   "snippets": [
     {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_DeleteLog_sync",
-      "title": "DeleteLogRequestObject",
-      "description": "Snippet for DeleteLog",
-      "file": "LoggingServiceV2Client.DeleteLogRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteLog",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLog",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "DeleteLog",
-          "fullName": "google.logging.v2.LoggingServiceV2.DeleteLog",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_DeleteLog_async",
-      "title": "DeleteLogRequestObjectAsync",
-      "description": "Snippet for DeleteLogAsync",
-      "file": "LoggingServiceV2Client.DeleteLogRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteLogAsync",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLogAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "DeleteLog",
-          "fullName": "google.logging.v2.LoggingServiceV2.DeleteLog",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_DeleteLog_sync_flattened",
-      "title": "DeleteLog",
-      "description": "Snippet for DeleteLog",
-      "file": "LoggingServiceV2Client.DeleteLogSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteLog",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLog",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "DeleteLog",
-          "fullName": "google.logging.v2.LoggingServiceV2.DeleteLog",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_DeleteLog_async_flattened",
-      "title": "DeleteLogAsync",
-      "description": "Snippet for DeleteLogAsync",
-      "file": "LoggingServiceV2Client.DeleteLogAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteLogAsync",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLogAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "DeleteLog",
-          "fullName": "google.logging.v2.LoggingServiceV2.DeleteLog",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_DeleteLog_sync_flattened_resourceNames",
-      "title": "DeleteLogResourceNames",
-      "description": "Snippet for DeleteLog",
-      "file": "LoggingServiceV2Client.DeleteLogResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteLog",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLog",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "DeleteLog",
-          "fullName": "google.logging.v2.LoggingServiceV2.DeleteLog",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_DeleteLog_async_flattened_resourceNames",
-      "title": "DeleteLogResourceNamesAsync",
-      "description": "Snippet for DeleteLogAsync",
-      "file": "LoggingServiceV2Client.DeleteLogResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteLogAsync",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLogAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "DeleteLog",
-          "fullName": "google.logging.v2.LoggingServiceV2.DeleteLog",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_WriteLogEntries_sync",
-      "title": "WriteLogEntriesRequestObject",
-      "description": "Snippet for WriteLogEntries",
-      "file": "LoggingServiceV2Client.WriteLogEntriesRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "WriteLogEntries",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntries",
-        "resultType": "Google.Cloud.Logging.V2.WriteLogEntriesResponse",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "WriteLogEntries",
-          "fullName": "google.logging.v2.LoggingServiceV2.WriteLogEntries",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_WriteLogEntries_async",
-      "title": "WriteLogEntriesRequestObjectAsync",
-      "description": "Snippet for WriteLogEntriesAsync",
-      "file": "LoggingServiceV2Client.WriteLogEntriesRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "WriteLogEntriesAsync",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.WriteLogEntriesResponse>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "WriteLogEntries",
-          "fullName": "google.logging.v2.LoggingServiceV2.WriteLogEntries",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_WriteLogEntries_sync_flattened",
-      "title": "WriteLogEntries",
-      "description": "Snippet for WriteLogEntries",
-      "file": "LoggingServiceV2Client.WriteLogEntriesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "WriteLogEntries",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntries",
-        "resultType": "Google.Cloud.Logging.V2.WriteLogEntriesResponse",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "WriteLogEntries",
-          "fullName": "google.logging.v2.LoggingServiceV2.WriteLogEntries",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_WriteLogEntries_async_flattened",
-      "title": "WriteLogEntriesAsync",
-      "description": "Snippet for WriteLogEntriesAsync",
-      "file": "LoggingServiceV2Client.WriteLogEntriesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "WriteLogEntriesAsync",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.WriteLogEntriesResponse>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "WriteLogEntries",
-          "fullName": "google.logging.v2.LoggingServiceV2.WriteLogEntries",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_WriteLogEntries_sync_flattened_resourceNames",
-      "title": "WriteLogEntriesResourceNames",
-      "description": "Snippet for WriteLogEntries",
-      "file": "LoggingServiceV2Client.WriteLogEntriesResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "WriteLogEntries",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntries",
-        "resultType": "Google.Cloud.Logging.V2.WriteLogEntriesResponse",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "WriteLogEntries",
-          "fullName": "google.logging.v2.LoggingServiceV2.WriteLogEntries",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_WriteLogEntries_async_flattened_resourceNames",
-      "title": "WriteLogEntriesResourceNamesAsync",
-      "description": "Snippet for WriteLogEntriesAsync",
-      "file": "LoggingServiceV2Client.WriteLogEntriesResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "WriteLogEntriesAsync",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync",
-        "async": true,
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.WriteLogEntriesResponse>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "WriteLogEntries",
-          "fullName": "google.logging.v2.LoggingServiceV2.WriteLogEntries",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_sync",
-      "title": "ListLogEntriesRequestObject",
-      "description": "Snippet for ListLogEntries",
-      "file": "LoggingServiceV2Client.ListLogEntriesRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogEntries",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogEntries",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_async",
-      "title": "ListLogEntriesRequestObjectAsync",
-      "description": "Snippet for ListLogEntriesAsync",
-      "file": "LoggingServiceV2Client.ListLogEntriesRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogEntriesAsync",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogEntries",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_sync_flattened",
-      "title": "ListLogEntries",
-      "description": "Snippet for ListLogEntries",
-      "file": "LoggingServiceV2Client.ListLogEntriesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogEntries",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogEntries",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_async_flattened",
-      "title": "ListLogEntriesAsync",
-      "description": "Snippet for ListLogEntriesAsync",
-      "file": "LoggingServiceV2Client.ListLogEntriesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogEntriesAsync",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogEntries",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_sync_flattened_resourceNames1",
-      "title": "ListLogEntriesResourceNames1",
-      "description": "Snippet for ListLogEntries",
-      "file": "LoggingServiceV2Client.ListLogEntriesResourceNames1Snippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogEntries",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogEntries",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_async_flattened_resourceNames1",
-      "title": "ListLogEntriesResourceNames1Async",
-      "description": "Snippet for ListLogEntriesAsync",
-      "file": "LoggingServiceV2Client.ListLogEntriesResourceNames1AsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogEntriesAsync",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogEntries",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_sync_flattened_resourceNames2",
-      "title": "ListLogEntriesResourceNames2",
-      "description": "Snippet for ListLogEntries",
-      "file": "LoggingServiceV2Client.ListLogEntriesResourceNames2Snippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogEntries",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogEntries",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_async_flattened_resourceNames2",
-      "title": "ListLogEntriesResourceNames2Async",
-      "description": "Snippet for ListLogEntriesAsync",
-      "file": "LoggingServiceV2Client.ListLogEntriesResourceNames2AsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogEntriesAsync",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogEntries",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_sync_flattened_resourceNames3",
-      "title": "ListLogEntriesResourceNames3",
-      "description": "Snippet for ListLogEntries",
-      "file": "LoggingServiceV2Client.ListLogEntriesResourceNames3Snippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogEntries",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogEntries",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_async_flattened_resourceNames3",
-      "title": "ListLogEntriesResourceNames3Async",
-      "description": "Snippet for ListLogEntriesAsync",
-      "file": "LoggingServiceV2Client.ListLogEntriesResourceNames3AsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogEntriesAsync",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogEntries",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_sync_flattened_resourceNames4",
-      "title": "ListLogEntriesResourceNames4",
-      "description": "Snippet for ListLogEntries",
-      "file": "LoggingServiceV2Client.ListLogEntriesResourceNames4Snippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogEntries",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogEntries",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_async_flattened_resourceNames4",
-      "title": "ListLogEntriesResourceNames4Async",
-      "description": "Snippet for ListLogEntriesAsync",
-      "file": "LoggingServiceV2Client.ListLogEntriesResourceNames4AsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogEntriesAsync",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogEntries",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListMonitoredResourceDescriptors_sync",
-      "title": "ListMonitoredResourceDescriptorsRequestObject",
-      "description": "Snippet for ListMonitoredResourceDescriptors",
-      "file": "LoggingServiceV2Client.ListMonitoredResourceDescriptorsRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListMonitoredResourceDescriptors",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListMonitoredResourceDescriptors",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse, Google.Api.MonitoredResourceDescriptor>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListMonitoredResourceDescriptors",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListMonitoredResourceDescriptors",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListMonitoredResourceDescriptors_async",
-      "title": "ListMonitoredResourceDescriptorsRequestObjectAsync",
-      "description": "Snippet for ListMonitoredResourceDescriptorsAsync",
-      "file": "LoggingServiceV2Client.ListMonitoredResourceDescriptorsRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListMonitoredResourceDescriptorsAsync",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListMonitoredResourceDescriptorsAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse, Google.Api.MonitoredResourceDescriptor>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListMonitoredResourceDescriptors",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListMonitoredResourceDescriptors",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_sync",
-      "title": "ListLogsRequestObject",
-      "description": "Snippet for ListLogs",
-      "file": "LoggingServiceV2Client.ListLogsRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogs",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogs",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_async",
-      "title": "ListLogsRequestObjectAsync",
-      "description": "Snippet for ListLogsAsync",
-      "file": "LoggingServiceV2Client.ListLogsRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogsAsync",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogs",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_sync_flattened",
-      "title": "ListLogs",
-      "description": "Snippet for ListLogs",
-      "file": "LoggingServiceV2Client.ListLogsSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogs",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogs",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_async_flattened",
-      "title": "ListLogsAsync",
-      "description": "Snippet for ListLogsAsync",
-      "file": "LoggingServiceV2Client.ListLogsAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogsAsync",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogs",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_sync_flattened_resourceNames1",
-      "title": "ListLogsResourceNames1",
-      "description": "Snippet for ListLogs",
-      "file": "LoggingServiceV2Client.ListLogsResourceNames1Snippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogs",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogs",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_async_flattened_resourceNames1",
-      "title": "ListLogsResourceNames1Async",
-      "description": "Snippet for ListLogsAsync",
-      "file": "LoggingServiceV2Client.ListLogsResourceNames1AsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogsAsync",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogs",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_sync_flattened_resourceNames2",
-      "title": "ListLogsResourceNames2",
-      "description": "Snippet for ListLogs",
-      "file": "LoggingServiceV2Client.ListLogsResourceNames2Snippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogs",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogs",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_async_flattened_resourceNames2",
-      "title": "ListLogsResourceNames2Async",
-      "description": "Snippet for ListLogsAsync",
-      "file": "LoggingServiceV2Client.ListLogsResourceNames2AsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogsAsync",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogs",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_sync_flattened_resourceNames3",
-      "title": "ListLogsResourceNames3",
-      "description": "Snippet for ListLogs",
-      "file": "LoggingServiceV2Client.ListLogsResourceNames3Snippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogs",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogs",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_async_flattened_resourceNames3",
-      "title": "ListLogsResourceNames3Async",
-      "description": "Snippet for ListLogsAsync",
-      "file": "LoggingServiceV2Client.ListLogsResourceNames3AsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogsAsync",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogs",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_sync_flattened_resourceNames4",
-      "title": "ListLogsResourceNames4",
-      "description": "Snippet for ListLogs",
-      "file": "LoggingServiceV2Client.ListLogsResourceNames4Snippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogs",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs",
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogs",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_async_flattened_resourceNames4",
-      "title": "ListLogsResourceNames4Async",
-      "description": "Snippet for ListLogsAsync",
-      "file": "LoggingServiceV2Client.ListLogsResourceNames4AsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListLogsAsync",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync",
-        "async": true,
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "ListLogs",
-          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "origin": "API_DEFINITION"
-    },
-    {
-      "regionTag": "logging_v2_generated_LoggingServiceV2_TailLogEntries_sync",
-      "title": "TailLogEntries",
-      "description": "Snippet for TailLogEntries",
-      "file": "LoggingServiceV2Client.TailLogEntriesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "TailLogEntries",
-        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.TailLogEntries",
-        "resultType": "Google.Cloud.Logging.V2.LoggingServiceV2Client+TailLogEntriesStream",
-        "client": {
-          "shortName": "LoggingServiceV2Client",
-          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
-        },
-        "method": {
-          "shortName": "TailLogEntries",
-          "fullName": "google.logging.v2.LoggingServiceV2.TailLogEntries",
-          "service": {
-            "shortName": "LoggingServiceV2",
-            "fullName": "google.logging.v2.LoggingServiceV2"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION"
-    },
-    {
       "regionTag": "logging_v2_generated_ConfigServiceV2_ListBuckets_sync",
       "title": "ListBucketsRequestObject",
       "description": "Snippet for ListBuckets",
@@ -4568,6 +3566,1008 @@
           "service": {
             "shortName": "ConfigServiceV2",
             "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_DeleteLog_sync",
+      "title": "DeleteLogRequestObject",
+      "description": "Snippet for DeleteLog",
+      "file": "LoggingServiceV2Client.DeleteLogRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLog",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLog",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "DeleteLog",
+          "fullName": "google.logging.v2.LoggingServiceV2.DeleteLog",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_DeleteLog_async",
+      "title": "DeleteLogRequestObjectAsync",
+      "description": "Snippet for DeleteLogAsync",
+      "file": "LoggingServiceV2Client.DeleteLogRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLogAsync",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLogAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "DeleteLog",
+          "fullName": "google.logging.v2.LoggingServiceV2.DeleteLog",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_DeleteLog_sync_flattened",
+      "title": "DeleteLog",
+      "description": "Snippet for DeleteLog",
+      "file": "LoggingServiceV2Client.DeleteLogSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLog",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLog",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "DeleteLog",
+          "fullName": "google.logging.v2.LoggingServiceV2.DeleteLog",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_DeleteLog_async_flattened",
+      "title": "DeleteLogAsync",
+      "description": "Snippet for DeleteLogAsync",
+      "file": "LoggingServiceV2Client.DeleteLogAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLogAsync",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLogAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "DeleteLog",
+          "fullName": "google.logging.v2.LoggingServiceV2.DeleteLog",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_DeleteLog_sync_flattened_resourceNames",
+      "title": "DeleteLogResourceNames",
+      "description": "Snippet for DeleteLog",
+      "file": "LoggingServiceV2Client.DeleteLogResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLog",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLog",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "DeleteLog",
+          "fullName": "google.logging.v2.LoggingServiceV2.DeleteLog",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_DeleteLog_async_flattened_resourceNames",
+      "title": "DeleteLogResourceNamesAsync",
+      "description": "Snippet for DeleteLogAsync",
+      "file": "LoggingServiceV2Client.DeleteLogResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLogAsync",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLogAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "DeleteLog",
+          "fullName": "google.logging.v2.LoggingServiceV2.DeleteLog",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_WriteLogEntries_sync",
+      "title": "WriteLogEntriesRequestObject",
+      "description": "Snippet for WriteLogEntries",
+      "file": "LoggingServiceV2Client.WriteLogEntriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "WriteLogEntries",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntries",
+        "resultType": "Google.Cloud.Logging.V2.WriteLogEntriesResponse",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "WriteLogEntries",
+          "fullName": "google.logging.v2.LoggingServiceV2.WriteLogEntries",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_WriteLogEntries_async",
+      "title": "WriteLogEntriesRequestObjectAsync",
+      "description": "Snippet for WriteLogEntriesAsync",
+      "file": "LoggingServiceV2Client.WriteLogEntriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "WriteLogEntriesAsync",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.WriteLogEntriesResponse>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "WriteLogEntries",
+          "fullName": "google.logging.v2.LoggingServiceV2.WriteLogEntries",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_WriteLogEntries_sync_flattened",
+      "title": "WriteLogEntries",
+      "description": "Snippet for WriteLogEntries",
+      "file": "LoggingServiceV2Client.WriteLogEntriesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "WriteLogEntries",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntries",
+        "resultType": "Google.Cloud.Logging.V2.WriteLogEntriesResponse",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "WriteLogEntries",
+          "fullName": "google.logging.v2.LoggingServiceV2.WriteLogEntries",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_WriteLogEntries_async_flattened",
+      "title": "WriteLogEntriesAsync",
+      "description": "Snippet for WriteLogEntriesAsync",
+      "file": "LoggingServiceV2Client.WriteLogEntriesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "WriteLogEntriesAsync",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.WriteLogEntriesResponse>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "WriteLogEntries",
+          "fullName": "google.logging.v2.LoggingServiceV2.WriteLogEntries",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_WriteLogEntries_sync_flattened_resourceNames",
+      "title": "WriteLogEntriesResourceNames",
+      "description": "Snippet for WriteLogEntries",
+      "file": "LoggingServiceV2Client.WriteLogEntriesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "WriteLogEntries",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntries",
+        "resultType": "Google.Cloud.Logging.V2.WriteLogEntriesResponse",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "WriteLogEntries",
+          "fullName": "google.logging.v2.LoggingServiceV2.WriteLogEntries",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_WriteLogEntries_async_flattened_resourceNames",
+      "title": "WriteLogEntriesResourceNamesAsync",
+      "description": "Snippet for WriteLogEntriesAsync",
+      "file": "LoggingServiceV2Client.WriteLogEntriesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "WriteLogEntriesAsync",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.WriteLogEntriesResponse>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "WriteLogEntries",
+          "fullName": "google.logging.v2.LoggingServiceV2.WriteLogEntries",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_sync",
+      "title": "ListLogEntriesRequestObject",
+      "description": "Snippet for ListLogEntries",
+      "file": "LoggingServiceV2Client.ListLogEntriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogEntries",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogEntries",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_async",
+      "title": "ListLogEntriesRequestObjectAsync",
+      "description": "Snippet for ListLogEntriesAsync",
+      "file": "LoggingServiceV2Client.ListLogEntriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogEntriesAsync",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogEntries",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_sync_flattened",
+      "title": "ListLogEntries",
+      "description": "Snippet for ListLogEntries",
+      "file": "LoggingServiceV2Client.ListLogEntriesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogEntries",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogEntries",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_async_flattened",
+      "title": "ListLogEntriesAsync",
+      "description": "Snippet for ListLogEntriesAsync",
+      "file": "LoggingServiceV2Client.ListLogEntriesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogEntriesAsync",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogEntries",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_sync_flattened_resourceNames1",
+      "title": "ListLogEntriesResourceNames1",
+      "description": "Snippet for ListLogEntries",
+      "file": "LoggingServiceV2Client.ListLogEntriesResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogEntries",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogEntries",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_async_flattened_resourceNames1",
+      "title": "ListLogEntriesResourceNames1Async",
+      "description": "Snippet for ListLogEntriesAsync",
+      "file": "LoggingServiceV2Client.ListLogEntriesResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogEntriesAsync",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogEntries",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_sync_flattened_resourceNames2",
+      "title": "ListLogEntriesResourceNames2",
+      "description": "Snippet for ListLogEntries",
+      "file": "LoggingServiceV2Client.ListLogEntriesResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogEntries",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogEntries",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_async_flattened_resourceNames2",
+      "title": "ListLogEntriesResourceNames2Async",
+      "description": "Snippet for ListLogEntriesAsync",
+      "file": "LoggingServiceV2Client.ListLogEntriesResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogEntriesAsync",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogEntries",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_sync_flattened_resourceNames3",
+      "title": "ListLogEntriesResourceNames3",
+      "description": "Snippet for ListLogEntries",
+      "file": "LoggingServiceV2Client.ListLogEntriesResourceNames3Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogEntries",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogEntries",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_async_flattened_resourceNames3",
+      "title": "ListLogEntriesResourceNames3Async",
+      "description": "Snippet for ListLogEntriesAsync",
+      "file": "LoggingServiceV2Client.ListLogEntriesResourceNames3AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogEntriesAsync",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogEntries",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_sync_flattened_resourceNames4",
+      "title": "ListLogEntriesResourceNames4",
+      "description": "Snippet for ListLogEntries",
+      "file": "LoggingServiceV2Client.ListLogEntriesResourceNames4Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogEntries",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogEntries",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogEntries_async_flattened_resourceNames4",
+      "title": "ListLogEntriesResourceNames4Async",
+      "description": "Snippet for ListLogEntriesAsync",
+      "file": "LoggingServiceV2Client.ListLogEntriesResourceNames4AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogEntriesAsync",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogEntries",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogEntries",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListMonitoredResourceDescriptors_sync",
+      "title": "ListMonitoredResourceDescriptorsRequestObject",
+      "description": "Snippet for ListMonitoredResourceDescriptors",
+      "file": "LoggingServiceV2Client.ListMonitoredResourceDescriptorsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMonitoredResourceDescriptors",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListMonitoredResourceDescriptors",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse, Google.Api.MonitoredResourceDescriptor>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListMonitoredResourceDescriptors",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListMonitoredResourceDescriptors",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListMonitoredResourceDescriptors_async",
+      "title": "ListMonitoredResourceDescriptorsRequestObjectAsync",
+      "description": "Snippet for ListMonitoredResourceDescriptorsAsync",
+      "file": "LoggingServiceV2Client.ListMonitoredResourceDescriptorsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMonitoredResourceDescriptorsAsync",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListMonitoredResourceDescriptorsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse, Google.Api.MonitoredResourceDescriptor>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListMonitoredResourceDescriptors",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListMonitoredResourceDescriptors",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_sync",
+      "title": "ListLogsRequestObject",
+      "description": "Snippet for ListLogs",
+      "file": "LoggingServiceV2Client.ListLogsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogs",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogs",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_async",
+      "title": "ListLogsRequestObjectAsync",
+      "description": "Snippet for ListLogsAsync",
+      "file": "LoggingServiceV2Client.ListLogsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogsAsync",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogs",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_sync_flattened",
+      "title": "ListLogs",
+      "description": "Snippet for ListLogs",
+      "file": "LoggingServiceV2Client.ListLogsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogs",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogs",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_async_flattened",
+      "title": "ListLogsAsync",
+      "description": "Snippet for ListLogsAsync",
+      "file": "LoggingServiceV2Client.ListLogsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogsAsync",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogs",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_sync_flattened_resourceNames1",
+      "title": "ListLogsResourceNames1",
+      "description": "Snippet for ListLogs",
+      "file": "LoggingServiceV2Client.ListLogsResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogs",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogs",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_async_flattened_resourceNames1",
+      "title": "ListLogsResourceNames1Async",
+      "description": "Snippet for ListLogsAsync",
+      "file": "LoggingServiceV2Client.ListLogsResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogsAsync",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogs",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_sync_flattened_resourceNames2",
+      "title": "ListLogsResourceNames2",
+      "description": "Snippet for ListLogs",
+      "file": "LoggingServiceV2Client.ListLogsResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogs",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogs",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_async_flattened_resourceNames2",
+      "title": "ListLogsResourceNames2Async",
+      "description": "Snippet for ListLogsAsync",
+      "file": "LoggingServiceV2Client.ListLogsResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogsAsync",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogs",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_sync_flattened_resourceNames3",
+      "title": "ListLogsResourceNames3",
+      "description": "Snippet for ListLogs",
+      "file": "LoggingServiceV2Client.ListLogsResourceNames3Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogs",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogs",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_async_flattened_resourceNames3",
+      "title": "ListLogsResourceNames3Async",
+      "description": "Snippet for ListLogsAsync",
+      "file": "LoggingServiceV2Client.ListLogsResourceNames3AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogsAsync",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogs",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_sync_flattened_resourceNames4",
+      "title": "ListLogsResourceNames4",
+      "description": "Snippet for ListLogs",
+      "file": "LoggingServiceV2Client.ListLogsResourceNames4Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogs",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogs",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_ListLogs_async_flattened_resourceNames4",
+      "title": "ListLogsResourceNames4Async",
+      "description": "Snippet for ListLogsAsync",
+      "file": "LoggingServiceV2Client.ListLogsResourceNames4AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogsAsync",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLogs",
+          "fullName": "google.logging.v2.LoggingServiceV2.ListLogs",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION"
+    },
+    {
+      "regionTag": "logging_v2_generated_LoggingServiceV2_TailLogEntries_sync",
+      "title": "TailLogEntries",
+      "description": "Snippet for TailLogEntries",
+      "file": "LoggingServiceV2Client.TailLogEntriesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TailLogEntries",
+        "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.TailLogEntries",
+        "resultType": "Google.Cloud.Logging.V2.LoggingServiceV2Client+TailLogEntriesStream",
+        "client": {
+          "shortName": "LoggingServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
+        },
+        "method": {
+          "shortName": "TailLogEntries",
+          "fullName": "google.logging.v2.LoggingServiceV2.TailLogEntries",
+          "service": {
+            "shortName": "LoggingServiceV2",
+            "fullName": "google.logging.v2.LoggingServiceV2"
           }
         }
       },

@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -341,9 +341,8 @@ namespace Google.Cloud.Dialogflow.V2
         public ConversationModelsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ConversationModelsClientBuilder()
+        public ConversationModelsClientBuilder() : base(ConversationModelsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ConversationModelsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ConversationModelsClient client);
@@ -370,29 +369,18 @@ namespace Google.Cloud.Dialogflow.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ConversationModelsClient.Create(callInvoker, Settings);
+            return ConversationModelsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ConversationModelsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ConversationModelsClient.Create(callInvoker, Settings);
+            return ConversationModelsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ConversationModelsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ConversationModelsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ConversationModelsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ConversationModels client wrapper, for convenient use.</summary>
@@ -421,19 +409,10 @@ namespace Google.Cloud.Dialogflow.V2
             "https://www.googleapis.com/auth/dialogflow",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ConversationModels.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ConversationModelsClient"/> using the default credentials, endpoint and
@@ -463,8 +442,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ConversationModelsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ConversationModelsClient"/>.</returns>
-        internal static ConversationModelsClient Create(grpccore::CallInvoker callInvoker, ConversationModelsSettings settings = null)
+        internal static ConversationModelsClient Create(grpccore::CallInvoker callInvoker, ConversationModelsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -473,7 +453,7 @@ namespace Google.Cloud.Dialogflow.V2
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ConversationModels.ConversationModelsClient grpcClient = new ConversationModels.ConversationModelsClient(callInvoker);
-            return new ConversationModelsClientImpl(grpcClient, settings);
+            return new ConversationModelsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1432,41 +1412,42 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ConversationModelsSettings"/> used within this client.</param>
-        public ConversationModelsClientImpl(ConversationModels.ConversationModelsClient grpcClient, ConversationModelsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ConversationModelsClientImpl(ConversationModels.ConversationModelsClient grpcClient, ConversationModelsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ConversationModelsSettings effectiveSettings = settings ?? ConversationModelsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateConversationModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateConversationModelOperationsSettings);
-            DeleteConversationModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteConversationModelOperationsSettings);
-            DeployConversationModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeployConversationModelOperationsSettings);
-            UndeployConversationModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeployConversationModelOperationsSettings);
-            CreateConversationModelEvaluationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateConversationModelEvaluationOperationsSettings);
-            _callCreateConversationModel = clientHelper.BuildApiCall<CreateConversationModelRequest, lro::Operation>(grpcClient.CreateConversationModelAsync, grpcClient.CreateConversationModel, effectiveSettings.CreateConversationModelSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateConversationModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateConversationModelOperationsSettings, logger);
+            DeleteConversationModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteConversationModelOperationsSettings, logger);
+            DeployConversationModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeployConversationModelOperationsSettings, logger);
+            UndeployConversationModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeployConversationModelOperationsSettings, logger);
+            CreateConversationModelEvaluationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateConversationModelEvaluationOperationsSettings, logger);
+            _callCreateConversationModel = clientHelper.BuildApiCall<CreateConversationModelRequest, lro::Operation>("CreateConversationModel", grpcClient.CreateConversationModelAsync, grpcClient.CreateConversationModel, effectiveSettings.CreateConversationModelSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateConversationModel);
             Modify_CreateConversationModelApiCall(ref _callCreateConversationModel);
-            _callGetConversationModel = clientHelper.BuildApiCall<GetConversationModelRequest, ConversationModel>(grpcClient.GetConversationModelAsync, grpcClient.GetConversationModel, effectiveSettings.GetConversationModelSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetConversationModel = clientHelper.BuildApiCall<GetConversationModelRequest, ConversationModel>("GetConversationModel", grpcClient.GetConversationModelAsync, grpcClient.GetConversationModel, effectiveSettings.GetConversationModelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetConversationModel);
             Modify_GetConversationModelApiCall(ref _callGetConversationModel);
-            _callListConversationModels = clientHelper.BuildApiCall<ListConversationModelsRequest, ListConversationModelsResponse>(grpcClient.ListConversationModelsAsync, grpcClient.ListConversationModels, effectiveSettings.ListConversationModelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListConversationModels = clientHelper.BuildApiCall<ListConversationModelsRequest, ListConversationModelsResponse>("ListConversationModels", grpcClient.ListConversationModelsAsync, grpcClient.ListConversationModels, effectiveSettings.ListConversationModelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListConversationModels);
             Modify_ListConversationModelsApiCall(ref _callListConversationModels);
-            _callDeleteConversationModel = clientHelper.BuildApiCall<DeleteConversationModelRequest, lro::Operation>(grpcClient.DeleteConversationModelAsync, grpcClient.DeleteConversationModel, effectiveSettings.DeleteConversationModelSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteConversationModel = clientHelper.BuildApiCall<DeleteConversationModelRequest, lro::Operation>("DeleteConversationModel", grpcClient.DeleteConversationModelAsync, grpcClient.DeleteConversationModel, effectiveSettings.DeleteConversationModelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteConversationModel);
             Modify_DeleteConversationModelApiCall(ref _callDeleteConversationModel);
-            _callDeployConversationModel = clientHelper.BuildApiCall<DeployConversationModelRequest, lro::Operation>(grpcClient.DeployConversationModelAsync, grpcClient.DeployConversationModel, effectiveSettings.DeployConversationModelSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeployConversationModel = clientHelper.BuildApiCall<DeployConversationModelRequest, lro::Operation>("DeployConversationModel", grpcClient.DeployConversationModelAsync, grpcClient.DeployConversationModel, effectiveSettings.DeployConversationModelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeployConversationModel);
             Modify_DeployConversationModelApiCall(ref _callDeployConversationModel);
-            _callUndeployConversationModel = clientHelper.BuildApiCall<UndeployConversationModelRequest, lro::Operation>(grpcClient.UndeployConversationModelAsync, grpcClient.UndeployConversationModel, effectiveSettings.UndeployConversationModelSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUndeployConversationModel = clientHelper.BuildApiCall<UndeployConversationModelRequest, lro::Operation>("UndeployConversationModel", grpcClient.UndeployConversationModelAsync, grpcClient.UndeployConversationModel, effectiveSettings.UndeployConversationModelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUndeployConversationModel);
             Modify_UndeployConversationModelApiCall(ref _callUndeployConversationModel);
-            _callGetConversationModelEvaluation = clientHelper.BuildApiCall<GetConversationModelEvaluationRequest, ConversationModelEvaluation>(grpcClient.GetConversationModelEvaluationAsync, grpcClient.GetConversationModelEvaluation, effectiveSettings.GetConversationModelEvaluationSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetConversationModelEvaluation = clientHelper.BuildApiCall<GetConversationModelEvaluationRequest, ConversationModelEvaluation>("GetConversationModelEvaluation", grpcClient.GetConversationModelEvaluationAsync, grpcClient.GetConversationModelEvaluation, effectiveSettings.GetConversationModelEvaluationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetConversationModelEvaluation);
             Modify_GetConversationModelEvaluationApiCall(ref _callGetConversationModelEvaluation);
-            _callListConversationModelEvaluations = clientHelper.BuildApiCall<ListConversationModelEvaluationsRequest, ListConversationModelEvaluationsResponse>(grpcClient.ListConversationModelEvaluationsAsync, grpcClient.ListConversationModelEvaluations, effectiveSettings.ListConversationModelEvaluationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListConversationModelEvaluations = clientHelper.BuildApiCall<ListConversationModelEvaluationsRequest, ListConversationModelEvaluationsResponse>("ListConversationModelEvaluations", grpcClient.ListConversationModelEvaluationsAsync, grpcClient.ListConversationModelEvaluations, effectiveSettings.ListConversationModelEvaluationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListConversationModelEvaluations);
             Modify_ListConversationModelEvaluationsApiCall(ref _callListConversationModelEvaluations);
-            _callCreateConversationModelEvaluation = clientHelper.BuildApiCall<CreateConversationModelEvaluationRequest, lro::Operation>(grpcClient.CreateConversationModelEvaluationAsync, grpcClient.CreateConversationModelEvaluation, effectiveSettings.CreateConversationModelEvaluationSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateConversationModelEvaluation = clientHelper.BuildApiCall<CreateConversationModelEvaluationRequest, lro::Operation>("CreateConversationModelEvaluation", grpcClient.CreateConversationModelEvaluationAsync, grpcClient.CreateConversationModelEvaluation, effectiveSettings.CreateConversationModelEvaluationSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateConversationModelEvaluation);
             Modify_CreateConversationModelEvaluationApiCall(ref _callCreateConversationModelEvaluation);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

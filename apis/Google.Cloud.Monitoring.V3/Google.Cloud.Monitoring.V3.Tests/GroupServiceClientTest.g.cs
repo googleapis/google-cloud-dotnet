@@ -45,7 +45,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.GetGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group response = client.GetGroup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -68,7 +68,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.GetGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group responseCallSettings = await client.GetGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Group responseCancellationToken = await client.GetGroupAsync(request, st::CancellationToken.None);
@@ -93,7 +93,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.GetGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group response = client.GetGroup(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -116,7 +116,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.GetGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group responseCallSettings = await client.GetGroupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Group responseCancellationToken = await client.GetGroupAsync(request.Name, st::CancellationToken.None);
@@ -141,7 +141,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.GetGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group response = client.GetGroup(request.GroupName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -164,7 +164,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.GetGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group responseCallSettings = await client.GetGroupAsync(request.GroupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Group responseCancellationToken = await client.GetGroupAsync(request.GroupName, st::CancellationToken.None);
@@ -189,7 +189,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.GetGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group response = client.GetGroup(request.ResourceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -212,7 +212,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.GetGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group responseCallSettings = await client.GetGroupAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Group responseCancellationToken = await client.GetGroupAsync(request.ResourceName, st::CancellationToken.None);
@@ -239,7 +239,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.CreateGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group response = client.CreateGroup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -264,7 +264,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.CreateGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group responseCallSettings = await client.CreateGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Group responseCancellationToken = await client.CreateGroupAsync(request, st::CancellationToken.None);
@@ -290,7 +290,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.CreateGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group response = client.CreateGroup(request.Name, request.Group);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -314,7 +314,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.CreateGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group responseCallSettings = await client.CreateGroupAsync(request.Name, request.Group, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Group responseCancellationToken = await client.CreateGroupAsync(request.Name, request.Group, st::CancellationToken.None);
@@ -340,7 +340,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.CreateGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group response = client.CreateGroup(request.ProjectName, request.Group);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -364,7 +364,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.CreateGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group responseCallSettings = await client.CreateGroupAsync(request.ProjectName, request.Group, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Group responseCancellationToken = await client.CreateGroupAsync(request.ProjectName, request.Group, st::CancellationToken.None);
@@ -390,7 +390,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.CreateGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group response = client.CreateGroup(request.OrganizationName, request.Group);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -414,7 +414,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.CreateGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group responseCallSettings = await client.CreateGroupAsync(request.OrganizationName, request.Group, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Group responseCancellationToken = await client.CreateGroupAsync(request.OrganizationName, request.Group, st::CancellationToken.None);
@@ -440,7 +440,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.CreateGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group response = client.CreateGroup(request.FolderName, request.Group);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -464,7 +464,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.CreateGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group responseCallSettings = await client.CreateGroupAsync(request.FolderName, request.Group, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Group responseCancellationToken = await client.CreateGroupAsync(request.FolderName, request.Group, st::CancellationToken.None);
@@ -490,7 +490,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.CreateGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group response = client.CreateGroup(request.ResourceName, request.Group);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -514,7 +514,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.CreateGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group responseCallSettings = await client.CreateGroupAsync(request.ResourceName, request.Group, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Group responseCancellationToken = await client.CreateGroupAsync(request.ResourceName, request.Group, st::CancellationToken.None);
@@ -540,7 +540,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.UpdateGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group response = client.UpdateGroup(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -564,7 +564,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.UpdateGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group responseCallSettings = await client.UpdateGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Group responseCancellationToken = await client.UpdateGroupAsync(request, st::CancellationToken.None);
@@ -586,7 +586,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.UpdateGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group response = client.UpdateGroup(request.Group);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -606,7 +606,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 IsCluster = true,
             };
             mockGrpcClient.Setup(x => x.UpdateGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             Group responseCallSettings = await client.UpdateGroupAsync(request.Group, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Group responseCancellationToken = await client.UpdateGroupAsync(request.Group, st::CancellationToken.None);
@@ -625,7 +625,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteGroup(request);
             mockGrpcClient.VerifyAll();
         }
@@ -641,7 +641,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteGroupAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -657,7 +657,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteGroup(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -672,7 +672,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteGroupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteGroupAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -688,7 +688,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteGroup(request.GroupName);
             mockGrpcClient.VerifyAll();
         }
@@ -703,7 +703,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteGroupAsync(request.GroupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteGroupAsync(request.GroupName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -719,7 +719,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteGroup(request.ResourceName);
             mockGrpcClient.VerifyAll();
         }
@@ -734,7 +734,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteGroupAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteGroupAsync(request.ResourceName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

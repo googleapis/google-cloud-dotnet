@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -188,9 +188,8 @@ namespace Google.Cloud.AIPlatform.V1
         public IndexServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public IndexServiceClientBuilder()
+        public IndexServiceClientBuilder() : base(IndexServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = IndexServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref IndexServiceClient client);
@@ -217,29 +216,18 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return IndexServiceClient.Create(callInvoker, Settings);
+            return IndexServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<IndexServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return IndexServiceClient.Create(callInvoker, Settings);
+            return IndexServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => IndexServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => IndexServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => IndexServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>IndexService client wrapper, for convenient use.</summary>
@@ -266,19 +254,10 @@ namespace Google.Cloud.AIPlatform.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(IndexService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="IndexServiceClient"/> using the default credentials, endpoint and
@@ -305,8 +284,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="IndexServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="IndexServiceClient"/>.</returns>
-        internal static IndexServiceClient Create(grpccore::CallInvoker callInvoker, IndexServiceSettings settings = null)
+        internal static IndexServiceClient Create(grpccore::CallInvoker callInvoker, IndexServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -315,7 +295,7 @@ namespace Google.Cloud.AIPlatform.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             IndexService.IndexServiceClient grpcClient = new IndexService.IndexServiceClient(callInvoker);
-            return new IndexServiceClientImpl(grpcClient, settings);
+            return new IndexServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1017,27 +997,28 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="IndexServiceSettings"/> used within this client.</param>
-        public IndexServiceClientImpl(IndexService.IndexServiceClient grpcClient, IndexServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public IndexServiceClientImpl(IndexService.IndexServiceClient grpcClient, IndexServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             IndexServiceSettings effectiveSettings = settings ?? IndexServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateIndexOperationsSettings);
-            UpdateIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateIndexOperationsSettings);
-            DeleteIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteIndexOperationsSettings);
-            _callCreateIndex = clientHelper.BuildApiCall<CreateIndexRequest, lro::Operation>(grpcClient.CreateIndexAsync, grpcClient.CreateIndex, effectiveSettings.CreateIndexSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateIndexOperationsSettings, logger);
+            UpdateIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateIndexOperationsSettings, logger);
+            DeleteIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteIndexOperationsSettings, logger);
+            _callCreateIndex = clientHelper.BuildApiCall<CreateIndexRequest, lro::Operation>("CreateIndex", grpcClient.CreateIndexAsync, grpcClient.CreateIndex, effectiveSettings.CreateIndexSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateIndex);
             Modify_CreateIndexApiCall(ref _callCreateIndex);
-            _callGetIndex = clientHelper.BuildApiCall<GetIndexRequest, Index>(grpcClient.GetIndexAsync, grpcClient.GetIndex, effectiveSettings.GetIndexSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetIndex = clientHelper.BuildApiCall<GetIndexRequest, Index>("GetIndex", grpcClient.GetIndexAsync, grpcClient.GetIndex, effectiveSettings.GetIndexSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetIndex);
             Modify_GetIndexApiCall(ref _callGetIndex);
-            _callListIndexes = clientHelper.BuildApiCall<ListIndexesRequest, ListIndexesResponse>(grpcClient.ListIndexesAsync, grpcClient.ListIndexes, effectiveSettings.ListIndexesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListIndexes = clientHelper.BuildApiCall<ListIndexesRequest, ListIndexesResponse>("ListIndexes", grpcClient.ListIndexesAsync, grpcClient.ListIndexes, effectiveSettings.ListIndexesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListIndexes);
             Modify_ListIndexesApiCall(ref _callListIndexes);
-            _callUpdateIndex = clientHelper.BuildApiCall<UpdateIndexRequest, lro::Operation>(grpcClient.UpdateIndexAsync, grpcClient.UpdateIndex, effectiveSettings.UpdateIndexSettings).WithGoogleRequestParam("index.name", request => request.Index?.Name);
+            _callUpdateIndex = clientHelper.BuildApiCall<UpdateIndexRequest, lro::Operation>("UpdateIndex", grpcClient.UpdateIndexAsync, grpcClient.UpdateIndex, effectiveSettings.UpdateIndexSettings).WithGoogleRequestParam("index.name", request => request.Index?.Name);
             Modify_ApiCall(ref _callUpdateIndex);
             Modify_UpdateIndexApiCall(ref _callUpdateIndex);
-            _callDeleteIndex = clientHelper.BuildApiCall<DeleteIndexRequest, lro::Operation>(grpcClient.DeleteIndexAsync, grpcClient.DeleteIndex, effectiveSettings.DeleteIndexSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteIndex = clientHelper.BuildApiCall<DeleteIndexRequest, lro::Operation>("DeleteIndex", grpcClient.DeleteIndexAsync, grpcClient.DeleteIndex, effectiveSettings.DeleteIndexSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteIndex);
             Modify_DeleteIndexApiCall(ref _callDeleteIndex);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

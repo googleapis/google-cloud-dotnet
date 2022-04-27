@@ -54,7 +54,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 Uid = "uida2d37198",
             };
             mockGrpcClient.Setup(x => x.GetOSPolicyAssignment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             OSPolicyAssignment response = client.GetOSPolicyAssignment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -86,7 +86,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 Uid = "uida2d37198",
             };
             mockGrpcClient.Setup(x => x.GetOSPolicyAssignmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<OSPolicyAssignment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             OSPolicyAssignment responseCallSettings = await client.GetOSPolicyAssignmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             OSPolicyAssignment responseCancellationToken = await client.GetOSPolicyAssignmentAsync(request, st::CancellationToken.None);
@@ -120,7 +120,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 Uid = "uida2d37198",
             };
             mockGrpcClient.Setup(x => x.GetOSPolicyAssignment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             OSPolicyAssignment response = client.GetOSPolicyAssignment(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -152,7 +152,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 Uid = "uida2d37198",
             };
             mockGrpcClient.Setup(x => x.GetOSPolicyAssignmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<OSPolicyAssignment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             OSPolicyAssignment responseCallSettings = await client.GetOSPolicyAssignmentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             OSPolicyAssignment responseCancellationToken = await client.GetOSPolicyAssignmentAsync(request.Name, st::CancellationToken.None);
@@ -186,7 +186,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 Uid = "uida2d37198",
             };
             mockGrpcClient.Setup(x => x.GetOSPolicyAssignment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             OSPolicyAssignment response = client.GetOSPolicyAssignment(request.OSPolicyAssignmentName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -218,7 +218,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 Uid = "uida2d37198",
             };
             mockGrpcClient.Setup(x => x.GetOSPolicyAssignmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<OSPolicyAssignment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             OSPolicyAssignment responseCallSettings = await client.GetOSPolicyAssignmentAsync(request.OSPolicyAssignmentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             OSPolicyAssignment responseCancellationToken = await client.GetOSPolicyAssignmentAsync(request.OSPolicyAssignmentName, st::CancellationToken.None);
@@ -248,7 +248,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 LastRunId = "last_run_ida47e4da8",
             };
             mockGrpcClient.Setup(x => x.GetOSPolicyAssignmentReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             OSPolicyAssignmentReport response = client.GetOSPolicyAssignmentReport(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -276,7 +276,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 LastRunId = "last_run_ida47e4da8",
             };
             mockGrpcClient.Setup(x => x.GetOSPolicyAssignmentReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<OSPolicyAssignmentReport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             OSPolicyAssignmentReport responseCallSettings = await client.GetOSPolicyAssignmentReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             OSPolicyAssignmentReport responseCancellationToken = await client.GetOSPolicyAssignmentReportAsync(request, st::CancellationToken.None);
@@ -306,7 +306,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 LastRunId = "last_run_ida47e4da8",
             };
             mockGrpcClient.Setup(x => x.GetOSPolicyAssignmentReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             OSPolicyAssignmentReport response = client.GetOSPolicyAssignmentReport(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -334,7 +334,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 LastRunId = "last_run_ida47e4da8",
             };
             mockGrpcClient.Setup(x => x.GetOSPolicyAssignmentReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<OSPolicyAssignmentReport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             OSPolicyAssignmentReport responseCallSettings = await client.GetOSPolicyAssignmentReportAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             OSPolicyAssignmentReport responseCancellationToken = await client.GetOSPolicyAssignmentReportAsync(request.Name, st::CancellationToken.None);
@@ -364,7 +364,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 LastRunId = "last_run_ida47e4da8",
             };
             mockGrpcClient.Setup(x => x.GetOSPolicyAssignmentReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             OSPolicyAssignmentReport response = client.GetOSPolicyAssignmentReport(request.OSPolicyAssignmentReportName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -392,7 +392,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 LastRunId = "last_run_ida47e4da8",
             };
             mockGrpcClient.Setup(x => x.GetOSPolicyAssignmentReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<OSPolicyAssignmentReport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             OSPolicyAssignmentReport responseCallSettings = await client.GetOSPolicyAssignmentReportAsync(request.OSPolicyAssignmentReportName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             OSPolicyAssignmentReport responseCancellationToken = await client.GetOSPolicyAssignmentReportAsync(request.OSPolicyAssignmentReportName, st::CancellationToken.None);
@@ -424,7 +424,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetInventory(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             Inventory response = client.GetInventory(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -454,7 +454,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetInventoryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Inventory>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             Inventory responseCallSettings = await client.GetInventoryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Inventory responseCancellationToken = await client.GetInventoryAsync(request, st::CancellationToken.None);
@@ -485,7 +485,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetInventory(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             Inventory response = client.GetInventory(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -514,7 +514,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetInventoryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Inventory>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             Inventory responseCallSettings = await client.GetInventoryAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Inventory responseCancellationToken = await client.GetInventoryAsync(request.Name, st::CancellationToken.None);
@@ -545,7 +545,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetInventory(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             Inventory response = client.GetInventory(request.InventoryName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -574,7 +574,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetInventoryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Inventory>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             Inventory responseCallSettings = await client.GetInventoryAsync(request.InventoryName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Inventory responseCancellationToken = await client.GetInventoryAsync(request.InventoryName, st::CancellationToken.None);
@@ -601,7 +601,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetVulnerabilityReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             VulnerabilityReport response = client.GetVulnerabilityReport(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -626,7 +626,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetVulnerabilityReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VulnerabilityReport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             VulnerabilityReport responseCallSettings = await client.GetVulnerabilityReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VulnerabilityReport responseCancellationToken = await client.GetVulnerabilityReportAsync(request, st::CancellationToken.None);
@@ -653,7 +653,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetVulnerabilityReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             VulnerabilityReport response = client.GetVulnerabilityReport(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -678,7 +678,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetVulnerabilityReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VulnerabilityReport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             VulnerabilityReport responseCallSettings = await client.GetVulnerabilityReportAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VulnerabilityReport responseCancellationToken = await client.GetVulnerabilityReportAsync(request.Name, st::CancellationToken.None);
@@ -705,7 +705,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetVulnerabilityReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             VulnerabilityReport response = client.GetVulnerabilityReport(request.VulnerabilityReportName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -730,7 +730,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetVulnerabilityReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VulnerabilityReport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null);
+            OsConfigZonalServiceClient client = new OsConfigZonalServiceClientImpl(mockGrpcClient.Object, null, null);
             VulnerabilityReport responseCallSettings = await client.GetVulnerabilityReportAsync(request.VulnerabilityReportName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VulnerabilityReport responseCancellationToken = await client.GetVulnerabilityReportAsync(request.VulnerabilityReportName, st::CancellationToken.None);

@@ -57,7 +57,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetGameServerConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GameServerConfigsServiceClient client = new GameServerConfigsServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerConfigsServiceClient client = new GameServerConfigsServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerConfig response = client.GetGameServerConfig(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -92,7 +92,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetGameServerConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GameServerConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GameServerConfigsServiceClient client = new GameServerConfigsServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerConfigsServiceClient client = new GameServerConfigsServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerConfig responseCallSettings = await client.GetGameServerConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GameServerConfig responseCancellationToken = await client.GetGameServerConfigAsync(request, st::CancellationToken.None);
@@ -129,7 +129,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetGameServerConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GameServerConfigsServiceClient client = new GameServerConfigsServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerConfigsServiceClient client = new GameServerConfigsServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerConfig response = client.GetGameServerConfig(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -164,7 +164,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetGameServerConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GameServerConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GameServerConfigsServiceClient client = new GameServerConfigsServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerConfigsServiceClient client = new GameServerConfigsServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerConfig responseCallSettings = await client.GetGameServerConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GameServerConfig responseCancellationToken = await client.GetGameServerConfigAsync(request.Name, st::CancellationToken.None);
@@ -201,7 +201,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetGameServerConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GameServerConfigsServiceClient client = new GameServerConfigsServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerConfigsServiceClient client = new GameServerConfigsServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerConfig response = client.GetGameServerConfig(request.GameServerConfigName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -236,7 +236,7 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetGameServerConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GameServerConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GameServerConfigsServiceClient client = new GameServerConfigsServiceClientImpl(mockGrpcClient.Object, null);
+            GameServerConfigsServiceClient client = new GameServerConfigsServiceClientImpl(mockGrpcClient.Object, null, null);
             GameServerConfig responseCallSettings = await client.GetGameServerConfigAsync(request.GameServerConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             GameServerConfig responseCancellationToken = await client.GetGameServerConfigAsync(request.GameServerConfigName, st::CancellationToken.None);

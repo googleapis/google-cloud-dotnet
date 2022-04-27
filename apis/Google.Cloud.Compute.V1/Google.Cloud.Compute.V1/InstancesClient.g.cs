@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -1350,9 +1350,8 @@ namespace Google.Cloud.Compute.V1
         public InstancesSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public InstancesClientBuilder()
+        public InstancesClientBuilder() : base(InstancesClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = InstancesClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref InstancesClient client);
@@ -1379,29 +1378,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return InstancesClient.Create(callInvoker, Settings);
+            return InstancesClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<InstancesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return InstancesClient.Create(callInvoker, Settings);
+            return InstancesClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => InstancesClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => InstancesClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => InstancesClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>Instances client wrapper, for convenient use.</summary>
@@ -1430,19 +1418,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Instances.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="InstancesClient"/> using the default credentials, endpoint and settings.
@@ -1469,8 +1448,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="InstancesSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="InstancesClient"/>.</returns>
-        internal static InstancesClient Create(grpccore::CallInvoker callInvoker, InstancesSettings settings = null)
+        internal static InstancesClient Create(grpccore::CallInvoker callInvoker, InstancesSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -1479,7 +1459,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Instances.InstancesClient grpcClient = new Instances.InstancesClient(callInvoker);
-            return new InstancesClientImpl(grpcClient, settings);
+            return new InstancesClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -6699,176 +6679,177 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="InstancesSettings"/> used within this client.</param>
-        public InstancesClientImpl(Instances.InstancesClient grpcClient, InstancesSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public InstancesClientImpl(Instances.InstancesClient grpcClient, InstancesSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             InstancesSettings effectiveSettings = settings ?? InstancesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            AddAccessConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.AddAccessConfigOperationsSettings);
-            AddResourcePoliciesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.AddResourcePoliciesOperationsSettings);
-            AttachDiskOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.AttachDiskOperationsSettings);
-            BulkInsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.BulkInsertOperationsSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DeleteOperationsSettings);
-            DeleteAccessConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DeleteAccessConfigOperationsSettings);
-            DetachDiskOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DetachDiskOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.InsertOperationsSettings);
-            RemoveResourcePoliciesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.RemoveResourcePoliciesOperationsSettings);
-            ResetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.ResetOperationsSettings);
-            ResumeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.ResumeOperationsSettings);
-            SetDeletionProtectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetDeletionProtectionOperationsSettings);
-            SetDiskAutoDeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetDiskAutoDeleteOperationsSettings);
-            SetLabelsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetLabelsOperationsSettings);
-            SetMachineResourcesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetMachineResourcesOperationsSettings);
-            SetMachineTypeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetMachineTypeOperationsSettings);
-            SetMetadataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetMetadataOperationsSettings);
-            SetMinCpuPlatformOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetMinCpuPlatformOperationsSettings);
-            SetSchedulingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetSchedulingOperationsSettings);
-            SetServiceAccountOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetServiceAccountOperationsSettings);
-            SetShieldedInstanceIntegrityPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetShieldedInstanceIntegrityPolicyOperationsSettings);
-            SetTagsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetTagsOperationsSettings);
-            SimulateMaintenanceEventOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SimulateMaintenanceEventOperationsSettings);
-            StartOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.StartOperationsSettings);
-            StartWithEncryptionKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.StartWithEncryptionKeyOperationsSettings);
-            StopOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.StopOperationsSettings);
-            SuspendOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SuspendOperationsSettings);
-            UpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.UpdateOperationsSettings);
-            UpdateAccessConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.UpdateAccessConfigOperationsSettings);
-            UpdateDisplayDeviceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.UpdateDisplayDeviceOperationsSettings);
-            UpdateNetworkInterfaceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.UpdateNetworkInterfaceOperationsSettings);
-            UpdateShieldedInstanceConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.UpdateShieldedInstanceConfigOperationsSettings);
-            _callAddAccessConfig = clientHelper.BuildApiCall<AddAccessConfigInstanceRequest, Operation>(grpcClient.AddAccessConfigAsync, grpcClient.AddAccessConfig, effectiveSettings.AddAccessConfigSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            AddAccessConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.AddAccessConfigOperationsSettings, logger);
+            AddResourcePoliciesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.AddResourcePoliciesOperationsSettings, logger);
+            AttachDiskOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.AttachDiskOperationsSettings, logger);
+            BulkInsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.BulkInsertOperationsSettings, logger);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DeleteOperationsSettings, logger);
+            DeleteAccessConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DeleteAccessConfigOperationsSettings, logger);
+            DetachDiskOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DetachDiskOperationsSettings, logger);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.InsertOperationsSettings, logger);
+            RemoveResourcePoliciesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.RemoveResourcePoliciesOperationsSettings, logger);
+            ResetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.ResetOperationsSettings, logger);
+            ResumeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.ResumeOperationsSettings, logger);
+            SetDeletionProtectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetDeletionProtectionOperationsSettings, logger);
+            SetDiskAutoDeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetDiskAutoDeleteOperationsSettings, logger);
+            SetLabelsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetLabelsOperationsSettings, logger);
+            SetMachineResourcesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetMachineResourcesOperationsSettings, logger);
+            SetMachineTypeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetMachineTypeOperationsSettings, logger);
+            SetMetadataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetMetadataOperationsSettings, logger);
+            SetMinCpuPlatformOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetMinCpuPlatformOperationsSettings, logger);
+            SetSchedulingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetSchedulingOperationsSettings, logger);
+            SetServiceAccountOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetServiceAccountOperationsSettings, logger);
+            SetShieldedInstanceIntegrityPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetShieldedInstanceIntegrityPolicyOperationsSettings, logger);
+            SetTagsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetTagsOperationsSettings, logger);
+            SimulateMaintenanceEventOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SimulateMaintenanceEventOperationsSettings, logger);
+            StartOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.StartOperationsSettings, logger);
+            StartWithEncryptionKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.StartWithEncryptionKeyOperationsSettings, logger);
+            StopOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.StopOperationsSettings, logger);
+            SuspendOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SuspendOperationsSettings, logger);
+            UpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.UpdateOperationsSettings, logger);
+            UpdateAccessConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.UpdateAccessConfigOperationsSettings, logger);
+            UpdateDisplayDeviceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.UpdateDisplayDeviceOperationsSettings, logger);
+            UpdateNetworkInterfaceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.UpdateNetworkInterfaceOperationsSettings, logger);
+            UpdateShieldedInstanceConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.UpdateShieldedInstanceConfigOperationsSettings, logger);
+            _callAddAccessConfig = clientHelper.BuildApiCall<AddAccessConfigInstanceRequest, Operation>("AddAccessConfig", grpcClient.AddAccessConfigAsync, grpcClient.AddAccessConfig, effectiveSettings.AddAccessConfigSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callAddAccessConfig);
             Modify_AddAccessConfigApiCall(ref _callAddAccessConfig);
-            _callAddResourcePolicies = clientHelper.BuildApiCall<AddResourcePoliciesInstanceRequest, Operation>(grpcClient.AddResourcePoliciesAsync, grpcClient.AddResourcePolicies, effectiveSettings.AddResourcePoliciesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callAddResourcePolicies = clientHelper.BuildApiCall<AddResourcePoliciesInstanceRequest, Operation>("AddResourcePolicies", grpcClient.AddResourcePoliciesAsync, grpcClient.AddResourcePolicies, effectiveSettings.AddResourcePoliciesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callAddResourcePolicies);
             Modify_AddResourcePoliciesApiCall(ref _callAddResourcePolicies);
-            _callAggregatedList = clientHelper.BuildApiCall<AggregatedListInstancesRequest, InstanceAggregatedList>(grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callAggregatedList = clientHelper.BuildApiCall<AggregatedListInstancesRequest, InstanceAggregatedList>("AggregatedList", grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callAggregatedList);
             Modify_AggregatedListApiCall(ref _callAggregatedList);
-            _callAttachDisk = clientHelper.BuildApiCall<AttachDiskInstanceRequest, Operation>(grpcClient.AttachDiskAsync, grpcClient.AttachDisk, effectiveSettings.AttachDiskSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callAttachDisk = clientHelper.BuildApiCall<AttachDiskInstanceRequest, Operation>("AttachDisk", grpcClient.AttachDiskAsync, grpcClient.AttachDisk, effectiveSettings.AttachDiskSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callAttachDisk);
             Modify_AttachDiskApiCall(ref _callAttachDisk);
-            _callBulkInsert = clientHelper.BuildApiCall<BulkInsertInstanceRequest, Operation>(grpcClient.BulkInsertAsync, grpcClient.BulkInsert, effectiveSettings.BulkInsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone);
+            _callBulkInsert = clientHelper.BuildApiCall<BulkInsertInstanceRequest, Operation>("BulkInsert", grpcClient.BulkInsertAsync, grpcClient.BulkInsert, effectiveSettings.BulkInsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone);
             Modify_ApiCall(ref _callBulkInsert);
             Modify_BulkInsertApiCall(ref _callBulkInsert);
-            _callDelete = clientHelper.BuildApiCall<DeleteInstanceRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callDelete = clientHelper.BuildApiCall<DeleteInstanceRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
-            _callDeleteAccessConfig = clientHelper.BuildApiCall<DeleteAccessConfigInstanceRequest, Operation>(grpcClient.DeleteAccessConfigAsync, grpcClient.DeleteAccessConfig, effectiveSettings.DeleteAccessConfigSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callDeleteAccessConfig = clientHelper.BuildApiCall<DeleteAccessConfigInstanceRequest, Operation>("DeleteAccessConfig", grpcClient.DeleteAccessConfigAsync, grpcClient.DeleteAccessConfig, effectiveSettings.DeleteAccessConfigSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callDeleteAccessConfig);
             Modify_DeleteAccessConfigApiCall(ref _callDeleteAccessConfig);
-            _callDetachDisk = clientHelper.BuildApiCall<DetachDiskInstanceRequest, Operation>(grpcClient.DetachDiskAsync, grpcClient.DetachDisk, effectiveSettings.DetachDiskSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callDetachDisk = clientHelper.BuildApiCall<DetachDiskInstanceRequest, Operation>("DetachDisk", grpcClient.DetachDiskAsync, grpcClient.DetachDisk, effectiveSettings.DetachDiskSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callDetachDisk);
             Modify_DetachDiskApiCall(ref _callDetachDisk);
-            _callGet = clientHelper.BuildApiCall<GetInstanceRequest, Instance>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callGet = clientHelper.BuildApiCall<GetInstanceRequest, Instance>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callGetEffectiveFirewalls = clientHelper.BuildApiCall<GetEffectiveFirewallsInstanceRequest, InstancesGetEffectiveFirewallsResponse>(grpcClient.GetEffectiveFirewallsAsync, grpcClient.GetEffectiveFirewalls, effectiveSettings.GetEffectiveFirewallsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callGetEffectiveFirewalls = clientHelper.BuildApiCall<GetEffectiveFirewallsInstanceRequest, InstancesGetEffectiveFirewallsResponse>("GetEffectiveFirewalls", grpcClient.GetEffectiveFirewallsAsync, grpcClient.GetEffectiveFirewalls, effectiveSettings.GetEffectiveFirewallsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callGetEffectiveFirewalls);
             Modify_GetEffectiveFirewallsApiCall(ref _callGetEffectiveFirewalls);
-            _callGetGuestAttributes = clientHelper.BuildApiCall<GetGuestAttributesInstanceRequest, GuestAttributes>(grpcClient.GetGuestAttributesAsync, grpcClient.GetGuestAttributes, effectiveSettings.GetGuestAttributesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callGetGuestAttributes = clientHelper.BuildApiCall<GetGuestAttributesInstanceRequest, GuestAttributes>("GetGuestAttributes", grpcClient.GetGuestAttributesAsync, grpcClient.GetGuestAttributes, effectiveSettings.GetGuestAttributesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callGetGuestAttributes);
             Modify_GetGuestAttributesApiCall(ref _callGetGuestAttributes);
-            _callGetIamPolicy = clientHelper.BuildApiCall<GetIamPolicyInstanceRequest, Policy>(grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("resource", request => request.Resource);
+            _callGetIamPolicy = clientHelper.BuildApiCall<GetIamPolicyInstanceRequest, Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
-            _callGetScreenshot = clientHelper.BuildApiCall<GetScreenshotInstanceRequest, Screenshot>(grpcClient.GetScreenshotAsync, grpcClient.GetScreenshot, effectiveSettings.GetScreenshotSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callGetScreenshot = clientHelper.BuildApiCall<GetScreenshotInstanceRequest, Screenshot>("GetScreenshot", grpcClient.GetScreenshotAsync, grpcClient.GetScreenshot, effectiveSettings.GetScreenshotSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callGetScreenshot);
             Modify_GetScreenshotApiCall(ref _callGetScreenshot);
-            _callGetSerialPortOutput = clientHelper.BuildApiCall<GetSerialPortOutputInstanceRequest, SerialPortOutput>(grpcClient.GetSerialPortOutputAsync, grpcClient.GetSerialPortOutput, effectiveSettings.GetSerialPortOutputSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callGetSerialPortOutput = clientHelper.BuildApiCall<GetSerialPortOutputInstanceRequest, SerialPortOutput>("GetSerialPortOutput", grpcClient.GetSerialPortOutputAsync, grpcClient.GetSerialPortOutput, effectiveSettings.GetSerialPortOutputSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callGetSerialPortOutput);
             Modify_GetSerialPortOutputApiCall(ref _callGetSerialPortOutput);
-            _callGetShieldedInstanceIdentity = clientHelper.BuildApiCall<GetShieldedInstanceIdentityInstanceRequest, ShieldedInstanceIdentity>(grpcClient.GetShieldedInstanceIdentityAsync, grpcClient.GetShieldedInstanceIdentity, effectiveSettings.GetShieldedInstanceIdentitySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callGetShieldedInstanceIdentity = clientHelper.BuildApiCall<GetShieldedInstanceIdentityInstanceRequest, ShieldedInstanceIdentity>("GetShieldedInstanceIdentity", grpcClient.GetShieldedInstanceIdentityAsync, grpcClient.GetShieldedInstanceIdentity, effectiveSettings.GetShieldedInstanceIdentitySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callGetShieldedInstanceIdentity);
             Modify_GetShieldedInstanceIdentityApiCall(ref _callGetShieldedInstanceIdentity);
-            _callInsert = clientHelper.BuildApiCall<InsertInstanceRequest, Operation>(grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone);
+            _callInsert = clientHelper.BuildApiCall<InsertInstanceRequest, Operation>("Insert", grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
-            _callList = clientHelper.BuildApiCall<ListInstancesRequest, InstanceList>(grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone);
+            _callList = clientHelper.BuildApiCall<ListInstancesRequest, InstanceList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
-            _callListReferrers = clientHelper.BuildApiCall<ListReferrersInstancesRequest, InstanceListReferrers>(grpcClient.ListReferrersAsync, grpcClient.ListReferrers, effectiveSettings.ListReferrersSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callListReferrers = clientHelper.BuildApiCall<ListReferrersInstancesRequest, InstanceListReferrers>("ListReferrers", grpcClient.ListReferrersAsync, grpcClient.ListReferrers, effectiveSettings.ListReferrersSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callListReferrers);
             Modify_ListReferrersApiCall(ref _callListReferrers);
-            _callRemoveResourcePolicies = clientHelper.BuildApiCall<RemoveResourcePoliciesInstanceRequest, Operation>(grpcClient.RemoveResourcePoliciesAsync, grpcClient.RemoveResourcePolicies, effectiveSettings.RemoveResourcePoliciesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callRemoveResourcePolicies = clientHelper.BuildApiCall<RemoveResourcePoliciesInstanceRequest, Operation>("RemoveResourcePolicies", grpcClient.RemoveResourcePoliciesAsync, grpcClient.RemoveResourcePolicies, effectiveSettings.RemoveResourcePoliciesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callRemoveResourcePolicies);
             Modify_RemoveResourcePoliciesApiCall(ref _callRemoveResourcePolicies);
-            _callReset = clientHelper.BuildApiCall<ResetInstanceRequest, Operation>(grpcClient.ResetAsync, grpcClient.Reset, effectiveSettings.ResetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callReset = clientHelper.BuildApiCall<ResetInstanceRequest, Operation>("Reset", grpcClient.ResetAsync, grpcClient.Reset, effectiveSettings.ResetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callReset);
             Modify_ResetApiCall(ref _callReset);
-            _callResume = clientHelper.BuildApiCall<ResumeInstanceRequest, Operation>(grpcClient.ResumeAsync, grpcClient.Resume, effectiveSettings.ResumeSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callResume = clientHelper.BuildApiCall<ResumeInstanceRequest, Operation>("Resume", grpcClient.ResumeAsync, grpcClient.Resume, effectiveSettings.ResumeSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callResume);
             Modify_ResumeApiCall(ref _callResume);
-            _callSendDiagnosticInterrupt = clientHelper.BuildApiCall<SendDiagnosticInterruptInstanceRequest, SendDiagnosticInterruptInstanceResponse>(grpcClient.SendDiagnosticInterruptAsync, grpcClient.SendDiagnosticInterrupt, effectiveSettings.SendDiagnosticInterruptSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callSendDiagnosticInterrupt = clientHelper.BuildApiCall<SendDiagnosticInterruptInstanceRequest, SendDiagnosticInterruptInstanceResponse>("SendDiagnosticInterrupt", grpcClient.SendDiagnosticInterruptAsync, grpcClient.SendDiagnosticInterrupt, effectiveSettings.SendDiagnosticInterruptSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callSendDiagnosticInterrupt);
             Modify_SendDiagnosticInterruptApiCall(ref _callSendDiagnosticInterrupt);
-            _callSetDeletionProtection = clientHelper.BuildApiCall<SetDeletionProtectionInstanceRequest, Operation>(grpcClient.SetDeletionProtectionAsync, grpcClient.SetDeletionProtection, effectiveSettings.SetDeletionProtectionSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("resource", request => request.Resource);
+            _callSetDeletionProtection = clientHelper.BuildApiCall<SetDeletionProtectionInstanceRequest, Operation>("SetDeletionProtection", grpcClient.SetDeletionProtectionAsync, grpcClient.SetDeletionProtection, effectiveSettings.SetDeletionProtectionSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetDeletionProtection);
             Modify_SetDeletionProtectionApiCall(ref _callSetDeletionProtection);
-            _callSetDiskAutoDelete = clientHelper.BuildApiCall<SetDiskAutoDeleteInstanceRequest, Operation>(grpcClient.SetDiskAutoDeleteAsync, grpcClient.SetDiskAutoDelete, effectiveSettings.SetDiskAutoDeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callSetDiskAutoDelete = clientHelper.BuildApiCall<SetDiskAutoDeleteInstanceRequest, Operation>("SetDiskAutoDelete", grpcClient.SetDiskAutoDeleteAsync, grpcClient.SetDiskAutoDelete, effectiveSettings.SetDiskAutoDeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callSetDiskAutoDelete);
             Modify_SetDiskAutoDeleteApiCall(ref _callSetDiskAutoDelete);
-            _callSetIamPolicy = clientHelper.BuildApiCall<SetIamPolicyInstanceRequest, Policy>(grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("resource", request => request.Resource);
+            _callSetIamPolicy = clientHelper.BuildApiCall<SetIamPolicyInstanceRequest, Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
-            _callSetLabels = clientHelper.BuildApiCall<SetLabelsInstanceRequest, Operation>(grpcClient.SetLabelsAsync, grpcClient.SetLabels, effectiveSettings.SetLabelsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callSetLabels = clientHelper.BuildApiCall<SetLabelsInstanceRequest, Operation>("SetLabels", grpcClient.SetLabelsAsync, grpcClient.SetLabels, effectiveSettings.SetLabelsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callSetLabels);
             Modify_SetLabelsApiCall(ref _callSetLabels);
-            _callSetMachineResources = clientHelper.BuildApiCall<SetMachineResourcesInstanceRequest, Operation>(grpcClient.SetMachineResourcesAsync, grpcClient.SetMachineResources, effectiveSettings.SetMachineResourcesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callSetMachineResources = clientHelper.BuildApiCall<SetMachineResourcesInstanceRequest, Operation>("SetMachineResources", grpcClient.SetMachineResourcesAsync, grpcClient.SetMachineResources, effectiveSettings.SetMachineResourcesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callSetMachineResources);
             Modify_SetMachineResourcesApiCall(ref _callSetMachineResources);
-            _callSetMachineType = clientHelper.BuildApiCall<SetMachineTypeInstanceRequest, Operation>(grpcClient.SetMachineTypeAsync, grpcClient.SetMachineType, effectiveSettings.SetMachineTypeSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callSetMachineType = clientHelper.BuildApiCall<SetMachineTypeInstanceRequest, Operation>("SetMachineType", grpcClient.SetMachineTypeAsync, grpcClient.SetMachineType, effectiveSettings.SetMachineTypeSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callSetMachineType);
             Modify_SetMachineTypeApiCall(ref _callSetMachineType);
-            _callSetMetadata = clientHelper.BuildApiCall<SetMetadataInstanceRequest, Operation>(grpcClient.SetMetadataAsync, grpcClient.SetMetadata, effectiveSettings.SetMetadataSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callSetMetadata = clientHelper.BuildApiCall<SetMetadataInstanceRequest, Operation>("SetMetadata", grpcClient.SetMetadataAsync, grpcClient.SetMetadata, effectiveSettings.SetMetadataSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callSetMetadata);
             Modify_SetMetadataApiCall(ref _callSetMetadata);
-            _callSetMinCpuPlatform = clientHelper.BuildApiCall<SetMinCpuPlatformInstanceRequest, Operation>(grpcClient.SetMinCpuPlatformAsync, grpcClient.SetMinCpuPlatform, effectiveSettings.SetMinCpuPlatformSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callSetMinCpuPlatform = clientHelper.BuildApiCall<SetMinCpuPlatformInstanceRequest, Operation>("SetMinCpuPlatform", grpcClient.SetMinCpuPlatformAsync, grpcClient.SetMinCpuPlatform, effectiveSettings.SetMinCpuPlatformSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callSetMinCpuPlatform);
             Modify_SetMinCpuPlatformApiCall(ref _callSetMinCpuPlatform);
-            _callSetScheduling = clientHelper.BuildApiCall<SetSchedulingInstanceRequest, Operation>(grpcClient.SetSchedulingAsync, grpcClient.SetScheduling, effectiveSettings.SetSchedulingSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callSetScheduling = clientHelper.BuildApiCall<SetSchedulingInstanceRequest, Operation>("SetScheduling", grpcClient.SetSchedulingAsync, grpcClient.SetScheduling, effectiveSettings.SetSchedulingSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callSetScheduling);
             Modify_SetSchedulingApiCall(ref _callSetScheduling);
-            _callSetServiceAccount = clientHelper.BuildApiCall<SetServiceAccountInstanceRequest, Operation>(grpcClient.SetServiceAccountAsync, grpcClient.SetServiceAccount, effectiveSettings.SetServiceAccountSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callSetServiceAccount = clientHelper.BuildApiCall<SetServiceAccountInstanceRequest, Operation>("SetServiceAccount", grpcClient.SetServiceAccountAsync, grpcClient.SetServiceAccount, effectiveSettings.SetServiceAccountSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callSetServiceAccount);
             Modify_SetServiceAccountApiCall(ref _callSetServiceAccount);
-            _callSetShieldedInstanceIntegrityPolicy = clientHelper.BuildApiCall<SetShieldedInstanceIntegrityPolicyInstanceRequest, Operation>(grpcClient.SetShieldedInstanceIntegrityPolicyAsync, grpcClient.SetShieldedInstanceIntegrityPolicy, effectiveSettings.SetShieldedInstanceIntegrityPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callSetShieldedInstanceIntegrityPolicy = clientHelper.BuildApiCall<SetShieldedInstanceIntegrityPolicyInstanceRequest, Operation>("SetShieldedInstanceIntegrityPolicy", grpcClient.SetShieldedInstanceIntegrityPolicyAsync, grpcClient.SetShieldedInstanceIntegrityPolicy, effectiveSettings.SetShieldedInstanceIntegrityPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callSetShieldedInstanceIntegrityPolicy);
             Modify_SetShieldedInstanceIntegrityPolicyApiCall(ref _callSetShieldedInstanceIntegrityPolicy);
-            _callSetTags = clientHelper.BuildApiCall<SetTagsInstanceRequest, Operation>(grpcClient.SetTagsAsync, grpcClient.SetTags, effectiveSettings.SetTagsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callSetTags = clientHelper.BuildApiCall<SetTagsInstanceRequest, Operation>("SetTags", grpcClient.SetTagsAsync, grpcClient.SetTags, effectiveSettings.SetTagsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callSetTags);
             Modify_SetTagsApiCall(ref _callSetTags);
-            _callSimulateMaintenanceEvent = clientHelper.BuildApiCall<SimulateMaintenanceEventInstanceRequest, Operation>(grpcClient.SimulateMaintenanceEventAsync, grpcClient.SimulateMaintenanceEvent, effectiveSettings.SimulateMaintenanceEventSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callSimulateMaintenanceEvent = clientHelper.BuildApiCall<SimulateMaintenanceEventInstanceRequest, Operation>("SimulateMaintenanceEvent", grpcClient.SimulateMaintenanceEventAsync, grpcClient.SimulateMaintenanceEvent, effectiveSettings.SimulateMaintenanceEventSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callSimulateMaintenanceEvent);
             Modify_SimulateMaintenanceEventApiCall(ref _callSimulateMaintenanceEvent);
-            _callStart = clientHelper.BuildApiCall<StartInstanceRequest, Operation>(grpcClient.StartAsync, grpcClient.Start, effectiveSettings.StartSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callStart = clientHelper.BuildApiCall<StartInstanceRequest, Operation>("Start", grpcClient.StartAsync, grpcClient.Start, effectiveSettings.StartSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callStart);
             Modify_StartApiCall(ref _callStart);
-            _callStartWithEncryptionKey = clientHelper.BuildApiCall<StartWithEncryptionKeyInstanceRequest, Operation>(grpcClient.StartWithEncryptionKeyAsync, grpcClient.StartWithEncryptionKey, effectiveSettings.StartWithEncryptionKeySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callStartWithEncryptionKey = clientHelper.BuildApiCall<StartWithEncryptionKeyInstanceRequest, Operation>("StartWithEncryptionKey", grpcClient.StartWithEncryptionKeyAsync, grpcClient.StartWithEncryptionKey, effectiveSettings.StartWithEncryptionKeySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callStartWithEncryptionKey);
             Modify_StartWithEncryptionKeyApiCall(ref _callStartWithEncryptionKey);
-            _callStop = clientHelper.BuildApiCall<StopInstanceRequest, Operation>(grpcClient.StopAsync, grpcClient.Stop, effectiveSettings.StopSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callStop = clientHelper.BuildApiCall<StopInstanceRequest, Operation>("Stop", grpcClient.StopAsync, grpcClient.Stop, effectiveSettings.StopSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callStop);
             Modify_StopApiCall(ref _callStop);
-            _callSuspend = clientHelper.BuildApiCall<SuspendInstanceRequest, Operation>(grpcClient.SuspendAsync, grpcClient.Suspend, effectiveSettings.SuspendSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callSuspend = clientHelper.BuildApiCall<SuspendInstanceRequest, Operation>("Suspend", grpcClient.SuspendAsync, grpcClient.Suspend, effectiveSettings.SuspendSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callSuspend);
             Modify_SuspendApiCall(ref _callSuspend);
-            _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsInstanceRequest, TestPermissionsResponse>(grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("resource", request => request.Resource);
+            _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsInstanceRequest, TestPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
-            _callUpdate = clientHelper.BuildApiCall<UpdateInstanceRequest, Operation>(grpcClient.UpdateAsync, grpcClient.Update, effectiveSettings.UpdateSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callUpdate = clientHelper.BuildApiCall<UpdateInstanceRequest, Operation>("Update", grpcClient.UpdateAsync, grpcClient.Update, effectiveSettings.UpdateSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callUpdate);
             Modify_UpdateApiCall(ref _callUpdate);
-            _callUpdateAccessConfig = clientHelper.BuildApiCall<UpdateAccessConfigInstanceRequest, Operation>(grpcClient.UpdateAccessConfigAsync, grpcClient.UpdateAccessConfig, effectiveSettings.UpdateAccessConfigSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callUpdateAccessConfig = clientHelper.BuildApiCall<UpdateAccessConfigInstanceRequest, Operation>("UpdateAccessConfig", grpcClient.UpdateAccessConfigAsync, grpcClient.UpdateAccessConfig, effectiveSettings.UpdateAccessConfigSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callUpdateAccessConfig);
             Modify_UpdateAccessConfigApiCall(ref _callUpdateAccessConfig);
-            _callUpdateDisplayDevice = clientHelper.BuildApiCall<UpdateDisplayDeviceInstanceRequest, Operation>(grpcClient.UpdateDisplayDeviceAsync, grpcClient.UpdateDisplayDevice, effectiveSettings.UpdateDisplayDeviceSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callUpdateDisplayDevice = clientHelper.BuildApiCall<UpdateDisplayDeviceInstanceRequest, Operation>("UpdateDisplayDevice", grpcClient.UpdateDisplayDeviceAsync, grpcClient.UpdateDisplayDevice, effectiveSettings.UpdateDisplayDeviceSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callUpdateDisplayDevice);
             Modify_UpdateDisplayDeviceApiCall(ref _callUpdateDisplayDevice);
-            _callUpdateNetworkInterface = clientHelper.BuildApiCall<UpdateNetworkInterfaceInstanceRequest, Operation>(grpcClient.UpdateNetworkInterfaceAsync, grpcClient.UpdateNetworkInterface, effectiveSettings.UpdateNetworkInterfaceSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callUpdateNetworkInterface = clientHelper.BuildApiCall<UpdateNetworkInterfaceInstanceRequest, Operation>("UpdateNetworkInterface", grpcClient.UpdateNetworkInterfaceAsync, grpcClient.UpdateNetworkInterface, effectiveSettings.UpdateNetworkInterfaceSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callUpdateNetworkInterface);
             Modify_UpdateNetworkInterfaceApiCall(ref _callUpdateNetworkInterface);
-            _callUpdateShieldedInstanceConfig = clientHelper.BuildApiCall<UpdateShieldedInstanceConfigInstanceRequest, Operation>(grpcClient.UpdateShieldedInstanceConfigAsync, grpcClient.UpdateShieldedInstanceConfig, effectiveSettings.UpdateShieldedInstanceConfigSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            _callUpdateShieldedInstanceConfig = clientHelper.BuildApiCall<UpdateShieldedInstanceConfigInstanceRequest, Operation>("UpdateShieldedInstanceConfig", grpcClient.UpdateShieldedInstanceConfigAsync, grpcClient.UpdateShieldedInstanceConfig, effectiveSettings.UpdateShieldedInstanceConfigSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callUpdateShieldedInstanceConfig);
             Modify_UpdateShieldedInstanceConfigApiCall(ref _callUpdateShieldedInstanceConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

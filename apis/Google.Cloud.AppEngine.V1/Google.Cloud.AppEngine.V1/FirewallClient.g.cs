@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -142,9 +142,8 @@ namespace Google.Cloud.AppEngine.V1
         public FirewallSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public FirewallClientBuilder()
+        public FirewallClientBuilder() : base(FirewallClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = FirewallClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref FirewallClient client);
@@ -171,29 +170,18 @@ namespace Google.Cloud.AppEngine.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return FirewallClient.Create(callInvoker, Settings);
+            return FirewallClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<FirewallClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return FirewallClient.Create(callInvoker, Settings);
+            return FirewallClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => FirewallClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => FirewallClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => FirewallClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Firewall client wrapper, for convenient use.</summary>
@@ -233,19 +221,10 @@ namespace Google.Cloud.AppEngine.V1
             "https://www.googleapis.com/auth/cloud-platform.read-only",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Firewall.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="FirewallClient"/> using the default credentials, endpoint and settings. 
@@ -272,8 +251,9 @@ namespace Google.Cloud.AppEngine.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="FirewallSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="FirewallClient"/>.</returns>
-        internal static FirewallClient Create(grpccore::CallInvoker callInvoker, FirewallSettings settings = null)
+        internal static FirewallClient Create(grpccore::CallInvoker callInvoker, FirewallSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -282,7 +262,7 @@ namespace Google.Cloud.AppEngine.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Firewall.FirewallClient grpcClient = new Firewall.FirewallClient(callInvoker);
-            return new FirewallClientImpl(grpcClient, settings);
+            return new FirewallClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -499,27 +479,28 @@ namespace Google.Cloud.AppEngine.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="FirewallSettings"/> used within this client.</param>
-        public FirewallClientImpl(Firewall.FirewallClient grpcClient, FirewallSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public FirewallClientImpl(Firewall.FirewallClient grpcClient, FirewallSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             FirewallSettings effectiveSettings = settings ?? FirewallSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListIngressRules = clientHelper.BuildApiCall<ListIngressRulesRequest, ListIngressRulesResponse>(grpcClient.ListIngressRulesAsync, grpcClient.ListIngressRules, effectiveSettings.ListIngressRulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListIngressRules = clientHelper.BuildApiCall<ListIngressRulesRequest, ListIngressRulesResponse>("ListIngressRules", grpcClient.ListIngressRulesAsync, grpcClient.ListIngressRules, effectiveSettings.ListIngressRulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListIngressRules);
             Modify_ListIngressRulesApiCall(ref _callListIngressRules);
-            _callBatchUpdateIngressRules = clientHelper.BuildApiCall<BatchUpdateIngressRulesRequest, BatchUpdateIngressRulesResponse>(grpcClient.BatchUpdateIngressRulesAsync, grpcClient.BatchUpdateIngressRules, effectiveSettings.BatchUpdateIngressRulesSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callBatchUpdateIngressRules = clientHelper.BuildApiCall<BatchUpdateIngressRulesRequest, BatchUpdateIngressRulesResponse>("BatchUpdateIngressRules", grpcClient.BatchUpdateIngressRulesAsync, grpcClient.BatchUpdateIngressRules, effectiveSettings.BatchUpdateIngressRulesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callBatchUpdateIngressRules);
             Modify_BatchUpdateIngressRulesApiCall(ref _callBatchUpdateIngressRules);
-            _callCreateIngressRule = clientHelper.BuildApiCall<CreateIngressRuleRequest, FirewallRule>(grpcClient.CreateIngressRuleAsync, grpcClient.CreateIngressRule, effectiveSettings.CreateIngressRuleSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateIngressRule = clientHelper.BuildApiCall<CreateIngressRuleRequest, FirewallRule>("CreateIngressRule", grpcClient.CreateIngressRuleAsync, grpcClient.CreateIngressRule, effectiveSettings.CreateIngressRuleSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateIngressRule);
             Modify_CreateIngressRuleApiCall(ref _callCreateIngressRule);
-            _callGetIngressRule = clientHelper.BuildApiCall<GetIngressRuleRequest, FirewallRule>(grpcClient.GetIngressRuleAsync, grpcClient.GetIngressRule, effectiveSettings.GetIngressRuleSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetIngressRule = clientHelper.BuildApiCall<GetIngressRuleRequest, FirewallRule>("GetIngressRule", grpcClient.GetIngressRuleAsync, grpcClient.GetIngressRule, effectiveSettings.GetIngressRuleSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetIngressRule);
             Modify_GetIngressRuleApiCall(ref _callGetIngressRule);
-            _callUpdateIngressRule = clientHelper.BuildApiCall<UpdateIngressRuleRequest, FirewallRule>(grpcClient.UpdateIngressRuleAsync, grpcClient.UpdateIngressRule, effectiveSettings.UpdateIngressRuleSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateIngressRule = clientHelper.BuildApiCall<UpdateIngressRuleRequest, FirewallRule>("UpdateIngressRule", grpcClient.UpdateIngressRuleAsync, grpcClient.UpdateIngressRule, effectiveSettings.UpdateIngressRuleSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateIngressRule);
             Modify_UpdateIngressRuleApiCall(ref _callUpdateIngressRule);
-            _callDeleteIngressRule = clientHelper.BuildApiCall<DeleteIngressRuleRequest, wkt::Empty>(grpcClient.DeleteIngressRuleAsync, grpcClient.DeleteIngressRule, effectiveSettings.DeleteIngressRuleSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteIngressRule = clientHelper.BuildApiCall<DeleteIngressRuleRequest, wkt::Empty>("DeleteIngressRule", grpcClient.DeleteIngressRuleAsync, grpcClient.DeleteIngressRule, effectiveSettings.DeleteIngressRuleSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteIngressRule);
             Modify_DeleteIngressRuleApiCall(ref _callDeleteIngressRule);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

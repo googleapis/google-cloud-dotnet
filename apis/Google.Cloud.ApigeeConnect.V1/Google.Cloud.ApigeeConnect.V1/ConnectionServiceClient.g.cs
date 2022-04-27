@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -86,9 +86,8 @@ namespace Google.Cloud.ApigeeConnect.V1
         public ConnectionServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ConnectionServiceClientBuilder()
+        public ConnectionServiceClientBuilder() : base(ConnectionServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ConnectionServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ConnectionServiceClient client);
@@ -115,29 +114,18 @@ namespace Google.Cloud.ApigeeConnect.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ConnectionServiceClient.Create(callInvoker, Settings);
+            return ConnectionServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ConnectionServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ConnectionServiceClient.Create(callInvoker, Settings);
+            return ConnectionServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ConnectionServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ConnectionServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ConnectionServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ConnectionService client wrapper, for convenient use.</summary>
@@ -164,19 +152,10 @@ namespace Google.Cloud.ApigeeConnect.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ConnectionService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ConnectionServiceClient"/> using the default credentials, endpoint and
@@ -203,8 +182,9 @@ namespace Google.Cloud.ApigeeConnect.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ConnectionServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ConnectionServiceClient"/>.</returns>
-        internal static ConnectionServiceClient Create(grpccore::CallInvoker callInvoker, ConnectionServiceSettings settings = null)
+        internal static ConnectionServiceClient Create(grpccore::CallInvoker callInvoker, ConnectionServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -213,7 +193,7 @@ namespace Google.Cloud.ApigeeConnect.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ConnectionService.ConnectionServiceClient grpcClient = new ConnectionService.ConnectionServiceClient(callInvoker);
-            return new ConnectionServiceClientImpl(grpcClient, settings);
+            return new ConnectionServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -370,12 +350,13 @@ namespace Google.Cloud.ApigeeConnect.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ConnectionServiceSettings"/> used within this client.</param>
-        public ConnectionServiceClientImpl(ConnectionService.ConnectionServiceClient grpcClient, ConnectionServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ConnectionServiceClientImpl(ConnectionService.ConnectionServiceClient grpcClient, ConnectionServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ConnectionServiceSettings effectiveSettings = settings ?? ConnectionServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListConnections = clientHelper.BuildApiCall<ListConnectionsRequest, ListConnectionsResponse>(grpcClient.ListConnectionsAsync, grpcClient.ListConnections, effectiveSettings.ListConnectionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListConnections = clientHelper.BuildApiCall<ListConnectionsRequest, ListConnectionsResponse>("ListConnections", grpcClient.ListConnectionsAsync, grpcClient.ListConnections, effectiveSettings.ListConnectionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListConnections);
             Modify_ListConnectionsApiCall(ref _callListConnections);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

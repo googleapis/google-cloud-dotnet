@@ -37,7 +37,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             };
             DeleteEventsResponse expectedResponse = new DeleteEventsResponse { };
             mockGrpcClient.Setup(x => x.DeleteEvents(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ErrorStatsServiceClient client = new ErrorStatsServiceClientImpl(mockGrpcClient.Object, null);
+            ErrorStatsServiceClient client = new ErrorStatsServiceClientImpl(mockGrpcClient.Object, null, null);
             DeleteEventsResponse response = client.DeleteEvents(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -53,7 +53,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             };
             DeleteEventsResponse expectedResponse = new DeleteEventsResponse { };
             mockGrpcClient.Setup(x => x.DeleteEventsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeleteEventsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ErrorStatsServiceClient client = new ErrorStatsServiceClientImpl(mockGrpcClient.Object, null);
+            ErrorStatsServiceClient client = new ErrorStatsServiceClientImpl(mockGrpcClient.Object, null, null);
             DeleteEventsResponse responseCallSettings = await client.DeleteEventsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeleteEventsResponse responseCancellationToken = await client.DeleteEventsAsync(request, st::CancellationToken.None);
@@ -71,7 +71,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             };
             DeleteEventsResponse expectedResponse = new DeleteEventsResponse { };
             mockGrpcClient.Setup(x => x.DeleteEvents(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ErrorStatsServiceClient client = new ErrorStatsServiceClientImpl(mockGrpcClient.Object, null);
+            ErrorStatsServiceClient client = new ErrorStatsServiceClientImpl(mockGrpcClient.Object, null, null);
             DeleteEventsResponse response = client.DeleteEvents(request.ProjectName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -87,7 +87,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             };
             DeleteEventsResponse expectedResponse = new DeleteEventsResponse { };
             mockGrpcClient.Setup(x => x.DeleteEventsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeleteEventsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ErrorStatsServiceClient client = new ErrorStatsServiceClientImpl(mockGrpcClient.Object, null);
+            ErrorStatsServiceClient client = new ErrorStatsServiceClientImpl(mockGrpcClient.Object, null, null);
             DeleteEventsResponse responseCallSettings = await client.DeleteEventsAsync(request.ProjectName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeleteEventsResponse responseCancellationToken = await client.DeleteEventsAsync(request.ProjectName, st::CancellationToken.None);
@@ -105,7 +105,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             };
             DeleteEventsResponse expectedResponse = new DeleteEventsResponse { };
             mockGrpcClient.Setup(x => x.DeleteEvents(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ErrorStatsServiceClient client = new ErrorStatsServiceClientImpl(mockGrpcClient.Object, null);
+            ErrorStatsServiceClient client = new ErrorStatsServiceClientImpl(mockGrpcClient.Object, null, null);
             DeleteEventsResponse response = client.DeleteEvents(request.ProjectNameAsProjectName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -121,7 +121,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             };
             DeleteEventsResponse expectedResponse = new DeleteEventsResponse { };
             mockGrpcClient.Setup(x => x.DeleteEventsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeleteEventsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ErrorStatsServiceClient client = new ErrorStatsServiceClientImpl(mockGrpcClient.Object, null);
+            ErrorStatsServiceClient client = new ErrorStatsServiceClientImpl(mockGrpcClient.Object, null, null);
             DeleteEventsResponse responseCallSettings = await client.DeleteEventsAsync(request.ProjectNameAsProjectName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeleteEventsResponse responseCancellationToken = await client.DeleteEventsAsync(request.ProjectNameAsProjectName, st::CancellationToken.None);

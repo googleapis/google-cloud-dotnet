@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -159,9 +159,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public EntityTypesSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public EntityTypesClientBuilder()
+        public EntityTypesClientBuilder() : base(EntityTypesClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = EntityTypesClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref EntityTypesClient client);
@@ -188,29 +187,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return EntityTypesClient.Create(callInvoker, Settings);
+            return EntityTypesClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<EntityTypesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return EntityTypesClient.Create(callInvoker, Settings);
+            return EntityTypesClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => EntityTypesClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => EntityTypesClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => EntityTypesClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>EntityTypes client wrapper, for convenient use.</summary>
@@ -239,19 +227,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             "https://www.googleapis.com/auth/dialogflow",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(EntityTypes.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="EntityTypesClient"/> using the default credentials, endpoint and
@@ -278,8 +257,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="EntityTypesSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="EntityTypesClient"/>.</returns>
-        internal static EntityTypesClient Create(grpccore::CallInvoker callInvoker, EntityTypesSettings settings = null)
+        internal static EntityTypesClient Create(grpccore::CallInvoker callInvoker, EntityTypesSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -288,7 +268,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             EntityTypes.EntityTypesClient grpcClient = new EntityTypes.EntityTypesClient(callInvoker);
-            return new EntityTypesClientImpl(grpcClient, settings);
+            return new EntityTypesClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -987,24 +967,25 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="EntityTypesSettings"/> used within this client.</param>
-        public EntityTypesClientImpl(EntityTypes.EntityTypesClient grpcClient, EntityTypesSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public EntityTypesClientImpl(EntityTypes.EntityTypesClient grpcClient, EntityTypesSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             EntityTypesSettings effectiveSettings = settings ?? EntityTypesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListEntityTypes = clientHelper.BuildApiCall<ListEntityTypesRequest, ListEntityTypesResponse>(grpcClient.ListEntityTypesAsync, grpcClient.ListEntityTypes, effectiveSettings.ListEntityTypesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callListEntityTypes = clientHelper.BuildApiCall<ListEntityTypesRequest, ListEntityTypesResponse>("ListEntityTypes", grpcClient.ListEntityTypesAsync, grpcClient.ListEntityTypes, effectiveSettings.ListEntityTypesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListEntityTypes);
             Modify_ListEntityTypesApiCall(ref _callListEntityTypes);
-            _callGetEntityType = clientHelper.BuildApiCall<GetEntityTypeRequest, EntityType>(grpcClient.GetEntityTypeAsync, grpcClient.GetEntityType, effectiveSettings.GetEntityTypeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetEntityType = clientHelper.BuildApiCall<GetEntityTypeRequest, EntityType>("GetEntityType", grpcClient.GetEntityTypeAsync, grpcClient.GetEntityType, effectiveSettings.GetEntityTypeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetEntityType);
             Modify_GetEntityTypeApiCall(ref _callGetEntityType);
-            _callCreateEntityType = clientHelper.BuildApiCall<CreateEntityTypeRequest, EntityType>(grpcClient.CreateEntityTypeAsync, grpcClient.CreateEntityType, effectiveSettings.CreateEntityTypeSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateEntityType = clientHelper.BuildApiCall<CreateEntityTypeRequest, EntityType>("CreateEntityType", grpcClient.CreateEntityTypeAsync, grpcClient.CreateEntityType, effectiveSettings.CreateEntityTypeSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateEntityType);
             Modify_CreateEntityTypeApiCall(ref _callCreateEntityType);
-            _callUpdateEntityType = clientHelper.BuildApiCall<UpdateEntityTypeRequest, EntityType>(grpcClient.UpdateEntityTypeAsync, grpcClient.UpdateEntityType, effectiveSettings.UpdateEntityTypeSettings).WithGoogleRequestParam("entity_type.name", request => request.EntityType?.Name);
+            _callUpdateEntityType = clientHelper.BuildApiCall<UpdateEntityTypeRequest, EntityType>("UpdateEntityType", grpcClient.UpdateEntityTypeAsync, grpcClient.UpdateEntityType, effectiveSettings.UpdateEntityTypeSettings).WithGoogleRequestParam("entity_type.name", request => request.EntityType?.Name);
             Modify_ApiCall(ref _callUpdateEntityType);
             Modify_UpdateEntityTypeApiCall(ref _callUpdateEntityType);
-            _callDeleteEntityType = clientHelper.BuildApiCall<DeleteEntityTypeRequest, wkt::Empty>(grpcClient.DeleteEntityTypeAsync, grpcClient.DeleteEntityType, effectiveSettings.DeleteEntityTypeSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteEntityType = clientHelper.BuildApiCall<DeleteEntityTypeRequest, wkt::Empty>("DeleteEntityType", grpcClient.DeleteEntityTypeAsync, grpcClient.DeleteEntityType, effectiveSettings.DeleteEntityTypeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteEntityType);
             Modify_DeleteEntityTypeApiCall(ref _callDeleteEntityType);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

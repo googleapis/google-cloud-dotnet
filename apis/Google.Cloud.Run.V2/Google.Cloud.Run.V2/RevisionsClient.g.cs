@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -122,9 +122,8 @@ namespace Google.Cloud.Run.V2
         public RevisionsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public RevisionsClientBuilder()
+        public RevisionsClientBuilder() : base(RevisionsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = RevisionsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref RevisionsClient client);
@@ -151,29 +150,18 @@ namespace Google.Cloud.Run.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return RevisionsClient.Create(callInvoker, Settings);
+            return RevisionsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<RevisionsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return RevisionsClient.Create(callInvoker, Settings);
+            return RevisionsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => RevisionsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => RevisionsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => RevisionsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Revisions client wrapper, for convenient use.</summary>
@@ -199,19 +187,10 @@ namespace Google.Cloud.Run.V2
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Revisions.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="RevisionsClient"/> using the default credentials, endpoint and settings.
@@ -238,8 +217,9 @@ namespace Google.Cloud.Run.V2
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="RevisionsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="RevisionsClient"/>.</returns>
-        internal static RevisionsClient Create(grpccore::CallInvoker callInvoker, RevisionsSettings settings = null)
+        internal static RevisionsClient Create(grpccore::CallInvoker callInvoker, RevisionsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -248,7 +228,7 @@ namespace Google.Cloud.Run.V2
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Revisions.RevisionsClient grpcClient = new Revisions.RevisionsClient(callInvoker);
-            return new RevisionsClientImpl(grpcClient, settings);
+            return new RevisionsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -671,19 +651,20 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="RevisionsSettings"/> used within this client.</param>
-        public RevisionsClientImpl(Revisions.RevisionsClient grpcClient, RevisionsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public RevisionsClientImpl(Revisions.RevisionsClient grpcClient, RevisionsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             RevisionsSettings effectiveSettings = settings ?? RevisionsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            DeleteRevisionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRevisionOperationsSettings);
-            _callGetRevision = clientHelper.BuildApiCall<GetRevisionRequest, Revision>(grpcClient.GetRevisionAsync, grpcClient.GetRevision, effectiveSettings.GetRevisionSettings).WithGoogleRequestParam("name", request => request.Name);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            DeleteRevisionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRevisionOperationsSettings, logger);
+            _callGetRevision = clientHelper.BuildApiCall<GetRevisionRequest, Revision>("GetRevision", grpcClient.GetRevisionAsync, grpcClient.GetRevision, effectiveSettings.GetRevisionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetRevision);
             Modify_GetRevisionApiCall(ref _callGetRevision);
-            _callListRevisions = clientHelper.BuildApiCall<ListRevisionsRequest, ListRevisionsResponse>(grpcClient.ListRevisionsAsync, grpcClient.ListRevisions, effectiveSettings.ListRevisionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListRevisions = clientHelper.BuildApiCall<ListRevisionsRequest, ListRevisionsResponse>("ListRevisions", grpcClient.ListRevisionsAsync, grpcClient.ListRevisions, effectiveSettings.ListRevisionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListRevisions);
             Modify_ListRevisionsApiCall(ref _callListRevisions);
-            _callDeleteRevision = clientHelper.BuildApiCall<DeleteRevisionRequest, lro::Operation>(grpcClient.DeleteRevisionAsync, grpcClient.DeleteRevision, effectiveSettings.DeleteRevisionSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteRevision = clientHelper.BuildApiCall<DeleteRevisionRequest, lro::Operation>("DeleteRevision", grpcClient.DeleteRevisionAsync, grpcClient.DeleteRevision, effectiveSettings.DeleteRevisionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteRevision);
             Modify_DeleteRevisionApiCall(ref _callDeleteRevision);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

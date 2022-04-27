@@ -46,7 +46,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Fulfillment = new Fulfillment(),
             };
             mockGrpcClient.Setup(x => x.GetEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null, null);
             Environment response = client.GetEnvironment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -71,7 +71,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Fulfillment = new Fulfillment(),
             };
             mockGrpcClient.Setup(x => x.GetEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Environment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null, null);
             Environment responseCallSettings = await client.GetEnvironmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Environment responseCancellationToken = await client.GetEnvironmentAsync(request, st::CancellationToken.None);
@@ -100,7 +100,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Fulfillment = new Fulfillment(),
             };
             mockGrpcClient.Setup(x => x.CreateEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null, null);
             Environment response = client.CreateEnvironment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -127,7 +127,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Fulfillment = new Fulfillment(),
             };
             mockGrpcClient.Setup(x => x.CreateEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Environment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null, null);
             Environment responseCallSettings = await client.CreateEnvironmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Environment responseCancellationToken = await client.CreateEnvironmentAsync(request, st::CancellationToken.None);
@@ -156,7 +156,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Fulfillment = new Fulfillment(),
             };
             mockGrpcClient.Setup(x => x.UpdateEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null, null);
             Environment response = client.UpdateEnvironment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -183,7 +183,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Fulfillment = new Fulfillment(),
             };
             mockGrpcClient.Setup(x => x.UpdateEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Environment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null, null);
             Environment responseCallSettings = await client.UpdateEnvironmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Environment responseCancellationToken = await client.UpdateEnvironmentAsync(request, st::CancellationToken.None);
@@ -201,7 +201,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteEnvironment(request);
             mockGrpcClient.VerifyAll();
         }
@@ -216,7 +216,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteEnvironmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteEnvironmentAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();

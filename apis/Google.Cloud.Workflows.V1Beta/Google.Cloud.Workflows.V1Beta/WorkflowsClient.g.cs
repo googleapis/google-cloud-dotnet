@@ -16,7 +16,6 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using gcwcv = Google.Cloud.Workflows.Common.V1Beta;
 using lro = Google.LongRunning;
@@ -24,6 +23,7 @@ using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -189,9 +189,8 @@ namespace Google.Cloud.Workflows.V1Beta
         public WorkflowsSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public WorkflowsClientBuilder()
+        public WorkflowsClientBuilder() : base(WorkflowsClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = WorkflowsClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref WorkflowsClient client);
@@ -218,29 +217,18 @@ namespace Google.Cloud.Workflows.V1Beta
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return WorkflowsClient.Create(callInvoker, Settings);
+            return WorkflowsClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<WorkflowsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return WorkflowsClient.Create(callInvoker, Settings);
+            return WorkflowsClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => WorkflowsClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => WorkflowsClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => WorkflowsClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Workflows client wrapper, for convenient use.</summary>
@@ -269,19 +257,10 @@ namespace Google.Cloud.Workflows.V1Beta
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Workflows.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="WorkflowsClient"/> using the default credentials, endpoint and settings.
@@ -308,8 +287,9 @@ namespace Google.Cloud.Workflows.V1Beta
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="WorkflowsSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="WorkflowsClient"/>.</returns>
-        internal static WorkflowsClient Create(grpccore::CallInvoker callInvoker, WorkflowsSettings settings = null)
+        internal static WorkflowsClient Create(grpccore::CallInvoker callInvoker, WorkflowsSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -318,7 +298,7 @@ namespace Google.Cloud.Workflows.V1Beta
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             Workflows.WorkflowsClient grpcClient = new Workflows.WorkflowsClient(callInvoker);
-            return new WorkflowsClientImpl(grpcClient, settings);
+            return new WorkflowsClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1122,27 +1102,28 @@ namespace Google.Cloud.Workflows.V1Beta
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="WorkflowsSettings"/> used within this client.</param>
-        public WorkflowsClientImpl(Workflows.WorkflowsClient grpcClient, WorkflowsSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public WorkflowsClientImpl(Workflows.WorkflowsClient grpcClient, WorkflowsSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             WorkflowsSettings effectiveSettings = settings ?? WorkflowsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateWorkflowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateWorkflowOperationsSettings);
-            DeleteWorkflowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteWorkflowOperationsSettings);
-            UpdateWorkflowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateWorkflowOperationsSettings);
-            _callListWorkflows = clientHelper.BuildApiCall<ListWorkflowsRequest, ListWorkflowsResponse>(grpcClient.ListWorkflowsAsync, grpcClient.ListWorkflows, effectiveSettings.ListWorkflowsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateWorkflowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateWorkflowOperationsSettings, logger);
+            DeleteWorkflowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteWorkflowOperationsSettings, logger);
+            UpdateWorkflowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateWorkflowOperationsSettings, logger);
+            _callListWorkflows = clientHelper.BuildApiCall<ListWorkflowsRequest, ListWorkflowsResponse>("ListWorkflows", grpcClient.ListWorkflowsAsync, grpcClient.ListWorkflows, effectiveSettings.ListWorkflowsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListWorkflows);
             Modify_ListWorkflowsApiCall(ref _callListWorkflows);
-            _callGetWorkflow = clientHelper.BuildApiCall<GetWorkflowRequest, Workflow>(grpcClient.GetWorkflowAsync, grpcClient.GetWorkflow, effectiveSettings.GetWorkflowSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetWorkflow = clientHelper.BuildApiCall<GetWorkflowRequest, Workflow>("GetWorkflow", grpcClient.GetWorkflowAsync, grpcClient.GetWorkflow, effectiveSettings.GetWorkflowSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetWorkflow);
             Modify_GetWorkflowApiCall(ref _callGetWorkflow);
-            _callCreateWorkflow = clientHelper.BuildApiCall<CreateWorkflowRequest, lro::Operation>(grpcClient.CreateWorkflowAsync, grpcClient.CreateWorkflow, effectiveSettings.CreateWorkflowSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateWorkflow = clientHelper.BuildApiCall<CreateWorkflowRequest, lro::Operation>("CreateWorkflow", grpcClient.CreateWorkflowAsync, grpcClient.CreateWorkflow, effectiveSettings.CreateWorkflowSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateWorkflow);
             Modify_CreateWorkflowApiCall(ref _callCreateWorkflow);
-            _callDeleteWorkflow = clientHelper.BuildApiCall<DeleteWorkflowRequest, lro::Operation>(grpcClient.DeleteWorkflowAsync, grpcClient.DeleteWorkflow, effectiveSettings.DeleteWorkflowSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteWorkflow = clientHelper.BuildApiCall<DeleteWorkflowRequest, lro::Operation>("DeleteWorkflow", grpcClient.DeleteWorkflowAsync, grpcClient.DeleteWorkflow, effectiveSettings.DeleteWorkflowSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteWorkflow);
             Modify_DeleteWorkflowApiCall(ref _callDeleteWorkflow);
-            _callUpdateWorkflow = clientHelper.BuildApiCall<UpdateWorkflowRequest, lro::Operation>(grpcClient.UpdateWorkflowAsync, grpcClient.UpdateWorkflow, effectiveSettings.UpdateWorkflowSettings).WithGoogleRequestParam("workflow.name", request => request.Workflow?.Name);
+            _callUpdateWorkflow = clientHelper.BuildApiCall<UpdateWorkflowRequest, lro::Operation>("UpdateWorkflow", grpcClient.UpdateWorkflowAsync, grpcClient.UpdateWorkflow, effectiveSettings.UpdateWorkflowSettings).WithGoogleRequestParam("workflow.name", request => request.Workflow?.Name);
             Modify_ApiCall(ref _callUpdateWorkflow);
             Modify_UpdateWorkflowApiCall(ref _callUpdateWorkflow);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

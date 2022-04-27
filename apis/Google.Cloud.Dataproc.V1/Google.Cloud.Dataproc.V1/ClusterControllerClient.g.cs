@@ -16,12 +16,12 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -326,9 +326,8 @@ namespace Google.Cloud.Dataproc.V1
         public ClusterControllerSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public ClusterControllerClientBuilder()
+        public ClusterControllerClientBuilder() : base(ClusterControllerClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = ClusterControllerClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref ClusterControllerClient client);
@@ -355,29 +354,18 @@ namespace Google.Cloud.Dataproc.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ClusterControllerClient.Create(callInvoker, Settings);
+            return ClusterControllerClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<ClusterControllerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ClusterControllerClient.Create(callInvoker, Settings);
+            return ClusterControllerClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => ClusterControllerClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ClusterControllerClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ClusterControllerClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ClusterController client wrapper, for convenient use.</summary>
@@ -405,19 +393,10 @@ namespace Google.Cloud.Dataproc.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ClusterController.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ClusterControllerClient"/> using the default credentials, endpoint and
@@ -444,8 +423,9 @@ namespace Google.Cloud.Dataproc.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="ClusterControllerSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="ClusterControllerClient"/>.</returns>
-        internal static ClusterControllerClient Create(grpccore::CallInvoker callInvoker, ClusterControllerSettings settings = null)
+        internal static ClusterControllerClient Create(grpccore::CallInvoker callInvoker, ClusterControllerSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -454,7 +434,7 @@ namespace Google.Cloud.Dataproc.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             ClusterController.ClusterControllerClient grpcClient = new ClusterController.ClusterControllerClient(callInvoker);
-            return new ClusterControllerClientImpl(grpcClient, settings);
+            return new ClusterControllerClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1601,39 +1581,40 @@ namespace Google.Cloud.Dataproc.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="ClusterControllerSettings"/> used within this client.</param>
-        public ClusterControllerClientImpl(ClusterController.ClusterControllerClient grpcClient, ClusterControllerSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public ClusterControllerClientImpl(ClusterController.ClusterControllerClient grpcClient, ClusterControllerSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             ClusterControllerSettings effectiveSettings = settings ?? ClusterControllerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateClusterOperationsSettings);
-            UpdateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateClusterOperationsSettings);
-            StopClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StopClusterOperationsSettings);
-            StartClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartClusterOperationsSettings);
-            DeleteClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteClusterOperationsSettings);
-            DiagnoseClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DiagnoseClusterOperationsSettings);
-            _callCreateCluster = clientHelper.BuildApiCall<CreateClusterRequest, lro::Operation>(grpcClient.CreateClusterAsync, grpcClient.CreateCluster, effectiveSettings.CreateClusterSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateClusterOperationsSettings, logger);
+            UpdateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateClusterOperationsSettings, logger);
+            StopClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StopClusterOperationsSettings, logger);
+            StartClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartClusterOperationsSettings, logger);
+            DeleteClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteClusterOperationsSettings, logger);
+            DiagnoseClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DiagnoseClusterOperationsSettings, logger);
+            _callCreateCluster = clientHelper.BuildApiCall<CreateClusterRequest, lro::Operation>("CreateCluster", grpcClient.CreateClusterAsync, grpcClient.CreateCluster, effectiveSettings.CreateClusterSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callCreateCluster);
             Modify_CreateClusterApiCall(ref _callCreateCluster);
-            _callUpdateCluster = clientHelper.BuildApiCall<UpdateClusterRequest, lro::Operation>(grpcClient.UpdateClusterAsync, grpcClient.UpdateCluster, effectiveSettings.UpdateClusterSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("cluster_name", request => request.ClusterName);
+            _callUpdateCluster = clientHelper.BuildApiCall<UpdateClusterRequest, lro::Operation>("UpdateCluster", grpcClient.UpdateClusterAsync, grpcClient.UpdateCluster, effectiveSettings.UpdateClusterSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("cluster_name", request => request.ClusterName);
             Modify_ApiCall(ref _callUpdateCluster);
             Modify_UpdateClusterApiCall(ref _callUpdateCluster);
-            _callStopCluster = clientHelper.BuildApiCall<StopClusterRequest, lro::Operation>(grpcClient.StopClusterAsync, grpcClient.StopCluster, effectiveSettings.StopClusterSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("cluster_name", request => request.ClusterName);
+            _callStopCluster = clientHelper.BuildApiCall<StopClusterRequest, lro::Operation>("StopCluster", grpcClient.StopClusterAsync, grpcClient.StopCluster, effectiveSettings.StopClusterSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("cluster_name", request => request.ClusterName);
             Modify_ApiCall(ref _callStopCluster);
             Modify_StopClusterApiCall(ref _callStopCluster);
-            _callStartCluster = clientHelper.BuildApiCall<StartClusterRequest, lro::Operation>(grpcClient.StartClusterAsync, grpcClient.StartCluster, effectiveSettings.StartClusterSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("cluster_name", request => request.ClusterName);
+            _callStartCluster = clientHelper.BuildApiCall<StartClusterRequest, lro::Operation>("StartCluster", grpcClient.StartClusterAsync, grpcClient.StartCluster, effectiveSettings.StartClusterSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("cluster_name", request => request.ClusterName);
             Modify_ApiCall(ref _callStartCluster);
             Modify_StartClusterApiCall(ref _callStartCluster);
-            _callDeleteCluster = clientHelper.BuildApiCall<DeleteClusterRequest, lro::Operation>(grpcClient.DeleteClusterAsync, grpcClient.DeleteCluster, effectiveSettings.DeleteClusterSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("cluster_name", request => request.ClusterName);
+            _callDeleteCluster = clientHelper.BuildApiCall<DeleteClusterRequest, lro::Operation>("DeleteCluster", grpcClient.DeleteClusterAsync, grpcClient.DeleteCluster, effectiveSettings.DeleteClusterSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("cluster_name", request => request.ClusterName);
             Modify_ApiCall(ref _callDeleteCluster);
             Modify_DeleteClusterApiCall(ref _callDeleteCluster);
-            _callGetCluster = clientHelper.BuildApiCall<GetClusterRequest, Cluster>(grpcClient.GetClusterAsync, grpcClient.GetCluster, effectiveSettings.GetClusterSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("cluster_name", request => request.ClusterName);
+            _callGetCluster = clientHelper.BuildApiCall<GetClusterRequest, Cluster>("GetCluster", grpcClient.GetClusterAsync, grpcClient.GetCluster, effectiveSettings.GetClusterSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("cluster_name", request => request.ClusterName);
             Modify_ApiCall(ref _callGetCluster);
             Modify_GetClusterApiCall(ref _callGetCluster);
-            _callListClusters = clientHelper.BuildApiCall<ListClustersRequest, ListClustersResponse>(grpcClient.ListClustersAsync, grpcClient.ListClusters, effectiveSettings.ListClustersSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region);
+            _callListClusters = clientHelper.BuildApiCall<ListClustersRequest, ListClustersResponse>("ListClusters", grpcClient.ListClustersAsync, grpcClient.ListClusters, effectiveSettings.ListClustersSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callListClusters);
             Modify_ListClustersApiCall(ref _callListClusters);
-            _callDiagnoseCluster = clientHelper.BuildApiCall<DiagnoseClusterRequest, lro::Operation>(grpcClient.DiagnoseClusterAsync, grpcClient.DiagnoseCluster, effectiveSettings.DiagnoseClusterSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("cluster_name", request => request.ClusterName);
+            _callDiagnoseCluster = clientHelper.BuildApiCall<DiagnoseClusterRequest, lro::Operation>("DiagnoseCluster", grpcClient.DiagnoseClusterAsync, grpcClient.DiagnoseCluster, effectiveSettings.DiagnoseClusterSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("cluster_name", request => request.ClusterName);
             Modify_ApiCall(ref _callDiagnoseCluster);
             Modify_DiagnoseClusterApiCall(ref _callDiagnoseCluster);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -60,7 +60,7 @@ namespace Google.Cloud.AutoML.V1.Tests
                 PreprocessedInput = new ExamplePayload(),
             };
             mockGrpcClient.Setup(x => x.Predict(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             PredictResponse response = client.Predict(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -99,7 +99,7 @@ namespace Google.Cloud.AutoML.V1.Tests
                 PreprocessedInput = new ExamplePayload(),
             };
             mockGrpcClient.Setup(x => x.PredictAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PredictResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             PredictResponse responseCallSettings = await client.PredictAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PredictResponse responseCancellationToken = await client.PredictAsync(request, st::CancellationToken.None);
@@ -140,7 +140,7 @@ namespace Google.Cloud.AutoML.V1.Tests
                 PreprocessedInput = new ExamplePayload(),
             };
             mockGrpcClient.Setup(x => x.Predict(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             PredictResponse response = client.Predict(request.Name, request.Payload, request.Params);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -179,7 +179,7 @@ namespace Google.Cloud.AutoML.V1.Tests
                 PreprocessedInput = new ExamplePayload(),
             };
             mockGrpcClient.Setup(x => x.PredictAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PredictResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             PredictResponse responseCallSettings = await client.PredictAsync(request.Name, request.Payload, request.Params, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PredictResponse responseCancellationToken = await client.PredictAsync(request.Name, request.Payload, request.Params, st::CancellationToken.None);
@@ -220,7 +220,7 @@ namespace Google.Cloud.AutoML.V1.Tests
                 PreprocessedInput = new ExamplePayload(),
             };
             mockGrpcClient.Setup(x => x.Predict(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             PredictResponse response = client.Predict(request.ModelName, request.Payload, request.Params);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -259,7 +259,7 @@ namespace Google.Cloud.AutoML.V1.Tests
                 PreprocessedInput = new ExamplePayload(),
             };
             mockGrpcClient.Setup(x => x.PredictAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PredictResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
+            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null, null);
             PredictResponse responseCallSettings = await client.PredictAsync(request.ModelName, request.Payload, request.Params, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PredictResponse responseCancellationToken = await client.PredictAsync(request.ModelName, request.Payload, request.Params, st::CancellationToken.None);

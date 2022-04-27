@@ -55,7 +55,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -85,7 +85,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
@@ -116,7 +116,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request.Resource, request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -145,7 +145,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.Resource, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.Resource, request.Policy, st::CancellationToken.None);
@@ -176,7 +176,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.SetIamPolicy(request.ResourceAsResourceName, request.Policy);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -205,7 +205,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, st::CancellationToken.None);
@@ -236,7 +236,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -265,7 +265,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
@@ -295,7 +295,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request.Resource);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -323,7 +323,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.Resource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.Resource, st::CancellationToken.None);
@@ -353,7 +353,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy response = client.GetIamPolicy(request.ResourceAsResourceName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -381,7 +381,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.ResourceAsResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.ResourceAsResourceName, st::CancellationToken.None);
@@ -409,7 +409,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -435,7 +435,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);
@@ -463,7 +463,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.Resource, request.Permissions);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -489,7 +489,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, st::CancellationToken.None);
@@ -517,7 +517,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.ResourceAsResourceName, request.Permissions);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -543,7 +543,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, st::CancellationToken.None);
@@ -568,7 +568,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetVulnerabilityOccurrencesSummary(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             VulnerabilityOccurrencesSummary response = client.GetVulnerabilityOccurrencesSummary(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -591,7 +591,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetVulnerabilityOccurrencesSummaryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VulnerabilityOccurrencesSummary>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             VulnerabilityOccurrencesSummary responseCallSettings = await client.GetVulnerabilityOccurrencesSummaryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VulnerabilityOccurrencesSummary responseCancellationToken = await client.GetVulnerabilityOccurrencesSummaryAsync(request, st::CancellationToken.None);
@@ -616,7 +616,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetVulnerabilityOccurrencesSummary(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             VulnerabilityOccurrencesSummary response = client.GetVulnerabilityOccurrencesSummary(request.Parent, request.Filter);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -639,7 +639,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetVulnerabilityOccurrencesSummaryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VulnerabilityOccurrencesSummary>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             VulnerabilityOccurrencesSummary responseCallSettings = await client.GetVulnerabilityOccurrencesSummaryAsync(request.Parent, request.Filter, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VulnerabilityOccurrencesSummary responseCancellationToken = await client.GetVulnerabilityOccurrencesSummaryAsync(request.Parent, request.Filter, st::CancellationToken.None);
@@ -664,7 +664,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetVulnerabilityOccurrencesSummary(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             VulnerabilityOccurrencesSummary response = client.GetVulnerabilityOccurrencesSummary(request.ParentAsProjectName, request.Filter);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -687,7 +687,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
                 },
             };
             mockGrpcClient.Setup(x => x.GetVulnerabilityOccurrencesSummaryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VulnerabilityOccurrencesSummary>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null, null);
             VulnerabilityOccurrencesSummary responseCallSettings = await client.GetVulnerabilityOccurrencesSummaryAsync(request.ParentAsProjectName, request.Filter, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             VulnerabilityOccurrencesSummary responseCancellationToken = await client.GetVulnerabilityOccurrencesSummaryAsync(request.ParentAsProjectName, request.Filter, st::CancellationToken.None);

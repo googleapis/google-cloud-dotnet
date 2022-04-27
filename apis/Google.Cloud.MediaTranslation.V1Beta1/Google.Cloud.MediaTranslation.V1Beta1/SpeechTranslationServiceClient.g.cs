@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -88,9 +88,8 @@ namespace Google.Cloud.MediaTranslation.V1Beta1
         public SpeechTranslationServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public SpeechTranslationServiceClientBuilder()
+        public SpeechTranslationServiceClientBuilder() : base(SpeechTranslationServiceClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = SpeechTranslationServiceClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref SpeechTranslationServiceClient client);
@@ -117,29 +116,18 @@ namespace Google.Cloud.MediaTranslation.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SpeechTranslationServiceClient.Create(callInvoker, Settings);
+            return SpeechTranslationServiceClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<SpeechTranslationServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SpeechTranslationServiceClient.Create(callInvoker, Settings);
+            return SpeechTranslationServiceClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => SpeechTranslationServiceClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => SpeechTranslationServiceClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => SpeechTranslationServiceClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>SpeechTranslationService client wrapper, for convenient use.</summary>
@@ -166,19 +154,10 @@ namespace Google.Cloud.MediaTranslation.V1Beta1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(SpeechTranslationService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="SpeechTranslationServiceClient"/> using the default credentials,
@@ -208,8 +187,9 @@ namespace Google.Cloud.MediaTranslation.V1Beta1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="SpeechTranslationServiceSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="SpeechTranslationServiceClient"/>.</returns>
-        internal static SpeechTranslationServiceClient Create(grpccore::CallInvoker callInvoker, SpeechTranslationServiceSettings settings = null)
+        internal static SpeechTranslationServiceClient Create(grpccore::CallInvoker callInvoker, SpeechTranslationServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -218,7 +198,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             SpeechTranslationService.SpeechTranslationServiceClient grpcClient = new SpeechTranslationService.SpeechTranslationServiceClient(callInvoker);
-            return new SpeechTranslationServiceClientImpl(grpcClient, settings);
+            return new SpeechTranslationServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -272,12 +252,13 @@ namespace Google.Cloud.MediaTranslation.V1Beta1
         /// <param name="settings">
         /// The base <see cref="SpeechTranslationServiceSettings"/> used within this client.
         /// </param>
-        public SpeechTranslationServiceClientImpl(SpeechTranslationService.SpeechTranslationServiceClient grpcClient, SpeechTranslationServiceSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public SpeechTranslationServiceClientImpl(SpeechTranslationService.SpeechTranslationServiceClient grpcClient, SpeechTranslationServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             SpeechTranslationServiceSettings effectiveSettings = settings ?? SpeechTranslationServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callStreamingTranslateSpeech = clientHelper.BuildApiCall<StreamingTranslateSpeechRequest, StreamingTranslateSpeechResponse>(grpcClient.StreamingTranslateSpeech, effectiveSettings.StreamingTranslateSpeechSettings, effectiveSettings.StreamingTranslateSpeechStreamingSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callStreamingTranslateSpeech = clientHelper.BuildApiCall<StreamingTranslateSpeechRequest, StreamingTranslateSpeechResponse>("StreamingTranslateSpeech", grpcClient.StreamingTranslateSpeech, effectiveSettings.StreamingTranslateSpeechSettings, effectiveSettings.StreamingTranslateSpeechStreamingSettings);
             Modify_ApiCall(ref _callStreamingTranslateSpeech);
             Modify_StreamingTranslateSpeechApiCall(ref _callStreamingTranslateSpeech);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

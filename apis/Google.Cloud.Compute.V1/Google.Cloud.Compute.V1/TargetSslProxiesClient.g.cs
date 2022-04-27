@@ -16,11 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -301,9 +301,8 @@ namespace Google.Cloud.Compute.V1
         public TargetSslProxiesSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public TargetSslProxiesClientBuilder()
+        public TargetSslProxiesClientBuilder() : base(TargetSslProxiesClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = TargetSslProxiesClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref TargetSslProxiesClient client);
@@ -330,29 +329,18 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TargetSslProxiesClient.Create(callInvoker, Settings);
+            return TargetSslProxiesClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<TargetSslProxiesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TargetSslProxiesClient.Create(callInvoker, Settings);
+            return TargetSslProxiesClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => TargetSslProxiesClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => TargetSslProxiesClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => TargetSslProxiesClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => ComputeRestAdapter.ComputeAdapter;
     }
 
     /// <summary>TargetSslProxies client wrapper, for convenient use.</summary>
@@ -381,19 +369,10 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(TargetSslProxies.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="TargetSslProxiesClient"/> using the default credentials, endpoint and
@@ -420,8 +399,9 @@ namespace Google.Cloud.Compute.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="TargetSslProxiesSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="TargetSslProxiesClient"/>.</returns>
-        internal static TargetSslProxiesClient Create(grpccore::CallInvoker callInvoker, TargetSslProxiesSettings settings = null)
+        internal static TargetSslProxiesClient Create(grpccore::CallInvoker callInvoker, TargetSslProxiesSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -430,7 +410,7 @@ namespace Google.Cloud.Compute.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             TargetSslProxies.TargetSslProxiesClient grpcClient = new TargetSslProxies.TargetSslProxiesClient(callInvoker);
-            return new TargetSslProxiesClientImpl(grpcClient, settings);
+            return new TargetSslProxiesClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -1284,39 +1264,40 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="TargetSslProxiesSettings"/> used within this client.</param>
-        public TargetSslProxiesClientImpl(TargetSslProxies.TargetSslProxiesClient grpcClient, TargetSslProxiesSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public TargetSslProxiesClientImpl(TargetSslProxies.TargetSslProxiesClient grpcClient, TargetSslProxiesSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             TargetSslProxiesSettings effectiveSettings = settings ?? TargetSslProxiesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings);
-            SetBackendServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetBackendServiceOperationsSettings);
-            SetProxyHeaderOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetProxyHeaderOperationsSettings);
-            SetSslCertificatesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetSslCertificatesOperationsSettings);
-            SetSslPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetSslPolicyOperationsSettings);
-            _callDelete = clientHelper.BuildApiCall<DeleteTargetSslProxyRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("target_ssl_proxy", request => request.TargetSslProxy);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings, logger);
+            SetBackendServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetBackendServiceOperationsSettings, logger);
+            SetProxyHeaderOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetProxyHeaderOperationsSettings, logger);
+            SetSslCertificatesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetSslCertificatesOperationsSettings, logger);
+            SetSslPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetSslPolicyOperationsSettings, logger);
+            _callDelete = clientHelper.BuildApiCall<DeleteTargetSslProxyRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("target_ssl_proxy", request => request.TargetSslProxy);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
-            _callGet = clientHelper.BuildApiCall<GetTargetSslProxyRequest, TargetSslProxy>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("target_ssl_proxy", request => request.TargetSslProxy);
+            _callGet = clientHelper.BuildApiCall<GetTargetSslProxyRequest, TargetSslProxy>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("target_ssl_proxy", request => request.TargetSslProxy);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
-            _callInsert = clientHelper.BuildApiCall<InsertTargetSslProxyRequest, Operation>(grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callInsert = clientHelper.BuildApiCall<InsertTargetSslProxyRequest, Operation>("Insert", grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
-            _callList = clientHelper.BuildApiCall<ListTargetSslProxiesRequest, TargetSslProxyList>(grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
+            _callList = clientHelper.BuildApiCall<ListTargetSslProxiesRequest, TargetSslProxyList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
-            _callSetBackendService = clientHelper.BuildApiCall<SetBackendServiceTargetSslProxyRequest, Operation>(grpcClient.SetBackendServiceAsync, grpcClient.SetBackendService, effectiveSettings.SetBackendServiceSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("target_ssl_proxy", request => request.TargetSslProxy);
+            _callSetBackendService = clientHelper.BuildApiCall<SetBackendServiceTargetSslProxyRequest, Operation>("SetBackendService", grpcClient.SetBackendServiceAsync, grpcClient.SetBackendService, effectiveSettings.SetBackendServiceSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("target_ssl_proxy", request => request.TargetSslProxy);
             Modify_ApiCall(ref _callSetBackendService);
             Modify_SetBackendServiceApiCall(ref _callSetBackendService);
-            _callSetProxyHeader = clientHelper.BuildApiCall<SetProxyHeaderTargetSslProxyRequest, Operation>(grpcClient.SetProxyHeaderAsync, grpcClient.SetProxyHeader, effectiveSettings.SetProxyHeaderSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("target_ssl_proxy", request => request.TargetSslProxy);
+            _callSetProxyHeader = clientHelper.BuildApiCall<SetProxyHeaderTargetSslProxyRequest, Operation>("SetProxyHeader", grpcClient.SetProxyHeaderAsync, grpcClient.SetProxyHeader, effectiveSettings.SetProxyHeaderSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("target_ssl_proxy", request => request.TargetSslProxy);
             Modify_ApiCall(ref _callSetProxyHeader);
             Modify_SetProxyHeaderApiCall(ref _callSetProxyHeader);
-            _callSetSslCertificates = clientHelper.BuildApiCall<SetSslCertificatesTargetSslProxyRequest, Operation>(grpcClient.SetSslCertificatesAsync, grpcClient.SetSslCertificates, effectiveSettings.SetSslCertificatesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("target_ssl_proxy", request => request.TargetSslProxy);
+            _callSetSslCertificates = clientHelper.BuildApiCall<SetSslCertificatesTargetSslProxyRequest, Operation>("SetSslCertificates", grpcClient.SetSslCertificatesAsync, grpcClient.SetSslCertificates, effectiveSettings.SetSslCertificatesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("target_ssl_proxy", request => request.TargetSslProxy);
             Modify_ApiCall(ref _callSetSslCertificates);
             Modify_SetSslCertificatesApiCall(ref _callSetSslCertificates);
-            _callSetSslPolicy = clientHelper.BuildApiCall<SetSslPolicyTargetSslProxyRequest, Operation>(grpcClient.SetSslPolicyAsync, grpcClient.SetSslPolicy, effectiveSettings.SetSslPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("target_ssl_proxy", request => request.TargetSslProxy);
+            _callSetSslPolicy = clientHelper.BuildApiCall<SetSslPolicyTargetSslProxyRequest, Operation>("SetSslPolicy", grpcClient.SetSslPolicyAsync, grpcClient.SetSslPolicy, effectiveSettings.SetSslPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("target_ssl_proxy", request => request.TargetSslProxy);
             Modify_ApiCall(ref _callSetSslPolicy);
             Modify_SetSslPolicyApiCall(ref _callSetSslPolicy);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

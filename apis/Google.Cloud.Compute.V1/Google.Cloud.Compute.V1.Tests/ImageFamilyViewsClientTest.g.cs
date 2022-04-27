@@ -38,7 +38,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             ImageFamilyView expectedResponse = new ImageFamilyView { Image = new Image(), };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImageFamilyViewsClient client = new ImageFamilyViewsClientImpl(mockGrpcClient.Object, null);
+            ImageFamilyViewsClient client = new ImageFamilyViewsClientImpl(mockGrpcClient.Object, null, null);
             ImageFamilyView response = client.Get(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -56,7 +56,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             ImageFamilyView expectedResponse = new ImageFamilyView { Image = new Image(), };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImageFamilyView>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImageFamilyViewsClient client = new ImageFamilyViewsClientImpl(mockGrpcClient.Object, null);
+            ImageFamilyViewsClient client = new ImageFamilyViewsClientImpl(mockGrpcClient.Object, null, null);
             ImageFamilyView responseCallSettings = await client.GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ImageFamilyView responseCancellationToken = await client.GetAsync(request, st::CancellationToken.None);
@@ -76,7 +76,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             ImageFamilyView expectedResponse = new ImageFamilyView { Image = new Image(), };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImageFamilyViewsClient client = new ImageFamilyViewsClientImpl(mockGrpcClient.Object, null);
+            ImageFamilyViewsClient client = new ImageFamilyViewsClientImpl(mockGrpcClient.Object, null, null);
             ImageFamilyView response = client.Get(request.Project, request.Zone, request.Family);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -94,7 +94,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             ImageFamilyView expectedResponse = new ImageFamilyView { Image = new Image(), };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImageFamilyView>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImageFamilyViewsClient client = new ImageFamilyViewsClientImpl(mockGrpcClient.Object, null);
+            ImageFamilyViewsClient client = new ImageFamilyViewsClientImpl(mockGrpcClient.Object, null, null);
             ImageFamilyView responseCallSettings = await client.GetAsync(request.Project, request.Zone, request.Family, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ImageFamilyView responseCancellationToken = await client.GetAsync(request.Project, request.Zone, request.Family, st::CancellationToken.None);

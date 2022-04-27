@@ -16,13 +16,13 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using mel = Microsoft.Extensions.Logging;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -673,9 +673,8 @@ namespace Google.Identity.AccessContextManager.V1
         public AccessContextManagerSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public AccessContextManagerClientBuilder()
+        public AccessContextManagerClientBuilder() : base(AccessContextManagerClient.ServiceMetadata)
         {
-            UseJwtAccessWithScopes = AccessContextManagerClient.UseJwtAccessWithScopes;
         }
 
         partial void InterceptBuild(ref AccessContextManagerClient client);
@@ -702,29 +701,18 @@ namespace Google.Identity.AccessContextManager.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AccessContextManagerClient.Create(callInvoker, Settings);
+            return AccessContextManagerClient.Create(callInvoker, Settings, Logger);
         }
 
         private async stt::Task<AccessContextManagerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AccessContextManagerClient.Create(callInvoker, Settings);
+            return AccessContextManagerClient.Create(callInvoker, Settings, Logger);
         }
-
-        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
-        protected override string GetDefaultEndpoint() => AccessContextManagerClient.DefaultEndpoint;
-
-        /// <summary>
-        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
-        /// </summary>
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => AccessContextManagerClient.DefaultScopes;
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => AccessContextManagerClient.ChannelPool;
-
-        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
-        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>AccessContextManager client wrapper, for convenient use.</summary>
@@ -761,19 +749,10 @@ namespace Google.Identity.AccessContextManager.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+        /// <summary>The service metadata associated with this client type.</summary>
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(AccessContextManager.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
-        internal static bool UseJwtAccessWithScopes
-        {
-            get
-            {
-                bool useJwtAccessWithScopes = true;
-                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
-                return useJwtAccessWithScopes;
-            }
-        }
-
-        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
         /// Asynchronously creates a <see cref="AccessContextManagerClient"/> using the default credentials, endpoint
@@ -803,8 +782,9 @@ namespace Google.Identity.AccessContextManager.V1
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
         /// <param name="settings">Optional <see cref="AccessContextManagerSettings"/>.</param>
+        /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
         /// <returns>The created <see cref="AccessContextManagerClient"/>.</returns>
-        internal static AccessContextManagerClient Create(grpccore::CallInvoker callInvoker, AccessContextManagerSettings settings = null)
+        internal static AccessContextManagerClient Create(grpccore::CallInvoker callInvoker, AccessContextManagerSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -813,7 +793,7 @@ namespace Google.Identity.AccessContextManager.V1
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
             AccessContextManager.AccessContextManagerClient grpcClient = new AccessContextManager.AccessContextManagerClient(callInvoker);
-            return new AccessContextManagerClientImpl(grpcClient, settings);
+            return new AccessContextManagerClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -4323,93 +4303,94 @@ namespace Google.Identity.AccessContextManager.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="AccessContextManagerSettings"/> used within this client.</param>
-        public AccessContextManagerClientImpl(AccessContextManager.AccessContextManagerClient grpcClient, AccessContextManagerSettings settings)
+        /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
+        public AccessContextManagerClientImpl(AccessContextManager.AccessContextManagerClient grpcClient, AccessContextManagerSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
             AccessContextManagerSettings effectiveSettings = settings ?? AccessContextManagerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            CreateAccessPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAccessPolicyOperationsSettings);
-            UpdateAccessPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAccessPolicyOperationsSettings);
-            DeleteAccessPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAccessPolicyOperationsSettings);
-            CreateAccessLevelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAccessLevelOperationsSettings);
-            UpdateAccessLevelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAccessLevelOperationsSettings);
-            DeleteAccessLevelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAccessLevelOperationsSettings);
-            ReplaceAccessLevelsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReplaceAccessLevelsOperationsSettings);
-            CreateServicePerimeterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateServicePerimeterOperationsSettings);
-            UpdateServicePerimeterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateServicePerimeterOperationsSettings);
-            DeleteServicePerimeterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteServicePerimeterOperationsSettings);
-            ReplaceServicePerimetersOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReplaceServicePerimetersOperationsSettings);
-            CommitServicePerimetersOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CommitServicePerimetersOperationsSettings);
-            CreateGcpUserAccessBindingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGcpUserAccessBindingOperationsSettings);
-            UpdateGcpUserAccessBindingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateGcpUserAccessBindingOperationsSettings);
-            DeleteGcpUserAccessBindingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGcpUserAccessBindingOperationsSettings);
-            _callListAccessPolicies = clientHelper.BuildApiCall<ListAccessPoliciesRequest, ListAccessPoliciesResponse>(grpcClient.ListAccessPoliciesAsync, grpcClient.ListAccessPolicies, effectiveSettings.ListAccessPoliciesSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateAccessPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAccessPolicyOperationsSettings, logger);
+            UpdateAccessPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAccessPolicyOperationsSettings, logger);
+            DeleteAccessPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAccessPolicyOperationsSettings, logger);
+            CreateAccessLevelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAccessLevelOperationsSettings, logger);
+            UpdateAccessLevelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAccessLevelOperationsSettings, logger);
+            DeleteAccessLevelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAccessLevelOperationsSettings, logger);
+            ReplaceAccessLevelsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReplaceAccessLevelsOperationsSettings, logger);
+            CreateServicePerimeterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateServicePerimeterOperationsSettings, logger);
+            UpdateServicePerimeterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateServicePerimeterOperationsSettings, logger);
+            DeleteServicePerimeterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteServicePerimeterOperationsSettings, logger);
+            ReplaceServicePerimetersOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReplaceServicePerimetersOperationsSettings, logger);
+            CommitServicePerimetersOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CommitServicePerimetersOperationsSettings, logger);
+            CreateGcpUserAccessBindingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGcpUserAccessBindingOperationsSettings, logger);
+            UpdateGcpUserAccessBindingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateGcpUserAccessBindingOperationsSettings, logger);
+            DeleteGcpUserAccessBindingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGcpUserAccessBindingOperationsSettings, logger);
+            _callListAccessPolicies = clientHelper.BuildApiCall<ListAccessPoliciesRequest, ListAccessPoliciesResponse>("ListAccessPolicies", grpcClient.ListAccessPoliciesAsync, grpcClient.ListAccessPolicies, effectiveSettings.ListAccessPoliciesSettings);
             Modify_ApiCall(ref _callListAccessPolicies);
             Modify_ListAccessPoliciesApiCall(ref _callListAccessPolicies);
-            _callGetAccessPolicy = clientHelper.BuildApiCall<GetAccessPolicyRequest, AccessPolicy>(grpcClient.GetAccessPolicyAsync, grpcClient.GetAccessPolicy, effectiveSettings.GetAccessPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetAccessPolicy = clientHelper.BuildApiCall<GetAccessPolicyRequest, AccessPolicy>("GetAccessPolicy", grpcClient.GetAccessPolicyAsync, grpcClient.GetAccessPolicy, effectiveSettings.GetAccessPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAccessPolicy);
             Modify_GetAccessPolicyApiCall(ref _callGetAccessPolicy);
-            _callCreateAccessPolicy = clientHelper.BuildApiCall<AccessPolicy, lro::Operation>(grpcClient.CreateAccessPolicyAsync, grpcClient.CreateAccessPolicy, effectiveSettings.CreateAccessPolicySettings);
+            _callCreateAccessPolicy = clientHelper.BuildApiCall<AccessPolicy, lro::Operation>("CreateAccessPolicy", grpcClient.CreateAccessPolicyAsync, grpcClient.CreateAccessPolicy, effectiveSettings.CreateAccessPolicySettings);
             Modify_ApiCall(ref _callCreateAccessPolicy);
             Modify_CreateAccessPolicyApiCall(ref _callCreateAccessPolicy);
-            _callUpdateAccessPolicy = clientHelper.BuildApiCall<UpdateAccessPolicyRequest, lro::Operation>(grpcClient.UpdateAccessPolicyAsync, grpcClient.UpdateAccessPolicy, effectiveSettings.UpdateAccessPolicySettings).WithGoogleRequestParam("policy.name", request => request.Policy?.Name);
+            _callUpdateAccessPolicy = clientHelper.BuildApiCall<UpdateAccessPolicyRequest, lro::Operation>("UpdateAccessPolicy", grpcClient.UpdateAccessPolicyAsync, grpcClient.UpdateAccessPolicy, effectiveSettings.UpdateAccessPolicySettings).WithGoogleRequestParam("policy.name", request => request.Policy?.Name);
             Modify_ApiCall(ref _callUpdateAccessPolicy);
             Modify_UpdateAccessPolicyApiCall(ref _callUpdateAccessPolicy);
-            _callDeleteAccessPolicy = clientHelper.BuildApiCall<DeleteAccessPolicyRequest, lro::Operation>(grpcClient.DeleteAccessPolicyAsync, grpcClient.DeleteAccessPolicy, effectiveSettings.DeleteAccessPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteAccessPolicy = clientHelper.BuildApiCall<DeleteAccessPolicyRequest, lro::Operation>("DeleteAccessPolicy", grpcClient.DeleteAccessPolicyAsync, grpcClient.DeleteAccessPolicy, effectiveSettings.DeleteAccessPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAccessPolicy);
             Modify_DeleteAccessPolicyApiCall(ref _callDeleteAccessPolicy);
-            _callListAccessLevels = clientHelper.BuildApiCall<ListAccessLevelsRequest, ListAccessLevelsResponse>(grpcClient.ListAccessLevelsAsync, grpcClient.ListAccessLevels, effectiveSettings.ListAccessLevelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListAccessLevels = clientHelper.BuildApiCall<ListAccessLevelsRequest, ListAccessLevelsResponse>("ListAccessLevels", grpcClient.ListAccessLevelsAsync, grpcClient.ListAccessLevels, effectiveSettings.ListAccessLevelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAccessLevels);
             Modify_ListAccessLevelsApiCall(ref _callListAccessLevels);
-            _callGetAccessLevel = clientHelper.BuildApiCall<GetAccessLevelRequest, AccessLevel>(grpcClient.GetAccessLevelAsync, grpcClient.GetAccessLevel, effectiveSettings.GetAccessLevelSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetAccessLevel = clientHelper.BuildApiCall<GetAccessLevelRequest, AccessLevel>("GetAccessLevel", grpcClient.GetAccessLevelAsync, grpcClient.GetAccessLevel, effectiveSettings.GetAccessLevelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAccessLevel);
             Modify_GetAccessLevelApiCall(ref _callGetAccessLevel);
-            _callCreateAccessLevel = clientHelper.BuildApiCall<CreateAccessLevelRequest, lro::Operation>(grpcClient.CreateAccessLevelAsync, grpcClient.CreateAccessLevel, effectiveSettings.CreateAccessLevelSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateAccessLevel = clientHelper.BuildApiCall<CreateAccessLevelRequest, lro::Operation>("CreateAccessLevel", grpcClient.CreateAccessLevelAsync, grpcClient.CreateAccessLevel, effectiveSettings.CreateAccessLevelSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateAccessLevel);
             Modify_CreateAccessLevelApiCall(ref _callCreateAccessLevel);
-            _callUpdateAccessLevel = clientHelper.BuildApiCall<UpdateAccessLevelRequest, lro::Operation>(grpcClient.UpdateAccessLevelAsync, grpcClient.UpdateAccessLevel, effectiveSettings.UpdateAccessLevelSettings).WithGoogleRequestParam("access_level.name", request => request.AccessLevel?.Name);
+            _callUpdateAccessLevel = clientHelper.BuildApiCall<UpdateAccessLevelRequest, lro::Operation>("UpdateAccessLevel", grpcClient.UpdateAccessLevelAsync, grpcClient.UpdateAccessLevel, effectiveSettings.UpdateAccessLevelSettings).WithGoogleRequestParam("access_level.name", request => request.AccessLevel?.Name);
             Modify_ApiCall(ref _callUpdateAccessLevel);
             Modify_UpdateAccessLevelApiCall(ref _callUpdateAccessLevel);
-            _callDeleteAccessLevel = clientHelper.BuildApiCall<DeleteAccessLevelRequest, lro::Operation>(grpcClient.DeleteAccessLevelAsync, grpcClient.DeleteAccessLevel, effectiveSettings.DeleteAccessLevelSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteAccessLevel = clientHelper.BuildApiCall<DeleteAccessLevelRequest, lro::Operation>("DeleteAccessLevel", grpcClient.DeleteAccessLevelAsync, grpcClient.DeleteAccessLevel, effectiveSettings.DeleteAccessLevelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAccessLevel);
             Modify_DeleteAccessLevelApiCall(ref _callDeleteAccessLevel);
-            _callReplaceAccessLevels = clientHelper.BuildApiCall<ReplaceAccessLevelsRequest, lro::Operation>(grpcClient.ReplaceAccessLevelsAsync, grpcClient.ReplaceAccessLevels, effectiveSettings.ReplaceAccessLevelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callReplaceAccessLevels = clientHelper.BuildApiCall<ReplaceAccessLevelsRequest, lro::Operation>("ReplaceAccessLevels", grpcClient.ReplaceAccessLevelsAsync, grpcClient.ReplaceAccessLevels, effectiveSettings.ReplaceAccessLevelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callReplaceAccessLevels);
             Modify_ReplaceAccessLevelsApiCall(ref _callReplaceAccessLevels);
-            _callListServicePerimeters = clientHelper.BuildApiCall<ListServicePerimetersRequest, ListServicePerimetersResponse>(grpcClient.ListServicePerimetersAsync, grpcClient.ListServicePerimeters, effectiveSettings.ListServicePerimetersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListServicePerimeters = clientHelper.BuildApiCall<ListServicePerimetersRequest, ListServicePerimetersResponse>("ListServicePerimeters", grpcClient.ListServicePerimetersAsync, grpcClient.ListServicePerimeters, effectiveSettings.ListServicePerimetersSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListServicePerimeters);
             Modify_ListServicePerimetersApiCall(ref _callListServicePerimeters);
-            _callGetServicePerimeter = clientHelper.BuildApiCall<GetServicePerimeterRequest, ServicePerimeter>(grpcClient.GetServicePerimeterAsync, grpcClient.GetServicePerimeter, effectiveSettings.GetServicePerimeterSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetServicePerimeter = clientHelper.BuildApiCall<GetServicePerimeterRequest, ServicePerimeter>("GetServicePerimeter", grpcClient.GetServicePerimeterAsync, grpcClient.GetServicePerimeter, effectiveSettings.GetServicePerimeterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetServicePerimeter);
             Modify_GetServicePerimeterApiCall(ref _callGetServicePerimeter);
-            _callCreateServicePerimeter = clientHelper.BuildApiCall<CreateServicePerimeterRequest, lro::Operation>(grpcClient.CreateServicePerimeterAsync, grpcClient.CreateServicePerimeter, effectiveSettings.CreateServicePerimeterSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateServicePerimeter = clientHelper.BuildApiCall<CreateServicePerimeterRequest, lro::Operation>("CreateServicePerimeter", grpcClient.CreateServicePerimeterAsync, grpcClient.CreateServicePerimeter, effectiveSettings.CreateServicePerimeterSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateServicePerimeter);
             Modify_CreateServicePerimeterApiCall(ref _callCreateServicePerimeter);
-            _callUpdateServicePerimeter = clientHelper.BuildApiCall<UpdateServicePerimeterRequest, lro::Operation>(grpcClient.UpdateServicePerimeterAsync, grpcClient.UpdateServicePerimeter, effectiveSettings.UpdateServicePerimeterSettings).WithGoogleRequestParam("service_perimeter.name", request => request.ServicePerimeter?.Name);
+            _callUpdateServicePerimeter = clientHelper.BuildApiCall<UpdateServicePerimeterRequest, lro::Operation>("UpdateServicePerimeter", grpcClient.UpdateServicePerimeterAsync, grpcClient.UpdateServicePerimeter, effectiveSettings.UpdateServicePerimeterSettings).WithGoogleRequestParam("service_perimeter.name", request => request.ServicePerimeter?.Name);
             Modify_ApiCall(ref _callUpdateServicePerimeter);
             Modify_UpdateServicePerimeterApiCall(ref _callUpdateServicePerimeter);
-            _callDeleteServicePerimeter = clientHelper.BuildApiCall<DeleteServicePerimeterRequest, lro::Operation>(grpcClient.DeleteServicePerimeterAsync, grpcClient.DeleteServicePerimeter, effectiveSettings.DeleteServicePerimeterSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteServicePerimeter = clientHelper.BuildApiCall<DeleteServicePerimeterRequest, lro::Operation>("DeleteServicePerimeter", grpcClient.DeleteServicePerimeterAsync, grpcClient.DeleteServicePerimeter, effectiveSettings.DeleteServicePerimeterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteServicePerimeter);
             Modify_DeleteServicePerimeterApiCall(ref _callDeleteServicePerimeter);
-            _callReplaceServicePerimeters = clientHelper.BuildApiCall<ReplaceServicePerimetersRequest, lro::Operation>(grpcClient.ReplaceServicePerimetersAsync, grpcClient.ReplaceServicePerimeters, effectiveSettings.ReplaceServicePerimetersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callReplaceServicePerimeters = clientHelper.BuildApiCall<ReplaceServicePerimetersRequest, lro::Operation>("ReplaceServicePerimeters", grpcClient.ReplaceServicePerimetersAsync, grpcClient.ReplaceServicePerimeters, effectiveSettings.ReplaceServicePerimetersSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callReplaceServicePerimeters);
             Modify_ReplaceServicePerimetersApiCall(ref _callReplaceServicePerimeters);
-            _callCommitServicePerimeters = clientHelper.BuildApiCall<CommitServicePerimetersRequest, lro::Operation>(grpcClient.CommitServicePerimetersAsync, grpcClient.CommitServicePerimeters, effectiveSettings.CommitServicePerimetersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCommitServicePerimeters = clientHelper.BuildApiCall<CommitServicePerimetersRequest, lro::Operation>("CommitServicePerimeters", grpcClient.CommitServicePerimetersAsync, grpcClient.CommitServicePerimeters, effectiveSettings.CommitServicePerimetersSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCommitServicePerimeters);
             Modify_CommitServicePerimetersApiCall(ref _callCommitServicePerimeters);
-            _callListGcpUserAccessBindings = clientHelper.BuildApiCall<ListGcpUserAccessBindingsRequest, ListGcpUserAccessBindingsResponse>(grpcClient.ListGcpUserAccessBindingsAsync, grpcClient.ListGcpUserAccessBindings, effectiveSettings.ListGcpUserAccessBindingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListGcpUserAccessBindings = clientHelper.BuildApiCall<ListGcpUserAccessBindingsRequest, ListGcpUserAccessBindingsResponse>("ListGcpUserAccessBindings", grpcClient.ListGcpUserAccessBindingsAsync, grpcClient.ListGcpUserAccessBindings, effectiveSettings.ListGcpUserAccessBindingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListGcpUserAccessBindings);
             Modify_ListGcpUserAccessBindingsApiCall(ref _callListGcpUserAccessBindings);
-            _callGetGcpUserAccessBinding = clientHelper.BuildApiCall<GetGcpUserAccessBindingRequest, GcpUserAccessBinding>(grpcClient.GetGcpUserAccessBindingAsync, grpcClient.GetGcpUserAccessBinding, effectiveSettings.GetGcpUserAccessBindingSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetGcpUserAccessBinding = clientHelper.BuildApiCall<GetGcpUserAccessBindingRequest, GcpUserAccessBinding>("GetGcpUserAccessBinding", grpcClient.GetGcpUserAccessBindingAsync, grpcClient.GetGcpUserAccessBinding, effectiveSettings.GetGcpUserAccessBindingSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetGcpUserAccessBinding);
             Modify_GetGcpUserAccessBindingApiCall(ref _callGetGcpUserAccessBinding);
-            _callCreateGcpUserAccessBinding = clientHelper.BuildApiCall<CreateGcpUserAccessBindingRequest, lro::Operation>(grpcClient.CreateGcpUserAccessBindingAsync, grpcClient.CreateGcpUserAccessBinding, effectiveSettings.CreateGcpUserAccessBindingSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateGcpUserAccessBinding = clientHelper.BuildApiCall<CreateGcpUserAccessBindingRequest, lro::Operation>("CreateGcpUserAccessBinding", grpcClient.CreateGcpUserAccessBindingAsync, grpcClient.CreateGcpUserAccessBinding, effectiveSettings.CreateGcpUserAccessBindingSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateGcpUserAccessBinding);
             Modify_CreateGcpUserAccessBindingApiCall(ref _callCreateGcpUserAccessBinding);
-            _callUpdateGcpUserAccessBinding = clientHelper.BuildApiCall<UpdateGcpUserAccessBindingRequest, lro::Operation>(grpcClient.UpdateGcpUserAccessBindingAsync, grpcClient.UpdateGcpUserAccessBinding, effectiveSettings.UpdateGcpUserAccessBindingSettings).WithGoogleRequestParam("gcp_user_access_binding.name", request => request.GcpUserAccessBinding?.Name);
+            _callUpdateGcpUserAccessBinding = clientHelper.BuildApiCall<UpdateGcpUserAccessBindingRequest, lro::Operation>("UpdateGcpUserAccessBinding", grpcClient.UpdateGcpUserAccessBindingAsync, grpcClient.UpdateGcpUserAccessBinding, effectiveSettings.UpdateGcpUserAccessBindingSettings).WithGoogleRequestParam("gcp_user_access_binding.name", request => request.GcpUserAccessBinding?.Name);
             Modify_ApiCall(ref _callUpdateGcpUserAccessBinding);
             Modify_UpdateGcpUserAccessBindingApiCall(ref _callUpdateGcpUserAccessBinding);
-            _callDeleteGcpUserAccessBinding = clientHelper.BuildApiCall<DeleteGcpUserAccessBindingRequest, lro::Operation>(grpcClient.DeleteGcpUserAccessBindingAsync, grpcClient.DeleteGcpUserAccessBinding, effectiveSettings.DeleteGcpUserAccessBindingSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteGcpUserAccessBinding = clientHelper.BuildApiCall<DeleteGcpUserAccessBindingRequest, lro::Operation>("DeleteGcpUserAccessBinding", grpcClient.DeleteGcpUserAccessBindingAsync, grpcClient.DeleteGcpUserAccessBinding, effectiveSettings.DeleteGcpUserAccessBindingSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteGcpUserAccessBinding);
             Modify_DeleteGcpUserAccessBindingApiCall(ref _callDeleteGcpUserAccessBinding);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

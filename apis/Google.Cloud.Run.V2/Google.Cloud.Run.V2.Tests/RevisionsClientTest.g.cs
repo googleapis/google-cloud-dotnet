@@ -80,7 +80,7 @@ namespace Google.Cloud.Run.V2.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRevision(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null);
+            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null, null);
             Revision response = client.GetRevision(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -137,7 +137,7 @@ namespace Google.Cloud.Run.V2.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRevisionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Revision>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null);
+            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null, null);
             Revision responseCallSettings = await client.GetRevisionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Revision responseCancellationToken = await client.GetRevisionAsync(request, st::CancellationToken.None);
@@ -196,7 +196,7 @@ namespace Google.Cloud.Run.V2.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRevision(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null);
+            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null, null);
             Revision response = client.GetRevision(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -253,7 +253,7 @@ namespace Google.Cloud.Run.V2.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRevisionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Revision>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null);
+            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null, null);
             Revision responseCallSettings = await client.GetRevisionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Revision responseCancellationToken = await client.GetRevisionAsync(request.Name, st::CancellationToken.None);
@@ -312,7 +312,7 @@ namespace Google.Cloud.Run.V2.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRevision(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null);
+            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null, null);
             Revision response = client.GetRevision(request.RevisionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -369,7 +369,7 @@ namespace Google.Cloud.Run.V2.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetRevisionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Revision>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null);
+            RevisionsClient client = new RevisionsClientImpl(mockGrpcClient.Object, null, null);
             Revision responseCallSettings = await client.GetRevisionAsync(request.RevisionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Revision responseCancellationToken = await client.GetRevisionAsync(request.RevisionName, st::CancellationToken.None);

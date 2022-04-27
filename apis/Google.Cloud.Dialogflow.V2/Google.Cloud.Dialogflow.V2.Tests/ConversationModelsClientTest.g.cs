@@ -49,7 +49,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
             };
             mockGrpcClient.Setup(x => x.GetConversationModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConversationModelsClient client = new ConversationModelsClientImpl(mockGrpcClient.Object, null);
+            ConversationModelsClient client = new ConversationModelsClientImpl(mockGrpcClient.Object, null, null);
             ConversationModel response = client.GetConversationModel(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -76,7 +76,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
             };
             mockGrpcClient.Setup(x => x.GetConversationModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationModel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConversationModelsClient client = new ConversationModelsClientImpl(mockGrpcClient.Object, null);
+            ConversationModelsClient client = new ConversationModelsClientImpl(mockGrpcClient.Object, null, null);
             ConversationModel responseCallSettings = await client.GetConversationModelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConversationModel responseCancellationToken = await client.GetConversationModelAsync(request, st::CancellationToken.None);
@@ -105,7 +105,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
             };
             mockGrpcClient.Setup(x => x.GetConversationModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConversationModelsClient client = new ConversationModelsClientImpl(mockGrpcClient.Object, null);
+            ConversationModelsClient client = new ConversationModelsClientImpl(mockGrpcClient.Object, null, null);
             ConversationModel response = client.GetConversationModel(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -132,7 +132,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
             };
             mockGrpcClient.Setup(x => x.GetConversationModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationModel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConversationModelsClient client = new ConversationModelsClientImpl(mockGrpcClient.Object, null);
+            ConversationModelsClient client = new ConversationModelsClientImpl(mockGrpcClient.Object, null, null);
             ConversationModel responseCallSettings = await client.GetConversationModelAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConversationModel responseCancellationToken = await client.GetConversationModelAsync(request.Name, st::CancellationToken.None);
@@ -158,7 +158,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 EvaluationConfig = new EvaluationConfig(),
             };
             mockGrpcClient.Setup(x => x.GetConversationModelEvaluation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConversationModelsClient client = new ConversationModelsClientImpl(mockGrpcClient.Object, null);
+            ConversationModelsClient client = new ConversationModelsClientImpl(mockGrpcClient.Object, null, null);
             ConversationModelEvaluation response = client.GetConversationModelEvaluation(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -182,7 +182,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 EvaluationConfig = new EvaluationConfig(),
             };
             mockGrpcClient.Setup(x => x.GetConversationModelEvaluationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationModelEvaluation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConversationModelsClient client = new ConversationModelsClientImpl(mockGrpcClient.Object, null);
+            ConversationModelsClient client = new ConversationModelsClientImpl(mockGrpcClient.Object, null, null);
             ConversationModelEvaluation responseCallSettings = await client.GetConversationModelEvaluationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConversationModelEvaluation responseCancellationToken = await client.GetConversationModelEvaluationAsync(request, st::CancellationToken.None);
@@ -208,7 +208,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 EvaluationConfig = new EvaluationConfig(),
             };
             mockGrpcClient.Setup(x => x.GetConversationModelEvaluation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ConversationModelsClient client = new ConversationModelsClientImpl(mockGrpcClient.Object, null);
+            ConversationModelsClient client = new ConversationModelsClientImpl(mockGrpcClient.Object, null, null);
             ConversationModelEvaluation response = client.GetConversationModelEvaluation(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -232,7 +232,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 EvaluationConfig = new EvaluationConfig(),
             };
             mockGrpcClient.Setup(x => x.GetConversationModelEvaluationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationModelEvaluation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ConversationModelsClient client = new ConversationModelsClientImpl(mockGrpcClient.Object, null);
+            ConversationModelsClient client = new ConversationModelsClientImpl(mockGrpcClient.Object, null, null);
             ConversationModelEvaluation responseCallSettings = await client.GetConversationModelEvaluationAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ConversationModelEvaluation responseCancellationToken = await client.GetConversationModelEvaluationAsync(request.Name, st::CancellationToken.None);

@@ -43,7 +43,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 OauthClientId = "oauth_client_iddd047d42",
             };
             mockGrpcClient.Setup(x => x.GetAuthorization(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             Authorization response = client.GetAuthorization(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -64,7 +64,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 OauthClientId = "oauth_client_iddd047d42",
             };
             mockGrpcClient.Setup(x => x.GetAuthorizationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Authorization>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             Authorization responseCallSettings = await client.GetAuthorizationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Authorization responseCancellationToken = await client.GetAuthorizationAsync(request, st::CancellationToken.None);
@@ -87,7 +87,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 OauthClientId = "oauth_client_iddd047d42",
             };
             mockGrpcClient.Setup(x => x.GetAuthorization(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             Authorization response = client.GetAuthorization(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -108,7 +108,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 OauthClientId = "oauth_client_iddd047d42",
             };
             mockGrpcClient.Setup(x => x.GetAuthorizationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Authorization>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             Authorization responseCallSettings = await client.GetAuthorizationAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Authorization responseCancellationToken = await client.GetAuthorizationAsync(request.Name, st::CancellationToken.None);
@@ -131,7 +131,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 OauthClientId = "oauth_client_iddd047d42",
             };
             mockGrpcClient.Setup(x => x.GetAuthorization(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             Authorization response = client.GetAuthorization(request.AuthorizationName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -152,7 +152,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 OauthClientId = "oauth_client_iddd047d42",
             };
             mockGrpcClient.Setup(x => x.GetAuthorizationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Authorization>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             Authorization responseCallSettings = await client.GetAuthorizationAsync(request.AuthorizationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Authorization responseCancellationToken = await client.GetAuthorizationAsync(request.AuthorizationName, st::CancellationToken.None);
@@ -181,7 +181,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.CreateDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             Deployment response = client.CreateDeployment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -208,7 +208,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.CreateDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Deployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             Deployment responseCallSettings = await client.CreateDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Deployment responseCancellationToken = await client.CreateDeploymentAsync(request, st::CancellationToken.None);
@@ -237,7 +237,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.CreateDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             Deployment response = client.CreateDeployment(request.Parent, request.Deployment, request.DeploymentId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -264,7 +264,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.CreateDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Deployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             Deployment responseCallSettings = await client.CreateDeploymentAsync(request.Parent, request.Deployment, request.DeploymentId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Deployment responseCancellationToken = await client.CreateDeploymentAsync(request.Parent, request.Deployment, request.DeploymentId, st::CancellationToken.None);
@@ -293,7 +293,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.CreateDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             Deployment response = client.CreateDeployment(request.ParentAsProjectName, request.Deployment, request.DeploymentId);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -320,7 +320,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.CreateDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Deployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             Deployment responseCallSettings = await client.CreateDeploymentAsync(request.ParentAsProjectName, request.Deployment, request.DeploymentId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Deployment responseCancellationToken = await client.CreateDeploymentAsync(request.ParentAsProjectName, request.Deployment, request.DeploymentId, st::CancellationToken.None);
@@ -347,7 +347,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.ReplaceDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             Deployment response = client.ReplaceDeployment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -372,7 +372,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.ReplaceDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Deployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             Deployment responseCallSettings = await client.ReplaceDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Deployment responseCancellationToken = await client.ReplaceDeploymentAsync(request, st::CancellationToken.None);
@@ -399,7 +399,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.ReplaceDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             Deployment response = client.ReplaceDeployment(request.Deployment);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -424,7 +424,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.ReplaceDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Deployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             Deployment responseCallSettings = await client.ReplaceDeploymentAsync(request.Deployment, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Deployment responseCancellationToken = await client.ReplaceDeploymentAsync(request.Deployment, st::CancellationToken.None);
@@ -451,7 +451,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             Deployment response = client.GetDeployment(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -476,7 +476,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Deployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             Deployment responseCallSettings = await client.GetDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Deployment responseCancellationToken = await client.GetDeploymentAsync(request, st::CancellationToken.None);
@@ -503,7 +503,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             Deployment response = client.GetDeployment(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -528,7 +528,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Deployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             Deployment responseCallSettings = await client.GetDeploymentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Deployment responseCancellationToken = await client.GetDeploymentAsync(request.Name, st::CancellationToken.None);
@@ -555,7 +555,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             Deployment response = client.GetDeployment(request.DeploymentName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -580,7 +580,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Deployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             Deployment responseCallSettings = await client.GetDeploymentAsync(request.DeploymentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Deployment responseCancellationToken = await client.GetDeploymentAsync(request.DeploymentName, st::CancellationToken.None);
@@ -599,7 +599,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDeployment(request);
             mockGrpcClient.VerifyAll();
         }
@@ -615,7 +615,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDeploymentAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -631,7 +631,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDeployment(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -646,7 +646,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDeploymentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDeploymentAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -662,7 +662,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             client.DeleteDeployment(request.DeploymentName);
             mockGrpcClient.VerifyAll();
         }
@@ -677,7 +677,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             await client.DeleteDeploymentAsync(request.DeploymentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteDeploymentAsync(request.DeploymentName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -693,7 +693,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.InstallDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             client.InstallDeployment(request);
             mockGrpcClient.VerifyAll();
         }
@@ -708,7 +708,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.InstallDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             await client.InstallDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.InstallDeploymentAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -724,7 +724,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.InstallDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             client.InstallDeployment(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -739,7 +739,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.InstallDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             await client.InstallDeploymentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.InstallDeploymentAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -755,7 +755,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.InstallDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             client.InstallDeployment(request.DeploymentName);
             mockGrpcClient.VerifyAll();
         }
@@ -770,7 +770,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.InstallDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             await client.InstallDeploymentAsync(request.DeploymentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.InstallDeploymentAsync(request.DeploymentName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -786,7 +786,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.UninstallDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             client.UninstallDeployment(request);
             mockGrpcClient.VerifyAll();
         }
@@ -801,7 +801,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.UninstallDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             await client.UninstallDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.UninstallDeploymentAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -817,7 +817,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.UninstallDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             client.UninstallDeployment(request.Name);
             mockGrpcClient.VerifyAll();
         }
@@ -832,7 +832,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.UninstallDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             await client.UninstallDeploymentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.UninstallDeploymentAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -848,7 +848,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.UninstallDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             client.UninstallDeployment(request.DeploymentName);
             mockGrpcClient.VerifyAll();
         }
@@ -863,7 +863,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.UninstallDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             await client.UninstallDeploymentAsync(request.DeploymentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.UninstallDeploymentAsync(request.DeploymentName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
@@ -883,7 +883,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 Installed = true,
             };
             mockGrpcClient.Setup(x => x.GetInstallStatus(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             InstallStatus response = client.GetInstallStatus(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -903,7 +903,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 Installed = true,
             };
             mockGrpcClient.Setup(x => x.GetInstallStatusAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstallStatus>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             InstallStatus responseCallSettings = await client.GetInstallStatusAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InstallStatus responseCancellationToken = await client.GetInstallStatusAsync(request, st::CancellationToken.None);
@@ -925,7 +925,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 Installed = true,
             };
             mockGrpcClient.Setup(x => x.GetInstallStatus(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             InstallStatus response = client.GetInstallStatus(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -945,7 +945,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 Installed = true,
             };
             mockGrpcClient.Setup(x => x.GetInstallStatusAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstallStatus>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             InstallStatus responseCallSettings = await client.GetInstallStatusAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InstallStatus responseCancellationToken = await client.GetInstallStatusAsync(request.Name, st::CancellationToken.None);
@@ -967,7 +967,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 Installed = true,
             };
             mockGrpcClient.Setup(x => x.GetInstallStatus(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             InstallStatus response = client.GetInstallStatus(request.InstallStatusName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -987,7 +987,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Tests
                 Installed = true,
             };
             mockGrpcClient.Setup(x => x.GetInstallStatusAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstallStatus>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null);
+            GSuiteAddOnsClient client = new GSuiteAddOnsClientImpl(mockGrpcClient.Object, null, null);
             InstallStatus responseCallSettings = await client.GetInstallStatusAsync(request.InstallStatusName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InstallStatus responseCancellationToken = await client.GetInstallStatusAsync(request.InstallStatusName, st::CancellationToken.None);

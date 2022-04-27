@@ -58,7 +58,7 @@ namespace Google.Cloud.Workflows.V1Beta.Tests
                 SourceContents = "source_contentscf4464d3",
             };
             mockGrpcClient.Setup(x => x.GetWorkflow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WorkflowsClient client = new WorkflowsClientImpl(mockGrpcClient.Object, null);
+            WorkflowsClient client = new WorkflowsClientImpl(mockGrpcClient.Object, null, null);
             Workflow response = client.GetWorkflow(request);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -93,7 +93,7 @@ namespace Google.Cloud.Workflows.V1Beta.Tests
                 SourceContents = "source_contentscf4464d3",
             };
             mockGrpcClient.Setup(x => x.GetWorkflowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workflow>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WorkflowsClient client = new WorkflowsClientImpl(mockGrpcClient.Object, null);
+            WorkflowsClient client = new WorkflowsClientImpl(mockGrpcClient.Object, null, null);
             Workflow responseCallSettings = await client.GetWorkflowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Workflow responseCancellationToken = await client.GetWorkflowAsync(request, st::CancellationToken.None);
@@ -130,7 +130,7 @@ namespace Google.Cloud.Workflows.V1Beta.Tests
                 SourceContents = "source_contentscf4464d3",
             };
             mockGrpcClient.Setup(x => x.GetWorkflow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WorkflowsClient client = new WorkflowsClientImpl(mockGrpcClient.Object, null);
+            WorkflowsClient client = new WorkflowsClientImpl(mockGrpcClient.Object, null, null);
             Workflow response = client.GetWorkflow(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -165,7 +165,7 @@ namespace Google.Cloud.Workflows.V1Beta.Tests
                 SourceContents = "source_contentscf4464d3",
             };
             mockGrpcClient.Setup(x => x.GetWorkflowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workflow>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WorkflowsClient client = new WorkflowsClientImpl(mockGrpcClient.Object, null);
+            WorkflowsClient client = new WorkflowsClientImpl(mockGrpcClient.Object, null, null);
             Workflow responseCallSettings = await client.GetWorkflowAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Workflow responseCancellationToken = await client.GetWorkflowAsync(request.Name, st::CancellationToken.None);
@@ -202,7 +202,7 @@ namespace Google.Cloud.Workflows.V1Beta.Tests
                 SourceContents = "source_contentscf4464d3",
             };
             mockGrpcClient.Setup(x => x.GetWorkflow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            WorkflowsClient client = new WorkflowsClientImpl(mockGrpcClient.Object, null);
+            WorkflowsClient client = new WorkflowsClientImpl(mockGrpcClient.Object, null, null);
             Workflow response = client.GetWorkflow(request.WorkflowName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -237,7 +237,7 @@ namespace Google.Cloud.Workflows.V1Beta.Tests
                 SourceContents = "source_contentscf4464d3",
             };
             mockGrpcClient.Setup(x => x.GetWorkflowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workflow>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            WorkflowsClient client = new WorkflowsClientImpl(mockGrpcClient.Object, null);
+            WorkflowsClient client = new WorkflowsClientImpl(mockGrpcClient.Object, null, null);
             Workflow responseCallSettings = await client.GetWorkflowAsync(request.WorkflowName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Workflow responseCancellationToken = await client.GetWorkflowAsync(request.WorkflowName, st::CancellationToken.None);
