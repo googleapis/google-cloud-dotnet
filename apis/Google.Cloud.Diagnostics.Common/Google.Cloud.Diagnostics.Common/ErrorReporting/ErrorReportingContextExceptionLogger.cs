@@ -61,7 +61,7 @@ namespace Google.Cloud.Diagnostics.Common
         internal static IContextExceptionLogger Create(ErrorReportingServiceOptions options, IServiceProvider serviceProvider)
         {
             options = options ?? new ErrorReportingServiceOptions();
-            var errorReportingOptions = options.Options ?? ErrorReportingOptions.CreateInstance();
+            var errorReportingOptions = options.Options ?? ErrorReportingOptions.Create();
 
             var eventTarget = options.EventTarget
                 ?? EventTarget.ForProject(Project.GetAndCheckProjectId(null, errorReportingOptions.MonitoredResource));
