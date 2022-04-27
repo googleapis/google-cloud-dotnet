@@ -109,26 +109,6 @@ then
   fi
 fi
 
-# If we are building Google.Cloud.Diagnostics.AspNetCore we also need to build
-# Google.Cloud.Diagnostics.AspNetCore3 since they share code files.
-hasCore=false
-hasCore3=false
-for api in ${apis[*]}
-do
-  if [[ "$api" == "Google.Cloud.Diagnostics.AspNetCore" ]]
-  then
-    hasCore=true
-  elif [[ "$api" == "Google.Cloud.Diagnostics.AspNetCore3" ]]
-  then
-    hasCore3=true
-  fi
-done
-if [[ "$hasCore" == "true" ]] && [[ "$hasCore3" == "false" ]]
-then
-  apis+=("Google.Cloud.Diagnostics.AspNetCore3")
-fi
-
-
 if [[ "$nobuild" == "true" ]]
 then
   echo "APIs that would be built:"
@@ -150,18 +130,6 @@ dotnet publish -nologo -clp:NoSummary -v quiet -c Release -f netstandard2.0 tool
 for api in ${apis[*]}
 do
   [[ -d "$api" ]] && apidir=$api || apidir=apis/$api
-
-  if [[ "$api" == "Google.Cloud.Diagnostics.AspNetCore" ]]
-  then
-    echo "Not building AspNetCore - will be removed"
-    continue
-  fi
-
-  if [[ "$api" == "Google.Cloud.Diagnostics.AspNetCore3" ]]
-  then
-    echo "Not building AspNetCore3 - needs work before it will build"
-    continue
-  fi
 
   log_build_action "Building $apidir"
   dotnet build -nologo -clp:NoSummary -v quiet -c Release $apidir
