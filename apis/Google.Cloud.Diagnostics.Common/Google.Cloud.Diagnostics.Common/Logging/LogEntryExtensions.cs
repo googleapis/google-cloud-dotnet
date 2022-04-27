@@ -21,9 +21,7 @@ namespace Google.Cloud.Diagnostics.Common
 {
     internal static class LogEntryExtensions
     {
-        internal static LogEntry SetTraceAndSpanIfAny(
-            this LogEntry entry, TraceTarget traceTarget,
-            IServiceProvider serviceProvider, Action<IServiceProvider, LogEntry, TraceTarget> obsoleteTraceContextGetter)
+        internal static LogEntry SetTraceAndSpanIfAny(this LogEntry entry, TraceTarget traceTarget, IServiceProvider serviceProvider)
         {
             GaxPreconditions.CheckNotNull(entry, nameof(entry));
 
@@ -42,10 +40,6 @@ namespace Google.Cloud.Diagnostics.Common
                 entry.Trace = traceTarget.GetFullTraceName(context.TraceId);
                 entry.TraceSampled = context.ShouldTrace ?? false;
                 entry.SpanId = SpanIdToHex(context.SpanId);
-            }
-            else
-            {
-                obsoleteTraceContextGetter?.Invoke(serviceProvider, entry, traceTarget);
             }
 
             return entry;

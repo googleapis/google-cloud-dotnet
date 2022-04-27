@@ -51,21 +51,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         }
 
         [Fact]
-        [Obsolete("Both EventTarget.ForLogging and ErrorReportingOptions.Create are obsolete.")]
-        public void Log_Compat()
-        {
-            var eventTarget = EventTarget.ForLogging("pid", loggingClient: new ThrowingLoggingClient());
-            var options = ErrorReportingOptions.Create(eventTarget);
-            var consumer = new FakeConsumer();
-
-            IContextExceptionLogger logger = new ErrorReportingContextExceptionLogger(
-                consumer, eventTarget, _serviceContext, options, null);
-            logger.Log(CreateException(), new FakeContextWrapper());
-
-            ValidateSingleEntry(consumer, _method, _uri, _userAgent, options, eventTarget);
-        }
-
-        [Fact]
         public void Log()
         {
             var eventTarget = EventTarget.ForProject("pid");
@@ -80,21 +65,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         }
 
         [Fact]
-        [Obsolete("Both EventTarget.ForLogging and ErrorReportingOptions.Create are obsolete.")]
-        public void Log_Simple_Compat()
-        {
-            var eventTarget = EventTarget.ForLogging("pid", loggingClient: new ThrowingLoggingClient());
-            var options = ErrorReportingOptions.Create(eventTarget);
-            var consumer = new FakeConsumer();
-
-            IContextExceptionLogger logger = new ErrorReportingContextExceptionLogger(
-                 consumer, eventTarget, _serviceContext, options, null);
-            logger.Log(CreateException(), new EmptyContextWrapper());
-
-            ValidateSingleEntry(consumer, "", "", "", options, eventTarget);
-        }
-
-        [Fact]
         public void Log_Simple()
         {
             var eventTarget = EventTarget.ForProject("pid");
@@ -106,22 +76,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             logger.Log(CreateException(), new EmptyContextWrapper());
 
             ValidateSingleEntry(consumer, "", "", "", options, eventTarget);
-        }
-
-
-        [Fact]
-        [Obsolete("Both EventTarget.ForLogging and ErrorReportingOptions.Create are obsolete.")]
-        public async Task LogAsync_Compat()
-        {
-            var eventTarget = EventTarget.ForLogging("pid", loggingClient: new ThrowingLoggingClient());
-            var options = ErrorReportingOptions.Create(eventTarget);
-            var consumer = new FakeConsumer();
-
-            IContextExceptionLogger logger = new ErrorReportingContextExceptionLogger(
-                consumer, eventTarget, _serviceContext, options, null);
-            await logger.LogAsync(CreateException(), new FakeContextWrapper());
-
-            ValidateSingleEntry(consumer, _method, _uri, _userAgent, options, eventTarget);
         }
 
         [Fact]
@@ -226,13 +180,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 Receive(items);
                 return Task.CompletedTask;
             }
-        }
-
-        /// <summary>
-        /// Logging client that will just throw if any methods are called.
-        /// </summary>
-        private class ThrowingLoggingClient : LoggingServiceV2Client
-        {
         }
     }
 }
